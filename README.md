@@ -35,6 +35,8 @@
 
 保留窗口、侧栏、表格和状态这些熟悉的软件结构，再重排内容密度、字号与焦点。关键字段可读，行与面板可以单独移动，适合制作用户所说的“像电脑截图，但更精致”的画面。
 
+**只有文案、没有电脑素材，也可以直接制作。** Skill 会按内容选择对话、搜索、文档、文件管理、表格、看板、设置、日历或流程等界面，生成静态图或模拟操作片段。工作台只是一个示范；具体画面由文案决定。见 [文案 → 界面选型](references/ui-patterns.md)。
+
 <a href="assets/ui-showcase/preview.mp4"><img src="assets/ui-showcase/preview.gif" width="100%" alt="资料工作台：完整界面、选中详情、团队交接的连续变化" /></a>
 
 **[播放 12 秒 UI 示范](assets/ui-showcase/preview.mp4)** · [两张参考与组件说明](docs/ui-design.md) · [可执行设计方法](references/ui-design.md) · [编辑界面源码](assets/ui-showcase/index.html)
@@ -121,6 +123,12 @@ git clone https://github.com/3105059695-rgb/ui-motion-explainer.git ~/.codex/ski
 更具体的请求：
 
 ```text
+我只有文案，没有电脑录屏。请按各段内容直接设计 UI 素材：
+查找信息可以用搜索页，解释改写可以用文档编辑器，任务流转可以用看板。
+选择适合讲解的静态或动态画面，统一黑白紫风格，交付成片与源码。
+```
+
+```text
 先做 20 秒短样：三个文档依次出现，合并成一次任务，
 再展开团队界面，最后退焦突出结论。
 ```
@@ -151,6 +159,7 @@ git clone https://github.com/3105059695-rgb/ui-motion-explainer.git ~/.codex/ski
 | [style-system.md](references/style-system.md) | 色彩、字体、布局、节奏与口播处理 |
 | [effects.md](references/effects.md) | 33 类参考动作 + 20 类扩展的触发条件与实现建议 |
 | [ui-design.md](references/ui-design.md) | 产品 UI 重建、组件结构、信息层级与动静态交付 |
+| [ui-patterns.md](references/ui-patterns.md) | 没有电脑素材时，按文案选择界面布局与模拟操作 |
 | [narration-effects.md](references/narration-effects.md) | X09–X20 口播触发、动作配方、边界与组合 |
 | [production.md](references/production.md) | 字体子集、时间轴、音画同步与导出检查 |
 | [reference-evidence.md](references/reference-evidence.md) | 来源、观察边界与样例验证记录 |
