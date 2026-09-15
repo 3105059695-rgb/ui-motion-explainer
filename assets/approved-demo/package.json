@@ -1,0 +1,14 @@
+{
+  "name": "ui-motion-explainer-approved-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "hyperframes check .",
+    "dev": "hyperframes preview . --no-open",
+    "render": "hyperframes render . --fps 30 --workers 1 --quality high --resolution landscape --low-memory-mode --no-browser-gpu -o renders/approved-demo.mp4"
+  },
+  "devDependencies": {
+    "hyperframes": "0.8.38"
+  }
+}
