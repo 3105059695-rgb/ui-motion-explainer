@@ -6,9 +6,9 @@
 
 **把口播里的对象、关系和变化，剪成看得懂的动画。**
 
-三条完整参考 · 33 类实测动作 · 8 类扩展演示 · 可编辑工程
+三条完整参考 · 33 类观察动作 · 20 类原创扩展 · 精致产品 UI · 可编辑工程
 
-[查看全部动效](docs/gallery.md) · [观看风格短样](assets/approved-demo/preview.mp4) · [安装与使用](#安装与使用) · [下载 ZIP](https://github.com/3105059695-rgb/ui-motion-explainer/archive/refs/heads/main.zip)
+[查看全部动效](docs/gallery.md) · [观看风格短样](assets/approved-demo/preview.mp4) · [产品 UI 示范](docs/ui-design.md) · [安装与使用](#安装与使用) · [下载 ZIP](https://github.com/3105059695-rgb/ui-motion-explainer/archive/refs/heads/main.zip)
 
 </div>
 
@@ -31,6 +31,32 @@
 | 白底、近黑卡片、淡紫焦点、粗中文无衬线 | 建立对象 → 改变关系 → 留出阅读时间 | HTML + GSAP / HyperFrames 优先，可映射到其他剪辑工具 |
 | 圆角窗口、柔和阴影、克制的层次 | 图解讲原理，真实录屏展示操作 | 随包脚本处理字体与抽帧，保留可编辑工程 |
 
+## 产品 UI：为讲解重新设计的界面
+
+保留窗口、侧栏、表格和状态这些熟悉的软件结构，再重排内容密度、字号与焦点。关键字段可读，行与面板可以单独移动，适合制作用户所说的“像电脑截图，但更精致”的画面。
+
+<a href="assets/ui-showcase/preview.mp4"><img src="assets/ui-showcase/preview.gif" width="100%" alt="资料工作台：完整界面、选中详情、团队交接的连续变化" /></a>
+
+**[播放 12 秒 UI 示范](assets/ui-showcase/preview.mp4)** · [两张参考与组件说明](docs/ui-design.md) · [可执行设计方法](references/ui-design.md) · [编辑界面源码](assets/ui-showcase/index.html)
+
+| 可以制作 | 内容与交付 |
+|---|---|
+| 资料工作台、数据表、任务看板、对话窗口 | 用可信的示例内容搭建完整界面，重点字段用紫色强调 |
+| 文档、搜索结果、侧边详情、协作状态 | 同一条目在前后状态保持身份，按讲解展开和收起 |
+| 静态 UI 图 / 动态 UI 视频 | 从可编辑布局导出画面；也可接入口播、字幕与局部聚焦 |
+
+本示范是原创演示界面。需要展示真实产品的操作结果时，以实际产品素材核对。
+
+## 12 种口播效果，听着看更直观
+
+**72 秒中文演示配音**，每种动作单独示范。强调、追问、因果、纠错、步骤、类比、数值、证据和总结，都有相应的动作配方。
+
+| 把一句话拆成步骤 | 把抽象交接变成类比 |
+|:---:|:---:|
+| <a href="assets/narration-demos/preview.mp4"><img src="docs/previews/X13.gif" width="420" alt="X13 原句短语进入编号步骤槽" /></a> | <a href="assets/narration-demos/preview.mp4"><img src="docs/previews/X15.gif" width="420" alt="X15 文档变成接力棒再展开" /></a> |
+
+**[播放完整口播合集](assets/narration-demos/preview.mp4)** · [12 项逐项预览](docs/gallery.md#narration) · [使用配方](references/narration-effects.md) · [文案与工程](assets/narration-demos/README.md)
+
 ## 三条参考，一个不漏
 
 每条都提供 **完整原片、独立拆解、带时间码的动作索引**。下方 GIF 保留原画幅和画面署名，点击标题查看对应参考页。
@@ -44,9 +70,9 @@
 
 参考题目是原视频标题，片中产品宣传与技术结论不属于本仓库验证范围。来源署名与素材说明见 [CREDITS](CREDITS.md)。
 
-## 41 种动作，都有可看的示例
+## 53 种动作，都有可看的示例
 
-**O01–O33** 来自三条参考的实际画面；**X01–X08** 是沿用同一视觉语言的新设计。编号与 Skill 动效库一一对应。
+**O01–O33** 来自三条参考的实际画面；**X01–X20** 是沿用同一视觉语言的新设计。编号与 Skill 动效库一一对应。
 
 | 对象与布局 | 注意力与交接 |
 |:---:|:---:|
@@ -61,9 +87,9 @@
 | 一件事经过几个环节 | 连续扩列 → 同一字段贯穿 → 结果停留 | [关系与交接](docs/gallery.md#relations) |
 | 找到历史记录中的关键原话 | 逐字搜索 → 过滤 → 原文重排 → 高亮 | [界面与聚焦](docs/gallery.md#focus) |
 | 原理说明之后展示真实操作 | 图解 → 匹配衔接 → 录屏推近 | [镜头与节奏](docs/gallery.md#editing) |
-| 需要更多变化 | 遮罩揭字、排序、局部放大、差异切换等 | [8 类扩展](docs/gallery.md#extensions) |
+| 需要更多变化 | 遮罩揭字、排序、局部放大、差异切换等 | [20 类扩展](docs/gallery.md#extensions) |
 
-**[打开完整 41 项 GIF 图鉴 →](docs/gallery.md)**
+**[打开完整 53 项 GIF 图鉴 →](docs/gallery.md)**
 
 ## 安装与使用
 
@@ -109,18 +135,30 @@ git clone https://github.com/3105059695-rgb/ui-motion-explainer.git ~/.codex/ski
 在关系图解和真实录屏之间切换，按语义设计新的动效组合。
 ```
 
+也可以只做精致的静态界面：
+
+```text
+使用 $ui-motion-explainer，做一张产品 UI 示意图：
+资料工作台，包含侧栏、筛选工具栏、数据表和右侧详情。
+参考黑白紫风格，正文足够大，保留可编辑源码，并导出高清图片。
+```
+
 ## 规范和工程在哪里
 
 | 文件 | 用途 |
 |---|---|
 | [SKILL.md](SKILL.md) | 技能入口、动作选择、制作顺序与完成标准 |
 | [style-system.md](references/style-system.md) | 色彩、字体、布局、节奏与口播处理 |
-| [effects.md](references/effects.md) | 33 类参考动作 + 8 类扩展的触发条件与实现建议 |
+| [effects.md](references/effects.md) | 33 类参考动作 + 20 类扩展的触发条件与实现建议 |
+| [ui-design.md](references/ui-design.md) | 产品 UI 重建、组件结构、信息层级与动静态交付 |
+| [narration-effects.md](references/narration-effects.md) | X09–X20 口播触发、动作配方、边界与组合 |
 | [production.md](references/production.md) | 字体子集、时间轴、音画同步与导出检查 |
 | [reference-evidence.md](references/reference-evidence.md) | 来源、观察边界与样例验证记录 |
-| [动效图鉴](docs/gallery.md) | 41 项逐项预览，链接到来源与工程 |
+| [动效图鉴](docs/gallery.md) | 53 项逐项预览，链接到来源与工程 |
 | [风格短样工程](assets/approved-demo) | 18 秒完整组合，可编辑 HTML 和素材 |
 | [扩展演示工程](assets/extension-demos) | 8 个新设计动作的分段演示与源码 |
+| [口播演示工程](assets/narration-demos) | 12 个新动作、72 秒配音、字幕、时间表与源码 |
+| [资料工作台工程](assets/ui-showcase) | 完整界面 → 选中详情 → 团队交接，静态帧与动态图 |
 | [辅助脚本](scripts) | 字体准备、参考抽帧及媒体索引 |
 
 ### 本地预览与导出

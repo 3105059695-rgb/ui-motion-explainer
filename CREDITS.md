@@ -18,8 +18,14 @@
 
 - `assets/approved-demo/index.html`：依据上述视觉语言重新构建的 18 秒图解；界面标记为演示。原混音来自 D 的约 11.84–29.9067 秒，只作为参考比较音频。
 - 公开工程使用 Noto Sans SC 子集；原本地确认版使用过系统中文字体。公开版的字体与局部排版可能因此略有差异。
-- `assets/extension-demos/` 与 `docs/previews/X*.gif`：新制作的扩展动作示例，画面明确标注“扩展演示”。它们不是原参考片出现过的动作证据。
+- `assets/extension-demos/`、`assets/narration-demos/` 与 `docs/previews/X*.gif`：新制作的扩展动作示例，画面明确标注“扩展演示”。它们不是原参考片出现过的动作证据。
 - X04 若显示“图解 → 实录位置”，该段是衔接方法的示意；不声称已执行真实产品操作。
+
+## 新增口播与产品 UI
+
+- `assets/narration-demos/`：12 种原创口播动效，完整 72 秒。配音由 Windows 标准中文语音 Microsoft Kangkang 本地合成，用于示范时间安排，未克隆参考作者声音。实际语句起止保存在 `assets/narration-timing.json`。
+- `assets/ui-showcase/`：新制作的“资料工作台”演示 UI 与时间轴；名称、资料、人员与状态均为示例内容。完整窗口、详情面板和协作状态不代表某个真实产品的已执行操作。
+- `docs/images/ui-cards.jpg`、`ui-handoff.jpg`：从仓库已有重建短样导出的干净画面，对应用户再次指定的 UI 参考。未把播放器控制栏作为设计内容。
 
 ## 字体
 

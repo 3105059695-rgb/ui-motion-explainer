@@ -1,0 +1,498 @@
+<!doctype html><html lang="zh-CN" data-resolution="landscape"><head><meta charset="utf-8"><meta name="viewport" content="width=1920,height=1080"><title>12种口播讲解新动效</title><script src="assets/gsap.min.js"></script><style>
+@font-face{font-family:ProjectSans;src:url('assets/NotoSansSC-subset.woff2') format('woff2');font-weight:100 900;font-display:block}
+*{box-sizing:border-box}html,body{width:1920px;height:1080px;margin:0;overflow:hidden;background:#fff}
+body{font-family:ProjectSans,sans-serif;color:#101112;-webkit-font-smoothing:antialiased}h1,h2,h3,p{margin:0}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;background:#fff}
+.scene{position:absolute;inset:0;background:#fff;overflow:hidden;visibility:hidden;opacity:0}
+.top{position:absolute;left:100px;right:100px;top:65px;display:flex;justify-content:space-between;align-items:center}
+.kicker{font-size:24px;font-weight:700;letter-spacing:1px}.tag{font-size:22px;color:#67666d;border:1px solid #dedde4;border-radius:28px;padding:8px 17px}
+.title{position:absolute;left:100px;right:100px;top:145px;font-size:64px;font-weight:700;line-height:1.3;letter-spacing:-1.5px}
+.purple{color:#7451b8}.light-purple{color:#cdb7f5}.muted{color:#777981}
+.subtitle{position:absolute;bottom:50px;left:100px;right:100px;display:flex;justify-content:center;align-items:center;z-index:90;pointer-events:none;visibility:hidden}
+.subtitle span{display:inline-block;max-width:1720px;font-size:42px;font-weight:700;line-height:1.45;text-align:center;border-radius:15px;padding:12px 26px 15px;background:#101112;color:#fff}
+.series-progress{position:absolute;bottom:0;left:0;right:0;display:flex;height:5px;gap:4px;z-index:100}.series-progress i{flex:1;background:#e9e7ed}.series-progress i.active{background:#b596e4}
+
+
+/* X09–X14. Every rule is scoped to its own scene. */
+#s09 .sentence{position:absolute;left:190px;top:414px;width:1540px;display:flex;align-items:baseline;justify-content:center;gap:42px;white-space:nowrap}
+#s09 .phrase{display:flex;align-items:baseline;font-size:70px;font-weight:500;letter-spacing:-2px}
+#s09 .join{color:#96969d}
+#s09 .word{position:relative;display:inline-block;font-size:102px;font-weight:750;letter-spacing:-3px;transform-origin:50% 75%;padding:0 10px}
+#s09 .beat{position:absolute;left:4px;right:4px;bottom:-20px;height:11px;border-radius:6px;background:#cdb7f5;transform:scaleX(0);transform-origin:0 50%}
+#s09 .sentence-rule{position:absolute;left:230px;right:230px;top:634px;height:2px;background:#e4e3e7}
+#s09 .meaning{position:absolute;left:200px;right:200px;top:710px;text-align:center;font-size:39px;color:#73717b}
+#s09 .meaning strong{color:#101112;font-weight:600}
+#s09 .lead-label{position:absolute;left:230px;top:322px;font-size:28px;color:#9b97a4;letter-spacing:3px}
+
+#s10 .question-stage{position:absolute;left:170px;top:280px;width:1580px;height:560px}
+#s10 .question-rail{position:absolute;left:98px;top:36px;width:3px;height:484px;background:#e5e1eb}
+#s10 .question-dot{position:absolute;left:86px;top:258px;width:27px;height:27px;background:#7451b8;border:6px solid #eee6fa;border-radius:50%;box-shadow:0 0 0 1px #cdb7f5}
+#s10 .qrow{position:absolute;left:185px;top:220px;display:flex;align-items:center;gap:38px;width:1230px;height:120px;white-space:nowrap;transform-origin:0 50%}
+#s10 .qnum{font-size:34px;color:#a8a3af;letter-spacing:2px;font-weight:500;width:64px;flex:none}
+#s10 .qtext{font-size:96px;font-weight:700;letter-spacing:-2px}
+#s10 .q2,#s10 .q3{opacity:0}
+#s10 .q3 .qtext{font-size:91px}
+#s10 .q3 .qtext strong{font-weight:750;color:#7451b8}
+#s10 .known{position:absolute;left:1410px;top:38px;border:2px solid #dedbe4;border-radius:30px;padding:10px 24px;font-size:25px;color:#84808d;opacity:0}
+#s10 .q-underline{position:absolute;left:286px;top:341px;width:910px;height:10px;border-radius:7px;background:#cdb7f5;transform-origin:left;transform:scaleX(0)}
+#s10 .depth-mark{position:absolute;right:10px;bottom:30px;font-size:26px;color:#aba7b3;letter-spacing:2px;opacity:0}
+
+#s11 .cause-map{position:absolute;inset:0;width:1920px;height:1080px;pointer-events:none}
+#s11 .cause-base{stroke:#e1dce8;stroke-width:7;fill:none;stroke-linecap:round}
+#s11 .cause-passed{stroke:#b497df;stroke-width:7;fill:none;stroke-linecap:round;stroke-dasharray:1180;stroke-dashoffset:1180}
+#s11 .cause-tick{fill:white;stroke:#d7cedf;stroke-width:5}
+#s11 .cause-signal{fill:#7451b8;stroke:#fff;stroke-width:6;opacity:0}
+#s11 .cause-label{position:absolute;top:332px;width:450px;text-align:center;color:#adabb2}
+#s11 .n1{left:145px}#s11 .n2{left:735px}#s11 .n3{left:1325px}
+#s11 .cause-label .small{font-size:45px;font-weight:550;margin-bottom:14px}
+#s11 .cause-label .large{position:relative;display:inline-block;font-size:85px;line-height:1.4;letter-spacing:-2px;font-weight:750;z-index:1}
+#s11 .cause-label .outcome-bg{position:absolute;inset:0 -25px;z-index:-1;border-radius:24px;background:#101112;transform:scaleX(0);transform-origin:left}
+#s11 .cause-note{position:absolute;top:674px;width:450px;text-align:center;font-size:32px;letter-spacing:1px;color:#88818f;opacity:0}
+#s11 .note1{left:145px}#s11 .note2{left:735px}#s11 .note3{left:1325px}
+#s11 .cause-arrow{position:absolute;top:548px;color:#b2a6c3;font-size:39px}
+#s11 .arrow1{left:640px}#s11 .arrow2{left:1230px}
+
+#s12 .correction-stage{position:absolute;left:180px;top:300px;width:1560px;height:520px}
+#s12 .belief-label{position:absolute;left:40px;top:10px;color:#99949f;font-size:29px;letter-spacing:2px}
+#s12 .myth{position:absolute;left:0;right:0;top:143px;display:flex;align-items:center;justify-content:center;gap:66px;font-size:81px;font-weight:650;white-space:nowrap}
+#s12 .relation{position:relative;font-size:108px;width:150px;text-align:center;font-weight:400;color:#96919e}
+#s12 .wrong-line{position:absolute;left:-8px;top:74px;width:0;height:10px;background:#7451b8;transform:rotate(-29deg);transform-origin:0 50%;border-radius:7px}
+#s12 .myth-question{font-size:91px;color:#7451b8;margin-left:-36px}
+#s12 .not-always{position:absolute;left:620px;top:27px;padding:12px 38px;border-radius:18px;background:#101112;color:#cdb7f5;font-size:47px;font-weight:700;opacity:0;transform:translateY(18px)}
+#s12 .new-rule{position:absolute;left:0;right:0;top:144px;text-align:center;font-size:104px;font-weight:750;letter-spacing:-3px;opacity:0;white-space:nowrap}
+#s12 .new-rule strong{position:relative;font-weight:750;color:#7451b8;z-index:1}
+#s12 .goal-mark{position:absolute;left:0;right:0;bottom:0;height:27px;background:#e9ddf9;z-index:-1;transform:scaleX(0);transform-origin:left}
+#s12 .action-note{position:absolute;left:0;right:0;top:364px;text-align:center;font-size:36px;line-height:1.6;color:#85818b;opacity:0}
+#s12 .clear-label{position:absolute;left:40px;top:10px;color:#7451b8;font-size:29px;letter-spacing:2px;opacity:0}
+
+#s13 .sentence-label{position:absolute;left:160px;top:280px;font-size:28px;letter-spacing:2px;color:#9a95a1}
+#s13 .fragment{position:absolute;top:354px;width:480px;text-align:center;font-size:65px;line-height:1.3;white-space:nowrap;font-weight:700;letter-spacing:-2px;z-index:3;transform-origin:center center}
+#s13 .f1{left:160px}#s13 .f2{left:720px}#s13 .f3{left:1280px;font-size:61px}
+#s13 .punctuation{position:absolute;top:364px;font-size:62px;color:#aeabb3}
+#s13 .p1{left:650px}#s13 .p2{left:1210px}#s13 .p3{left:1748px}
+#s13 .step-slot{position:absolute;top:522px;width:480px;height:260px;border:2px solid #e4dfeb;border-radius:27px;background:#fff;overflow:hidden}
+#s13 .slot1{left:160px}#s13 .slot2{left:720px}#s13 .slot3{left:1280px}
+#s13 .slot-num{position:absolute;left:32px;top:28px;font-size:35px;font-weight:650;color:#aba2b9}
+#s13 .slot-rule{position:absolute;left:31px;right:31px;top:101px;height:2px;background:#ece7f0}
+#s13 .slot-fill{position:absolute;inset:0;background:#f4eefb;transform:scaleY(0);transform-origin:50% 100%}
+#s13 .slot-num,#s13 .slot-rule{z-index:1}
+#s13 .slot-check{position:absolute;right:34px;top:28px;color:#7451b8;font-size:31px;opacity:0}
+#s13 .sequence-link{position:absolute;top:646px;font-size:42px;color:#c1b5d0;opacity:0}
+#s13 .link1{left:666px}#s13 .link2{left:1226px}
+#s13 .sentence-guide{position:absolute;left:160px;right:160px;top:458px;border-bottom:2px solid #efedf2}
+
+#s14 .task-shell{position:absolute;left:180px;top:291px;width:1560px;height:551px;border:3px solid #101112;border-radius:42px;background:#fff}
+#s14 .shell-label{position:absolute;left:68px;top:69px;font-size:27px;letter-spacing:3px;color:#99939f}
+#s14 .shell-title{position:absolute;left:68px;top:145px;font-size:77px;font-weight:750;letter-spacing:-2px;line-height:1.3}
+#s14 .shell-note{position:absolute;left:68px;top:281px;font-size:35px;color:#88818f;line-height:1.65}
+#s14 .shell-divider{position:absolute;left:527px;top:54px;bottom:54px;width:2px;background:#e7e1ed}
+#s14 .task-layer{position:absolute;left:780px;top:410px;width:830px;height:282px;border:2px solid #dcd5e5;border-radius:23px;box-shadow:0 17px 30px -26px #10111255;background:#fff;transform-origin:left center;overflow:hidden}
+#s14 .layer1{z-index:5;background:#101112;border-color:#101112}
+#s14 .layer2{z-index:4;transform:translate(18px,18px);background:#efe9f6}
+#s14 .layer3{z-index:3;transform:translate(36px,36px);background:#e2d6ee}
+#s14 .layer-content{position:absolute;left:29px;right:29px;top:27px;display:flex;align-items:center;gap:30px;opacity:0;white-space:nowrap}
+#s14 .layer-num{font-size:25px;color:#b8a7cc;width:40px;flex:none}
+#s14 .layer-key{font-size:50px;font-weight:700;letter-spacing:-1px;width:250px;flex:none}
+#s14 .layer-detail{font-size:32px;color:#8d8398;margin-left:auto}
+#s14 .closed-cover{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#cdb7f5;font-size:76px;font-weight:700;letter-spacing:-2px}
+#s14 .layer-ruler{position:absolute;left:738px;top:357px;height:425px;width:18px;border-left:2px solid #cdb7f5;border-top:2px solid #cdb7f5;border-bottom:2px solid #cdb7f5;opacity:0}
+
+#s09 .lead-label,#s09 .join{color:#747782}
+#s11 .cause-arrow{color:#787382}
+#s14 .shell-label{color:#77717e}
+#s14 .layer1 .layer-num,#s14 .layer2 .layer-num{color:#77638f}
+
+#s10 .qnum,#s10 .depth-mark{color:#746d7f}
+
+
+#s15 svg.diagram{position:absolute;inset:0;width:1920px;height:1080px;overflow:visible;font-family:ProjectSans,sans-serif}#s15 .actor{font-size:27px;font-weight:700}#s15 .doc-title{font-size:43px;font-weight:700}#s15 .doc-row{font-size:29px;fill:#514568}#s15 .guide{font-size:25px;fill:#777a84}#s15 .identity{font-size:25px;font-weight:700;fill:#5c3d8a;letter-spacing:2px}#s15 .receiver-body{opacity:0}#s15 .handoff-note{position:absolute;left:660px;top:744px;width:600px;text-align:center;font-size:35px;font-weight:700;color:#7451b8;opacity:0}
+#s16 svg.diagram{position:absolute;inset:0;width:1920px;height:1080px;overflow:visible;font-family:ProjectSans,sans-serif}#s16 .unit-number{font-size:33px;font-weight:700;fill:#777c87}#s16 .unit-keep .unit-number{fill:#4c346e}#s16 .count-large{font-size:92px;font-weight:700;fill:#101112}#s16 .count-caption{font-size:32px;fill:#676d77}#s16 .process-badge{position:absolute;left:1450px;top:320px;border:1px solid #d9d5e4;border-radius:30px;padding:13px 26px;font-size:27px;color:#7451b8;background:#faf8fd}#s16 .measure-label{font-size:28px;fill:#7451b8;font-weight:700}#s16 .result{position:absolute;left:850px;top:480px;opacity:0}#s16 .result strong{font-size:69px;font-weight:700;letter-spacing:-1px}#s16 .result strong span{color:#7451b8}#s16 .result p{font-size:30px;color:#707581;margin:24px 0 0}#s16 .legend{position:absolute;left:238px;top:780px;display:flex;gap:44px;font-size:26px;color:#686d77}#s16 .legend span{display:flex;align-items:center;gap:13px}#s16 .legend i{width:20px;height:20px;display:block;border-radius:5px;background:#cdb7f5}#s16 .legend span+span i{background:#e0e3e9}
+#s17 .now-label{position:absolute;left:154px;top:320px;font-size:26px;font-weight:700;color:#7451b8;letter-spacing:2px}#s17 .later-label{position:absolute;left:627px;top:320px;font-size:26px;color:#8a909b;letter-spacing:2px}#s17 .work-card{position:absolute;top:457px;width:320px;height:210px;background:#f4f5f8;border:1px solid #dce0e6;border-radius:22px;padding:33px 30px;transform-origin:0 0;box-shadow:0 23px 36px -31px #10111266}#s17 .work-card h2{font-size:43px;line-height:1.25;margin:17px 0 0}#s17 .work-card .step-id{font-size:21px;font-weight:700;color:#9197a2;letter-spacing:2px}#s17 .work-card p{font-size:25px;color:#858c98;margin:19px 0 0}#s17 #current17{left:140px;top:431px;width:360px;height:262px;background:#101112;color:#fff;border-color:#101112;padding:34px}#s17 #current17 .step-id{color:#cdb7f5}#s17 #current17 h2{font-size:49px}#s17 #current17 p{color:#c8cbd4;margin-top:26px}#s17 #later17a{left:620px;z-index:5}#s17 #later17b{left:1005px;z-index:4}#s17 #later17c{left:1390px;z-index:3}#s17 .folder{position:absolute;left:950px;top:384px;width:640px;height:350px;border:2px solid #d8c6ee;background:#f5effc;border-radius:24px;opacity:0;transform-origin:left center}#s17 .folder-tab{position:absolute;left:0;top:-30px;width:230px;height:43px;border:2px solid #d8c6ee;border-bottom:none;border-radius:15px 15px 0 0;background:#f5effc;padding:5px 21px;font-size:22px;color:#7451b8}#s17 .connector{position:absolute;left:520px;top:505px;width:420px;height:70px;overflow:visible}#s17 .fold-note{position:absolute;left:1020px;top:771px;font-size:30px;font-weight:700;color:#7451b8;opacity:0}#s17 .status-pill{position:absolute;left:173px;top:725px;background:#e9def8;color:#63448f;border-radius:26px;padding:9px 22px;font-size:24px}
+#s18 .claim{position:absolute;left:145px;top:325px;width:670px;height:426px;background:#101112;color:#fff;border-radius:28px;padding:41px 45px}#s18 .claim-label{font-size:25px;color:#cdb7f5;letter-spacing:2px}#s18 .claim h2{font-size:68px;line-height:1.34;letter-spacing:-2px;margin:35px 0 0}#s18 .claim p{font-size:25px;color:#aeb4c0;margin:24px 0 0}#s18 .footnote{position:absolute;left:565px;top:180px;width:60px;height:60px;border:2px solid #b693e9;border-radius:13px;display:grid;place-items:center;font-size:27px;font-weight:700;color:#cdb7f5;background:#26212e}#s18 .source{position:absolute;left:1020px;top:295px;width:750px;height:505px;border:1px solid #dce0e8;border-radius:23px;background:#f6f7fa;box-shadow:0 27px 42px -34px #10111266;overflow:hidden}#s18 .sourcebar{height:59px;background:#e9ebf0;padding:16px 30px;display:flex;justify-content:space-between;align-items:center;font-size:23px;color:#626a77}#s18 .sourcebody{padding:29px 39px}#s18 .source h3{font-size:36px;margin:0 0 26px;line-height:1.4}#s18 .source-line{position:relative;font-size:29px;line-height:1.4;padding:20px 12px;white-space:nowrap;color:#707784;margin:0 -12px}#s18 .source-line.target{color:#362549;font-weight:700}#s18 .source-line .mark{position:absolute;left:0;top:5px;right:0;bottom:5px;background:#dac4f5;border-radius:8px;transform-origin:left center}#s18 .source-line .words{position:relative;z-index:1}#s18 .source-footer{border-top:1px solid #dde1e8;margin-top:18px;padding-top:21px;font-size:22px;color:#939aa5}#s18 .evidence-line{position:absolute;inset:0;width:1920px;height:1080px;pointer-events:none}#s18 .locator{position:absolute;left:978px;top:541px;width:57px;height:57px;background:#cdb7f5;border:5px solid #fff;border-radius:50%;display:grid;place-items:center;color:#4e346f;font-size:23px;font-weight:700;opacity:0}#s18 .connection-label{position:absolute;left:808px;top:436px;font-size:22px;color:#7451b8;opacity:0}
+#s19 .bookmark{position:absolute;left:480px;top:330px;width:960px;height:155px;background:#101112;color:#fff;border-radius:22px;display:flex;align-items:center;justify-content:center;gap:24px;transform-origin:left top;box-shadow:0 20px 42px -27px #10111266;overflow:hidden}#s19 .bookmark::before{content:'';position:absolute;left:0;top:0;bottom:0;width:10px;background:#cdb7f5}#s19 .question-icon{flex:0 0 48px;width:48px;height:48px;border:1px solid #8e78ad;border-radius:12px;display:grid;place-items:center;font-size:26px;color:#cdb7f5}#s19 .question-text{font-size:61px;font-weight:700;white-space:nowrap;letter-spacing:-1px}#s19 .bookmark-caption{position:absolute;left:1390px;top:247px;font-size:24px;color:#8d929e;opacity:0}#s19 .example{position:absolute;left:340px;top:499px;width:1240px;display:flex;gap:35px;opacity:0}#s19 .example-item{height:190px;flex:1;border:1px solid #dce0e7;border-radius:21px;background:#f5f6f9;padding:30px;text-align:center}#s19 .example-item .check{display:block;color:#7451b8;font-size:35px}#s19 .example-item h3{font-size:39px;line-height:1.2;margin:16px 0 10px}#s19 .example-item p{font-size:24px;color:#8b929e;margin:0}#s19 .answer{position:absolute;left:220px;right:220px;top:580px;text-align:center;opacity:0}#s19 .answer .answer-label{font-size:26px;color:#939aa4;letter-spacing:2px;margin-bottom:22px}#s19 .answer h2{font-size:71px;line-height:1.3;letter-spacing:-2px;margin:0}#s19 .answer h2 span{color:#7451b8}#s19 .answer-rule{height:8px;width:528px;background:#cdb7f5;border-radius:5px;margin:22px auto 0;transform-origin:left center}
+#s20 .concept{position:absolute;top:380px;width:410px;height:260px;transform-origin:left top}#s20 #concept20a{left:220px}#s20 #concept20b{left:755px}#s20 #concept20c{left:1290px}#s20 .concept-bg{position:absolute;inset:0;border:1px solid #dee0e7;border-radius:26px;background:#f3f4f7;box-shadow:0 24px 38px -32px #10111266}#s20 .concept-id{position:absolute;left:33px;top:25px;font-size:22px;letter-spacing:2px;color:#989eaa}#s20 .concept-key{position:absolute;left:33px;top:80px;font-size:68px;font-weight:700;letter-spacing:-2px;transform-origin:left top}#s20 .concept-guide{position:absolute;left:36px;top:179px;font-size:28px;color:#7f8794}#s20 .final-piece{position:absolute;left:0;top:0;white-space:nowrap;font-size:96px;line-height:1.4;font-weight:700;letter-spacing:-2px;opacity:0}#s20 #concept20c .final-piece{color:#7451b8}#s20 .assembly-line{position:absolute;left:515px;top:694px;width:842px;height:8px;background:#cdb7f5;border-radius:6px;transform-origin:left center;opacity:0}#s20 .conclusion-label{position:absolute;left:0;right:0;top:363px;text-align:center;font-size:28px;letter-spacing:4px;color:#8b929d;opacity:0}#s20 .join-symbol{position:absolute;top:480px;color:#b9bdc7;font-size:42px}#s20 .join1{left:683px}#s20 .join2{left:1218px}
+
+#s17 .work-card:not(#current17) .step-id{color:#626a76}
+
+#s18 .sourcebody{padding-bottom:21px}
+
+#s18 .source-footer{color:#656c76}
+</style></head><body><main id="root" data-composition-id="main" data-start="0" data-duration="72" data-width="1920" data-height="1080" data-fps="30">
+<section class="scene" id="s09">
+  <div class="top"><span class="kicker">X09 · 重音接力</span><span class="tag">口播动效 · 新设计</span></div>
+  <h1 class="title">一句话里，重点依次接棒。</h1>
+  <div class="lead-label">把任务一次说明白</div>
+  <div class="sentence">
+    <div class="phrase"><span class="join">先看</span><span class="word w1">目标<i class="beat"></i></span><span class="join">，</span></div>
+    <div class="phrase"><span class="join">再看</span><span class="word w2">材料<i class="beat"></i></span><span class="join">，</span></div>
+    <div class="phrase"><span class="join">最后看</span><span class="word w3">交付<i class="beat"></i></span><span class="join">。</span></div>
+  </div>
+  <div class="sentence-rule"></div>
+  <div class="meaning">想解决什么　·　用哪些信息　·　最后拿到什么</div>
+</section>
+<section class="scene" id="s10">
+  <div class="top"><span class="kicker">X10 · 追问递进</span><span class="tag">口播动效 · 新设计</span></div>
+  <h1 class="title">会写之后，继续往下问。</h1>
+  <div class="question-stage">
+    <div class="question-rail"></div><div class="question-dot"></div>
+    <div class="qrow q1"><span class="qnum">01</span><span class="qtext">它会写。</span></div>
+    <div class="qrow q2"><span class="qnum">02</span><span class="qtext">但能记住吗？</span></div>
+    <div class="qrow q3"><span class="qnum">03</span><span class="qtext">还能<strong>接着做</strong>吗？</span></div>
+    <span class="known">已知</span><div class="q-underline"></div><span class="depth-mark">能力 → 记忆 → 连续工作</span>
+  </div>
+</section>
+<section class="scene" id="s11">
+  <div class="top"><span class="kicker">X11 · 因果传导</span><span class="tag">口播动效 · 新设计</span></div>
+  <h1 class="title">前因后果，连成一条线。</h1>
+  <svg class="cause-map" viewBox="0 0 1920 1080" aria-hidden="true">
+    <path class="cause-base" d="M370 598 H1550"/><path class="cause-passed" d="M370 598 H1550"/>
+    <circle class="cause-tick tick1" cx="370" cy="598" r="28"/><circle class="cause-tick tick2" cx="960" cy="598" r="28"/><circle class="cause-tick tick3" cx="1550" cy="598" r="28"/>
+    <circle class="cause-signal" cx="370" cy="598" r="22"/>
+  </svg>
+  <div class="cause-label n1"><div class="small">目标</div><span class="large">没说清</span></div>
+  <div class="cause-label n2"><div class="small">理解</div><span class="large">就会偏</span></div>
+  <div class="cause-label n3"><div class="small">最后</div><span class="large"><i class="outcome-bg"></i>返工</span></div>
+  <div class="cause-note note1">输入的问题</div><div class="cause-note note2">理解的偏差</div><div class="cause-note note3">结果的代价</div>
+  <span class="cause-arrow arrow1">→</span><span class="cause-arrow arrow2">→</span>
+</section>
+<section class="scene" id="s12">
+  <div class="top"><span class="kicker">X12 · 误区纠正</span><span class="tag">口播动效 · 新设计</span></div>
+  <h1 class="title">打断误解，换成可执行的说法。</h1>
+  <div class="correction-stage">
+    <div class="belief-label">先看一个常见误解</div><div class="clear-label">现在就能做的一步</div>
+    <div class="myth"><span>提示词越长</span><span class="relation">＝<i class="wrong-line"></i></span><span>结果越好</span><span class="myth-question">？</span></div>
+    <div class="not-always">不一定。</div>
+    <div class="new-rule">先把<strong>目标<i class="goal-mark"></i></strong>说清楚。</div>
+    <div class="action-note">要解决什么，以及希望得到什么。</div>
+  </div>
+</section>
+<section class="scene" id="s13">
+  <div class="top"><span class="kicker">X13 · 句子拆步骤</span><span class="tag">口播动效 · 新设计</span></div>
+  <h1 class="title">同一句话，拆成能执行的三步。</h1>
+  <div class="sentence-label">一句完整的任务说明</div>
+  <span class="fragment f1">先给材料</span><span class="punctuation p1">，</span>
+  <span class="fragment f2">再定目标</span><span class="punctuation p2">，</span>
+  <span class="fragment f3">最后说清交付</span><span class="punctuation p3">。</span>
+  <div class="sentence-guide"></div>
+  <div class="step-slot slot1"><div class="slot-fill"></div><span class="slot-num">01</span><span class="slot-check">✓</span><i class="slot-rule"></i></div>
+  <div class="step-slot slot2"><div class="slot-fill"></div><span class="slot-num">02</span><span class="slot-check">✓</span><i class="slot-rule"></i></div>
+  <div class="step-slot slot3"><div class="slot-fill"></div><span class="slot-num">03</span><span class="slot-check">✓</span><i class="slot-rule"></i></div>
+  <span class="sequence-link link1">→</span><span class="sequence-link link2">→</span>
+</section>
+<section class="scene" id="s14">
+  <div class="top"><span class="kicker">X14 · 层层剖开</span><span class="tag">口播动效 · 新设计</span></div>
+  <h1 class="title">保留整体，再看里面每一层。</h1>
+  <div class="task-shell"><span class="shell-label">TASK</span><div class="shell-title">一个任务</div><div class="shell-note">拆开以后，<br>每层都能检查。</div><div class="shell-divider"></div></div>
+  <div class="layer-ruler"></div>
+  <div class="task-layer layer3"><div class="layer-content"><span class="layer-num">03</span><span class="layer-key">交付要求</span><span class="layer-detail">形式与标准</span></div></div>
+  <div class="task-layer layer2"><div class="layer-content"><span class="layer-num">02</span><span class="layer-key">材料</span><span class="layer-detail">用哪些信息</span></div></div>
+  <div class="task-layer layer1"><div class="layer-content"><span class="layer-num">01</span><span class="layer-key">目标</span><span class="layer-detail">要解决什么</span></div><div class="closed-cover">完整说明</div></div>
+</section>
+
+<section class="scene" id="s15"><div class="top"><div class="kicker">X15 · 类比变形</div><div class="tag">口播动效 · 新设计</div></div><h1 class="title">同一份任务，像接力棒一样交出去。</h1>
+<svg class="diagram" viewBox="0 0 1920 1080" aria-label="同一交接文档变成接力棒，传递后再展开为文档">
+<line id="handoff15line" x1="960" y1="320" x2="960" y2="697" stroke="#e3d9ef" stroke-width="2" stroke-dasharray="8 10"/><text class="guide" x="960" y="304" text-anchor="middle">交接点</text>
+<g id="actor15a"><circle cx="460" cy="302" r="29" fill="#101112"/><text x="460" y="312" text-anchor="middle" fill="#fff" class="actor">A</text><text x="460" y="818" text-anchor="middle" class="guide">当前负责人</text></g>
+<g id="actor15b"><circle cx="1460" cy="302" r="29" fill="#e5e0eb"/><text x="1460" y="312" text-anchor="middle" fill="#7451b8" class="actor">B</text><text x="1460" y="818" text-anchor="middle" class="guide">下一位负责人</text></g>
+<rect id="receiver15outline" x="1295" y="351" width="330" height="360" rx="26" stroke="#dce0e8" stroke-width="2" stroke-dasharray="10 11" fill="#fafbfc"/>
+<rect id="token15" x="295" y="351" width="330" height="360" rx="26" fill="#cdb7f5"/>
+<text class="identity" id="identity15" x="330" y="400">TASK · 024</text>
+<g id="sender15body"><text x="330" y="480" class="doc-title">交接文档</text><line x1="331" y1="516" x2="586" y2="516" stroke="#b495dc" stroke-width="2"/><text x="331" y="564" class="doc-row">目标已明确</text><text x="331" y="613" class="doc-row">进度有记录</text><text x="331" y="662" class="doc-row">下一步可继续</text></g>
+<g class="receiver-body" id="receiver15body"><text x="1330" y="480" class="doc-title">任务继续</text><line x1="1331" y1="516" x2="1586" y2="516" stroke="#b495dc" stroke-width="2"/><text x="1331" y="564" class="doc-row">同一个目标</text><text x="1331" y="613" class="doc-row">接着当前进度</text><text x="1331" y="662" class="doc-row">继续下一步</text></g>
+</svg><div class="handoff-note">换了人，任务没有断。</div></section>
+<section class="scene" id="s16"><div class="top"><div class="kicker">X16 · 数值尺量</div><div class="tag">口播动效 · 新设计</div></div><h1 class="title">把数量，变成可数的单位。</h1>
+<div class="process-badge">流程示例</div><svg class="diagram" viewBox="0 0 1920 1080" aria-label="十个示例步骤中保留三个必要步骤">
+<g id="count16old"><text class="count-large" x="230" y="408">10</text><text class="count-caption" x="376" y="404">个步骤</text></g>
+<g id="count16new" opacity="0"><text class="count-large" x="230" y="408">3</text><text class="count-caption" x="316" y="404">个必要步骤</text></g>
+<g class="unit unit-keep" id="unit161" style="transform-origin:230px 550px"><rect x="230" y="486" width="126" height="132" rx="16" fill="#cdb7f5"/><text class="unit-number" x="293" y="565" text-anchor="middle">01</text></g><g class="unit unit-keep" id="unit162" style="transform-origin:378px 550px"><rect x="378" y="486" width="126" height="132" rx="16" fill="#cdb7f5"/><text class="unit-number" x="441" y="565" text-anchor="middle">02</text></g><g class="unit unit-keep" id="unit163" style="transform-origin:526px 550px"><rect x="526" y="486" width="126" height="132" rx="16" fill="#cdb7f5"/><text class="unit-number" x="589" y="565" text-anchor="middle">03</text></g><g class="unit unit-remove" id="unit164" style="transform-origin:674px 550px"><rect x="674" y="486" width="126" height="132" rx="16" fill="#e3e6ed"/><text class="unit-number" x="737" y="565" text-anchor="middle">04</text></g><g class="unit unit-remove" id="unit165" style="transform-origin:822px 550px"><rect x="822" y="486" width="126" height="132" rx="16" fill="#e3e6ed"/><text class="unit-number" x="885" y="565" text-anchor="middle">05</text></g><g class="unit unit-remove" id="unit166" style="transform-origin:970px 550px"><rect x="970" y="486" width="126" height="132" rx="16" fill="#e3e6ed"/><text class="unit-number" x="1033" y="565" text-anchor="middle">06</text></g><g class="unit unit-remove" id="unit167" style="transform-origin:1118px 550px"><rect x="1118" y="486" width="126" height="132" rx="16" fill="#e3e6ed"/><text class="unit-number" x="1181" y="565" text-anchor="middle">07</text></g><g class="unit unit-remove" id="unit168" style="transform-origin:1266px 550px"><rect x="1266" y="486" width="126" height="132" rx="16" fill="#e3e6ed"/><text class="unit-number" x="1329" y="565" text-anchor="middle">08</text></g><g class="unit unit-remove" id="unit169" style="transform-origin:1414px 550px"><rect x="1414" y="486" width="126" height="132" rx="16" fill="#e3e6ed"/><text class="unit-number" x="1477" y="565" text-anchor="middle">09</text></g><g class="unit unit-remove" id="unit1610" style="transform-origin:1562px 550px"><rect x="1562" y="486" width="126" height="132" rx="16" fill="#e3e6ed"/><text class="unit-number" x="1625" y="565" text-anchor="middle">10</text></g>
+<path id="measure16" d="M230 660 V687 H1688 V660" fill="none" stroke="#9a79c7" stroke-width="3"/><text id="measure16old" class="measure-label" x="959" y="738" text-anchor="middle">10 个可数单位</text><text id="measure16new" class="measure-label" x="441" y="738" text-anchor="middle" opacity="0">留下 3 个</text>
+</svg><div class="result"><strong>省下的是<br><span>重复操作。</span></strong><p>折叠示例中的非必要步骤。</p></div><div class="legend"><span><i></i>必要步骤</span><span><i></i>示例中的重复步骤</span></div></section>
+<section class="scene" id="s17"><div class="top"><div class="kicker">X17 · 时间折叠</div><div class="tag">口播动效 · 新设计</div></div><h1 class="title">关键一步现在做，其余按需展开。</h1>
+<div class="now-label">现在</div><div class="later-label">后续步骤</div><svg class="connector" viewBox="0 0 420 70"><path id="flow17" d="M0 35 H402 M387 22 L403 35 L387 48" fill="none" stroke="#ccb5eb" stroke-width="3"/></svg>
+<div class="folder"><div class="folder-tab">稍后按需 · 3 项</div></div>
+<div class="work-card" id="current17"><span class="step-id">CURRENT</span><h2>明确目标</h2><p>把关键一步先做完。</p></div>
+<div class="work-card" id="later17a"><span class="step-id">NEXT 01</span><h2>查资料</h2><p>需要依据时再展开。</p></div>
+<div class="work-card" id="later17b"><span class="step-id">NEXT 02</span><h2>补细节</h2><p>范围确定后再补充。</p></div>
+<div class="work-card" id="later17c"><span class="step-id">NEXT 03</span><h2>润色</h2><p>内容确认后再处理。</p></div>
+<div class="status-pill">当前焦点保持不变</div><div class="fold-note">需要时，只展开当前这一项。</div></section>
+<section class="scene" id="s18"><div class="top"><div class="kicker">X18 · 证据落点</div><div class="tag">口播动效 · 新设计</div></div><h1 class="title">让结论，有一个能返回的落点。</h1>
+<div class="claim"><div class="claim-label">本例结论</div><h2>先写清<br>交付标准。</h2><p>结论与出处，一一对应。</p><span class="footnote">1</span></div>
+<svg class="evidence-line" viewBox="0 0 1920 1080"><path id="evidence18path" d="M785 535 H916 Q945 535 945 564 V570 H1007" stroke="#a887d6" stroke-width="3" fill="none"/></svg><div class="connection-label">回到对应位置</div>
+<div class="source"><div class="sourcebar"><span>讲解脚本</span><span>示例原文</span></div><div class="sourcebody"><h3>任务交接记录</h3><div class="source-line other"><span class="words">任务开始前，先明确输出形式。</span></div><div class="source-line target"><div class="mark"></div><span class="words">把交付标准写清楚，再开始执行。</span></div><div class="source-line other"><span class="words">材料、范围和约束放在同一处。</span></div><div class="source-footer">示例文本 · 来源位置可核对</div></div></div><div class="locator">1</div></section>
+<section class="scene" id="s19"><div class="top"><div class="kicker">X19 · 首尾回扣</div><div class="tag">口播动效 · 新设计</div></div><h1 class="title">把开头留下的问题，带到答案面前。</h1>
+<div class="bookmark-caption">开头留下的问题</div><div class="bookmark"><span class="question-icon">Q</span><span class="question-text">怎样减少返工？</span></div>
+<div class="example"><div class="example-item"><span class="check">✓</span><h3>格式</h3><p>输出长什么样</p></div><div class="example-item"><span class="check">✓</span><h3>范围</h3><p>做到什么程度</p></div><div class="example-item"><span class="check">✓</span><h3>验收</h3><p>怎样判断完成</p></div></div>
+<div class="answer"><div class="answer-label">回到同一个问题，给出可执行的答案</div><h2>先把<span>交付标准</span>讲清楚。</h2><div class="answer-rule"></div></div></section>
+<section class="scene" id="s20"><div class="top"><div class="kicker">X20 · 结论拼句</div><div class="tag">口播动效 · 新设计</div></div><h1 class="title">把散落的要点，收成一句结论。</h1>
+<div class="conclusion-label">最后，记住这一句</div>
+<div class="concept" id="concept20a"><div class="concept-bg"></div><div class="concept-id">01</div><div class="concept-key">目标</div><div class="concept-guide">要做什么</div><div class="final-piece">让任务</div></div>
+<div class="concept" id="concept20b"><div class="concept-bg"></div><div class="concept-id">02</div><div class="concept-key">材料</div><div class="concept-guide">依据是什么</div><div class="final-piece">一次</div></div>
+<div class="concept" id="concept20c"><div class="concept-bg"></div><div class="concept-id">03</div><div class="concept-key">标准</div><div class="concept-guide">怎样算完成</div><div class="final-piece">讲清楚。</div></div>
+<span class="join-symbol join1">+</span><span class="join-symbol join2">+</span><div class="assembly-line"></div></section>
+<div class="subtitle" id="caption-0"><span>先看目标，</span></div><div class="subtitle" id="caption-1"><span>再看材料，</span></div><div class="subtitle" id="caption-2"><span>最后，看交付。</span></div><div class="subtitle" id="caption-3"><span>它会写，</span></div><div class="subtitle" id="caption-4"><span>但能记住吗？</span></div><div class="subtitle" id="caption-5"><span>还能接着做吗？</span></div><div class="subtitle" id="caption-6"><span>目标没说清，</span></div><div class="subtitle" id="caption-7"><span>理解就会偏，</span></div><div class="subtitle" id="caption-8"><span>最后，只能返工。</span></div><div class="subtitle" id="caption-9"><span>提示词越长，结果越好？</span></div><div class="subtitle" id="caption-10"><span>不一定。</span></div><div class="subtitle" id="caption-11"><span>先把目标说清楚。</span></div><div class="subtitle" id="caption-12"><span>先给材料，</span></div><div class="subtitle" id="caption-13"><span>再定目标，</span></div><div class="subtitle" id="caption-14"><span>最后说清交付。</span></div><div class="subtitle" id="caption-15"><span>把一个任务拆开看，</span></div><div class="subtitle" id="caption-16"><span>里面有目标、材料，</span></div><div class="subtitle" id="caption-17"><span>还有交付要求。</span></div><div class="subtitle" id="caption-18"><span>把交接文档，</span></div><div class="subtitle" id="caption-19"><span>想成一根接力棒。</span></div><div class="subtitle" id="caption-20"><span>换了人，任务继续。</span></div><div class="subtitle" id="caption-21"><span>从十个步骤，</span></div><div class="subtitle" id="caption-22"><span>缩到三个。</span></div><div class="subtitle" id="caption-23"><span>省下的是重复操作。</span></div><div class="subtitle" id="caption-24"><span>关键一步，现在做。</span></div><div class="subtitle" id="caption-25"><span>其他步骤，</span></div><div class="subtitle" id="caption-26"><span>需要的时候再展开。</span></div><div class="subtitle" id="caption-27"><span>每一个结论，</span></div><div class="subtitle" id="caption-28"><span>都应该能点回，</span></div><div class="subtitle" id="caption-29"><span>它对应的原文。</span></div><div class="subtitle" id="caption-30"><span>回到开头的问题：</span></div><div class="subtitle" id="caption-31"><span>怎样减少返工？</span></div><div class="subtitle" id="caption-32"><span>先把交付标准讲清楚。</span></div><div class="subtitle" id="caption-33"><span>目标、材料、标准，</span></div><div class="subtitle" id="caption-34"><span>最后合成一句话：</span></div><div class="subtitle" id="caption-35"><span>让任务一次讲清楚。</span></div><div class="series-progress"><i id="step-0"></i><i id="step-1"></i><i id="step-2"></i><i id="step-3"></i><i id="step-4"></i><i id="step-5"></i><i id="step-6"></i><i id="step-7"></i><i id="step-8"></i><i id="step-9"></i><i id="step-10"></i><i id="step-11"></i></div><audio src="assets/narration.wav" id="voice" preload="auto" data-start="0" data-duration="72" data-track-index="3" data-volume="1"></audio></main><script>window.__timelines=window.__timelines||{};const tl=gsap.timeline({paused:true});window.__timelines.main=tl;
+const planTimings={"X09": {"id": "X09", "title": "重音接力", "start": 0, "duration": 6, "chunks": [{"text": "先看目标，", "start": 0.4, "end": 1.376417}, {"text": "再看材料，", "start": 1.456417, "end": 2.429271}, {"text": "最后，看交付。", "start": 2.509271, "end": 3.866604}]}, "X10": {"id": "X10", "title": "追问递进", "start": 6, "duration": 6, "chunks": [{"text": "它会写，", "start": 6.4, "end": 7.188}, {"text": "但能记住吗？", "start": 7.268, "end": 8.277042}, {"text": "还能接着做吗？", "start": 8.357042, "end": 9.540604}]}, "X11": {"id": "X11", "title": "因果传导", "start": 12, "duration": 6, "chunks": [{"text": "目标没说清，", "start": 12.4, "end": 13.555312}, {"text": "理解就会偏，", "start": 13.635312, "end": 14.746667}, {"text": "最后，只能返工。", "start": 14.826667, "end": 16.262979}]}, "X12": {"id": "X12", "title": "误区纠正", "start": 18, "duration": 6, "chunks": [{"text": "提示词越长，结果越好？", "start": 18.4, "end": 20.434271}, {"text": "不一定。", "start": 20.514271, "end": 21.170979}, {"text": "先把目标说清楚。", "start": 21.250979, "end": 22.796521}]}, "X13": {"id": "X13", "title": "句子拆步骤", "start": 24, "duration": 6, "chunks": [{"text": "先给材料，", "start": 24.4, "end": 25.406208}, {"text": "再定目标，", "start": 25.486208, "end": 26.354396}, {"text": "最后说清交付。", "start": 26.434396, "end": 27.687167}]}, "X14": {"id": "X14", "title": "层层剖开", "start": 30, "duration": 6, "chunks": [{"text": "把一个任务拆开看，", "start": 30.4, "end": 31.964479}, {"text": "里面有目标、材料，", "start": 32.044479, "end": 33.776333}, {"text": "还有交付要求。", "start": 33.856333, "end": 35.143271}]}, "X15": {"id": "X15", "title": "类比变形", "start": 36, "duration": 6, "chunks": [{"text": "把交接文档，", "start": 36.4, "end": 37.475167}, {"text": "想成一根接力棒。", "start": 37.555167, "end": 39.017229}, {"text": "换了人，任务继续。", "start": 39.097229, "end": 40.676083}]}, "X16": {"id": "X16", "title": "数值尺量", "start": 42, "duration": 6, "chunks": [{"text": "从十个步骤，", "start": 42.4, "end": 43.470479}, {"text": "缩到三个。", "start": 43.550479, "end": 44.490667}, {"text": "省下的是重复操作。", "start": 44.570667, "end": 46.294729}]}, "X17": {"id": "X17", "title": "时间折叠", "start": 48, "duration": 6, "chunks": [{"text": "关键一步，现在做。", "start": 48.4, "end": 50.000937}, {"text": "其他步骤，", "start": 50.080937, "end": 50.971812}, {"text": "需要的时候再展开。", "start": 51.051812, "end": 52.633313}]}, "X18": {"id": "X18", "title": "证据落点", "start": 54, "duration": 6, "chunks": [{"text": "每一个结论，", "start": 54.4, "end": 55.342438}, {"text": "都应该能点回，", "start": 55.422438, "end": 56.752667}, {"text": "它对应的原文。", "start": 56.832667, "end": 57.995063}]}, "X19": {"id": "X19", "title": "首尾回扣", "start": 60, "duration": 6, "chunks": [{"text": "回到开头的问题：", "start": 60.4, "end": 61.833333}, {"text": "怎样减少返工？", "start": 61.913333, "end": 63.139938}, {"text": "先把交付标准讲清楚。", "start": 63.219938, "end": 65.160938}]}, "X20": {"id": "X20", "title": "结论拼句", "start": 66, "duration": 6, "chunks": [{"text": "目标、材料、标准，", "start": 66.4, "end": 68.170187}, {"text": "最后合成一句话：", "start": 68.250187, "end": 69.647854}, {"text": "让任务一次讲清楚。", "start": 69.727854, "end": 71.394688}]}};
+const at=(id,j)=>planTimings[id].chunks[j].start;
+gsap.set('.scene',{autoAlpha:0});gsap.set('#s09',{autoAlpha:1});gsap.set('.subtitle',{autoAlpha:0});
+tl.set('#s09',{autoAlpha:1},0);
+tl.set('#s09',{autoAlpha:0},6);
+tl.from('#s09 .top, #s09 .title',{opacity:0,y:16,duration:.35,stagger:.04,ease:'power3.out'},0.04);
+tl.to('#step-0',{backgroundColor:'#b596e4',duration:.22},0.1);
+tl.set('#s10',{autoAlpha:1},6);
+tl.set('#s10',{autoAlpha:0},12);
+tl.from('#s10 .top, #s10 .title',{opacity:0,y:16,duration:.35,stagger:.04,ease:'power3.out'},6.04);
+tl.to('#step-1',{backgroundColor:'#b596e4',duration:.22},6.1);
+tl.set('#s11',{autoAlpha:1},12);
+tl.set('#s11',{autoAlpha:0},18);
+tl.from('#s11 .top, #s11 .title',{opacity:0,y:16,duration:.35,stagger:.04,ease:'power3.out'},12.04);
+tl.to('#step-2',{backgroundColor:'#b596e4',duration:.22},12.1);
+tl.set('#s12',{autoAlpha:1},18);
+tl.set('#s12',{autoAlpha:0},24);
+tl.from('#s12 .top, #s12 .title',{opacity:0,y:16,duration:.35,stagger:.04,ease:'power3.out'},18.04);
+tl.to('#step-3',{backgroundColor:'#b596e4',duration:.22},18.1);
+tl.set('#s13',{autoAlpha:1},24);
+tl.set('#s13',{autoAlpha:0},30);
+tl.from('#s13 .top, #s13 .title',{opacity:0,y:16,duration:.35,stagger:.04,ease:'power3.out'},24.04);
+tl.to('#step-4',{backgroundColor:'#b596e4',duration:.22},24.1);
+tl.set('#s14',{autoAlpha:1},30);
+tl.set('#s14',{autoAlpha:0},36);
+tl.from('#s14 .top, #s14 .title',{opacity:0,y:16,duration:.35,stagger:.04,ease:'power3.out'},30.04);
+tl.to('#step-5',{backgroundColor:'#b596e4',duration:.22},30.1);
+tl.set('#s15',{autoAlpha:1},36);
+tl.set('#s15',{autoAlpha:0},42);
+tl.from('#s15 .top, #s15 .title',{opacity:0,y:16,duration:.35,stagger:.04,ease:'power3.out'},36.04);
+tl.to('#step-6',{backgroundColor:'#b596e4',duration:.22},36.1);
+tl.set('#s16',{autoAlpha:1},42);
+tl.set('#s16',{autoAlpha:0},48);
+tl.from('#s16 .top, #s16 .title',{opacity:0,y:16,duration:.35,stagger:.04,ease:'power3.out'},42.04);
+tl.to('#step-7',{backgroundColor:'#b596e4',duration:.22},42.1);
+tl.set('#s17',{autoAlpha:1},48);
+tl.set('#s17',{autoAlpha:0},54);
+tl.from('#s17 .top, #s17 .title',{opacity:0,y:16,duration:.35,stagger:.04,ease:'power3.out'},48.04);
+tl.to('#step-8',{backgroundColor:'#b596e4',duration:.22},48.1);
+tl.set('#s18',{autoAlpha:1},54);
+tl.set('#s18',{autoAlpha:0},60);
+tl.from('#s18 .top, #s18 .title',{opacity:0,y:16,duration:.35,stagger:.04,ease:'power3.out'},54.04);
+tl.to('#step-9',{backgroundColor:'#b596e4',duration:.22},54.1);
+tl.set('#s19',{autoAlpha:1},60);
+tl.set('#s19',{autoAlpha:0},66);
+tl.from('#s19 .top, #s19 .title',{opacity:0,y:16,duration:.35,stagger:.04,ease:'power3.out'},60.04);
+tl.to('#step-10',{backgroundColor:'#b596e4',duration:.22},60.1);
+tl.set('#s20',{autoAlpha:1},66);
+tl.from('#s20 .top, #s20 .title',{opacity:0,y:16,duration:.35,stagger:.04,ease:'power3.out'},66.04);
+tl.to('#step-11',{backgroundColor:'#b596e4',duration:.22},66.1);
+tl.set('#caption-0',{autoAlpha:1},0.4);tl.set('#caption-0',{autoAlpha:0},1.456417);
+tl.set('#caption-1',{autoAlpha:1},1.456417);tl.set('#caption-1',{autoAlpha:0},2.509271);
+tl.set('#caption-2',{autoAlpha:1},2.509271);tl.set('#caption-2',{autoAlpha:0},5.94);
+tl.set('#caption-3',{autoAlpha:1},6.4);tl.set('#caption-3',{autoAlpha:0},7.268);
+tl.set('#caption-4',{autoAlpha:1},7.268);tl.set('#caption-4',{autoAlpha:0},8.357042);
+tl.set('#caption-5',{autoAlpha:1},8.357042);tl.set('#caption-5',{autoAlpha:0},11.94);
+tl.set('#caption-6',{autoAlpha:1},12.4);tl.set('#caption-6',{autoAlpha:0},13.635312);
+tl.set('#caption-7',{autoAlpha:1},13.635312);tl.set('#caption-7',{autoAlpha:0},14.826667);
+tl.set('#caption-8',{autoAlpha:1},14.826667);tl.set('#caption-8',{autoAlpha:0},17.94);
+tl.set('#caption-9',{autoAlpha:1},18.4);tl.set('#caption-9',{autoAlpha:0},20.514271);
+tl.set('#caption-10',{autoAlpha:1},20.514271);tl.set('#caption-10',{autoAlpha:0},21.250979);
+tl.set('#caption-11',{autoAlpha:1},21.250979);tl.set('#caption-11',{autoAlpha:0},23.94);
+tl.set('#caption-12',{autoAlpha:1},24.4);tl.set('#caption-12',{autoAlpha:0},25.486208);
+tl.set('#caption-13',{autoAlpha:1},25.486208);tl.set('#caption-13',{autoAlpha:0},26.434396);
+tl.set('#caption-14',{autoAlpha:1},26.434396);tl.set('#caption-14',{autoAlpha:0},29.94);
+tl.set('#caption-15',{autoAlpha:1},30.4);tl.set('#caption-15',{autoAlpha:0},32.044479);
+tl.set('#caption-16',{autoAlpha:1},32.044479);tl.set('#caption-16',{autoAlpha:0},33.856333);
+tl.set('#caption-17',{autoAlpha:1},33.856333);tl.set('#caption-17',{autoAlpha:0},35.94);
+tl.set('#caption-18',{autoAlpha:1},36.4);tl.set('#caption-18',{autoAlpha:0},37.555167);
+tl.set('#caption-19',{autoAlpha:1},37.555167);tl.set('#caption-19',{autoAlpha:0},39.097229);
+tl.set('#caption-20',{autoAlpha:1},39.097229);tl.set('#caption-20',{autoAlpha:0},41.94);
+tl.set('#caption-21',{autoAlpha:1},42.4);tl.set('#caption-21',{autoAlpha:0},43.550479);
+tl.set('#caption-22',{autoAlpha:1},43.550479);tl.set('#caption-22',{autoAlpha:0},44.570667);
+tl.set('#caption-23',{autoAlpha:1},44.570667);tl.set('#caption-23',{autoAlpha:0},47.94);
+tl.set('#caption-24',{autoAlpha:1},48.4);tl.set('#caption-24',{autoAlpha:0},50.080937);
+tl.set('#caption-25',{autoAlpha:1},50.080937);tl.set('#caption-25',{autoAlpha:0},51.051812);
+tl.set('#caption-26',{autoAlpha:1},51.051812);tl.set('#caption-26',{autoAlpha:0},53.94);
+tl.set('#caption-27',{autoAlpha:1},54.4);tl.set('#caption-27',{autoAlpha:0},55.422438);
+tl.set('#caption-28',{autoAlpha:1},55.422438);tl.set('#caption-28',{autoAlpha:0},56.832667);
+tl.set('#caption-29',{autoAlpha:1},56.832667);tl.set('#caption-29',{autoAlpha:0},59.94);
+tl.set('#caption-30',{autoAlpha:1},60.4);tl.set('#caption-30',{autoAlpha:0},61.913333);
+tl.set('#caption-31',{autoAlpha:1},61.913333);tl.set('#caption-31',{autoAlpha:0},63.219938);
+tl.set('#caption-32',{autoAlpha:1},63.219938);tl.set('#caption-32',{autoAlpha:0},65.94);
+tl.set('#caption-33',{autoAlpha:1},66.4);tl.set('#caption-33',{autoAlpha:0},68.250187);
+tl.set('#caption-34',{autoAlpha:1},68.250187);tl.set('#caption-34',{autoAlpha:0},69.727854);
+tl.set('#caption-35',{autoAlpha:1},69.727854);tl.set('#caption-35',{autoAlpha:0},71.94);
+
+{
+  // Each block uses absolute spoken chunk starts supplied by the parent.
+  // Scene visibility and subtitles are exclusively controlled by the parent.
+  // X09: the full sentence stays intact; only one noun carries the live accent.
+  tl.fromTo('#s09 .sentence',{y:12,opacity:0},{y:0,opacity:1,duration:.28,ease:'power2.out',immediateRender:false},0);
+  for(let j=0;j<3;j++){
+    const current='#s09 .w'+(j+1), when=at('X09',j);
+    if(j>0){
+      tl.to('#s09 .w'+j,{y:0,scale:1,color:'#101112',duration:.24,ease:'power2.out'},when);
+      tl.to('#s09 .w'+j+' .beat',{scaleX:0,duration:.2,ease:'power2.in'},when);
+    }
+    tl.to(current,{y:-17,scale:1.09,color:'#7451b8',duration:.3,ease:'power2.out'},when);
+    tl.to(current+' .beat',{scaleX:1,duration:.28,ease:'power2.out'},when+.05);
+  }
+
+  // X10: preceding questions become a compact reading history.
+  tl.fromTo('#s10 .q1',{x:40,opacity:0},{x:0,opacity:1,duration:.28,ease:'power2.out',immediateRender:false},6);
+  tl.to('#s10 .q1',{y:-230,scale:.60,opacity:.46,duration:.4,ease:'power3.inOut'},at('X10',1));
+  tl.to('#s10 .known',{opacity:1,duration:.22},at('X10',1)+.16);
+  tl.fromTo('#s10 .q2',{x:190,y:65,opacity:0},{x:0,y:0,opacity:1,duration:.36,ease:'power3.out',immediateRender:false},at('X10',1)+.22);
+  tl.to('#s10 .q2',{y:-118,scale:.66,opacity:.64,duration:.36,ease:'power3.inOut'},at('X10',2));
+  tl.fromTo('#s10 .q3',{x:160,y:75,opacity:0},{x:0,y:0,opacity:1,duration:.36,ease:'power3.out',immediateRender:false},at('X10',2)+.22);
+  tl.to('#s10 .q-underline',{scaleX:1,duration:.32,ease:'power2.out'},at('X10',2)+.34);
+  tl.to('#s10 .depth-mark',{opacity:1,duration:.22},at('X10',2)+.25);
+
+  // X11: a single focus moves along a meaningful causal connection.
+  tl.to('#s11 .cause-signal',{opacity:1,duration:.2},at('X11',0));
+  tl.to('#s11 .n1',{color:'#101112',duration:.24},at('X11',0));
+  tl.to('#s11 .tick1',{attr:{stroke:'#b497df'},duration:.24},at('X11',0));
+  tl.to('#s11 .note1',{opacity:1,duration:.25},at('X11',0)+.14);
+  tl.to('#s11 .cause-signal',{attr:{cx:960},duration:.46,ease:'power2.inOut'},at('X11',1));
+  tl.to('#s11 .cause-passed',{strokeDashoffset:590,duration:.46,ease:'power2.inOut'},at('X11',1));
+  tl.to('#s11 .n2',{color:'#101112',duration:.28},at('X11',1)+.16);
+  tl.to('#s11 .tick2',{attr:{stroke:'#b497df'},duration:.22},at('X11',1)+.22);
+  tl.to('#s11 .note2',{opacity:1,duration:.24},at('X11',1)+.23);
+  tl.to('#s11 .cause-signal',{attr:{cx:1550},duration:.46,ease:'power2.inOut'},at('X11',2));
+  tl.to('#s11 .cause-passed',{strokeDashoffset:0,duration:.46,ease:'power2.inOut'},at('X11',2));
+  tl.to('#s11 .n3',{color:'#101112',duration:.2},at('X11',2)+.14);
+  tl.to('#s11 .n3 .outcome-bg',{scaleX:1,duration:.28,ease:'power2.out'},at('X11',2)+.18);
+  tl.to('#s11 .n3 .large',{color:'#cdb7f5',duration:.24},at('X11',2)+.18);
+  tl.to('#s11 .tick3',{attr:{stroke:'#7451b8'},duration:.2},at('X11',2)+.26);
+  tl.to('#s11 .note3',{opacity:1,duration:.22},at('X11',2)+.24);
+
+  // X12: challenge the false relation first, then replace the claim in place.
+  tl.fromTo('#s12 .myth',{y:15,opacity:0},{y:0,opacity:1,duration:.26,ease:'power2.out',immediateRender:false},18);
+  tl.to('#s12 .wrong-line',{width:171,duration:.28,ease:'power2.out'},at('X12',1));
+  tl.to('#s12 .not-always',{opacity:1,y:0,duration:.26,ease:'power2.out'},at('X12',1)+.05);
+  tl.to('#s12 .myth',{color:'#aaa5b0',duration:.2},at('X12',1)+.09);
+  tl.to('#s12 .myth,#s12 .not-always,#s12 .belief-label',{opacity:0,duration:.2},at('X12',2));
+  tl.fromTo('#s12 .new-rule',{y:16,opacity:0},{y:0,opacity:1,duration:.34,ease:'power2.out',immediateRender:false},at('X12',2)+.12);
+  tl.to('#s12 .goal-mark',{scaleX:1,duration:.28,ease:'power2.out'},at('X12',2)+.17);
+  tl.to('#s12 .clear-label,#s12 .action-note',{opacity:1,duration:.25},at('X12',2)+.23);
+
+  // X13: these are the original phrase nodes, not duplicated replacement text.
+  for(let j=0;j<3;j++){
+    const n=j+1, when=at('X13',j);
+    tl.to('#s13 .f'+n,{y:301,duration:.48,ease:'power3.inOut'},when);
+    tl.to('#s13 .p'+n,{opacity:0,duration:.17},when+.03);
+    tl.to('#s13 .slot'+n,{borderColor:'#b99bdc',duration:.26},when+.16);
+    tl.to('#s13 .slot'+n+' .slot-fill',{scaleY:1,duration:.31,ease:'power2.out'},when+.13);
+    tl.to('#s13 .slot'+n+' .slot-num',{color:'#7451b8',duration:.22},when+.18);
+    tl.to('#s13 .slot'+n+' .slot-check',{opacity:1,duration:.18},when+.29);
+    if(j>0)tl.to('#s13 .link'+j,{opacity:1,duration:.2},when+.25);
+  }
+  tl.to('#s13 .sentence-label,#s13 .sentence-guide',{opacity:0,duration:.23},at('X13',2)+.12);
+
+  // X14: the outer task boundary stays fixed while its interior becomes legible.
+  tl.fromTo('#s14 .task-shell',{opacity:0},{opacity:1,duration:.22,immediateRender:false},30);
+  const open=at('X14',1), last=at('X14',2);
+  tl.to('#s14 .closed-cover',{opacity:0,duration:.17},open);
+  tl.to('#s14 .layer1',{x:0,y:-50,height:120,backgroundColor:'#cdb7f5',borderColor:'#cdb7f5',duration:.46,ease:'power3.inOut'},open);
+  tl.to('#s14 .layer2',{x:20,y:100,height:120,backgroundColor:'#fff',duration:.46,ease:'power3.inOut'},open);
+  tl.to('#s14 .layer3',{x:40,y:250,height:120,backgroundColor:'#f6f2fa',duration:.46,ease:'power3.inOut'},open);
+  tl.to('#s14 .layer1 .layer-content,#s14 .layer2 .layer-content',{opacity:1,duration:.26},open+.19);
+  tl.to('#s14 .layer-ruler',{opacity:1,duration:.28},open+.2);
+  const material=Math.min(open+.63,last-.24);
+  tl.to('#s14 .layer1',{backgroundColor:'#fff',borderColor:'#dcd5e5',duration:.22},material);
+  tl.to('#s14 .layer2',{backgroundColor:'#cdb7f5',borderColor:'#cdb7f5',duration:.22},material);
+  tl.to('#s14 .layer2',{backgroundColor:'#fff',borderColor:'#dcd5e5',duration:.23},last);
+  tl.to('#s14 .layer3',{x:70,backgroundColor:'#101112',borderColor:'#101112',duration:.4,ease:'power2.out'},last);
+  tl.to('#s14 .layer3 .layer-content',{opacity:1,duration:.26},last+.16);
+  tl.to('#s14 .layer3 .layer-key',{color:'#cdb7f5',duration:.24},last+.13);
+  tl.to('#s14 .layer3 .layer-detail',{color:'#ece5f4',duration:.24},last+.13);
+}
+
+
+// X15: one SVG token keeps its identity through document -> baton -> document.
+{
+  const a=at('X15',0), b=at('X15',1), c=at('X15',2);
+  tl.from('#s15 #token15,#s15 #sender15body,#s15 #identity15',{opacity:0,y:16,duration:.35,ease:'power2.out'},a+.06);
+  tl.to('#s15 #sender15body',{opacity:0,duration:.2},b);
+  tl.to('#s15 #token15',{attr:{x:742,y:510,width:438,height:66,rx:33},duration:.55,ease:'power3.inOut'},b+.05);
+  tl.to('#s15 #identity15',{attr:{x:850,y:552},duration:.55,ease:'power3.inOut'},b+.05);
+  tl.to('#s15 #actor15a',{opacity:.4,duration:.4},b+.28);
+  tl.to('#s15 #token15',{attr:{x:1040},duration:.45,ease:'sine.inOut'},b+.62);
+  tl.to('#s15 #identity15',{attr:{x:1148},duration:.45,ease:'sine.inOut'},b+.62);
+  tl.to('#s15 #token15',{attr:{x:1295,y:351,width:330,height:360,rx:26},duration:.44,ease:'power3.inOut'},c+.02);
+  tl.to('#s15 #identity15',{attr:{x:1330,y:400},duration:.44,ease:'power3.inOut'},c+.02);
+  tl.to('#s15 #receiver15outline',{opacity:0,duration:.22},c+.35);
+  tl.to('#s15 #receiver15body',{opacity:1,duration:.24},c+.34);
+  tl.to('#s15 #actor15b circle',{attr:{fill:'#101112'},duration:.25},c+.3);
+  tl.to('#s15 #actor15b .actor',{attr:{fill:'#cdb7f5'},duration:.25},c+.3);
+  tl.to('#s15 .handoff-note',{opacity:1,y:-8,duration:.2,ease:'power2.out'},c+.4);
+}
+// X16: counted units, explicitly a process example. No unsupported performance claim.
+{
+  const a=at('X16',0), b=at('X16',1), c=at('X16',2);
+  tl.from('#s16 .unit',{opacity:0,y:25,stagger:.045,duration:.3,ease:'power2.out'},a+.06);
+  tl.from('#s16 #measure16',{opacity:0,duration:.3},a+.32);
+  tl.to('#s16 #count16old',{opacity:0,y:-14,duration:.23},b);
+  tl.to('#s16 #count16new',{opacity:1,duration:.3},b+.14);
+  for(let i=4;i<=10;i++){
+    const currentX=230+(i-1)*148;
+    tl.to('#s16 #unit16'+i,{x:652-currentX,scaleX:0,opacity:0,duration:.62,ease:'power3.inOut'},b+.05+(10-i)*.025);
+  }
+  tl.to('#s16 #measure16',{attr:{d:'M230 660 V687 H652 V660'},duration:.72,ease:'power3.inOut'},b+.05);
+  tl.to('#s16 #measure16old',{opacity:0,duration:.2},b+.05);
+  tl.to('#s16 #measure16new',{opacity:1,duration:.3},b+.59);
+  tl.to('#s16 .legend span+span',{opacity:.4,duration:.3},b+.65);
+  tl.to('#s16 .result',{opacity:1,y:-10,duration:.45,ease:'power2.out'},c+.12);
+}
+// X17: later steps are put away in a temporal group, then only one is reopened.
+{
+  const a=at('X17',0), b=at('X17',1), c=at('X17',2);
+  tl.from('#s17 #current17',{scale:.94,opacity:0,duration:.36,ease:'power3.out'},a+.06);
+  tl.from('#s17 .work-card:not(#current17)',{opacity:.2,y:18,stagger:.08,duration:.4},a+.1);
+  tl.to('#s17 .later-label',{opacity:0,duration:.2},b);
+  tl.to('#s17 .work-card:not(#current17) > *',{autoAlpha:0,duration:.16},b-.02);
+  tl.to('#s17 .folder',{opacity:1,duration:.4},b+.1);
+  tl.to('#s17 #later17a',{x:405,y:-2,scale:.73,duration:.62,ease:'power3.inOut'},b+.02);
+  tl.to('#s17 #later17b',{x:57,y:23,scale:.73,duration:.62,ease:'power3.inOut'},b+.08);
+  tl.to('#s17 #later17c',{x:-291,y:48,scale:.73,duration:.62,ease:'power3.inOut'},b+.14);
+  tl.to('#s17 #later17a p,#s17 #later17b p,#s17 #later17c p',{opacity:0,duration:.25},b+.12);
+  tl.to('#s17 #later17a',{x:380,y:-25,scale:1,duration:.48,ease:'power3.inOut'},c+.02);
+  tl.to('#s17 #later17a > *',{autoAlpha:1,duration:.22},c+.22);
+  tl.to('#s17 #later17b',{x:328,y:1,scale:.67,duration:.48,ease:'power3.inOut'},c+.02);
+  tl.to('#s17 #later17c',{x:-34,y:26,scale:.67,duration:.48,ease:'power3.inOut'},c+.02);
+  tl.to('#s17 .fold-note',{opacity:1,y:-5,duration:.22},c+.36);
+}
+// X18: a footnote anchors one claim to one sentence in clearly marked sample text.
+{
+  const a=at('X18',0), b=at('X18',1), c=at('X18',2);
+  tl.from('#s18 .claim',{opacity:0,y:17,duration:.35,ease:'power2.out'},a+.08);
+  tl.from('#s18 .source',{opacity:.3,duration:.4},a+.14);
+  tl.from('#s18 .footnote',{scale:.65,opacity:0,duration:.3,ease:'power2.out'},b+.03);
+  tl.from('#s18 #evidence18path',{strokeDasharray:350,strokeDashoffset:350,duration:.65,ease:'power2.out'},b+.14);
+  tl.to('#s18 .connection-label',{opacity:1,duration:.3},b+.22);
+  tl.to('#s18 .locator',{opacity:1,scale:1.05,duration:.27,ease:'power2.out'},c+.03);
+  tl.from('#s18 .mark',{scaleX:0,duration:.48,ease:'power2.inOut'},c+.08);
+  tl.to('#s18 .source-line.other',{opacity:.45,duration:.35},c+.18);
+}
+// X19: the same question object becomes a bookmark, then returns above its answer.
+{
+  const a=at('X19',0), b=at('X19',1), c=at('X19',2);
+  tl.to('#s19 .bookmark',{x:910,y:-37,scale:.41,duration:.48,ease:'power3.inOut'},a+.14);
+  tl.to('#s19 .bookmark-caption',{opacity:1,duration:.23},a+.49);
+  tl.to('#s19 .example',{opacity:1,y:-12,duration:.35,ease:'power2.out'},a+.6);
+  tl.to('#s19 .example',{opacity:0,y:12,duration:.25},b+.02);
+  tl.to('#s19 .bookmark-caption',{opacity:0,duration:.2},b+.02);
+  tl.to('#s19 .bookmark',{x:-90,y:-1,scale:1.1875,duration:.58,ease:'power3.inOut'},b+.08);
+  tl.to('#s19 .answer',{opacity:1,y:-9,duration:.42,ease:'power2.out'},c+.05);
+  tl.from('#s19 .answer-rule',{scaleX:0,duration:.36,ease:'power2.out'},c+.22);
+}
+// X20: the concept groups converge into a sentence structure, then leave one line.
+{
+  const a=at('X20',0), b=at('X20',1), c=at('X20',2);
+  tl.from('#s20 .concept',{opacity:0,y:25,stagger:.09,duration:.35,ease:'power2.out'},a+.05);
+  tl.to('#s20 .concept-bg,#s20 .concept-id,#s20 .concept-guide,#s20 .join-symbol',{opacity:0,duration:.28},b+.02);
+  tl.to('#s20 #concept20a',{x:280,y:127,duration:.64,ease:'power3.inOut'},b+.08);
+  tl.to('#s20 #concept20b',{x:33,y:127,duration:.64,ease:'power3.inOut'},b+.08);
+  tl.to('#s20 #concept20c',{x:-310,y:127,duration:.64,ease:'power3.inOut'},b+.08);
+  tl.to('#s20 .concept-key',{x:-33,y:-141,scale:.455882353,color:'#a59baa',duration:.64,ease:'power3.inOut'},b+.08);
+  tl.to('#s20 .final-piece',{opacity:1,duration:.35},c+.06);
+  tl.to('#s20 .concept-key',{opacity:0,y:-151,duration:.3},c+.18);
+  tl.to('#s20 .conclusion-label',{opacity:1,duration:.4},c+.14);
+  tl.fromTo('#s20 .assembly-line',{scaleX:0,opacity:0},{scaleX:1,opacity:1,duration:.4,ease:'power2.out'},c+.2);
+}
+
+tl.to({}, {duration:0.001}, 71.999);</script></body></html>

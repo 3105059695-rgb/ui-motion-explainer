@@ -1,0 +1,19 @@
+{
+  "description": "本地合成演示配音",
+  "engine": "Windows System.Speech",
+  "voice": "Microsoft Kangkang",
+  "language": "zh-CN",
+  "rate": 2,
+  "tempo": 1.0,
+  "external_service": false,
+  "reference_voice_cloning": false,
+  "text_preserved": true,
+  "sample_rate": 48000,
+  "channels": 1,
+  "duration": 72,
+  "format": "PCM signed 16-bit WAV",
+  "target_peak_dbfs": -1.0,
+  "chunks": 36,
+  "timing_basis": "实际生成音频的样本数；每段起始 0.4 秒，句间 0.08 秒",
+  "listening_checked": false
+}

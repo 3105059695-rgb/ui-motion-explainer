@@ -1,0 +1,11 @@
+{
+  "name": "narration-effects-v2",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "hyperframes preview . --no-open",
+    "check": "hyperframes check .",
+    "render": "hyperframes render . --fps 30 --workers 1 --quality high --resolution landscape --low-memory-mode --no-browser-gpu -o preview.mp4"
+  },
+  "devDependencies": {"hyperframes": "0.8.38"}
+}

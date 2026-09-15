@@ -1,0 +1,12 @@
+{
+  "name": "ui-motion-workspace-showcase",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Original illustrative document workspace UI; no real product or real user data.",
+  "scripts": {
+    "dev": "hyperframes preview . --no-open",
+    "check": "hyperframes check .",
+    "render": "hyperframes render . -o preview.mp4 --fps 30 --workers 1 --quality high"
+  },
+  "devDependencies": { "hyperframes": "0.8.38" }
+}

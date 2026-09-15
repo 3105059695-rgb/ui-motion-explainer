@@ -1,10 +1,10 @@
-# 41 项动效图鉴
+# 53 项动效图鉴
 
 [返回首页](../README.md) · [完整动效规范](../references/effects.md) · [素材署名](../CREDITS.md)
 
-**O01–O33：原片节选。X01–X08：新制作的扩展演示。** 每一项都有动态预览，实际截取时间与观察说明分开记录。GIF 保留必要的前后状态；实现建议见动效规范。
+**O01–O33：原片节选。X01–X20：新制作的扩展演示。** 每一项都有动态预览，实际截取时间与观察说明分开记录。GIF 保留必要的前后状态；实现建议见动效规范。
 
-[卡片布局](#cards) · [关系交接](#relations) · [界面聚焦](#focus) · [镜头节奏](#editing) · [扩展演示](#extensions)
+[卡片布局](#cards) · [关系交接](#relations) · [界面聚焦](#focus) · [镜头节奏](#editing) · [基础扩展](#extensions) · [口播扩展](#narration) · [产品 UI](ui-design.md)
 
 <a id="cards"></a>
 
@@ -17,7 +17,7 @@
 | <a id="o05"></a><strong>O05 · 结果脱离容器</strong><br /><img src="previews/O05.gif" width="420" alt="O05 结果脱离容器" /><br /><a href='sources/doubao.md'>D · 00:28.10–00:30.20</a> · 原片节选<br /><br />个人对话产物转成可共享对象；旧窗口收窄左移，结果脱离并在右边展开 | <a id="o06"></a><strong>O06 · 同一窗口换内容</strong><br /><img src="previews/O06.gif" width="420" alt="O06 同一窗口换内容" /><br /><a href='sources/doubao.md'>D · 00:47.00–00:51.00</a> · 原片节选<br /><br />同一工作空间输出多种结果；保留外壳，替换内部内容和标题 |
 | <a id="o07"></a><strong>O07 · 网格积累</strong><br /><img src="previews/O07.gif" width="420" alt="O07 网格积累" /><br /><a href='sources/token.md'>G · 01:31.50–01:33.50</a> · 原片节选<br /><br />概念逐项组成一个集合；先一格，后完整网格 | <a id="o08"></a><strong>O08 · 连续扩列</strong><br /><img src="previews/O08.gif" width="420" alt="O08 连续扩列" /><br /><a href='sources/doubao.md'>D · 00:58.50–01:03.00</a> · 原片节选<br /><br />流程增加下一站；旧列让位，新列进入，最后形成三列链条 |
 
-[回到目录](#41-项动效图鉴)
+[回到目录](#53-项动效图鉴)
 
 <a id="relations"></a>
 
@@ -29,7 +29,7 @@
 | <a id="o11"></a><strong>O11 · 字段贯穿链条</strong><br /><img src="previews/O11.gif" width="420" alt="O11 字段贯穿链条" /><br /><a href='sources/doubao.md'>D · 00:58.50–01:03.00</a> · 原片节选<br /><br />同一信息从记录到任务再到群聊；多端保留同一关键字段 | <a id="o12"></a><strong>O12 · 文档外加新容器</strong><br /><img src="previews/O12.gif" width="420" alt="O12 文档外加新容器" /><br /><a href='sources/codex.md'>C · 02:48.20–02:50.50</a> · 原片节选<br /><br />文档被新会话或系统继承；文档保留位置，背后展开新窗口 |
 | <a id="o13"></a><strong>O13 · 并置比较</strong><br /><img src="previews/O13.gif" width="420" alt="O13 并置比较" /><br /><a href='sources/codex.md'>C · 00:10.80–00:13.00</a> · 原片节选<br /><br />原文/摘要、主任务/支线、方案 A/B；从单对象扩展为双栏 | <a id="o14"></a><strong>O14 · 数量级对比</strong><br /><img src="previews/O14.gif" width="420" alt="O14 数量级对比" /><br /><a href='sources/codex.md'>C · 00:53.50–00:57.50</a> · 原片节选<br /><br />比较容量、成本、比例；灰色旧值与更显著的新值并列 |
 
-[回到目录](#41-项动效图鉴)
+[回到目录](#53-项动效图鉴)
 
 <a id="focus"></a>
 
@@ -45,7 +45,7 @@
 | <a id="o25"></a><strong>O25 · 消失或灰化</strong><br /><img src="previews/O25.gif" width="420" alt="O25 消失或灰化" /><br /><a href='sources/token.md'>G · 02:59.00–03:03.00</a> · 原片节选<br /><br />解释信息丢失、步骤取消或旧做法降级 | <a id="o26"></a><strong>O26 · 状态标签切词</strong><br /><img src="previews/O26.gif" width="420" alt="O26 状态标签切词" /><br /><a href='sources/codex.md'>C · 02:43.00–02:47.00</a> · 原片节选<br /><br />流程状态更新但对象位置不变 |
 | <a id="o27"></a><strong>O27 · 选中文字再替换</strong><br /><img src="previews/O27.gif" width="420" alt="O27 选中文字再替换" /><br /><a href='sources/token.md'>G · 00:28.80–00:31.60</a> · 原片节选<br /><br />提示词、按钮标签或规则被修改 | <a id="o28"></a><strong>O28 · 条目升格为主结论</strong><br /><img src="previews/O28.gif" width="420" alt="O28 条目升格为主结论" /><br /><a href='sources/token.md'>G · 00:15.60–00:18.50</a> · 原片节选<br /><br />某一行规则值得重点解释 |
 
-[回到目录](#41-项动效图鉴)
+[回到目录](#53-项动效图鉴)
 
 <a id="editing"></a>
 
@@ -57,7 +57,7 @@
 | <a id="o31"></a><strong>O31 · 黑色章节页</strong><br /><img src="previews/O31.gif" width="420" alt="O31 黑色章节页" /><br /><a href='sources/codex.md'>C · 00:35.50–00:38.50</a> · 原片节选<br /><br />主题层级发生变化 | <a id="o32"></a><strong>O32 · 场景水平接力</strong><br /><img src="previews/O32.gif" width="420" alt="O32 场景水平接力" /><br /><a href='sources/token.md'>G · 00:05.10–00:07.20</a> · 原片节选<br /><br />前后是明确的新段，但需要方向感 |
 | <a id="o33"></a><strong>O33 · 人物引导与回收</strong><br /><img src="previews/O33.gif" width="420" alt="O33 人物引导与回收" /><br /><a href='sources/token.md'>G · 03:13.00–03:16.50</a> · 原片节选<br /><br />开场建立讲解感、结尾逐项总结 | 按语义组合动作，给结果留出阅读时间。 |
 
-[回到目录](#41-项动效图鉴)
+[回到目录](#53-项动效图鉴)
 
 <a id="extensions"></a>
 
@@ -74,5 +74,24 @@
 | <a id="x05"></a><strong>X05 · 分段步骤条</strong><br /><img src="previews/X05.gif" width="420" alt="X05 分段步骤条" /><br /><a href='../assets/extension-demos/preview.mp4'>00:16.00–00:20.00</a> · 扩展演示 · <a href='../assets/extension-demos/index.html'>源码</a><br /><br />有明确顺序且需要让用户记住当前步骤 | <a id="x06"></a><strong>X06 · 差异层切换</strong><br /><img src="previews/X06.gif" width="420" alt="X06 差异层切换" /><br /><a href='../assets/extension-demos/preview.mp4'>00:20.00–00:24.00</a> · 扩展演示 · <a href='../assets/extension-demos/index.html'>源码</a><br /><br />比较修改前后同一个区域 |
 | <a id="x07"></a><strong>X07 · 局部跟随聚焦</strong><br /><img src="previews/X07.gif" width="420" alt="X07 局部跟随聚焦" /><br /><a href='../assets/extension-demos/preview.mp4'>00:24.00–00:28.00</a> · 扩展演示 · <a href='../assets/extension-demos/index.html'>源码</a><br /><br />同一区域中的目标连续移动，例如拖动排序 | <a id="x08"></a><strong>X08 · 轻微纵深翻面</strong><br /><img src="previews/X08.gif" width="420" alt="X08 轻微纵深翻面" /><br /><a href='../assets/extension-demos/preview.mp4'>00:28.00–00:32.00</a> · 扩展演示 · <a href='../assets/extension-demos/index.html'>源码</a><br /><br />正反面本身有意义，如问题与答案、输入与输出 |
 
-[回到目录](#41-项动效图鉴)
+[回到目录](#53-项动效图鉴)
+
+<a id="narration"></a>
+
+## 06 · 口播讲解：带配音的新设计
+
+根据口播语义设计的 12 种新动作，每段 6 秒。完整 MP4 带中文合成演示配音，下方 GIF 为静音预览。
+
+[播放 72 秒口播合集](../assets/narration-demos/preview.mp4) · [口播配方](../references/narration-effects.md) · [文案与工程](../assets/narration-demos/README.md)
+
+| 动作预览 | 动作预览 |
+|:---|:---|
+| <a id="x09"></a><strong>X09 · 重音接力</strong><br /><img src="previews/X09.gif" width="420" alt="X09 重音接力" /><br /><a href='../assets/narration-demos/preview.mp4'>00:00.00–00:06.00</a> · 中文配音示范 · <a href='../assets/narration-demos/index.html'>源码</a><br /><br />一句话里的两三项重点 | <a id="x10"></a><strong>X10 · 追问递进</strong><br /><img src="previews/X10.gif" width="420" alt="X10 追问递进" /><br /><a href='../assets/narration-demos/preview.mp4'>00:06.00–00:12.00</a> · 中文配音示范 · <a href='../assets/narration-demos/index.html'>源码</a><br /><br />从表面问题追到真正需求 |
+| <a id="x11"></a><strong>X11 · 因果传导</strong><br /><img src="previews/X11.gif" width="420" alt="X11 因果传导" /><br /><a href='../assets/narration-demos/preview.mp4'>00:12.00–00:18.00</a> · 中文配音示范 · <a href='../assets/narration-demos/index.html'>源码</a><br /><br />有依据的原因到结果 | <a id="x12"></a><strong>X12 · 误区纠正</strong><br /><img src="previews/X12.gif" width="420" alt="X12 误区纠正" /><br /><a href='../assets/narration-demos/preview.mp4'>00:18.00–00:24.00</a> · 中文配音示范 · <a href='../assets/narration-demos/index.html'>源码</a><br /><br />常见说法需要准确替代 |
+| <a id="x13"></a><strong>X13 · 句子拆步骤</strong><br /><img src="previews/X13.gif" width="420" alt="X13 句子拆步骤" /><br /><a href='../assets/narration-demos/preview.mp4'>00:24.00–00:30.00</a> · 中文配音示范 · <a href='../assets/narration-demos/index.html'>源码</a><br /><br />将口头说明转成行动清单 | <a id="x14"></a><strong>X14 · 层层剖开</strong><br /><img src="previews/X14.gif" width="420" alt="X14 层层剖开" /><br /><a href='../assets/narration-demos/preview.mp4'>00:30.00–00:36.00</a> · 中文配音示范 · <a href='../assets/narration-demos/index.html'>源码</a><br /><br />一个概念包含多层组成 |
+| <a id="x15"></a><strong>X15 · 类比变形</strong><br /><img src="previews/X15.gif" width="420" alt="X15 类比变形" /><br /><a href='../assets/narration-demos/preview.mp4'>00:36.00–00:42.00</a> · 中文配音示范 · <a href='../assets/narration-demos/index.html'>源码</a><br /><br />用熟悉物件解释抽象关系 | <a id="x16"></a><strong>X16 · 数值尺量</strong><br /><img src="previews/X16.gif" width="420" alt="X16 数值尺量" /><br /><a href='../assets/narration-demos/preview.mp4'>00:42.00–00:48.00</a> · 中文配音示范 · <a href='../assets/narration-demos/index.html'>源码</a><br /><br />数量或步骤确有变化 |
+| <a id="x17"></a><strong>X17 · 时间折叠</strong><br /><img src="previews/X17.gif" width="420" alt="X17 时间折叠" /><br /><a href='../assets/narration-demos/preview.mp4'>00:48.00–00:54.00</a> · 中文配音示范 · <a href='../assets/narration-demos/index.html'>源码</a><br /><br />当前执行与后续按需处理 | <a id="x18"></a><strong>X18 · 证据落点</strong><br /><img src="previews/X18.gif" width="420" alt="X18 证据落点" /><br /><a href='../assets/narration-demos/preview.mp4'>00:54.00–01:00.00</a> · 中文配音示范 · <a href='../assets/narration-demos/index.html'>源码</a><br /><br />结论需要追溯原文 |
+| <a id="x19"></a><strong>X19 · 首尾回扣</strong><br /><img src="previews/X19.gif" width="420" alt="X19 首尾回扣" /><br /><a href='../assets/narration-demos/preview.mp4'>01:00.00–01:06.00</a> · 中文配音示范 · <a href='../assets/narration-demos/index.html'>源码</a><br /><br />解释后回答开头问题 | <a id="x20"></a><strong>X20 · 结论拼句</strong><br /><img src="previews/X20.gif" width="420" alt="X20 结论拼句" /><br /><a href='../assets/narration-demos/preview.mp4'>01:06.00–01:12.00</a> · 中文配音示范 · <a href='../assets/narration-demos/index.html'>源码</a><br /><br />多个要点需要归纳 |
+
+[回到目录](#53-项动效图鉴)
 
