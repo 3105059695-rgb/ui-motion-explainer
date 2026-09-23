@@ -1,0 +1,12 @@
+{
+  "name": "ui-motion-explainer-202609-motion-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "check": "hyperframes check .",
+    "render": "hyperframes render . --fps 50 --workers 1 --quality delivery --output preview.mp4"
+  },
+  "devDependencies": {"hyperframes": "0.8.62"}
+}

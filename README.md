@@ -6,9 +6,9 @@
 
 **把口播里的对象、关系和变化，剪成看得懂的动画。**
 
-三条完整参考 · 33 类观察动作 · 20 类原创扩展 · 精致产品 UI · 可编辑工程
+三条完整参考 · 33 类观察动作 · 23 类原创扩展 · 精致产品 UI · 可编辑工程
 
-[查看全部动效](docs/gallery.md) · [观看风格短样](assets/approved-demo/preview.mp4) · [产品 UI 示范](docs/ui-design.md) · [安装与使用](#安装与使用) · [下载 ZIP](https://github.com/3105059695-rgb/ui-motion-explainer/archive/refs/heads/main.zip)
+[查看全部动效](docs/gallery.md) · [新动效 X21–X23](references/motion-lab.md) · [观看风格短样](assets/approved-demo/preview.mp4) · [产品 UI 示范](docs/ui-design.md) · [安装与使用](#安装与使用) · [下载 ZIP](https://github.com/3105059695-rgb/ui-motion-explainer/archive/refs/heads/main.zip)
 
 </div>
 
@@ -72,9 +72,21 @@
 
 参考题目是原视频标题，片中产品宣传与技术结论不属于本仓库验证范围。来源署名与素材说明见 [CREDITS](CREDITS.md)。
 
-## 53 种动作，都有可看的示例
+## 新增 X21–X23：同一对象，连续变化
 
-**O01–O33** 来自三条参考的实际画面；**X01–X20** 是沿用同一视觉语言的新设计。编号与 Skill 动效库一一对应。
+三段各 9 秒、1920×1080、50 fps 的无声原创示意：资料依次接管前景并归入文件；同一个仓库窗口推近条目后回到总览；数据文件沿曲线交接并展开成报告。
+
+| X21 · 资料纵深归并 | X22 · 仓库窗口连续推镜 | X23 · 数据文件曲线交接 |
+|:---:|:---:|:---:|
+| <a href="assets/motion-lab/X21.mp4"><img src="docs/previews/X21.gif" width="280" alt="X21 三个资料来源归入同一个文件" /></a> | <a href="assets/motion-lab/X22.mp4"><img src="docs/previews/X22.gif" width="280" alt="X22 同一个仓库窗口推近关键条目后返回总览" /></a> | <a href="assets/motion-lab/X23.mp4"><img src="docs/previews/X23.gif" width="280" alt="X23 同一数据文件沿曲线交接后展开成报告" /></a> |
+
+**[27 秒完整预览](assets/motion-lab/preview.mp4)** · [可编辑工程](assets/motion-lab/index.html) · [场景源码](assets/motion-lab/scenes) · [动作配方与模糊边界](references/motion-lab.md)
+
+使用 HyperFrames 0.8.62 与上游 `motion-blur` 组件。已完成实际视频导出与检查；不作为真实产品操作或原参考片的证据。
+
+## 56 种动作，都有对应示例
+
+**O01–O33** 来自三条参考的实际画面；**X01–X23** 是沿用同一视觉语言的新设计。编号与 Skill 动效库一一对应。
 
 | 对象与布局 | 注意力与交接 |
 |:---:|:---:|
@@ -89,9 +101,10 @@
 | 一件事经过几个环节 | 连续扩列 → 同一字段贯穿 → 结果停留 | [关系与交接](docs/gallery.md#relations) |
 | 找到历史记录中的关键原话 | 逐字搜索 → 过滤 → 原文重排 → 高亮 | [界面与聚焦](docs/gallery.md#focus) |
 | 原理说明之后展示真实操作 | 图解 → 匹配衔接 → 录屏推近 | [镜头与节奏](docs/gallery.md#editing) |
-| 需要更多变化 | 遮罩揭字、排序、局部放大、差异切换等 | [20 类扩展](docs/gallery.md#extensions) |
+| 资料归档、条目定位、文件交付 | 纵深归并、连续推镜、曲线与遮罩交接 | [X21–X23](docs/gallery.md#motion-lab) |
+| 需要更多变化 | 遮罩揭字、排序、局部放大、差异切换等 | [23 类扩展](docs/gallery.md#extensions) |
 
-**[打开完整 53 项 GIF 图鉴 →](docs/gallery.md)**
+**[打开完整 56 项动效图鉴 →](docs/gallery.md)**
 
 ## 安装与使用
 
@@ -157,17 +170,19 @@ git clone https://github.com/3105059695-rgb/ui-motion-explainer.git ~/.codex/ski
 |---|---|
 | [SKILL.md](SKILL.md) | 技能入口、动作选择、制作顺序与完成标准 |
 | [style-system.md](references/style-system.md) | 色彩、字体、布局、节奏与口播处理 |
-| [effects.md](references/effects.md) | 33 类参考动作 + 20 类扩展的触发条件与实现建议 |
+| [effects.md](references/effects.md) | 33 类参考动作 + 23 类扩展的触发条件与实现建议 |
 | [ui-design.md](references/ui-design.md) | 产品 UI 重建、组件结构、信息层级与动静态交付 |
 | [ui-patterns.md](references/ui-patterns.md) | 没有电脑素材时，按文案选择界面布局与模拟操作 |
 | [narration-effects.md](references/narration-effects.md) | X09–X20 口播触发、动作配方、边界与组合 |
+| [motion-lab.md](references/motion-lab.md) | X21–X23 纵深归并、连续推镜、曲线交接与运动模糊接入 |
 | [production.md](references/production.md) | 字体子集、时间轴、音画同步与导出检查 |
 | [reference-evidence.md](references/reference-evidence.md) | 来源、观察边界与样例验证记录 |
-| [动效图鉴](docs/gallery.md) | 53 项逐项预览，链接到来源与工程 |
+| [动效图鉴](docs/gallery.md) | 56 项逐项入口，链接到来源与工程 |
 | [风格短样工程](assets/approved-demo) | 18 秒完整组合，可编辑 HTML 和素材 |
 | [扩展演示工程](assets/extension-demos) | 8 个新设计动作的分段演示与源码 |
 | [口播演示工程](assets/narration-demos) | 12 个新动作、72 秒配音、字幕、时间表与源码 |
 | [资料工作台工程](assets/ui-showcase) | 完整界面 → 选中详情 → 团队交接，静态帧与动态图 |
+| [连续对象动效工程](assets/motion-lab) | X21–X23，3 段 9 秒无声示意，独立场景源码 |
 | [辅助脚本](scripts) | 字体准备、参考抽帧及媒体索引 |
 
 ### 本地预览与导出
@@ -182,13 +197,13 @@ npm run dev
 npm run render
 ```
 
-参考运行版本为 HyperFrames `0.8.38`，字体使用 Noto Sans SC 子集。修改文案后要重新生成字形子集，并检查实际导出帧。
+旧示例的参考运行版本为 HyperFrames `0.8.38`；新增 `assets/motion-lab/` 锁定 `0.8.62`，使用该目录自己的依赖和命令。中文字体使用 Noto Sans SC 子集。修改文案后要重新生成字形子集，并检查实际导出帧。
 
 ## 使用边界
 
 本项目提供动效设计方法和工程示例。具体软件功能、数字或宣传结论仍需按新任务核实；生成的演示 UI 应明确标注。新作品按内容与素材选择音频，不自动沿用参考作者的旁白或形象。
 
-原创代码与文档采用 [MIT License](LICENSE)。参考视频、从参考抽取的 GIF/截图、原混音、GSAP 和字体分别按 [素材与第三方说明](CREDITS.md) 处理，**不包含在原创代码的 MIT 授权中**。
+原创代码与文档采用 [MIT License](LICENSE)。参考视频、从参考抽取的 GIF/截图、原混音、GSAP、字体与 HyperFrames 上游 `motion-blur` 组件分别按 [素材与第三方说明](CREDITS.md) 处理，**不包含在原创代码的 MIT 授权中**；该上游组件采用 Apache-2.0。
 
 ---
 

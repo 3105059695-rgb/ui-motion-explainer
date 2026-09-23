@@ -18,7 +18,7 @@
 
 - `assets/approved-demo/index.html`：依据上述视觉语言重新构建的 18 秒图解；界面标记为演示。原混音来自 D 的约 11.84–29.9067 秒，只作为参考比较音频。
 - 公开工程使用 Noto Sans SC 子集；原本地确认版使用过系统中文字体。公开版的字体与局部排版可能因此略有差异。
-- `assets/extension-demos/`、`assets/narration-demos/` 与 `docs/previews/X*.gif`：新制作的扩展动作示例，画面明确标注“扩展演示”。它们不是原参考片出现过的动作证据。
+- `assets/extension-demos/`、`assets/narration-demos/`、`assets/motion-lab/` 与 `docs/previews/X*.gif`：新制作的扩展动作示例，画面以“扩展演示”“原创示意”等标识交代性质。它们不是原参考片出现过的动作证据。
 - X04 若显示“图解 → 实录位置”，该段是衔接方法的示意；不声称已执行真实产品操作。
 
 ## 新增口播与产品 UI
@@ -26,16 +26,21 @@
 - `assets/narration-demos/`：12 种原创口播动效，完整 72 秒。配音由 Windows 标准中文语音 Microsoft Kangkang 本地合成，用于示范时间安排，未克隆参考作者声音。实际语句起止保存在 `assets/narration-timing.json`。
 - `assets/ui-showcase/`：新制作的“资料工作台”演示 UI 与时间轴；名称、资料、人员与状态均为示例内容。完整窗口、详情面板和协作状态不代表某个真实产品的已执行操作。
 - `docs/images/ui-cards.jpg`、`ui-handoff.jpg`：从仓库已有重建短样导出的干净画面，对应用户再次指定的 UI 参考。未把播放器控制栏作为设计内容。
+- `assets/motion-lab/`：X21–X23 三段各 9 秒、1920×1080、50 fps 无声原创示意，分别演示资料纵深归并、同一仓库窗口推镜、数据文件曲线交接与遮罩展开；`docs/previews/X21.gif`–`X23.gif` 为对应预览。界面和示例数据不代表真实产品操作；公共包不含个人音色、人物素材或本地私有路径。成片已完成导出检查，记录见 [验证说明](assets/motion-lab/verification.md)。
 
 ## 字体
 
 使用 [Google Fonts 的 Noto Sans SC](https://github.com/google/fonts/tree/main/ofl/notosanssc)，并为各示例生成所需字形子集。字体按 [SIL Open Font License 1.1](licenses/NotoSansSC-OFL.txt) 分发，保留该字体的版权与许可证文本。
 
+`assets/motion-lab/` 的拉丁字符与数字使用 Outfit Bold，按该目录内的 [Outfit OFL](assets/motion-lab/assets/Outfit-OFL.txt) 分发；中文 Noto Sans SC 子集的许可证同时保存在[示例资产目录](assets/motion-lab/assets/NotoSansSC-OFL.txt)。
+
 ## 动画运行库
 
 示例包含 GSAP 3.14.2，保留库文件头的版权信息，按 [GSAP Standard License](https://gsap.com/community/standard-license/) 使用。GSAP 不属于本仓库原创代码的 MIT 授权部分。
 
-HyperFrames 在样例 `package.json` 中作为外部依赖声明，版本为 0.8.38；仓库不包含其 `node_modules` 或浏览器二进制。相应许可由上游包提供。
+HyperFrames 在旧样例 `package.json` 中作为外部依赖声明，版本为 0.8.38；新增 `assets/motion-lab/` 锁定 0.8.62。仓库不包含其 `node_modules` 或浏览器二进制。
+
+`assets/motion-lab/assets/motion-blur.js` 使用 HyperFrames 上游提交 **`1b8f8a4`** 的 `motion-blur` 组件；上游原文件保留为 `motion-blur.upstream.html`。该组件采用 **Apache-2.0**，见随包[许可证](assets/motion-lab/assets/HyperFrames-Apache-2.0.txt)与[来源记录](assets/motion-lab/assets/provenance.json)，不属于本仓库原创部分的 MIT 授权。X21 在场景代码里针对子节点样式缓存设置副本可见性的边界，方法见 [motion-lab](references/motion-lab.md)。
 
 ## 原创部分
 

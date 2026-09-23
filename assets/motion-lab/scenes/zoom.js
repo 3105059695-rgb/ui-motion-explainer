@@ -1,0 +1,88 @@
+/* X22: one persistent repository window, authored camera poses, no image swapping. */
+window.makeZoom = function makeZoom(gsap, mount) {
+  mount.innerHTML = `
+  <style>
+  .z-scene{position:relative;width:1920px;height:1080px;background:#FAF9FC;color:#17131E;font-family:ProjectSans,sans-serif;overflow:hidden}
+  .z-scene *{box-sizing:border-box} .z-scene p,.z-scene h1{margin:0}
+  .z-title{position:absolute;left:120px;top:98px;font-size:62px;font-weight:700;letter-spacing:-1.5px}
+  .z-subtitle{position:absolute;left:124px;top:188px;font-size:28px;color:#746B7F}
+  .z-step{position:absolute;right:120px;top:125px;font-size:28px;color:#7950B8;font-weight:700}
+  .z-window{position:absolute;left:180px;top:268px;width:1560px;height:586px;background:#fff;border:1.5px solid #DDD6E5;border-radius:24px;box-shadow:0 25px 55px -26px #3a225c40;overflow:hidden}
+  .z-chrome{position:absolute;inset:0 0 auto;height:66px;background:#211A2B;color:#fff;display:flex;align-items:center;gap:10px;padding:0 30px;z-index:5}
+  .z-chrome i{width:11px;height:11px;border-radius:50%;background:#B1A5C0}
+  .z-address{margin-left:30px;font-size:24px;color:#E7E0EF}
+  .z-view{position:absolute;top:66px;left:0;right:0;bottom:0;overflow:hidden}
+  .z-camera{position:absolute;left:0;top:0;width:1560px;height:520px;transform-origin:0 0;background:#fff}
+  .z-nav{position:absolute;left:0;top:0;width:305px;bottom:0;border-right:1px solid #E3DDE9;background:#F8F5FC;padding:28px 26px}
+  .z-project{font-size:28px;font-weight:700;margin-bottom:25px}.z-branch{font-size:24px;border:1px solid #DCD3E8;border-radius:9px;padding:8px 16px;background:#fff;display:inline-block;margin-bottom:30px}
+  .z-files{font-size:26px;line-height:58px;color:#6E637C}.z-file{height:58px;padding-left:18px;white-space:nowrap;position:relative}
+  .z-file span{position:relative;z-index:2}.z-selected{position:absolute;inset:0 -10px;background:#E9DEF7;border-radius:9px;transform-origin:0 50%}
+  .z-doc{position:absolute;left:347px;top:30px;width:1160px;height:455px;border:1px solid #E2DCE8;border-radius:14px;overflow:hidden}
+  .z-doc-top{height:67px;background:#F8F5FB;border-bottom:1px solid #E7E1EB;padding:14px 25px;font-size:29px;font-weight:700;display:flex;justify-content:space-between}
+  .z-doc-tag{font-size:20px;background:#EAE0F5;color:#64438C;padding:5px 13px;border-radius:6px;line-height:30px;font-weight:400}
+  .z-doc-content{position:absolute;left:38px;top:100px;right:35px}
+  .z-heading{font-size:36px;font-weight:700;line-height:1.35;margin-bottom:26px!important}
+  .z-line{position:relative;font-size:30px;line-height:1.55;height:65px;white-space:nowrap;display:flex;align-items:center;gap:14px;color:#584E63}
+  .z-line span{position:relative;z-index:1}.z-index{font-family:ProjectDisplay,sans-serif;font-size:23px;color:#75677F;min-width:28px}
+  .z-mark{position:absolute;left:42px;top:6px;width:632px;height:50px;background:#E7D6F7;border-radius:6px;transform-origin:0 50%}
+  .z-quote{font-weight:700;color:#513071}
+  .z-line-last{font-size:24px;color:#887C94;margin-top:13px!important}
+  .z-cursor{position:absolute;left:0;top:0;width:30px;height:39px;z-index:8;filter:drop-shadow(0 3px 2px #30213C22);transform-origin:8px 6px}
+  .z-ring{position:absolute;left:0;top:0;width:60px;height:60px;border:2px solid #9B77C5;border-radius:50%;z-index:7}
+  .z-context{position:absolute;left:780px;top:204px;background:#211A2B;color:#EEDFFA;padding:11px 24px;border-radius:30px;font-size:25px;z-index:6}
+  .z-footnote{position:absolute;left:120px;top:893px;font-size:23px;color:#75677F}
+  </style>
+  <section class="z-scene" id="z-scene">
+    <h1 class="z-title">看清关键，再回到全局</h1>
+    <p class="z-subtitle">推近的是同一页，保留的是上下文</p>
+    <div class="z-step">02 / 连续推镜</div>
+    <div id="z-context" class="z-context">核心视觉语法 / 第 2 条</div>
+    <div id="z-window" class="z-window">
+      <div class="z-chrome"><i></i><i></i><i></i><div class="z-address">github.com / 3105059695-rgb / ui-motion-explainer</div></div>
+      <div class="z-view"><div id="z-camera" class="z-camera" data-layout-allow-overflow="camera crops inside the fixed viewport">
+        <div class="z-nav"><div class="z-project">ui-motion-explainer</div><div class="z-branch">main</div><div class="z-files">
+          <div class="z-file"><span>assets /</span></div>
+          <div class="z-file"><span>references /</span></div>
+          <div class="z-file"><span>README.md</span></div>
+          <div class="z-file"><div id="z-file-select" class="z-selected"></div><span>SKILL.md</span></div>
+        </div></div>
+        <div class="z-doc"><div class="z-doc-top"><span>SKILL.md</span><span class="z-doc-tag">内容节选 · UI 示意</span></div>
+          <div class="z-doc-content"><p class="z-heading">核心视觉语法</p>
+            <div class="z-line"><span class="z-index">01</span><span>白底、近黑窗口、淡紫色选区</span></div>
+            <div class="z-line"><div id="z-mark" class="z-mark"></div><span class="z-index">02</span><span class="z-quote">让同一对象持续存在</span></div>
+            <div class="z-line"><span class="z-index">03</span><span>改变关系后，留时间读结论</span></div>
+            <p class="z-line-last">对象 → 状态变化 → 清楚的结果</p>
+          </div>
+        </div>
+      </div></div>
+      <div id="z-ring" class="z-ring"></div>
+      <svg id="z-cursor" class="z-cursor" viewBox="0 0 32 42" aria-hidden="true"><path d="M3 2L5 35L13 27L20 40L26 37L19 24L30 23Z" fill="#211A2B" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+    </div>
+    <p class="z-footnote">据公开技能内容重排的界面示意 · 未模拟真实点击结果</p>
+  </section>`;
+  const q=id=>mount.querySelector('#'+id);
+  const tl=gsap.timeline({paused:true});
+  tl.set(q('z-file-select'),{scaleX:0},0)
+    .set(q('z-mark'),{scaleX:0},0)
+    .set(q('z-context'),{opacity:0,y:16},0)
+    .set(q('z-cursor'),{x:1040,y:485},0)
+    .set(q('z-ring'),{x:93,y:407,opacity:0,scale:.2},0)
+    .fromTo(q('z-window'),{y:24,scale:.97},{y:0,scale:1,duration:.7,ease:'power3.out'},0)
+    .to(q('z-cursor'),{x:120,y:425,duration:.68,ease:'power3.inOut'},.92)
+    .to(q('z-ring'),{opacity:.8,scale:1,duration:.15,ease:'power2.out'},1.6)
+    .to(q('z-ring'),{opacity:0,scale:1.35,duration:.32,ease:'power2.out'},1.75)
+    .to(q('z-file-select'),{scaleX:1,duration:.35,ease:'power3.out'},1.66)
+    .to(q('z-cursor'),{x:850,y:302,duration:.5,ease:'power3.inOut'},1.94)
+    .to(q('z-camera'),{scale:1.42,x:-468,y:-106,duration:.72,ease:'power3.inOut'},2.44)
+    .to(mount.querySelector('.z-doc-top'),{autoAlpha:0,duration:.18},2.44)
+    .to(q('z-cursor'),{x:900,y:315,opacity:0,duration:.3},2.48)
+    .to(q('z-context'),{opacity:1,y:0,duration:.4,ease:'power3.out'},2.9)
+    .to(q('z-mark'),{scaleX:1,duration:.48,ease:'power2.inOut'},3.22)
+    .to(q('z-camera'),{x:-500,y:-106,duration:1.25,ease:'sine.inOut'},4.1)
+    .to(q('z-context'),{opacity:0,y:-10,duration:.26},5.92)
+    .to(q('z-camera'),{scale:1,x:0,y:0,duration:.8,ease:'power3.inOut'},6.14)
+    .to(mount.querySelector('.z-doc-top'),{autoAlpha:1,duration:.28},6.5)
+    .to(q('z-mark'),{opacity:.72,duration:.35},6.75)
+    .to(q('z-scene'),{opacity:1,duration:1},8);
+  return tl;
+};

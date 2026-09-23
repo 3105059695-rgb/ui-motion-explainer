@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>UI Motion Lab</title>
+ <style>
+ @font-face{font-family:ProjectSans;src:url('assets/Chinese-regular.woff2') format('woff2');font-weight:400;font-display:block}
+ @font-face{font-family:ProjectSans;src:url('assets/Chinese-bold.woff2') format('woff2');font-weight:700;font-display:block}
+ @font-face{font-family:ProjectDisplay;src:url('assets/Outfit-Bold.ttf') format('truetype');font-weight:700;font-display:block}
+ *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#FAF9FC;font-family:ProjectSans,sans-serif}
+ #main{position:relative;width:100%;height:100%;overflow:hidden;background:#FAF9FC}
+ .scene-mount{position:absolute;inset:0;opacity:0}
+ #lab-footer{position:absolute;left:120px;right:120px;bottom:44px;height:68px;border-top:1px solid #DDD4E6;display:flex;align-items:flex-end;justify-content:space-between;color:#75677F;font-size:23px;z-index:100}
+ #lab-footer strong{font-family:ProjectDisplay,sans-serif;font-size:30px;color:#7950B8;margin-right:18px}
+ #lab-footer b{font-weight:400;color:#493B58}
+ #lab-progress{position:absolute;left:120px;right:120px;height:3px;bottom:112px;background:linear-gradient(90deg,#4F3175,#AC7DD1);transform-origin:left center;z-index:100}
+ </style><script src="assets/gsap.min.js"></script><script src="assets/motion-blur.js"></script></head><body>
+ <div id="main" data-composition-id="main" data-width="1920" data-height="1080" data-duration="9" data-fps="50">
+ <div id="mount-handoff" class="scene-mount"></div>
+ <div id="lab-progress"></div><div id="lab-footer"><div><strong id="sample-id">X23</strong><b id="sample-name">遮罩接力</b></div><div>黑白紫 UI · 原创动效参考 · 无声</div></div>
+ </div><script>
+ /* X23 — Object handoff. Authored illustrative data; no live product claims. */
+window.makeHandoff = function (gsap, mount) {
+  mount.innerHTML = `
+    <style>
+      #h-stage{position:relative;width:1920px;height:1080px;overflow:hidden;background:#FAF9FC;color:#17131E;font-family:ProjectSans,sans-serif;font-weight:400;isolation:isolate}
+      #h-stage *{box-sizing:border-box}
+      #h-stage .h-bold{font-weight:700}
+      #h-stage .h-display{font-family:ProjectDisplay,ProjectSans,sans-serif;font-weight:700}
+      #h-wash{position:absolute;left:1040px;top:220px;width:720px;height:630px;background:radial-gradient(ellipse,#EDE5F8 0%,rgba(237,229,248,0) 70%);z-index:0}
+      #h-heading{position:absolute;left:120px;top:94px;margin:0;font-size:54px;line-height:1.3;font-weight:700;letter-spacing:-1px}
+      #h-subheading{position:absolute;left:122px;top:176px;font-size:32px;line-height:1.4;color:#716A7B;display:flex;gap:20px;align-items:center}
+      #h-subheading b{color:#7950B8;font-weight:700}
+      #h-source{position:absolute;left:120px;top:256px;width:680px;height:564px;border-radius:24px;background:#fff;border:2px solid #DED9E5;box-shadow:0 20px 56px rgba(35,20,53,.08);transform-origin:50% 50%;z-index:2;overflow:hidden}
+      #h-source-code{position:absolute;left:50px;top:174px;font-size:36px;line-height:1.75;white-space:nowrap;color:#51485E}
+      #h-source-code .h-code-line{display:flex;gap:24px;align-items:baseline}
+      #h-source-code .h-code-no{font-family:ProjectDisplay,ProjectSans,sans-serif;color:#75677F;font-size:28px;width:28px}
+      #h-source-code .h-code-value{color:#7950B8;font-family:ProjectDisplay,ProjectSans,sans-serif;font-size:40px;font-weight:700}
+      #h-source-note{position:absolute;left:50px;bottom:39px;color:#81778C;font-size:28px;letter-spacing:.3px}
+      #h-source-retained{position:absolute;right:34px;bottom:34px;border:1px solid #D9CEE8;border-radius:12px;padding:8px 16px;background:#F6F1FC;color:#7950B8;font-size:26px;font-weight:700;opacity:0}
+      #h-source-chrome{position:absolute;left:120px;top:256px;width:680px;height:74px;background:#17131E;border-radius:24px 24px 0 0;z-index:5;color:#fff;display:flex;align-items:center;padding:0 28px;gap:11px;transform-origin:50% 282px}
+      #h-source-chrome i{display:block;width:12px;height:12px;border-radius:50%;background:#766D80}
+      #h-source-chrome i:nth-child(2){background:#8A7D9B}#h-source-chrome i:nth-child(3){background:#A690C0}
+      #h-source-chrome span{margin-left:20px;font-size:28px;letter-spacing:.2px}
+      #h-source-caption{position:absolute;left:162px;top:841px;font-size:28px;color:#81778C;z-index:2}
+      #h-source-caption b{font-weight:700;color:#51485E}
+      #h-target{position:absolute;left:1060px;top:411px;z-index:1}
+      #h-target .h-target-eyebrow{display:flex;align-items:center;gap:14px;font-size:28px;color:#7950B8;letter-spacing:2px}
+      #h-target .h-target-eyebrow:before{content:'';display:block;width:36px;height:3px;background:#7950B8}
+      #h-target .h-target-title{font-size:48px;font-weight:700;margin-top:18px}
+      #h-target .h-target-note{font-size:32px;color:#81778C;margin-top:18px}
+      #h-route{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:1;overflow:visible}
+      #h-route-path{fill:none;stroke:#CBB5E6;stroke-width:3;stroke-linecap:round;stroke-dasharray:1120;stroke-dashoffset:1120}
+      #h-transfer-label{position:absolute;left:829px;top:639px;z-index:3;color:#7950B8;font-size:28px;font-weight:700;opacity:0}
+      #h-object{position:absolute;left:930px;top:232px;width:870px;height:626px;z-index:3;transform-origin:50% 50%;filter:drop-shadow(0 18px 25px rgba(48,28,74,.1))}
+      #h-paper{position:absolute;inset:0;overflow:hidden;clip-path:inset(112px 146px 208px 104px round 18px);background:#fff;border:2px solid #DAD2E5;border-radius:24px}
+      #h-file-outline{position:absolute;left:102px;top:110px;width:620px;height:306px;border:2px solid #DAD2E5;border-radius:18px;pointer-events:none}
+      #h-paper-accent{position:absolute;left:0;top:0;width:100%;height:8px;background:#7950B8;opacity:0}
+      #h-file-label{position:absolute;left:132px;top:134px;display:flex;gap:16px;align-items:center;white-space:nowrap}
+      #h-file-icon{width:28px;height:34px;display:block;color:#7950B8;flex:none}
+      #h-filename{font-size:36px;line-height:44px;font-weight:700;letter-spacing:-.2px}
+      #h-file-id{margin-left:14px;font-family:ProjectDisplay,ProjectSans,sans-serif;font-size:22px;color:#75677F;letter-spacing:1.2px}
+      #h-report-kicker{position:absolute;right:46px;top:40px;color:#81778C;font-size:26px;opacity:0}
+      #h-report-title{position:absolute;left:48px;top:111px;font-size:48px;font-weight:700;line-height:1.3;clip-path:inset(0 0 100% 0)}
+      #h-report-rule{position:absolute;left:48px;right:48px;top:198px;height:2px;background:#EAE4F0;transform-origin:left center}
+      .h-data-row{position:absolute;left:132px;width:650px;height:60px;font-size:36px;line-height:60px}
+      #h-row-1{top:212px}#h-row-2{top:270px}#h-row-3{top:328px}
+      .h-row-index{position:absolute;left:0;top:0;font-family:ProjectDisplay,ProjectSans,sans-serif;font-size:24px;color:#75677F}
+      .h-row-label{position:absolute;left:30px;top:0;font-size:36px;white-space:nowrap}
+      .h-row-comma{position:absolute;left:244px;top:-1px;color:#75677F;font-size:36px}
+      .h-row-number{position:absolute;left:286px;top:0;font-family:ProjectDisplay,ProjectSans,sans-serif;font-size:44px;line-height:60px;font-weight:700;color:#7950B8;min-width:70px;text-align:left}
+      .h-bar-track{position:absolute;left:255px;top:22px;width:350px;height:16px;background:#F0EBF5;border-radius:8px;opacity:0}
+      .h-bar{position:absolute;left:0;top:0;height:16px;border-radius:8px;background:#7950B8;transform-origin:left center}
+      #h-bar-1{width:350px;background:#BCA5D6}#h-bar-2{width:262.5px;background:#7950B8}#h-bar-3{width:87.5px;background:#BDA1DB}
+      #h-report-summary{position:absolute;left:48px;top:517px;display:flex;align-items:center;gap:15px;font-size:34px;line-height:50px;color:#51485E;clip-path:inset(0 100% 0 0);white-space:nowrap}
+      #h-report-summary strong{color:#7950B8;font-weight:700}
+      #h-summary-dot{width:10px;height:10px;flex:none;border-radius:50%;background:#7950B8}
+      #h-result-check{position:absolute;left:1724px;top:793px;width:46px;height:46px;border-radius:50%;background:#F1E9FA;color:#7950B8;display:flex;align-items:center;justify-content:center;z-index:9;opacity:0}
+      #h-result-check svg{width:25px;height:25px}
+      #h-bottom{position:absolute;left:120px;right:120px;top:900px;border-top:0;padding-top:0;display:flex;align-items:center;justify-content:space-between;color:#81778C;font-size:26px;line-height:36px;z-index:10}
+      #h-bottom strong{font-weight:700;color:#51485E}
+      #h-bottom .h-foot-id{font-family:ProjectDisplay,ProjectSans,sans-serif;letter-spacing:1px;font-size:24px;color:#75677F}
+    </style>
+    <div id="h-stage">
+      <div id="h-wash"></div>
+      <h1 id="h-heading">同一份结果，接力交付</h1>
+      <div id="h-subheading"><span>来源可追溯</span><b>→</b><span>结果可阅读</span></div>
+      <svg id="h-route" viewBox="0 0 1920 1080" aria-hidden="true"><path id="h-route-path" d="M 655 474 C 785 188, 1130 211, 1364 474" /></svg>
+      <div id="h-source">
+        <div id="h-source-code">
+          <div class="h-code-line"><span class="h-code-no">1</span><span>选题数量,</span><span class="h-code-value">12</span></div>
+          <div class="h-code-line"><span class="h-code-no">2</span><span>已整理,</span><span class="h-code-value">9</span></div>
+          <div class="h-code-line"><span class="h-code-no">3</span><span>待核对,</span><span class="h-code-value">3</span></div>
+        </div>
+        <div id="h-source-note">UTF-8 · 3 行数据</div>
+        <div id="h-source-retained">来源保留</div>
+      </div>
+      <div id="h-source-chrome"><i></i><i></i><i></i><span>输入 / data.csv</span></div>
+      <div id="h-source-caption"><b>原始记录</b> · 数值始终一致</div>
+      <div id="h-target"><div class="h-target-eyebrow">交付到下一步</div><div class="h-target-title">可读报告</div><div class="h-target-note">保留来源，便于复核</div></div>
+      <div id="h-transfer-label">同一文件</div>
+      <div id="h-object">
+        <div id="h-paper">
+          <div id="h-file-outline"></div>
+          <div id="h-paper-accent"></div>
+          <div id="h-file-label">
+            <svg id="h-file-icon" viewBox="0 0 28 34" aria-hidden="true"><path d="M4 1.5h12l8 8V32H4z" fill="#F1EAF9" stroke="currentColor" stroke-width="2.2"/><path d="M16 2v8h8M9 17h10M9 23h8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+            <span id="h-filename">data.csv</span><span id="h-file-id"># 001</span>
+          </div>
+          <div id="h-report-kicker">整理结果 / 原创示意</div>
+          <div id="h-report-title">本周选题整理</div>
+          <div id="h-report-rule"></div>
+          <div class="h-data-row" id="h-row-1"><span class="h-row-index">1</span><span class="h-row-label">选题数量</span><span class="h-row-comma">,</span><span class="h-bar-track"><span class="h-bar" id="h-bar-1"></span></span><span class="h-row-number">12</span></div>
+          <div class="h-data-row" id="h-row-2"><span class="h-row-index">2</span><span class="h-row-label">已整理</span><span class="h-row-comma">,</span><span class="h-bar-track"><span class="h-bar" id="h-bar-2"></span></span><span class="h-row-number">9</span></div>
+          <div class="h-data-row" id="h-row-3"><span class="h-row-index">3</span><span class="h-row-label">待核对</span><span class="h-row-comma">,</span><span class="h-bar-track"><span class="h-bar" id="h-bar-3"></span></span><span class="h-row-number">3</span></div>
+          <div id="h-report-summary"><i id="h-summary-dot"></i><span><strong>9</strong> 项完成整理，<strong>3</strong> 项留待核对。</span></div>
+        </div>
+      </div>
+      <div id="h-result-check"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="m5 14 6 6L23 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div id="h-bottom"><span><strong>原创示意</strong> · 仅演示数据到报告的交接，不代表真实产品业绩</span><span class="h-foot-id">X23 / OBJECT HANDOFF</span></div>
+    </div>`;
+
+  // The lifted paper intentionally crosses its original record and target label.
+  mount.querySelector('#h-source-code').setAttribute('data-layout-allow-occlusion','the lifted file crosses its original record');
+  mount.querySelectorAll('#h-source-code span').forEach(e=>e.setAttribute('data-layout-allow-overlap','paper crosses the source during pickup'));
+  const q = (selector) => mount.querySelector(selector);
+  const qa = (selector) => mount.querySelectorAll(selector);
+  const tl = gsap.timeline({ paused: true });
+  const travelEase = gsap.parseEase('power2.inOut');
+  // Both channels use the same clock; the quadratic y term creates one continuous arc.
+  const arcEase = (p) => {
+    const t = travelEase(p);
+    return t - 10 * t * (1 - t);
+  };
+
+  tl.addLabel('read-source', 0);
+  tl.set(q('#h-object'), { x: -870, y: 24, rotation: 0, scale: 1, zIndex: 3 }, 0);
+  tl.set(q('#h-source-code'), { autoAlpha: 0 }, 0);
+  tl.set(qa('#h-report-rule, .h-bar'), { scaleX: 0 }, 0);
+  tl.to(q('#h-file-outline'), { borderColor: '#A68ACB', duration: 0.35, ease: 'power2.out' }, 1.25);
+  tl.addLabel('lift-from-source', 2.05);
+  tl.to(q('#h-object'), { y: -32, duration: 0.35, ease: 'power2.inOut' }, 2.05);
+  // The paper crosses the black source chrome from back to front at this exact beat.
+  tl.set(q('#h-object'), { zIndex: 8 }, 2.23);
+  tl.to(q('#h-source-code'), { autoAlpha: 1, duration: 0.4, ease: 'power2.out' }, 2.2);
+  tl.to(q('#h-source-retained'), { opacity: 1, duration: 0.35, ease: 'power2.out' }, 2.35);
+  tl.to(q('#h-route-path'), { strokeDashoffset: 0, duration: 1.05, ease: 'power2.inOut' }, 2.4);
+  tl.to(q('#h-transfer-label'), { opacity: 1, duration: 0.3, ease: 'power2.out' }, 2.5);
+
+  tl.addLabel('curved-handoff', 2.4);
+  tl.to(q('#h-object'), { x: 0, duration: 1.0, ease: travelEase }, 2.4);
+  tl.to(q('#h-object'), { y: 0, duration: 1.0, ease: arcEase }, 2.4);
+  tl.to(q('#h-object'), { rotation: -3, duration: 0.42, ease: 'power2.inOut' }, 2.4);
+  tl.to(q('#h-object'), { rotation: 0, duration: 0.58, ease: 'power2.out' }, 2.82);
+  tl.to(q('#h-target'), { autoAlpha: 0, duration: 0.22, ease: 'power1.out' }, 2.68);
+
+  tl.addLabel('file-outline-becomes-report', 3.75);
+  tl.to(q('#h-paper'), { clipPath: 'inset(0px 0px 0px 0px round 24px)', borderColor: '#DAD2E5', duration: 0.75, ease: 'power3.inOut' }, 3.75);
+  tl.to(q('#h-file-outline'), { opacity: 0, duration: 0.35, ease: 'power2.out' }, 3.78);
+  tl.to(q('#h-file-label'), { x: -84, y: -96, duration: 0.7, ease: 'power3.inOut' }, 3.78);
+  tl.to(q('#h-file-id'), { opacity: 0, duration: 0.3, ease: 'power1.out' }, 3.83);
+  tl.to(qa('.h-row-index, .h-row-comma'), { opacity: 0, duration: 0.35, ease: 'power1.out' }, 3.85);
+  tl.to(qa('.h-row-label'), { x: -30, duration: 0.65, ease: 'power3.inOut' }, 3.82);
+  tl.to(q('#h-row-1'), { x: -84, y: 28, duration: 0.7, ease: 'power3.inOut' }, 3.8);
+  tl.to(q('#h-row-2'), { x: -84, y: 52, duration: 0.7, ease: 'power3.inOut' }, 3.85);
+  tl.to(q('#h-row-3'), { x: -84, y: 76, duration: 0.7, ease: 'power3.inOut' }, 3.9);
+  tl.to(qa('.h-row-number'), { x: 410, duration: 0.7, ease: 'power3.inOut' }, 3.85);
+  tl.to(q('#h-report-title'), { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.5, ease: 'power2.out' }, 4.15);
+  tl.to(q('#h-report-rule'), { scaleX: 1, duration: 0.6, ease: 'power2.out' }, 4.15);
+  tl.to(q('#h-report-kicker'), { opacity: 1, duration: 0.35, ease: 'power2.out' }, 4.25);
+  tl.to(q('#h-paper-accent'), { opacity: 1, duration: 0.35, ease: 'power2.out' }, 4.3);
+  tl.to(qa('.h-bar-track'), { opacity: 1, duration: 0.35, stagger: 0.08, ease: 'power2.out' }, 4.35);
+  tl.to(qa('.h-bar'), { scaleX: 1, duration: 0.65, stagger: 0.12, ease: 'power3.out' }, 4.5);
+  tl.to(q('#h-route-path'), { opacity: 0.4, duration: 0.5, ease: 'power2.out' }, 4.4);
+  tl.to(q('#h-transfer-label'), { opacity: 0, duration: 0.35, ease: 'power2.out' }, 4.6);
+
+  tl.addLabel('report-readable', 5.45);
+  tl.to(q('#h-report-summary'), { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.65, ease: 'power2.out' }, 5.45);
+  tl.fromTo(q('#h-result-check'), { opacity: 0, scale: 0.75 }, { opacity: 1, scale: 1, duration: 0.4, ease: 'power2.out', immediateRender: false }, 6.12);
+  tl.addLabel('final-hold', 6.6);
+  tl.to(q('#h-stage'), { opacity: 1, duration: 2.4, ease: 'none' }, 6.6);
+  return tl;
+};
+
+ window.__timelines=window.__timelines||{};
+ const master=gsap.timeline({paused:true});
+ {
+ const mount=document.getElementById('mount-handoff');
+ const child=window.makeHandoff(gsap,mount);
+ child.paused(false); master.add(child,0);
+ master.set(mount,{opacity:1},0);
+
+ master.set('#sample-id',{textContent:'X23'},0);
+ master.set('#sample-name',{textContent:'遮罩接力'},0);
+}
+ master.fromTo('#lab-progress',{scaleX:0},{scaleX:1,duration:9,ease:'none'},0);
+ // Materialize the first frame even when a viewer first asks for time(0).
+ master.time(0.0001,true).time(0,true);
+ window.__timelines.main=master;
+ // Only the external viewer/renderer drives this registered timeline.
+ </script></body></html>
