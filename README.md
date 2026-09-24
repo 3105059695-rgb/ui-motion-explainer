@@ -8,7 +8,7 @@
 
 三条完整参考 · 33 类观察动作 · 23 类原创扩展 · 精致产品 UI · 可编辑工程
 
-[查看全部动效](docs/gallery.md) · [新动效 X21–X23](references/motion-lab.md) · [观看风格短样](assets/approved-demo/preview.mp4) · [产品 UI 示范](docs/ui-design.md) · [安装与使用](#安装与使用) · [下载 ZIP](https://github.com/3105059695-rgb/ui-motion-explainer/archive/refs/heads/main.zip)
+[每期不同的开场](references/opening-design.md) · [查看全部动效](docs/gallery.md) · [新动效 X21–X23](references/motion-lab.md) · [观看风格短样](assets/approved-demo/preview.mp4) · [产品 UI 示范](docs/ui-design.md) · [安装与使用](#安装与使用) · [下载 ZIP](https://github.com/3105059695-rgb/ui-motion-explainer/archive/refs/heads/main.zip)
 
 </div>
 
@@ -21,6 +21,16 @@
 <a href="assets/approved-demo/preview.mp4"><img src="docs/images/demo.gif" width="100%" alt="18 秒风格短样：建立、归并、协作、聚焦" /></a>
 
 **[播放 1080p 短样](assets/approved-demo/preview.mp4)** · [查看可编辑 HTML](assets/approved-demo/index.html) · [视觉与节奏规范](references/style-system.md)
+
+## 2026-09-24 升级：每期不同的 AE 感开场
+
+**统一 UI 语言，每期独立设计开场。** 沿用白底、近黑、紫色焦点与清楚的字体层级，根据本期内容改变主视觉事件、镜头路线、素材出场顺序和转场组合。
+
+- 制作前比较能取得的近期开头，明确本期变化。历史记录缺失时继续设计，不假称已比较旧片。
+- 从内容选择成果接管、字形进入、同物追踪、焦点切换等动作机制，组合出不同的镜头；只换标题、截图或大数字不算新开场。
+- 将速度变化、运动模糊、对象遮罩与层级落实到中间帧，停稳后保证素材可读、人物和字幕不被遮挡。
+
+入口、调用提示词与[完整开场规则](references/opening-design.md)已一起更新，单独下载本仓库即可读取；无需依赖作者电脑上的其他技能或路径。本次升级的是制作规则与选镜头方法，既有示范视频和运行依赖保持原版本，**未新增或重新验证一批特效视频**。实际制作效果仍需检查当期导出片段。
 
 ## 这套 Skill 做什么
 
@@ -126,11 +136,15 @@ git clone https://github.com/3105059695-rgb/ui-motion-explainer.git ~/.codex/ski
 
 也可以下载 ZIP，将包含 `SKILL.md` 的 `ui-motion-explainer` 文件夹放入技能目录。
 
+已通过 Git 安装的用户，先保存自己改过的文件，工作目录干净后在该技能目录运行 `git pull --ff-only`。ZIP 用户保留本地定制副本后下载新版。更新后让使用的工具重新加载技能；若当前任务仍缓存旧内容，开启新任务读取新版。
+
 ### 一句话调用
 
 ```text
 使用 $ui-motion-explainer，把这段口播做成黑白紫 UI 动态讲解。
-按内容选择动作，保留稳定阅读时间，交付 MP4 和可编辑工程。
+沿用 UI 风格，按本期内容独立设计有冲击力、转场丝滑的 AE 感开头。
+对照能取得的近期开头，改变主视觉事件与镜头衔接，不沿用固定入场顺序。
+真实素材对应口播，动作落定后保留阅读时间，交付 MP4 和可编辑工程。
 ```
 
 更具体的请求：
@@ -170,6 +184,7 @@ git clone https://github.com/3105059695-rgb/ui-motion-explainer.git ~/.codex/ski
 |---|---|
 | [SKILL.md](SKILL.md) | 技能入口、动作选择、制作顺序与完成标准 |
 | [style-system.md](references/style-system.md) | 色彩、字体、布局、节奏与口播处理 |
+| [opening-design.md](references/opening-design.md) | 每期独立开场、近期差异比较、镜头机制与动态检查 |
 | [effects.md](references/effects.md) | 33 类参考动作 + 23 类扩展的触发条件与实现建议 |
 | [ui-design.md](references/ui-design.md) | 产品 UI 重建、组件结构、信息层级与动静态交付 |
 | [ui-patterns.md](references/ui-patterns.md) | 没有电脑素材时，按文案选择界面布局与模拟操作 |
