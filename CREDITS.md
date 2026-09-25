@@ -42,6 +42,14 @@ HyperFrames 在旧样例 `package.json` 中作为外部依赖声明，版本为 
 
 `assets/motion-lab/assets/motion-blur.js` 使用 HyperFrames 上游提交 **`1b8f8a4`** 的 `motion-blur` 组件；上游原文件保留为 `motion-blur.upstream.html`。该组件采用 **Apache-2.0**，见随包[许可证](assets/motion-lab/assets/HyperFrames-Apache-2.0.txt)与[来源记录](assets/motion-lab/assets/provenance.json)，不属于本仓库原创部分的 MIT 授权。X21 在场景代码里针对子节点样式缓存设置副本可见性的边界，方法见 [motion-lab](references/motion-lab.md)。
 
+## v2 可移植工程
+
+`assets/portable-studio/` 的界面、几何人物占位、地形壁纸与两幅插画为本仓库原创示意。不是苹果官方壁纸或真实产品实操；没有加入作者肖像、克隆音色或私人素材。公开示范均无声。
+
+该目录包含 Noto Sans SC 完整可变字体（不是只覆盖演示文案的子集）及 Outfit Bold，分别保留 OFL 许可证，供其他电脑直接渲染中文。新项目使用自己的授权人物、音频和产品材料。
+
+`collect_assets.py` 在新项目按官网/文档URL采集素材，保留来源清单，不把采集到的第三方媒体默认纳入本技能安装包或改为MIT授权。`requirements-render.txt`锁定Playwright、Pillow与imageio-ffmpeg，运行时按各自许可安装，不随包包含浏览器和FFmpeg二进制。
+
 ## 原创部分
 
 除上述第三方素材外，本仓库原创技能文本、拆解说明、辅助脚本、HTML/CSS/时间轴与封面图按根目录 [LICENSE](LICENSE) 授权。素材的研究展示与技能方法不代表参考作者认可或参与本项目。

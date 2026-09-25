@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>UI Motion — 可编辑工程</title><link rel="stylesheet" href="studio.css"></head>
+<body><main id="stage">
+  <div id="desktop-bg"></div><div id="menu"><b>●　创作桌面</b><span>文件　编辑　显示　窗口</span><i>UI Motion · 原创界面示意</i></div>
+  <div id="presenter"><video id="person-video" muted playsinline preload="auto"></video><div id="person-placeholder"><div class="head"></div><div class="shoulders"></div><p>人物原片占位</p><small>使用你的口播视频</small></div></div>
+  <div id="comparison"><div class="video-window" id="compare-a"><header><em>● ● ●</em>参考视频</header><div data-media="0"></div><footer>01　镜头与节奏</footer></div><div class="video-window" id="compare-b"><header><em>● ● ●</em>我的作品</header><div data-media="1"></div><footer>02　人物与内容</footer></div></div>
+  <div id="album" class="window"><header><em>● ● ●</em><b>相册</b><small>精选素材</small></header><div class="album-content"><aside>资料库<br><b>所有视频</b><br>我的收藏<br>最近导入</aside><section><h1>你的灵感，都在这里。</h1><p>参考 · 素材 · 作品</p><div id="album-grid"><div data-media="0"></div><div id="album-target" data-media="1"><button>▶</button></div><div class="album-note">今天<br><b>开始创作</b></div></div></section></div></div>
+  <div id="dock"><span>访达</span><span id="photos-icon">✿</span><span>视频</span><span>文件</span></div>
+  <div id="intro-label"><small>CREATE / EDIT / EXPLAIN</small><h1></h1><p>同一份素材，连续进入下一步。</p></div>
+  <div id="workspace" class="window"><header><em>● ● ●</em><b id="product-title"></b><small>界面示意</small></header><div id="window-content">
+    <div id="input-view"><div class="brand-mark">W</div><h2>从一个想法开始。</h2><div class="command"><span id="typed"></span><i></i><b>↑</b></div><p>参考视频　＋　自己的素材　＋　文案</p></div>
+    <div id="edit-view"><aside><small>项目素材</small><div class="asset-row">▧　reference.mp4</div><div class="asset-row" id="own-row">▧　my-video.mp4</div><div class="asset-row" id="text-row">▤　script.txt</div></aside><section><div id="media-preview"><div data-media="0"></div><div id="reveal" data-media="1"></div><div id="wipe-line"></div><span>素材预览</span></div><div id="timeline"><small>00:00　　00:03　　00:06　　00:09</small><div class="track"><b>参考片段</b><b>我的素材</b><b>结果</b></div><div class="track text-track"><b>口播与字幕</b></div><i id="playhead"></i></div></section></div>
+    <div id="body-view"><aside><b>工作空间</b><p class="active">素材与脚本</p><p>任务进度</p><p>文件交付</p><small>PROJECT / 01</small></aside><section><h2>让素材真正动起来</h2><div id="body-prompt"></div><div id="body-response"><small>已整理参考</small><p>镜头结构、节奏与转场</p><div class="body-files"><span>reference.mp4</span><span>script.txt</span></div></div><div id="body-input">继续调整当前作品<span>↑</span></div></section><div id="body-preview"><header>预览　/　当前素材</header><div data-media="1"></div><p>文件落位 → 预览展开</p></div></div>
+  </div></div>
+  <div id="file-a" class="flying-file"><span>MP4</span><b>参考视频</b></div><div id="file-b" class="flying-file"><span>MP4</span><b>我的素材</b></div><div id="file-c" class="flying-file"><span>TXT</span><b>口播文案</b></div>
+  <div id="result-label"></div><div id="cursor">➤</div><div id="click-ring"></div><div id="caption"></div><div id="demo-label">原创动效示例 · 人物为占位</div>
+</main><script src="studio.js"></script></body></html>
