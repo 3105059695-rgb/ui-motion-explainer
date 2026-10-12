@@ -4,6 +4,8 @@
 
 用户把本仓库链接或源码文件夹交给你并要求安装时，请直接完成下面流程，不把环境配置拆给用户手工执行。适用 Windows 10/11 x64；用户的本次明确要求优先。
 
+开始前先读取本仓库的 [B-roll 规则](docs/broll-preferences.md)与[标注案例](docs/broll-calibration-cases.md)。本次增量规则独立于完整运行包，安装后按下节保存到实际 Skill 目录；已有可用安装时只更新规则即可。
+
 ## 下载可运行文件夹
 
 1. 读取本仓库最新 main 的 [runtime-release.json](runtime-release.json)，使用其中固定的 `url`、`sha256` 和 `archive_root`。如当前只有 GitHub 链接，可从 `https://raw.githubusercontent.com/3105059695-rgb/ui-motion-explainer/main/runtime-release.json` 读取。不要用旧对话猜版本，也不要将某版校验值与变化中的 latest URL 混用。
@@ -18,6 +20,15 @@
 脚本自动准备私有运行资源、检查环境、导出并解码样片，成功后写入 `.ui-ready.json`。已有成功安装时会核验并复用。等实际退出码为 0，并确认成功状态后，再告诉用户已装好、可直接发视频素材。
 
 这是当前工作文件夹内的安装，不需要注册全局技能或更改宿主配置。保留原素材及已有技能，遇到网络或权限失败说明实际失败步骤，不伪报成功。账号由用户自行登录，安装请求不授权付款或发布作品。
+
+## 仅更新口播规则（已有安装无需重下大包）
+
+本仓库的 2026-10-12 / v1 口播校准是文本补充，不改变 runtime-release.json 指向的完整包。新安装完成后也执行以下步骤：
+
+1. 在本次任务获准使用的安装中定位实际的 `工具/skills/ui-motion-fusion` 或已注册的同名 Skill 目录，读取其主入口；不猜作者本机路径，不自动更新其他无关安装。
+2. 从本仓库同一个 main 提交取得 `docs/broll-preferences.md`、`docs/broll-calibration-cases.md` 和 `docs/evidence/broll-calibration-20261012.json`，分别保存为该 Skill 下的 `references/broll-preferences.md`、`references/broll-calibration-cases.md` 和 `references/evidence/broll-calibration-20261012.json`。已有相同内容直接复用；已有更新版本、用户定制或本地注释先比较和保留，不整文件覆盖。可从 GitHub 内容接口或该提交的 raw 地址读取；下载失败保留原文件，说明规则未更新。
+3. 在实际 Skill 的主入口加入或复用读取上述两份 Markdown 的相对链接及“先句意、上下文、人物情绪，再决定 B-roll 和动作，最后选特效与声音”的执行要求。相同要求已存在就不重复追加。只合并规则入口，不替换原入口全文，不改已有版本号、程序、字体、素材和项目设置。
+4. 复查两个相对链接及 JSON：共 50 题、49 个选择，第 34 题为空；说明真实保存位置。后续新窗口读取该主入口即可，不依赖旧对话。接收方当前明确要求优先于作者偏好。
 
 ## 后续直接接收素材
 
