@@ -1,0 +1,325 @@
+{
+  "scope": "Packaged Qiaomu export and browser font-loading smoke check",
+  "network_downloads": false,
+  "bundle": {
+    "font_count": 34,
+    "font_files": 34,
+    "license_files": 34,
+    "font_bytes": 32198880,
+    "failures": [],
+    "checksums_match_bundled_upstream_manifest": true
+  },
+  "upstream_commit": "415ea71650d6ba896759a2d7fde05ac5317ca3d1",
+  "list": {
+    "exit_code": 0,
+    "pairing_count": 12,
+    "ids": [
+      "editorial",
+      "literary",
+      "tech",
+      "trend",
+      "youth",
+      "punch",
+      "promo",
+      "soft",
+      "playful",
+      "warm",
+      "guofeng",
+      "guochao"
+    ]
+  },
+  "exports": [
+    {
+      "directory": "tech-export",
+      "exit_code": 0,
+      "metadata": {
+        "pairings": [
+          "tech"
+        ],
+        "fontCount": 4,
+        "fontIds": [
+          "notosans",
+          "glow",
+          "spacegrotesk",
+          "jetbrains"
+        ],
+        "fontBytes": 3128092,
+        "fontAndLicenseChecksumsPassed": true,
+        "upstreamCommit": "415ea71650d6ba896759a2d7fde05ac5317ca3d1",
+        "originalFontBinariesUnmodified": true,
+        "systemFontInstallation": false,
+        "networkRequired": false,
+        "effectsIncluded": true,
+        "effectsSha256": "cb0d15356778e002e9a17d62b050759833888573dfc84e3ee9a2a81d108bc860",
+        "effectsSource": "ui-motion-fusion local integration (not upstream font repository)"
+      },
+      "file_checks": {
+        "font_count": 4,
+        "font_files": 4,
+        "license_files": 4,
+        "font_bytes": 3128092,
+        "failures": [],
+        "checksums_match_bundled_upstream_manifest": true
+      },
+      "existing_output_refused": true,
+      "existing_output_unchanged": true,
+      "refusal_exit_code": 2
+    },
+    {
+      "directory": "all-export",
+      "exit_code": 0,
+      "metadata": {
+        "pairings": [
+          "editorial",
+          "literary",
+          "tech",
+          "trend",
+          "youth",
+          "punch",
+          "promo",
+          "soft",
+          "playful",
+          "warm",
+          "guofeng",
+          "guochao"
+        ],
+        "fontCount": 34,
+        "fontIds": [
+          "notosans",
+          "notosans-bold",
+          "notosans-heavy",
+          "notoserif",
+          "notoserif-bold",
+          "notoserif-heavy",
+          "zhuque",
+          "wenkai",
+          "smiley",
+          "douyin",
+          "glow",
+          "huangyou",
+          "kuaile",
+          "jiangcheng",
+          "maoken",
+          "tiejili",
+          "mashan",
+          "zhimang",
+          "pixel",
+          "inter",
+          "inter-bold",
+          "spacegrotesk",
+          "bricolage",
+          "unbounded",
+          "anton",
+          "bebas",
+          "archivoblack",
+          "dmserif",
+          "fraunces",
+          "instrument",
+          "instrument-italic",
+          "cormorant",
+          "jetbrains",
+          "caveat"
+        ],
+        "fontBytes": 32198880,
+        "fontAndLicenseChecksumsPassed": true,
+        "upstreamCommit": "415ea71650d6ba896759a2d7fde05ac5317ca3d1",
+        "originalFontBinariesUnmodified": true,
+        "systemFontInstallation": false,
+        "networkRequired": false,
+        "effectsIncluded": true,
+        "effectsSha256": "cb0d15356778e002e9a17d62b050759833888573dfc84e3ee9a2a81d108bc860",
+        "effectsSource": "ui-motion-fusion local integration (not upstream font repository)"
+      },
+      "file_checks": {
+        "font_count": 34,
+        "font_files": 34,
+        "license_files": 34,
+        "font_bytes": 32198880,
+        "failures": [],
+        "checksums_match_bundled_upstream_manifest": true
+      },
+      "existing_output_refused": true,
+      "existing_output_unchanged": true,
+      "refusal_exit_code": 2
+    }
+  ],
+  "browser": {
+    "result": "passed",
+    "browser_version": "151.0.7922.34",
+    "browser_source": "Existing local Playwright Chromium; not a browser bundled inside the release",
+    "ready": {
+      "pairings": 12,
+      "fonts": 34
+    },
+    "font_report": [
+      {
+        "id": "notosans",
+        "loaded": true
+      },
+      {
+        "id": "notosans-bold",
+        "loaded": true
+      },
+      {
+        "id": "notosans-heavy",
+        "loaded": true
+      },
+      {
+        "id": "notoserif",
+        "loaded": true
+      },
+      {
+        "id": "notoserif-bold",
+        "loaded": true
+      },
+      {
+        "id": "notoserif-heavy",
+        "loaded": true
+      },
+      {
+        "id": "zhuque",
+        "loaded": true
+      },
+      {
+        "id": "wenkai",
+        "loaded": true
+      },
+      {
+        "id": "smiley",
+        "loaded": true
+      },
+      {
+        "id": "douyin",
+        "loaded": true
+      },
+      {
+        "id": "glow",
+        "loaded": true
+      },
+      {
+        "id": "huangyou",
+        "loaded": true
+      },
+      {
+        "id": "kuaile",
+        "loaded": true
+      },
+      {
+        "id": "jiangcheng",
+        "loaded": true
+      },
+      {
+        "id": "maoken",
+        "loaded": true
+      },
+      {
+        "id": "tiejili",
+        "loaded": true
+      },
+      {
+        "id": "mashan",
+        "loaded": true
+      },
+      {
+        "id": "zhimang",
+        "loaded": true
+      },
+      {
+        "id": "pixel",
+        "loaded": true
+      },
+      {
+        "id": "inter",
+        "loaded": true
+      },
+      {
+        "id": "inter-bold",
+        "loaded": true
+      },
+      {
+        "id": "spacegrotesk",
+        "loaded": true
+      },
+      {
+        "id": "bricolage",
+        "loaded": true
+      },
+      {
+        "id": "unbounded",
+        "loaded": true
+      },
+      {
+        "id": "anton",
+        "loaded": true
+      },
+      {
+        "id": "bebas",
+        "loaded": true
+      },
+      {
+        "id": "archivoblack",
+        "loaded": true
+      },
+      {
+        "id": "dmserif",
+        "loaded": true
+      },
+      {
+        "id": "fraunces",
+        "loaded": true
+      },
+      {
+        "id": "instrument",
+        "loaded": true
+      },
+      {
+        "id": "instrument-italic",
+        "loaded": true
+      },
+      {
+        "id": "cormorant",
+        "loaded": true
+      },
+      {
+        "id": "jetbrains",
+        "loaded": true
+      },
+      {
+        "id": "caveat",
+        "loaded": true
+      }
+    ],
+    "pairings_selected": [
+      "editorial",
+      "literary",
+      "tech",
+      "trend",
+      "youth",
+      "punch",
+      "promo",
+      "soft",
+      "playful",
+      "warm",
+      "guofeng",
+      "guochao"
+    ],
+    "effects_selected": [
+      "highlight",
+      "plain",
+      "sticker",
+      "depth",
+      "outline"
+    ],
+    "computed_tech_title": {
+      "family": "Qiaomu-glow, Qiaomu-notosans, sans-serif",
+      "weight": "900"
+    },
+    "page_errors": [],
+    "failed_requests": [],
+    "unexpected_requests": [],
+    "screenshot": "gallery.png",
+    "visual_review": false,
+    "scope_limit": "FontFace loading and smoke interactions; not complete glyph coverage or final video validation"
+  },
+  "result": "passed"
+}

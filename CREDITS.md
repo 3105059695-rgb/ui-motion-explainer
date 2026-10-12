@@ -34,6 +34,10 @@
 
 `assets/motion-lab/` 的拉丁字符与数字使用 Outfit Bold，按该目录内的 [Outfit OFL](assets/motion-lab/assets/Outfit-OFL.txt) 分发；中文 Noto Sans SC 子集的许可证同时保存在[示例资产目录](assets/motion-lab/assets/NotoSansSC-OFL.txt)。
 
+2026.10.12.2 完整发布包新增乔木字库，来源 [joeseesun/qiaomu-cover-fonts](https://github.com/joeseesun/qiaomu-cover-fonts/tree/415ea71650d6ba896759a2d7fde05ac5317ca3d1)，固定提交为 `415ea71650d6ba896759a2d7fde05ac5317ca3d1`。包内 `工具/skills/ui-motion-fusion/assets/qiaomu-fonts/` 保存 34 个字体文件（部分为同一字体的不同字重）、来源索引和对应许可；本次整合保持从该上游取得的字体二进制原字节，不声称它们等同于各字体厂商未经处理的原始发行文件。上游收录、处理与具体字体授权以随包来源及许可为准，字体不重新许可为本仓库 MIT。
+
+12 套字体搭配及字体来源由包内 `pairings.json`、`source.json` 记录；`effects.css` 的 5 种可选花字、交互预览和 `scripts/export_qiaomu_fonts.py` 导出器为本技能的整合功能，不将其称为乔木上游原有功能。分发或导出字体时保留相应许可和来源记录，具体使用方式见[字体模块说明](docs/director-fonts-20261012.md)。
+
 ## 动画运行库
 
 示例包含 GSAP 3.14.2，保留库文件头的版权信息，按 [GSAP Standard License](https://gsap.com/community/standard-license/) 使用。GSAP 不属于本仓库原创代码的 MIT 授权部分。
