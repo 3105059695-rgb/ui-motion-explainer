@@ -53,6 +53,15 @@ class AigcAssetTests(unittest.TestCase):
         self.assertFalse(result['approved_static_assets'][0]['video_verified'])
         self.assertFalse(result['video_approval_inherited'])
         self.assertEqual(result['research_sources'], self.data['research_sources'])
+        self.assertTrue(result['reference_only'])
+        self.assertFalse(result['default_character_required'])
+        for row in [*result['character_references'], *result['approved_static_assets']]:
+            self.assertEqual(row['usage_role'], 'style-reference-only')
+            self.assertEqual(row['role'], 'reference')
+            self.assertFalse(row['auto_use_as_first_frame'])
+            self.assertFalse(row['auto_use_as_output'])
+        self.assertIn('每期先理解口播句意', result['instruction'])
+        self.assertIn('当前工程明确指定的固定 IP', result['character_policy'])
 
     def test_other_accounts_do_not_inherit_girl_even_inside_sample_project(self):
         for profile in ('adiao', 'fangmu'):
@@ -119,6 +128,15 @@ class AigcAssetTests(unittest.TestCase):
         self.assertEqual(context['aigc']['selected_style_set'], 'qiuzhi-girl-painterly')
         self.assertEqual(len(context['aigc']['approved_static_assets']), 1)
         self.assertTrue(any(item['path'].endswith('aigc-directing.md') for item in context['required_reading']))
+        self.assertTrue(context['aigc']['reference_only'])
+        self.assertFalse(context['aigc']['default_character_required'])
+        self.assertIn('例图不得自动变成首帧或成片', (self.project / 'director-brief.md').read_text(encoding='utf-8'))
+
+    def test_reference_only_path_index_includes_style_examples_not_source_video(self):
+        paths = aigc_assets.reference_only_paths(self.root)
+        self.assertIn((self.root / 'character.png').resolve(), paths)
+        self.assertIn((self.root / 'scene.png').resolve(), paths)
+        self.assertNotIn((self.root / 'source.mp4').resolve(), paths)
 
     def test_missing_catalog_keeps_legacy_prepare_usable_but_reports_gap(self):
         (self.root / aigc_assets.CATALOG).unlink()

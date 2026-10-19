@@ -118,3 +118,12 @@ Remotion 按 `frame / fps` 驱动画面，保持 composition 的 `durationInFram
 
 后端的安装、升级、登录或确认提示只在确有需求时处理，不复制成主技能的固定开工门槛。
 用户已授权的本地制作／导出继续完成；费用、外部发布及重要数据覆盖按当前明确授权执行。
+
+
+## 统一生产导出与历史演示
+
+`new` 生成的是实现起点，记录当前档案来源并标记风格尚未应用。不能将能播放的历史皮肤直接交作本期成片。
+
+统一 `ui.py render --engine <engine>` 默认生产导出：使用工程根目录的 `director-plan.json`，或通过 `--plan <同工程计划>` 指定；检查 `render_ready` 与 `current_style_ready` 后才启动下游渲染器。只展示历史动作机制时显式加 `--demo`，输出会注明非生产。当前绑定只证明依据和结构齐备，实际样式仍需对照成片。
+
+由统一入口新建的工程还有 `current_style_applied:false` 标记。落实本期画面样式后才可将 `project.json.current_style_applied` 设为 `true`；未落实时即使计划有效也阻止生产导出。该声明是制作状态，不是自动视觉验收。

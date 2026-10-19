@@ -57,6 +57,7 @@ class DirectorTests(unittest.TestCase):
         self.assertIn('media decode', report['scope'])
         self.assertFalse(report['generation_submitted'])
         self.assertFalse(report['current_style_ready'])
+        self.assertFalse(report['production_ready'])
 
     def bind_current_style(self):
         (self.root / 'references/profiles').mkdir(exist_ok=True)
@@ -82,7 +83,59 @@ class DirectorTests(unittest.TestCase):
         report = self.run_check()
         self.assertTrue(report['render_ready'], report)
         self.assertTrue(report['current_style_ready'], report)
+        self.assertTrue(report['production_ready'], report)
         self.assertIn('not rendered-style or aesthetic approval', report['style_readiness_scope'])
+
+    def test_legacy_plan_cannot_select_a_globally_rejected_baseline(self):
+        self.bind_current_style()
+        del self.plan['style_contract_version']
+        del self.plan['style']['binding']
+        (self.root / 'rejected').mkdir()
+        (self.root / 'rejected/video.mp4').write_bytes(b'rejected-fixture')
+        self.plan['style']['baseline'] = 'rejected/video.mp4'
+        report = self.run_check()
+        self.assertFalse(report['plan_valid'], report)
+        self.assertFalse(report['render_ready'])
+        self.assertFalse(report['production_ready'])
+        self.assertTrue(any('style.baseline: registered baseline is rejected or excluded' in item
+                            for item in report['errors']))
+
+    def test_legacy_plan_cannot_select_a_source_index_excluded_baseline(self):
+        self.bind_current_style()
+        del self.plan['style_contract_version']
+        del self.plan['style']['binding']
+        (self.root / 'trial.mp4').write_bytes(b'unapproved-fixture')
+        (self.root / 'samples.json').write_text(json.dumps({'samples': [
+            {'id': 'old-trial', 'path': 'trial.mp4', 'status': 'rejected'}]}), encoding='utf-8')
+        registry = director.load_json(self.root / style_registry.REGISTRY)
+        registry['profiles'][0]['sources'] = [{'kind': 'asset-map', 'path': 'samples.json',
+                                              'accepted_statuses': ['approved']}]
+        (self.root / style_registry.REGISTRY).write_text(json.dumps(registry), encoding='utf-8')
+        self.plan['style']['baseline'] = 'trial.mp4'
+        report = self.run_check()
+        self.assertFalse(report['render_ready'], report)
+        self.assertFalse(report['production_ready'])
+        self.assertTrue(any('style.baseline: registered baseline is rejected or excluded' in item
+                            for item in report['errors']))
+
+    def test_legacy_unlisted_baseline_retains_only_structural_compatibility(self):
+        self.bind_current_style()
+        del self.plan['style_contract_version']
+        del self.plan['style']['binding']
+        (self.root / 'unlisted.mp4').write_bytes(b'unlisted-fixture')
+        self.plan['style']['baseline'] = 'unlisted.mp4'
+        report = self.run_check()
+        self.assertTrue(report['render_ready'], report)
+        self.assertFalse(report['current_style_ready'])
+        self.assertFalse(report['production_ready'])
+
+    def test_current_binding_without_audio_alignment_is_not_production_ready(self):
+        self.bind_current_style()
+        self.plan['timing'] = {'basis': 'script-estimate'}
+        report = self.run_check()
+        self.assertTrue(report['current_style_ready'], report)
+        self.assertFalse(report['render_ready'])
+        self.assertFalse(report['production_ready'])
 
     def test_new_contract_requires_current_binding_not_just_tokens(self):
         self.plan['style_contract_version'] = 1
@@ -269,6 +322,79 @@ class DirectorTests(unittest.TestCase):
             'result_hold_seconds': 0.5,
         }
         return segment
+
+    def reference_catalog(self):
+        for name in ('reference.png', 'library-scene.png'):
+            (self.root / name).write_bytes(b'registered-style-example')
+        (self.root / 'references/aigc-assets.json').write_text(json.dumps({'style_sets': [{
+            'id': 'style-example', 'character_references': ['reference.png'],
+            'assets': [{'id': 'example', 'image_path': 'library-scene.png',
+                        'approval_state': 'approved_static_scene'}]}]}), encoding='utf-8')
+
+    def test_registered_picture_as_style_reference_does_not_force_same_character(self):
+        self.reference_catalog()
+        self.plan['segments'][0]['assets'] = [{'kind': 'concept', 'role': 'reference', 'status': 'ready',
+            'path': 'library-scene.png', 'purpose': '仅学习画法，本期重新设计场景'}]
+        report = self.run_check()
+        self.assertTrue(report['render_ready'], report)
+        self.assertTrue(report['plan_valid'])
+
+    def test_registered_reference_as_output_requires_explicit_current_basis(self):
+        self.reference_catalog()
+        segment = self.plan['segments'][0]
+        segment['carrier'] = 'mixed'
+        asset = {'kind': 'generated', 'status': 'ready', 'path': 'library-scene.png',
+                 'purpose': '显示场景图'}
+        segment['assets'] = [asset]
+        report = self.run_check()
+        self.assertFalse(report['render_ready'])
+        self.assertTrue(any('style-reference-only' in item for item in report['errors']))
+        asset['reference_reuse'] = {'basis': 'historical-approval', 'reason': '以前喜欢过'}
+        self.assertFalse(self.run_check()['plan_valid'])
+        asset['reference_reuse'] = {'basis': 'current-request', 'reason': '本期明确要求展示这张原图作为对照证据'}
+        self.assertTrue(self.run_check()['render_ready'])
+
+    def test_reference_only_inputs_do_not_count_as_finished_mixed_media(self):
+        self.reference_catalog()
+        segment = self.plan['segments'][0]
+        segment['carrier'] = 'mixed'
+        segment['assets'] = [{'kind': 'generated', 'role': 'reference', 'status': 'ready',
+                             'path': 'library-scene.png', 'purpose': '画风参考'}]
+        report = self.run_check()
+        self.assertTrue(report['plan_valid'])
+        self.assertFalse(report['render_ready'])
+
+    def test_registered_example_as_generation_first_frame_requires_current_basis(self):
+        segment = self.generated_segment()
+        self.reference_catalog()
+        segment['generation'] = {'first_frame': 'library-scene.png'}
+        self.assertFalse(self.run_check()['plan_valid'])
+        segment['generation']['reference_reuse'] = {
+            'basis': 'current-project', 'reason': '续剪当前已确认镜头，沿用同一初态接下一动作'}
+        self.assertTrue(self.run_check()['render_ready'])
+
+    def test_new_scene_first_frame_is_distinct_from_style_reference(self):
+        segment = self.generated_segment()
+        self.reference_catalog()
+        (self.root / 'new-scene.png').write_bytes(b'new-narration-specific-design')
+        segment['generation'] = {'first_frame_path': 'new-scene.png'}
+        self.assertTrue(self.run_check()['render_ready'])
+        segment['generation'] = None
+        segment['aigc']['first_frame_path'] = 'library-scene.png'
+        self.assertFalse(self.run_check()['plan_valid'])
+
+    def test_asset_first_frame_role_does_not_masquerade_as_finished_video(self):
+        self.reference_catalog()
+        segment = self.plan['segments'][0]
+        segment['carrier'] = 'mixed'
+        asset = {'kind': 'generated', 'role': 'first-frame', 'status': 'ready',
+                 'path': 'library-scene.png', 'purpose': '旧图首帧'}
+        segment['assets'] = [asset]
+        self.assertFalse(self.run_check()['plan_valid'])
+        asset['reference_reuse'] = {'basis': 'current-project', 'reason': '续剪本期同一镜头'}
+        report = self.run_check()
+        self.assertTrue(report['plan_valid'])
+        self.assertFalse(report['render_ready'])
 
     def test_new_aigc_contract_checks_real_local_references(self):
         segment = self.generated_segment()

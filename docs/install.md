@@ -64,9 +64,9 @@ python -B -X utf8 scripts/ui.py modules check
 所有代码、文档、脱敏配置和媒体定稿后，再生成本次清单：
 
 ```powershell
-python -B -X utf8 scripts/release_manifest.py --write --version 2026.10.19.1
+python -B -X utf8 scripts/release_manifest.py --write --version 2026.10.19.2
 python -B -X utf8 scripts/verify_package.py
-python -B -X utf8 scripts/package.py --out "../ui-motion-fusion-2026.10.19.1.zip"
+python -B -X utf8 scripts/package.py --out "../ui-motion-fusion-2026.10.19.2.zip"
 python -B -X utf8 -m unittest discover -s tests -p "test_install_release.py" -v
 ```
 

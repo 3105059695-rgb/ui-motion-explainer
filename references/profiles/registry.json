@@ -94,7 +94,7 @@
               "覆盖阿刁、方木等独立档案",
               "后续通用 user-ui 口播任务以此片校准女孩画风、动作与衔接，不重复确认；当前正文UI外观以最新Fred方向合同为准。",
               "先理解新口播句意、因果与情绪，再选场景和动作；不固定复用这份口播、三段顺序、11.3 秒长度或坐标。",
-              "角色身份继续以两张用户原图约束；样片中已知局部比例或发夹偏差不改写角色标准。",
+              "图片仅作画风参考；当前工程明确固定该女孩IP时才约束身份，其他稿件按内容设计。",
               "复用已成功实现的连续动作与转场代码，视频导出核验实际解码画面和定位，不能只看 currentTime。"
             ],
             "related_visuals": [
@@ -113,9 +113,12 @@
               "assets/approved-girl-sample/validation/final-check.json",
               "assets/approved-girl-sample/validation/visual-review.json"
             ],
-            "current_usage": "AIGC identity/action/transition implementation only; current body UI is bound to the latest Fred direction contract."
+            "current_usage": "Style, causal action and transition methods only; design new assets per narration. Do not automatically reuse example images or character identity. Current UI follows the latest Fred contract."
           }
         }
+      ],
+      "required_reading": [
+        "references/evidence/aigc-reference-scope-20261019.json"
       ]
     },
     {

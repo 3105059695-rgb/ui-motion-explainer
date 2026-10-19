@@ -136,9 +136,9 @@ def prepare(script, project, profile=None, force=False, root=ROOT):
         f"- 逐句来源索引：{context['source_study']['manifest']}",
         f"- 多来源注册：{context['source_study']['source_registry']}；各片独立的对照和研究索引位于 context.source_study.sources。",
         '- 先按句意阅读候选和原片对照；字面搜索结果不是自动选型，未匹配不硬套。', '',
-        f"- AIGC 画风：{context['aigc']['selected_style_set'] or '未自动选定'}；路由、角色原图、已认可静态场景和完整研究入口见 context.aigc。",
+        f"- AIGC 画风参考：{context['aigc']['selected_style_set'] or '未自动选定'}；图中人物与场景是风格例证，不是每期固定素材，见 context.aigc。",
         f"- AIGC 资产目录：{context['aigc']['catalog']}；使用及节奏指南：{context['aigc']['guide']['path']}。",
-        '- AIGC 与 UI 风格独立；静态场景图认可不能替代新视频的动作、节奏与风格核对。按当前句意复用资产，实际剪辑时长与生成时长分别填写。', '',
+        '- AIGC 与 UI 风格独立；每期按口播句意新设计人物、场景、道具与动作，例图不得自动变成首帧或成片。明确工程固定 IP 保持连续，其他稿件不强制同一女孩。直接沿用参考图时在使用处记录 reference_reuse 的本期明确依据；风格参考标 role=reference。实际剪辑时长与生成时长分别填写。', '',
         '- 新建且含 AIGC 动作的导演计划使用 aigc_contract_version: 1，并填写对应段落的 aigc 参考图与动作时间；旧计划沿用兼容性，不要求无 AIGC 的计划补填。', '',
         '- 新建制作计划使用 style_contract_version: 1，并将 context.style.binding 原样放入 style.binding。check 会重新读取当前合同、版本、视觉锚点与哈希；缺图或过期绑定不能报当前风格依据就绪。这不代表实际画面已经通过审美检查。', '',
         '## 由 Agent 判断并落实', '',
@@ -215,6 +215,7 @@ def check(plan_path, root=ROOT):
     current_style_ready = False
     path = Path(plan_path).resolve()
     base = path.parent
+    reference_only_images = set()
 
     def error(where, message):
         errors.append(f'{where}: {message}')
@@ -238,6 +239,27 @@ def check(plan_path, root=ROOT):
         except (ValueError, OSError) as exc:
             error(where, str(exc))
             return None
+
+    def check_reference_reuse(p, record, where):
+        # Registered-path checks cannot detect renamed/copied pictures or judge
+        # the actual rendered style. New pictures do not need reuse approval.
+        if p not in reference_only_images:
+            return
+        reuse = record.get('reference_reuse')
+        if not (isinstance(reuse, dict) and reuse.get('basis') in ('current-project', 'current-request')
+                and populated(reuse.get('reason'))):
+            error(where, 'registered style-reference-only image cannot become output/first frame automatically; '
+                  'design this narration anew, or record reference_reuse={basis:current-project|current-request,reason:<explicit current-use basis>}')
+
+    def check_first_frames(record, where):
+        if not isinstance(record, dict):
+            return
+        for key in ('first_frame', 'first_frame_path'):
+            if key in record:
+                value = record[key]
+                p = file_ref(value.get('path') if isinstance(value, dict) else value, where + '.' + key)
+                if p is not None:
+                    check_reference_reuse(p, record, where + '.' + key)
 
     def aigc_contract(segment, where, required):
         contract = segment.get('aigc')
@@ -303,9 +325,11 @@ def check(plan_path, root=ROOT):
             error(label + '.result_hold_seconds', 'the final action plus result hold exceeds edit_duration_seconds')
 
     def result():
+        render_ready = not errors and not blockers
         return {'errors': errors, 'warnings': warnings, 'plan_valid': not errors,
-                'render_ready': not errors and not blockers,
+                'render_ready': render_ready,
                 'current_style_ready': current_style_ready,
+                'production_ready': render_ready and current_style_ready,
                 'style_readiness_scope': 'Current registered contract and visual-reference files only; not rendered-style or aesthetic approval.',
                 'readiness_blockers': blockers, 'generation_jobs': jobs,
                 'generation_submitted': False,
@@ -321,6 +345,10 @@ def check(plan_path, root=ROOT):
     if not isinstance(plan, dict):
         error('plan', 'must be an object')
         return result()
+    try:
+        reference_only_images = aigc_assets.reference_only_paths(root)
+    except (OSError, ValueError, TypeError) as exc:
+        error('aigc.catalog', 'cannot validate reference-only image use: ' + str(exc))
     if type(plan.get('schema_version')) is not int or plan['schema_version'] != 1:
         error('schema_version', 'must be integer 1')
     strict_aigc = plan.get('aigc_contract_version') == 1 or plan.get('style_contract_version') == 1
@@ -357,6 +385,24 @@ def check(plan_path, root=ROOT):
                 file_ref(style[key], 'style.' + key, directory=key == 'baseline')
         if not style.get('profile') and not style.get('binding'):
             warnings.append('style.profile: no account profile selected; Agent must verify that explicit tokens fit the current request.')
+        if style.get('baseline'):
+            # Rejections apply to legacy plans too. Do not use resolve() here:
+            # its unconfirmed project declarations are not registry rejections.
+            try:
+                registry = style_registry.load_registry(root)
+                candidate = style_registry.local_path(style['baseline'], base)
+                rejected = style_registry._excluded_path(candidate, registry, root)
+                if not rejected:
+                    for config in registry['profiles']:
+                        exclusions = style_registry.load_profile(config, registry, root).get('excluded_baselines', [])
+                        rejected = next((row for row in exclusions if row.get('path') and
+                            style_registry.under(candidate, style_registry.local_path(row['path'], root))), None)
+                        if rejected:
+                            break
+                if rejected:
+                    error('style.baseline', 'registered baseline is rejected or excluded; legacy plans cannot override this decision')
+            except (OSError, ValueError, KeyError, TypeError) as exc:
+                error('style.baseline', 'cannot verify registered baseline exclusions: ' + str(exc))
     style_version = plan.get('style_contract_version')
     if style_version is None:
         warnings.append('style.binding: legacy plan has no current style contract binding; current_style_ready=false even if structural render_ready=true.')
@@ -516,7 +562,8 @@ def check(plan_path, root=ROOT):
         if not isinstance(assets, list):
             error(where + '.assets', 'must be an explicit list; [] is allowed for a self-contained diagram')
             assets = []
-        if not assets and carrier in {'real-media', 'mixed'}:
+        if not any(isinstance(asset, dict) and asset.get('role', 'output') not in ('reference', 'first-frame')
+                   for asset in assets) and carrier in {'real-media', 'mixed'}:
             blockers.append(where + ': no media assets recorded for this carrier.')
         for j, asset in enumerate(assets):
             label = where + f'.assets[{j}]'
@@ -526,7 +573,8 @@ def check(plan_path, root=ROOT):
             if not isinstance(asset.get('kind'), str) or asset['kind'] not in {'real', 'generated', 'concept'}:
                 error(label + '.kind', 'must be real, generated or concept')
             status = asset.get('status')
-            if asset.get('kind') == 'generated' and asset.get('role', 'output') != 'reference':
+            is_output = asset.get('role', 'output') not in ('reference', 'first-frame')
+            if asset.get('kind') == 'generated' and is_output:
                 asset_path = asset.get('path')
                 has_generated_video = has_generated_video or asset.get('output_kind') == 'video' or (
                     populated(asset_path) and Path(asset_path).suffix.lower() in VIDEO_EXTENSIONS)
@@ -537,7 +585,9 @@ def check(plan_path, root=ROOT):
                 blockers.append(label + ': asset is ' + str(status))
             if status == 'ready':
                 p = file_ref(asset.get('path'), label + '.path')
-                if asset.get('kind') == 'generated' and asset.get('role', 'output') != 'reference':
+                if p is not None and asset.get('role', 'output') != 'reference':
+                    check_reference_reuse(p, asset, label)
+                if asset.get('kind') == 'generated' and is_output:
                     if carrier == 'aigc' and p and p.suffix.lower() in IMAGE_EXTENSIONS:
                         error(label, 'a static image is not a completed AIGC continuous-action video; mark reference assets role=reference')
                     provenance = asset.get('source')
@@ -549,6 +599,8 @@ def check(plan_path, root=ROOT):
         if generation is not None and not isinstance(generation, dict):
             error(where + '.generation', 'must be an object')
             generation = None
+        check_first_frames(generation, where + '.generation')
+        check_first_frames(segment.get('aigc'), where + '.aigc')
         if carrier == 'aigc' or carrier == 'mixed' and (generation is not None or has_generated_video):
             aigc_contract(segment, where, strict_aigc)
         if carrier == 'aigc' and not ready_generated_video:

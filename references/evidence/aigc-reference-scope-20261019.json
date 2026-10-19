@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "event_id": "aigc-reference-scope-20261019",
+  "date": "2026-10-19",
+  "source": "direct_user_message",
+  "user_quote": "目前里面不会保留之前错误的那些动效这些吧，以及aigc我的那个图片只是参考，不是说以后都用这个aigc的图片，只是参考风格的",
+  "current_policy": {
+    "reference_usage_default": "style-reference-only",
+    "scene_generation_policy": "new-per-narration",
+    "automatic_first_frame": false,
+    "automatic_output_reuse": false,
+    "default_character_required": false,
+    "fixed_ip": "仅当前工程或请求明确固定 IP 时延续其身份；不强制所有稿子重复参考中的人物。",
+    "inherit": "柔和手绘画风、材质统一、可读动作与按句意解释的方法。",
+    "redesign": "根据每期口播设计人物、空间、道具、构图、动作和转场；参考例图不作为固定素材菜单。",
+    "exception": "本期明确直接使用旧图时记录当前需求/工程依据，不要求正常生成新素材反复审批。"
+  },
+  "historical_policy": "保留已认可机制、源码、历史证据和反例；被否定外观与效果不作生产默认或已认可基线。历史保留不等于允许调用。",
+  "verification_boundary": "检查可区分声明的角色与注册路径，不能自动辨认复制改名图片或替代成片审美判断。"
+}

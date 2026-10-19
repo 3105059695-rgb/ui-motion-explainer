@@ -63,6 +63,29 @@ def _project_choice(project, warnings):
     return None, None
 
 
+def reference_only_paths(root=ROOT):
+    """Catalog images teach style; a path match does not authorize production use."""
+    root = Path(root)
+    catalog = root / CATALOG
+    if not catalog.is_file():
+        return set()
+    data = _read(catalog)
+    sets = data.get('style_sets') if isinstance(data, dict) else None
+    if not isinstance(sets, list):
+        raise ValueError('AIGC catalog must contain style_sets:[...]')
+    paths = set()
+    for style in sets:
+        if not isinstance(style, dict):
+            raise ValueError('AIGC style_sets entries must be objects')
+        values = list(style.get('character_references', []))
+        values += [row.get('image_path') for row in style.get('assets', []) if isinstance(row, dict)]
+        for value in values:
+            fact = _path_fact(value, root)
+            if isinstance(fact['path'], str) and fact['path'] and '://' not in fact['path']:
+                paths.add(Path(fact['path']))
+    return paths
+
+
 def directing_context(project, style_resolution=None, root=ROOT):
     root = Path(root)
     catalog = root / CATALOG
@@ -74,10 +97,13 @@ def directing_context(project, style_resolution=None, root=ROOT):
         'character_references': [], 'style_rules': {}, 'approval': {},
         'approved_static_assets': [], 'research_sources': [],
         'available_style_sets': [], 'warnings': warnings,
+        'reference_only': True, 'default_character_required': False,
+        'auto_use_as_first_frame': False, 'auto_use_as_output': False,
+        'character_policy': '参考图中的人物不是所有稿件的默认主角；人物按本期句意设计。当前工程明确指定的固定 IP 继续保持身份、服装和画风连续，不因换场景重置。',
         'character_references_ready': False, 'production_references_ready': False,
         'optional_provenance_missing': [],
         'requires_visual_comparison': True, 'video_approval_inherited': False,
-        'instruction': 'AIGC 与 UI 外观分开。读取本次适用角色原图、认可场景图及研究入口，按句意选择或改编；静态图认可不代表新动作视频已通过。优先复用资产，不重做已认可造型；当前明确请求优先于默认路由。',
+        'instruction': 'AIGC 与 UI 外观分开。注册图片只用于理解画风、材质、构图和叙事方法；每期先理解口播句意，再设计本期人物、场景、道具和动作，制作匹配的新素材。不得自动把这些例图当成视频首帧、成片素材或固定场景菜单，也不强制所有稿件使用图中同一人物。当前工程明确指定的固定 IP 保持连续；直接沿用某张旧图须有本期明确依据，历史风格认可本身不是复用许可。',
     }
     if not catalog.is_file():
         context['status'] = 'missing-catalog'
@@ -124,7 +150,9 @@ def directing_context(project, style_resolution=None, root=ROOT):
     context.update(status='resolved', selected_style_set=selected['id'],
                    style_rules=selected.get('style_rules', {}), approval=selected.get('approval', {}))
     context['character_references'] = [
-        {**(row if isinstance(row, dict) else {}), **_path_fact(row, root)}
+        {**(row if isinstance(row, dict) else {}), **_path_fact(row, root),
+         'role': 'reference', 'usage_role': 'style-reference-only', 'identity_binding_default': False,
+         'auto_use_as_first_frame': False, 'auto_use_as_output': False}
         for row in selected.get('character_references', [])]
     for asset in selected.get('assets', []):
         if not isinstance(asset, dict) or asset.get('approval_state') != 'approved_static_scene':
@@ -132,6 +160,8 @@ def directing_context(project, style_resolution=None, root=ROOT):
         checks = {key: _path_fact(asset[key], root) for key in
                   ('image_path', 'source_frame', 'source_video') if asset.get(key)}
         context['approved_static_assets'].append({**asset, 'resource_checks': checks,
+                                                 'role': 'reference', 'usage_role': 'style-reference-only',
+                                                 'auto_use_as_first_frame': False, 'auto_use_as_output': False,
                                                  'reference_ready': bool(checks.get('image_path', {}).get('exists')),
                                                 'video_approval_inherited': False})
     missing = [row['path'] for row in context['character_references'] if not row['exists']]
@@ -141,11 +171,12 @@ def directing_context(project, style_resolution=None, root=ROOT):
         row['exists'] for row in context['character_references'])
     context['production_references_ready'] = context['character_references_ready'] and all(
         row['reference_ready'] for row in context['approved_static_assets'])
-    context['reference_readiness_scope'] = ('Inventory availability only. A plan checks only the character/scene/style '
-        'references it actually uses; a missing unused scene does not block a UI-only edit. No visual review performed.')
+    context['reference_readiness_scope'] = ('Style-reference inventory availability only, not ready production assets or automatic first frames. '
+        'Design each narration anew and preserve only a project-explicit fixed IP. A plan checks references it actually uses; '
+        'a missing unused example does not block a UI-only edit. No visual review performed.')
     context['optional_provenance_missing'] = [fact['path'] for row in context['approved_static_assets']
         for key, fact in row['resource_checks'].items() if key != 'image_path' and not fact['exists']]
     if missing:
-        warnings.append('Some AIGC production reference images are missing; do not silently replace the selected character or scene.')
+        warnings.append('Some AIGC style-reference images are missing; inspect the selected art direction rather than silently replacing it.')
         context['missing_resources'] = missing
     return context

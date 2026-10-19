@@ -135,19 +135,19 @@ AIGC 另外返回 `character_references_ready`、每个场景的 `reference_read
 }
 ```
 
-已有视频素材可写 `{"kind":"generated","status":"ready","path":"assets/existing.mp4","purpose":"本段连续表演","source":"用户已提供的既有生成片段及来源描述"}`，此时不强制再填生成提示词。作为身份参考的图片需显式加 `role:"reference"`，不能当完成视频。声明 `output_kind:"image"` 或 `motion:"static-pan-zoom"/"slideshow"/"still-image"` 不满足 AIGC 连续动作。扩展名检查只能发现明确误标，不能证明 MP4 内部真有动作。
+已有视频素材可写 `{"kind":"generated","status":"ready","path":"assets/existing.mp4","purpose":"本段连续表演","source":"用户已提供的既有生成片段及来源描述"}`，此时不强制再填生成提示词。作为画风或明确身份参考的图片需显式加 `role:"reference"`，不能当完成视频。声明 `output_kind:"image"` 或 `motion:"static-pan-zoom"/"slideshow"/"still-image"` 不满足 AIGC 连续动作。扩展名检查只能发现明确误标，不能证明 MP4 内部真有动作。
 
 `generation_jobs` 仅返回准备信息，始终 `eligible_for_submission:false`；不提交、不付费，也不由工具推断预算授权。
 
 ## AIGC 资产与实际剪辑节奏
 
-新建且包含 AIGC 动作的计划在顶层写 `"aigc_contract_version": 1`。对 `carrier=aigc`，或包含视频生成请求／已生成视频的 `mixed` 段，增加以下 `aigc` 对象。示例路径需替换为实际本地文件；两张角色原图和适用场景可直接取自 `prepare` 的上下文。
+新建且包含 AIGC 动作的计划在顶层写 `"aigc_contract_version": 1`。对 `carrier=aigc`，或包含视频生成请求／已生成视频的 `mixed` 段，增加以下 `aigc` 对象。示例路径需替换为实际本地文件；`prepare` 的人物图和场景例图默认仅作风格参考；本期角色/场景关键图按新口播制作，明确固定 IP 的工程可保留其身份参考。
 
 ```json
 "aigc": {
   "character_mode": "reference",
   "character_refs": ["实际角色原图.png"],
-  "scene_ref": "实际认可场景图.png",
+  "scene_ref": "本期设计的场景关键图.png",
   "style_ref": "实际画风参考图.png",
   "edit_duration_seconds": 2.5,
   "action_beats": [
@@ -158,7 +158,7 @@ AIGC 另外返回 `character_references_ready`、每个场景的 `reference_read
 }
 ```
 
-- `character_refs`、`scene_ref`、`style_ref` 必须指向存在的本地文件；身份原图与场景图承担不同作用，不能用一个画风标签代替实际参考。确实不含角色的镜头可用 `character_mode:"none"`、`character_refs:[]`，同时填写非空 `character_reason`，不强塞女孩。
+- `character_refs`、`scene_ref`、`style_ref` 必须指向存在的本地文件；参考分工必须明确：画风例图不自动决定本期人物身份、场景内容或首帧；角色/场景图对应本期实际设计，不能用一个画风标签代替实际参考。确实不含角色的镜头可用 `character_mode:"none"`、`character_refs:[]`，同时填写非空 `character_reason`，不强塞女孩。
 - 所有时间是**本段最终上屏片段内部的相对秒数**，不是原片取帧时间或生成服务时长。`edit_duration_seconds` 为有限正数；`result_hold_seconds` 为有限非负数。
 - `action_beats` 按顺序写实际可见变化，起止有效且不得互相重叠；动作不能超过上屏时长，最后动作结束加结果停留也不能越界。主体接触、转移与结果均须写清，画面仍需实际检查。
 - 只有稿件时这些数字仍是估时，保留 `timing.basis:"script-estimate"`，不可声称已音画对齐。正式剪辑后回填实际有效区间，较长生成素材只截所需动作。
@@ -171,3 +171,23 @@ AIGC 另外返回 `character_references_ready`、每个场景的 `reference_read
 - `warnings`：需要 Agent 判断的缺口，例如未绑定账号、尚未核对音轨证据内容。
 - `readiness_blockers`：只有估时、素材未齐或生成尚未完成。计划可结构有效，但 `render_ready=false`。
 - `render_ready=true`：仅表示本检查涉及的结构和路径就绪；版本 1 的风格计划还要求当前绑定与必读视觉依据齐备。旧计划的兼容性通过不等于当前风格齐备，应同时查看 `current_style_ready`。语义恰当、事实准确、工程能运行、媒体真实内容、画面效果、完整试听及用户认可均须另查；本工具不作这些认证。
+
+
+## 参考图片与实际素材分开
+
+注册图库中的人物图、场景图默认 `usage_role:"style-reference-only"`。在 `assets` 中引用它们时写 `role:"reference"`，只用于校准画风；`aigc.scene_ref/style_ref` 也不会自动升级为首帧。生成采用本期准备的关键图，图片存在不表示已完成动作。
+
+如果本期明确直接沿用某张旧图作上屏素材，在该素材项记录 `reference_reuse`；若作 `generation.first_frame` / `first_frame_path` 或 `aigc.first_frame` / `first_frame_path`，在对应对象记录同样字段：
+
+```json
+"reference_reuse": {
+  "basis": "current-request",
+  "reason": "记录本期明确使用该图的要求；或 basis=current-project 并写明该图在当前工程的既有用途"
+}
+```
+
+历史画风认可不能填作本期用图依据。正常按口播制作的新图不需要这个例外，也不要求用户逐图确认。此检查按已注册路径匹配，不能识别复制改名文件、判断理由真实性或代替最终画面审查。
+
+`production_ready = render_ready && current_style_ready`。旧计划可保留结构兼容，但未绑定当前风格不能进入统一生产导出；任何版本声明被否定的基线都会拒绝。统一 `ui.py render` 检查生产就绪后才调用底层渲染器；明确 `--demo` 仅用于历史机制演示，不算正式制作通过。
+
+由统一入口新建的工程还有 `current_style_applied:false` 标记。落实本期画面样式后才可将 `project.json.current_style_applied` 设为 `true`；未落实时即使计划有效也阻止生产导出。该声明是制作状态，不是自动视觉验收。

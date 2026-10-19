@@ -15,15 +15,18 @@
     "repeat_style_confirmation_required": false,
     "media_policy": "跨机器发行携带已确认角色、8张场景与必要样片；原作者整片、私有音色、数字人和账号工程不随包。local-only标注仅是未携带的研究原址，不用于生成首帧。",
     "ui_policy": "只约束AIGC叙事镜头，UI外观继续读取原账号/项目UI风格。",
-    "selection_policy": "先判句意、上下文、人物情绪与可见因果，再按semantic_use匹配资产；不只做关键词替换。",
-    "fallback": "资产语义不匹配时沿用角色原图与绘画材质制作适配场景；不能硬塞已存场景。",
-    "historical_candidates_policy": "cat-v1、animal-ip、旧男性视频及girl-assets-v1通用空景保留历史，不作默认或已认可风格。"
+    "selection_policy": "先理解每期口播句意、上下文、情绪与因果，再新设计人物、场景、道具和动作；参考图用于学习画风与方法，不从八张旧图中默认挑素材。",
+    "fallback": "保持已确认画风并设计匹配本期内容的新素材；不强塞已有场景或强制同一人物。",
+    "historical_candidates_policy": "cat-v1、animal-ip、旧男性视频及girl-assets-v1通用空景保留历史，不作默认或已认可风格。",
+    "reference_usage_default": "style-reference-only",
+    "scene_generation_policy": "new-per-narration",
+    "current_scope_evidence": "references/evidence/aigc-reference-scope-20261019.json"
   },
   "style_sets": [
     {
       "id": "qiuzhi-girl-painterly",
-      "title": "女孩手绘IP × 秋芝具体场景叙事",
-      "scope": "通用user-ui项目的默认AIGC叙事画风；具体账号/项目优先。",
+      "title": "柔和手绘画风 × 按口播设计具体事件",
+      "scope": "通用user-ui默认画风参考；图中身份及场景不是所有新稿的固定内容，当前工程明确IP除外。",
       "default_for_profiles": [
         "user-ui"
       ],
@@ -54,20 +57,20 @@
           "柔和自然光与可读的物体接触，不用发光粒子代替动作"
         ],
         "scene_policy": [
-          "以原片具体机位、空间和物件关系指导适配场景",
-          "场景为任务服务，可覆盖工坊、森林、铁匠铺、能力货架、书堆、游戏平台",
-          "人物身份以用户原图为准，不沿用原作者人设或品牌标志"
+          "按本期句意设计空间、道具与人物关系；历史图用于学习画风和解释方法。",
+          "不固定机位、旧场景和场景菜单；同一事件的对象与空间关系保持连续。",
+          "人物按本期需求设计；明确固定IP时延续，不克隆原作者身份。"
         ],
         "reference_roles": {
-          "character_reference": "两张用户原图决定身份、比例和笔触；九宫格仅作参考，不作视频首帧。",
-          "scene_reference": "原片帧决定功能场景、构图和人/物/动作关系，不覆盖用户绘画材质。",
-          "video_first_frame": "使用单场景已认可图，先处理该图observations中影响连续镜头的偏差。"
+          "character_reference": "画风、比例和材质参考；当前项目明确固定该女孩IP时才约束身份。九宫格不能直接当首帧。",
+          "scene_reference": "学习场景的画法与解释关系；按本期内容重设计，不固定布局、道具或人物。",
+          "video_first_frame": "使用本期设计并检查的单场景关键图；例图不可自动升为首帧。"
         },
         "negative_constraints": [
           "写实成人比例",
           "3D塑料/光滑娃娃",
           "厚重黑描边或扁平矢量",
-          "更换发色、发夹侧别、服装和比例",
+          "同一镜头或明确固定IP的连续段无故改变身份、服装和比例",
           "让九宫格一起动",
           "随机换场或无因果空房间",
           "生成文字充当精确UI",
@@ -78,7 +81,8 @@
           "简单动作只占完成理解所需时长，生成时长不等于剪辑使用时长",
           "保持首帧手绘材质，不让视频模型自动转为3D",
           "不将8张静图认可等同任何运动片认可"
-        ]
+        ],
+        "identity_scope": "identity与wardrobe仅描述历史女孩示例；只有工程明确沿用该IP时才作为身份约束，不强制所有稿件同一人物。"
       },
       "approval": {
         "schema_version": 1,
@@ -106,7 +110,7 @@
         "video_verified": false,
         "known_deviations_preserved": "local-only/verification.json",
         "generation_plan_policy": "replica-plan.json保留当时candidate状态作为生成历史；当前认可状态以本文件为准。",
-        "reuse_policy": "已认可方向直接按口播语义复用，不逐图或逐次重新请求风格确认；新素材完成后检查身份、画风和动作。",
+        "reuse_policy": "认可的是画风与解释方法。每期按口播新设计素材，不自动复用原图；本期明确直接沿用旧图时记录依据。",
         "profile_scope": "user-ui默认AIGC风格；更具体的账号/项目档案优先，不覆盖adiao、fangmu；UI外观继续遵循原账号UI档案。",
         "subsequent_video_approvals": [
           {
@@ -126,7 +130,7 @@
             "reuse_rules": [
               "后续通用 user-ui 口播任务直接以此片校准，不让用户重复确认画风。",
               "先理解新口播句意、因果与情绪，再选场景和动作；不固定复用这份口播、三段顺序、11.3 秒长度或坐标。",
-              "角色身份继续以两张用户原图约束；样片中已知局部比例或发夹偏差不改写角色标准。",
+              "参考图默认约束画风；本期明确沿用该女孩IP时才保持其身份，历史局部偏差不改写标准。",
               "复用已成功实现的连续动作与转场代码，视频导出核验实际解码画面和定位，不能只看 currentTime。"
             ],
             "scope": [
@@ -136,12 +140,13 @@
               "白画布、黑白窗口、淡紫强调的 UI 呈现"
             ],
             "current_usage": [
-              "女孩身份与绘画材质",
-              "可读动作、利落切点、AIGC到UI交接"
+              "手绘材质和画风参考；不自动复用图中人物或场景",
+              "可读动作、利落切点、AIGC到UI交接方法"
             ],
             "superseded_visual_scope": "样片中的历史淡紫UI不作为当前正文模板；当前UI读取Fred方向合同。"
           }
-        ]
+        ],
+        "current_scope_evidence": "references/evidence/aigc-reference-scope-20261019.json"
       },
       "assets": [
         {
@@ -187,7 +192,11 @@
             "保留俯视机位、四站布局、紫色/蓝色机器、纸张与线缆；女孩在紫色工位拿图。纸条连接紫色机器，单张尚不能说明上一站到下一站的完整移动，动画时需明确产物来源。"
           ],
           "prompt_record": "local-only/replica-plan.json",
-          "prompt_record_asset_id": "01"
+          "prompt_record_asset_id": "01",
+          "usage_role": "style-reference-only",
+          "auto_use_as_first_frame": false,
+          "auto_use_as_output": false,
+          "historical_scene_invariants_scope": "只描述原场景内部连续性；不约束新稿必须复用此构图、道具或人物。"
         },
         {
           "id": "qiuzhi-girl-02",
@@ -232,7 +241,11 @@
             "保留左侧休息女孩、中间蓝机器、右侧紫机器，以及机器人送入图片的关系。女孩服装与原设定一致；机器人仅为该场景候选，未与其他场景统一成同一机器设计。"
           ],
           "prompt_record": "local-only/replica-plan.json",
-          "prompt_record_asset_id": "02"
+          "prompt_record_asset_id": "02",
+          "usage_role": "style-reference-only",
+          "auto_use_as_first_frame": false,
+          "auto_use_as_output": false,
+          "historical_scene_invariants_scope": "只描述原场景内部连续性；不约束新稿必须复用此构图、道具或人物。"
         },
         {
           "id": "qiuzhi-girl-03",
@@ -277,7 +290,11 @@
             "保留森林清地、左女孩右机器人、双方共同抓住书箱、旁边工具箱及红旗。女孩腿部比原始Q版参考稍长；侧面发夹位置存在偏差，未当作角色标准。"
           ],
           "prompt_record": "local-only/replica-plan.json",
-          "prompt_record_asset_id": "03"
+          "prompt_record_asset_id": "03",
+          "usage_role": "style-reference-only",
+          "auto_use_as_first_frame": false,
+          "auto_use_as_output": false,
+          "historical_scene_invariants_scope": "只描述原场景内部连续性；不约束新稿必须复用此构图、道具或人物。"
         },
         {
           "id": "qiuzhi-girl-04",
@@ -322,7 +339,11 @@
             "保留铁砧、热铁、长钳、炉火与师徒共同握同一锤柄。围裙为工作道具，白毛衣保留；师傅和金属呈现比女孩更接近原片立体质感，侧面发夹也需后续统一。"
           ],
           "prompt_record": "local-only/replica-plan.json",
-          "prompt_record_asset_id": "04"
+          "prompt_record_asset_id": "04",
+          "usage_role": "style-reference-only",
+          "auto_use_as_first_frame": false,
+          "auto_use_as_output": false,
+          "historical_scene_invariants_scope": "只描述原场景内部连续性；不约束新稿必须复用此构图、道具或人物。"
         },
         {
           "id": "qiuzhi-girl-05",
@@ -367,7 +388,11 @@
             "保留三类箱子的前景分层、工具/齿轮/档案内容和主角为难表情。右侧原片角色改为白机器人；标签留空，准确说明由后期制作。未把迁移困难改成迁移成功。"
           ],
           "prompt_record": "local-only/replica-plan.json",
-          "prompt_record_asset_id": "05"
+          "prompt_record_asset_id": "05",
+          "usage_role": "style-reference-only",
+          "auto_use_as_first_frame": false,
+          "auto_use_as_output": false,
+          "historical_scene_invariants_scope": "只描述原场景内部连续性；不约束新稿必须复用此构图、道具或人物。"
         },
         {
           "id": "qiuzhi-girl-06",
@@ -412,7 +437,11 @@
             "保留纵深能力货架、蓝橙两块相接、双手承托及后方排队角色。原片橙色品牌机器人换为白色助手；新图为组合的接触状态，未验证后续动作。"
           ],
           "prompt_record": "local-only/replica-plan.json",
-          "prompt_record_asset_id": "06"
+          "prompt_record_asset_id": "06",
+          "usage_role": "style-reference-only",
+          "auto_use_as_first_frame": false,
+          "auto_use_as_output": false,
+          "historical_scene_invariants_scope": "只描述原场景内部连续性；不约束新稿必须复用此构图、道具或人物。"
         },
         {
           "id": "qiuzhi-girl-07",
@@ -457,7 +486,11 @@
             "保留电脑在左、打开的书和停下的笔在前、书堆围困、女孩双手抱头。换成用户长发女孩与服装；画面中电脑屏幕与书页为生成示意，不能当真实软件证据。"
           ],
           "prompt_record": "local-only/replica-plan.json",
-          "prompt_record_asset_id": "07"
+          "prompt_record_asset_id": "07",
+          "usage_role": "style-reference-only",
+          "auto_use_as_first_frame": false,
+          "auto_use_as_output": false,
+          "historical_scene_invariants_scope": "只描述原场景内部连续性；不约束新稿必须复用此构图、道具或人物。"
         },
         {
           "id": "qiuzhi-girl-08",
@@ -502,9 +535,15 @@
             "保留横向平台、中央绿色旗、左侧树与女孩向右到达的空间锚点。像素场景改为手绘游戏场景，尚只生成到达存档这一状态，未生成失败/返回两状态；侧面发夹方向待统一。"
           ],
           "prompt_record": "local-only/replica-plan.json",
-          "prompt_record_asset_id": "08"
+          "prompt_record_asset_id": "08",
+          "usage_role": "style-reference-only",
+          "auto_use_as_first_frame": false,
+          "auto_use_as_output": false,
+          "historical_scene_invariants_scope": "只描述原场景内部连续性；不约束新稿必须复用此构图、道具或人物。"
         }
-      ]
+      ],
+      "usage_role": "style-reference-only",
+      "default_character_required": false
     }
   ],
   "research_sources": [

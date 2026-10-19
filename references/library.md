@@ -49,7 +49,7 @@
 ## 已认可的内容从这里接续
 
 - [女孩 AIGC × UI 完整样片](../assets/approved-girl-sample/output/preview.mp4)：11.3 秒，用户已明确认可女孩观感、动作、利落节奏与 UI 衔接。[确认记录](evidence/girl-agent-sample-approved-20261015.json)、[可编辑工程](../assets/approved-girl-sample/README.md)与[用户档案](profiles/user-ui.md)提供实际实现；统一风格查询和 AIGC 上下文均可定位。新口播复用方法与画风，重新设计具体事件。
-- 8 张女孩场景图（原始资料未随公开包）与[AIGC 注册集](aigc-assets.json)：2026-10-15 明确认可静态场景方向。`direct prepare` 自动提供角色原图、场景、原帧、口播与动作链；使用条件、节奏和视频画风按[AIGC 导演](aigc-directing.md)。静图认可与新视频检查分开，原动效源码继续使用。
+- 8 张女孩场景图（原始资料未随公开包）与[AIGC 注册集](aigc-assets.json)：2026-10-15 明确认可静态场景方向；2026-10-19 明确这些图片仅作画风参考，每期按口播设计新素材。`direct prepare` 自动提供角色原图、场景、原帧、口播与动作链；使用条件、节奏和视频画风按[AIGC 导演](aigc-directing.md)。静图认可与新视频检查分开，原动效源码按已确认方法改编使用，不代表历史皮肤、未认可效果或例图可以直接进入新片。
 - [A01 基础短样](../assets/base-skill/assets/approved-demo/preview.mp4)与[通用 UI 档案](profiles/user-ui.md)：认可的是该短样组合与风格方向，已注册供 local-only/ui 接续。[原证据](../assets/base-skill/references/reference-evidence.md)保留过渡警告及未可靠试听的边界。
 - [方木档案](profiles/fangmu.md) → 本机样片与实现索引（原始资料未随公开包）：按制作模式读取当前已认可样片及实现；Token 历史整片的技术检查和其他后续认可分别保留，不从一个旧项目概括整个账号状态。
 - [阿刁档案](profiles/adiao.md) → [公开包范围与私人项目接入](distribution-scope.md)：保留《失业手册》v3 开头修订接受范围；本机最新项目指针不随公开包分发，由对应工程提供并核对本期。

@@ -6,6 +6,7 @@ from pathlib import Path
 import subprocess
 import sys
 from resource_registry import ResourceRegistry
+import production_entry
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -112,7 +113,7 @@ def guides(guide_id=None):
                      'Current project and approved style priorities remain unchanged.'}
 
 
-def main():
+def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='action', required=True)
     sub.add_parser('status', help='Check local resources without installing or rendering.')
@@ -136,6 +137,12 @@ def main():
         child.add_argument('--engine', choices=engines, required=True)
         child.add_argument('--base', type=Path, help='Fix the base version for base/fusion operations.')
         child.add_argument('--module-root', type=Path, help='Explicit local director/editorial module override; packaged modules are the default.')
+        if action == 'new':
+            child.add_argument('--profile', help='Current registered account profile; historical templates are not automatically restyled.')
+            child.add_argument('--script', type=Path, help='Preserved narration used to prepare the new directing context.')
+        else:
+            child.add_argument('--plan', type=Path, help='Current director plan in the project root; default director-plan.json.')
+            child.add_argument('--demo', action='store_true', help='Export a historical demonstration, explicitly not a production deliverable.')
         child.add_argument('--dry-run', action='store_true')
         child.add_argument('backend_args', nargs=argparse.REMAINDER, help='Original backend arguments after --')
     child = sub.add_parser('reference', help='Use the existing per-case reference tools.')
@@ -143,7 +150,9 @@ def main():
     child.add_argument('--module-root', type=Path, help='Explicit local reference module override.')
     child.add_argument('--dry-run', action='store_true')
     child.add_argument('backend_args', nargs=argparse.REMAINDER)
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
+    project = resolution = export_report = None
+    options = {}
     try:
         if args.action == 'status':
             print(json.dumps(status(), ensure_ascii=False, indent=2))
@@ -155,15 +164,50 @@ def main():
             report = ResourceRegistry(ROOT).report(args.module)
             print(json.dumps(report, ensure_ascii=False, indent=2))
             return 1 if args.operation == 'check' and not report['available'] else 0
-        argv = command(args.action, getattr(args, 'engine', None), getattr(args, 'base', None),
-                       getattr(args, 'tool', None), args.backend_args,
+        forwarded = args.backend_args
+        if args.action in ('new', 'render') and not any(x in ('--help', '-h') for x in forwarded):
+            forwarded, options = production_entry.forwarded_options(
+                args.action, forwarded, profile=getattr(args, 'profile', None),
+                script=getattr(args, 'script', None), plan=getattr(args, 'plan', None),
+                demo=getattr(args, 'demo', False))
+            project = production_entry.project_argument(forwarded, args.action)
+            if args.action == 'new':
+                resolution = production_entry.creation_resolution(project, options['profile'], root=ROOT)
+                if options['script'] is not None:
+                    options['script'] = options['script'].expanduser().resolve()
+                    if not options['script'].is_file() or not options['script'].read_text(encoding='utf-8-sig').strip():
+                        raise ValueError('Narration must be an existing nonempty text file.')
+                    if args.engine == 'base':
+                        forwarded += ['--script', str(options['script'])]
+                if args.engine == 'fusion':
+                    forwarded += ['--profile', resolution['resolved_profile']]
+            else:
+                export_report = production_entry.export_check(project, options['plan'], options['demo'], root=ROOT)
+        backend_argv = command(args.action, getattr(args, 'engine', None), getattr(args, 'base', None),
+                       getattr(args, 'tool', None), forwarded,
                        module_root=getattr(args, 'module_root', None))
-    except ValueError as exc:
+    except (OSError, ValueError) as exc:
         parser.error(str(exc))
     if args.dry_run:
-        print(json.dumps({'argv': argv, 'executed': False}, ensure_ascii=False, indent=2))
+        print(json.dumps({'argv': backend_argv, 'executed': False, 'export_check': export_report}, ensure_ascii=False, indent=2))
         return 0
-    return subprocess.run(argv, check=False).returncode
+    if export_report is not None:
+        print(json.dumps(export_report, ensure_ascii=False), flush=True)
+    result = subprocess.run(backend_argv, check=False).returncode
+    if result == 0 and resolution is not None:
+        try:
+            # An authored director --plan may declare its account in project.json.
+            # Preserve that choice unless this invocation explicitly selected another.
+            if options['profile'] is None:
+                created_resolution = production_entry.style_registry.resolve(project, root=ROOT)
+                if created_resolution.get('status') != 'resolved':
+                    raise ValueError('Created project declares an unresolved or conflicting style profile.')
+                resolution = created_resolution
+            context = production_entry.attach_creation_context(project, resolution, options['script'], root=ROOT)
+        except (OSError, ValueError) as exc:
+            parser.error('Project was created but current context could not be attached: ' + str(exc))
+        print(json.dumps(context, ensure_ascii=False))
+    return result
 
 
 if __name__ == '__main__':

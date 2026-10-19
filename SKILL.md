@@ -2,7 +2,7 @@
 name: ui-motion-fusion
 description: "根据口播稿与素材完成 UI 动效、B-roll、AIGC 解释视频及可编辑工程；复用已选风格和实际实现，按句意设计动作、蒙版、转场与节奏。支持已有项目续作、逐句参考研究和明确指定的复刻。"
 metadata:
-  version: "2026.10.19.1"
+  version: "2026.10.19.2"
 ---
 
 # 我的 UI 动效剪辑
@@ -26,7 +26,7 @@ metadata:
 
 - 没有明确账号或项目覆盖时，使用 [user-ui](references/profiles/user-ui.md)。当前正文按 [Fred 黑紫方向](references/fred-ui-direction.md)与[现行合同](references/evidence/fred-reference-approved-20261015.json)执行：深黑实体主体、黑底醒目紫色重点、清楚的大字级和前后层次。先查看合同 `visual_calibration` 的三张包内校准图；只给白色小窗加紫色细线不算完成。避免低对比淡紫模板、固定等宽四窗贯穿和逐句换卡的 PPT 表达。
 - 讲过程要让同一对象的**初态、触发、动作、结果与下一步交接**可见；按句意选聚焦、放大、蒙版、变形、遮挡、换位等手段，不能用同一种缩放或淡入淡出代替所有动作。章节标题、总结表和必要的静止阅读仍可使用。
-- 通用 AIGC 采用[注册集](references/aigc-assets.json)的女孩手绘 IP：两张原图固定身份，八张已确认场景按语义选用。先复用资产，缺什么才补什么；保持人物比例、发夹侧别、服装、材质与物体接触连续。简单动作利落完成，留出看懂结果的时间，不把模型生成时长当作必须使用时长。具体方法只在 [AIGC 导演](references/aigc-directing.md)维护。
+- 通用 AIGC 从[注册集](references/aigc-assets.json)的两张人物图和八张场景学习已确认的柔和手绘画风、材质和叙事方法。这些图默认只作风格参考，不是固定素材菜单，不自动作为首帧或反复上屏。每期按口播句意重新设计人物、空间、道具与事件，再生成匹配素材；只有当前工程明确固定 IP 时延续其身份，镜头内部保持人物与物体接触连续。简单动作利落完成，留出看懂结果的时间，不把模型生成时长当作必须使用时长。具体方法只在 [AIGC 导演](references/aigc-directing.md)维护。
 - [女孩完整样片](assets/approved-girl-sample/output/preview.mp4)用于画风、动作、节奏和 AIGC/UI 交接；A01保留实现底座。它们的历史淡紫 UI **不覆盖**当前 Fred 正文方向。被否定的 `full-transfer-sample` 不可成为基线。
 - 明确阿刁、方木或其他账号时使用对应档案，不用通用女孩覆盖其角色。公开包保留账号规则；私人音色、数字人和账号影片由该工程提供。未知或冲突账号不偷偷换成默认账号。
 - 普通换稿、换目录、换窗口不撤销已有风格认可。已有风格与制作授权足够时直接完成所请求的整片；实质改变方向才做必要澄清或小样。未授权费用等仍按主流程处理。
@@ -43,7 +43,7 @@ metadata:
 
 - `styles -- resolve --project <工程>`：定位当前合同指纹、校准图、认可范围与实现；不能只看旧 `confirmed_baselines`。
 - `modules check`、`guides --id <工具名>`：检查包内核心实现与可选插件。包内优先；明确 `--base` 或 `--module-root` 才用外部旧实现。
-- `new --engine fusion|base|director|editorial`：生成可编辑起点。历史机制演示不等于当前风格已应用；按档案落实后再导出。
+- `new --engine fusion|base|director|editorial`：生成可编辑起点，历史演示统一标为未应用当前风格。正式 `render` 必须有本工程当前绑定、生产就绪的导演计划；只看机制演示时显式 `--demo`，不作为正式成片。底层源码保留不等于所有旧皮肤获认可。
 - `study -- list/read/find/example`：查逐句出处；按[逐句程序](references/source-study-guide.md)对齐口播与连续画面，几张截图不能代表学懂全片。
 - 忠实复刻读[复刻约束](references/reference-replication.md)；继续工程保留有效引擎和确认范围；局部改规则不触发整片制作。
 
