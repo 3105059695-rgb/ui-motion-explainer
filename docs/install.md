@@ -50,6 +50,8 @@ python -B -X utf8 install.py --update --replace-modified
 
 ## 验证
 
+本机原片与历史参考库使用 `references/resources.local.json` 的显式映射。该文件不进入发布清单或安装载荷，更新保留；安装器不会替别人猜作者盘符。格式和资源状态查询见[公开与本机资源范围](../references/distribution-scope.md)。Agent 在同一入口读取映射，用户无需再单独调用旧参考 Skill。
+
 在已安装目录运行：
 
 ```powershell
@@ -64,9 +66,9 @@ python -B -X utf8 scripts/ui.py modules check
 所有代码、文档、脱敏配置和媒体定稿后，再生成本次清单：
 
 ```powershell
-python -B -X utf8 scripts/release_manifest.py --write --version 2026.10.19.2
+python -B -X utf8 scripts/release_manifest.py --write --version 2026.10.19.3
 python -B -X utf8 scripts/verify_package.py
-python -B -X utf8 scripts/package.py --out "../ui-motion-fusion-2026.10.19.2.zip"
+python -B -X utf8 scripts/package.py --out "../ui-motion-fusion-2026.10.19.3.zip"
 python -B -X utf8 -m unittest discover -s tests -p "test_install_release.py" -v
 ```
 

@@ -5,6 +5,7 @@ approval is never promoted to generated-video approval by this helper.
 """
 import json
 from pathlib import Path
+from resource_inventory import resource_fact
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = 'references/aigc-assets.json'
@@ -122,7 +123,11 @@ def directing_context(project, style_resolution=None, root=ROOT):
         warnings.append('Cannot read AIGC catalog: ' + str(exc))
         return context
     context['routing_policy'] = data.get('routing_policy', {})
-    context['research_sources'] = data.get('research_sources', [])
+    context['research_sources'] = [
+        {**row, 'resource': resource_fact('aigc-research:' + row['id'], row.get('path'), root)}
+        for row in data.get('research_sources', [])]
+    context['research_sources_present'] = sum(row['resource']['file_exists'] for row in context['research_sources'])
+    context['research_readiness_scope'] = 'Optional provenance/research paths, separate from packaged style images; absent originals are not claimed as available.'
     context['available_style_sets'] = [
         {key: row[key] for key in ('id', 'title', 'label', 'default_for_profiles', 'project_roots', 'approval') if key in row}
         for row in sets]
@@ -159,6 +164,10 @@ def directing_context(project, style_resolution=None, root=ROOT):
             continue
         checks = {key: _path_fact(asset[key], root) for key in
                   ('image_path', 'source_frame', 'source_video') if asset.get(key)}
+        if asset.get('source_key') and asset.get('source_video'):
+            checks['source_video'] = resource_fact('source-video:' + asset['source_key'], asset['source_video'], root)
+        if asset.get('source_frame'):
+            checks['source_frame'] = resource_fact('aigc-source-frame:' + asset['id'], asset['source_frame'], root)
         context['approved_static_assets'].append({**asset, 'resource_checks': checks,
                                                  'role': 'reference', 'usage_role': 'style-reference-only',
                                                  'auto_use_as_first_frame': False, 'auto_use_as_output': False,
@@ -176,6 +185,8 @@ def directing_context(project, style_resolution=None, root=ROOT):
         'a missing unused example does not block a UI-only edit. No visual review performed.')
     context['optional_provenance_missing'] = [fact['path'] for row in context['approved_static_assets']
         for key, fact in row['resource_checks'].items() if key != 'image_path' and not fact['exists']]
+    context['optional_provenance_missing'] += [row['resource']['path'] for row in context['research_sources']
+                                              if not row['resource']['exists']]
     if missing:
         warnings.append('Some AIGC style-reference images are missing; inspect the selected art direction rather than silently replacing it.')
         context['missing_resources'] = missing

@@ -2,7 +2,7 @@
 name: ui-motion-fusion
 description: "根据口播稿与素材完成 UI 动效、B-roll、AIGC 解释视频及可编辑工程；复用已选风格和实际实现，按句意设计动作、蒙版、转场与节奏。支持已有项目续作、逐句参考研究和明确指定的复刻。"
 metadata:
-  version: "2026.10.19.2"
+  version: "2026.10.19.3"
 ---
 
 # 我的 UI 动效剪辑
@@ -34,17 +34,17 @@ metadata:
 ## 从口播到实际工程
 
 1. 核对完整口播、原声、素材和当前工程。先理解段落意思、上下文、人物情绪、观众哪里不懂，再决定人物、真实素材、UI 或 AIGC 的作用。不是按关键词配通用图片，也不按句号换页。
-2. 从实际安装目录运行 `python -B -X utf8 scripts/ui.py direct -- prepare --script <口播文件> --project <工程目录>`。显式账号可加 `--profile`。读取上下文中的完整原文、当前合同、实际视觉参考和 AIGC 资源；工具只定位，不替 Agent 做创意判断。
-3. 逐句或按连续事件映射 B-roll、动作和衔接；几句可共享一个场景。用真实操作说明功能，用已标注示意说明机制。按 [语义导演](references/semantic-directing.md)、[口播选材](references/script-visual-planning.md)、[条件偏好](references/broll-preferences.md)选实现并落入工程。
-4. 新导演计划保存 `style_contract_version: 1` 与 `style.binding`（来自当前 `director-context.json`），按[计划合同](references/director-plan-contract.md)运行 `direct -- check --plan <计划>`。缺视觉参考、绑定过期或以被否定素材作基线时先修正，不用非空色号冒充风格落实。旧计划结构兼容，但缺绑定不能宣称当前风格已核验。
+2. 从实际安装目录运行 `python -B -X utf8 scripts/ui.py direct -- prepare --script <口播文件> --project <工程目录>`。显式账号可加 `--profile`。读取完整原文、当前合同、实际视觉参考和 `context.selection` 按段候选；实际查看被选方法的原句、画面与适用条件。候选是检索辅助，不是自动选中的分镜；不用的候选无需硬套。
+3. 在同一导演计划逐句或按连续事件映射 B-roll、动作和衔接；几句可共享一个场景。记录表达目的、采用参考或原创/保留人物的理由、AIGC 用不用及原因。用真实操作说明功能，用已标注示意说明机制。按[选用流程](references/selection-workflow.md)、[语义导演](references/semantic-directing.md)、[口播选材](references/script-visual-planning.md)将决定落实到实际素材和工程，不交给用户逐条点名。
+4. 正式制作使用 `selection_contract_version: 1`、`style_contract_version: 1` 和当前 `style.binding`；需要 AIGC 时绑定当前 AIGC 画风。声明整片或明确节选范围，记录每段的输出时间、实现文件哈希/标记及渲染入口实际读取的时间线映射。按[计划合同](references/director-plan-contract.md)运行 `direct -- check --plan <计划>`；漏覆盖、缺映射或过期绑定先修正。旧计划可读，但缺少当前制作证据不能称为生产就绪。
 5. 交付实际画面与可编辑工程。按最终观看尺寸和连续播放检查重点、阅读停留、动作结果、画风与同步；有偏差先修。文件存在、结构通过、解码、实际视听和用户认可分别记录。`current_style_ready`只是当前依据齐备，不是自动审美评分。
 
 ## 内部资源与其他任务
 
 - `styles -- resolve --project <工程>`：定位当前合同指纹、校准图、认可范围与实现；不能只看旧 `confirmed_baselines`。
-- `modules check`、`guides --id <工具名>`：检查包内核心实现与可选插件。包内优先；明确 `--base` 或 `--module-root` 才用外部旧实现。
+- `modules check`、`guides --id <工具名>`：检查包内核心实现与可选插件。已配置的本机资源映射接续原片和历史参考源码；无本机映射时使用公开包并明确缺件，不要求用户重新调用旧 Skill。渲染引擎仍包内优先。
 - `new --engine fusion|base|director|editorial`：生成可编辑起点，历史演示统一标为未应用当前风格。正式 `render` 必须有本工程当前绑定、生产就绪的导演计划；只看机制演示时显式 `--demo`，不作为正式成片。底层源码保留不等于所有旧皮肤获认可。
-- `study -- list/read/find/example`：查逐句出处；按[逐句程序](references/source-study-guide.md)对齐口播与连续画面，几张截图不能代表学懂全片。
+- `study -- list/read/find/example`：查逐句出处；`select` / `inspect` 查询本期候选和具体能力，按[选用流程](references/selection-workflow.md)操作。按[逐句程序](references/source-study-guide.md)对齐口播与连续画面，几张截图不能代表学懂全片。
 - 忠实复刻读[复刻约束](references/reference-replication.md)；继续工程保留有效引擎和确认范围；局部改规则不触发整片制作。
 
 [能力与源码导航](index.html) · [跨窗口使用](references/global-use.md) · [公开包范围](references/distribution-scope.md)。原作者整片、未附历史重建和私人账号素材明确标注未随包，不用虚假替代物补齐。原素材、既有项目和本地库不因升级而删除。

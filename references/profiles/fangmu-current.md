@@ -1,33 +1,35 @@
 # 方木连续 UI 剪辑：保持质感，每期重新编排
 
+公开包保留本账号规则；下方标为“账号工程”的样片、研究与源码未随包，须由当前账号工程的资源索引定位。本机映射和私人档案仍优先接续实际文件。
+
 适用：方木真人口播、连续 UI 动效和本次这种炫酷开头。明确制作手写白板时使用独立白板档案。本文件是创作与复核依据，不是固定时间轴模板。
 
 ## 上传后直接制作（2026-10-15 当前默认）
 
 用户上传口播视频并要求“按方木默认剪辑”，即按本文件完成整片；文案可选，未提供时先从原声转写、校正并设计镜头。方木项目内已明确要求剪辑时也自动进入，不要求再点名 Skill、补发参考、填写任务卡或重新确认基础审美。明确的新要求优先。
 
-接续依据是 **Skill 完整剪辑 V1 的整片质感、V7 的连续镜头与动作音效、API 最新开头的人物避让与空间交接、用户两条实际参考**。API 开头只补充相应开头方向，不能替代已认可整片。样片、源码与认可范围由 [asset-map.json](asset-map.json) 定位；旧源码参数不能覆盖本文件的当前要求。
+接续依据是 **Skill 完整剪辑 V1 的整片质感、V7 的连续镜头与动作音效、API 最新开头的人物避让与空间交接、用户两条实际参考**。API 开头只补充相应开头方向，不能替代已认可整片。样片、源码与认可范围由 asset-map.json（账号工程：`asset-map.json`） 定位；旧源码参数不能覆盖本文件的当前要求。
 
 制作端自己先完成必要的开头短渲染与对照，再继续整片，这不是新增用户审批阶段。除用户明确要样片或确有改变结果的歧义，不停下来让用户反复选效果。先把设计落实到真实画面与声音；检查围绕新改动、声画同步、遮挡和解释清晰度进行，复用已有检查，不自动启动独立审查代理或反复生成整套报告。交付完整视频及可编辑工程入口，未实际观看／试听的范围如实说明。新增收费生成仍按本次授权处理，历史 5 元额度不是长期授权。
 
-**当前连续 UI 色彩：** 不再默认使用淡紫。以白、近黑、中性灰建立排版层级，人物房间、摄影素材和真实物品保留自身颜色；其他强调色依本期明确要求决定。旧 Token／Skill 源码淡紫色号仅是历史参数，适配后才能复用。此条不覆盖明确选用的手写白板模式。
+**当前连续 UI 色彩（2026-10-19 用户纠正）：** 使用 Skill 新版 user-ui 的 Fred 黑紫视觉合同：深黑实心主体、黑底醒目亮紫关键词、白字与紫字的大字级层次、实体圆角投影及前后空间。白色可作留白舞台，白底强调用深紫；不是给小白窗添加几条浅紫线。人物房间和素材保留自身色彩。此前本文件将“白、近黑、中性灰”写为方木默认并不代表用户认可；用户明确说“用新版的，并且我从来没有说过方木用黑白灰的”，该旧归纳已纠正。外观随当前 [Fred 方向合同](../evidence/fred-reference-approved-20261015.json)及三张校准图落实，方木身份、原声、原房间与开头连续剪辑方法继续保留。明确指定独立白板模式时才走白板档案。
 
 **当前人物与空间：** 开头以原房间和基本全屏真人为主要空间；内容可在人物前后连续运动，但脸、手势、关键文字与字幕必须可辨认。禁止用固定黑色侧栏或不透明大块遮住原画面，也不靠过早缩到左下角腾地方。语义需要时由同一成果连续展开到全屏，再自然归还真人；开头结束后才按正文节奏编排人物圆窗。
 
 **素材与 AIGC：** 自然摄影、真实材质与可信动作，符合用户要求的网感／ins 感；不用塑料质感假物件或泛化贴图冒充解释。生成与接入仍遵循 Skill 的 AIGC 导演，但先明确完整句意对应的“初态→动作→结果”。需要演示过程时，静图平移缩放不等于动作视频；不拉长、定格或拼接重复帧填满口播。动作不连续、因果看不懂时，先重剪可用动作或换清楚的表现，不能因为已经付费就塞进成片；额外付费重试仍需本次授权。API 奶茶 AIGC 已收到负面反馈，不作为认可素材或画风基线。
 
-**开头与中段参考分开：** 用户最新指定 FredTalk《Gemini4 Argon》只用于中段，开头继续以原先两条视频和认可开头为准。中段先读[口播与画面关系整理](body-reference-fred-argon/ANALYSIS.md)：按本段需要展示条件、操作、反馈、结果与结论，作品、真实操作、比较和图解随解释任务切换，所有变化服务观众听懂。它是完整视频工具分析与全音轨转写的整理，未完成人工连续视听；具体观察与不确定处以该记录为准。不能把它的紫色、卡通人物、片头或固定章节动作变成方木默认。
+**开头与中段参考分开：** 用户最新指定 FredTalk《Gemini4 Argon》只用于中段，开头继续以原先两条视频和认可开头为准。中段先读口播与画面关系整理（账号工程：`body-reference-fred-argon/ANALYSIS.md`）：按本段需要展示条件、操作、反馈、结果与结论，作品、真实操作、比较和图解随解释任务切换，所有变化服务观众听懂。它是完整视频工具分析与全音轨转写的整理，未完成人工连续视听；具体观察与不确定处以该记录为准。原片的卡通人物、片头或固定章节动作不自动移植；UI 黑紫外观按 2026-10-19 最新明确选择接入。
 
 ## 已认可的实际成片
 
-2026-10-14 用户在收到完整视频后明确喜欢开头与中段，同时要求后续保持感觉、避免固定重复。原话及版本证据见 [认可记录](../skill-body/approval-v1.json)。
+2026-10-14 用户在收到完整视频后明确喜欢开头与中段，同时要求后续保持感觉、避免固定重复。原话及版本证据见 认可记录（账号工程：`../skill-body/approval-v1.json`）。
 
-- 主样片：[Skill 完整剪辑 V1 转场校正](../skill-body/方木_Skill完整剪辑_UI升级版_v1_转场校正.mp4)，0–159.70 秒，SHA-256 `718187e8d67f298568c5949183b0237a2414a98337cc06e4c6493a2b772047bb`。
-- 开头 0–28.98 秒：独立 [V7 校正版](../skill-opening/方木_Skill完整开头_连续镜头与机械卡点_v7_校正.mp4)；[动作表与实现](../skill-opening/README-v7.md)。
-- 正文 28.98–159.70 秒：[正文动作表与实现](../skill-body/README.md)。用户已认可整片方向；不将其等同于逐帧事实审核，也不补写制作端完整人工视听检查。
-- 用户指定的两条开头参考：[逐段依据](opening-references-20261014/OPENING-REFERENCE.md)；[鱼眼指定参考](fisheye-reference-20261014/ANALYSIS.md)。原参考继续提供编排依据，不能因已有一条认可样片而停止比较。
-- API 最新开头：[0–26.50 秒预览](../api-milk-tea/方木_API奶茶科普_新参考开头预览.mp4)，用于原房间保留、人物避让及内容交接；[反馈范围](../api-milk-tea/analysis/opening-approval-20261015.json)。用户后续仍指出整片和 AIGC 问题，因此这不是 API 整片认可。
-- 后续重发两条参考：[理解 AI 交付开头](../api-milk-tea/analysis/reference-new/ONE.md)、[Opus 实验开头](../api-milk-tea/analysis/reference-new/TWO.md)。已有分析覆盖各自 0–25 秒视觉动作，未试听部分不声称已完成听感对照；原片路径见索引。
+- 主样片：Skill 完整剪辑 V1 转场校正（账号工程：`../skill-body/方木_Skill完整剪辑_UI升级版_v1_转场校正.mp4`），0–159.70 秒，SHA-256 `718187e8d67f298568c5949183b0237a2414a98337cc06e4c6493a2b772047bb`。
+- 开头 0–28.98 秒：独立 V7 校正版（账号工程：`../skill-opening/方木_Skill完整开头_连续镜头与机械卡点_v7_校正.mp4`）；动作表与实现（账号工程：`../skill-opening/README-v7.md`）。
+- 正文 28.98–159.70 秒：正文动作表与实现（账号工程：`../skill-body/README.md`）。用户已认可整片方向；不将其等同于逐帧事实审核，也不补写制作端完整人工视听检查。
+- 用户指定的两条开头参考：逐段依据（账号工程：`opening-references-20261014/OPENING-REFERENCE.md`）；鱼眼指定参考（账号工程：`fisheye-reference-20261014/ANALYSIS.md`）。原参考继续提供编排依据，不能因已有一条认可样片而停止比较。
+- API 最新开头：0–26.50 秒预览（账号工程：`../api-milk-tea/方木_API奶茶科普_新参考开头预览.mp4`），用于原房间保留、人物避让及内容交接；反馈范围（账号工程：`../api-milk-tea/analysis/opening-approval-20261015.json`）。用户后续仍指出整片和 AIGC 问题，因此这不是 API 整片认可。
+- 后续重发两条参考：理解 AI 交付开头（账号工程：`../api-milk-tea/analysis/reference-new/ONE.md`）、Opus 实验开头（账号工程：`../api-milk-tea/analysis/reference-new/TWO.md`）。已有分析覆盖各自 0–25 秒视觉动作，未试听部分不声称已完成听感对照；原片路径见索引。
 
 ## 要稳定继承的感觉
 
@@ -66,14 +68,14 @@
 
 | 责任 | 入口 | 新一期怎么用 |
 | --- | --- | --- |
-| 成果动作、人物与相机交接 | [intro-v7.js](../skill-opening/project/intro-v7.js) | 复用组合、取景、揭示方法；重写第一事件与对象关系 |
-| 同窗展开、内部结构与后续连续解释 | [chapters-v7.js](../skill-opening/project/chapters-v7.js) | 复用状态连续和减速方式；重写场景、内容及时间 |
-| 鱼眼与局部形变 | [lens-v6.js](../skill-opening/project/lens-v6.js) | 只有本期语义适合时选用；禁止全屏稀疏多帧叠加 |
-| 原声上的逐动作音效 | [sfx-v7.py](../skill-opening/analysis/sfx-v7.py)、[正文音效](../skill-body/analysis/build_audio.py) | 按新动作选择声型和实测时间，不复制原事件表 |
-| 真人与正文、可读转场 | [film.js](../skill-body/project/film.js) | 复用源时钟、人物合成、保留旧状态再揭开新状态；新期重设裁切与布局 |
-| 连续解释与语义素材 | [definition-scenes.js](../skill-body/project/definition-scenes.js)、[value-scenes.js](../skill-body/project/value-scenes.js)、[structure-scenes.js](../skill-body/project/structure-scenes.js) | 复用对象推进、输入到结果、局部聚焦方法；不移植旧示例和平台数值 |
-| UI 字幕 | [ui-captions.js](../skill-body/project/ui-captions.js) | 沿用字体层级与轻量强调；字幕与实测强调时点按新原声生成 |
-| 最新原空间与人物避让 | [opening-reference-core.js](../api-milk-tea/project-v2/opening-reference-core.js)、[film.js](../api-milk-tea/project-v2/film.js)、[构建脚本](../api-milk-tea/analysis/build_opening_reference.py) | 复用原背景、同源时钟与人物前景合成；按新口播重设内容、空间及镜头，不复制 API 时间轴 |
-| 最新开头动作音效 | [build_audio_v2.py](../api-milk-tea/analysis/build_audio_v2.py) | 按实际新动作安排声型与落点；保留原声，不复制旧事件表 |
+| 成果动作、人物与相机交接 | intro-v7.js（账号工程：`../skill-opening/project/intro-v7.js`） | 复用组合、取景、揭示方法；重写第一事件与对象关系 |
+| 同窗展开、内部结构与后续连续解释 | chapters-v7.js（账号工程：`../skill-opening/project/chapters-v7.js`） | 复用状态连续和减速方式；重写场景、内容及时间 |
+| 鱼眼与局部形变 | lens-v6.js（账号工程：`../skill-opening/project/lens-v6.js`） | 只有本期语义适合时选用；禁止全屏稀疏多帧叠加 |
+| 原声上的逐动作音效 | sfx-v7.py（账号工程：`../skill-opening/analysis/sfx-v7.py`）、正文音效（账号工程：`../skill-body/analysis/build_audio.py`） | 按新动作选择声型和实测时间，不复制原事件表 |
+| 真人与正文、可读转场 | film.js（账号工程：`../skill-body/project/film.js`） | 复用源时钟、人物合成、保留旧状态再揭开新状态；新期重设裁切与布局 |
+| 连续解释与语义素材 | definition-scenes.js（账号工程：`../skill-body/project/definition-scenes.js`）、value-scenes.js（账号工程：`../skill-body/project/value-scenes.js`）、structure-scenes.js（账号工程：`../skill-body/project/structure-scenes.js`） | 复用对象推进、输入到结果、局部聚焦方法；不移植旧示例和平台数值 |
+| UI 字幕 | ui-captions.js（账号工程：`../skill-body/project/ui-captions.js`） | 沿用字体层级与轻量强调；字幕与实测强调时点按新原声生成 |
+| 最新原空间与人物避让 | opening-reference-core.js（账号工程：`../api-milk-tea/project-v2/opening-reference-core.js`）、film.js（账号工程：`../api-milk-tea/project-v2/film.js`）、构建脚本（账号工程：`../api-milk-tea/analysis/build_opening_reference.py`） | 复用原背景、同源时钟与人物前景合成；按新口播重设内容、空间及镜头，不复制 API 时间轴 |
+| 最新开头动作音效 | build_audio_v2.py（账号工程：`../api-milk-tea/analysis/build_audio_v2.py`） | 按实际新动作安排声型与落点；保留原声，不复制旧事件表 |
 
 档案和源码能提供稳定起点；下一期是否达到同等观感，需要在下一期实际渲染中检验，不能仅凭已读取 Skill 或程序检查通过作保证。

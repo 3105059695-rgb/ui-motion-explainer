@@ -89,6 +89,7 @@ class InstallReleaseTests(unittest.TestCase):
         write(self.target, 'local-profile.json', {'private_setting': True})
         write(self.target, '.env', 'TOKEN=private_fixture_value')
         write(self.target, 'references/profiles/registry.local.json', {'schema_version': 1, 'profiles': []})
+        write(self.target, 'references/resources.local.json', {'schema_version': 1, 'modules': {}, 'files': {}})
         write(self.target, 'references/profiles/local/private-account.md', 'keep local account rules')
         write(self.source, 'SKILL.md', 'new rules')
         build_manifest(self.source, '2')
@@ -100,6 +101,8 @@ class InstallReleaseTests(unittest.TestCase):
         self.assertEqual({'schema_version': 1, 'profiles': []}, json.loads(
             (self.target / 'references/profiles/registry.local.json').read_text()))
         self.assertEqual('keep local account rules', (self.target / 'references/profiles/local/private-account.md').read_text())
+        self.assertEqual({'schema_version': 1, 'modules': {}, 'files': {}}, json.loads(
+            (self.target / 'references/resources.local.json').read_text()))
         backup = Path(result['backup'])
         self.assertFalse(backup.is_relative_to(self.target.parent))
         self.assertEqual('fixture', (backup / 'files/SKILL.md').read_text())
@@ -202,7 +205,7 @@ class InstallReleaseTests(unittest.TestCase):
             verify_release(self.source)
 
     def test_machine_local_account_routes_and_docs_never_enter_release_payload(self):
-        local_files = ['references/profiles/registry.local.json',
+        local_files = ['references/resources.local.json', 'references/profiles/registry.local.json',
                        'references/profiles/local/fangmu.md',
                        'references/profiles/local/nested/account.json',
                        'references/profiles/local/keys/private-fixture.txt']
@@ -229,6 +232,14 @@ class InstallReleaseTests(unittest.TestCase):
         write(self.source, MANIFEST, manifest)
         with self.assertRaisesRegex(ValueError, 'Forbidden or duplicate manifest path'):
             verify_release(self.source)
+
+    def test_active_library_cannot_link_to_missing_or_external_old_skill(self):
+        write(self.source, 'references/library.md', '[old](../../../old-skill/SKILL.md)')
+        with self.assertRaisesRegex(ValueError, 'Broken active documentation link'):
+            build_manifest(self.source)
+        write(self.source, 'references/library.md', '[source](../assets/core/source.js)')
+        build_manifest(self.source)
+        self.assertEqual(1, verify_release(self.source)['active_document_links'])
 
     def test_private_profile_exclusion_does_not_bypass_parent_link_guard(self):
         write(self.source, 'references/profiles/registry.local.json', 'private fixture')

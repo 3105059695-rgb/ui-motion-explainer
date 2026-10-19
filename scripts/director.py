@@ -17,6 +17,8 @@ import tempfile
 import source_study
 import style_registry
 import aigc_assets
+import selection
+import selection_contract
 
 ROOT = Path(__file__).resolve().parents[1]
 OWNER = 'ui-motion-fusion/director.py'
@@ -119,6 +121,12 @@ def prepare(script, project, profile=None, force=False, root=ROOT):
                        'An Agent must read meaning, context and viewer gap; this tool does not infer them.',
                        'No media generation, upload, payment, render or style approval occurs.'],
     }
+    context['aigc']['binding'] = selection_contract.aigc_style_binding(context['aigc'])
+    try:
+        context['selection'] = selection.build_selection_context(root, source)
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        context['selection'] = {'status': 'unavailable', 'source': {'path': source['path'], 'sha256': source['sha256']},
+                                'segments': [], 'errors': [str(exc)], 'plan_authored': False}
     profile_text = str(selected) if selected else '未选择：由 Agent 从本次请求和当前工程判断，不猜账号。'
     brief = '\n'.join([
         MARKER, '# 导演上下文草稿', '',
@@ -149,6 +157,9 @@ def prepare(script, project, profile=None, force=False, root=ROOT):
         '对照本期实际片段与适用样片检查材质、焦点、阅读和衔接；单调、泛素材与组件堆叠由 Agent 先修正。机器检查不能判断网感或审美，未播放/试听的范围如实记录。', '',
         '原文锚定：唯一 quote 可省 span；歧义或同句拆段需 span={start,end}，为 BOM 解码后原文字符位置，左闭右开。',
         '无音轨对齐依据使用 timing.basis=script-estimate。结构检查通过不代表成片、听审或用户认可。', '',
+        '新正式计划还须 selection_contract_version:1：明确full/excerpt范围，逐段记录参考/原创/保留人物与AIGC取舍；把源文件哈希、实际runtime timeline、实现marker和输出时间绑定在同一计划。旧计划结构通过不代表production_ready。', '',
+        selection.render_selection_brief(context['selection']) if not context['selection'].get('errors')
+        else '按稿候选不可用：' + '; '.join(context['selection']['errors']),
     ])
     outputs = {
         folder / 'director-context.json': json.dumps(context, ensure_ascii=False, indent=2) + '\n',
@@ -205,6 +216,7 @@ def prepare(script, project, profile=None, force=False, root=ROOT):
     warnings.extend(style_resolution.get('warnings', []))
     warnings.extend(context['source_study'].get('warnings', []))
     warnings.extend(context['aigc']['warnings'])
+    warnings.extend(context['selection'].get('errors', []))
     return {'created_or_updated': [str(p) for p, _ in changed], 'unchanged': skipped,
             'source_sha256': source['sha256'], 'warnings': warnings,
             'plan_authored': False, 'generation_submitted': False}
@@ -213,6 +225,7 @@ def prepare(script, project, profile=None, force=False, root=ROOT):
 def check(plan_path, root=ROOT):
     errors, warnings, blockers, jobs = [], [], [], []
     current_style_ready = False
+    selection_report = {'ready': False, 'errors': [], 'warnings': [], 'ledger': []}
     path = Path(plan_path).resolve()
     base = path.parent
     reference_only_images = set()
@@ -329,7 +342,9 @@ def check(plan_path, root=ROOT):
         return {'errors': errors, 'warnings': warnings, 'plan_valid': not errors,
                 'render_ready': render_ready,
                 'current_style_ready': current_style_ready,
-                'production_ready': render_ready and current_style_ready,
+                'selection_ready': selection_report['ready'],
+                'production_ready': render_ready and current_style_ready and selection_report['ready'],
+                'selection_evidence': selection_report,
                 'style_readiness_scope': 'Current registered contract and visual-reference files only; not rendered-style or aesthetic approval.',
                 'readiness_blockers': blockers, 'generation_jobs': jobs,
                 'generation_submitted': False,
@@ -625,6 +640,9 @@ def check(plan_path, root=ROOT):
                              'request': generation, 'eligible_for_submission': False,
                              'requires_cost_authorization': True})
                 blockers.append(where + ': generation request is prepared, not submitted or delivered.')
+    selection_report = selection_contract.validate(plan, base, root, text)
+    errors.extend(selection_report['errors'])
+    warnings.extend(selection_report['warnings'])
     return result()
 
 

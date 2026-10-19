@@ -1,6 +1,7 @@
 """Resolve packaged implementations and explicitly configured local overrides."""
 import json
 from pathlib import Path
+from resource_inventory import load_overlay
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -22,6 +23,7 @@ class ResourceRegistry:
             if not name or name in self.modules or not isinstance(module.get('path'), str):
                 raise ValueError(f'Invalid or duplicate module in {self.path}: {name}')
             self.modules[name] = module
+        self.local_overrides = load_overlay(self.root)['modules']
         self.overrides = overrides or {}
         if not isinstance(self.overrides, dict) or any(name not in self.modules for name in self.overrides):
             raise ValueError('Module overrides must map registered module IDs to local paths.')
@@ -34,7 +36,7 @@ class ResourceRegistry:
 
     def inspect(self, name):
         module = self.definition(name)
-        override = self.overrides.get(name)
+        override = self.overrides.get(name) or self.local_overrides.get(name)
         folder = (self.root / Path(override or module['path']).expanduser()).resolve()
         required = list(dict.fromkeys([*module.get('required', []),
                                       *module.get('commands', {}).values()]))
@@ -44,7 +46,7 @@ class ResourceRegistry:
         return {'library': name, 'path': str(folder), 'actual_root': str(folder),
                 'purpose': module.get('purpose', ''), 'available': not missing,
                 'required_for_install': module.get('required_for_install', True),
-                'selection_source': 'explicit-override' if override else 'packaged-registry',
+                'selection_source': ('explicit-override' if name in self.overrides else 'local-overlay') if override else 'packaged-registry',
                 'distribution': module.get('distribution', {}),
                 'missing': missing, 'required': required,
                 'commands': {key: str((folder / value).resolve())

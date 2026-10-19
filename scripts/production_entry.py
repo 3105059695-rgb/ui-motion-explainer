@@ -1,7 +1,11 @@
 """Shared creation context and production export checks for the public UI entry."""
 import argparse
 import json
+import hashlib
+import math
 from pathlib import Path
+import shutil
+import subprocess
 
 import director
 import style_registry
@@ -114,12 +118,82 @@ def export_check(project, plan=None, demo=False, root=ROOT):
                                  'Apply the current direction to the actual project first, then explicitly set '
                                  'project.json current_style_applied=true. This declaration is not automatic visual approval.')
     report = director.check(selected, root=root)
-    if not (report.get('render_ready') is True and report.get('current_style_ready') is True):
+    if report.get('production_ready') is not True:
         reasons = [*report.get('errors', []), *report.get('readiness_blockers', [])]
         if report.get('current_style_ready') is not True:
             reasons.append('Current style binding/reference readiness is not established.')
+        if report.get('selection_ready') is not True:
+            reasons.append('Current narration selection, coverage and runtime implementation evidence is not established.')
         raise ValueError('Production export blocked: ' + '; '.join(dict.fromkeys(reasons)))
+    evidence = report.get('selection_evidence', {})
+    entry = evidence.get('entrypoint', {})
+    if not isinstance(entry, dict) or not isinstance(entry.get('path'), str) \
+            or (folder / entry['path']).resolve() != folder / 'index.html':
+        raise ValueError('Production export must bind this renderer\'s actual project/index.html entry, not a separate demonstration or evidence-only entry.')
+    config_path = folder / 'project.json'
+    config = json.loads(config_path.read_text(encoding='utf-8-sig')) if config_path.is_file() else {}
+    duration = config.get('duration')
+    if type(duration) not in (int, float) or not math.isfinite(duration) \
+            or duration != evidence.get('duration_seconds'):
+        raise ValueError('Production project.json duration must match the bound runtime timeline and delivery duration.')
     return {'export_mode': 'production', 'production_export': True, 'plan': str(selected),
-            'render_ready': True, 'current_style_ready': True,
+            'plan_sha256': hashlib.sha256(selected.read_bytes()).hexdigest(),
+            'render_ready': True, 'current_style_ready': True, 'selection_ready': True,
+            'production_ready': True, 'selection_evidence': evidence,
             'scope': report.get('scope'), 'style_readiness_scope': report.get('style_readiness_scope'),
             'notice': 'Plan and current references passed; rendered appearance and audio still require review.'}
+
+
+def verify_output(project, media, plan=None, root=ROOT, ffprobe=None, expected_plan_sha256=None):
+    """Recheck preflight and inspect real export metadata; never certify aesthetics.
+
+    The caller supplies the actual renderer output path. No media is generated,
+    installed, uploaded or modified; ffprobe must already be available locally.
+    """
+    preflight = export_check(project, plan=plan, root=root)
+    errors = []
+    output = Path(media).expanduser().resolve()
+    report = {'technical_passed': False, 'errors': errors, 'media': {'path': str(output)},
+              'plan_sha256': preflight['plan_sha256'],
+              'traceability': preflight['selection_evidence']['ledger'],
+              'aesthetic_approval': False, 'full_realtime_av_review': False,
+              'scope': 'Actual exported file hash, ffprobe streams/duration, and unchanged plan/source/implementation bindings. '
+                       'No visual suitability, rendered-marker execution, listening or aesthetic approval is inferred.'}
+    if expected_plan_sha256 is not None and preflight['plan_sha256'] != expected_plan_sha256:
+        errors.append('Plan changed after render preflight; this export cannot be attributed to the newly edited plan.')
+        return report
+    if not output.is_file() or not output.stat().st_size:
+        errors.append('Actual rendered media file is missing or empty.')
+        return report
+    report['media'].update(sha256=hashlib.sha256(output.read_bytes()).hexdigest(), bytes=output.stat().st_size)
+    executable = str(ffprobe) if ffprobe is not None else shutil.which('ffprobe')
+    if not executable:
+        errors.append('Existing ffprobe is unavailable; actual media verification remains incomplete. No tool was installed.')
+        return report
+    try:
+        completed = subprocess.run([executable, '-v', 'error', '-show_format', '-show_streams',
+                                    '-of', 'json', str(output)], capture_output=True, text=True,
+                                   encoding='utf-8', check=False, timeout=60)
+        if completed.returncode:
+            raise ValueError('ffprobe could not inspect the exported media: ' + completed.stderr.strip()[:500])
+        facts = json.loads(completed.stdout)
+        duration = float(facts.get('format', {}).get('duration'))
+        if not math.isfinite(duration) or duration <= 0:
+            raise ValueError('Export duration must be finite and positive.')
+        streams = facts.get('streams', [])
+        if not isinstance(streams, list):
+            raise ValueError('ffprobe streams must be an array.')
+        report['media'].update(duration_seconds=duration,
+            streams=[{key: stream.get(key) for key in ('codec_type', 'codec_name', 'width', 'height', 'duration', 'avg_frame_rate')}
+                     for stream in streams if isinstance(stream, dict)])
+        if not any(stream.get('codec_type') == 'video' for stream in streams if isinstance(stream, dict)):
+            errors.append('Export has no video stream.')
+        if not any(stream.get('codec_type') == 'audio' for stream in streams if isinstance(stream, dict)):
+            errors.append('Narrated production export has no audio stream.')
+        expected = preflight['selection_evidence']['duration_seconds']
+        if abs(duration - expected) > 0.12:
+            errors.append(f'Export duration {duration:g}s does not match mapped delivery {expected:g}s (tolerance 0.12s).')
+    except (OSError, ValueError, TypeError, subprocess.TimeoutExpired) as exc:
+        errors.append(str(exc))
+    report['technical_passed'] = not errors
+    return report

@@ -147,7 +147,18 @@
       "required_reading": [
         "references/profiles/fangmu-current.md"
       ],
-      "distribution_note": "保留当前规则，私有视频与账号素材不公开；使用账号工程中的已确认资源。"
+      "distribution_note": "保留当前规则，私有视频与账号素材不公开；使用账号工程中的已确认资源。",
+      "reference_directions": [
+        {
+          "id": "fred-explainer-20261015",
+          "label": "Fred 连续 UI 讲解参考 · 用户已选方向",
+          "guidance_path": "references/evidence/fred-reference-approved-20261015.json",
+          "reading": [
+            "references/fred-ui-direction.md"
+          ]
+        }
+      ],
+      "direction_update": "2026-10-19: current user choice joins the Fred black-purple UI contract; retain Fangmu identity, source audio, opening guidance and explicitly selected whiteboard mode."
     }
   ],
   "default_profile": "user-ui"

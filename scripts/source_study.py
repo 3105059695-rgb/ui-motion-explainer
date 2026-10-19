@@ -8,6 +8,7 @@ import argparse
 import json
 from pathlib import Path
 import unicodedata
+from resource_inventory import resource_fact
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG_FILE = 'references/source-study-methods.json'
@@ -56,14 +57,27 @@ def source_record(video, root=ROOT):
     raise ValueError('Unknown source video: ' + str(video))
 
 
-def source_facts(root=ROOT):
+def original_media(row, root=ROOT, payload=None, verify_hash=False):
+    manifest = Path(root) / row['manifest']
+    document = load_json(manifest) if manifest.is_file() else {}
+    video = next((item for item in document.get('videos', []) if item.get('id') == row['id']), {})
+    if payload is None and not video.get('source'):
+        path = Path(root) / row['alignment']
+        payload = load_json(path) if path.is_file() else {}
+    payload = payload or {}
+    return resource_fact('source-video:' + row['id'], video.get('source') or payload.get('source'),
+                         root, verify_hash, video.get('source_sha256') or payload.get('source_sha256'))
+
+
+def source_facts(root=ROOT, verify_hash=False):
     facts = []
     for row in source_records(root):
         alignment_path = (Path(root) / row['alignment']).resolve()
         manifest_path = (Path(root) / row['manifest']).resolve()
         facts.append({**row, 'alignment': str(alignment_path), 'manifest': str(manifest_path),
                       'alignment_exists': alignment_path.is_file(),
-                      'manifest_exists': manifest_path.is_file()})
+                      'manifest_exists': manifest_path.is_file(),
+                      'original_media': original_media(row, root, verify_hash=verify_hash)})
     return facts
 
 
@@ -155,6 +169,7 @@ def example(video, row_id, root=ROOT):
             'alignment': str((Path(root) / registered['alignment']).resolve()),
             'manifest': str((Path(root) / registered['manifest']).resolve()),
             'source': payload.get('source'), 'review': payload.get('review', {}),
+            'original_media': original_media(registered, root, payload),
             'row': row,
             'shots': [s for s in payload.get('shots', [])
                       if isinstance(s, dict) and s.get('id') in shot_ids],
@@ -177,6 +192,8 @@ def directing_context(root=ROOT):
     result['count'] = len(result['methods'])
     result['all_sources_exist'] = all(s['alignment_exists'] and s['manifest_exists']
                                       for s in result['sources'])
+    result['original_media_present'] = sum(s['original_media']['file_exists'] for s in result['sources'])
+    result['original_media_scope'] = 'Current explicit local mappings and file presence only; hash_status states whether bytes were verified. Text research remains usable when original media is absent.'
     result['warnings'] = [
         'Source-study registered files are missing for ' + s['id']
         for s in result['sources'] if not s['alignment_exists'] or not s['manifest_exists']]

@@ -1,10 +1,11 @@
 """Serve the skill's local galleries; Ctrl+C stops the server."""
 import argparse
 from functools import partial
-from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
+from http.server import ThreadingHTTPServer
 from pathlib import Path
+from media_server import SingleRangeHTTPRequestHandler
 
-class QuietHandler(SimpleHTTPRequestHandler):
+class QuietHandler(SingleRangeHTTPRequestHandler):
     def log_message(self,*args):pass
 
 def main():

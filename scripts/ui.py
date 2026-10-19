@@ -114,9 +114,21 @@ def guides(guide_id=None):
 
 
 def main(argv=None):
+    # Keep selection arguments with their own small parser, including --help.
+    # Existing backend routing and production checks remain unchanged.
+    actual_argv = list(sys.argv[1:] if argv is None else argv)
+    if actual_argv[:1] and actual_argv[0] in ('select', 'inspect'):
+        import selection
+        return selection.main(actual_argv)
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='action', required=True)
+    sub.add_parser('select', help='Retrieve per-narration method/recipe/implementation candidates, pending Agent judgment.')
+    sub.add_parser('inspect', help='Read an exact method, recipe, capability, family or reference and available source paths.')
     sub.add_parser('status', help='Check local resources without installing or rendering.')
+    child = sub.add_parser('verify-output', help='Check rendered media duration/streams/hash against the current plan; no aesthetic approval.')
+    child.add_argument('--project', required=True, type=Path)
+    child.add_argument('--media', required=True, type=Path)
+    child.add_argument('--plan', type=Path)
     child = sub.add_parser('guides', help='Locate internal technical guides; no instructions are loaded or executed.')
     child.add_argument('--id', dest='guide_id', help='Optional exact backend guide ID.')
     child = sub.add_parser('modules', help='List or check the implementations retained behind this entry.')
@@ -157,6 +169,10 @@ def main(argv=None):
         if args.action == 'status':
             print(json.dumps(status(), ensure_ascii=False, indent=2))
             return 0
+        if args.action == 'verify-output':
+            report = production_entry.verify_output(args.project, args.media, args.plan, root=ROOT)
+            print(json.dumps(report, ensure_ascii=False, indent=2))
+            return 0 if report.get('technical_passed') else 1
         if args.action == 'guides':
             print(json.dumps(guides(args.guide_id), ensure_ascii=False, indent=2))
             return 0
@@ -194,6 +210,28 @@ def main(argv=None):
     if export_report is not None:
         print(json.dumps(export_report, ensure_ascii=False), flush=True)
     result = subprocess.run(backend_argv, check=False).returncode
+    if result == 0 and export_report is not None and export_report.get('production_export'):
+        render_parser = argparse.ArgumentParser(add_help=False, allow_abbrev=False)
+        render_parser.add_argument('--out', type=Path)
+        render_parser.add_argument('--start', type=float, default=0)
+        render_parser.add_argument('--end', type=float)
+        render_parser.add_argument('--stills-only', action='store_true')
+        render_options, _ = render_parser.parse_known_args(forwarded)
+        if render_options.stills_only or render_options.start != 0 or render_options.end is not None:
+            print(json.dumps({'delivery_status': 'preview-only', 'full_delivery_verified': False,
+                              'notice': 'Explicit still/range preview; a complete output must be verified separately.'},
+                             ensure_ascii=False))
+        else:
+            media = (render_options.out or project / 'renders').resolve() / 'preview.mp4'
+            try:
+                report = production_entry.verify_output(
+                    project, media, options['plan'], root=ROOT,
+                    expected_plan_sha256=export_report.get('plan_sha256'))
+            except (OSError, ValueError) as exc:
+                parser.error('Render finished but output verification failed: ' + str(exc))
+            print(json.dumps(report, ensure_ascii=False, indent=2))
+            if not report.get('technical_passed'):
+                return 1
     if result == 0 and resolution is not None:
         try:
             # An authored director --plan may declare its account in project.json.

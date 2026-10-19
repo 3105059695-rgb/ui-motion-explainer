@@ -6,17 +6,27 @@ required. Export time is explicit; scenes never depend on wall-clock time.
 """
 import argparse
 from functools import partial
-from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+from http.server import ThreadingHTTPServer
 import io
 import json
 import math
 from pathlib import Path
 import shutil
 import subprocess
+import sys
 import threading
 import time
 
-class QuietHandler(SimpleHTTPRequestHandler):
+for package_root in Path(__file__).resolve().parents:
+    if (package_root / 'SKILL.md').is_file() and (package_root / 'scripts/media_server.py').is_file():
+        sys.path.insert(0, str(package_root / 'scripts'))
+        break
+else:
+    raise ImportError('Shared media server is missing; keep this renderer inside the complete ui-motion-fusion package.')
+from media_server import SingleRangeHTTPRequestHandler
+
+
+class QuietHandler(SingleRangeHTTPRequestHandler):
     def log_message(self, *_): pass
 
 def ffmpeg_path():

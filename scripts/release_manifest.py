@@ -8,16 +8,25 @@ import os
 from pathlib import Path, PurePosixPath
 import re
 import stat
+from urllib.parse import unquote
 
 MANIFEST = 'release-manifest.json'
 STATE = '.install-state.json'
-VERSION = '2026.10.19.2'
+VERSION = '2026.10.19.3'
 EXCLUDED_DIRS = {'.git', 'node_modules', '__pycache__', '.cache', 'cache', 'caches',
                  '.venv', 'venv', '.pytest_cache', '.mypy_cache', '.ruff_cache',
                  'runtime', 'runtimes', 'browser-cache'}
 PRIVATE_NAMES = {'.env', 'keys', 'credentials', 'credentials.json', 'secrets.json',
                  'id_rsa', 'id_ed25519', '.npmrc', '.pypirc'}
 PRIVATE_SUFFIXES = {'.pem', '.key', '.pfx', '.p12'}
+ENTRY_DOCUMENTS = ('SKILL.md', 'references/workflow.md', 'references/style-profiles.md',
+                   'references/library.md', 'references/history.md',
+                   'references/profiles/user-ui.md', 'references/profiles/fangmu.md',
+                   'references/profiles/fangmu-current.md', 'references/global-use.md',
+                   'references/semantic-directing.md', 'references/script-visual-planning.md',
+                   'references/source-study-guide.md', 'references/aigc-directing.md',
+                   'references/engine-routing.md', 'references/distribution-scope.md',
+                   'references/selection-workflow.md')
 
 
 def sha256(path: Path) -> str:
@@ -63,7 +72,8 @@ def classify(value: str) -> str:
     lower = [part.lower() for part in parts]
     # Author-machine account routes/documents are never release payload. Exclude
     # before traversing their contents; parent links still get checked_path checks.
-    if (lower == ['references', 'profiles', 'registry.local.json']
+    if (lower == ['references', 'resources.local.json']
+            or lower == ['references', 'profiles', 'registry.local.json']
             or lower[:3] == ['references', 'profiles', 'local']):
         return 'excluded'
     for name in lower:
@@ -105,6 +115,28 @@ def inventory(root: Path) -> list[Path]:
 
 def read_json(path: Path):
     return json.loads(path.read_text(encoding='utf-8-sig'))
+
+
+def validate_entry_links(root: Path) -> int:
+    """Active docs must not send a fresh installation to absent sibling skills."""
+    root = root.resolve()
+    count = 0
+    for name in ENTRY_DOCUMENTS:
+        document = root / name
+        if not document.is_file():
+            continue
+        for match in re.finditer(r'\[[^\]\n]*\]\(([^)\n]+)\)', document.read_text(encoding='utf-8-sig')):
+            target = match.group(1).strip().strip('<>')
+            if re.match(r'^[a-zA-Z][a-zA-Z0-9+.-]*://|^#|^mailto:', target):
+                continue
+            target = unquote(target.split('#', 1)[0])
+            if not target:
+                continue
+            resolved = (document.parent / target).resolve()
+            if not resolved.is_relative_to(root) or not resolved.exists():
+                raise ValueError(f'Broken active documentation link: {name} -> {target}')
+            count += 1
+    return count
 
 
 def validate_resources(root: Path) -> dict:
@@ -160,7 +192,8 @@ def validate_resources(root: Path) -> dict:
         path = checked_path(root, name)
         if not path.is_file() or not path.stat().st_size:
             raise ValueError(f'Missing approved girl image: {name}')
-    return {'required_modules': modules, 'fred_visual_anchors': len(anchors),
+    return {'required_modules': modules, 'active_document_links': validate_entry_links(root),
+            'fred_visual_anchors': len(anchors),
             'girl_identity_images': len(characters), 'girl_scene_images': len(scenes)}
 
 

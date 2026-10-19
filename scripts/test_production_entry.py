@@ -21,8 +21,19 @@ class ProductionEntryTests(unittest.TestCase):
         self.plan = self.project / 'director-plan.json'
 
     def run_entry(self, args):
-        with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+        # Renderer is mocked in these routing tests; real post-output validation
+        # has positive/negative cases in test_selection_contract.
+        with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()), \
+                patch.object(production_entry, 'verify_output', return_value={'technical_passed': True}):
             return ui.main(args)
+
+    def ready_report(self):
+        config_path = self.project / 'project.json'
+        config = json.loads(config_path.read_text(encoding='utf-8')) if config_path.is_file() else {}
+        config['duration'] = 1
+        config_path.write_text(json.dumps(config), encoding='utf-8')
+        return {'render_ready': True, 'current_style_ready': True, 'selection_ready': True, 'production_ready': True,
+                'selection_evidence': {'entrypoint': {'path': 'index.html'}, 'duration_seconds': 1, 'ledger': []}}
 
     def render_args(self, engine='fusion'):
         return ['render', '--engine', engine, '--', '--project', str(self.project)]
@@ -36,9 +47,10 @@ class ProductionEntryTests(unittest.TestCase):
 
     def test_legacy_stale_or_not_ready_plan_never_launches_renderer(self):
         self.plan.write_text('{}', encoding='utf-8')
-        cases = [(True, False), (False, True), (False, False)]
+        cases = [(True, False), (False, True), (False, False), (True, True)]
         for ready, current in cases:
-            report = {'render_ready': ready, 'current_style_ready': current, 'errors': [], 'readiness_blockers': []}
+            report = {'render_ready': ready, 'current_style_ready': current, 'selection_ready': False,
+                      'production_ready': False, 'errors': [], 'readiness_blockers': []}
             with self.subTest(report=report), patch.object(production_entry.director, 'check', return_value=report), \
                     patch.object(ui.subprocess, 'run') as run:
                 with self.assertRaises(SystemExit):
@@ -47,7 +59,7 @@ class ProductionEntryTests(unittest.TestCase):
 
     def test_production_check_is_for_this_project_and_consumes_plan_flag(self):
         self.plan.write_text('{}', encoding='utf-8')
-        report = {'render_ready': True, 'current_style_ready': True}
+        report = self.ready_report()
         with patch.object(production_entry.director, 'check', return_value=report) as check, \
                 patch.object(ui.subprocess, 'run', return_value=SimpleNamespace(returncode=0)) as run:
             args = self.render_args() + ['--plan', 'director-plan.json', '--width', '960']
@@ -72,14 +84,13 @@ class ProductionEntryTests(unittest.TestCase):
             json.dumps({'generated_by': production_entry.OWNER}), encoding='utf-8')
         config = self.project / 'project.json'
         config.write_text('{"current_style_applied":false}', encoding='utf-8')
-        with patch.object(production_entry.director, 'check', return_value={
-                'render_ready': True, 'current_style_ready': True}) as check, \
+        with patch.object(production_entry.director, 'check', return_value=self.ready_report()) as check, \
                 patch.object(ui.subprocess, 'run', return_value=SimpleNamespace(returncode=0)) as run:
             with self.assertRaises(SystemExit):
                 self.run_entry(self.render_args())
             check.assert_not_called()
             run.assert_not_called()
-            config.write_text('{"current_style_applied":true}', encoding='utf-8')
+            config.write_text('{"current_style_applied":true,"duration":1}', encoding='utf-8')
             self.assertEqual(0, self.run_entry(self.render_args()))
             check.assert_called_once()
             run.assert_called_once()
@@ -99,8 +110,7 @@ class ProductionEntryTests(unittest.TestCase):
 
     def test_dry_run_checks_production_but_never_launches(self):
         self.plan.write_text('{}', encoding='utf-8')
-        with patch.object(production_entry.director, 'check', return_value={
-                'render_ready': True, 'current_style_ready': True}) as check, \
+        with patch.object(production_entry.director, 'check', return_value=self.ready_report()) as check, \
                 patch.object(ui.subprocess, 'run') as run:
             args = ['render', '--engine', 'fusion', '--dry-run', '--', '--project', str(self.project)]
             self.assertEqual(0, self.run_entry(args))

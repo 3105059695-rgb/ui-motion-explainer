@@ -11,7 +11,7 @@ python -X utf8 scripts/ui.py direct check --plan <导演计划.json>
 
 统一入口如果使用 `--` 传递参数，以 `scripts/ui.py direct --help` 的实际帮助为准；也可直接调用 `scripts/director.py` 的同名子命令。
 
-`prepare` 只生成 `director-context.json` 与 `director-brief.md`，包含完整原文、原文件 SHA-256、风格选择状态和必读文件路径。它调用本机风格注册表，按显式 `--profile`、工程配置、注册的项目根目录解析；无依据或有冲突时保持未确定，不猜账号。`context.style.resolution` 保存档案、认可样片、实现、证据和未认可范围；同时内嵌来源方法候选。Agent 仍须实际阅读和应用这些内容。同内容跳过；不同内容拒绝覆盖，除非明确 `--force`，且原文件确由本工具生成。两份输出先一起检查；源稿、其他文件以及链接目标不覆盖。
+`prepare` 生成 `director-context.json` 与 `director-brief.md`，包含完整原文、原文件 SHA-256、风格选择状态和必读文件路径。它调用本机风格注册表，按显式 `--profile`、工程配置、注册的项目根目录解析；无依据或有冲突时保持未确定，不猜账号。`context.style.resolution` 保存档案、认可样片、实现、证据和未认可范围。`context.selection` 根据原文位置与上下文检索方法、配方和源码候选，保留出处、适用条件与负例；它不是已完成的选材决定，允许跨句连续场景、原创或保留人物。Agent 仍须实际阅读并落实本期工程。同内容跳过；不同内容拒绝覆盖，除非明确 `--force`，且原文件确由本工具生成。两份输出先一起检查；源稿、其他文件以及链接目标不覆盖。
 
 `context.aigc` 独立加载 [AIGC 注册集](aigc-assets.json)：当前工程的 `aigc_style_id` 或 `aigc.style_set_id` 优先，其次匹配已解析的账号／项目范围。通用 `user-ui` 默认带入两张女孩原图、8 张已认可场景及既有研究路径；阿刁、方木保留各自档案。找不到选择或设置冲突时明确标记未解决，不猜选画风。它检查资产路径是否存在，但场景是否符合新句意、实际图像是否适用仍由 Agent 按 [AIGC 导演方法](aigc-directing.md)判断。`context.style` 继续约束 UI；AIGC 参考不会替换 UI 外观。
 
@@ -73,7 +73,7 @@ AIGC 另外返回 `character_references_ready`、每个场景的 `reference_read
 
 ## 来源方法引用
 
-顶层或单个 `segments[]` 可增加下面的可选字段；旧计划继续兼容。选了来源方法的 Agent 应留下所选例证及本期改编原因，不能只登记 ID：
+旧计划兼容顶层或单个 `segments[]` 的可选引用。新选用合同中，采用既有来源方法的段落必须在该段登记具体例证、改编原因及源文件哈希；原创或保留人物可以没有来源引用。不能只登记 ID：
 
 ```json
 "source_study_refs": [{
@@ -110,7 +110,7 @@ AIGC 另外返回 `character_references_ready`、每个场景的 `reference_read
 }
 ```
 
-工具只检查音频路径、哈希与证据文件存在，不判断该证据内容是否正确，不解码声音、不复核真实落点。
+旧合同只检查音频路径、哈希与证据文件存在。下述新版选用合同另外核对结构化对齐文件的哈希、原文位置和源音轨范围，但仍不能代替实际试听判断音画是否准确。
 
 ## 素材和 AIGC 请求
 
@@ -188,6 +188,122 @@ AIGC 另外返回 `character_references_ready`、每个场景的 `reference_read
 
 历史画风认可不能填作本期用图依据。正常按口播制作的新图不需要这个例外，也不要求用户逐图确认。此检查按已注册路径匹配，不能识别复制改名文件、判断理由真实性或代替最终画面审查。
 
-`production_ready = render_ready && current_style_ready`。旧计划可保留结构兼容，但未绑定当前风格不能进入统一生产导出；任何版本声明被否定的基线都会拒绝。统一 `ui.py render` 检查生产就绪后才调用底层渲染器；明确 `--demo` 仅用于历史机制演示，不算正式制作通过。
+`production_ready = render_ready && current_style_ready && selection_ready`。旧计划保留结构兼容，但缺当前风格或本期选用／实现证据不能进入统一生产导出；任何版本声明被否定的基线都会拒绝。统一 `ui.py render` 检查生产就绪后才调用底层渲染器；明确 `--demo` 仅用于历史机制演示，不算正式制作通过。
 
 由统一入口新建的工程还有 `current_style_applied:false` 标记。落实本期画面样式后才可将 `project.json.current_style_applied` 设为 `true`；未落实时即使计划有效也阻止生产导出。该声明是制作状态，不是自动视觉验收。
+
+## 本期选用与实际实现合同（新正式制作必需）
+
+在同一个计划增加 `selection_contract_version:1`，不要另造一套与工程无关的完成清单。选材阶段可以先写决定，制作后回填实际文件、哈希和时间；未制作完时保持非生产就绪。
+
+```json
+{
+  "selection_contract_version": 1,
+  "delivery": {"scope": "full", "duration_seconds": 2},
+  "implementation_manifest": {"path": "implementation-manifest.json", "sha256": "真实文件哈希"}
+}
+```
+
+- `full` 覆盖原稿全部非空白字符；可以几句共享一个事件，不按句号强制切镜。
+- 合法样段使用 `scope:"excerpt"`，另写 `reason` 与 `source_ranges:[{"start":0,"end":5}]`，范围沿用原稿字符坐标。范围外不能偷偷补入或漏掉范围内的句子。
+- 每段补 `output:{start_seconds,end_seconds}`，以本次导出开头为零。输出范围覆盖 `delivery.duration_seconds`；转场或图层交叠可写 `output.overlap_reason`。人物停留、开头与结尾也应有落点，不能留未解释的空段。
+
+每个 `segments[]` 增加：
+
+```json
+{
+  "selection": {
+    "mode": "original",
+    "reason": "这两句描述同一对象的关系，现有例图对象不适用；沿用已确认的UI质感，重新设计连续关系事件",
+    "aigc": {"use": false, "reason": "对象关系用当前图形即可看懂，生成镜头会打断这一事件"},
+    "evidence": []
+  },
+  "output": {"start_seconds": 0, "end_seconds": 2},
+  "source_audio": {"start_seconds": 0, "end_seconds": 2},
+  "implementation": {"path": "main.js", "sha256": "真实源码哈希", "marker": "\"relation-01\""}
+}
+```
+
+`mode` 为 `reference / original / presenter`。`presenter` 对应保留人物载体；无需强加效果或 AIGC。三种情况都写本句实际理由；机器只验证说明存在，Agent 要复核说明是否成立。`aigc.use` 必须与该段实际生成资产／生成请求一致；没有 AIGC 时明确为何不用，而不是缺字段让其他窗口猜。
+
+`reference` 模式至少选择一个正向来源方法，使用已有 `source_study_refs` 填方法、具体 `video/row_ids`、`adaptation_reason`。相应方法目录与逐句对照文件同时放入 `selection.evidence`：
+
+```json
+{"path":"references/source-study-methods.json","origin":"skill","sha256":"真实文件哈希","role":"source-method"}
+```
+
+证据默认相对工程；包内文件用 `origin:"skill"`，避免复制一份参考库。所有证据文件必须真实存在且 SHA-256 相符。来源行还必须属于所选方法；不能把负例正向照搬。原创、真实直出和保留人物可无方法引用，不要求每句堆效果；其 `reason` 说明本期取舍即可。
+
+所有 `ready` 素材增加 `sha256`，包括风格参考。改了文件内容却保留旧计划会失败；更新哈希前先复核变更，不批量填新哈希来掩盖未落实的修改。
+
+### AIGC 绑定画风，不固定每期人物与场景
+
+`prepare` 的 `context.aigc.binding` 含当前 `style_set_id` 与规则哈希。使用 AIGC 的段落复制到 `aigc.style_binding`，并在 `selection.evidence` 绑定至少一张适用的当前画风参考，`role:"art-style-reference"`。不要求所有八张场景，也不强制女孩 IP。
+
+实际使用的 `aigc.scene_ref/style_ref/character_refs` 都应在 `selection.evidence` 留文件哈希；新的本期场景可以作为 `new-scene-reference`，人物身份参考仅在本期需要时绑定。当前工程已经固定的 IP 要延续；这项校验不代替 Agent 看脸、服装和场景是否一致。库图继续默认只校准画风；重复上屏或首帧仍遵守前文的 `reference_reuse`。
+
+### 绑定渲染入口真正读取的时间线
+
+`implementation_manifest` 不是一个随手填 `done:true` 的旁路清单。其内容如下，路径均相对计划所在工程：
+
+```json
+{
+  "schema_version": 1,
+  "entrypoint": {"path": "index.html", "sha256": "真实入口哈希"},
+  "timeline": {"path": "timeline.json", "sha256": "真实时间线哈希", "consumer": "main.js", "binding": "timeline"},
+  "files": [{"path": "main.js", "sha256": "真实源码哈希"}]
+}
+```
+
+统一 base/fusion/director 渲染器实际打开工程的 `index.html`，因此公开生产导出要求绑定该入口，并核对 `project.json.duration` 与本计划时长。入口的本地 `script/import/fetch` 依赖必须可以追踪，全部可达文本实现列入 `files`；不能拿未被入口引用的演示源码冒充本期实现。动态拼接文件名无法静态核实时，改为明确本地导入或取址，不伪造路径通过。
+
+时间线必须由可达的 `consumer` 实际导入或读取，并赋给 `binding` 指定的变量；该变量的 `.segments` 必须用于代码。支持直接 JSON import/require，或下面的明确 fetch 方式：
+
+```javascript
+const timeline = await fetch("./timeline.json").then(response => response.json());
+window.renderFrame = t => {
+  const shot = timeline.segments.find(row => row.output.start_seconds <= t && t < row.output.end_seconds);
+  if (shot && shot.id === "relation-01") renderRelation(shot, t - shot.output.start_seconds);
+};
+```
+
+这里只展示如何接入现有 `renderRelation` 实现，不是成片模板。实际实现也要通过本地导入连接到入口并绑定哈希。工具检查读取依赖、变量和映射，不把“代码出现”冒充浏览器实际执行或视觉正确；仍须正常速度播放验证。
+
+注意浏览器取址规则：`src/main.js` 内普通 `fetch("./timeline.json")` 相对 HTML 文档的 `document.baseURI`，通常读取工程根目录的 `timeline.json`；静态 import/require 才相对模块文件目录。校验遵循这个区别，也支持 `fetch(new URL("../timeline.json", import.meta.url))` 显式按模块取址。字面本地 `<base href>` 会改变文档基址；动态 URL、外部文档基址或无法静态确定的加载方式明确报不支持，不能把未实际读取的另一个 JSON 当作时间线。此处只验证这些明确读取形式，不证明运行时分支已经执行。
+
+`timeline.json` 是工程渲染使用的时间线，不是另一份无调用的审核 JSON：
+
+```json
+{
+  "schema_version": 1,
+  "source_sha256": "原稿真实哈希",
+  "duration_seconds": 2,
+  "segments": [{
+    "id": "relation-01", "span": {"start": 0, "end": 5},
+    "output": {"start_seconds": 0, "end_seconds": 2},
+    "implementation": {"path": "main.js", "sha256": "真实源码哈希", "marker": "\"relation-01\""},
+    "assets": []
+  }]
+}
+```
+
+时间线每行的原文位置、输出落点、实现文件／唯一 marker、实际输出素材的 `path/sha256` 必须与计划相符。可附加当前渲染所需的事件、对象等字段。实现 marker 必须在入口可达的真实代码或 DOM 中出现一次，注释不算。`role:reference/first-frame` 不冒充最终上屏素材；实际输出素材写入该行 assets，静态校验不判断 MP4 内部动作质量。
+
+### 对齐与导出后的检查
+
+新版对齐证据使用 JSON，`timing.alignment_sha256` 绑定该文件的内容：
+
+```json
+{
+  "schema_version": 1,
+  "source_sha256": "原稿真实哈希",
+  "audio_sha256": "保留原声真实哈希",
+  "segments": [{"id":"relation-01","span":{"start":0,"end":5},"source_audio":{"start_seconds":0,"end_seconds":2}}]
+}
+```
+
+实际对齐应来自本期音轨／字幕；空 `{}` 不再被当成证据。每行 source span、源音轨区间与计划一致，源音轨与输出段时长不能无说明地改变。这里核对结构与哈希，不通过文件名声称已经听审。
+
+`selection_ready` 表示上述本期来源、覆盖和实现映射成立。`production_entry.verify_output(project, media, ..., expected_plan_sha256=导出前计划哈希)` 在实际渲染后重新核对输入绑定，并通过本机已有 ffprobe 检查导出文件的视频／音频流、时长和文件 SHA-256。成片时长与映射时长的误差容限为 0.12 秒；缺 ffprobe 或媒体解码元信息失败时明确未通过，不自动下载工具。输出报告保留 `traceability` 逐段落点，并明确 `aesthetic_approval:false`、`full_realtime_av_review:false`。技术通过仍不等于句意适合、动画真实、观感满意或听审完成。
+
+目前这个生产导出／导出后检查入口面向读取 `index.html` 与 `project.json.duration` 的 base/fusion/director 后端。自定义 Editorial/Remotion 工程的入口和时钟不同，尚不受这套导出适配器支持，不能宣称已经统一验收；需使用其真实入口的专用适配与媒体检查。

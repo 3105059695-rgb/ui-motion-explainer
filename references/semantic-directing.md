@@ -6,10 +6,10 @@
 
 制作顺序、源音轨与实际画面检查统一按[主流程](workflow.md)；本页只维护调用连接。
 
-1. `direct prepare` 读取原稿和当前档案，提供认可样片、源码、来源方法及 AIGC 资产。先读取所选风格的 `reference_directions` 内嵌约束与 `required_reading`；`user-ui` 默认含 [Fred 正文方向](fred-ui-direction.md)，无需另点名参考。Agent 查看适用样片和本段证据，按[口播选材](script-visual-planning.md)完成语义判断。
+1. `direct prepare` 读取原稿和当前档案，提供认可样片、来源方法、AIGC 画风与 `context.selection` 的按段候选。先读取所选风格的 `reference_directions` 与 `required_reading`；`user-ui` 默认含 [Fred 正文方向](fred-ui-direction.md)。Agent 查看适用样片和候选的原句/画面例证，按[口播选材](script-visual-planning.md)完成判断；检索得分不是创作决定。
 2. 用下表和 [O/X/F/R 等能力](library.md)找实现；需要参考时按[研究接入](source-study-guide.md)回查所选方法的口播与画面证据。`study -- read --id Q-C01` 查来源，`direct -- recipes --id Sxx` 查配方；编号不是关键词剪辑规则。
 3. 代码调用实际 API，传入本期对象、主题和时间；AIGC 使用适用角色、场景、具体动作与首尾状态。现成方法不合适时改编或定制，已有素材先核对再复用。
-4. 实现和衔接落实到原工程及同一份分镜。机器检查负责结构与缺件；表达、节奏和质感仍需查看实际输出，完成标准见主流程。
+4. 正式制作把选用理由、引用或原创决定、覆盖范围、实际素材和输出时间留在同一导演计划。渲染入口读取的实际时间线与实现文件参与检查；文件哈希和映射不一致先修。表达、节奏和质感仍需查看实际输出，完成标准见主流程和[选用流程](selection-workflow.md)。
 
 ## 配方选型
 
@@ -32,7 +32,7 @@
 
 ## AIGC 怎样自然接入
 
-具体规则集中维护在[AIGC 导演](aigc-directing.md)：选用条件、8 个认可场景的动作链、双参考与单场景首帧、有效剪辑节奏、开头和转场，以及视频画风固定项。先读取 `context.aigc` 中适用参考的实际图像，按原句选择或扩展场景，再将动作、首尾状态和衔接落实到现有分镜；原片截图控制事件与空间，用户角色图控制身份与绘画材质。
+具体规则集中维护在[AIGC 导演](aigc-directing.md)：选用条件、参考场景的动作链、有效剪辑节奏、开头和转场，以及视频画风。先查看 `context.aigc` 中适用图像，按本期原句重新设计空间、道具和事件，再制作关键图和动作；例图只校准画风与叙事方法，不能自动成为首帧。仅在当前工程明确固定 IP 时延续原图身份。计划绑定当前 AIGC 画风和实际使用的参考，不因表格已填就声称生成结果已达标。
 
 [资产注册集](aigc-assets.json)维护角色、场景、研究及后续视频认可，当前适用样片只从[账号档案](style-profiles.md)接续。新句意需要别的事件时，沿用已定画风补资产，不固定套用已有场景顺序。
 
@@ -49,11 +49,11 @@ python -X utf8 scripts/ui.py direct -- recipes --id S08
 python -X utf8 scripts/ui.py direct -- check --plan <当前工程/director-plan.json>
 ```
 
-`prepare` 将原稿路径、SHA-256、必须读取的约束与资源路径写入 `director-context.json` 和 `director-brief.md`，默认嵌入来源方法候选、完整逐句研究及独立的 `context.aigc`。后者包含画风路由、角色原图、认可场景图、文件存在状态、动作链和认可范围；通用 `user-ui` 默认选择 `qiuzhi-girl-painterly`，账号／项目的具体设置优先。工具定位依据，语义选型仍由 Agent 完成；`--profile` 不是渲染器自动换肤参数。已有工程资料足够时接续分镜，不重复拷贝媒体。
+`prepare` 将原稿路径、SHA-256、必须读取的约束与资源路径写入 `director-context.json` 和 `director-brief.md`。`context.selection` 提供按段候选，完整研究目录仍用于查找；独立的 `context.aigc` 包含画风、参考图、动作链、认可范围和当前绑定。通用 `user-ui` 默认选择 `qiuzhi-girl-painterly` 画风，账号／项目设置优先。工具辅助检索，选型仍由 Agent 完成；`--profile` 不是渲染器自动换肤。已有资料足够时接续工程，不重复拷贝媒体。
 
 新建且含 AIGC 动作的计划采用 `aigc_contract_version:1`，在段落 `aigc` 中引用角色、场景、画风及实际动作节拍。`check` 核验文件存在、节拍有序及动作与结果停留不超上屏时长；旧计划兼容，非 AIGC 不强制填写。字段详见[计划合同](director-plan-contract.md#aigc-资产与实际剪辑节奏)。
 
-Agent 将本次判断落到现有分镜；使用机器检查时，以 `director-plan.json` 保存同一份记录或从原记录导出，避免维护两份互相冲突的计划。计划字段见 [director-plan-contract.md](director-plan-contract.md)。`check` 检查原稿、顺序、引用、素材和生成缺口，返回 `plan_valid` / `render_ready` / 待制作任务；它不能验证理解准确性、生成质量或审美。缺件必须解决或明确限定交付，不能把检查通过当成成片。
+Agent 将本次判断落到现有分镜，并以 `director-plan.json` 保存同一份记录或从原记录导出。正式制作采用 `selection_contract_version:1`；字段见[计划合同](director-plan-contract.md)。检查稿件覆盖、引用、素材、画风和真实时间线依赖，缺少选用证据的旧计划仍可读取但不能报生产就绪。原创或纯人物段落可以不用已有方法，需明确原因；不要求每句堆效果。输出后还要核对媒体与实际画面，结构通过不代表理解、生成质量或审美通过。
 
 六种组件的接口、集成与可播放演示见 [editing-kit/README.md](../assets/editing-kit/README.md)。使用原工程的字体和主题变量，以原有时间轴驱动进度；组件不触碰音视频播放。新生成的素材仍由原工程后端合成。一个 Skill 的内部模块调用由 Agent 完成，不要求用户分别唤起几个 Skill。
 

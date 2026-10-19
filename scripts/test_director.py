@@ -83,7 +83,8 @@ class DirectorTests(unittest.TestCase):
         report = self.run_check()
         self.assertTrue(report['render_ready'], report)
         self.assertTrue(report['current_style_ready'], report)
-        self.assertTrue(report['production_ready'], report)
+        self.assertFalse(report['production_ready'], report)
+        self.assertFalse(report['selection_ready'], report)
         self.assertIn('not rendered-style or aesthetic approval', report['style_readiness_scope'])
 
     def test_legacy_plan_cannot_select_a_globally_rejected_baseline(self):

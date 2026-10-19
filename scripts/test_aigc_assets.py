@@ -52,7 +52,10 @@ class AigcAssetTests(unittest.TestCase):
         self.assertTrue(result['approved_static_assets'][0]['resource_checks']['image_path']['exists'])
         self.assertFalse(result['approved_static_assets'][0]['video_verified'])
         self.assertFalse(result['video_approval_inherited'])
-        self.assertEqual(result['research_sources'], self.data['research_sources'])
+        self.assertEqual([{k: v for k, v in row.items() if k != 'resource'}
+                          for row in result['research_sources']], self.data['research_sources'])
+        self.assertEqual(result['research_sources_present'], 0)
+        self.assertFalse(result['research_sources'][0]['resource']['file_exists'])
         self.assertTrue(result['reference_only'])
         self.assertFalse(result['default_character_required'])
         for row in [*result['character_references'], *result['approved_static_assets']]:
@@ -105,7 +108,9 @@ class AigcAssetTests(unittest.TestCase):
         result = self.resolve('user-ui')
         self.assertTrue(result['production_references_ready'])
         self.assertTrue(result['approved_static_assets'][0]['reference_ready'])
-        self.assertEqual(len(result['optional_provenance_missing']), 2)
+        self.assertEqual(set(result['optional_provenance_missing']), {
+            str((self.root / 'source.mp4').resolve()), str((self.root / 'frame.jpg').resolve()),
+            str((self.root / 'references/full-study.md').resolve())})
         self.assertNotIn('missing_resources', result)
 
     def test_missing_character_is_not_treated_as_a_resolved_production_reference(self):
