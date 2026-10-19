@@ -330,13 +330,14 @@ def validate(plan, project, root=ROOT, source_text=None):
         if not isinstance(evidence, list):
             error(where + '.selection.evidence', 'must be an array of file/hash/role bindings')
             evidence = []
-        evidence_paths, art_paths = set(), set()
+        evidence_paths, evidence_hashes, art_paths = set(), set(), set()
         for n, record in enumerate(evidence):
             target = bound_file(record, where + f'.selection.evidence[{n}]')
             if not isinstance(record, dict) or not text(record.get('role')):
                 error(where + f'.selection.evidence[{n}].role', 'state what this source contributes')
             if target is not None:
                 evidence_paths.add(target)
+                evidence_hashes.add(record['sha256'])
                 if record.get('role') == 'art-style-reference':
                     art_paths.add(target)
         refs = segment.get('source_study_refs', [])
@@ -396,8 +397,13 @@ def validate(plan, project, root=ROOT, source_text=None):
                 characters = actual.get('character_refs') if isinstance(actual.get('character_refs'), list) else []
                 used = [actual.get('scene_ref'), actual.get('style_ref'), *characters]
                 for value in used:
-                    if value and path(value) not in evidence_paths:
-                        error(where + '.selection.evidence', 'bind the actual character/scene/style reference file: ' + str(value))
+                    if value:
+                        actual_path = path(value)
+                        # Installing the same Skill in another directory changes paths,
+                        # not reference identity. Only existing files with a verified
+                        # evidence hash qualify; a stale path or claimed hash cannot.
+                        if not actual_path.is_file() or digest(actual_path) not in evidence_hashes:
+                            error(where + '.selection.evidence', 'bind the actual character/scene/style reference file: ' + str(value))
             except (OSError, ValueError, TypeError, KeyError) as exc:
                 error(where + '.aigc.style_binding', str(exc))
 

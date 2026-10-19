@@ -300,6 +300,36 @@ const active = timeline.segments[0]; const id = "shot-1";''', encoding='utf-8')
         self.plan['segments'][0]['aigc']['style_binding']['rules_sha256'] = '0' * 64
         self.assert_blocked('current selected AIGC art direction')
 
+    def test_aigc_reference_content_survives_skill_install_location_change(self):
+        self.make_aigc()
+        checkout = Path(self.temp.name) / 'original-checkout'
+        checkout.mkdir()
+        anchor = checkout / 'anchor.png'
+        scene = checkout / 'new-scene.png'
+        anchor.write_bytes((self.root / 'anchor.png').read_bytes())
+        scene.write_bytes((self.project / 'new-scene.png').read_bytes())
+        self.plan['segments'][0]['aigc'].update({
+            'character_mode': 'reference', 'character_refs': [str(anchor)],
+            'style_ref': str(anchor), 'scene_ref': str(scene)})
+        # Evidence resolves to the current installation/project; actual references
+        # still name the original checkout. All three reference types are identical.
+        report = self.check()
+        self.assertTrue(report['production_ready'], report)
+        self.assertTrue(production_entry.export_check(self.project, root=self.root)['production_ready'])
+
+    def test_aigc_reference_migration_rejects_changed_missing_or_falsely_hashed_files(self):
+        for failure in ('changed-content', 'missing-file', 'false-evidence-hash'):
+            with self.subTest(failure=failure):
+                self.make_aigc()
+                anchor = Path(self.temp.name) / ('old-checkout-' + failure + '.png')
+                if failure != 'missing-file':
+                    anchor.write_bytes(b'different art' if failure == 'changed-content'
+                                       else (self.root / 'anchor.png').read_bytes())
+                self.plan['segments'][0]['aigc']['style_ref'] = str(anchor)
+                if failure == 'false-evidence-hash':
+                    self.plan['segments'][0]['selection']['evidence'][0]['sha256'] = '0' * 64
+                self.assert_blocked('bind the actual character/scene/style reference file')
+
     def test_arbitrary_reference_image_cannot_replace_current_aigc_art_direction(self):
         self.make_aigc()
         self.plan['segments'][0]['selection']['evidence'] = [self.file('new-scene.png', role='art-style-reference')]
