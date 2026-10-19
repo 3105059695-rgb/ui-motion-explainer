@@ -1,6 +1,12 @@
 {
   "schema_version": 1,
-  "purpose": "Portable profile routing. Explicit project/account choices take precedence; default user-ui works without the author machine.",
+  "purpose": "Account routing preserves identity and layout. All continuous body UI profiles inherit one current Fred contract; an evidenced project UI exception has its own body-ui scope.",
+  "shared_ui_direction": {
+    "id": "fred-explainer-20261015",
+    "label": "当前正文 UI · Fred 黑紫统一方向",
+    "guidance_path": "references/evidence/fred-reference-approved-20261015.json",
+    "reading": ["references/fred-ui-direction.md"]
+  },
   "unregistered_profiles": {},
   "excluded_ui_projects": [
     {
@@ -19,16 +25,7 @@
       ],
       "profile_path": "references/profiles/user-ui.md",
       "project_roots": [],
-      "reference_directions": [
-        {
-          "id": "fred-explainer-20261015",
-          "label": "Fred 连续 UI 讲解参考 · 用户已选方向",
-          "guidance_path": "references/evidence/fred-reference-approved-20261015.json",
-          "reading": [
-            "references/fred-ui-direction.md"
-          ]
-        }
-      ],
+      "ui_direction": "shared",
       "sources": [
         {
           "kind": "documented-baseline",
@@ -130,6 +127,7 @@
       ],
       "profile_path": "references/profiles/adiao.md",
       "project_roots": [],
+      "ui_direction": "shared",
       "sources": [],
       "distribution_note": "账号规则可读；私有样片/声音/人物由账号工程提供，不自动用通用女孩替代。"
     },
@@ -148,16 +146,7 @@
         "references/profiles/fangmu-current.md"
       ],
       "distribution_note": "保留当前规则，私有视频与账号素材不公开；使用账号工程中的已确认资源。",
-      "reference_directions": [
-        {
-          "id": "fred-explainer-20261015",
-          "label": "Fred 连续 UI 讲解参考 · 用户已选方向",
-          "guidance_path": "references/evidence/fred-reference-approved-20261015.json",
-          "reading": [
-            "references/fred-ui-direction.md"
-          ]
-        }
-      ],
+      "ui_direction": "shared",
       "direction_update": "2026-10-19: current user choice joins the Fred black-purple UI contract; retain Fangmu identity, source audio, opening guidance and explicitly selected whiteboard mode."
     }
   ],

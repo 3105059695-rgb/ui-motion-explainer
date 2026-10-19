@@ -28,8 +28,9 @@ def read_json(path):
 def load_registry(root=ROOT):
     """Merge an optional, explicit machine-local overlay without changing defaults.
 
-    Only existing profile IDs can be overridden. Lists replace that field, not
-    individual entries. Malformed overlays fail closed instead of being ignored.
+    Account data may be local, but the current shared UI is package-owned.
+    Reading lists are additive so older local profiles cannot hide current rules.
+    Project UI exceptions are resolved separately from account routing.
     """
     root = Path(root)
     registry = read_json(root / REGISTRY)
@@ -95,7 +96,14 @@ def load_registry(root=ROOT):
                         raise ValueError('adiao-current-opening requires accepted_status')
             patches.append(item)
         for item in patches:
-            known[item['id']].update({key: value for key, value in item.items() if key != 'id'})
+            current = known[item['id']]
+            reading = list(current.get('required_reading', []))
+            if item.get('profile_path') and item['profile_path'] != current['profile_path']:
+                reading.append(current['profile_path'])
+            reading.extend(item.get('required_reading', []))
+            current.update({key: value for key, value in item.items() if key not in {'id', 'required_reading'}})
+            if reading:
+                current['required_reading'] = list(dict.fromkeys(reading))
         return registry
     except (OSError, ValueError, KeyError, TypeError) as exc:
         raise ValueError('Invalid local style registry ' + str(overlay_path) + ': ' + str(exc)) from exc
@@ -121,7 +129,7 @@ def current_binding(resolution):
     profile = resolution.get('profile_path')
     if not resolution.get('resolved_profile') or not profile or not Path(profile).is_file():
         return None
-    return {'schema_version': 1, 'profile_id': resolution['resolved_profile'],
+    binding = {'schema_version': 1, 'profile_id': resolution['resolved_profile'],
             'profile_sha256': content_sha256(profile),
             'directions': [
                 {'id': row['id'], 'revision': row.get('contract_revision'),
@@ -129,6 +137,11 @@ def current_binding(resolution):
                  'anchors': [{'index': index, 'sha256': fact.get('sha256')}
                              for index, fact in enumerate(row.get('visual_anchors', []))]}
                 for row in resolution.get('reference_directions', [])]}
+    exception = resolution.get('ui_override')
+    if exception:
+        binding['ui_override'] = {key: exception[key] for key in
+                                 ('id', 'scope', 'approval_source_sha256', 'quote_sha256')}
+    return binding
 
 
 def under(path, folder):
@@ -171,8 +184,8 @@ def load_profile(config, registry, root=ROOT):
               'project_roots': [str(local_path(p, root)) for p in config.get('project_roots', [])]}
     facts = [profile]
 
-    def add_reading(value, target=None):
-        fact = path_fact(value, root, 'profile-required-reading')
+    def add_reading(value, target=None, base=None):
+        fact = path_fact(value, root if base is None else base, 'profile-required-reading')
         facts.append(fact)
         if fact['path'] not in {item['path'] for item in result['required_reading']}:
             result['required_reading'].append(fact)
@@ -181,7 +194,18 @@ def load_profile(config, registry, root=ROOT):
 
     for value in config.get('required_reading', []):
         add_reading(value)
-    for spec in config.get('reference_directions', []):
+    directions = config.get('reference_directions', [])
+    if config.get('ui_direction') == 'shared':
+        shared = registry.get('shared_ui_direction')
+        if not isinstance(shared, dict) or not shared.get('id') or not shared.get('guidance_path'):
+            result['warnings'].append('The shared body UI direction is missing or malformed; no historical palette fallback is allowed.')
+            result['style_references_ready'] = False
+            return result
+        directions = [shared]
+    result['ui_direction_source'] = ('shared-body-ui' if config.get('ui_direction') == 'shared' else
+                                     'project-body-ui' if config.get('ui_direction') == 'project' else 'profile')
+    for spec in directions:
+        direction_root = spec.get('resource_root', root)
         # A chosen reference is independent of an approved reproduction. Load its
         # current machine-readable contract, not a cached or project-authored copy.
         source = path_fact(spec['guidance_path'], root, 'reference-direction-evidence')
@@ -210,7 +234,7 @@ def load_profile(config, registry, root=ROOT):
             if not isinstance(reading, list) or any(not isinstance(p, str) or not p.strip() for p in reading):
                 raise ValueError('direction_contract.reading must be a list of local paths.')
             for value in reading:
-                add_reading(value, direction['required_reading'])
+                add_reading(value, direction['required_reading'], direction_root)
             calibration = contract.get('visual_calibration', {})
             if not isinstance(calibration, dict):
                 raise ValueError('direction_contract.visual_calibration must be an object.')
@@ -220,7 +244,7 @@ def load_profile(config, registry, root=ROOT):
             for anchor in anchors:
                 if not isinstance(anchor, dict):
                     raise ValueError('Every visual anchor must be an object with a local frame path.')
-                fact = {**path_fact(anchor.get('frame'), root, 'visual-calibration-anchor'),
+                fact = {**path_fact(anchor.get('frame'), direction_root, 'visual-calibration-anchor'),
                         'source': anchor.get('source'), 'event': anchor.get('event'),
                         'learn': anchor.get('learn')}
                 if fact['exists']:
@@ -237,7 +261,7 @@ def load_profile(config, registry, root=ROOT):
                              contract_revision=contract.get('revision'),
                              contract_sha256=contract_sha256(contract),
                              visual_references_ready=anchors_ready)
-            for key in ('status', 'quote', 'scope', 'review', 'approval', 'source', 'source_range'):
+            for key in ('status', 'quote', 'scope', 'scope_updates', 'review', 'approval', 'source', 'source_range'):
                 if key in doc:
                     direction[key] = doc[key]
         except (OSError, ValueError, KeyError, TypeError) as exc:
@@ -373,6 +397,65 @@ def identify(value, configs, root, base):
     return None
 
 
+def project_ui_override(declaration, metadata, config, registry, root):
+    """Check a scoped project exception's files, not the human's identity.
+
+    A local file/hash is provenance evidence, not authentication. The production
+    Agent must read the actual user conversation before treating it as approval.
+    A profile ID, palette string, or a plan's own 'approved' flag is insufficient.
+    """
+    if not isinstance(declaration, dict) or declaration.get('scope') != 'body-ui':
+        raise ValueError('style.ui_override requires scope="body-ui"; AIGC-only choices do not override UI')
+    source = declaration.get('source', {})
+    if not isinstance(source, dict):
+        raise ValueError('style.ui_override.source must contain path, sha256 and the exact user quote')
+    evidence = local_path(source.get('path'), metadata.parent)
+    if evidence.name in PROJECT_FILES or evidence == metadata.resolve():
+        raise ValueError('UI override evidence must be separate from project/plan/derived metadata')
+    expected = source.get('sha256')
+    quote = source.get('quote')
+    if not isinstance(expected, str) or len(expected) != 64 or content_sha256(evidence) != expected:
+        raise ValueError('UI override source sha256 does not match its actual file')
+    if not isinstance(quote, str) or not quote.strip():
+        raise ValueError('UI override requires the exact nonempty user quote')
+    text = evidence.read_text(encoding='utf-8-sig')
+    if evidence.suffix.lower() == '.jsonl':
+        user_messages = []
+        for line in text.splitlines():
+            if not line.strip():
+                continue
+            row = json.loads(line)
+            if not isinstance(row, dict):
+                raise ValueError('UI override conversation records must be JSON objects')
+            payload = row.get('payload', {})
+            if not isinstance(payload, dict):
+                continue
+            if row.get('type') == 'response_item' and payload.get('role') == 'user':
+                user_messages.extend(item.get('text', '') for item in payload.get('content', [])
+                                     if isinstance(item, dict) and item.get('type') in {'input_text', 'text'})
+            elif row.get('type') == 'event_msg' and payload.get('type') == 'user_message':
+                user_messages.append(payload.get('message', ''))
+        text = '\n'.join(message for message in user_messages if isinstance(message, str))
+    if quote not in text:
+        raise ValueError('UI override quote is absent from the source (JSONL requires an actual user-message record)')
+    spec = declaration.get('direction')
+    if not isinstance(spec, dict) or not spec.get('id') or not spec.get('guidance_path'):
+        raise ValueError('UI override direction requires id and an independent guidance_path')
+    spec = {**spec, 'guidance_path': str(local_path(spec['guidance_path'], metadata.parent)),
+            'resource_root': str(metadata.parent),
+            'reading': [str(local_path(value, metadata.parent)) for value in spec.get('reading', [])]}
+    exception = {**config, 'ui_direction': 'project', 'reference_directions': [spec]}
+    resolved = load_profile(exception, registry, root)
+    if (not resolved['reference_directions'] or not resolved['reference_directions'][0]['visual_anchors']):
+        raise ValueError('Project UI exception requires actual visual calibration anchors, not a prose-only palette')
+    resolved['ui_override'] = {'id': spec['id'], 'scope': 'body-ui',
+        'approval_source_sha256': expected, 'quote_sha256': hashlib.sha256(quote.encode('utf-8')).hexdigest(),
+        'source': {**source, 'path': str(evidence)}, 'metadata_path': str(metadata),
+        'evidence_files_verified': True, 'user_identity_verified': False,
+        'boundary': 'File/hash/quote checks only; the Agent must verify the actual human request and scope in its conversation.'}
+    return resolved
+
+
 def resolve(project=None, profile=None, root=ROOT, registry=None):
     registry = load_registry(root) if registry is None else registry
     configs = registry['profiles']
@@ -393,11 +476,13 @@ def resolve(project=None, profile=None, root=ROOT, registry=None):
             result['warnings'].append(registry.get('unregistered_profiles', {}).get(profile, 'Unknown registered profile: ' + profile))
             return result
     declared_baselines = []
+    declared_ui = []
     # Nearest project metadata takes precedence over folder routing. Parent lookup
     # permits calling from project/src without scanning unrelated workspace files.
     for folder in [directory, *list(directory.parents)[:5]]:
         found = set()
         unknown = []
+        folder_ui = []
         for name in PROJECT_FILES:
             path = folder / name
             if not path.is_file():
@@ -419,6 +504,8 @@ def resolve(project=None, profile=None, root=ROOT, registry=None):
                 values += [(k, style.get(k)) for k in PROFILE_KEYS]
                 if style.get('baseline'):
                     declared_baselines.append((style['baseline'], folder))
+                if 'ui_override' in style:
+                    folder_ui.append((style['ui_override'], path))
             if doc.get('baseline'):
                 declared_baselines.append((doc['baseline'], folder))
             for key, value in values:
@@ -427,6 +514,8 @@ def resolve(project=None, profile=None, root=ROOT, registry=None):
                     found.add(ident)
                 elif key != 'workflow' and isinstance(value, str) and value.strip():
                     unknown.append(value)
+        if not declared_ui and folder_ui:
+            declared_ui = folder_ui
         if unknown and not profile:
             result['selection_source'] = 'unregistered-project-profile:' + str(folder)
             result['warnings'].append('Project declares an unregistered profile; folder routing must not replace it: ' + ', '.join(unknown))
@@ -460,12 +549,25 @@ def resolve(project=None, profile=None, root=ROOT, registry=None):
                 result['warnings'].append('The registry default profile is not registered; no profile was assumed.')
     selected = next((item for item in available if item['id'] == selection), None)
     if selected:
+        if declared_ui:
+            try:
+                if len(declared_ui) != 1 or declared_ui[0][1].name != 'project.json':
+                    raise ValueError('Declare one UI exception in project.json; plans and copied contexts cannot establish it')
+                declaration, metadata = declared_ui[0]
+                config = next(item for item in configs if item['id'] == selection)
+                selected = project_ui_override(declaration, metadata, config, registry, root)
+            except (OSError, ValueError, KeyError, TypeError) as exc:
+                selected = {**selected, 'style_references_ready': False,
+                            'warnings': [*selected['warnings'], 'Invalid project UI override: ' + str(exc)]}
         result.update(status='resolved' if selected['profile_exists'] else 'missing-profile',
                       resolved_profile=selection, profile_path=selected['profile_path'],
                       reference_directions=selected['reference_directions'],
                       required_reading=selected['required_reading'],
                       style_references_ready=selected['style_references_ready'],
                       confirmed_baselines=selected['confirmed_baselines'], missing=selected['missing'])
+        result['ui_direction_source'] = selected.get('ui_direction_source')
+        if selected.get('ui_override'):
+            result['ui_override'] = selected['ui_override']
         result['excluded_baselines'].extend(selected['excluded_baselines'])
         result['warnings'].extend(selected['warnings'])
         result['available_profiles'] = []

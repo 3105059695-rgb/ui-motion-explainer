@@ -3,6 +3,7 @@
 AIGC art direction is independent of the account's UI profile. Recorded static
 approval is never promoted to generated-video approval by this helper.
 """
+import hashlib
 import json
 from pathlib import Path
 from resource_inventory import resource_fact
@@ -11,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CATALOG = 'references/aigc-assets.json'
 GUIDE = 'references/aigc-directing.md'
 PROJECT_FILES = ('project.json', 'current-project.json', 'director-plan.json')
+IMAGE_EXTENSIONS = {'.png', '.jpg', '.jpeg', '.webp', '.gif', '.avif', '.bmp', '.tif', '.tiff'}
 
 
 def _read(path):
@@ -64,6 +66,60 @@ def _project_choice(project, warnings):
     return None, None
 
 
+def _project_override(project):
+    """Read a sourced AIGC-only request from this project, never its parents.
+
+    File hashes and an exact quotation make the declaration inspectable; they
+    cannot authenticate a human speaker or establish aesthetic approval.
+    """
+    folder = Path(project).resolve()
+    found = []
+    for name in PROJECT_FILES:
+        metadata = folder / name
+        if not metadata.is_file():
+            continue
+        doc = _read(metadata)
+        aigc = doc.get('aigc') if isinstance(doc, dict) else None
+        if not isinstance(aigc, dict) or 'direction_override' not in aigc:
+            continue
+        override = aigc['direction_override']
+        allowed = {'scope', 'direction', 'source', 'style_references'}
+        if not isinstance(override, dict) or set(override) - allowed or override.get('scope') != 'aigc-only':
+            raise ValueError('AIGC direction_override must have scope=aigc-only and only direction/source/style_references fields; UI overrides belong to the UI contract.')
+        direction, source = override.get('direction'), override.get('source')
+        if not isinstance(direction, str) or not direction.strip():
+            raise ValueError('AIGC direction_override.direction must describe the current art direction.')
+        if not isinstance(source, dict) or source.get('kind') not in ('current-user-request', 'current-project-confirmation'):
+            raise ValueError('AIGC direction_override.source requires kind=current-user-request or current-project-confirmation and an actual source file/hash/quote.')
+        source_fact = _path_fact(source.get('path'), folder)
+        if not source_fact['exists']:
+            raise ValueError('AIGC override source file is missing; a claimed approval flag is insufficient.')
+        source_path = Path(source_fact['path'])
+        actual_hash = hashlib.sha256(source_path.read_bytes()).hexdigest()
+        quote = source.get('quote')
+        if source.get('sha256') != actual_hash or not isinstance(quote, str) or not quote.strip() or quote not in source_path.read_text(encoding='utf-8-sig'):
+            raise ValueError('AIGC override source SHA-256 and exact quote must match its actual UTF-8 source file.')
+        refs = override.get('style_references')
+        if not isinstance(refs, list) or not refs:
+            raise ValueError('AIGC override needs current style_references; use relevant supplied references or a current direction frame, not unrelated default examples.')
+        references = []
+        for value in refs:
+            fact = _path_fact(value, folder)
+            if not fact['exists'] or Path(fact['path']).suffix.lower() not in IMAGE_EXTENSIONS:
+                raise ValueError('AIGC override style_references must point to existing local image files.')
+            references.append({**fact, 'sha256': hashlib.sha256(Path(fact['path']).read_bytes()).hexdigest(),
+                               'role': 'reference', 'usage_role': 'style-reference-only',
+                               'auto_use_as_first_frame': False, 'auto_use_as_output': False})
+        found.append({'scope': 'aigc-only', 'direction': direction.strip(),
+                      'source': {**source_fact, 'kind': source['kind'], 'sha256': actual_hash, 'quote': quote},
+                      'style_references': references})
+    if not found:
+        return None
+    if any(value != found[0] for value in found[1:]):
+        raise ValueError('Conflicting AIGC direction_override declarations in this project; no default applied.')
+    return found[0]
+
+
 def reference_only_paths(root=ROOT):
     """Catalog images teach style; a path match does not authorize production use."""
     root = Path(root)
@@ -95,7 +151,7 @@ def directing_context(project, style_resolution=None, root=ROOT):
         'catalog': str(catalog.resolve()), 'catalog_exists': catalog.is_file(),
         'guide': _path_fact(GUIDE, root), 'status': 'unresolved',
         'selection_source': None, 'selected_style_set': None,
-        'character_references': [], 'style_rules': {}, 'approval': {},
+        'character_references': [], 'style_references': [], 'style_rules': {}, 'approval': {},
         'approved_static_assets': [], 'research_sources': [],
         'available_style_sets': [], 'warnings': warnings,
         'reference_only': True, 'default_character_required': False,
@@ -106,6 +162,21 @@ def directing_context(project, style_resolution=None, root=ROOT):
         'requires_visual_comparison': True, 'video_approval_inherited': False,
         'instruction': 'AIGC 与 UI 外观分开。注册图片只用于理解画风、材质、构图和叙事方法；每期先理解口播句意，再设计本期人物、场景、道具和动作，制作匹配的新素材。不得自动把这些例图当成视频首帧、成片素材或固定场景菜单，也不强制所有稿件使用图中同一人物。当前工程明确指定的固定 IP 保持连续；直接沿用某张旧图须有本期明确依据，历史风格认可本身不是复用许可。',
     }
+    try:
+        override = _project_override(project)
+    except (OSError, ValueError, TypeError, UnicodeError) as exc:
+        context['status'] = 'invalid-project-override'
+        warnings.append(str(exc))
+        return context
+    if override is not None:
+        context.update(status='resolved', selected_style_set='project-local-aigc',
+                       selection_source='project-direction-override:' + str(Path(project).resolve()),
+                       direction_override=override,
+                       style_rules={'rendering': override['direction']},
+                       style_references=override['style_references'],
+                       production_references_ready=True,
+                       reference_readiness_scope='Sourced AIGC-only direction and current reference files. No reference or generated-output aesthetic approval is inferred.')
+        return context
     if not catalog.is_file():
         context['status'] = 'missing-catalog'
         warnings.append('AIGC asset catalog is missing; references were not silently invented.')

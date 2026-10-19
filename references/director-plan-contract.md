@@ -6,14 +6,31 @@
 python -X utf8 scripts/ui.py direct recipes
 python -X utf8 scripts/ui.py direct recipes --id S01
 python -X utf8 scripts/ui.py direct prepare --script <原稿.txt> --project <当前工程目录> --profile <适用档案.md>
-python -X utf8 scripts/ui.py direct check --plan <导演计划.json>
+python -X utf8 scripts/ui.py direct check --plan <导演计划.json> --production
 ```
 
 统一入口如果使用 `--` 传递参数，以 `scripts/ui.py direct --help` 的实际帮助为准；也可直接调用 `scripts/director.py` 的同名子命令。
 
+正式预检必须加 `--production`（同义参数 `--require-production`）：仅 `production_ready=true` 才退出 0。省略参数是历史结构诊断，退出 0 只说明 `plan_valid=true`，不代表可以正式制作；返回值同时标明 `check_mode` 与 `check_passed`。现有 `ui.py render` 原本就会检查生产就绪，这次不重复增加另一道导出流程。
+
 `prepare` 生成 `director-context.json` 与 `director-brief.md`，包含完整原文、原文件 SHA-256、风格选择状态和必读文件路径。它调用本机风格注册表，按显式 `--profile`、工程配置、注册的项目根目录解析；无依据或有冲突时保持未确定，不猜账号。`context.style.resolution` 保存档案、认可样片、实现、证据和未认可范围。`context.selection` 根据原文位置与上下文检索方法、配方和源码候选，保留出处、适用条件与负例；它不是已完成的选材决定，允许跨句连续场景、原创或保留人物。Agent 仍须实际阅读并落实本期工程。同内容跳过；不同内容拒绝覆盖，除非明确 `--force`，且原文件确由本工具生成。两份输出先一起检查；源稿、其他文件以及链接目标不覆盖。
 
 `context.aigc` 独立加载 [AIGC 注册集](aigc-assets.json)：当前工程的 `aigc_style_id` 或 `aigc.style_set_id` 优先，其次匹配已解析的账号／项目范围。通用 `user-ui` 默认带入两张女孩原图、8 张已认可场景及既有研究路径；阿刁、方木保留各自档案。找不到选择或设置冲突时明确标记未解决，不猜选画风。它检查资产路径是否存在，但场景是否符合新句意、实际图像是否适用仍由 Agent 按 [AIGC 导演方法](aigc-directing.md)判断。`context.style` 继续约束 UI；AIGC 参考不会替换 UI 外观。
+
+本期明确要求与注册画风不同（例如摄影写实）时，可在本工程 `project.json` 的 `aigc.direction_override` 保存有出处的局部方向，优先于注册选择：
+
+```json
+{"aigc":{"direction_override":{
+  "scope":"aigc-only",
+  "direction":"摄影写实、自然光、真实杯子材质",
+  "source":{"kind":"current-user-request","path":"本期要求原文.txt","sha256":"真实文件哈希","quote":"本期素材用摄影写实"},
+  "style_references":["assets/本期摄影方向图.png"]
+}}}
+```
+
+也可保存在本工程 `current-project.json` 或计划顶层；多处声明必须一致。`source.kind` 仅接受 `current-user-request` 或 `current-project-confirmation`；原文文件必须存在、SHA-256 一致、精确引文能在其中找到。来源是用户实际要求或工程已有确认，不能由 Agent 自写“已确认”替代。代码只能验证文件与引文一致，**不能自动认证作者身份、判断引用的语义授权或产生审美认可**。
+
+此覆盖仅在当前工程生效，不从父目录传播到另一期工程；`scope` 只允许 `aigc-only`，不能顺便更改 UI。`style_references` 是本期适用的现有参考或按该方向制作的关键图，至少一张；不要求女孩、不要求固定 IP，不沿用无关的手绘绑定。它们默认只作风格依据，是否可上屏仍看本期用途；图片存在也不是审美批准。`prepare` 返回 `selected_style_set:"project-local-aigc"`、当前来源和图片，以及独立的 `context.aigc.binding`。正式段落绑定该值，同时在 `selection.evidence` 登记实际来源文件和画风参考的哈希；`aigc.style_ref` 必须属于本期所选方向。源文、方向或参考内容改变后重新准备，不能保留过期绑定。
 
 ## 当前风格绑定与跨机器调用
 
@@ -189,6 +206,8 @@ AIGC 另外返回 `character_references_ready`、每个场景的 `reference_read
 历史画风认可不能填作本期用图依据。正常按口播制作的新图不需要这个例外，也不要求用户逐图确认。此检查按已注册路径匹配，不能识别复制改名文件、判断理由真实性或代替最终画面审查。
 
 `production_ready = render_ready && current_style_ready && selection_ready`。旧计划保留结构兼容，但缺当前风格或本期选用／实现证据不能进入统一生产导出；任何版本声明被否定的基线都会拒绝。统一 `ui.py render` 检查生产就绪后才调用底层渲染器；明确 `--demo` 仅用于历史机制演示，不算正式制作通过。
+
+检查报告的 `selection_evidence.ledger` 将每段句意、观众疑问、事件与前后交接随实际素材、实现标记及输出范围一起列出，便于实片逐段对照。它复用同一计划，不增加另填的审批表，也不判断这些文字是否已经变成清晰画面。原创、静止阅读、保留人物等合法选择不需要凑配方或参考数量。
 
 由统一入口新建的工程还有 `current_style_applied:false` 标记。落实本期画面样式后才可将 `project.json.current_style_applied` 设为 `true`；未落实时即使计划有效也阻止生产导出。该声明是制作状态，不是自动视觉验收。
 

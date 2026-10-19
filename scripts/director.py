@@ -656,8 +656,10 @@ def main(argv=None):
     prep.add_argument('--project', required=True, type=Path)
     prep.add_argument('--profile', type=Path)
     prep.add_argument('--force', action='store_true', help='Replace only this tool\'s own generated context/brief files.')
-    validator = sub.add_parser('check', help='Check static structure, source anchors and local resources.')
+    validator = sub.add_parser('check', help='Check static structure, source anchors and local resources; use --production for production preflight.')
     validator.add_argument('--plan', required=True, type=Path)
+    validator.add_argument('--production', '--require-production', action='store_true',
+                           help='Exit nonzero unless production_ready is true. Default mode only diagnoses plan structure.')
     args = parser.parse_args(argv)
     try:
         if args.command == 'recipes':
@@ -666,11 +668,13 @@ def main(argv=None):
             output = prepare(args.script, args.project, args.profile, args.force)
         else:
             output = check(args.plan)
+            output['check_mode'] = 'production-preflight' if args.production else 'structure-diagnostic'
+            output['check_passed'] = output['production_ready'] if args.production else output['plan_valid']
     except (OSError, ValueError, UnicodeError) as exc:
         print(json.dumps({'errors': [str(exc)], 'generation_submitted': False}, ensure_ascii=False, indent=2))
         return 1
     print(json.dumps(output, ensure_ascii=False, indent=2))
-    return 1 if args.command == 'check' and not output['plan_valid'] else 0
+    return 1 if args.command == 'check' and not output['check_passed'] else 0
 
 
 if __name__ == '__main__':

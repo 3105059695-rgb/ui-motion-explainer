@@ -1,15 +1,29 @@
 """Meaningful local tests; no media generation, network or dependencies."""
 import hashlib
+import io
 import json
+from contextlib import redirect_stdout
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 import director
 import style_registry
 
 
 class DirectorTests(unittest.TestCase):
+    def test_production_cli_distinguishes_structure_diagnostic_from_preflight(self):
+        report = {'plan_valid': True, 'render_ready': True, 'current_style_ready': True, 'production_ready': False}
+        for flag, expected in (([], 0), (['--production'], 1), (['--require-production'], 1)):
+            with self.subTest(flag=flag), patch.object(director, 'check', return_value=dict(report)), redirect_stdout(io.StringIO()) as capture:
+                result = director.main(['check', '--plan', 'legacy.json', *flag])
+            self.assertEqual(result, expected)
+            self.assertEqual(json.loads(capture.getvalue())['check_passed'], expected == 0)
+        report['production_ready'] = True
+        with patch.object(director, 'check', return_value=report), redirect_stdout(io.StringIO()):
+            self.assertEqual(director.main(['check', '--plan', 'ready.json', '--production']), 0)
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)

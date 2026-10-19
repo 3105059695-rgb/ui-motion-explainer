@@ -204,14 +204,14 @@ class LocalRoutes(unittest.TestCase):
             self.assertIn(direction['direction_contract']['summary'],
                           (project / 'director-brief.md').read_text(encoding='utf-8'))
 
-    def test_fred_default_is_selected_only_for_user_ui(self):
+    def test_fred_body_ui_is_shared_without_merging_account_identity(self):
         user = styles.resolve('E:/ui')
         self.assertEqual([d['id'] for d in user['reference_directions']], ['fred-explainer-20261015'])
         for account in ('adiao', 'fangmu'):
             selected = styles.resolve('E:/ui', account)
             self.assertEqual(selected['resolved_profile'], account)
-            self.assertEqual(selected['reference_directions'], [])
-            self.assertFalse(any(Path(p['path']).name == 'fred-ui-direction.md'
+            self.assertEqual([d['id'] for d in selected['reference_directions']], ['fred-explainer-20261015'])
+            self.assertTrue(any(Path(p['path']).name == 'fred-ui-direction.md'
                                  for p in selected['required_reading']))
         with tempfile.TemporaryDirectory(prefix='no-reference-default-') as folder:
             unresolved = styles.resolve(folder)
@@ -299,10 +299,9 @@ class PortableRoutes(unittest.TestCase):
         self.record = {'id': 'current', 'status': 'user_selected_reference_direction',
                        'direction_contract': self.contract}
         self.save_direction()
-        self.registry = {'profiles': [
+        self.registry = {'shared_ui_direction': {'id': 'current', 'guidance_path': 'references/direction.json'}, 'profiles': [
             {'id': profile, 'label': profile, 'profile_path': f'references/profiles/{profile}.md',
-             'sources': [], 'reference_directions': ([{'id': 'current', 'guidance_path': 'references/direction.json'}]
-                                                    if profile == 'user-ui' else [])}
+             'sources': [], 'ui_direction': 'shared'}
             for profile in ('user-ui', 'fangmu', 'adiao')]}
         (self.root / styles.REGISTRY).write_text(json.dumps(self.registry), encoding='utf-8')
         self.project = self.base / 'project'
@@ -357,7 +356,9 @@ class PortableRoutes(unittest.TestCase):
         self.assertEqual(context['style']['binding'], styles.current_binding(self.resolve()))
         self.assertTrue(context['style']['references_ready'])
         for profile in ('fangmu', 'adiao'):
-            self.assertEqual(self.resolve(profile)['reference_directions'], [])
+            selected = self.resolve(profile)
+            self.assertEqual(selected['resolved_profile'], profile)
+            self.assertEqual([row['id'] for row in selected['reference_directions']], ['current'])
         (self.project / 'project.json').write_text('{"profile":"fangmu"}', encoding='utf-8')
         self.assertEqual(styles.resolve(self.project, root=self.root)['resolved_profile'], 'fangmu')
         (self.project / 'project.json').write_text('{"profile":"unknown"}', encoding='utf-8')
@@ -462,6 +463,146 @@ class PortableRoutes(unittest.TestCase):
         for metadata in ({'profile': 'unknown'}, {'profile': 'fangmu', 'account': 'adiao'}):
             (self.project / 'project.json').write_text(json.dumps(metadata), encoding='utf-8')
             self.assertEqual(styles.resolve(self.project, root=self.root)['status'], 'unresolved')
+
+    def test_all_accounts_share_body_direction_but_keep_account_profile(self):
+        bindings = []
+        for profile in ('user-ui', 'adiao', 'fangmu'):
+            selected = self.resolve(profile)
+            self.assertTrue(selected['style_references_ready'])
+            self.assertEqual(selected['resolved_profile'], profile)
+            self.assertEqual(Path(selected['profile_path']).name, profile + '.md')
+            self.assertEqual(selected['ui_direction_source'], 'shared-body-ui')
+            bindings.append(styles.current_binding(selected)['directions'])
+        self.assertEqual(bindings[0], bindings[1])
+        self.assertEqual(bindings[1], bindings[2])
+
+    def test_old_local_account_does_not_restore_historical_body_palette(self):
+        local = self.root / 'local'
+        local.mkdir()
+        (local / 'adiao.md').write_text('Historical account: white cards and pale purple', encoding='utf-8')
+        overlay = {'schema_version': 1, 'profiles': [{'id': 'adiao', 'profile_path': 'local/adiao.md',
+            'project_roots': [str(self.project)], 'required_reading': []}]}
+        (self.root / styles.LOCAL_REGISTRY).write_text(json.dumps(overlay), encoding='utf-8')
+        result = styles.resolve(self.project, root=self.root)
+        self.assertEqual(result['resolved_profile'], 'adiao')
+        self.assertEqual(result['ui_direction_source'], 'shared-body-ui')
+        self.assertEqual(result['reference_directions'][0]['direction_contract'], self.contract)
+        reading = {Path(row['path']) for row in result['required_reading']}
+        self.assertIn((self.root / 'references/profiles/adiao.md').resolve(), reading)
+        self.assertIn((local / 'adiao.md').resolve(), reading)
+        overlay['profiles'][0]['ui_direction'] = 'old'
+        (self.root / styles.LOCAL_REGISTRY).write_text(json.dumps(overlay), encoding='utf-8')
+        with self.assertRaisesRegex(ValueError, 'Invalid local style registry'):
+            styles.resolve(self.project, root=self.root)
+
+    def test_missing_shared_contract_or_profile_cannot_use_old_baseline_as_fallback(self):
+        (self.root / 'references/direction.json').unlink()
+        for profile in ('user-ui', 'adiao', 'fangmu'):
+            self.assertFalse(self.resolve(profile)['style_references_ready'])
+        self.save_direction()
+        (self.root / 'references/profiles/adiao.md').unlink()
+        self.assertFalse(self.resolve('adiao')['style_references_ready'])
+        self.assertEqual(self.resolve('adiao')['status'], 'missing-profile')
+        del self.registry['shared_ui_direction']
+        (self.root / styles.REGISTRY).write_text(json.dumps(self.registry), encoding='utf-8')
+        result = self.resolve()
+        self.assertFalse(result['style_references_ready'])
+        self.assertTrue(any('shared body UI direction' in value for value in result['warnings']))
+
+    def write_project_ui_override(self, role='user'):
+        quote = 'This project keeps its approved whiteboard body UI; preserve the presenter and audio.'
+        source = self.base / 'actual-conversation.jsonl'
+        source.write_text(json.dumps({'type': 'response_item', 'payload': {'role': role,
+            'content': [{'type': 'input_text', 'text': quote}]}}) + '\n', encoding='utf-8')
+        (self.project / 'whiteboard.png').write_bytes(b'whiteboard-calibration-fixture')
+        (self.project / 'whiteboard.md').write_text('Explicit existing project direction', encoding='utf-8')
+        contract = {'id': 'whiteboard', 'revision': '1', 'summary': 'project whiteboard',
+            'reading': ['whiteboard.md'], 'visual_calibration': {'view_before_design': True,
+                'anchors': [{'frame': 'whiteboard.png', 'learn': 'approved whiteboard reading hierarchy'}]}}
+        (self.project / 'whiteboard.json').write_text(json.dumps({'id': 'whiteboard',
+            'status': 'user_selected_reference_direction', 'direction_contract': contract}), encoding='utf-8')
+        declaration = {'scope': 'body-ui', 'direction': {'id': 'whiteboard', 'guidance_path': 'whiteboard.json'},
+            'source': {'path': str(source), 'sha256': styles.content_sha256(source), 'quote': quote}}
+        metadata = {'profile': 'adiao', 'style': {'ui_override': declaration}}
+        (self.project / 'project.json').write_text(json.dumps(metadata), encoding='utf-8')
+        return metadata, source
+
+    def test_evidenced_project_ui_exception_retains_account_and_is_project_scoped(self):
+        self.write_project_ui_override()
+        result = styles.resolve(self.project, root=self.root)
+        self.assertTrue(result['style_references_ready'])
+        self.assertEqual(result['resolved_profile'], 'adiao')
+        self.assertEqual(result['reference_directions'][0]['id'], 'whiteboard')
+        self.assertTrue(result['ui_override']['evidence_files_verified'])
+        self.assertFalse(result['ui_override']['user_identity_verified'])
+        self.assertEqual(styles.current_binding(result)['ui_override']['scope'], 'body-ui')
+        other = styles.resolve(self.base / 'unrelated', 'adiao', root=self.root)
+        self.assertEqual(other['reference_directions'][0]['id'], 'current')
+        self.assertNotIn('ui_override', styles.current_binding(other))
+
+    def test_project_exception_needs_actual_quote_hash_scope_and_materials(self):
+        for mutation in ('missing-source', 'wrong-hash', 'wrong-quote', 'aigc-scope', 'missing-anchor', 'no-anchors'):
+            with self.subTest(mutation=mutation):
+                metadata, source = self.write_project_ui_override()
+                override = metadata['style']['ui_override']
+                if mutation == 'missing-source':
+                    source.unlink()
+                elif mutation == 'wrong-hash':
+                    override['source']['sha256'] = '0' * 64
+                elif mutation == 'wrong-quote':
+                    override['source']['quote'] = 'Assistant claims user approved this.'
+                elif mutation == 'aigc-scope':
+                    override['scope'] = 'aigc-only'
+                elif mutation == 'missing-anchor':
+                    (self.project / 'whiteboard.png').unlink()
+                else:
+                    evidence = styles.read_json(self.project / 'whiteboard.json')
+                    evidence['direction_contract']['visual_calibration'] = {}
+                    (self.project / 'whiteboard.json').write_text(json.dumps(evidence), encoding='utf-8')
+                (self.project / 'project.json').write_text(json.dumps(metadata), encoding='utf-8')
+                self.assertFalse(styles.resolve(self.project, root=self.root)['style_references_ready'])
+
+    def test_agent_record_and_old_profile_do_not_establish_ui_exception(self):
+        self.write_project_ui_override(role='assistant')
+        selected = styles.resolve(self.project, root=self.root)
+        self.assertFalse(selected['style_references_ready'])
+        self.assertTrue(any('actual user-message' in value for value in selected['warnings']))
+        metadata = {'profile': 'adiao', 'style': {'approved': True, 'background': '#fff'}}
+        (self.project / 'project.json').write_text(json.dumps(metadata), encoding='utf-8')
+        selected = styles.resolve(self.project, root=self.root)
+        self.assertTrue(selected['style_references_ready'])
+        self.assertEqual(selected['reference_directions'][0]['id'], 'current')
+
+    def test_plan_or_derived_metadata_cannot_self_approve_a_ui_exception(self):
+        metadata, source = self.write_project_ui_override()
+        (self.project / 'project.json').unlink()
+        (self.project / 'director-plan.json').write_text(json.dumps(metadata), encoding='utf-8')
+        result = styles.resolve(self.project, root=self.root)
+        self.assertFalse(result['style_references_ready'])
+        self.assertTrue(any('project.json' in value for value in result['warnings']))
+
+    def test_aigc_choice_does_not_change_body_ui(self):
+        metadata = {'profile': 'adiao', 'aigc': {'direction_override': {
+            'scope': 'aigc-only', 'direction': 'photographic realism'}}}
+        (self.project / 'project.json').write_text(json.dumps(metadata), encoding='utf-8')
+        result = styles.resolve(self.project, root=self.root)
+        self.assertEqual(result['resolved_profile'], 'adiao')
+        self.assertEqual(result['reference_directions'][0]['id'], 'current')
+        self.assertTrue(result['style_references_ready'])
+
+
+class PackagedSharedDirection(unittest.TestCase):
+    def test_shipped_registry_routes_each_account_to_the_same_contract(self):
+        registry = styles.read_json(styles.ROOT / styles.REGISTRY)
+        with tempfile.TemporaryDirectory() as folder:
+            default = styles.resolve(folder, root=styles.ROOT, registry=registry)
+            self.assertEqual(default['resolved_profile'], 'user-ui')
+            for profile in ('user-ui', 'adiao', 'fangmu'):
+                selected = styles.resolve(folder, profile, registry=registry)
+                self.assertTrue(selected['style_references_ready'])
+                self.assertEqual(selected['resolved_profile'], profile)
+                self.assertEqual([row['id'] for row in selected['reference_directions']], ['fred-explainer-20261015'])
+                self.assertEqual(len(selected['reference_directions'][0]['visual_anchors']), 3)
 
 
 if __name__ == '__main__':

@@ -6,7 +6,7 @@
 
 制作顺序、源音轨与实际画面检查统一按[主流程](workflow.md)；本页只维护调用连接。
 
-1. `direct prepare` 读取原稿和当前档案，提供认可样片、来源方法、AIGC 画风与 `context.selection` 的按段候选。先读取所选风格的 `reference_directions` 与 `required_reading`；`user-ui` 默认含 [Fred 正文方向](fred-ui-direction.md)。Agent 查看适用样片和候选的原句/画面例证，按[口播选材](script-visual-planning.md)完成判断；检索得分不是创作决定。
+1. `direct prepare` 读取原稿和当前档案，独立提供公共 UI、账号身份、AIGC 画风与 `context.selection` 的按段候选。先读取 `reference_directions` 与 `required_reading`；普通正文继承 [Fred 方向](fred-ui-direction.md)，不因账号目录或写实图片要求退回旧皮肤。Agent 查看适用样片和候选的原句/画面例证，按[口播选材](script-visual-planning.md)完成判断；检索得分不是创作决定。
 2. 用下表和 [O/X/F/R 等能力](library.md)找实现；需要参考时按[研究接入](source-study-guide.md)回查所选方法的口播与画面证据。`study -- read --id Q-C01` 查来源，`direct -- recipes --id Sxx` 查配方；编号不是关键词剪辑规则。
 3. 代码调用实际 API，传入本期对象、主题和时间；AIGC 使用适用角色、场景、具体动作与首尾状态。现成方法不合适时改编或定制，已有素材先核对再复用。
 4. 正式制作把选用理由、引用或原创决定、覆盖范围、实际素材和输出时间留在同一导演计划。渲染入口读取的实际时间线与实现文件参与检查；文件哈希和映射不一致先修。表达、节奏和质感仍需查看实际输出，完成标准见主流程和[选用流程](selection-workflow.md)。
@@ -46,7 +46,7 @@
 python -X utf8 scripts/ui.py direct -- prepare --script <原稿.txt> --project <当前工程目录> --profile user-ui
 python -X utf8 scripts/ui.py direct -- recipes
 python -X utf8 scripts/ui.py direct -- recipes --id S08
-python -X utf8 scripts/ui.py direct -- check --plan <当前工程/director-plan.json>
+python -X utf8 scripts/ui.py direct -- check --plan <当前工程/director-plan.json> --production
 ```
 
 `prepare` 将原稿路径、SHA-256、必须读取的约束与资源路径写入 `director-context.json` 和 `director-brief.md`。`context.selection` 提供按段候选，完整研究目录仍用于查找；独立的 `context.aigc` 包含画风、参考图、动作链、认可范围和当前绑定。通用 `user-ui` 默认选择 `qiuzhi-girl-painterly` 画风，账号／项目设置优先。工具辅助检索，选型仍由 Agent 完成；`--profile` 不是渲染器自动换肤。已有资料足够时接续工程，不重复拷贝媒体。

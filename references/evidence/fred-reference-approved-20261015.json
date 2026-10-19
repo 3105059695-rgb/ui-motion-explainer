@@ -22,12 +22,28 @@
     }
   ],
   "scope": "用户选择 Fred Argon 参考作为通用 user-ui 正文展示与剪辑语言的最新校准，并明确要求先接入 Skill 的跨窗口默认调用。尤其适用于人物缩到左侧、正文展开的讲解阶段。认可原参考方向，不等于我们已复刻或新成片已获认可。",
+  "scope_updates": [
+    {
+      "date": "2026-10-19",
+      "quote": "可以，你来修改",
+      "proposal_approved": "统一正文风格，拆开账号与画风；阿刁、方木按适用范围继承当前黑紫 UI，账号保存人物、声音、布局习惯；历史已确认工程可显式保留。写实图片只改变 AIGC 素材画风，不能改变 UI。",
+      "scope": "当前连续正文 UI 在 user-ui、阿刁、方木间共享；真人开头可保留原场景。独立工程外观须有本期真实原话依据，不因目录、旧档案或 Agent 自述覆盖。",
+      "preserves": "上述原始 quote、原始 scope、历史样片认可及账号身份记录保持原范围；此次是实现与继承规则的修改授权，不是新视频的审美认可。"
+    }
+  ],
   "source": "local-only/Gemini4 Argon终于发布了，到底是夯是拉？！ #抖音精选App知识充电站 #抖音精选App征稿中 #抖音前沿科技首发计划#AI新星计划 #vibecoding大赏.mp4",
   "source_sha256": "0a7aa3d6a84299d76e118c4ad400fd31aee06d9acd7244eb67c27a872092fe6d",
   "duration": 300.16,
   "direction_contract": {
     "id": "fred-explainer-20261015",
-    "summary": "user-ui 正文以 Fred 参考的黑紫视觉质感为当前外观基准：深黑实心主体与胶囊有分量，黑底亮紫关键词/大数字和白字形成强对比，投影、退焦和前景聚焦建立空间层次；白底可作舞台、章节可切黑底。不能仅有白底小窗口和几处紫色就算继承，不能固定等宽四窗贯穿整片。同一材料随句意展开、聚焦、比较、更新、收拢；连续性指身份与因果可追踪，不锁死位置、比例和景别。女孩与独立账号保持各自认可范围。",
+    "summary": "user-ui、阿刁、方木的连续正文共享 Fred 黑紫视觉基准：深黑实体主体与胶囊有分量，黑底亮紫关键词/大数字和白字形成强对比，投影、退焦和前景聚焦建立层次；白底可作舞台、章节可切黑底。不能仅有白底小窗口和几处紫色就算继承，不能固定等宽四窗贯穿。同一材料随句意展开、聚焦、比较、更新、收拢；连续性指身份与因果可追踪。账号保留人物、声音、布局和真人原场景开头；AIGC 画风独立选择。有真实依据的工程外观例外只覆盖声明范围。",
+    "application_scope": {
+      "layer": "body-ui",
+      "profiles": ["user-ui", "adiao", "fangmu"],
+      "account_preserves": ["人物身份", "原声与音色", "人物布局习惯", "已确认真人开头与原场景"],
+      "aigc_is_independent": true,
+      "project_override": "project.json style.ui_override requires body-ui scope, an independent direction contract, actual visual anchors and source path/sha256/exact user quote. File checks are not human authentication."
+    },
     "reading": [
       "references/profiles/user-ui.md",
       "references/fred-ui-direction.md"
@@ -76,7 +92,7 @@
       {
         "id": "carrier-selection",
         "scope": "B-roll 与 AIGC",
-        "instruction": "软件、文档、比较、流程与机制可由真实材料和连续UI直接解释，不因口播抽象就一律生成女孩镜头。人物处境、情绪和具体事件采用已确认女孩及场景，动作连续并可与UI交接；此参考不改变女孩身份和手绘画风。"
+        "instruction": "软件、文档、比较、流程与机制可由真实材料和连续UI解释，不因口播抽象就一律生成女孩镜头。人物处境、情绪和具体事件按本期口播设计素材；已确认图片默认只供画风参考，明确固定 IP 的工程才延续其身份。本期摄影写实等 AIGC 要求只覆盖生成素材画风，不改变本正文 UI 合同。"
       },
       {
         "id": "evidence-and-implementation",
@@ -113,14 +129,14 @@
       "A01 已认可 UI 短样、实现与原认可范围；正文展示以本次更具体的 Fred 校准为准。",
       "女孩完整样片、两张角色原图、8张已认可场景及既有连续动作/转场源码。",
       "秋芝四片逐句研究与36条方法、10条S配方、O/X/F/R及其他已有能力。",
-      "阿刁、方木和明确工程的独立风格与认可记录。"
+      "阿刁、方木的人物、声音、布局、开头及历史认可记录；当前连续正文继承共享合同。有真实原话依据的独立工程外观在其声明范围保留。"
     ],
     "boundaries": [
       "原参考正文没有常驻左侧真人；左侧人物是用户的迁移布局要求。",
       "原片角色/汽车的生成方式、模型、字体文件、精确曲线与音乐节拍未确认。",
       "未授权把本参考的3D角色作为女孩IP替代，也未批准未来任意新样片。"
     ],
-    "revision": "2026.10.19.1",
+    "revision": "2026.10.19.4",
     "reference_sources": [
       {
         "id": "fred-argon",
@@ -132,6 +148,7 @@
       }
     ],
     "latest_refinement": {
+      "record_scope": "历史 Fred JEV 方法细化记录；当前账号继承范围以 application_scope 与 scope_updates 为准。",
       "source": "fred-jev",
       "reused_method_ids": [
         "Q-A01",

@@ -300,6 +300,49 @@ const active = timeline.segments[0]; const id = "shot-1";''', encoding='utf-8')
         self.plan['segments'][0]['aigc']['style_binding']['rules_sha256'] = '0' * 64
         self.assert_blocked('current selected AIGC art direction')
 
+    def set_photographic_override(self):
+        self.make_aigc()
+        (self.project / 'user-request.txt').write_text('本期素材要摄影写实，UI不变。', encoding='utf-8')
+        override = {'scope': 'aigc-only', 'direction': '真实摄影材质与自然光',
+            'source': {**self.file('user-request.txt'), 'kind': 'current-user-request', 'quote': '本期素材要摄影写实'},
+            'style_references': ['new-scene.png']}
+        self.plan['aigc'] = {'direction_override': override}
+        self.write(self.project / 'director-plan.json', self.plan)
+        context = aigc_assets.directing_context(self.project, {'resolved_profile': 'user-ui'}, self.root)
+        return context
+
+    def test_project_photography_override_cannot_keep_hand_drawn_binding(self):
+        original_ui = copy.deepcopy(self.plan['style']['binding'])
+        context = self.set_photographic_override()
+        self.assert_blocked('current selected AIGC art direction')
+        segment = self.plan['segments'][0]
+        segment['aigc'].update(style_binding=contract.aigc_style_binding(context), style_ref='new-scene.png')
+        segment['selection']['evidence'] = [self.file('new-scene.png', role='art-style-reference'),
+            self.file('user-request.txt', role='art-direction-source')]
+        report = self.check()
+        self.assertTrue(report['production_ready'], report)
+        self.assertEqual(original_ui, self.plan['style']['binding'])
+        self.assertEqual([], context['character_references'])
+        self.assertEqual('project-local-aigc', report['selection_evidence']['ledger'][0]['aigc']['style_binding']['style_set_id'])
+
+    def test_project_override_requires_source_evidence_and_actual_applicable_style_ref(self):
+        context = self.set_photographic_override()
+        segment = self.plan['segments'][0]
+        segment['aigc'].update(style_binding=contract.aigc_style_binding(context), style_ref='new-scene.png')
+        segment['selection']['evidence'] = [self.file('new-scene.png', role='art-style-reference')]
+        self.assert_blocked('sourced AIGC-only request')
+        segment['selection']['evidence'].extend([self.file('user-request.txt', role='art-direction-source'),
+                                               self.file('anchor.png', 'skill', 'old-reference')])
+        segment['aigc']['style_ref'] = str(self.root / 'anchor.png')
+        self.assert_blocked('actual style_ref must belong')
+
+    def test_ledger_retains_event_and_handoff_for_actual_media_review(self):
+        report = self.check()
+        intent = report['selection_evidence']['ledger'][0]['review_intent']
+        self.assertEqual(intent['events'], self.plan['segments'][0]['events'])
+        self.assertEqual(intent['continuity'], self.plan['segments'][0]['continuity'])
+        self.assertIn('Does not certify', report['selection_evidence']['scope'])
+
     def test_aigc_reference_content_survives_skill_install_location_change(self):
         self.make_aigc()
         checkout = Path(self.temp.name) / 'original-checkout'

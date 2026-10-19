@@ -1,4 +1,6 @@
 """Local routing and approval-boundary tests; no generation or network."""
+import copy
+import hashlib
 import json
 from pathlib import Path
 import tempfile
@@ -6,6 +8,7 @@ import unittest
 
 import aigc_assets
 import director
+import selection_contract
 
 
 class AigcAssetTests(unittest.TestCase):
@@ -42,6 +45,74 @@ class AigcAssetTests(unittest.TestCase):
     def resolve(self, profile=None, project=None):
         return aigc_assets.directing_context(project or self.project,
                                             {'resolved_profile': profile}, self.root)
+
+    def local_override(self):
+        source = self.project / 'user-request.txt'
+        source.write_text('本期素材用摄影写实，UI保持已经确认的黑紫。', encoding='utf-8')
+        (self.project / 'coffee.png').write_bytes(b'photographic direction fixture, not approved media')
+        value = {'scope': 'aigc-only', 'direction': '摄影写实、自然光、真实杯子材质',
+            'source': {'kind': 'current-user-request', 'path': 'user-request.txt',
+                       'sha256': hashlib.sha256(source.read_bytes()).hexdigest(), 'quote': '本期素材用摄影写实'},
+            'style_references': ['coffee.png']}
+        self.save_override(value)
+        return value
+
+    def save_override(self, value, file='project.json'):
+        (self.project / file).write_text(json.dumps({'aigc': {'direction_override': value}}, ensure_ascii=False), encoding='utf-8')
+
+    def test_sourced_project_override_does_not_load_default_girl_or_imply_approval(self):
+        self.local_override()
+        resolution = {'resolved_profile': 'user-ui', 'binding': {'example': 'unchanged UI'}}
+        before = copy.deepcopy(resolution)
+        result = aigc_assets.directing_context(self.project, resolution, self.root)
+        self.assertEqual(resolution, before)
+        self.assertEqual(result['selected_style_set'], 'project-local-aigc')
+        self.assertEqual(result['character_references'], [])
+        self.assertEqual(result['approved_static_assets'], [])
+        self.assertEqual(result['approval'], {})
+        self.assertFalse(result['default_character_required'])
+        self.assertFalse(result['video_approval_inherited'])
+        self.assertTrue(result['production_references_ready'])
+        self.assertEqual(result['style_references'][0]['path'], str((self.project / 'coffee.png').resolve()))
+
+    def test_aigc_only_override_rejects_wrong_scope_missing_source_and_false_quote(self):
+        original = self.local_override()
+        mutations = [
+            {'scope': 'all'}, {'ui': 'white'}, {'style_references': []},
+            {'source': {**original['source'], 'sha256': '0' * 64}},
+            {'source': {**original['source'], 'quote': '用户已同意白底'}},
+            {'source': {'kind': 'current-user-request', 'approved': True}},
+        ]
+        for changes in mutations:
+            with self.subTest(changes=changes):
+                self.save_override({**original, **changes})
+                result = self.resolve('user-ui')
+                self.assertEqual(result['status'], 'invalid-project-override', result)
+                self.assertIsNone(result['selected_style_set'])
+                self.assertEqual(result['character_references'], [])
+
+    def test_project_override_is_not_inherited_by_a_new_nested_project(self):
+        self.local_override()
+        result = self.resolve('user-ui', self.project / 'other-project')
+        self.assertEqual(result['selected_style_set'], 'qiuzhi-girl-painterly')
+        self.assertNotIn('direction_override', result)
+
+    def test_project_override_binding_changes_with_source_or_reference_content(self):
+        original = self.local_override()
+        first = selection_contract.aigc_style_binding(self.resolve('user-ui'))
+        (self.project / 'coffee.png').write_bytes(b'changed direction image')
+        second = selection_contract.aigc_style_binding(self.resolve('user-ui'))
+        self.assertNotEqual(first, second)
+        source = self.project / 'user-request.txt'
+        source.write_text('本期素材用摄影写实，换成暖光。', encoding='utf-8')
+        original['source']['sha256'] = hashlib.sha256(source.read_bytes()).hexdigest()
+        self.save_override(original)
+        self.assertNotEqual(second, selection_contract.aigc_style_binding(self.resolve('user-ui')))
+
+    def test_conflicting_project_overrides_do_not_fall_back(self):
+        value = self.local_override()
+        self.save_override({**value, 'direction': 'another direction'}, 'director-plan.json')
+        self.assertEqual(self.resolve('user-ui')['status'], 'invalid-project-override')
 
     def test_user_ui_carries_actual_files_and_research_without_video_approval(self):
         result = self.resolve('user-ui', self.root / 'new-project')

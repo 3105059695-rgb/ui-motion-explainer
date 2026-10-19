@@ -43,10 +43,17 @@ def aigc_style_binding(context):
     """Bind the selected art direction, without fixing an IP or all scene images."""
     if context.get('status') != 'resolved' or not context.get('selected_style_set'):
         return None
+    rules = {'style_rules': context.get('style_rules', {}),
+             'routing_policy': context.get('routing_policy', {}),
+             'reference_only': True, 'default_character_required': False}
+    override = context.get('direction_override')
+    if isinstance(override, dict):
+        # Bind request and current images by content, not machine-specific paths.
+        rules['direction_override'] = {'scope': override['scope'],
+            'source': {key: override['source'][key] for key in ('kind', 'sha256', 'quote')},
+            'reference_sha256': sorted(row['sha256'] for row in override['style_references'])}
     return {'schema_version': 1, 'style_set_id': context['selected_style_set'],
-            'rules_sha256': canonical_digest({'style_rules': context.get('style_rules', {}),
-                'routing_policy': context.get('routing_policy', {}),
-                'reference_only': True, 'default_character_required': False})}
+            'rules_sha256': canonical_digest(rules)}
 
 
 def _without_comments(value):
@@ -392,8 +399,17 @@ def validate(plan, project, root=ROOT, source_text=None):
                 approved_paths = {Path(row['path']).resolve() for row in aigc_context.get('character_references', []) if row.get('exists')}
                 approved_paths.update(Path(row['resource_checks']['image_path']['path']).resolve()
                     for row in aigc_context.get('approved_static_assets', []) if row.get('reference_ready'))
+                approved_paths.update(Path(row['path']).resolve()
+                    for row in aigc_context.get('style_references', []) if row.get('exists'))
                 if not art_paths.intersection(approved_paths):
                     error(where + '.selection.evidence', 'bind at least one applicable current art-style reference; all library scenes and a fixed IP are not required')
+                direction_override = aigc_context.get('direction_override')
+                if isinstance(direction_override, dict) and Path(direction_override['source']['path']).resolve() not in evidence_paths:
+                    error(where + '.selection.evidence', 'bind the sourced AIGC-only request file as well as the current reference images')
+                style_ref = actual.get('style_ref')
+                style_path = path(style_ref) if style_ref else None
+                if style_path is None or not style_path.is_file() or digest(style_path) not in {digest(item) for item in approved_paths}:
+                    error(where + '.aigc.style_ref', 'the actual style_ref must belong to the selected current AIGC direction; including another reference only in the evidence list is insufficient')
                 characters = actual.get('character_refs') if isinstance(actual.get('character_refs'), list) else []
                 used = [actual.get('scene_ref'), actual.get('style_ref'), *characters]
                 for value in used:
@@ -446,7 +462,10 @@ def validate(plan, project, root=ROOT, source_text=None):
                 error(where + '.source_audio', 'preserved narration and output durations differ by more than 0.1s; do not silently retime original audio')
         ledger.append({'segment_id': ident, 'source_span': span, 'output': segment.get('output'),
                        'selection_mode': mode, 'source_methods': [ref.get('method_id') for ref in refs if isinstance(ref, dict)] if isinstance(refs, list) else [],
-                       'implementation': expected_row['implementation'], 'assets': runtime_assets})
+                       'implementation': expected_row['implementation'], 'assets': runtime_assets,
+                       'review_intent': {key: segment.get(key) for key in ('meaning', 'viewer_gap', 'events', 'continuity')},
+                       'aigc': {'use': uses_aigc, 'style_binding': segment.get('aigc', {}).get('style_binding')
+                                if isinstance(segment.get('aigc'), dict) else None}})
     if covered != requested:
         error('delivery.coverage', 'selected scope has missing or out-of-scope non-whitespace source characters '
               f'(missing={len(requested - covered)}, outside={len(covered - requested)}); use explicit excerpt scope for a sample')
