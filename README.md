@@ -8,7 +8,7 @@
 
 > 请读取 https://github.com/3105059695-rgb/ui-motion-explainer/blob/main/AI-START.md ，安装或更新最新版 ui-motion-fusion，保留我的工程和自定义内容，完成安装检查。以后使用这个唯一入口按已确认风格剪辑。
 
-本版仓库源码就是完整 Skill；GitHub `Download ZIP` 或 [完整源码包](https://github.com/3105059695-rgb/ui-motion-explainer/releases/latest/download/UI-Style-Source.zip) 都可安装，不再依赖作者 E 盘或七个额外入口。复用已有 Python、Node、FFmpeg 与浏览器，不为每个项目另装运行时。
+本版仓库源码就是完整 Skill；GitHub `Download ZIP` 或 [最新完整源码包](https://github.com/3105059695-rgb/ui-motion-explainer/archive/refs/heads/main.zip) 都可安装，Release页面的 `Source code (zip)` 提供固定版本。解压后进入含 `SKILL.md` 和 `install.py` 的目录，不再依赖作者 E 盘或七个额外入口。复用已有 Python、Node、FFmpeg 与浏览器，不为每个项目另装运行时。
 
 ## 本版修正
 
