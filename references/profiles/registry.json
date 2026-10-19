@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "purpose": "Portable profile routing. Explicit project/account choices take precedence; default user-ui works without the author machine.",
+  "unregistered_profiles": {},
+  "excluded_ui_projects": [
+    {
+      "path": "local-only/full-transfer-sample",
+      "path_component": "full-transfer-sample",
+      "reason": "仅 AIGC 衔接方法获肯定，UI 外观被否定；整片和全局 UI 风格未获认可。",
+      "evidence": "references/evidence/full-transfer-feedback-20261014.json"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "user-ui",
+      "label": "用户通用 UI · Fred 黑紫当前方向、A01 与女孩已认可实现",
+      "aliases": [
+        "user-ui"
+      ],
+      "profile_path": "references/profiles/user-ui.md",
+      "project_roots": [],
+      "reference_directions": [
+        {
+          "id": "fred-explainer-20261015",
+          "label": "Fred 连续 UI 讲解参考 · 用户已选方向",
+          "guidance_path": "references/evidence/fred-reference-approved-20261015.json",
+          "reading": [
+            "references/fred-ui-direction.md"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "kind": "documented-baseline",
+          "path": "assets/base-skill/references/reference-evidence.md",
+          "acceptance_marker": "对对对，我就想要这种风格的",
+          "baseline": {
+            "id": "A01",
+            "path": "assets/base-skill/assets/approved-demo/preview.mp4",
+            "status": "approved_sample_combination_and_style_direction",
+            "media_kind": "video",
+            "quote": "对对对，我就想要这种风格的",
+            "scope": "A01 短样的组合与风格方向：具体内容结构、黑白层次、局部淡紫、干净排版与同一对象的连续变化和信息节奏；不是固定四卡模板或所有新片的认可。",
+            "source_range": [
+              0,
+              18.0667
+            ],
+            "audio_review": "not_reliably_auditioned",
+            "new_projects_approved": false,
+            "boundaries": [
+              "原记录没有可靠试听，不能声称听感已确认。",
+              "历史检查保留约 8.35–8.4 秒汇合布局警告和 8.4 秒退场小字对比度警告；不声称所有时刻零警告。",
+              "原混音来自 D 参考片约 11.84–29.9067 秒，仅用于节奏比较；新片更换为本期授权声音。",
+              "改写后的布局、内容、声音和成片须另行检查；full-transfer-sample UI 不属于本基线。原A01认可保留，当前正文UI外观以最新Fred方向合同为准。"
+            ],
+            "related_visuals": [
+              "assets/base-skill/assets/approved-demo/contact-sheet.jpg"
+            ],
+            "implementations": [
+              "assets/base-skill/assets/approved-demo/index.html",
+              "assets/base-skill/assets/approved-demo/assets/gsap.min.js",
+              "assets/base-skill/assets/approved-demo/assets/Chinese-regular.woff2",
+              "assets/base-skill/assets/approved-demo/assets/Chinese-bold.woff2",
+              "assets/base-skill/assets/approved-demo/package.json"
+            ],
+            "evidence": [
+              "references/library.md",
+              "assets/base-skill/references/style-system.md"
+            ],
+            "current_usage": "Historical implementation reference; current body UI follows the latest Fred contract."
+          }
+        },
+        {
+          "kind": "documented-baseline",
+          "path": "references/evidence/girl-agent-sample-approved-20261015.json",
+          "acceptance_marker": "对对对，就是这样的，深得我心呀",
+          "baseline": {
+            "id": "user-ui/girl-agent-sample-20261015",
+            "path": "assets/approved-girl-sample/output/preview.mp4",
+            "status": "approved_video_sample",
+            "media_kind": "video",
+            "quote": "对对对，就是这样的，深得我心呀",
+            "scope": "本次女孩与场景的成片观感；搬运、接管、交接的可见动作及利落节奏；AIGC 局部聚焦、遮挡转场、收拢接入 UI 的衔接；白画布、黑白窗口、淡紫强调的 UI 呈现",
+            "source_range": [
+              0,
+              11.3
+            ],
+            "audio_review": "full_normal_speed_listening_review_not_recorded",
+            "new_projects_approved": false,
+            "boundaries": [
+              "所有旧视频或未来生成片已经认可",
+              "公共示意配音被指定为永久账号声音",
+              "已完成独立的全片正常速度听审",
+              "覆盖阿刁、方木等独立档案",
+              "后续通用 user-ui 口播任务以此片校准女孩画风、动作与衔接，不重复确认；当前正文UI外观以最新Fred方向合同为准。",
+              "先理解新口播句意、因果与情绪，再选场景和动作；不固定复用这份口播、三段顺序、11.3 秒长度或坐标。",
+              "角色身份继续以两张用户原图约束；样片中已知局部比例或发夹偏差不改写角色标准。",
+              "复用已成功实现的连续动作与转场代码，视频导出核验实际解码画面和定位，不能只看 currentTime。"
+            ],
+            "related_visuals": [
+              "assets/approved-girl-sample/validation/encoded-contact-sheet.jpg"
+            ],
+            "implementations": [
+              "assets/approved-girl-sample/index.html",
+              "assets/approved-girl-sample/src/player.js",
+              "assets/approved-girl-sample/src/style.css",
+              "assets/approved-girl-sample/project.json",
+              "assets/approved-girl-sample/resource-provenance.json"
+            ],
+            "evidence": [
+              "assets/approved-girl-sample/output/verification.json",
+              "assets/approved-girl-sample/src/qa/media-decoding.json",
+              "assets/approved-girl-sample/validation/final-check.json",
+              "assets/approved-girl-sample/validation/visual-review.json"
+            ],
+            "current_usage": "AIGC identity/action/transition implementation only; current body UI is bound to the latest Fred direction contract."
+          }
+        }
+      ]
+    },
+    {
+      "id": "adiao",
+      "label": "阿刁",
+      "aliases": [
+        "adiao",
+        "阿刁"
+      ],
+      "profile_path": "references/profiles/adiao.md",
+      "project_roots": [],
+      "sources": [],
+      "distribution_note": "账号规则可读；私有样片/声音/人物由账号工程提供，不自动用通用女孩替代。"
+    },
+    {
+      "id": "fangmu",
+      "label": "方木",
+      "aliases": [
+        "fangmu",
+        "方木",
+        "方木默认剪辑"
+      ],
+      "profile_path": "references/profiles/fangmu.md",
+      "project_roots": [],
+      "sources": [],
+      "required_reading": [
+        "references/profiles/fangmu-current.md"
+      ],
+      "distribution_note": "保留当前规则，私有视频与账号素材不公开；使用账号工程中的已确认资源。"
+    }
+  ],
+  "default_profile": "user-ui"
+}

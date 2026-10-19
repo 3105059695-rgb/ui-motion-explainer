@@ -1,0 +1,112 @@
+{
+  "slug": "lexnlin-038035",
+  "title": "Engraving-style Claude ad",
+  "date": "2026-10-02",
+  "tags": [
+    "prompt"
+  ],
+  "promptShared": true,
+  "handle": "LexnLin",
+  "poster": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "preview": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "video": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "width": 1080,
+  "height": 1920,
+  "schema_version": "1.0.0",
+  "collected_at": "2026-10-07T02:46:55+00:00",
+  "source_page": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "source_post": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "attribution": "Videos and prompts belong to their creators, linked on each entry.",
+  "source_html_sha256": "9541066b563ba5493a78e5b0c3ceeee55462e3b19eb87e0a1608f51912fc6f03",
+  "prompt": "Make a fast-paced ad for Claude, about 10–15 s (closer to 15). Reference video attached.\n\n1. research:\n- Study Claude's earlier brand designs first.\n- Find every photo and asset that fits: artistic, editorial, whatever the idea needs.\n\n2. design/direction\n- An art reimagine: bold, light mode.\n- Clean and perfect: no beige \"artsy\" look, no eyebrow labels.\n- Paint elements on top of the images.\n- Above all: fast-paced and very creative.\n\n3. rules\n- No slop. Study the reference closely: smoothness, timing, shot durations, fonts, elements.\n- Take some inspiration and borrow techniques, but change the design overall, it should look like something you did completely on yourself with your own taste \n- Every morph has to be perfect.\n\nideas: (since everything moves fast)\n- Clean, varied Claude SVG animations\n- Images small, bigger, several at once\n- Morphing text\n- Clean 3D animation\n- Zooms\n\nextra notes:\n- Feel free to work 10+ hours \n- Give me the final video, ending on the Claude logo.",
+  "prompt_characters": 994,
+  "prompt_sha256": "b0382301404e516e215e3ea11aaa81d0fbd487d15f0997ffe6ea440440a1d14c",
+  "prompt_extraction": "full HTML #entry-prompt (unfolded source text)",
+  "prompt_rsc_match": true,
+  "prompt_source_note": "using any reference with a fast edit (5s video is enough)\nThis prompt was taken directly from @LexnLin’s post (opens in a new tab).",
+  "stack": null,
+  "model": "Opus 5.5",
+  "effort": null,
+  "iterations": null,
+  "detail_fields": {
+    "Model": "Opus 5.5",
+    "Posted": "Oct 2, 2026"
+  },
+  "skill_repo": null,
+  "skill_description": null,
+  "skill_install_command": null,
+  "category": "product-film",
+  "category_inferred": true,
+  "status": "reference-collected",
+  "collection_errors": [],
+  "local_poster": "assets/reference/posters/lexnlin-038035.webp",
+  "local_preview": null,
+  "local_video_absolute": null,
+  "detail_request_retries": [],
+  "media_transfers": {
+    "poster": {
+      "status": "cached",
+      "bytes": 27422,
+      "attempts": []
+    },
+    "preview": {
+      "status": "cached",
+      "bytes": 337716,
+      "attempts": []
+    },
+    "video": {
+      "status": "cached",
+      "bytes": 7851390,
+      "attempts": []
+    }
+  },
+  "media_probe": {
+    "poster": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "webp",
+          "codec_type": "video",
+          "width": 720,
+          "height": 1280
+        }
+      ],
+      "duration": null,
+      "error": null
+    },
+    "preview": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 406,
+          "height": 720
+        }
+      ],
+      "duration": "4.000000",
+      "error": null
+    },
+    "video": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1080,
+          "height": 1920
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "duration": "14.528000",
+      "error": null
+    }
+  },
+  "distribution_status": "catalog-and-starters; historical reconstruction and original video not bundled"
+}

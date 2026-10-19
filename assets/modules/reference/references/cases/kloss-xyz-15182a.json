@@ -1,0 +1,113 @@
+{
+  "slug": "kloss-xyz-15182a",
+  "title": "Chaotic Claude POV video",
+  "date": "2026-09-26",
+  "tags": [
+    "prompt"
+  ],
+  "promptShared": true,
+  "handle": "kloss_xyz",
+  "poster": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "preview": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "video": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "width": 1080,
+  "height": 1920,
+  "schema_version": "1.0.0",
+  "collected_at": "2026-10-07T02:48:15+00:00",
+  "source_page": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "source_post": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "attribution": "Videos and prompts belong to their creators, linked on each entry.",
+  "source_html_sha256": "41b004da5d0fcdca56ee0c5b606c102a8736375519e4aa0599d4b80eafc122c5",
+  "prompt": "Use Python to generate a 9:16 chaotic brain rot video with excellent motion + sound design and render it using ffmpeg. Put your own personal spin on it so it’s aligned with Anthropic’s new launch. Also fully express what it’s like to be a very creative LLM used by me every day from your POV to give it some extra personality.",
+  "prompt_characters": 326,
+  "prompt_sha256": "aebbe45e903e96994b4bb9ab4cc3de1ffb0080438a89c39547487938ce0f6195",
+  "prompt_extraction": "full HTML #entry-prompt (unfolded source text)",
+  "prompt_rsc_match": true,
+  "prompt_source_note": "This prompt was taken directly from @kloss_xyz’s post (opens in a new tab).",
+  "stack": "Python + ffmpeg",
+  "model": "Opus 5.5",
+  "effort": null,
+  "iterations": null,
+  "detail_fields": {
+    "Model": "Opus 5.5",
+    "Stack": "Python + ffmpeg",
+    "Posted": "Sep 26, 2026"
+  },
+  "skill_repo": null,
+  "skill_description": null,
+  "skill_install_command": null,
+  "category": "general-motion",
+  "category_inferred": true,
+  "status": "reference-collected",
+  "collection_errors": [],
+  "local_poster": "assets/reference/posters/kloss-xyz-15182a.webp",
+  "local_preview": null,
+  "local_video_absolute": null,
+  "detail_request_retries": [],
+  "media_transfers": {
+    "poster": {
+      "status": "cached",
+      "bytes": 37042,
+      "attempts": []
+    },
+    "preview": {
+      "status": "cached",
+      "bytes": 176758,
+      "attempts": []
+    },
+    "video": {
+      "status": "cached",
+      "bytes": 28574962,
+      "attempts": []
+    }
+  },
+  "media_probe": {
+    "poster": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "webp",
+          "codec_type": "video",
+          "width": 720,
+          "height": 1280
+        }
+      ],
+      "duration": null,
+      "error": null
+    },
+    "preview": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 406,
+          "height": 720
+        }
+      ],
+      "duration": "4.000000",
+      "error": null
+    },
+    "video": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1080,
+          "height": 1920
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "duration": "153.552993",
+      "error": null
+    }
+  },
+  "distribution_status": "catalog-and-starters; historical reconstruction and original video not bundled"
+}

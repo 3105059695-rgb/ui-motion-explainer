@@ -1,0 +1,1893 @@
+{
+  "schema_version": 1,
+  "catalog_id": "semantic-editing-recipes",
+  "updated": "2026-10-14",
+  "purpose": "按句意、上下文、情绪和观众理解缺口选择段落级剪辑动作及AIGC完整事件；不是关键词触发器或十个自动成片预设。",
+  "path_base": "ui-motion-fusion skill root",
+  "selection_contract": {
+    "read_first": [
+      "references/workflow.md",
+      "references/script-visual-planning.md",
+      "references/broll-preferences.md",
+      "references/style-profiles.md"
+    ],
+    "decision": [
+      "通读原句及前后文，识别段落任务和情绪依据",
+      "说清观众缺少什么理解；决定保留人物、实拍、真实操作、图形或AIGC",
+      "写出初态、可见触发、变化、结果，再选一个主配方；无必要不选",
+      "入口、退出、阅读和声音落点接回原口播及前后素材",
+      "按账号换角色/字体/材质，按新句子重设对象与动作，不套参考故事"
+    ],
+    "not_keyword_triggered": true,
+    "preserve_source_voice": true,
+    "no_default_cost_authorization": true,
+    "generation_authorization": "本目录可离线形成提示词/计划；创建计费任务仍按现有生成模块和会话预算授权。",
+    "status_policy": "方法观察、重建推断、源码存在、技术检查、完整AV和用户认可分别记录。"
+  },
+  "recipes": [
+    {
+      "id": "S01",
+      "title": "先看结果，再回到产生它的过程",
+      "intents": [
+        "建立期待",
+        "展示用途",
+        "解释成品来源"
+      ],
+      "understanding_gap": "观众还不知道这段方法会带来什么可见结果。",
+      "use_when": "开头或新论点已经指向成果，且有可核对的本期结果素材。",
+      "avoid_when": "没有真实成果，或先露结果会破坏原稿明确的悬念；不能为套开头挪动口播。",
+      "required_inputs": [
+        "原句与前后文",
+        "成果视频或图及来源",
+        "对应输入或工程画面",
+        "实际音频锚点",
+        "账号风格"
+      ],
+      "event_chain": [
+        {
+          "initial": "成果中的关键细节已经在画面中心",
+          "trigger": "原声开始讲本段用途或结果",
+          "change": "先让成果本身正常推进，暂不叠满说明",
+          "result": "看见具体价值",
+          "camera": "固定或轻跟随动作",
+          "transition": "直接切入本期成果"
+        },
+        {
+          "initial": "成果占主画面",
+          "trigger": "原声追问来源或说明如何做到",
+          "change": "镜头回拉，露出同一成果所在的工程或输入关系",
+          "result": "知道结果来自哪里",
+          "camera": "从结果细节回到含来源的全貌",
+          "transition": "result-pullback"
+        },
+        {
+          "initial": "来源与成果同场可辨",
+          "trigger": "原声进入第一步",
+          "change": "来源成为当前焦点，成果缩成身份锚点或自然退出",
+          "result": "能接入真实过程",
+          "camera": "停在首个必要操作",
+          "transition": "保持成果缩略图身份，不强制常驻"
+        }
+      ],
+      "continuity": "同一成果的截图、文件名和主体不能被另一案例替换；回拉来自真实素材或明确示意的合成布局。",
+      "reading_exit": "结果可看懂再回拉；进入过程后让非当前信息降权，尾部可再回到完整成果。",
+      "implementation": {
+        "kind": "editing-kit",
+        "path": "assets/editing-kit/editing-kit.js",
+        "effect": "result-pullback",
+        "status": "shared-component-implemented"
+      },
+      "source_evidence": [
+        {
+          "video": "creative",
+          "time_range": "00:22–00:32；13:56–14:48",
+          "observed": "同一眼镜项目先展示方案/商品图/TVC成果；后段人物引导后成片全屏。",
+          "inferred": "扩展为可按原口播调度的结果先行与来源回拉段落，并非声称原片使用同一回拉代码。"
+        },
+        {
+          "video": "workflow",
+          "time_range": "02:43–03:02；04:14–04:50",
+          "observed": "作品本身全屏，主体软件外框退出，之后回到操作说明。",
+          "inferred": "完整结果应有独立观看空间。"
+        }
+      ],
+      "status": {
+        "implementation": "shared-component-implemented; full recipe requires project assets and timing",
+        "validation": "recipe-specific-output-not-rendered; shared component checks are recorded separately",
+        "approval": "new recipe and new output not individually approved"
+      },
+      "component_validation": {
+        "record": "assets/editing-kit/validation.json",
+        "scope": "Six parameterized components checked in Chromium for deterministic seek, controls and displayed keyframes; not full recipe A/V or user approval."
+      },
+      "source_study_links": [
+        {
+          "video": "fred-jev",
+          "method_id": "Q-A01",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L017",
+            "J-L018",
+            "J-L019",
+            "J-L020",
+            "J-L021",
+            "J-L022",
+            "J-L023",
+            "J-L024",
+            "J-L025"
+          ],
+          "scope": "先亮租机、部署、比较的实际材料，再将本期承诺逐项建立；承诺与后文教学对应，不能只喊收益。",
+          "implementation_note": "复用S01/S02结构及本稿真实证据，承诺列队和当前项状态由宿主布局实现；不复制原题材、价格或固定三分钟。"
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "title": "问题、证据与反差推动开头",
+      "intents": [
+        "提出问题",
+        "建立必要性",
+        "证据论证",
+        "情绪起势"
+      ],
+      "understanding_gap": "观众听到了判断，却不知道为什么要在意或相信。",
+      "use_when": "原稿存在明确问题与有来源的证据，且需要从现状推进到解决办法。",
+      "avoid_when": "纯观点没有证据时不制造新闻墙；没有冲突就不硬凑焦虑，不能照搬参考中的数字和产品论点。",
+      "required_inputs": [
+        "原问题与观点边界",
+        "2–3份可核对证据素材",
+        "各证据只需读清的一处",
+        "人物或结果回接画面",
+        "原声重音与停顿"
+      ],
+      "event_chain": [
+        {
+          "initial": "人物或真实情境建立问题",
+          "trigger": "原声提问或指出困境",
+          "change": "标题只点出问题核心，当前情境轻降权",
+          "result": "观众知道在讨论什么",
+          "camera": "保留情境身份",
+          "transition": "短判断直接切或轻压暗"
+        },
+        {
+          "initial": "第一份证据可读",
+          "trigger": "原声给出证据",
+          "change": "逐份接入证据，当前一份前移或遮暗周边，旧证据仍可辨",
+          "result": "看到问题有依据",
+          "camera": "只推近必要字段",
+          "transition": "focus-mask"
+        },
+        {
+          "initial": "证据已形成对照",
+          "trigger": "原声转向反差或追问",
+          "change": "同尺度对照关键两项，再把注意力交给人物/行动",
+          "result": "从现状走到本段任务",
+          "camera": "短停后回人物或首个动作",
+          "transition": "按原停顿切换，不堆固定音效"
+        }
+      ],
+      "continuity": "证据之间按同一论点衔接；每张只突出一个支持点，真实来源与上下文仍可查。",
+      "reading_exit": "证据读完再切；问题落定后尽快给具体对象/行动，开头长度随原稿而非套用固定30秒。",
+      "implementation": {
+        "kind": "editing-kit",
+        "path": "assets/editing-kit/editing-kit.js",
+        "effect": "focus-mask",
+        "status": "shared-component-implemented"
+      },
+      "source_evidence": [
+        {
+          "video": "network",
+          "time_range": "00:04–00:40",
+          "observed": "人群提问、融资/研究新闻截图、采访与抗议对照、杠杆隐喻，最后回讲解者再露产品。",
+          "inferred": "学的是证据与阅读中心接力；该论证段的事实与效果不自动适用于新稿。"
+        }
+      ],
+      "status": {
+        "implementation": "shared-component-implemented; full recipe requires project assets and timing",
+        "validation": "recipe-specific-output-not-rendered; shared component checks are recorded separately",
+        "approval": "new recipe and new output not individually approved"
+      },
+      "component_validation": {
+        "record": "assets/editing-kit/validation.json",
+        "scope": "Six parameterized components checked in Chromium for deterministic seek, controls and displayed keyframes; not full recipe A/V or user approval."
+      },
+      "source_study_links": [
+        {
+          "video": "fred-jev",
+          "method_id": "Q-A01",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L017",
+            "J-L018",
+            "J-L019",
+            "J-L020",
+            "J-L021",
+            "J-L022",
+            "J-L023",
+            "J-L024",
+            "J-L025"
+          ],
+          "scope": "先亮租机、部署、比较的实际材料，再将本期承诺逐项建立；承诺与后文教学对应，不能只喊收益。",
+          "implementation_note": "复用S01/S02结构及本稿真实证据，承诺列队和当前项状态由宿主布局实现；不复制原题材、价格或固定三分钟。"
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "title": "保留全貌，蒙版聚焦关键证据再归位",
+      "intents": [
+        "定位控件",
+        "解释细节",
+        "核对事实",
+        "纠错复看"
+      ],
+      "understanding_gap": "观众不知道该看哪里，也不能失去细节所在的位置。",
+      "use_when": "密集画面里只有一处字段、控件或变化承担当前句意。",
+      "avoid_when": "整段画面都重要、目标没有证据或放大后失真时，不靠复制假内容补全。",
+      "required_inputs": [
+        "完整截图或真实录屏",
+        "同源目标矩形",
+        "该处变化前后状态",
+        "操作发生时间",
+        "需读清的字段"
+      ],
+      "event_chain": [
+        {
+          "initial": "全貌与邻接区域可识别",
+          "trigger": "原声点名目标或真实操作反馈已发生",
+          "change": "蒙版压暗外围，目标保留原像素；必要时另取同源局部放大",
+          "result": "知道目标位置",
+          "camera": "先全貌后局部",
+          "transition": "focus-mask"
+        },
+        {
+          "initial": "目标成为唯一阅读中心",
+          "trigger": "解释或对比进行",
+          "change": "高亮跟随真正变化的行/字段，不跟随每个无关鼠标移动",
+          "result": "看清证据与变化",
+          "camera": "目标内轻推或稳定",
+          "transition": "保持邻接标签"
+        },
+        {
+          "initial": "目标已读清",
+          "trigger": "原声进入下一步",
+          "change": "解除遮暗并归回全貌或同源结果区",
+          "result": "接回上下文",
+          "camera": "回到原构图或真实操作终点",
+          "transition": "回位后再切下一对象"
+        }
+      ],
+      "continuity": "局部必须来自同帧同源坐标；蒙版与目标同动，不能篡改产品状态。",
+      "reading_exit": "停留按需阅读内容和实际语音；解释完成就归位，避免高亮一直悬着。",
+      "implementation": {
+        "kind": "editing-kit",
+        "path": "assets/editing-kit/editing-kit.js",
+        "effect": "focus-mask",
+        "status": "shared-component-implemented"
+      },
+      "source_evidence": [
+        {
+          "video": "claude",
+          "time_range": "12:45–13:00",
+          "observed": "终端背景降暗，功能列表、实现步骤、确认选项依次成为阅读区。",
+          "inferred": "使用目标矩形驱动外部蒙版与放大，不推断作者参数。"
+        },
+        {
+          "video": "creative",
+          "time_range": "02:18.00–02:19.00",
+          "observed": "右下触发后侧栏打开，之后出现橙色外部标注。",
+          "inferred": "教学标注应在真实反馈后进入。"
+        },
+        {
+          "video": "network",
+          "time_range": "09:34.00–09:37.75（0.25秒相邻采样）",
+          "observed": "574.00/574.25秒上组Skill/提示词/参考/笔记高亮；574.50起焦点移向Agent行；575.00–576.75维持侧栏内Agent聚焦；577.00蒙层开始退；577.25–577.75回完整Agent页。",
+          "inferred": "同一侧栏内转移阅读焦点，再退蒙层回全界面；不推断作者缓动或音效参数。该相邻组由本轮根代理实际查看。"
+        }
+      ],
+      "status": {
+        "implementation": "shared-component-implemented; full recipe requires project assets and timing",
+        "validation": "recipe-specific-output-not-rendered; shared component checks are recorded separately",
+        "approval": "new recipe and new output not individually approved"
+      },
+      "component_validation": {
+        "record": "assets/editing-kit/validation.json",
+        "scope": "Six parameterized components checked in Chromium for deterministic seek, controls and displayed keyframes; not full recipe A/V or user approval."
+      },
+      "usage_examples": [
+        {
+          "record": "references/evidence/semantic-transfer-sample-20261014.json",
+          "scope": "New-narration silent structure preview; AIGC request prepared but not generated. No aesthetic approval."
+        }
+      ],
+      "source_study_links": [
+        {
+          "video": "fred-argon",
+          "method_id": "F-M03",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "F-L023",
+            "F-L024",
+            "F-L025"
+          ],
+          "scope": "只补参考来源与适用方法；原配方实现及认可状态不变。"
+        },
+        {
+          "video": "fred-argon",
+          "method_id": "F-M04",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "F-L140"
+          ],
+          "scope": "只补参考来源与适用方法；原配方实现及认可状态不变。"
+        },
+        {
+          "video": "fred-argon",
+          "method_id": "F-M14",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "F-L136",
+            "F-L137"
+          ],
+          "scope": "只补参考来源与适用方法；原配方实现及认可状态不变。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "F-M14",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L012",
+            "J-L013",
+            "J-L046",
+            "J-L047",
+            "J-L090",
+            "J-L091",
+            "J-L092",
+            "J-L093",
+            "J-L103",
+            "J-L104"
+          ],
+          "scope": "已有证据退后，解释到前景；手动负担逐项出现并划除后，立即接实际接管入口；前景结论有来处。",
+          "implementation_note": "焦点原语可复用；背景模糊、解释标题、负担标签和删线时序由宿主实现。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "F-M03",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L018",
+            "J-L019",
+            "J-L020",
+            "J-L021",
+            "J-L039",
+            "J-L040",
+            "J-L041",
+            "J-L053",
+            "J-L054",
+            "J-L055",
+            "J-L078",
+            "J-L079",
+            "J-L080",
+            "J-L081",
+            "J-L082",
+            "J-L084",
+            "J-L085",
+            "J-L086",
+            "J-L087",
+            "J-L088",
+            "J-L089",
+            "J-L090",
+            "J-L093"
+          ],
+          "scope": "先交代页面身份，再在框内聚焦菜单、型号、价格或按钮；不适合缩放全页时可裁出相关栏目继续读。",
+          "implementation_note": "focus-mask与稳定裁切视窗复用；焦点位置从本期截图测量，不能固定原作者坐标或以重绘界面冒充实录。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "Q-A03",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L082",
+            "J-L083",
+            "J-L084",
+            "J-L085",
+            "J-L086",
+            "J-L087",
+            "J-L088",
+            "J-L089",
+            "J-L090",
+            "J-L091",
+            "J-L092",
+            "J-L093",
+            "J-L094",
+            "J-L095",
+            "J-L096",
+            "J-L097",
+            "J-L098"
+          ],
+          "scope": "四步进度持续存在，真实界面分别展示找到入口、选中、发出请求、服务运行、复制完成和连通证据；同一地址跨应用承接。",
+          "implementation_note": "复用focus-mask、match-handoff和宿主状态；原片没有显示地址独立飞行，不把推测记成已观察动作。"
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "title": "把因果或信息交接演成可见状态链",
+      "intents": [
+        "解释因果",
+        "解释机制",
+        "任务传递",
+        "异常恢复"
+      ],
+      "understanding_gap": "观众认识名词，却不知道是谁改变了什么、为什么产生结果。",
+      "use_when": "关系本身是重点，可以用可辨对象、角色或节点表达具体变化。",
+      "avoid_when": "只需一句判断或真实操作已经足够清楚时，不额外套复杂关系图；无证据不把相关性画成确定因果。",
+      "required_inputs": [
+        "参与者与对象ID",
+        "每步真实或示意属性",
+        "触发及反馈",
+        "结果成立条件",
+        "原声动作锚点"
+      ],
+      "event_chain": [
+        {
+          "initial": "参与者与目标对象位置建立",
+          "trigger": "原声交代第一动作",
+          "change": "同一对象离开来源进入处理者，连线只表示这一传递",
+          "result": "谁把什么交给谁清楚",
+          "camera": "先全貌，再跟随对象",
+          "transition": "causal-chain"
+        },
+        {
+          "initial": "处理者持有对象",
+          "trigger": "原声说明限制/处理/判断",
+          "change": "对象发生可辨状态变化；若失败保留已完成部分",
+          "result": "原因和变化一一对应",
+          "camera": "靠近关键变换，非当前节点降权",
+          "transition": "按事件推进而非随机粒子"
+        },
+        {
+          "initial": "中间状态已成立",
+          "trigger": "原声说明结果或回路",
+          "change": "结果回到发起者，或按明确条件进入下一节点",
+          "result": "看到闭环或未完成状态",
+          "camera": "拉回足够看懂关系的全貌",
+          "transition": "停在真实末态"
+        }
+      ],
+      "continuity": "同一对象ID、数值和状态由同一份事件表驱动；抽象包/网络变化要说明对象身份，不声称模型真实思维过程。",
+      "reading_exit": "每次变化后留出辨认时间；总结只保留已经发生的路径，未执行分支不写成功。",
+      "implementation": {
+        "kind": "editing-kit",
+        "path": "assets/editing-kit/editing-kit.js",
+        "effect": "causal-chain",
+        "status": "shared-component-implemented"
+      },
+      "source_evidence": [
+        {
+          "video": "claude",
+          "time_range": "02:25–03:06",
+          "observed": "用户/Agent/大模型三列保持，消息和工具请求逐步累加，结果返回。",
+          "inferred": "据此形成可换角色和消息的因果事件表。"
+        },
+        {
+          "video": "network",
+          "time_range": "05:20–05:34",
+          "observed": "术语被包入圆周容器，随后形成多个节点与网络，再切到取用物件动作。",
+          "inferred": "可设计抽象层级变化和具象回落，采样不支持逐帧身份追踪。"
+        }
+      ],
+      "status": {
+        "implementation": "shared-component-implemented; full recipe requires project assets and timing",
+        "validation": "recipe-specific-output-not-rendered; shared component checks are recorded separately",
+        "approval": "new recipe and new output not individually approved"
+      },
+      "component_validation": {
+        "record": "assets/editing-kit/validation.json",
+        "scope": "Six parameterized components checked in Chromium for deterministic seek, controls and displayed keyframes; not full recipe A/V or user approval."
+      },
+      "usage_examples": [
+        {
+          "record": "references/evidence/semantic-transfer-sample-20261014.json",
+          "scope": "New-narration silent structure preview; AIGC request prepared but not generated. No aesthetic approval."
+        }
+      ],
+      "source_study_links": [
+        {
+          "video": "fred-argon",
+          "method_id": "F-M04",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "F-L140"
+          ],
+          "scope": "只补参考来源与适用方法；原配方实现及认可状态不变。"
+        },
+        {
+          "video": "fred-argon",
+          "method_id": "F-M06",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "F-L082",
+            "F-L083",
+            "F-L084",
+            "F-L085",
+            "F-L086",
+            "F-L087"
+          ],
+          "scope": "只补参考来源与适用方法；原配方实现及认可状态不变。"
+        },
+        {
+          "video": "fred-argon",
+          "method_id": "F-M07",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "F-L132",
+            "F-L133",
+            "F-L134",
+            "F-L135"
+          ],
+          "scope": "只补参考来源与适用方法；原配方实现及认可状态不变。"
+        },
+        {
+          "video": "fred-argon",
+          "method_id": "F-M10",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "F-L156",
+            "F-L157",
+            "F-L158",
+            "F-L159",
+            "F-L160",
+            "F-L161",
+            "F-L162",
+            "F-L163"
+          ],
+          "scope": "只补参考来源与适用方法；原配方实现及认可状态不变。"
+        },
+        {
+          "video": "fred-argon",
+          "method_id": "F-M12",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "F-L112",
+            "F-L113",
+            "F-L114",
+            "F-L115",
+            "F-L116",
+            "F-L117",
+            "F-L118",
+            "F-L119",
+            "F-L120",
+            "F-L121",
+            "F-L122"
+          ],
+          "scope": "只补参考来源与适用方法；原配方实现及认可状态不变。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "Q-N01",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L006",
+            "J-L007",
+            "J-L008",
+            "J-L009",
+            "J-L010",
+            "J-L011",
+            "J-L031",
+            "J-L032",
+            "J-L033",
+            "J-L034",
+            "J-L035",
+            "J-L036",
+            "J-L037",
+            "J-L038"
+          ],
+          "scope": "使用权、控制权和材料去向通过两端位置、请求/数据移动、付费计数与受阻路径解释；受限菜谱接成可下载模型，保留对象身份。",
+          "implementation_note": "causal-chain、match-handoff可承担路径和交接；移动标签、计数、阻断叉号和锁状态需按宿主定制，不把参考的开源权利主张视为已核验。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "F-M10",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L006",
+            "J-L007",
+            "J-L008",
+            "J-L009",
+            "J-L010",
+            "J-L011",
+            "J-L032",
+            "J-L033",
+            "J-L034",
+            "J-L035",
+            "J-L036",
+            "J-L037",
+            "J-L038",
+            "J-L044",
+            "J-L045",
+            "J-L046",
+            "J-L092",
+            "J-L093",
+            "J-L113",
+            "J-L114",
+            "J-L115"
+          ],
+          "scope": "请求必须穿过路径并触发计次，限流阻断同一路径；公开、下载、装入、运行各有不同可见结果；结尾行动按依赖依次接上。",
+          "implementation_note": "已有causal-chain、match-handoff提供节点/交接；下载进度、计数、红叉、开锁、运行灯、删线需在宿主实现。视频中的演示进度不当实际耗时。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "F-M06",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L001",
+            "J-L002",
+            "J-L003",
+            "J-L004",
+            "J-L005",
+            "J-L006",
+            "J-L015",
+            "J-L016",
+            "J-L017",
+            "J-L044",
+            "J-L045",
+            "J-L046",
+            "J-L047",
+            "J-L048",
+            "J-L049",
+            "J-L093",
+            "J-L094",
+            "J-L095",
+            "J-L096",
+            "J-L097",
+            "J-L098"
+          ],
+          "scope": "同一载体从加载到失败、请求到回复、复制到已复制、调用到连通；状态要留给观众核对。",
+          "implementation_note": "复用原DOM/SVG对象与状态切换，不把只显示按钮、提交请求或演示卡当已完成真实操作。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "F-M09",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L049",
+            "J-L050",
+            "J-L051",
+            "J-L052",
+            "J-L053",
+            "J-L055",
+            "J-L056",
+            "J-L057",
+            "J-L058",
+            "J-L059"
+          ],
+          "scope": "先用桌面装载建立容纳关系，再固定52GB基准，逐项对齐容量；斜纹显示超出量、半线显示阈值、勾叉表达是否能容纳。",
+          "implementation_note": "compare可组织对齐，数值驱动条长、阈线、占用/溢出分段需用DOM/SVG定制；桌面隐喻不是精确运行原理，显存数字只是该来源示意。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "F-M12",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L052",
+            "J-L053",
+            "J-L054",
+            "J-L055",
+            "J-L056",
+            "J-L057",
+            "J-L058",
+            "J-L059",
+            "J-L100",
+            "J-L101",
+            "J-L102",
+            "J-L103",
+            "J-L104",
+            "J-L105",
+            "J-L106"
+          ],
+          "scope": "数字先落在来源材料上，再提炼成可读标签和比较；单位、样本量、执行条件和评价依据随数字一起保留。",
+          "implementation_note": "复用证据聚焦、compare及结果收拢。原片200/100条、执行方式不同和历史AI评审参考限制必须带入，不能把它们标成同条件人工准确率。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "Q-A03",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L082",
+            "J-L083",
+            "J-L084",
+            "J-L085",
+            "J-L086",
+            "J-L087",
+            "J-L088",
+            "J-L089",
+            "J-L090",
+            "J-L091",
+            "J-L092",
+            "J-L093",
+            "J-L094",
+            "J-L095",
+            "J-L096",
+            "J-L097",
+            "J-L098"
+          ],
+          "scope": "四步进度持续存在，真实界面分别展示找到入口、选中、发出请求、服务运行、复制完成和连通证据；同一地址跨应用承接。",
+          "implementation_note": "复用focus-mask、match-handoff和宿主状态；原片没有显示地址独立飞行，不把推测记成已观察动作。"
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "title": "同条件下让差别自己发生",
+      "intents": [
+        "比较方法",
+        "展示效率差异",
+        "说明选择",
+        "纠错前后"
+      ],
+      "understanding_gap": "观众只听到好坏结论，看不到影响结果的具体差异。",
+      "use_when": "两种做法可共享任务、输入或尺度，并有真实结果或清楚标注的机制示意。",
+      "avoid_when": "条件不同却要比较绝对优劣；以剪辑播放时长冒充真实耗时；未经核实的排名。",
+      "required_inputs": [
+        "共同任务与输入",
+        "左右方案的证据",
+        "比较维度与单位",
+        "关键差异时点",
+        "结果来源"
+      ],
+      "event_chain": [
+        {
+          "initial": "两边共有任务和起始条件",
+          "trigger": "原声提出比较维度",
+          "change": "并列建立同一输入，先不宣布赢家",
+          "result": "观众知道在比什么",
+          "camera": "相同景别与可读尺度",
+          "transition": "compare"
+        },
+        {
+          "initial": "两边正在执行",
+          "trigger": "原声解释差异",
+          "change": "各自按实际步骤推进，只突出影响结果的动作或约束",
+          "result": "差异有可见成因",
+          "camera": "同步关注同类对象",
+          "transition": "必要时交替近景，再回双侧"
+        },
+        {
+          "initial": "两边到达各自真实末态",
+          "trigger": "原声给出选择或总结",
+          "change": "标出结论对应的实际结果，背景降权",
+          "result": "选择理由可核对",
+          "camera": "结果并列停留",
+          "transition": "只在语义结束时收束"
+        }
+      ],
+      "continuity": "同条件、同尺度、同口径；加速和回放标清，数字来自证据。",
+      "reading_exit": "先让差异可辨再给结论；复杂结果交替读，不让两列长文同时滚动。",
+      "implementation": {
+        "kind": "editing-kit",
+        "path": "assets/editing-kit/editing-kit.js",
+        "effect": "compare",
+        "status": "shared-component-implemented"
+      },
+      "source_evidence": [
+        {
+          "video": "workflow",
+          "time_range": "00:16–00:20",
+          "observed": "AI视频与传统自媒体两列标签逐步展开制作流程。",
+          "inferred": "配方将双列用于同条件比较，原片此处仅是流程区别，不是速度实测。"
+        },
+        {
+          "video": "claude",
+          "time_range": "05:30–05:50",
+          "observed": "四种入口以真实界面缩略图并列，之后降权其他项并强调终端方案。",
+          "inferred": "比较维度与选择理由应绑定真实证据；不照搬软件优劣判断。"
+        }
+      ],
+      "status": {
+        "implementation": "shared-component-implemented; full recipe requires project assets and timing",
+        "validation": "recipe-specific-output-not-rendered; shared component checks are recorded separately",
+        "approval": "new recipe and new output not individually approved"
+      },
+      "component_validation": {
+        "record": "assets/editing-kit/validation.json",
+        "scope": "Six parameterized components checked in Chromium for deterministic seek, controls and displayed keyframes; not full recipe A/V or user approval."
+      },
+      "usage_examples": [
+        {
+          "record": "references/evidence/semantic-transfer-sample-20261014.json",
+          "scope": "New-narration silent structure preview; AIGC request prepared but not generated. No aesthetic approval."
+        }
+      ],
+      "source_study_links": [
+        {
+          "video": "fred-argon",
+          "method_id": "F-M02",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "F-L026",
+            "F-L027",
+            "F-L028",
+            "F-L029",
+            "F-L030",
+            "F-L067",
+            "F-L068"
+          ],
+          "scope": "只补参考来源与适用方法；原配方实现及认可状态不变。"
+        },
+        {
+          "video": "fred-argon",
+          "method_id": "F-M05",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "F-L073",
+            "F-L074",
+            "F-L075",
+            "F-L076"
+          ],
+          "scope": "只补参考来源与适用方法；原配方实现及认可状态不变。"
+        },
+        {
+          "video": "fred-argon",
+          "method_id": "F-M06",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "F-L082",
+            "F-L083",
+            "F-L084",
+            "F-L085",
+            "F-L086",
+            "F-L087"
+          ],
+          "scope": "只补参考来源与适用方法；原配方实现及认可状态不变。"
+        },
+        {
+          "video": "fred-argon",
+          "method_id": "F-M08",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "F-L147",
+            "F-L148",
+            "F-L149",
+            "F-L150",
+            "F-L151",
+            "F-L152"
+          ],
+          "scope": "只补参考来源与适用方法；原配方实现及认可状态不变。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "F-M06",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L001",
+            "J-L002",
+            "J-L003",
+            "J-L004",
+            "J-L005",
+            "J-L006",
+            "J-L015",
+            "J-L016",
+            "J-L017",
+            "J-L044",
+            "J-L045",
+            "J-L046",
+            "J-L047",
+            "J-L048",
+            "J-L049",
+            "J-L093",
+            "J-L094",
+            "J-L095",
+            "J-L096",
+            "J-L097",
+            "J-L098"
+          ],
+          "scope": "同一载体从加载到失败、请求到回复、复制到已复制、调用到连通；状态要留给观众核对。",
+          "implementation_note": "复用原DOM/SVG对象与状态切换，不把只显示按钮、提交请求或演示卡当已完成真实操作。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "F-M09",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L049",
+            "J-L050",
+            "J-L051",
+            "J-L052",
+            "J-L053",
+            "J-L055",
+            "J-L056",
+            "J-L057",
+            "J-L058",
+            "J-L059"
+          ],
+          "scope": "先用桌面装载建立容纳关系，再固定52GB基准，逐项对齐容量；斜纹显示超出量、半线显示阈值、勾叉表达是否能容纳。",
+          "implementation_note": "compare可组织对齐，数值驱动条长、阈线、占用/溢出分段需用DOM/SVG定制；桌面隐喻不是精确运行原理，显存数字只是该来源示意。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "F-M12",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L052",
+            "J-L053",
+            "J-L054",
+            "J-L055",
+            "J-L056",
+            "J-L057",
+            "J-L058",
+            "J-L059",
+            "J-L100",
+            "J-L101",
+            "J-L102",
+            "J-L103",
+            "J-L104",
+            "J-L105",
+            "J-L106"
+          ],
+          "scope": "数字先落在来源材料上，再提炼成可读标签和比较；单位、样本量、执行条件和评价依据随数字一起保留。",
+          "implementation_note": "复用证据聚焦、compare及结果收拢。原片200/100条、执行方式不同和历史AI评审参考限制必须带入，不能把它们标成同条件人工准确率。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "F-M11",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L021",
+            "J-L022",
+            "J-L023",
+            "J-L024",
+            "J-L025",
+            "J-L060",
+            "J-L061",
+            "J-L062",
+            "J-L063",
+            "J-L064",
+            "J-L065",
+            "J-L066",
+            "J-L067",
+            "J-L068",
+            "J-L069",
+            "J-L070",
+            "J-L071",
+            "J-L072",
+            "J-L073",
+            "J-L074",
+            "J-L075",
+            "J-L076",
+            "J-L077",
+            "J-L078",
+            "J-L082",
+            "J-L083"
+          ],
+          "scope": "预置题目/方案/步骤骨架，按口播填入当前项，已讲项保留；选择时再回全貌，而不是每个短句换一张新卡。",
+          "implementation_note": "使用宿主布局与状态填入；同尺度比较复用compare，当前项换位复用match-handoff；没有预置骨架的行动链应选F-M10。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "F-M02",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L006",
+            "J-L013",
+            "J-L014",
+            "J-L015",
+            "J-L060",
+            "J-L061",
+            "J-L062",
+            "J-L063",
+            "J-L064",
+            "J-L065",
+            "J-L066",
+            "J-L067",
+            "J-L068",
+            "J-L069",
+            "J-L070",
+            "J-L071",
+            "J-L072",
+            "J-L073",
+            "J-L074",
+            "J-L075",
+            "J-L076",
+            "J-L077",
+            "J-L078",
+            "J-L104",
+            "J-L105",
+            "J-L107",
+            "J-L108",
+            "J-L109",
+            "J-L110",
+            "J-L111",
+            "J-L112",
+            "J-L113"
+          ],
+          "scope": "现有对象让位以加入新参照或条件；重点移动时旧项保留，最终回到整体再突出选择。",
+          "implementation_note": "compare、match-handoff可承担排列与位移；材料进出、前后层次及降权要定制，新增一项比较不误写成替换全部结果。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "Q-W01",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L106",
+            "J-L107",
+            "J-L108",
+            "J-L109",
+            "J-L110",
+            "J-L111",
+            "J-L112",
+            "J-L113"
+          ],
+          "scope": "由开头受众分流扩展到结尾条件推荐：先出现条件再给方案，旧方案保留降权，多条动机可汇到同一方案。",
+          "implementation_note": "已有compare/causal-chain承载分流；价格/选择属于来源语境，未来按本稿条件设计，不强制双卡或租机建议。"
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "title": "同一对象跨素材与媒介接力",
+      "intents": [
+        "解释来源",
+        "跨工具操作",
+        "资料变成果",
+        "把概念接回实际"
+      ],
+      "understanding_gap": "每次换画面都像换了话题，观众不知道前一步产物去了哪里。",
+      "use_when": "同一文件、物件、角色或成果在两种媒介中有可辨认对应物。",
+      "avoid_when": "两场没有同一身份关系时，不用形状相似暗示同源；无需转场时允许直接切。",
+      "required_inputs": [
+        "两场真实素材",
+        "共同对象ID与同源证据",
+        "出场位置和入场位置",
+        "相近尺度/方向/动作",
+        "下场已加载状态"
+      ],
+      "event_chain": [
+        {
+          "initial": "前场对象完成当前任务",
+          "trigger": "原声转向去向或下一步",
+          "change": "收束到共同对象，其他信息降权",
+          "result": "观众记住交接对象",
+          "camera": "跟随或推到匹配景别",
+          "transition": "match-handoff"
+        },
+        {
+          "initial": "共同对象占据可辨位置",
+          "trigger": "对象动作或原声承接点",
+          "change": "在相近位置/方向交给下一场同一对象",
+          "result": "换媒介但身份不变",
+          "camera": "匹配构图后再展开",
+          "transition": "按方向/形状/内容匹配切，不强制几何变形"
+        },
+        {
+          "initial": "下场接到共同对象",
+          "trigger": "原声说明新用途",
+          "change": "露出下场环境和行为，前场包装退出",
+          "result": "知道对象进入哪一步",
+          "camera": "从共同物件展开上下文",
+          "transition": "同一动作继续或结果打开"
+        }
+      ],
+      "continuity": "记录 from/to 素材及对象，不只写“丝滑转场”；跨实拍/截图/AIGC也保留方向、相位和用途。",
+      "reading_exit": "前场先完成它的意思，下场必须新增行动或信息；避免对象永远飞却没有结果。",
+      "implementation": {
+        "kind": "editing-kit",
+        "path": "assets/editing-kit/editing-kit.js",
+        "effect": "match-handoff",
+        "status": "shared-component-implemented"
+      },
+      "source_evidence": [
+        {
+          "video": "workflow",
+          "time_range": "00:30–00:48",
+          "observed": "文字/图片/音频/视频小样汇入剪辑工具，再回产品界面和真实控件说明。",
+          "inferred": "可将分类对象与实际控件建立稳定映射；不把示意当实操。"
+        },
+        {
+          "video": "creative",
+          "time_range": "05:19–06:04",
+          "observed": "前面生成的方案、布局、效果图被汇集，随后打开网页成果。",
+          "inferred": "保留同一案例产物的来源和去向。"
+        }
+      ],
+      "status": {
+        "implementation": "shared-component-implemented; full recipe requires project assets and timing",
+        "validation": "recipe-specific-output-not-rendered; shared component checks are recorded separately",
+        "approval": "new recipe and new output not individually approved"
+      },
+      "component_validation": {
+        "record": "assets/editing-kit/validation.json",
+        "scope": "Six parameterized components checked in Chromium for deterministic seek, controls and displayed keyframes; not full recipe A/V or user approval."
+      },
+      "usage_examples": [
+        {
+          "record": "references/evidence/semantic-transfer-sample-20261014.json",
+          "scope": "New-narration silent structure preview; AIGC request prepared but not generated. No aesthetic approval."
+        }
+      ],
+      "source_study_links": [
+        {
+          "video": "fred-argon",
+          "method_id": "F-M01",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "F-L020",
+            "F-L021",
+            "F-L022",
+            "F-L023"
+          ],
+          "scope": "只补参考来源与适用方法；原配方实现及认可状态不变。"
+        },
+        {
+          "video": "fred-argon",
+          "method_id": "F-M02",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "F-L026",
+            "F-L027",
+            "F-L028",
+            "F-L029",
+            "F-L030",
+            "F-L067",
+            "F-L068"
+          ],
+          "scope": "只补参考来源与适用方法；原配方实现及认可状态不变。"
+        },
+        {
+          "video": "fred-argon",
+          "method_id": "F-M07",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "F-L132",
+            "F-L133",
+            "F-L134",
+            "F-L135"
+          ],
+          "scope": "只补参考来源与适用方法；原配方实现及认可状态不变。"
+        },
+        {
+          "video": "fred-argon",
+          "method_id": "F-M08",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "F-L147",
+            "F-L148",
+            "F-L149",
+            "F-L150",
+            "F-L151",
+            "F-L152"
+          ],
+          "scope": "只补参考来源与适用方法；原配方实现及认可状态不变。"
+        },
+        {
+          "video": "fred-argon",
+          "method_id": "F-M10",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "F-L156",
+            "F-L157",
+            "F-L158",
+            "F-L159",
+            "F-L160",
+            "F-L161",
+            "F-L162",
+            "F-L163"
+          ],
+          "scope": "只补参考来源与适用方法；原配方实现及认可状态不变。"
+        },
+        {
+          "video": "fred-argon",
+          "method_id": "F-M12",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "F-L112",
+            "F-L113",
+            "F-L114",
+            "F-L115",
+            "F-L116",
+            "F-L117",
+            "F-L118",
+            "F-L119",
+            "F-L120",
+            "F-L121",
+            "F-L122"
+          ],
+          "scope": "只补参考来源与适用方法；原配方实现及认可状态不变。"
+        },
+        {
+          "video": "fred-argon",
+          "method_id": "F-M13",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "F-L064",
+            "F-L065",
+            "F-L095",
+            "F-L096",
+            "F-R001",
+            "F-L146",
+            "F-R002"
+          ],
+          "scope": "只补参考来源与适用方法；原配方实现及认可状态不变。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "Q-N01",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L006",
+            "J-L007",
+            "J-L008",
+            "J-L009",
+            "J-L010",
+            "J-L011",
+            "J-L031",
+            "J-L032",
+            "J-L033",
+            "J-L034",
+            "J-L035",
+            "J-L036",
+            "J-L037",
+            "J-L038"
+          ],
+          "scope": "使用权、控制权和材料去向通过两端位置、请求/数据移动、付费计数与受阻路径解释；受限菜谱接成可下载模型，保留对象身份。",
+          "implementation_note": "causal-chain、match-handoff可承担路径和交接；移动标签、计数、阻断叉号和锁状态需按宿主定制，不把参考的开源权利主张视为已核验。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "F-M10",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L006",
+            "J-L007",
+            "J-L008",
+            "J-L009",
+            "J-L010",
+            "J-L011",
+            "J-L032",
+            "J-L033",
+            "J-L034",
+            "J-L035",
+            "J-L036",
+            "J-L037",
+            "J-L038",
+            "J-L044",
+            "J-L045",
+            "J-L046",
+            "J-L092",
+            "J-L093",
+            "J-L113",
+            "J-L114",
+            "J-L115"
+          ],
+          "scope": "请求必须穿过路径并触发计次，限流阻断同一路径；公开、下载、装入、运行各有不同可见结果；结尾行动按依赖依次接上。",
+          "implementation_note": "已有causal-chain、match-handoff提供节点/交接；下载进度、计数、红叉、开锁、运行灯、删线需在宿主实现。视频中的演示进度不当实际耗时。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "F-M13",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L028",
+            "J-L029",
+            "J-L043",
+            "J-L044",
+            "J-L059",
+            "J-L060",
+            "J-L082",
+            "J-L083",
+            "J-L084",
+            "J-L099"
+          ],
+          "scope": "章节标题或步骤总览读清后，同一组缩到导航位；后续内容只改变当前项状态，持续交代位置。",
+          "implementation_note": "match-handoff可承接位移；翻牌/大字/全屏遮挡/步骤高亮由宿主实现，文字与人物字幕安全区按本稿测量。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "F-M12",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L052",
+            "J-L053",
+            "J-L054",
+            "J-L055",
+            "J-L056",
+            "J-L057",
+            "J-L058",
+            "J-L059",
+            "J-L100",
+            "J-L101",
+            "J-L102",
+            "J-L103",
+            "J-L104",
+            "J-L105",
+            "J-L106"
+          ],
+          "scope": "数字先落在来源材料上，再提炼成可读标签和比较；单位、样本量、执行条件和评价依据随数字一起保留。",
+          "implementation_note": "复用证据聚焦、compare及结果收拢。原片200/100条、执行方式不同和历史AI评审参考限制必须带入，不能把它们标成同条件人工准确率。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "F-M11",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L021",
+            "J-L022",
+            "J-L023",
+            "J-L024",
+            "J-L025",
+            "J-L060",
+            "J-L061",
+            "J-L062",
+            "J-L063",
+            "J-L064",
+            "J-L065",
+            "J-L066",
+            "J-L067",
+            "J-L068",
+            "J-L069",
+            "J-L070",
+            "J-L071",
+            "J-L072",
+            "J-L073",
+            "J-L074",
+            "J-L075",
+            "J-L076",
+            "J-L077",
+            "J-L078",
+            "J-L082",
+            "J-L083"
+          ],
+          "scope": "预置题目/方案/步骤骨架，按口播填入当前项，已讲项保留；选择时再回全貌，而不是每个短句换一张新卡。",
+          "implementation_note": "使用宿主布局与状态填入；同尺度比较复用compare，当前项换位复用match-handoff；没有预置骨架的行动链应选F-M10。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "F-M02",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L006",
+            "J-L013",
+            "J-L014",
+            "J-L015",
+            "J-L060",
+            "J-L061",
+            "J-L062",
+            "J-L063",
+            "J-L064",
+            "J-L065",
+            "J-L066",
+            "J-L067",
+            "J-L068",
+            "J-L069",
+            "J-L070",
+            "J-L071",
+            "J-L072",
+            "J-L073",
+            "J-L074",
+            "J-L075",
+            "J-L076",
+            "J-L077",
+            "J-L078",
+            "J-L104",
+            "J-L105",
+            "J-L107",
+            "J-L108",
+            "J-L109",
+            "J-L110",
+            "J-L111",
+            "J-L112",
+            "J-L113"
+          ],
+          "scope": "现有对象让位以加入新参照或条件；重点移动时旧项保留，最终回到整体再突出选择。",
+          "implementation_note": "compare、match-handoff可承担排列与位移；材料进出、前后层次及降权要定制，新增一项比较不误写成替换全部结果。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "Q-A03",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L082",
+            "J-L083",
+            "J-L084",
+            "J-L085",
+            "J-L086",
+            "J-L087",
+            "J-L088",
+            "J-L089",
+            "J-L090",
+            "J-L091",
+            "J-L092",
+            "J-L093",
+            "J-L094",
+            "J-L095",
+            "J-L096",
+            "J-L097",
+            "J-L098"
+          ],
+          "scope": "四步进度持续存在，真实界面分别展示找到入口、选中、发出请求、服务运行、复制完成和连通证据；同一地址跨应用承接。",
+          "implementation_note": "复用focus-mask、match-handoff和宿主状态；原片没有显示地址独立飞行，不把推测记成已观察动作。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "Q-W01",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L106",
+            "J-L107",
+            "J-L108",
+            "J-L109",
+            "J-L110",
+            "J-L111",
+            "J-L112",
+            "J-L113"
+          ],
+          "scope": "由开头受众分流扩展到结尾条件推荐：先出现条件再给方案，旧方案保留降权，多条动机可汇到同一方案。",
+          "implementation_note": "已有compare/causal-chain承载分流；价格/选择属于来源语境，未来按本稿条件设计，不强制双卡或租机建议。"
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "title": "让物件或空间遮挡打开下一事件",
+      "intents": [
+        "进入想象",
+        "转入例子",
+        "从细节进入场景",
+        "情绪转折"
+      ],
+      "understanding_gap": "直接换镜会割裂关系，需要可理解的进入/退出动作。",
+      "use_when": "前场存在可自然遮住镜头、展开空间或承载下一场的对象，后场已准备好。",
+      "avoid_when": "只是为了炫技加黑幕；遮挡本身没有语义；没有后场真实素材时不假装揭幕完成。",
+      "required_inputs": [
+        "前后场素材",
+        "遮挡对象及方向",
+        "对应进入理由",
+        "后场首个可读动作",
+        "遮挡遮罩或前景层"
+      ],
+      "event_chain": [
+        {
+          "initial": "前场对象与下一场关系已经交代",
+          "trigger": "原声或物体动作允许进入",
+          "change": "对象靠近/掠过或容器扩展，形成有来源的遮挡",
+          "result": "观众知道为何换场",
+          "camera": "跟随对象或短推近",
+          "transition": "occlusion-reveal"
+        },
+        {
+          "initial": "遮挡覆盖转场接缝",
+          "trigger": "遮挡达到覆盖区",
+          "change": "下一场在遮罩下已经推进，沿原方向揭开",
+          "result": "真正进入下一事件",
+          "camera": "保持方向，再按下一场动作调景别",
+          "transition": "不得用静态黑卡代替后场"
+        },
+        {
+          "initial": "后场核心动作出现",
+          "trigger": "原声继续当前意思",
+          "change": "遮挡物退出，后场完整展示",
+          "result": "转场完成且增加信息",
+          "camera": "稳定关键动作及结果",
+          "transition": "等待结果可读后再变镜头"
+        }
+      ],
+      "continuity": "遮挡层、媒体裁切和相机分别控制；不得通过拉伸人物遮盖切点。此为既有揭幕机制的可配置重建，不声称秋芝原片使用此源码。",
+      "reading_exit": "遮挡不吞掉关键字/操作；后场先看懂，再安排下一次运动。",
+      "implementation": {
+        "kind": "editing-kit",
+        "path": "assets/editing-kit/editing-kit.js",
+        "effect": "occlusion-reveal",
+        "status": "shared-component-implemented"
+      },
+      "source_evidence": [
+        {
+          "video": "creative",
+          "time_range": "00:25.20–00:25.60",
+          "observed": "眼镜主视觉被降权，第一张成果卡从前方接管。",
+          "inferred": "可提炼前后层权重交接；完整遮挡揭幕是设计扩展，不是该段已观察事实。"
+        },
+        {
+          "video": "local-video-5c2f8b41",
+          "time_range": "00:30.10–00:31.30",
+          "observed": "既有R05记录胶囊扩展为覆盖层，横向开口揭示下一场动画。",
+          "inferred": "复用已有R05机制，按本期物件和空间重设计，不另造重复原理。"
+        }
+      ],
+      "status": {
+        "implementation": "shared-component-implemented; full recipe requires project assets and timing",
+        "validation": "recipe-specific-output-not-rendered; shared component checks are recorded separately",
+        "approval": "new recipe and new output not individually approved"
+      },
+      "component_validation": {
+        "record": "assets/editing-kit/validation.json",
+        "scope": "Six parameterized components checked in Chromium for deterministic seek, controls and displayed keyframes; not full recipe A/V or user approval."
+      },
+      "source_study_links": [
+        {
+          "video": "fred-argon",
+          "method_id": "F-M13",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "F-L064",
+            "F-L065",
+            "F-L095",
+            "F-L096",
+            "F-R001",
+            "F-L146",
+            "F-R002"
+          ],
+          "scope": "只补参考来源与适用方法；原配方实现及认可状态不变。"
+        },
+        {
+          "video": "fred-jev",
+          "method_id": "F-M13",
+          "catalog": "references/source-study-methods.json",
+          "example_row_ids": [
+            "J-L028",
+            "J-L029",
+            "J-L043",
+            "J-L044",
+            "J-L059",
+            "J-L060",
+            "J-L082",
+            "J-L083",
+            "J-L084",
+            "J-L099"
+          ],
+          "scope": "章节标题或步骤总览读清后，同一组缩到导航位；后续内容只改变当前项状态，持续交代位置。",
+          "implementation_note": "match-handoff可承接位移；翻牌/大字/全屏遮挡/步骤高亮由宿主实现，文字与人物字幕安全区按本稿测量。"
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "title": "同一空间里取用、交接、组合并产出",
+      "intents": [
+        "解释组合能力",
+        "资源取用",
+        "协作分工",
+        "从选择到收益"
+      ],
+      "understanding_gap": "抽象能力名词看不出怎样被选择、怎样一起产生新结果。",
+      "use_when": "原句确实讲取用/组合/协作，实操素材不足以直接解释，且隐喻对象能够保持身份。",
+      "avoid_when": "不相关的能力只是并列介绍；不需要收益变化却强加发光爆炸；不能复制参考角色和品牌。",
+      "required_inputs": [
+        "原句及上下文",
+        "当前IP角色/场景参考",
+        "抽象名词到物件的映射",
+        "每物件物理属性",
+        "结果应发生的可见变化",
+        "前后镜头锚点",
+        "本期可用时长"
+      ],
+      "event_chain": [
+        {
+          "initial": "人物面前有稳定存放位置和两个可辨物件",
+          "trigger": "原声提出需要的能力或资源",
+          "change": "人物看向目标并实际取下第一件",
+          "result": "选择具象可见",
+          "camera": "先建立空间，后手部近景",
+          "transition": "从上场相近物件/手势匹配进入"
+        },
+        {
+          "initial": "第一件在人物手中",
+          "trigger": "原声引入第二能力或协作方",
+          "change": "另一角色/人物另一只手取用第二件并交接",
+          "result": "两份来源没有混淆",
+          "camera": "跟随手与物件，交代视线",
+          "transition": "按动作切到接收方"
+        },
+        {
+          "initial": "两件保持各自特征",
+          "trigger": "原声说组合或一起完成",
+          "change": "两个物件以明确接口装配/拼合并启动",
+          "result": "组合动作直接产生新状态",
+          "camera": "近景看接口，再稍拉开",
+          "transition": "用接触/扣合做动作落点"
+        },
+        {
+          "initial": "新产物已出现",
+          "trigger": "原声交代收益",
+          "change": "人物使用一次产物，产生可辨后果，随后回应",
+          "result": "观众看到用途而不只看到光效",
+          "camera": "结果与人物反应之间切换",
+          "transition": "以产物的形状/方向接后场"
+        }
+      ],
+      "continuity": "同一空间、角色服装、物件材质/数量/左右关系持续；功能由动作和后果体现。",
+      "reading_exit": "给接口动作和新用途读懂时间，结束保留可交接产物；动作数和镜头数随语义与可用时长。",
+      "implementation": {
+        "kind": "generation-recipe",
+        "path": "scripts/metaso_video.py",
+        "status": "prompt-template-ready-not-generated"
+      },
+      "source_evidence": [
+        {
+          "video": "network",
+          "time_range": "17:21–17:27",
+          "observed": "同一货架空间中取用蓝/橙物件、交接、合成发光结果，角色作出反应。",
+          "inferred": "物件=能力、货架=可取用资源、组合=新收益是根据字幕的语义映射；原作者模型和工作流未知。"
+        }
+      ],
+      "status": {
+        "implementation": "prompt-template-ready-not-generated",
+        "validation": "no-generated-media; no-full-av-review; new shot remains pending",
+        "approval": "prior method approval applies only to its documented scope; new generated output not approved"
+      },
+      "generation": {
+        "subject_reference": "使用 {{角色参考}} 及 {{场景画风参考}}；从本期账号档案选择，禁止把秋芝或上一账号角色当默认。",
+        "world": "{{地点}} 中固定 {{存放区}}、{{操作台}}、{{结果区}}；{{物件A}} 和 {{物件B}} 的颜色/形状/接口保持一致。具体质感服从 {{画风}}。",
+        "action_beats": [
+          "建立空间与需求",
+          "取用A",
+          "交接B",
+          "以可见接口组合",
+          "使用产物并显示后果"
+        ],
+        "entry_exit": {
+          "entry": "前场 {{进入锚点}} 位于 {{进入位置}}，首镜以相近方向/景别承接。",
+          "exit": "尾镜 {{产物}} 保留在 {{退出位置}}，朝 {{退出方向}} 运动或稳定供后场匹配。",
+          "match": "前后场主对象的比例、朝向与动作相位在合成时核对，不承诺模型自动精确匹配。"
+        },
+        "negative_constraints": [
+          "不复制秋芝角色、炉子吉祥物或其品牌",
+          "物件不得无因复制/瞬移/提前组合",
+          "不以随机火花和镜头旋转代替取用过程",
+          "不生成可读品牌文案和字幕",
+          "不把多格分镜画入最终视频",
+          "无旁白复述、口型硬对原口播"
+        ],
+        "still_image_prompt_template": "为 {{原句}} 制作一个可播放单场景的首帧，非分镜拼图。沿用 {{角色参考}} 的身份和 {{场景画风参考}} 的整体画风：{{角色}} 位于 {{地点}}，视线朝向 {{目标}}；{{物件A}} 置于 {{A位置}}，{{物件B}} 置于 {{B位置}}，两物件尚未接触；{{操作台}} 与最终 {{结果区}} 在同一空间有清楚关系。{{构图}}，{{画幅}}，保留 {{字幕安全区}}，不含文字、Logo、漫画格。",
+        "video_prompt_template": "本段用于辅助理解这句原口播：{{原句}}。其前文是 {{前文}}，后文是 {{后文}}，观众此刻缺少的理解是 {{理解缺口}}。总可用时长 {{时长}}，按 {{角色参考}} 与 {{场景画风参考}} 保持角色和世界一致。初态：{{初态}}。依次演出：人物实际取下 {{物件A}}；在 {{交接位置}} 接到 {{物件B}}；让两件以 {{组合方式}} 可见地连接；新产物 {{产物}} 通过 {{使用动作}} 带来 {{可见后果}}；人物用 {{反应动作}} 回应。可用建立镜头、手部近景、结果镜头，每次切换必须增加信息，动作方向连续。首镜匹配 {{进入锚点}}，尾镜将 {{产物}} 留在 {{退出位置}} 以 {{退出方向}} 接下一画面。必须保留 {{结果停留}}，不得只眨眼或静图推拉，不输出字幕、标志或复述旁白。",
+        "compositing": {
+          "generated": "角色、场景、取用与组合的连续表演",
+          "code": "精确标签/图标及必要接口示意在剪辑中单独加入；可用 match-handoff 或 occlusion-reveal 接前后素材",
+          "audio": "沿用原口播时钟；生成音轨只有单独检查并明确保留后才使用",
+          "checks": [
+            "物件数量与身份",
+            "取用和接收动作连贯",
+            "组合先于结果",
+            "结果确实解释原句",
+            "前后素材方向与观看中心连续"
+          ]
+        }
+      },
+      "usage_examples": [
+        {
+          "record": "references/evidence/semantic-transfer-sample-20261014.json",
+          "scope": "New-narration silent structure preview; AIGC request prepared but not generated. No aesthetic approval."
+        }
+      ]
+    },
+    {
+      "id": "S09",
+      "title": "让表达或传递中的信息损失真正发生",
+      "intents": [
+        "解释信息损失",
+        "表达落差",
+        "约束压缩",
+        "输入与意图不一致"
+      ],
+      "understanding_gap": "观众听到“说不清/传不过去”，但看不见缺失了哪一层信息。",
+      "use_when": "原句明确描述丰富意图经过表达或传递后变少；只设计与句意一致的损失机制。",
+      "avoid_when": "实际只是检索失败或质量差却误画成丢失；涉及真实数据损失时必须有证据，不用隐喻声称产品故障。",
+      "required_inputs": [
+        "完整意图的可视对象",
+        "具体丢失的属性",
+        "狭窄通道/媒介的解释关系",
+        "剩余结果",
+        "当前IP参考",
+        "前后场和实际时长"
+      ],
+      "event_chain": [
+        {
+          "initial": "角色面前或想象空间存在丰富且可辨的完整对象",
+          "trigger": "原声描述脑中/原始状态",
+          "change": "展现至少两种将要失去的具体细节",
+          "result": "观众记住完整基准",
+          "camera": "由人物进入对象或从全貌推近",
+          "transition": "用视线/手势进入，明确示意"
+        },
+        {
+          "initial": "完整对象正在向表达媒介移动",
+          "trigger": "原声出现表达/输入/传递动作",
+          "change": "对象经过有意义的窄口或简化过程，细节在过程中脱落/合并",
+          "result": "损失发生于可见过程",
+          "camera": "跟随变化而不是随机碎裂",
+          "transition": "保持同一主轮廓穿过接缝"
+        },
+        {
+          "initial": "残余到达终点",
+          "trigger": "原声说只剩/偏差",
+          "change": "只剩少数元素；原完整轮廓可作短暂低权重对照",
+          "result": "看见损失后的结果",
+          "camera": "停在残余并回接人物反应",
+          "transition": "准确文字后期叠加，再接实际输入框"
+        }
+      ],
+      "continuity": "完整/残余仍可认出是同一意图；每种消失的属性在初态出现过，不能凭空炸碎。",
+      "reading_exit": "结果至少可辨其缺了什么；尾部以残余的形状或输入位置连接后场，避免持续粒子遮住阅读。",
+      "implementation": {
+        "kind": "generation-recipe",
+        "path": "scripts/metaso_video.py",
+        "status": "prompt-template-ready-not-generated"
+      },
+      "source_evidence": [
+        {
+          "video": "network",
+          "time_range": "08:16–08:26",
+          "observed": "三个角色卡逐项列举个人/团队/健康背景，需要反复说明的资料保留在画面上。",
+          "inferred": "这段并未观察到信息碎裂；它只提供资料负担的语义背景，本配方损失事件是独立重建设计。"
+        },
+        {
+          "video": "approved-anime-feedback-20261013",
+          "time_range": "00:00–00:05（历史5秒样片；本轮未重新播放）",
+          "observed": "既有反馈文件记录“脑中完整画面→只剩几个词”的修订解释样片获用户认可。",
+          "inferred": "沿用已确认的解释方法；本条新物件、新生成素材不继承旧样片验收。"
+        }
+      ],
+      "status": {
+        "implementation": "prompt-template-ready-not-generated",
+        "validation": "no-generated-media; no-full-av-review; new shot remains pending",
+        "approval": "prior method approval applies only to its documented scope; new generated output not approved"
+      },
+      "generation": {
+        "subject_reference": "{{当前IP角色参考}} + {{整体画风参考}}；继承身份而不固定鲸鱼、房间或镜头数量。",
+        "world": "完整意图 {{完整对象}} 从 {{来源空间}} 经 {{传递媒介}} 到 {{结果位置}}；分别定义 {{会失去的属性}} 与 {{必须保留的特征}}。",
+        "action_beats": [
+          "建立完整状态",
+          "发起表达或传递",
+          "可见压缩/遗漏发生",
+          "残余落到终点",
+          "辨认落差"
+        ],
+        "entry_exit": {
+          "entry": "接前场的视线、手势或画面对象；首镜必须让完整状态可读。",
+          "exit": "残余停在后场将继续操作的位置；真实输入框由真实截图/录屏承接，概念输入框标示意。",
+          "match": "后期把残余元素与后场输入位置对齐，字幕源时钟不随AIGC时长拉伸。"
+        },
+        "negative_constraints": [
+          "不把无关碎裂和爆炸当信息损失",
+          "完整对象未出现前不得直接展示残骸",
+          "不让角色/服装/主物件跨镜变形换身份",
+          "不固定复用蓝鲸城市或秋芝人物",
+          "不要求模型准确生成汉字/UI",
+          "不得把隐喻冒充真实产品故障"
+        ],
+        "still_image_prompt_template": "生成单场景首帧来解释 {{原句}}，使用 {{当前IP角色参考}} 的角色、{{整体画风参考}} 的完整画风。{{角色}} 的 {{视线/手势}} 指向完整的 {{完整对象}}，清楚呈现 {{会失去的属性}}，同时保留 {{必须保留的特征}}；通往 {{结果位置}} 的 {{传递媒介}} 已在场但尚未触发。{{构图}}，{{画幅}}，{{字幕安全区}}；不画分镜格，不写任何文字。",
+        "video_prompt_template": "解释任务：{{原句}}；上下文 {{前文}} / {{后文}}；需要观众看懂 {{理解缺口}}。在 {{时长}} 内，从 {{完整对象}} 的完整状态开始，先让 {{会失去的属性}} 可辨认；随后 {{角色}} 做出 {{传递动作}}，对象沿 {{路径}} 穿过 {{传递媒介}}，在通过过程中按顺序 {{损失过程}}，保留 {{必须保留的特征}}，最终在 {{结果位置}} 只留下 {{残余对象}}。镜头随语义从完整状态进入关键损失近景，再停在残余与角色 {{反应}}；每次切镜维持方向与同一对象身份。尾镜稳定 {{结果停留}} 供后期叠加准确文字并接 {{后场}}。无需复述原口播，不含字幕、Logo、漫画格；不是一张静图的推拉，也不是无因随机爆炸。",
+        "compositing": {
+          "generated": "角色/想象空间与完整对象的连续表演",
+          "code": "准确短词、输入框、可控碎片/蒙版可由代码叠加；生成不稳定时以对象遮罩完成精确损失过程",
+          "audio": "原口播保留，语义触发落在实际说到传递和损失的位置；生成音轨不默认混入",
+          "checks": [
+            "完整状态先建立",
+            "损失发生点可见",
+            "残余仍能对应原对象",
+            "损失语义不被误读为产品故障",
+            "真实/示意明确"
+          ]
+        }
+      }
+    },
+    {
+      "id": "S10",
+      "title": "刺激引发连续情绪动作",
+      "intents": [
+        "挫败到释然",
+        "期待被打断",
+        "犹豫到决定",
+        "情绪承接"
+      ],
+      "understanding_gap": "情绪形容词缺少触发与行为，观众只能看见无关表情。",
+      "use_when": "原句的重点是人物处境与情绪变化，能够说明是什么导致转折。",
+      "avoid_when": "真正要解释机制却只让人物微笑/比V；人物本人的实拍反应已足够时不必覆盖。",
+      "required_inputs": [
+        "原句与情绪的音频依据或待校准标记",
+        "角色/场景参考",
+        "具体触发物",
+        "转折前状态",
+        "转折后行为及结果",
+        "进入/退出镜头"
+      ],
+      "event_chain": [
+        {
+          "initial": "角色处于 {{转折前状态}} 并执行可见任务",
+          "trigger": "原声建立处境",
+          "change": "用身体/手/道具动作让投入或紧张可见",
+          "result": "情绪有基准",
+          "camera": "能看清身体和道具的中景",
+          "transition": "接前场动作方向"
+        },
+        {
+          "initial": "角色尚未知道变化",
+          "trigger": "{{触发物}} 进入或状态改变",
+          "change": "角色先发现刺激，视线和动作中断",
+          "result": "转折有具体原因",
+          "camera": "触发近景后切反应",
+          "transition": "视线匹配或遮挡接入"
+        },
+        {
+          "initial": "刺激已经被理解",
+          "trigger": "原声情绪转折",
+          "change": "躯干、手势、表情连续变化，并做出 {{后续动作}}",
+          "result": "感受通过行为而非标签成立",
+          "camera": "选择能读到关键身体动作的景别",
+          "transition": "按动作切，不机械快切"
+        },
+        {
+          "initial": "新情绪已经落定",
+          "trigger": "原声继续下一意思",
+          "change": "保留一个结束动作/物件位置，交给后场",
+          "result": "情绪与内容继续推进",
+          "camera": "结果停留或回到人物讲述",
+          "transition": "以手势/道具/视线匹配退出"
+        }
+      ],
+      "continuity": "同角色同事件，表演有起点和后果；具体情绪由原声校准，无音频时不得声称已经匹配。",
+      "reading_exit": "给观众看清情绪转折和后续行为，动作密度由原句决定；不把眨眼/头发摆动当全部表演。",
+      "implementation": {
+        "kind": "generation-recipe",
+        "path": "scripts/metaso_video.py",
+        "status": "prompt-template-ready-not-generated"
+      },
+      "source_evidence": [
+        {
+          "video": "network",
+          "time_range": "17:21–17:27",
+          "observed": "真人谈到未来，转入取用/组合事件，结果出现时角色有反应，再接生活素材。",
+          "inferred": "情绪与事件相接可复用；本配方的受挫/释然等动作须按新口播重新设计，不是原片已出现的固定表演。"
+        },
+        {
+          "video": "creative",
+          "time_range": "00:34–00:36；13:56–13:58",
+          "observed": "角色/团队示意和真人交棒结果段交替出现。",
+          "inferred": "载体可随段落切换，不能把静态角色展示当连续动作验收。"
+        }
+      ],
+      "status": {
+        "implementation": "prompt-template-ready-not-generated",
+        "validation": "no-generated-media; no-full-av-review; new shot remains pending",
+        "approval": "prior method approval applies only to its documented scope; new generated output not approved"
+      },
+      "generation": {
+        "subject_reference": "{{角色参考}} 与 {{场景参考}} 按本期IP读取；如原句描述真实讲述者，先判断保留实拍是否更合适。",
+        "world": "{{地点}}、{{道具}} 和 {{触发物}} 具有实际空间关系；身体朝向与光线跨镜一致。",
+        "action_beats": [
+          "用可见任务建立情绪初态",
+          "刺激进入",
+          "发现并理解刺激",
+          "身体与表情改变",
+          "做出后续动作并落定"
+        ],
+        "entry_exit": {
+          "entry": "首镜承接 {{前场手势/视线/物件}}，保留 {{进入方向}}。",
+          "exit": "末镜 {{结束动作}} 停在 {{退出构图}}，交给后场 {{下一事件}}。",
+          "match": "表演的动作峰值按实际语音转折对齐；超时删非关键动作或重生成，不拉扯原口播。"
+        },
+        "negative_constraints": [
+          "不只眨眼、微笑、比V或静图推拉",
+          "不让情绪无刺激突然切换",
+          "不夸张到改变原句语气",
+          "不以多格漫画/跨图淡化代替连续动作",
+          "不复制秋芝/阿刁形象到其他IP",
+          "不生成聊天消息汉字和原口播口型"
+        ],
+        "still_image_prompt_template": "单场景首帧：{{角色参考}} 中的角色在 {{地点}} 做 {{初始动作}}，{{道具}} 位于 {{位置}}，身体与手势清楚表达 {{转折前状态}}。{{触发物}} 尚未引起角色注意，预留它出现的空间。遵循 {{场景参考}} 的线条、材质与光影，{{画幅}}，{{构图}}，{{字幕安全区}}，没有文字或漫画格。",
+        "video_prompt_template": "为原句 {{原句}} 制作连续情绪事件，前后文 {{前文}} / {{后文}}。角色身份按 {{角色参考}}，全画风按 {{场景参考}}，可用时长 {{时长}}。先 {{初始动作}}，让 {{转折前状态}} 可见；随后 {{触发物}} 通过 {{触发方式}} 出现，角色先 {{发现动作}}，再 {{身体变化}} 和 {{表情变化}}，最后完成 {{后续动作}}，情绪落在 {{转折后状态}}。需要时从中景切触发物近景再回身体反应，视线与动作方向连续，每次切镜增加信息；并非固定一镜到底。入口匹配 {{前场锚点}}；尾部用 {{结束动作}} 保留 {{结果停留}} 后接 {{后场锚点}}。不复述原口播，不画字幕/Logo/漫画格，不靠静图推拉、只眨眼或发梢微动撑满时长。",
+        "compositing": {
+          "generated": "角色、道具、刺激与可辨身体连续动作",
+          "code": "准确通知文字/叙事标签后期合成；match-handoff/occlusion-reveal仅在有语义入口时使用",
+          "audio": "原声重音、停顿和语气作为动作落点；无音频先标待声音校准",
+          "checks": [
+            "刺激先于情绪反应",
+            "身体动作正常尺寸可辨",
+            "表情不替代后续行为",
+            "角色情绪没有偏离原句",
+            "入口和退出不突兀"
+          ]
+        }
+      }
+    }
+  ]
+}

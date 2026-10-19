@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>UI 连续变形 · Prompt Motion Replica</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./motion.js" defer></script>
+</head>
+<body>
+  <svg class="definitions" aria-hidden="true"><defs>
+    <symbol id="icon-check" viewBox="0 0 32 32"><path d="m7 16 6 6L25 10"/></symbol>
+    <symbol id="icon-next" viewBox="0 0 32 32"><path d="m10 9 11 7-11 7Z" fill="currentColor" stroke="none"/><path d="M23 9v14"/></symbol>
+    <symbol id="icon-speaker" viewBox="0 0 32 32"><path d="M5 12h6l7-6v20l-7-6H5Z"/><path d="M23 11q6 5 0 10M26 7q11 9 0 18"/></symbol>
+    <symbol id="icon-search" viewBox="0 0 32 32"><circle cx="14" cy="14" r="8"/><path d="m20 20 7 7"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 32 32"><path d="m10 10 12 12m0-12L10 22"/></symbol>
+    <symbol id="icon-arrow" viewBox="0 0 32 32"><path d="M7 16h18m-7-7 8 7-8 7"/></symbol>
+  </defs></svg>
+  <main id="viewport" aria-label="连续单形状 UI 动效预览">
+    <div id="canvas">
+      <div id="camera">
+        <div id="shape">
+          <section id="button-layer" class="layer button-layer"><span data-text="button">开始播放</span><svg class="icon"><use href="#icon-arrow"/></svg></section>
+          <section id="loader-layer" class="layer loader-layer"><svg viewBox="0 0 100 100"><circle class="loader-track" cx="50" cy="50" r="31"/><circle id="loader-ring" cx="50" cy="50" r="31"/></svg></section>
+          <section id="check-layer" class="layer check-layer"><svg viewBox="0 0 80 80"><path id="success-check" d="m20 41 13 13L61 27"/></svg></section>
+          <section id="island-layer" class="layer island-layer">
+            <div class="island-disc"><div class="disc-center"></div></div><div class="island-copy"><strong data-text="song">留一点时间</strong><span data-text="artist">MOTION / 轻松时刻</span></div><div class="waveform" id="island-wave"></div>
+          </section>
+          <section id="player-layer" class="layer player-layer">
+            <div class="album"><span class="album-orbit"></span><span class="album-orbit orbit-two"></span><span class="album-dot"></span><span class="album-word" data-text="album">M</span></div>
+            <div class="player-copy"><strong data-text="song">留一点时间</strong><span data-text="artist">MOTION / 轻松时刻</span></div>
+            <div class="player-buttons"><svg class="icon previous"><use href="#icon-next"/></svg><div class="play-button"><svg viewBox="0 0 44 44"><path id="play-left"/><path id="play-right"/></svg></div><svg class="icon"><use href="#icon-next"/></svg><div class="sound-wave" id="player-wave"></div></div>
+            <div class="progress-line"><div id="progress-fill"></div><span id="progress-thumb"></span></div><div class="progress-times"><span id="elapsed">0:32</span><span data-text="songLength">2:48</span></div>
+            <div class="scrub-tooltip" id="scrub-tooltip">1:56</div>
+          </section>
+          <section id="volume-layer" class="layer volume-layer"><svg class="icon speaker"><use href="#icon-speaker"/></svg><div class="volume-track"><div id="volume-fill"></div><div id="volume-thumb"></div></div><span class="volume-value" id="volume-value">72</span></section>
+          <section id="toggle-layer" class="layer toggle-layer"><div id="toggle-knob"><svg class="icon"><use href="#icon-check"/></svg></div></section>
+          <section id="tabs-layer" class="layer tabs-layer"><div id="tab-indicator"></div><span data-text="tabOne">概览</span><span data-text="tabTwo">播放</span><span data-text="tabThree">趋势</span></section>
+          <section id="chart-layer" class="layer chart-layer">
+            <div class="chart-tabs"><div id="chart-tab-indicator"></div><span data-text="tabOne">Day</span><span data-text="tabTwo">Week</span><span data-text="tabThree">Month</span></div>
+            <div class="chart-title"><div><strong><span id="chart-number" data-text="chartValue">84,320</span><small data-text="chartUnit"></small></strong><span data-text="chartLabel">total views</span></div><span class="chart-change" data-text="chartChange"></span></div>
+            <svg class="chart-plot" viewBox="0 0 752 240" preserveAspectRatio="none" aria-label="播放趋势折线图"><g class="chart-grid"><path d="M0 30h752M0 105h752M0 180h752"/></g><path id="chart-area"/><path id="chart-line" d="M0 198C35 198 39 176 74 172S126 193 154 155S200 141 238 128S277 154 312 119S362 89 391 104S434 92 473 79S521 103 555 60S602 60 639 46S697 57 752 14"/><line id="chart-hover-line" x1="639" x2="639" y1="30" y2="220"/><circle id="chart-point" cx="639" cy="46" r="7"/></svg>
+            <div class="chart-tooltip" id="chart-tooltip"><span data-text="chartDay">周六</span><strong data-text="chartTooltipValue">4,280 次</strong></div>
+            <div class="chart-days"><span>周一</span><span>周二</span><span>周三</span><span>周四</span><span>周五</span><span>周六</span><span>周日</span></div>
+          </section>
+          <section id="command-key-layer" class="layer command-key-layer"><svg class="icon"><use href="#icon-search"/></svg><span data-text="searchPlaceholder">Search</span><kbd>⌘ K</kbd></section>
+          <section id="palette-layer" class="layer palette-layer">
+            <div class="command-input"><svg class="icon"><use href="#icon-search"/></svg><span id="query-text"></span><span id="text-caret"></span><kbd>esc</kbd></div>
+            <div class="command-divider"></div><div class="command-hint" id="command-hint" data-text="commandHint">快速操作</div>
+            <div id="result-new" class="command-result"><span class="command-result-icon">▣</span><span data-text="commandNew">New project</span><kbd>⌘N</kbd></div>
+            <div id="result-export" class="command-result"><span class="command-result-icon">↧</span><span data-text="commandExport">Export video</span><kbd>⌘E</kbd></div>
+            <div id="result-one" class="command-result"><span class="command-result-icon">▤</span><span data-text="commandResult">Frame rate · 60fps</span></div>
+            <div id="result-three" class="command-result"><span class="command-result-icon">◉</span><span data-text="commandOtherTwo">Motion blur</span></div>
+            <div id="result-two" class="command-result"><span class="command-result-icon">◷</span><span data-text="commandOtherOne">Every frame is code</span></div>
+            <div class="command-footer"><span data-text="commandFooter">↑ ↓ 选择</span><span data-text="commandEnter">↵ 确认</span></div>
+          </section>
+          <section id="toast-layer" class="layer toast-layer"><span class="toast-check"><svg class="icon"><use href="#icon-check"/></svg></span><div><strong data-text="toast">已添加到你的收藏</strong><span data-text="toastDetail">下次打开，继续这一刻。</span></div><svg class="icon toast-close"><use href="#icon-close"/></svg></section>
+        </div>
+        <svg id="cursor" viewBox="0 0 1440 1440" aria-hidden="true"><circle id="click-ring" cx="0" cy="0" r="29"/><g id="cursor-glyph"><path d="M8 5v39l10-10 8 17 7-4-8-17h15Z"/></g></svg>
+      </div>
+    </div>
+  </main>
+  <nav id="preview-controls" aria-label="预览时间控制"><button id="play-toggle" type="button">暂停</button><input id="timeline" type="range" min="0" max="14" step="0.01" value="0" aria-label="预览时间"><output id="time-label">0.00 / 14.00 s</output></nav>
+</body>
+</html>

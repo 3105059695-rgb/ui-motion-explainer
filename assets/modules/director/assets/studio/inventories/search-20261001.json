@@ -1,0 +1,1255 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-01",
+  "scope": {
+    "site": "Collect UI",
+    "category": "Search",
+    "categoryUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "listingUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "observedDate": "2026-10-01",
+    "timezone": "Asia/Shanghai",
+    "enumerationComplete": true,
+    "pagesCatalogued": [
+      1
+    ],
+    "sourcePaginationControlsPresent": false,
+    "paginationMode": "single-loaded-list-no-pagination-controls",
+    "lastPageEvidence": {
+      "snapshotId": "search-page-1-2026-10-01",
+      "pageNumber": 1,
+      "activePage": null,
+      "nextPageDisabled": null,
+      "paginationControlsObserved": false,
+      "observedCardCount": 21,
+      "evidenceKind": "complete-loaded-list-two-stable-reads-no-pagination-controls"
+    },
+    "enumerationMeaning": "仅当时实际浏览的完整分页快照，不代表媒体已观看、独立原作总数或全站完成。",
+    "notes": [
+      "Search为完整已加载21卡单列表；实际到达页面底部后完整双读一致，没有源分页，p1仅归档。",
+      "Notification实际Next从1到2；旧首卡脱离、当前页和新首卡均确认后取完整集合双读，末Next禁用。",
+      "Notification第二页翻译尚未稳定的初读单独丢弃保留，未纳入accepted快照、卡片或媒体计数。",
+      "可见翻译标签、完整tag href、hidden +N、实际图片alt与归属href原样保留；隐藏标签不补造。",
+      "原名仅在derivedOriginalCategoryName独立按159类真实完整href映射，不覆盖实际可见标签。",
+      "外部归属链接不冒充原作href，authorProfile null不补造；原作链接按实际精确卡弹层另外丰富。",
+      "目录清点新增媒体观看0、适配0；已有观察只按完整媒体URL分别关联。"
+    ]
+  },
+  "enumerationEvidence": {
+    "frozenRawSha256": "668afcd4451521533a14d8836bf6373fd4a1bc7a7fe7ff4c7536062dc5de1912",
+    "rawMetadata": {
+      "category": "Search",
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "observedAt": "2026-10-01T08:00:09.951Z",
+      "actualHeading": "搜索界面设计灵感",
+      "sourcePaginationControlsPresent": false,
+      "mediaObservationClaims": 0,
+      "collectionComplete": true,
+      "complete": true,
+      "twoReadsMatch": true,
+      "navigations": [],
+      "rejectedReads": [],
+      "navigationNote": "Opened a new dedicated Edge browser3 tab at the actual Search category URL. After its listing loaded, read the whole rendered card collection once, pressed Control+End on the page, confirmed the actual document bottom and no pagination/load-more controls, then read the same entire collection a second time. No pagination exists: old-first detach and current-page checks are not applicable to this single loaded list; no source page number is invented. No card modal opened and no source media playback/frame observation performed.",
+      "collection": {
+        "kind": "rendered-DOM-entire-loaded-card-list",
+        "browser": "Edge",
+        "browserId": "3",
+        "dedicatedTabId": "1655173158",
+        "categoryRegistrySource": "ai-ui-director/assets/studio/coverage.json",
+        "alreadyInventoriedAtStart": false,
+        "derivedCategoryNameMapping": {
+          "association": "exact complete href; separate derived field; observed visible label unchanged",
+          "usedMapping": {
+            "https://collectui.com/designs/sidebar-ui-design-inspiration": "Sidebar",
+            "https://collectui.com/designs/command-bar-ui-design-inspiration": "Command Bar",
+            "https://collectui.com/designs/navigation-ui-design-inspiration": "Navigation",
+            "https://collectui.com/designs/header-navigation-ui-design-inspiration": "Header Navigation",
+            "https://collectui.com/designs/ui-interaction-ui-design-inspiration": "UI Interaction",
+            "https://collectui.com/designs/search-ui-design-inspiration": "Search",
+            "https://collectui.com/designs/filter-products-ui-design-inspiration": "Filter Products",
+            "https://collectui.com/designs/app-screens-ui-design-inspiration": "App Screens",
+            "https://collectui.com/designs/activity-feed-ui-design-inspiration": "Activity Feed",
+            "https://collectui.com/designs/liquid-glass-ui-design-inspiration": "Liquid Glass",
+            "https://collectui.com/designs/file-tree-ui-design-inspiration": "File Tree",
+            "https://collectui.com/designs/modal-ui-design-inspiration": "Modal",
+            "https://collectui.com/designs/map-ui-design-inspiration": "Map",
+            "https://collectui.com/designs/tags-ui-design-inspiration": "Tags",
+            "https://collectui.com/designs/dashboard-ui-design-inspiration": "Dashboard",
+            "https://collectui.com/designs/dropdown-ui-design-inspiration": "Dropdown",
+            "https://collectui.com/designs/terminal-aesthetic-ui-design-inspiration": "Terminal Aesthetic"
+          }
+        },
+        "sourceMediaDownloaded": false,
+        "cardModalOpened": false,
+        "mediaFrameObservationPerformed": false,
+        "independentReview": false
+      },
+      "completionEvidence": {
+        "singleLoadedList": true,
+        "noSourcePaginationControls": true,
+        "paginationSemanticButtons": [],
+        "sourceActivePage": null,
+        "allPageCollectionsReadTwice": true,
+        "wholeLoadedCollectionStable": true,
+        "actualDocumentBottomReached": true,
+        "bottomState": {
+          "bodyHeight": 3628,
+          "cardCount": 21,
+          "clientHeight": 948,
+          "dialogCount": 0,
+          "lastCardBox": {
+            "bottom": 239.75,
+            "top": -144.25
+          },
+          "paginationSemanticButtons": [],
+          "scrollHeight": 3628,
+          "scrollTop": 2680
+        }
+      },
+      "summary": {
+        "archivedLists": 1,
+        "cardOccurrences": 21,
+        "uniqueMedia": 21,
+        "duplicateMediaOccurrences": 0,
+        "cardMediaTypes": {
+          "video": 9,
+          "image": 12
+        },
+        "mediaObservationsClaimed": 0,
+        "adaptationsClaimed": 0
+      },
+      "notes": [
+        "Visible translated labels are preserved unchanged; derivedOriginalCategoryName is stored separately and maps only by the actual complete category href.",
+        "Only actual image alt is used as an image card title. Video titles remain null; source work hrefs are not guessed from media IDs.",
+        "Hidden +N is preserved, otherTags stays null because hidden labels were not expanded.",
+        "Designer attribution profiles are retained only for actual collectui.com/designers links. The last card has an actual external Published by link, so authorProfile stays null.",
+        "Card/media repeats are retained as card occurrences; complete URL grouping does not imply independent original-work identity.",
+        "Enumeration is metadata collection only and adds zero media observations, adaptations or implemented works."
+      ]
+    },
+    "rawSourceFile": "batch22-search-enumeration.json"
+  },
+  "listingSnapshots": [
+    {
+      "id": "search-page-1-2026-10-01",
+      "pageNumber": 1,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "搜索界面设计灵感——收集界面",
+      "activePage": null,
+      "pagination": [],
+      "cardCount": 21,
+      "cardCollectionSignature": "5aed7890798d2e1dfd1ccf1cfa0b6b04089b605a94bfde8af19058404198e0a0",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "bc7b400a7d15bdc4db21aa1ce7d1f7ee22f65ce1aa236d1771811879c315f6b1",
+        "second": "bc7b400a7d15bdc4db21aa1ce7d1f7ee22f65ce1aa236d1771811879c315f6b1"
+      },
+      "pageEnumerationEvidence": {
+        "sourcePageNumber": null,
+        "archiveMeaning": "p1 is the archive number for the complete loaded single list; the website has no source pagination controls or active page.",
+        "twoReadsMatch": true
+      }
+    }
+  ],
+  "summary": {
+    "cataloguedEntries": 21,
+    "uniqueMedia": 21,
+    "duplicateMediaOccurrences": 0,
+    "mediaTypes": {
+      "video": 9,
+      "image": 12
+    },
+    "mediaObservationsClaimed": 0
+  },
+  "entries": [
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "noechague",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "Sidebar",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "侧边栏"
+        },
+        {
+          "derivedOriginalCategoryName": "Command Bar",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "指挥条"
+        }
+      ],
+      "firstVisibleTag": "侧边栏",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "bdbd395a-4cd4-45c4-bf88-4e7b4823187e",
+      "title": null,
+      "titleSource": null,
+      "id": "search-p1-001",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-001"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "renzobianchi_",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "Navigation",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航"
+        },
+        {
+          "derivedOriginalCategoryName": "Header Navigation",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "头部导航"
+        }
+      ],
+      "firstVisibleTag": "导航",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "ecb087e8-59ea-499d-bd0c-33c9d811c365",
+      "title": null,
+      "titleSource": null,
+      "id": "search-p1-002",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-002"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "juli_fella",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 3,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "UI Interaction",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "用户界面交互"
+        },
+        {
+          "derivedOriginalCategoryName": "Search",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "搜索"
+        }
+      ],
+      "firstVisibleTag": "用户界面交互",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "754e9f1b-cd04-4a83-be1e-e53cfe749877",
+      "title": null,
+      "titleSource": null,
+      "id": "search-p1-003",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-003"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "batukrskl",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 4,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "Sidebar",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "侧边栏"
+        },
+        {
+          "derivedOriginalCategoryName": "Search",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "搜索"
+        }
+      ],
+      "firstVisibleTag": "侧边栏",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "27f88bb4-c703-4963-80c3-90ca46bb740a",
+      "title": null,
+      "titleSource": null,
+      "id": "search-p1-004",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-004"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "piyushsphere",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 5,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "Filter Products",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "滤波器产品"
+        },
+        {
+          "derivedOriginalCategoryName": "Search",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "搜索"
+        }
+      ],
+      "firstVisibleTag": "滤波器产品",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "46dfbb93-2465-4882-a4bc-18e622079573",
+      "title": "Dropdwon designs",
+      "titleSource": "actual-media-image-alt",
+      "id": "search-p1-005",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-005"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "omererdgan",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 6,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "App Screens",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "应用界面"
+        },
+        {
+          "derivedOriginalCategoryName": "Search",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "搜索"
+        }
+      ],
+      "firstVisibleTag": "应用界面",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c67e1dcd-f5b7-45ed-bf61-aada69f7c19f",
+      "title": "Mobile filter and empty states",
+      "titleSource": "actual-media-image-alt",
+      "id": "search-p1-006",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-006"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "HAFEEZOLAMIDE1",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 7,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "Activity Feed",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "活动订阅"
+        },
+        {
+          "derivedOriginalCategoryName": "Search",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "搜索"
+        }
+      ],
+      "firstVisibleTag": "活动订阅",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "a5613716-d836-4d11-921f-75282c024536",
+      "title": "Activity log",
+      "titleSource": "actual-media-image-alt",
+      "id": "search-p1-007",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-007"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "ersadwork",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 8,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "Command Bar",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "指挥条"
+        },
+        {
+          "derivedOriginalCategoryName": "Search",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "搜索"
+        }
+      ],
+      "firstVisibleTag": "指挥条",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "aa3c4a1b-5313-431e-838c-3b3ebc99ae4b",
+      "title": null,
+      "titleSource": null,
+      "id": "search-p1-008",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-008"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "victorwill__",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 9,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "Search",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "搜索"
+        }
+      ],
+      "firstVisibleTag": "搜索",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "acff9949-4b39-45c6-b639-28d02cbb3ac0",
+      "title": null,
+      "titleSource": null,
+      "id": "search-p1-009",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-009"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "hiddevdploeg",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 10,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "Search",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "搜索"
+        },
+        {
+          "derivedOriginalCategoryName": "Liquid Glass",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "液态玻璃"
+        }
+      ],
+      "firstVisibleTag": "搜索",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "6a1fbb79-ca98-44f3-aab1-e03010902be3",
+      "title": null,
+      "titleSource": null,
+      "id": "search-p1-010",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-010"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "emirayaaz",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 11,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "Search",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "搜索"
+        },
+        {
+          "derivedOriginalCategoryName": "File Tree",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "文件树"
+        }
+      ],
+      "firstVisibleTag": "搜索",
+      "hiddenTagCount": 3,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "e3639eb3-e65e-4acc-9a21-29e194f9b8d0",
+      "title": "search",
+      "titleSource": "actual-media-image-alt",
+      "id": "search-p1-011",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-011"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "emirayaaz",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 12,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "Command Bar",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "指挥条"
+        },
+        {
+          "derivedOriginalCategoryName": "Search",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "搜索"
+        }
+      ],
+      "firstVisibleTag": "指挥条",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "ea17fe12-79eb-4bc9-abb6-2e7d2dc0766e",
+      "title": "search",
+      "titleSource": "actual-media-image-alt",
+      "id": "search-p1-012",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-012"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "halil_works",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 13,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "Modal",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "模态"
+        },
+        {
+          "derivedOriginalCategoryName": "Search",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "搜索"
+        }
+      ],
+      "firstVisibleTag": "模态",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "336e4fa3-f6b1-4e8a-864a-c47825e02643",
+      "title": " Move chat modals dark & light",
+      "titleSource": "actual-media-image-alt",
+      "id": "search-p1-013",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-013"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "pacovitiello",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 14,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "Command Bar",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "指挥条"
+        },
+        {
+          "derivedOriginalCategoryName": "Search",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "搜索"
+        }
+      ],
+      "firstVisibleTag": "指挥条",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "31f84a41-5e56-44ca-a09d-3175e9fcd0dd",
+      "title": null,
+      "titleSource": null,
+      "id": "search-p1-014",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-014"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "Ishanzaad",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 15,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "Map",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "地图"
+        },
+        {
+          "derivedOriginalCategoryName": "Search",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "搜索"
+        }
+      ],
+      "firstVisibleTag": "地图",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "af629d93-f3af-4f68-9c73-57e8022fcfeb",
+      "title": "Searching friends",
+      "titleSource": "actual-media-image-alt",
+      "id": "search-p1-015",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-015"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "_cassarino_",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 16,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "Modal",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "模态"
+        },
+        {
+          "derivedOriginalCategoryName": "Search",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "搜索"
+        }
+      ],
+      "firstVisibleTag": "模态",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c22837ff-307e-4b1d-8685-400961b1e020",
+      "title": " Having fun with modals @agency",
+      "titleSource": "actual-media-image-alt",
+      "id": "search-p1-016",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-016"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "LynelSkroll",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 17,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "Search",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "搜索"
+        },
+        {
+          "derivedOriginalCategoryName": "Tags",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "标签"
+        }
+      ],
+      "firstVisibleTag": "搜索",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "52d2606f-3397-4b94-915d-a9fea876185f",
+      "title": "Did you cook?",
+      "titleSource": "actual-media-image-alt",
+      "id": "search-p1-017",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-017"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "shedsgns",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 18,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "Dashboard",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "仪表盘"
+        },
+        {
+          "derivedOriginalCategoryName": "Dropdown",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "下拉菜单"
+        }
+      ],
+      "firstVisibleTag": "仪表盘",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "f725b123-c691-4903-bb30-ec9d4d25b7d4",
+      "title": "clean AI agent dashboard design",
+      "titleSource": "actual-media-image-alt",
+      "id": "search-p1-018",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-018"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "Nomandsign",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 19,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "Search",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "搜索"
+        }
+      ],
+      "firstVisibleTag": "搜索",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "f7a38842-13c3-478f-b260-7595317df06b",
+      "title": null,
+      "titleSource": null,
+      "id": "search-p1-019",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-019"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "adsafayet",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 20,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "Sidebar",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "侧边栏"
+        },
+        {
+          "derivedOriginalCategoryName": "Search",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "搜索"
+        }
+      ],
+      "firstVisibleTag": "侧边栏",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "e563151e-c902-468e-89ff-bfccafa93e9d",
+      "title": "see the quality of my sidebar design ",
+      "titleSource": "actual-media-image-alt",
+      "id": "search-p1-020",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-020"
+    },
+    {
+      "attributionDisplayedText": "发布者",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": null,
+      "cardOrder": 21,
+      "displayedTags": [
+        {
+          "derivedOriginalCategoryName": "Search",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "搜索"
+        },
+        {
+          "derivedOriginalCategoryName": "Terminal Aesthetic",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "终极美学"
+        }
+      ],
+      "firstVisibleTag": "搜索",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "94158ca6-e6be-4bcc-a015-ad5ddec607c9",
+      "title": null,
+      "titleSource": null,
+      "id": "search-p1-021",
+      "pageNumber": 1,
+      "snapshotId": "search-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Search",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "search-media-021"
+    }
+  ],
+  "mediaGroups": [
+    {
+      "id": "search-media-001",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-001"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "search-media-002",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-002"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "search-media-003",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-003"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "search-media-004",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-004"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "search-media-005",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-005"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "search-media-006",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-006"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "search-media-007",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-007"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "search-media-008",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-008"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "search-media-009",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-009"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "search-media-010",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-010"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "search-media-011",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-011"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "search-media-012",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-012"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "search-media-013",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-013"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "search-media-014",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-014"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "search-media-015",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-015"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "search-media-016",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-016"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "search-media-017",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-017"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "search-media-018",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-018"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "search-media-019",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-019"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "search-media-020",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-020"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "search-media-021",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "search-p1-021"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    }
+  ],
+  "enrichments": [
+    {
+      "entryId": "search-p1-002",
+      "date": "2026-10-01",
+      "field": "originalWorkUrl",
+      "value": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "basis": "Actual exact-card modal href; association solely by complete media URL. Historical catalogued-only status retained.",
+      "evidence": "../observations/batch22.json"
+    }
+  ]
+}

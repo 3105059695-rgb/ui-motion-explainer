@@ -1,0 +1,4149 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-01",
+  "scope": {
+    "site": "Collect UI",
+    "category": "Dropdown",
+    "categoryUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "listingUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "observedDate": "2026-10-01",
+    "timezone": "Asia/Shanghai",
+    "enumerationComplete": true,
+    "pagesCatalogued": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "sourcePaginationControlsPresent": true,
+    "paginationMode": "actual-pagination-button-pages",
+    "lastPageEvidence": {
+      "snapshotId": "dropdown-page-4-2026-10-01",
+      "pageNumber": 4,
+      "activePage": 4,
+      "nextPageDisabled": true,
+      "paginationControlsObserved": true,
+      "observedCardCount": 10,
+      "evidenceKind": "loaded-rendered-DOM-two-stable-reads-next-disabled"
+    },
+    "enumerationMeaning": "仅当时实际浏览的完整分页快照，不代表媒体已观看、独立原作总数或全站完成。",
+    "notes": [
+      "每个归档页/列表完整已载入卡片集合两次DOM读取一致，卡片顺序及重复均保留；有源分页者末页Next禁用。",
+      "Tabs使用Next分页；Dropdown旧raw的误开弹层及Page 3备注只作纠错历史，accepted快照来自另存的实际换卡双读纠正raw及本次导航。",
+      "Navigation/Mobile App瞬时旧集合只保留discard证据，不参与accepted快照、卡片或URL汇总。",
+      "Code Editor为实际完整加载单列表且无源分页控件，p1仅归档编号；Mac App实际Next一次至末Page 2。",
+      "可见翻译标签、原始tag href、hidden +N、实际图片alt与外部归属href均保留；未展开标签不补造。",
+      "derivedOriginalCategoryName及映射来源独立保留，不覆盖或冒充观察到的可见标签。",
+      "原作href初始null；外部归属链接不冒充原作href，authorProfile null不补造作者身份。",
+      "目录清点新增媒体观看0、适配0；既有真实观察只由汇总脚本按完整媒体URL关联。"
+    ]
+  },
+  "enumerationEvidence": {
+    "frozenRawSha256": "25d750ccc5759ffd205ed36c23c86350a88246113631f9b7442b12aa2163e3aa",
+    "rawMetadata": {
+      "category": "Dropdown",
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "sourcePaginationControlsPresent": true,
+      "mediaObservationClaims": 0,
+      "correctionOf": "batch21-dropdown-enumeration.json",
+      "correctionReason": "Frozen old pages 3 and 4 shared the same complete card collection despite different active controls; re-enumerated with actual card replacement before accepting page data.",
+      "navigationNote": "Old raw preserved, including its actual accidental Taras modal and Page3 navigation exception. This separate corrected run starts in a fresh tab and records actual navigation separately.",
+      "navigation": [
+        {
+          "fromPage": 1,
+          "toPage": 2,
+          "action": "Actual Go to next page button",
+          "oldFirstCheckboxId": "checkbox-284752d8-f247-468f-9ab7-b95cfba324a7",
+          "oldFirstDetached": true,
+          "newFirstCardId": "b27d2e03-2a30-4b5f-9f69-f64d11468d74",
+          "dialogCount": 0
+        },
+        {
+          "fromPage": 2,
+          "toPage": 3,
+          "failedAction": "Next click reported no node; fresh DOM confirmed still page2 and no dialog",
+          "action": "Actual Page 3 button",
+          "oldFirstCheckboxId": "checkbox-b27d2e03-2a30-4b5f-9f69-f64d11468d74",
+          "oldFirstDetached": true,
+          "newFirstCardId": "eb256294-7ffc-4bff-b378-2c316389e34a",
+          "dialogCount": 0
+        },
+        {
+          "fromPage": 3,
+          "toPage": 4,
+          "action": "Actual Page 4 button",
+          "oldFirstCheckboxId": "checkbox-eb256294-7ffc-4bff-b378-2c316389e34a",
+          "oldFirstDetached": true,
+          "newFirstCardId": "6589d5c1-6b25-48f6-abb3-4c2c93e24693",
+          "dialogCount": 0
+        }
+      ],
+      "collectionComplete": true,
+      "summary": {
+        "pages": 4,
+        "cards": 82,
+        "uniqueCardIds": 82,
+        "uniqueMedia": 82,
+        "video": 48,
+        "image": 34
+      }
+    },
+    "rawSourceFile": "batch21-dropdown-enumeration-corrected.json",
+    "discardedPriorRaw": {
+      "rawSourceFile": "batch21-dropdown-enumeration.json",
+      "frozenRawSha256": "df8d702bf2fbad1e1593d16e9e87101d478d7d822b768bf0a6e1c6516288f092",
+      "reason": "Frozen old pages 3 and 4 shared the same complete card collection despite different active controls; re-enumerated with actual card replacement before accepting page data.",
+      "rawMetadata": {
+        "category": "Dropdown",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+        "mediaObservationClaims": 0,
+        "navigationNote": "Next advanced pages 1→2 and 3→4. A card modal accidentally opened during the first 2→3 attempt; after closing it, the actual Page 3 button advanced. No source video-frame observation claimed."
+      },
+      "historicalPage3Navigation": "Observed Page 3 button after popup closed",
+      "repeatedPageCollectionEvidence": [
+        {
+          "pageNumber": 3,
+          "cardCount": 24,
+          "firstSourceCardId": "eb256294-7ffc-4bff-b378-2c316389e34a",
+          "lastSourceCardId": "d41dd956-8cba-4075-a0bb-9d01d3a45498",
+          "cardCollectionSignature": "c6fde2fb16eb4134f6c962d00ecb1e68169139856e4b81e9328e98b033fddac5"
+        },
+        {
+          "pageNumber": 4,
+          "cardCount": 24,
+          "firstSourceCardId": "eb256294-7ffc-4bff-b378-2c316389e34a",
+          "lastSourceCardId": "d41dd956-8cba-4075-a0bb-9d01d3a45498",
+          "cardCollectionSignature": "c6fde2fb16eb4134f6c962d00ecb1e68169139856e4b81e9328e98b033fddac5"
+        }
+      ],
+      "includedInAcceptedSnapshots": false,
+      "includedInCardOrMediaCounts": false
+    }
+  },
+  "listingSnapshots": [
+    {
+      "id": "dropdown-page-1-2026-10-01",
+      "pageNumber": 1,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "Dropdown UI Design Inspiration",
+      "activePage": 1,
+      "pagination": [
+        {
+          "active": null,
+          "current": null,
+          "disabled": true,
+          "label": "Go to previous page",
+          "text": "Previous"
+        },
+        {
+          "active": "true",
+          "current": "page",
+          "disabled": false,
+          "label": "Page 1",
+          "text": "1"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 2",
+          "text": "2"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 3",
+          "text": "3"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 4",
+          "text": "4"
+        },
+        {
+          "active": null,
+          "current": null,
+          "disabled": false,
+          "label": "Go to next page",
+          "text": "Next"
+        }
+      ],
+      "cardCount": 24,
+      "cardCollectionSignature": "81359bf174070e86df8823fbb7f5d9ecb0ac732f0289794a8374979ff0df4301",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "80c01e7f50224f4d10e0f9cf97a3b1ef170239acfc7ea5addd49ccaeeeb27975",
+        "second": "80c01e7f50224f4d10e0f9cf97a3b1ef170239acfc7ea5addd49ccaeeeb27975"
+      },
+      "pageEnumerationEvidence": {
+        "twoReadsMatch": true
+      }
+    },
+    {
+      "id": "dropdown-page-2-2026-10-01",
+      "pageNumber": 2,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "Dropdown UI Design Inspiration",
+      "activePage": 2,
+      "pagination": [
+        {
+          "active": null,
+          "current": null,
+          "disabled": false,
+          "label": "Go to previous page",
+          "text": "Previous"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 1",
+          "text": "1"
+        },
+        {
+          "active": "true",
+          "current": "page",
+          "disabled": false,
+          "label": "Page 2",
+          "text": "2"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 3",
+          "text": "3"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 4",
+          "text": "4"
+        },
+        {
+          "active": null,
+          "current": null,
+          "disabled": false,
+          "label": "Go to next page",
+          "text": "Next"
+        }
+      ],
+      "cardCount": 24,
+      "cardCollectionSignature": "79f83b16139c8f3ea32a0f37bd165aba00cfdaf9b4db405be1c0ca49b1f6beef",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "522c070740a57b39a9386f257cf422c932aaad95e2d85e62bf4e23638f0117ee",
+        "second": "522c070740a57b39a9386f257cf422c932aaad95e2d85e62bf4e23638f0117ee"
+      },
+      "pageEnumerationEvidence": {
+        "twoReadsMatch": true
+      }
+    },
+    {
+      "id": "dropdown-page-3-2026-10-01",
+      "pageNumber": 3,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "Dropdown UI Design Inspiration",
+      "activePage": 3,
+      "pagination": [
+        {
+          "active": null,
+          "current": null,
+          "disabled": false,
+          "label": "Go to previous page",
+          "text": "Previous"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 1",
+          "text": "1"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 2",
+          "text": "2"
+        },
+        {
+          "active": "true",
+          "current": "page",
+          "disabled": false,
+          "label": "Page 3",
+          "text": "3"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 4",
+          "text": "4"
+        },
+        {
+          "active": null,
+          "current": null,
+          "disabled": false,
+          "label": "Go to next page",
+          "text": "Next"
+        }
+      ],
+      "cardCount": 24,
+      "cardCollectionSignature": "c6fde2fb16eb4134f6c962d00ecb1e68169139856e4b81e9328e98b033fddac5",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "ec90a7f55ed9775a8967bf9e6367f4c95e773c34f014a55d2afb964049a088aa",
+        "second": "ec90a7f55ed9775a8967bf9e6367f4c95e773c34f014a55d2afb964049a088aa"
+      },
+      "pageEnumerationEvidence": {
+        "twoReadsMatch": true
+      }
+    },
+    {
+      "id": "dropdown-page-4-2026-10-01",
+      "pageNumber": 4,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "Dropdown UI Design Inspiration",
+      "activePage": 4,
+      "pagination": [
+        {
+          "active": null,
+          "current": null,
+          "disabled": false,
+          "label": "Go to previous page",
+          "text": "Previous"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 1",
+          "text": "1"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 2",
+          "text": "2"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 3",
+          "text": "3"
+        },
+        {
+          "active": "true",
+          "current": "page",
+          "disabled": false,
+          "label": "Page 4",
+          "text": "4"
+        },
+        {
+          "active": null,
+          "current": null,
+          "disabled": true,
+          "label": "Go to next page",
+          "text": "Next"
+        }
+      ],
+      "cardCount": 10,
+      "cardCollectionSignature": "bdb9b930d71b5b01cb829d77a4921c1ea134e2960bfb6f9fd06509885db069cd",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "83225287a34ffd0eae5ebe772ccbab6871d50dbb185a9f2d05e48d6ed5064a09",
+        "second": "83225287a34ffd0eae5ebe772ccbab6871d50dbb185a9f2d05e48d6ed5064a09"
+      },
+      "pageEnumerationEvidence": {
+        "twoReadsMatch": true
+      }
+    }
+  ],
+  "summary": {
+    "cataloguedEntries": 82,
+    "uniqueMedia": 82,
+    "duplicateMediaOccurrences": 0,
+    "mediaTypes": {
+      "image": 34,
+      "video": 48
+    },
+    "mediaObservationsClaimed": 0
+  },
+  "entries": [
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "a1x45h",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "CHAT LAYOUT"
+        }
+      ],
+      "firstVisibleTag": "CHAT LAYOUT",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "284752d8-f247-468f-9ab7-b95cfba324a7",
+      "title": "polishing",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p1-001",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-001"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "kevserctk",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "LIQUID GLASS"
+        }
+      ],
+      "firstVisibleTag": "LIQUID GLASS",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "8d50fb17-f6ca-4b0d-b34a-30ab6d8922f0",
+      "title": "Liquid Glass UI Design Sections",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p1-002",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-002"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "abjt14",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 3,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "bd7f3297-b188-416b-930f-30296af87bc0",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p1-003",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-003"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "gabriell_lab",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 4,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "f173e413-f41e-4efe-b6d6-c224b32c5890",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p1-004",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-004"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "a1x45h",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 5,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "5efed0cf-7e68-4672-8232-c0ff2825b2ab",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p1-005",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-005"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "AdityaSur11",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 6,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "2b4c0666-fe6e-4319-bfa8-531f48b39f36",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p1-006",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-006"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "dejvdesign",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 7,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "3c9cbfe9-2f12-4f3d-b096-e9bf27d34d3b",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p1-007",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-007"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "zzzzshawn",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 8,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "UI INTERACTION"
+        }
+      ],
+      "firstVisibleTag": "UI INTERACTION",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "596bf591-caa2-4af1-9509-d49473d09dd0",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p1-008",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-008"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "cabralorenzo",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 9,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "UI INTERACTION"
+        }
+      ],
+      "firstVisibleTag": "UI INTERACTION",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "f6ea1705-2356-410a-b075-89cef5384d21",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p1-009",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-009"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "byJWXN",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 10,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "db52084d-a3bb-46b2-b10e-d39f6481f96c",
+      "title": "profile menu dropdown ",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p1-010",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-010"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "Matthias_Oel",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 11,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "ebbbd833-c83e-40d2-9bbc-33d8ada19e4c",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p1-011",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-011"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "leouiux",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 12,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "7c86426c-6c0d-4d5f-a5ac-88a4c64ce03a",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p1-012",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-012"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "theShaneLevine",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 13,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "UI KIT"
+        }
+      ],
+      "firstVisibleTag": "UI KIT",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "d2b3b40d-e1ce-47cd-976c-1705da436716",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p1-013",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-013"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "uAghazadae",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 14,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "CARD"
+        }
+      ],
+      "firstVisibleTag": "CARD",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "9ad36656-37b5-4ea8-a2cd-07bbf6173ed5",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p1-014",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-014"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "arknow91",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 15,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "CLAUDE"
+        }
+      ],
+      "firstVisibleTag": "CLAUDE",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "b9399c90-6688-49f9-b290-1a43badd049a",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p1-015",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-015"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "shedsgns",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 16,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TEXT EDITOR"
+        }
+      ],
+      "firstVisibleTag": "TEXT EDITOR",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "a41b5313-0255-4f37-a1aa-49ef85573b49",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p1-016",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-016"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "disarto_max",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 17,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "PROGRESS BAR"
+        }
+      ],
+      "firstVisibleTag": "PROGRESS BAR",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "5873cd36-cca5-4f37-85e3-4abd66d35292",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p1-017",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-017"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "tilljanek",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 18,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MENU"
+        }
+      ],
+      "firstVisibleTag": "MENU",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "b13c835e-d1a8-4cad-9dbc-6275f793ee7e",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p1-018",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-018"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "nilseller",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 19,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "162524b4-4ba9-45a5-af1b-3321bdb8547b",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p1-019",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-019"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "piyushsphere",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 20,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FILTER PRODUCTS"
+        }
+      ],
+      "firstVisibleTag": "FILTER PRODUCTS",
+      "hiddenTagCount": 3,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "46dfbb93-2465-4882-a4bc-18e622079573",
+      "title": "Dropdwon designs",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p1-020",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-020"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "alexgilev",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 21,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MENU"
+        }
+      ],
+      "firstVisibleTag": "MENU",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c4ffe47b-6177-4902-a283-f1c706f4fd7c",
+      "title": "Agentic menu component .\n\nw/ @AgenticUi",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p1-021",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-021"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "kail_designs",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 22,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "NAVIGATION"
+        }
+      ],
+      "firstVisibleTag": "NAVIGATION",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "bf71a0fa-3cd9-45f2-93e1-8322a43e2863",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p1-022",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-022"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "_heyrico",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 23,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "USER PROFILE"
+        }
+      ],
+      "firstVisibleTag": "USER PROFILE",
+      "hiddenTagCount": 3,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "86db0fb5-1dc1-4afb-aa37-60cc50abedc8",
+      "title": "cooking some product exploration ",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p1-023",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-023"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "NateWatkin",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 24,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DATE PICKER"
+        }
+      ],
+      "firstVisibleTag": "DATE PICKER",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c9bf964b-f1c7-4dfc-8966-416d99e16611",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p1-024",
+      "pageNumber": 1,
+      "snapshotId": "dropdown-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-024"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "ersadwork",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "b27d2e03-2a30-4b5f-9f69-f64d11468d74",
+      "title": "Details ",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p2-001",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-025"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "tomm_ui",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "NAVIGATION"
+        }
+      ],
+      "firstVisibleTag": "NAVIGATION",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "0543c6f8-2bda-4958-ad84-b02b1d2cbb60",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p2-002",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-026"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "Osha_Lion",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 3,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "AI"
+        }
+      ],
+      "firstVisibleTag": "AI",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "9650dc46-2630-4064-8485-f376473e23a7",
+      "title": "Select AI model dropdown menu",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p2-003",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-027"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "usrnk1",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 4,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "SIDEBAR"
+        }
+      ],
+      "firstVisibleTag": "SIDEBAR",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "711e5db8-af3f-4d47-bea3-4c01bc063e2c",
+      "title": "WIP explorations for OpenCode desktop ",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p2-004",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-028"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "zzzzshawn",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 5,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TYPOGRAPHY"
+        }
+      ],
+      "firstVisibleTag": "TYPOGRAPHY",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "ad5097d6-e25a-4618-ad1d-1e5bc6aae807",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p2-005",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-029"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "leouiux",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 6,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "UI INTERACTION"
+        }
+      ],
+      "firstVisibleTag": "UI INTERACTION",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "21da6bcc-76c7-4149-803c-ec9aca9f4abc",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p2-006",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-030"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "_heyrico",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 7,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "CHAT LAYOUT"
+        }
+      ],
+      "firstVisibleTag": "CHAT LAYOUT",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "7e461f5b-4add-481c-840c-d534165ae6d8",
+      "title": "recent work ",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p2-007",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-031"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "joshpensky",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 8,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "LIST ITEMS"
+        }
+      ],
+      "firstVisibleTag": "LIST ITEMS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "935f97e6-ae40-4de4-bdd5-e784c938327c",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p2-008",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-032"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "piyushsphere",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 9,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c7d9822e-e837-4ceb-9c00-4f25a9f7532d",
+      "title": "Peak product work",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p2-009",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-033"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "sekachov",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 10,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "SIDEBAR"
+        }
+      ],
+      "firstVisibleTag": "SIDEBAR",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "0ab6d419-c878-4846-8a14-1a44945afaa0",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p2-010",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-034"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "reactiive_",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 11,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "AI"
+        }
+      ],
+      "firstVisibleTag": "AI",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "6b29de95-1542-47e3-ad6d-7b7a8787c38a",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p2-011",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-035"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "jeetnirnejak",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 12,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "8b22f858-287f-4796-915b-42c69b8963f3",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p2-012",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-036"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "shedsgns",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 13,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TOOLTIP / POPOVER"
+        }
+      ],
+      "firstVisibleTag": "TOOLTIP / POPOVER",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "169276a8-b00f-4b62-a75e-fa68742e3821",
+      "title": "branding actions popover menu ",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p2-013",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-037"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "benjaminakar",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 14,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "6d269a28-172f-4690-908d-8ad7cce38b58",
+      "title": "doc prescribed me filter pills ",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p2-014",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-038"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "pqoqubbw",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 15,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "8248b42a-667d-459f-9365-fe4ff364f8b9",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p2-015",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-039"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "Aurelien_Gz",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 16,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "UI INTERACTION"
+        }
+      ],
+      "firstVisibleTag": "UI INTERACTION",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "a5f6f078-6cde-45fe-89c6-8e9fd3747b2b",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p2-016",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-040"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "zzzzshawn",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 17,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "18c488c0-2c75-47f3-b65d-1c35e6b57143",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p2-017",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-041"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "faydesignsstuff",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 18,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "282aa367-5413-4d1f-b5f7-55682ecbc0d8",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p2-018",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-042"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "dev_ya",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 19,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MENU"
+        }
+      ],
+      "firstVisibleTag": "MENU",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "e4c0fd24-8966-4ee4-a4af-3380242face9",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p2-019",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-043"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "AdityaSur11",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 20,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "da5fce41-cf08-4c80-93d4-bb59246db749",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p2-020",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-044"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "arronflashman",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 21,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "630afd32-49a5-4a28-9967-35ea658ba9ce",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p2-021",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-045"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "micka_design",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 22,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "8216876e-093f-4bcd-9944-b4440b6a7aaf",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p2-022",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-046"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "tar_uniqueee",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 23,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "b6ec4764-0d19-4841-9f96-bdda83638f7b",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p2-023",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-047"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "Una",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 24,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "ddb964e6-8c9b-4c70-b74b-f844a75ac3ee",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p2-024",
+      "pageNumber": 2,
+      "snapshotId": "dropdown-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-048"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "jh3yy",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "eb256294-7ffc-4bff-b378-2c316389e34a",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p3-001",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-049"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "argyleink",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "CSS"
+        }
+      ],
+      "firstVisibleTag": "CSS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c6e9a4d3-e029-467d-8db8-e35e5b5196bc",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p3-002",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-050"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "rndr_realm",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 3,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "01abb09a-5de7-4bd4-b63b-a839ec72e100",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p3-003",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-051"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "uxkosta",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 4,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "92a6eced-6414-4164-b63c-1fd9568fd5b7",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p3-004",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-052"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "_heyrico",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 5,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "CHAT LAYOUT"
+        }
+      ],
+      "firstVisibleTag": "CHAT LAYOUT",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "571163e2-9a70-41e1-ac98-254042d69a13",
+      "title": "Still love this clean component ",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p3-005",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-053"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "louisdainguyen",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 6,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MENU"
+        }
+      ],
+      "firstVisibleTag": "MENU",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "41b24c02-5108-4f3d-bf65-2309e000a685",
+      "title": "Day 169: Switch Account Menu.\n\n↓",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p3-006",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-054"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "creativedash",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 7,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "8f715d73-71c7-456d-af78-a5c51952412d",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p3-007",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-055"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "srotimi_ui",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 8,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "SETTINGS PAGE"
+        }
+      ],
+      "firstVisibleTag": "SETTINGS PAGE",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c5a2ecd5-9d2f-496d-9d8e-1c4411e7f626",
+      "title": "Day 27 of posting my designs on X till I get 1k likes",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p3-008",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-056"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "yeasindesign",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 9,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "691931f4-4623-4c0b-af28-bfa4ce8c1779",
+      "title": "the best designs are the simplest  \n\nthis is a dropdown I designed that is ready to be used in your AI app",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p3-009",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-057"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "pacovitiello",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 10,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "25c50022-e630-48a9-a22e-82686b7dd6ed",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p3-010",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-058"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "define_app",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 11,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "165a99df-f2cb-4abe-83d9-a2600d001eb0",
+      "title": "Small UI detail:\n\nAlign submenus with their trigger item.\n\nUsers won’t consciously notice it, but it will make a huge difference.",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p3-011",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-059"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "_cassarino_",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 12,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MODAL"
+        }
+      ],
+      "firstVisibleTag": "MODAL",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c22837ff-307e-4b1d-8685-400961b1e020",
+      "title": " Having fun with modals @agency",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p3-012",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-060"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "disarto_max",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 13,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "9eabec52-2f7b-4d53-b9d0-b7501cdabe8f",
+      "title": "Collection of clean dark mode UI elements ",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p3-013",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-061"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "disarto_max",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 14,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "PROGRESS"
+        }
+      ],
+      "firstVisibleTag": "PROGRESS",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "5e86c52e-00a9-4212-b004-fc1ee968b991",
+      "title": "Collection of clean dark mode UI elements ",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p3-014",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-062"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "anzoryo",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 15,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "dd29256c-615c-460e-8dff-615c4520ff80",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p3-015",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-063"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "jordanphughes",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 16,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "480932a8-1656-4c94-b752-d5ce322bfc58",
+      "title": "Day 1,104\n\n↓\n\nMade with @UntitledUI",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p3-016",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-064"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "LynelSkroll",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 17,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "96b1e84c-756f-4237-837a-7a770f3d1366",
+      "title": "Don't you just love these colours? ",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p3-017",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-065"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "LynelSkroll",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 18,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "999d6e96-dbed-41d2-a3d4-e943c20620ba",
+      "title": "Don't you just love these colours? ",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p3-018",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-066"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "tfalexandrino",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 19,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "UI KIT"
+        }
+      ],
+      "firstVisibleTag": "UI KIT",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "0cdc3294-e2ad-4a5f-8961-c681e3fa8e05",
+      "title": "Components ",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p3-019",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-067"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "AliGrids",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 20,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "USER PROFILE"
+        }
+      ],
+      "firstVisibleTag": "USER PROFILE",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "1bdfd9f2-54ac-41c9-9044-37f8391d539d",
+      "title": "If you had to choose one- light or dark?",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p3-020",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-068"
+    },
+    {
+      "attributionDisplayedText": "Post by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": null,
+      "cardOrder": 21,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "NAVIGATION"
+        }
+      ],
+      "firstVisibleTag": "NAVIGATION",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "d9931019-8049-434d-ab64-57ef9cfae8bd",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p3-021",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-069"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "colmtuite",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 22,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "2217c7c0-3d03-4da9-b4bb-b60ffa06b6b6",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p3-022",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-070"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "shedsgns",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 23,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DASHBOARD"
+        }
+      ],
+      "firstVisibleTag": "DASHBOARD",
+      "hiddenTagCount": 3,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "f725b123-c691-4903-bb30-ec9d4d25b7d4",
+      "title": "clean AI agent dashboard design",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p3-023",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-071"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "arronflashman",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 24,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DASHBOARD"
+        }
+      ],
+      "firstVisibleTag": "DASHBOARD",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "d41dd956-8cba-4075-a0bb-9d01d3a45498",
+      "title": "recent work for an API Gateway product.",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p3-024",
+      "pageNumber": 3,
+      "snapshotId": "dropdown-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-072"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "shedsgns",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MENU"
+        }
+      ],
+      "firstVisibleTag": "MENU",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "6589d5c1-6b25-48f6-abb3-4c2c93e24693",
+      "title": "choose network (dark) ",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p4-001",
+      "pageNumber": 4,
+      "snapshotId": "dropdown-page-4-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-073"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "AliGrids",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "763c9e00-434d-4363-bddb-68231bd1c772",
+      "title": "Designers! \n- \nWhich 'Select Language' dropdown works better for users?",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p4-002",
+      "pageNumber": 4,
+      "snapshotId": "dropdown-page-4-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-074"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "raunofreiberg",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 3,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "1a4dd0ba-48ba-4bd5-aec8-27a1d07b4cd9",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p4-003",
+      "pageNumber": 4,
+      "snapshotId": "dropdown-page-4-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-075"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "kvnkld",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 4,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "WIDGET"
+        }
+      ],
+      "firstVisibleTag": "WIDGET",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "366c3925-29f6-4938-a9ba-0cdd8e617074",
+      "title": "Workflow Action Panel",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p4-004",
+      "pageNumber": 4,
+      "snapshotId": "dropdown-page-4-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-076"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "mehdi_made",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 5,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "LIQUID GLASS"
+        }
+      ],
+      "firstVisibleTag": "LIQUID GLASS",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "9eb61e39-dea6-439a-ab20-130497dbbc27",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p4-005",
+      "pageNumber": 4,
+      "snapshotId": "dropdown-page-4-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-077"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "pqoqubbw",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 6,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "a868fa42-cf3e-45da-b3d3-117e0bf6994b",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p4-006",
+      "pageNumber": 4,
+      "snapshotId": "dropdown-page-4-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-078"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "kianbazza",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 7,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "6b8128aa-1b10-4ce3-8fb7-321b8eb04240",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p4-007",
+      "pageNumber": 4,
+      "snapshotId": "dropdown-page-4-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-079"
+    },
+    {
+      "attributionDisplayedText": "Post by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": null,
+      "cardOrder": 8,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "967e9f6d-c41a-4ce9-aa8b-a5d6ee63cd3e",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p4-008",
+      "pageNumber": 4,
+      "snapshotId": "dropdown-page-4-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-080"
+    },
+    {
+      "attributionDisplayedText": "Post by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": null,
+      "cardOrder": 9,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "UI INTERACTION"
+        }
+      ],
+      "firstVisibleTag": "UI INTERACTION",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "23478c6d-a508-4bf9-a58a-eb4f2aca1745",
+      "title": null,
+      "titleSource": null,
+      "id": "dropdown-p4-009",
+      "pageNumber": 4,
+      "snapshotId": "dropdown-page-4-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-081"
+    },
+    {
+      "attributionDisplayedText": "Post by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": null,
+      "cardOrder": 10,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c73d17f0-7a98-4a36-91d0-b687036b9d3b",
+      "title": "[assign tag]",
+      "titleSource": "actual-media-image-alt",
+      "id": "dropdown-p4-010",
+      "pageNumber": 4,
+      "snapshotId": "dropdown-page-4-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Dropdown",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "dropdown-media-082"
+    }
+  ],
+  "mediaGroups": [
+    {
+      "id": "dropdown-media-001",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-001"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-002",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-002"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-003",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-003"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-004",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-004"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-005",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-005"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-006",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-006"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-007",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-007"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-008",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-008"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-009",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-009"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-010",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-010"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-011",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-011"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-012",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-012"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-013",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-013"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-014",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-014"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-015",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-015"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-016",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-016"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-017",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-017"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-018",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-018"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-019",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-019"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-020",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-020"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-021",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-021"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-022",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-022"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-023",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-023"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-024",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p1-024"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-025",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-001"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-026",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-002"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-027",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-003"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-028",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-004"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-029",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-005"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-030",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-006"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-031",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-007"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-032",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-008"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-033",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-009"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-034",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-010"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-035",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-011"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-036",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-012"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-037",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-013"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-038",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-014"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-039",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-015"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-040",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-016"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-041",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-017"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-042",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-018"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-043",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-019"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-044",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-020"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-045",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-021"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-046",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-022"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-047",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-023"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-048",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p2-024"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-049",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-001"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-050",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-002"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-051",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-003"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-052",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-004"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-053",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-005"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-054",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-006"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-055",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-007"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-056",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-008"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-057",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-009"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-058",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-010"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-059",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-011"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-060",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-012"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-061",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-013"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-062",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-014"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-063",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-015"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-064",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-016"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-065",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-017"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-066",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-018"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-067",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-019"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-068",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-020"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-069",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-021"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-070",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-022"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-071",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-023"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-072",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p3-024"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-073",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p4-001"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-074",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p4-002"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-075",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p4-003"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-076",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p4-004"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-077",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p4-005"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-078",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p4-006"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-079",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p4-007"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-080",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p4-008"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-081",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p4-009"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "dropdown-media-082",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "dropdown-p4-010"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    }
+  ],
+  "enrichments": [
+    {
+      "entryId": "dropdown-p1-003",
+      "date": "2026-10-01",
+      "field": "originalWorkUrl",
+      "value": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "basis": "Actual exact-card modal href; association solely by complete media URL. Historical catalogued-only status retained.",
+      "evidence": "../observations/batch21.json"
+    }
+  ]
+}

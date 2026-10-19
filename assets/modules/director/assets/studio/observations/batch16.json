@@ -1,0 +1,2269 @@
+{
+  "schemaVersion": 1,
+  "batch": 16,
+  "recordedAt": "2026-10-01",
+  "targetFormat": "1920x1080 landscape",
+  "scope": "Two observed video primary chains and one static design independently adapted. No whole-category or exact-original completion claim. Source videos and research browser screenshots are not bundled.",
+  "works": [
+    {
+      "id": "ilya-camera-strip-HPh3wTJXIAALJQ9",
+      "title": "相机参数条 · 亮暗联动演示",
+      "author": "Ilya Miskov / @ilyamiskov",
+      "sourceURL": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "categoryNames": [
+        "Command Bar"
+      ],
+      "observationDepth": "static-image-observed",
+      "sourceDuration": null,
+      "sourceDimensions": {
+        "width": 1162,
+        "height": 880
+      },
+      "acceptedPausedFrameCount": 0,
+      "observedImageCount": 1,
+      "acceptedSamples": [],
+      "mechanisms": [
+        "Single static image divided into a pale upper and nearly black lower field, each containing the same horizontal rounded camera parameter strip.",
+        "Five cells left to right: camera icon + DJI MAVIC 4 PRO; purple lens icon + 28MM; aperture icon + F/2.5; orange-red timer icon + 3S; gold ISO icon + 800.",
+        "Light strip uses pale borders, subtle shadow and dark text; dark strip uses a low-contrast border and muted grey text. Slim dividers separate the cells.",
+        "No pointer, menu, text edit, state change or motion is observed in the static reference."
+      ],
+      "differences": [
+        "Two visual themes are preserved but reflowed to 1920x1080 with legible labels. Icons are original SVG approximations, not reference pixels.",
+        "Entrance, simulated cursor, focal menu 28MM to 35MM, ISO menu 800 to 640, and synchronised field changes in both strips are explicitly original choreography, not source-observed motion.",
+        "Title is device name, prompt is initial focal string, result is initial ISO string. Custom initial values do not acquire invented targets unless focalTarget/isoTarget are explicitly supplied.",
+        "No real camera, photograph EXIF, code generation, network or paid service is accessed."
+      ],
+      "unknowns": [
+        "Source CSS, actual dimensions, icon artwork, color samples, easing or interaction behavior",
+        "Whether reference values are actual camera metadata; only their visible text is recorded"
+      ],
+      "sourceObservationMethod": "One actual static modal image observed. All new cursor, menus and linked changes are original choreography, not observed source motion.",
+      "implementation": {
+        "presetId": "interaction-camera-strip-dual-theme",
+        "module": "../presets/camerastrip.js",
+        "duration": 12,
+        "params": {
+          "title": "DJI MAVIC 4 PRO",
+          "prompt": "28MM",
+          "result": "800"
+        },
+        "paramLimits": {
+          "title": 18,
+          "prompt": 8,
+          "result": 8
+        }
+      },
+      "mainGalleryValidation": {
+        "samples": [
+          {
+            "error": "",
+            "focal": [
+              "28MM",
+              "28MM"
+            ],
+            "iso": [
+              "800",
+              "800"
+            ],
+            "menus": [
+              {
+                "opacity": "0",
+                "visibility": "hidden"
+              },
+              {
+                "opacity": "0",
+                "visibility": "hidden"
+              }
+            ],
+            "pointerFill": "#191B23",
+            "time": "0.00 / 12.00"
+          },
+          {
+            "error": "",
+            "focal": [
+              "28MM",
+              "28MM"
+            ],
+            "iso": [
+              "800",
+              "800"
+            ],
+            "menus": [
+              {
+                "opacity": "0",
+                "visibility": "hidden"
+              },
+              {
+                "opacity": "0",
+                "visibility": "hidden"
+              }
+            ],
+            "pointerFill": "#191B23",
+            "time": "1.00 / 12.00"
+          },
+          {
+            "error": "",
+            "focal": [
+              "35MM",
+              "35MM"
+            ],
+            "iso": [
+              "800",
+              "800"
+            ],
+            "menus": [
+              {
+                "opacity": "0",
+                "visibility": "hidden"
+              },
+              {
+                "opacity": "0",
+                "visibility": "hidden"
+              }
+            ],
+            "pointerFill": "#191B23",
+            "time": "4.50 / 12.00"
+          },
+          {
+            "error": "",
+            "focal": [
+              "35MM",
+              "35MM"
+            ],
+            "iso": [
+              "800",
+              "800"
+            ],
+            "menus": [
+              {
+                "opacity": "0",
+                "visibility": "hidden"
+              },
+              {
+                "opacity": "1",
+                "visibility": "visible"
+              }
+            ],
+            "pointerFill": "#e6e9ee",
+            "time": "7.80 / 12.00"
+          },
+          {
+            "error": "",
+            "focal": [
+              "35MM",
+              "35MM"
+            ],
+            "iso": [
+              "640",
+              "640"
+            ],
+            "menus": [
+              {
+                "opacity": "0",
+                "visibility": "hidden"
+              },
+              {
+                "opacity": "0",
+                "visibility": "hidden"
+              }
+            ],
+            "pointerFill": "#e6e9ee",
+            "time": "9.20 / 12.00"
+          },
+          {
+            "error": "",
+            "focal": [
+              "35MM",
+              "35MM"
+            ],
+            "iso": [
+              "640",
+              "640"
+            ],
+            "menus": [
+              {
+                "opacity": "0",
+                "visibility": "hidden"
+              },
+              {
+                "opacity": "0",
+                "visibility": "hidden"
+              }
+            ],
+            "pointerFill": "#e6e9ee",
+            "time": "12.00 / 12.00"
+          },
+          {
+            "error": "",
+            "focal": [
+              "28MM",
+              "28MM"
+            ],
+            "iso": [
+              "800",
+              "800"
+            ],
+            "menus": [
+              {
+                "opacity": "0",
+                "visibility": "hidden"
+              },
+              {
+                "opacity": "0",
+                "visibility": "hidden"
+              }
+            ],
+            "pointerFill": "#191B23",
+            "time": "0.00 / 12.00"
+          },
+          {
+            "camera": [
+              "相机<&>",
+              "相机<&>"
+            ],
+            "custom": true,
+            "error": "",
+            "focal": [
+              "50MM",
+              "50MM"
+            ],
+            "iso": [
+              "100",
+              "100"
+            ],
+            "time": "12.00 / 12.00"
+          }
+        ],
+        "diagnostic": {
+          "svgCoordinates": {
+            "passed": true,
+            "inside": {
+              "x": 50,
+              "y": 24,
+              "width": 20.387985229492188,
+              "height": 20
+            },
+            "outside": {
+              "x": -100,
+              "y": 24,
+              "width": 29.481979370117188,
+              "height": 20
+            }
+          },
+          "textClipping": {
+            "passed": true,
+            "issues": [
+              {
+                "text": "outside-canvas-test",
+                "type": "outside-canvas"
+              }
+            ]
+          },
+          "total": 1,
+          "errors": [],
+          "seekFailures": [],
+          "layoutFlags": []
+        },
+        "logs": []
+      },
+      "exportValidation": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "frames": 360,
+        "seconds": 12,
+        "audio": false,
+        "fullDecode": "passed",
+        "sampledVisualReview": true,
+        "fullyWatched": false
+      },
+      "previewFile": "camera-strip-dual-theme.mp4"
+    },
+    {
+      "id": "ersad-command-quadrants-2052762430854369481",
+      "title": "HR Command · 四组筛选与清空",
+      "author": "Erşad / @ersadwork",
+      "sourceURL": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "categoryNames": [
+        "Command Bar",
+        "Search",
+        "UI Interaction"
+      ],
+      "observationDepth": "multiple-video-times-observed",
+      "sourceDuration": 22.270833,
+      "sourceDimensions": {
+        "width": 2532,
+        "height": 2050
+      },
+      "acceptedPausedFrameCount": 28,
+      "observedImageCount": 0,
+      "acceptedSamples": [
+        {
+          "label": "0",
+          "currentTime": 0,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "初态白色HR命令菜单，输入栏Search HR tools or press...与蓝色搜索图标和⌘K；Recent五个标签Onboarding/Reviews/Hiring/Benefits/Learning；四格Tools & Apps、Employees、Teams、Locations均各3行。手形鼠标在Loom行，Loom浅灰高亮右箭头；底部上下Navigate/Return Select/Contact。"
+        },
+        {
+          "label": "2",
+          "currentTime": 2,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "输入仍为空，全部12行保留；手形鼠标在Teams的Pulse Medical行，该行灰色高亮带右箭头。"
+        },
+        {
+          "label": "4",
+          "currentTime": 4,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "全部四组保留，输入空；手形鼠标在Employees的Laura Perez行，该行高亮带右箭头，未打开详情。"
+        },
+        {
+          "label": "6",
+          "currentTime": 6,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "手形已转为输入栏I形光标，输入仍占位；Employees第一行James Brown仍灰色选中并带箭头，四组未过滤。"
+        },
+        {
+          "label": "8",
+          "currentTime": 8,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "输入Monday并显示插入光标；Tools & Apps只留Monday.com灰色高亮箭头，其余三格保留标题和结构线但为空；Recent五标签仍在。"
+        },
+        {
+          "label": "10",
+          "currentTime": 10,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "Monday过滤保持；手形鼠标悬停Recent的Benefits标签，标签变白并有细边框，其它标签灰底；没有点击或新结果。"
+        },
+        {
+          "label": "12",
+          "currentTime": 12,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "输入Monday文字被浅灰选区覆盖；I形鼠标在输入栏旁，工具结果仍Monday.com，三格空；未证明具体快捷键。"
+        },
+        {
+          "label": "14",
+          "currentTime": 14,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "查询替换成Asana，文字在灰选区中；Tools & Apps只留Asana高亮及右箭头，员工/团队/地区为空且标题保留。"
+        },
+        {
+          "label": "16",
+          "currentTime": 16,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "查询变成Laura，Employees仅保留Laura Perez并移动到组首行，浅灰高亮右箭头；其余三格为空。"
+        },
+        {
+          "label": "18",
+          "currentTime": 18,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "查询变成Italy，Locations仅留Italy并移到组首行，灰色高亮右箭头；其余三格为空。"
+        },
+        {
+          "label": "20",
+          "currentTime": 20,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "输入S；匹配跨四格：Tools & Apps Asana，Employees Sophia Williams和James Brown，Teams Synergy HR/Aurora Solutions/Pulse Medical，Locations Spain和United States；Asana组首高亮。原始匹配行顺序发生重排。"
+        },
+        {
+          "label": "end",
+          "currentTime": 22.270833,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "末帧查询清空为占位，全部四格12行恢复原顺序，Monday.com组首高亮；没有打开详情或业务执行结果。"
+        },
+        {
+          "label": "21",
+          "currentTime": 21,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "S继续输入成Synergy；Teams仅留Synergy HR并移组首，灰色高亮右箭头；其它三格空。"
+        },
+        {
+          "label": "1",
+          "currentTime": 1,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "初始四格12行不变；手形悬停Asana行，Asana浅灰高亮与右箭头。"
+        },
+        {
+          "label": "3",
+          "currentTime": 3,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "四格12行保持；手形鼠标悬停Locations末行Italy，该行高亮右箭头。"
+        },
+        {
+          "label": "5",
+          "currentTime": 5,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "James Brown灰色高亮带箭头，四组12行保持；普通箭头鼠标移动到输入区下方空白，未打开员工详情。"
+        },
+        {
+          "label": "9",
+          "currentTime": 9,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "Monday筛选保留，手形在Recent的Onboarding标签，该标签变白细框；无点击或查询内容改变。"
+        },
+        {
+          "label": "11",
+          "currentTime": 11,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "Monday过滤仍在，标签均灰底；I形光标回到输入栏，插入光标在Monday末尾。"
+        },
+        {
+          "label": "13",
+          "currentTime": 13,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "A query: Tools Asana selected then Monday.com; Employees James Brown, Sophia Williams, Laura Perez; Teams Aurora Solutions, Pulse Medical; Locations United States, Spain, Italy. Fixed four-group grid remains."
+        },
+        {
+          "label": "15",
+          "currentTime": 15,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "Query cleared to placeholder; all twelve rows restore to original order and Monday.com selected. This reset separates Asana and Laura searches."
+        },
+        {
+          "label": "17",
+          "currentTime": 17,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "Query cleared to placeholder; all original rows and Monday.com selected. Reset occurs between Laura and Italy searches."
+        },
+        {
+          "label": "19",
+          "currentTime": 19,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "Placeholder, caret at start, all original rows restored with Monday.com selected. Reset precedes final S/Synergy query."
+        },
+        {
+          "label": "7",
+          "currentTime": 7,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "First character M entered. Tools Monday.com selected then Loom; Employees James Brown then Sophia Williams; Teams Pulse Medical at first row; Locations empty. Matching results reorder within retained groups."
+        },
+        {
+          "label": "9-4",
+          "currentTime": 9.4,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "Monday query remains with one result; pointer hovers Onboarding recent chip, white fill and border, no navigation."
+        },
+        {
+          "label": "9-7",
+          "currentTime": 9.7,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "Monday query unchanged, pointer hovers Reviews recent chip and gives white bordered state."
+        },
+        {
+          "label": "10-4",
+          "currentTime": 10.4,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "Monday single-result state remains; pointer beyond Learning chip, none highlighted at this instant."
+        },
+        {
+          "label": "9-85",
+          "currentTime": 9.85,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "Monday filter unchanged; pointer hovers Hiring recent chip, white bordered state."
+        },
+        {
+          "label": "10-15",
+          "currentTime": 10.15,
+          "duration": 22.270833,
+          "paused": true,
+          "readyState": 4,
+          "src": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "videoHeight": 2050,
+          "videoWidth": 2532,
+          "observed": "Monday query retained; hand pointer over Learning recent chip, Benefits white bordered state still visible during the transition; no query/navigation change."
+        }
+      ],
+      "mechanisms": [
+        "One white rounded menu on gray canvas, blue search icon, Cmd K hint and fixed Recent chips.",
+        "Fixed 2x2 Tools & Apps / Employees / Teams / Locations groups retain headings/dividers when empty.",
+        "Pointer-driven row hover highlights background and right chevron; observed Loom, Asana, Pulse Medical, Italy, Laura Perez, James Brown.",
+        "M partially filters across Tools/Employees/Teams, Monday leaves only Monday.com.",
+        "Recent Onboarding, Reviews, Hiring, Benefits, Learning hover while Monday remains unchanged.",
+        "Query text visibly selected, then A cross-group matches and Asana-only result.",
+        "Clear resets all twelve original rows with Monday.com selected before Laura query; Laura shifts from third row to first row.",
+        "Clear resets before Italy query; Italy shifts from third row to first row.",
+        "Clear resets before S cross-group matches with prefix results sorted ahead of substring matches, then Synergy-only team.",
+        "Final clear returns complete original listing; no details, action execution or business-success state."
+      ],
+      "differences": [
+        "1920x1080 horizontal layout with wider menu; duration extended from22.270833 to28 seconds.",
+        "Groups, Recent chips and footer translated to Chinese; proper names preserved by default.",
+        "Icons, avatars and flags independently drawn vectors; not source pixels or original code.",
+        "Pointer route, typing interval and selection width approximate visible mechanism; exact physical keys not proven and not labelled.",
+        "Editable prompt and result replace first tool/final team names; retained English aliases preserve fixed original M/A/S style searches. result means team query, not business result.",
+        "Added small interface-demo/no-business-calls caption."
+      ],
+      "unknowns": [
+        "Exact physical keyboard commands and source implementation are not visible.",
+        "Fine icon and portrait detail is approximated; no source pixel assets copied.",
+        "Transient states between paused samples may contain minor additional hover paths; no unseen business outcome inferred."
+      ],
+      "sourceObservationMethod": "Actual card modal original link and rendered source media observed; source viewer contains the exact remote URL and visible controls only. No source media downloaded or reference pixels redistributed.",
+      "implementation": {
+        "presetId": "interaction-hr-command-multigroup-search",
+        "module": "../presets/ersadcommand.js",
+        "duration": 28,
+        "params": {
+          "title": "搜索 HR 工具或输入关键词",
+          "prompt": "Monday",
+          "result": "Synergy"
+        },
+        "paramLimits": {
+          "title": 26,
+          "prompt": 18,
+          "result": 18
+        }
+      },
+      "mainGalleryValidation": {
+        "samples": [
+          {
+            "error": "",
+            "placeholder": "搜索 HR 工具或输入关键词",
+            "query": "",
+            "rows": [
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Monday.com",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgb(245, 245, 246)",
+                "name": "Loom",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Asana",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "James Brown",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Sophia Williams",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Laura Perez",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Aurora Solutions",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Pulse Medical",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Synergy HR",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "United States",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Spain",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Italy",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              }
+            ],
+            "selectionOpacity": "0",
+            "time": "0.00 / 28.00"
+          },
+          {
+            "error": "",
+            "placeholder": "搜索 HR 工具或输入关键词",
+            "query": "",
+            "rows": [
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Monday.com",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Loom",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Asana",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "James Brown",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Sophia Williams",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgb(245, 245, 246)",
+                "name": "Laura Perez",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Aurora Solutions",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Pulse Medical",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Synergy HR",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "United States",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Spain",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Italy",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              }
+            ],
+            "selectionOpacity": "0",
+            "time": "4.20 / 28.00"
+          },
+          {
+            "error": "",
+            "placeholder": "搜索 HR 工具或输入关键词",
+            "query": "Monday",
+            "rows": [
+              {
+                "highlight": "rgb(245, 245, 246)",
+                "name": "Monday.com",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              }
+            ],
+            "selectionOpacity": "0",
+            "time": "7.30 / 28.00"
+          },
+          {
+            "error": "",
+            "placeholder": "搜索 HR 工具或输入关键词",
+            "query": "Monday",
+            "rows": [
+              {
+                "highlight": "rgb(245, 245, 246)",
+                "name": "Monday.com",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              }
+            ],
+            "selectionOpacity": "0",
+            "time": "10.20 / 28.00"
+          },
+          {
+            "error": "",
+            "placeholder": "搜索 HR 工具或输入关键词",
+            "query": "Asana",
+            "rows": [
+              {
+                "highlight": "rgb(245, 245, 246)",
+                "name": "Asana",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              }
+            ],
+            "selectionOpacity": "0",
+            "time": "12.60 / 28.00"
+          },
+          {
+            "error": "",
+            "placeholder": "搜索 HR 工具或输入关键词",
+            "query": "Laura",
+            "rows": [
+              {
+                "highlight": "rgb(245, 245, 246)",
+                "name": "Laura Perez",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              }
+            ],
+            "selectionOpacity": "0",
+            "time": "15.30 / 28.00"
+          },
+          {
+            "error": "",
+            "placeholder": "搜索 HR 工具或输入关键词",
+            "query": "Italy",
+            "rows": [
+              {
+                "highlight": "rgb(245, 245, 246)",
+                "name": "Italy",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              }
+            ],
+            "selectionOpacity": "0",
+            "time": "18.00 / 28.00"
+          },
+          {
+            "error": "",
+            "placeholder": "搜索 HR 工具或输入关键词",
+            "query": "S",
+            "rows": [
+              {
+                "highlight": "rgb(245, 245, 246)",
+                "name": "Asana",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "James Brown",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Sophia Williams",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Aurora Solutions",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Pulse Medical",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Synergy HR",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "United States",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Spain",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              }
+            ],
+            "selectionOpacity": "0",
+            "time": "20.00 / 28.00"
+          },
+          {
+            "error": "",
+            "placeholder": "搜索 HR 工具或输入关键词",
+            "query": "Synergy",
+            "rows": [
+              {
+                "highlight": "rgb(245, 245, 246)",
+                "name": "Synergy HR",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              }
+            ],
+            "selectionOpacity": "0",
+            "time": "22.00 / 28.00"
+          },
+          {
+            "error": "",
+            "placeholder": "搜索 HR 工具或输入关键词",
+            "query": "",
+            "rows": [
+              {
+                "highlight": "rgb(245, 245, 246)",
+                "name": "Monday.com",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Loom",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Asana",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "James Brown",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Sophia Williams",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Laura Perez",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Aurora Solutions",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Pulse Medical",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Synergy HR",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "United States",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Spain",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Italy",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              }
+            ],
+            "selectionOpacity": "0",
+            "time": "25.00 / 28.00"
+          },
+          {
+            "error": "",
+            "placeholder": "搜索 HR 工具或输入关键词",
+            "query": "",
+            "rows": [
+              {
+                "highlight": "rgb(245, 245, 246)",
+                "name": "Monday.com",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Loom",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Asana",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "James Brown",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Sophia Williams",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Laura Perez",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Aurora Solutions",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Pulse Medical",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Synergy HR",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "United States",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Spain",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Italy",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              }
+            ],
+            "selectionOpacity": "0",
+            "time": "28.00 / 28.00"
+          },
+          {
+            "error": "",
+            "placeholder": "搜索 HR 工具或输入关键词",
+            "query": "",
+            "rows": [
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Monday.com",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgb(245, 245, 246)",
+                "name": "Loom",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Asana",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "James Brown",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Sophia Williams",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Laura Perez",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Aurora Solutions",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Pulse Medical",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Synergy HR",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "United States",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Spain",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Italy",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              }
+            ],
+            "selectionOpacity": "0",
+            "time": "0.00 / 28.00"
+          },
+          {
+            "error": "",
+            "placeholder": "搜索<&>",
+            "query": "工具",
+            "rows": [
+              {
+                "highlight": "rgb(245, 245, 246)",
+                "name": "工具",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              }
+            ],
+            "selectionOpacity": "0",
+            "time": "7.40 / 28.00",
+            "custom": true
+          },
+          {
+            "error": "",
+            "placeholder": "搜索<&>",
+            "query": "协同团队",
+            "rows": [
+              {
+                "highlight": "rgb(245, 245, 246)",
+                "name": "协同团队",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              }
+            ],
+            "selectionOpacity": "0",
+            "time": "22.00 / 28.00",
+            "custom": true
+          },
+          {
+            "error": "",
+            "placeholder": "搜索<&>",
+            "query": "",
+            "rows": [
+              {
+                "highlight": "rgb(245, 245, 246)",
+                "name": "工具",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Loom",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Asana",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "James Brown",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Sophia Williams",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Laura Perez",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Aurora Solutions",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Pulse Medical",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "协同团队",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "United States",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Spain",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Italy",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              }
+            ],
+            "selectionOpacity": "0",
+            "time": "28.00 / 28.00",
+            "custom": true
+          },
+          {
+            "error": "",
+            "placeholder": "搜索<&>",
+            "query": "",
+            "rows": [
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "工具",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgb(245, 245, 246)",
+                "name": "Loom",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Asana",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "James Brown",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Sophia Williams",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Laura Perez",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Aurora Solutions",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Pulse Medical",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "协同团队",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "United States",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Spain",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Italy",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              }
+            ],
+            "selectionOpacity": "0",
+            "time": "0.00 / 28.00",
+            "custom": true
+          },
+          {
+            "error": "",
+            "placeholder": "搜索 HR 工具或输入关键词",
+            "query": "Monday",
+            "rows": [
+              {
+                "highlight": "rgb(245, 245, 246)",
+                "name": "Monday.com",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              }
+            ],
+            "selectionOpacity": "0",
+            "time": "7.30 / 28.00",
+            "postCursorRepair": true
+          },
+          {
+            "error": "",
+            "placeholder": "搜索 HR 工具或输入关键词",
+            "query": "Synergy",
+            "rows": [
+              {
+                "highlight": "rgb(245, 245, 246)",
+                "name": "Synergy HR",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              }
+            ],
+            "selectionOpacity": "0",
+            "time": "22.00 / 28.00",
+            "postCursorRepair": true
+          },
+          {
+            "error": "",
+            "placeholder": "搜索 HR 工具或输入关键词",
+            "query": "",
+            "rows": [
+              {
+                "highlight": "rgb(245, 245, 246)",
+                "name": "Monday.com",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Loom",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Asana",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "James Brown",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Sophia Williams",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Laura Perez",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Aurora Solutions",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Pulse Medical",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Synergy HR",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "United States",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Spain",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Italy",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              }
+            ],
+            "selectionOpacity": "0",
+            "time": "28.00 / 28.00",
+            "postCursorRepair": true
+          },
+          {
+            "error": "",
+            "placeholder": "搜索 HR 工具或输入关键词",
+            "query": "",
+            "rows": [
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Monday.com",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgb(245, 245, 246)",
+                "name": "Loom",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Asana",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "James Brown",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Sophia Williams",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Laura Perez",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Aurora Solutions",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Pulse Medical",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Synergy HR",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "United States",
+                "y": "matrix(1, 0, 0, 1, 0, 0)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Spain",
+                "y": "matrix(1, 0, 0, 1, 0, 53)"
+              },
+              {
+                "highlight": "rgba(0, 0, 0, 0)",
+                "name": "Italy",
+                "y": "matrix(1, 0, 0, 1, 0, 106)"
+              }
+            ],
+            "selectionOpacity": "0",
+            "time": "0.00 / 28.00",
+            "postCursorRepair": true
+          }
+        ],
+        "logs": [],
+        "scope": "Root actual main-gallery major default chain, escaped short Chinese parameters, tail-to-zero. No max-length or full continuous watching.",
+        "cursorRepair": {
+          "initialIssue": "Unicode Roman numeral I-beam text overflow at 80% diagnostic sample; width-only change did not resolve fallback glyph width.",
+          "finalChange": "Independent SVG I-beam, no text glyph; diagnostics unchanged and all three modules passed.",
+          "actualShape": {
+            "svgCount": 1,
+            "text": ""
+          }
+        }
+      },
+      "exportValidation": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "frames": 840,
+        "seconds": 28,
+        "audio": false,
+        "fullDecode": "passed",
+        "sampledVisualReview": true,
+        "fullyWatched": false
+      },
+      "previewFile": "command-quadrant-filter.mp4"
+    },
+    {
+      "id": "WORK_IDENTIFIER_PLACEHOLDER",
+      "title": "任务命令栏 · 搜索、配置与主题",
+      "author": "benja / @benjaminakar",
+      "sourceURL": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "categoryNames": [
+        "Command Bar",
+        "Code Editor",
+        "Mac App"
+      ],
+      "observationDepth": "multiple-video-times-observed",
+      "sourceDuration": 19.481481,
+      "sourceDimensions": {
+        "width": 2898,
+        "height": 1750
+      },
+      "acceptedPausedFrameCount": 24,
+      "observedImageCount": 0,
+      "acceptedSamples": [
+        {
+          "id": "benjamin-source-01",
+          "currentTime": 0,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "深色Tembo任务仪表盘，顶部全局搜索，左图标侧栏，任务输入区，Dashboard与Pull Requests列表；当前agent为Claude Code: Opus 4.6，仓库tax。"
+        },
+        {
+          "id": "benjamin-source-02",
+          "currentTime": 1,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "全局命令浮层打开，搜索占位Search tasks, automations, or navigate...；Search分组Tasks...选中，Pull Requests.../Automations...；Pages Home/Tasks/Automations/Settings/Switch workspace。原工作台仍在背景。"
+        },
+        {
+          "id": "benjamin-source-03",
+          "currentTime": 2,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "同一浮层进入任务子层，返回箭头及Search tasks...；任务列表初态多条，Greet user x with a friendly message选中；列表包含Greet with a simple hello message等已存任务。"
+        },
+        {
+          "id": "benjamin-source-04",
+          "currentTime": 3,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "任务子层搜索已有hel文字，但仍显示多条任务的过渡态，原窗口位置和背景不换。"
+        },
+        {
+          "id": "benjamin-source-05",
+          "currentTime": 4,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "hel查询收拢为单条Greet with a simple hello message，列表容器高度同步变小，返回箭头保留。"
+        },
+        {
+          "id": "benjamin-source-06",
+          "currentTime": 5,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "命令浮层消失，仪表盘短暂露出。"
+        },
+        {
+          "id": "benjamin-source-07",
+          "currentTime": 6,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "打开既有任务Greet with a simple hello message，会话显示hello、10 hours ago、Worked for 1h 1m、已创建hello-world.md的历史回复；右侧PR Add hello world greeting，+1/-0，1 failing check，文件hello-world.md一行hello world。并非本段新执行成功。"
+        },
+        {
+          "id": "benjamin-source-08",
+          "currentTime": 7,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "任务上下文命令栏再次打开，Task Actions：Set agent...选中、Set repos...、Toggle task sidebar、Show PR、Show sandbox logs、Reset and retry、Archive task、View PR on GitHub；Search分组边缘可见。"
+        },
+        {
+          "id": "benjamin-source-09",
+          "currentTime": 8,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "同一Task Actions浮层仍为Set agent...选中，无子层或业务动作反馈。"
+        },
+        {
+          "id": "benjamin-source-10",
+          "currentTime": 9,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "进入Search agents...子层，Claude Code/Codex/OpenCode/Cursor/Pi/Amp；OpenCode灰色选中，底提示Enter select，返回箭头保留。"
+        },
+        {
+          "id": "benjamin-source-11",
+          "currentTime": 10,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "浮层关闭，底部代理变为OpenCode: Opus 4.5，右下出现Agent updated通知；会话和PR文件仍在原位。"
+        },
+        {
+          "id": "benjamin-source-12",
+          "currentTime": 11,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "仓库Search repositories...子层，组织benja，tax已勾选且选中，rapid未勾选；底部Space select、Enter confirm；背景仍显示Agent updated。"
+        },
+        {
+          "id": "benjamin-source-13",
+          "currentTime": 11.5,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "rapid行选中并勾选，tax仍勾选，二者都在同一仓库浮层；此刻任务底栏仍tax，确认尚未反馈。"
+        },
+        {
+          "id": "benjamin-source-14",
+          "currentTime": 12,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "仓库浮层关闭，任务底栏变2 repositories；右下出现Connected 2 repositories，前一通知在其后叠放。"
+        },
+        {
+          "id": "benjamin-source-15",
+          "currentTime": 13,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "任务命令栏打开，Show sandbox logs行灰色选中；既有PR和会话还在背景，Connected 2 repositories通知仍在。"
+        },
+        {
+          "id": "benjamin-source-16",
+          "currentTime": 14,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "浮层关闭，右侧原PR区域切换为Sandbox/1 run，内容首先为多行加载骨架；左会话和底部配置保留。"
+        },
+        {
+          "id": "benjamin-source-17",
+          "currentTime": 15,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "右侧日志已出现，当前命令栏再次打开，Set repos...行选中；后方日志部分可读，含git pull (exit 1)、git add -A、git rev-parse HEAD等历史记录，全部未作逐字转录。"
+        },
+        {
+          "id": "benjamin-source-18",
+          "currentTime": 15.5,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "同一命令栏Show PR行选中，后方仍Sandbox历史日志，部分日志success/stop状态可见；不是本段新执行。"
+        },
+        {
+          "id": "benjamin-source-19",
+          "currentTime": 16,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "右侧返回原PR文件内容，Task Actions命令栏再开，Set agent...选中；仍显示1 failing check。"
+        },
+        {
+          "id": "benjamin-source-20",
+          "currentTime": 17,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "同一命令列表滚到下方，Events/Models/Pull Requests/Instructions/Sandbox/API Keys，Appearance分组Change interface theme选中，下方Actions/Create new task。搜索栏固定、右滚动条下移。"
+        },
+        {
+          "id": "benjamin-source-21",
+          "currentTime": 18,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "下方列表仍在，Create new task行灰色选中；没有进入新任务页面。"
+        },
+        {
+          "id": "benjamin-source-22",
+          "currentTime": 18.5,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "进入Choose interface theme...子层，System preference带当前勾号，Light行选中，Dark下方；底部Enter select。"
+        },
+        {
+          "id": "benjamin-source-23",
+          "currentTime": 19,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "同一软件窗切换浅色，主题子层正在淡出；历史会话、PR标题、文件与1 failing check保持。"
+        },
+        {
+          "id": "benjamin-source-24",
+          "currentTime": 19.481481,
+          "readyState": 4,
+          "paused": true,
+          "seeking": false,
+          "videoWidth": 2898,
+          "videoHeight": 1750,
+          "duration": 19.481481,
+          "description": "稳定末帧是浅色既有任务会话+PR文件差异；命令栏已关闭；底栏仍2 repositories和OpenCode: Opus 4.5，PR仍1 failing check。"
+        }
+      ],
+      "mechanisms": [
+        "打开浮层后背景仪表盘保留；进入任务子层出现返回箭头、专属占位与既有任务列表。",
+        "hel匹配单条hello任务，浮层原位缩高；关闭后打开既有会话与并排PR差异。",
+        "任务页命令栏增加Task Actions，保持任务与PR后方上下文。",
+        "代理列表选OpenCode，关闭后底栏代理变OpenCode: Opus 4.5，Agent updated通知。",
+        "tax勾选保留，再选rapid；Space/Enter提示，确认后底栏2 repositories与Connected 2 repositories通知。",
+        "Show sandbox logs选项触发右侧从PR到骨架再日志，Show PR选项返回原文件；会话与配置持续存在。",
+        "浮层列表下滚到Appearance，主题子层保留返回箭头；Light选择后整个原软件窗变浅色且浮层退出。"
+      ],
+      "differences": [
+        "原片2898×1750、19.481481秒；重排为1920×1080横屏并放慢至40秒。保留持续软件窗、全局/任务上下文分层、筛选缩高、双栏既有任务/PR、代理选择、仓库多选确认、PR/日志加载往返、命令内滚动和浅色主题的完整主要链。位置、尺寸、插值和缓动为代码重建，并非提取原片工程。",
+        "多数界面标签译为中文，title、prompt、result为可编辑示意文本。原查询为hel；修改prompt后仍按固定演示链收拢至title对应的一条任务，不构成通用搜索引擎。result显示既有历史答复，不表现一次新生成或新业务执行。",
+        "原片无可核实的鼠标或逐次按键事件。重建不添加指针；窗口外的⌘K、Enter、方向键、Space提示是原创因果引导。⌘+K原片标题及仓库Space/Enter、代理/主题Enter帮助文字已观察，其余具体按键时序未在源中确认。",
+        "背景椭圆线、入场淡入、通用SVG图标和B头像为原创。保留软件层级，不使用原片像素、品牌标志或第三方截图作为模块资产。",
+        "列表仅重建在已接受暂停状态看清的条目；未看清的完整菜单与日志不编造。历史日志保留读到的部分命令/状态并增加“历史日志内容已省略”提示。未观察到的中段列表项目不复刻。",
+        "源通知有叠置旧通知的状态；重建用同一通知位置依次显示代理和仓库反馈。所选代理与两仓库更新顺序保持。",
+        "原片PR始终含1 failing check，重建保留1项检查失败；不会补成成功，也不会执行外链、命令、代理、仓库或任务服务。创建新任务行只被选中后返回主题，未显示新任务创建结果。"
+      ],
+      "unknowns": [
+        "未读取原作源码、精确缓动/布局数值或每个中间键盘事件。",
+        "未看见鼠标或真实按键画面，⌘+K来自原作标题，不能声称实际所有转折使用某按键。",
+        "全部原列表条目和完整日志未逐字读出，未见内容不补为原片转录。",
+        "观察到的是历史任务、配置通知、PR与日志切换，不证明真实执行/新建任务/PR打开外站或失败检查修复。",
+        "原片音频未试听，未连续观看所有帧；24个稳定暂停状态及主要链实际观察，截图只由CUA显示未存本地。"
+      ],
+      "sourceObservationMethod": "Actual card modal original link and rendered source media observed; source viewer contains the exact remote URL and visible controls only. No source media downloaded or reference pixels redistributed.",
+      "implementation": {
+        "presetId": "interaction-command-task-config-theme",
+        "module": "../presets/benjamincommand.js",
+        "duration": 40,
+        "params": {
+          "title": "简单问候任务",
+          "prompt": "hel",
+          "result": "已创建 hello-world.md，内容为 hello world，与 CLAUDE.md 说明一致。"
+        },
+        "paramLimits": {
+          "title": 18,
+          "prompt": 18,
+          "result": 100
+        }
+      },
+      "mainGalleryValidation": {
+        "samples": [
+          {
+            "agent": "Claude Code: Opus 4.6",
+            "error": "",
+            "failingCheck": true,
+            "log": "0",
+            "menuHeight": "606px",
+            "menuOpacity": "0",
+            "page": "global",
+            "paper": "#131314",
+            "phase": "dashboard",
+            "query": "",
+            "repos": "tax",
+            "selection": "tasks",
+            "skeleton": "1",
+            "time": "0.00 / 40.00"
+          },
+          {
+            "agent": "Claude Code: Opus 4.6",
+            "error": "",
+            "failingCheck": true,
+            "log": "0",
+            "menuHeight": "606px",
+            "menuOpacity": "1",
+            "page": "global",
+            "paper": "#131314",
+            "phase": "dashboard",
+            "query": "",
+            "repos": "tax",
+            "selection": "tasks",
+            "skeleton": "1",
+            "time": "2.40 / 40.00"
+          },
+          {
+            "agent": "Claude Code: Opus 4.6",
+            "error": "",
+            "failingCheck": true,
+            "log": "0",
+            "menuHeight": "606px",
+            "menuOpacity": "1",
+            "page": "tasks",
+            "paper": "#131314",
+            "phase": "dashboard",
+            "query": "",
+            "repos": "tax",
+            "selection": "task-0",
+            "skeleton": "1",
+            "time": "3.90 / 40.00"
+          },
+          {
+            "agent": "Claude Code: Opus 4.6",
+            "error": "",
+            "failingCheck": true,
+            "log": "0",
+            "menuHeight": "184px",
+            "menuOpacity": "1",
+            "page": "tasks",
+            "paper": "#131314",
+            "phase": "dashboard",
+            "query": "hel",
+            "repos": "tax",
+            "selection": "task-3",
+            "skeleton": "1",
+            "time": "6.70 / 40.00"
+          },
+          {
+            "agent": "Claude Code: Opus 4.6",
+            "error": "",
+            "failingCheck": true,
+            "log": "0",
+            "menuHeight": "184px",
+            "menuOpacity": "0",
+            "page": "tasks",
+            "paper": "#131314",
+            "phase": "task",
+            "query": "hel",
+            "repos": "tax",
+            "selection": "task-3",
+            "skeleton": "1",
+            "time": "8.80 / 40.00"
+          },
+          {
+            "agent": "Claude Code: Opus 4.6",
+            "error": "",
+            "failingCheck": true,
+            "log": "0",
+            "menuHeight": "474px",
+            "menuOpacity": "1",
+            "page": "agents",
+            "paper": "#131314",
+            "phase": "task",
+            "query": "",
+            "repos": "tax",
+            "selection": "agent-2",
+            "skeleton": "1",
+            "time": "12.90 / 40.00"
+          },
+          {
+            "agent": "OpenCode: Opus 4.5",
+            "error": "",
+            "failingCheck": true,
+            "log": "0",
+            "menuHeight": "474px",
+            "menuOpacity": "0",
+            "page": "agents",
+            "paper": "#131314",
+            "phase": "task",
+            "query": "",
+            "repos": "tax",
+            "selection": "agent-2",
+            "skeleton": "1",
+            "time": "14.60 / 40.00"
+          },
+          {
+            "agent": "OpenCode: Opus 4.5",
+            "error": "",
+            "failingCheck": true,
+            "log": "0",
+            "menuHeight": "332px",
+            "menuOpacity": "1",
+            "page": "repos",
+            "paper": "#131314",
+            "phase": "task",
+            "query": "",
+            "repos": "tax",
+            "selection": "rapid",
+            "skeleton": "1",
+            "time": "17.30 / 40.00"
+          },
+          {
+            "agent": "OpenCode: Opus 4.5",
+            "error": "",
+            "failingCheck": true,
+            "log": "0",
+            "menuHeight": "332px",
+            "menuOpacity": "0",
+            "page": "repos",
+            "paper": "#131314",
+            "phase": "task",
+            "query": "",
+            "repos": "2 个仓库",
+            "selection": "rapid",
+            "skeleton": "1",
+            "time": "18.70 / 40.00"
+          },
+          {
+            "agent": "OpenCode: Opus 4.5",
+            "error": "",
+            "failingCheck": true,
+            "log": "0",
+            "menuHeight": "606px",
+            "menuOpacity": "0",
+            "page": "context",
+            "paper": "#131314",
+            "phase": "logs",
+            "query": "",
+            "repos": "2 个仓库",
+            "selection": "logs",
+            "skeleton": "1",
+            "time": "21.80 / 40.00"
+          },
+          {
+            "agent": "OpenCode: Opus 4.5",
+            "error": "",
+            "failingCheck": true,
+            "log": "1",
+            "menuHeight": "606px",
+            "menuOpacity": "0",
+            "page": "context",
+            "paper": "#131314",
+            "phase": "logs",
+            "query": "",
+            "repos": "2 个仓库",
+            "selection": "logs",
+            "skeleton": "0",
+            "time": "23.00 / 40.00"
+          },
+          {
+            "agent": "OpenCode: Opus 4.5",
+            "error": "",
+            "failingCheck": true,
+            "log": "1",
+            "menuHeight": "606px",
+            "menuOpacity": "0",
+            "page": "context",
+            "paper": "#131314",
+            "phase": "pr",
+            "query": "",
+            "repos": "2 个仓库",
+            "selection": "pr",
+            "skeleton": "0",
+            "time": "25.90 / 40.00"
+          },
+          {
+            "agent": "OpenCode: Opus 4.5",
+            "error": "",
+            "failingCheck": true,
+            "log": "1",
+            "menuHeight": "606px",
+            "menuOpacity": "1",
+            "page": "context",
+            "paper": "#131314",
+            "phase": "pr",
+            "query": "",
+            "repos": "2 个仓库",
+            "selection": "theme",
+            "skeleton": "0",
+            "time": "30.50 / 40.00"
+          },
+          {
+            "agent": "OpenCode: Opus 4.5",
+            "error": "",
+            "failingCheck": true,
+            "log": "1",
+            "menuHeight": "324px",
+            "menuOpacity": "1",
+            "page": "themes",
+            "paper": "#131314",
+            "phase": "pr",
+            "query": "",
+            "repos": "2 个仓库",
+            "selection": "light",
+            "skeleton": "0",
+            "time": "34.70 / 40.00"
+          },
+          {
+            "agent": "OpenCode: Opus 4.5",
+            "error": "",
+            "failingCheck": true,
+            "log": "1",
+            "menuHeight": "324px",
+            "menuOpacity": "0",
+            "page": "themes",
+            "paper": "#f8f8f9",
+            "phase": "light",
+            "query": "",
+            "repos": "2 个仓库",
+            "selection": "light",
+            "skeleton": "0",
+            "time": "37.50 / 40.00"
+          },
+          {
+            "agent": "OpenCode: Opus 4.5",
+            "error": "",
+            "failingCheck": true,
+            "log": "1",
+            "menuHeight": "324px",
+            "menuOpacity": "0",
+            "page": "themes",
+            "paper": "#f8f8f9",
+            "phase": "light",
+            "query": "",
+            "repos": "2 个仓库",
+            "selection": "light",
+            "skeleton": "0",
+            "time": "40.00 / 40.00"
+          },
+          {
+            "agent": "Claude Code: Opus 4.6",
+            "error": "",
+            "failingCheck": true,
+            "log": "0",
+            "menuHeight": "606px",
+            "menuOpacity": "0",
+            "page": "global",
+            "paper": "#131314",
+            "phase": "dashboard",
+            "query": "",
+            "repos": "tax",
+            "selection": "tasks",
+            "skeleton": "1",
+            "time": "0.00 / 40.00"
+          },
+          {
+            "agent": "Claude Code: Opus 4.6",
+            "error": "",
+            "failingCheck": true,
+            "log": "0",
+            "menuHeight": "184px",
+            "menuOpacity": "1",
+            "page": "tasks",
+            "paper": "#131314",
+            "phase": "dashboard",
+            "query": "问候",
+            "repos": "tax",
+            "selection": "task-3",
+            "skeleton": "1",
+            "time": "6.70 / 40.00",
+            "custom": true
+          },
+          {
+            "agent": "Claude Code: Opus 4.6",
+            "error": "",
+            "failingCheck": true,
+            "log": "0",
+            "menuHeight": "184px",
+            "menuOpacity": "0",
+            "page": "tasks",
+            "paper": "#131314",
+            "phase": "task",
+            "query": "问候",
+            "repos": "tax",
+            "selection": "task-3",
+            "skeleton": "1",
+            "time": "8.80 / 40.00",
+            "custom": true
+          },
+          {
+            "agent": "OpenCode: Opus 4.5",
+            "error": "",
+            "failingCheck": true,
+            "log": "0",
+            "menuHeight": "332px",
+            "menuOpacity": "0",
+            "page": "repos",
+            "paper": "#131314",
+            "phase": "task",
+            "query": "",
+            "repos": "2 个仓库",
+            "selection": "rapid",
+            "skeleton": "1",
+            "time": "18.70 / 40.00",
+            "custom": true
+          },
+          {
+            "agent": "OpenCode: Opus 4.5",
+            "error": "",
+            "failingCheck": true,
+            "log": "1",
+            "menuHeight": "606px",
+            "menuOpacity": "0",
+            "page": "context",
+            "paper": "#131314",
+            "phase": "logs",
+            "query": "",
+            "repos": "2 个仓库",
+            "selection": "logs",
+            "skeleton": "0",
+            "time": "23.00 / 40.00",
+            "custom": true
+          },
+          {
+            "agent": "OpenCode: Opus 4.5",
+            "error": "",
+            "failingCheck": true,
+            "log": "1",
+            "menuHeight": "324px",
+            "menuOpacity": "0",
+            "page": "themes",
+            "paper": "#f8f8f9",
+            "phase": "light",
+            "query": "",
+            "repos": "2 个仓库",
+            "selection": "light",
+            "skeleton": "0",
+            "time": "37.50 / 40.00",
+            "custom": true
+          },
+          {
+            "agent": "OpenCode: Opus 4.5",
+            "error": "",
+            "failingCheck": true,
+            "log": "1",
+            "menuHeight": "324px",
+            "menuOpacity": "0",
+            "page": "themes",
+            "paper": "#f8f8f9",
+            "phase": "light",
+            "query": "",
+            "repos": "2 个仓库",
+            "selection": "light",
+            "skeleton": "0",
+            "time": "40.00 / 40.00",
+            "custom": true
+          },
+          {
+            "agent": "Claude Code: Opus 4.6",
+            "error": "",
+            "failingCheck": true,
+            "log": "0",
+            "menuHeight": "606px",
+            "menuOpacity": "0",
+            "page": "global",
+            "paper": "#131314",
+            "phase": "dashboard",
+            "query": "",
+            "repos": "tax",
+            "selection": "tasks",
+            "skeleton": "1",
+            "time": "0.00 / 40.00",
+            "custom": true
+          }
+        ],
+        "logs": [],
+        "scope": "Root major default chain including two repositories, logs skeleton/history, theme, escaped short Chinese and tail-to-zero; no maximal-length or full continuous watching."
+      },
+      "exportValidation": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "frames": 1200,
+        "seconds": 40,
+        "audio": false,
+        "fullDecode": "passed",
+        "sampledVisualReview": true,
+        "fullyWatched": false
+      },
+      "previewFile": "task-command-workspace.mp4"
+    }
+  ],
+  "mainDiagnostics": {
+    "svgCoordinates": {
+      "passed": true,
+      "inside": {
+        "x": 50,
+        "y": 24,
+        "width": 20.387985229492188,
+        "height": 20
+      },
+      "outside": {
+        "x": -100,
+        "y": 24,
+        "width": 29.481979370117188,
+        "height": 20
+      }
+    },
+    "textClipping": {
+      "passed": true,
+      "issues": [
+        {
+          "text": "outside-canvas-test",
+          "type": "outside-canvas"
+        }
+      ]
+    },
+    "total": 3,
+    "errors": [],
+    "seekFailures": [],
+    "layoutFlags": []
+  }
+}

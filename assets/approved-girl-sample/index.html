@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=1920,height=1080,initial-scale=1"><title>把流程交给 Agent · 女孩 AIGC 样片</title><link rel="stylesheet" href="src/style.css"></head>
+<body><main id="root">
+  <div class="topline"><span class="brand"><i></i>工作流</span><span class="label">流程示意 · 演示数据</span></div>
+  <section id="story-copy"><div class="eyebrow" id="eyebrow">01 / 人工搬运</div><h1 id="headline">工具多了，<br>还得<span>自己搬。</span></h1><p id="subline">同一份资料，反复转手。</p><div class="steps"><span id="step-a">图像工具</span><b>→</b><span id="step-b">视频工具</span></div><div id="focus-label"><i></i><span>看资料怎样传过去</span></div></section>
+  <section id="media-window" class="window"><div class="windowbar"><i></i><i></i><i></i><span id="media-title">工具链 · 同一份资料</span><b id="media-status">手动</b></div><div id="media-viewport"><div id="media-stack"></div><div id="focus-shade"></div><div id="focus-ring"></div><div id="cut-wipe"></div></div><div id="media-footer"><span id="media-footer-title">资料包</span><span id="media-footer-status">等待接收</span></div></section>
+  <section id="ui-heading"><p class="eyebrow">把来回搬运，变成一次交付</p><h2>我给清楚资料，<span>再检查结果。</span></h2></section>
+  <svg id="links" viewBox="0 0 1920 1080"><path id="link-a" d="M580 555H632"/><path id="link-b" d="M1220 555H1272"/><path d="M620 543L632 555L620 567M1260 543L1272 555L1260 567"/></svg>
+  <section id="agent-window" class="window"><div class="windowbar"><i></i><i></i><i></i><span>Agent · 执行任务</span></div><div class="agent-body"><div class="agent-name"><span class="agent-icon">A</span><div><h3>整理这份资料</h3><p>按任务说明，生成一张输出图</p></div></div><div class="task-note"><span>任务说明</span><strong>保留完整步骤<br>让交接关系一眼看懂</strong></div><div class="task-row" id="task-received"><span class="tick">✓</span><div><b>资料包</b><small>原图 3 张 · 口播稿 1 份</small></div><em>已接收</em></div><div class="task-row" id="task-goal"><span class="tick">✓</span><div><b>任务说明</b><small>对象、步骤与最终结果</small></div><em>已明确</em></div><div class="task-progress"><span id="progress-label">整理资料 → 生成输出图</span><div><i id="progress-fill"></i></div></div></div></section>
+  <section id="result-window" class="window"><div class="windowbar"><i></i><i></i><i></i><span>输出图 · 核对结果</span></div><div class="result-body"><div class="result-top"><h3>输出图</h3><b id="review-tag">待核对</b></div><div class="output-preview"><div><span>资料包</span><b>→</b><span>Agent</span><b>→</b><span>输出图</span></div><img id="result-image" alt="同一条工具链的 Agent 接管场景"/><p>同一份资料，完成一次交接</p></div><div class="review-row" id="review-a"><i></i><span>资料齐全</span><b>3 / 3</b></div><div class="review-row" id="review-b"><i></i><span>目标一致</span><b>✓</b></div><div class="review-row" id="review-c"><i></i><span>输出图可读</span><b>✓</b></div><div id="result-done"><span>✓</span> 已核对</div></div></section>
+  <div id="package"><div class="paper-corner"></div><b>资料包</b><span>3 张原图<br>1 份口播</span><i></i></div>
+  <div id="caption"><span></span></div>
+  <audio id="voice" preload="auto"></audio>
+  <div id="controls"><button id="play">播放 / 暂停</button><input id="scrub" type="range" min="0" max="14" step=".01"><span id="time">0.0 s</span></div>
+  <div id="loading">正在加载样片素材…</div>
+</main><script src="src/player.js"></script></body></html>

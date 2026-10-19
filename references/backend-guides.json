@@ -1,0 +1,532 @@
+{
+  "schema_version": 1,
+  "entry": "SKILL.md",
+  "policy": "仅按需读取技术接口与素材要求。主入口工作流、当前工程和适用认可风格优先；原独立入口的默认色盘、账号和强制加载顺序不继承。菜单停用不关闭 MCP 工具或源码；有费用的调用依当前用户授权。",
+  "guides": [
+    {
+      "id": "adiao-series-guide",
+      "name": "adiao-series-guide",
+      "path": "assets/modules/adiao-context/GUIDE.md",
+      "purpose": "阿刁账号的原认可证据、最新项目指针和接续资料。",
+      "category": "merged-editing-or-account-entry",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "optional": false
+    },
+    {
+      "id": "adiao-ui-editing",
+      "name": "adiao-ui-editing",
+      "path": "assets/modules/adiao-ui-editing/GUIDE.md",
+      "purpose": "阿刁人物与 UI 剪辑的原创意和制作资源。",
+      "category": "merged-editing-or-account-entry",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "optional": false
+    },
+    {
+      "id": "adiao-workflow",
+      "name": "adiao-workflow",
+      "path": "assets/modules/adiao-workflow/GUIDE.md",
+      "purpose": "阿刁配音、人物、素材与工程交接的技术资料。",
+      "category": "merged-editing-or-account-entry",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "optional": false
+    },
+    {
+      "id": "ai-ui-director",
+      "name": "ai-ui-director",
+      "path": "assets/modules/director/GUIDE.md",
+      "purpose": "软件操作预设、工作室及创建和导出脚本。",
+      "category": "merged-editing-or-account-entry",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "optional": false
+    },
+    {
+      "id": "app-promo-guide",
+      "name": "app-promo-guide",
+      "path": "assets/optional-guides/app-promo-guide/GUIDE.md",
+      "purpose": "软件产品宣传片的素材与制作接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "chatcut-app-promo-guide"
+      ],
+      "optional": true
+    },
+    {
+      "id": "apple-kinetic-promo",
+      "name": "apple-kinetic-promo",
+      "path": "assets/modules/apple-kinetic-promo/GUIDE.md",
+      "purpose": "动态文字、节拍和画面清晰度的原参考。",
+      "category": "merged-editing-or-account-entry",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "optional": false
+    },
+    {
+      "id": "create-motion-graphics",
+      "name": "chatcut:create-motion-graphics",
+      "path": "assets/optional-guides/create-motion-graphics/GUIDE.md",
+      "purpose": "ChatCut 可编辑 JSX 动效的编写、素材绑定和轨道放置接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "create-motion-graphics"
+      ],
+      "optional": true
+    },
+    {
+      "id": "editorial-ui-motion",
+      "name": "editorial-ui-motion",
+      "path": "assets/modules/editorial/GUIDE.md",
+      "purpose": "真实截图聚焦、编辑式排版及 Remotion 模板。",
+      "category": "merged-editing-or-account-entry",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "optional": false
+    },
+    {
+      "id": "embedded-captions",
+      "name": "embedded-captions",
+      "path": "assets/optional-guides/embedded-captions/GUIDE.md",
+      "purpose": "将字幕融入当前构图与时钟的制作方法。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "embedded-captions"
+      ],
+      "optional": true
+    },
+    {
+      "id": "faceless-explainer",
+      "name": "faceless-explainer",
+      "path": "assets/optional-guides/faceless-explainer/GUIDE.md",
+      "purpose": "无人物讲解片的图形表达和生成视觉接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "faceless-explainer"
+      ],
+      "optional": true
+    },
+    {
+      "id": "general-video",
+      "name": "general-video",
+      "path": "assets/optional-guides/general-video/GUIDE.md",
+      "purpose": "通用视频后端的工程、轨道与渲染接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "general-video"
+      ],
+      "optional": true
+    },
+    {
+      "id": "geo-paper-collage-remotion",
+      "name": "geo-paper-collage-remotion",
+      "path": "assets/optional-guides/geo-paper-collage-remotion/GUIDE.md",
+      "purpose": "纸张拼贴与手绘构图的 Remotion 实现参考。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "geo-paper-collage-remotion"
+      ],
+      "optional": true
+    },
+    {
+      "id": "hyperframes",
+      "name": "hyperframes",
+      "path": "assets/optional-guides/hyperframes/GUIDE.md",
+      "purpose": "HyperFrames 框架工程与时间轴技术接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "hyperframes"
+      ],
+      "optional": true
+    },
+    {
+      "id": "hyperframes-animation",
+      "name": "hyperframes-animation",
+      "path": "assets/optional-guides/hyperframes-animation/GUIDE.md",
+      "purpose": "HyperFrames 中确定性动画与缓动接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "hyperframes-animation"
+      ],
+      "optional": true
+    },
+    {
+      "id": "hyperframes-audio",
+      "name": "hyperframes-audio",
+      "path": "assets/optional-guides/hyperframes-audio/GUIDE.md",
+      "purpose": "HyperFrames 音轨、时钟和混音接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "hyperframes-audio"
+      ],
+      "optional": true
+    },
+    {
+      "id": "hyperframes-cli",
+      "name": "hyperframes-cli",
+      "path": "assets/optional-guides/hyperframes-cli/GUIDE.md",
+      "purpose": "HyperFrames 本机检查、预览和渲染命令。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "hyperframes-cli"
+      ],
+      "optional": true
+    },
+    {
+      "id": "hyperframes-core",
+      "name": "hyperframes-core",
+      "path": "assets/optional-guides/hyperframes-core/GUIDE.md",
+      "purpose": "HyperFrames 合成、媒体元素和时间声明。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "hyperframes-core"
+      ],
+      "optional": true
+    },
+    {
+      "id": "hyperframes-creative",
+      "name": "hyperframes-creative",
+      "path": "assets/optional-guides/hyperframes-creative/GUIDE.md",
+      "purpose": "HyperFrames 场景实现与视觉机制参考。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "hyperframes-creative"
+      ],
+      "optional": true
+    },
+    {
+      "id": "hyperframes-keyframes",
+      "name": "hyperframes-keyframes",
+      "path": "assets/optional-guides/hyperframes-keyframes/GUIDE.md",
+      "purpose": "HyperFrames 关键帧与定位采样接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "hyperframes-keyframes"
+      ],
+      "optional": true
+    },
+    {
+      "id": "hyperframes-registry",
+      "name": "hyperframes-registry",
+      "path": "assets/optional-guides/hyperframes-registry/GUIDE.md",
+      "purpose": "HyperFrames 已有组件与预设的查找接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "hyperframes-registry"
+      ],
+      "optional": true
+    },
+    {
+      "id": "motion-graphics",
+      "name": "motion-graphics",
+      "path": "assets/optional-guides/motion-graphics/GUIDE.md",
+      "purpose": "图形动画工程与轨道合成接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "motion-graphics"
+      ],
+      "optional": true
+    },
+    {
+      "id": "multicam-sync",
+      "name": "multicam-sync",
+      "path": "assets/optional-guides/multicam-sync/GUIDE.md",
+      "purpose": "多机位素材与音轨的同步接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "chatcut-multicam-sync"
+      ],
+      "optional": true
+    },
+    {
+      "id": "music-to-video",
+      "name": "music-to-video",
+      "path": "assets/optional-guides/music-to-video/GUIDE.md",
+      "purpose": "音乐时钟与画面节奏的制作接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "music-to-video"
+      ],
+      "optional": true
+    },
+    {
+      "id": "narrated-video-workflow",
+      "name": "narrated-video-workflow",
+      "path": "assets/optional-guides/narrated-video-workflow/GUIDE.md",
+      "purpose": "口播、字幕、素材及时间线的技术交接。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "narrated-video-workflow"
+      ],
+      "optional": true
+    },
+    {
+      "id": "portrait-editorial-explainer",
+      "name": "portrait-editorial-explainer",
+      "path": "assets/optional-guides/portrait-editorial-explainer/GUIDE.md",
+      "purpose": "竖屏编辑式讲解的正式本机入口和工程资源。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "portrait-editorial-explainer"
+      ],
+      "optional": true
+    },
+    {
+      "id": "pr-to-video",
+      "name": "pr-to-video",
+      "path": "assets/optional-guides/pr-to-video/GUIDE.md",
+      "purpose": "代码变更记录转为视频素材的技术接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "pr-to-video"
+      ],
+      "optional": true
+    },
+    {
+      "id": "product-launch-video",
+      "name": "product-launch-video",
+      "path": "assets/optional-guides/product-launch-video/GUIDE.md",
+      "purpose": "产品发布素材的场景与制作参考。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "product-launch-video"
+      ],
+      "optional": true
+    },
+    {
+      "id": "remotion",
+      "name": "remotion",
+      "path": "assets/optional-guides/remotion/GUIDE.md",
+      "purpose": "Remotion 组件、composition 与逐帧渲染接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "remotion"
+      ],
+      "optional": true
+    },
+    {
+      "id": "remotion-animation",
+      "name": "remotion-animation",
+      "path": "assets/optional-guides/remotion-animation/GUIDE.md",
+      "purpose": "Remotion 动画、插值与缓动实现。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "remotion-animation"
+      ],
+      "optional": true
+    },
+    {
+      "id": "remotion-best-practices",
+      "name": "remotion-best-practices",
+      "path": "assets/optional-guides/remotion-best-practices/GUIDE.md",
+      "purpose": "Remotion 运行和渲染的技术约束。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "remotion-best-practices"
+      ],
+      "optional": true
+    },
+    {
+      "id": "remotion-render",
+      "name": "remotion-render",
+      "path": "assets/optional-guides/remotion-render/GUIDE.md",
+      "purpose": "Remotion 导出与运行环境接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "remotion-render"
+      ],
+      "optional": true
+    },
+    {
+      "id": "remotion-spec-translator",
+      "name": "remotion-spec-translator",
+      "path": "assets/optional-guides/remotion-spec-translator/GUIDE.md",
+      "purpose": "将分镜说明落实为 Remotion 工程的接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "remotion-spec-translator"
+      ],
+      "optional": true
+    },
+    {
+      "id": "remotion-to-hyperframes",
+      "name": "remotion-to-hyperframes",
+      "path": "assets/optional-guides/remotion-to-hyperframes/GUIDE.md",
+      "purpose": "明确需要迁移时使用的框架转换资料。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "remotion-to-hyperframes"
+      ],
+      "optional": true
+    },
+    {
+      "id": "remotion-video-production",
+      "name": "remotion-video-production",
+      "path": "assets/optional-guides/remotion-video-production/GUIDE.md",
+      "purpose": "Remotion 视频生产与检查接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "remotion-video-production"
+      ],
+      "optional": true
+    },
+    {
+      "id": "short-video-director",
+      "name": "short-video-director",
+      "path": "assets/optional-guides/short-video-director/GUIDE.md",
+      "purpose": "短视频镜头组织和节奏设计的原方法参考。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "short-video-director"
+      ],
+      "optional": true
+    },
+    {
+      "id": "talking-head-guide",
+      "name": "chatcut:talking-head-guide",
+      "path": "assets/optional-guides/talking-head-guide/GUIDE.md",
+      "purpose": "ChatCut 人物口播轨道、B-roll 与字幕接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "talking-head-guide"
+      ],
+      "optional": true
+    },
+    {
+      "id": "talking-head-recut",
+      "name": "talking-head-recut",
+      "path": "assets/optional-guides/talking-head-recut/GUIDE.md",
+      "purpose": "已有口播素材的重剪和轨道对齐接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "talking-head-recut"
+      ],
+      "optional": true
+    },
+    {
+      "id": "ugc-ad-guide",
+      "name": "ugc-ad-guide",
+      "path": "assets/optional-guides/ugc-ad-guide/GUIDE.md",
+      "purpose": "产品实物及人物展示的素材生成接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "chatcut-ugc-ad-guide"
+      ],
+      "optional": true
+    },
+    {
+      "id": "ui-motion-explainer",
+      "name": "ui-motion-explainer",
+      "path": "assets/base-skill/GUIDE.md",
+      "purpose": "O/X 原库、认可短样、字体及基础工程和导出脚本。",
+      "category": "merged-editing-or-account-entry",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "optional": false
+    },
+    {
+      "id": "video-gen",
+      "name": "chatcut:video-gen",
+      "path": "assets/optional-guides/video-gen/GUIDE.md",
+      "purpose": "视频生成、素材导入与生成状态检查接口。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "video-gen"
+      ],
+      "optional": true
+    },
+    {
+      "id": "video-shotcraft",
+      "name": "video-shotcraft:video-shotcraft",
+      "path": "assets/optional-guides/video-shotcraft/GUIDE.md",
+      "purpose": "镜头构图、动作连续性与场景表达参考。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "video-shotcraft"
+      ],
+      "optional": true
+    },
+    {
+      "id": "video-talkcraft",
+      "name": "video-talkcraft",
+      "path": "assets/optional-guides/video-talkcraft/GUIDE.md",
+      "purpose": "人物口播、表达与剪辑衔接参考。",
+      "category": "backend-guide-only",
+      "alternate_entry_paths": [],
+      "entry_enabled": false,
+      "discover_skill_names": [
+        "video-talkcraft"
+      ],
+      "optional": true
+    }
+  ]
+}

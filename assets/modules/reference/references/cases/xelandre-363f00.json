@@ -1,0 +1,114 @@
+{
+  "slug": "xelandre-363f00",
+  "title": "SaaS product launch video",
+  "date": "2026-09-25",
+  "tags": [
+    "prompt"
+  ],
+  "promptShared": true,
+  "handle": "xelandre__",
+  "poster": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "preview": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "video": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "width": 1920,
+  "height": 1080,
+  "schema_version": "1.0.0",
+  "collected_at": "2026-10-07T02:51:27+00:00",
+  "source_page": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "source_post": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "attribution": "Videos and prompts belong to their creators, linked on each entry.",
+  "source_html_sha256": "ab3bcab239cadcffa40066b597b8a5994767b78be1f1855b086282fb209ddc41",
+  "prompt": "Code-driven animation: an HTML/JS page where every frame is calculated from the time, captured frame by frame with headless Chrome (Playwright), then assembled with ffmpeg into an MP4 with motion blur and code-generated sound.",
+  "prompt_characters": 226,
+  "prompt_sha256": "4a0e1bf932053a9dd2205cd5d8fc0c617e9623635fcf6fc3d48dbd3656495a34",
+  "prompt_extraction": "full HTML #entry-prompt (unfolded source text)",
+  "prompt_rsc_match": true,
+  "prompt_source_note": "This prompt was taken directly from @xelandre__’s post (opens in a new tab).",
+  "stack": "HTML/JS, Playwright, ffmpeg",
+  "model": "Opus 5.5",
+  "effort": null,
+  "iterations": "One-shot",
+  "detail_fields": {
+    "Model": "Opus 5.5",
+    "Iterations": "One-shot",
+    "Stack": "HTML/JS, Playwright, ffmpeg",
+    "Posted": "Sep 25, 2026"
+  },
+  "skill_repo": null,
+  "skill_description": null,
+  "skill_install_command": null,
+  "category": "product-film",
+  "category_inferred": true,
+  "status": "reference-collected",
+  "collection_errors": [],
+  "local_poster": "assets/reference/posters/xelandre-363f00.webp",
+  "local_preview": null,
+  "local_video_absolute": null,
+  "detail_request_retries": [],
+  "media_transfers": {
+    "poster": {
+      "status": "cached",
+      "bytes": 4568,
+      "attempts": []
+    },
+    "preview": {
+      "status": "cached",
+      "bytes": 30658,
+      "attempts": []
+    },
+    "video": {
+      "status": "cached",
+      "bytes": 8512302,
+      "attempts": []
+    }
+  },
+  "media_probe": {
+    "poster": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "webp",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "duration": null,
+      "error": null
+    },
+    "preview": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 720,
+          "height": 406
+        }
+      ],
+      "duration": "4.000000",
+      "error": null
+    },
+    "video": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "duration": "30.058000",
+      "error": null
+    }
+  },
+  "distribution_status": "catalog-and-starters; historical reconstruction and original video not bundled"
+}

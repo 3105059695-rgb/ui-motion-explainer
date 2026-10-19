@@ -1,0 +1,109 @@
+{
+  "slug": "ror-fly-9950f1",
+  "title": "Negroni recipe animation",
+  "date": "2026-09-23",
+  "tags": [
+    "prompt"
+  ],
+  "promptShared": true,
+  "handle": "Ror_Fly",
+  "poster": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "preview": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "video": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "width": 1080,
+  "height": 1080,
+  "schema_version": "1.0.0",
+  "collected_at": "2026-10-07T02:46:55+00:00",
+  "source_page": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "source_post": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "attribution": "Videos and prompts belong to their creators, linked on each entry.",
+  "source_html_sha256": "cb2c9209ad7e02b591c7d4f4d404f8aca3e9e7e7218cbe6080045d04d4b3f322",
+  "prompt": "We're going to try a little test. Do you think you could render a recipe motion graphic animation using javascript or html (w/e you think will produce the best) to show the full recipe from start to finish (empty glass to completed cocktail) - Explainer video style - Showing the recipe ingreidents + measurements as they're going into the cup. Should be a 30s video.",
+  "prompt_characters": 367,
+  "prompt_sha256": "3baf7bd56c13c9a744a61d918a1dc2b1c4b30b74b9bd1a03b2160470cebc0a34",
+  "prompt_extraction": "full HTML #entry-prompt (unfolded source text)",
+  "prompt_rsc_match": true,
+  "prompt_source_note": "This prompt was taken directly from @Ror_Fly’s post (opens in a new tab).",
+  "stack": "HTML",
+  "model": "Opus 5.5",
+  "effort": null,
+  "iterations": null,
+  "detail_fields": {
+    "Model": "Opus 5.5",
+    "Stack": "HTML",
+    "Posted": "Sep 23, 2026"
+  },
+  "skill_repo": null,
+  "skill_description": null,
+  "skill_install_command": null,
+  "category": "recipe-animation",
+  "category_inferred": true,
+  "status": "reference-collected",
+  "collection_errors": [],
+  "local_poster": "assets/reference/posters/ror-fly-9950f1.webp",
+  "local_preview": null,
+  "local_video_absolute": null,
+  "detail_request_retries": [],
+  "media_transfers": {
+    "poster": {
+      "status": "cached",
+      "bytes": 12264,
+      "attempts": []
+    },
+    "preview": {
+      "status": "cached",
+      "bytes": 79688,
+      "attempts": []
+    },
+    "video": {
+      "status": "cached",
+      "bytes": 3994023,
+      "attempts": []
+    }
+  },
+  "media_probe": {
+    "poster": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "webp",
+          "codec_type": "video",
+          "width": 1080,
+          "height": 1080
+        }
+      ],
+      "duration": null,
+      "error": null
+    },
+    "preview": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 720,
+          "height": 720
+        }
+      ],
+      "duration": "4.000000",
+      "error": null
+    },
+    "video": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1080,
+          "height": 1080
+        }
+      ],
+      "duration": "30.000000",
+      "error": null
+    }
+  },
+  "distribution_status": "catalog-and-starters; historical reconstruction and original video not bundled"
+}

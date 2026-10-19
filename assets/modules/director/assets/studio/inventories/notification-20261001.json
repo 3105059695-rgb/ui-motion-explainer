@@ -1,0 +1,1542 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-01",
+  "scope": {
+    "site": "Collect UI",
+    "category": "Notification",
+    "categoryUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "listingUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "observedDate": "2026-10-01",
+    "timezone": "Asia/Shanghai",
+    "enumerationComplete": true,
+    "pagesCatalogued": [
+      1,
+      2
+    ],
+    "sourcePaginationControlsPresent": true,
+    "paginationMode": "actual-pagination-button-pages",
+    "lastPageEvidence": {
+      "snapshotId": "notification-page-2-2026-10-01",
+      "pageNumber": 2,
+      "activePage": 2,
+      "nextPageDisabled": true,
+      "paginationControlsObserved": true,
+      "observedCardCount": 2,
+      "evidenceKind": "loaded-rendered-DOM-two-stable-reads-next-disabled"
+    },
+    "enumerationMeaning": "仅当时实际浏览的完整分页快照，不代表媒体已观看、独立原作总数或全站完成。",
+    "notes": [
+      "Search为完整已加载21卡单列表；实际到达页面底部后完整双读一致，没有源分页，p1仅归档。",
+      "Notification实际Next从1到2；旧首卡脱离、当前页和新首卡均确认后取完整集合双读，末Next禁用。",
+      "Notification第二页翻译尚未稳定的初读单独丢弃保留，未纳入accepted快照、卡片或媒体计数。",
+      "可见翻译标签、完整tag href、hidden +N、实际图片alt与归属href原样保留；隐藏标签不补造。",
+      "原名仅在derivedOriginalCategoryName独立按159类真实完整href映射，不覆盖实际可见标签。",
+      "外部归属链接不冒充原作href，authorProfile null不补造；原作链接按实际精确卡弹层另外丰富。",
+      "目录清点新增媒体观看0、适配0；已有观察只按完整媒体URL分别关联。"
+    ]
+  },
+  "enumerationEvidence": {
+    "frozenRawSha256": "f445b951b0fa15f83230e10d29a7ef95137d5f27fe82d34e53a8f2f4a6f52e7d",
+    "rawMetadata": {
+      "category": "Notification",
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "requestedCategory": "Toast Notifications",
+      "selection": {
+        "requestedNamePresentIn159CategoryRegistry": false,
+        "selectedActualCategory": "Notification",
+        "basis": "Exact current coverage registry contains Notification as the only toast/notif/alert/message candidate; this category is absent from the actual 20 inventory catalog",
+        "categoryRegistrySource": "ai-ui-director/assets/studio/coverage.json",
+        "existingInventoryCatalogSource": "ai-ui-director/assets/studio/inventory-catalog.json",
+        "existingInventoriedCategories": 20
+      },
+      "sourcePaginationControlsPresent": true,
+      "collectionComplete": true,
+      "navigation": [
+        {
+          "fromPage": 1,
+          "toPage": 2,
+          "action": "Clicked actual visible Next button",
+          "selector": "button[data-pagination-next]",
+          "actualLabel": "前往下一页",
+          "oldFirstCheckboxId": "checkbox-8ef39c22-3c4e-41e2-99e5-effe31854ac9",
+          "oldFirstDetached": true,
+          "newFirstCardId": "144fa719-1f66-4553-877d-10a389bd3496",
+          "activePageConfirmed": 2,
+          "dialogCount": 0
+        }
+      ],
+      "discardedReads": [
+        {
+          "targetPage": 2,
+          "reason": "First read after card replacement still showed English card/attribution labels before browser translation settled. Replaced with separate full stable reads; collection card IDs unchanged.",
+          "rejectedFirstSourceCardId": "144fa719-1f66-4553-877d-10a389bd3496",
+          "rejectedCardCount": 2,
+          "discardedVisibleLabels": [
+            [
+              "UI INTERACTION",
+              "MOBILE APP"
+            ],
+            [
+              "NOTIFICATION",
+              "UI INTERACTION"
+            ]
+          ]
+        }
+      ],
+      "modalHandling": [],
+      "mediaObservationClaims": 0,
+      "notes": [
+        "Browser translation currently shows Chinese card tag labels, attribution text and pagination text. Exact visible strings and full hrefs are preserved; original English names are never substituted as observed DOM text.",
+        "Only actual media image alt is a title. Empty image alt and video title are null. Hidden +N is counted; undisclosed tag names are not guessed.",
+        "This directory enumeration does not claim remote video watching, paused media samples, implementation, or whole-site completion.",
+        "derivedOriginalCategoryName is an independent exact-href mapping to the existing 159-category registry; it is not claimed as original raw DOM text and does not replace the actual translated label."
+      ],
+      "twoReadsMatch": true,
+      "collection": {
+        "method": "CUA read-only complete rendered DOM twice per accepted page; actual Next plus old first checkbox detached and active page/new first card confirmation",
+        "capturedAt": "2026-10-01T08:02:06.804Z",
+        "sourcePageCount": 2,
+        "pageCardCounts": [
+          24,
+          2
+        ],
+        "cardOccurrences": 26,
+        "uniqueCardIds": 26,
+        "uniqueCompleteMediaURLs": 26,
+        "mediaTypes": {
+          "video": 20,
+          "image": 6
+        },
+        "derivedCategoryNameMapping": {
+          "source": "ai-ui-director/assets/studio/coverage.json categories (159 actual catalogued category names/URLs)",
+          "association": "exact complete href; separate derived field; observed visible label unchanged",
+          "matchedTagRecordsAcrossBothReads": 76
+        }
+      },
+      "completionEvidence": {
+        "lastPage": 2,
+        "lastPageActive": true,
+        "lastPageNextDisabled": true,
+        "allPageCollectionsReadTwice": true,
+        "allNavigationsOldFirstDetached": true,
+        "dialogsObserved": 0
+      },
+      "navigationNote": "Actual visible Next advanced 1→2. Old first checkbox detached, actual page 2 current and changed first card confirmed before reads. The first new collection read preceded browser translation completion and was discarded as language-unstable; two later complete translated reads match. Final Next is disabled. No modal opened; no source media watching or frame samples."
+    },
+    "rawSourceFile": "batch22-toast-enumeration.json"
+  },
+  "listingSnapshots": [
+    {
+      "id": "notification-page-1-2026-10-01",
+      "pageNumber": 1,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "通知界面设计灵感",
+      "activePage": 1,
+      "pagination": [
+        {
+          "active": null,
+          "controlType": "previous",
+          "current": null,
+          "disabled": true,
+          "label": "返回上一页",
+          "pageValue": null,
+          "text": "之前"
+        },
+        {
+          "active": "true",
+          "controlType": "page",
+          "current": "page",
+          "disabled": false,
+          "label": "第1页",
+          "pageValue": "1",
+          "text": "1"
+        },
+        {
+          "active": "false",
+          "controlType": "page",
+          "current": null,
+          "disabled": false,
+          "label": "第2页",
+          "pageValue": "2",
+          "text": "2"
+        },
+        {
+          "active": null,
+          "controlType": "next",
+          "current": null,
+          "disabled": false,
+          "label": "前往下一页",
+          "pageValue": null,
+          "text": "下一个"
+        }
+      ],
+      "cardCount": 24,
+      "cardCollectionSignature": "20b680867c863df9734091908691dbd8138dc80495353f4601d8b7ebf53568ed",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "1ad6d92a0f57e650c2bac2466105eac01e48fabb8216b3c79dc93ae36ac1b992",
+        "second": "1ad6d92a0f57e650c2bac2466105eac01e48fabb8216b3c79dc93ae36ac1b992"
+      },
+      "pageEnumerationEvidence": {
+        "twoReadsMatch": true
+      }
+    },
+    {
+      "id": "notification-page-2-2026-10-01",
+      "pageNumber": 2,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "通知界面设计灵感",
+      "activePage": 2,
+      "pagination": [
+        {
+          "active": null,
+          "controlType": "previous",
+          "current": null,
+          "disabled": false,
+          "label": "返回上一页",
+          "pageValue": null,
+          "text": "之前"
+        },
+        {
+          "active": "false",
+          "controlType": "page",
+          "current": null,
+          "disabled": false,
+          "label": "第1页",
+          "pageValue": "1",
+          "text": "1"
+        },
+        {
+          "active": "true",
+          "controlType": "page",
+          "current": "page",
+          "disabled": false,
+          "label": "第2页",
+          "pageValue": "2",
+          "text": "2"
+        },
+        {
+          "active": null,
+          "controlType": "next",
+          "current": null,
+          "disabled": true,
+          "label": "前往下一页",
+          "pageValue": null,
+          "text": "下一个"
+        }
+      ],
+      "cardCount": 2,
+      "cardCollectionSignature": "8181289d7b1ca2a1c40b952595b4417556e6ef0b26b15f09af88fcd0ecde94b6",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "f820864e91a86f3293faf224c3be60156ab07d8ba74872896d6e712837fd3e2c",
+        "second": "f820864e91a86f3293faf224c3be60156ab07d8ba74872896d6e712837fd3e2c"
+      },
+      "pageEnumerationEvidence": {
+        "twoReadsMatch": true
+      }
+    }
+  ],
+  "summary": {
+    "cataloguedEntries": 26,
+    "uniqueMedia": 26,
+    "duplicateMediaOccurrences": 0,
+    "mediaTypes": {
+      "video": 20,
+      "image": 6
+    },
+    "mediaObservationsClaimed": 0
+  },
+  "entries": [
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "murattenil",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "动态岛",
+          "derivedOriginalCategoryName": "Dynamic Island"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        }
+      ],
+      "firstVisibleTag": "动态岛",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "8ef39c22-3c4e-41e2-99e5-effe31854ac9",
+      "title": null,
+      "titleSource": null,
+      "id": "notification-p1-001",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-001"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "raunofreiberg",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        }
+      ],
+      "firstVisibleTag": "通知",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "148cc261-55b6-4370-af87-7e66024cfd34",
+      "title": null,
+      "titleSource": null,
+      "id": "notification-p1-002",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-002"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "MoizArshi29",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 3,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        }
+      ],
+      "firstVisibleTag": "通知",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "fa036304-5bbf-4712-88e3-46c32a002dfc",
+      "title": null,
+      "titleSource": null,
+      "id": "notification-p1-003",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-003"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "jrgarciadev",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 4,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        }
+      ],
+      "firstVisibleTag": "通知",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "89363fa7-a70b-4b05-8859-9fddf1a531cc",
+      "title": null,
+      "titleSource": null,
+      "id": "notification-p1-004",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-004"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "tcosta",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 5,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "卡牌",
+          "derivedOriginalCategoryName": "Card"
+        }
+      ],
+      "firstVisibleTag": "通知",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "a6f7eee2-b5a4-4ef2-89a8-34be71d60f02",
+      "title": null,
+      "titleSource": null,
+      "id": "notification-p1-005",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-005"
+    },
+    {
+      "attributionDisplayedText": "设计\nA",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计\nA",
+        "handle": "aydahnizzy",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 6,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        }
+      ],
+      "firstVisibleTag": "通知",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "656af8c1-ba8a-42e2-adf2-b8909c45f005",
+      "title": null,
+      "titleSource": null,
+      "id": "notification-p1-006",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-006"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "SwamiMalode",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 7,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        }
+      ],
+      "firstVisibleTag": "通知",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "deaf4883-02c1-4ff6-935b-5b7d4e411e7b",
+      "title": null,
+      "titleSource": null,
+      "id": "notification-p1-007",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-007"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "benjitaylor",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 8,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        }
+      ],
+      "firstVisibleTag": "通知",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "2efe178b-f7dc-4e01-bef0-12fd41a31909",
+      "title": null,
+      "titleSource": null,
+      "id": "notification-p1-008",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-008"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "pqoqubbw",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 9,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "按钮",
+          "derivedOriginalCategoryName": "Button"
+        }
+      ],
+      "firstVisibleTag": "通知",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "66a9d014-21a0-4c27-87d6-3dde2590ef6e",
+      "title": null,
+      "titleSource": null,
+      "id": "notification-p1-009",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-009"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "studiobakers",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 10,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "小工具",
+          "derivedOriginalCategoryName": "Widget"
+        }
+      ],
+      "firstVisibleTag": "通知",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "96c7412a-c28e-4af8-a5e3-ae5ced93d844",
+      "title": "When the interface and the design elements click.",
+      "titleSource": "actual-media-image-alt",
+      "id": "notification-p1-010",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-010"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "hiaaryan",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 11,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        }
+      ],
+      "firstVisibleTag": "通知",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "59aeec1c-5198-4e63-9a85-105f32591f67",
+      "title": null,
+      "titleSource": null,
+      "id": "notification-p1-011",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-011"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "privetavdey",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 12,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        }
+      ],
+      "firstVisibleTag": "通知",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "8c31f9ca-2d6c-4641-bf5f-6f945f9a6ddc",
+      "title": null,
+      "titleSource": null,
+      "id": "notification-p1-012",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-012"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "pranathiperii",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 13,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        }
+      ],
+      "firstVisibleTag": "通知",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "682bbd43-0941-49c5-be78-72f848b2baf4",
+      "title": "in the next few days, we're slowly rolling a ton of changes that make it easier for you to use v0 in your existing projects and repos. \n\nto start, we made the github sync experience much more powerful. you can now create, update, and merge branches all without ever having to",
+      "titleSource": "actual-media-image-alt",
+      "id": "notification-p1-013",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-013"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "alex_krasikau",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 14,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        }
+      ],
+      "firstVisibleTag": "通知",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c375b2e8-3dce-4e22-83a3-312043170ed7",
+      "title": null,
+      "titleSource": null,
+      "id": "notification-p1-014",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-014"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "jrgarciadev",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 15,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        }
+      ],
+      "firstVisibleTag": "通知",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c810a31c-8e78-44ac-a0ba-dc9894124489",
+      "title": null,
+      "titleSource": null,
+      "id": "notification-p1-015",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-015"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "Jakubantalik",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 16,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "CSS",
+          "derivedOriginalCategoryName": "CSS"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        }
+      ],
+      "firstVisibleTag": "CSS",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "12d4d91d-a204-465a-9a4d-af93153d47f1",
+      "title": null,
+      "titleSource": null,
+      "id": "notification-p1-016",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-016"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "happydesign_",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 17,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "小工具",
+          "derivedOriginalCategoryName": "Widget"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        }
+      ],
+      "firstVisibleTag": "小工具",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "fb6f15d9-1fde-4e32-a7da-cec8d7c4eb28",
+      "title": "Saved payments interface for recurring transactions",
+      "titleSource": "actual-media-image-alt",
+      "id": "notification-p1-017",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-017"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "disarto_max",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 18,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "卡牌",
+          "derivedOriginalCategoryName": "Card"
+        }
+      ],
+      "firstVisibleTag": "通知",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "11f11ae4-bc05-452c-860e-ece07fc16810",
+      "title": "Collection of clean dark mode UI elements ",
+      "titleSource": "actual-media-image-alt",
+      "id": "notification-p1-018",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-018"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "LynelSkroll",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 19,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        }
+      ],
+      "firstVisibleTag": "通知",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "11e71627-5323-43da-be87-49b74179f082",
+      "title": "Don't you just love these colours? ",
+      "titleSource": "actual-media-image-alt",
+      "id": "notification-p1-019",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-019"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "jordanphughes",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 20,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "下拉菜单",
+          "derivedOriginalCategoryName": "Dropdown"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        }
+      ],
+      "firstVisibleTag": "下拉菜单",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "480932a8-1656-4c94-b752-d5ce322bfc58",
+      "title": "Day 1,104\n\n↓\n\nMade with @UntitledUI",
+      "titleSource": "actual-media-image-alt",
+      "id": "notification-p1-020",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-020"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "hero_ui",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 21,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "移动应用",
+          "derivedOriginalCategoryName": "Mobile App"
+        }
+      ],
+      "firstVisibleTag": "通知",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "3e4eedfb-47c0-4d08-8729-fa0ed16ceb3b",
+      "title": null,
+      "titleSource": null,
+      "id": "notification-p1-021",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-021"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "mnowakdesign",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 22,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        }
+      ],
+      "firstVisibleTag": "通知",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "ff0b9123-d833-45ec-9729-b264752fc87c",
+      "title": null,
+      "titleSource": null,
+      "id": "notification-p1-022",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-022"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "lorenzodossi",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 23,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "用户界面交互",
+          "derivedOriginalCategoryName": "UI Interaction"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "网络动画",
+          "derivedOriginalCategoryName": "Web Animation"
+        }
+      ],
+      "firstVisibleTag": "用户界面交互",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "f7c9b78c-be56-4f03-b76c-b1a7c6299653",
+      "title": null,
+      "titleSource": null,
+      "id": "notification-p1-023",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-023"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "pqoqubbw",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 24,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        }
+      ],
+      "firstVisibleTag": "通知",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "1937e4fa-92b4-4073-b515-7121bf1e0a64",
+      "title": null,
+      "titleSource": null,
+      "id": "notification-p1-024",
+      "pageNumber": 1,
+      "snapshotId": "notification-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-024"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "S0LARIN",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "用户界面交互",
+          "derivedOriginalCategoryName": "UI Interaction"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "移动应用",
+          "derivedOriginalCategoryName": "Mobile App"
+        }
+      ],
+      "firstVisibleTag": "用户界面交互",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "144fa719-1f66-4553-877d-10a389bd3496",
+      "title": null,
+      "titleSource": null,
+      "id": "notification-p2-001",
+      "pageNumber": 2,
+      "snapshotId": "notification-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-025"
+    },
+    {
+      "attributionDisplayedText": "发布者",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": null,
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "通知",
+          "derivedOriginalCategoryName": "Notification"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "用户界面交互",
+          "derivedOriginalCategoryName": "UI Interaction"
+        }
+      ],
+      "firstVisibleTag": "通知",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "cf06b8cc-3941-4209-8307-6fd7042347a7",
+      "title": null,
+      "titleSource": null,
+      "id": "notification-p2-002",
+      "pageNumber": 2,
+      "snapshotId": "notification-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Notification",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "notification-media-026"
+    }
+  ],
+  "mediaGroups": [
+    {
+      "id": "notification-media-001",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-001"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-002",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-002"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-003",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-003"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-004",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-004"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-005",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-005"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-006",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-006"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-007",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-007"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-008",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-008"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-009",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-009"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-010",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-010"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-011",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-011"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-012",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-012"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-013",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-013"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-014",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-014"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-015",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-015"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-016",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-016"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-017",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-017"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-018",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-018"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-019",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-019"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-020",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-020"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-021",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-021"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-022",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-022"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-023",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-023"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-024",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p1-024"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-025",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p2-001"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "notification-media-026",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "notification-p2-002"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    }
+  ],
+  "enrichments": [
+    {
+      "entryId": "notification-p1-002",
+      "date": "2026-10-01",
+      "field": "originalWorkUrl",
+      "value": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "basis": "Actual exact-card modal href; association solely by complete media URL. Historical catalogued-only status retained.",
+      "evidence": "../observations/batch22.json"
+    }
+  ]
+}

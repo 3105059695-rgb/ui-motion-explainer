@@ -1,0 +1,1 @@
+window.CONFIG={brand:"动效原语",account:"示意人物",demo:true,fps:60,width:1920,height:1080,end:6,subtitles:false,talkFrames:0,race:{labels:["起点","过程","完成"],keys:[0,2,4,6]}};window.WALL=Array.from({length:36},(_,i)=>i);

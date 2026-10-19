@@ -1,0 +1,1604 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-01",
+  "scope": {
+    "site": "Collect UI",
+    "category": "Navigation",
+    "categoryUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "listingUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "observedDate": "2026-10-01",
+    "timezone": "Asia/Shanghai",
+    "enumerationComplete": true,
+    "pagesCatalogued": [
+      1,
+      2
+    ],
+    "sourcePaginationControlsPresent": true,
+    "paginationMode": "actual-pagination-button-pages",
+    "lastPageEvidence": {
+      "snapshotId": "navigation-page-2-2026-10-01",
+      "pageNumber": 2,
+      "activePage": 2,
+      "nextPageDisabled": true,
+      "paginationControlsObserved": true,
+      "observedCardCount": 2,
+      "evidenceKind": "loaded-rendered-DOM-two-stable-reads-next-disabled"
+    },
+    "enumerationMeaning": "仅当时实际浏览的完整分页快照，不代表媒体已观看、独立原作总数或全站完成。",
+    "notes": [
+      "每个归档页/列表完整已载入卡片集合两次DOM读取一致，卡片顺序及重复均保留；有源分页者末页Next禁用。",
+      "Tabs使用Next分页；Dropdown旧raw的误开弹层及Page 3备注只作纠错历史，accepted快照来自另存的实际换卡双读纠正raw及本次导航。",
+      "Navigation/Mobile App瞬时旧集合只保留discard证据，不参与accepted快照、卡片或URL汇总。",
+      "Code Editor为实际完整加载单列表且无源分页控件，p1仅归档编号；Mac App实际Next一次至末Page 2。",
+      "可见翻译标签、原始tag href、hidden +N、实际图片alt与外部归属href均保留；未展开标签不补造。",
+      "derivedOriginalCategoryName及映射来源独立保留，不覆盖或冒充观察到的可见标签。",
+      "原作href初始null；外部归属链接不冒充原作href，authorProfile null不补造作者身份。",
+      "目录清点新增媒体观看0、适配0；既有真实观察只由汇总脚本按完整媒体URL关联。"
+    ]
+  },
+  "enumerationEvidence": {
+    "frozenRawSha256": "6a5252fb1f4200e06db2781d8100ca4ed2da508422b1fef0857d20e7da1b8a41",
+    "rawMetadata": {
+      "category": "Navigation",
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaObservationClaims": 0,
+      "collection": {
+        "method": "CUA read-only rendered DOM; complete loaded card collection read twice per page; actual pagination buttons used",
+        "capturedAt": "2026-10-01T07:08:46.751Z",
+        "displayLanguage": "Browser translation currently shows some Chinese labels; exact displayed labels preserved with actual hrefs, never translated back or guessed",
+        "pages": 2,
+        "pageCardCounts": [
+          24,
+          2
+        ],
+        "cardOccurrences": 26,
+        "uniqueCompleteMediaURLs": 26,
+        "uniqueCardIds": 26,
+        "mediaTypes": {
+          "video": 21,
+          "image": 5
+        },
+        "derivedCategoryNameMapping": {
+          "source": "LOCAL_ASSET_NOT_DISTRIBUTED categories (159 actual catalogued category names/URLs)",
+          "association": "exact complete href; separate derived field; observed visible label unchanged",
+          "matchedTagRecordsAcrossBothReads": 100
+        }
+      },
+      "navigations": [
+        {
+          "fromPage": 1,
+          "action": "Clicked actual visible Next button",
+          "selector": "button[data-pagination-next]",
+          "actualLabel": "前往下一页",
+          "fromURL": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "toURL": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "acceptedToPage": 2,
+          "buttonWasDisabled": false,
+          "previousCollectionFirstId": "52da44a5-07bc-4590-b80f-8b6a66d3a8e4",
+          "resultCollectionFirstId": "85edb0a4-baf4-4b49-88d7-30d1ff66ad7a",
+          "resultCollectionCardCount": 2,
+          "newCollectionConfirmed": true
+        }
+      ],
+      "twoReadsMatch": true,
+      "complete": true,
+      "modalHandling": [],
+      "rejectedReads": [
+        {
+          "targetPage": 2,
+          "reason": "Immediately after Next, page controls changed to page 2 while old page-1 collection of 24 cards was still present; rejected, then new two-card collection separately read twice.",
+          "rejectedFirstCardId": "52da44a5-07bc-4590-b80f-8b6a66d3a8e4",
+          "rejectedCardCount": 24
+        }
+      ],
+      "completionEvidence": {
+        "lastPage": 2,
+        "lastPageActive": true,
+        "lastPageNextDisabled": true,
+        "allPageCollectionsReadTwice": true,
+        "paginationMode": "actual-next-button-pages",
+        "dialogsObserved": 0
+      },
+      "notes": [
+        "Snapshot enumeration only; no source-modal/video observation or implementation claim.",
+        "Visible card tag labels and attribution text currently include browser-translated Chinese; exact strings and actual hrefs are preserved. Hidden +N is recorded as a count; unexpanded tag names are not guessed.",
+        "Video cards without image alt have null title; actual image alt is stored even when the page has browser translation.",
+        "The external Post by booking link on page 2 is retained as attributionUrl with null authorProfile; it is not claimed to be a source-work href.",
+        "derivedOriginalCategoryName is mapped separately by exact complete tag href to the existing 159-category coverage registry; it is not a claimed original raw DOM string."
+      ]
+    },
+    "rawSourceFile": "batch21-navigation-enumeration.json"
+  },
+  "listingSnapshots": [
+    {
+      "id": "navigation-page-1-2026-10-01",
+      "pageNumber": 1,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "导航界面设计灵感",
+      "activePage": 1,
+      "pagination": [
+        {
+          "active": null,
+          "controlType": "previous",
+          "current": null,
+          "disabled": true,
+          "label": "返回上一页",
+          "pageValue": null,
+          "text": "之前"
+        },
+        {
+          "active": "true",
+          "controlType": "page",
+          "current": "page",
+          "disabled": false,
+          "label": "第1页",
+          "pageValue": "1",
+          "text": "1"
+        },
+        {
+          "active": "false",
+          "controlType": "page",
+          "current": null,
+          "disabled": false,
+          "label": "第2页",
+          "pageValue": "2",
+          "text": "2"
+        },
+        {
+          "active": null,
+          "controlType": "next",
+          "current": null,
+          "disabled": false,
+          "label": "前往下一页",
+          "pageValue": null,
+          "text": "下一个"
+        }
+      ],
+      "cardCount": 24,
+      "cardCollectionSignature": "505e361cf8728ac0dca9109283ac69f1c7cb8e920efc7d41ead8d8f8d7ec2295",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "20269785ebddf92db6d72ea630b814bf130a561ff73239a778be4a95ff7a72e0",
+        "second": "20269785ebddf92db6d72ea630b814bf130a561ff73239a778be4a95ff7a72e0"
+      },
+      "pageEnumerationEvidence": {
+        "twoReadsMatch": true,
+        "collection": {
+          "cardCount": 24,
+          "uniqueCardIds": 24,
+          "uniqueCompleteMediaURLs": 24
+        }
+      }
+    },
+    {
+      "id": "navigation-page-2-2026-10-01",
+      "pageNumber": 2,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "导航界面设计灵感",
+      "activePage": 2,
+      "pagination": [
+        {
+          "active": null,
+          "controlType": "previous",
+          "current": null,
+          "disabled": false,
+          "label": "返回上一页",
+          "pageValue": null,
+          "text": "之前"
+        },
+        {
+          "active": "false",
+          "controlType": "page",
+          "current": null,
+          "disabled": false,
+          "label": "第1页",
+          "pageValue": "1",
+          "text": "1"
+        },
+        {
+          "active": "true",
+          "controlType": "page",
+          "current": "page",
+          "disabled": false,
+          "label": "第2页",
+          "pageValue": "2",
+          "text": "2"
+        },
+        {
+          "active": null,
+          "controlType": "next",
+          "current": null,
+          "disabled": true,
+          "label": "前往下一页",
+          "pageValue": null,
+          "text": "下一个"
+        }
+      ],
+      "cardCount": 2,
+      "cardCollectionSignature": "bae0cf5f23c53f46303c72c721885fa23cb910afa242dd0bc8d4f52f2f54cbb8",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "f26bdfe7ea16f3c95510e225adced629242be96cda931546d18962fa2cdf3443",
+        "second": "f26bdfe7ea16f3c95510e225adced629242be96cda931546d18962fa2cdf3443"
+      },
+      "pageEnumerationEvidence": {
+        "twoReadsMatch": true,
+        "collection": {
+          "cardCount": 2,
+          "uniqueCardIds": 2,
+          "uniqueCompleteMediaURLs": 2
+        }
+      }
+    }
+  ],
+  "summary": {
+    "cataloguedEntries": 26,
+    "uniqueMedia": 26,
+    "duplicateMediaOccurrences": 0,
+    "mediaTypes": {
+      "video": 21,
+      "image": 5
+    },
+    "mediaObservationsClaimed": 0
+  },
+  "entries": [
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "koppkev",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "菜单",
+          "derivedOriginalCategoryName": "Menu"
+        }
+      ],
+      "firstVisibleTag": "导航",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "52da44a5-07bc-4590-b80f-8b6a66d3a8e4",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p1-001",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-001"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "Matthias_Oel",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "用户界面交互",
+          "derivedOriginalCategoryName": "UI Interaction"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        }
+      ],
+      "firstVisibleTag": "用户界面交互",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "1c6d8acd-0cf9-4f80-b1bf-a75ca3ce903d",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p1-002",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-002"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "tell_me_mur",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 3,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "标签页",
+          "derivedOriginalCategoryName": "Tabs"
+        }
+      ],
+      "firstVisibleTag": "导航",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "adc3ce43-ffff-4f6c-8ded-f4ee3d519320",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p1-003",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-003"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "withAnimationUI",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 4,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "按钮",
+          "derivedOriginalCategoryName": "Button"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "动画",
+          "derivedOriginalCategoryName": "Animation"
+        }
+      ],
+      "firstVisibleTag": "按钮",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "d4b9216b-6323-4279-addb-593d14c730c2",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p1-004",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-004"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "gabriell_lab",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 5,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "动画",
+          "derivedOriginalCategoryName": "Animation"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "用户界面交互",
+          "derivedOriginalCategoryName": "UI Interaction"
+        }
+      ],
+      "firstVisibleTag": "动画",
+      "hiddenTagCount": 4,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "2fa7e0de-e102-4ac9-92d1-3e9b2b1640b1",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p1-005",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-005"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "dannyjpwilliams",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 6,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "菜单",
+          "derivedOriginalCategoryName": "Menu"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        }
+      ],
+      "firstVisibleTag": "菜单",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "09f8c565-0e0a-4abd-8e5d-85c55b9b56c6",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p1-006",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-006"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "Jamie_Merrill",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 7,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "用户界面交互",
+          "derivedOriginalCategoryName": "UI Interaction"
+        }
+      ],
+      "firstVisibleTag": "导航",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c721bf14-83ee-4d7c-914f-7a89f3c118d6",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p1-007",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-007"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "DopeOblivion",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 8,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "菜单",
+          "derivedOriginalCategoryName": "Menu"
+        }
+      ],
+      "firstVisibleTag": "导航",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "4fae0173-2eac-4018-ba12-c48de1f8676c",
+      "title": "Details 🤌🤌",
+      "titleSource": "actual-media-image-alt",
+      "id": "navigation-p1-008",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-008"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "noechague",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 9,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "博客",
+          "derivedOriginalCategoryName": "Blog"
+        }
+      ],
+      "firstVisibleTag": "导航",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c00d3685-8461-4712-902b-e4547da18729",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p1-009",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-009"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "renzobianchi_",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 10,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "头部导航",
+          "derivedOriginalCategoryName": "Header Navigation"
+        }
+      ],
+      "firstVisibleTag": "导航",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "ecb087e8-59ea-499d-bd0c-33c9d811c365",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p1-010",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-010"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "SwamiMalode",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 11,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "侧边栏",
+          "derivedOriginalCategoryName": "Sidebar"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        }
+      ],
+      "firstVisibleTag": "侧边栏",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "04113ef0-9bca-48d3-ad53-f61362d4edf2",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p1-011",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-011"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "JerryDizs",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 12,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "卷轴过渡",
+          "derivedOriginalCategoryName": "Scroll Transition"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        }
+      ],
+      "firstVisibleTag": "卷轴过渡",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "9f343652-7a1e-487e-b5ff-278ef0da84b6",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p1-012",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-012"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "ozzyxs1a",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 13,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "用户界面交互",
+          "derivedOriginalCategoryName": "UI Interaction"
+        }
+      ],
+      "firstVisibleTag": "导航",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "21793fa2-4d46-4191-ada2-5386883d89a1",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p1-013",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-013"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "kail_designs",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 14,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "标签页",
+          "derivedOriginalCategoryName": "Tabs"
+        }
+      ],
+      "firstVisibleTag": "导航",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "bf71a0fa-3cd9-45f2-93e1-8322a43e2863",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p1-014",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-014"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "tomm_ui",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 15,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "下拉菜单",
+          "derivedOriginalCategoryName": "Dropdown"
+        }
+      ],
+      "firstVisibleTag": "导航",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "0543c6f8-2bda-4958-ad84-b02b1d2cbb60",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p1-015",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-015"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "seltugba_",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 16,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "侧边栏",
+          "derivedOriginalCategoryName": "Sidebar"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        }
+      ],
+      "firstVisibleTag": "侧边栏",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "97ad9491-3a27-424f-a3f9-e8920388540d",
+      "title": "Sidebar navigation, two themes. ",
+      "titleSource": "actual-media-image-alt",
+      "id": "navigation-p1-016",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-016"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "alibey_10",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 17,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "标签页",
+          "derivedOriginalCategoryName": "Tabs"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        }
+      ],
+      "firstVisibleTag": "标签页",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c97d69c7-e7ab-41cb-a419-4edba5c5490c",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p1-017",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-017"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "jakubkrehel",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 18,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "侧边栏",
+          "derivedOriginalCategoryName": "Sidebar"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        }
+      ],
+      "firstVisibleTag": "侧边栏",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "13581ebb-f622-46f0-94f2-d207d4db2e4f",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p1-018",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-018"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "mihirtwt",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 19,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        }
+      ],
+      "firstVisibleTag": "导航",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "67e80690-2ed1-4482-b0af-119f3cb25883",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p1-019",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-019"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "darylginn",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 20,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "用户界面交互",
+          "derivedOriginalCategoryName": "UI Interaction"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "菜单",
+          "derivedOriginalCategoryName": "Menu"
+        }
+      ],
+      "firstVisibleTag": "用户界面交互",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "ff738e1c-6011-4d62-bfde-c4a1ccea465b",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p1-020",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-020"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "AdarshSingh_in",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 21,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "仪表盘",
+          "derivedOriginalCategoryName": "Dashboard"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "统计数据",
+          "derivedOriginalCategoryName": "Statistics"
+        }
+      ],
+      "firstVisibleTag": "仪表盘",
+      "hiddenTagCount": 3,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "2df700f9-7e3e-42e0-9dca-2d919ce0cd51",
+      "title": "Tasks dashboard design ",
+      "titleSource": "actual-media-image-alt",
+      "id": "navigation-p1-021",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-021"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "hiddnest",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 22,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "博客",
+          "derivedOriginalCategoryName": "Blog"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        }
+      ],
+      "firstVisibleTag": "博客",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "d1ddc815-7a24-476d-bf05-7345628544cc",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p1-022",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-022"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "HeyAnsariUX",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 23,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "仪表盘",
+          "derivedOriginalCategoryName": "Dashboard"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "收件箱",
+          "derivedOriginalCategoryName": "Inbox"
+        }
+      ],
+      "firstVisibleTag": "仪表盘",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "f06a209b-659b-4030-92f2-4489572e5908",
+      "title": "I love product design",
+      "titleSource": "actual-media-image-alt",
+      "id": "navigation-p1-023",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-023"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "jmsbaduor",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 24,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        }
+      ],
+      "firstVisibleTag": "导航",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "3c08acdc-4bfd-4cd3-aa25-582fe89fff05",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p1-024",
+      "pageNumber": 1,
+      "snapshotId": "navigation-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-024"
+    },
+    {
+      "attributionDisplayedText": "设计",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "设计",
+        "handle": "mnowakdesign",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "侧边栏",
+          "derivedOriginalCategoryName": "Sidebar"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        }
+      ],
+      "firstVisibleTag": "侧边栏",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "85edb0a4-baf4-4b49-88d7-30d1ff66ad7a",
+      "title": "Two variations of a sidebar navigation - one collapsed to icon-only and one expanded with labels ",
+      "titleSource": "actual-media-image-alt",
+      "id": "navigation-p2-001",
+      "pageNumber": 2,
+      "snapshotId": "navigation-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-025"
+    },
+    {
+      "attributionDisplayedText": "发布者",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": null,
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "导航",
+          "derivedOriginalCategoryName": "Navigation"
+        },
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "菜单",
+          "derivedOriginalCategoryName": "Menu"
+        }
+      ],
+      "firstVisibleTag": "导航",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "d9931019-8049-434d-ab64-57ef9cfae8bd",
+      "title": null,
+      "titleSource": null,
+      "id": "navigation-p2-002",
+      "pageNumber": 2,
+      "snapshotId": "navigation-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Navigation",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "navigation-media-026"
+    }
+  ],
+  "mediaGroups": [
+    {
+      "id": "navigation-media-001",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-001"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-002",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-002"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-003",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-003"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-004",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-004"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-005",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-005"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-006",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-006"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-007",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-007"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-008",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-008"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-009",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-009"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-010",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-010"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-011",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-011"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-012",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-012"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-013",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-013"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-014",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-014"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-015",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-015"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-016",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-016"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-017",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-017"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-018",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-018"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-019",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-019"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-020",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-020"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-021",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-021"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-022",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-022"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-023",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-023"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-024",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p1-024"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-025",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p2-001"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "navigation-media-026",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "navigation-p2-002"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    }
+  ],
+  "enrichments": [
+    {
+      "entryId": "navigation-p1-003",
+      "date": "2026-10-01",
+      "field": "originalWorkUrl",
+      "value": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "basis": "Actual exact-card modal href; association solely by complete media URL. Historical catalogued-only status retained.",
+      "evidence": "../observations/batch21.json"
+    },
+    {
+      "entryId": "navigation-p1-010",
+      "date": "2026-10-01",
+      "field": "originalWorkUrl",
+      "value": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "basis": "Actual exact-card modal href; association solely by complete media URL. Historical catalogued-only status retained.",
+      "evidence": "../observations/batch22.json"
+    }
+  ]
+}

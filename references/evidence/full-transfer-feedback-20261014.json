@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-14",
+  "source": "Direct user feedback in the local-only/ui conversation after viewing the full-transfer sample",
+  "project": "local-only/full-transfer-sample",
+  "video": "local-only/完整样片.mp4",
+  "user_statement": "很好，我就是想要以后的剪辑里面aigc能搭配着这么顺，目前这些AIGC是你自己做的吗？还是去网上找的，这点儿我得确认一下，其次就是这个图片，我不是写好了ui风格是什么的吗？怎么又做成这样的，你都设计成为这样的了，那其他窗口岂不是也没有办法好好设计",
+  "approval_scope": {
+    "aigc_integration_accepted": true,
+    "ui_appearance_accepted": false,
+    "ui_appearance_feedback": "User rejects the pictured UI as failing to inherit the previously specified style.",
+    "whole_film_approved": false,
+    "new_global_ui_style_approved": false
+  },
+  "reuse": {
+    "accepted_method": "Generate semantic continuous-action B-roll, edit to narration, and hand the same object from generated footage into precisely controlled UI actions.",
+    "not_fixed_defaults": [
+      "physical paper and desk props",
+      "black-sleeved hands",
+      "a specific model",
+      "this sample's white/purple UI",
+      "this sample's panel layout"
+    ],
+    "ui_rule": "This sample's UI and the earlier fresh-use prototype are not approved visual baselines. Find the applicable existing confirmed sample and implementation before claiming style inheritance."
+  },
+  "observed_failure": {
+    "project_style_basis": "Prior fresh-use sample: white, near-black, restrained lavender; no IP-specific character or voice.",
+    "diagnosis_by_assistant": "The implementation substituted a palette summary and an unapproved prototype for a complete confirmed visual baseline; no approved segment, applicable profile, or visual implementation source was bound to the project.",
+    "exact_applicable_original_baseline": "not yet identified for this unnamed-account sample; do not guess an account"
+  },
+  "provenance": {
+    "generated_not_stock": true,
+    "provider": "metaso.cn",
+    "model": "MiniMax-H3",
+    "tasks": [
+      "2110236511317798912",
+      "2110236555716079616"
+    ],
+    "records": "local-only/resource-provenance.json"
+  },
+  "rejected_ui_image": "local-only/rejected-ui-user-feedback.png",
+  "evidence_boundary": "The positive AIGC-integration feedback is not whole-film approval, UI-style approval, permission to replace an account baseline, or proof that every other conversation has refreshed its loaded instructions."
+}

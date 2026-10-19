@@ -1,0 +1,81 @@
+{
+  "title": "从人工搬运，到交付与核对",
+  "duration": 11.3,
+  "fps": 30,
+  "mode": "aigc-ui-sample",
+  "profile": "user-ui",
+  "aigc_style_id": "qiuzhi-girl-painterly",
+  "audio": "audio/mix.wav",
+  "captions": [
+    {
+      "start": 0.33,
+      "end": 1.69,
+      "text": "工具越来越多，"
+    },
+    {
+      "start": 1.74,
+      "end": 4.18,
+      "text": "素材却还是要我来回搬。"
+    },
+    {
+      "start": 4.43,
+      "end": 5.84,
+      "text": "把流程交给 Agent 后，"
+    },
+    {
+      "start": 5.92,
+      "end": 7.49,
+      "text": "我只需要给清楚资料，"
+    },
+    {
+      "start": 7.54,
+      "end": 8.65,
+      "text": "再检查结果。"
+    }
+  ],
+  "edit": {
+    "shots": [
+      {
+        "id": "manual",
+        "start": 0,
+        "end": 4.4,
+        "source": "assets/manual-v2.mp4",
+        "poster": "assets/manual-face-lock.png",
+        "in": 0,
+        "out": 4.85,
+        "focus": {
+          "x": 0.33,
+          "y": 0.32,
+          "width": 0.4,
+          "height": 0.56,
+          "start": 0.01,
+          "end": 0.13,
+          "scale": 1.1
+        }
+      },
+      {
+        "id": "takeover",
+        "start": 4.4,
+        "end": 5.95,
+        "source": "assets/takeover.mp4",
+        "poster": "assets/takeover.png",
+        "in": 0.5,
+        "out": 3.28
+      },
+      {
+        "id": "handoff",
+        "start": 5.95,
+        "end": 7.55,
+        "source": "assets/handoff.mp4",
+        "poster": "assets/handoff.png",
+        "in": 0.25,
+        "out": 2.45
+      }
+    ],
+    "ui_start": 7.55,
+    "ui_check_start": 8.65
+  },
+  "style_basis": "A01 approved demo; current approved girl scene images",
+  "approval": "preview-awaiting-user-feedback",
+  "audio_note": "HeyGen public Lea voice, exact source narration; no user voice cloning; original procedural SFX"
+}

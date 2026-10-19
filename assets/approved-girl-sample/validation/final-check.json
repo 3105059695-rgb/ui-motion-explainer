@@ -1,0 +1,59 @@
+{
+  "file": "assets/approved-girl-sample/output/preview.mp4",
+  "sha256": "b70994e106999601574fa526a0aed435b43ad882f05aad1c7497bd2941433d0a",
+  "width": 1920,
+  "height": 1080,
+  "fps": "30/1",
+  "duration": 11.3,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "full_decode": "passed by renderer",
+  "browser_errors": [],
+  "source_seek_and_pixel_checks": "assets/approved-girl-sample/src/qa/media-decoding.json",
+  "encoded_motion_checks": [
+    {
+      "shot": "manual",
+      "encoded_times": [
+        0.8,
+        3.95
+      ],
+      "changed_pixel_fraction": 0.6895359848484849
+    },
+    {
+      "shot": "takeover",
+      "encoded_times": [
+        4.7,
+        5.65
+      ],
+      "changed_pixel_fraction": 0.9348011363636364
+    },
+    {
+      "shot": "handoff",
+      "encoded_times": [
+        6.2,
+        7.3
+      ],
+      "changed_pixel_fraction": 0.7967487373737374
+    }
+  ],
+  "frame_files": [
+    "assets/approved-girl-sample\\validation\\encoded-00.00.jpg",
+    "assets/approved-girl-sample\\validation\\encoded-00.80.jpg",
+    "assets/approved-girl-sample\\validation\\encoded-02.50.jpg",
+    "assets/approved-girl-sample\\validation\\encoded-03.95.jpg",
+    "assets/approved-girl-sample\\validation\\encoded-04.70.jpg",
+    "assets/approved-girl-sample\\validation\\encoded-05.65.jpg",
+    "assets/approved-girl-sample\\validation\\encoded-06.20.jpg",
+    "assets/approved-girl-sample\\validation\\encoded-07.30.jpg",
+    "assets/approved-girl-sample\\validation\\encoded-07.85.jpg",
+    "assets/approved-girl-sample\\validation\\encoded-08.60.jpg",
+    "assets/approved-girl-sample\\validation\\encoded-09.80.jpg",
+    "assets/approved-girl-sample\\validation\\encoded-11.25.jpg"
+  ],
+  "contact_sheet": "assets/approved-girl-sample/validation/encoded-contact-sheet.jpg",
+  "audio_alignment": "Provider word timestamps plus independent cached Whisper; exact script preserved, machine same-sound 搬/班 transcription caveat.",
+  "full_normal_speed_listening_review": false,
+  "user_approved_this_video": false,
+  "visual_review_status": "Frames exported for inspection; see visual-review.json for actual observations.",
+  "scope": "File structure, existing full decode result, actual encoded pixel changes; not an aesthetic certification."
+}

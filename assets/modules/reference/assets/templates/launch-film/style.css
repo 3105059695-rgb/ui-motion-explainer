@@ -1,0 +1,12 @@
+@font-face{font-family:PMGeist;src:url('assets/fonts/Geist.ttf') format('truetype');font-weight:100 900;font-display:block}
+@font-face{font-family:PMArchivo;src:url('assets/fonts/Archivo.ttf') format('truetype');font-weight:100 900;font-stretch:62.5% 125%;font-display:block}
+:root{color-scheme:light;font-family:PMGeist,Arial,"Microsoft YaHei",sans-serif;background:#ecece7;color:#161616}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{display:flex;align-items:center;justify-content:center}
+#stage{width:min(100vw,100vh);height:min(100vw,100vh);position:relative;background:#f2f1eb;overflow:hidden}
+#film{display:block;width:100%;height:100%;touch-action:none}
+#controls{position:fixed;z-index:10;bottom:14px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;max-width:95vw;padding:10px 13px;border:1px solid #dadad1;border-radius:13px;background:#fafaf5f0;font-size:12px;box-shadow:0 5px 20px #00000014}
+#controls input{width:220px;accent-color:#151515}#controls output{white-space:nowrap;font-variant-numeric:tabular-nums}#controls span{white-space:nowrap;color:#77786f}
+button{font:inherit;background:#171717;color:#fff;border:0;border-radius:7px;padding:7px 12px;cursor:pointer}
+body.render #stage{width:100vw;height:100vh}body.render #controls{display:none}
+@media(max-width:620px){#controls span{display:none}#controls input{width:130px}}

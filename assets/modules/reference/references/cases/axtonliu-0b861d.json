@@ -1,0 +1,113 @@
+{
+  "slug": "axtonliu-0b861d",
+  "title": "Pelican riding a bicycle",
+  "date": "2026-09-24",
+  "tags": [
+    "prompt"
+  ],
+  "promptShared": true,
+  "handle": "AxtonLiu",
+  "poster": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "preview": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "video": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "width": 1920,
+  "height": 1080,
+  "schema_version": "1.0.0",
+  "collected_at": "2026-10-07T02:47:52+00:00",
+  "source_page": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "source_post": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "attribution": "Videos and prompts belong to their creators, linked on each entry.",
+  "source_html_sha256": "b87f3034954c069b0f00553cd4f5a917070cac828345508432bf2df777267fe2",
+  "prompt": "每次一个新的模型出来呢，大家都让它去画 “鹈鹕骑自行车” 来判断这个模型的空间能力，基本上都是用 HTML、SVG 来画动画。当我实在看得都有审美疲劳了，我希望你能画一个最复杂、最精细、最精美的 “鹈鹕骑自行车”的动画视频，你可以用任何的技术，不用着急，画一天都可以。",
+  "prompt_characters": 134,
+  "prompt_sha256": "fa61721e87a60572057180ff67083338f558ecb260770cffbe1b85ff50c5f0c7",
+  "prompt_extraction": "full HTML #entry-prompt (unfolded source text)",
+  "prompt_rsc_match": true,
+  "prompt_source_note": "This prompt was taken directly from @AxtonLiu’s post (opens in a new tab).",
+  "stack": null,
+  "model": "Opus 5.5",
+  "effort": null,
+  "iterations": "One-shot",
+  "detail_fields": {
+    "Model": "Opus 5.5",
+    "Iterations": "One-shot",
+    "Posted": "Sep 24, 2026"
+  },
+  "skill_repo": null,
+  "skill_description": null,
+  "skill_install_command": null,
+  "category": "general-motion",
+  "category_inferred": true,
+  "status": "reference-collected",
+  "collection_errors": [],
+  "local_poster": "assets/reference/posters/axtonliu-0b861d.webp",
+  "local_preview": null,
+  "local_video_absolute": null,
+  "detail_request_retries": [],
+  "media_transfers": {
+    "poster": {
+      "status": "cached",
+      "bytes": 44824,
+      "attempts": []
+    },
+    "preview": {
+      "status": "cached",
+      "bytes": 274891,
+      "attempts": []
+    },
+    "video": {
+      "status": "cached",
+      "bytes": 23504995,
+      "attempts": []
+    }
+  },
+  "media_probe": {
+    "poster": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "webp",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "duration": null,
+      "error": null
+    },
+    "preview": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 720,
+          "height": 406
+        }
+      ],
+      "duration": "4.000000",
+      "error": null
+    },
+    "video": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "duration": "38.058000",
+      "error": null
+    }
+  },
+  "distribution_status": "catalog-and-starters; historical reconstruction and original video not bundled"
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>我的 UI 动效 · 字体与花字</title>
+  <link rel="stylesheet" href="fonts.css"><link rel="stylesheet" href="pairings.css">
+  <link rel="stylesheet" href="effects.css"><link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+  <main>
+    <header><a class="wordmark" href="#">UI <span>TYPE / MOTION</span></a><span class="edition">乔木字库 × 我的 UI 动效</span></header>
+    <section class="intro"><div><p class="eyebrow">为每一种表达，选一副合适的字形</p><h1>让重点，<span>一眼可见。</span></h1></div><p class="intro-note">标题有性格，正文有秩序。<br>先选内容的语气，再让文字动起来。</p></section>
+    <section class="demo-wrap" aria-label="可交互文字动效预览">
+      <div class="stage qm-pairing" data-pairing="tech" id="stage">
+        <div class="stage-meta"><span id="pair-name">科技产品</span><span class="qm-latin">TYPE IN MOTION · 01</span></div>
+        <div class="stage-rule"></div>
+        <div class="reading-panel"><div class="panel-caption qm-latin">STEP 01 / KEY IDEA</div><p class="qm-body">用具体的画面，<br>把这一步讲清楚。</p><span class="panel-line"></span></div>
+        <div class="hero-phrase qm-title"><span class="qm-fx qm-fx-highlight" id="hero-text">把重点讲清楚</span></div>
+        <p class="hero-support qm-body">先突出重点，再把同一句话交给下一步。</p>
+        <div class="stage-index qm-latin">Aa<span>01 — 12</span></div>
+        <div class="stage-bottom"><span id="font-label"></span><span>标题 · 正文 · 英文数字</span></div>
+      </div>
+      <div class="controls"><button id="play" type="button">播放动效</button><label class="scrub-label" for="scrub">预览进度</label><input type="range" min="0" max="6" value="2" step=".01" id="scrub"><output id="time">2.00 s</output></div>
+      <div class="edit-controls"><label>试写一句<input id="sample-text" maxlength="28" value="把重点讲清楚" autocomplete="off"></label><label>花字效果<select id="effect"><option value="highlight">淡紫标记</option><option value="plain">纯字形</option><option value="sticker">描边贴纸</option><option value="depth">浅层叠影</option><option value="outline">轮廓字</option></select></label><span class="load-status" id="status" role="status">正在载入本地字体…</span></div>
+    </section>
+    <section class="collection"><div class="section-head"><div><p class="eyebrow">12 套搭配 / 按内容挑选</p><h2>同一套动效，多种表达。</h2></div><p>点击任意一套，在上方试用。</p></div><div class="pair-grid" id="pair-grid"></div></section>
+    <section class="effect-section"><div class="section-head"><div><p class="eyebrow">轻量花字 / 只强调该强调的词</p><h2>重点可以有层次。</h2></div></div><div class="effect-grid qm-pairing" data-pairing="trend"><div><span class="qm-title qm-fx qm-fx-highlight">重点来了</span><small>淡紫标记</small></div><div><span class="qm-title qm-fx qm-fx-sticker">这里易错</span><small>描边贴纸</small></div><div><span class="qm-title qm-fx qm-fx-depth">看见变化</span><small>浅层叠影</small></div><div><span class="qm-title qm-fx qm-fx-outline">新的思路</span><small>轮廓字</small></div></div></section>
+    <footer><span>34 个本地字体文件 · 12 套搭配 · 离线加载</span><span>字体来源：<a href="https://github.com/joeseesun/qiaomu-cover-fonts">Qiaomu Cover Fonts</a> · <a href="source.json">来源记录</a></span></footer>
+  </main><script src="gallery.js"></script>
+</body></html>

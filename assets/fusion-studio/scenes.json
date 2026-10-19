@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 1,
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 50
+  },
+  "totalDuration": 72,
+  "scenes": [
+    {
+      "id": "F01",
+      "title": "列表聚焦与详情展开",
+      "duration": 9,
+      "nav": "资料库",
+      "page": "项目资料",
+      "subtitle": "选中一份资料，详情在原位置旁展开",
+      "caption": "同一份资料，从列表进入详情",
+      "object": "DOC-014 · 用户访谈记录",
+      "logic": "光标定位 DOC-014 → 选中原行 → 列表让位与轻推近 → 同一文件的详情展开 → 阅读结果。",
+      "source": [
+        [
+          "原机制",
+          "anim4 / S2 高亮与退出，S3 hero 推近"
+        ],
+        [
+          "原范围",
+          "anim4：208–217、252、283–289"
+        ],
+        [
+          "本场代码",
+          "studio.js：renderF01；studio.css：资料列表与详情层"
+        ]
+      ],
+      "start": 0,
+      "sourceMode": "interface-demonstration",
+      "styleAuthority": "../base-skill/references/series-feedback-20260930.md"
+    },
+    {
+      "id": "F02",
+      "title": "字段焦点与选区",
+      "duration": 9,
+      "nav": "资料库",
+      "page": "用户访谈记录",
+      "subtitle": "在文档内部定位重点，保留来源上下文",
+      "caption": "聚焦当前字段，其他区域轻退焦",
+      "object": "DOC-014 / 关键需求",
+      "logic": "定位原文 → 点击“聚焦关键需求” → 原字段淡紫选中 → 周围正文降暗 → 引用与注释仍有出处。",
+      "source": [
+        [
+          "原机制",
+          "anim4 / S2 litG、litC、modLit、dim"
+        ],
+        [
+          "原范围",
+          "anim4：208–214"
+        ],
+        [
+          "本场代码",
+          "studio.js：renderF02；studio.css：document-view、focus-field"
+        ]
+      ],
+      "start": 9,
+      "sourceMode": "interface-demonstration",
+      "styleAuthority": "../base-skill/references/series-feedback-20260930.md"
+    },
+    {
+      "id": "F03",
+      "title": "带身份的曲线交接",
+      "duration": 9,
+      "nav": "报告",
+      "page": "资料交接",
+      "subtitle": "原始文件进入报告，引用编号跟着它一起走",
+      "caption": "文件沿曲线进入报告，身份持续保留",
+      "object": "DOC-014 → RPT-003 / 引用 DOC-014",
+      "logic": "点击“加入报告” → DOC-014 沿曲线移动 → 报告内出现同名来源 → 引用 ID 与原资料一致 → 留出核对时间。",
+      "source": [
+        [
+          "原机制",
+          "anim3 / S4 line、acct、Lseg"
+        ],
+        [
+          "原范围",
+          "anim3：152–154、166–171"
+        ],
+        [
+          "本场代码",
+          "studio.js：renderF03、bezier；studio.css：handoff-stage"
+        ]
+      ],
+      "start": 18,
+      "sourceMode": "interface-demonstration",
+      "styleAuthority": "../base-skill/references/series-feedback-20260930.md"
+    },
+    {
+      "id": "F04",
+      "title": "有暂停状态的任务传输",
+      "duration": 9,
+      "nav": "工作流",
+      "page": "研究流程",
+      "subtitle": "操作触发任务，暂停时传输与进度一起停下",
+      "caption": "任务可暂停，完成后回收报告",
+      "object": "TASK-003 / DOC-014 / RPT-003",
+      "logic": "点击开始 → 数据向分析节点传递 → 点击暂停，节点和进度冻结 → 继续任务 → 核对完成 → 报告回到结果区。",
+      "source": [
+        [
+          "原机制",
+          "anim3 / S6 lines、pk、ae、tf、fr、state"
+        ],
+        [
+          "原范围",
+          "anim3：243–248、257、265–272"
+        ],
+        [
+          "本场代码",
+          "studio.js：renderF04、workflowClock；studio.css：workflow"
+        ]
+      ],
+      "start": 27,
+      "sourceMode": "interface-demonstration",
+      "styleAuthority": "../base-skill/references/series-feedback-20260930.md"
+    },
+    {
+      "id": "F05",
+      "title": "整行遮罩与同窗展开",
+      "duration": 9,
+      "nav": "报告",
+      "page": "研究报告",
+      "subtitle": "展开已有内容，保持窗口、文件与阅读位置",
+      "caption": "整行揭示内容，同一报告继续展开",
+      "object": "RPT-003 / 需求摘要",
+      "logic": "点击“展开摘要” → 整行遮罩揭示结果 → 同一文档内部增加正文空间 → 引用出处进入下方 → 原标题始终保留。",
+      "source": [
+        [
+          "原机制",
+          "template / lib show(mask)、words、wordsAt；anim3 clipPath"
+        ],
+        [
+          "原范围",
+          "template/lib：42–78；anim3：163"
+        ],
+        [
+          "本场代码",
+          "studio.js：renderF05；studio.css：masked-line、report-expanded"
+        ]
+      ],
+      "start": 36,
+      "sourceMode": "interface-demonstration",
+      "styleAuthority": "../base-skill/references/series-feedback-20260930.md"
+    },
+    {
+      "id": "F06",
+      "title": "数据与时间轨道联动",
+      "duration": 9,
+      "nav": "工作流",
+      "page": "流程对比",
+      "subtitle": "同一任务、同一单位，数值随时间轴推进",
+      "caption": "对比同一任务，时间与进度同步",
+      "object": "TASK-003 / 整理 12 份记录",
+      "logic": "点击播放对比 → 两条轨道按同一时间单位推进 → 8 分钟轨道先完成 → 24 分钟轨道随后完成 → 从数据计算减少 16 分钟。",
+      "source": [
+        [
+          "原机制",
+          "anim3 / S8 aValue、bValue、b1、b2；anim4 / S7 cmp；counter"
+        ],
+        [
+          "原范围",
+          "anim3：345–355；anim4：583–587；template/lib：107"
+        ],
+        [
+          "本场代码",
+          "studio.js：renderF06；studio.css：comparison-timeline"
+        ]
+      ],
+      "start": 45,
+      "sourceMode": "interface-demonstration",
+      "styleAuthority": "../base-skill/references/series-feedback-20260930.md"
+    },
+    {
+      "id": "F07",
+      "title": "光标操作与可见反馈",
+      "duration": 9,
+      "nav": "设置",
+      "page": "报告设置",
+      "subtitle": "滑杆改变布局密度，开关决定引用是否保留",
+      "caption": "先拖动控件，再看到结果变化",
+      "object": "RPT-003 / 布局密度与引用",
+      "logic": "光标定位滑杆 → 拖动，预览行距由 16 增至 28 px → 点击“保留引用”开关 → 文档内出现来源 → 保存确认。",
+      "source": [
+        [
+          "原机制",
+          "anim4 / S2 rs、rf、rk、rv；S6 sw、kn"
+        ],
+        [
+          "原范围",
+          "anim4：189–194、233–234、512、516、535"
+        ],
+        [
+          "本场代码",
+          "studio.js：renderF07；studio.css：control-slider、control-switch"
+        ]
+      ],
+      "start": 54,
+      "sourceMode": "interface-demonstration",
+      "styleAuthority": "../base-skill/references/series-feedback-20260930.md"
+    },
+    {
+      "id": "F08",
+      "title": "人物与软件窗口连续交接",
+      "duration": 9,
+      "nav": "资料库",
+      "page": "项目资料",
+      "subtitle": "人物连续收向左下，软件界面接过阅读中心",
+      "caption": "同一人物层、同一媒体时钟，完成构图交接",
+      "object": "PRESENTER-001 / 单一媒体时钟",
+      "logic": "开场人物保持主位 → 原人物层连续缩小并收向左下 → 工作窗口让位展开 → 原资料被选中 → 人物媒体时钟连续，不建立第二张脸。",
+      "source": [
+        [
+          "原机制",
+          "anim4 / S5 toSmall、hand、camR、win、wIn；camAt"
+        ],
+        [
+          "原范围",
+          "anim4：426、445–449、456–460；template/lib：153–167"
+        ],
+        [
+          "本场代码",
+          "studio.js：renderF08、syncMedia；index.html：唯一 presenter 节点"
+        ]
+      ],
+      "start": 63,
+      "sourceMode": "interface-demonstration",
+      "styleAuthority": "../base-skill/references/series-feedback-20260930.md"
+    }
+  ]
+}

@@ -1,0 +1,1383 @@
+{
+  "schemaVersion": 1,
+  "batch": 22,
+  "recordedAt": "2026-10-01",
+  "targetFormat": "1920x1080 landscape",
+  "scope": "Three specifically observed video sources with their actual categories and explicit per-source interaction/motion boundaries; continuous original reconstructions preserve major regions. Piyush source UI is static, its background alone moves, and local editor operations are original extensions. Search/Notification directory enumeration adds zero media observations and retains catalogued-only historical status. Original media/research screenshots not bundled. Whole-site goal remains incomplete.",
+  "works": [
+    {
+      "id": "batch22-editortour",
+      "title": "玻璃代码编辑器 · 本地查找与文本替换",
+      "author": "@piyushsphere",
+      "sourceURL": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "inventoryEntryId": "code-editor-p1-005",
+      "categoryNames": [
+        "Code Editor"
+      ],
+      "observationDepth": "multiple-video-times-observed",
+      "sourceDuration": 10.008333,
+      "sourceDimensions": {
+        "width": 2002,
+        "height": 1816
+      },
+      "acceptedPausedFrameCount": 6,
+      "acceptedSamples": [
+        {
+          "timeSeconds": 0,
+          "requestedTimeSeconds": 0,
+          "frameTime": 0,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 1,
+          "decodedFrameConfirmed": true,
+          "description": "Static glass IDE over a soft blurred luminous rectangular background. Left tool rail, Search, Page Code tree with Main pages/Booking Pages/Cart & Thank You, desktop/mobile/domain controls, Services (Item)/About/Getting started tabs, numbered syntax-highlighted service category code. Source right and lower edges clip the window. No source UI cursor or action observed."
+        },
+        {
+          "timeSeconds": 2.00019,
+          "requestedTimeSeconds": 2,
+          "frameTime": 2,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 2,
+          "decodedFrameConfirmed": true,
+          "description": "Same software labels, tree and code state. Background luminous frame has tilted/drifted, changing the light passing behind translucent sidebar and toolbar. No UI action observed."
+        },
+        {
+          "timeSeconds": 4.000395,
+          "requestedTimeSeconds": 4,
+          "frameTime": 4,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 3,
+          "decodedFrameConfirmed": true,
+          "description": "Same three tabs, expanded tree groups and identical code. Only soft background frame/light position changes; no click, selection or typed input observed."
+        },
+        {
+          "timeSeconds": 6.000251,
+          "requestedTimeSeconds": 6,
+          "frameTime": 6,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 4,
+          "decodedFrameConfirmed": true,
+          "description": "IDE remains unchanged; pale background rectangular ribbon tilts and blurred warm light shifts behind tree. No software interaction observed."
+        },
+        {
+          "timeSeconds": 8.000205,
+          "requestedTimeSeconds": 8,
+          "frameTime": 8,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 5,
+          "decodedFrameConfirmed": true,
+          "description": "Same static IDE state and source-clipped code/window edges; moving background illumination remains the only observed dynamic mechanism."
+        },
+        {
+          "timeSeconds": 9.800178,
+          "requestedTimeSeconds": 9.8,
+          "frameTime": 9.8,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 6,
+          "decodedFrameConfirmed": true,
+          "description": "Near end same full visible IDE composition, identical labels and code, with changed soft background light. No execution, preview result, save confirmation or UI action is shown."
+        }
+      ],
+      "observedImageCount": 0,
+      "mechanisms": [
+        "Observed: a continuous soft blurred luminous rectangular background tilts/drifts behind a static translucent dark IDE.",
+        "Observed: persistent full visible tool rail, search, Page Code header/tree, device/domain tools, three tabs and numbered syntax-highlighted code.",
+        "Original extension: Booking Pages children collapse and expand inside the same tree; Cart & Thank You group shifts in normal layout.",
+        "Original extension: current-file query typed into Search; literal substring count and highlights generated deterministically from displayed code; no-match query shows No matches.",
+        "Original extension: close local find, select existing enterpriseNote text, replace it character by character with caret and unsaved dot.",
+        "Original extension: continuous reading hold within same editor; no backend execution, live preview, CI result or successful save is added."
+      ],
+      "differences": [
+        "Source 2002x1816 and 10.008333 seconds adapted to an editable 1920x1080 horizontal window and 28 seconds of reference reading plus explicitly original local operations.",
+        "All source UI interactions are absent: folding, find popover, typing, highlights, selection, replacement, caret and unsaved dot are original extension, not observed source actions.",
+        "Independent original SVG icon shapes/logo and blurred vector rectangular ribbons replace all original background/media pixels.",
+        "All visible source groups/rows preserved: Main pages with Home/About/Search Results/Plans & Pricing/masterPage.js; Booking Pages with four rows; Cart & Thank You with Cart Page.",
+        "Right/bottom source crop opened into a readable horizontal code panel; no unseen tree items added. The displayed getCurrentItem() call/closing punctuation are independent non-executable text completion of clipped source code; complete source implementation is not claimed.",
+        "Initial enterpriseNote string retains visible source fragment with an explicit ellipsis; editable result is original local replacement text, not a guessed full source sentence.",
+        "Repository/service/domain/data behavior is not real; code is display text only."
+      ],
+      "unknowns": [
+        "Source does not show interaction behavior for tree collapse, global Search, tab switching, preview controls, domain connection or save/run.",
+        "Original background construction/renderer and true code/service implementation cannot be determined from rendered video.",
+        "Source clips right/lower window; remaining code characters, further tree rows and hidden panels are not fully visible.",
+        "No actual backend, data, category decision, booking workflow or executable result is verified."
+      ],
+      "sourceObservationMethod": "Exact source card modal and original href read; original remote video actually paused/viewed at accepted decoded samples. No remote pixels distributed. Not a full original source-code replica or real service execution.",
+      "implementation": {
+        "presetId": "software-glass-code-editor-local-edit",
+        "title": "玻璃代码编辑器 · 本地查找与文本替换",
+        "duration": 28,
+        "dimensions": {
+          "width": 1920,
+          "height": 1080
+        },
+        "module": "../presets/editortourpiyush.js",
+        "params": {
+          "title": "Services (Item)",
+          "prompt": "service",
+          "result": "Tailored support for your team."
+        },
+        "paramLimits": {
+          "title": 24,
+          "prompt": 20,
+          "result": 64
+        },
+        "paramSemantics": {
+          "title": "Active file label, shared by the tab and current-file find result.",
+          "prompt": "Original local current-file find query; literal case-insensitive matching against displayed source-code text controls count/highlights or No matches.",
+          "result": "Original replacement for the enterpriseNote text in the already-open code line; typed locally, never executed."
+        },
+        "paramSanitization": "Whitespace collapsed, empty value falls back to default, Array.from code-point limits 24/20/64; c.esc used for parameter markup and c.text writes plain text for animated query/replacement. Long title uses 15px in a 500px tab; 64-character Chinese replacement uses 17px and wraps inside editor; find field uses ellipsis without shortcut wrapping.",
+        "keyTimes": [
+          {
+            "time": 0,
+            "action": "Observed IDE composition, all tree groups expanded; background-only motion",
+            "provenance": "observed composition / independent vector background"
+          },
+          {
+            "time": 3.4,
+            "action": "Click Booking Pages group",
+            "provenance": "original extension"
+          },
+          {
+            "time": 4.5,
+            "action": "Booking children folded; Cart group moves within same tree",
+            "provenance": "original extension"
+          },
+          {
+            "time": 5.5,
+            "action": "Click Booking Pages again",
+            "provenance": "original extension"
+          },
+          {
+            "time": 6.3,
+            "action": "Original tree restored",
+            "provenance": "original extension"
+          },
+          {
+            "time": 7.3,
+            "action": "Click Search for current-file find",
+            "provenance": "original extension"
+          },
+          {
+            "time": 8.3,
+            "action": "Query partially typed",
+            "provenance": "original extension"
+          },
+          {
+            "time": 9.6,
+            "action": "Default service query has five actual code text matches",
+            "provenance": "original extension"
+          },
+          {
+            "time": 11.6,
+            "action": "Close find and clear visual highlights",
+            "provenance": "original extension"
+          },
+          {
+            "time": 13.6,
+            "action": "Click current enterpriseNote text",
+            "provenance": "original extension"
+          },
+          {
+            "time": 14.2,
+            "action": "Same code string selected",
+            "provenance": "original extension"
+          },
+          {
+            "time": 15.15,
+            "action": "Start local replacement typing",
+            "provenance": "original extension"
+          },
+          {
+            "time": 16.4,
+            "action": "Partial replacement and caret visible in same line",
+            "provenance": "original extension"
+          },
+          {
+            "time": 18.8,
+            "action": "Edited text complete, unsaved dot visible; no execution or save",
+            "provenance": "original extension"
+          },
+          {
+            "time": 23.2,
+            "action": "Cursor leaves, final edited-code reading hold through 28",
+            "provenance": "original extension"
+          }
+        ],
+        "sourceInteractionObserved": false,
+        "originalExtension": [
+          "local tree fold/unfold",
+          "current-file find and literal match highlights",
+          "text selection/replacement",
+          "caret/unsaved dot"
+        ],
+        "semanticUse": "Continuous UI正文 for explaining current-file search, local text editing and preservation of editor context; glass/background motion can support a developer-product opening before the same window becomes operational."
+      },
+      "mainGalleryValidation": {
+        "label": "editortour",
+        "presetId": "software-glass-code-editor-local-edit",
+        "seconds": 28,
+        "samples": [
+          {
+            "error": "",
+            "id": "software-glass-code-editor-local-edit",
+            "scene": "Search\n⌘ K\nConnect your domain\nPage Code\nMain pages\nHome\nAbout\nSearch Results\nPlans & Pricing\nmasterPage.js\nBooking Pages\nBook Online\nService Page\nBooking Calendar\nBooking Form\nCart & Thank You\nCart Page\nServices (Item)\nAbout\nGetting started\n1\n$w.onReady(() => {\n2\n  const service = $w('#servicesDataset').getCurrentItem();\n3\n \n4\n  if (service.category === 'Compliance') {\n5\n    $w('#page').style.backgroundColor = '#F6F7F8';\n6\n  }\n7\n \n8\n  if (service.category === 'Advisory') {\n9\n    $w('#enterpriseNote').text =\n10\n      'This service is delivered through a tailored en…';\n11\n  }\n12\n});\n13\n \n14\n \n15\n ",
+            "time": "0.00 / 28.00",
+            "title": "玻璃代码编辑器 · 本地查找与文本替换",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "software-glass-code-editor-local-edit",
+            "scene": "Search\n⌘ K\nConnect your domain\nPage Code\nMain pages\nHome\nAbout\nSearch Results\nPlans & Pricing\nmasterPage.js\nBooking Pages\nBook Online\nService Page\nBooking Calendar\nBooking Form\nCart & Thank You\nCart Page\nServices (Item)\nAbout\nGetting started\n1\n$w.onReady(() => {\n2\n  const service = $w('#servicesDataset').getCurrentItem();\n3\n \n4\n  if (service.category === 'Compliance') {\n5\n    $w('#page').style.backgroundColor = '#F6F7F8';\n6\n  }\n7\n \n8\n  if (service.category === 'Advisory') {\n9\n    $w('#enterpriseNote').text =\n10\n      'This service is delivered through a tailored en…';\n11\n  }\n12\n});\n13\n \n14\n \n15\n ",
+            "time": "4.50 / 28.00",
+            "title": "玻璃代码编辑器 · 本地查找与文本替换",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "software-glass-code-editor-local-edit",
+            "scene": "Search\nservice\n⌘ K\nConnect your domain\nPage Code\nMain pages\nHome\nAbout\nSearch Results\nPlans & Pricing\nmasterPage.js\nBooking Pages\nBook Online\nService Page\nBooking Calendar\nBooking Form\nCart & Thank You\nCart Page\nServices (Item)\nAbout\nGetting started\n1\n$w.onReady(() => {\n2\n  const service = $w('#servicesDataset').getCurrentItem();\n3\n \n4\n  if (service.category === 'Compliance') {\n5\n    $w('#page').style.backgroundColor = '#F6F7F8';\n6\n  }\n7\n \n8\n  if (service.category === 'Advisory') {\n9\n    $w('#enterpriseNote').text =\n10\n      'This service is delivered through a tailored en…';\n11\n  }\n12\n});\n13\n \n14\n \n15\n \nFind in current file\n5 matches\nServices (Item)\nMatching text highlighted in the current file",
+            "time": "9.60 / 28.00",
+            "title": "玻璃代码编辑器 · 本地查找与文本替换",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "software-glass-code-editor-local-edit",
+            "scene": "Search\nservice\n⌘ K\nConnect your domain\nPage Code\nMain pages\nHome\nAbout\nSearch Results\nPlans & Pricing\nmasterPage.js\nBooking Pages\nBook Online\nService Page\nBooking Calendar\nBooking Form\nCart & Thank You\nCart Page\nServices (Item)\nAbout\nGetting started\n1\n$w.onReady(() => {\n2\n  const service = $w('#servicesDataset').getCurrentItem();\n3\n \n4\n  if (service.category === 'Compliance') {\n5\n    $w('#page').style.backgroundColor = '#F6F7F8';\n6\n  }\n7\n \n8\n  if (service.category === 'Advisory') {\n9\n    $w('#enterpriseNote').text =\n10\n      'This service is delivered through a tailored en…';\n11\n  }\n12\n});\n13\n \n14\n \n15\n ",
+            "time": "14.20 / 28.00",
+            "title": "玻璃代码编辑器 · 本地查找与文本替换",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "software-glass-code-editor-local-edit",
+            "scene": "Search\nservice\n⌘ K\nConnect your domain\nPage Code\nMain pages\nHome\nAbout\nSearch Results\nPlans & Pricing\nmasterPage.js\nBooking Pages\nBook Online\nService Page\nBooking Calendar\nBooking Form\nCart & Thank You\nCart Page\nServices (Item)\nAbout\nGetting started\n1\n$w.onReady(() => {\n2\n  const service = $w('#servicesDataset').getCurrentItem();\n3\n \n4\n  if (service.category === 'Compliance') {\n5\n    $w('#page').style.backgroundColor = '#F6F7F8';\n6\n  }\n7\n \n8\n  if (service.category === 'Advisory') {\n9\n    $w('#enterpriseNote').text =\n10\n      'Tailored support for your team.';\n11\n  }\n12\n});\n13\n \n14\n \n15\n ",
+            "time": "18.80 / 28.00",
+            "title": "玻璃代码编辑器 · 本地查找与文本替换",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "software-glass-code-editor-local-edit",
+            "scene": "Search\nservice\n⌘ K\nConnect your domain\nPage Code\nMain pages\nHome\nAbout\nSearch Results\nPlans & Pricing\nmasterPage.js\nBooking Pages\nBook Online\nService Page\nBooking Calendar\nBooking Form\nCart & Thank You\nCart Page\nServices (Item)\nAbout\nGetting started\n1\n$w.onReady(() => {\n2\n  const service = $w('#servicesDataset').getCurrentItem();\n3\n \n4\n  if (service.category === 'Compliance') {\n5\n    $w('#page').style.backgroundColor = '#F6F7F8';\n6\n  }\n7\n \n8\n  if (service.category === 'Advisory') {\n9\n    $w('#enterpriseNote').text =\n10\n      'Tailored support for your team.';\n11\n  }\n12\n});\n13\n \n14\n \n15\n ",
+            "time": "26.00 / 28.00",
+            "title": "玻璃代码编辑器 · 本地查找与文本替换",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "software-glass-code-editor-local-edit",
+            "scene": "Search\n中文输入<&>\n⌘ K\nConnect your domain\nPage Code\nMain pages\nHome\nAbout\nSearch Results\nPlans & Pricing\nmasterPage.js\nBooking Pages\nBook Online\nService Page\nBooking Calendar\nBooking Form\nCart & Thank You\nCart Page\n测试<&>\nAbout\nGetting started\n1\n$w.onReady(() => {\n2\n  const service = $w('#servicesDataset').getCurrentItem();\n3\n \n4\n  if (service.category === 'Compliance') {\n5\n    $w('#page').style.backgroundColor = '#F6F7F8';\n6\n  }\n7\n \n8\n  if (service.category === 'Advisory') {\n9\n    $w('#enterpriseNote').text =\n10\n      'This service is delivered through a tailored en…';\n11\n  }\n12\n});\n13\n \n14\n \n15\n \nFind in current file\nNo matches\n测试<&>\nTry another query in this file",
+            "time": "9.60 / 28.00",
+            "title": "玻璃代码编辑器 · 本地查找与文本替换",
+            "phase": "short-Chinese-escaped"
+          },
+          {
+            "error": "",
+            "id": "software-glass-code-editor-local-edit",
+            "scene": "Search\n中文输入<&>\n⌘ K\nConnect your domain\nPage Code\nMain pages\nHome\nAbout\nSearch Results\nPlans & Pricing\nmasterPage.js\nBooking Pages\nBook Online\nService Page\nBooking Calendar\nBooking Form\nCart & Thank You\nCart Page\n测试<&>\nAbout\nGetting started\n1\n$w.onReady(() => {\n2\n  const service = $w('#servicesDataset').getCurrentItem();\n3\n \n4\n  if (service.category === 'Compliance') {\n5\n    $w('#page').style.backgroundColor = '#F6F7F8';\n6\n  }\n7\n \n8\n  if (service.category === 'Advisory') {\n9\n    $w('#enterpriseNote').text =\n10\n      '结果<&>';\n11\n  }\n12\n});\n13\n \n14\n \n15\n ",
+            "time": "18.80 / 28.00",
+            "title": "玻璃代码编辑器 · 本地查找与文本替换",
+            "phase": "short-Chinese-escaped"
+          }
+        ],
+        "majorStateScreenshotViewed": true,
+        "tailToZeroMatches": true,
+        "shortParamsChecked": true,
+        "logs": [],
+        "tailState": {
+          "error": "",
+          "id": "software-glass-code-editor-local-edit",
+          "scene": "Search\nservice\n⌘ K\nConnect your domain\nPage Code\nMain pages\nHome\nAbout\nSearch Results\nPlans & Pricing\nmasterPage.js\nBooking Pages\nBook Online\nService Page\nBooking Calendar\nBooking Form\nCart & Thank You\nCart Page\nServices (Item)\nAbout\nGetting started\n1\n$w.onReady(() => {\n2\n  const service = $w('#servicesDataset').getCurrentItem();\n3\n \n4\n  if (service.category === 'Compliance') {\n5\n    $w('#page').style.backgroundColor = '#F6F7F8';\n6\n  }\n7\n \n8\n  if (service.category === 'Advisory') {\n9\n    $w('#enterpriseNote').text =\n10\n      'Tailored support for your team.';\n11\n  }\n12\n});\n13\n \n14\n \n15\n ",
+          "time": "28.00 / 28.00",
+          "title": "玻璃代码编辑器 · 本地查找与文本替换"
+        },
+        "resetState": {
+          "error": "",
+          "id": "software-glass-code-editor-local-edit",
+          "scene": "Search\n⌘ K\nConnect your domain\nPage Code\nMain pages\nHome\nAbout\nSearch Results\nPlans & Pricing\nmasterPage.js\nBooking Pages\nBook Online\nService Page\nBooking Calendar\nBooking Form\nCart & Thank You\nCart Page\nServices (Item)\nAbout\nGetting started\n1\n$w.onReady(() => {\n2\n  const service = $w('#servicesDataset').getCurrentItem();\n3\n \n4\n  if (service.category === 'Compliance') {\n5\n    $w('#page').style.backgroundColor = '#F6F7F8';\n6\n  }\n7\n \n8\n  if (service.category === 'Advisory') {\n9\n    $w('#enterpriseNote').text =\n10\n      'This service is delivered through a tailored en…';\n11\n  }\n12\n});\n13\n \n14\n \n15\n ",
+          "time": "0.00 / 28.00",
+          "title": "玻璃代码编辑器 · 本地查找与文本替换"
+        }
+      },
+      "exportValidation": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "frames": 840,
+        "seconds": 28,
+        "audio": false,
+        "fullDecode": "passed",
+        "sampledVisualReview": true,
+        "fullyWatched": false,
+        "sourceSha256": "1a3bfe4a514f3ad23bbe457f81eb70f041bc31f258ff3ac7708dda7dfb035675",
+        "previewSha256": "bbea7b622d8a653dd5c6ffae29daa4a587e2e87ad4b48e6af2bab2f1aa5bb513",
+        "renderVerificationSha256": "f562a3f6c1c1ecaaae28ac550f32463c123d3b02ff756a1f09c994e47756cf0f"
+      },
+      "previewFile": "glass-code-editor-local-edit.mp4",
+      "sourceInteractionObserved": false,
+      "sourceMotionObserved": true,
+      "sourceMotionScope": "background only",
+      "sourceUIState": "Static IDE composition at all six accepted samples; no click, typing, selection, run, preview result or success response is observed."
+    },
+    {
+      "id": "batch22-search",
+      "title": "变形导航 · 搜索输入与通知巡览",
+      "author": "@renzobianchi_",
+      "sourceURL": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "inventoryEntryId": "search-p1-002",
+      "categoryNames": [
+        "Navigation",
+        "Header Navigation",
+        "Menu",
+        "Search"
+      ],
+      "observationDepth": "multiple-video-times-observed",
+      "sourceDuration": 16.3,
+      "sourceDimensions": {
+        "width": 1840,
+        "height": 1320
+      },
+      "acceptedPausedFrameCount": 16,
+      "acceptedSamples": [
+        {
+          "timeSeconds": 0,
+          "requestedTimeSeconds": 0,
+          "frameTime": 0,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "frameTimeMethod": "requestVideoFrameCallback mediaTime, reset on UI seek and read after readyState4",
+          "description": "Initial compact translucent nav over a gray/blue geometric backdrop: Home labeled active; Search, Inbox, Notifications with orange unread dot, Settings as glyphs. No app page content."
+        },
+        {
+          "timeSeconds": 2,
+          "requestedTimeSeconds": 2,
+          "frameTime": 2,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "frameTimeMethod": "requestVideoFrameCallback mediaTime, reset on UI seek and read after readyState4",
+          "description": "Home text is shrinking and the active capsule is moving toward Search; five navigation glyphs remain. This is a transition frame, not a stable new panel."
+        },
+        {
+          "timeSeconds": 3,
+          "requestedTimeSeconds": 3,
+          "frameTime": 3,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "frameTimeMethod": "requestVideoFrameCallback mediaTime, reset on UI seek and read after readyState4",
+          "description": "Search expands horizontally into a wide input pill; Search... placeholder and insertion caret, Home glyph at left, Inbox/bell/gear at right. No results."
+        },
+        {
+          "timeSeconds": 4,
+          "requestedTimeSeconds": 4,
+          "frameTime": 4,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "frameTimeMethod": "requestVideoFrameCallback mediaTime, reset on UI seek and read after readyState4",
+          "description": "Search input contains liquid with caret. Same extended nav and unchanged remaining icons; no search result area appears."
+        },
+        {
+          "timeSeconds": 6,
+          "requestedTimeSeconds": 6,
+          "frameTime": 6,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "frameTimeMethod": "requestVideoFrameCallback mediaTime, reset on UI seek and read after readyState4",
+          "description": "Search input now reads liquid glass, still inside the same wide nav. No results, suggestions, filtering, or backend action visible."
+        },
+        {
+          "timeSeconds": 7,
+          "requestedTimeSeconds": 7,
+          "frameTime": 7,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "frameTimeMethod": "requestVideoFrameCallback mediaTime, reset on UI seek and read after readyState4",
+          "description": "Nav contracts; Inbox icon and Inbox label are active within the moving pill. Home/Search/bell/gear remain. Inbox does not reveal message content."
+        },
+        {
+          "timeSeconds": 8,
+          "requestedTimeSeconds": 8,
+          "frameTime": 8,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "frameTimeMethod": "requestVideoFrameCallback mediaTime, reset on UI seek and read after readyState4",
+          "description": "Active pill transitions from Inbox toward the bell; partial Inbox label and larger moving glass shape. Five glyphs remain."
+        },
+        {
+          "timeSeconds": 9,
+          "requestedTimeSeconds": 9,
+          "frameTime": 9,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "frameTimeMethod": "requestVideoFrameCallback mediaTime, reset on UI seek and read after readyState4",
+          "description": "Notifications label is active and the same nav shell grows downward into a complete four-row panel: Ana commented on Nav morph v2 (2m), Deploy preview build finished (14m), Tomás requested a review (1h), Billing invoice #0412 was paid (3h). Person avatars on rows 1/3, rocket/receipt on rows 2/4, orange dots on rows 1/2. No hover plate at this sample."
+        },
+        {
+          "timeSeconds": 9.5,
+          "requestedTimeSeconds": 9.5,
+          "frameTime": 9.5,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "frameTimeMethod": "requestVideoFrameCallback mediaTime, reset on UI seek and read after readyState4",
+          "description": "Full four-row notification panel; first/comment row gains a wide rounded translucent highlight, preserving all rows and age labels."
+        },
+        {
+          "timeSeconds": 10,
+          "requestedTimeSeconds": 10,
+          "frameTime": 10,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "frameTimeMethod": "requestVideoFrameCallback mediaTime, reset on UI seek and read after readyState4",
+          "description": "Full notification panel; second/deploy row has the highlight. The first row returns to plain background."
+        },
+        {
+          "timeSeconds": 10.5,
+          "requestedTimeSeconds": 10.5,
+          "frameTime": 10.5,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "frameTimeMethod": "requestVideoFrameCallback mediaTime, reset on UI seek and read after readyState4",
+          "description": "Third/review row is highlighted; the other three rows remain visible and plain."
+        },
+        {
+          "timeSeconds": 11,
+          "requestedTimeSeconds": 11,
+          "frameTime": 11,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "frameTimeMethod": "requestVideoFrameCallback mediaTime, reset on UI seek and read after readyState4",
+          "description": "Fourth/billing row is highlighted. No click-through, payment execution or new details appear."
+        },
+        {
+          "timeSeconds": 12,
+          "requestedTimeSeconds": 12,
+          "frameTime": 12,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "frameTimeMethod": "requestVideoFrameCallback mediaTime, reset on UI seek and read after readyState4",
+          "description": "Notification rows have vanished while the same shell is collapsing and the active pill moves to Settings; partial Settings label. Empty body is a transition, not a settings form."
+        },
+        {
+          "timeSeconds": 12.7,
+          "requestedTimeSeconds": 12.7,
+          "frameTime": 12.7,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "frameTimeMethod": "requestVideoFrameCallback mediaTime, reset on UI seek and read after readyState4",
+          "description": "Compact nav with complete Settings label and gear active. Bell orange dot is present again. No settings content or toggles appear."
+        },
+        {
+          "timeSeconds": 14,
+          "requestedTimeSeconds": 14,
+          "frameTime": 14,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "frameTimeMethod": "requestVideoFrameCallback mediaTime, reset on UI seek and read after readyState4",
+          "description": "Home label and home glyph active again; all five nav items remain, no panel."
+        },
+        {
+          "timeSeconds": 16.2,
+          "requestedTimeSeconds": 16.2,
+          "frameTime": 16.2,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "frameTimeMethod": "requestVideoFrameCallback mediaTime, reset on UI seek and read after readyState4",
+          "description": "Last sampled range keeps Home active; nav and geometric backdrop appear smaller as the source camera/frame eases outward. No additional UI state."
+        }
+      ],
+      "observedImageCount": 0,
+      "mechanisms": [
+        "A single rounded glass navigation shell keeps all five Home/Search/Inbox/Notifications/Settings glyphs and morphs width and active capsule position instead of replacing whole screens.",
+        "Search expands an in-place input, shows Search... and caret, then visibly accumulates liquid glass text; no search results are shown.",
+        "Inbox uses a labeled active pill only, without a message panel.",
+        "Notifications expands the same shell downward into four complete rows with two unread dots, two person portraits, rocket/receipt glyphs and 2m/14m/1h/3h ages.",
+        "A rounded highlight moves in order over notification rows 1, 2, 3 and 4.",
+        "Settings collapses the shell to a labeled active pill without settings fields; Home returns afterward."
+      ],
+      "differences": [
+        "Independent 1920×1080 CSS/SVG redraw and 32-second editable timeline replace the 1840×1320,16.3-second source playback, giving input and each notification row reading time.",
+        "Gray/blue right-angle geometry, gradients and shadows are independently authored SVG; source wallpaper pixels are not used. The original camera crop/zoom is represented only by a modest independent background scale.",
+        "Source portraits are replaced with independently drawn flat SVG avatars; names Ana/Tomás become Maya/Leo and Nav morph v2 becomes Nav study. Four notification roles and age labels are preserved.",
+        "Continuous cursor, navigation click rings and cursor following the morphing selected control are original operation mappings. Source has no visible pointer/click event proof. Notification rows only hover; no click-through or business result is invented.",
+        "title/prompt/result can change the Home label, typed query and Notifications heading; source order, other labels, all four notification rows and age/unread structure remain fixed.",
+        "An unobtrusive adaptation note identifies the independent interface example. No external media, source screenshots, remote pixels or original source code are referenced by rendered CSS/SVG."
+      ],
+      "unknowns": [
+        "Exact original DOM/CSS, easing curves, event modality and click/key coordinates are unavailable; active changes and typing do not prove a specific original mouse click.",
+        "No source Search result, Inbox detail, Settings form, notification detail or actual deploy/review/billing transaction was observed or implemented.",
+        "No source audio inspection, full continuous playback review, narration synchronization, independent review or user aesthetic approval. Paused verified samples are not a complete frame-by-frame source review.",
+        "Main gallery integration, final render/export/decoder verification and package install are pending parent/root validation."
+      ],
+      "sourceObservationMethod": "Exact source card modal and original href read; original remote video actually paused/viewed at accepted decoded samples. No remote pixels distributed. Not a full original source-code replica or real service execution.",
+      "implementation": {
+        "presetId": "interaction-morphing-search-notification-nav",
+        "title": "变形导航 · 搜索输入与通知巡览",
+        "duration": 32,
+        "dimensions": {
+          "width": 1920,
+          "height": 1080
+        },
+        "modulePath": "../presets/searchmorphrenzo.js",
+        "moduleSha256": "3167530149eaf3bb33ba96d8ce8a0fed6cb5380eead52737f472c0d4507cc913",
+        "sha256": "3167530149eaf3bb33ba96d8ce8a0fed6cb5380eead52737f472c0d4507cc913",
+        "staging": false,
+        "params": {
+          "title": "Home",
+          "prompt": "liquid glass",
+          "result": "Notifications"
+        },
+        "paramLimits": {
+          "title": 12,
+          "prompt": 24,
+          "result": 18
+        },
+        "paramSemantics": {
+          "title": "Home active label at the start and return; does not name a workspace or result page.",
+          "prompt": "Text typed character by character in the expanded Search field; input only, no search results or backend call.",
+          "result": "Notifications active pill heading above the four fixed rows; does not change any notification content or trigger a result."
+        },
+        "paramSanitization": "Collapsed whitespace, empty fallback, Unicode Array.from code-point truncation 12/24/18; c.esc for markup labels; explicit previous/current textContent values in zero-duration timeline fromTo steps for typed query. Font/active widths adapt for long labels.",
+        "keyTimes": [
+          {
+            "time": 0,
+            "action": "Home stable; five nav items and unread dot",
+            "provenance": "observed UI state with independent timing"
+          },
+          {
+            "time": 2.2,
+            "action": "Original Search pointer click on the compact nav",
+            "provenance": "original pointer mapping of observed state order"
+          },
+          {
+            "time": 3.2,
+            "action": "Observed expanded Search... placeholder/caret state",
+            "provenance": "observed UI state with independent timing"
+          },
+          {
+            "time": 4.3,
+            "action": "Begin parameterized query typing in the same input",
+            "provenance": "observed UI state with independent timing"
+          },
+          {
+            "time": 5.6,
+            "action": "Partial query typed",
+            "provenance": "observed UI state with independent timing"
+          },
+          {
+            "time": 6.8,
+            "action": "Complete query reading hold through 9.2",
+            "provenance": "observed UI state with independent timing"
+          },
+          {
+            "time": 10.15,
+            "action": "Original Inbox pointer click",
+            "provenance": "original pointer mapping of observed state order"
+          },
+          {
+            "time": 11.2,
+            "action": "Observed Inbox active label, no body",
+            "provenance": "observed UI state with independent timing"
+          },
+          {
+            "time": 13.2,
+            "action": "Original Notifications pointer click",
+            "provenance": "original pointer mapping of observed state order"
+          },
+          {
+            "time": 14.5,
+            "action": "Complete observed four-row Notifications panel",
+            "provenance": "observed UI state with independent timing"
+          },
+          {
+            "time": 15.9,
+            "action": "Observed first-row hover reproduced with original pointer",
+            "provenance": "original pointer mapping of observed state order"
+          },
+          {
+            "time": 17.9,
+            "action": "Observed second-row hover reproduced with original pointer",
+            "provenance": "original pointer mapping of observed state order"
+          },
+          {
+            "time": 19.9,
+            "action": "Observed third-row hover reproduced with original pointer",
+            "provenance": "original pointer mapping of observed state order"
+          },
+          {
+            "time": 21.9,
+            "action": "Observed fourth-row hover reproduced with original pointer",
+            "provenance": "original pointer mapping of observed state order"
+          },
+          {
+            "time": 24.45,
+            "action": "Original Settings pointer click",
+            "provenance": "original pointer mapping of observed state order"
+          },
+          {
+            "time": 25.6,
+            "action": "Observed compact Settings active label",
+            "provenance": "observed UI state with independent timing"
+          },
+          {
+            "time": 28.4,
+            "action": "Original Home pointer click",
+            "provenance": "original pointer mapping of observed state order"
+          },
+          {
+            "time": 29.4,
+            "action": "Observed Home return and reading hold",
+            "provenance": "observed UI state with independent timing"
+          },
+          {
+            "time": 32,
+            "action": "Home tail; timeline can seek back to zero",
+            "provenance": "observed UI state with independent timing"
+          }
+        ],
+        "pressTimes": [
+          {
+            "time": 2.2,
+            "target": "Search"
+          },
+          {
+            "time": 10.15,
+            "target": "Inbox"
+          },
+          {
+            "time": 13.2,
+            "target": "Notifications"
+          },
+          {
+            "time": 24.45,
+            "target": "Settings"
+          },
+          {
+            "time": 28.4,
+            "target": "Home"
+          }
+        ],
+        "hoverTimes": [
+          {
+            "time": 15.9,
+            "row": 1
+          },
+          {
+            "time": 17.9,
+            "row": 2
+          },
+          {
+            "time": 19.9,
+            "row": 3
+          },
+          {
+            "time": 21.9,
+            "row": 4
+          }
+        ],
+        "sourceInteractionObserved": true,
+        "sourceMotionScope": "Observed UI state changes: Home→expanded Search input with Search... then liquid glass typing→Inbox label→Notifications four-row expansion and row1→2→3→4 hover highlights→Settings label→Home. Source framing also eases in/out. No source pointer or click/key event was visible, so trigger modality and exact event coordinates remain unknown. Source states are not background-only.",
+        "semanticUse": "Continuous UI正文 for in-place search activation, typed query and notification hover navigation while preserving the same five-item header and background.",
+        "originalExtension": [
+          "continuous cursor and click-ring causal mapping",
+          "cursor follows selected icon during morph",
+          "32-second reading schedule",
+          "independent SVG geometry/portraits and example names"
+        ],
+        "module": "../presets/searchmorphrenzo.js"
+      },
+      "mainGalleryValidation": {
+        "label": "search",
+        "presetId": "interaction-morphing-search-notification-nav",
+        "seconds": 32,
+        "samples": [
+          {
+            "error": "",
+            "id": "interaction-morphing-search-notification-nav",
+            "scene": "Home\nSearch...\nInbox\nNotifications\nSettings\nMaya commented on Nav study\n2m\nDeploy preview build finished\n14m\nLeo requested a review\n1h\nBilling invoice #0412 was paid\n3h\n界面示意 · 独立矢量与操作时序",
+            "time": "0.00 / 32.00",
+            "title": "变形导航 · 搜索输入与通知巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-morphing-search-notification-nav",
+            "scene": "Home\nSearch...\nliquid glass\nInbox\nNotifications\nSettings\nMaya commented on Nav study\n2m\nDeploy preview build finished\n14m\nLeo requested a review\n1h\nBilling invoice #0412 was paid\n3h\n界面示意 · 独立矢量与操作时序",
+            "time": "6.80 / 32.00",
+            "title": "变形导航 · 搜索输入与通知巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-morphing-search-notification-nav",
+            "scene": "Home\nSearch...\nliquid glass\nInbox\nNotifications\nSettings\nMaya commented on Nav study\n2m\nDeploy preview build finished\n14m\nLeo requested a review\n1h\nBilling invoice #0412 was paid\n3h\n界面示意 · 独立矢量与操作时序",
+            "time": "11.20 / 32.00",
+            "title": "变形导航 · 搜索输入与通知巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-morphing-search-notification-nav",
+            "scene": "Home\nSearch...\nliquid glass\nInbox\nNotifications\nSettings\nMaya commented on Nav study\n2m\nDeploy preview build finished\n14m\nLeo requested a review\n1h\nBilling invoice #0412 was paid\n3h\n界面示意 · 独立矢量与操作时序",
+            "time": "14.50 / 32.00",
+            "title": "变形导航 · 搜索输入与通知巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-morphing-search-notification-nav",
+            "scene": "Home\nSearch...\nliquid glass\nInbox\nNotifications\nSettings\nMaya commented on Nav study\n2m\nDeploy preview build finished\n14m\nLeo requested a review\n1h\nBilling invoice #0412 was paid\n3h\n界面示意 · 独立矢量与操作时序",
+            "time": "17.90 / 32.00",
+            "title": "变形导航 · 搜索输入与通知巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-morphing-search-notification-nav",
+            "scene": "Home\nSearch...\nliquid glass\nInbox\nNotifications\nSettings\nMaya commented on Nav study\n2m\nDeploy preview build finished\n14m\nLeo requested a review\n1h\nBilling invoice #0412 was paid\n3h\n界面示意 · 独立矢量与操作时序",
+            "time": "19.90 / 32.00",
+            "title": "变形导航 · 搜索输入与通知巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-morphing-search-notification-nav",
+            "scene": "Home\nSearch...\nliquid glass\nInbox\nNotifications\nSettings\nMaya commented on Nav study\n2m\nDeploy preview build finished\n14m\nLeo requested a review\n1h\nBilling invoice #0412 was paid\n3h\n界面示意 · 独立矢量与操作时序",
+            "time": "21.90 / 32.00",
+            "title": "变形导航 · 搜索输入与通知巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-morphing-search-notification-nav",
+            "scene": "Home\nSearch...\nliquid glass\nInbox\nNotifications\nSettings\nMaya commented on Nav study\n2m\nDeploy preview build finished\n14m\nLeo requested a review\n1h\nBilling invoice #0412 was paid\n3h\n界面示意 · 独立矢量与操作时序",
+            "time": "25.60 / 32.00",
+            "title": "变形导航 · 搜索输入与通知巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-morphing-search-notification-nav",
+            "scene": "Home\nSearch...\nliquid glass\nInbox\nNotifications\nSettings\nMaya commented on Nav study\n2m\nDeploy preview build finished\n14m\nLeo requested a review\n1h\nBilling invoice #0412 was paid\n3h\n界面示意 · 独立矢量与操作时序",
+            "time": "29.40 / 32.00",
+            "title": "变形导航 · 搜索输入与通知巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-morphing-search-notification-nav",
+            "scene": "测试<&>\nSearch...\n中文输入<&>\nInbox\n结果<&>\nSettings\nMaya commented on Nav study\n2m\nDeploy preview build finished\n14m\nLeo requested a review\n1h\nBilling invoice #0412 was paid\n3h\n界面示意 · 独立矢量与操作时序",
+            "time": "6.80 / 32.00",
+            "title": "变形导航 · 搜索输入与通知巡览",
+            "phase": "short-Chinese-escaped"
+          },
+          {
+            "error": "",
+            "id": "interaction-morphing-search-notification-nav",
+            "scene": "测试<&>\nSearch...\n中文输入<&>\nInbox\n结果<&>\nSettings\nMaya commented on Nav study\n2m\nDeploy preview build finished\n14m\nLeo requested a review\n1h\nBilling invoice #0412 was paid\n3h\n界面示意 · 独立矢量与操作时序",
+            "time": "14.50 / 32.00",
+            "title": "变形导航 · 搜索输入与通知巡览",
+            "phase": "short-Chinese-escaped"
+          },
+          {
+            "error": "",
+            "id": "interaction-morphing-search-notification-nav",
+            "scene": "测试<&>\nSearch...\n中文输入<&>\nInbox\n结果<&>\nSettings\nMaya commented on Nav study\n2m\nDeploy preview build finished\n14m\nLeo requested a review\n1h\nBilling invoice #0412 was paid\n3h\n界面示意 · 独立矢量与操作时序",
+            "time": "29.40 / 32.00",
+            "title": "变形导航 · 搜索输入与通知巡览",
+            "phase": "short-Chinese-escaped"
+          }
+        ],
+        "majorStateScreenshotViewed": true,
+        "tailToZeroMatches": true,
+        "shortParamsChecked": true,
+        "logs": [],
+        "tailState": {
+          "error": "",
+          "id": "interaction-morphing-search-notification-nav",
+          "scene": "Home\nSearch...\nliquid glass\nInbox\nNotifications\nSettings\nMaya commented on Nav study\n2m\nDeploy preview build finished\n14m\nLeo requested a review\n1h\nBilling invoice #0412 was paid\n3h\n界面示意 · 独立矢量与操作时序",
+          "time": "32.00 / 32.00",
+          "title": "变形导航 · 搜索输入与通知巡览"
+        },
+        "resetState": {
+          "error": "",
+          "id": "interaction-morphing-search-notification-nav",
+          "scene": "Home\nSearch...\nInbox\nNotifications\nSettings\nMaya commented on Nav study\n2m\nDeploy preview build finished\n14m\nLeo requested a review\n1h\nBilling invoice #0412 was paid\n3h\n界面示意 · 独立矢量与操作时序",
+          "time": "0.00 / 32.00",
+          "title": "变形导航 · 搜索输入与通知巡览"
+        },
+        "captureNote": "Default full-page screenshots plus documented visible-page screenshots; Inbox full-page capture failed, visible-page capture succeeded. Actual UI remained error-free. Slider focus had scrolled some visible-page captures; cropped captures were retained as history, then search short query, short four-row notification and Settings were actually re-viewed after reframing to document top."
+      },
+      "exportValidation": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "frames": 960,
+        "seconds": 32,
+        "audio": false,
+        "fullDecode": "passed",
+        "sampledVisualReview": true,
+        "fullyWatched": false,
+        "sourceSha256": "3167530149eaf3bb33ba96d8ce8a0fed6cb5380eead52737f472c0d4507cc913",
+        "previewSha256": "c85c43c1d3c3d98f6b919c88f14bde60eec2b78e3f34164d91400ac1bd3e2e87",
+        "renderVerificationSha256": "96f870b5086675b3b7da2e79ffb81bb314ab1993ce81513f5e4ffef53ce47557"
+      },
+      "previewFile": "morphing-search-notification-nav.mp4",
+      "sourceInteractionObserved": true,
+      "sourceMotionScope": "Observed UI state changes: Home→expanded Search input with Search... then liquid glass typing→Inbox label→Notifications four-row expansion and row1→2→3→4 hover highlights→Settings label→Home. Source framing also eases in/out. No source pointer or click/key event was visible, so trigger modality and exact event coordinates remain unknown. Source states are not background-only.",
+      "sourcePointerObserved": false,
+      "sourceClickEventObserved": false,
+      "actualVisibleCategories": [
+        {
+          "visibleLabel": "导航",
+          "englishName": "Navigation",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+        },
+        {
+          "visibleLabel": "头部导航",
+          "englishName": "Header Navigation",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+        },
+        {
+          "visibleLabel": "菜单",
+          "englishName": "Menu",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+        },
+        {
+          "visibleLabel": "搜索",
+          "englishName": "Search",
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+        }
+      ]
+    },
+    {
+      "id": "batch22-notification",
+      "title": "通知堆栈 · 悬停轮换与关闭",
+      "author": "@raunofreiberg",
+      "sourceURL": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "inventoryEntryId": "notification-p1-002",
+      "categoryNames": [
+        "Notification"
+      ],
+      "observationDepth": "multiple-video-times-observed",
+      "sourceDuration": 11.433333,
+      "sourceDimensions": {
+        "width": 2520,
+        "height": 1860
+      },
+      "acceptedPausedFrameCount": 16,
+      "acceptedSamples": [
+        {
+          "requestedTimeSeconds": 0,
+          "timeSeconds": 0,
+          "frameTime": 0,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 1,
+          "decodedFrameConfirmed": true,
+          "description": "Initial compact deck above persistent avatar, rauno account, more and bell controls. White rounded two-column container; left sidebar divider and empty right content. First full card is 50% off GPT-5.6 Sol with body and Learn More CTA; three narrow rear outlines are visible."
+        },
+        {
+          "requestedTimeSeconds": 1.2,
+          "timeSeconds": 1.206949,
+          "frameTime": 1.2,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 2,
+          "decodedFrameConfirmed": true,
+          "description": "Cursor has entered the notification area; rear card outline rises slightly. First full notification remains unchanged. This stable decoded frame replaces the rejected seeking/old-frame capture."
+        },
+        {
+          "requestedTimeSeconds": 2.4,
+          "timeSeconds": 2.402477,
+          "frameTime": 2.4,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 3,
+          "decodedFrameConfirmed": true,
+          "description": "Hover reveals the rear title Explore your project above the still-complete offer card; cursor becomes a hand over this exposed header. Container and account footer remain fixed."
+        },
+        {
+          "requestedTimeSeconds": 3.6,
+          "timeSeconds": 3.603108,
+          "frameTime": 3.6,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 4,
+          "decodedFrameConfirmed": true,
+          "description": "Exposed Explore your project header remains hovered and readable; front card continues to show the first offer. Rear deck elevation is stable."
+        },
+        {
+          "requestedTimeSeconds": 4.8,
+          "timeSeconds": 4.803228,
+          "frameTime": 4.8,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 5,
+          "decodedFrameConfirmed": true,
+          "description": "Following a click on the exposed header, Explore your project becomes the full front card with deployment/performance body and Explore Project CTA. Observability Plus is now the exposed next header."
+        },
+        {
+          "requestedTimeSeconds": 6,
+          "timeSeconds": 6.003891,
+          "frameTime": 6,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 6,
+          "decodedFrameConfirmed": true,
+          "description": "Ship 26 is the full front card with registration/seats text and Register CTA. The first offer title has cycled to the exposed next header; cursor remains over the same header area."
+        },
+        {
+          "requestedTimeSeconds": 7.2,
+          "timeSeconds": 7.202495,
+          "frameTime": 7.2,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 7,
+          "decodedFrameConfirmed": true,
+          "description": "The first offer is front again after the continuous cycle; Explore your project is the rear exposed header. Cursor begins leaving the header toward the front card."
+        },
+        {
+          "requestedTimeSeconds": 8.4,
+          "timeSeconds": 8.403348,
+          "frameTime": 8.4,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 8,
+          "decodedFrameConfirmed": true,
+          "description": "Rear titles retract into compact thin outlines as the pointer leaves the exposed header. Full offer, CTA and footer remain visible."
+        },
+        {
+          "requestedTimeSeconds": 9.6,
+          "timeSeconds": 9.603288,
+          "frameTime": 9.6,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 9,
+          "decodedFrameConfirmed": true,
+          "description": "Pointer is over the front close control; a pale circular hover fill is visible. Rear outlines are no longer visible, leaving the single full card before dismissal."
+        },
+        {
+          "requestedTimeSeconds": 10.8,
+          "timeSeconds": 10.802177,
+          "frameTime": 10.8,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 10,
+          "decodedFrameConfirmed": true,
+          "description": "After close, the notification region is empty. The two-column container, sidebar divider and avatar/account/more/bell footer remain in place."
+        },
+        {
+          "requestedTimeSeconds": 11.3,
+          "timeSeconds": 11.302764,
+          "frameTime": 11.3,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 11,
+          "decodedFrameConfirmed": true,
+          "description": "Near the actual source end the notification region stays empty; pointer has moved away. No CTA, bell or more-menu business result is displayed."
+        },
+        {
+          "requestedTimeSeconds": 5.2,
+          "timeSeconds": 5.202541,
+          "frameTime": 5.2,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 12,
+          "decodedFrameConfirmed": true,
+          "description": "Supplementary middle sample: Observability Plus is front, with traces/retention body and Start Trial CTA; Ship 26 is the exposed next header. Confirms the third item omitted by coarser samples."
+        },
+        {
+          "requestedTimeSeconds": 4.1,
+          "timeSeconds": 4.102613,
+          "frameTime": 4.1,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 14,
+          "decodedFrameConfirmed": true,
+          "description": "Supplementary sample immediately before cycle: first offer still front, Explore your project exposed, hand cursor over that header. Distinguishes rear-header selection from pressing the close button."
+        },
+        {
+          "requestedTimeSeconds": 9,
+          "timeSeconds": 9.002366,
+          "frameTime": 9,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 15,
+          "decodedFrameConfirmed": true,
+          "description": "Supplementary close-hover sample: pale close-control circle and hand cursor; rear cards are visually hidden but first card remains fully present. Underlying data deletion cannot be inferred."
+        },
+        {
+          "requestedTimeSeconds": 9.3,
+          "timeSeconds": 9.30425,
+          "frameTime": 9.3,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 16,
+          "decodedFrameConfirmed": true,
+          "description": "Close-hover state still present with only the first full notification. Confirms this is not a four-item sequential deletion animation."
+        },
+        {
+          "requestedTimeSeconds": 9.9,
+          "timeSeconds": 9.903778,
+          "frameTime": 9.9,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 17,
+          "decodedFrameConfirmed": true,
+          "description": "Supplementary post-close sample: all visible notification cards have exited and the persistent footer remains. Confirms the popup area is dismissed as one visible unit."
+        }
+      ],
+      "observedImageCount": 0,
+      "mechanisms": [
+        "Persistent two-column shell and account/footer controls",
+        "Compact four-card notification deck with scaled rear silhouettes",
+        "Hover-driven exposure of next header",
+        "Selection of the exposed next header rotates the same deck through four full messages and back to the first",
+        "Leaving the exposed header retracts rear layers",
+        "Close-hover feedback hides rear layers; clicking close removes the visible notification surface while preserving the workspace"
+      ],
+      "differences": [
+        "Independent CSS/SVG geometry, original avatar and account identity replace source pixels; no source footage or screenshot is used by the module.",
+        "1920×1080 landscape container and 26-second timeline increase text size/read holds; interpolation, cursor movement and click ring are original animation details.",
+        "First card uses editable illustrative Workspace update copy in place of a dated commercial discount. Other bodies/CTAs are independently rewritten illustrative copy; source four-item order is retained.",
+        "CTA, bell and more controls remain visible as in source, without unobserved execution, navigation, purchasing or backend outcomes.",
+        "The visible notification area is dismissed as a surface. This does not claim that all underlying source messages were deleted, marked read or persisted."
+      ],
+      "unknowns": [
+        "Source backend/product implementation and storage of dismissed notifications",
+        "Destination or result of source CTA buttons, bell and more menu",
+        "Hidden notifications or behavior after the source ends",
+        "Exact internal card layout/z-order algorithm; geometry reconstructed from observed rendered states"
+      ],
+      "sourceObservationMethod": "Exact source card modal and original href read; original remote video actually paused/viewed at accepted decoded samples. No remote pixels distributed. Not a full original source-code replica or real service execution.",
+      "implementation": {
+        "presetId": "interaction-notification-stack-cycle",
+        "title": "通知堆栈 · 悬停轮换与关闭",
+        "duration": 26,
+        "dimensions": {
+          "width": 1920,
+          "height": 1080
+        },
+        "module": "../presets/notificationstack.js",
+        "modulePath": "../presets/notificationstack.js",
+        "moduleSHA256": "0977bba20b1eb4d6770cc76f4a746b8ab85b242672a5c48fe379da1dae5af594",
+        "staging": false,
+        "params": {
+          "title": "Workspace update",
+          "prompt": "Explore what is new in your workspace.",
+          "result": "Read update"
+        },
+        "paramLimits": {
+          "title": 20,
+          "prompt": 48,
+          "result": 18
+        },
+        "paramSemantics": {
+          "title": "First notification headline, shown in front and again as the exposed rear title after cycling.",
+          "prompt": "First notification body; stays attached to the same card while it cycles through the stack.",
+          "result": "First notification CTA label; editable visible text only, with no unobserved click or real service result."
+        },
+        "paramSanitization": "Whitespace collapsed, empty strings fall back to defaults, Array.from code-point limits 20/48/18. All parameter markup uses c.esc. Long full-width headline/body/CTA reduce font size within the fixed card; no text state is written outside the seekable timeline.",
+        "sourceInteractionObserved": true,
+        "sourceMotionScope": "Cursor hover reveals the next notification header, repeated selection cycles four notifications in the same deck, leaving retracts rear layers, close hover hides rear layers and close dismisses the visible notification area. The container and account footer remain fixed.",
+        "keyTimes": [
+          {
+            "time": 0,
+            "action": "Compact four-item deck; two-column container and account footer remain persistent",
+            "provenance": "observed mechanism / original timing and vector styling"
+          },
+          {
+            "time": 3.45,
+            "action": "Hover exposes the next notification header",
+            "provenance": "observed mechanism / original timing and vector styling"
+          },
+          {
+            "time": 3.9,
+            "action": "Stable next-header hover",
+            "provenance": "observed mechanism / original timing and vector styling"
+          },
+          {
+            "time": 6.35,
+            "action": "Click next header; current card moves behind and next becomes front",
+            "provenance": "observed mechanism / original timing and vector styling"
+          },
+          {
+            "time": 7.2,
+            "action": "Explore your project front, Observability Plus rear header",
+            "provenance": "observed mechanism / original timing and vector styling"
+          },
+          {
+            "time": 9.65,
+            "action": "Click next header again",
+            "provenance": "observed mechanism / original timing and vector styling"
+          },
+          {
+            "time": 10.5,
+            "action": "Observability Plus front, Ship 26 rear header",
+            "provenance": "observed mechanism / original timing and vector styling"
+          },
+          {
+            "time": 12.95,
+            "action": "Click next header again",
+            "provenance": "observed mechanism / original timing and vector styling"
+          },
+          {
+            "time": 13.8,
+            "action": "Ship 26 front, Workspace update rear header",
+            "provenance": "observed mechanism / original timing and vector styling"
+          },
+          {
+            "time": 16.25,
+            "action": "Click next header to complete the cycle",
+            "provenance": "observed mechanism / original timing and vector styling"
+          },
+          {
+            "time": 17.2,
+            "action": "Original first notification restored as front",
+            "provenance": "observed mechanism / original timing and vector styling"
+          },
+          {
+            "time": 19.1,
+            "action": "Pointer leaves exposed header; rear deck retracts",
+            "provenance": "observed mechanism / original timing and vector styling"
+          },
+          {
+            "time": 21.4,
+            "action": "Close hover fill appears; rear layers visually hide",
+            "provenance": "observed mechanism / original timing and vector styling"
+          },
+          {
+            "time": 22.5,
+            "action": "Click the front close control",
+            "provenance": "observed mechanism / original timing and vector styling"
+          },
+          {
+            "time": 23.02,
+            "action": "Visible notification area dismissed; account footer and blank main region remain",
+            "provenance": "observed mechanism / original timing and vector styling"
+          },
+          {
+            "time": 26,
+            "action": "Empty notification-region reading hold",
+            "provenance": "observed mechanism / original timing and vector styling"
+          }
+        ],
+        "clickTargets": {
+          "rearHeader": {
+            "x": 644,
+            "y": 566
+          },
+          "frontClose": {
+            "x": 755,
+            "y": 636
+          }
+        },
+        "originalExtension": [
+          "Longer reading holds and independent interpolation/click ring",
+          "Editable first-card copy with current-offer language replaced by illustrative workspace text",
+          "Original SVG avatar and Alex identity"
+        ],
+        "semanticUse": "Continuous UI正文 for explaining stacked-notification preview, cycling without losing the workspace, and dismissing a visible notification surface."
+      },
+      "mainGalleryValidation": {
+        "label": "notification",
+        "presetId": "interaction-notification-stack-cycle",
+        "seconds": 26,
+        "samples": [
+          {
+            "error": "",
+            "id": "interaction-notification-stack-cycle",
+            "scene": "NotificationsInteraction demo\nWorkspace update\n\nExplore what is new in your workspace.\n\nRead update\nExplore your project\n\nReview recent deployments and see how your project performs.\n\nExplore project\nObservability Plus\n\nDeeper traces and more history, together in one view.\n\nView details\nShip 26\n\nMeet the makers and discover the next wave of projects.\n\nExplore event\nAlex\nEditable UI study",
+            "time": "0.00 / 26.00",
+            "title": "通知堆栈 · 悬停轮换与关闭",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-notification-stack-cycle",
+            "scene": "NotificationsInteraction demo\nWorkspace update\n\nExplore what is new in your workspace.\n\nRead update\nExplore your project\n\nReview recent deployments and see how your project performs.\n\nExplore project\nObservability Plus\n\nDeeper traces and more history, together in one view.\n\nView details\nShip 26\n\nMeet the makers and discover the next wave of projects.\n\nExplore event\nAlex\nEditable UI study",
+            "time": "3.90 / 26.00",
+            "title": "通知堆栈 · 悬停轮换与关闭",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-notification-stack-cycle",
+            "scene": "NotificationsInteraction demo\nWorkspace update\n\nExplore what is new in your workspace.\n\nRead update\nExplore your project\n\nReview recent deployments and see how your project performs.\n\nExplore project\nObservability Plus\n\nDeeper traces and more history, together in one view.\n\nView details\nShip 26\n\nMeet the makers and discover the next wave of projects.\n\nExplore event\nAlex\nEditable UI study",
+            "time": "7.20 / 26.00",
+            "title": "通知堆栈 · 悬停轮换与关闭",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-notification-stack-cycle",
+            "scene": "NotificationsInteraction demo\nWorkspace update\n\nExplore what is new in your workspace.\n\nRead update\nExplore your project\n\nReview recent deployments and see how your project performs.\n\nExplore project\nObservability Plus\n\nDeeper traces and more history, together in one view.\n\nView details\nShip 26\n\nMeet the makers and discover the next wave of projects.\n\nExplore event\nAlex\nEditable UI study",
+            "time": "10.50 / 26.00",
+            "title": "通知堆栈 · 悬停轮换与关闭",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-notification-stack-cycle",
+            "scene": "NotificationsInteraction demo\nWorkspace update\n\nExplore what is new in your workspace.\n\nRead update\nExplore your project\n\nReview recent deployments and see how your project performs.\n\nExplore project\nObservability Plus\n\nDeeper traces and more history, together in one view.\n\nView details\nShip 26\n\nMeet the makers and discover the next wave of projects.\n\nExplore event\nAlex\nEditable UI study",
+            "time": "13.80 / 26.00",
+            "title": "通知堆栈 · 悬停轮换与关闭",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-notification-stack-cycle",
+            "scene": "NotificationsInteraction demo\nWorkspace update\n\nExplore what is new in your workspace.\n\nRead update\nExplore your project\n\nReview recent deployments and see how your project performs.\n\nExplore project\nObservability Plus\n\nDeeper traces and more history, together in one view.\n\nView details\nShip 26\n\nMeet the makers and discover the next wave of projects.\n\nExplore event\nAlex\nEditable UI study",
+            "time": "17.20 / 26.00",
+            "title": "通知堆栈 · 悬停轮换与关闭",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-notification-stack-cycle",
+            "scene": "NotificationsInteraction demo\nWorkspace update\n\nExplore what is new in your workspace.\n\nRead update\nExplore your project\n\nReview recent deployments and see how your project performs.\n\nExplore project\nObservability Plus\n\nDeeper traces and more history, together in one view.\n\nView details\nShip 26\n\nMeet the makers and discover the next wave of projects.\n\nExplore event\nAlex\nEditable UI study",
+            "time": "21.40 / 26.00",
+            "title": "通知堆栈 · 悬停轮换与关闭",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-notification-stack-cycle",
+            "scene": "NotificationsInteraction demo\nWorkspace update\n\nExplore what is new in your workspace.\n\nRead update\nExplore your project\n\nReview recent deployments and see how your project performs.\n\nExplore project\nObservability Plus\n\nDeeper traces and more history, together in one view.\n\nView details\nShip 26\n\nMeet the makers and discover the next wave of projects.\n\nExplore event\nAlex\nEditable UI study",
+            "time": "23.02 / 26.00",
+            "title": "通知堆栈 · 悬停轮换与关闭",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-notification-stack-cycle",
+            "scene": "NotificationsInteraction demo\nWorkspace update\n\nExplore what is new in your workspace.\n\nRead update\nExplore your project\n\nReview recent deployments and see how your project performs.\n\nExplore project\nObservability Plus\n\nDeeper traces and more history, together in one view.\n\nView details\nShip 26\n\nMeet the makers and discover the next wave of projects.\n\nExplore event\nAlex\nEditable UI study",
+            "time": "26.00 / 26.00",
+            "title": "通知堆栈 · 悬停轮换与关闭",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-notification-stack-cycle",
+            "scene": "NotificationsInteraction demo\n测试<&>\n\n中文输入<&>\n\n结果<&>\nExplore your project\n\nReview recent deployments and see how your project performs.\n\nExplore project\nObservability Plus\n\nDeeper traces and more history, together in one view.\n\nView details\nShip 26\n\nMeet the makers and discover the next wave of projects.\n\nExplore event\nAlex\nEditable UI study",
+            "time": "3.90 / 26.00",
+            "title": "通知堆栈 · 悬停轮换与关闭",
+            "phase": "short-Chinese-escaped"
+          },
+          {
+            "error": "",
+            "id": "interaction-notification-stack-cycle",
+            "scene": "NotificationsInteraction demo\n测试<&>\n\n中文输入<&>\n\n结果<&>\nExplore your project\n\nReview recent deployments and see how your project performs.\n\nExplore project\nObservability Plus\n\nDeeper traces and more history, together in one view.\n\nView details\nShip 26\n\nMeet the makers and discover the next wave of projects.\n\nExplore event\nAlex\nEditable UI study",
+            "time": "17.20 / 26.00",
+            "title": "通知堆栈 · 悬停轮换与关闭",
+            "phase": "short-Chinese-escaped"
+          },
+          {
+            "error": "",
+            "id": "interaction-notification-stack-cycle",
+            "scene": "NotificationsInteraction demo\n测试<&>\n\n中文输入<&>\n\n结果<&>\nExplore your project\n\nReview recent deployments and see how your project performs.\n\nExplore project\nObservability Plus\n\nDeeper traces and more history, together in one view.\n\nView details\nShip 26\n\nMeet the makers and discover the next wave of projects.\n\nExplore event\nAlex\nEditable UI study",
+            "time": "23.02 / 26.00",
+            "title": "通知堆栈 · 悬停轮换与关闭",
+            "phase": "short-Chinese-escaped"
+          }
+        ],
+        "majorStateScreenshotViewed": true,
+        "tailToZeroMatches": true,
+        "shortParamsChecked": true,
+        "logs": [],
+        "tailState": {
+          "error": "",
+          "id": "interaction-notification-stack-cycle",
+          "scene": "NotificationsInteraction demo\nWorkspace update\n\nExplore what is new in your workspace.\n\nRead update\nExplore your project\n\nReview recent deployments and see how your project performs.\n\nExplore project\nObservability Plus\n\nDeeper traces and more history, together in one view.\n\nView details\nShip 26\n\nMeet the makers and discover the next wave of projects.\n\nExplore event\nAlex\nEditable UI study",
+          "time": "26.00 / 26.00",
+          "title": "通知堆栈 · 悬停轮换与关闭"
+        },
+        "resetState": {
+          "error": "",
+          "id": "interaction-notification-stack-cycle",
+          "scene": "NotificationsInteraction demo\nWorkspace update\n\nExplore what is new in your workspace.\n\nRead update\nExplore your project\n\nReview recent deployments and see how your project performs.\n\nExplore project\nObservability Plus\n\nDeeper traces and more history, together in one view.\n\nView details\nShip 26\n\nMeet the makers and discover the next wave of projects.\n\nExplore event\nAlex\nEditable UI study",
+          "time": "0.00 / 26.00",
+          "title": "通知堆栈 · 悬停轮换与关闭"
+        },
+        "captureNote": "Actual default and short-parameter stable states viewed with documented visible-page screenshots, reframed to document top before capture."
+      },
+      "exportValidation": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "frames": 780,
+        "seconds": 26,
+        "audio": false,
+        "fullDecode": "passed",
+        "sampledVisualReview": true,
+        "fullyWatched": false,
+        "sourceSha256": "0977bba20b1eb4d6770cc76f4a746b8ab85b242672a5c48fe379da1dae5af594",
+        "previewSha256": "731544cc3140bb69b293ce1bb984b70725119a5952f0d5d7f35dbea1e5ef5303",
+        "renderVerificationSha256": "f1c9a8488f943ee731dd6c7460168a08a75ffefa0b9ee48e605e0fdfbb490c3b"
+      },
+      "previewFile": "notification-stack-cycle.mp4",
+      "sourceInteractionObserved": true,
+      "sourceMotionScope": "Cursor hover reveals the next notification header, repeated selection cycles four notifications in the same deck, leaving retracts rear layers, close hover hides rear layers and close dismisses the visible notification area. The container and account footer remain fixed."
+    }
+  ],
+  "mainDiagnostics": {
+    "svgCoordinates": {
+      "passed": true,
+      "inside": {
+        "x": 50,
+        "y": 24,
+        "width": 20.387985229492188,
+        "height": 20
+      },
+      "outside": {
+        "x": -100,
+        "y": 24,
+        "width": 29.481979370117188,
+        "height": 20
+      }
+    },
+    "textClipping": {
+      "passed": true,
+      "issues": [
+        {
+          "text": "outside-canvas-test",
+          "type": "outside-canvas"
+        }
+      ]
+    },
+    "total": 3,
+    "errors": [],
+    "seekFailures": [],
+    "layoutFlags": []
+  }
+}

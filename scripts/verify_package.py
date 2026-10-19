@@ -1,22 +1,23 @@
-#!/usr/bin/env python3
-"""Verify an extracted Release using its file hash manifest."""
+"""Verify the current release, not obsolete hashes from private historical snapshots."""
 import argparse
-import hashlib
 import json
 from pathlib import Path
+import sys
+
+from release_manifest import verify_release
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('directory',type=Path)
-    a=p.parse_args()
-    root=a.directory.resolve()
-    manifest=json.loads((root/'package-manifest.json').read_text(encoding='utf-8'))
-    failures=[]
-    for name,expected in manifest['files'].items():
-        path=(root/name).resolve()
-        if root not in path.parents or not path.is_file():failures.append(name);continue
-        if hashlib.sha256(path.read_bytes()).hexdigest()!=expected:failures.append(name)
-    print(json.dumps({'version':manifest['version'],'checked':len(manifest['files']),'failures':failures}))
-    if failures:raise SystemExit(1)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
+    parser.add_argument('--installed', action='store_true', help='Permit additional local user files')
+    args = parser.parse_args()
+    try:
+        report = verify_release(args.root, exact=not args.installed)
+    except (ValueError, KeyError, OSError) as error:
+        print(json.dumps({'ok': False, 'error': str(error)}, ensure_ascii=False, indent=2))
+        return 1
+    print(json.dumps(report, ensure_ascii=False, indent=2))
+    return 0
 
-if __name__=='__main__':main()
+if __name__ == '__main__':
+    sys.exit(main())

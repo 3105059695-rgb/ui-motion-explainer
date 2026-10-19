@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "event_id": "20261015-girl-agent-sample-approved",
+  "date": "2026-10-15",
+  "source": "direct_user_message",
+  "user_quote": "对对对，就是这样的，深得我心呀",
+  "approval_state": "approved_video_sample",
+  "profile_scope": "user-ui; more specific account/project choices take precedence",
+  "video_path": "assets/approved-girl-sample/output/preview.mp4",
+  "video_sha256": "b70994e106999601574fa526a0aed435b43ad882f05aad1c7497bd2941433d0a",
+  "project_path": "assets/approved-girl-sample",
+  "implementation_paths": [
+    "assets/approved-girl-sample/index.html",
+    "assets/approved-girl-sample/src/player.js",
+    "assets/approved-girl-sample/src/style.css",
+    "assets/approved-girl-sample/project.json",
+    "assets/approved-girl-sample/resource-provenance.json"
+  ],
+  "approved_scope": [
+    "本次女孩与场景的成片观感",
+    "搬运、接管、交接的可见动作及利落节奏",
+    "AIGC 局部聚焦、遮挡转场、收拢接入 UI 的衔接",
+    "白画布、黑白窗口、淡紫强调的 UI 呈现"
+  ],
+  "reuse_rules": [
+    "后续通用 user-ui 口播任务直接以此片校准，不让用户重复确认画风。",
+    "先理解新口播句意、因果与情绪，再选场景和动作；不固定复用这份口播、三段顺序、11.3 秒长度或坐标。",
+    "角色身份继续以两张用户原图约束；样片中已知局部比例或发夹偏差不改写角色标准。",
+    "复用已成功实现的连续动作与转场代码，视频导出核验实际解码画面和定位，不能只看 currentTime。"
+  ],
+  "not_implied": [
+    "所有旧视频或未来生成片已经认可",
+    "公共示意配音被指定为永久账号声音",
+    "已完成独立的全片正常速度听审",
+    "覆盖阿刁、方木等独立档案"
+  ]
+}

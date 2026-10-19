@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-14",
+  "scope": "local component/demo technical checks",
+  "browser": "C:\\Users\\山有扶苏\\AppData\\Local\\ms-playwright\\chromium-1237\\chrome-win64\\chrome.exe",
+  "syntax_checks": [
+    "editing-kit.js",
+    "demo.js"
+  ],
+  "node_smoke_test": true,
+  "browser_checks": [
+    {
+      "effect": "focus-mask",
+      "reverse_seek": true,
+      "snapshots_seconds": [
+        0,
+        4,
+        8
+      ]
+    },
+    {
+      "effect": "occlusion-reveal",
+      "reverse_seek": true,
+      "snapshots_seconds": [
+        0,
+        4,
+        8
+      ]
+    },
+    {
+      "effect": "match-handoff",
+      "reverse_seek": true,
+      "snapshots_seconds": [
+        0,
+        4,
+        8
+      ]
+    },
+    {
+      "effect": "compare",
+      "reverse_seek": true,
+      "snapshots_seconds": [
+        0,
+        4,
+        8
+      ]
+    },
+    {
+      "effect": "causal-chain",
+      "reverse_seek": true,
+      "snapshots_seconds": [
+        0,
+        4,
+        8
+      ]
+    },
+    {
+      "effect": "result-pullback",
+      "reverse_seek": true,
+      "snapshots_seconds": [
+        0,
+        4,
+        8
+      ]
+    }
+  ],
+  "browser_console_errors": [],
+  "external_requests": [],
+  "play_pause_scrub_restart": true,
+  "alternate_theme": true,
+  "media_transport_in_effects": false,
+  "video_audio_material_tested": false,
+  "user_style_approval": false,
+  "full_video_rendered": false,
+  "model_visual_review": {
+    "completed": true,
+    "reviewed_contact_sheets": [
+      "validation/contact-1.jpg",
+      "validation/contact-2.jpg"
+    ],
+    "reviewed_full_size": [
+      "validation/focus-mask-dark.png"
+    ],
+    "scope": "6 effects at 0/4/8 seconds in contact sheets plus alternate-theme focus frame; no full-motion or audio review",
+    "findings": "Main content readable, effects visibly distinct at endpoints/midpoint, identity retained for handoff and causal items, actual next scene revealed behind occluder."
+  },
+  "source_sha256": {
+    "editing-kit.js": "187b49d8a9baef3427a062c00bc9321e0886d7d7014a5961e87eaf04067c3963",
+    "editing-kit.css": "85fb7281aac4738a1ec5477c119e3c621871c5b80c283be2716c8b0800748b85",
+    "demo.html": "b991fa4270835cfb677ffaecb738e7f82917a93615ff8192d72842788372d2f3",
+    "demo.js": "ffed1b1179f0b76b81e1327d22e39c99928f1b55a87259c3185860123304fd19"
+  }
+}

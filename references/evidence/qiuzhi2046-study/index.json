@@ -1,0 +1,580 @@
+{
+  "schema_version": 1,
+  "built_at": "2026-10-14T12:42:37+08:00",
+  "study_id": "qiuzhi2046-full-transcript-visual-alignment",
+  "study_root": "local-only/qiuzhi2046-alignment",
+  "reader": "local-only/逐句对照.html",
+  "check": "local-only/study-check.json",
+  "source_inventory": "local-only/inventory.json",
+  "media_policy": "original sources and evidence images referenced only; no source video copies in this metadata",
+  "total": {
+    "duration_seconds": 6220.974943,
+    "source_asr_segments": 2401,
+    "source_asr_words": 23549,
+    "alignment_rows": 2038,
+    "supplemental_rows": 16,
+    "observation_intervals": 1060,
+    "unique_evidence_files": 209
+  },
+  "full_realtime_av_review": false,
+  "videos": [
+    {
+      "id": "workflow",
+      "title": "一站式创作 Agent：AI 改写自媒体工作流",
+      "source": "local-only/一站式创作Agent！用 AI 改写自媒体工作流！ #AI #秋芝2046 #剪映AI创飞边界 #剪映AI还是太全面了 #杜比视界.mp4",
+      "source_sha256": "922fec6bc2fd9bf37cd9c47578a9d9571e6d84dc115fb120350b61301e2577f9",
+      "source_bytes": 61126644,
+      "duration_seconds": 636.411995,
+      "paths": {
+        "alignment": "local-only/alignment.json",
+        "raw_transcript": "local-only/transcript.json",
+        "word_timestamps": "local-only/transcript.json",
+        "recovered_gaps": "local-only/recovered-gaps.json",
+        "reader": "local-only/逐句对照.html",
+        "reader_uri": "file:///local-only/%E9%80%90%E5%8F%A5%E5%AF%B9%E7%85%A7.html#video=workflow"
+      },
+      "statistics": {
+        "duration_seconds": 636.411995,
+        "source_asr_segments": 220,
+        "source_asr_words": 2160,
+        "alignment_rows": 220,
+        "supplemental_rows": 9,
+        "observation_intervals": 113,
+        "unique_evidence_files": 23,
+        "covered_source_ids": 220,
+        "merged_alignment_rows": 0,
+        "explicitly_split_source_ids": [],
+        "visual_checked_rows": 220,
+        "supplemental_visual_checked_rows": 9,
+        "source_sha256_matches": true,
+        "raw_asr_coverage_and_preservation_passed": true
+      },
+      "review": {
+        "method": "实际依次查看全片636张1秒间隔画面及20张连续图集；重点翻页、时间线蒙版、人物回位补看0.1/0.2秒连续采样。逐行人工编写220个ASR对应关系；补9段原VAD漏对白。",
+        "audio_listened": false,
+        "transcript_status": "machine_asr_with_explicit_screen_corrections",
+        "reviewed_ranges": [
+          [
+            0,
+            636.411995
+          ]
+        ],
+        "unreviewed_ranges": [],
+        "limitations": [
+          "顺序视觉采样核对不是全片实时视听；未完整听审，音效、节拍与精确起音未验证。",
+          "观察区间约±1秒；短于采样间隔的瞬态仍可能遗漏，不能称逐帧切镜完成。",
+          "画面展示的工具流程可确定；示范成片每个素材的实际模型、提示词、生成次数、工程曲线无法仅由成片确定。"
+        ]
+      },
+      "learning_notes": [
+        {
+          "topic": "开头",
+          "range": [
+            0,
+            26
+          ],
+          "observed": "人物问候→具体工作流收益→两类受众→双列流程→进入实际工具。",
+          "inference": "开头承诺要有后文可以验证的工作成果，标题/流程服务收益理解，不能只套炫转场。"
+        },
+        {
+          "topic": "语义B-roll",
+          "range": [
+            209,
+            242
+          ],
+          "observed": "同一剪辑者从查看分镜、转椅换工具，再切真实额外操作和解决界面。",
+          "inference": "把工作受阻解释为连续动作链，情绪和多余步骤先可见，再交给实际UI证明解决。"
+        },
+        {
+          "topic": "局部聚焦蒙版",
+          "range": [
+            491,
+            496
+          ],
+          "observed": "时间线保持亮，画面其他部分暗，橙框出现，然后标题逐字建立。",
+          "inference": "先让目标区域可识别，再给出解释词；缩放/压暗/边框各承担一种注意力工作。"
+        },
+        {
+          "topic": "转场",
+          "range": [
+            401.8,
+            403.4
+          ],
+          "observed": "右下页角卷起扩展到白页，承接三个软件标志；人物圆窗/导航保留。",
+          "inference": "承载层翻页、解释层与讲解者锚点稳定，换主题时仍保留观看位置。"
+        },
+        {
+          "topic": "AIGC连续因果",
+          "range": [
+            434,
+            456
+          ],
+          "observed": "江面船只→孙权侦察→曹操察觉命令→箭雨→船受损→转船。",
+          "inference": "人物、道具、空间和动作因果连续；示意片明确标识，不能拿生成画面充当历史影像证据。"
+        },
+        {
+          "topic": "正反例",
+          "range": [
+            485,
+            518
+          ],
+          "observed": "先演示错位花字和过度包装，后回时间线调整，再显示更贴合语义的成片。",
+          "inference": "保留失败效果的负面标签，学习可编辑修正流程，不能把负面示范混入喜好库。"
+        },
+        {
+          "topic": "样片回讲解",
+          "range": [
+            522.5,
+            527.5
+          ],
+          "observed": "样片暗化，讲解者圆窗从中央出现并回左下，随后恢复工具界面。",
+          "inference": "用同一个讲解者锚点完成样片到操作的归位，不必每次硬切全屏人物。"
+        }
+      ],
+      "unresolved": [
+        "需要逐段实时听审才能确认语气、音效、节奏和全部精确切点；现阶段未做。",
+        "原片价格/产品功能只作为当时的画面叙事素材，未核实当前有效性；禁止迁移成当前事实。"
+      ],
+      "user_approval_scope": "Reference supplied for study; no user approval of recreated output claimed.",
+      "implementation_status": "reference_analysis_only; no effect implementation or rendered replica claimed",
+      "installed_alignment": "references/evidence/qiuzhi2046-study/workflow.json",
+      "original_alignment_sha256": "f475eb181683f7037fb3d642fd246de0081fae1d7fa2cda5d42b0de73ec11570",
+      "installed_alignment_sha256": "aba9f0b6a984fabd13544c90090d404e7acbef238fddd8f4252478e74545cf9e"
+    },
+    {
+      "id": "creative",
+      "title": "人人都要学！Agent 视觉创作全流程～【小白教程】 #AI#秋芝2046 #tapnow #creativeos #创作万岁",
+      "source": "local-only/人人都要学！Agent 视觉创作全流程～【小白教程】 #AI#秋芝2046 #tapnow #creativeos #创作万岁.mp4",
+      "source_sha256": "70000da72fdecb506bab77dc4f1787b7628f10e58393eada139919f140278e03",
+      "source_bytes": 91633281,
+      "duration_seconds": 963.789002,
+      "paths": {
+        "alignment": "local-only/alignment.json",
+        "raw_transcript": "local-only/transcript.json",
+        "word_timestamps": "local-only/transcript.json",
+        "recovered_gaps": "local-only/recovered-gaps.json",
+        "reader": "local-only/逐句对照.html",
+        "reader_uri": "file:///local-only/%E9%80%90%E5%8F%A5%E5%AF%B9%E7%85%A7.html#video=creative"
+      },
+      "statistics": {
+        "duration_seconds": 963.789002,
+        "source_asr_segments": 362,
+        "source_asr_words": 3646,
+        "alignment_rows": 196,
+        "supplemental_rows": 7,
+        "observation_intervals": 216,
+        "unique_evidence_files": 70,
+        "covered_source_ids": 362,
+        "merged_alignment_rows": 86,
+        "explicitly_split_source_ids": [],
+        "visual_checked_rows": 196,
+        "supplemental_visual_checked_rows": 7,
+        "source_sha256_matches": true,
+        "raw_asr_coverage_and_preservation_passed": true
+      },
+      "review": {
+        "method": "本人依时间顺序亲看0–963秒全部964帧1fps视觉图集；另亲看12组4fps相邻动作/转场共164帧及4张1920×1080 UI细节。逐句回指这些观察区间；不是全片正常速度视听或逐帧剪辑表。",
+        "audio_listened": false,
+        "transcript_status": "machine_asr_with_explicit_corrections",
+        "reviewed_ranges": [
+          [
+            0,
+            963.789002
+          ]
+        ],
+        "unreviewed_ranges": [],
+        "limitations": [
+          "视觉为1fps连续采样，抽帧之间小于1秒的动作可能遗漏；12组局部加密至0.25秒间隔。",
+          "原始362个ASR段未改；字幕只对明确可见误识作显式修订，未校部分保留机器文本。",
+          "TVC演示段存在ASR漏对白及漂移，特别849.62–856.22、857.7–878.26、882.46–888.96；已另请无VAD补识，不能称静默。",
+          "未独立试听音乐、语音、音效；不能评价音画节奏或断定音效制作方式。",
+          "应用回复中的模型/能力是片内证据，不是独立后端日志验证。"
+        ]
+      },
+      "learning_notes": [
+        "观察：课程用同一QZ眼镜项目贯穿活动方案、产品图和TVC，每个章节先显示三/四步总览，实录左侧导航持续高亮当前位置。推论：导航与项目连续性共同减轻长教程迷路。",
+        "观察：49–78秒旧流程与Agent流程都用同一女孩、纸张、机器；旧流程亲自收纸搬图跑机器，Agent段交纸后坐下，由机器人执行。推论：动作角色与责任转移比关键词切卡更清楚。其AIGC来源未披露。",
+        "观察：资料读取→确认理解→长期偏好→主体库→方案确认→批量产物→单图修改形成操作结果链；不是只展示最终美图。推论：每个关键能力应有入口、动作和结果证据。",
+        "观察：分镜先TEXT时间线，再铅笔故事板，再正式视频任务；复杂镜头可额外白模预演。推论：分层验证可让故事、构图、空间运动在正式生成前被检查。",
+        "观察：845–848秒衣物拿近遮镜后人物已穿同衣上街，878–882秒同一建筑模型从会议桌变阶梯座席。推论：保留对象身份与状态变化，能让B-roll解释功能带来的实际结果。",
+        "观察：946–954秒资料、工具箱、蓝图、建堡在同一森林空间依次交接/使用。推论：连续因果动作与人的判断职责共同收束课程主题。",
+        "工具证据边界：297秒应用卡只清晰可读6 Astra，前缀被模糊遮挡；609秒单图编辑设置可读GPT Image2；797秒任务回复明确写Seedance 2.5全能参考模式和generate-audio:true。都不外推至片头卡通B-roll或全片所有素材。"
+      ],
+      "unresolved": [
+        "前后卡通解释段具体生成模型、提示词和剪辑工程未知。",
+        "3D应用卡模型前缀被遮挡，ASR中的Deal/Liu Astra不据此猜改。",
+        "网络参考图来源页/授权未展示。",
+        "主体团队共享只见菜单；新技能只见创建结果，未验证跨项目复用。",
+        "成片剪辑软件、原始轨道、速度曲线、音乐与音效来源未展示。",
+        "TVC补识10条中8条已用字幕校订为7条补充对应，2条与原ASR重合排除；882.46–888.96秒仍未确认音频内容。补识中文不能当已人工核实的原语对白。"
+      ],
+      "user_approval_scope": "Reference supplied for study; no user approval of recreated output claimed.",
+      "implementation_status": "reference_analysis_only; no effect implementation or rendered replica claimed",
+      "installed_alignment": "references/evidence/qiuzhi2046-study/creative.json",
+      "original_alignment_sha256": "f68bc3206c8babca5337119e1efe02a43f7f2205aa9b4dc5247c2fbb9ea04ccd",
+      "installed_alignment_sha256": "5dffee1e9a434b7f028ccadd37c4bf9997142d0dc1f53704f92fa04ab238a95d"
+    },
+    {
+      "id": "network",
+      "title": "为了让所有人都用好AI，我做了这个…… #AI #秋芝2046 #炉子 #能力网络 #前沿科技趋势发布月",
+      "source": "local-only/为了让所有人都用好AI，我做了这个…… #AI #秋芝2046 #炉子 #能力网络 #前沿科技趋势发布月.mp4",
+      "source_sha256": "96268fe9b02c59884e9b0b4c3193c2edd812aeeaeb4d4e8b1871472a7d7b8917",
+      "source_bytes": 140207888,
+      "duration_seconds": 1259.773946,
+      "paths": {
+        "alignment": "local-only/alignment.json",
+        "raw_transcript": "local-only/transcript.json",
+        "word_timestamps": "local-only/transcript.json",
+        "recovered_gaps": null,
+        "reader": "local-only/逐句对照.html",
+        "reader_uri": "file:///local-only/%E9%80%90%E5%8F%A5%E5%AF%B9%E7%85%A7.html#video=network"
+      },
+      "statistics": {
+        "duration_seconds": 1259.773946,
+        "source_asr_segments": 528,
+        "source_asr_words": 4763,
+        "alignment_rows": 534,
+        "supplemental_rows": 0,
+        "observation_intervals": 280,
+        "unique_evidence_files": 42,
+        "covered_source_ids": 528,
+        "merged_alignment_rows": 0,
+        "explicitly_split_source_ids": [
+          528
+        ],
+        "visual_checked_rows": 534,
+        "supplemental_visual_checked_rows": 0,
+        "source_sha256_matches": true,
+        "raw_asr_coverage_and_preservation_passed": true
+      },
+      "review": {
+        "method": "亲看顺序接触表：0–60秒0.5秒；48–1259.77秒2秒；全片短ASR段没有落入基础采样时补中点，6个机制段按0.5秒补相邻状态，错字与结尾分句再定点核对。所有最终row均有句内已查看画面证据。此为全片抽样视觉对照，不是完整实时音画听审。",
+        "audio_listened": false,
+        "transcript_status": "machine_asr_with_explicit_corrections",
+        "reviewed_ranges": [
+          [
+            0,
+            1259.773946
+          ]
+        ],
+        "unreviewed_ranges": [],
+        "review_scope": "visual_sampling_only",
+        "source_asr_segments": 528,
+        "alignment_rows": 534,
+        "manual_observation_intervals": 280,
+        "personally_viewed_sheet_count": 42,
+        "checked_unique_frame_files": 948,
+        "denser_motion_ranges": [
+          [
+            236,
+            250
+          ],
+          [
+            262,
+            273
+          ],
+          [
+            295,
+            308
+          ],
+          [
+            326,
+            332
+          ],
+          [
+            1041,
+            1047
+          ],
+          [
+            1230,
+            1238
+          ]
+        ],
+        "transcript_sha256": "c386d228b8f646c455269ba43f2bc663e149353b2617149a3f7d34194210e4fa",
+        "limitations": [
+          "未进行全片音频听校，背景对白、歌曲、音效、漏识别口播及实际静默状态未确认。",
+          "时间范围全覆盖指顺序抽样覆盖；2秒采样可能漏掉更短的插帧/过渡；相邻样本间不能宣称连续动作的全部细节。",
+          "基础fps-filter图标为名义采样时间，未逐帧验证输入PTS；尤其切换附近应结合前后证据，不能据表直接精确重剪。",
+          "屏幕字幕仅对corrections明确列出的29个源段作校正；其余仍机器识别文本，不等同作者逐字稿。",
+          "卡通/拟真素材未找到作者生成记录；图形类别是视觉形态，不能从外观确定AIGC模型、制作软件、素材许可或提示词。",
+          "纯人物段保留自然动作和句意关系；不把一句一行误解为剪辑必须一句一镜。"
+        ]
+      },
+      "learning_notes": [],
+      "unresolved": [
+        "完整音频听校及ASR漏词/背景对白补全尚未做。",
+        "没有逐帧标定精确切点；2秒间隙内的短素材或过渡可能未包含。",
+        "原作者使用的图像/视频生成模型、软件、音效来源和素材授权均未凭画面猜测。"
+      ],
+      "user_approval_scope": "Reference supplied for study; no user approval of recreated output claimed.",
+      "implementation_status": "reference_analysis_only; no effect implementation or rendered replica claimed",
+      "installed_alignment": "references/evidence/qiuzhi2046-study/network.json",
+      "original_alignment_sha256": "26b961f9207125edae41812d71663f2b93a8fa49aff92e291503a711286d9b41",
+      "installed_alignment_sha256": "df8fa7bf45255f43b7688e9339f0174705089a6294f036ce7120d7d9e3162def"
+    },
+    {
+      "id": "claude",
+      "title": "Claude Code 全教程",
+      "source": "local-only/全网最全！60分钟全面掌握Claude Code～ 【附完整文档】 #AI #秋芝2046 #ClaudeCode #AI教程 #前沿科技趋势发布月.mp4",
+      "source_sha256": "75d5da352c23c7ad9d86e54ed2bcf6f581f3c05f393e72608cf4446895b0e2fd",
+      "source_bytes": 200508371,
+      "duration_seconds": 3361.0,
+      "paths": {
+        "alignment": "local-only/alignment.json",
+        "raw_transcript": "local-only/transcript.json",
+        "word_timestamps": "local-only/transcript.json",
+        "recovered_gaps": null,
+        "reader": "local-only/逐句对照.html",
+        "reader_uri": "file:///local-only/%E9%80%90%E5%8F%A5%E5%AF%B9%E7%85%A7.html#video=claude"
+      },
+      "statistics": {
+        "duration_seconds": 3361.0,
+        "source_asr_segments": 1291,
+        "source_asr_words": 12980,
+        "alignment_rows": 1088,
+        "supplemental_rows": 0,
+        "observation_intervals": 451,
+        "unique_evidence_files": 74,
+        "covered_source_ids": 1291,
+        "merged_alignment_rows": 121,
+        "explicitly_split_source_ids": [],
+        "visual_checked_rows": 1088,
+        "supplemental_visual_checked_rows": 0,
+        "source_sha256_matches": true,
+        "raw_asr_coverage_and_preservation_passed": true
+      },
+      "review": {
+        "method": "三份按原ASR起点分工的逐段观察合并；全片2秒顺序画面索引与局部加密图实际查看；各段方法见part_methods。",
+        "audio_listened": false,
+        "transcript_status": "machine_asr_with_explicit_screen_corrections",
+        "reviewed_ranges": [
+          [
+            0,
+            3361
+          ]
+        ],
+        "unreviewed_ranges": [],
+        "limitations": [
+          "逐段完整保留1291个机器ASR段，并对全部段落编写实际画面对应；不等同全文人工听写或完整实时视听。",
+          "主索引为全片2秒顺序采样；重点片段有0.25/0.5秒加密。短于采样间隔的镜头、字幕及动作仍可能遗漏，观察区间不是逐帧切镜表。",
+          "仅明确的屏幕字幕/界面用语另作校正；原始ASR、词时码和概率保存在transcript.json。",
+          "未验证音效、音乐节拍、精确起音、AIGC实际模型或源工程参数；参考中的产品建议只作原片内容记录。"
+        ],
+        "part_methods": [
+          {
+            "file": "parts/first-0000-1200.json",
+            "method": "实际查看sequence-001至019共19张2秒顺序联系图；逐段阅读ASR ID1–452；另实看目录/LLM循环/机器人/grep四组0.5秒连续索引，共184帧。按人工观察区间与ASR时码作对应，脚本仅合并已写观察，不用关键词猜视觉。",
+            "audio_listened": false,
+            "transcript_status": "machine_asr_with_explicit_corrections",
+            "reviewed_ranges": [
+              [
+                0,
+                1202
+              ]
+            ],
+            "unreviewed_ranges": [
+              [
+                1202,
+                3361
+              ]
+            ],
+            "limitations": [
+              "此part只负责前20分钟；后面两段由其他研究者负责合并。",
+              "原ASR保留全部词时码和概率；仅明确的屏幕字幕/界面专名做独立纠错，其余原样，不是全文人工听写。",
+              "顺序索引覆盖全段，不等于连续实时看听；2秒间隔仍可能漏短镜、微小动作或临时字幕。重点4段0.5秒加密仍不是逐帧切点。",
+              "模型/工具版本和演示中权限建议仅作为参考片内容，不当成当前产品建议或本机操作指令。",
+              "未从外观断言AIGC模型、源代码、缓动参数或音乐/音效节拍。"
+            ]
+          },
+          {
+            "file": "parts/root-1200-2400.json",
+            "method": "逐页实际查看sequence-019至038的连续2秒索引，逐一阅读453–938源ASR并手写对应备注；另看4组0.25/0.5秒共112帧连续动作。",
+            "audio_listened": false,
+            "transcript_status": "machine_asr_with_explicit_screen_corrections",
+            "reviewed_ranges": [
+              [
+                1200,
+                2400.3
+              ]
+            ],
+            "unreviewed_ranges": [],
+            "limitations": [
+              "非完整实时视听；音效/节拍/精确发音未核实。",
+              "区间基于2秒采样，不是逐帧切点；短于采样的瞬态可能遗漏。",
+              "参考中的技术建议、数量、界面功能只记录原片，不转成已核实的当前事实。",
+              "三维动画的实际生成模型和提示词无法由画面确认。"
+            ]
+          },
+          {
+            "file": "parts/creative-2400-end.json",
+            "method": "本人亲看sequence-038至053全部16页连续2秒视觉索引，尾段逐ASR映射；补看8张1600px关键操作日志和3323–3333秒20帧0.5秒间隔相邻证据。抽帧检查非完整实时A/V观看。",
+            "audio_listened": false,
+            "transcript_status": "machine_asr_with_explicit_corrections",
+            "reviewed_ranges": [
+              [
+                2400,
+                3361
+              ]
+            ],
+            "unreviewed_ranges": [],
+            "limitations": [
+              "本分片只负责ASR939–1291，之前的片段由其他代理整合。",
+              "基础2秒采样不能排除帧间短事件，视觉状态确认与精确剪点不同。",
+              "未正常速度听音，音效/语气/节奏未验证。",
+              "尾段素材与教程中的模型是不同问题；不能从机器人/科技眼外观反推AIGC工具。"
+            ]
+          }
+        ]
+      },
+      "learning_notes": [
+        {
+          "range": [
+            16,
+            29
+          ],
+          "observation": "目录先建五个固定空槽，再填字，人物留左侧；目录不是每句重做一张卡。",
+          "transfer": "可迁移固定对象状态与逐步揭示；需章节级状态持续存储。",
+          "evidence": [
+            "analysis/detail-directory-001.jpg"
+          ]
+        },
+        {
+          "range": [
+            136,
+            181.5
+          ],
+          "observation": "同一三泳道图让请求、决策、工具回传和完成依次发生，终局缩回产品整体。",
+          "transfer": "可迁移语义动作链；需要同一场景跨句共享对象及结果状态。",
+          "evidence": [
+            "analysis/detail-loop-001.jpg",
+            "analysis/detail-loop-002.jpg",
+            "analysis/detail-loop-003.jpg"
+          ]
+        },
+        {
+          "range": [
+            211.5,
+            215.5
+          ],
+          "observation": "机器人真实伸手、转头、触碰浮动文件块，连续动作支持本地访问类比。",
+          "transfer": "动画角色需有动作变化、对象交互和结果；不能把静图推拉标为同类能力。生成方式未知。",
+          "evidence": [
+            "analysis/detail-robot-001.jpg"
+          ]
+        },
+        {
+          "range": [
+            650,
+            706
+          ],
+          "observation": "实际终端状态先展示，再抽到统一三行权限对照表；每次加入一行后回实录验证。",
+          "transfer": "保留真实UI证据和概念层之间的双向来回，图解不可冒充实录。",
+          "evidence": [
+            "analysis/sequence-011.jpg"
+          ]
+        },
+        {
+          "range": [
+            808,
+            958
+          ],
+          "observation": "番茄钟实践保留创建代码、权限疑问、命令运行、应用结果、阻塞和后台处理整条过程。",
+          "transfer": "剪辑单元应是完整问题与处理结果；同一界面可持续多句，不强制每句配素材。",
+          "evidence": [
+            "analysis/sequence-013.jpg",
+            "analysis/sequence-014.jpg",
+            "analysis/sequence-015.jpg"
+          ]
+        },
+        {
+          "range": [
+            992,
+            1014
+          ],
+          "observation": "真实代码操作暂停后插入grep关系图，局部命中高亮并向grep连线，随后回同一代码/对话分栏。",
+          "transfer": "机制图入口必须有现实问题，结束必须回到原任务状态。",
+          "evidence": [
+            "analysis/detail-grep-001.jpg",
+            "analysis/detail-grep-002.jpg"
+          ]
+        },
+        {
+          "topic": "语义类比的动作链",
+          "range": [
+            1394,
+            1410
+          ],
+          "observed": "跑→击碎紫怪→旗帜变绿存档→挑战更强敌失败→原旗帜旁重生→Git指向该旗帜。",
+          "inference": "先让观众看懂熟悉规则的因果，再映射回抽象概念；回退必须回到已建立的同一锚点。"
+        },
+        {
+          "topic": "数据变换",
+          "range": [
+            1586,
+            1594
+          ],
+          "observed": "五条对话条叠合为一条，条变绿，再补保留关键信息。",
+          "inference": "用对象数量和状态的真实变化说明压缩，解释词在结果形成后出现。"
+        },
+        {
+          "topic": "层级展开",
+          "range": [
+            1810,
+            1878
+          ],
+          "observed": "三层梯形总览→全局规则→项目规则叠上去但保留父层标题→子文件夹规则再叠。",
+          "inference": "细节逐层深入时保留父级位置，降低重新找结构的负担；颜色替换为用户主题。"
+        },
+        {
+          "topic": "AIGC情绪动作",
+          "range": [
+            1574,
+            1580
+          ],
+          "observed": "同女孩在书堆中写→翻页→继续写→皱眉停笔→双手抱头。",
+          "inference": "让同一场景中的负担改变动作与情绪，而不是只给一张焦虑人物图。"
+        },
+        {
+          "topic": "真实操作证据",
+          "range": [
+            1476,
+            1498
+          ],
+          "observed": "同代码被手动改坏，保持红错，同时右侧输入回滚，最终错误消失。",
+          "inference": "保留问题对象让指令和结果同屏可核对，避免生成素材冒充实际修复证据。"
+        },
+        {
+          "topic": "调用不是收藏",
+          "range": [
+            2356,
+            2398
+          ],
+          "observed": "先创建两个不同规则文档，再在主文档分别写什么情况读哪个。",
+          "inference": "参考研究应同样挂到默认任务路线和适用句意，不只是添加文件链接。"
+        },
+        "观察：Skill四类型先建四色空容器，再依次填文件实例；元信息则先Agent→模型关系，再插name/description卡。推论：逐步填同一结构能降低解释多概念时的跳转负担。",
+        "观察：录屏里Skill加载、OpenCLI包安装版本、下载图片文件、子任务Running、插件Installed均有具体日志；Hook配置和手动代理创建只见入口/提问。推论：教学分析须逐项区分提出需求、开始运行、出现结果和真正生效。",
+        "观察：回顾使用统一关卡线，从初步上手移动至掌握管理、个性化、能力扩展，各节点逐条加木牌。推论：片尾导航能重建长教程结构。",
+        "观察：3323.5秒短人物强调句后依次硬切科技眼、握手、机器人办公。推论：这是三个象征素材的蒙太奇，不是一个角色连续完成多动作。"
+      ],
+      "unresolved": [
+        "全片未实时听校；字幕纠错不足以证明所有发声均被转写。",
+        "前20分钟ASR最大空档3.3秒，视觉为章节导航；仍不能以此证明绝对无语音。",
+        "部分专名/短句疑似ASR错误仍保留，详见corrections字段；未识别原片后台工具或生成模型。",
+        "未全程听审，无法证明音效/节拍/精确口播对齐；未观察到的细节保留未知。",
+        "飞书文档/邮件示例只有请求，无成功结果。",
+        "OpenCLI安装虽有版本结果，Browser Bridge等后续配置过程未完整展示。",
+        "手动SubAgent未完成创建；Hook未完成配置和触发验证；插件安装后未见reload。",
+        "片尾科技眼、握手和机器人群体素材来源未知。",
+        "作者谈源码与未来能力未在画面给出处，不作为本研究核实事实。"
+      ],
+      "user_approval_scope": "Reference supplied for study; no user approval of recreated output claimed.",
+      "implementation_status": "reference_analysis_only; no effect implementation or rendered replica claimed",
+      "installed_alignment": "references/evidence/qiuzhi2046-study/claude.json",
+      "original_alignment_sha256": "a6e00f4de6521168e44c59a1e8c85ef77ea04f71c650b169b324e8adb657e8a9",
+      "installed_alignment_sha256": "136aa841573869a6891e0394166325ec8b75f0575e7afabf684deab0bde665e0"
+    }
+  ],
+  "installed_catalog": "references/source-study-methods.json",
+  "installation_scope": "Text observations only. Source videos and evidence images remain at original local paths."
+}

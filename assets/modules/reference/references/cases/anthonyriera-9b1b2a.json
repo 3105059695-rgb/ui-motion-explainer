@@ -1,0 +1,114 @@
+{
+  "slug": "anthonyriera-9b1b2a",
+  "title": "Reddit marketing tool launch video",
+  "date": "2026-09-26",
+  "tags": [
+    "skill"
+  ],
+  "promptShared": true,
+  "handle": "anthonyriera",
+  "poster": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "preview": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "video": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "width": 1920,
+  "height": 1080,
+  "schema_version": "1.0.0",
+  "collected_at": "2026-10-07T02:47:20+00:00",
+  "source_page": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "source_post": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "attribution": "Videos and prompts belong to their creators, linked on each entry.",
+  "source_html_sha256": "c9650c58baf97d1b5e157e7e376a98e57fc2e4e28fae5fc4e6e37125426461eb",
+  "prompt": null,
+  "prompt_characters": 0,
+  "prompt_sha256": null,
+  "prompt_extraction": "full HTML #entry-prompt (unfolded source text)",
+  "prompt_rsc_match": null,
+  "prompt_source_note": null,
+  "stack": "Remotion",
+  "model": "Opus 5.5",
+  "effort": null,
+  "iterations": "Many rounds",
+  "detail_fields": {
+    "Model": "Opus 5.5",
+    "Iterations": "Many rounds",
+    "Stack": "Remotion",
+    "Posted": "Sep 26, 2026"
+  },
+  "skill_repo": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "skill_description": "A Claude Code skill that learns your product's design system, interviews you about the film, then builds and renders a launch or landing-page video in Remotion using your real components, logo and music.",
+  "skill_install_command": "/plugin marketplace add Rieranthony/product-film-skill\n/plugin install product-film@product-film-skill",
+  "category": "product-film",
+  "category_inferred": true,
+  "status": "reference-collected",
+  "collection_errors": [],
+  "local_poster": "assets/reference/posters/anthonyriera-9b1b2a.webp",
+  "local_preview": null,
+  "local_video_absolute": null,
+  "detail_request_retries": [],
+  "media_transfers": {
+    "poster": {
+      "status": "cached",
+      "bytes": 6206,
+      "attempts": []
+    },
+    "preview": {
+      "status": "cached",
+      "bytes": 42438,
+      "attempts": []
+    },
+    "video": {
+      "status": "cached",
+      "bytes": 7541663,
+      "attempts": []
+    }
+  },
+  "media_probe": {
+    "poster": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "webp",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "duration": null,
+      "error": null
+    },
+    "preview": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 720,
+          "height": 406
+        }
+      ],
+      "duration": "4.000000",
+      "error": null
+    },
+    "video": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "duration": "52.842000",
+      "error": null
+    }
+  },
+  "distribution_status": "catalog-and-starters; historical reconstruction and original video not bundled"
+}

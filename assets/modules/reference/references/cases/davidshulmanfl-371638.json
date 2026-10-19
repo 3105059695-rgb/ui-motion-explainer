@@ -1,0 +1,112 @@
+{
+  "slug": "davidshulmanfl-371638",
+  "title": "Clay-style music video",
+  "date": "2026-09-25",
+  "tags": [
+    "prompt"
+  ],
+  "promptShared": true,
+  "handle": "DavidShulmanFL",
+  "poster": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "preview": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "video": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "width": 1280,
+  "height": 720,
+  "schema_version": "1.0.0",
+  "collected_at": "2026-10-07T02:51:12+00:00",
+  "source_page": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "source_post": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "attribution": "Videos and prompts belong to their creators, linked on each entry.",
+  "source_html_sha256": "ad113f241703cdcd9d650b8c5cb7dbc267cec42489b1224c22f73db655372039",
+  "prompt": "Create a 60 second music video in the style of Peter Gabriel's Sledgehammer and Big Time. But use modern references and figures. Also create the song, something sounds like it would fit on Peter Gabriel's So album.",
+  "prompt_characters": 214,
+  "prompt_sha256": "015556543999f6e72ef7bb2f784fcd6cf4992552bb94fb91a3b0d25d6a0d08c9",
+  "prompt_extraction": "full HTML #entry-prompt (unfolded source text)",
+  "prompt_rsc_match": true,
+  "prompt_source_note": "This prompt was taken directly from @DavidShulmanFL’s post (opens in a new tab).",
+  "stack": null,
+  "model": "Opus 5.5",
+  "effort": null,
+  "iterations": null,
+  "detail_fields": {
+    "Model": "Opus 5.5",
+    "Posted": "Sep 25, 2026"
+  },
+  "skill_repo": null,
+  "skill_description": null,
+  "skill_install_command": null,
+  "category": "music-visual",
+  "category_inferred": true,
+  "status": "reference-collected",
+  "collection_errors": [],
+  "local_poster": "assets/reference/posters/davidshulmanfl-371638.webp",
+  "local_preview": null,
+  "local_video_absolute": null,
+  "detail_request_retries": [],
+  "media_transfers": {
+    "poster": {
+      "status": "cached",
+      "bytes": 30542,
+      "attempts": []
+    },
+    "preview": {
+      "status": "cached",
+      "bytes": 103130,
+      "attempts": []
+    },
+    "video": {
+      "status": "cached",
+      "bytes": 9932467,
+      "attempts": []
+    }
+  },
+  "media_probe": {
+    "poster": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "webp",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "duration": null,
+      "error": null
+    },
+    "preview": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 720,
+          "height": 406
+        }
+      ],
+      "duration": "4.000000",
+      "error": null
+    },
+    "video": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "duration": "60.053000",
+      "error": null
+    }
+  },
+  "distribution_status": "catalog-and-starters; historical reconstruction and original video not bundled"
+}

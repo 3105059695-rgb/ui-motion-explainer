@@ -1,0 +1,1474 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-01",
+  "scope": {
+    "site": "Collect UI",
+    "sourceEnumerationBatch": 25,
+    "category": "Text Effect",
+    "categoryUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "listingUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "observedDate": "2026-10-01",
+    "timezone": "Asia/Shanghai",
+    "enumerationComplete": true,
+    "pagesCatalogued": [
+      1,
+      2
+    ],
+    "sourcePaginationControlsPresent": true,
+    "paginationMode": "actual-pagination-button-pages",
+    "lastPageEvidence": {
+      "snapshotId": "text-effect-page-2-2026-10-01",
+      "pageNumber": 2,
+      "activePage": 2,
+      "nextPageDisabled": true,
+      "paginationControlsObserved": true,
+      "observedCardCount": 3,
+      "evidenceKind": "loaded-rendered-DOM-two-stable-reads-next-disabled"
+    },
+    "enumerationMeaning": "仅当时实际浏览的完整分页快照，不代表媒体已观看、独立原作总数或全站完成。",
+    "notes": [
+      "Progress、Switch Button、Progress Bar为完整已加载单列表；实际到达页面底部后完整双读一致，没有源分页，p1仅归档。",
+      "Text Effect与Terminal Aesthetic实际Next逐页导航；旧首卡脱离、当前页和新首卡确认后取完整集合双读，末Next禁用。",
+      "到达底部前的即时滚动中间状态单独丢弃保留；未纳入accepted快照、卡片或媒体计数。",
+      "实际可见大写英文标签、完整tag href、hidden +N、实际图片alt与归属href原样保留；隐藏标签不补造。",
+      "原名仅在derivedOriginalCategoryName独立按159类真实完整href映射，不覆盖实际可见标签。",
+      "外部归属链接不冒充原作href，authorProfile null不补造；原作链接按实际精确卡弹层另外丰富。",
+      "目录清点新增媒体观看0、适配0；已有观察只按完整媒体URL分别关联。"
+    ]
+  },
+  "enumerationEvidence": {
+    "frozenRawSha256": "8f473f05cf14a9efcd42e070430df826df7c11cc053211dda591fc7fed04f6df",
+    "rawBatch": 25,
+    "rawMetadata": {
+      "category": "Text Effect",
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "observedAt": "2026-10-01T09:32:03.708Z",
+      "sourcePaginationControlsPresent": true,
+      "collectionComplete": true,
+      "twoReadsMatch": true,
+      "mediaObservationClaims": 0,
+      "navigationNote": "Actual Next 1→2: old first checkbox detached, Page 2 current, new first card different, two complete card collections stable; final Next disabled.",
+      "navigation": [
+        {
+          "fromPage": 1,
+          "toPage": 2,
+          "oldFirstDetached": true,
+          "oldFirstCheckboxId": "checkbox-a7ced973-ec60-4d78-8fce-461207caebab",
+          "activePageConfirmed": 2,
+          "newFirstCardId": "a2246161-7f89-4002-a1ac-931c249eff69",
+          "dialogCount": 0
+        }
+      ],
+      "completionEvidence": {
+        "allPageCollectionsReadTwice": true,
+        "pagesExplicitlyVisited": [
+          1,
+          2
+        ],
+        "oldFirstDetachedBeforeAcceptedRead": true,
+        "sourceActivePage": 2,
+        "lastNextDisabled": true
+      },
+      "collection": {
+        "kind": "actual-entire-loaded-rendered-DOM",
+        "sourceMediaDownloaded": false,
+        "cardModalOpened": false,
+        "mediaFrameObservationPerformed": false,
+        "derivedCategoryNameMapping": {
+          "association": "exact complete href; separate derived field; observed visible label unchanged",
+          "usedMapping": {
+            "https://collectui.com/designs/text-effect-ui-design-inspiration": "Text Effect",
+            "https://collectui.com/designs/ui-interaction-ui-design-inspiration": "UI Interaction",
+            "https://collectui.com/designs/portfolio-ui-design-inspiration": "Portfolio",
+            "https://collectui.com/designs/motion-ui-design-inspiration": "Motion",
+            "https://collectui.com/designs/landing-page-ui-design-inspiration": "Landing Page",
+            "https://collectui.com/designs/funny-animation-ui-design-inspiration": "Funny Animation",
+            "https://collectui.com/designs/accordion-ui-design-inspiration": "Accordion",
+            "https://collectui.com/designs/framer-ui-design-inspiration": "Framer"
+          }
+        }
+      },
+      "rejectedReads": [],
+      "notes": [
+        "Future batch25 raw research only. Enumeration is not a source animation observation or original-work href verification."
+      ]
+    },
+    "rawSourceFile": "batch25-text-effect-enumeration.json"
+  },
+  "listingSnapshots": [
+    {
+      "id": "text-effect-page-1-2026-10-01",
+      "pageNumber": 1,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "Text Effect UI Design Inspiration",
+      "activePage": 1,
+      "pagination": [
+        {
+          "active": null,
+          "current": null,
+          "disabled": true,
+          "label": "Go to previous page",
+          "text": "Previous"
+        },
+        {
+          "active": "true",
+          "current": "page",
+          "disabled": false,
+          "label": "Page 1",
+          "text": "1"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 2",
+          "text": "2"
+        },
+        {
+          "active": null,
+          "current": null,
+          "disabled": false,
+          "label": "Go to next page",
+          "text": "Next"
+        }
+      ],
+      "cardCount": 24,
+      "cardCollectionSignature": "4dd2286047e4a0a337cb283705cc3a94b410f01d6a295e6c5b1e5462958995a2",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "416f25517354baba3befa0c5877c4cc4dc4f972e5763291d788940afee5684d9",
+        "second": "416f25517354baba3befa0c5877c4cc4dc4f972e5763291d788940afee5684d9"
+      },
+      "pageEnumerationEvidence": {
+        "twoReadsMatch": true
+      }
+    },
+    {
+      "id": "text-effect-page-2-2026-10-01",
+      "pageNumber": 2,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "Text Effect UI Design Inspiration",
+      "activePage": 2,
+      "pagination": [
+        {
+          "active": null,
+          "current": null,
+          "disabled": false,
+          "label": "Go to previous page",
+          "text": "Previous"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 1",
+          "text": "1"
+        },
+        {
+          "active": "true",
+          "current": "page",
+          "disabled": false,
+          "label": "Page 2",
+          "text": "2"
+        },
+        {
+          "active": null,
+          "current": null,
+          "disabled": true,
+          "label": "Go to next page",
+          "text": "Next"
+        }
+      ],
+      "cardCount": 3,
+      "cardCollectionSignature": "c09dda8157d5211c9ec5703e0f1242cfaab9fd8df3f9b236b7592690af6cb924",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "93930b448c2f1dc4c2001f58457197b58cab8048cf74e4d95a5891580cf16a06",
+        "second": "93930b448c2f1dc4c2001f58457197b58cab8048cf74e4d95a5891580cf16a06"
+      },
+      "pageEnumerationEvidence": {
+        "twoReadsMatch": true
+      }
+    }
+  ],
+  "summary": {
+    "cataloguedEntries": 27,
+    "uniqueMedia": 27,
+    "duplicateMediaOccurrences": 0,
+    "mediaTypes": {
+      "video": 27
+    },
+    "mediaObservationsClaimed": 0
+  },
+  "entries": [
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "davidhaz",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TEXT EFFECT",
+          "derivedOriginalCategoryName": "Text Effect"
+        }
+      ],
+      "firstVisibleTag": "TEXT EFFECT",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "a7ced973-ec60-4d78-8fce-461207caebab",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-001",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-001"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "wherescz",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TEXT EFFECT",
+          "derivedOriginalCategoryName": "Text Effect"
+        }
+      ],
+      "firstVisibleTag": "TEXT EFFECT",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "de5dfe10-6372-4a51-9c7d-e0f51090c9e5",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-002",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-002"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "arlanoska",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 3,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TEXT EFFECT",
+          "derivedOriginalCategoryName": "Text Effect"
+        }
+      ],
+      "firstVisibleTag": "TEXT EFFECT",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "20341ef6-fc7a-433d-b71f-063c6e5f6d1e",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-003",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-003"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "thecuvii",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 4,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "UI INTERACTION",
+          "derivedOriginalCategoryName": "UI Interaction"
+        }
+      ],
+      "firstVisibleTag": "UI INTERACTION",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "932e67b8-bd2a-4055-add9-6a8c312875e3",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-004",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-004"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "pxlrshi",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 5,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TEXT EFFECT",
+          "derivedOriginalCategoryName": "Text Effect"
+        }
+      ],
+      "firstVisibleTag": "TEXT EFFECT",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "6e3a75f3-b338-4d47-bb8c-066320279e8f",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-005",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-005"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "elou",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 6,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "PORTFOLIO",
+          "derivedOriginalCategoryName": "Portfolio"
+        }
+      ],
+      "firstVisibleTag": "PORTFOLIO",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "72079db0-b9f6-45ca-b7b7-86d6c43e5acd",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-006",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-006"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "arlanoska",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 7,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TEXT EFFECT",
+          "derivedOriginalCategoryName": "Text Effect"
+        }
+      ],
+      "firstVisibleTag": "TEXT EFFECT",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "2806f936-df28-46cd-8458-3b1d38663eaa",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-007",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-007"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "arlanoska",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 8,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TEXT EFFECT",
+          "derivedOriginalCategoryName": "Text Effect"
+        }
+      ],
+      "firstVisibleTag": "TEXT EFFECT",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "0c9ca229-acdb-4023-8a39-375aff4b9cc1",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-008",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-008"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "arlanoska",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 9,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TEXT EFFECT",
+          "derivedOriginalCategoryName": "Text Effect"
+        }
+      ],
+      "firstVisibleTag": "TEXT EFFECT",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "2f3b59e8-45ed-4d5d-8887-117e43eda045",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-009",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-009"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "tjcages",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 10,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TEXT EFFECT",
+          "derivedOriginalCategoryName": "Text Effect"
+        }
+      ],
+      "firstVisibleTag": "TEXT EFFECT",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "8a09e79f-4b56-41a4-bd07-0d7c8f0f23a4",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-010",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-010"
+    },
+    {
+      "attributionDisplayedText": "Post by",
+      "attributionUrl": "httLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": null,
+      "cardOrder": 11,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MOTION",
+          "derivedOriginalCategoryName": "Motion"
+        }
+      ],
+      "firstVisibleTag": "MOTION",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "d8eff312-09b2-4cd4-a08a-76478e4e40ec",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-011",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-011"
+    },
+    {
+      "attributionDisplayedText": "Post by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": null,
+      "cardOrder": 12,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TEXT EFFECT",
+          "derivedOriginalCategoryName": "Text Effect"
+        }
+      ],
+      "firstVisibleTag": "TEXT EFFECT",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "6d0eff33-6560-4c44-9145-136a40cec5ef",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-012",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-012"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "dwhitedesign",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 13,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "UI INTERACTION",
+          "derivedOriginalCategoryName": "UI Interaction"
+        }
+      ],
+      "firstVisibleTag": "UI INTERACTION",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "cfc58231-fa11-4118-9869-401d30a27da4",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-013",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-013"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "afterimage",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 14,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "LANDING PAGE",
+          "derivedOriginalCategoryName": "Landing Page"
+        }
+      ],
+      "firstVisibleTag": "LANDING PAGE",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "71e7d4a1-4027-41ef-809f-f2e698df3eb3",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-014",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-014"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "Nacho_Gavilanes",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 15,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FUNNY ANIMATION",
+          "derivedOriginalCategoryName": "Funny Animation"
+        }
+      ],
+      "firstVisibleTag": "FUNNY ANIMATION",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "7126e57d-4a94-44fe-91bf-9552b29daf98",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-015",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-015"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "Nomandsign",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 16,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TEXT EFFECT",
+          "derivedOriginalCategoryName": "Text Effect"
+        }
+      ],
+      "firstVisibleTag": "TEXT EFFECT",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "8e8a0708-ae94-48c0-8344-9a29e290f9b7",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-016",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-016"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "justinmfarrugia",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 17,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "UI INTERACTION",
+          "derivedOriginalCategoryName": "UI Interaction"
+        }
+      ],
+      "firstVisibleTag": "UI INTERACTION",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "9a0a4d18-2965-4fdf-856c-48cf9435725c",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-017",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-017"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "DanielWhit21874",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 18,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "ACCORDION",
+          "derivedOriginalCategoryName": "Accordion"
+        }
+      ],
+      "firstVisibleTag": "ACCORDION",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "628df458-1040-4c98-8556-5eda81f482eb",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-018",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-018"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "Jakubantalik",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 19,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "UI INTERACTION",
+          "derivedOriginalCategoryName": "UI Interaction"
+        }
+      ],
+      "firstVisibleTag": "UI INTERACTION",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "b0d60c90-b819-45e5-9bb1-6e1e04e8bb6f",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-019",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-019"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "lochieaxon",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 20,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TEXT EFFECT",
+          "derivedOriginalCategoryName": "Text Effect"
+        }
+      ],
+      "firstVisibleTag": "TEXT EFFECT",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "a04b0dc6-fb99-4af4-9a58-e0410dba0289",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-020",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-020"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "ChallengesCss",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 21,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TEXT EFFECT",
+          "derivedOriginalCategoryName": "Text Effect"
+        }
+      ],
+      "firstVisibleTag": "TEXT EFFECT",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "fb1f1b25-7683-4cfa-bc20-09d46efa15d5",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-021",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-021"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "gustavwf",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 22,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FRAMER",
+          "derivedOriginalCategoryName": "Framer"
+        }
+      ],
+      "firstVisibleTag": "FRAMER",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "ae73de0c-2bf7-481b-a6ae-b3edd4b5f648",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-022",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-022"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "brenolasserre",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 23,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TEXT EFFECT",
+          "derivedOriginalCategoryName": "Text Effect"
+        }
+      ],
+      "firstVisibleTag": "TEXT EFFECT",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "dbe384fb-cd20-4ffc-992d-9988767b9cf6",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-023",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-023"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "raunofreiberg",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 24,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TEXT EFFECT",
+          "derivedOriginalCategoryName": "Text Effect"
+        }
+      ],
+      "firstVisibleTag": "TEXT EFFECT",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "83147bf2-c4e3-4cfe-bf18-baa171cc9160",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p1-024",
+      "pageNumber": 1,
+      "snapshotId": "text-effect-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-024"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "CodePen",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TEXT EFFECT",
+          "derivedOriginalCategoryName": "Text Effect"
+        }
+      ],
+      "firstVisibleTag": "TEXT EFFECT",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "a2246161-7f89-4002-a1ac-931c249eff69",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p2-001",
+      "pageNumber": 2,
+      "snapshotId": "text-effect-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-025"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "JohnPhamous",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TEXT EFFECT",
+          "derivedOriginalCategoryName": "Text Effect"
+        }
+      ],
+      "firstVisibleTag": "TEXT EFFECT",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "af41c708-9d82-44ca-8e37-6399ca7be238",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p2-002",
+      "pageNumber": 2,
+      "snapshotId": "text-effect-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-026"
+    },
+    {
+      "attributionDisplayedText": "Post by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": null,
+      "cardOrder": 3,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TEXT EFFECT",
+          "derivedOriginalCategoryName": "Text Effect"
+        }
+      ],
+      "firstVisibleTag": "TEXT EFFECT",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "0bc91489-45de-4df2-b93c-a44c0d7a45a9",
+      "title": null,
+      "titleSource": null,
+      "id": "text-effect-p2-003",
+      "pageNumber": 2,
+      "snapshotId": "text-effect-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Text Effect",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "text-effect-media-027"
+    }
+  ],
+  "mediaGroups": [
+    {
+      "id": "text-effect-media-001",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-001"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-002",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-002"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-003",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-003"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-004",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-004"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-005",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-005"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-006",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-006"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-007",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-007"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-008",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-008"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-009",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-009"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-010",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-010"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-011",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-011"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-012",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-012"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-013",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-013"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-014",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-014"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-015",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-015"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-016",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-016"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-017",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-017"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-018",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-018"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-019",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-019"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-020",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-020"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-021",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-021"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-022",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-022"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-023",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-023"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-024",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p1-024"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-025",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p2-001"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-026",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p2-002"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "text-effect-media-027",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "text-effect-p2-003"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    }
+  ],
+  "enrichments": [
+    {
+      "entryId": "text-effect-p1-002",
+      "date": "2026-10-01",
+      "field": "originalWorkUrl",
+      "value": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "basis": "Actual exact-card modal href; association solely by complete media URL. Historical catalogued-only status retained.",
+      "evidence": "../observations/batch24.json"
+    }
+  ]
+}

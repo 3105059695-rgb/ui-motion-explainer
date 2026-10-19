@@ -1,0 +1,8089 @@
+{
+  "schema_version": 1,
+  "video": "workflow",
+  "title": "一站式创作 Agent：AI 改写自媒体工作流",
+  "source": "local-only/一站式创作Agent！用 AI 改写自媒体工作流！ #AI #秋芝2046 #剪映AI创飞边界 #剪映AI还是太全面了 #杜比视界.mp4",
+  "source_sha256": "922fec6bc2fd9bf37cd9c47578a9d9571e6d84dc115fb120350b61301e2577f9",
+  "duration": 636.411995,
+  "review": {
+    "method": "实际依次查看全片636张1秒间隔画面及20张连续图集；重点翻页、时间线蒙版、人物回位补看0.1/0.2秒连续采样。逐行人工编写220个ASR对应关系；补9段原VAD漏对白。",
+    "audio_listened": false,
+    "transcript_status": "machine_asr_with_explicit_screen_corrections",
+    "reviewed_ranges": [
+      [
+        0,
+        636.411995
+      ]
+    ],
+    "unreviewed_ranges": [],
+    "limitations": [
+      "顺序视觉采样核对不是全片实时视听；未完整听审，音效、节拍与精确起音未验证。",
+      "观察区间约±1秒；短于采样间隔的瞬态仍可能遗漏，不能称逐帧切镜完成。",
+      "画面展示的工具流程可确定；示范成片每个素材的实际模型、提示词、生成次数、工程曲线无法仅由成片确定。"
+    ]
+  },
+  "shots": [
+    {
+      "id": "W001",
+      "start": 0.0,
+      "end": 3.0,
+      "carrier": "人物+标题",
+      "material": "灰衣讲解者、夸张问候字、剪映AI标志",
+      "visible_action": "问候大字位于人物身后，随后缩回人物讲解并加右上软件标志",
+      "editing": "背景标题层与人物前景遮挡；标志浮入；不是B-roll替换",
+      "purpose_inference": "建立人物入口并点名工具",
+      "evidence": [
+        {
+          "path": "local-only/sequence-001.jpg",
+          "times": [
+            0.5,
+            1.5,
+            2.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W002",
+      "start": 3.0,
+      "end": 7.0,
+      "carrier": "实拍+标题",
+      "material": "暗化的剪辑工作台与工作流标题",
+      "visible_action": "绿色署名、白色主题、黄色“大分享”逐项出现",
+      "editing": "实拍压暗做底、主题分层建立、末尾放射线",
+      "purpose_inference": "先承诺具体工作流收益",
+      "evidence": [
+        {
+          "path": "local-only/sequence-001.jpg",
+          "times": [
+            3.5,
+            4.5,
+            5.5,
+            6.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W003",
+      "start": 7.0,
+      "end": 12.0,
+      "carrier": "人物",
+      "material": "灰衣讲解者",
+      "visible_action": "张手、指示，与两类创作者直接对话",
+      "editing": "人物中景、连续手势，未新增解释素材",
+      "purpose_inference": "用人物建立受众关联",
+      "evidence": [
+        {
+          "path": "local-only/sequence-001.jpg",
+          "times": [
+            7.5,
+            8.5,
+            9.5,
+            10.5,
+            11.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W004",
+      "start": 12.0,
+      "end": 14.0,
+      "carrier": "人物转图形",
+      "material": "“视频提效”“科技&狠活”标题",
+      "visible_action": "人物旁标签先出现，随后主词占据黑网格画面",
+      "editing": "人物切标题卡；大词突出",
+      "purpose_inference": "把收益提炼成可记忆的短句",
+      "evidence": [
+        {
+          "path": "local-only/sequence-001.jpg",
+          "times": [
+            12.5,
+            13.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W005",
+      "start": 14.0,
+      "end": 17.0,
+      "carrier": "人物",
+      "material": "讲解者收藏提示",
+      "visible_action": "举手和食指强调",
+      "editing": "回人物中景",
+      "purpose_inference": "互动与引出议程",
+      "evidence": [
+        {
+          "path": "local-only/sequence-001.jpg",
+          "times": [
+            14.5,
+            15.5,
+            16.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W006",
+      "start": 17.0,
+      "end": 21.0,
+      "carrier": "图形",
+      "material": "AI视频/传统自媒体两列流程",
+      "visible_action": "先左标题、再右标题，再向下列步骤",
+      "editing": "平行两列逐步揭示、固定对齐轴线",
+      "purpose_inference": "说明将覆盖两种工作流",
+      "evidence": [
+        {
+          "path": "local-only/sequence-001.jpg",
+          "times": [
+            17.5,
+            18.5,
+            19.5,
+            20.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W007",
+      "start": 21.0,
+      "end": 24.0,
+      "carrier": "人物",
+      "material": "讲解者“出发”",
+      "visible_action": "双手抬起、准备进入演示",
+      "editing": "图表切回人",
+      "purpose_inference": "完成议程承诺并进入正文",
+      "evidence": [
+        {
+          "path": "local-only/sequence-001.jpg",
+          "times": [
+            21.5,
+            22.5,
+            23.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W008",
+      "start": 24.0,
+      "end": 26.0,
+      "carrier": "转场标题",
+      "material": "黑底Let's Go",
+      "visible_action": "字出现后消退",
+      "editing": "独立短标题桥段",
+      "purpose_inference": "章节呼吸点",
+      "evidence": [
+        {
+          "path": "local-only/sequence-001.jpg",
+          "times": [
+            24.5,
+            25.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W009",
+      "start": 26.0,
+      "end": 29.0,
+      "carrier": "实录+画中画",
+      "material": "剪映首页Hub入口",
+      "visible_action": "人物变左下圆窗，界面出现，入口用黄三角和橙虚框标记",
+      "editing": "全景界面、局部指向",
+      "purpose_inference": "告诉观众从哪里进入",
+      "evidence": [
+        {
+          "path": "local-only/sequence-001.jpg",
+          "times": [
+            26.5,
+            27.5,
+            28.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W010",
+      "start": 29.0,
+      "end": 35.0,
+      "carrier": "实录+图形",
+      "material": "Hub画布、“脚本→成片”",
+      "visible_action": "窗口居左，右侧脚本成片箭头与“无限画布+Agent”分批补齐",
+      "editing": "缩窗让位、箭头关系、文字追加",
+      "purpose_inference": "建立整体输入输出关系",
+      "evidence": [
+        {
+          "path": "local-only/sequence-001.jpg",
+          "times": [
+            29.5,
+            30.5,
+            31.5
+          ]
+        },
+        {
+          "path": "local-only/sequence-002.jpg",
+          "times": [
+            32.5,
+            33.5,
+            34.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W011",
+      "start": 35.0,
+      "end": 38.0,
+      "carrier": "图形",
+      "material": "文字/图片/音频/视频四卡",
+      "visible_action": "四类卡片填入文字、咖啡图、波形和视频缩略图",
+      "editing": "2×2组合逐项填充",
+      "purpose_inference": "把分散软件具体化为四种材料",
+      "evidence": [
+        {
+          "path": "local-only/sequence-002.jpg",
+          "times": [
+            35.5,
+            36.5,
+            37.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W012",
+      "start": 38.0,
+      "end": 42.0,
+      "carrier": "图形",
+      "material": "四卡与剪映标志、时间线",
+      "visible_action": "四卡缩向左，导入箭头和右侧剪映出现，下方填入剪辑轨道",
+      "editing": "组缩放、空间重排、流程连线",
+      "purpose_inference": "表达最后还要搬运汇总的旧流程",
+      "evidence": [
+        {
+          "path": "local-only/sequence-002.jpg",
+          "times": [
+            38.5,
+            39.5,
+            40.5,
+            41.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W013",
+      "start": 42.0,
+      "end": 44.0,
+      "carrier": "实录",
+      "material": "Hub完整窗口",
+      "visible_action": "转入同一个Hub首页",
+      "editing": "从示意回真实界面",
+      "purpose_inference": "证明下面演示对应真实操作",
+      "evidence": [
+        {
+          "path": "local-only/sequence-002.jpg",
+          "times": [
+            42.5,
+            43.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W014",
+      "start": 44.0,
+      "end": 50.0,
+      "carrier": "实录+标注",
+      "material": "底部工具条的文字/图片/视频/音频/精剪图标",
+      "visible_action": "工具条放大，标签和橙圈随解说依次加入，精剪用绿色标签收束",
+      "editing": "局部放大、背景压暗、逐项定位",
+      "purpose_inference": "让观众知道“一站式”落在哪些按钮",
+      "evidence": [
+        {
+          "path": "local-only/sequence-002.jpg",
+          "times": [
+            44.5,
+            45.5,
+            46.5,
+            47.5,
+            48.5,
+            49.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W015",
+      "start": 50.0,
+      "end": 54.0,
+      "carrier": "实录+聚焦",
+      "material": "左侧Agent面板",
+      "visible_action": "恢复整体窗口，再框住左边栏并显示“上下文统一”",
+      "editing": "焦点从工具条切到侧栏、橙虚框与大词",
+      "purpose_inference": "将工具集合与统一上下文分开解释",
+      "evidence": [
+        {
+          "path": "local-only/sequence-002.jpg",
+          "times": [
+            50.5,
+            51.5,
+            52.5,
+            53.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W016",
+      "start": 54.0,
+      "end": 57.0,
+      "carrier": "人物",
+      "material": "讲解者",
+      "visible_action": "回到人物宣布做短剧",
+      "editing": "全景人物恢复",
+      "purpose_inference": "从概念转具体案例",
+      "evidence": [
+        {
+          "path": "local-only/sequence-002.jpg",
+          "times": [
+            54.5,
+            55.5,
+            56.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W017",
+      "start": 57.0,
+      "end": 60.0,
+      "carrier": "人物+材料",
+      "material": "3D小师妹人物图、故事名",
+      "visible_action": "女孩竖图与标题贴在人物右侧",
+      "editing": "案例卡出现、保留讲解者",
+      "purpose_inference": "先给即将制作的角色和情境",
+      "evidence": [
+        {
+          "path": "local-only/sequence-002.jpg",
+          "times": [
+            57.5,
+            58.5,
+            59.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W018",
+      "start": 60.0,
+      "end": 63.0,
+      "carrier": "章节标题",
+      "material": "实测1 剪映Hub",
+      "visible_action": "荧光标签+白色大标题",
+      "editing": "黑底短章节卡",
+      "purpose_inference": "区隔案例说明与操作",
+      "evidence": [
+        {
+          "path": "local-only/sequence-002.jpg",
+          "times": [
+            60.5,
+            61.5,
+            62.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W019",
+      "start": 63.0,
+      "end": 69.0,
+      "carrier": "实录",
+      "material": "Hub左侧Agent输入框",
+      "visible_action": "先全景，后拉近输入框",
+      "editing": "局部推近，左上“创意&剧本”持续导航",
+      "purpose_inference": "定位操作起点",
+      "evidence": [
+        {
+          "path": "local-only/sequence-002.jpg",
+          "times": [
+            63.5
+          ]
+        },
+        {
+          "path": "local-only/sequence-003.jpg",
+          "times": [
+            64.5,
+            65.5,
+            66.5,
+            67.5,
+            68.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W020",
+      "start": 69.0,
+      "end": 77.0,
+      "carrier": "实录",
+      "material": "同一输入框、萌娃修仙喜剧需求",
+      "visible_action": "文本输入从短词变长段，3D国漫风等约束落入框内",
+      "editing": "固定放大视口，留出连续输入过程",
+      "purpose_inference": "展示最小想法怎样成为可执行要求",
+      "evidence": [
+        {
+          "path": "local-only/sequence-003.jpg",
+          "times": [
+            69.5,
+            70.5,
+            71.5,
+            72.5,
+            73.5,
+            74.5,
+            75.5,
+            76.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W021",
+      "start": 77.0,
+      "end": 84.0,
+      "carrier": "实录",
+      "material": "简介节点与剧本框架",
+      "visible_action": "画布生成简介，随后打开长剧本详情",
+      "editing": "全局→节点→详情层级切换",
+      "purpose_inference": "给出请求后的实际输出",
+      "evidence": [
+        {
+          "path": "local-only/sequence-003.jpg",
+          "times": [
+            77.5,
+            78.5,
+            79.5,
+            80.5,
+            81.5,
+            82.5,
+            83.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W022",
+      "start": 84.0,
+      "end": 90.0,
+      "carrier": "实录",
+      "material": "Agent下一步、生成分镜节点",
+      "visible_action": "镜头先靠近确认按钮，再回到画布出现分镜表",
+      "editing": "操作焦点切换、步骤标签转“分镜&资产”",
+      "purpose_inference": "把继续对话与下一阶段连接",
+      "evidence": [
+        {
+          "path": "local-only/sequence-003.jpg",
+          "times": [
+            84.5,
+            85.5,
+            86.5,
+            87.5,
+            88.5,
+            89.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W023",
+      "start": 90.0,
+      "end": 99.0,
+      "carrier": "实录+强调",
+      "material": "分镜表多列",
+      "visible_action": "表格打开，时长、情节、运镜、台词音效等列先后加橙框",
+      "editing": "大表局部放大、逐列揭示",
+      "purpose_inference": "避免一次看整表无从下手",
+      "evidence": [
+        {
+          "path": "local-only/sequence-003.jpg",
+          "times": [
+            90.5,
+            91.5,
+            92.5,
+            93.5,
+            94.5,
+            95.5
+          ]
+        },
+        {
+          "path": "local-only/sequence-004.jpg",
+          "times": [
+            96.5,
+            97.5,
+            98.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W024",
+      "start": 99.0,
+      "end": 105.0,
+      "carrier": "实录",
+      "material": "批量生成按钮、角色场景图集",
+      "visible_action": "按钮被箭头点名；加载后出现人物三视图和场景",
+      "editing": "按钮近景→结果全景、跳过等待",
+      "purpose_inference": "形成操作—结果证据对",
+      "evidence": [
+        {
+          "path": "local-only/sequence-004.jpg",
+          "times": [
+            99.5,
+            100.5,
+            101.5,
+            102.5,
+            103.5,
+            104.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W025",
+      "start": 105.0,
+      "end": 111.0,
+      "carrier": "实录",
+      "material": "角色图卡、资产主体保存框",
+      "visible_action": "选中女孩图，打开保存窗，再显示主体库",
+      "editing": "目标放大、弹窗、库结果",
+      "purpose_inference": "展示一致性资产怎样保存",
+      "evidence": [
+        {
+          "path": "local-only/sequence-004.jpg",
+          "times": [
+            105.5,
+            106.5,
+            107.5,
+            108.5,
+            109.5,
+            110.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W026",
+      "start": 111.0,
+      "end": 118.0,
+      "carrier": "实录",
+      "material": "左侧人物主体、右侧地图/字条/画像道具",
+      "visible_action": "主体与道具面板同时展示",
+      "editing": "并排保持、允许阅读",
+      "purpose_inference": "把角色一致与道具一致一起固定",
+      "evidence": [
+        {
+          "path": "local-only/sequence-004.jpg",
+          "times": [
+            111.5,
+            112.5,
+            113.5,
+            114.5,
+            115.5,
+            116.5,
+            117.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W027",
+      "start": 118.0,
+      "end": 122.0,
+      "carrier": "实录",
+      "material": "生成分镜提示词按钮",
+      "visible_action": "视口回到画布上方该按钮",
+      "editing": "左上步骤切到“视频生成”",
+      "purpose_inference": "使观众知道操作推进到哪一环",
+      "evidence": [
+        {
+          "path": "local-only/sequence-004.jpg",
+          "times": [
+            118.5,
+            119.5,
+            120.5,
+            121.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W028",
+      "start": 122.0,
+      "end": 130.0,
+      "carrier": "实录",
+      "material": "视频分镜节点网格及左侧资产",
+      "visible_action": "节点由占位逐步出现，橙虚框圈住整组",
+      "editing": "整体框选强调输入资产被统一引用",
+      "purpose_inference": "展示批量而非孤立单镜生成",
+      "evidence": [
+        {
+          "path": "local-only/sequence-004.jpg",
+          "times": [
+            122.5,
+            123.5,
+            124.5,
+            125.5,
+            126.5,
+            127.5
+          ]
+        },
+        {
+          "path": "local-only/sequence-005.jpg",
+          "times": [
+            128.5,
+            129.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W029",
+      "start": 130.0,
+      "end": 134.0,
+      "carrier": "实录",
+      "material": "一张视频提示词详情卡",
+      "visible_action": "打开长提示词和多张参考缩略图",
+      "editing": "详情放大，留读，不叠外来素材",
+      "purpose_inference": "说明先检查资产引用再生成",
+      "evidence": [
+        {
+          "path": "local-only/sequence-005.jpg",
+          "times": [
+            130.5,
+            131.5,
+            132.5,
+            133.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W030",
+      "start": 134.0,
+      "end": 138.0,
+      "carrier": "实录",
+      "material": "批量生成视频按钮和占位节点",
+      "visible_action": "按钮操作后出现等待状态",
+      "editing": "局部推近、加载跳时",
+      "purpose_inference": "定位执行步骤",
+      "evidence": [
+        {
+          "path": "local-only/sequence-005.jpg",
+          "times": [
+            134.5,
+            135.5,
+            136.5,
+            137.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W031",
+      "start": 138.0,
+      "end": 146.0,
+      "carrier": "实录",
+      "material": "七个已生成短剧镜头",
+      "visible_action": "结果网格全部可见，然后指向成片预览",
+      "editing": "结果整体展示，不逐条乱切",
+      "purpose_inference": "用同一组镜头交代完整性",
+      "evidence": [
+        {
+          "path": "local-only/sequence-005.jpg",
+          "times": [
+            138.5,
+            139.5,
+            140.5,
+            141.5,
+            142.5,
+            143.5,
+            144.5,
+            145.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W032",
+      "start": 146.0,
+      "end": 150.0,
+      "carrier": "实录",
+      "material": "生成镜头网格、预览操作",
+      "visible_action": "网格停留并触发预览",
+      "editing": "保持结构、等待状态",
+      "purpose_inference": "保留操作与后续成片的因果",
+      "evidence": [
+        {
+          "path": "local-only/sequence-005.jpg",
+          "times": [
+            146.5,
+            147.5,
+            148.5,
+            149.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W033",
+      "start": 150.0,
+      "end": 155.0,
+      "carrier": "实录",
+      "material": "短剧预览节点与迷你时间线",
+      "visible_action": "画布内结果节点接入时间线",
+      "editing": "从镜头集到时间顺序",
+      "purpose_inference": "让生成素材如何连成片可见",
+      "evidence": [
+        {
+          "path": "local-only/sequence-005.jpg",
+          "times": [
+            150.5,
+            151.5,
+            152.5,
+            153.5,
+            154.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W034",
+      "start": 155.0,
+      "end": 160.0,
+      "carrier": "AIGC示范",
+      "material": "女孩背大袋登山去找白发师父",
+      "visible_action": "远景上台阶→手抓袋特写→脚步→师徒同框",
+      "editing": "动作分解、远中近景接续，教程外框撤去",
+      "purpose_inference": "让观众实际观看结果；不是讲解配图",
+      "evidence": [
+        {
+          "path": "local-only/sequence-005.jpg",
+          "times": [
+            155.5,
+            156.5,
+            157.5,
+            158.5,
+            159.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W035",
+      "start": 160.0,
+      "end": 168.0,
+      "carrier": "AIGC示范",
+      "material": "师徒桌前对话、辟谷三载纸条",
+      "visible_action": "双人交代空间，茶杯/女孩/纸条/师父依对白切换",
+      "editing": "正反打与道具插入特写",
+      "purpose_inference": "用可见纸条把误解的来源说明白",
+      "evidence": [
+        {
+          "path": "local-only/sequence-006.jpg",
+          "times": [
+            160.5,
+            161.5,
+            162.5,
+            163.5,
+            164.5,
+            165.5,
+            166.5,
+            167.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W036",
+      "start": 168.0,
+      "end": 174.0,
+      "carrier": "AIGC示范",
+      "material": "女孩盛饭、饭盒与师父",
+      "visible_action": "舀饭放入盒、抬头说话、师父回应",
+      "editing": "手部动作特写后回人物反应",
+      "purpose_inference": "道具连续动作支撑送饭动机",
+      "evidence": [
+        {
+          "path": "local-only/sequence-006.jpg",
+          "times": [
+            168.5,
+            169.5,
+            170.5,
+            171.5,
+            172.5,
+            173.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W037",
+      "start": 174.0,
+      "end": 180.0,
+      "carrier": "AIGC示范",
+      "material": "红绳铃铛",
+      "visible_action": "师父招手、拿红绳、系在女孩腕上、女孩查看",
+      "editing": "双人→手部特写→女孩反应",
+      "purpose_inference": "交代后续可触发的道具",
+      "evidence": [
+        {
+          "path": "local-only/sequence-006.jpg",
+          "times": [
+            174.5,
+            175.5,
+            176.5,
+            177.5,
+            178.5,
+            179.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W038",
+      "start": 180.0,
+      "end": 184.0,
+      "carrier": "AIGC示范",
+      "material": "女孩抱饭盒离开，师父留在桌边",
+      "visible_action": "抓盒起身、转身跑开，空出桌边位置",
+      "editing": "动作连续、镜头不抢离开动作",
+      "purpose_inference": "为下山段建立接续",
+      "evidence": [
+        {
+          "path": "local-only/sequence-006.jpg",
+          "times": [
+            180.5,
+            181.5,
+            182.5,
+            183.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W039",
+      "start": 184.0,
+      "end": 193.0,
+      "carrier": "实录",
+      "material": "预览节点与时间线",
+      "visible_action": "回到工具内讨论精剪",
+      "editing": "左上步骤变“剪辑&成片”",
+      "purpose_inference": "观看成片后再指出要改哪里",
+      "evidence": [
+        {
+          "path": "local-only/sequence-006.jpg",
+          "times": [
+            184.5,
+            185.5,
+            186.5,
+            187.5,
+            188.5,
+            189.5,
+            190.5,
+            191.5
+          ]
+        },
+        {
+          "path": "local-only/sequence-007.jpg",
+          "times": [
+            192.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W040",
+      "start": 193.0,
+      "end": 202.0,
+      "carrier": "实录",
+      "material": "更多编辑按钮、多轨道剪辑界面",
+      "visible_action": "点按钮后直接出现现有镜头时间线",
+      "editing": "按钮与目标界面切换，保留相同短剧画面",
+      "purpose_inference": "证明链路打通而非重新导入",
+      "evidence": [
+        {
+          "path": "local-only/sequence-007.jpg",
+          "times": [
+            193.5,
+            194.5,
+            195.5,
+            196.5,
+            197.5,
+            198.5,
+            199.5,
+            200.5,
+            201.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W041",
+      "start": 202.0,
+      "end": 209.0,
+      "carrier": "实录",
+      "material": "同一短剧时间线、预览区",
+      "visible_action": "播放头换位置，预览随之显示不同镜头",
+      "editing": "局部时间线操作与画面反馈",
+      "purpose_inference": "说明精剪确实落在可编辑素材上",
+      "evidence": [
+        {
+          "path": "local-only/sequence-007.jpg",
+          "times": [
+            202.5,
+            203.5,
+            204.5,
+            205.5,
+            206.5,
+            207.5,
+            208.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W042",
+      "start": 209.0,
+      "end": 215.0,
+      "carrier": "AIGC解释",
+      "material": "蓝衣戴耳机剪辑师、电脑",
+      "visible_action": "平静操作→张嘴吃惊→皱眉托腮看屏幕",
+      "editing": "近景推进、同角色同环境，阶段标签保留",
+      "purpose_inference": "把发现镜头时长不够变成情绪事件",
+      "evidence": [
+        {
+          "path": "local-only/sequence-007.jpg",
+          "times": [
+            209.5,
+            210.5,
+            211.5,
+            212.5,
+            213.5,
+            214.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W043",
+      "start": 215.0,
+      "end": 219.0,
+      "carrier": "AIGC解释",
+      "material": "同剪辑师与纸面分镜",
+      "visible_action": "俯身指看分镜纸，随后转动椅子",
+      "editing": "从脸部反应切到手与纸的动作",
+      "purpose_inference": "把发现瑕疵连接到检查和返工",
+      "evidence": [
+        {
+          "path": "local-only/sequence-007.jpg",
+          "times": [
+            215.5,
+            216.5,
+            217.5,
+            218.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W044",
+      "start": 219.0,
+      "end": 242.0,
+      "carrier": "混合",
+      "material": "第二台电脑上的生成界面，随后真实剪辑界面",
+      "visible_action": "动画角色转到另一台机器；222秒后回实录，演示延长镜头、输入需求、选择参考、生成",
+      "editing": "动画问题段→真实解决段；时间线局部放大、侧栏橙框与箭头；此长区间各行细分实际动作",
+      "purpose_inference": "用空间搬运表现切软件成本，再展示原地编辑的解决方案",
+      "evidence": [
+        {
+          "path": "local-only/sequence-007.jpg",
+          "times": [
+            219.5,
+            220.5,
+            221.5,
+            222.5,
+            223.5
+          ]
+        },
+        {
+          "path": "local-only/sequence-008.jpg",
+          "times": [
+            224.5,
+            225.5,
+            226.5,
+            227.5,
+            228.5,
+            229.5,
+            230.5,
+            231.5,
+            232.5,
+            233.5,
+            234.5,
+            235.5,
+            236.5,
+            237.5,
+            238.5,
+            239.5,
+            240.5,
+            241.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W045",
+      "start": 242.0,
+      "end": 245.0,
+      "carrier": "实录",
+      "material": "生成结果预览",
+      "visible_action": "显示师父新镜头和更新后时间线",
+      "editing": "结果回显",
+      "purpose_inference": "给修改结果证据",
+      "evidence": [
+        {
+          "path": "local-only/sequence-008.jpg",
+          "times": [
+            242.5,
+            243.5,
+            244.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W046",
+      "start": 245.0,
+      "end": 248.0,
+      "carrier": "人物",
+      "material": "讲解者“请看结果”",
+      "visible_action": "回人物交接",
+      "editing": "短人物缓冲再入成片",
+      "purpose_inference": "明确随后为成片展示",
+      "evidence": [
+        {
+          "path": "local-only/sequence-008.jpg",
+          "times": [
+            245.5,
+            246.5,
+            247.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W047",
+      "start": 248.0,
+      "end": 264.0,
+      "carrier": "AIGC示范",
+      "material": "仙城、街市、女孩、饭盒地图、剑尊殿",
+      "visible_action": "城市全景→街市行走→食物特写→女孩取地图→地图对到殿门→殿前大全景",
+      "editing": "远近景、视线匹配、地图与真实地点对照",
+      "purpose_inference": "用行动和道具保持跨场景连续",
+      "evidence": [
+        {
+          "path": "local-only/sequence-008.jpg",
+          "times": [
+            248.5,
+            249.5,
+            250.5,
+            251.5,
+            252.5,
+            253.5,
+            254.5,
+            255.5
+          ]
+        },
+        {
+          "path": "local-only/sequence-009.jpg",
+          "times": [
+            256.5,
+            257.5,
+            258.5,
+            259.5,
+            260.5,
+            261.5,
+            262.5,
+            263.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W048",
+      "start": 264.0,
+      "end": 271.0,
+      "carrier": "AIGC示范",
+      "material": "女孩举画像问守卫、守卫反问、女孩举饭盒",
+      "visible_action": "画像入镜→过肩守卫→饭盒近景",
+      "editing": "正反打、道具接对白落点",
+      "purpose_inference": "让找人和带饭都能直接读懂",
+      "evidence": [
+        {
+          "path": "local-only/sequence-009.jpg",
+          "times": [
+            264.5,
+            265.5,
+            266.5,
+            267.5,
+            268.5,
+            269.5,
+            270.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W049",
+      "start": 271.0,
+      "end": 286.0,
+      "carrier": "AIGC示范",
+      "material": "殿外守卫与女孩",
+      "visible_action": "守卫拒绝，女孩噘嘴、再举饭盒、低头，手腕铃铛持续存在",
+      "editing": "双人关系镜头与表情近景轮换",
+      "purpose_inference": "通过反应而非额外文字交代冲突",
+      "evidence": [
+        {
+          "path": "local-only/sequence-009.jpg",
+          "times": [
+            271.5,
+            272.5,
+            273.5,
+            274.5,
+            275.5,
+            276.5,
+            277.5,
+            278.5,
+            279.5,
+            280.5,
+            281.5,
+            282.5,
+            283.5,
+            284.5,
+            285.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W050",
+      "start": 286.0,
+      "end": 289.0,
+      "carrier": "AIGC示范",
+      "material": "女孩踢门、殿门内大空间",
+      "visible_action": "脚部近景接门向内打开的大远景",
+      "editing": "动作切点与尺度突变",
+      "purpose_inference": "动作结果明确，形成意外升级",
+      "evidence": [
+        {
+          "path": "local-only/sequence-009.jpg",
+          "times": [
+            286.5,
+            287.5
+          ]
+        },
+        {
+          "path": "local-only/sequence-010.jpg",
+          "times": [
+            288.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W051",
+      "start": 289.0,
+      "end": 296.0,
+      "carrier": "AIGC示范",
+      "material": "女孩入殿、众人、长者眼嘴",
+      "visible_action": "女孩带饭笑脸→大殿全景→长者嘴与眼极近景",
+      "editing": "空间反打与表情特写",
+      "purpose_inference": "建立威胁反应和悬念",
+      "evidence": [
+        {
+          "path": "local-only/sequence-010.jpg",
+          "times": [
+            289.5,
+            290.5,
+            291.5,
+            292.5,
+            293.5,
+            294.5,
+            295.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W052",
+      "start": 296.0,
+      "end": 303.0,
+      "carrier": "AIGC示范",
+      "material": "持剑众人、女孩被剑包围",
+      "visible_action": "拔剑、脚步、围拢，女孩睁眼惊讶",
+      "editing": "动作细节蒙太奇、结果近景",
+      "purpose_inference": "递增威胁并停在故事钩子",
+      "evidence": [
+        {
+          "path": "local-only/sequence-010.jpg",
+          "times": [
+            296.5,
+            297.5,
+            298.5,
+            299.5,
+            300.5,
+            301.5,
+            302.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W053",
+      "start": 303.0,
+      "end": 304.0,
+      "carrier": "黑场",
+      "material": "黑场",
+      "visible_action": "示范结束",
+      "editing": "短黑场断开",
+      "purpose_inference": "回教程前的边界",
+      "evidence": [
+        {
+          "path": "local-only/sequence-010.jpg",
+          "times": [
+            303.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W054",
+      "start": 304.0,
+      "end": 314.0,
+      "carrier": "人物+标志",
+      "material": "讲解者、剪映助手标志",
+      "visible_action": "评价结果，再引出助手、时间线Agent副标题",
+      "editing": "人物承接与标志追加",
+      "purpose_inference": "分清两个产品模块",
+      "evidence": [
+        {
+          "path": "local-only/sequence-010.jpg",
+          "times": [
+            304.5,
+            305.5,
+            306.5,
+            307.5,
+            308.5,
+            309.5,
+            310.5,
+            311.5,
+            312.5,
+            313.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W055",
+      "start": 314.0,
+      "end": 316.0,
+      "carrier": "章节标题",
+      "material": "实测2 剪映助手",
+      "visible_action": "居中标题",
+      "editing": "黑底分章",
+      "purpose_inference": "进入第二案例",
+      "evidence": [
+        {
+          "path": "local-only/sequence-010.jpg",
+          "times": [
+            314.5,
+            315.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W056",
+      "start": 316.0,
+      "end": 319.0,
+      "carrier": "人物",
+      "material": "讲解者",
+      "visible_action": "真人出镜场景说明",
+      "editing": "人物中景",
+      "purpose_inference": "明确第二案例受众",
+      "evidence": [
+        {
+          "path": "local-only/sequence-010.jpg",
+          "times": [
+            316.5,
+            317.5,
+            318.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W057",
+      "start": 319.0,
+      "end": 321.0,
+      "carrier": "图形",
+      "material": "桌前剪辑师插图",
+      "visible_action": "大人物居中后缩向左下",
+      "editing": "角色缩小腾出流程空间",
+      "purpose_inference": "把工作负担当作后续展开中心",
+      "evidence": [
+        {
+          "path": "local-only/sequence-010.jpg",
+          "times": [
+            319.5
+          ]
+        },
+        {
+          "path": "local-only/sequence-011.jpg",
+          "times": [
+            320.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W058",
+      "start": 321.0,
+      "end": 330.0,
+      "carrier": "图形",
+      "material": "六张工作卡：剪口播/B-roll/粗剪/音乐包装/精剪/字幕",
+      "visible_action": "随口播先1再2再3最后补齐6卡",
+      "editing": "逐项增量揭示、固定网格、人物留左下",
+      "purpose_inference": "让工作量随列举变多",
+      "evidence": [
+        {
+          "path": "local-only/sequence-011.jpg",
+          "times": [
+            321.5,
+            322.5,
+            323.5,
+            324.5,
+            325.5,
+            326.5,
+            327.5,
+            328.5,
+            329.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W059",
+      "start": 330.0,
+      "end": 338.0,
+      "carrier": "图形",
+      "material": "六卡组、剪辑师、Agent标志",
+      "visible_action": "六卡收为一组，接箭头至Agent；人物仍在左侧",
+      "editing": "组合缩小、橙虚框、箭头关系重构",
+      "purpose_inference": "从一刀刀手工概括为可交接任务",
+      "evidence": [
+        {
+          "path": "local-only/sequence-011.jpg",
+          "times": [
+            330.5,
+            331.5,
+            332.5,
+            333.5,
+            334.5,
+            335.5,
+            336.5,
+            337.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W060",
+      "start": 338.0,
+      "end": 340.0,
+      "carrier": "章节图形",
+      "material": "01剪口播条目",
+      "visible_action": "单条章节卡",
+      "editing": "局部项目抽出",
+      "purpose_inference": "切入第一具体步骤",
+      "evidence": [
+        {
+          "path": "local-only/sequence-011.jpg",
+          "times": [
+            338.5,
+            339.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W061",
+      "start": 340.0,
+      "end": 345.0,
+      "carrier": "实录",
+      "material": "原素材视频卡、文稿与时间线",
+      "visible_action": "原视频卡短展示，文稿中的口误部分被突出",
+      "editing": "素材→文稿近景",
+      "purpose_inference": "建立待处理问题证据",
+      "evidence": [
+        {
+          "path": "local-only/sequence-011.jpg",
+          "times": [
+            340.5,
+            341.5,
+            342.5,
+            343.5,
+            344.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W062",
+      "start": 345.0,
+      "end": 353.0,
+      "carrier": "实录",
+      "material": "剪映助手输入框",
+      "visible_action": "打开助手并输入删口误重复空白要求",
+      "editing": "左侧输入区放大",
+      "purpose_inference": "把需求到操作对齐",
+      "evidence": [
+        {
+          "path": "local-only/sequence-011.jpg",
+          "times": [
+            345.5,
+            346.5,
+            347.5,
+            348.5,
+            349.5,
+            350.5,
+            351.5
+          ]
+        },
+        {
+          "path": "local-only/sequence-012.jpg",
+          "times": [
+            352.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W063",
+      "start": 353.0,
+      "end": 357.0,
+      "carrier": "实录",
+      "material": "已切分的口播时间线",
+      "visible_action": "多个分段出现并预备播放",
+      "editing": "全窗口结果回显",
+      "purpose_inference": "展示处理输出",
+      "evidence": [
+        {
+          "path": "local-only/sequence-012.jpg",
+          "times": [
+            353.5,
+            354.5,
+            355.5,
+            356.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W064",
+      "start": 357.0,
+      "end": 367.0,
+      "carrier": "示范口播",
+      "material": "黑衣讲解者讲草船借箭",
+      "visible_action": "人物单独播放",
+      "editing": "撤掉软件界面，以圆角视频窗呈现",
+      "purpose_inference": "让观众听/看被剪后的连贯性",
+      "evidence": [
+        {
+          "path": "local-only/sequence-012.jpg",
+          "times": [
+            357.5,
+            358.5,
+            359.5,
+            360.5,
+            361.5,
+            362.5,
+            363.5,
+            364.5,
+            365.5,
+            366.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W065",
+      "start": 367.0,
+      "end": 375.0,
+      "carrier": "实录",
+      "material": "同口播剪辑界面",
+      "visible_action": "回到时间线讲误差与气口，可见播放头/窗口状态变化",
+      "editing": "从播放结果回编辑证据",
+      "purpose_inference": "承认需局部人工修订",
+      "evidence": [
+        {
+          "path": "local-only/sequence-012.jpg",
+          "times": [
+            367.5,
+            368.5,
+            369.5,
+            370.5,
+            371.5,
+            372.5,
+            373.5,
+            374.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W066",
+      "start": 375.0,
+      "end": 379.0,
+      "carrier": "人物",
+      "material": "灰衣讲解者",
+      "visible_action": "总结提效时长",
+      "editing": "人物中景",
+      "purpose_inference": "价值判断由讲解者承担",
+      "evidence": [
+        {
+          "path": "local-only/sequence-012.jpg",
+          "times": [
+            375.5,
+            376.5,
+            377.5,
+            378.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W067",
+      "start": 379.0,
+      "end": 383.0,
+      "carrier": "章节图形",
+      "material": "01剪口播、02素材生成",
+      "visible_action": "原步骤变暗，新步骤条加入",
+      "editing": "章节状态变更",
+      "purpose_inference": "交代工作推进而非突然换题",
+      "evidence": [
+        {
+          "path": "local-only/sequence-012.jpg",
+          "times": [
+            379.5,
+            380.5,
+            381.5,
+            382.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W068",
+      "start": 383.0,
+      "end": 393.0,
+      "carrier": "AIGC拼贴",
+      "material": "九宫格旧片素材：女孩/机器人/团队/工作者等",
+      "visible_action": "九格各自播放不同动作，讲解者圆窗保留",
+      "editing": "素材墙逐项填满、固定格位",
+      "purpose_inference": "示范素材多样性；非逐个名词机械匹配",
+      "evidence": [
+        {
+          "path": "local-only/sequence-012.jpg",
+          "times": [
+            383.5
+          ]
+        },
+        {
+          "path": "local-only/sequence-013.jpg",
+          "times": [
+            384.5,
+            385.5,
+            386.5,
+            387.5,
+            388.5,
+            389.5,
+            390.5,
+            391.5,
+            392.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W069",
+      "start": 393.0,
+      "end": 402.0,
+      "carrier": "实录",
+      "material": "历史口播与Agent输入面板",
+      "visible_action": "放大输入的台词及内容方向，发送后回显生成计划",
+      "editing": "原句→输入→回复三步保持空间连续",
+      "purpose_inference": "展示语义约束怎样进入素材任务",
+      "evidence": [
+        {
+          "path": "local-only/sequence-013.jpg",
+          "times": [
+            393.5,
+            394.5,
+            395.5,
+            396.5,
+            397.5,
+            398.5,
+            399.5,
+            400.5,
+            401.5
+          ]
+        },
+        {
+          "path": "local-only/curl-001.jpg",
+          "times": [
+            401.85,
+            401.95,
+            402.05,
+            402.15,
+            402.25,
+            402.35,
+            402.45,
+            402.55,
+            402.65,
+            402.75,
+            402.85,
+            402.95,
+            403.05,
+            403.15,
+            403.25,
+            403.35
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表；curl局部已以0.1秒步长补看，时间是采样区间代表值"
+    },
+    {
+      "id": "W070",
+      "start": 402.0,
+      "end": 409.0,
+      "carrier": "图形",
+      "material": "剪映、小云雀、即梦标志",
+      "visible_action": "白色页角卷入遮住实录；三标志并排，框住后出同账户登录/素材互通",
+      "editing": "卷页转场、并排组合、两行递进结论",
+      "purpose_inference": "解释账号与素材互通关系",
+      "evidence": [
+        {
+          "path": "local-only/sequence-013.jpg",
+          "times": [
+            402.5,
+            403.5,
+            404.5,
+            405.5,
+            406.5,
+            407.5,
+            408.5
+          ]
+        },
+        {
+          "path": "local-only/curl-001.jpg",
+          "times": [
+            401.85,
+            401.95,
+            402.05,
+            402.15,
+            402.25,
+            402.35,
+            402.45,
+            402.55,
+            402.65,
+            402.75,
+            402.85,
+            402.95,
+            403.05,
+            403.15,
+            403.25,
+            403.35
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表；curl局部已以0.1秒步长补看，时间是采样区间代表值"
+    },
+    {
+      "id": "W071",
+      "start": 409.0,
+      "end": 413.0,
+      "carrier": "实录转章节",
+      "material": "生成的水墨船战画面、三步骤导航",
+      "visible_action": "先展示已生成画面，再追加03素材粗剪",
+      "editing": "结果先行、章节递进",
+      "purpose_inference": "上一环产物成为下一环输入",
+      "evidence": [
+        {
+          "path": "local-only/sequence-013.jpg",
+          "times": [
+            409.5,
+            410.5,
+            411.5,
+            412.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W072",
+      "start": 413.0,
+      "end": 422.0,
+      "carrier": "实录",
+      "material": "导入素材库：画像/地图/文本等、生成画面轨道",
+      "visible_action": "多选拖入文件，框住素材库，再标出生成轨道",
+      "editing": "框选分区、黄箭头定位轨道",
+      "purpose_inference": "区分外来事实素材与已生成素材",
+      "evidence": [
+        {
+          "path": "local-only/sequence-013.jpg",
+          "times": [
+            413.5,
+            414.5,
+            415.5
+          ]
+        },
+        {
+          "path": "local-only/sequence-014.jpg",
+          "times": [
+            416.5,
+            417.5,
+            418.5,
+            419.5,
+            420.5,
+            421.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W073",
+      "start": 422.0,
+      "end": 427.0,
+      "carrier": "实录",
+      "material": "Agent的筛选与匹配请求",
+      "visible_action": "放大输入，让Agent配画面",
+      "editing": "输入区特写",
+      "purpose_inference": "展示配置素材选择的方法",
+      "evidence": [
+        {
+          "path": "local-only/sequence-014.jpg",
+          "times": [
+            422.5,
+            423.5,
+            424.5,
+            425.5,
+            426.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W074",
+      "start": 427.0,
+      "end": 434.0,
+      "carrier": "实录",
+      "material": "多轨道已配素材的时间线",
+      "visible_action": "轨道增加B-roll片段，预览仍为口播",
+      "editing": "结果整体停留、准备播放",
+      "purpose_inference": "交代自动排列后的骨架",
+      "evidence": [
+        {
+          "path": "local-only/sequence-014.jpg",
+          "times": [
+            427.5,
+            428.5,
+            429.5,
+            430.5,
+            431.5,
+            432.5,
+            433.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W075",
+      "start": 434.0,
+      "end": 438.0,
+      "carrier": "AIGC示范",
+      "material": "江面大船远景",
+      "visible_action": "船在江上前进，岸营在背景",
+      "editing": "先建地理关系，角落写AI生成/仅作示意",
+      "purpose_inference": "给故事地点与人物交通状态",
+      "evidence": [
+        {
+          "path": "local-only/sequence-014.jpg",
+          "times": [
+            434.5,
+            435.5,
+            436.5,
+            437.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W076",
+      "start": 438.0,
+      "end": 444.0,
+      "carrier": "AIGC示范",
+      "material": "船侧、船上孙权、对岸曹营",
+      "visible_action": "先船侧接近，后人物看向对岸，再过肩视角看到阵营",
+      "editing": "远→中→视线反打",
+      "purpose_inference": "把“亲自探阵势”变成观察动作",
+      "evidence": [
+        {
+          "path": "local-only/sequence-014.jpg",
+          "times": [
+            438.5,
+            439.5,
+            440.5,
+            441.5,
+            442.5,
+            443.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W077",
+      "start": 444.0,
+      "end": 450.0,
+      "carrier": "AIGC示范",
+      "material": "曹操、箭雨、孙权俯身、船侧中箭",
+      "visible_action": "挥手命令→飞箭→人物躲避→船体插箭",
+      "editing": "因果切镜，行动与后果连续",
+      "purpose_inference": "把攻击过程讲清楚",
+      "evidence": [
+        {
+          "path": "local-only/sequence-014.jpg",
+          "times": [
+            444.5,
+            445.5,
+            446.5,
+            447.5
+          ]
+        },
+        {
+          "path": "local-only/sequence-015.jpg",
+          "times": [
+            448.5,
+            449.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W078",
+      "start": 450.0,
+      "end": 456.0,
+      "carrier": "AIGC示范",
+      "material": "孙权与船体转向",
+      "visible_action": "人物惊慌转身，船整体从侧斜向转到另一侧",
+      "editing": "角色反应接大全景展示转船",
+      "purpose_inference": "使“转个身”是可见运动而非只靠旁白",
+      "evidence": [
+        {
+          "path": "local-only/sequence-015.jpg",
+          "times": [
+            450.5,
+            451.5,
+            452.5,
+            453.5,
+            454.5,
+            455.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W079",
+      "start": 456.0,
+      "end": 467.0,
+      "carrier": "实录",
+      "material": "同船镜头回到编辑预览与多轨时间线",
+      "visible_action": "看过演示后回工具谈优缺点",
+      "editing": "收回软件窗口，保留当前结果帧",
+      "purpose_inference": "说明粗剪骨架与完成质量不同",
+      "evidence": [
+        {
+          "path": "local-only/sequence-015.jpg",
+          "times": [
+            456.5,
+            457.5,
+            458.5,
+            459.5,
+            460.5,
+            461.5,
+            462.5,
+            463.5,
+            464.5,
+            465.5,
+            466.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W080",
+      "start": 467.0,
+      "end": 470.0,
+      "carrier": "章节图形",
+      "material": "四步列表追加字幕包装",
+      "visible_action": "前三步变暗，第四步加入",
+      "editing": "递进导航",
+      "purpose_inference": "进入包装阶段",
+      "evidence": [
+        {
+          "path": "local-only/sequence-015.jpg",
+          "times": [
+            467.5,
+            468.5,
+            469.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W081",
+      "start": 470.0,
+      "end": 473.0,
+      "carrier": "人物转实录",
+      "material": "讲解者表情、包装功能入口",
+      "visible_action": "短人物兴奋提示，随后箭头对准菜单项",
+      "editing": "情绪桥段→操作定位",
+      "purpose_inference": "把推荐落到可找的功能",
+      "evidence": [
+        {
+          "path": "local-only/sequence-015.jpg",
+          "times": [
+            470.5,
+            471.5,
+            472.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W082",
+      "start": 473.0,
+      "end": 480.0,
+      "carrier": "实录",
+      "material": "包装模板选择和智能设计",
+      "visible_action": "模板窗出现、选择并发送，返回执行状态",
+      "editing": "局部放大模板，不替换其他界面",
+      "purpose_inference": "展示样式选择过程",
+      "evidence": [
+        {
+          "path": "local-only/sequence-015.jpg",
+          "times": [
+            473.5,
+            474.5,
+            475.5,
+            476.5,
+            477.5,
+            478.5,
+            479.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W083",
+      "start": 480.0,
+      "end": 485.0,
+      "carrier": "实录",
+      "material": "多层包装时间线、人物描边与文字",
+      "visible_action": "时间线已加包装，讲解承认不是一键成片",
+      "editing": "结果展示同时保留可编辑轨道",
+      "purpose_inference": "设置合理期待",
+      "evidence": [
+        {
+          "path": "local-only/sequence-016.jpg",
+          "times": [
+            480.5,
+            481.5,
+            482.5,
+            483.5,
+            484.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W084",
+      "start": 485.0,
+      "end": 488.0,
+      "carrier": "反例演示",
+      "material": "花字贴在人物额头的错误",
+      "visible_action": "预览抽出放大，黄色“花字错位”+三角箭头指向额头",
+      "editing": "局部放大与问题标记",
+      "purpose_inference": "明确负例，不纳入喜欢的外观",
+      "evidence": [
+        {
+          "path": "local-only/sequence-016.jpg",
+          "times": [
+            485.5,
+            486.5,
+            487.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W085",
+      "start": 488.0,
+      "end": 491.0,
+      "carrier": "反例演示",
+      "material": "左错位、右放射线过花包装",
+      "visible_action": "新增第二个错误例并排",
+      "editing": "左右对比、黄色问题标签",
+      "purpose_inference": "区分两种失败模式",
+      "evidence": [
+        {
+          "path": "local-only/sequence-016.jpg",
+          "times": [
+            488.5,
+            489.5,
+            490.5
+          ]
+        },
+        {
+          "path": "local-only/timeline-mask-001.jpg",
+          "times": [
+            490.6,
+            490.8,
+            491.0,
+            491.2,
+            491.4,
+            491.6,
+            491.8,
+            492.0,
+            492.2,
+            492.4,
+            492.6,
+            492.8,
+            493.0,
+            493.2,
+            493.4,
+            493.6,
+            493.8,
+            494.0,
+            494.2,
+            494.4,
+            494.6,
+            494.8,
+            495.0,
+            495.2,
+            495.4,
+            495.6,
+            495.8,
+            496.0
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表；timeline-mask局部已以0.2秒步长补看，时间是采样区间代表值"
+    },
+    {
+      "id": "W086",
+      "start": 491.0,
+      "end": 496.0,
+      "carrier": "实录+蒙版聚焦",
+      "material": "剪辑时间线",
+      "visible_action": "回编辑界面、上方压暗，下方时间线保留亮度并加框/标题",
+      "editing": "压暗蒙版、焦点由结果转向轨道",
+      "purpose_inference": "解释为什么可修，而不是掩盖失败",
+      "evidence": [
+        {
+          "path": "local-only/sequence-016.jpg",
+          "times": [
+            491.5,
+            492.5,
+            493.5,
+            494.5,
+            495.5
+          ]
+        },
+        {
+          "path": "local-only/timeline-mask-001.jpg",
+          "times": [
+            490.6,
+            490.8,
+            491.0,
+            491.2,
+            491.4,
+            491.6,
+            491.8,
+            492.0,
+            492.2,
+            492.4,
+            492.6,
+            492.8,
+            493.0,
+            493.2,
+            493.4,
+            493.6,
+            493.8,
+            494.0,
+            494.2,
+            494.4,
+            494.6,
+            494.8,
+            495.0,
+            495.2,
+            495.4,
+            495.6,
+            495.8,
+            496.0
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表；timeline-mask局部已以0.2秒步长补看，时间是采样区间代表值"
+    },
+    {
+      "id": "W087",
+      "start": 496.0,
+      "end": 502.0,
+      "carrier": "实录",
+      "material": "属性面板与时间线",
+      "visible_action": "恢复窗口，显示文字调整状态",
+      "editing": "回整体、参数区可见",
+      "purpose_inference": "说明实际能自己调整",
+      "evidence": [
+        {
+          "path": "local-only/sequence-016.jpg",
+          "times": [
+            496.5,
+            497.5,
+            498.5,
+            499.5,
+            500.5,
+            501.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W088",
+      "start": 502.0,
+      "end": 505.0,
+      "carrier": "示范口播",
+      "material": "黑衣讲解者",
+      "visible_action": "讲转船，字幕“转个身”着色",
+      "editing": "人物稍推近、关键词强调",
+      "purpose_inference": "用人物承接故事行动",
+      "evidence": [
+        {
+          "path": "local-only/sequence-016.jpg",
+          "times": [
+            502.5,
+            503.5,
+            504.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W089",
+      "start": 505.0,
+      "end": 509.0,
+      "carrier": "AIGC示范",
+      "material": "转向中的木船",
+      "visible_action": "船斜转向另一边",
+      "editing": "连续同对象旋转/转向",
+      "purpose_inference": "让观众直观看到方向变化",
+      "evidence": [
+        {
+          "path": "local-only/sequence-016.jpg",
+          "times": [
+            505.5,
+            506.5,
+            507.5,
+            508.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W090",
+      "start": 509.0,
+      "end": 513.0,
+      "carrier": "AIGC示范",
+      "material": "弓箭手队列、船侧箭雨",
+      "visible_action": "列队射箭后切中箭船体",
+      "editing": "原因→结果，字幕强调箭雨",
+      "purpose_inference": "说明另一侧也受到负载",
+      "evidence": [
+        {
+          "path": "local-only/sequence-016.jpg",
+          "times": [
+            509.5,
+            510.5,
+            511.5
+          ]
+        },
+        {
+          "path": "local-only/sequence-017.jpg",
+          "times": [
+            512.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W091",
+      "start": 513.0,
+      "end": 518.0,
+      "carrier": "示范口播+文献",
+      "material": "讲解者、原文截图",
+      "visible_action": "回人物说恢复平衡，引用时左上纸张展开并红框标句",
+      "editing": "引用证据浮入/放大，人物保持主位",
+      "purpose_inference": "把叙事与出处分开",
+      "evidence": [
+        {
+          "path": "local-only/sequence-017.jpg",
+          "times": [
+            513.5,
+            514.5,
+            515.5,
+            516.5,
+            517.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W092",
+      "start": 518.0,
+      "end": 523.0,
+      "carrier": "AIGC示范",
+      "material": "两侧有箭的船靠岸、孙权扶船沿",
+      "visible_action": "大全景展示两侧箭，近景人物上岸",
+      "editing": "结果全景→角色动作",
+      "purpose_inference": "表现平衡后能够归还的结果",
+      "evidence": [
+        {
+          "path": "local-only/sequence-017.jpg",
+          "times": [
+            518.5,
+            519.5,
+            520.5,
+            521.5,
+            522.5
+          ]
+        },
+        {
+          "path": "local-only/return-presenter-001.jpg",
+          "times": [
+            522.6,
+            522.8,
+            523.0,
+            523.2,
+            523.4,
+            523.6,
+            523.8,
+            524.0,
+            524.2,
+            524.4,
+            524.6,
+            524.8,
+            525.0,
+            525.2,
+            525.4,
+            525.6,
+            525.8,
+            526.0,
+            526.2,
+            526.4,
+            526.6,
+            526.8,
+            527.0,
+            527.2,
+            527.4
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表；return-presenter局部已以0.2秒步长补看，时间是采样区间代表值"
+    },
+    {
+      "id": "W093",
+      "start": 523.0,
+      "end": 527.0,
+      "carrier": "人物圆窗叠加",
+      "material": "灰衣讲解者浮在上一示范帧上",
+      "visible_action": "底片压暗、中央圆窗出现并移动",
+      "editing": "由内容播放回到讲解层，圆形蒙版",
+      "purpose_inference": "使示范与总结的层级切换清楚",
+      "evidence": [
+        {
+          "path": "local-only/sequence-017.jpg",
+          "times": [
+            523.5,
+            524.5,
+            525.5,
+            526.5
+          ]
+        },
+        {
+          "path": "local-only/return-presenter-001.jpg",
+          "times": [
+            522.6,
+            522.8,
+            523.0,
+            523.2,
+            523.4,
+            523.6,
+            523.8,
+            524.0,
+            524.2,
+            524.4,
+            524.6,
+            524.8,
+            525.0,
+            525.2,
+            525.4,
+            525.6,
+            525.8,
+            526.0,
+            526.2,
+            526.4,
+            526.6,
+            526.8,
+            527.0,
+            527.2,
+            527.4
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表；return-presenter局部已以0.2秒步长补看，时间是采样区间代表值"
+    },
+    {
+      "id": "W094",
+      "start": 527.0,
+      "end": 534.0,
+      "carrier": "实录",
+      "material": "另一项目的助手技能列表",
+      "visible_action": "侧栏菜单展开，展示内置技能",
+      "editing": "界面推近技能列表",
+      "purpose_inference": "具体呈现可复用工作流入口",
+      "evidence": [
+        {
+          "path": "local-only/sequence-017.jpg",
+          "times": [
+            527.5,
+            528.5,
+            529.5,
+            530.5,
+            531.5,
+            532.5,
+            533.5
+          ]
+        },
+        {
+          "path": "local-only/return-presenter-001.jpg",
+          "times": [
+            522.6,
+            522.8,
+            523.0,
+            523.2,
+            523.4,
+            523.6,
+            523.8,
+            524.0,
+            524.2,
+            524.4,
+            524.6,
+            524.8,
+            525.0,
+            525.2,
+            525.4,
+            525.6,
+            525.8,
+            526.0,
+            526.2,
+            526.4,
+            526.6,
+            526.8,
+            527.0,
+            527.2,
+            527.4
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表；return-presenter局部已以0.2秒步长补看，时间是采样区间代表值"
+    },
+    {
+      "id": "W095",
+      "start": 534.0,
+      "end": 539.0,
+      "carrier": "人物",
+      "material": "讲解者谈批量和长改短",
+      "visible_action": "举指列举",
+      "editing": "人物中景",
+      "purpose_inference": "为适用案例分类铺垫",
+      "evidence": [
+        {
+          "path": "local-only/sequence-017.jpg",
+          "times": [
+            534.5,
+            535.5,
+            536.5,
+            537.5,
+            538.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W096",
+      "start": 539.0,
+      "end": 545.0,
+      "carrier": "外部视频示例",
+      "material": "发布会、课堂回放、直播高光三竖屏",
+      "visible_action": "一张→两张→三张，标题同步出现",
+      "editing": "三列逐项揭示，各视频可独立动",
+      "purpose_inference": "把三种用例一一对应",
+      "evidence": [
+        {
+          "path": "local-only/sequence-017.jpg",
+          "times": [
+            539.5,
+            540.5,
+            541.5,
+            542.5,
+            543.5
+          ]
+        },
+        {
+          "path": "local-only/sequence-018.jpg",
+          "times": [
+            544.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W097",
+      "start": 545.0,
+      "end": 551.0,
+      "carrier": "人物",
+      "material": "讲解者引出专业和手机端",
+      "visible_action": "人物居中解释",
+      "editing": "回人物，未强塞素材",
+      "purpose_inference": "话题转折缓冲",
+      "evidence": [
+        {
+          "path": "local-only/sequence-018.jpg",
+          "times": [
+            545.5,
+            546.5,
+            547.5,
+            548.5,
+            549.5,
+            550.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W098",
+      "start": 551.0,
+      "end": 556.0,
+      "carrier": "图形",
+      "material": "杜比合作卡、手机/PC设备",
+      "visible_action": "合作卡移至上方，两个终端逐项加入",
+      "editing": "缩放重排、对应标签",
+      "purpose_inference": "把支持范围分终端表示",
+      "evidence": [
+        {
+          "path": "local-only/sequence-018.jpg",
+          "times": [
+            551.5,
+            552.5,
+            553.5,
+            554.5,
+            555.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W099",
+      "start": 556.0,
+      "end": 566.0,
+      "carrier": "实录合成",
+      "material": "手机壳录屏、人物竖窗、功能字",
+      "visible_action": "iOS标签、剪辑、导出、杜比视界、即将支持项逐个出现",
+      "editing": "人物与设备并排、文案逐行追加",
+      "purpose_inference": "区分当前功能与片中称未来支持的项",
+      "evidence": [
+        {
+          "path": "local-only/sequence-018.jpg",
+          "times": [
+            556.5,
+            557.5,
+            558.5,
+            559.5,
+            560.5,
+            561.5,
+            562.5,
+            563.5,
+            564.5,
+            565.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W100",
+      "start": 566.0,
+      "end": 571.0,
+      "carrier": "实录+旧作卡",
+      "material": "手机对话界面、旧视频封面",
+      "visible_action": "手机旁展示上一期封面",
+      "editing": "回指历史内容，双列布局",
+      "purpose_inference": "减少重复讲解并补背景",
+      "evidence": [
+        {
+          "path": "local-only/sequence-018.jpg",
+          "times": [
+            566.5,
+            567.5,
+            568.5,
+            569.5,
+            570.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W101",
+      "start": 571.0,
+      "end": 579.0,
+      "carrier": "实录",
+      "material": "手机AI创作入口及模板库",
+      "visible_action": "界面拉近底部AI按钮、点入新页，模板加载后拉回",
+      "editing": "按钮放大定位→实际页面→全机回看",
+      "purpose_inference": "入口与功能结果对应",
+      "evidence": [
+        {
+          "path": "local-only/sequence-018.jpg",
+          "times": [
+            571.5,
+            572.5,
+            573.5,
+            574.5,
+            575.5
+          ]
+        },
+        {
+          "path": "local-only/sequence-019.jpg",
+          "times": [
+            576.5,
+            577.5,
+            578.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W102",
+      "start": 579.0,
+      "end": 584.0,
+      "carrier": "实录+标题",
+      "material": "热门模板网格",
+      "visible_action": "局部推近，随后压暗叠“一键复制热门”",
+      "editing": "聚焦＋总结字",
+      "purpose_inference": "从多个样例收束共性能力",
+      "evidence": [
+        {
+          "path": "local-only/sequence-019.jpg",
+          "times": [
+            579.5,
+            580.5,
+            581.5,
+            582.5,
+            583.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W103",
+      "start": 584.0,
+      "end": 589.0,
+      "carrier": "AIGC示范",
+      "material": "蓝场边牧站立闪身步",
+      "visible_action": "狗站立、缩身/步伐与重回站姿，左上保留原模板小卡",
+      "editing": "模板与结果并存的前后参照",
+      "purpose_inference": "演示替换主体后的动作效果",
+      "evidence": [
+        {
+          "path": "local-only/sequence-019.jpg",
+          "times": [
+            584.5,
+            585.5,
+            586.5,
+            587.5,
+            588.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W104",
+      "start": 589.0,
+      "end": 590.0,
+      "carrier": "转场",
+      "material": "彩条和狗头表情",
+      "visible_action": "短卡过场",
+      "editing": "喜剧停顿卡",
+      "purpose_inference": "结束示范并换到费用话题",
+      "evidence": [
+        {
+          "path": "local-only/sequence-019.jpg",
+          "times": [
+            589.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W105",
+      "start": 590.0,
+      "end": 594.0,
+      "carrier": "人物转图形",
+      "material": "人物、疑问表情与气泡",
+      "visible_action": "先讲解者引问，再气泡逐字补完整问题",
+      "editing": "代替观众发问的气泡转场",
+      "purpose_inference": "把潜在疑问变成下一段标题",
+      "evidence": [
+        {
+          "path": "local-only/sequence-019.jpg",
+          "times": [
+            590.5,
+            591.5,
+            592.5,
+            593.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W106",
+      "start": 594.0,
+      "end": 599.0,
+      "carrier": "人物",
+      "material": "讲解者谈性价比",
+      "visible_action": "正面回答",
+      "editing": "人物中景",
+      "purpose_inference": "评价归作者，价格不当本次研究事实",
+      "evidence": [
+        {
+          "path": "local-only/sequence-019.jpg",
+          "times": [
+            594.5,
+            595.5,
+            596.5,
+            597.5,
+            598.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W107",
+      "start": 599.0,
+      "end": 603.0,
+      "carrier": "实录截图",
+      "material": "AI Ultra订阅面板",
+      "visible_action": "卡片从小到大、停留阅读",
+      "editing": "缩放入场、黑底单焦点",
+      "purpose_inference": "给费用说法原片依据",
+      "evidence": [
+        {
+          "path": "local-only/sequence-019.jpg",
+          "times": [
+            599.5,
+            600.5,
+            601.5,
+            602.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W108",
+      "start": 603.0,
+      "end": 611.0,
+      "carrier": "实录截图+蒙版",
+      "material": "权益对照表",
+      "visible_action": "加右侧表格，压暗非重点，先框SVIP行再框积分行",
+      "editing": "并排对照、分行聚焦",
+      "purpose_inference": "让每个权益说法对应可见表格行",
+      "evidence": [
+        {
+          "path": "local-only/sequence-019.jpg",
+          "times": [
+            603.5,
+            604.5,
+            605.5,
+            606.5,
+            607.5
+          ]
+        },
+        {
+          "path": "local-only/sequence-020.jpg",
+          "times": [
+            608.5,
+            609.5,
+            610.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W109",
+      "start": 611.0,
+      "end": 619.0,
+      "carrier": "人物",
+      "material": "讲解者总结每环节提效",
+      "visible_action": "连续讲解、手势分层",
+      "editing": "人物主导、不再堆新资料",
+      "purpose_inference": "将价值回到工作流",
+      "evidence": [
+        {
+          "path": "local-only/sequence-020.jpg",
+          "times": [
+            611.5,
+            612.5,
+            613.5,
+            614.5,
+            615.5,
+            616.5,
+            617.5,
+            618.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W110",
+      "start": 619.0,
+      "end": 625.0,
+      "carrier": "实录宣传素材",
+      "material": "创作输入、任务结果、剧本与分镜",
+      "visible_action": "输入框→任务完成→内容节点→分镜表快速串联",
+      "editing": "沿产物链快切，背景光带统一",
+      "purpose_inference": "复述一站式链路结果",
+      "evidence": [
+        {
+          "path": "local-only/sequence-020.jpg",
+          "times": [
+            619.5,
+            620.5,
+            621.5,
+            622.5,
+            623.5,
+            624.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W111",
+      "start": 625.0,
+      "end": 627.0,
+      "carrier": "品牌图形",
+      "material": "Hub标志与一站式智能创作平台",
+      "visible_action": "大标志收为文字横排",
+      "editing": "标志与短句收束",
+      "purpose_inference": "品牌归因，不迁移到用户账号",
+      "evidence": [
+        {
+          "path": "local-only/sequence-020.jpg",
+          "times": [
+            625.5,
+            626.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W112",
+      "start": 627.0,
+      "end": 635.0,
+      "carrier": "人物",
+      "material": "讲解者互动与告别",
+      "visible_action": "手指提问、点赞手势和挥别",
+      "editing": "人物近中景、收尾动作",
+      "purpose_inference": "互动退出",
+      "evidence": [
+        {
+          "path": "local-only/sequence-020.jpg",
+          "times": [
+            627.5,
+            628.5,
+            629.5,
+            630.5,
+            631.5,
+            632.5,
+            633.5,
+            634.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    },
+    {
+      "id": "W113",
+      "start": 635.0,
+      "end": 636.412,
+      "carrier": "品牌片尾",
+      "material": "秋芝2046文字",
+      "visible_action": "黑底白标",
+      "editing": "静态片尾",
+      "purpose_inference": "参考作者标识，不复用",
+      "evidence": [
+        {
+          "path": "local-only/sequence-020.jpg",
+          "times": [
+            635.5
+          ]
+        }
+      ],
+      "boundary_precision": "顺序1秒采样，观察区间约±1秒，不是逐帧切点表"
+    }
+  ],
+  "rows": [
+    {
+      "id": "W-L001",
+      "source_segment_ids": [
+        1
+      ],
+      "start": 0.0,
+      "end": 1.44,
+      "asr_start": 0.0,
+      "asr_end": 1.44,
+      "asr_text": "没有啊 朋友们",
+      "text": "你好啊，朋友们",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W001"
+      ],
+      "mapping": "人物招呼配身后大字；不是B-roll。",
+      "purpose_inference": "分析推论：建立人物入口并点名工具",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W001"
+    },
+    {
+      "id": "W-L002",
+      "source_segment_ids": [
+        2
+      ],
+      "start": 1.44,
+      "end": 5.88,
+      "asr_start": 1.44,
+      "asr_end": 5.88,
+      "asr_text": "我用简硬AI重写了自媒体视频的工作流",
+      "text": "我用剪映AI重写了自媒体视频的工作流",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W001",
+        "W002"
+      ],
+      "mapping": "先人物旁软件标志，随后实拍剪辑桌压暗并出现工作流主题，句中换承载。",
+      "purpose_inference": "分析推论：建立人物入口并点名工具",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W001"
+    },
+    {
+      "id": "W-L003",
+      "source_segment_ids": [
+        3
+      ],
+      "start": 7.1,
+      "end": 8.84,
+      "asr_start": 7.1,
+      "asr_end": 8.84,
+      "asr_text": "不管你是哪类自媒体",
+      "text": "不管你是哪类自媒体",
+      "corrections": "",
+      "shot_ids": [
+        "W003"
+      ],
+      "mapping": "回人物张手，直接点名自媒体受众。",
+      "purpose_inference": "分析推论：用人物建立受众关联",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W003"
+    },
+    {
+      "id": "W-L004",
+      "source_segment_ids": [
+        4
+      ],
+      "start": 8.84,
+      "end": 10.84,
+      "asr_start": 8.84,
+      "asr_end": 10.84,
+      "asr_text": "还是创作AI视频的朋友",
+      "text": "还是创作AI视频的朋友",
+      "corrections": "",
+      "shot_ids": [
+        "W003"
+      ],
+      "mapping": "同人物继续说AI视频受众，没有换一张对应配图。",
+      "purpose_inference": "分析推论：用人物建立受众关联",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W003"
+    },
+    {
+      "id": "W-L005",
+      "source_segment_ids": [
+        5
+      ],
+      "start": 10.84,
+      "end": 14.3,
+      "asr_start": 10.84,
+      "asr_end": 14.3,
+      "asr_text": "都有帮你提效的科技与狠火",
+      "text": "都有帮你提效的科技与狠活",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W003",
+        "W004",
+        "W005"
+      ],
+      "mapping": "先人物旁“视频提效”，后切黑底“科技&狠活”大字总结收益。",
+      "purpose_inference": "分析推论：用人物建立受众关联",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W003"
+    },
+    {
+      "id": "W-L006",
+      "source_segment_ids": [
+        6
+      ],
+      "start": 14.3,
+      "end": 16.02,
+      "asr_start": 14.3,
+      "asr_end": 16.02,
+      "asr_text": "快点好收藏光头赞",
+      "text": "快点好收藏关注赞",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W005"
+      ],
+      "mapping": "人物手势配互动提示，无独立B-roll。",
+      "purpose_inference": "分析推论：互动与引出议程",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W005"
+    },
+    {
+      "id": "W-L007",
+      "source_segment_ids": [
+        7
+      ],
+      "start": 16.02,
+      "end": 20.56,
+      "asr_start": 16.02,
+      "asr_end": 20.56,
+      "asr_text": "今天我们就用AI视频和传统自媒体视频的全流程",
+      "text": "今天我们就用AI视频和传统自媒体视频的全流程",
+      "corrections": "",
+      "shot_ids": [
+        "W005",
+        "W006"
+      ],
+      "mapping": "人物起句，随后AI视频与传统自媒体两标题依次出现，并展开两条纵向流程。",
+      "purpose_inference": "分析推论：互动与引出议程",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W005"
+    },
+    {
+      "id": "W-L008",
+      "source_segment_ids": [
+        8
+      ],
+      "start": 20.56,
+      "end": 23.64,
+      "asr_start": 20.56,
+      "asr_end": 23.64,
+      "asr_text": "带大家看看它升级了哪些好东西",
+      "text": "带大家看看它升级了哪些好东西",
+      "corrections": "",
+      "shot_ids": [
+        "W006",
+        "W007"
+      ],
+      "mapping": "先完成两列步骤，后回人物解释将演示升级。",
+      "purpose_inference": "分析推论：说明将覆盖两种工作流",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W006"
+    },
+    {
+      "id": "W-L009",
+      "source_segment_ids": [
+        9
+      ],
+      "start": 23.64,
+      "end": 24.54,
+      "asr_start": 23.64,
+      "asr_end": 24.54,
+      "asr_text": "出发",
+      "text": "出发",
+      "corrections": "",
+      "shot_ids": [
+        "W007",
+        "W008"
+      ],
+      "mapping": "人物说出发后接Let's Go短标题桥段。",
+      "purpose_inference": "分析推论：完成议程承诺并进入正文",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W007"
+    },
+    {
+      "id": "W-L010",
+      "source_segment_ids": [
+        10
+      ],
+      "start": 26.2,
+      "end": 28.88,
+      "asr_start": 26.2,
+      "asr_end": 28.88,
+      "asr_text": "首先是它新出的这个简硬Hub",
+      "text": "首先是它新出的这个剪映Hub",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W009"
+      ],
+      "mapping": "实录首页Hub入口被黄三角和橙框定位，左下人物圆窗。",
+      "purpose_inference": "分析推论：告诉观众从哪里进入",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W009"
+    },
+    {
+      "id": "W-L011",
+      "source_segment_ids": [
+        11
+      ],
+      "start": 28.88,
+      "end": 31.18,
+      "asr_start": 28.88,
+      "asr_end": 31.18,
+      "asr_text": "一个从脚本到成片",
+      "text": "一个从脚本到成片",
+      "corrections": "",
+      "shot_ids": [
+        "W009",
+        "W010"
+      ],
+      "mapping": "Hub界面缩左，右侧脚本→成片箭头说明输入输出。",
+      "purpose_inference": "分析推论：告诉观众从哪里进入",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W009"
+    },
+    {
+      "id": "W-L012",
+      "source_segment_ids": [
+        12
+      ],
+      "start": 31.18,
+      "end": 34.74,
+      "asr_start": 31.18,
+      "asr_end": 34.74,
+      "asr_text": "一站式的无线画布加上agent",
+      "text": "一站式的无限画布加上Agent",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W010"
+      ],
+      "mapping": "右侧先“无限画布”再补“+Agent”，留在同关系图内。",
+      "purpose_inference": "分析推论：建立整体输入输出关系",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W010"
+    },
+    {
+      "id": "W-L013",
+      "source_segment_ids": [
+        13
+      ],
+      "start": 34.74,
+      "end": 38.2,
+      "asr_start": 34.74,
+      "asr_end": 38.2,
+      "asr_text": "那原来我们做AI视频都会分散好几个软件",
+      "text": "那原来我们做AI视频都会分散好几个软件",
+      "corrections": "",
+      "shot_ids": [
+        "W010",
+        "W011",
+        "W012"
+      ],
+      "mapping": "用文字、图片、音频、视频四张填充卡示意分散产物。",
+      "purpose_inference": "分析推论：建立整体输入输出关系",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W010"
+    },
+    {
+      "id": "W-L014",
+      "source_segment_ids": [
+        14
+      ],
+      "start": 38.2,
+      "end": 41.84,
+      "asr_start": 38.2,
+      "asr_end": 41.84,
+      "asr_text": "最后一站才是导入到剪音里面去做精简",
+      "text": "最后一站才是导入到剪映里面去做精剪",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W012"
+      ],
+      "mapping": "四卡组合缩到左侧，右侧剪映标志与导入箭头/时间线加入。",
+      "purpose_inference": "分析推论：表达最后还要搬运汇总的旧流程",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W012"
+    },
+    {
+      "id": "W-L015",
+      "source_segment_ids": [
+        15
+      ],
+      "start": 41.84,
+      "end": 46.78,
+      "asr_start": 41.84,
+      "asr_end": 46.78,
+      "asr_text": "那这个剪音hub就是把文字图片音频视频的生成",
+      "text": "那这个剪映Hub就是把文字图片音频视频的生成",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W012",
+        "W013",
+        "W014"
+      ],
+      "mapping": "回真实Hub工具条并放大，对应文字、图片、音频、视频按钮逐个圈出贴标签。",
+      "purpose_inference": "分析推论：表达最后还要搬运汇总的旧流程",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W012"
+    },
+    {
+      "id": "W-L016",
+      "source_segment_ids": [
+        16
+      ],
+      "start": 46.78,
+      "end": 49.96,
+      "asr_start": 46.78,
+      "asr_end": 49.96,
+      "asr_text": "和最后的精简全都拉通了",
+      "text": "和最后的精剪全都拉通了",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W014"
+      ],
+      "mapping": "同工具条最后补绿色“精剪”，所有标签同屏形成集合。",
+      "purpose_inference": "分析推论：让观众知道“一站式”落在哪些按钮",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W014"
+    },
+    {
+      "id": "W-L017",
+      "source_segment_ids": [
+        17
+      ],
+      "start": 49.96,
+      "end": 54.18,
+      "asr_start": 49.96,
+      "asr_end": 54.18,
+      "asr_text": "最关键的是它的agent上下文是统一的",
+      "text": "最关键的是它的agent上下文是统一的",
+      "corrections": "",
+      "shot_ids": [
+        "W014",
+        "W015",
+        "W016"
+      ],
+      "mapping": "从工具条退回窗口，左侧Agent栏被框住并显示“上下文统一”。",
+      "purpose_inference": "分析推论：让观众知道“一站式”落在哪些按钮",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W014"
+    },
+    {
+      "id": "W-L018",
+      "source_segment_ids": [
+        18
+      ],
+      "start": 54.18,
+      "end": 57.0,
+      "asr_start": 54.18,
+      "asr_end": 57.0,
+      "asr_text": "我们直接做个AI短剧来演示",
+      "text": "我们直接做个AI短剧来演示",
+      "corrections": "",
+      "shot_ids": [
+        "W016"
+      ],
+      "mapping": "回全幅讲解者，宣布接下来用短剧演示。",
+      "purpose_inference": "分析推论：从概念转具体案例",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W016"
+    },
+    {
+      "id": "W-L019",
+      "source_segment_ids": [
+        19
+      ],
+      "start": 57.0,
+      "end": 60.14,
+      "asr_start": 57.0,
+      "asr_end": 60.14,
+      "asr_text": "小师妹上山找先尊师兄",
+      "text": "小师妹上山找仙尊师兄",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W017",
+        "W018"
+      ],
+      "mapping": "人物右侧出现3D女孩角色卡和故事名；先预告具体案例。",
+      "purpose_inference": "分析推论：先给即将制作的角色和情境",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W017"
+    },
+    {
+      "id": "W-L020",
+      "source_segment_ids": [
+        20
+      ],
+      "start": 63.22,
+      "end": 64.38,
+      "asr_start": 63.22,
+      "asr_end": 64.38,
+      "asr_text": "打开简易卡谱",
+      "text": "打开剪映Hub",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W019"
+      ],
+      "mapping": "实测1章节卡后切实际Hub画布，左上开始步骤导航。",
+      "purpose_inference": "分析推论：定位操作起点",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W019"
+    },
+    {
+      "id": "W-L021",
+      "source_segment_ids": [
+        21
+      ],
+      "start": 64.38,
+      "end": 65.9,
+      "asr_start": 64.38,
+      "asr_end": 65.9,
+      "asr_text": "我们点左边的agent",
+      "text": "我们点左边的agent",
+      "corrections": "",
+      "shot_ids": [
+        "W019"
+      ],
+      "mapping": "从完整窗口推近左侧Agent输入框。",
+      "purpose_inference": "分析推论：定位操作起点",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W019"
+    },
+    {
+      "id": "W-L022",
+      "source_segment_ids": [
+        22
+      ],
+      "start": 65.9,
+      "end": 68.58,
+      "asr_start": 65.9,
+      "asr_end": 68.58,
+      "asr_text": "你就可以直接从最原始的想法开始",
+      "text": "你就可以直接从最原始的想法开始",
+      "corrections": "",
+      "shot_ids": [
+        "W019"
+      ],
+      "mapping": "输入区保持放大，留出输入起始想法的空间。",
+      "purpose_inference": "分析推论：定位操作起点",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W019"
+    },
+    {
+      "id": "W-L023",
+      "source_segment_ids": [
+        23
+      ],
+      "start": 68.58,
+      "end": 70.08,
+      "asr_start": 68.58,
+      "asr_end": 70.08,
+      "asr_text": "我们先写剧本",
+      "text": "我们先写剧本",
+      "corrections": "",
+      "shot_ids": [
+        "W019",
+        "W020"
+      ],
+      "mapping": "仍是同一输入框，准备从剧本开始，没有独立剧本装饰素材。",
+      "purpose_inference": "分析推论：定位操作起点",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W019"
+    },
+    {
+      "id": "W-L024",
+      "source_segment_ids": [
+        24
+      ],
+      "start": 70.08,
+      "end": 73.16,
+      "asr_start": 70.08,
+      "asr_end": 73.16,
+      "asr_text": "帮我做这个萌娃修仙清洗剧",
+      "text": "帮我做这个萌娃修仙轻喜剧",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W020"
+      ],
+      "mapping": "实际输入框开始填入故事需求，字幕说明题材。",
+      "purpose_inference": "分析推论：展示最小想法怎样成为可执行要求",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W020"
+    },
+    {
+      "id": "W-L025",
+      "source_segment_ids": [
+        25
+      ],
+      "start": 73.16,
+      "end": 74.52,
+      "asr_start": 73.16,
+      "asr_end": 74.52,
+      "asr_text": "3D国慢风",
+      "text": "3D国漫风",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W020"
+      ],
+      "mapping": "同一段输入继续加入风格约束。",
+      "purpose_inference": "分析推论：展示最小想法怎样成为可执行要求",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W020"
+    },
+    {
+      "id": "W-L026",
+      "source_segment_ids": [
+        26
+      ],
+      "start": 74.52,
+      "end": 76.42,
+      "asr_start": 74.52,
+      "asr_end": 76.42,
+      "asr_text": "小师妹被师傅拍下山",
+      "text": "小师妹被师父派下山",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W020"
+      ],
+      "mapping": "故事设定继续进入同一输入框，体现上下文连续。",
+      "purpose_inference": "分析推论：展示最小想法怎样成为可执行要求",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W020"
+    },
+    {
+      "id": "W-L027",
+      "source_segment_ids": [
+        27
+      ],
+      "start": 76.42,
+      "end": 77.58,
+      "asr_start": 76.42,
+      "asr_end": 77.58,
+      "asr_text": "巴拉巴拉巴拉",
+      "text": "巴拉巴拉巴拉",
+      "corrections": "",
+      "shot_ids": [
+        "W020",
+        "W021"
+      ],
+      "mapping": "长段需求补全，略过逐字朗读；可看见输入内容变长。",
+      "purpose_inference": "分析推论：展示最小想法怎样成为可执行要求",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W020"
+    },
+    {
+      "id": "W-L028",
+      "source_segment_ids": [
+        28
+      ],
+      "start": 77.58,
+      "end": 77.96,
+      "asr_start": 77.58,
+      "asr_end": 77.96,
+      "asr_text": "诶",
+      "text": "诶",
+      "corrections": "",
+      "shot_ids": [
+        "W021"
+      ],
+      "mapping": "输入转为画布简介结果，短语气词与状态切换相邻。",
+      "purpose_inference": "分析推论：给出请求后的实际输出",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W021"
+    },
+    {
+      "id": "W-L029",
+      "source_segment_ids": [
+        29
+      ],
+      "start": 77.96,
+      "end": 78.74,
+      "asr_start": 77.96,
+      "asr_end": 78.74,
+      "asr_text": "那他呢",
+      "text": "那他呢",
+      "corrections": "",
+      "shot_ids": [
+        "W021"
+      ],
+      "mapping": "简介已出现，讲解者接着解释系统行为。",
+      "purpose_inference": "分析推论：给出请求后的实际输出",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W021"
+    },
+    {
+      "id": "W-L030",
+      "source_segment_ids": [
+        30
+      ],
+      "start": 78.74,
+      "end": 82.0,
+      "asr_start": 78.74,
+      "asr_end": 82.0,
+      "asr_text": "就会自己选用了内置的短剧成片技能",
+      "text": "就会自己选用了内置的短剧成片技能",
+      "corrections": "",
+      "shot_ids": [
+        "W021"
+      ],
+      "mapping": "简介卡被打开为剧本长详情，屏幕展示所调用技能的输出。",
+      "purpose_inference": "分析推论：给出请求后的实际输出",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W021"
+    },
+    {
+      "id": "W-L031",
+      "source_segment_ids": [
+        31
+      ],
+      "start": 82.0,
+      "end": 84.0,
+      "asr_start": 82.0,
+      "asr_end": 84.0,
+      "asr_text": "帮我们把剧本框架打出来了",
+      "text": "帮我们把剧本框架打出来了",
+      "corrections": "",
+      "shot_ids": [
+        "W021"
+      ],
+      "mapping": "保留展开的剧本结构供观察，未换到别的例子。",
+      "purpose_inference": "分析推论：给出请求后的实际输出",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W021"
+    },
+    {
+      "id": "W-L032",
+      "source_segment_ids": [
+        32
+      ],
+      "start": 84.0,
+      "end": 88.3,
+      "asr_start": 84.0,
+      "asr_end": 88.3,
+      "asr_text": "然后我们可以继续让他帮我们一键拆成分镜表",
+      "text": "然后我们可以继续让他帮我们一键拆成分镜表",
+      "corrections": "",
+      "shot_ids": [
+        "W022"
+      ],
+      "mapping": "回Agent确认区并推近按钮，随后分镜节点出现；阶段标记切到分镜&资产。",
+      "purpose_inference": "分析推论：把继续对话与下一阶段连接",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W022"
+    },
+    {
+      "id": "W-L033",
+      "source_segment_ids": [
+        33
+      ],
+      "start": 89.36,
+      "end": 89.8,
+      "asr_start": 89.36,
+      "asr_end": 89.8,
+      "asr_text": "好",
+      "text": "好",
+      "corrections": "",
+      "shot_ids": [
+        "W022"
+      ],
+      "mapping": "分镜节点生成结果停留，语气词不另加效果。",
+      "purpose_inference": "分析推论：把继续对话与下一阶段连接",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W022"
+    },
+    {
+      "id": "W-L034",
+      "source_segment_ids": [
+        34
+      ],
+      "start": 89.8,
+      "end": 92.06,
+      "asr_start": 89.8,
+      "asr_end": 92.06,
+      "asr_text": "那这个标准的分镜就出来了",
+      "text": "那这个标准的分镜就出来了",
+      "corrections": "",
+      "shot_ids": [
+        "W022",
+        "W023"
+      ],
+      "mapping": "打开生成的分镜表，让观众看到标准字段。",
+      "purpose_inference": "分析推论：把继续对话与下一阶段连接",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W022"
+    },
+    {
+      "id": "W-L035",
+      "source_segment_ids": [
+        35
+      ],
+      "start": 92.06,
+      "end": 97.16,
+      "asr_start": 92.06,
+      "asr_end": 97.16,
+      "asr_text": "时长、情节画面、运镜、台词、音乐音效都规划好了",
+      "text": "时长、情节画面、运镜、台词、音乐音效都规划好了",
+      "corrections": "",
+      "shot_ids": [
+        "W023"
+      ],
+      "mapping": "时长、情节、运镜、台词/音效等列依解说逐个橙框突出；一张表承接整句。",
+      "purpose_inference": "分析推论：避免一次看整表无从下手",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W023"
+    },
+    {
+      "id": "W-L036",
+      "source_segment_ids": [
+        36
+      ],
+      "start": 97.16,
+      "end": 98.88,
+      "asr_start": 97.16,
+      "asr_end": 98.88,
+      "asr_text": "那有了这个分镜的设计",
+      "text": "那有了这个分镜的设计",
+      "corrections": "",
+      "shot_ids": [
+        "W023"
+      ],
+      "mapping": "同表结构保持，承接已有分镜设计。",
+      "purpose_inference": "分析推论：避免一次看整表无从下手",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W023"
+    },
+    {
+      "id": "W-L037",
+      "source_segment_ids": [
+        37
+      ],
+      "start": 98.88,
+      "end": 102.08,
+      "asr_start": 98.88,
+      "asr_end": 102.08,
+      "asr_text": "我们可以点一键批量生成",
+      "text": "我们可以点一键批量生成",
+      "corrections": "",
+      "shot_ids": [
+        "W023",
+        "W024"
+      ],
+      "mapping": "视口向右下批量生成按钮靠近，黄箭头指向点击；随后切生成结果。",
+      "purpose_inference": "分析推论：避免一次看整表无从下手",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W023"
+    },
+    {
+      "id": "W-L038",
+      "source_segment_ids": [
+        38
+      ],
+      "start": 102.08,
+      "end": 104.68,
+      "asr_start": 102.08,
+      "asr_end": 104.68,
+      "asr_text": "当当,效果都还不错",
+      "text": "当当,效果都还不错",
+      "corrections": "",
+      "shot_ids": [
+        "W024"
+      ],
+      "mapping": "角色多视图和场景图集同时出现，直接展示质量。",
+      "purpose_inference": "分析推论：形成操作—结果证据对",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W024"
+    },
+    {
+      "id": "W-L039",
+      "source_segment_ids": [
+        39
+      ],
+      "start": 104.68,
+      "end": 106.08,
+      "asr_start": 104.68,
+      "asr_end": 106.08,
+      "asr_text": "那我们觉得不错呢",
+      "text": "那我们觉得不错呢",
+      "corrections": "",
+      "shot_ids": [
+        "W024",
+        "W025"
+      ],
+      "mapping": "停在女孩角色图，视口开始推近准备保存。",
+      "purpose_inference": "分析推论：形成操作—结果证据对",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W024"
+    },
+    {
+      "id": "W-L040",
+      "source_segment_ids": [
+        40
+      ],
+      "start": 106.08,
+      "end": 107.36,
+      "asr_start": 106.08,
+      "asr_end": 107.36,
+      "asr_text": "我们可以再点这里",
+      "text": "我们可以再点这里",
+      "corrections": "",
+      "shot_ids": [
+        "W025"
+      ],
+      "mapping": "角色图上方操作被点击，打开资产保存弹窗。",
+      "purpose_inference": "分析推论：展示一致性资产怎样保存",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W025"
+    },
+    {
+      "id": "W-L041",
+      "source_segment_ids": [
+        41
+      ],
+      "start": 107.36,
+      "end": 111.58,
+      "asr_start": 107.36,
+      "asr_end": 111.58,
+      "asr_text": "快速的把这些都保存到资产主体里面",
+      "text": "快速的把这些都保存到资产主体里面",
+      "corrections": "",
+      "shot_ids": [
+        "W025",
+        "W026"
+      ],
+      "mapping": "确认保存后左侧出现主体库，角色缩略图进入库内。",
+      "purpose_inference": "分析推论：展示一致性资产怎样保存",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W025"
+    },
+    {
+      "id": "W-L042",
+      "source_segment_ids": [
+        42
+      ],
+      "start": 111.58,
+      "end": 114.5,
+      "asr_start": 111.58,
+      "asr_end": 114.5,
+      "asr_text": "那这样人物道具就都固定好了",
+      "text": "那这样人物道具就都固定好了",
+      "corrections": "",
+      "shot_ids": [
+        "W026"
+      ],
+      "mapping": "主体库与道具库并排展示，人物、地图、纸条、画像可见。",
+      "purpose_inference": "分析推论：把角色一致与道具一致一起固定",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W026"
+    },
+    {
+      "id": "W-L043",
+      "source_segment_ids": [
+        43
+      ],
+      "start": 114.5,
+      "end": 115.94,
+      "asr_start": 114.5,
+      "asr_end": 115.94,
+      "asr_text": "那再接着呢",
+      "text": "那再接着呢",
+      "corrections": "",
+      "shot_ids": [
+        "W026"
+      ],
+      "mapping": "仍保持已有主体和道具板，作为下一步输入上下文。",
+      "purpose_inference": "分析推论：把角色一致与道具一致一起固定",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W026"
+    },
+    {
+      "id": "W-L044",
+      "source_segment_ids": [
+        44
+      ],
+      "start": 115.94,
+      "end": 118.66,
+      "asr_start": 115.94,
+      "asr_end": 118.66,
+      "asr_text": "我们就该写视频的提示词了",
+      "text": "我们就该写视频的提示词了",
+      "corrections": "",
+      "shot_ids": [
+        "W026",
+        "W027"
+      ],
+      "mapping": "资产板保持，随后视口回到生成提示词入口，体现素材先于视频。",
+      "purpose_inference": "分析推论：把角色一致与道具一致一起固定",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W026"
+    },
+    {
+      "id": "W-L045",
+      "source_segment_ids": [
+        45
+      ],
+      "start": 118.66,
+      "end": 122.54,
+      "asr_start": 118.66,
+      "asr_end": 122.54,
+      "asr_text": "也只需要点这个生成分镜提示词",
+      "text": "也只需要点这个生成分镜提示词",
+      "corrections": "",
+      "shot_ids": [
+        "W027",
+        "W028"
+      ],
+      "mapping": "真实按钮“生成分镜提示词”位于画布上方，阶段导航变为视频生成。",
+      "purpose_inference": "分析推论：使观众知道操作推进到哪一环",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W027"
+    },
+    {
+      "id": "W-L046",
+      "source_segment_ids": [
+        46
+      ],
+      "start": 122.54,
+      "end": 127.58,
+      "asr_start": 122.54,
+      "asr_end": 127.58,
+      "asr_text": "它就会按照分镜并且把我们这些资产都给引用上了",
+      "text": "它就会按照分镜并且把我们这些资产都给引用上了",
+      "corrections": "",
+      "shot_ids": [
+        "W028"
+      ],
+      "mapping": "左侧资产缩略图仍在，右侧分镜视频占位节点出现，再橙框圈整组。",
+      "purpose_inference": "分析推论：展示批量而非孤立单镜生成",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W028"
+    },
+    {
+      "id": "W-L047",
+      "source_segment_ids": [
+        47
+      ],
+      "start": 127.58,
+      "end": 130.5,
+      "asr_start": 127.58,
+      "asr_end": 130.5,
+      "asr_text": "给我们整理好了所有的提示词",
+      "text": "给我们整理好了所有的提示词",
+      "corrections": "",
+      "shot_ids": [
+        "W028",
+        "W029"
+      ],
+      "mapping": "整组提示词节点被框住，没有把每条提示词做成新的动画卡。",
+      "purpose_inference": "分析推论：展示批量而非孤立单镜生成",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W028"
+    },
+    {
+      "id": "W-L048",
+      "source_segment_ids": [
+        48
+      ],
+      "start": 130.5,
+      "end": 132.9,
+      "asr_start": 130.5,
+      "asr_end": 132.9,
+      "asr_text": "我们可以检查检查这些提示词",
+      "text": "我们可以检查检查这些提示词",
+      "corrections": "",
+      "shot_ids": [
+        "W029"
+      ],
+      "mapping": "打开单张节点的长提示词，顶部能看到多张角色/道具参考。",
+      "purpose_inference": "分析推论：说明先检查资产引用再生成",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W029"
+    },
+    {
+      "id": "W-L049",
+      "source_segment_ids": [
+        49
+      ],
+      "start": 132.9,
+      "end": 134.4,
+      "asr_start": 132.9,
+      "asr_end": 134.4,
+      "asr_text": "如果说没问题了",
+      "text": "如果说没问题了",
+      "corrections": "",
+      "shot_ids": [
+        "W029",
+        "W030"
+      ],
+      "mapping": "提示词详情停留供检查，未急着切走。",
+      "purpose_inference": "分析推论：说明先检查资产引用再生成",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W029"
+    },
+    {
+      "id": "W-L050",
+      "source_segment_ids": [
+        50
+      ],
+      "start": 134.4,
+      "end": 137.74,
+      "asr_start": 134.4,
+      "asr_end": 137.74,
+      "asr_text": "我们就点击这个批量生成视频",
+      "text": "我们就点击这个批量生成视频",
+      "corrections": "",
+      "shot_ids": [
+        "W030"
+      ],
+      "mapping": "退出详情后推近“批量生成视频”，占位节点进入等待。",
+      "purpose_inference": "分析推论：定位执行步骤",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W030"
+    },
+    {
+      "id": "W-L051",
+      "source_segment_ids": [
+        51
+      ],
+      "start": 137.74,
+      "end": 139.98,
+      "asr_start": 137.74,
+      "asr_end": 139.98,
+      "asr_text": "嗯 一口气都生成好了",
+      "text": "嗯 一口气都生成好了",
+      "corrections": "",
+      "shot_ids": [
+        "W030",
+        "W031"
+      ],
+      "mapping": "等待后同网格变成七个真实视频缩略图，前后布局相同。",
+      "purpose_inference": "分析推论：定位执行步骤",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W030"
+    },
+    {
+      "id": "W-L052",
+      "source_segment_ids": [
+        52
+      ],
+      "start": 139.98,
+      "end": 143.74,
+      "asr_start": 139.98,
+      "asr_end": 143.74,
+      "asr_text": "那等到这些视频都照着分镜已经生成完了之后",
+      "text": "那等到这些视频都照着分镜已经生成完了之后",
+      "corrections": "",
+      "shot_ids": [
+        "W031"
+      ],
+      "mapping": "生成镜头网格保持；观众可把它与刚才的分镜组对应。",
+      "purpose_inference": "分析推论：用同一组镜头交代完整性",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W031"
+    },
+    {
+      "id": "W-L053",
+      "source_segment_ids": [
+        53
+      ],
+      "start": 143.74,
+      "end": 146.3,
+      "asr_start": 143.74,
+      "asr_end": 146.3,
+      "asr_text": "我们就可以点击成片预览",
+      "text": "我们就可以点击成片预览",
+      "corrections": "",
+      "shot_ids": [
+        "W031",
+        "W032"
+      ],
+      "mapping": "鼠标移到上方成片预览入口，按钮位置与结果组同屏。",
+      "purpose_inference": "分析推论：用同一组镜头交代完整性",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W031"
+    },
+    {
+      "id": "W-L054",
+      "source_segment_ids": [
+        54
+      ],
+      "start": 146.3,
+      "end": 149.52,
+      "asr_start": 146.3,
+      "asr_end": 149.52,
+      "asr_text": "他在画布里面就会给我们按照分镜",
+      "text": "他在画布里面就会给我们按照分镜",
+      "corrections": "",
+      "shot_ids": [
+        "W032"
+      ],
+      "mapping": "生成镜头被组织进新的成片节点；沿用同一案例画面。",
+      "purpose_inference": "分析推论：保留操作与后续成片的因果",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W032"
+    },
+    {
+      "id": "W-L055",
+      "source_segment_ids": [
+        55
+      ],
+      "start": 149.52,
+      "end": 152.78,
+      "asr_start": 149.52,
+      "asr_end": 152.78,
+      "asr_text": "帮我们做好这些视频之间的基础衔接",
+      "text": "帮我们做好这些视频之间的基础衔接",
+      "corrections": "",
+      "shot_ids": [
+        "W032",
+        "W033"
+      ],
+      "mapping": "画布内出现预览窗口与迷你时间线，显示素材已经有顺序。",
+      "purpose_inference": "分析推论：保留操作与后续成片的因果",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W032"
+    },
+    {
+      "id": "W-L056",
+      "source_segment_ids": [
+        56
+      ],
+      "start": 152.78,
+      "end": 154.86,
+      "asr_start": 152.78,
+      "asr_end": 154.86,
+      "asr_text": "我们可以看这个结果",
+      "text": "我们可以看这个结果",
+      "corrections": "",
+      "shot_ids": [
+        "W033"
+      ],
+      "mapping": "结果预览短停留后撤去教程外框，进入女孩上山的全幅短剧。",
+      "purpose_inference": "分析推论：让生成素材如何连成片可见",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W033"
+    },
+    {
+      "id": "W-L057",
+      "source_segment_ids": [
+        57
+      ],
+      "start": 183.43,
+      "end": 186.61,
+      "asr_start": 183.43,
+      "asr_end": 186.61,
+      "asr_text": "那如果我们觉得情节问题不是很大",
+      "text": "那如果我们觉得情节问题不是很大",
+      "corrections": "",
+      "shot_ids": [
+        "W038",
+        "W039"
+      ],
+      "mapping": "短剧退回画布预览与时间线，开始讨论情节是否需要改。",
+      "purpose_inference": "分析推论：为下山段建立接续",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W038"
+    },
+    {
+      "id": "W-L058",
+      "source_segment_ids": [
+        58
+      ],
+      "start": 186.61,
+      "end": 188.61,
+      "asr_start": 186.61,
+      "asr_end": 188.61,
+      "asr_text": "但是可能需要精简一下",
+      "text": "但是可能需要精剪一下",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W039"
+      ],
+      "mapping": "工具内保持成片，步骤标签变剪辑&成片。",
+      "purpose_inference": "分析推论：观看成片后再指出要改哪里",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W039"
+    },
+    {
+      "id": "W-L059",
+      "source_segment_ids": [
+        59
+      ],
+      "start": 188.61,
+      "end": 191.13,
+      "asr_start": 188.61,
+      "asr_end": 191.13,
+      "asr_text": "对某一些这个镜头做一些细调",
+      "text": "对某一些这个镜头做一些细调",
+      "corrections": "",
+      "shot_ids": [
+        "W039"
+      ],
+      "mapping": "同预览时间线可见，讲细调时保留编辑上下文。",
+      "purpose_inference": "分析推论：观看成片后再指出要改哪里",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W039"
+    },
+    {
+      "id": "W-L060",
+      "source_segment_ids": [
+        60
+      ],
+      "start": 191.13,
+      "end": 193.03,
+      "asr_start": 191.13,
+      "asr_end": 193.03,
+      "asr_text": "那美妙的地方就来了",
+      "text": "那美妙的地方就来了",
+      "corrections": "",
+      "shot_ids": [
+        "W039",
+        "W040"
+      ],
+      "mapping": "更多编辑按钮位于预览上方，为下一句做准备。",
+      "purpose_inference": "分析推论：观看成片后再指出要改哪里",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W039"
+    },
+    {
+      "id": "W-L061",
+      "source_segment_ids": [
+        61
+      ],
+      "start": 193.03,
+      "end": 195.41,
+      "asr_start": 193.03,
+      "asr_end": 195.41,
+      "asr_text": "我们点击更多编辑",
+      "text": "我们点击更多编辑",
+      "corrections": "",
+      "shot_ids": [
+        "W040"
+      ],
+      "mapping": "实际点击“更多编辑”，紧接着跳到完整多轨道界面。",
+      "purpose_inference": "分析推论：证明链路打通而非重新导入",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W040"
+    },
+    {
+      "id": "W-L062",
+      "source_segment_ids": [
+        62
+      ],
+      "start": 195.41,
+      "end": 197.07,
+      "asr_start": 195.41,
+      "asr_end": 197.07,
+      "asr_text": "它就会直接进入",
+      "text": "它就会直接进入",
+      "corrections": "",
+      "shot_ids": [
+        "W040"
+      ],
+      "mapping": "多轨道界面已出现，预览仍是同一短剧的包袱画面。",
+      "purpose_inference": "分析推论：证明链路打通而非重新导入",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W040"
+    },
+    {
+      "id": "W-L063",
+      "source_segment_ids": [
+        63
+      ],
+      "start": 197.07,
+      "end": 199.93,
+      "asr_start": 197.07,
+      "asr_end": 199.93,
+      "asr_text": "剪印平时的多轨道剪辑线",
+      "text": "剪映平时的那个多轨道剪辑线",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W040"
+      ],
+      "mapping": "完整时间线和已有片段可见，证明不是重新建立空工程。",
+      "purpose_inference": "分析推论：证明链路打通而非重新导入",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W040"
+    },
+    {
+      "id": "W-L064",
+      "source_segment_ids": [
+        64
+      ],
+      "start": 199.93,
+      "end": 202.21,
+      "asr_start": 199.93,
+      "asr_end": 202.21,
+      "asr_text": "完全不用我们导入导出",
+      "text": "完全不用我们导入导出",
+      "corrections": "",
+      "shot_ids": [
+        "W040",
+        "W041"
+      ],
+      "mapping": "预览和时间线保持，解释无需导入导出；没有用额外箭头冒充操作。",
+      "purpose_inference": "分析推论：证明链路打通而非重新导入",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W040"
+    },
+    {
+      "id": "W-L065",
+      "source_segment_ids": [
+        65
+      ],
+      "start": 202.21,
+      "end": 203.23,
+      "asr_start": 202.21,
+      "asr_end": 203.23,
+      "asr_text": "那这个时候呢",
+      "text": "那这个时候呢",
+      "corrections": "",
+      "shot_ids": [
+        "W041"
+      ],
+      "mapping": "播放头与预览开始变化，进入精剪过程。",
+      "purpose_inference": "分析推论：说明精剪确实落在可编辑素材上",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W041"
+    },
+    {
+      "id": "W-L066",
+      "source_segment_ids": [
+        66
+      ],
+      "start": 203.23,
+      "end": 204.63,
+      "asr_start": 203.23,
+      "asr_end": 204.63,
+      "asr_text": "我们可能减减减",
+      "text": "我们可能剪剪剪",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W041"
+      ],
+      "mapping": "预览依次换到女孩、守卫等镜头，时间线仍在下方。",
+      "purpose_inference": "分析推论：说明精剪确实落在可编辑素材上",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W041"
+    },
+    {
+      "id": "W-L067",
+      "source_segment_ids": [
+        67
+      ],
+      "start": 204.63,
+      "end": 207.15,
+      "asr_start": 204.63,
+      "asr_end": 207.15,
+      "asr_text": "稍微把画面的衔接点再做做好",
+      "text": "稍微把画面的衔接点再做做好",
+      "corrections": "",
+      "shot_ids": [
+        "W041"
+      ],
+      "mapping": "继续切换同一短剧镜头位置，以真实时间线展示衔接点调整。",
+      "purpose_inference": "分析推论：说明精剪确实落在可编辑素材上",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W041"
+    },
+    {
+      "id": "W-L068",
+      "source_segment_ids": [
+        68
+      ],
+      "start": 207.15,
+      "end": 208.81,
+      "asr_start": 207.15,
+      "asr_end": 208.81,
+      "asr_text": "更美妙的地方就来了",
+      "text": "更美妙的地方就来了",
+      "corrections": "",
+      "shot_ids": [
+        "W041"
+      ],
+      "mapping": "预览回包袱镜头后准备转动画问题说明。",
+      "purpose_inference": "分析推论：说明精剪确实落在可编辑素材上",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W041"
+    },
+    {
+      "id": "W-L069",
+      "source_segment_ids": [
+        69
+      ],
+      "start": 208.81,
+      "end": 211.61,
+      "asr_start": 208.81,
+      "asr_end": 211.61,
+      "asr_text": "因为很多时候我们在精简的过程当中",
+      "text": "因为很多时候我们在精剪的过程当中",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W041",
+        "W042"
+      ],
+      "mapping": "切到同一蓝衣戴耳机动画剪辑师坐电脑前操作。",
+      "purpose_inference": "分析推论：说明精剪确实落在可编辑素材上",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W041"
+    },
+    {
+      "id": "W-L070",
+      "source_segment_ids": [
+        70
+      ],
+      "start": 211.61,
+      "end": 212.77,
+      "asr_start": 211.61,
+      "asr_end": 212.77,
+      "asr_text": "我们就会发现",
+      "text": "我们就会发现",
+      "corrections": "",
+      "shot_ids": [
+        "W042"
+      ],
+      "mapping": "镜头更近，剪辑师由平静变吃惊，表现发现问题。",
+      "purpose_inference": "分析推论：把发现镜头时长不够变成情绪事件",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W042"
+    },
+    {
+      "id": "W-L071",
+      "source_segment_ids": [
+        71
+      ],
+      "start": 212.77,
+      "end": 215.65,
+      "asr_start": 212.77,
+      "asr_end": 215.65,
+      "asr_text": "有些镜头的画面时长不太够",
+      "text": "有些镜头的画面时长不太够",
+      "corrections": "",
+      "shot_ids": [
+        "W042",
+        "W043"
+      ],
+      "mapping": "角色皱眉托腮看屏幕，随后低头检查纸面分镜；不是仅一张工作者静图。",
+      "purpose_inference": "分析推论：把发现镜头时长不够变成情绪事件",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W042"
+    },
+    {
+      "id": "W-L072",
+      "source_segment_ids": [
+        72
+      ],
+      "start": 215.65,
+      "end": 217.41,
+      "asr_start": 215.65,
+      "asr_end": 217.41,
+      "asr_text": "或者是有的画面有瑕疵",
+      "text": "或者是有的画面有瑕疵",
+      "corrections": "",
+      "shot_ids": [
+        "W043"
+      ],
+      "mapping": "角色手指纸上的分镜格查看瑕疵。",
+      "purpose_inference": "分析推论：把发现瑕疵连接到检查和返工",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W043"
+    },
+    {
+      "id": "W-L073",
+      "source_segment_ids": [
+        73
+      ],
+      "start": 217.41,
+      "end": 218.45,
+      "asr_start": 217.41,
+      "asr_end": 218.45,
+      "asr_text": "我们需要编辑一下",
+      "text": "我们需要编辑一下",
+      "corrections": "",
+      "shot_ids": [
+        "W043"
+      ],
+      "mapping": "同角色从纸面抬身并转椅子，进入需要返工的动作。",
+      "purpose_inference": "分析推论：把发现瑕疵连接到检查和返工",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W043"
+    },
+    {
+      "id": "W-L074",
+      "source_segment_ids": [
+        74
+      ],
+      "start": 218.45,
+      "end": 222.33,
+      "asr_start": 218.45,
+      "asr_end": 222.33,
+      "asr_text": "那原来我们都得要再切回到那些AI软件里去",
+      "text": "那原来我们都得要再切回到那些AI软件里去",
+      "corrections": "",
+      "shot_ids": [
+        "W043",
+        "W044"
+      ],
+      "mapping": "转到另一台电脑，第二显示器上是生成界面，用空间搬运解释切软件成本。",
+      "purpose_inference": "分析推论：把发现瑕疵连接到检查和返工",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W043"
+    },
+    {
+      "id": "W-L075",
+      "source_segment_ids": [
+        75
+      ],
+      "start": 222.33,
+      "end": 225.27,
+      "asr_start": 222.33,
+      "asr_end": 225.27,
+      "asr_text": "但是在简硬的多轨道剪辑里面",
+      "text": "但是在剪映的多轨道剪辑里面",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W044"
+      ],
+      "mapping": "切回真实时间线，问题动画结束并由实录接手解决。",
+      "purpose_inference": "分析推论：用空间搬运表现切软件成本，再展示原地编辑的解决方案",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W044"
+    },
+    {
+      "id": "W-L076",
+      "source_segment_ids": [
+        76
+      ],
+      "start": 225.27,
+      "end": 227.69,
+      "asr_start": 225.27,
+      "asr_end": 227.69,
+      "asr_text": "我们可以直接AI后编辑",
+      "text": "我们可以直接用AI再编辑",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W044"
+      ],
+      "mapping": "保持真实工程，准备在既有镜头上编辑。",
+      "purpose_inference": "分析推论：用空间搬运表现切软件成本，再展示原地编辑的解决方案",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W044"
+    },
+    {
+      "id": "W-L077",
+      "source_segment_ids": [
+        77
+      ],
+      "start": 227.69,
+      "end": 230.59,
+      "asr_start": 227.69,
+      "asr_end": 230.59,
+      "asr_text": "比如把这个镜头延长一点",
+      "text": "比如把这个镜头延长一点",
+      "corrections": "",
+      "shot_ids": [
+        "W044"
+      ],
+      "mapping": "推近时间线，拖长片段边缘出现延长区域。",
+      "purpose_inference": "分析推论：用空间搬运表现切软件成本，再展示原地编辑的解决方案",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W044"
+    },
+    {
+      "id": "W-L078",
+      "source_segment_ids": [
+        78
+      ],
+      "start": 230.59,
+      "end": 232.57,
+      "asr_start": 230.59,
+      "asr_end": 232.57,
+      "asr_text": "然后我们点输入需求",
+      "text": "然后我们点输入需求",
+      "corrections": "",
+      "shot_ids": [
+        "W044"
+      ],
+      "mapping": "延长区域旁输入需求提示出现，人物圆窗此时退出。",
+      "purpose_inference": "分析推论：用空间搬运表现切软件成本，再展示原地编辑的解决方案",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W044"
+    },
+    {
+      "id": "W-L079",
+      "source_segment_ids": [
+        79
+      ],
+      "start": 232.57,
+      "end": 235.51,
+      "asr_start": 232.57,
+      "asr_end": 235.51,
+      "asr_text": "它右边就会有这个输入提示词的区域",
+      "text": "它右边就会有这个输入提示词的区域",
+      "corrections": "",
+      "shot_ids": [
+        "W044"
+      ],
+      "mapping": "拉回窗口，橙框与三角指向右侧新出现的提示词输入区。",
+      "purpose_inference": "分析推论：用空间搬运表现切软件成本，再展示原地编辑的解决方案",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W044"
+    },
+    {
+      "id": "W-L080",
+      "source_segment_ids": [
+        80
+      ],
+      "start": 235.51,
+      "end": 239.31,
+      "asr_start": 235.51,
+      "asr_end": 239.31,
+      "asr_text": "我们可以直接从时间轴上选择参考",
+      "text": "我们可以直接从时间轴上选择参考",
+      "corrections": "",
+      "shot_ids": [
+        "W044"
+      ],
+      "mapping": "靠近参考选择面板并展示从时间线上选定短剧画面。",
+      "purpose_inference": "分析推论：用空间搬运表现切软件成本，再展示原地编辑的解决方案",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W044"
+    },
+    {
+      "id": "W-L081",
+      "source_segment_ids": [
+        81
+      ],
+      "start": 239.31,
+      "end": 242.67,
+      "asr_start": 239.31,
+      "asr_end": 242.67,
+      "asr_text": "然后输入提示词生成",
+      "text": "然后输入提示词生成",
+      "corrections": "",
+      "shot_ids": [
+        "W044",
+        "W045"
+      ],
+      "mapping": "同一侧栏填入需求并触发生成，当前画面仍可对照。",
+      "purpose_inference": "分析推论：用空间搬运表现切软件成本，再展示原地编辑的解决方案",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W044"
+    },
+    {
+      "id": "W-L082",
+      "source_segment_ids": [
+        82
+      ],
+      "start": 242.67,
+      "end": 244.81,
+      "asr_start": 242.67,
+      "asr_end": 244.81,
+      "asr_text": "嗯 直接它就改了",
+      "text": "嗯 直接它就改了",
+      "corrections": "",
+      "shot_ids": [
+        "W045"
+      ],
+      "mapping": "更新后的师父近景在预览里出现，作为改好后的回显。",
+      "purpose_inference": "分析推论：给修改结果证据",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W045"
+    },
+    {
+      "id": "W-L083",
+      "source_segment_ids": [
+        83
+      ],
+      "start": 244.81,
+      "end": 246.69,
+      "asr_start": 244.81,
+      "asr_end": 246.69,
+      "asr_text": "那最后经过几次精简",
+      "text": "那最后经过几次精剪",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W045",
+        "W046"
+      ],
+      "mapping": "回全幅讲解者，承接已完成的编辑步骤。",
+      "purpose_inference": "分析推论：给修改结果证据",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W045"
+    },
+    {
+      "id": "W-L084",
+      "source_segment_ids": [
+        84
+      ],
+      "start": 246.69,
+      "end": 248.53,
+      "asr_start": 246.69,
+      "asr_end": 248.53,
+      "asr_text": "请看结果",
+      "text": "请看结果",
+      "corrections": "",
+      "shot_ids": [
+        "W046",
+        "W047"
+      ],
+      "mapping": "讲解者交接“请看结果”，随后转无教程外框的短剧。",
+      "purpose_inference": "分析推论：明确随后为成片展示",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W046"
+    },
+    {
+      "id": "W-L085",
+      "source_segment_ids": [
+        85
+      ],
+      "start": 264,
+      "end": 266.7,
+      "asr_start": 248.53,
+      "asr_end": 266.7,
+      "asr_text": "我找他 他是我大师兄",
+      "text": "我找他，他是我大师兄",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。原ASR把无识别展示段并入句首；按已查看字幕将展示定位移至约264秒，精确起音尚未听审。",
+      "shot_ids": [
+        "W048"
+      ],
+      "mapping": "原ASR把开始时间拉到248.53秒；实际字幕在约264–267秒女孩举画像问守卫时，前面的仙城/街市/地图是铺垫镜头。",
+      "purpose_inference": "分析推论：让找人和带饭都能直接读懂",
+      "status": "visual_checked",
+      "speech_role": "AIGC示范角色对白",
+      "semantic_group": "W048"
+    },
+    {
+      "id": "W-L086",
+      "source_segment_ids": [
+        86
+      ],
+      "start": 266.7,
+      "end": 269.0,
+      "asr_start": 266.7,
+      "asr_end": 269.0,
+      "asr_text": "找剑尊 有白帖吗",
+      "text": "找剑尊，有拜帖吗",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W048"
+      ],
+      "mapping": "守卫过肩近景反问，与女孩举画像的镜头构成正反打。",
+      "purpose_inference": "分析推论：让找人和带饭都能直接读懂",
+      "status": "visual_checked",
+      "speech_role": "AIGC示范角色对白",
+      "semantic_group": "W048"
+    },
+    {
+      "id": "W-L087",
+      "source_segment_ids": [
+        87
+      ],
+      "start": 269.0,
+      "end": 270.14,
+      "asr_start": 269.0,
+      "asr_end": 270.14,
+      "asr_text": "有饭",
+      "text": "有饭",
+      "corrections": "",
+      "shot_ids": [
+        "W048"
+      ],
+      "mapping": "女孩改举饭盒近景回答“有饭”，用具体道具制造语义错位。",
+      "purpose_inference": "分析推论：让找人和带饭都能直接读懂",
+      "status": "visual_checked",
+      "speech_role": "AIGC示范角色对白",
+      "semantic_group": "W048"
+    },
+    {
+      "id": "W-L088",
+      "source_segment_ids": [
+        88
+      ],
+      "start": 271.64,
+      "end": 273.82,
+      "asr_start": 271.64,
+      "asr_end": 273.82,
+      "asr_text": "小不点 剑尊忙着呢",
+      "text": "小不点，剑尊忙着呢",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W049"
+      ],
+      "mapping": "双人关系镜头中女孩递饭，守卫倚门拒绝。",
+      "purpose_inference": "分析推论：通过反应而非额外文字交代冲突",
+      "status": "visual_checked",
+      "speech_role": "AIGC示范角色对白",
+      "semantic_group": "W049"
+    },
+    {
+      "id": "W-L089",
+      "source_segment_ids": [
+        89
+      ],
+      "start": 273.82,
+      "end": 275.9,
+      "asr_start": 273.82,
+      "asr_end": 275.9,
+      "asr_text": "没空陪你玩 去去去",
+      "text": "没空陪你玩 去去去",
+      "corrections": "",
+      "shot_ids": [
+        "W049"
+      ],
+      "mapping": "同场景守卫持续拒绝，随后切女孩失落近景。",
+      "purpose_inference": "分析推论：通过反应而非额外文字交代冲突",
+      "status": "visual_checked",
+      "speech_role": "AIGC示范角色对白",
+      "semantic_group": "W049"
+    },
+    {
+      "id": "W-L090",
+      "source_segment_ids": [
+        90
+      ],
+      "start": 277.38,
+      "end": 279.92,
+      "asr_start": 277.38,
+      "asr_end": 279.92,
+      "asr_text": "可是饭要凉了",
+      "text": "可是饭要凉了",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W049"
+      ],
+      "mapping": "女孩抬头并再次把饭盒举高，道具动作对应劝说。",
+      "purpose_inference": "分析推论：通过反应而非额外文字交代冲突",
+      "status": "visual_checked",
+      "speech_role": "AIGC示范角色对白",
+      "semantic_group": "W049"
+    },
+    {
+      "id": "W-L091",
+      "source_segment_ids": [
+        91
+      ],
+      "start": 279.92,
+      "end": 282.32,
+      "asr_start": 279.92,
+      "asr_end": 282.32,
+      "asr_text": "凉了就自己吃呗",
+      "text": "凉了就自己吃呗",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W049"
+      ],
+      "mapping": "切回守卫回应，再回女孩低落表情。",
+      "purpose_inference": "分析推论：通过反应而非额外文字交代冲突",
+      "status": "visual_checked",
+      "speech_role": "AIGC示范角色对白",
+      "semantic_group": "W049"
+    },
+    {
+      "id": "W-L092",
+      "source_segment_ids": [
+        92
+      ],
+      "start": 282.32,
+      "end": 284.98,
+      "asr_start": 282.32,
+      "asr_end": 284.98,
+      "asr_text": "三年没吃饭 还不让送",
+      "text": "三年没吃饭，还不让送",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W049"
+      ],
+      "mapping": "女孩低头抱饭盒嘟囔，铃铛与佩剑仍在画面中保持空间关系。",
+      "purpose_inference": "分析推论：通过反应而非额外文字交代冲突",
+      "status": "visual_checked",
+      "speech_role": "AIGC示范角色对白",
+      "semantic_group": "W049"
+    },
+    {
+      "id": "W-L093",
+      "source_segment_ids": [
+        93
+      ],
+      "start": 289.42,
+      "end": 291.6,
+      "asr_start": 289.42,
+      "asr_end": 291.6,
+      "asr_text": "大师兄 我给你送",
+      "text": "大师兄我给你送",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W051"
+      ],
+      "mapping": "踢门后女孩入殿，大景切其笑脸近景，话没说完便转众人的威胁反应。",
+      "purpose_inference": "分析推论：建立威胁反应和悬念",
+      "status": "visual_checked",
+      "speech_role": "AIGC示范角色对白",
+      "semantic_group": "W051"
+    },
+    {
+      "id": "W-L094",
+      "source_segment_ids": [
+        94
+      ],
+      "start": 302,
+      "end": 302.73,
+      "asr_start": 291.6,
+      "asr_end": 302.73,
+      "asr_text": "嗯 拿下",
+      "text": "拿下",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。原ASR把追逐镜头并入句首；按已查看字幕将“拿下”定位移至约302秒，精确起音尚未听审。",
+      "shot_ids": [
+        "W052"
+      ],
+      "mapping": "ASR把大殿反应段拉成一句；“拿下”字幕在约302秒，前面是长者眼嘴、拔剑、脚步、围拢的递进动作。",
+      "purpose_inference": "分析推论：递增威胁并停在故事钩子",
+      "status": "visual_checked",
+      "speech_role": "AIGC示范角色对白",
+      "semantic_group": "W052"
+    },
+    {
+      "id": "W-L095",
+      "source_segment_ids": [
+        95
+      ],
+      "start": 304.08,
+      "end": 306.78,
+      "asr_start": 304.08,
+      "asr_end": 306.78,
+      "asr_text": "的确是一战士成片榜",
+      "text": "的确是一站式成片吧",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W054"
+      ],
+      "mapping": "短黑场后回灰衣讲解者，以人物评价刚播出的结果。",
+      "purpose_inference": "分析推论：分清两个产品模块",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W054"
+    },
+    {
+      "id": "W-L096",
+      "source_segment_ids": [
+        96
+      ],
+      "start": 306.78,
+      "end": 309.92,
+      "asr_start": 306.78,
+      "asr_end": 309.92,
+      "asr_text": "那第二个是自媒体人必须了解的",
+      "text": "那第二个是自媒体人必须了解的",
+      "corrections": "",
+      "shot_ids": [
+        "W054"
+      ],
+      "mapping": "人物引出第二部分，自媒体适用场景由讲解者承担。",
+      "purpose_inference": "分析推论：分清两个产品模块",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W054"
+    },
+    {
+      "id": "W-L097",
+      "source_segment_ids": [
+        97
+      ],
+      "start": 309.92,
+      "end": 311.16,
+      "asr_start": 309.92,
+      "asr_end": 311.16,
+      "asr_text": "剪映助手",
+      "text": "剪映助手",
+      "corrections": "",
+      "shot_ids": [
+        "W054"
+      ],
+      "mapping": "右侧剪映助手标志与标题出现。",
+      "purpose_inference": "分析推论：分清两个产品模块",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W054"
+    },
+    {
+      "id": "W-L098",
+      "source_segment_ids": [
+        98
+      ],
+      "start": 311.16,
+      "end": 313.22,
+      "asr_start": 311.16,
+      "asr_end": 313.22,
+      "asr_text": "剪辑时间线里的",
+      "text": "剪辑时间线里的",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W054"
+      ],
+      "mapping": "标志下增加“时间线上的Agent”副标题。",
+      "purpose_inference": "分析推论：分清两个产品模块",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W054"
+    },
+    {
+      "id": "W-L099",
+      "source_segment_ids": [
+        99
+      ],
+      "start": 313.22,
+      "end": 313.7,
+      "asr_start": 313.22,
+      "asr_end": 313.7,
+      "asr_text": "Agent",
+      "text": "Agent",
+      "corrections": "",
+      "shot_ids": [
+        "W054"
+      ],
+      "mapping": "同副标题补足概念，没有另加机器人大图。",
+      "purpose_inference": "分析推论：分清两个产品模块",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W054"
+    },
+    {
+      "id": "W-L100",
+      "source_segment_ids": [
+        100
+      ],
+      "start": 315.39,
+      "end": 319.19,
+      "asr_start": 315.39,
+      "asr_end": 319.19,
+      "asr_text": "我们用一些真人出镜的传统自媒体为例",
+      "text": "我们用一些真人出镜的传统自媒体为例",
+      "corrections": "",
+      "shot_ids": [
+        "W055",
+        "W056",
+        "W057"
+      ],
+      "mapping": "实测2章节卡后回人物，明确传统真人出镜案例。",
+      "purpose_inference": "分析推论：进入第二案例",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W055"
+    },
+    {
+      "id": "W-L101",
+      "source_segment_ids": [
+        101
+      ],
+      "start": 319.19,
+      "end": 320.79,
+      "asr_start": 319.19,
+      "asr_end": 320.79,
+      "asr_text": "那原来我们要剪一条片子",
+      "text": "那原来我们要剪一条片子",
+      "corrections": "",
+      "shot_ids": [
+        "W057"
+      ],
+      "mapping": "切动画剪辑师桌前插图，随后将角色缩向左下，为任务卡让位。",
+      "purpose_inference": "分析推论：把工作负担当作后续展开中心",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W057"
+    },
+    {
+      "id": "W-L102",
+      "source_segment_ids": [
+        102
+      ],
+      "start": 320.79,
+      "end": 321.73,
+      "asr_start": 320.79,
+      "asr_end": 321.73,
+      "asr_text": "要剪口播",
+      "text": "要剪口播",
+      "corrections": "",
+      "shot_ids": [
+        "W057",
+        "W058"
+      ],
+      "mapping": "第一张“剪口播”工作卡出现。",
+      "purpose_inference": "分析推论：把工作负担当作后续展开中心",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W057"
+    },
+    {
+      "id": "W-L103",
+      "source_segment_ids": [
+        103
+      ],
+      "start": 321.73,
+      "end": 323.49,
+      "asr_start": 321.73,
+      "asr_end": 323.49,
+      "asr_text": "要准备B-roll的素材",
+      "text": "要准备B-roll的素材",
+      "corrections": "",
+      "shot_ids": [
+        "W058"
+      ],
+      "mapping": "第二张“B-roll素材”卡加入第一张旁边。",
+      "purpose_inference": "分析推论：让工作量随列举变多",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W058"
+    },
+    {
+      "id": "W-L104",
+      "source_segment_ids": [
+        104
+      ],
+      "start": 323.49,
+      "end": 325.45,
+      "asr_start": 323.49,
+      "asr_end": 325.45,
+      "asr_text": "然后要对素材进行粗剪",
+      "text": "然后要对素材进行粗剪",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W058"
+      ],
+      "mapping": "第三张素材粗剪卡加入，同一网格继续生长。",
+      "purpose_inference": "分析推论：让工作量随列举变多",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W058"
+    },
+    {
+      "id": "W-L105",
+      "source_segment_ids": [
+        105
+      ],
+      "start": 325.45,
+      "end": 326.61,
+      "asr_start": 325.45,
+      "asr_end": 326.61,
+      "asr_text": "然后要加包装",
+      "text": "然后要加包装",
+      "corrections": "",
+      "shot_ids": [
+        "W058"
+      ],
+      "mapping": "第二行开始补音乐包装、精剪和字幕卡。",
+      "purpose_inference": "分析推论：让工作量随列举变多",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W058"
+    },
+    {
+      "id": "W-L106",
+      "source_segment_ids": [
+        106
+      ],
+      "start": 326.61,
+      "end": 329.31,
+      "asr_start": 326.61,
+      "asr_end": 329.31,
+      "asr_text": "然后音乐音效精简字幕等等",
+      "text": "然后音乐音效、精剪、字幕等等",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W058"
+      ],
+      "mapping": "六项完整可见，末尾省略点表示仍有工作；没有六次换背景。",
+      "purpose_inference": "分析推论：让工作量随列举变多",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W058"
+    },
+    {
+      "id": "W-L107",
+      "source_segment_ids": [
+        107
+      ],
+      "start": 329.31,
+      "end": 333.51,
+      "asr_start": 329.31,
+      "asr_end": 333.51,
+      "asr_text": "这些需要剪辑师一刀一刀一针针手搓的活",
+      "text": "这些需要剪辑师一刀一刀一帧帧手搓的活",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W058",
+        "W059"
+      ],
+      "mapping": "六卡整体缩小并框成一个任务组，左下人保留。",
+      "purpose_inference": "分析推论：让工作量随列举变多",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W058"
+    },
+    {
+      "id": "W-L108",
+      "source_segment_ids": [
+        108
+      ],
+      "start": 333.51,
+      "end": 337.69,
+      "asr_start": 333.51,
+      "asr_end": 337.69,
+      "asr_text": "现在都可以让这个Agent先帮你提效了",
+      "text": "现在都可以让这个Agent先帮你提效了",
+      "corrections": "",
+      "shot_ids": [
+        "W059"
+      ],
+      "mapping": "同组卡片通过箭头指向右侧Agent标志，表达交接。",
+      "purpose_inference": "分析推论：从一刀刀手工概括为可交接任务",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W059"
+    },
+    {
+      "id": "W-L109",
+      "source_segment_ids": [
+        109
+      ],
+      "start": 337.69,
+      "end": 339.39,
+      "asr_start": 337.69,
+      "asr_end": 339.39,
+      "asr_text": "比如第一关剪口播",
+      "text": "比如第1关剪口播",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W059",
+        "W060"
+      ],
+      "mapping": "抽出“01剪口播”条目作为章节入口。",
+      "purpose_inference": "分析推论：从一刀刀手工概括为可交接任务",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W059"
+    },
+    {
+      "id": "W-L110",
+      "source_segment_ids": [
+        110
+      ],
+      "start": 339.39,
+      "end": 341.21,
+      "asr_start": 339.39,
+      "asr_end": 341.21,
+      "asr_text": "那我有这么一条原素材",
+      "text": "那我有这么一条原素材",
+      "corrections": "",
+      "shot_ids": [
+        "W060",
+        "W061"
+      ],
+      "mapping": "显示待处理的原视频素材卡，先交代输入是谁。",
+      "purpose_inference": "分析推论：切入第一具体步骤",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W060"
+    },
+    {
+      "id": "W-L111",
+      "source_segment_ids": [
+        111
+      ],
+      "start": 341.21,
+      "end": 345.47,
+      "asr_start": 341.21,
+      "asr_end": 345.47,
+      "asr_text": "那导进来大家可以看到其实是有很多口误卡顿的",
+      "text": "那导进来大家可以看到其实是有很多口误卡顿的",
+      "corrections": "",
+      "shot_ids": [
+        "W061",
+        "W062"
+      ],
+      "mapping": "导入后的文稿近景能看见多处高亮和时间线，给口误/卡顿提供对象。",
+      "purpose_inference": "分析推论：建立待处理问题证据",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W061"
+    },
+    {
+      "id": "W-L112",
+      "source_segment_ids": [
+        112
+      ],
+      "start": 345.47,
+      "end": 347.41,
+      "asr_start": 345.47,
+      "asr_end": 347.41,
+      "asr_text": "那我们直接打开剪辑入手",
+      "text": "那我们直接打开剪映助手",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W062"
+      ],
+      "mapping": "视口回助手入口，左侧对话框展开。",
+      "purpose_inference": "分析推论：把需求到操作对齐",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W062"
+    },
+    {
+      "id": "W-L113",
+      "source_segment_ids": [
+        113
+      ],
+      "start": 347.41,
+      "end": 352.49,
+      "asr_start": 347.41,
+      "asr_end": 352.49,
+      "asr_text": "让它帮我们删掉这些口误重复剧和那些空白",
+      "text": "让它帮我们删掉这些口误、重复句和那些空白",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W062"
+      ],
+      "mapping": "输入框放大，删口误等要求清楚留在同一框内。",
+      "purpose_inference": "分析推论：把需求到操作对齐",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W062"
+    },
+    {
+      "id": "W-L114",
+      "source_segment_ids": [
+        114
+      ],
+      "start": 352.49,
+      "end": 354.75,
+      "asr_start": 352.49,
+      "asr_end": 354.75,
+      "asr_text": "稍等几分钟它就剪好了",
+      "text": "稍等几分钟它就剪好了",
+      "corrections": "",
+      "shot_ids": [
+        "W062",
+        "W063"
+      ],
+      "mapping": "结果时间线被分成多段，直接显示处理完成后的轨道。",
+      "purpose_inference": "分析推论：把需求到操作对齐",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W062"
+    },
+    {
+      "id": "W-L115",
+      "source_segment_ids": [
+        115
+      ],
+      "start": 354.75,
+      "end": 356.59,
+      "asr_start": 354.75,
+      "asr_end": 356.59,
+      "asr_text": "我们稍微听一下",
+      "text": "我们稍微听一下",
+      "corrections": "",
+      "shot_ids": [
+        "W063"
+      ],
+      "mapping": "停留预览准备播放，稍后软件外框退出。",
+      "purpose_inference": "分析推论：展示处理输出",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W063"
+    },
+    {
+      "id": "W-L116",
+      "source_segment_ids": [
+        116
+      ],
+      "start": 356.59,
+      "end": 359.15,
+      "asr_start": 356.59,
+      "asr_end": 359.15,
+      "asr_text": "《特本》里的草船借鉴",
+      "text": "课本里的草船借箭",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W063",
+        "W064"
+      ],
+      "mapping": "黑衣示范讲解者开始独立播放；这句是样片口播，不是灰衣作者继续讲工具。",
+      "purpose_inference": "分析推论：展示处理输出",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W063"
+    },
+    {
+      "id": "W-L117",
+      "source_segment_ids": [
+        117
+      ],
+      "start": 359.15,
+      "end": 361.15,
+      "asr_start": 359.15,
+      "asr_end": 361.15,
+      "asr_text": "你被骗了很多年",
+      "text": "你被骗了很多年",
+      "corrections": "",
+      "shot_ids": [
+        "W064"
+      ],
+      "mapping": "同示范人物保持，没有另插“被骗”素材。",
+      "purpose_inference": "分析推论：让观众听/看被剪后的连贯性",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W064"
+    },
+    {
+      "id": "W-L118",
+      "source_segment_ids": [
+        118
+      ],
+      "start": 361.15,
+      "end": 363.03,
+      "asr_start": 361.15,
+      "asr_end": 363.03,
+      "asr_text": "诸葛亮神机妙算",
+      "text": "诸葛亮神机妙算",
+      "corrections": "",
+      "shot_ids": [
+        "W064"
+      ],
+      "mapping": "示范人物继续讲诸葛亮，检验剪后口播衔接。",
+      "purpose_inference": "分析推论：让观众听/看被剪后的连贯性",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W064"
+    },
+    {
+      "id": "W-L119",
+      "source_segment_ids": [
+        119
+      ],
+      "start": 363.03,
+      "end": 366.51,
+      "asr_start": 363.03,
+      "asr_end": 366.51,
+      "asr_text": "三天用20只草船借来10万只鉴",
+      "text": "3天用20只草船借来10万支箭",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W064"
+      ],
+      "mapping": "同人物持续播放，数字由字幕承载，画面没有出现船。",
+      "purpose_inference": "分析推论：让观众听/看被剪后的连贯性",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W064"
+    },
+    {
+      "id": "W-L120",
+      "source_segment_ids": [
+        120
+      ],
+      "start": 367.67,
+      "end": 369.71,
+      "asr_start": 367.67,
+      "asr_end": 369.71,
+      "asr_text": "误差和连贯性还可以",
+      "text": "误差和连贯性还可以",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W065"
+      ],
+      "mapping": "返回软件预览与时间线，灰衣圆窗评价样片。",
+      "purpose_inference": "分析推论：承认需局部人工修订",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W065"
+    },
+    {
+      "id": "W-L121",
+      "source_segment_ids": [
+        121
+      ],
+      "start": 369.71,
+      "end": 375.13,
+      "asr_start": 369.71,
+      "asr_end": 375.13,
+      "asr_text": "基本上只需要把一两个气口不够自然的地方给它稍微编辑一下就行了",
+      "text": "基本上只需要把一两个气口不够自然的地方给它稍微编辑一下就行了",
+      "corrections": "",
+      "shot_ids": [
+        "W065",
+        "W066"
+      ],
+      "mapping": "时间线与播放头变化保留，说明仍需局部调整气口。",
+      "purpose_inference": "分析推论：承认需局部人工修订",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W065"
+    },
+    {
+      "id": "W-L122",
+      "source_segment_ids": [
+        122
+      ],
+      "start": 375.13,
+      "end": 378.39,
+      "asr_start": 375.13,
+      "asr_end": 378.39,
+      "asr_text": "一个小时的工作差不多十分钟就可以完成了",
+      "text": "一个小时的工作差不多十分钟就可以完成了",
+      "corrections": "",
+      "shot_ids": [
+        "W066"
+      ],
+      "mapping": "切回全幅灰衣人物总结节约时间。",
+      "purpose_inference": "分析推论：价值判断由讲解者承担",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W066"
+    },
+    {
+      "id": "W-L123",
+      "source_segment_ids": [
+        123
+      ],
+      "start": 378.87,
+      "end": 383.39,
+      "asr_start": 378.87,
+      "asr_end": 383.39,
+      "asr_text": "那剪完口播我们通常都要给它配一点B-roll的画面素材",
+      "text": "那剪完口播我们通常都要给它配一点B-roll的画面素材",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W066",
+        "W067",
+        "W068"
+      ],
+      "mapping": "步骤01变暗、02素材生成加入，为生成环节建立上下文。",
+      "purpose_inference": "分析推论：价值判断由讲解者承担",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W066"
+    },
+    {
+      "id": "W-L124",
+      "source_segment_ids": [
+        124
+      ],
+      "start": 383.39,
+      "end": 387.35,
+      "asr_start": 383.39,
+      "asr_end": 387.35,
+      "asr_text": "像我们平时的视频里就有很多这样AI生成的素材",
+      "text": "像我们平时的视频里就有很多这样AI生成的素材",
+      "corrections": "",
+      "shot_ids": [
+        "W068"
+      ],
+      "mapping": "旧作品AI素材组成九宫格，多角色多动作并存，人物圆窗保留。",
+      "purpose_inference": "分析推论：示范素材多样性；非逐个名词机械匹配",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W068"
+    },
+    {
+      "id": "W-L125",
+      "source_segment_ids": [
+        125
+      ],
+      "start": 387.35,
+      "end": 390.69,
+      "asr_start": 387.35,
+      "asr_end": 390.69,
+      "asr_text": "原来基本上我们都是在别的AI软件里面生成",
+      "text": "原来基本上我们都是在别的AI软件里面生成",
+      "corrections": "",
+      "shot_ids": [
+        "W068"
+      ],
+      "mapping": "同九宫格继续播放，说明这些此前在别处生成；外部平台具体模型不可从九格推断。",
+      "purpose_inference": "分析推论：示范素材多样性；非逐个名词机械匹配",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W068"
+    },
+    {
+      "id": "W-L126",
+      "source_segment_ids": [
+        126
+      ],
+      "start": 390.69,
+      "end": 392.59,
+      "asr_start": 390.69,
+      "asr_end": 392.59,
+      "asr_text": "再导导时间线里来的",
+      "text": "再导到时间线里来的",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W068"
+      ],
+      "mapping": "仍展示同素材墙收束旧流程，随后回软件。",
+      "purpose_inference": "分析推论：示范素材多样性；非逐个名词机械匹配",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W068"
+    },
+    {
+      "id": "W-L127",
+      "source_segment_ids": [
+        127
+      ],
+      "start": 392.59,
+      "end": 398.41,
+      "asr_start": 392.59,
+      "asr_end": 398.41,
+      "asr_text": "那现在我们可以直接把这一段台词和我们想要的一个内容方向",
+      "text": "那现在我们可以直接把这一段台词和我们想要的一个内容方向",
+      "corrections": "",
+      "shot_ids": [
+        "W068",
+        "W069"
+      ],
+      "mapping": "真实助手输入框内显示历史口播原句与所需内容方向，视口推近文本。",
+      "purpose_inference": "分析推论：示范素材多样性；非逐个名词机械匹配",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W068"
+    },
+    {
+      "id": "W-L128",
+      "source_segment_ids": [
+        128
+      ],
+      "start": 398.41,
+      "end": 399.57,
+      "asr_start": 398.41,
+      "asr_end": 399.57,
+      "asr_text": "发给Agent",
+      "text": "发给Agent",
+      "corrections": "",
+      "shot_ids": [
+        "W069"
+      ],
+      "mapping": "同框提交，响应区域出现，原句与生成动作相连。",
+      "purpose_inference": "分析推论：展示语义约束怎样进入素材任务",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W069"
+    },
+    {
+      "id": "W-L129",
+      "source_segment_ids": [
+        129
+      ],
+      "start": 399.57,
+      "end": 402.25,
+      "asr_start": 399.57,
+      "asr_end": 402.25,
+      "asr_text": "让他来帮我们匹配素材",
+      "text": "让他来帮我们匹配素材",
+      "corrections": "",
+      "shot_ids": [
+        "W069",
+        "W070"
+      ],
+      "mapping": "助手回显素材生成计划，不凭抽象图标说明完成。",
+      "purpose_inference": "分析推论：展示语义约束怎样进入素材任务",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W069"
+    },
+    {
+      "id": "W-L130",
+      "source_segment_ids": [
+        130
+      ],
+      "start": 402.25,
+      "end": 402.77,
+      "asr_start": 402.25,
+      "asr_end": 402.77,
+      "asr_text": "对了",
+      "text": "对了",
+      "corrections": "",
+      "shot_ids": [
+        "W070"
+      ],
+      "mapping": "白色卷页形状盖入当前界面，为补充账号关系转场。",
+      "purpose_inference": "分析推论：解释账号与素材互通关系",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W070"
+    },
+    {
+      "id": "W-L131",
+      "source_segment_ids": [
+        131
+      ],
+      "start": 402.77,
+      "end": 406.01,
+      "asr_start": 402.77,
+      "asr_end": 406.01,
+      "asr_text": "剪影台可以用小云雀集梦的同名账户登录",
+      "text": "剪映还可以用小云雀、即梦的同名账户登录",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W070"
+      ],
+      "mapping": "白底三个软件标志依次加入，橙框合并，黄色同账户登录出现。",
+      "purpose_inference": "分析推论：解释账号与素材互通关系",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W070"
+    },
+    {
+      "id": "W-L132",
+      "source_segment_ids": [
+        132
+      ],
+      "start": 406.01,
+      "end": 408.91,
+      "asr_start": 406.01,
+      "asr_end": 408.91,
+      "asr_text": "它的素材就可以直达剪辑线",
+      "text": "它的素材就可以直达剪辑线",
+      "corrections": "",
+      "shot_ids": [
+        "W070"
+      ],
+      "mapping": "同组合下再加素材互通，关系说完后返回编辑器。",
+      "purpose_inference": "分析推论：解释账号与素材互通关系",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W070"
+    },
+    {
+      "id": "W-L133",
+      "source_segment_ids": [
+        133
+      ],
+      "start": 408.91,
+      "end": 411.89,
+      "asr_start": 408.91,
+      "asr_end": 411.89,
+      "asr_text": "OK 素材生成完我们就该做粗剪了",
+      "text": "OK 素材生成完我们就该做粗剪了",
+      "corrections": "",
+      "shot_ids": [
+        "W070",
+        "W071"
+      ],
+      "mapping": "先看到水墨船战素材已在轨道，再步骤03素材粗剪追加，产物成为下一步输入。",
+      "purpose_inference": "分析推论：解释账号与素材互通关系",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W070"
+    },
+    {
+      "id": "W-L134",
+      "source_segment_ids": [
+        134
+      ],
+      "start": 413.17,
+      "end": 415.97,
+      "asr_start": 413.17,
+      "asr_end": 415.97,
+      "asr_text": "那这个时候我们可以把手上所有的",
+      "text": "那这个时候我们可以把手上所有的",
+      "corrections": "",
+      "shot_ids": [
+        "W072"
+      ],
+      "mapping": "回素材库，多个文件拖入，提示接下来可汇总手头材料。",
+      "purpose_inference": "分析推论：区分外来事实素材与已生成素材",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W072"
+    },
+    {
+      "id": "W-L135",
+      "source_segment_ids": [
+        135
+      ],
+      "start": 415.97,
+      "end": 419.73,
+      "asr_start": 415.97,
+      "asr_end": 419.73,
+      "asr_text": "那些实拍的素材或者是事实性的素材都导进来",
+      "text": "那些实拍的素材或者是事实性的素材都导进来",
+      "corrections": "",
+      "shot_ids": [
+        "W072"
+      ],
+      "mapping": "素材库的画像、文本页、地图等被橙框指示；本研究不将其自动认定为史实证据。",
+      "purpose_inference": "分析推论：区分外来事实素材与已生成素材",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W072"
+    },
+    {
+      "id": "W-L136",
+      "source_segment_ids": [
+        136
+      ],
+      "start": 419.73,
+      "end": 421.77,
+      "asr_start": 419.73,
+      "asr_end": 421.77,
+      "asr_text": "加上它刚才自己生成的",
+      "text": "加上它刚才自己生成的",
+      "corrections": "",
+      "shot_ids": [
+        "W072"
+      ],
+      "mapping": "黄三角转向时间线里的已生成片段，与上方外来素材库区分。",
+      "purpose_inference": "分析推论：区分外来事实素材与已生成素材",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W072"
+    },
+    {
+      "id": "W-L137",
+      "source_segment_ids": [
+        137
+      ],
+      "start": 421.77,
+      "end": 423.51,
+      "asr_start": 421.77,
+      "asr_end": 423.51,
+      "asr_text": "我们直接交给Agent",
+      "text": "我们直接交给Agent",
+      "corrections": "",
+      "shot_ids": [
+        "W072",
+        "W073"
+      ],
+      "mapping": "打开左側Agent面板准备把两类材料交给它。",
+      "purpose_inference": "分析推论：区分外来事实素材与已生成素材",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W072"
+    },
+    {
+      "id": "W-L138",
+      "source_segment_ids": [
+        138
+      ],
+      "start": 423.51,
+      "end": 427.41,
+      "asr_start": 423.51,
+      "asr_end": 427.41,
+      "asr_text": "让他来做筛选素材匹配画面",
+      "text": "让他来做筛选素材匹配画面",
+      "corrections": "",
+      "shot_ids": [
+        "W073",
+        "W074"
+      ],
+      "mapping": "放大的输入框显示筛选素材、匹配画面的要求。",
+      "purpose_inference": "分析推论：展示配置素材选择的方法",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W073"
+    },
+    {
+      "id": "W-L139",
+      "source_segment_ids": [
+        139
+      ],
+      "start": 427.41,
+      "end": 431.87,
+      "asr_start": 427.41,
+      "asr_end": 431.87,
+      "asr_text": "噹噹 他直接就在时间线上帮我们给排布好了",
+      "text": "噹噹 他直接就在时间线上帮我们给排布好了",
+      "corrections": "",
+      "shot_ids": [
+        "W074"
+      ],
+      "mapping": "结果时间线增加素材层并停留，给可见排布结果。",
+      "purpose_inference": "分析推论：交代自动排列后的骨架",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W074"
+    },
+    {
+      "id": "W-L140",
+      "source_segment_ids": [
+        140
+      ],
+      "start": 431.87,
+      "end": 434.09,
+      "asr_start": 431.87,
+      "asr_end": 434.09,
+      "asr_text": "我们大概这样看一下效果",
+      "text": "我们大概这样看一下效果",
+      "corrections": "",
+      "shot_ids": [
+        "W074",
+        "W075"
+      ],
+      "mapping": "窗口保持，先宣布看效果，再切到全幅船战示范。",
+      "purpose_inference": "分析推论：交代自动排列后的骨架",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W074"
+    },
+    {
+      "id": "W-L141",
+      "source_segment_ids": [
+        141
+      ],
+      "start": 434.63,
+      "end": 437.25,
+      "asr_start": 434.63,
+      "asr_end": 437.25,
+      "asr_text": "建安18年 曹操打到乳虚口",
+      "text": "建安18年，曹操打到濡须口",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W075"
+      ],
+      "mapping": "江面营寨和大船远景先建地理场景，角落明确AI生成示意。",
+      "purpose_inference": "分析推论：给故事地点与人物交通状态",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W075"
+    },
+    {
+      "id": "W-L142",
+      "source_segment_ids": [
+        142
+      ],
+      "start": 437.25,
+      "end": 439.05,
+      "asr_start": 437.25,
+      "asr_end": 439.05,
+      "asr_text": "孙权坐着一条大船",
+      "text": "孙权坐着一条大船",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W075",
+        "W076"
+      ],
+      "mapping": "同大船远景接船侧近景，句中从整体靠近载人船。",
+      "purpose_inference": "分析推论：给故事地点与人物交通状态",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W075"
+    },
+    {
+      "id": "W-L143",
+      "source_segment_ids": [
+        143
+      ],
+      "start": 439.05,
+      "end": 441.21,
+      "asr_start": 439.05,
+      "asr_end": 441.21,
+      "asr_text": "亲自跑到曹营门口",
+      "text": "亲自跑到曹营门口",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W076"
+      ],
+      "mapping": "船侧近景前进，对岸营寨处于可见位置。",
+      "purpose_inference": "分析推论：把“亲自探阵势”变成观察动作",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W076"
+    },
+    {
+      "id": "W-L144",
+      "source_segment_ids": [
+        144
+      ],
+      "start": 441.21,
+      "end": 443.63,
+      "asr_start": 441.21,
+      "asr_end": 443.63,
+      "asr_text": "想偷偷看看曹军的证实",
+      "text": "想偷偷看看曹军的阵势",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W076"
+      ],
+      "mapping": "船上人物近景后过肩看向对岸，视线和观察对象接上。",
+      "purpose_inference": "分析推论：把“亲自探阵势”变成观察动作",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W076"
+    },
+    {
+      "id": "W-L145",
+      "source_segment_ids": [
+        145
+      ],
+      "start": 443.63,
+      "end": 446.03,
+      "asr_start": 443.63,
+      "asr_end": 446.03,
+      "asr_text": "结果曹操一看 来的正好",
+      "text": "结果曹操一看，来得正好",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W076",
+        "W077"
+      ],
+      "mapping": "切对岸曹操手势与脸部，主体切换有两岸关系支撑。",
+      "purpose_inference": "分析推论：把“亲自探阵势”变成观察动作",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W076"
+    },
+    {
+      "id": "W-L146",
+      "source_segment_ids": [
+        146
+      ],
+      "start": 446.03,
+      "end": 447.05,
+      "asr_start": 446.03,
+      "asr_end": 447.05,
+      "asr_text": "给我放箭",
+      "text": "给我放箭",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W077"
+      ],
+      "mapping": "箭雨出现在向船的视角，随后人物俯身躲避和船侧中箭。",
+      "purpose_inference": "分析推论：把攻击过程讲清楚",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W077"
+    },
+    {
+      "id": "W-L147",
+      "source_segment_ids": [
+        147
+      ],
+      "start": 449.87,
+      "end": 453.09,
+      "asr_start": 449.87,
+      "asr_end": 453.09,
+      "asr_text": "孙权赶紧让人把船转个身",
+      "text": "孙权赶紧让人把船转个身",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W077",
+        "W078"
+      ],
+      "mapping": "人物转身惊慌后接整条船的转向远景。",
+      "purpose_inference": "分析推论：把攻击过程讲清楚",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W077"
+    },
+    {
+      "id": "W-L148",
+      "source_segment_ids": [
+        148
+      ],
+      "start": 453.09,
+      "end": 455.01,
+      "asr_start": 453.09,
+      "asr_end": 455.01,
+      "asr_text": "另一边接着挨箭",
+      "text": "另一边接着挨箭",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W078"
+      ],
+      "mapping": "持续展示船体转向另一侧，动作跨两句延续，非一句另换素材。",
+      "purpose_inference": "分析推论：使“转个身”是可见运动而非只靠旁白",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W078"
+    },
+    {
+      "id": "W-L149",
+      "source_segment_ids": [
+        149
+      ],
+      "start": 456.17,
+      "end": 458.75,
+      "asr_start": 456.17,
+      "asr_end": 458.75,
+      "asr_text": "嗯 虽然说肯定没有那么完美吧",
+      "text": "嗯 虽然说肯定没有那么完美吧",
+      "corrections": "",
+      "shot_ids": [
+        "W079"
+      ],
+      "mapping": "船画面回到软件预览，灰衣圆窗对刚才结果保留评价空间。",
+      "purpose_inference": "分析推论：说明粗剪骨架与完成质量不同",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W079"
+    },
+    {
+      "id": "W-L150",
+      "source_segment_ids": [
+        150
+      ],
+      "start": 458.75,
+      "end": 461.27,
+      "asr_start": 458.75,
+      "asr_end": 461.27,
+      "asr_text": "但是的确省去了我们自己去找素材",
+      "text": "但是的确省去了我们自己去找素材",
+      "corrections": "",
+      "shot_ids": [
+        "W079"
+      ],
+      "mapping": "同界面展示素材排布，强调省下选材时间。",
+      "purpose_inference": "分析推论：说明粗剪骨架与完成质量不同",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W079"
+    },
+    {
+      "id": "W-L151",
+      "source_segment_ids": [
+        151
+      ],
+      "start": 461.27,
+      "end": 463.85,
+      "asr_start": 461.27,
+      "asr_end": 463.85,
+      "asr_text": "然后又找位置又贴这贴那的时间",
+      "text": "然后又找位置又贴这贴那的时间",
+      "corrections": "",
+      "shot_ids": [
+        "W079"
+      ],
+      "mapping": "继续保留已经摆好的轨道，让贴素材的劳动可对照。",
+      "purpose_inference": "分析推论：说明粗剪骨架与完成质量不同",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W079"
+    },
+    {
+      "id": "W-L152",
+      "source_segment_ids": [
+        152
+      ],
+      "start": 463.85,
+      "end": 466.97,
+      "asr_start": 463.85,
+      "asr_end": 466.97,
+      "asr_text": "快速的我们就能看到一个片子的骨架",
+      "text": "快速的我们就能看到一个片子的骨架",
+      "corrections": "",
+      "shot_ids": [
+        "W079"
+      ],
+      "mapping": "整条时间线作为骨架结果停留，然后进入下一章。",
+      "purpose_inference": "分析推论：说明粗剪骨架与完成质量不同",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W079"
+    },
+    {
+      "id": "W-L153",
+      "source_segment_ids": [
+        153
+      ],
+      "start": 466.97,
+      "end": 469.73,
+      "asr_start": 466.97,
+      "asr_end": 469.73,
+      "asr_text": "那在这个基础上你可能还得上点包装",
+      "text": "那在这个基础上你可能还得上点包装",
+      "corrections": "",
+      "shot_ids": [
+        "W079",
+        "W080"
+      ],
+      "mapping": "三步导航追加第四步字幕包装，段落位置清楚。",
+      "purpose_inference": "分析推论：说明粗剪骨架与完成质量不同",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W079"
+    },
+    {
+      "id": "W-L154",
+      "source_segment_ids": [
+        154
+      ],
+      "start": 469.73,
+      "end": 471.65,
+      "asr_start": 469.73,
+      "asr_end": 471.65,
+      "asr_text": "我最爱的功能来了",
+      "text": "我最爱的功能来了",
+      "corrections": "",
+      "shot_ids": [
+        "W080",
+        "W081"
+      ],
+      "mapping": "灰衣人物短暂出现表达推荐，随后切功能菜单。",
+      "purpose_inference": "分析推论：进入包装阶段",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W080"
+    },
+    {
+      "id": "W-L155",
+      "source_segment_ids": [
+        155
+      ],
+      "start": 471.65,
+      "end": 472.95,
+      "asr_start": 471.65,
+      "asr_end": 472.95,
+      "asr_text": "一键包装",
+      "text": "一键包装",
+      "corrections": "",
+      "shot_ids": [
+        "W081"
+      ],
+      "mapping": "双侧黄箭头和橙框定位一键包装入口。",
+      "purpose_inference": "分析推论：把推荐落到可找的功能",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W081"
+    },
+    {
+      "id": "W-L156",
+      "source_segment_ids": [
+        156
+      ],
+      "start": 472.95,
+      "end": 475.25,
+      "asr_start": 472.95,
+      "asr_end": 475.25,
+      "asr_text": "它这个里面就有不少成熟的模板",
+      "text": "它这个里面就有不少成熟的模板",
+      "corrections": "",
+      "shot_ids": [
+        "W081",
+        "W082"
+      ],
+      "mapping": "模板选项弹出，观众能看到多个真实风格选择。",
+      "purpose_inference": "分析推论：把推荐落到可找的功能",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W081"
+    },
+    {
+      "id": "W-L157",
+      "source_segment_ids": [
+        157
+      ],
+      "start": 475.25,
+      "end": 478.81,
+      "asr_start": 475.25,
+      "asr_end": 478.81,
+      "asr_text": "而且也可以根据你的片子重新的智能设计",
+      "text": "而且也可以根据你的片子重新的智能设计",
+      "corrections": "",
+      "shot_ids": [
+        "W082"
+      ],
+      "mapping": "同模板窗与智能设计请求继续展示，未改变当前工程。",
+      "purpose_inference": "分析推论：展示样式选择过程",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W082"
+    },
+    {
+      "id": "W-L158",
+      "source_segment_ids": [
+        158
+      ],
+      "start": 478.81,
+      "end": 479.51,
+      "asr_start": 478.81,
+      "asr_end": 479.51,
+      "asr_text": "一点",
+      "text": "一点",
+      "corrections": "",
+      "shot_ids": [
+        "W082"
+      ],
+      "mapping": "点击发送后回执行状态。",
+      "purpose_inference": "分析推论：展示样式选择过程",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W082"
+    },
+    {
+      "id": "W-L159",
+      "source_segment_ids": [
+        159
+      ],
+      "start": 480.37,
+      "end": 482.89,
+      "asr_start": 480.37,
+      "asr_end": 482.89,
+      "asr_text": "就这么把我们的时间线给编辑好了",
+      "text": "就这么把我们的时间线给编辑好了",
+      "corrections": "",
+      "shot_ids": [
+        "W083"
+      ],
+      "mapping": "整个时间线出现多层包装素材，同时预览里可见人物描边和花字。",
+      "purpose_inference": "分析推论：设置合理期待",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W083"
+    },
+    {
+      "id": "W-L160",
+      "source_segment_ids": [
+        160
+      ],
+      "start": 482.89,
+      "end": 485.17,
+      "asr_start": 482.89,
+      "asr_end": 485.17,
+      "asr_text": "那当然了它也不是一键成片",
+      "text": "那当然了它也不是一键成片",
+      "corrections": "",
+      "shot_ids": [
+        "W083",
+        "W084"
+      ],
+      "mapping": "同结果先展示，讲解明确它并非一键完成；不能把这句反向解读为全自动承诺。",
+      "purpose_inference": "分析推论：设置合理期待",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W083"
+    },
+    {
+      "id": "W-L161",
+      "source_segment_ids": [
+        161
+      ],
+      "start": 485.17,
+      "end": 488.57,
+      "asr_start": 485.17,
+      "asr_end": 488.57,
+      "asr_text": "有的时候可能出现一些这样的花字错位啊",
+      "text": "有的时候可能出现一些这样的花字错位啊",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W084",
+        "W085"
+      ],
+      "mapping": "把预览抽出来放大，黄色标题与箭头指向额头上的花字，是负面示例。",
+      "purpose_inference": "分析推论：明确负例，不纳入喜欢的外观",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W084",
+      "polarity": "negative"
+    },
+    {
+      "id": "W-L162",
+      "source_segment_ids": [
+        162
+      ],
+      "start": 488.57,
+      "end": 490.93,
+      "asr_start": 488.57,
+      "asr_end": 490.93,
+      "asr_text": "或者给你的包装过于花哨了",
+      "text": "或者给你的包装过于花哨了",
+      "corrections": "",
+      "shot_ids": [
+        "W085"
+      ],
+      "mapping": "右侧新增放射线过花样片，与左错位样片并排；两者均是反例。",
+      "purpose_inference": "分析推论：区分两种失败模式",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W085",
+      "polarity": "negative"
+    },
+    {
+      "id": "W-L163",
+      "source_segment_ids": [
+        163
+      ],
+      "start": 490.93,
+      "end": 495.85,
+      "asr_start": 490.93,
+      "asr_end": 495.85,
+      "asr_text": "但它好就好在它生成的就是这种可编辑的剪辑轨道",
+      "text": "但它好就好在它生成的就是这种可编辑的剪辑轨道",
+      "corrections": "",
+      "shot_ids": [
+        "W085",
+        "W086"
+      ],
+      "mapping": "切回轨道并放大，压暗上半画面保留下方时间线亮度，再加“可编辑时间线”。",
+      "purpose_inference": "分析推论：区分两种失败模式",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W085"
+    },
+    {
+      "id": "W-L164",
+      "source_segment_ids": [
+        164
+      ],
+      "start": 495.85,
+      "end": 498.19,
+      "asr_start": 495.85,
+      "asr_end": 498.19,
+      "asr_text": "对新手来说真的是宝藏了",
+      "text": "对新手来说真的是宝藏了",
+      "corrections": "",
+      "shot_ids": [
+        "W086",
+        "W087"
+      ],
+      "mapping": "退回完整编辑界面，灰衣圆窗评价可编辑性。",
+      "purpose_inference": "分析推论：解释为什么可修，而不是掩盖失败",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W086"
+    },
+    {
+      "id": "W-L165",
+      "source_segment_ids": [
+        165
+      ],
+      "start": 498.19,
+      "end": 500.89,
+      "asr_start": 498.19,
+      "asr_end": 500.89,
+      "asr_text": "我们只需要自己稍微调整调整",
+      "text": "我们只需要自己稍微调整调整",
+      "corrections": "",
+      "shot_ids": [
+        "W087"
+      ],
+      "mapping": "右侧文字属性设置打开，时间线和参数同时可见。",
+      "purpose_inference": "分析推论：说明实际能自己调整",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W087"
+    },
+    {
+      "id": "W-L166",
+      "source_segment_ids": [
+        166
+      ],
+      "start": 500.89,
+      "end": 502.15,
+      "asr_start": 500.89,
+      "asr_end": 502.15,
+      "asr_text": "请看效果",
+      "text": "请看效果",
+      "corrections": "",
+      "shot_ids": [
+        "W087",
+        "W088"
+      ],
+      "mapping": "停留已调整工程宣布看结果，下一段才是包装后的历史视频。",
+      "purpose_inference": "分析推论：说明实际能自己调整",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W087"
+    },
+    {
+      "id": "W-L167",
+      "source_segment_ids": [
+        167
+      ],
+      "start": 502.91,
+      "end": 505.43,
+      "asr_start": 502.91,
+      "asr_end": 505.43,
+      "asr_text": "孙权赶紧让人把船转个身",
+      "text": "孙权赶紧让人把船转个身",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W088",
+        "W089"
+      ],
+      "mapping": "黑衣人物讲述，字幕“转个身”着色，轻推近人物；先保留人再切船。",
+      "purpose_inference": "分析推论：用人物承接故事行动",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W088"
+    },
+    {
+      "id": "W-L168",
+      "source_segment_ids": [
+        168
+      ],
+      "start": 505.43,
+      "end": 507.11,
+      "asr_start": 505.43,
+      "asr_end": 507.11,
+      "asr_text": "另一边接着挨舰",
+      "text": "另一边接着挨箭",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W089"
+      ],
+      "mapping": "全幅船体转向连续画面，字幕关键词“挨箭”着色。",
+      "purpose_inference": "分析推论：让观众直观看到方向变化",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W089"
+    },
+    {
+      "id": "W-L169",
+      "source_segment_ids": [
+        169
+      ],
+      "start": 508.27,
+      "end": 510.01,
+      "asr_start": 508.27,
+      "asr_end": 510.01,
+      "asr_text": "可算曹操财大气粗",
+      "text": "可算曹操财大气粗",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W089",
+        "W090"
+      ],
+      "mapping": "先保持船，再切成排弓箭手，表达攻击规模。",
+      "purpose_inference": "分析推论：让观众直观看到方向变化",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W089"
+    },
+    {
+      "id": "W-L170",
+      "source_segment_ids": [
+        170
+      ],
+      "start": 510.01,
+      "end": 512.55,
+      "asr_start": 510.01,
+      "asr_end": 512.55,
+      "asr_text": "又朝着这一刻放出了大量舰鱼",
+      "text": "又朝着这一侧放出了大量的箭雨",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W090"
+      ],
+      "mapping": "弓箭齐射后接船体箭雨、满箭船侧，因果相连。",
+      "purpose_inference": "分析推论：说明另一侧也受到负载",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W090"
+    },
+    {
+      "id": "W-L171",
+      "source_segment_ids": [
+        171
+      ],
+      "start": 512.55,
+      "end": 515.21,
+      "asr_start": 512.55,
+      "asr_end": 515.21,
+      "asr_text": "还真就让孙权的船恢复了平衡",
+      "text": "还真就让孙权的船恢复了平衡",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W090",
+        "W091"
+      ],
+      "mapping": "回黑衣人物说结果；未假装此处一直由船体动画演示。",
+      "purpose_inference": "分析推论：说明另一侧也受到负载",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W090"
+    },
+    {
+      "id": "W-L172",
+      "source_segment_ids": [
+        172
+      ],
+      "start": 515.21,
+      "end": 516.11,
+      "asr_start": 515.21,
+      "asr_end": 516.11,
+      "asr_text": "原文说到",
+      "text": "原文说到",
+      "corrections": "",
+      "shot_ids": [
+        "W091"
+      ],
+      "mapping": "人物左上纸张原文截图开始进入，预告引文证据。",
+      "purpose_inference": "分析推论：把叙事与出处分开",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W091"
+    },
+    {
+      "id": "W-L173",
+      "source_segment_ids": [
+        173
+      ],
+      "start": 516.11,
+      "end": 518.03,
+      "asr_start": 516.11,
+      "asr_end": 518.03,
+      "asr_text": "建军船平 奶还",
+      "text": "箭均船平乃还",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W091",
+        "W092"
+      ],
+      "mapping": "纸页放大，原文相关句红框，字幕同步引用；历史真实性不是本次核验范围。",
+      "purpose_inference": "分析推论：把叙事与出处分开",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W091"
+    },
+    {
+      "id": "W-L174",
+      "source_segment_ids": [
+        174
+      ],
+      "start": 518.03,
+      "end": 520.61,
+      "asr_start": 518.03,
+      "asr_end": 520.61,
+      "asr_text": "他两面都挨舰 船平衡了",
+      "text": "他两面都挨箭，船平衡了",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W092"
+      ],
+      "mapping": "切满箭船体靠岸远景，再人物扶船沿的近景，显示结果状态。",
+      "purpose_inference": "分析推论：表现平衡后能够归还的结果",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W092"
+    },
+    {
+      "id": "W-L175",
+      "source_segment_ids": [
+        175
+      ],
+      "start": 520.61,
+      "end": 522.45,
+      "asr_start": 520.61,
+      "asr_end": 522.45,
+      "asr_text": "孙权才得以返回军营",
+      "text": "孙权才得以返回军营",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W092"
+      ],
+      "mapping": "孙权扶着插箭船侧移动，完成结果动作。",
+      "purpose_inference": "分析推论：表现平衡后能够归还的结果",
+      "status": "visual_checked",
+      "speech_role": "成片示范旁白",
+      "semantic_group": "W092"
+    },
+    {
+      "id": "W-L176",
+      "source_segment_ids": [
+        176
+      ],
+      "start": 523.13,
+      "end": 526.77,
+      "asr_start": 523.13,
+      "asr_end": 526.77,
+      "asr_text": "是不是自媒体后期全流程都能帮你提效",
+      "text": "是不是自媒体后期全流程都能帮你提效",
+      "corrections": "",
+      "shot_ids": [
+        "W093"
+      ],
+      "mapping": "底层示范画面被压暗，灰衣讲解者中央圆窗出现，收回教学层总结。",
+      "purpose_inference": "分析推论：使示范与总结的层级切换清楚",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W093"
+    },
+    {
+      "id": "W-L177",
+      "source_segment_ids": [
+        177
+      ],
+      "start": 526.77,
+      "end": 527.69,
+      "asr_start": 526.77,
+      "asr_end": 527.69,
+      "asr_text": "那另外呢",
+      "text": "那另外呢",
+      "corrections": "",
+      "shot_ids": [
+        "W093",
+        "W094"
+      ],
+      "mapping": "同圆窗短接词，随后跳真实技能列表。",
+      "purpose_inference": "分析推论：使示范与总结的层级切换清楚",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W093"
+    },
+    {
+      "id": "W-L178",
+      "source_segment_ids": [
+        178
+      ],
+      "start": 527.69,
+      "end": 531.21,
+      "asr_start": 527.69,
+      "asr_end": 531.21,
+      "asr_text": "简英助手agent其实还有一些内置的技能和工作流",
+      "text": "剪映助手Agent其实还有一些内置的技能和工作流",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W094"
+      ],
+      "mapping": "真实助手菜单展开，视口靠近技能列表。",
+      "purpose_inference": "分析推论：具体呈现可复用工作流入口",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W094"
+    },
+    {
+      "id": "W-L179",
+      "source_segment_ids": [
+        179
+      ],
+      "start": 531.21,
+      "end": 534.07,
+      "asr_start": 531.21,
+      "asr_end": 534.07,
+      "asr_text": "你自己也可以去搭建一些合适自己的",
+      "text": "你自己也可以去搭建一些合适自己的",
+      "corrections": "",
+      "shot_ids": [
+        "W094",
+        "W095"
+      ],
+      "mapping": "菜单保持显示，自建技能的描述仍在同上下文。",
+      "purpose_inference": "分析推论：具体呈现可复用工作流入口",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W094"
+    },
+    {
+      "id": "W-L180",
+      "source_segment_ids": [
+        180
+      ],
+      "start": 534.07,
+      "end": 536.77,
+      "asr_start": 534.07,
+      "asr_end": 536.77,
+      "asr_text": "尤其是平时有批量做视频的朋友",
+      "text": "尤其是平时有批量做视频的朋友",
+      "corrections": "",
+      "shot_ids": [
+        "W095"
+      ],
+      "mapping": "回全幅人物，点名批量视频用户。",
+      "purpose_inference": "分析推论：为适用案例分类铺垫",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W095"
+    },
+    {
+      "id": "W-L181",
+      "source_segment_ids": [
+        181
+      ],
+      "start": 536.77,
+      "end": 539.35,
+      "asr_start": 536.77,
+      "asr_end": 539.35,
+      "asr_text": "常改短视频他可太擅长了",
+      "text": "长改短视频它可太擅长了",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W095",
+        "W096"
+      ],
+      "mapping": "人物讲适用能力，随后准备三种用例。",
+      "purpose_inference": "分析推论：为适用案例分类铺垫",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W095"
+    },
+    {
+      "id": "W-L182",
+      "source_segment_ids": [
+        182
+      ],
+      "start": 539.35,
+      "end": 541.01,
+      "asr_start": 539.35,
+      "asr_end": 541.01,
+      "asr_text": "什么发布会精华啊",
+      "text": "什么发布会精华啊",
+      "corrections": "",
+      "shot_ids": [
+        "W096"
+      ],
+      "mapping": "左侧发布会竖屏和对应标题先出现。",
+      "purpose_inference": "分析推论：把三种用例一一对应",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W096"
+    },
+    {
+      "id": "W-L183",
+      "source_segment_ids": [
+        183
+      ],
+      "start": 541.01,
+      "end": 542.43,
+      "asr_start": 541.01,
+      "asr_end": 542.43,
+      "asr_text": "课堂回放片段啊",
+      "text": "课堂回放片段啊",
+      "corrections": "",
+      "shot_ids": [
+        "W096"
+      ],
+      "mapping": "中间课堂回放竖屏加入，第一列仍保留。",
+      "purpose_inference": "分析推论：把三种用例一一对应",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W096"
+    },
+    {
+      "id": "W-L184",
+      "source_segment_ids": [
+        184
+      ],
+      "start": 542.43,
+      "end": 544.31,
+      "asr_start": 542.43,
+      "asr_end": 544.31,
+      "asr_text": "直播高光切片啊",
+      "text": "直播高光切片啊",
+      "corrections": "",
+      "shot_ids": [
+        "W096"
+      ],
+      "mapping": "右侧直播高光加入，三列完整对齐。",
+      "purpose_inference": "分析推论：把三种用例一一对应",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W096"
+    },
+    {
+      "id": "W-L185",
+      "source_segment_ids": [
+        185
+      ],
+      "start": 544.31,
+      "end": 545.31,
+      "asr_start": 544.31,
+      "asr_end": 545.31,
+      "asr_text": "太省事了",
+      "text": "太省事了",
+      "corrections": "",
+      "shot_ids": [
+        "W096",
+        "W097"
+      ],
+      "mapping": "三例同屏停留作总结，没有继续追加无关素材。",
+      "purpose_inference": "分析推论：把三种用例一一对应",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W096"
+    },
+    {
+      "id": "W-L186",
+      "source_segment_ids": [
+        186
+      ],
+      "start": 545.31,
+      "end": 547.79,
+      "asr_start": 545.31,
+      "asr_end": 547.79,
+      "asr_text": "那除了更便捷的两个AI功能",
+      "text": "那除了更便捷的两个AI功能",
+      "corrections": "",
+      "shot_ids": [
+        "W097"
+      ],
+      "mapping": "回人物开启专业与移动端话题。",
+      "purpose_inference": "分析推论：话题转折缓冲",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W097"
+    },
+    {
+      "id": "W-L187",
+      "source_segment_ids": [
+        187
+      ],
+      "start": 547.79,
+      "end": 550.81,
+      "asr_start": 547.79,
+      "asr_end": 550.81,
+      "asr_text": "剪影影在专业制作和手机端也都有升级",
+      "text": "剪映在专业制作和手机端也都有升级",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W097"
+      ],
+      "mapping": "人物主画面持续，作为功能分支的过渡。",
+      "purpose_inference": "分析推论：话题转折缓冲",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W097"
+    },
+    {
+      "id": "W-L188",
+      "source_segment_ids": [
+        188
+      ],
+      "start": 550.81,
+      "end": 553.21,
+      "asr_start": 550.81,
+      "asr_end": 553.21,
+      "asr_text": "剪影影现在跟杜比合作了",
+      "text": "剪映现在跟杜比合作了",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W097",
+        "W098"
+      ],
+      "mapping": "黑底合作卡片加入，人物变左下圆窗。",
+      "purpose_inference": "分析推论：话题转折缓冲",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W097"
+    },
+    {
+      "id": "W-L189",
+      "source_segment_ids": [
+        189
+      ],
+      "start": 553.21,
+      "end": 556.11,
+      "asr_start": 553.21,
+      "asr_end": 556.11,
+      "asr_text": "手机端和PC端都支持杜比世界了",
+      "text": "手机端和PC端都支持杜比视界了",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W098",
+        "W099"
+      ],
+      "mapping": "合作卡缩至上方，手机和PC两设备逐项加入。",
+      "purpose_inference": "分析推论：把支持范围分终端表示",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W098"
+    },
+    {
+      "id": "W-L190",
+      "source_segment_ids": [
+        190
+      ],
+      "start": 556.11,
+      "end": 559.73,
+      "asr_start": 556.11,
+      "asr_end": 559.73,
+      "asr_text": "大家可以用iOS手机就一站式的实现",
+      "text": "大家可以用iOS手机就一站式的实现",
+      "corrections": "",
+      "shot_ids": [
+        "W099"
+      ],
+      "mapping": "改为手机大图+人物竖窗，旁边加iOS手机标签。",
+      "purpose_inference": "分析推论：区分当前功能与片中称未来支持的项",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W099"
+    },
+    {
+      "id": "W-L191",
+      "source_segment_ids": [
+        191
+      ],
+      "start": 559.73,
+      "end": 562.37,
+      "asr_start": 559.73,
+      "asr_end": 562.37,
+      "asr_text": "剪辑导出杜比世界格式",
+      "text": "剪辑导出杜比视界格式",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W099"
+      ],
+      "mapping": "手机旁边逐行加剪辑/导出/杜比视界；说一项亮一项。",
+      "purpose_inference": "分析推论：区分当前功能与片中称未来支持的项",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W099"
+    },
+    {
+      "id": "W-L192",
+      "source_segment_ids": [
+        192
+      ],
+      "start": 562.37,
+      "end": 565.71,
+      "asr_start": 562.37,
+      "asr_end": 565.71,
+      "asr_text": "过几个月还会支持杜比全景深编辑哦",
+      "text": "过几个月还会支持杜比全景声编辑哦",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W099"
+      ],
+      "mapping": "现有功能下加括号“即将支持”，区分未来能力，不能学习成已实现。",
+      "purpose_inference": "分析推论：区分当前功能与片中称未来支持的项",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W099"
+    },
+    {
+      "id": "W-L193",
+      "source_segment_ids": [
+        193
+      ],
+      "start": 565.71,
+      "end": 568.37,
+      "asr_start": 565.71,
+      "asr_end": 568.37,
+      "asr_text": "那手机APP的用嘴剪辑Agent",
+      "text": "那手机APP的用嘴剪辑Agent",
+      "corrections": "",
+      "shot_ids": [
+        "W099",
+        "W100"
+      ],
+      "mapping": "手机对话界面旁加入上一期AI剪辑封面。",
+      "purpose_inference": "分析推论：区分当前功能与片中称未来支持的项",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W099"
+    },
+    {
+      "id": "W-L194",
+      "source_segment_ids": [
+        194
+      ],
+      "start": 568.37,
+      "end": 569.67,
+      "asr_start": 568.37,
+      "asr_end": 569.67,
+      "asr_text": "我之前也讲过一起",
+      "text": "我之前也讲过一期",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W100"
+      ],
+      "mapping": "旧作封面保持，作为回指背景。",
+      "purpose_inference": "分析推论：减少重复讲解并补背景",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W100"
+    },
+    {
+      "id": "W-L195",
+      "source_segment_ids": [
+        195
+      ],
+      "start": 569.67,
+      "end": 570.45,
+      "asr_start": 569.67,
+      "asr_end": 570.45,
+      "asr_text": "非常好用",
+      "text": "非常好用",
+      "corrections": "",
+      "shot_ids": [
+        "W100"
+      ],
+      "mapping": "同旧作卡停留，随后回本次手机入口。",
+      "purpose_inference": "分析推论：减少重复讲解并补背景",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W100"
+    },
+    {
+      "id": "W-L196",
+      "source_segment_ids": [
+        196
+      ],
+      "start": 570.45,
+      "end": 573.35,
+      "asr_start": 570.45,
+      "asr_end": 573.35,
+      "asr_text": "它这次又新上了AI创作功能",
+      "text": "它这次又新上了AI创作功能",
+      "corrections": "",
+      "shot_ids": [
+        "W100",
+        "W101"
+      ],
+      "mapping": "手机界面推近底部AI创作按钮，用黄箭头橙圈明确入口。",
+      "purpose_inference": "分析推论：减少重复讲解并补背景",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W100"
+    },
+    {
+      "id": "W-L197",
+      "source_segment_ids": [
+        197
+      ],
+      "start": 573.35,
+      "end": 575.03,
+      "asr_start": 573.35,
+      "asr_end": 575.03,
+      "asr_text": "来做各种AI生成",
+      "text": "来做各种AI生成",
+      "corrections": "",
+      "shot_ids": [
+        "W101"
+      ],
+      "mapping": "进入AI创作页，模板从占位加载成图。",
+      "purpose_inference": "分析推论：入口与功能结果对应",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W101"
+    },
+    {
+      "id": "W-L198",
+      "source_segment_ids": [
+        198
+      ],
+      "start": 575.03,
+      "end": 578.99,
+      "asr_start": 575.03,
+      "asr_end": 578.99,
+      "asr_text": "所以也打通了生成到剪辑的全流程",
+      "text": "所以也打通了生成到剪辑的全流程",
+      "corrections": "",
+      "shot_ids": [
+        "W101"
+      ],
+      "mapping": "人物与完整手机并列，模板页保持，解释生成剪辑在同链路。",
+      "purpose_inference": "分析推论：入口与功能结果对应",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W101"
+    },
+    {
+      "id": "W-L199",
+      "source_segment_ids": [
+        199
+      ],
+      "start": 578.99,
+      "end": 582.21,
+      "asr_start": 578.99,
+      "asr_end": 582.21,
+      "asr_text": "而且手机版有各种热门玩法的技能",
+      "text": "而且手机版有各种热门玩法的技能",
+      "corrections": "",
+      "shot_ids": [
+        "W101",
+        "W102"
+      ],
+      "mapping": "推近热门模板网格，具体展示可选内容。",
+      "purpose_inference": "分析推论：入口与功能结果对应",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W101"
+    },
+    {
+      "id": "W-L200",
+      "source_segment_ids": [
+        200
+      ],
+      "start": 582.21,
+      "end": 584.25,
+      "asr_start": 582.21,
+      "asr_end": 584.25,
+      "asr_text": "一键复刻抖音爆款",
+      "text": "一键复制抖音热门",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W102",
+        "W103"
+      ],
+      "mapping": "模板压暗后叠黄色“一键复制热门”；此处是原片说法。",
+      "purpose_inference": "分析推论：从多个样例收束共性能力",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W102"
+    },
+    {
+      "id": "W-L201",
+      "source_segment_ids": [
+        201
+      ],
+      "start": 589.48,
+      "end": 591.46,
+      "asr_start": 589.48,
+      "asr_end": 591.46,
+      "asr_text": "那有的朋友可能就想问了",
+      "text": "那有的朋友可能就想问了",
+      "corrections": "",
+      "shot_ids": [
+        "W104",
+        "W105"
+      ],
+      "mapping": "狗跳舞示范和彩条狗头短卡结束后回讲解者引问。",
+      "purpose_inference": "分析推论：结束示范并换到费用话题",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W104"
+    },
+    {
+      "id": "W-L202",
+      "source_segment_ids": [
+        202
+      ],
+      "start": 591.46,
+      "end": 594.48,
+      "asr_start": 591.46,
+      "asr_end": 594.48,
+      "asr_text": "这么多AI升级会不会很贵呢",
+      "text": "这么多AI升级会不会很贵呢",
+      "corrections": "",
+      "shot_ids": [
+        "W105",
+        "W106"
+      ],
+      "mapping": "疑问表情与气泡文字逐项形成完整费用问题。",
+      "purpose_inference": "分析推论：把潜在疑问变成下一段标题",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W105"
+    },
+    {
+      "id": "W-L203",
+      "source_segment_ids": [
+        203
+      ],
+      "start": 594.48,
+      "end": 596.98,
+      "asr_start": 594.48,
+      "asr_end": 596.98,
+      "asr_text": "的确 C-DANCE 2.5本来就有小贵",
+      "text": "的确Seedance 2.5本来就很贵",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W106"
+      ],
+      "mapping": "回人物回答；模型名来自本句字幕，不推及全片AIGC皆由它生成。",
+      "purpose_inference": "分析推论：评价归作者，价格不当本次研究事实",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W106"
+    },
+    {
+      "id": "W-L204",
+      "source_segment_ids": [
+        204
+      ],
+      "start": 596.98,
+      "end": 599.42,
+      "asr_start": 596.98,
+      "asr_end": 599.42,
+      "asr_text": "但是简硬的性价比还可以的",
+      "text": "但是剪映的性价比还可以的",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W106",
+        "W107"
+      ],
+      "mapping": "仍是人物评价，未把评价当可核验价格结论。",
+      "purpose_inference": "分析推论：评价归作者，价格不当本次研究事实",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W106"
+    },
+    {
+      "id": "W-L205",
+      "source_segment_ids": [
+        205
+      ],
+      "start": 599.42,
+      "end": 602.78,
+      "asr_start": 599.42,
+      "asr_end": 602.78,
+      "asr_text": "尤其是它这个AI Ultra的首阅优惠非常值得好",
+      "text": "尤其是它这个AI Ultra的首月优惠非常值得薅",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W107"
+      ],
+      "mapping": "实际订阅界面小卡放大出现，停留优惠项供读。",
+      "purpose_inference": "分析推论：给费用说法原片依据",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W107"
+    },
+    {
+      "id": "W-L206",
+      "source_segment_ids": [
+        206
+      ],
+      "start": 602.78,
+      "end": 605.2,
+      "asr_start": 602.78,
+      "asr_end": 605.2,
+      "asr_text": "因为它包含原来的SVIP权益",
+      "text": "因为它包含原来的SVIP权益",
+      "corrections": "",
+      "shot_ids": [
+        "W107",
+        "W108"
+      ],
+      "mapping": "增加右侧权益对照表，压暗背景，框住SVIP权益行。",
+      "purpose_inference": "分析推论：给费用说法原片依据",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W107"
+    },
+    {
+      "id": "W-L207",
+      "source_segment_ids": [
+        207
+      ],
+      "start": 605.2,
+      "end": 607.44,
+      "asr_start": 605.2,
+      "asr_end": 607.44,
+      "asr_text": "还带生成积分2万多",
+      "text": "还带生成积分2万多",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W108"
+      ],
+      "mapping": "同表转为突出积分行，上一个权益框仍保留。",
+      "purpose_inference": "分析推论：让每个权益说法对应可见表格行",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W108"
+    },
+    {
+      "id": "W-L208",
+      "source_segment_ids": [
+        208
+      ],
+      "start": 607.44,
+      "end": 611.34,
+      "asr_start": 607.44,
+      "asr_end": 611.34,
+      "asr_text": "首月C-DANCE 2.5的消耗要比其他平台便宜一半了",
+      "text": "首月Seedance 2.5的消耗要比其他平台便宜一半了",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W108",
+        "W109"
+      ],
+      "mapping": "继续保留同表，句中的平台价差没有额外对比证据；只记录原片表达，不证明价差。",
+      "purpose_inference": "分析推论：让每个权益说法对应可见表格行",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W108"
+    },
+    {
+      "id": "W-L209",
+      "source_segment_ids": [
+        209
+      ],
+      "start": 611.34,
+      "end": 612.98,
+      "asr_start": 611.34,
+      "asr_end": 612.98,
+      "asr_text": "当然我觉得最主要的",
+      "text": "当然我觉得最主要的",
+      "corrections": "",
+      "shot_ids": [
+        "W109"
+      ],
+      "mapping": "切回人物，开始从费用转工作价值。",
+      "purpose_inference": "分析推论：将价值回到工作流",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W109"
+    },
+    {
+      "id": "W-L210",
+      "source_segment_ids": [
+        210
+      ],
+      "start": 612.98,
+      "end": 615.68,
+      "asr_start": 612.98,
+      "asr_end": 615.68,
+      "asr_text": "还是它在每个环节都能帮你提效",
+      "text": "还是它在每个环节都能帮你提效",
+      "corrections": "",
+      "shot_ids": [
+        "W109"
+      ],
+      "mapping": "人物手势分层强调每个环节，没有再追加新功能材料。",
+      "purpose_inference": "分析推论：将价值回到工作流",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W109"
+    },
+    {
+      "id": "W-L211",
+      "source_segment_ids": [
+        211
+      ],
+      "start": 615.68,
+      "end": 618.62,
+      "asr_start": 615.68,
+      "asr_end": 618.62,
+      "asr_text": "打通了生成到成片的联罗",
+      "text": "打通了生成到成片的链路",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W109"
+      ],
+      "mapping": "人物总结链路，下一段再用快速实录串联呼应。",
+      "purpose_inference": "分析推论：将价值回到工作流",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W109"
+    },
+    {
+      "id": "W-L212",
+      "source_segment_ids": [
+        212
+      ],
+      "start": 618.62,
+      "end": 619.76,
+      "asr_start": 618.62,
+      "asr_end": 619.76,
+      "asr_text": "那总之呢",
+      "text": "那总之呢",
+      "corrections": "",
+      "shot_ids": [
+        "W109",
+        "W110"
+      ],
+      "mapping": "切创作界面“今天想创作什么”，作为结语视觉入口。",
+      "purpose_inference": "分析推论：将价值回到工作流",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W109"
+    },
+    {
+      "id": "W-L213",
+      "source_segment_ids": [
+        213
+      ],
+      "start": 619.76,
+      "end": 622.78,
+      "asr_start": 619.76,
+      "asr_end": 622.78,
+      "asr_text": "剪影影现在已经不再只是个剪辑工具了",
+      "text": "剪映现在已经不再只是个剪辑工具了",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W110"
+      ],
+      "mapping": "输入需求、发送、任务完成卡逐步切换，证实创作前端也在流程里。",
+      "purpose_inference": "分析推论：复述一站式链路结果",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W110"
+    },
+    {
+      "id": "W-L214",
+      "source_segment_ids": [
+        214
+      ],
+      "start": 622.78,
+      "end": 625.36,
+      "asr_start": 622.78,
+      "asr_end": 625.36,
+      "asr_text": "如果你在做自媒体或者是做AI视频",
+      "text": "如果你在做自媒体或者是做AI视频",
+      "corrections": "",
+      "shot_ids": [
+        "W110",
+        "W111"
+      ],
+      "mapping": "剧本与分镜节点快速接续，仍沿同一创作链路。",
+      "purpose_inference": "分析推论：复述一站式链路结果",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W110"
+    },
+    {
+      "id": "W-L215",
+      "source_segment_ids": [
+        215
+      ],
+      "start": 625.36,
+      "end": 626.53,
+      "asr_start": 625.36,
+      "asr_end": 626.53,
+      "asr_text": "都很值得关注",
+      "text": "都很值得关注",
+      "corrections": "",
+      "shot_ids": [
+        "W111"
+      ],
+      "mapping": "Hub标志与一站式平台副标题收束，不继承其品牌样式。",
+      "purpose_inference": "分析推论：品牌归因，不迁移到用户账号",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W111"
+    },
+    {
+      "id": "W-L216",
+      "source_segment_ids": [
+        216
+      ],
+      "start": 627.28,
+      "end": 627.62,
+      "asr_start": 627.28,
+      "asr_end": 627.62,
+      "asr_text": "好了",
+      "text": "好了",
+      "corrections": "",
+      "shot_ids": [
+        "W112"
+      ],
+      "mapping": "回讲解者合手准备互动。",
+      "purpose_inference": "分析推论：互动退出",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W112"
+    },
+    {
+      "id": "W-L217",
+      "source_segment_ids": [
+        217
+      ],
+      "start": 627.62,
+      "end": 630.26,
+      "asr_start": 627.62,
+      "asr_end": 630.26,
+      "asr_text": "在你心里哪个功能最有用呢",
+      "text": "在你心里哪个功能最有用呢",
+      "corrections": "依据已查看的画面字幕/界面校正；原始ASR保留。",
+      "shot_ids": [
+        "W112"
+      ],
+      "mapping": "人物双指向上、向镜头提问，保留交流感。",
+      "purpose_inference": "分析推论：互动退出",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W112"
+    },
+    {
+      "id": "W-L218",
+      "source_segment_ids": [
+        218
+      ],
+      "start": 630.26,
+      "end": 631.18,
+      "asr_start": 630.26,
+      "asr_end": 631.18,
+      "asr_text": "评论区告诉我",
+      "text": "评论区告诉我",
+      "corrections": "",
+      "shot_ids": [
+        "W112"
+      ],
+      "mapping": "人物指示评论区，未叠复杂素材。",
+      "purpose_inference": "分析推论：互动退出",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W112"
+    },
+    {
+      "id": "W-L219",
+      "source_segment_ids": [
+        219
+      ],
+      "start": 631.18,
+      "end": 632.64,
+      "asr_start": 631.18,
+      "asr_end": 632.64,
+      "asr_text": "记得点赞收藏关注",
+      "text": "记得点赞收藏关注",
+      "corrections": "",
+      "shot_ids": [
+        "W112"
+      ],
+      "mapping": "双拇指/手势与点赞收藏关注字幕对应。",
+      "purpose_inference": "分析推论：互动退出",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W112"
+    },
+    {
+      "id": "W-L220",
+      "source_segment_ids": [
+        220
+      ],
+      "start": 632.64,
+      "end": 634.04,
+      "asr_start": 632.64,
+      "asr_end": 634.04,
+      "asr_text": "我们下次见了",
+      "text": "我们下次见了",
+      "corrections": "",
+      "shot_ids": [
+        "W112"
+      ],
+      "mapping": "人物告别后黑底作者标志片尾。",
+      "purpose_inference": "分析推论：互动退出",
+      "status": "visual_checked",
+      "speech_role": "作者口播",
+      "semantic_group": "W112"
+    }
+  ],
+  "supplemental_rows": [
+    {
+      "id": "W-R01",
+      "source_segment_ids": [],
+      "recovered_source_segment_ids": [
+        1
+      ],
+      "start": 155.35999999999999,
+      "end": 156.8,
+      "asr_text": "师父 师父",
+      "text": "师傅，师傅",
+      "corrections": "关闭VAD对漏段补识别，再依据连续画面字幕校正；未完整听审。",
+      "shot_ids": [
+        "W034"
+      ],
+      "mapping": "女孩提食盒上山，先全身再脚步和提物细节；角色在叫师傅。",
+      "purpose_inference": "分析推论：连续任务动作与对话支撑示范剧情，不当作作者口播配图。",
+      "status": "visual_checked",
+      "speech_role": "AIGC示范角色对白",
+      "semantic_group": "short-drama-delivery",
+      "source_file": "recovered-gaps.json"
+    },
+    {
+      "id": "W-R02",
+      "source_segment_ids": [],
+      "recovered_source_segment_ids": [
+        2
+      ],
+      "start": 159.66,
+      "end": 161.44,
+      "asr_text": "师父 大哥凶要死了",
+      "text": "师父，大师兄要死啦",
+      "corrections": "关闭VAD对漏段补识别，再依据连续画面字幕校正；未完整听审。",
+      "shot_ids": [
+        "W034",
+        "W035"
+      ],
+      "mapping": "女孩抵达桌旁并向师父报信，二人建立对话位置。",
+      "purpose_inference": "分析推论：连续任务动作与对话支撑示范剧情，不当作作者口播配图。",
+      "status": "visual_checked",
+      "speech_role": "AIGC示范角色对白",
+      "semantic_group": "short-drama-delivery",
+      "source_file": "recovered-gaps.json"
+    },
+    {
+      "id": "W-R03",
+      "source_segment_ids": [],
+      "recovered_source_segment_ids": [
+        3
+      ],
+      "start": 163.16,
+      "end": 164.28,
+      "asr_text": "三年没吃饭了",
+      "text": "三年没吃饭了",
+      "corrections": "关闭VAD对漏段补识别，再依据连续画面字幕校正；未完整听审。",
+      "shot_ids": [
+        "W035"
+      ],
+      "mapping": "女孩近景说出问题；前后纸条“辟谷三载”提供具体原因。",
+      "purpose_inference": "分析推论：连续任务动作与对话支撑示范剧情，不当作作者口播配图。",
+      "status": "visual_checked",
+      "speech_role": "AIGC示范角色对白",
+      "semantic_group": "short-drama-delivery",
+      "source_file": "recovered-gaps.json"
+    },
+    {
+      "id": "W-R04",
+      "source_segment_ids": [],
+      "recovered_source_segment_ids": [
+        4
+      ],
+      "start": 166.06,
+      "end": 167.48,
+      "asr_text": "避蛊 饿不死",
+      "text": "辟谷饿不死",
+      "corrections": "关闭VAD对漏段补识别，再依据连续画面字幕校正；未完整听审。",
+      "shot_ids": [
+        "W035"
+      ],
+      "mapping": "师父反打近景，持杯回应女孩；不同景别保持同一桌边空间。",
+      "purpose_inference": "分析推论：连续任务动作与对话支撑示范剧情，不当作作者口播配图。",
+      "status": "visual_checked",
+      "speech_role": "AIGC示范角色对白",
+      "semantic_group": "short-drama-delivery",
+      "source_file": "recovered-gaps.json"
+    },
+    {
+      "id": "W-R05",
+      "source_segment_ids": [],
+      "recovered_source_segment_ids": [
+        5
+      ],
+      "start": 170.38,
+      "end": 172.36,
+      "asr_text": "那也该吃口家里的饭呀",
+      "text": "那也该吃口家里的饭呀",
+      "corrections": "关闭VAD对漏段补识别，再依据连续画面字幕校正；未完整听审。",
+      "shot_ids": [
+        "W036"
+      ],
+      "mapping": "盛饭入食盒的动作再接女孩望向师父，台词里的“饭”变成可交付物。",
+      "purpose_inference": "分析推论：连续任务动作与对话支撑示范剧情，不当作作者口播配图。",
+      "status": "visual_checked",
+      "speech_role": "AIGC示范角色对白",
+      "semantic_group": "short-drama-delivery",
+      "source_file": "recovered-gaps.json"
+    },
+    {
+      "id": "W-R06",
+      "source_segment_ids": [],
+      "recovered_source_segment_ids": [
+        6
+      ],
+      "start": 172.36,
+      "end": 173.96,
+      "asr_text": "去吧 叫他回来吃饭",
+      "text": "去吧，叫他回来吃饭",
+      "corrections": "关闭VAD对漏段补识别，再依据连续画面字幕校正；未完整听审。",
+      "shot_ids": [
+        "W036"
+      ],
+      "mapping": "师父回应并派任务，随后女孩抬手应答。",
+      "purpose_inference": "分析推论：连续任务动作与对话支撑示范剧情，不当作作者口播配图。",
+      "status": "visual_checked",
+      "speech_role": "AIGC示范角色对白",
+      "semantic_group": "short-drama-delivery",
+      "source_file": "recovered-gaps.json"
+    },
+    {
+      "id": "W-R07",
+      "source_segment_ids": [],
+      "recovered_source_segment_ids": [
+        7
+      ],
+      "start": 174.56,
+      "end": 175.96,
+      "asr_text": "过来 路语带上",
+      "text": "过来，路引带上",
+      "corrections": "关闭VAD对漏段补识别，再依据连续画面字幕校正；未完整听审。",
+      "shot_ids": [
+        "W037"
+      ],
+      "mapping": "师父招手让女孩过来，红绳铃铛进入画面。",
+      "purpose_inference": "分析推论：连续任务动作与对话支撑示范剧情，不当作作者口播配图。",
+      "status": "visual_checked",
+      "speech_role": "AIGC示范角色对白",
+      "semantic_group": "short-drama-delivery",
+      "source_file": "recovered-gaps.json"
+    },
+    {
+      "id": "W-R08",
+      "source_segment_ids": [],
+      "recovered_source_segment_ids": [
+        8
+      ],
+      "start": 177.4,
+      "end": 179.48,
+      "asr_text": "有事摇灵 师父听得见",
+      "text": "有事摇铃，师傅听得见",
+      "corrections": "关闭VAD对漏段补识别，再依据连续画面字幕校正；未完整听审。",
+      "shot_ids": [
+        "W037"
+      ],
+      "mapping": "给手腕系红绳铃铛的特写，接女孩查看手腕，建立后文可回收的道具。",
+      "purpose_inference": "分析推论：连续任务动作与对话支撑示范剧情，不当作作者口播配图。",
+      "status": "visual_checked",
+      "speech_role": "AIGC示范角色对白",
+      "semantic_group": "short-drama-delivery",
+      "source_file": "recovered-gaps.json"
+    },
+    {
+      "id": "W-R09",
+      "source_segment_ids": [],
+      "recovered_source_segment_ids": [
+        9
+      ],
+      "start": 181.38,
+      "end": 182.76,
+      "asr_text": "送饭能有什么麻烦",
+      "text": "送饭能有什么麻烦",
+      "corrections": "关闭VAD对漏段补识别，再依据连续画面字幕校正；未完整听审。",
+      "shot_ids": [
+        "W038"
+      ],
+      "mapping": "女孩拿起食盒离开桌边，动作结束任务准备段。",
+      "purpose_inference": "分析推论：连续任务动作与对话支撑示范剧情，不当作作者口播配图。",
+      "status": "visual_checked",
+      "speech_role": "AIGC示范角色对白",
+      "semantic_group": "short-drama-delivery",
+      "source_file": "recovered-gaps.json"
+    }
+  ],
+  "non_narration": [
+    {
+      "start": 24.54,
+      "end": 26.2,
+      "shot_ids": [
+        "W008",
+        "W009"
+      ],
+      "description": "此区间ASR未识别文字；已查看画面：黑底Let's Go：字出现后消退；剪映首页Hub入口：人物变左下圆窗，界面出现，入口用黄三角和橙虚框标记。未听审，不能据此判为静音。"
+    },
+    {
+      "start": 60.14,
+      "end": 63.22,
+      "shot_ids": [
+        "W018",
+        "W019"
+      ],
+      "description": "此区间ASR未识别文字；已查看画面：实测1 剪映Hub：荧光标签+白色大标题；Hub左侧Agent输入框：先全景，后拉近输入框。未听审，不能据此判为静音。"
+    },
+    {
+      "start": 156.8,
+      "end": 159.66,
+      "shot_ids": [
+        "W034"
+      ],
+      "description": "此区间ASR未识别文字；已查看画面：女孩背大袋登山去找白发师父：远景上台阶→手抓袋特写→脚步→师徒同框。未听审，不能据此判为静音。"
+    },
+    {
+      "start": 161.44,
+      "end": 163.16,
+      "shot_ids": [
+        "W035"
+      ],
+      "description": "此区间ASR未识别文字；已查看画面：师徒桌前对话、辟谷三载纸条：双人交代空间，茶杯/女孩/纸条/师父依对白切换。未听审，不能据此判为静音。"
+    },
+    {
+      "start": 164.28,
+      "end": 166.06,
+      "shot_ids": [
+        "W035"
+      ],
+      "description": "此区间ASR未识别文字；已查看画面：师徒桌前对话、辟谷三载纸条：双人交代空间，茶杯/女孩/纸条/师父依对白切换。未听审，不能据此判为静音。"
+    },
+    {
+      "start": 167.48,
+      "end": 170.38,
+      "shot_ids": [
+        "W035",
+        "W036"
+      ],
+      "description": "此区间ASR未识别文字；已查看画面：师徒桌前对话、辟谷三载纸条：双人交代空间，茶杯/女孩/纸条/师父依对白切换；女孩盛饭、饭盒与师父：舀饭放入盒、抬头说话、师父回应。未听审，不能据此判为静音。"
+    },
+    {
+      "start": 179.48,
+      "end": 181.38,
+      "shot_ids": [
+        "W037",
+        "W038"
+      ],
+      "description": "此区间ASR未识别文字；已查看画面：红绳铃铛：师父招手、拿红绳、系在女孩腕上、女孩查看；女孩抱饭盒离开，师父留在桌边：抓盒起身、转身跑开，空出桌边位置。未听审，不能据此判为静音。"
+    },
+    {
+      "start": 248.53,
+      "end": 264,
+      "shot_ids": [
+        "W047"
+      ],
+      "description": "此区间ASR未识别文字；已查看画面：仙城、街市、女孩、饭盒地图、剑尊殿：城市全景→街市行走→食物特写→女孩取地图→地图对到殿门→殿前大全景。未听审，不能据此判为静音。"
+    },
+    {
+      "start": 270.14,
+      "end": 271.64,
+      "shot_ids": [
+        "W048",
+        "W049"
+      ],
+      "description": "此区间ASR未识别文字；已查看画面：女孩举画像问守卫、守卫反问、女孩举饭盒：画像入镜→过肩守卫→饭盒近景；殿外守卫与女孩：守卫拒绝，女孩噘嘴、再举饭盒、低头，手腕铃铛持续存在。未听审，不能据此判为静音。"
+    },
+    {
+      "start": 284.98,
+      "end": 289.42,
+      "shot_ids": [
+        "W049",
+        "W050",
+        "W051"
+      ],
+      "description": "此区间ASR未识别文字；已查看画面：殿外守卫与女孩：守卫拒绝，女孩噘嘴、再举饭盒、低头，手腕铃铛持续存在；女孩踢门、殿门内大空间：脚部近景接门向内打开的大远景；女孩入殿、众人、长者眼嘴：女孩带饭笑脸→大殿全景→长者嘴与眼极近景。未听审，不能据此判为静音。"
+    },
+    {
+      "start": 291.6,
+      "end": 302,
+      "shot_ids": [
+        "W051",
+        "W052"
+      ],
+      "description": "此区间ASR未识别文字；已查看画面：女孩入殿、众人、长者眼嘴：女孩带饭笑脸→大殿全景→长者嘴与眼极近景；持剑众人、女孩被剑包围：拔剑、脚步、围拢，女孩睁眼惊讶。未听审，不能据此判为静音。"
+    },
+    {
+      "start": 313.7,
+      "end": 315.39,
+      "shot_ids": [
+        "W054",
+        "W055"
+      ],
+      "description": "此区间ASR未识别文字；已查看画面：讲解者、剪映助手标志：评价结果，再引出助手、时间线Agent副标题；实测2 剪映助手：居中标题。未听审，不能据此判为静音。"
+    },
+    {
+      "start": 447.05,
+      "end": 449.87,
+      "shot_ids": [
+        "W077"
+      ],
+      "description": "此区间ASR未识别文字；已查看画面：曹操、箭雨、孙权俯身、船侧中箭：挥手命令→飞箭→人物躲避→船体插箭。未听审，不能据此判为静音。"
+    },
+    {
+      "start": 584.25,
+      "end": 589.48,
+      "shot_ids": [
+        "W103",
+        "W104"
+      ],
+      "description": "此区间ASR未识别文字；已查看画面：蓝场边牧站立闪身步：狗站立、缩身/步伐与重回站姿，左上保留原模板小卡；彩条和狗头表情：短卡过场。未听审，不能据此判为静音。"
+    },
+    {
+      "start": 634.04,
+      "end": 636.411995,
+      "shot_ids": [
+        "W112",
+        "W113"
+      ],
+      "description": "片尾标识；ASR无文字，未听审，不据此判断静音。"
+    }
+  ],
+  "learning_notes": [
+    {
+      "topic": "开头",
+      "range": [
+        0,
+        26
+      ],
+      "observed": "人物问候→具体工作流收益→两类受众→双列流程→进入实际工具。",
+      "inference": "开头承诺要有后文可以验证的工作成果，标题/流程服务收益理解，不能只套炫转场。"
+    },
+    {
+      "topic": "语义B-roll",
+      "range": [
+        209,
+        242
+      ],
+      "observed": "同一剪辑者从查看分镜、转椅换工具，再切真实额外操作和解决界面。",
+      "inference": "把工作受阻解释为连续动作链，情绪和多余步骤先可见，再交给实际UI证明解决。"
+    },
+    {
+      "topic": "局部聚焦蒙版",
+      "range": [
+        491,
+        496
+      ],
+      "observed": "时间线保持亮，画面其他部分暗，橙框出现，然后标题逐字建立。",
+      "inference": "先让目标区域可识别，再给出解释词；缩放/压暗/边框各承担一种注意力工作。"
+    },
+    {
+      "topic": "转场",
+      "range": [
+        401.8,
+        403.4
+      ],
+      "observed": "右下页角卷起扩展到白页，承接三个软件标志；人物圆窗/导航保留。",
+      "inference": "承载层翻页、解释层与讲解者锚点稳定，换主题时仍保留观看位置。"
+    },
+    {
+      "topic": "AIGC连续因果",
+      "range": [
+        434,
+        456
+      ],
+      "observed": "江面船只→孙权侦察→曹操察觉命令→箭雨→船受损→转船。",
+      "inference": "人物、道具、空间和动作因果连续；示意片明确标识，不能拿生成画面充当历史影像证据。"
+    },
+    {
+      "topic": "正反例",
+      "range": [
+        485,
+        518
+      ],
+      "observed": "先演示错位花字和过度包装，后回时间线调整，再显示更贴合语义的成片。",
+      "inference": "保留失败效果的负面标签，学习可编辑修正流程，不能把负面示范混入喜好库。"
+    },
+    {
+      "topic": "样片回讲解",
+      "range": [
+        522.5,
+        527.5
+      ],
+      "observed": "样片暗化，讲解者圆窗从中央出现并回左下，随后恢复工具界面。",
+      "inference": "用同一个讲解者锚点完成样片到操作的归位，不必每次硬切全屏人物。"
+    }
+  ],
+  "unresolved": [
+    "需要逐段实时听审才能确认语气、音效、节奏和全部精确切点；现阶段未做。",
+    "原片价格/产品功能只作为当时的画面叙事素材，未核实当前有效性；禁止迁移成当前事实。"
+  ],
+  "study_location": {
+    "original_alignment": "local-only/alignment.json",
+    "evidence_base": "local-only/workflow",
+    "viewer": "local-only/逐句对照.html"
+  }
+}

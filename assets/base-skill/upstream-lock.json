@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-25T10:01:24.287092+00:00",
+  "ui_upstream": {
+    "repository": "https://github.com/3105059695-rgb/ui-motion-explainer",
+    "branch": "main",
+    "commit": "7e0b3a7db13e52dadc3150a680d541609579389e",
+    "commit_date": "2026-09-25",
+    "status": "published_portable_v2_with_private_overlay",
+    "upstream_files_checked": 200,
+    "local_overlay": [
+      "SKILL.md",
+      "references/style-system.md",
+      "references/adiao-profile.md",
+      "references/ppt-motion-fusion.md",
+      "references/upstream.md"
+    ],
+    "previous_commit": "ba17d3854afb3006aeb8c099a5c4578dccaf434c",
+    "matching_files": 192,
+    "preserved_modified_files": [
+      ".gitattributes",
+      ".gitignore",
+      "LICENSE",
+      "SKILL.md",
+      "assets/narration-demos/assets/NotoSansSC-OFL.txt",
+      "assets/ui-showcase/assets/NotoSansSC-OFL.txt",
+      "licenses/NotoSansSC-OFL.txt",
+      "references/style-system.md"
+    ]
+  },
+  "motion_upstream": {
+    "repository": "https://github.com/heygen-com/hyperframes",
+    "branch": "main",
+    "commit": "1b8f8a43d43bc2456075215b066b23e11d821435",
+    "commit_date": "2026-09-22",
+    "previous_commit": "f6041d7597c8c53d381d4c27feb86b305b3317a4",
+    "installed_roots": [
+      "<AUTHOR_HOME>/.codex/skills",
+      "<AUTHOR_HOME>/.agents/skills"
+    ],
+    "skills": [
+      {
+        "name": "hyperframes",
+        "tree": "35cae77fb96db5563589f2bfaf71d57acc9b2c2a"
+      },
+      {
+        "name": "hyperframes-core",
+        "tree": "a36f88049659a56626e36c792718950344b96003"
+      },
+      {
+        "name": "hyperframes-animation",
+        "tree": "3815b6ff000e75bac1aead4272388033d1a099a2"
+      },
+      {
+        "name": "hyperframes-keyframes",
+        "tree": "2f42a87ef924110b3b34f407aecb7d08f3581f2c"
+      },
+      {
+        "name": "hyperframes-creative",
+        "tree": "babbc7f918852ef57eca68464aea2c4f8defb9e6"
+      },
+      {
+        "name": "hyperframes-cli",
+        "tree": "10cee5610d8065495b55521a85584f0c8d451fa7"
+      },
+      {
+        "name": "hyperframes-registry",
+        "tree": "37afff98e3c7047ad062aff534a8f7849e1796fb"
+      },
+      {
+        "name": "hyperframes-audio",
+        "tree": "05ca1f4bcb5bef31ba53d8b0416677704a682f88"
+      },
+      {
+        "name": "general-video",
+        "tree": "4e392203d66529999e0471debbf83530205e850b"
+      },
+      {
+        "name": "motion-graphics",
+        "tree": "8a39aa8d180de8c3649ef31b6b31b28b5f7d54eb"
+      }
+    ]
+  },
+  "retained": {
+    "media-use": {
+      "commit": "f6041d7597c8c53d381d4c27feb86b305b3317a4",
+      "reason": "New resolve/media-fetch entry points depend on monorepo packages/cli absent in standalone installation; migration requires separate compatibility validation."
+    }
+  },
+  "account_profile": "../adiao-workflow/references/ui-adiao.md",
+  "local_compatibility_patches": [
+    {
+      "skill": "hyperframes-audio",
+      "file": "SKILL.md",
+      "scope": "description only",
+      "before": "(`<hf-audio-group>`)",
+      "after": "(the `hf-audio-group` element)",
+      "reason": "Codex skill metadata validator disallows angle brackets in description; technical body unchanged."
+    }
+  ],
+  "runtime_upgraded": false,
+  "render_validation": "motion_lab_rendered_and_checked; historical_projects_unchanged",
+  "backup_and_report": "E:\\自媒体图文\\ui-opening-upgrade-20260924",
+  "publication": {
+    "repository": "https://github.com/3105059695-rgb/ui-motion-explainer",
+    "commit": "7e0b3a7db13e52dadc3150a680d541609579389e",
+    "branch": "main",
+    "version": "2.0.0"
+  },
+  "motion_lab": {
+    "path": "assets/motion-lab",
+    "cli_version": "0.8.62",
+    "samples": [
+      "X21",
+      "X22",
+      "X23"
+    ],
+    "seconds_each": 9,
+    "width": 1920,
+    "height": 1080,
+    "fps": 50,
+    "audio_tracks": 0,
+    "verification": "assets/motion-lab/verification.md"
+  },
+  "runtime_note": "Historical project runtimes unchanged; new motion-lab pins 0.8.62.",
+  "opening_design": {
+    "updated_on": "2026-09-24",
+    "reference": "references/opening-design.md",
+    "scope": "Content-specific AE-style openings with recent-episode comparison; documentation update only.",
+    "new_render_validation": false,
+    "runtime_upgraded": false
+  },
+  "portable_studio": {
+    "version": "2.0.0",
+    "synchronized_files": 45,
+    "backup": "E:\\自媒体图文\\ui-skills-portable-20260925\\backup-installed",
+    "private_account_preserved": true
+  }
+}

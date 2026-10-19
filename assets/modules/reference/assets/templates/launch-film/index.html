@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Launch Film · 可编辑连续产品发布片</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="stage"><canvas id="film" width="1440" height="1440" aria-label="连续产品发布片，参考帧与示例素材均可替换"></canvas></main>
+  <aside id="controls">
+    <button id="play" aria-label="暂停预览">暂停</button>
+    <input id="scrub" type="range" min="0" max="29.077" step="0.0166667" value="0" aria-label="预览时间">
+    <output id="time">0.00 / 29.08</output>
+    <span id="asset-note">参考帧 · 可替换</span>
+  </aside>
+  <script src="motion.js"></script>
+</body>
+</html>

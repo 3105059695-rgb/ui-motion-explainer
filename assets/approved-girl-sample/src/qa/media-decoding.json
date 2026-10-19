@@ -1,0 +1,113 @@
+{
+  "checked_at": "2026-10-15T04:41:39.640024+00:00",
+  "project": "assets/approved-girl-sample/project.json",
+  "strict_query": "render=1",
+  "console_errors": [],
+  "shots": [
+    {
+      "id": "manual",
+      "source": "assets/manual-v2.mp4",
+      "source_sha256": "bb29427a4fe35149cfdd04bce0636e5c1d3a4cb469dc1aa1d5a3a2ebd5418c16",
+      "frames": [
+        {
+          "src": "blob:http://127.0.0.1:60299/2a2a35ef-b749-45d8-a41e-37bc1a6c9f3b",
+          "currentTime": 0.97,
+          "videoWidth": 1920,
+          "videoHeight": 1080,
+          "readyState": 4,
+          "timeline_time": 0.8800000000000001,
+          "expected_source_time": 0.97,
+          "seek_position_matches": true,
+          "sha256_rgba": "77ddc6c187a419ac6f82751d56ad83451ef4ffaa4aaf75e4836ccbd55dd11851"
+        },
+        {
+          "src": "blob:http://127.0.0.1:60299/2a2a35ef-b749-45d8-a41e-37bc1a6c9f3b",
+          "currentTime": 3.88,
+          "videoWidth": 1920,
+          "videoHeight": 1080,
+          "readyState": 4,
+          "timeline_time": 3.5200000000000005,
+          "expected_source_time": 3.88,
+          "seek_position_matches": true,
+          "sha256_rgba": "4483121f0fe5a0d628f3157062785e20299dcaa5f5e1dfc315a3b2bde02405d5"
+        }
+      ],
+      "different_pixels": 125124,
+      "mean_absolute_channel_change": 5.1433723958333335,
+      "frame_hashes_differ": true
+    },
+    {
+      "id": "takeover",
+      "source": "assets/takeover.mp4",
+      "source_sha256": "3e09ee4394e56337ce6a8b15d4494b0ea8d3e0ec99773cbc21585c8d82939f02",
+      "frames": [
+        {
+          "src": "blob:http://127.0.0.1:60299/80f06485-2c38-4426-bdd4-2dce609893ca",
+          "currentTime": 1.055999,
+          "videoWidth": 1920,
+          "videoHeight": 1080,
+          "readyState": 4,
+          "timeline_time": 4.71,
+          "expected_source_time": 1.056,
+          "seek_position_matches": true,
+          "sha256_rgba": "c959e6af2b1f8f6d7235497a7952aa840ab5d9fc1384b20d0a5ec9f91205e12f"
+        },
+        {
+          "src": "blob:http://127.0.0.1:60299/80f06485-2c38-4426-bdd4-2dce609893ca",
+          "currentTime": 2.724,
+          "videoWidth": 1920,
+          "videoHeight": 1080,
+          "readyState": 4,
+          "timeline_time": 5.640000000000001,
+          "expected_source_time": 2.7239999999999998,
+          "seek_position_matches": true,
+          "sha256_rgba": "dabbe27445a189b9db7d7c938ece9e24dd7c529f1f09f993ee357a806c4bdb6d"
+        }
+      ],
+      "different_pixels": 171371,
+      "mean_absolute_channel_change": 42.010043402777775,
+      "frame_hashes_differ": true
+    },
+    {
+      "id": "handoff",
+      "source": "assets/handoff.mp4",
+      "source_sha256": "8c4d6fa581b384bf10f55050ff0cd76f0c530c2f3e23b4f05ef9081efe873819",
+      "frames": [
+        {
+          "src": "blob:http://127.0.0.1:60299/7731d7a5-6710-4caa-82f1-f95a6ece49e2",
+          "currentTime": 0.69,
+          "videoWidth": 1920,
+          "videoHeight": 1080,
+          "readyState": 4,
+          "timeline_time": 6.2700000000000005,
+          "expected_source_time": 0.6900000000000001,
+          "seek_position_matches": true,
+          "sha256_rgba": "86049aa15279b4cf2bbfe987c94149e61ff44eb89f958e799198de43b5e1cf72"
+        },
+        {
+          "src": "blob:http://127.0.0.1:60299/7731d7a5-6710-4caa-82f1-f95a6ece49e2",
+          "currentTime": 2.009999,
+          "videoWidth": 1920,
+          "videoHeight": 1080,
+          "readyState": 4,
+          "timeline_time": 7.23,
+          "expected_source_time": 2.0100000000000002,
+          "seek_position_matches": true,
+          "sha256_rgba": "6b00a0614afead514d8692f1e892f98f0c1cf70100dc43d1da8360a5e188ffae"
+        }
+      ],
+      "different_pixels": 169783,
+      "mean_absolute_channel_change": 25.588819444444443,
+      "frame_hashes_differ": true
+    }
+  ],
+  "passed": true,
+  "scope": "Chromium loadeddata and seeked RGBA pixel changes; not semantic motion approval",
+  "browser": "151.0.7922.34",
+  "ready": {
+    "duration": 11.3,
+    "shots": 3,
+    "font": true,
+    "allVideo": true
+  }
+}

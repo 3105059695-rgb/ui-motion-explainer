@@ -1,0 +1,115 @@
+{
+  "slug": "ik-builds-b8bdcf",
+  "title": "Paper-style product launch film",
+  "date": "2026-09-26",
+  "tags": [
+    "prompt"
+  ],
+  "promptShared": true,
+  "handle": "ik_builds",
+  "poster": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "preview": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "video": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "width": 1920,
+  "height": 1080,
+  "schema_version": "1.0.0",
+  "collected_at": "2026-10-07T02:50:02+00:00",
+  "source_page": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "source_post": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "attribution": "Videos and prompts belong to their creators, linked on each entry.",
+  "source_html_sha256": "47385971b73066d8a1d0491a74868223114959bf4545250b8d9bb75fff938a42",
+  "prompt": "Create a 15s motion-graphics film explaining {{PRODUCT}}. HyperFrames + GSAP, no voiceover, no footage.\nStyle: paper-light canvas, marker notes that draw on, real physics, huge kinetic type,\nhard light/dark switches, a new idea every 1.5–2 s, a sound on every hit.\n\nCOPY: read {{POSITIONING_DOCS}} first. {{ONE_LINER}} For {{AUDIENCE}}. {{WHAT_IT_DOES}}\nName what the product learns, never the abstraction.\n\nRULES\n- No chrome (scrubber, timecode, fps, headers). No animator jargon on screen\n  (\"squash\", \"stagger\", \"easing\"...). Every word speaks to the buyer.\n- No invented results: no %, multipliers, customer names or figures.\n- Never use: {{BANNED_WORDS}}.\n- Logo: real mark {{LOGO_FILE}} + \"{{PRODUCT}}\" in {{WORDMARK_FONT}}; never a boxed logo file.\n\nCRAFT\n- Colours {{COLOR_CANVAS}} / {{COLOR_INK}} / {{COLOR_ACCENT_1}} / {{COLOR_ACCENT_2}}; notes in the\n  accents; dark mode = charcoal matching the palette.\n- Fonts {{BRAND_FONTS}}; Anton for kinetic type; Caveat handwriting via stroke-dashoffset.\n- Real easing, squash/stretch, stagger, overlap, onion skin, smear, follow-through. Check the\n  HyperFrames registry first. Set every from-state at t=0 (seek-safe); never cover an exit.\n  One primary move per transition; no generic push/slide/rotate-swing.\n- Music in sections: drums drop on the dark switch and while the ball is airborne, slam back\n  on the type and the logo. SFX: pops, pen scribbles, whooshes, logo sub-hit. CC0 or generated\n  only; log sources. Master -14 LUFS, -2 dBTP, re-measured after AAC encode.",
+  "prompt_characters": 1528,
+  "prompt_sha256": "7f16614ae3863b6f02d9f62dd2a31604a253ef8410c98a3c87b8b876b5670db3",
+  "prompt_extraction": "full HTML #entry-prompt (unfolded source text)",
+  "prompt_rsc_match": true,
+  "prompt_source_note": "This prompt was taken directly from @ik_builds’s post (opens in a new tab).",
+  "stack": "HyperFrames + GSAP",
+  "model": "Opus 5.5",
+  "effort": "Medium",
+  "iterations": "One-shot",
+  "detail_fields": {
+    "Model": "Opus 5.5",
+    "Effort": "Medium",
+    "Iterations": "One-shot",
+    "Stack": "HyperFrames + GSAP",
+    "Posted": "Sep 26, 2026"
+  },
+  "skill_repo": null,
+  "skill_description": null,
+  "skill_install_command": null,
+  "category": "product-film",
+  "category_inferred": true,
+  "status": "reference-collected",
+  "collection_errors": [],
+  "local_poster": "assets/reference/posters/ik-builds-b8bdcf.webp",
+  "local_preview": null,
+  "local_video_absolute": null,
+  "detail_request_retries": [],
+  "media_transfers": {
+    "poster": {
+      "status": "cached",
+      "bytes": 9820,
+      "attempts": []
+    },
+    "preview": {
+      "status": "cached",
+      "bytes": 50961,
+      "attempts": []
+    },
+    "video": {
+      "status": "cached",
+      "bytes": 6249496,
+      "attempts": []
+    }
+  },
+  "media_probe": {
+    "poster": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "webp",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "duration": null,
+      "error": null
+    },
+    "preview": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 720,
+          "height": 406
+        }
+      ],
+      "duration": "4.000000",
+      "error": null
+    },
+    "video": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "duration": "15.061000",
+      "error": null
+    }
+  },
+  "distribution_status": "catalog-and-starters; historical reconstruction and original video not bundled"
+}

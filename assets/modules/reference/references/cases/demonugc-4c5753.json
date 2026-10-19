@@ -1,0 +1,109 @@
+{
+  "slug": "demonugc-4c5753",
+  "title": "Morphing UI states loop",
+  "date": "2026-09-25",
+  "tags": [
+    "prompt"
+  ],
+  "promptShared": true,
+  "handle": "demonugc",
+  "poster": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "preview": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "video": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "width": 1440,
+  "height": 1440,
+  "schema_version": "1.0.0",
+  "collected_at": "2026-10-07T02:49:23+00:00",
+  "source_page": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "source_post": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "attribution": "Videos and prompts belong to their creators, linked on each entry.",
+  "source_html_sha256": "1034a1db964cd2497313404ea44d4397090f1c49f76cad2c205bbf07c4adc17b",
+  "prompt": "<inputs>\nAsk me for: 8 to 12 UI states I want the shape to become (e.g. button, loader, player, slider, toggle, tabs, chart, command palette, toast), pure black and white or one accent color, and a royalty-free song around 120 BPM (e.g. Mixkit, free for commercial use).\n</inputs>\n\n<direction>\nDribbble-level UI motion. One shape, never cut: every state is the same element morphing its size, radius and color while its content swaps with a short blur. A cursor drives every change with real clicks and drags. Light warm-gray canvas, black and white components, one clean UI font (Geist). Springs everywhere, a tiny overshoot at most. The camera zooms so each state fills the frame. The last frame is the first frame, so it loops.\nBanned: bouncy easing, particle bursts, glows, gradients on UI chrome, mismatched icon strokes, dead time, anything that looks like a template.\n</direction>\n\n<structure>\n120 BPM, 7 bars, something happens on every beat.\nButton → loader → check → dynamic island → music player with a play/pause morph → scrub the progress bar → it becomes a volume slider that stretches when dragged past max → a toggle flips on the beat → the knob becomes a liquid tab indicator → the tabs open into a chart that draws itself, with a tooltip on hover → it collapses into ⌘K → type to filter → enter → toast → back to the button.\n</structure>\n\n<build>\n1. One HTML file, square 1440x1440. Every style is computed from time inside seek(t): no CSS transitions, no timers, no state carried between frames.\n2. Springs are closed-form step responses. A value that changes target many times is the sum of one spring per change, so it stays a pure function of time.\n3. The tab indicator's two edges ride different springs, so the leading edge stretches ahead of the trailing one. Same trick for the toggle knob.\n4. Drags are direct manipulation: while the cursor is held, the value is computed from its position. On release it springs back from wherever it was.\n5. Analyze the song with numpy for the beat grid and start on a downbeat. Place every UI sound by its measured peak.\n6. Render with Playwright: 4 subframes per frame, blended with ffmpeg tmix for motion blur at 60fps.\n7. Render one frame per beat before the full render. Fix anything off the grid, cramped or hard to read.\n</build>\n\n<gotchas>\nNever put will-change on anything the camera scales or the text renders blurry. Text that swaps inside a morphing container needs its own enter and exit timing or it overlaps. Make the last frame identical to the first, cursor position and speed included, or the loop stutters.\n</gotchas>\n\n<start>\nAsk me for the inputs, then show me the state list on the beat grid before you write any code.\n</start>",
+  "prompt_characters": 2711,
+  "prompt_sha256": "85434958ccdc0c246f5b0b73a6977c6bede956be6e107d19c771285d0f4bf134",
+  "prompt_extraction": "full HTML #entry-prompt (unfolded source text)",
+  "prompt_rsc_match": true,
+  "prompt_source_note": "This prompt was taken directly from @demonugc’s post (opens in a new tab).",
+  "stack": "HTML, Playwright",
+  "model": "Opus 5.5",
+  "effort": null,
+  "iterations": null,
+  "detail_fields": {
+    "Model": "Opus 5.5",
+    "Stack": "HTML, Playwright",
+    "Posted": "Sep 25, 2026"
+  },
+  "skill_repo": null,
+  "skill_description": null,
+  "skill_install_command": null,
+  "category": "ui-morphing",
+  "category_inferred": true,
+  "status": "reference-collected",
+  "collection_errors": [],
+  "local_poster": "assets/reference/posters/demonugc-4c5753.webp",
+  "local_preview": null,
+  "local_video_absolute": null,
+  "detail_request_retries": [],
+  "media_transfers": {
+    "poster": {
+      "status": "cached",
+      "bytes": 3820,
+      "attempts": []
+    },
+    "preview": {
+      "status": "cached",
+      "bytes": 18738,
+      "attempts": []
+    },
+    "video": {
+      "status": "cached",
+      "bytes": 345476,
+      "attempts": []
+    }
+  },
+  "media_probe": {
+    "poster": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "webp",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 1280
+        }
+      ],
+      "duration": null,
+      "error": null
+    },
+    "preview": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 720,
+          "height": 720
+        }
+      ],
+      "duration": "4.000000",
+      "error": null
+    },
+    "video": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1440,
+          "height": 1440
+        }
+      ],
+      "duration": "14.000000",
+      "error": null
+    }
+  },
+  "distribution_status": "catalog-and-starters; historical reconstruction and original video not bundled"
+}

@@ -1,0 +1,151 @@
+/* Opt-in roles only. Load fonts.css first; await font loads before rendering. */
+.qm-pairing[data-pairing="editorial"] {
+  --qm-title-font: 'Qiaomu-notoserif-heavy', 'Qiaomu-notosans', sans-serif;
+  --qm-title-weight: 900;
+  --qm-title-style: normal;
+  --qm-body-font: 'Qiaomu-notosans', sans-serif;
+  --qm-body-weight: 400;
+  --qm-body-style: normal;
+  --qm-latin-font: 'Qiaomu-instrument', 'Qiaomu-notosans', sans-serif;
+  --qm-latin-weight: 400;
+  --qm-latin-style: normal;
+}
+.qm-pairing[data-pairing="literary"] {
+  --qm-title-font: 'Qiaomu-zhuque', 'Qiaomu-notosans', sans-serif;
+  --qm-title-weight: 400;
+  --qm-title-style: normal;
+  --qm-body-font: 'Qiaomu-wenkai', 'Qiaomu-notosans', sans-serif;
+  --qm-body-weight: 400;
+  --qm-body-style: normal;
+  --qm-latin-font: 'Qiaomu-cormorant', 'Qiaomu-wenkai', 'Qiaomu-notosans', sans-serif;
+  --qm-latin-weight: 700;
+  --qm-latin-style: normal;
+}
+.qm-pairing[data-pairing="tech"] {
+  --qm-title-font: 'Qiaomu-glow', 'Qiaomu-notosans', sans-serif;
+  --qm-title-weight: 900;
+  --qm-title-style: normal;
+  --qm-body-font: 'Qiaomu-notosans', sans-serif;
+  --qm-body-weight: 400;
+  --qm-body-style: normal;
+  --qm-latin-font: 'Qiaomu-spacegrotesk', 'Qiaomu-notosans', sans-serif;
+  --qm-latin-weight: 700;
+  --qm-latin-style: normal;
+}
+.qm-pairing[data-pairing="trend"] {
+  --qm-title-font: 'Qiaomu-smiley', 'Qiaomu-notosans', sans-serif;
+  --qm-title-weight: 400;
+  --qm-title-style: italic;
+  --qm-body-font: 'Qiaomu-notosans', sans-serif;
+  --qm-body-weight: 400;
+  --qm-body-style: normal;
+  --qm-latin-font: 'Qiaomu-bricolage', 'Qiaomu-notosans', sans-serif;
+  --qm-latin-weight: 800;
+  --qm-latin-style: normal;
+}
+.qm-pairing[data-pairing="youth"] {
+  --qm-title-font: 'Qiaomu-douyin', 'Qiaomu-notosans', sans-serif;
+  --qm-title-weight: 400;
+  --qm-title-style: normal;
+  --qm-body-font: 'Qiaomu-notosans', sans-serif;
+  --qm-body-weight: 400;
+  --qm-body-style: normal;
+  --qm-latin-font: 'Qiaomu-inter-bold', 'Qiaomu-notosans', sans-serif;
+  --qm-latin-weight: 800;
+  --qm-latin-style: normal;
+}
+.qm-pairing[data-pairing="punch"] {
+  --qm-title-font: 'Qiaomu-notosans-heavy', 'Qiaomu-notosans', sans-serif;
+  --qm-title-weight: 900;
+  --qm-title-style: normal;
+  --qm-body-font: 'Qiaomu-notosans', sans-serif;
+  --qm-body-weight: 400;
+  --qm-body-style: normal;
+  --qm-latin-font: 'Qiaomu-anton', 'Qiaomu-notosans', sans-serif;
+  --qm-latin-weight: 400;
+  --qm-latin-style: normal;
+}
+.qm-pairing[data-pairing="promo"] {
+  --qm-title-font: 'Qiaomu-huangyou', 'Qiaomu-notosans', sans-serif;
+  --qm-title-weight: 400;
+  --qm-title-style: normal;
+  --qm-body-font: 'Qiaomu-notosans', sans-serif;
+  --qm-body-weight: 400;
+  --qm-body-style: normal;
+  --qm-latin-font: 'Qiaomu-archivoblack', 'Qiaomu-notosans', sans-serif;
+  --qm-latin-weight: 400;
+  --qm-latin-style: normal;
+}
+.qm-pairing[data-pairing="soft"] {
+  --qm-title-font: 'Qiaomu-jiangcheng', 'Qiaomu-notosans', sans-serif;
+  --qm-title-weight: 600;
+  --qm-title-style: normal;
+  --qm-body-font: 'Qiaomu-notosans', sans-serif;
+  --qm-body-weight: 400;
+  --qm-body-style: normal;
+  --qm-latin-font: 'Qiaomu-fraunces', 'Qiaomu-notosans', sans-serif;
+  --qm-latin-weight: 800;
+  --qm-latin-style: normal;
+}
+.qm-pairing[data-pairing="playful"] {
+  --qm-title-font: 'Qiaomu-maoken', 'Qiaomu-notosans', sans-serif;
+  --qm-title-weight: 500;
+  --qm-title-style: normal;
+  --qm-body-font: 'Qiaomu-notosans', sans-serif;
+  --qm-body-weight: 400;
+  --qm-body-style: normal;
+  --qm-latin-font: 'Qiaomu-bricolage', 'Qiaomu-notosans', sans-serif;
+  --qm-latin-weight: 800;
+  --qm-latin-style: normal;
+}
+.qm-pairing[data-pairing="warm"] {
+  --qm-title-font: 'Qiaomu-wenkai', 'Qiaomu-notosans', sans-serif;
+  --qm-title-weight: 400;
+  --qm-title-style: normal;
+  --qm-body-font: 'Qiaomu-notosans', sans-serif;
+  --qm-body-weight: 400;
+  --qm-body-style: normal;
+  --qm-latin-font: 'Qiaomu-fraunces', 'Qiaomu-notosans', sans-serif;
+  --qm-latin-weight: 800;
+  --qm-latin-style: normal;
+}
+.qm-pairing[data-pairing="guofeng"] {
+  --qm-title-font: 'Qiaomu-mashan', 'Qiaomu-notosans', sans-serif;
+  --qm-title-weight: 400;
+  --qm-title-style: normal;
+  --qm-body-font: 'Qiaomu-zhuque', 'Qiaomu-notosans', sans-serif;
+  --qm-body-weight: 400;
+  --qm-body-style: normal;
+  --qm-latin-font: 'Qiaomu-cormorant', 'Qiaomu-zhuque', 'Qiaomu-notosans', sans-serif;
+  --qm-latin-weight: 700;
+  --qm-latin-style: normal;
+}
+.qm-pairing[data-pairing="guochao"] {
+  --qm-title-font: 'Qiaomu-tiejili', 'Qiaomu-notosans', sans-serif;
+  --qm-title-weight: 400;
+  --qm-title-style: normal;
+  --qm-body-font: 'Qiaomu-notosans', sans-serif;
+  --qm-body-weight: 400;
+  --qm-body-style: normal;
+  --qm-latin-font: 'Qiaomu-unbounded', 'Qiaomu-notosans', sans-serif;
+  --qm-latin-weight: 800;
+  --qm-latin-style: normal;
+}
+.qm-pairing .qm-title {
+  font-family: var(--qm-title-font);
+  font-weight: var(--qm-title-weight);
+  font-style: var(--qm-title-style);
+  font-synthesis: none;
+}
+.qm-pairing .qm-body {
+  font-family: var(--qm-body-font);
+  font-weight: var(--qm-body-weight);
+  font-style: var(--qm-body-style);
+  font-synthesis: none;
+}
+.qm-pairing .qm-latin {
+  font-family: var(--qm-latin-font);
+  font-weight: var(--qm-latin-weight);
+  font-style: var(--qm-latin-style);
+  font-synthesis: none;
+}

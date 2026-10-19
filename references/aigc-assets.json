@@ -1,0 +1,614 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-19",
+  "routing_policy": {
+    "priority": [
+      "当前用户明确指定",
+      "当前项目/账号专属AIGC档案",
+      "user-ui默认风格"
+    ],
+    "default_style_id": "qiuzhi-girl-painterly",
+    "excluded_automatic_overrides": [
+      "adiao",
+      "fangmu"
+    ],
+    "repeat_style_confirmation_required": false,
+    "media_policy": "跨机器发行携带已确认角色、8张场景与必要样片；原作者整片、私有音色、数字人和账号工程不随包。local-only标注仅是未携带的研究原址，不用于生成首帧。",
+    "ui_policy": "只约束AIGC叙事镜头，UI外观继续读取原账号/项目UI风格。",
+    "selection_policy": "先判句意、上下文、人物情绪与可见因果，再按semantic_use匹配资产；不只做关键词替换。",
+    "fallback": "资产语义不匹配时沿用角色原图与绘画材质制作适配场景；不能硬塞已存场景。",
+    "historical_candidates_policy": "cat-v1、animal-ip、旧男性视频及girl-assets-v1通用空景保留历史，不作默认或已认可风格。"
+  },
+  "style_sets": [
+    {
+      "id": "qiuzhi-girl-painterly",
+      "title": "女孩手绘IP × 秋芝具体场景叙事",
+      "scope": "通用user-ui项目的默认AIGC叙事画风；具体账号/项目优先。",
+      "default_for_profiles": [
+        "user-ui"
+      ],
+      "project_roots": [
+        "local-only/qiuzhi-aigc-samples"
+      ],
+      "character_references": [
+        "assets/aigc/girl/references/girl-expressions.png",
+        "assets/aigc/girl/references/girl-life-poses.png"
+      ],
+      "style_rules": {
+        "identity": [
+          "同一长巧克力棕发Q版女孩",
+          "酒红发夹在角色自身左侧太阳穴，正面即观众右侧",
+          "大头短身，约2头身，保持小手短腿",
+          "棕玫瑰色大眼、柔和腮红与小鼻口"
+        ],
+        "wardrobe": [
+          "米白针织毛衣",
+          "浅灰宽松裤",
+          "白鞋",
+          "允许确有任务作用的围裙等道具；不顺手换掉固定衣着"
+        ],
+        "rendering": [
+          "细腻柔和的二维手绘/彩铅水彩感",
+          "细暖色轮廓、发丝细节、针织布料纹理",
+          "角色、助手、道具和环境使用一致绘画材质",
+          "柔和自然光与可读的物体接触，不用发光粒子代替动作"
+        ],
+        "scene_policy": [
+          "以原片具体机位、空间和物件关系指导适配场景",
+          "场景为任务服务，可覆盖工坊、森林、铁匠铺、能力货架、书堆、游戏平台",
+          "人物身份以用户原图为准，不沿用原作者人设或品牌标志"
+        ],
+        "reference_roles": {
+          "character_reference": "两张用户原图决定身份、比例和笔触；九宫格仅作参考，不作视频首帧。",
+          "scene_reference": "原片帧决定功能场景、构图和人/物/动作关系，不覆盖用户绘画材质。",
+          "video_first_frame": "使用单场景已认可图，先处理该图observations中影响连续镜头的偏差。"
+        },
+        "negative_constraints": [
+          "写实成人比例",
+          "3D塑料/光滑娃娃",
+          "厚重黑描边或扁平矢量",
+          "更换发色、发夹侧别、服装和比例",
+          "让九宫格一起动",
+          "随机换场或无因果空房间",
+          "生成文字充当精确UI",
+          "把未认可旧样片设为默认"
+        ],
+        "motion_policy": [
+          "动作从起因到可见结果，保持角色、道具和接触连续",
+          "简单动作只占完成理解所需时长，生成时长不等于剪辑使用时长",
+          "保持首帧手绘材质，不让视频模型自动转为3D",
+          "不将8张静图认可等同任何运动片认可"
+        ]
+      },
+      "approval": {
+        "schema_version": 1,
+        "event_id": "20261015-qiuzhi-girl-scenes-approved",
+        "date": "2026-10-15",
+        "source": "direct_user_message",
+        "user_quote": "可以可以，就这些场景图很不错了，目前把skill里面的aigc内容完善一下吧，什么地方使用aigc，以及aigc怎么使用，什么节奏使用，以及最关键的是aigc生成的视频的风格，这些都要整理归纳，之前你读取整理的都可以加入进去了",
+        "approved_asset_ids": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08"
+        ],
+        "approval_state": "approved_static_scene",
+        "scope": "8张静态场景的整体方向、场景选型与女孩手绘风格可复用。",
+        "not_approved_by_this_event": [
+          "新生成视频的连续运动和剪辑节奏",
+          "已记录的发夹方向、人物比例、配角材质偏差成为角色新标准",
+          "既往普通男性、猫、仓鼠或通用空场景作为默认IP/场景"
+        ],
+        "video_verified": false,
+        "known_deviations_preserved": "local-only/verification.json",
+        "generation_plan_policy": "replica-plan.json保留当时candidate状态作为生成历史；当前认可状态以本文件为准。",
+        "reuse_policy": "已认可方向直接按口播语义复用，不逐图或逐次重新请求风格确认；新素材完成后检查身份、画风和动作。",
+        "profile_scope": "user-ui默认AIGC风格；更具体的账号/项目档案优先，不覆盖adiao、fangmu；UI外观继续遵循原账号UI档案。",
+        "subsequent_video_approvals": [
+          {
+            "event_id": "20261015-girl-agent-sample-approved",
+            "approval_state": "approved_video_sample",
+            "user_quote": "对对对，就是这样的，深得我心呀",
+            "evidence_path": "references/evidence/girl-agent-sample-approved-20261015.json",
+            "video_path": "assets/approved-girl-sample/output/preview.mp4",
+            "project_path": "assets/approved-girl-sample",
+            "implementation_paths": [
+              "assets/approved-girl-sample/index.html",
+              "assets/approved-girl-sample/src/player.js",
+              "assets/approved-girl-sample/src/style.css",
+              "assets/approved-girl-sample/project.json",
+              "assets/approved-girl-sample/resource-provenance.json"
+            ],
+            "reuse_rules": [
+              "后续通用 user-ui 口播任务直接以此片校准，不让用户重复确认画风。",
+              "先理解新口播句意、因果与情绪，再选场景和动作；不固定复用这份口播、三段顺序、11.3 秒长度或坐标。",
+              "角色身份继续以两张用户原图约束；样片中已知局部比例或发夹偏差不改写角色标准。",
+              "复用已成功实现的连续动作与转场代码，视频导出核验实际解码画面和定位，不能只看 currentTime。"
+            ],
+            "scope": [
+              "本次女孩与场景的成片观感",
+              "搬运、接管、交接的可见动作及利落节奏",
+              "AIGC 局部聚焦、遮挡转场、收拢接入 UI 的衔接",
+              "白画布、黑白窗口、淡紫强调的 UI 呈现"
+            ],
+            "current_usage": [
+              "女孩身份与绘画材质",
+              "可读动作、利落切点、AIGC到UI交接"
+            ],
+            "superseded_visual_scope": "样片中的历史淡紫UI不作为当前正文模板；当前UI读取Fred方向合同。"
+          }
+        ]
+      },
+      "assets": [
+        {
+          "id": "qiuzhi-girl-01",
+          "gallery_asset_id": "01",
+          "title": "工具间搬运",
+          "image_path": "assets/aigc/girl/scenes/01-manual-toolchain.png",
+          "source_frame": "local-only/creative-0064.jpg",
+          "source_video": "local-only/人人都要学！Agent 视觉创作全流程～【小白教程】 #AI#秋芝2046 #tapnow #creativeos #创作万岁.mp4",
+          "source_key": "creative",
+          "source_time": 64,
+          "source_range": [
+            60.77,
+            66.75
+          ],
+          "narration": "自己在不同的工具之间搬运提示词和组织素材",
+          "meaning": "单个工具可用，但人仍承担衔接成本",
+          "semantic_use": [
+            "多个工具独立工作，但人负责搬运中间产物",
+            "手动复制、下载、上传与上下游衔接成本",
+            "工具多不等于流程自动化"
+          ],
+          "action_chain": [
+            "从明确的上游机器取出纸条或图片",
+            "女孩带着同一产物穿过工位间通道",
+            "将产物送进下一台机器",
+            "动作结束立即转入接管或准确UI解释"
+          ],
+          "scene_invariants": [
+            "四个功能工位围绕中央可通行区域",
+            "蓝色/紫色机器及输入输出口可区分",
+            "同一产物从来源到去向保持可追踪",
+            "角色大头短身与固定服装"
+          ],
+          "reuse_notes": [
+            "适合与02组成手动到Agent接管的对照，保留同一工具链。",
+            "当前静图是搬运中途状态；动画必须补清上一站产物来源，不能用闲逛代替搬运。"
+          ],
+          "action_chain_status": "future_animation_specification_from_reference_semantics; not validated generated video",
+          "approval_state": "approved_static_scene",
+          "video_verified": false,
+          "observations": [
+            "保留俯视机位、四站布局、紫色/蓝色机器、纸张与线缆；女孩在紫色工位拿图。纸条连接紫色机器，单张尚不能说明上一站到下一站的完整移动，动画时需明确产物来源。"
+          ],
+          "prompt_record": "local-only/replica-plan.json",
+          "prompt_record_asset_id": "01"
+        },
+        {
+          "id": "qiuzhi-girl-02",
+          "gallery_asset_id": "02",
+          "title": "Agent 接管",
+          "image_path": "assets/aigc/girl/scenes/02-agent-takeover.png",
+          "source_frame": "local-only/creative-0077.jpg",
+          "source_video": "local-only/人人都要学！Agent 视觉创作全流程～【小白教程】 #AI#秋芝2046 #tapnow #creativeos #创作万岁.mp4",
+          "source_key": "creative",
+          "source_time": 77,
+          "source_range": [
+            66.75,
+            80.67
+          ],
+          "narration": "由一个Agent来主导，统一地管理和调用",
+          "meaning": "保留工具链，执行者换成Agent",
+          "semantic_use": [
+            "Agent统一调度并执行已有工具链",
+            "执行权转交后人从重复操作中抽离",
+            "自动化仍有可见输入输出"
+          ],
+          "action_chain": [
+            "机器人接取蓝色机器输出的图片",
+            "机器人把同一张图片送入右侧紫色机器",
+            "女孩在左侧休息或查看结果",
+            "输出完成后切回UI证明实际功能"
+          ],
+          "scene_invariants": [
+            "女孩在左侧椅子上",
+            "蓝色输出机在中间、紫色输入机在右侧",
+            "机器人双手与图片/插槽确实接触",
+            "人休息、助手工作这一责任关系清楚"
+          ],
+          "reuse_notes": [
+            "与01保持工位、道具颜色和产物一致，不为一句话另造空房间。",
+            "白色机器人是场景助手；跨镜头复用时先统一头身、手臂和材质，不默认已有全套机器人IP。"
+          ],
+          "action_chain_status": "future_animation_specification_from_reference_semantics; not validated generated video",
+          "approval_state": "approved_static_scene",
+          "video_verified": false,
+          "observations": [
+            "保留左侧休息女孩、中间蓝机器、右侧紫机器，以及机器人送入图片的关系。女孩服装与原设定一致；机器人仅为该场景候选，未与其他场景统一成同一机器设计。"
+          ],
+          "prompt_record": "local-only/replica-plan.json",
+          "prompt_record_asset_id": "02"
+        },
+        {
+          "id": "qiuzhi-girl-03",
+          "gallery_asset_id": "03",
+          "title": "森林递资料",
+          "image_path": "assets/aigc/girl/scenes/03-context-handoff.png",
+          "source_frame": "local-only/creative-0948.jpg",
+          "source_video": "local-only/人人都要学！Agent 视觉创作全流程～【小白教程】 #AI#秋芝2046 #tapnow #creativeos #创作万岁.mp4",
+          "source_key": "creative",
+          "source_time": 948,
+          "source_range": [
+            945.6,
+            950.2
+          ],
+          "narration": "帮创作Agent去组织好上下文",
+          "meaning": "上下文是一组可交付给Agent的具体资料",
+          "semantic_use": [
+            "组织并交付上下文",
+            "资料、工具和目标承担不同作用",
+            "人在把资料交给Agent后继续负责判断"
+          ],
+          "action_chain": [
+            "女孩捧起装有资料的书箱",
+            "双方共同承托书箱完成交接",
+            "机器人接稳后女孩松手",
+            "如口播继续讲工具或目标，沿用同一场地交工具箱或看图纸"
+          ],
+          "scene_invariants": [
+            "森林空地和左右角色位置稳定",
+            "书箱与地面工具箱是两个不同容器",
+            "箱子始终有可见承重接触",
+            "女孩左、助手右，交接方向明确"
+          ],
+          "reuse_notes": [
+            "当前图只表达上下文交接；工具交接、看图纸是有对应口播才延伸的动作。",
+            "正式运动前校正侧面发夹位置和偏长腿部；原图身份标准优先。"
+          ],
+          "action_chain_status": "future_animation_specification_from_reference_semantics; not validated generated video",
+          "approval_state": "approved_static_scene",
+          "video_verified": false,
+          "observations": [
+            "保留森林清地、左女孩右机器人、双方共同抓住书箱、旁边工具箱及红旗。女孩腿部比原始Q版参考稍长；侧面发夹位置存在偏差，未当作角色标准。"
+          ],
+          "prompt_record": "local-only/replica-plan.json",
+          "prompt_record_asset_id": "03"
+        },
+        {
+          "id": "qiuzhi-girl-04",
+          "gallery_asset_id": "04",
+          "title": "师徒打铁",
+          "image_path": "assets/aigc/girl/scenes/04-learning-blacksmith.png",
+          "source_frame": "local-only/extra-0265.000.jpg",
+          "source_video": "local-only/为了让所有人都用好AI，我做了这个…… #AI #秋芝2046 #炉子 #能力网络 #前沿科技趋势发布月.mp4",
+          "source_key": "network",
+          "source_time": 265,
+          "source_range": [
+            262.4,
+            272.68
+          ],
+          "narration": "学习需要别人教你，你再学再练，最后还要亲自执行",
+          "meaning": "学习需要示范、接手和自己实践",
+          "semantic_use": [
+            "听懂不等于学会",
+            "示范、接手、练习与亲自执行",
+            "指导辅助但不能替代人的技能形成"
+          ],
+          "action_chain": [
+            "师傅示范并指导同一把锤子的握法",
+            "女孩接手锤柄并试敲",
+            "师傅退开，女孩完成一次明确敲击",
+            "停在可见的练习结果再转解释"
+          ],
+          "scene_invariants": [
+            "锤柄唯一、双方手的位置可区分",
+            "铁砧、热铁、长钳和炉火维持空间关系",
+            "围裙是工作道具，内层米白毛衣身份不变",
+            "师傅与女孩采用兼容手绘材质"
+          ],
+          "reuse_notes": [
+            "打铁是学习成本的比喻；若新句意不匹配，不为复用而强套。",
+            "当前图是师徒共握阶段，后续接手/独立执行需另做动作；师傅和金属现有立体感偏差应统一。"
+          ],
+          "action_chain_status": "future_animation_specification_from_reference_semantics; not validated generated video",
+          "approval_state": "approved_static_scene",
+          "video_verified": false,
+          "observations": [
+            "保留铁砧、热铁、长钳、炉火与师徒共同握同一锤柄。围裙为工作道具，白毛衣保留；师傅和金属呈现比女孩更接近原片立体质感，侧面发夹也需后续统一。"
+          ],
+          "prompt_record": "local-only/replica-plan.json",
+          "prompt_record_asset_id": "04"
+        },
+        {
+          "id": "qiuzhi-girl-05",
+          "gallery_asset_id": "05",
+          "title": "迁移纸箱",
+          "image_path": "assets/aigc/girl/scenes/05-migration-burden.png",
+          "source_frame": "local-only/network-0604.jpg",
+          "source_video": "local-only/为了让所有人都用好AI，我做了这个…… #AI #秋芝2046 #炉子 #能力网络 #前沿科技趋势发布月.mp4",
+          "source_key": "network",
+          "source_time": 604,
+          "source_range": [
+            596.3,
+            609.04
+          ],
+          "narration": "把攒下的Skill、插件、记忆迁移过去，但是特别麻烦",
+          "meaning": "已有积累成为难搬走的负担，未显示迁移成功",
+          "semantic_use": [
+            "平台迁移成本",
+            "已有Skill、插件、记忆变成搬家负担",
+            "有积累但难切换到新的系统"
+          ],
+          "action_chain": [
+            "女孩看向可迁移的新助手或目的地",
+            "回头检查已有工具/齿轮/档案箱",
+            "尝试抬起或搬动一个箱子暴露负担",
+            "停在为难或受阻状态"
+          ],
+          "scene_invariants": [
+            "三类箱子和各自内容可区分",
+            "新助手与原有积累同框形成抉择",
+            "不得凭空把困难结局改成成功",
+            "精确标签由后期UI加入，图片文字保持空白"
+          ],
+          "reuse_notes": [
+            "若口播只说迁移麻烦，结尾保留困难；只有后文提供解决方案才另做解决动作。",
+            "可以用箱体前景遮挡转入新镜头，但要承接同一搬运动作。"
+          ],
+          "action_chain_status": "future_animation_specification_from_reference_semantics; not validated generated video",
+          "approval_state": "approved_static_scene",
+          "video_verified": false,
+          "observations": [
+            "保留三类箱子的前景分层、工具/齿轮/档案内容和主角为难表情。右侧原片角色改为白机器人；标签留空，准确说明由后期制作。未把迁移困难改成迁移成功。"
+          ],
+          "prompt_record": "local-only/replica-plan.json",
+          "prompt_record_asset_id": "05"
+        },
+        {
+          "id": "qiuzhi-girl-06",
+          "gallery_asset_id": "06",
+          "title": "能力拼装",
+          "image_path": "assets/aigc/girl/scenes/06-capability-assembly.png",
+          "source_frame": "local-only/extra-1045.500.jpg",
+          "source_video": "local-only/为了让所有人都用好AI，我做了这个…… #AI #秋芝2046 #炉子 #能力网络 #前沿科技趋势发布月.mp4",
+          "source_key": "network",
+          "source_time": 1045.5,
+          "source_range": [
+            1041.3,
+            1046.9
+          ],
+          "narration": "挑选自己的各种能力，组装自己的能力",
+          "meaning": "选择并拼合两个模块，产生组合后的能力",
+          "semantic_use": [
+            "挑选能力模块并组合",
+            "已有能力变成可组装资源",
+            "不同模块的关系产生新结果"
+          ],
+          "action_chain": [
+            "从纵深货架中选出两个不同能力块",
+            "双手把蓝橙模块带到同一操作区域",
+            "让模块真实接触并扣合",
+            "呈现一个可辨认的组合结果"
+          ],
+          "scene_invariants": [
+            "蓝橙两块的身份从挑选到拼合持续不变",
+            "手和模块保持抓握关系",
+            "货架呈现可选集合而非随机背景",
+            "组合前后数量、接触方式与结果可解释"
+          ],
+          "reuse_notes": [
+            "当前图只是接触状态，并非已证明组合完成。",
+            "精确能力名称、功能证据由UI/后期标注承担，避免生成乱码或拿发光当结果。"
+          ],
+          "action_chain_status": "future_animation_specification_from_reference_semantics; not validated generated video",
+          "approval_state": "approved_static_scene",
+          "video_verified": false,
+          "observations": [
+            "保留纵深能力货架、蓝橙两块相接、双手承托及后方排队角色。原片橙色品牌机器人换为白色助手；新图为组合的接触状态，未验证后续动作。"
+          ],
+          "prompt_record": "local-only/replica-plan.json",
+          "prompt_record_asset_id": "06"
+        },
+        {
+          "id": "qiuzhi-girl-07",
+          "gallery_asset_id": "07",
+          "title": "书堆过载",
+          "image_path": "assets/aigc/girl/scenes/07-information-overload.png",
+          "source_frame": "local-only/chibi-overload.jpg",
+          "source_video": "local-only/全网最全！60分钟全面掌握Claude Code～ 【附完整文档】 #AI #秋芝2046 #ClaudeCode #AI教程 #前沿科技趋势发布月.mp4",
+          "source_key": "claude",
+          "source_time": 1578.5,
+          "source_range": [
+            1574,
+            1580
+          ],
+          "narration": "脑子里一口气塞了太多东西，也容易把握不住重点",
+          "meaning": "过量输入让处理停止，焦虑是结果",
+          "semantic_use": [
+            "信息过载",
+            "上下文过长难以抓重点",
+            "输入增加导致处理停滞和焦虑"
+          ],
+          "action_chain": [
+            "女孩在打开的书上阅读或记录",
+            "输入或书堆增加并挤占工作区域",
+            "笔停下、视线失焦或开始来回查找",
+            "抱头显露无法处理的结果"
+          ],
+          "scene_invariants": [
+            "左侧电脑、面前打开的书和停笔位置有连续性",
+            "书堆包围而非凭空漂浮",
+            "情绪由输入压力触发",
+            "生成屏幕与书页只作示意"
+          ],
+          "reuse_notes": [
+            "当前图是过载结果，可直接作短反应点；要解释原因则补输入到停笔的短动作。",
+            "返回真实UI解释裁剪、压缩或分步处理，不把生成屏幕当真实软件证据。"
+          ],
+          "action_chain_status": "future_animation_specification_from_reference_semantics; not validated generated video",
+          "approval_state": "approved_static_scene",
+          "video_verified": false,
+          "observations": [
+            "保留电脑在左、打开的书和停下的笔在前、书堆围困、女孩双手抱头。换成用户长发女孩与服装；画面中电脑屏幕与书页为生成示意，不能当真实软件证据。"
+          ],
+          "prompt_record": "local-only/replica-plan.json",
+          "prompt_record_asset_id": "07"
+        },
+        {
+          "id": "qiuzhi-girl-08",
+          "gallery_asset_id": "08",
+          "title": "游戏存档点",
+          "image_path": "assets/aigc/girl/scenes/08-game-savepoint.png",
+          "source_frame": "local-only/hybrid-save-point.jpg",
+          "source_video": "local-only/全网最全！60分钟全面掌握Claude Code～ 【附完整文档】 #AI #秋芝2046 #ClaudeCode #AI教程 #前沿科技趋势发布月.mp4",
+          "source_key": "claude",
+          "source_time": 1397.75,
+          "source_range": [
+            1394,
+            1410
+          ],
+          "narration": "感觉挺满意的就存一个档，失败后还可以回到这个存档点",
+          "meaning": "固定的保存位置为后续回退提供锚点",
+          "semantic_use": [
+            "存档与版本回退",
+            "可恢复状态",
+            "失败后回到确定检查点再继续"
+          ],
+          "action_chain": [
+            "女孩到达固定绿色旗帜并完成存档标记",
+            "沿同一平台向前尝试并遭遇失败",
+            "回到原位置的同一旗帜",
+            "再向前行动或切入真实版本管理UI"
+          ],
+          "scene_invariants": [
+            "绿色旗帜的地形位置始终不变",
+            "左右前进方向保持一致",
+            "失败与回退有明确前后状态",
+            "同一女孩和同一保存点形成辨认锚点"
+          ],
+          "reuse_notes": [
+            "当前图仅为到达存档点，失败和返回尚需生成；不能拿单张图宣称回退动作已完成。",
+            "保持手绘游戏场景，不自动切成像素或3D；正式视频前统一侧面发夹。"
+          ],
+          "action_chain_status": "future_animation_specification_from_reference_semantics; not validated generated video",
+          "approval_state": "approved_static_scene",
+          "video_verified": false,
+          "observations": [
+            "保留横向平台、中央绿色旗、左侧树与女孩向右到达的空间锚点。像素场景改为手绘游戏场景，尚只生成到达存档这一状态，未生成失败/返回两状态；侧面发夹方向待统一。"
+          ],
+          "prompt_record": "local-only/replica-plan.json",
+          "prompt_record_asset_id": "08"
+        }
+      ]
+    }
+  ],
+  "research_sources": [
+    {
+      "id": "network-style-json",
+      "kind": "style_analysis",
+      "path": "local-only/network-style.json",
+      "scope": "原片可见画风、动作与场景分析；不是作者生成流程证明。"
+    },
+    {
+      "id": "network-style-notes",
+      "kind": "style_analysis_notes",
+      "path": "local-only/network-style.md",
+      "scope": "保留该片的观察与推断边界。"
+    },
+    {
+      "id": "network-sentence-alignment",
+      "kind": "narration_visual_alignment",
+      "path": "local-only/alignment.json",
+      "scope": "逐句口播、时码及视觉证据对应；机器ASR与顺序视觉采样，不等于完整实时视听。"
+    },
+    {
+      "id": "creative-style-json",
+      "kind": "style_analysis",
+      "path": "local-only/creative-style.json",
+      "scope": "原片可见画风、动作与场景分析；不是作者生成流程证明。"
+    },
+    {
+      "id": "creative-style-notes",
+      "kind": "style_analysis_notes",
+      "path": "local-only/creative-style.md",
+      "scope": "保留该片的观察与推断边界。"
+    },
+    {
+      "id": "creative-sentence-alignment",
+      "kind": "narration_visual_alignment",
+      "path": "local-only/alignment.json",
+      "scope": "逐句口播、时码及视觉证据对应；机器ASR与顺序视觉采样，不等于完整实时视听。"
+    },
+    {
+      "id": "claude-style-json",
+      "kind": "style_analysis",
+      "path": "local-only/claude-style.json",
+      "scope": "原片可见画风、动作与场景分析；不是作者生成流程证明。"
+    },
+    {
+      "id": "claude-style-notes",
+      "kind": "style_analysis_notes",
+      "path": "local-only/claude-style.md",
+      "scope": "保留该片的观察与推断边界。"
+    },
+    {
+      "id": "claude-sentence-alignment",
+      "kind": "narration_visual_alignment",
+      "path": "local-only/alignment.json",
+      "scope": "逐句口播、时码及视觉证据对应；机器ASR与顺序视觉采样，不等于完整实时视听。"
+    },
+    {
+      "id": "workflow-style-json",
+      "kind": "style_analysis",
+      "path": "local-only/workflow-style.json",
+      "scope": "原片可见画风、动作与场景分析；不是作者生成流程证明。"
+    },
+    {
+      "id": "workflow-style-notes",
+      "kind": "style_analysis_notes",
+      "path": "local-only/workflow-style.md",
+      "scope": "保留该片的观察与推断边界。"
+    },
+    {
+      "id": "workflow-sentence-alignment",
+      "kind": "narration_visual_alignment",
+      "path": "local-only/alignment.json",
+      "scope": "逐句口播、时码及视觉证据对应；机器ASR与顺序视觉采样，不等于完整实时视听。"
+    },
+    {
+      "id": "aigc-style-synthesis",
+      "kind": "synthesis",
+      "path": "local-only/秋芝AIGC画风拆解.md",
+      "scope": "综合语义动作与媒介衔接；其中原片3D画风为研究对象，当前默认输出材质仍是用户女孩手绘。"
+    },
+    {
+      "id": "alignment-reader",
+      "kind": "reader",
+      "path": "local-only/逐句对照.html",
+      "scope": "原片口播和B-roll逐句对照入口。"
+    },
+    {
+      "id": "alignment-index",
+      "kind": "study_index",
+      "path": "local-only/study-index.json",
+      "scope": "研究范围及验证边界。"
+    },
+    {
+      "id": "learned-methods-index",
+      "kind": "methods_index",
+      "path": "local-only/学习结果与方法索引.md",
+      "scope": "剪辑手法和开头结构索引。"
+    },
+    {
+      "id": "scene-gallery",
+      "kind": "approved_static_gallery",
+      "path": "local-only/index.html",
+      "scope": "本次认可的8张静图与原帧对照。"
+    }
+  ]
+}

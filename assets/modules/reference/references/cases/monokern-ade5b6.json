@@ -1,0 +1,113 @@
+{
+  "slug": "monokern-ade5b6",
+  "title": "Psychedelic hypnotic eye showreel",
+  "date": "2026-09-25",
+  "tags": [
+    "prompt"
+  ],
+  "promptShared": true,
+  "handle": "monokern",
+  "poster": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "preview": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "video": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "width": 1920,
+  "height": 1080,
+  "schema_version": "1.0.0",
+  "collected_at": "2026-10-07T02:48:12+00:00",
+  "source_page": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "source_post": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "attribution": "Videos and prompts belong to their creators, linked on each entry.",
+  "source_html_sha256": "d46af9e2d7c4d43106c0cc3a2d97e015ab0880bacff5535d5ffb7462825539eb",
+  "prompt": "make a dynamic 20-second motion graphics video that shows what an incredible motion designer you are, psychedelic and hypnotic. make it feel like a showreel piece. go all out.",
+  "prompt_characters": 175,
+  "prompt_sha256": "24c6aa0bfcad75774e09a2778f8240d0b50973ead4aaf58c6f8004e5da2e96f2",
+  "prompt_extraction": "full HTML #entry-prompt (unfolded source text)",
+  "prompt_rsc_match": true,
+  "prompt_source_note": "This prompt was taken directly from @monokern’s post (opens in a new tab).",
+  "stack": null,
+  "model": "Opus 5.5",
+  "effort": null,
+  "iterations": "One-shot",
+  "detail_fields": {
+    "Model": "Opus 5.5",
+    "Iterations": "One-shot",
+    "Posted": "Sep 25, 2026"
+  },
+  "skill_repo": null,
+  "skill_description": null,
+  "skill_install_command": null,
+  "category": "motion-showreel",
+  "category_inferred": true,
+  "status": "reference-collected",
+  "collection_errors": [],
+  "local_poster": "assets/reference/posters/monokern-ade5b6.webp",
+  "local_preview": null,
+  "local_video_absolute": null,
+  "detail_request_retries": [],
+  "media_transfers": {
+    "poster": {
+      "status": "cached",
+      "bytes": 45198,
+      "attempts": []
+    },
+    "preview": {
+      "status": "cached",
+      "bytes": 324269,
+      "attempts": []
+    },
+    "video": {
+      "status": "cached",
+      "bytes": 25639825,
+      "attempts": []
+    }
+  },
+  "media_probe": {
+    "poster": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "webp",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "duration": null,
+      "error": null
+    },
+    "preview": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 720,
+          "height": 406
+        }
+      ],
+      "duration": "4.000000",
+      "error": null
+    },
+    "video": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "duration": "20.053000",
+      "error": null
+    }
+  },
+  "distribution_status": "catalog-and-starters; historical reconstruction and original video not bundled"
+}

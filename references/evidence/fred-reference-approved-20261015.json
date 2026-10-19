@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "id": "fred-explainer-20261015",
+  "status": "user_selected_reference_direction",
+  "date": "2026-10-15",
+  "profile": "user-ui",
+  "quote": "这个是我非常喜欢的，其实你做那种多的内容，进化那么多的skill以后，你应该知道的是，我其实很喜欢这种风格的，这个放在视频下一部分，就是人物缩小到最左侧的时候的，这种风格就是我的skill要说的风格，你先看看，了解一下",
+  "integration_quote": "我觉得先根据这个视频，来升级skill，不然这边儿OK了，另外打开窗口又是错误的",
+  "followup_feedback": [
+    {
+      "date": "2026-10-15",
+      "quote": "我就怕又出现那种淡紫色的，或者那种纯ppt的样式",
+      "interpretation": "针对此前低对比淡紫模板和逐页卡片式表达补充明确排除项；结合已选Fred参考，保留有作用的局部强调色、真实内容容器和阅读停留，不解释为禁用所有紫色或所有静止。"
+    },
+    {
+      "date": "2026-10-16",
+      "quote": "目前我想要的是他那个视频的质感，就是那种ui非常炫酷的感觉，就是黑紫色色彩非常好看的感觉的那种",
+      "context": "独立新窗口按旧合同生成16.5秒样片后，用户重新强调参考片的黑紫视觉质感。",
+      "interpretation": "黑紫的视觉分量、字形尺度、前后景层次与运动质感是当前外观重点。此前将白画布与少量局部紫色当作充分条件过弱；不能把这条反馈等同于全片黑底或泛化霓虹科幻主题。",
+      "sample_under_feedback": "local-only/完整样片.mp4",
+      "sample_status": "not_a_style_approval; visual_direction_correction_required"
+    }
+  ],
+  "scope": "用户选择 Fred Argon 参考作为通用 user-ui 正文展示与剪辑语言的最新校准，并明确要求先接入 Skill 的跨窗口默认调用。尤其适用于人物缩到左侧、正文展开的讲解阶段。认可原参考方向，不等于我们已复刻或新成片已获认可。",
+  "source": "local-only/Gemini4 Argon终于发布了，到底是夯是拉？！ #抖音精选App知识充电站 #抖音精选App征稿中 #抖音前沿科技首发计划#AI新星计划 #vibecoding大赏.mp4",
+  "source_sha256": "0a7aa3d6a84299d76e118c4ad400fd31aee06d9acd7244eb67c27a872092fe6d",
+  "duration": 300.16,
+  "direction_contract": {
+    "id": "fred-explainer-20261015",
+    "summary": "user-ui 正文以 Fred 参考的黑紫视觉质感为当前外观基准：深黑实心主体与胶囊有分量，黑底亮紫关键词/大数字和白字形成强对比，投影、退焦和前景聚焦建立空间层次；白底可作舞台、章节可切黑底。不能仅有白底小窗口和几处紫色就算继承，不能固定等宽四窗贯穿整片。同一材料随句意展开、聚焦、比较、更新、收拢；连续性指身份与因果可追踪，不锁死位置、比例和景别。女孩与独立账号保持各自认可范围。",
+    "reading": [
+      "references/profiles/user-ui.md",
+      "references/fred-ui-direction.md"
+    ],
+    "rules": [
+      {
+        "id": "scope",
+        "scope": "user-ui 正文",
+        "instruction": "这是已选择的当前参考方向，普通制作自动继承，无需用户再说 Fred 或重述风格。具体工程设置和本次明确要求仍优先；不覆盖阿刁、方木等独立档案。"
+      },
+      {
+        "id": "hierarchy",
+        "scope": "UI 视觉",
+        "instruction": "以参考中的黑紫视觉关系设计主画面：深黑实心内容块、窗体或胶囊承担主体分量，亮紫关键词/大数字在黑底上醒目，白字与紫字清楚分层；白底紫字使用足够深的紫。白色或浅色可作留白舞台，黑底可承接章节或重点，不预设整片统一底色。不能只给白色卡片加窄黑表头、浅紫细线和小号数字就判定完成黑紫质感。当前重点应在最终观看尺寸上显著，必要时让标题、数字和对象放大占据主视野；次要证据退后或缩略。圆角、实体边界、与大小相称的柔和投影，以及前清后虚/明暗遮罩体现深度；不凭空添加满屏霓虹、发光网格或玻璃质感。排除大面积低对比淡紫底、漂白卡片、满屏细紫线与稀疏小字。黑底上的亮紫/浅紫重点是可用且重要的参考特征，不属于上述排除项。"
+      },
+      {
+        "id": "object-continuity",
+        "scope": "跨句解释",
+        "instruction": "追踪同一材料的来源和身份；上一句的结果作为下一句的初态。过程性讲解必须让对应操作与结果可见；每句换一张标题卡/图文页、整段只有淡入淡出或静图推拉属于本用户明确排除的PPT式表达。改成同一对象的输入、操作、状态变化和衔接；不要仅给静态卡片叠加弹跳、旋转。原位展开和保留位置是可选手段，不强制整片一镜到底，章节标题、总结表、真实材料静止阅读仍可按任务使用。"
+      },
+      {
+        "id": "semantic-operation",
+        "scope": "语义到动作",
+        "instruction": "识别主体、动作、条件、关系与结果。比较时让旧图腾位，查细节时稳定外框并聚焦内部；调序改变位置，替换改变内容，返工增加步骤或条件，修复改变同一对象状态。不能用同一种缩放代替所有动词。 请求经过路径触发计次，限流阻断同一路径；下载有进度、装入改变归属、启动改变运行状态。容量先给共同需求基准，再显示占用、余量与超出量；比喻须回接真实概念或材料。"
+      },
+      {
+        "id": "focus-chain",
+        "scope": "蒙版与解释",
+        "instruction": "按实际素材定位重点；必要时同时保亮问题、机制节点和后果并建立连线。代码或复杂证据可在同一区域接成可见机制图，保留原结果作上下文。"
+      },
+      {
+        "id": "adaptive-layout",
+        "scope": "布局与总结",
+        "instruction": "正文按任务变化：单对象细读、同条件比较、多结果选择、步骤累积、证据加指标、逐项总结。先建关系，当前信息按口播揭示，已讲信息可继续保留；不把来源方法做成每片必用清单。 多方案先逐项解释，再回同尺度全貌给出选择；教程的完整步骤组可归位成持续导航，当前步骤对应真实入口、操作和确认状态。结尾建议先显示适用条件，再绑定方案，多条条件可共用一个方案。 连续性不等于画面永远保持同一排小窗。随论点改变景别与主次：当前操作的对象可以移到前景、放大，其他对象缩为上下文；完成后再收回比较或交接。并列窗口仅在需要同尺度比较时使用，不把等宽四窗作为整个过程的默认舞台。"
+      },
+      {
+        "id": "presenter-safe-stage",
+        "scope": "有人物的正文模式",
+        "instruction": "讲述者缩到左侧后，正文在剩余区域重新排版并保留可读字级。不要把整幅16:9参考缩成右侧小窗；蒙版与章标题的扩张不遮住人物和字幕。无人物任务不添加人物占位，具体位置按本期素材测量。"
+      },
+      {
+        "id": "readable-rhythm",
+        "scope": "节奏与转场",
+        "instruction": "对象建立和换位利落，动作落定后按材料复杂度留出读图时间；录屏自身在动时减少外围争抢。转场交代对象去向或章节变化，大标题可归位为导航，不按固定秒数换图，也不锁死参考的0.4–0.8秒动作区间。"
+      },
+      {
+        "id": "carrier-selection",
+        "scope": "B-roll 与 AIGC",
+        "instruction": "软件、文档、比较、流程与机制可由真实材料和连续UI直接解释，不因口播抽象就一律生成女孩镜头。人物处境、情绪和具体事件采用已确认女孩及场景，动作连续并可与UI交接；此参考不改变女孩身份和手绘画风。"
+      },
+      {
+        "id": "evidence-and-implementation",
+        "scope": "制作完成状态",
+        "instruction": "来源目录中的方法有可追溯例证，继续调用既有S配方/OXFR原语并按本稿定制。来源研究、源码可用、实际生成、技术检查和新片认可分别记录；示意UI不得冒充实测，片中产品结论与数据未核实。 数字比较保留单位、样本量、执行方式及评价依据；口径不同时明确写本次记录与差异，AI参考匹配率不得改称人工准确率。"
+      }
+    ],
+    "delivery_review": {
+      "purpose": "由制作Agent在现有实际输出检查中核对，不新增用户审批或独立审核流程；脚本只能传递规则，不能自动判定审美。",
+      "checks": [
+        "对照本合同 visual_calibration 的原片画面，按最终观看尺寸核对黑色主体分量、黑底亮紫重点、粗大字级和前后层次；若只是白色小窗口、窄黑表头与几条浅紫线，仍未达到本次外观要求。不能用改几处色号代替重做主体尺度、明暗与层次。",
+        "连续播放过程性讲解，核对口播动作是否发生在对应对象上、前后状态能否追踪；仅靠换页、字幕或装饰运动讲过程时先返修。",
+        "保留必要的阅读停留；当前对象有足够尺度，场景在总览、局部和结果之间按句意变化。不以固定等宽窗口贯穿整段，也不为炫酷强制每秒运动或全片铺黑。",
+        "涉及软件教程时，实际播放检查当前导航、操作目标与反馈一致；选中、请求发出、服务启动、复制完成和连通分别有对应状态，不能靠标题代替。",
+        "涉及比较和推荐时，核对单位、样本量、条件与来源说明在最终尺寸可读；条件条与对应方案的关系清楚，不能通过删除条件制造绝对推荐。"
+      ],
+      "rejected_ui_evidence": "references/evidence/full-transfer-feedback-20261014.json",
+      "reference_review_ranges_seconds": [
+        [
+          36,
+          74
+        ],
+        [
+          211.96,
+          218
+        ],
+        [
+          254,
+          263
+        ]
+      ]
+    },
+    "preserves": [
+      "A01 已认可 UI 短样、实现与原认可范围；正文展示以本次更具体的 Fred 校准为准。",
+      "女孩完整样片、两张角色原图、8张已认可场景及既有连续动作/转场源码。",
+      "秋芝四片逐句研究与36条方法、10条S配方、O/X/F/R及其他已有能力。",
+      "阿刁、方木和明确工程的独立风格与认可记录。"
+    ],
+    "boundaries": [
+      "原参考正文没有常驻左侧真人；左侧人物是用户的迁移布局要求。",
+      "原片角色/汽车的生成方式、模型、字体文件、精确曲线与音乐节拍未确认。",
+      "未授权把本参考的3D角色作为女孩IP替代，也未批准未来任意新样片。"
+    ],
+    "revision": "2026.10.19.1",
+    "reference_sources": [
+      {
+        "id": "fred-argon",
+        "index": "references/evidence/fred-argon-study/index.json"
+      },
+      {
+        "id": "fred-jev",
+        "index": "references/evidence/fred-jev-study/index.json"
+      }
+    ],
+    "latest_refinement": {
+      "source": "fred-jev",
+      "reused_method_ids": [
+        "Q-A01",
+        "Q-N01",
+        "F-M10",
+        "F-M06",
+        "F-M14",
+        "F-M13",
+        "F-M09",
+        "F-M12",
+        "F-M11",
+        "F-M02",
+        "F-M03",
+        "Q-A03",
+        "Q-W01"
+      ],
+      "new_method_ids": [],
+      "new_render_created": false,
+      "scope": "追加实例、细化已有方法和当前默认方向；不改变认可角色/资产及独立账号。"
+    },
+    "visual_calibration": {
+      "revision": "2026.10.19.1",
+      "feedback_quote": "目前我想要的是他那个视频的质感，就是那种ui非常炫酷的感觉，就是黑紫色色彩非常好看的感觉的那种",
+      "priority": "本次明确外观反馈优先于旧A01的通用配色描述；沿用旧源码时也必须按此校准。",
+      "view_before_design": true,
+      "anchors": [
+        {
+          "source": "fred-jev",
+          "event": "J-S011",
+          "range_seconds": [
+            16,
+            16.9
+          ],
+          "frame": "assets/style-calibration/fred/anchor-01.jpg",
+          "learn": "前景深黑胶囊、粗大白字与亮紫关键词；原对象留在模糊后景，形成明确前后层。"
+        },
+        {
+          "source": "fred-jev",
+          "event": "J-S220",
+          "range_seconds": [
+            169.2,
+            170.85
+          ],
+          "frame": "assets/style-calibration/fred/anchor-02.jpg",
+          "learn": "黑白主体对照、黑底亮紫大数字、实体圆角与投影；来源退焦，条件文字仍可读。"
+        },
+        {
+          "source": "fred-jev",
+          "event": "J-S118",
+          "range_seconds": [
+            103.25,
+            105.5
+          ],
+          "frame": "assets/style-calibration/fred/anchor-03.jpg",
+          "learn": "章节黑色块扩张覆盖，再缩回导航，黑紫重点与连续转场共同形成观感。"
+        }
+      ],
+      "limits": "以上是原参考视觉锚点，不是本轮新设计或原片精确色值、字体、曲线的测量。新窗口样片未获此次风格认可。"
+    }
+  },
+  "research": {
+    "guide": "references/fred-ui-direction.md",
+    "installed_index": "references/evidence/fred-argon-study/index.json",
+    "installed_alignment": "references/evidence/fred-argon-study/alignment.json",
+    "report": "local-only/详细拆解.md",
+    "viewer": "local-only/逐句对照.html",
+    "verification": "local-only/verification.json",
+    "asr_segments": 184,
+    "visual_events": 112,
+    "subtitle_only_supplements": 2
+  },
+  "review": {
+    "user_selected_source_direction": true,
+    "reproduction_created": false,
+    "new_video_approved": false,
+    "full_normal_speed_listening_review": false,
+    "full_frame_by_frame_review": false,
+    "method": "全片1fps概览与26处4–8fps局部抽帧、离线ASR、烧录字幕核对；保留不确定项。"
+  },
+  "learning_updates": [
+    {
+      "date": "2026-10-16",
+      "quote": "这是今天的ui，你继续学习这个ui，然后升级skill，你明白怎么升级，以至于以后调用不会出错了吧?以及怎么做这个skill的框架不至于太乱",
+      "source_id": "fred-jev",
+      "source": "local-only/不用巨资买显卡了，我自己部署了开源版 JEV #抖音精选App知识充电站 #抖音精选App征稿中 #抖音前沿科技首发计划#器灵soulmate #JEV.mp4",
+      "source_sha256": "daf563c43d9a74eeb1908fc8bb1c81be06b9ef141186bca6e0a9efb703e412e6",
+      "scope": "按新参考完善既有user-ui方向；不是另建账号画风或认可尚未生成的成片。",
+      "research_index": "references/evidence/fred-jev-study/index.json",
+      "research_alignment": "references/evidence/fred-jev-study/alignment.json"
+    }
+  ],
+  "distribution": {
+    "visual_anchors": "Three excerpt frames for style comparison; full third-party source videos are not redistributed.",
+    "scope": "Selected reference direction, not a newly approved reproduction."
+  }
+}

@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "study_id": "fred-jev-transcript-visual-alignment-20261016",
+  "study_root": "local-only/fred-jev-style",
+  "reader": "local-only/逐句对照.html",
+  "report": "local-only/详细拆解.md",
+  "check": "local-only/verification.json",
+  "structured_research": "local-only/study.json",
+  "media_policy": "只安装文本研究；原视频、音轨和证据帧在原址，不复制媒体或运行时。",
+  "total": {
+    "duration_seconds": 202.048005,
+    "source_asr_segments": 118,
+    "alignment_rows": 118,
+    "supplemental_rows": 0,
+    "observation_intervals": 109,
+    "unique_evidence_files": 288,
+    "new_method_count": 0,
+    "reused_method_count": 13
+  },
+  "method_ids": [
+    "Q-A01",
+    "Q-N01",
+    "F-M10",
+    "F-M06",
+    "F-M14",
+    "F-M13",
+    "F-M09",
+    "F-M12",
+    "F-M11",
+    "F-M02",
+    "F-M03",
+    "Q-A03",
+    "Q-W01"
+  ],
+  "full_realtime_av_review": false,
+  "videos": [
+    {
+      "id": "fred-jev",
+      "title": "FredTalk · 开源 JEV 部署 UI 逐句研究",
+      "source": "local-only/不用巨资买显卡了，我自己部署了开源版 JEV #抖音精选App知识充电站 #抖音精选App征稿中 #抖音前沿科技首发计划#器灵soulmate #JEV.mp4",
+      "source_sha256": "daf563c43d9a74eeb1908fc8bb1c81be06b9ef141186bca6e0a9efb703e412e6",
+      "source_bytes": 13566179,
+      "duration_seconds": 202.048005,
+      "paths": {
+        "alignment": "references/evidence/fred-jev-study/alignment.json",
+        "raw_transcript": "local-only/asr.json",
+        "reader": "local-only/逐句对照.html",
+        "word_timestamps": "local-only/asr.json"
+      },
+      "review": {
+        "method": "全范围1fps顺序接触表观察及关键动作密集采样；全音轨本地ASR并依字幕标记校正。",
+        "full_realtime_av_review": false,
+        "full_frame_by_frame_review": false,
+        "limitations": [
+          "全音轨离线机器转写；保留原始文字和词时码，字幕校正另记。",
+          "全时段1fps顺序视觉采样并补密集动作帧；未正常速度完整听审、未逐帧查看。",
+          "事件边界为采样定位，不推断精确曲线、字体、音乐节拍或生成模型。",
+          "原片技术和测评主张只是来源内容；样本量及执行条件不同，不作为本任务实测结论。",
+          "本任务为研究与Skill接入，未制作新视频或获得新输出审美认可。"
+        ]
+      }
+    }
+  ],
+  "part_coverage": [
+    {
+      "video": "fred-jev",
+      "assigned_range": [
+        0,
+        70
+      ],
+      "visual_review_range": [
+        0,
+        72
+      ],
+      "sample_sets": [
+        {
+          "start": 0,
+          "end": 72,
+          "fps": 1,
+          "count": 72,
+          "timestamp_convention": "approximate filter sample center start+(index+0.5)/fps; decode seeking may differ under 1 frame",
+          "directory": "local-only/baseline",
+          "viewed_all_extracted_frames": true,
+          "viewed_contact_sheets": [
+            "local-only/sheet-01.jpg",
+            "local-only/sheet-02.jpg",
+            "local-only/sheet-03.jpg",
+            "local-only/sheet-04.jpg",
+            "local-only/sheet-05.jpg",
+            "local-only/sheet-06.jpg",
+            "local-only/sheet-07.jpg",
+            "local-only/sheet-08.jpg",
+            "local-only/sheet-09.jpg"
+          ]
+        },
+        {
+          "start": 4.5,
+          "end": 8.5,
+          "fps": 6.0,
+          "count": 24,
+          "timestamp_convention": "approximate filter sample center start+(index+0.5)/fps; decode seeking may differ under 1 frame",
+          "directory": "local-only/dense-04_5-08_5",
+          "viewed_all_extracted_frames": true,
+          "viewed_contact_sheets": [
+            "local-only/sheet-01.jpg",
+            "local-only/sheet-02.jpg",
+            "local-only/sheet-03.jpg"
+          ]
+        },
+        {
+          "start": 9.0,
+          "end": 16.9,
+          "fps": 4.0,
+          "count": 32,
+          "timestamp_convention": "approximate filter sample center start+(index+0.5)/fps; decode seeking may differ under 1 frame",
+          "directory": "local-only/dense-09-16_9",
+          "viewed_all_extracted_frames": true,
+          "viewed_contact_sheets": [
+            "local-only/sheet-01.jpg",
+            "local-only/sheet-02.jpg",
+            "local-only/sheet-03.jpg",
+            "local-only/sheet-04.jpg"
+          ]
+        },
+        {
+          "start": 11.3,
+          "end": 12.0,
+          "fps": 8.0,
+          "count": 6,
+          "timestamp_convention": "approximate filter sample center start+(index+0.5)/fps; decode seeking may differ under 1 frame",
+          "directory": "local-only/dense-11_3-12",
+          "viewed_all_extracted_frames": true,
+          "viewed_contact_sheets": [
+            "local-only/sheet-01.jpg"
+          ]
+        },
+        {
+          "start": 17.0,
+          "end": 24.8,
+          "fps": 4.0,
+          "count": 31,
+          "timestamp_convention": "approximate filter sample center start+(index+0.5)/fps; decode seeking may differ under 1 frame",
+          "directory": "local-only/dense-17-24_8",
+          "viewed_all_extracted_frames": true,
+          "viewed_contact_sheets": [
+            "local-only/sheet-01.jpg",
+            "local-only/sheet-02.jpg",
+            "local-only/sheet-03.jpg",
+            "local-only/sheet-04.jpg"
+          ]
+        },
+        {
+          "start": 25.8,
+          "end": 29.8,
+          "fps": 6.0,
+          "count": 24,
+          "timestamp_convention": "approximate filter sample center start+(index+0.5)/fps; decode seeking may differ under 1 frame",
+          "directory": "local-only/dense-25_8-29_8",
+          "viewed_all_extracted_frames": true,
+          "viewed_contact_sheets": [
+            "local-only/sheet-01.jpg",
+            "local-only/sheet-02.jpg",
+            "local-only/sheet-03.jpg"
+          ]
+        },
+        {
+          "start": 31.3,
+          "end": 37.5,
+          "fps": 4.0,
+          "count": 25,
+          "timestamp_convention": "approximate filter sample center start+(index+0.5)/fps; decode seeking may differ under 1 frame",
+          "directory": "local-only/dense-31_3-37_5",
+          "viewed_all_extracted_frames": true,
+          "viewed_contact_sheets": [
+            "local-only/sheet-01.jpg",
+            "local-only/sheet-02.jpg",
+            "local-only/sheet-03.jpg",
+            "local-only/sheet-04.jpg"
+          ]
+        },
+        {
+          "start": 40.0,
+          "end": 43.9,
+          "fps": 4.0,
+          "count": 16,
+          "timestamp_convention": "approximate filter sample center start+(index+0.5)/fps; decode seeking may differ under 1 frame",
+          "directory": "local-only/dense-40-43_9",
+          "viewed_all_extracted_frames": true,
+          "viewed_contact_sheets": [
+            "local-only/sheet-01.jpg",
+            "local-only/sheet-02.jpg"
+          ]
+        },
+        {
+          "start": 46.2,
+          "end": 49.5,
+          "fps": 6.0,
+          "count": 20,
+          "timestamp_convention": "approximate filter sample center start+(index+0.5)/fps; decode seeking may differ under 1 frame",
+          "directory": "local-only/dense-46_2-49_5",
+          "viewed_all_extracted_frames": true,
+          "viewed_contact_sheets": [
+            "local-only/sheet-01.jpg",
+            "local-only/sheet-02.jpg",
+            "local-only/sheet-03.jpg"
+          ]
+        },
+        {
+          "start": 53.0,
+          "end": 61.8,
+          "fps": 4.0,
+          "count": 35,
+          "timestamp_convention": "approximate filter sample center start+(index+0.5)/fps; decode seeking may differ under 1 frame",
+          "directory": "local-only/dense-53-61_8",
+          "viewed_all_extracted_frames": true,
+          "viewed_contact_sheets": [
+            "local-only/sheet-01.jpg",
+            "local-only/sheet-02.jpg",
+            "local-only/sheet-03.jpg",
+            "local-only/sheet-04.jpg",
+            "local-only/sheet-05.jpg"
+          ]
+        },
+        {
+          "start": 64.0,
+          "end": 70.0,
+          "fps": 4.0,
+          "count": 24,
+          "timestamp_convention": "approximate filter sample center start+(index+0.5)/fps; decode seeking may differ under 1 frame",
+          "directory": "local-only/dense-64-70",
+          "viewed_all_extracted_frames": true,
+          "viewed_contact_sheets": [
+            "local-only/sheet-01.jpg",
+            "local-only/sheet-02.jpg",
+            "local-only/sheet-03.jpg"
+          ]
+        }
+      ],
+      "total_sampled_and_viewed_frames": 309,
+      "dense_windows": 10,
+      "full_realtime_av_review": false,
+      "all_original_frames_reviewed": false,
+      "audio_review": "使用根目录离线ASR，未做完整实时听审",
+      "limitations": [
+        "1fps覆盖全区间，动作关键窗口4–8fps；不能排除窗口外一秒内的短暂变化。",
+        "秒点为抽样区间估计，不是原工程关键帧；64–72秒使用可见字幕纠正ASR专名，未独立核实产品事实。",
+        "人物和跑车素材生成手段未知；仅观察到连续3D动作，不确认AIGC模型。"
+      ]
+    },
+    {
+      "reviewed_scope": [
+        70,
+        140
+      ],
+      "context_sample_scope": [
+        68,
+        142
+      ],
+      "baseline_fps": 1,
+      "baseline_frames": 74,
+      "dense_windows": [
+        {
+          "start": 94.5,
+          "duration": 6,
+          "fps": 4,
+          "count": 24,
+          "nominal_timestamp_tolerance_sec": 0.125,
+          "method": "ffmpeg fps filter; labels nominal; boundaries approximate",
+          "manifest": "local-only/capacity-bars-sampling.json",
+          "name": "capacity-bars"
+        },
+        {
+          "start": 83.5,
+          "duration": 5.5,
+          "fps": 8,
+          "count": 44,
+          "nominal_timestamp_tolerance_sec": 0.0625,
+          "method": "ffmpeg fps filter; labels nominal; boundaries approximate",
+          "manifest": "local-only/capacity-metaphor-sampling.json",
+          "name": "capacity-metaphor"
+        },
+        {
+          "start": 72.5,
+          "duration": 6.5,
+          "fps": 8,
+          "count": 52,
+          "nominal_timestamp_tolerance_sec": 0.0625,
+          "method": "ffmpeg fps filter; labels nominal; boundaries approximate",
+          "manifest": "local-only/chapter-deploy-sampling.json",
+          "name": "chapter-deploy"
+        },
+        {
+          "start": 103,
+          "duration": 3,
+          "fps": 8,
+          "count": 24,
+          "nominal_timestamp_tolerance_sec": 0.0625,
+          "method": "ffmpeg fps filter; labels nominal; boundaries approximate",
+          "manifest": "local-only/chapter-options-sampling.json",
+          "name": "chapter-options"
+        },
+        {
+          "start": 78.5,
+          "duration": 4,
+          "fps": 4,
+          "count": 16,
+          "nominal_timestamp_tolerance_sec": 0.125,
+          "method": "ffmpeg fps filter; labels nominal; boundaries approximate",
+          "manifest": "local-only/fail-state-sampling.json",
+          "name": "fail-state"
+        },
+        {
+          "start": 110,
+          "duration": 4,
+          "fps": 4,
+          "count": 16,
+          "nominal_timestamp_tolerance_sec": 0.125,
+          "method": "ffmpeg fps filter; labels nominal; boundaries approximate",
+          "manifest": "local-only/option-focus-sampling.json",
+          "name": "option-focus"
+        },
+        {
+          "start": 119.5,
+          "duration": 5.5,
+          "fps": 4,
+          "count": 22,
+          "nominal_timestamp_tolerance_sec": 0.125,
+          "method": "ffmpeg fps filter; labels nominal; boundaries approximate",
+          "manifest": "local-only/option-summary-sampling.json",
+          "name": "option-summary"
+        },
+        {
+          "start": 130.5,
+          "duration": 8,
+          "fps": 4,
+          "count": 32,
+          "nominal_timestamp_tolerance_sec": 0.125,
+          "method": "ffmpeg fps filter; labels nominal; boundaries approximate",
+          "manifest": "local-only/steps-demo-sampling.json",
+          "name": "steps-demo"
+        }
+      ],
+      "total_sampled_frames_including_context_and_dense_overlap": 304,
+      "contact_sheets_actually_viewed": [
+        "local-only/capacity-bars-sheet-01.jpg",
+        "local-only/capacity-bars-sheet-02.jpg",
+        "local-only/capacity-metaphor-sheet-01.jpg",
+        "local-only/capacity-metaphor-sheet-02.jpg",
+        "local-only/capacity-metaphor-sheet-03.jpg",
+        "local-only/chapter-deploy-sheet-01.jpg",
+        "local-only/chapter-deploy-sheet-02.jpg",
+        "local-only/chapter-deploy-sheet-03.jpg",
+        "assets/style-calibration/fred/anchor-03.jpg",
+        "local-only/chapter-options-sheet-02.jpg",
+        "local-only/fail-state-sheet-01.jpg",
+        "local-only/option-focus-sheet-01.jpg",
+        "local-only/option-summary-sheet-01.jpg",
+        "local-only/option-summary-sheet-02.jpg",
+        "local-only/seconds-sheet-01.jpg",
+        "local-only/seconds-sheet-02.jpg",
+        "local-only/seconds-sheet-03.jpg",
+        "local-only/seconds-sheet-04.jpg",
+        "local-only/steps-demo-sheet-01.jpg",
+        "local-only/steps-demo-sheet-02.jpg"
+      ],
+      "contact_sheet_count": 20,
+      "large_frames_actually_viewed": [
+        "local-only/0026.jpg"
+      ],
+      "full_realtime_av_review": false,
+      "full_frame_by_frame_review": false,
+      "raw_asr_preserved": true,
+      "aligned_rows_count": 46,
+      "visual_events_count": 33,
+      "notes": [
+        "所有已列接触表已实际打开查看；未将覆盖全时段的抽样等同于正常速度完整观看。",
+        "1fps时点名义误差约±0.5秒，4fps约±0.125秒，8fps约±0.0625秒；事件边界仍属人工抽样估计。",
+        "全段与密集段帧数含重叠，不应当作不重复源帧计数。"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "assigned_range": [
+        140,
+        202.048
+      ],
+      "reviewed_baseline_range": [
+        138,
+        202.048
+      ],
+      "baseline_fps": 1,
+      "baseline_frame_count": 64,
+      "baseline_contact_sheets_viewed": [
+        "local-only/overview-1.jpg",
+        "local-only/overview-2.jpg",
+        "local-only/overview-3.jpg",
+        "local-only/overview-4.jpg"
+      ],
+      "dense_windows": [
+        {
+          "name": "machine",
+          "start": 140,
+          "end": 143,
+          "fps": 4,
+          "frame_count": 12,
+          "sheets_viewed": [
+            "local-only/sheet-1.jpg"
+          ]
+        },
+        {
+          "name": "deploy",
+          "start": 143,
+          "end": 149,
+          "fps": 4,
+          "frame_count": 24,
+          "sheets_viewed": [
+            "local-only/sheet-1.jpg",
+            "local-only/sheet-2.jpg"
+          ]
+        },
+        {
+          "name": "service",
+          "start": 149,
+          "end": 157,
+          "fps": 4,
+          "frame_count": 32,
+          "sheets_viewed": [
+            "local-only/sheet-1.jpg",
+            "local-only/sheet-2.jpg"
+          ]
+        },
+        {
+          "name": "chapter",
+          "start": 157,
+          "end": 164,
+          "fps": 4,
+          "frame_count": 28,
+          "sheets_viewed": [
+            "local-only/sheet-1.jpg",
+            "local-only/sheet-2.jpg"
+          ]
+        },
+        {
+          "name": "metrics",
+          "start": 168,
+          "end": 177,
+          "fps": 4,
+          "frame_count": 36,
+          "sheets_viewed": [
+            "local-only/sheet-1.jpg",
+            "local-only/sheet-2.jpg"
+          ]
+        },
+        {
+          "name": "decision",
+          "start": 177,
+          "end": 190,
+          "fps": 4,
+          "frame_count": 52,
+          "sheets_viewed": [
+            "local-only/sheet-1.jpg",
+            "local-only/sheet-2.jpg",
+            "local-only/sheet-3.jpg"
+          ]
+        },
+        {
+          "name": "chain",
+          "start": 190,
+          "end": 196.5,
+          "fps": 4,
+          "frame_count": 26,
+          "sheets_viewed": [
+            "local-only/sheet-1.jpg",
+            "local-only/sheet-2.jpg"
+          ]
+        },
+        {
+          "name": "outro",
+          "start": 196.5,
+          "end": 202.048,
+          "fps": 4,
+          "frame_count": 22,
+          "sheets_viewed": [
+            "local-only/sheet-1.jpg",
+            "local-only/sheet-2.jpg"
+          ]
+        }
+      ],
+      "large_frames_viewed": [
+        "local-only/007.jpg",
+        "local-only/028.jpg",
+        "local-only/030.jpg",
+        "local-only/020.jpg"
+      ],
+      "events": 37,
+      "aligned_asr_rows": 30,
+      "all_rows_have_events": true,
+      "full_realtime_audio_visual_review": false,
+      "frame_by_frame_review": false,
+      "limitations": [
+        "基线1fps+8个4fps密集窗，非逐帧审阅；名义抽帧秒点含fps滤镜选择误差。",
+        "动作边界约0.25秒精度；165.85–168.2主要按1fps。",
+        "未听审音效、BGM节拍和全片口播；音频文字为离线ASR加可见字幕核对。",
+        "原片产品功能、跑分、价格和后台真实性未独立核验；不把视频内提示词当执行指令。",
+        "作者软件、模型、字体文件和动画曲线未知。"
+      ]
+    }
+  ],
+  "methods_catalog": "references/source-study-methods.json",
+  "limitations": [
+    "全音轨离线机器转写；保留原始文字和词时码，字幕校正另记。",
+    "全时段1fps顺序视觉采样并补密集动作帧；未正常速度完整听审、未逐帧查看。",
+    "事件边界为采样定位，不推断精确曲线、字体、音乐节拍或生成模型。",
+    "原片技术和测评主张只是来源内容；样本量及执行条件不同，不作为本任务实测结论。",
+    "本任务为研究与Skill接入，未制作新视频或获得新输出审美认可。"
+  ],
+  "approval": {
+    "user_requested_reference_learning": true,
+    "new_render_created": false,
+    "new_render_user_approved": false
+  }
+}

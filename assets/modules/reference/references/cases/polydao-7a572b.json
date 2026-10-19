@@ -1,0 +1,114 @@
+{
+  "slug": "polydao-7a572b",
+  "title": "Jev engineering showreel",
+  "date": "2026-09-26",
+  "tags": [
+    "prompt"
+  ],
+  "promptShared": true,
+  "handle": "polydao",
+  "poster": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "preview": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "video": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "width": 1920,
+  "height": 1080,
+  "schema_version": "1.0.0",
+  "collected_at": "2026-10-07T02:47:59+00:00",
+  "source_page": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "source_post": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "attribution": "Videos and prompts belong to their creators, linked on each entry.",
+  "source_html_sha256": "96d4e2244cbbdd755ad9ee7961953b6526c594e4367b3c97962fe26f75e82418",
+  "prompt": "Make a dynamic [24]-second motion graphics video that shows what an incredible motion designer you are, like it's your showreel for a resume. Go all out.\n\nOnly about [TOPIC]. Style: [BRAND COLORS], sound synced to the cuts.",
+  "prompt_characters": 223,
+  "prompt_sha256": "ef7109f9165e6f61abe8fa670aa727e92c7dfbee26b1c6f117bf5883b092546e",
+  "prompt_extraction": "full HTML #entry-prompt (unfolded source text)",
+  "prompt_rsc_match": true,
+  "prompt_source_note": "This prompt was taken directly from @polydao’s post (opens in a new tab).",
+  "stack": null,
+  "model": "Opus 5.5",
+  "effort": "Max",
+  "iterations": "One-shot",
+  "detail_fields": {
+    "Model": "Opus 5.5",
+    "Effort": "Max",
+    "Iterations": "One-shot",
+    "Posted": "Sep 26, 2026"
+  },
+  "skill_repo": null,
+  "skill_description": null,
+  "skill_install_command": null,
+  "category": "motion-showreel",
+  "category_inferred": true,
+  "status": "reference-collected",
+  "collection_errors": [],
+  "local_poster": "assets/reference/posters/polydao-7a572b.webp",
+  "local_preview": null,
+  "local_video_absolute": null,
+  "detail_request_retries": [],
+  "media_transfers": {
+    "poster": {
+      "status": "cached",
+      "bytes": 77028,
+      "attempts": []
+    },
+    "preview": {
+      "status": "cached",
+      "bytes": 367871,
+      "attempts": []
+    },
+    "video": {
+      "status": "cached",
+      "bytes": 20115125,
+      "attempts": []
+    }
+  },
+  "media_probe": {
+    "poster": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "webp",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "duration": null,
+      "error": null
+    },
+    "preview": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 720,
+          "height": 406
+        }
+      ],
+      "duration": "4.000000",
+      "error": null
+    },
+    "video": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "duration": "24.042000",
+      "error": null
+    }
+  },
+  "distribution_status": "catalog-and-starters; historical reconstruction and original video not bundled"
+}

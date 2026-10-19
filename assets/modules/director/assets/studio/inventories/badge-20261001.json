@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-01",
+  "scope": {
+    "site": "Collect UI",
+    "category": "Badge",
+    "categoryUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "listingUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "observedDate": "2026-10-01",
+    "timezone": "Asia/Shanghai",
+    "enumerationComplete": true,
+    "pagesCatalogued": [
+      1
+    ],
+    "sourcePaginationControlsPresent": false,
+    "paginationMode": "single-loaded-list-no-pagination-controls",
+    "lastPageEvidence": {
+      "snapshotId": "badge-page-1-2026-10-01",
+      "pageNumber": 1,
+      "activePage": null,
+      "nextPageDisabled": null,
+      "paginationControlsObserved": false,
+      "observedCardCount": 6,
+      "evidenceKind": "complete-loaded-list-two-stable-reads-no-pagination-controls"
+    },
+    "enumerationMeaning": "仅当时实际浏览的完整分页快照，不代表媒体已观看、独立原作总数或全站完成。",
+    "notes": [
+      "Accordion、Empty States、Notepad、Badge为完整已加载单列表；实际到达页面底部后完整双读一致，没有源分页，p1仅归档。",
+      "Tooltip / Popover与Folder实际Next逐页导航；旧首卡脱离、当前页和新首卡确认后取完整集合双读，末Next禁用。",
+      "到达底部前的即时滚动中间状态单独丢弃保留；未纳入accepted快照、卡片或媒体计数。",
+      "可见翻译标签、完整tag href、hidden +N、实际图片alt与归属href原样保留；隐藏标签不补造。",
+      "原名仅在derivedOriginalCategoryName独立按159类真实完整href映射，不覆盖实际可见标签。",
+      "外部归属链接不冒充原作href，authorProfile null不补造；原作链接按实际精确卡弹层另外丰富。",
+      "目录清点新增媒体观看0、适配0；已有观察只按完整媒体URL分别关联。"
+    ]
+  },
+  "enumerationEvidence": {
+    "frozenRawSha256": "4a52e498e959cbe19f3f2bcae25eadc3ad9ff83bc0e851a8a8e002cc65cdacbe",
+    "rawMetadata": {
+      "category": "Badge",
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "observedAt": "2026-10-01T08:35:07.706Z",
+      "sourcePaginationControlsPresent": false,
+      "collectionComplete": true,
+      "twoReadsMatch": true,
+      "mediaObservationClaims": 0,
+      "navigation": [],
+      "completionEvidence": {
+        "singleLoadedList": true,
+        "noSourcePaginationControls": true,
+        "sourceActivePage": null,
+        "allPageCollectionsReadTwice": true,
+        "wholeLoadedCollectionStable": true,
+        "actualDocumentBottomReached": true,
+        "bottomState": {
+          "clientHeight": 720,
+          "dialogCount": 0,
+          "paginationSemanticButtons": [],
+          "scrollHeight": 1621,
+          "scrollTop": 901
+        }
+      },
+      "collection": {
+        "kind": "actual-entire-loaded-rendered-DOM",
+        "sourceMediaDownloaded": false,
+        "cardModalOpened": false,
+        "mediaFrameObservationPerformed": false,
+        "derivedCategoryNameMapping": {
+          "association": "exact complete href; separate derived field; observed visible label unchanged",
+          "usedMapping": {
+            "https://collectui.com/designs/badge-ui-design-inspiration": "Badge",
+            "https://collectui.com/designs/icons-ui-design-inspiration": "Icons",
+            "https://collectui.com/designs/tags-ui-design-inspiration": "Tags"
+          }
+        }
+      },
+      "rejectedReads": [
+        {
+          "reason": "Immediate Control+End measurement was still scrolling; excluded from bottom proof.",
+          "measurement": {
+            "scrollTop": 451,
+            "scrollHeight": 1621,
+            "clientHeight": 720
+          },
+          "includedInAcceptedSnapshots": false
+        }
+      ],
+      "notes": [
+        "Future batch23 raw enumeration only, no source media observation or release21 inventory mutation."
+      ]
+    },
+    "rawSourceFile": "batch23-badge-enumeration.json"
+  },
+  "listingSnapshots": [
+    {
+      "id": "badge-page-1-2026-10-01",
+      "pageNumber": 1,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "Badge UI Design Inspiration",
+      "activePage": null,
+      "pagination": [],
+      "cardCount": 6,
+      "cardCollectionSignature": "afd41a13fe99f543fc2c66206be381fc4b589af95d522ea3704329ecb79c2d8f",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "1d5ff0ee6793aa2743e16903d0fc8a791eeffc37bdb3f775d286112bc5123f1a",
+        "second": "1d5ff0ee6793aa2743e16903d0fc8a791eeffc37bdb3f775d286112bc5123f1a"
+      },
+      "pageEnumerationEvidence": {
+        "sourcePageNumber": null,
+        "archiveMeaning": "p1 is an archive index for the entire loaded list, not a source website page number",
+        "twoReadsMatch": true
+      }
+    }
+  ],
+  "summary": {
+    "cataloguedEntries": 6,
+    "uniqueMedia": 6,
+    "duplicateMediaOccurrences": 0,
+    "mediaTypes": {
+      "image": 5,
+      "video": 1
+    },
+    "mediaObservationsClaimed": 0
+  },
+  "entries": [
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "shedsgns",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "BADGE"
+        }
+      ],
+      "firstVisibleTag": "BADGE",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "1081b135-b198-4151-9a39-05dbbc9ae022",
+      "title": "pills or chips though?",
+      "titleSource": "actual-media-image-alt",
+      "id": "badge-p1-001",
+      "pageNumber": 1,
+      "snapshotId": "badge-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Badge",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "badge-media-001"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "vyshnav_xyz",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "ICONS"
+        }
+      ],
+      "firstVisibleTag": "ICONS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "bfa58b1a-2a1c-4659-90e2-5ea7479cdf6e",
+      "title": " Feature badges",
+      "titleSource": "actual-media-image-alt",
+      "id": "badge-p1-002",
+      "pageNumber": 1,
+      "snapshotId": "badge-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Badge",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "badge-media-002"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "AdityaSur11",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 3,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TAGS"
+        }
+      ],
+      "firstVisibleTag": "TAGS",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "35e7064c-82bb-4808-b284-54e6a321ef3f",
+      "title": "Label UI design\nthoughts?",
+      "titleSource": "actual-media-image-alt",
+      "id": "badge-p1-003",
+      "pageNumber": 1,
+      "snapshotId": "badge-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Badge",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "badge-media-003"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "elayadesigns",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 4,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "BADGE"
+        }
+      ],
+      "firstVisibleTag": "BADGE",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "6add3752-fb4c-485d-9e4c-35339991b4d7",
+      "title": "I've been working on a cool AI-based product lately. Will share more soon.",
+      "titleSource": "actual-media-image-alt",
+      "id": "badge-p1-004",
+      "pageNumber": 1,
+      "snapshotId": "badge-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Badge",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "badge-media-004"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "morflax_com",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 5,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "BADGE"
+        }
+      ],
+      "firstVisibleTag": "BADGE",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "f663afb7-e174-410d-bfde-a77deae02c26",
+      "title": null,
+      "titleSource": null,
+      "id": "badge-p1-005",
+      "pageNumber": 1,
+      "snapshotId": "badge-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Badge",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "badge-media-005"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "theShaneLevine",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 6,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "BADGE"
+        }
+      ],
+      "firstVisibleTag": "BADGE",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "6e42aa2d-d29b-4af4-a6a1-5886c333db0d",
+      "title": "2 years @turbodesignco",
+      "titleSource": "actual-media-image-alt",
+      "id": "badge-p1-006",
+      "pageNumber": 1,
+      "snapshotId": "badge-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Badge",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "badge-media-006"
+    }
+  ],
+  "mediaGroups": [
+    {
+      "id": "badge-media-001",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "badge-p1-001"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "badge-media-002",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "badge-p1-002"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "badge-media-003",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "badge-p1-003"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "badge-media-004",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "badge-p1-004"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "badge-media-005",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "badge-p1-005"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "badge-media-006",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "badge-p1-006"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    }
+  ]
+}

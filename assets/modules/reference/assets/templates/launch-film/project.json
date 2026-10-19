@@ -1,0 +1,544 @@
+{
+  "template": "launch-film",
+  "duration": 29.077,
+  "internal_duration": 27,
+  "timing_mode": "reference-estimated",
+  "reference_duration": 29.077,
+  "timing_note": "基于原片每秒采样的估计锚点，以单调三次 Hermite 映射平滑重定时；并非原片逐帧精确时间线。?timing=prompt 切换为 27 秒 Prompt 动作时钟。duration 可更改以统一伸缩。",
+  "timing_anchors": [
+    {
+      "time": 0,
+      "internalTime": 0
+    },
+    {
+      "time": 0.6,
+      "internalTime": 0.18
+    },
+    {
+      "time": 1.1,
+      "internalTime": 1
+    },
+    {
+      "time": 2,
+      "internalTime": 1.85
+    },
+    {
+      "time": 3,
+      "internalTime": 2.75
+    },
+    {
+      "time": 4,
+      "internalTime": 3.55
+    },
+    {
+      "time": 5,
+      "internalTime": 4.25
+    },
+    {
+      "time": 5.7,
+      "internalTime": 5
+    },
+    {
+      "time": 6,
+      "internalTime": 5.2
+    },
+    {
+      "time": 7,
+      "internalTime": 5.75
+    },
+    {
+      "time": 8,
+      "internalTime": 6.5
+    },
+    {
+      "time": 9,
+      "internalTime": 7.3
+    },
+    {
+      "time": 10,
+      "internalTime": 8.2
+    },
+    {
+      "time": 10.6,
+      "internalTime": 8.55
+    },
+    {
+      "time": 11.5,
+      "internalTime": 9.4
+    },
+    {
+      "time": 12,
+      "internalTime": 9.5
+    },
+    {
+      "time": 13,
+      "internalTime": 10.3
+    },
+    {
+      "time": 14,
+      "internalTime": 11.2
+    },
+    {
+      "time": 14.5,
+      "internalTime": 12.4
+    },
+    {
+      "time": 15,
+      "internalTime": 13.3
+    },
+    {
+      "time": 16,
+      "internalTime": 14.6
+    },
+    {
+      "time": 17,
+      "internalTime": 15.4
+    },
+    {
+      "time": 17.6,
+      "internalTime": 16
+    },
+    {
+      "time": 18,
+      "internalTime": 17.3
+    },
+    {
+      "time": 19,
+      "internalTime": 18.55
+    },
+    {
+      "time": 19.6,
+      "internalTime": 19.4
+    },
+    {
+      "time": 20,
+      "internalTime": 20
+    },
+    {
+      "time": 21,
+      "internalTime": 20.8
+    },
+    {
+      "time": 21.6,
+      "internalTime": 21.8
+    },
+    {
+      "time": 22,
+      "internalTime": 22.7
+    },
+    {
+      "time": 23,
+      "internalTime": 23.95
+    },
+    {
+      "time": 24.5,
+      "internalTime": 24.15
+    },
+    {
+      "time": 25,
+      "internalTime": 24.3
+    },
+    {
+      "time": 25.5,
+      "internalTime": 24.7
+    },
+    {
+      "time": 26,
+      "internalTime": 25
+    },
+    {
+      "time": 27,
+      "internalTime": 25.7
+    },
+    {
+      "time": 28,
+      "internalTime": 26.7
+    },
+    {
+      "time": 28.6,
+      "internalTime": 27
+    },
+    {
+      "time": 29.077,
+      "internalTime": 27
+    }
+  ],
+  "width": 1440,
+  "height": 1440,
+  "fps": 60,
+  "fonts": {
+    "ui": {
+      "family": "PMGeist",
+      "file": "assets/fonts/Geist.ttf"
+    },
+    "wordmark": {
+      "family": "PMArchivo",
+      "file": "assets/fonts/Archivo.ttf",
+      "weight": 800,
+      "stretch": "expanded",
+      "width_axis_target": 125
+    },
+    "license": "SIL Open Font License 1.1; accompanying licenses and source hashes in assets/fonts"
+  },
+  "bpm": 120,
+  "brand": "develop",
+  "accent": "#111111",
+  "canvas": "#eeefe9",
+  "asset_mode": "reference-frames",
+  "photos": [
+    "assets/reference-arch-day.jpg",
+    "assets/reference-arch-golden.jpg",
+    "assets/reference-astronaut.jpg",
+    "assets/reference-portal.jpg",
+    "assets/reference-dunes.jpg",
+    "assets/reference-space.jpg",
+    "assets/reference-cyclist.jpg",
+    "assets/reference-portrait.jpg",
+    "assets/reference-nebula.jpg",
+    "assets/reference-meadow.jpg",
+    "assets/reference-eye.jpg"
+  ],
+  "sample_photos": [
+    "assets/arch.svg",
+    "assets/arch-golden.svg",
+    "assets/coast.svg",
+    "assets/city.svg",
+    "assets/desert.svg",
+    "assets/mountains.svg",
+    "assets/waves.svg",
+    "assets/forest.svg",
+    "assets/meadow.svg",
+    "assets/meadow.svg",
+    "assets/forest.svg"
+  ],
+  "desktop": "assets/desktop.svg",
+  "wall": "assets/wall.svg",
+  "copy": {
+    "open": "Develop",
+    "tagline": "From screen to wall.",
+    "glass": "relight",
+    "toolbar": "Golden hour",
+    "date": "Friday, September 25",
+    "music": "This Must Be the Place",
+    "musicArtist": "Talking Heads",
+    "hero": "from screen\nto wall.",
+    "heroSub": "museum-grade prints of the photos you already love. framed by hand, sent in a week.",
+    "product": "the print",
+    "order": "Order print",
+    "ordered": "Ordered",
+    "printing": "Printing",
+    "shipping": "On its way",
+    "delivered": "Delivered"
+  },
+  "reference_url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "reference_creator": "@twoclipping",
+  "provenance": "independent-reimplementation",
+  "sample_assets": true,
+  "sample_asset_note": "默认 photos 为原作者视频提取的参考帧，权利仍归原作者及原素材权利人，仅用于本机复刻参考；不是本模板原创摄影。sample_photos、墙面与淡蓝桌面为原创 SVG 示例。?assets=svg 切换为全 SVG 模式。公开发布时将 reference-frame 素材换成自己的授权素材。详见 assets/PROVENANCE.json。",
+  "approximation_notes": [
+    "本模板为独立实现，不是参考片原始工程。",
+    "默认参考时间模式为 29.077 秒；内部为 27 秒、54 拍的动作模板，按估计锚点重映射。Prompt 时间模式仍为 27 秒、120 BPM。参考模式不是精确逐帧时间线，也不保证与原曲逐拍同步。",
+    "默认参考帧来自视频压缩及裁切，不是原始高分辨率照片；黄金时段图底部使用无 UI 花海条带拉伸填充，两张图只近似对齐。",
+    "玻璃通过场景克隆、局部透镜缩放及边缘高光近似；尚未实现参考 prompt 的逐字 SDF 色散位移折射。",
+    "墙面使用原创 SVG 与随时间移动的植物影子，真实墙面影片需自行替换并实现逐帧 seek。",
+    "默认无音乐或音效，不承诺原片音画一致。54 拍时间标记可用于加入已有授权的音乐及音效。",
+    "字标使用本地 Archivo 800，可变宽度约 125%，逐字压缩使用几何缩放；UI 使用本地 Geist，中文使用系统回退字体。字距及压缩轨迹仍需原片逐帧校准。",
+    "产品场景与内容独立设计，动作链沿参考 prompt 重建；需用原片并排检查后再判定视觉接近度。"
+  ],
+  "marks_timebase": "project-seconds",
+  "internal_marks": [
+    {
+      "time": 0,
+      "label": "字标压缩"
+    },
+    {
+      "time": 1,
+      "label": "圆点成 pill"
+    },
+    {
+      "time": 2,
+      "label": "六叶 iris"
+    },
+    {
+      "time": 3,
+      "label": "圆形到方形与九宫格"
+    },
+    {
+      "time": 4,
+      "label": "九宫格到 bento"
+    },
+    {
+      "time": 4.5,
+      "label": "点击照片放大"
+    },
+    {
+      "time": 5,
+      "label": "玻璃文字"
+    },
+    {
+      "time": 6,
+      "label": "文字聚成液滴"
+    },
+    {
+      "time": 6.5,
+      "label": "液滴拉成工具条"
+    },
+    {
+      "time": 7,
+      "label": "调整与滑杆"
+    },
+    {
+      "time": 7.5,
+      "label": "拖动调光"
+    },
+    {
+      "time": 8.5,
+      "label": "透镜抬起成 orb"
+    },
+    {
+      "time": 9,
+      "label": "orb 扩展到锁屏"
+    },
+    {
+      "time": 10,
+      "label": "home bar 到音乐播放器"
+    },
+    {
+      "time": 10.5,
+      "label": "锁屏收回手机"
+    },
+    {
+      "time": 12,
+      "label": "Dynamic Island 拉伸"
+    },
+    {
+      "time": 13,
+      "label": "液体转移至 Mac 窗口"
+    },
+    {
+      "time": 14,
+      "label": "长按壁纸"
+    },
+    {
+      "time": 14.5,
+      "label": "拖图到浏览器标签"
+    },
+    {
+      "time": 15,
+      "label": "落成 landing hero"
+    },
+    {
+      "time": 16,
+      "label": "滚动到相框产品"
+    },
+    {
+      "time": 17,
+      "label": "照片边缘长出卡纸与边框"
+    },
+    {
+      "time": 18,
+      "label": "涂刷边框颜色"
+    },
+    {
+      "time": 19,
+      "label": "尺寸选择与按钮转移"
+    },
+    {
+      "time": 20,
+      "label": "订单状态"
+    },
+    {
+      "time": 22,
+      "label": "送达圆形 flood"
+    },
+    {
+      "time": 23,
+      "label": "收缩到墙面相框"
+    },
+    {
+      "time": 24,
+      "label": "iris 展示印刷品"
+    },
+    {
+      "time": 25,
+      "label": "相框 flood 与 pill"
+    },
+    {
+      "time": 26,
+      "label": "pill 到圆点"
+    },
+    {
+      "time": 26.5,
+      "label": "字母弹回"
+    },
+    {
+      "time": 27,
+      "label": "首尾同帧"
+    }
+  ],
+  "marks": [
+    {
+      "time": 0,
+      "label": "字标压缩",
+      "internalTime": 0
+    },
+    {
+      "time": 1.1,
+      "label": "圆点成 pill",
+      "internalTime": 1
+    },
+    {
+      "time": 2.162568,
+      "label": "六叶 iris",
+      "internalTime": 2
+    },
+    {
+      "time": 3.299662,
+      "label": "圆形到方形与九宫格",
+      "internalTime": 3
+    },
+    {
+      "time": 4.671319,
+      "label": "九宫格到 bento",
+      "internalTime": 4
+    },
+    {
+      "time": 5.240184,
+      "label": "点击照片放大",
+      "internalTime": 4.5
+    },
+    {
+      "time": 5.7,
+      "label": "玻璃文字",
+      "internalTime": 5
+    },
+    {
+      "time": 7.358691,
+      "label": "文字聚成液滴",
+      "internalTime": 6
+    },
+    {
+      "time": 8,
+      "label": "液滴拉成工具条",
+      "internalTime": 6.5
+    },
+    {
+      "time": 8.636377,
+      "label": "调整与滑杆",
+      "internalTime": 7
+    },
+    {
+      "time": 9.221443,
+      "label": "拖动调光",
+      "internalTime": 7.5
+    },
+    {
+      "time": 10.525166,
+      "label": "透镜抬起成 orb",
+      "internalTime": 8.5
+    },
+    {
+      "time": 11.03291,
+      "label": "orb 扩展到锁屏",
+      "internalTime": 9
+    },
+    {
+      "time": 12.677705,
+      "label": "home bar 到音乐播放器",
+      "internalTime": 10
+    },
+    {
+      "time": 13.2566,
+      "label": "锁屏收回手机",
+      "internalTime": 10.5
+    },
+    {
+      "time": 14.337874,
+      "label": "Dynamic Island 拉伸",
+      "internalTime": 12
+    },
+    {
+      "time": 14.81651,
+      "label": "液体转移至 Mac 窗口",
+      "internalTime": 13
+    },
+    {
+      "time": 15.486123,
+      "label": "长按壁纸",
+      "internalTime": 14
+    },
+    {
+      "time": 15.902626,
+      "label": "拖图到浏览器标签",
+      "internalTime": 14.5
+    },
+    {
+      "time": 16.484003,
+      "label": "落成 landing hero",
+      "internalTime": 15
+    },
+    {
+      "time": 17.6,
+      "label": "滚动到相框产品",
+      "internalTime": 16
+    },
+    {
+      "time": 17.894884,
+      "label": "照片边缘长出卡纸与边框",
+      "internalTime": 17
+    },
+    {
+      "time": 18.50084,
+      "label": "涂刷边框颜色",
+      "internalTime": 18
+    },
+    {
+      "time": 19.324052,
+      "label": "尺寸选择与按钮转移",
+      "internalTime": 19
+    },
+    {
+      "time": 20,
+      "label": "订单状态",
+      "internalTime": 20
+    },
+    {
+      "time": 21.692371,
+      "label": "送达圆形 flood",
+      "internalTime": 22
+    },
+    {
+      "time": 22.178238,
+      "label": "收缩到墙面相框",
+      "internalTime": 23
+    },
+    {
+      "time": 23.237165,
+      "label": "iris 展示印刷品",
+      "internalTime": 24
+    },
+    {
+      "time": 26,
+      "label": "相框 flood 与 pill",
+      "internalTime": 25
+    },
+    {
+      "time": 27.303446,
+      "label": "pill 到圆点",
+      "internalTime": 26
+    },
+    {
+      "time": 27.758999,
+      "label": "字母弹回",
+      "internalTime": 26.5
+    },
+    {
+      "time": 29.077,
+      "label": "首尾同帧",
+      "internalTime": 27
+    }
+  ],
+  "marks_duration": 29.077,
+  "marks_timing_mode": "reference-estimated",
+  "implementation_status": "reference-compared"
+}

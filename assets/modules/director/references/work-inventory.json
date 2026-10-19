@@ -1,0 +1,1127 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-09-27",
+  "scope": {
+    "site": "Collect UI",
+    "category": "AI Flow",
+    "categoryUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "observedDate": "2026-09-27",
+    "enumerationComplete": true,
+    "pagesCatalogued": [
+      1,
+      2
+    ],
+    "paginationButtonsObserved": [
+      1,
+      2
+    ],
+    "lastPageEvidence": {
+      "snapshotId": "ai-flow-page-2-2026-09-27",
+      "pageNumber": 2,
+      "activePage": 2,
+      "nextPageDisabled": true,
+      "observedCardCount": 2,
+      "contentChangedAfterPageClick": true
+    },
+    "exactOriginalWorkCount": null,
+    "notes": [
+      "本文件只登记主代理实际读取的分类列表 DOM；卡片登记不等于媒体已观察、代码已实现或验证通过。",
+      "保留每页卡片顺序与重复项。mediaGroups 仅按完整媒体 URL 精确分组；uniqueMedia 不是不同原作数量。",
+      "只登记实际可见的首个标签。2026-09-27 本轮重新读取第 1 页 DOM，补录可见 +N 为 hiddenTagCount；本轮第 1 页未显示 +N 的卡片记为 0。隐藏标签名称 otherTags 仍为 null；第 2 页未补读的隐藏数量继续为 null。",
+      "仅给独立打开作品弹层核实的条目补originalWorkUrl；其余保留null，重复媒体也不自动共享原作链接。",
+      "第 1 页本轮实际读取图片 alt 文本，补录 10 条 title，其余第 1 页 title 仍为 null；第 2 页第 2 卡保留 web { @intrfacer }。不从用户名、媒体 ID 或其他批次推造标题。",
+      "第 1 页作者资料地址来自主代理记录的 /designers/<handle>；第 2 页仅提供 Post by 归属链接，authorProfile 保持 null，不把社交资料页当作原作品链接。",
+      "媒体类型仅依据文件扩展名，不表示已播放或查看；未下载媒体。",
+      "第 2 页是内部分页，页面 URL 不变；主代理等待新卡片出现，确认 Page 2 active 和 Go to next page disabled，实读 2 卡。",
+      "枚举完成仅覆盖本次分类列表快照；站点会继续更新，后续卡片数量、顺序和分页可能改变。全站原作品总数未知。",
+      "本清单status保留卡片登记状态；实际观察和代码验证另见assets/studio/coverage.json及collectui-batch-04.md，不把登记数当作完成数。"
+    ],
+    "enumerationMeaning": "仅表示 2026-09-27 本次 AI Flow 分类可见的两个分页、26 张卡片已完成元数据登记；不表示全站清点完成，也不表示 26 个独立原作、已观看媒体或已实现预设。",
+    "exactSiteOriginalWorkCount": null
+  },
+  "summary": {
+    "cataloguedEntries": 26,
+    "uniqueMedia": 25,
+    "duplicateCardOccurrences": 1,
+    "videoCardEntries": 15,
+    "imageCardEntries": 11,
+    "uniqueVideoMedia": 14,
+    "uniqueImageMedia": 11,
+    "observedMediaEntries": 0,
+    "implementedEntries": 0
+  },
+  "listingSnapshots": [
+    {
+      "id": "ai-flow-page-1-2026-09-27",
+      "category": "AI Flow",
+      "categoryUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "listingUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "observedDate": "2026-09-27",
+      "evidence": "主代理实际读取的分类列表 DOM",
+      "paginationButtonsObserved": [
+        1,
+        2
+      ],
+      "cardCount": 24,
+      "listingMetadataCaptured": true,
+      "mediaPlaybackObserved": false,
+      "isLastPageConfirmed": false,
+      "entryIds": [
+        "ai-flow-p1-001",
+        "ai-flow-p1-002",
+        "ai-flow-p1-003",
+        "ai-flow-p1-004",
+        "ai-flow-p1-005",
+        "ai-flow-p1-006",
+        "ai-flow-p1-007",
+        "ai-flow-p1-008",
+        "ai-flow-p1-009",
+        "ai-flow-p1-010",
+        "ai-flow-p1-011",
+        "ai-flow-p1-012",
+        "ai-flow-p1-013",
+        "ai-flow-p1-014",
+        "ai-flow-p1-015",
+        "ai-flow-p1-016",
+        "ai-flow-p1-017",
+        "ai-flow-p1-018",
+        "ai-flow-p1-019",
+        "ai-flow-p1-020",
+        "ai-flow-p1-021",
+        "ai-flow-p1-022",
+        "ai-flow-p1-023",
+        "ai-flow-p1-024"
+      ],
+      "pageNumber": 1
+    },
+    {
+      "id": "ai-flow-page-2-2026-09-27",
+      "category": "AI Flow",
+      "categoryUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "listingUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "pageNumber": 2,
+      "observedDate": "2026-09-27",
+      "evidence": "主代理点击 Page 2 后等待新卡片出现，实读第 2 页 DOM；不是第 1 页残留。",
+      "paginationButtonsObserved": [
+        1,
+        2
+      ],
+      "paginationEvidence": {
+        "activePage": 2,
+        "nextPageControlText": "Go to next page",
+        "nextPageDisabled": true,
+        "urlUnchanged": true,
+        "contentChangedAfterPageClick": true
+      },
+      "cardCount": 2,
+      "listingMetadataCaptured": true,
+      "mediaPlaybackObserved": false,
+      "isLastPageConfirmed": true,
+      "entryIds": [
+        "ai-flow-p2-001",
+        "ai-flow-p2-002"
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "id": "ai-flow-p1-001",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 1,
+      "title": null,
+      "firstVisibleTag": "AI Flow",
+      "otherTags": null,
+      "hiddenTagCount": 0,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-001",
+      "authorProfile": {
+        "handle": "chalaska",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1,
+      "originalWorkUrlEvidence": "主代理独立打开相应站内作品弹层，读取原作链接；非由媒体ID推算。"
+    },
+    {
+      "id": "ai-flow-p1-002",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 2,
+      "title": null,
+      "firstVisibleTag": "AI Flow",
+      "otherTags": null,
+      "hiddenTagCount": 0,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-002",
+      "authorProfile": {
+        "handle": "mrblackstudio",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1,
+      "originalWorkUrlEvidence": "主代理实际打开该卡弹层，读取发布者、标签和View on X链接；非由视频媒体ID推算。"
+    },
+    {
+      "id": "ai-flow-p1-003",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 3,
+      "title": null,
+      "firstVisibleTag": "AI Agents",
+      "otherTags": null,
+      "hiddenTagCount": 3,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-003",
+      "authorProfile": {
+        "handle": "aydaoz",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1,
+      "originalWorkUrlEvidence": "主代理独立打开相应站内作品弹层，读取原作链接；非由媒体ID推算。"
+    },
+    {
+      "id": "ai-flow-p1-004",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 4,
+      "title": "ouuuu",
+      "firstVisibleTag": "AI Flow",
+      "otherTags": null,
+      "hiddenTagCount": 0,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-004",
+      "authorProfile": {
+        "handle": "mikun_ux",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1,
+      "originalWorkUrlEvidence": "主代理独立打开弹层实读View on X链接，并查看原尺寸静态图；非由媒体ID推算。"
+    },
+    {
+      "id": "ai-flow-p1-005",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 5,
+      "title": null,
+      "firstVisibleTag": "AI Agents",
+      "otherTags": null,
+      "hiddenTagCount": 3,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-003",
+      "authorProfile": {
+        "handle": "aydaoz",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1
+    },
+    {
+      "id": "ai-flow-p1-006",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 6,
+      "title": "Agentic reasoning for image and video generation.",
+      "firstVisibleTag": "AI Flow",
+      "otherTags": null,
+      "hiddenTagCount": 2,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-005",
+      "authorProfile": {
+        "handle": "gabriell_lab",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1,
+      "originalWorkUrlEvidence": "主代理本批独立打开作品弹层实读View on X链接，非由媒体ID推算。"
+    },
+    {
+      "id": "ai-flow-p1-007",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 7,
+      "title": null,
+      "firstVisibleTag": "AI Flow",
+      "otherTags": null,
+      "hiddenTagCount": 3,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-006",
+      "authorProfile": {
+        "handle": "jeetnirnejak",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1,
+      "originalWorkUrlEvidence": "主代理实际打开该卡弹层，读取发布者、标签和View on X链接；非由视频媒体ID推算。"
+    },
+    {
+      "id": "ai-flow-p1-008",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 8,
+      "title": null,
+      "firstVisibleTag": "AI Flow",
+      "otherTags": null,
+      "hiddenTagCount": 2,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-007",
+      "authorProfile": {
+        "handle": "sayansenguptaa",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1,
+      "originalWorkUrlEvidence": "实际打开Sayan作品弹层读取View on X，不从媒体ID推定。"
+    },
+    {
+      "id": "ai-flow-p1-009",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 9,
+      "title": null,
+      "firstVisibleTag": "AI Flow",
+      "otherTags": null,
+      "hiddenTagCount": 0,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-008",
+      "authorProfile": {
+        "handle": "bruce_CQT",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1,
+      "originalWorkUrlEvidence": "2026-09-30独立打开作者页对应视频的作品弹层，实读View on X。"
+    },
+    {
+      "id": "ai-flow-p1-010",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 10,
+      "title": null,
+      "firstVisibleTag": "Chat Layout",
+      "otherTags": null,
+      "hiddenTagCount": 1,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-009",
+      "authorProfile": {
+        "handle": "nandafyi",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1,
+      "originalWorkUrlEvidence": "2026-09-30独立打开作者页对应视频的作品弹层，实读View on X。"
+    },
+    {
+      "id": "ai-flow-p1-011",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 11,
+      "title": "Replace Workflow Nodes",
+      "firstVisibleTag": "AI Flow",
+      "otherTags": null,
+      "hiddenTagCount": 0,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-010",
+      "authorProfile": {
+        "handle": "kvnkld",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1,
+      "originalWorkUrlEvidence": "主代理独立打开相应站内作品弹层，读取原作链接；非由媒体ID推算。"
+    },
+    {
+      "id": "ai-flow-p1-012",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 12,
+      "title": "Workflow automation",
+      "firstVisibleTag": "AI Flow",
+      "otherTags": null,
+      "hiddenTagCount": 0,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-011",
+      "authorProfile": {
+        "handle": "elayadesigns",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1,
+      "originalWorkUrlEvidence": "主代理本批独立打开作品弹层实读View on X链接，非由媒体ID推算。"
+    },
+    {
+      "id": "ai-flow-p1-013",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 13,
+      "title": "Bring this back cus its sooo cleannnn",
+      "firstVisibleTag": "Chat Layout",
+      "otherTags": null,
+      "hiddenTagCount": 2,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-012",
+      "authorProfile": {
+        "handle": "srotimi_ui",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1,
+      "originalWorkUrlEvidence": "主代理独立打开弹层实读View on X链接，并查看原尺寸静态图；非由媒体ID推算。"
+    },
+    {
+      "id": "ai-flow-p1-014",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 14,
+      "title": null,
+      "firstVisibleTag": "AI Flow",
+      "otherTags": null,
+      "hiddenTagCount": 1,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-013",
+      "authorProfile": {
+        "handle": "timothymaarv",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1
+    },
+    {
+      "id": "ai-flow-p1-015",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 15,
+      "title": null,
+      "firstVisibleTag": "AI Flow",
+      "otherTags": null,
+      "hiddenTagCount": 1,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-014",
+      "authorProfile": {
+        "handle": "nandafyi",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1
+    },
+    {
+      "id": "ai-flow-p1-016",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 16,
+      "title": "Workflow Node Configuration",
+      "firstVisibleTag": "AI Flow",
+      "otherTags": null,
+      "hiddenTagCount": 1,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-015",
+      "authorProfile": {
+        "handle": "kvnkld",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1,
+      "originalWorkUrlEvidence": "主代理独立打开相应站内作品弹层，读取原作链接；非由媒体ID推算。"
+    },
+    {
+      "id": "ai-flow-p1-017",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 17,
+      "title": "cleanest workflow builder design you'll see here ;)",
+      "firstVisibleTag": "Dashboard",
+      "otherTags": null,
+      "hiddenTagCount": 1,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-016",
+      "authorProfile": {
+        "handle": "siddharthvij_",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1,
+      "originalWorkUrlEvidence": "主代理本批独立打开作品弹层实读View on X链接，非由媒体ID推算。"
+    },
+    {
+      "id": "ai-flow-p1-018",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 18,
+      "title": null,
+      "firstVisibleTag": "AI Flow",
+      "otherTags": null,
+      "hiddenTagCount": 0,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-017",
+      "authorProfile": {
+        "handle": "privetavdey",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1
+    },
+    {
+      "id": "ai-flow-p1-019",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 19,
+      "title": null,
+      "firstVisibleTag": "AI",
+      "otherTags": null,
+      "hiddenTagCount": 1,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-018",
+      "authorProfile": {
+        "handle": "ailker",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1
+    },
+    {
+      "id": "ai-flow-p1-020",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 20,
+      "title": "Workflow Builder",
+      "firstVisibleTag": "AI Flow",
+      "otherTags": null,
+      "hiddenTagCount": 1,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-019",
+      "authorProfile": {
+        "handle": "kvnkld",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1,
+      "originalWorkUrlEvidence": "主代理独立打开相应站内作品弹层，读取原作链接；非由媒体ID推算。"
+    },
+    {
+      "id": "ai-flow-p1-021",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 21,
+      "title": null,
+      "firstVisibleTag": "AI Flow",
+      "otherTags": null,
+      "hiddenTagCount": 0,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-020",
+      "authorProfile": {
+        "handle": "jamesperkins",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1
+    },
+    {
+      "id": "ai-flow-p1-022",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 22,
+      "title": "This is the design quality founders happily invest $50,000+ into.",
+      "firstVisibleTag": "AI Flow",
+      "otherTags": null,
+      "hiddenTagCount": 0,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-021",
+      "authorProfile": {
+        "handle": "marcelkargul",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1,
+      "originalWorkUrlEvidence": "主代理独立打开本卡弹层，读取发布者和View on X实际链接；第二页先等待新卡片出现。"
+    },
+    {
+      "id": "ai-flow-p1-023",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 23,
+      "title": "This is the part where designers get mad because it doesn’t look like a pastel SaaS template.",
+      "firstVisibleTag": "AI Flow",
+      "otherTags": null,
+      "hiddenTagCount": 0,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-022",
+      "authorProfile": {
+        "handle": "TukiFromKL",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1,
+      "originalWorkUrlEvidence": "主代理独立打开本卡弹层，读取发布者和View on X实际链接；第二页先等待新卡片出现。"
+    },
+    {
+      "id": "ai-flow-p1-024",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "cardOrder": 24,
+      "title": null,
+      "firstVisibleTag": "Chat Layout",
+      "otherTags": null,
+      "hiddenTagCount": 2,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-023",
+      "authorProfile": {
+        "handle": "maxleedev",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "attributionRole": null,
+      "attributionUrl": null,
+      "pageNumber": 1
+    },
+    {
+      "id": "ai-flow-p2-001",
+      "snapshotId": "ai-flow-page-2-2026-09-27",
+      "pageNumber": 2,
+      "cardOrder": 1,
+      "authorProfile": null,
+      "attributionRole": "Post by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": null,
+      "firstVisibleTag": "Motion",
+      "otherTags": null,
+      "hiddenTagCount": null,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-024"
+    },
+    {
+      "id": "ai-flow-p2-002",
+      "snapshotId": "ai-flow-page-2-2026-09-27",
+      "pageNumber": 2,
+      "cardOrder": 2,
+      "authorProfile": null,
+      "attributionRole": "Post by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "web { @intrfacer }",
+      "firstVisibleTag": "AI Flow",
+      "otherTags": null,
+      "hiddenTagCount": null,
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "mediaGroupId": "media-025",
+      "originalWorkUrlEvidence": "主代理独立打开本卡弹层，读取发布者和View on X实际链接；第二页先等待新卡片出现。"
+    }
+  ],
+  "mediaGroups": [
+    {
+      "id": "media-001",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "entryIds": [
+        "ai-flow-p1-001"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-002",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "entryIds": [
+        "ai-flow-p1-002"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-003",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "entryIds": [
+        "ai-flow-p1-003",
+        "ai-flow-p1-005"
+      ],
+      "cardOccurrences": 2,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-004",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "entryIds": [
+        "ai-flow-p1-004"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-005",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "entryIds": [
+        "ai-flow-p1-006"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-006",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "entryIds": [
+        "ai-flow-p1-007"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-007",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "entryIds": [
+        "ai-flow-p1-008"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-008",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "entryIds": [
+        "ai-flow-p1-009"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-009",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "entryIds": [
+        "ai-flow-p1-010"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-010",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "entryIds": [
+        "ai-flow-p1-011"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-011",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "entryIds": [
+        "ai-flow-p1-012"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-012",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "entryIds": [
+        "ai-flow-p1-013"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-013",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "entryIds": [
+        "ai-flow-p1-014"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-014",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "entryIds": [
+        "ai-flow-p1-015"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-015",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "entryIds": [
+        "ai-flow-p1-016"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-016",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "entryIds": [
+        "ai-flow-p1-017"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-017",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "entryIds": [
+        "ai-flow-p1-018"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-018",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "entryIds": [
+        "ai-flow-p1-019"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-019",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "entryIds": [
+        "ai-flow-p1-020"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-020",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "entryIds": [
+        "ai-flow-p1-021"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-021",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "entryIds": [
+        "ai-flow-p1-022"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-022",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "entryIds": [
+        "ai-flow-p1-023"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-023",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "entryIds": [
+        "ai-flow-p1-024"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-024",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "entryIds": [
+        "ai-flow-p2-001"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    },
+    {
+      "id": "media-025",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "entryIds": [
+        "ai-flow-p2-002"
+      ],
+      "cardOccurrences": 1,
+      "originalWorkIdentityConfirmed": false
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "ai-flow-page-1-metadata-2026-09-27",
+      "observedDate": "2026-09-27",
+      "snapshotId": "ai-flow-page-1-2026-09-27",
+      "pageNumber": 1,
+      "evidence": "主代理本轮重新读取 AI Flow 第 1 页实时 DOM：实际读取图片 alt 文本与可见 +N 数量；并非根据前批推断。",
+      "fields": [
+        "title",
+        "hiddenTagCount"
+      ],
+      "titleEntryIds": [
+        "ai-flow-p1-004",
+        "ai-flow-p1-006",
+        "ai-flow-p1-011",
+        "ai-flow-p1-012",
+        "ai-flow-p1-013",
+        "ai-flow-p1-016",
+        "ai-flow-p1-017",
+        "ai-flow-p1-020",
+        "ai-flow-p1-022",
+        "ai-flow-p1-023"
+      ],
+      "hiddenTagCountEntryIds": [
+        "ai-flow-p1-001",
+        "ai-flow-p1-002",
+        "ai-flow-p1-003",
+        "ai-flow-p1-004",
+        "ai-flow-p1-005",
+        "ai-flow-p1-006",
+        "ai-flow-p1-007",
+        "ai-flow-p1-008",
+        "ai-flow-p1-009",
+        "ai-flow-p1-010",
+        "ai-flow-p1-011",
+        "ai-flow-p1-012",
+        "ai-flow-p1-013",
+        "ai-flow-p1-014",
+        "ai-flow-p1-015",
+        "ai-flow-p1-016",
+        "ai-flow-p1-017",
+        "ai-flow-p1-018",
+        "ai-flow-p1-019",
+        "ai-flow-p1-020",
+        "ai-flow-p1-021",
+        "ai-flow-p1-022",
+        "ai-flow-p1-023",
+        "ai-flow-p1-024"
+      ],
+      "notes": [
+        "第 1 页未显示 +N 时，本轮明确记 0。",
+        "仅补计数，隐藏标签名称 otherTags 仍为 null。",
+        "不变更 catalogued-only 状态、原作链接、快照或媒体分组。"
+      ]
+    },
+    {
+      "id": "ai-flow-static-sources-2026-09-27-batch-07",
+      "observedDate": "2026-09-27",
+      "fields": [
+        "originalWorkUrl"
+      ],
+      "entryIds": [
+        "ai-flow-p1-022",
+        "ai-flow-p1-023",
+        "ai-flow-p2-002"
+      ],
+      "evidence": "实际弹层发布者/原作URL和原尺寸AVIF观察，详见collectui-batch-07.md。保留卡片登记快照状态。"
+    },
+    {
+      "id": "ai-flow-video-sources-2026-09-27-batch-08",
+      "observedDate": "2026-09-27",
+      "fields": [
+        "originalWorkUrl"
+      ],
+      "entryIds": [
+        "ai-flow-p1-002",
+        "ai-flow-p1-007"
+      ],
+      "evidence": "两条弹层来源核实，视频多时间点观察详见collectui-batch-08.md。登记快照状态保持。"
+    },
+    {
+      "id": "ai-flow-context-clear-2026-09-27-batch-09",
+      "observedDate": "2026-09-27",
+      "fields": [
+        "originalWorkUrl"
+      ],
+      "entryIds": [
+        "ai-flow-p1-008"
+      ],
+      "evidence": "collectui-batch-09.md；保留原始卡片登记状态。"
+    },
+    {
+      "id": "ai-flow-dynamic-sources-2026-09-30-batch-10",
+      "observedDate": "2026-09-30",
+      "fields": [
+        "originalWorkUrl"
+      ],
+      "entryIds": [
+        "ai-flow-p1-009",
+        "ai-flow-p1-010"
+      ],
+      "evidence": "collectui-batch-10.md；原始卡片登记状态保留。"
+    },
+    {
+      "id": "ai-flow-dynamic-sources-2026-09-30-batch-11",
+      "observedDate": "2026-09-30",
+      "fields": [
+        "originalWorkUrl"
+      ],
+      "entryIds": [
+        "ai-flow-p1-024",
+        "ai-flow-p1-014",
+        "ai-flow-p1-015"
+      ],
+      "evidence": "三次独立作者页作品弹层的View on X实读地址，媒体currentSrc对应本快照；原片浏览器多时点观察见collectui-batch-11.md。登记状态、分页、原始标签与媒体分组保留。"
+    },
+    {
+      "id": "ai-flow-dynamic-sources-2026-09-30-batch-12",
+      "observedDate": "2026-09-30",
+      "fields": [
+        "originalWorkUrl"
+      ],
+      "entryIds": [
+        "ai-flow-p1-018",
+        "ai-flow-p1-021",
+        "ai-flow-p1-019",
+        "ai-flow-p2-001"
+      ],
+      "evidence": "collectui-batch-12.md；privetavdey、ailker、jamesperkins在独立作者页作品弹层实读View on X及对应媒体；ai-flow-p2-001在AI Flow第二页实际弹层核实KREA AI原作链接和Motion、AI Flow标签。",
+      "notes": [
+        "只补原作来源及独立后续观察依据，保留2026-09-27原始26卡、25媒体组、分页、标题、作者归属与登记状态。",
+        "第2页Post by不是原作链接；本次通过真实弹层单独核实，不从媒体ID推算原作地址。",
+        "后续媒体观察及代码机制映射见coverage.json，原快照not-observed字段不回写为本次状态。"
+      ]
+    }
+  ]
+}

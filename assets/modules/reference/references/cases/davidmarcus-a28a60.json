@@ -1,0 +1,113 @@
+{
+  "slug": "davidmarcus-a28a60",
+  "title": "Lightspark social promo video",
+  "date": "2026-09-25",
+  "tags": [
+    "prompt"
+  ],
+  "promptShared": true,
+  "handle": "davidmarcus",
+  "poster": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "preview": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "video": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "width": 1080,
+  "height": 1920,
+  "schema_version": "1.0.0",
+  "collected_at": "2026-10-07T02:47:21+00:00",
+  "source_page": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "source_post": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "attribution": "Videos and prompts belong to their creators, linked on each entry.",
+  "source_html_sha256": "00fa597bf1176d8fa700985ee0093e14f870aa5d071f82438c9741b3849de09c",
+  "prompt": "make a punchy and modern short video for social that promotes @lightspark capabilities. Needs to be production grade with sound",
+  "prompt_characters": 127,
+  "prompt_sha256": "aaade63f480e75cf8733138b465ccfe0ef549f362c394f29fef97c807069e09d",
+  "prompt_extraction": "full HTML #entry-prompt (unfolded source text)",
+  "prompt_rsc_match": true,
+  "prompt_source_note": "This prompt was taken directly from @davidmarcus’s post (opens in a new tab).",
+  "stack": null,
+  "model": "Opus 5.5",
+  "effort": null,
+  "iterations": "One-shot",
+  "detail_fields": {
+    "Model": "Opus 5.5",
+    "Iterations": "One-shot",
+    "Posted": "Sep 25, 2026"
+  },
+  "skill_repo": null,
+  "skill_description": null,
+  "skill_install_command": null,
+  "category": "product-film",
+  "category_inferred": true,
+  "status": "reference-collected",
+  "collection_errors": [],
+  "local_poster": "assets/reference/posters/davidmarcus-a28a60.webp",
+  "local_preview": null,
+  "local_video_absolute": null,
+  "detail_request_retries": [],
+  "media_transfers": {
+    "poster": {
+      "status": "cached",
+      "bytes": 12666,
+      "attempts": []
+    },
+    "preview": {
+      "status": "cached",
+      "bytes": 64745,
+      "attempts": []
+    },
+    "video": {
+      "status": "cached",
+      "bytes": 1489185,
+      "attempts": []
+    }
+  },
+  "media_probe": {
+    "poster": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "webp",
+          "codec_type": "video",
+          "width": 720,
+          "height": 1280
+        }
+      ],
+      "duration": null,
+      "error": null
+    },
+    "preview": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 406,
+          "height": 720
+        }
+      ],
+      "duration": "4.000000",
+      "error": null
+    },
+    "video": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1080,
+          "height": 1920
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "duration": "23.061000",
+      "error": null
+    }
+  },
+  "distribution_status": "catalog-and-starters; historical reconstruction and original video not bundled"
+}

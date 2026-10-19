@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "built_at": "2026-10-15T08:01:16.302238+00:00",
+  "study_id": "fred-argon-transcript-visual-alignment-20261015",
+  "study_root": "local-only/deep",
+  "reader": "local-only/逐句对照.html",
+  "report": "local-only/详细拆解.md",
+  "check": "local-only/verification.json",
+  "structured_research": "local-only/study.json",
+  "media_policy": "原视频和证据图仅绝对原址引用；只安装可检索文本数据，无媒体副本。",
+  "total": {
+    "duration_seconds": 300.16,
+    "source_asr_segments": 184,
+    "source_asr_words": 1336,
+    "alignment_rows": 184,
+    "supplemental_rows": 2,
+    "observation_intervals": 112,
+    "unique_evidence_files": 135,
+    "method_count": 14
+  },
+  "method_ids": [
+    "F-M01",
+    "F-M02",
+    "F-M03",
+    "F-M04",
+    "F-M05",
+    "F-M06",
+    "F-M07",
+    "F-M08",
+    "F-M09",
+    "F-M10",
+    "F-M11",
+    "F-M12",
+    "F-M13",
+    "F-M14"
+  ],
+  "full_realtime_av_review": false,
+  "videos": [
+    {
+      "id": "fred-argon",
+      "title": "FredTalk：Gemini4 Argon 发布测评参考",
+      "source": "local-only/Gemini4 Argon终于发布了，到底是夯是拉？！ #抖音精选App知识充电站 #抖音精选App征稿中 #抖音前沿科技首发计划#AI新星计划 #vibecoding大赏.mp4",
+      "source_sha256": "0a7aa3d6a84299d76e118c4ad400fd31aee06d9acd7244eb67c27a872092fe6d",
+      "source_bytes": 26094156,
+      "duration_seconds": 300.16,
+      "paths": {
+        "alignment": "references/evidence/fred-argon-study/alignment.json",
+        "raw_transcript": "local-only/asr.json",
+        "reader": "local-only/逐句对照.html",
+        "word_timestamps": "local-only/asr.json"
+      },
+      "review": {
+        "method": "全长300张1fps概览与26个重点窗口705张4–8fps抽帧的联系表对照；184条本地ASR绑定112个连续视觉事件；两处章节字幕补记。",
+        "audio_listened": false,
+        "full_realtime_av_review": false,
+        "full_frame_by_frame_review": false,
+        "transcript_status": "machine_asr_with_explicit_screen_corrections_and_separate_subtitle_only_rows",
+        "reviewed_ranges": [
+          [
+            0,
+            300.16
+          ]
+        ],
+        "unreviewed_ranges": [],
+        "limitations": [
+          "研究阶段未制作复刻；本轮安装文本数据和方法检索，不代表已渲染Fred完整效果。",
+          "全长按约 1 fps 概览，重点动作段按 4–8 fps 密集抽帧；不是 60 fps 全片逐帧审阅。",
+          "全片音频已做本地 ASR；未完成正常速度的全片主观听审，未核验音效、音乐节拍或声音转场。",
+          "视觉事件与转写边界为近似值；一句跨镜头时可关联多个事件，一项视觉事件也可承接多句。",
+          "保留原始 ASR。字幕 / 口播对照来自研究者结合可见字幕的阅读，可能合并数句；未做无依据的逐条改写。",
+          "第四块长任务、第五块写作由画面字幕补记，单列显示；没有伪造 ASR 编号。",
+          "视频内的产品名称、分数与性能等为原片主张，未做事实核验；其字形、模型来源、创作软件与精确缓动曲线也未确定。",
+          "帮助理解的作用属于基于画面和上下文的研究推断，与画面中可见的事实分别标示。"
+        ]
+      }
+    }
+  ],
+  "methods_catalog": "references/source-study-methods.json",
+  "limitations": [
+    "研究阶段未制作复刻；本轮安装文本数据和方法检索，不代表已渲染Fred完整效果。",
+    "全长按约 1 fps 概览，重点动作段按 4–8 fps 密集抽帧；不是 60 fps 全片逐帧审阅。",
+    "全片音频已做本地 ASR；未完成正常速度的全片主观听审，未核验音效、音乐节拍或声音转场。",
+    "视觉事件与转写边界为近似值；一句跨镜头时可关联多个事件，一项视觉事件也可承接多句。",
+    "保留原始 ASR。字幕 / 口播对照来自研究者结合可见字幕的阅读，可能合并数句；未做无依据的逐条改写。",
+    "第四块长任务、第五块写作由画面字幕补记，单列显示；没有伪造 ASR 编号。",
+    "视频内的产品名称、分数与性能等为原片主张，未做事实核验；其字形、模型来源、创作软件与精确缓动曲线也未确定。",
+    "帮助理解的作用属于基于画面和上下文的研究推断，与画面中可见的事实分别标示。"
+  ],
+  "integration_scope": "本轮将来源文本与方法接入Skill检索；原研究的skill_modified=false等字段为研究时点快照，未据此声称当前未升级。",
+  "approval": {
+    "reference_direction_user_approved": true,
+    "reconstructed_video_user_approved": false,
+    "existing_approved_girl_and_ui_preserved": true
+  }
+}

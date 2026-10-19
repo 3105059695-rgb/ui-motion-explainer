@@ -1,0 +1,2608 @@
+[
+  {
+    "id": "interaction-account-setup-accordion",
+    "title": "账号设置 · 三段折叠与本地确认",
+    "category": "interaction",
+    "duration": 30,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "video-paused-frames",
+    "description": "同一账号设置弹窗内，必填、个人资料、可选资料依次展开并折叠；回到必填资料后确认已有地址，行内边框退出，状态变为Complete。",
+    "adaptationNotes": "源1732×2160、12.672秒。保留三段标题/说明/图标/info/status/箭头，完整六行必填与各三行个人/可选资料，顶栏关闭及Skip/Proceed。1920×1080独立CSS/SVG与30秒阅读停留；预填身份和联系方式为原创示意，地址确认仅本地UI，不声称创建账号、上传或真实提交。",
+    "tags": [
+      "Collect UI",
+      "Modal",
+      "Accordion",
+      "Account Setup",
+      "Continuous interaction"
+    ],
+    "params": {
+      "title": "Alex Morgan",
+      "prompt": "alex@example.test",
+      "result": "Singapore"
+    },
+    "paramLimits": {
+      "title": 20,
+      "prompt": 30,
+      "result": 18
+    }
+  },
+  {
+    "id": "software-agent-hub",
+    "title": "Agent Hub · 从任务到失败定位",
+    "category": "software",
+    "duration": 16,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "description": "依据已观察的 My Agents 与 Agent Hub 界面重建；点击页签查看统计与活动，展开正在执行的步骤，再切到 Resume Review 的失败步骤并停留。头像、背景和16秒节奏为原创适配。",
+    "tags": [
+      "Collect UI",
+      "AI Agents",
+      "Agent Hub",
+      "任务展开",
+      "失败定位"
+    ],
+    "params": {
+      "title": "Agents",
+      "agentName": "Offer Letter Generator"
+    }
+  },
+  {
+    "id": "software-agent-workflow-inspect",
+    "title": "Agent Workflow · 定位失败与查看 Slack 配置",
+    "category": "software",
+    "duration": 14,
+    "description": "根据 Ayda 原片 26.441、31.729、33.896 秒的工作流与 Slack 抽屉重建界面；原创编排定位缺资料节点、切至全画布、点击 Slack 节点并展开配置，Failed 状态始终保留。",
+    "tags": [
+      "AI Agents",
+      "Workflow",
+      "失败检查",
+      "Slack 配置",
+      "侧栏展开"
+    ],
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "video-fragment",
+    "referenceVideoDuration": 78.75,
+    "observedTimes": [
+      26.441,
+      31.729,
+      33.896
+    ],
+    "adaptationNotes": "只依据已观察片段，不宣称完整原片复刻。节点第二项统一拼为 templates；原图疑似 remplates。操作节奏、简化 Agent Hub、渐变桌面和示意图标为原创；不连接 Drive/Slack，不展开未观察的频道列表，不演出发送成功。",
+    "params": {
+      "title": "Resume Review",
+      "prompt": "Describe your goal and AI will build the instructions..."
+    }
+  },
+  {
+    "id": "interaction-dual-image-loader-orb-reveal",
+    "title": "双图像加载 · 点阵与粒子球揭示",
+    "category": "interaction",
+    "duration": 9,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "video-paused-frames",
+    "description": "两种图像加载表示始终处于同一工作区：流动点阵和旋转粒子球伴随状态交替，经模糊扩张连续揭示相同黑白图像。",
+    "adaptationNotes": "依据2284×1362、6.208333秒原片的7个实际解码暂停帧重建双加载面板、游走边光、点阵、粒子球、多线光环、状态切换和成图揭示。独立SVG运动服人物替代来源照片与身份；源未显示AI请求或重试点击。9秒适配阅读及接UI正文，三参数编辑原片可见状态文字。成图矩形可接入图像工作区/素材详情。",
+    "tags": [
+      "Collect UI",
+      "Loading",
+      "Orb",
+      "AI",
+      "Particle Sphere",
+      "Image Reveal",
+      "图像加载",
+      "AI 开场"
+    ],
+    "params": {
+      "title": "Making the first draft...",
+      "prompt": "Forming the shapes...",
+      "result": "Gathering the light..."
+    },
+    "paramLimits": {
+      "title": 32,
+      "prompt": 32,
+      "result": 32
+    }
+  },
+  {
+    "id": "ai-product-ad-assets-pipeline",
+    "title": "产品广告素材 · 六图两视频工作流",
+    "category": "ai",
+    "duration": 36,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "深色节点画布持续移动，产品识别分成三路创意，再扩展六张图片、两段视频并汇总展示；包含运行、等待、连线传递和完整结果序列。",
+    "adaptationNotes": "依据 ilker 45.461 秒原片全段暂停观察重建，调整到36秒。保留输入、Vision、三路创意、拼接与合并、六路图片、两路视频、八项输出、红色结果序列与结束环。原片开场输入已填充且未见运行点击；本模块补充运行按钮点击作演示因果。中文提示词和独立SVG跑鞋替换原代码、品牌和生成图片；视频预览为SVG运动示意，不执行或证明任何模型能力。",
+    "tags": [
+      "Collect UI",
+      "AI Flow",
+      "AI",
+      "节点画布",
+      "产品广告",
+      "并行生成",
+      "结果展示"
+    ],
+    "params": {
+      "title": "产品广告素材工作流",
+      "prompt": "银灰跑鞋，青色气垫，保留结构与产品轮廓",
+      "result": "六张图片 · 两段视频"
+    }
+  },
+  {
+    "id": "interaction-crm-command-preview",
+    "title": "CRM 命令栏 · 轻浮层与草稿预览",
+    "category": "interaction",
+    "duration": 18,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "static-image",
+    "description": "保留侧栏、项目文档和公司属性三栏，在同一轻浮层内选择、输入筛选、预览公司草稿，ESC 返回后清空并恢复完整命令。",
+    "adaptationNotes": "实看4096×2913单张静态图及原作卡片。Create四项、General三项、页脚和无遮罩的三栏CRM来自观察；1920×1080布局、独立SVG、全部打开/输入/选行/清空/ESC时序和草稿预览均为原创。草稿只是界面示意，不创建公司、不修改源产品、不调用服务。未使用原头像或源图像素。",
+    "tags": [
+      "Collect UI",
+      "Command Bar",
+      "Modal",
+      "Dashboard",
+      "CRM",
+      "轻浮层",
+      "原创连续操作"
+    ],
+    "params": {
+      "title": "Project brief",
+      "prompt": "Northstar Studio",
+      "result": "Design partner for the next release"
+    },
+    "paramLimits": {
+      "title": 24,
+      "prompt": 28,
+      "result": 62
+    },
+    "paramMeaning": {
+      "title": "中央项目文档标题",
+      "prompt": "原创公司草稿预览中的名称",
+      "result": "原创公司草稿预览中的描述"
+    }
+  },
+  {
+    "id": "opening-orb-converge",
+    "title": "光球聚合 · 智能唤醒",
+    "category": "opening",
+    "duration": 8,
+    "description": "分散的光环聚为一个核心，核心收进输入框成为可操作入口。",
+    "tags": [
+      "Orb",
+      "开场",
+      "单一焦点"
+    ],
+    "sourceStatus": "original-extension"
+  },
+  {
+    "id": "ai-document-scan",
+    "title": "文档扫描 · 识别重点",
+    "category": "ai",
+    "duration": 9,
+    "description": "扫描线在文档范围内前进，命中字段后保留高亮，最后生成摘要。",
+    "tags": [
+      "扫描",
+      "识别",
+      "来源"
+    ],
+    "sourceStatus": "original-extension"
+  },
+  {
+    "id": "opening-type-mask",
+    "title": "标题遮罩 · 进入工作区",
+    "category": "opening",
+    "duration": 7,
+    "description": "标题从遮罩中显现，关键词缩为窗口名称，软件工作区接管同一画面。",
+    "tags": [
+      "Text Effect",
+      "标题",
+      "连续转场"
+    ],
+    "sourceStatus": "original-extension"
+  },
+  {
+    "id": "result-chart-draw",
+    "title": "数据成形 · 结论落点",
+    "category": "result",
+    "duration": 8,
+    "description": "同一组数据从行记录进入坐标系，曲线依点绘制后突出最终结论。",
+    "tags": [
+      "Analytics Chart",
+      "数据",
+      "结果"
+    ],
+    "sourceStatus": "original-extension"
+  },
+  {
+    "id": "ai-stage-progress",
+    "title": "任务推进 · 状态交接",
+    "category": "ai",
+    "duration": 9,
+    "description": "活动状态沿任务步骤推进，已完成步骤留下证据，最后汇总交付。",
+    "tags": [
+      "Progress",
+      "状态",
+      "AI 执行"
+    ],
+    "sourceStatus": "original-extension"
+  },
+  {
+    "id": "ambient-glass-focus",
+    "title": "玻璃层次 · 焦点让位",
+    "category": "ambient",
+    "duration": 8,
+    "description": "背景光带缓慢移动，透明面板拉近后回到清晰稳定的阅读状态。",
+    "tags": [
+      "Liquid Glass",
+      "景深",
+      "氛围"
+    ],
+    "sourceStatus": "original-extension"
+  },
+  {
+    "id": "software-workflow-automation",
+    "title": "Workflow automation",
+    "category": "software",
+    "duration": 12,
+    "description": "参考 Elaya 的静态 Workflow automation 界面重建；同一窗口纵深入场、打字、点击 Run 和连线检查为原创演示。流程只到 Missing Information，不展示抓取数据或 CRM 发送成功。",
+    "tags": [
+      "Workflow automation",
+      "AI Flow",
+      "静态界面参考",
+      "Missing Information"
+    ],
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "static-image",
+    "params": {
+      "title": "Reddit monthly Leads",
+      "prompt": "Find Series A SaaS companies in Europe and send qualified leads to my CRM."
+    }
+  },
+  {
+    "id": "interaction-add-job-hub-hover",
+    "title": "Add Job · 任务枢纽悬停展开",
+    "category": "interaction",
+    "duration": 9,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "光标离开六类任务面板后，面板、四端口和连线同步收缩为小枢纽；光标返回后恢复同一组任务入口与描述输入框。",
+    "adaptationNotes": "原片1308×1306、4.25秒；保留完整的展开—离开—收拢—进入—再展开循环，改成9秒1920×1080横屏并延长阅读停留。六任务标签翻译成中文，补充外部说明。参考未显示点击、输入、麦克风录音或任务执行，重建也不添加这些操作。",
+    "tags": [
+      "Collect UI",
+      "AI Flow",
+      "悬停",
+      "任务入口",
+      "端口收拢",
+      "连续变形"
+    ],
+    "params": {
+      "title": "添加任务",
+      "prompt": "或用一句话描述任务",
+      "result": "任务入口随光标展开"
+    }
+  },
+  {
+    "id": "interaction-sidebar-chat-grouping",
+    "title": "Cursor 侧栏 · 四种聊天分组",
+    "category": "interaction",
+    "duration": 26,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "video",
+    "description": "固定三条置顶聊天，从 Grouping 子菜单切换 Projects、Updated、Status、Environment；同一组十一条聊天连续重排，选中项保持。",
+    "adaptationNotes": "实看1000×564、15.6秒Cursor Sidebar视频，七个真实解码暂停帧确认四种分组、置顶三条和普通聊天十一条。此版1920×1080独立HTML/CSS/SVG重建，26秒时序、指针和点击波纹为原创，未复制源像素。get_bb_app为发布者，不将其称作源软件身份；状态标记为本地演示数据，未执行真实AI任务、连接IDE或改变远程聊天。Ordering、Show、Status、Environment等主菜单入口仅保留可见层级，未补造未观察的子菜单操作。",
+    "tags": [
+      "Collect UI",
+      "AI",
+      "AI Agents",
+      "Sidebar",
+      "Cursor Sidebar",
+      "同列表重排",
+      "原创连续操作"
+    ],
+    "params": {
+      "title": "CURSOR SIDEBAR",
+      "prompt": "Rate limit headers",
+      "result": "acme-web · feature-spacing"
+    },
+    "paramLimits": {
+      "title": 28,
+      "prompt": 30,
+      "result": 36
+    },
+    "paramMeaning": {
+      "title": "左侧软件身份标题",
+      "prompt": "保持选中的聊天标题",
+      "result": "该聊天的本地环境与分支说明"
+    }
+  },
+  {
+    "id": "interaction-command-task-config-theme",
+    "title": "任务命令栏 · 搜索、配置与主题",
+    "category": "interaction",
+    "duration": 40,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "从全局命令进入既有任务，连续筛选和收拢结果；任务上下文命令设置代理、勾选两个仓库，原位切换PR和日志，滚动到主题子层后同窗转浅色。",
+    "adaptationNotes": "依据19.481481秒2898×1750原片24个稳定暂停点保留完整主要链，重排为1920×1080/40秒。中文、图标、背景、时间和提示按键为可编辑改编；未见真实按键或鼠标事件。既有历史回复、配置通知与失败检查为示意，无真实业务、网络、命令执行或外站跳转。",
+    "tags": [
+      "Collect UI",
+      "Command Bar",
+      "Code Editor",
+      "Mac App",
+      "任务子层",
+      "仓库多选",
+      "配置反馈",
+      "主题切换"
+    ],
+    "params": {
+      "title": "简单问候任务",
+      "prompt": "hel",
+      "result": "已创建 hello-world.md，内容为 hello world，与 CLAUDE.md 说明一致。"
+    },
+    "paramLimits": {
+      "title": 18,
+      "prompt": 18,
+      "result": 100
+    }
+  },
+  {
+    "id": "software-branch-workflow",
+    "title": "分支工作流 · 查看触发条件与双路径",
+    "category": "software",
+    "duration": 14,
+    "description": "根据 Marcel Kargul 的静态 SaaS 工作流构图重建 Trigger、Condition 和双 Action 分支；原创点击展开配置与弱描线说明，Draft 保持，不演出执行成功。",
+    "tags": [
+      "AI Flow",
+      "工作流分支",
+      "Trigger 配置",
+      "静态参考"
+    ],
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceTitle": "This is the design quality founders happily invest $50,000+ into.",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "static-image",
+    "adaptationNotes": "原图4096×3231，改编为16:9。保留已见字段，Run history 仅标题与裁切说明；头像为原创绘制，点击、抽屉滑入与分支焦点节奏为原创，不代表原图含动画或真实执行。",
+    "params": {
+      "title": "Untitled workflow",
+      "prompt": "Record ID in Companies updated"
+    }
+  },
+  {
+    "id": "interaction-camera-strip-dual-theme",
+    "title": "相机参数条 · 亮暗联动演示",
+    "category": "interaction",
+    "duration": 12,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "static-image-observed",
+    "description": "亮暗两个相机参数条持续存在，镜头与ISO菜单原位展开，选择后两种主题同步更新；可作摄影、AI影像教程中的参数演示。",
+    "adaptationNotes": "参考是1162×880单张静态图片：浅色与深色两种条形界面，五项依次DJI MAVIC 4 PRO、28MM、F/2.5、3S、ISO800。只观察到布局/图标/值/两种主题，没有源动画或操作。横屏12秒保持两种主题，独立SVG近似图标。入场、光标、28→35MM菜单、800→640 ISO菜单和双主题联动全部是原创演示，不是原作交互复刻。数据仅示意，不证明相机设置、照片元数据、生成任务或网络调用。自定义prompt/result默认不新增猜测值，需显式focalTarget/isoTarget才能另改目标。",
+    "tags": [
+      "Collect UI",
+      "Command Bar",
+      "相机参数",
+      "亮暗主题",
+      "原位菜单",
+      "静态参考·原创交互"
+    ],
+    "params": {
+      "title": "DJI MAVIC 4 PRO",
+      "prompt": "28MM",
+      "result": "800"
+    },
+    "paramLimits": {
+      "title": 18,
+      "prompt": 8,
+      "result": 8
+    }
+  },
+  {
+    "id": "interaction-chat-canvas-branch",
+    "title": "对话画布 · 从原文接出分支",
+    "category": "interaction",
+    "duration": 20,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "在同一张暗色画布中输入、回答、选中原文并连接两个分支；展开引用后用画布搜索返回源节点。",
+    "adaptationNotes": "根据36.246秒原片实际状态重建，20秒横屏重排、中文示例与光标节奏为独立编排；不包含末尾推广节点和广告尾页，不调用真实模型或搜索服务。",
+    "tags": [
+      "Collect UI",
+      "Chat Layout",
+      "AI Flow",
+      "Dark Mode",
+      "上下文分支",
+      "原文选区",
+      "画布搜索"
+    ],
+    "params": {
+      "title": "AI 对话画布",
+      "prompt": "这个画布可以做什么？",
+      "result": "两个分支，始终保留原文"
+    }
+  },
+  {
+    "id": "ai-voice-recipe-preferences",
+    "title": "语音食谱偏好 · 九轮识别与家庭核对",
+    "category": "ai",
+    "duration": 70,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "同一手机逐轮转写家庭料理偏好，关键词先填入条件、回答结束再勾选；九轮完成后核对汇总，打开家庭人数面板并收起。",
+    "adaptationNotes": "108.45秒1080×1080手机概念改为70秒1920×1080：保留九问、实时提取、滚动条件、完整汇总与家庭面板→Done。新增旁侧同任务记录以供横屏阅读；原英文转为中文示例，触点替换为鼠标。没有+/-修改、Next提交、录音或网络调用。",
+    "tags": [
+      "Collect UI",
+      "UI Interaction",
+      "AI",
+      "语音转写",
+      "食谱偏好",
+      "家庭设置",
+      "条件勾选",
+      "底部面板"
+    ],
+    "params": {
+      "title": "家庭料理偏好",
+      "prompt": "说出习惯，偏好会一项项被记下来。",
+      "result": "这些信息对吗？"
+    },
+    "editableRounds": "可选params.rounds[0..8]分别替换question/hint/answer/facts。facts是[答案中的原文短语,记录值]数组，只有答案实际含短语才提取。只替换answer时记录该回答本身，不推测饮食/人数。家庭答案改写后，人数编辑面板显示未知；可用params.household.adults/children提供明确人数。"
+  },
+  {
+    "id": "interaction-sidebar-hover-expand-select",
+    "title": "图标侧栏 · 悬停展开与选中保留",
+    "category": "interaction",
+    "duration": 32,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "video-paused-frames",
+    "description": "同一白色工作区中，五项图标导航随光标展开名称，点击后切换实心图标并保留当前入口名称，再连续返回首页。",
+    "adaptationNotes": "依据1322×1322、25.383333秒原片的真实暂停解码帧保留 Search、Home、Strategies、Campaigns、Chats 与完整留白区域。独立SVG重画图标；横屏32秒保留悬停、点击、离开及往返阅读。未观察正文和真实服务，未添加业务结果。参数只编辑导航名称。",
+    "tags": [
+      "Collect UI",
+      "Menu",
+      "Sidebar",
+      "Hover State",
+      "Navigation",
+      "展开标签",
+      "选中保留"
+    ],
+    "params": {
+      "title": "Home",
+      "prompt": "Campaigns",
+      "result": "Chats"
+    },
+    "paramLimits": {
+      "title": 20,
+      "prompt": 24,
+      "result": 20
+    }
+  },
+  {
+    "id": "ai-coding-agent-progress",
+    "title": "Coding Agent · 五步任务持续推进",
+    "category": "ai",
+    "duration": 18,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "同一个编码组件经历读文件、搜索、决策、编写、检查和完成；清单逐项打勾、工具栏联动，下方内容原位更新，最后保留成果摘要。",
+    "adaptationNotes": "参考Jeet的16.617秒视频中六个阶段。横屏放大、18秒节奏和细节文案重新编排；费用、tokens和完成状态均为示例，没有真实调用编码服务。",
+    "tags": [
+      "Collect UI",
+      "AI Flow",
+      "Progress Bar",
+      "持续清单",
+      "逐步执行",
+      "代码修改"
+    ],
+    "params": {
+      "title": "Ship dark mode toggle",
+      "result": "Dark mode shipped"
+    }
+  },
+  {
+    "id": "ai-orb-image-reveal",
+    "title": "AI 图像加载 · 点阵与轨道揭示",
+    "category": "ai",
+    "duration": 8,
+    "description": "依据已观察的双卡加载机制适配：白色点阵明暗波浪与细环球体转动，随后在原位置用柔边圆形遮罩揭示原创 SVG 山景。",
+    "tags": [
+      "Collect UI",
+      "Orb",
+      "AI Image Loader",
+      "点阵",
+      "柔边揭示"
+    ],
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "params": {
+      "title": "等待，也可以是一种设计。",
+      "prompt": "一束光，落在远处的山峦。",
+      "result": "一帧新的风景，已经就绪。",
+      "image": ""
+    }
+  },
+  {
+    "id": "ai-command-block-link",
+    "title": "Command Block · 柔性光纤连接",
+    "category": "ai",
+    "duration": 12,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "static-image",
+    "sourcePublisher": "Ayda Oz",
+    "description": "依据静态图重建黑色 Command Block、绿黄等宽指令和已有柔性光纤。原创光标定位 between 与 9 PM，时间范围轻亮确认，一束光沿同一曲线传播后恢复稳定；不改时间值或展示设备执行结果。",
+    "adaptationNotes": "Ayda Oz 为该链接发布者，不据转发文案推定原设计署名。右侧卡片仅呈现已观察到的文字片段并保留裁切；点击、局部确认与光流时序为原创。JetBrains Mono 为随包 OFL 字体。",
+    "tags": [
+      "Collect UI",
+      "AI Flow",
+      "Command Block",
+      "等宽指令",
+      "柔性光纤",
+      "静态参考"
+    ],
+    "params": {
+      "title": "COMMAND BLOCK",
+      "prompt": "When everyone leaves kitchen, turn off\nall light and switch off kitchen items\nbesides fridge"
+    }
+  },
+  {
+    "id": "interaction-inline-edit",
+    "title": "原位选中与改写差异",
+    "category": "interaction",
+    "duration": 8.8,
+    "description": "拖选文档中的原句，浮出改写工具条，替换文本后保留修改前后差异。",
+    "tags": [
+      "原位编辑",
+      "文本选区",
+      "改写"
+    ],
+    "sourceStatus": "original-extension",
+    "params": {
+      "title": "选中这一句，让表达更准确。",
+      "prompt": "这个工具能帮你处理很多事情。",
+      "result": "把重复操作交给 AI，把时间留给创作。"
+    }
+  },
+  {
+    "id": "interaction-dock-switch",
+    "title": "Dock 鱼眼与应用切换",
+    "category": "interaction",
+    "duration": 8.6,
+    "description": "光标沿底部 Dock 移动产生邻近放大，点击应用后同一窗口切换焦点与内容。",
+    "tags": [
+      "Dock",
+      "鱼眼放大",
+      "应用切换"
+    ],
+    "sourceStatus": "original-extension",
+    "params": {
+      "title": "跟随焦点，自然切换。",
+      "prompt": "项目文档",
+      "result": "执行工作台"
+    }
+  },
+  {
+    "id": "interaction-progress-morph",
+    "title": "按钮进度环与完成勾",
+    "category": "interaction",
+    "duration": 8.6,
+    "description": "点击开始按钮，按钮收拢为进度圆环，环填满后同一控件切为完成勾。",
+    "tags": [
+      "按钮变形",
+      "进度",
+      "完成反馈"
+    ],
+    "sourceStatus": "original-extension",
+    "params": {
+      "title": "从开始，到完成。",
+      "prompt": "生成项目执行计划",
+      "result": "项目计划已生成"
+    }
+  },
+  {
+    "id": "interaction-notification-expand",
+    "title": "顶部胶囊展开执行通知",
+    "category": "interaction",
+    "duration": 8.8,
+    "description": "点击紧凑通知查看步骤，步骤依次完成，再收回为单行成功通知。",
+    "tags": [
+      "胶囊展开",
+      "任务状态",
+      "通知"
+    ],
+    "sourceStatus": "original-extension",
+    "params": {
+      "title": "过程展开，结果收好。",
+      "prompt": "正在整理项目资料",
+      "result": "项目资料已整理完成"
+    }
+  },
+  {
+    "id": "interaction-settings-toggle",
+    "title": "开关联动选项与预览",
+    "category": "interaction",
+    "duration": 8.4,
+    "description": "开启聚焦模式，相关选项连续展开，右侧预览同步收起干扰并强调正文。",
+    "tags": [
+      "设置",
+      "开关联动",
+      "实时预览"
+    ],
+    "sourceStatus": "original-extension",
+    "params": {
+      "title": "改一个设置，画面一起响应。",
+      "prompt": "聚焦模式",
+      "result": "正文已成为唯一焦点"
+    }
+  },
+  {
+    "id": "interaction-table-sort",
+    "title": "表格排序与关键行定位",
+    "category": "interaction",
+    "duration": 8.6,
+    "description": "点击用时列启用升序，原表格的四行连续重排，选择最快完成的那一行。",
+    "tags": [
+      "表格",
+      "排序",
+      "连续重排"
+    ],
+    "sourceStatus": "original-extension",
+    "params": {
+      "title": "换个顺序，重点就清楚了。",
+      "prompt": "任务执行记录",
+      "result": "最快完成的任务已定位"
+    }
+  },
+  {
+    "id": "interaction-context-clear",
+    "title": "上下文清空 · 文字卷走与新会话",
+    "category": "interaction",
+    "duration": 12,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "保留同一聊天窗口，输入清空命令；消息由下向上卷散，短暂色彩分离后回到新会话。",
+    "adaptationNotes": "依据Sayan原片多个可见状态，横屏重新排版、12秒时序与文字形变为独立实现，非逐帧复刻；不执行真实聊天清除。",
+    "tags": [
+      "Collect UI",
+      "AI Flow",
+      "Chat Layout",
+      "UI Interaction",
+      "清空上下文",
+      "命令输入"
+    ],
+    "params": {
+      "title": "Project Nexus",
+      "prompt": "/clear",
+      "result": "开始一段新的对话"
+    }
+  },
+  {
+    "id": "interaction-dns-scroll-explain",
+    "title": "DNS · 文章滚动与驻留图解",
+    "category": "interaction",
+    "duration": 12,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "左侧文章持续滚动，右侧后缀表保持驻留；表格连续下移、根服务器卡片显现，四条连接线依次绘制，最后停留在完整网络。",
+    "adaptationNotes": "参考nanda的6.946秒DNS图解视频，横屏重排为12秒。新增文档外壳、中文概述与示例地址；未发起DNS请求，原作未观察到聊天发送、打字或光标点击。",
+    "tags": [
+      "Collect UI",
+      "AI Flow",
+      "Chat Layout",
+      "连续滚动",
+      "驻留图解",
+      "SVG连线"
+    ],
+    "params": {
+      "title": "让域名找到正确的服务器",
+      "result": "根服务器指向每个后缀组"
+    }
+  },
+  {
+    "id": "interaction-dropdown-chain-multiselect",
+    "title": "链菜单 · 多选数量与图标联动",
+    "category": "interaction",
+    "duration": 30,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "同一链菜单展开后，两轮呈现Ethereum单链、2 Chains双图标斜叠、3 Chains三格与空占位、All Chains四格；菜单末尾闭合。五行选项始终完整可读。",
+    "adaptationNotes": "依据1322×1058、13.366667秒来源的14个真正解码暂停帧，独立代码重建为1920×1080、30秒。保留深色画布、汇总胶囊、双向小箭头及All Chains/Ethereum/Base/Polygon/Optimism完整五行。两轮实见All→Ethereum→2 Chains→3 Chains→All，最后关闭。来源推近会裁掉下方列表，横屏实现保持五行可读；被裁掉的逐行勾选按可见汇总图标与Ethereum部分勾选推导呈现，并非这些低位行已直接观察。连续指针、行悬停、点击提示环、精确点击顺序与阅读时长是原创操作映射，不能当作原事件记录。SVG品牌glyph独立绘制，无远程像素、源代码或业务调用。未验证源声音、链过滤结果、账户或资金行为。",
+    "parameterNotes": "title替换All Chains组名与汇总全链状态，限20字符；prompt替换Ethereum菜单与单链汇总名称，限20字符；result替换数量后的Chains单位，限12字符。数量2/3、其他三链名称、图标与两轮状态顺序固定。",
+    "params": {
+      "title": "All Chains",
+      "prompt": "Ethereum",
+      "result": "Chains"
+    },
+    "paramLimits": {
+      "title": 20,
+      "prompt": 20,
+      "result": 12
+    },
+    "tags": [
+      "Collect UI",
+      "Dropdown",
+      "多选菜单",
+      "图标联动",
+      "连续交互"
+    ]
+  },
+  {
+    "id": "software-glass-code-editor-local-edit",
+    "title": "玻璃代码编辑器 · 本地查找与文本替换",
+    "category": "software",
+    "duration": 28,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "video-paused-frames",
+    "description": "完整玻璃 IDE 中保留页面树、图标栏、设备/域名工具、三个文件标签和高亮代码。源片只有背景光影运动；折叠、当前文件查找和本地文本替换是独立原创操作，无真实代码执行。",
+    "adaptationNotes": "依据2002×1816、10.008333秒源片6个真实暂停解码帧重建全部可见界面。源内没有点击、输入、选择或执行，只有模糊框形背景循环。28秒连续演示中的查找弹层、分组折叠、文字选择及替换明确为original extension。源中右/下边缘裁切内容不猜补；独立SVG光影替代来源像素。",
+    "tags": [
+      "Collect UI",
+      "Code Editor",
+      "玻璃界面",
+      "本地编辑",
+      "original extension"
+    ],
+    "params": {
+      "title": "Services (Item)",
+      "prompt": "service",
+      "result": "Tailored support for your team."
+    },
+    "paramLimits": {
+      "title": 24,
+      "prompt": 20,
+      "result": 64
+    }
+  },
+  {
+    "id": "opening-window-depth",
+    "title": "窗口空间展开",
+    "category": "opening",
+    "duration": 7.8,
+    "description": "窗口沿深度展开，镜头回正后点击文件，文件内容在同一工作台展开。",
+    "tags": [
+      "空间展开",
+      "产品开场",
+      "连续窗口"
+    ],
+    "sourceStatus": "original-extension",
+    "params": {
+      "title": "把想法，展开成作品。",
+      "prompt": "产品发布计划",
+      "result": "发布方案已就绪"
+    }
+  },
+  {
+    "id": "opening-command-launch",
+    "title": "一条命令启动",
+    "category": "opening",
+    "duration": 8.4,
+    "description": "输入框接收命令，提交后自身扩展为任务执行窗口，再展开结果。",
+    "tags": [
+      "命令启动",
+      "输入",
+      "开场"
+    ],
+    "sourceStatus": "original-extension",
+    "params": {
+      "title": "一句话，开始执行。",
+      "prompt": "把这份想法整理成可执行计划",
+      "result": "执行计划已创建"
+    }
+  },
+  {
+    "id": "opening-focus-reveal",
+    "title": "景深对焦揭示",
+    "category": "opening",
+    "duration": 7.3,
+    "description": "从模糊的结果局部快速对焦，镜头拉回工作台，聚焦选区中的关键结论。",
+    "tags": [
+      "景深",
+      "结果预告",
+      "焦点"
+    ],
+    "sourceStatus": "original-extension",
+    "params": {
+      "title": "看清真正重要的。",
+      "prompt": "项目洞察",
+      "result": "把时间，留给创作。"
+    }
+  },
+  {
+    "id": "interaction-slider-confirm",
+    "title": "滑动确认与成功反馈",
+    "category": "interaction",
+    "duration": 8,
+    "description": "光标拖动滑块，确认轨道随拖动填充，释放后控件收拢为成功状态。",
+    "tags": [
+      "滑动确认",
+      "控件变形",
+      "成功反馈"
+    ],
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "params": {
+      "title": "确认，也可以很顺滑。",
+      "prompt": "确认发送项目文件",
+      "result": "文件已发送"
+    }
+  },
+  {
+    "id": "interaction-folder-fan",
+    "title": "文件夹扇形展开",
+    "category": "interaction",
+    "duration": 8.2,
+    "description": "打开文件夹后文件连续扇出，选中的文件脱离原位置并展开为可读文档。",
+    "tags": [
+      "文件",
+      "扇形展开",
+      "同一对象"
+    ],
+    "sourceStatus": "original-extension",
+    "params": {
+      "title": "资料展开，重点浮现。",
+      "prompt": "项目资料",
+      "result": "内容创作计划"
+    }
+  },
+  {
+    "id": "interaction-command-palette",
+    "title": "命令菜单搜索选择",
+    "category": "interaction",
+    "duration": 8.2,
+    "description": "打开命令菜单、键入关键词、匹配操作，选中后原页面切换为任务执行状态。",
+    "tags": [
+      "命令菜单",
+      "搜索",
+      "操作反馈"
+    ],
+    "sourceStatus": "original-extension",
+    "params": {
+      "title": "想做什么，直接找到。",
+      "prompt": "生成",
+      "result": "生成内容大纲"
+    }
+  },
+  {
+    "id": "interaction-list-filter",
+    "title": "搜索筛选与连续重排",
+    "category": "interaction",
+    "duration": 8,
+    "description": "输入关键词后非匹配行退场，匹配行保留身份并连续上移重排。",
+    "tags": [
+      "搜索",
+      "列表重排",
+      "筛选"
+    ],
+    "sourceStatus": "original-extension",
+    "params": {
+      "title": "从一堆文件，找到答案。",
+      "prompt": "视频",
+      "result": "找到 2 个相关文件"
+    }
+  },
+  {
+    "id": "interaction-sidebar-detail",
+    "title": "选中行展开详情",
+    "category": "interaction",
+    "duration": 8,
+    "description": "任务列表中的选中行保持位置，侧边详情从窗口内展开，状态更新同步回原列表。",
+    "tags": [
+      "侧栏",
+      "任务详情",
+      "同步状态"
+    ],
+    "sourceStatus": "original-extension",
+    "params": {
+      "title": "选中一项，展开全部。",
+      "prompt": "制作产品演示视频",
+      "result": "准备制作"
+    }
+  },
+  {
+    "id": "result-document-unfold",
+    "title": "结果文档展开",
+    "category": "result",
+    "duration": 8,
+    "description": "生成完成的文件从紧凑附件展开为多段文档，关键结论随后被原位强调。",
+    "tags": [
+      "结果揭示",
+      "文档展开",
+      "阅读停留"
+    ],
+    "sourceStatus": "original-extension",
+    "params": {
+      "title": "结果，已经成形。",
+      "prompt": "内容计划.md",
+      "result": "从想法到可执行方案"
+    }
+  },
+  {
+    "id": "result-compare-wipe",
+    "title": "前后差异局部擦除",
+    "category": "result",
+    "duration": 8.5,
+    "description": "拖动对比边界，同一份文档的修改前与修改后连续显露，停在完整结果。",
+    "tags": [
+      "前后对比",
+      "擦除",
+      "结果"
+    ],
+    "sourceStatus": "original-extension",
+    "params": {
+      "title": "变化，就在同一个画面。",
+      "prompt": "原始想法",
+      "result": "可执行方案"
+    }
+  },
+  {
+    "id": "transition-shared-file",
+    "title": "同一文件跨窗口",
+    "category": "transition",
+    "duration": 8.5,
+    "description": "把同一个文件从素材窗口拖入工作台，文件落入目标容器并展开预览。",
+    "tags": [
+      "跨窗口",
+      "拖拽",
+      "上下文交接"
+    ],
+    "sourceStatus": "original-extension",
+    "params": {
+      "title": "交接文件，接着往下做。",
+      "prompt": "项目方案.pdf",
+      "result": "已加入工作台"
+    }
+  },
+  {
+    "id": "transition-tab-morph",
+    "title": "同一内容切换标签",
+    "category": "transition",
+    "duration": 8.5,
+    "description": "从文档视图切到看板视图，同一任务行变为同一任务卡，随后切回列表保持内容一致。",
+    "tags": [
+      "标签切换",
+      "布局变形",
+      "共享内容"
+    ],
+    "sourceStatus": "original-extension",
+    "params": {
+      "title": "换个视角，内容不断。",
+      "prompt": "项目执行计划",
+      "result": "同一项目，两种视图"
+    }
+  },
+  {
+    "id": "interaction-file-library-search-open",
+    "title": "资料库 · 全局搜索转入文档阅读",
+    "category": "interaction",
+    "duration": 22,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "static-image",
+    "description": "完整深色资料库中打开搜索，输入查询并连续选择四条 nvidia 文件结果；原位打开文档、定位阅读段落、返回搜索，再退出到同一资料库。",
+    "adaptationNotes": "根据4096×3057静态图保留导航、顶栏、目录工具栏、六列五排文件网格、四结果搜索框与快捷键底栏。1920×1080中文布局与全部操作原创；内容为独立示例，无真实搜索或外部服务响应。",
+    "tags": [
+      "Collect UI",
+      "Search",
+      "File Tree",
+      "Command Bar",
+      "Modal",
+      "Dark Mode",
+      "资料库",
+      "文档阅读"
+    ],
+    "params": {
+      "title": "gold-data",
+      "prompt": "nvidia",
+      "result": "资料阅读笔记"
+    },
+    "paramLimits": {
+      "title": 20,
+      "prompt": 12,
+      "result": 56
+    }
+  },
+  {
+    "id": "interaction-snippet-search-refine",
+    "title": "局部搜索 · 摘录展开与查询细化",
+    "category": "interaction",
+    "duration": 20,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "static-image",
+    "description": "独立深色搜索框输入查询，保留四条 nvidia 文件和两行摘录；连续选择后原位展开 Vera 片段、收起，再追加 vera 将结果缩为同一文件。",
+    "adaptationNotes": "依据2960×2672静态源保留独立搜索片段、Files、四文件名与两行摘要、橄榄色文档图标和底栏。1920×1080布局、指针、输入、原位展开及细化全为原创；未添加另一来源的应用背景，无真实搜索或财务结果。",
+    "tags": [
+      "Collect UI",
+      "Command Bar",
+      "Search",
+      "File Tree",
+      "摘录",
+      "查询细化",
+      "局部阅读"
+    ],
+    "params": {
+      "title": "搜索工作资料",
+      "prompt": "nvidia",
+      "result": "阅读这份方案摘要"
+    },
+    "paramLimits": {
+      "title": 24,
+      "prompt": 12,
+      "result": 56
+    }
+  },
+  {
+    "id": "interaction-empty-state-workspace-folder-artifact",
+    "title": "空状态 · 工作区到文件夹与条目",
+    "category": "interaction",
+    "duration": 24,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "video-paused-frames",
+    "description": "同一空状态容器依源顺序呈现工作区窗口、文件夹与三条叠放的条目，容器尺寸、插图、逐字标题、说明与创建入口连续变化。",
+    "adaptationNotes": "源1600×1200、6.122秒。保留灰色留白、完整白色容器、三种插图、标题/说明/+CTA及自动切换顺序；独立CSS/SVG在1920×1080中重画，24秒增加阅读停留。未观察鼠标、点击、创建表单或业务结果，代码只演示源可见视觉动作；没有真实创建、数据写入或AI执行。",
+    "tags": [
+      "Collect UI",
+      "Empty States",
+      "Workspace",
+      "Folder",
+      "Artifact",
+      "Motion"
+    ],
+    "params": {
+      "title": "Workspace",
+      "prompt": "Folder",
+      "result": "Artifact"
+    },
+    "paramLimits": {
+      "title": 14,
+      "prompt": 14,
+      "result": 14
+    }
+  },
+  {
+    "id": "interaction-hr-command-multigroup-search",
+    "title": "HR Command · 四组筛选与清空",
+    "category": "interaction",
+    "duration": 28,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "同一个浅色命令菜单，跨工具、员工、团队和地区移动；查询时保留四组结构，匹配行重新排序，清空后恢复完整列表。",
+    "adaptationNotes": "已在22.270833秒、2532×2050原片中实看28个暂停点。保留初段行悬停、Monday筛选、五个Recent标签悬停、选中文本、Asana、清空、Laura、清空、Italy、清空、S到Synergy及最后清空。横屏1920×1080，时序延长到28秒，四组与标签中文化；所有图标、头像、旗帜为独立矢量示意。指针轨迹和文字选区按所见机制近似重建，不声称原作源码；未证明具体按键，故不标Ctrl+A或Esc。默认检索词保留英文名称；prompt/result覆盖时同步替换对应工具/团队名称并保留英文检索别名，可见筛选由文字变化触发。原片没有打开详情或业务成功，本版也只有筛选、选中与清空，不调用业务或网络。",
+    "tags": [
+      "Collect UI",
+      "Command Bar",
+      "Search",
+      "UI Interaction",
+      "四组结果",
+      "清空复位",
+      "完整交互链"
+    ],
+    "params": {
+      "title": "搜索 HR 工具或输入关键词",
+      "prompt": "Monday",
+      "result": "Synergy"
+    },
+    "paramLimits": {
+      "title": 26,
+      "prompt": 18,
+      "result": 18
+    },
+    "paramMeaning": {
+      "title": "搜索框占位文字",
+      "prompt": "第一轮工具检索词，同时替换对应工具名称",
+      "result": "最后一轮团队检索词，同时替换对应团队名称；不是执行结果"
+    }
+  },
+  {
+    "id": "interaction-flow-deck-insert",
+    "title": "Flow Builder · 拖入演示文档",
+    "category": "interaction",
+    "duration": 13,
+    "description": "根据 Siddharth Vij 的静态 Flow Builder 构图重建三节点界面；原创演出从 Add Deck 拖入 Sales Playbook，节点和连接线原位让位，再保留阅读时间。",
+    "tags": [
+      "Dashboard",
+      "AI Flow",
+      "节点插入",
+      "拖拽",
+      "连续对象"
+    ],
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceTitle": "cleanest workflow builder design you'll see here ;)",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "static-image",
+    "adaptationNotes": "保留静态参考图重复的 Guardrails 标签；森林、图标与头像为原创绘制，拖拽和插入节奏为原创，不代表真实 Hubspot 操作或原图包含动画。",
+    "params": {
+      "title": "Sales Playbook",
+      "prompt": "When a user mentions “product overview”",
+      "result": "Would you be interested in seeing a clip of the product in action"
+    }
+  },
+  {
+    "id": "interaction-finder-sticker-peel-drag",
+    "title": "文件贴纸 · 揭角与自由摆放",
+    "category": "interaction",
+    "duration": 26,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "video-paused-frames",
+    "description": "完整 Finder 窗口中的两张照片、ZIP 和 PDF 按源顺序揭角、抬起、旋转与摆放，建筑照片最后再次移动。全部文件与侧栏持续存在，可前后拖动时间轴。",
+    "adaptationNotes": "依据1600×1200、17.685秒源片13个实际paused/ready4/rVFC匹配帧重建。源中指针、文件移动、纸张揭角和镜头变焦可见，底层点击事件和真实文件保存未知。1920×1080适配保留完整窗口并延长阅读；照片、文档、图标均独立SVG重画，拖拽按压反馈为原创说明，没有真实系统文件操作。",
+    "tags": [
+      "Collect UI",
+      "Folder",
+      "UI Interaction",
+      "文件贴纸",
+      "揭角拖动"
+    ],
+    "params": {
+      "title": "Documents",
+      "prompt": "IMG_2355.jpg",
+      "result": "Account statement 2.pdf"
+    },
+    "paramLimits": {
+      "title": 22,
+      "prompt": 26,
+      "result": 36
+    }
+  },
+  {
+    "id": "interaction-draggable-split-snap",
+    "title": "分栏拖动 · 三个吸附点与自由比例",
+    "category": "interaction",
+    "duration": 26,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "同一双栏阅读视图经过25%、50%、75%吸附与54%、65%自由比例；文章自然换行、图像裁切、两栏宽度计数与拖柄同步。",
+    "adaptationNotes": "依据14.303571秒1920×1440原片的8个稳定暂停帧，横屏适配为26秒1920×1080。保留两张文章卡、中间青蓝三点拖柄、内容换行和底部渐隐、01/02页码、双W读数、吸附蓝色和自由比例黑色。两张原照片用原创SVG场景替换，不打包源像素。文章正文替换为独立写作的相近字长示例，保留自然换行机制。W数值按横屏演示的实际栏宽显示，非来源748单位的原读数。入场、点击提示环、拖动时长和末段说明是原创适配；实际鼠标事件、拖动速度和吸附阈值未从源代码验证。",
+    "parameterNotes": "title替换两张文章卡标题，限28字符；prompt替换两张卡的正文，限360字符，窄栏允许原作式换行与渐隐；result替换末段框外说明，限30字符。分栏比例、读数和页码属于动作机制，固定由时间轴驱动。",
+    "params": {
+      "title": "A little more room.",
+      "prompt": "Small changes in space can change how a page feels. A wider column lets the eye move along a calm line of text, while a narrow column brings each sentence closer. Drag the divider to compare both views. The content stays in place as each side finds its own rhythm.",
+      "result": "50% · 回到中心吸附点"
+    },
+    "paramLimits": {
+      "title": 28,
+      "prompt": 360,
+      "result": 30
+    },
+    "tags": [
+      "Collect UI",
+      "Sidebar",
+      "UI Tips",
+      "Split View",
+      "拖动",
+      "吸附点",
+      "连续布局"
+    ]
+  },
+  {
+    "id": "interaction-liquid-glass-control-suite",
+    "title": "液态玻璃 · 八组连续控件",
+    "category": "interaction",
+    "duration": 36,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "圆形分裂与回收、播放器换曲、玻璃镜片、控制中心、导航胶囊、柱图提示、键盘搜索和通知叠放，八组完整演示中每次只有一个操作中心。",
+    "adaptationNotes": "依据1440×1440、16.042秒原片主要状态重建为36秒横屏，保留八组与尾部文字镜片。中文文案、清楚标示的示例数据、SVG图标和模拟光标独立编排；局部折射为裁剪文字与SVG位移滤镜的程序近似。未接入音乐、系统设置、搜索或渲染业务。",
+    "tags": [
+      "Collect UI",
+      "Motion",
+      "Liquid Glass",
+      "玻璃折射",
+      "控件反馈",
+      "连续选区",
+      "完整八组"
+    ],
+    "sectionRanges": [
+      {
+        "id": "buttons",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "id": "player",
+        "start": 4,
+        "end": 8.6
+      },
+      {
+        "id": "lens",
+        "start": 8.6,
+        "end": 14
+      },
+      {
+        "id": "controls",
+        "start": 14,
+        "end": 19
+      },
+      {
+        "id": "navigation",
+        "start": 19,
+        "end": 23
+      },
+      {
+        "id": "chart",
+        "start": 23,
+        "end": 27.4
+      },
+      {
+        "id": "search",
+        "start": 27.4,
+        "end": 31.8
+      },
+      {
+        "id": "notifications",
+        "start": 31.8,
+        "end": 36
+      }
+    ],
+    "params": {
+      "title": "液态玻璃",
+      "prompt": "玻璃",
+      "result": "渲染完成"
+    }
+  },
+  {
+    "id": "interaction-nested-activity-sidebar",
+    "title": "嵌套侧栏 · 子项切换与折叠",
+    "category": "interaction",
+    "duration": 28,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "同一深色应用中展开Activities一级子树，先悬停Tasks与Meetings，再按Meetings→Calls→Tasks→Calls→Home切换，圆点连接轨道、蓝色选中条与下方菜单联动，最后折叠返回。",
+    "adaptationNotes": "依据1080×1080、12.050998秒原片的11个解码稳定暂停帧，适配为1920×1080、28秒。保留Home、Activities、Agents、Team、Settings及Tasks/Meetings/Calls一级子项；展开时下方项目让位，箭头转向，蓝色选择条与圆点移动，返回Home后收折，末尾再次hover闭合组。右侧搜索框与全部主要灰色占位区域持续存在，不产生业务内容。结形来源品牌标志替换为独立几何标记，其余图标和光标也是原创SVG。入口、点击提示环、宽度比例、阅读停留、连接轨道渐隐与精确插值为原创适配。未验证原声音、加载行为、文件内容或实际点击事件，不声称源代码实现。",
+    "parameterNotes": "title替换Activities组名，限24字符；prompt替换Tasks子项，限24字符；result替换Calls子项，限24字符。Home、Meetings、Agents、Team、Settings及层级和动作顺序固定。",
+    "params": {
+      "title": "Activities",
+      "prompt": "Tasks",
+      "result": "Calls"
+    },
+    "paramLimits": {
+      "title": 24,
+      "prompt": 24,
+      "result": 24
+    },
+    "tags": [
+      "Collect UI",
+      "Sidebar",
+      "File Tree",
+      "UI Interaction",
+      "嵌套导航",
+      "折叠组",
+      "连续界面"
+    ]
+  },
+  {
+    "id": "interaction-lab01-prototype-tour",
+    "title": "Lab01 · 十二段交互原型连续巡览",
+    "category": "interaction",
+    "duration": 66,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "video",
+    "description": "同一作品集纵向滚入十二个可编辑原型，保留邮件与时间线、层级菜单、任务卡跨列拖动、Schema编辑器、双侧栏缩宽、块菜单、Activities展开与Calls选择、Draft工具条、空搜索和时钟双指针调整。",
+    "adaptationNotes": "实看1080×1080、33.135011秒录屏并记录16个真实解码暂停样本。原作是Lab01作品集巡览而非单一侧栏；本版以独立1920×1080代码保留十二段主要区域和纵向作品集关系，66秒滚动、点击路径、速度与指针为原创。照片/背景/头像/图标以原创CSS/SVG/字母替代，无源像素。主题保持已观察Dark、邮件不发送、Schema保持可见状态、Ask AI仅悬停、Draft菜单不执行、搜索保持空查询，无真实AI/账户/服务操作。宽屏补足布局的占位条和省略号为原创，未补造未观察业务数据。",
+    "tags": [
+      "Collect UI",
+      "Sidebar",
+      "Lab01",
+      "作品集巡览",
+      "任务卡拖动",
+      "侧栏缩宽",
+      "层级展开",
+      "时钟控制",
+      "原创连续操作"
+    ],
+    "params": {
+      "title": "Lab01",
+      "prompt": "Define Requirements",
+      "result": "Opportunities"
+    },
+    "paramLimits": {
+      "title": 24,
+      "prompt": 30,
+      "result": 28
+    },
+    "paramMeaning": {
+      "title": "作品集页标题",
+      "prompt": "从To Do拖到Doing的同一任务卡标题",
+      "result": "双侧栏原型的分类标题"
+    }
+  },
+  {
+    "id": "interaction-sidebar-colored-anchor-trail",
+    "title": "长侧边栏 · 彩色锚点与滚动渐隐",
+    "category": "interaction",
+    "duration": 24,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "video-paused-frames",
+    "description": "同一长导航面板内连续选择 Layout、Typography、Color 和 Craft 条目；彩色圆点随选项移动，滚动时内容穿过顶部和底部渐隐。",
+    "adaptationNotes": "依据936×1190、10.991667秒原视频的8个实际暂停解码帧重建完整可见长导航与风景背景。横屏阅读节奏扩为24秒，独立SVG替代背景像素；未观察正文和服务行为，保留来源留白。参数用于编辑导航标签。",
+    "tags": [
+      "Collect UI",
+      "Sidebar",
+      "Navigation",
+      "Scroll Fades",
+      "Typography",
+      "Color",
+      "Layout",
+      "彩色锚点"
+    ],
+    "params": {
+      "title": "Resources",
+      "prompt": "Nested Border Radius",
+      "result": "Text Wrapping"
+    },
+    "paramLimits": {
+      "title": 20,
+      "prompt": 32,
+      "result": 28
+    }
+  },
+  {
+    "id": "ai-handoff-copy-component",
+    "title": "Handoff · 复制组件安装脚本",
+    "category": "interaction",
+    "duration": 12,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "video-fragment",
+    "description": "依据参考片段的 Handoff 组件与复制反馈重建：原创目录定位后，同一文档窗口连续推近，光标点击 Copy install script，浮动条显示 Copied 提示并停留。业务按钮保持待人工接管状态。",
+    "adaptationNotes": "参考观察范围约 25.36–27.00 秒。难以辨认的目录项以简化自写名称替代；目录点击、横屏重排与镜头节奏为原创。复制为可视反馈演示，不调用剪贴板或业务接口，也不展示退款成功。",
+    "tags": [
+      "Collect UI",
+      "Handoff",
+      "组件文档",
+      "连续推近",
+      "复制反馈"
+    ],
+    "params": {
+      "title": "Handoff",
+      "prompt": "Alpha is handing this to you"
+    }
+  },
+  {
+    "id": "interaction-invoice-node-focus",
+    "title": "发票流程 · 聚焦 AI 提取节点",
+    "category": "interaction",
+    "duration": 10,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "static-image",
+    "description": "重建 Invoice processing 草稿画布、四个相连节点和琥珀色选区；点击与局部推近为原创，始终保持配置草稿。",
+    "tags": [
+      "Collect UI",
+      "AI Flow",
+      "节点选择",
+      "局部推近",
+      "草稿"
+    ],
+    "params": {
+      "title": "Invoice processing",
+      "prompt": "Read attachments · Pull amount · Pull vendor"
+    }
+  },
+  {
+    "id": "ambient-agent-island",
+    "title": "点阵跑马工作状态",
+    "category": "ambient",
+    "duration": 10,
+    "description": "黑色胶囊中的点阵马持续奔跑，远处点阵山脉与近处像素树以不同速度滚动，保持清楚而克制的 AI 工作状态。",
+    "tags": [
+      "Dynamic Island",
+      "点阵",
+      "工作状态",
+      "景物滚动"
+    ],
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "params": {
+      "title": "正在整理你的素材",
+      "prompt": "读取文件、提取主题，并整理内容结构。"
+    }
+  },
+  {
+    "id": "ambient-cloud-topology-health",
+    "title": "云实例拓扑 · 健康状态与告警",
+    "category": "ambient",
+    "duration": 8,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "同一黑色点阵网络显示三地区与七个实例副本，指针经过正常与异常实例，悬停边框、滚动告警、点状连线和局部指标滑动持续反馈；末尾保持异常。",
+    "adaptationNotes": "依据原片全长 5.583 秒的 8 个暂停点重建为 8 秒。保留 3 个地区、7 个副本及不稳定实例，按 1920×1080 放大重排并中文化说明。告警完整文案属于独立改写，原片完整文字不可辨认；指标仅滑出和复位，未虚构数值刷新、故障修复或真实监控。",
+    "tags": [
+      "Collect UI",
+      "AI Flow",
+      "黑色点阵",
+      "云实例",
+      "监控拓扑",
+      "悬停反馈",
+      "告警"
+    ],
+    "params": {
+      "title": "互联网",
+      "prompt": "健康检查间歇性失败 · 请关注此实例",
+      "result": "不稳定"
+    }
+  },
+  {
+    "id": "interaction-finance-sidebar-resize",
+    "title": "财务侧栏 · 拖动收起与展开",
+    "category": "interaction",
+    "duration": 20,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "固定图标轨道、十项Finance菜单与空白Overview页面持续同框；悬停边界显示Drag to resize，再缩窄裁切、完全收起并拖回更宽侧栏。",
+    "adaptationNotes": "依据1440×1440、6.566667秒原片的8个稳定暂停帧，适配为1920×1080、20秒演示。保留全部菜单、Overview选中、Finance > Overview页头、空白内容页、固定图标轨道、灰色拖柄、双向调整光标及深色提示。轨道图标和光标以原创SVG绘制，背景用独立CSS渐变，没有来源像素。原片确有侧栏缩窄、文字被裁切、完全收起、展开到超过初始宽度，尾帧又回到初始附近且拖柄消失；本作宽度值与拖动节奏是横屏适配，尾段复位原因可能是录制剪切或行为，未验证。入场、按压提示环与延长阅读停留为原创；未验证财务业务、导航点击、吸附阈值或实际鼠标事件，不生成财务数据。",
+    "parameterNotes": "title替换侧栏模块名和页头模块名，限24字符；prompt替换悬停调整提示，限28字符；result替换首项选中行和页头页名，限24字符。菜单项与轨道、拖动宽度由固定时间轴控制。",
+    "params": {
+      "title": "Finance",
+      "prompt": "Drag to resize",
+      "result": "Overview"
+    },
+    "paramLimits": {
+      "title": 24,
+      "prompt": 28,
+      "result": 24
+    },
+    "tags": [
+      "Collect UI",
+      "Sidebar",
+      "侧栏",
+      "拖动",
+      "收起",
+      "Finance",
+      "连续布局"
+    ]
+  },
+  {
+    "id": "interaction-designer-directory-recovery",
+    "title": "设计师目录 · 空结果与清空恢复",
+    "category": "interaction",
+    "duration": 20,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "static-image",
+    "description": "同一浅色目录内输入、显示空结果、点击 Clear search、恢复七个筛选与三人列表；选行预览后 ESC 返回，并按地点筛选。",
+    "adaptationNotes": "实看3840×2880单张静态图及原作卡片：源图上下两窗分别是Elizabeth Mazen空结果与空查询最近三人。本版1920×1080单窗重排，保留七个筛选、三个最近对象与空结果清空入口；所有时序、点击、键位、筛选算法和本地详情预览为原创，不声称原作已有这些动画。不复制原头像或其他源像素，不创建profile、不联系或预订设计师。",
+    "tags": [
+      "Collect UI",
+      "Command Bar",
+      "目录搜索",
+      "空结果",
+      "清空恢复",
+      "原创连续操作"
+    ],
+    "params": {
+      "title": "All designers",
+      "prompt": "Elizabeth Mazen",
+      "result": "Sienna Hewitt"
+    },
+    "paramLimits": {
+      "title": 24,
+      "prompt": 28,
+      "result": 24
+    },
+    "paramMeaning": {
+      "title": "目录窗口标题",
+      "prompt": "第一轮目录查询，按本地三人数据真实匹配",
+      "result": "第一位最近浏览对象的可替换名称"
+    }
+  },
+  {
+    "id": "ai-image-model-video-nodes",
+    "title": "Nodes · 图像、三维与并行视频",
+    "category": "ai",
+    "duration": 29,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "同一画布沿图像、语言、图像模型、三维与三路视频连续移动；视角指令原位替换，框选视频组后展示三个不同运动结果。",
+    "adaptationNotes": "保留Krea 22.592秒原片的完整主要操作链；29秒中文阅读重排。人物与照片替换为原创矢量概念车，三维车为代码投影几何，视频为程序动画；按下反馈及片尾标识另作，不调用真实模型。",
+    "tags": [
+      "Collect UI",
+      "Motion",
+      "AI Flow",
+      "图像模型",
+      "三维",
+      "并行视频",
+      "连续画布"
+    ],
+    "params": {
+      "title": "让一张图，接出更多可能",
+      "prompt": "创造新的视角",
+      "result": "同一个素材，接入不同模型"
+    }
+  },
+  {
+    "id": "loading-sidebar-dot-morph",
+    "title": "Mini Loader · 软件侧栏点阵变形",
+    "category": "ambient",
+    "duration": 8,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "黑色软件侧栏保持两项任务与选中行；两个小点阵在双列、斜列和展开点簇之间持续变形，适合口播中的等待与处理段。",
+    "adaptationNotes": "观察原片6.866667秒的完整加载状态；横屏重新排布侧栏与背景，8秒可定位循环。背景、文件夹图标、圆点均独立绘制；圆点路径、数量显隐与周期为观察后的近似重建，并非原作源码。三行文字改为中文可编辑参数，result对应选中任务名称，不表示执行完成。原片未显示点击、输入或完成，重建没有添加这些操作。",
+    "tags": [
+      "Collect UI",
+      "Loading Animation",
+      "软件侧栏",
+      "点阵",
+      "连续变形",
+      "等待状态"
+    ],
+    "params": {
+      "title": "代码",
+      "prompt": "添加 AI 动效脚本",
+      "result": "本地预览加载中"
+    },
+    "paramLimits": {
+      "title": 20,
+      "prompt": 26,
+      "result": 26
+    }
+  },
+  {
+    "id": "software-logistics-route-map",
+    "title": "物流路径 · 选择与流量定位",
+    "category": "software",
+    "duration": 14,
+    "description": "参考 Tuki 的黑橙工业物流静态界面重建：同一工作台入场，点击 Main Hub 后查看现有路径，沿线光点与相邻 85 u/hr 指标强调均为原创演示。保留全部节点与原数值，不执行导入导出或创建节点。",
+    "tags": [
+      "AI Flow",
+      "logistics",
+      "Main Hub",
+      "路径查看",
+      "静态界面参考"
+    ],
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "static-image",
+    "params": {
+      "title": "Reporting window",
+      "result": "85 u/hr"
+    }
+  },
+  {
+    "id": "interaction-foldable-learning-tabs",
+    "title": "折叠设备 · 四标签连续切换",
+    "category": "interaction",
+    "duration": 30,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "video-paused-frames",
+    "description": "同一设备模拟器中，四个竖排标签切换完整学习应用页面；点击形态控制后，折叠屏展开，正文流动适配宽度，再连续往返导航。",
+    "adaptationNotes": "源720×812、11.078105秒，12个稳定暂停解码样本。保留Profile偏好与套餐、Insights分数/柱状图/模式、Explore搜索/四种心情/热门、Home目标/概览/学习条目以及模拟器控制栏。横屏30秒扩大字号与阅读停留；设备、图标、图表和折叠光影由独立CSS/SVG绘制。源始终右侧竖排导航，未伪造底部迁移、真实学习或系统服务。",
+    "tags": [
+      "Collect UI",
+      "Navigation",
+      "Tabs",
+      "Mobile App",
+      "Foldable",
+      "Responsive",
+      "连续导航"
+    ],
+    "params": {
+      "title": "Alex Morgan",
+      "prompt": "Keep your momentum going.",
+      "result": "The art of visual rhythm"
+    },
+    "paramLimits": {
+      "title": 20,
+      "prompt": 42,
+      "result": 38
+    }
+  },
+  {
+    "id": "interaction-nested-step-toggle",
+    "title": "Nested Steps · 子流程折叠与展开",
+    "category": "interaction",
+    "duration": 14,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "橙色选中的两步子流程经历两轮收起与展开；内部节点、两侧分支、末端任务和连接线持续重排，Enter反馈对应每次开合，末尾取消选中。",
+    "adaptationNotes": "参考nanda的9.776秒方形视频。保留三分支和两步嵌套结构，放大并横屏重排为14秒；末端写入文案缩短，所有任务均为界面示意，没有执行API、审批或写入。",
+    "tags": [
+      "Collect UI",
+      "AI Flow",
+      "UI Interaction",
+      "子流程",
+      "嵌套节点",
+      "布局重排",
+      "键盘反馈"
+    ],
+    "params": {
+      "title": "my first step",
+      "prompt": "fetch from api",
+      "result": "write action · may fail"
+    }
+  },
+  {
+    "id": "interaction-prompt-design-token-autocomplete",
+    "title": "提示词里的设计令牌 · 连续两次补全",
+    "category": "interaction",
+    "duration": 16,
+    "description": "同一提示框中输入颜色与背景前缀，候选菜单逐项移动、确认后变成带色块的内联令牌；停在可发送的完整提示，不提交请求。",
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "tags": [
+      "Collect UI",
+      "Command Bar",
+      "Dropdown",
+      "UI Interaction",
+      "AI",
+      "提示词",
+      "设计令牌",
+      "内联补全"
+    ],
+    "params": {
+      "title": "把设计令牌写进提示词",
+      "prompt": "更新为",
+      "result": "两个设计令牌已插入"
+    },
+    "adaptationNotes": "6.767442秒2240×1604参考适配为16秒1920×1080。保留同一白色提示框、两个工具图标、蓝色发送按钮、蓝色和背景两轮建议及两枚内联令牌。顶部标题与末段说明、输入框聚焦鼠标、方向键/Enter提示是原创解释；原片不显示实际按键，键盘方式为演示选择。只重建读清的blue-50到blue-800，菜单底部未读清项不补造。未点发送。",
+    "parameterNotes": "title限24字符；prompt作为命令前缀限12字符；result作为框外末段说明限32字符。blue/bg前缀、候选名称与目标令牌保持真实观察值。"
+  },
+  {
+    "id": "interaction-notification-stack-cycle",
+    "title": "通知堆栈 · 悬停轮换与关闭",
+    "category": "interaction",
+    "duration": 26,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "video-paused-frames",
+    "description": "在同一浅色侧栏底部，悬停露出下一条通知标题，点击后层标题连续轮换四条，离开后收拢，关闭按钮让通知区退出。",
+    "adaptationNotes": "源2520×1860、11.433333秒，16个真实paused/readyState4/rVFC匹配帧。保留浅灰两栏容器、空白主区域、四通知叠层、头像/账号/更多/铃铛。独立CSS/SVG改成1920×1080，26秒增加阅读停留；文案和头像原创，源商业优惠不作为真实当前信息。源未展示CTA、铃铛或更多操作结果，不增加业务结果或AI执行。",
+    "tags": [
+      "Collect UI",
+      "Notification",
+      "Stack",
+      "Hover",
+      "Continuous interaction"
+    ],
+    "params": {
+      "title": "Workspace update",
+      "prompt": "Explore what is new in your workspace.",
+      "result": "Read update"
+    },
+    "paramLimits": {
+      "title": 20,
+      "prompt": 48,
+      "result": 18
+    }
+  },
+  {
+    "id": "interaction-command-contact-folder-states",
+    "title": "Command + K · 四种内容状态",
+    "category": "interaction",
+    "duration": 34,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "static-image",
+    "description": "同一个Command窗口连续显示Intro联系人详情、@Oğ分类建议、Work Inquiries文件夹详情与Saved searches / Recent；每态保留阅读停留。",
+    "adaptationNotes": "4096×2486单张图中的2×2四个静态窗，按原创顺序串为34秒1920×1080连续窗口。布局、已读清标签、右侧联系人/文件夹详情、Contacts/Folders建议与底栏依据静态图重建。照片及头像改为原创SVG；截断条目保留省略，不补造其完整内容。点击、逐字输入、窗口入场、建议开合、保存动作及状态顺序均为原创演示；未观察源动效。Ask AI保持静态按钮，不显示AI回答、不调用服务。",
+    "parameterNotes": "title是窗口外说明标题，限28字符；prompt替换第一与第三态搜索词，限12字符，默认Intro；@Oğ和来源结果标签固定为观察值。result是窗口外保存后的示意说明，限30字符。替换搜索词不会调用服务或生成实际结果。",
+    "params": {
+      "title": "Command + K · 联系人、文件夹与搜索",
+      "prompt": "Intro",
+      "result": "当前搜索已加入演示列表"
+    },
+    "paramLimits": {
+      "title": 28,
+      "prompt": 12,
+      "result": 30
+    },
+    "tags": [
+      "Collect UI",
+      "Command Bar",
+      "联系人预览",
+      "@建议",
+      "文件夹",
+      "保存搜索",
+      "原创交互"
+    ]
+  },
+  {
+    "id": "interaction-command-scroll-filter",
+    "title": "命令窗口 · 滚动渐隐与实时筛选",
+    "category": "interaction",
+    "duration": 22,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "同一深色命令窗口中滚动文档与组件，上下边缘渐隐；指针悬停同步底部命令，拖动滚动条后输入查询，列表连续收拢成单条匹配。",
+    "adaptationNotes": "依据9.466667秒1440×1080原片完整主要链，横屏重排为22秒。中文与英文标识并存，镜头幅度、图标、滚动/过滤时序独立编排；未读条目不补造，滚动条几何为观察后的近似。仅显示示例安装命令，不复制、执行或打开真实页面。",
+    "tags": [
+      "Collect UI",
+      "Command Bar",
+      "Search",
+      "Dark Mode",
+      "UI Interaction",
+      "滚动遮罩",
+      "悬停联动",
+      "实时筛选"
+    ],
+    "params": {
+      "title": "组件文档",
+      "prompt": "comm",
+      "result": "命令面板"
+    },
+    "paramLimits": {
+      "title": 18,
+      "prompt": 18,
+      "result": 24,
+      "combinedTargetLabel": 28
+    }
+  },
+  {
+    "id": "opening-workflow-canvas",
+    "title": "工作流画布 · 纵深进入触发节点",
+    "category": "opening",
+    "duration": 10,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "static-image",
+    "description": "保留静态参考的 Mac 窗口、工具栏、Workflow Project 与 PayPal 触发卡；原创纵深入场后停留在节点说明，右侧未知流程保持出画。",
+    "tags": [
+      "Collect UI",
+      "AI Flow",
+      "窗口开场",
+      "触发节点",
+      "连续推近"
+    ],
+    "params": {
+      "title": "Workflow Project",
+      "prompt": "A completed PayPal payment starts this workflow. Its transaction data becomes input for subsequent steps."
+    }
+  },
+  {
+    "id": "interaction-folio-library-product-tour",
+    "title": "Folio · 收藏与笔记工作台完整巡游",
+    "category": "interaction",
+    "duration": 60,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "video-paused-frames",
+    "description": "同一 Folio 窗口中从收藏瀑布流切换表格、打开搜索与保存表单，再沿侧边栏进入任务、笔记、收件箱、每日记录和区域收藏详情。",
+    "adaptationNotes": "参考19.766667秒原生远程视频的17个实际暂停画面。保留主要区域和字段；阅读节奏扩为60秒，全部素材为独立SVG/CSS，示例文本与输入节奏原创，无真实保存或外部服务。",
+    "tags": [
+      "Collect UI",
+      "Product Tour",
+      "Dashboard",
+      "Sidebar",
+      "Saved",
+      "Notes",
+      "Tasks",
+      "工作台"
+    ],
+    "params": {
+      "title": "Folio",
+      "prompt": "Hello",
+      "result": "斑驳墙面与修补窗框，可作为空间的纹理参考。"
+    },
+    "paramLimits": {
+      "title": 20,
+      "prompt": 32,
+      "result": 64
+    }
+  },
+  {
+    "id": "interaction-squeezed-progress-pause-resume",
+    "title": "挤压进度 · 暂停与连续恢复",
+    "category": "interaction",
+    "duration": 24,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "同一完整蓝色进度画布由0%增长，在31%暂停变橙色并把直线末端挤成弹簧；恢复时释放波形并从当前值继续。81%再暂停与恢复，最终保留源的蓝色100%与暂停图标。",
+    "adaptationNotes": "按1912×1432、5.433333秒原片13个readyState4且rVFC匹配的真实暂停帧重建1920×1080、24秒。保留完整背景、完成区色块、中心百分比、从左边缘延伸的进度线、31/81%两次挤压、循环箭头/暂停圆图标切换、释放波与从当前值增长、100%仍显示原暂停图标。代码只用独立CSS/SVG；不是下载、源像素或业务执行。三处小文字、箭头指针、点击环、曲线与阅读时间是明确原创解释扩展；源可见鼠标位置和状态变化，具体鼠标按键/事件处理未知。100%是观察到的数字状态，不增加未见的成功页、完成任务或外部结果。",
+    "parameterNotes": "title为左上原创小标题，限32字符；prompt为蓝色运行态下控件的原创说明，限24字符；result为橙色暂停态下控件的原创说明，限24字符。源没有这些文字，均不是业务状态声明。31%、81%、100%、背景/填充/线/两图标和实际顺序固定。空白清理、Unicode截断、HTML escape，长文字按可用宽度适配字体。",
+    "params": {
+      "title": "Progress",
+      "prompt": "Pause progress",
+      "result": "Resume progress"
+    },
+    "paramLimits": {
+      "title": 32,
+      "prompt": 24,
+      "result": 24
+    },
+    "tags": [
+      "Collect UI",
+      "Motion",
+      "Progress",
+      "Progress Bar",
+      "暂停挤压",
+      "连续恢复"
+    ]
+  },
+  {
+    "id": "ai-reasoning-glass-panel",
+    "title": "AI 推理 · 磨砂玻璃工作面板",
+    "category": "ai",
+    "duration": 11,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "static-image",
+    "description": "依据静态参考的点阵画布、素材卡与深灰玻璃推理面板重建层次；入场与焦点转移为原创，所有背景与缩略图用原创可编辑 SVG 替代，尾帧保留处理中状态。",
+    "tags": [
+      "Collect UI",
+      "AI Flow",
+      "Chat Layout",
+      "玻璃面板",
+      "推理过程",
+      "原创SVG素材"
+    ],
+    "params": {
+      "title": "Desert Weaver Beneath the Tree",
+      "prompt": "A quiet desert scene built around one tree, a woven structure, and warm, directional light.",
+      "localImage": ""
+    }
+  },
+  {
+    "id": "interaction-command-search-assistant",
+    "title": "Command Palette · 搜索转入助手",
+    "category": "interaction",
+    "duration": 18,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "同一深色命令面板从导航、命令筛选和知识/信号结果，连续缩为搜索空态，再转入彩色边框与白色粒子加载，最后保留回答和追问入口。",
+    "adaptationNotes": "原片11.169002秒、1260×1298，已实看初中尾和Searching转折；横屏重排为1920×1080，延长到18秒。界面、图标和粒子独立绘制；模糊软件背景内容无法辨认，背景为原创示意。中文标签附英文检索词，固定c/cust/hel演示保留匹配因果；原片hel继续输入hello，这里清空后输入可编辑prompt，以支持中文。粒子路径、数量和边框色光为观察后的近似重建，非原作源码。原片没有可见鼠标或可辨认按键动作，本版也不添加鼠标、点击或实际业务调用；仅按所见选中行到助手状态转场。result为示例回答，非真实AI执行证明。",
+    "tags": [
+      "Collect UI",
+      "Command Bar",
+      "命令面板",
+      "搜索空态",
+      "助手",
+      "粒子加载",
+      "完整交互链"
+    ],
+    "params": {
+      "title": "工作台",
+      "prompt": "你好",
+      "result": "你好。"
+    },
+    "paramLimits": {
+      "title": 20,
+      "prompt": 24,
+      "result": 48
+    },
+    "paramMeaning": {
+      "title": "原创背景软件名称",
+      "prompt": "替换后送入助手的示例查询",
+      "result": "加载结束后保留的示例回答"
+    }
+  },
+  {
+    "id": "interaction-scenes-composer",
+    "title": "Scenes · 组合镜头输入",
+    "category": "interaction",
+    "duration": 11,
+    "description": "参考 Stephen 的静态 Scenes composer 重建三张素材、输入区与模式工具栏；照片替换为原创 SVG，窗口入场、切换 Video、逐字输入和发送按钮悬停均为原创演示。停在待发送，不呈现视频生成结果。",
+    "tags": [
+      "Scenes",
+      "Chat Layout",
+      "Modal",
+      "AI Flow",
+      "静态界面参考",
+      "原创 SVG"
+    ],
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "static-image",
+    "params": {
+      "title": "Scenes",
+      "prompt": "Combine the selected clips to create a cinematic transition between scene 2 and scene 3."
+    }
+  },
+  {
+    "id": "interaction-morphing-search-notification-nav",
+    "title": "变形导航 · 搜索输入与通知巡览",
+    "category": "interaction",
+    "duration": 32,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "同一玻璃导航依次呈现Home、Search输入、Inbox、完整四行Notifications与逐行高亮、Settings，再回Home。五个导航图标和通知内容始终属于同一个连续窗口。",
+    "adaptationNotes": "依据1840×1320、16.3秒原片16个真正解码暂停帧独立重建为1920×1080、32秒。保留灰蓝几何背景、五个导航图标、活动标签胶囊、Search...提示及liquid glass逐字输入、Inbox标签、通知四行/时间/两个未读点、第一到第四行高亮、Settings与回Home。源未显示鼠标指针或点击事件，连续指针、导航点击环与32秒阅读时序是原创因果操作映射。Inbox/Settings仅标签，未添加未知详情；不执行搜索、部署、审阅或账单业务。人物改为Maya/Leo及独立二维SVG头像，项目文字改为Nav study，灰蓝背景为原创SVG，非来源壁纸/照片。未验证原始音频、业务结果、精确触发事件或全片连续观看。",
+    "parameterNotes": "title替换Home活动标签，限12字符；prompt替换Search栏逐字输入，限24字符；result替换Notifications活动标签，限18字符。Search...提示、Inbox/Settings名称、四行通知及时间、源顺序固定。参数清理空白并按Unicode字符截断，长标签按可用宽度适配字体。",
+    "params": {
+      "title": "Home",
+      "prompt": "liquid glass",
+      "result": "Notifications"
+    },
+    "paramLimits": {
+      "title": 12,
+      "prompt": 24,
+      "result": 18
+    },
+    "tags": [
+      "Collect UI",
+      "Search",
+      "Navigation",
+      "Header Navigation",
+      "Menu",
+      "变形导航",
+      "通知高亮"
+    ]
+  },
+  {
+    "id": "ai-runtime-self-correct",
+    "title": "自纠错运行时 · 失败到恢复",
+    "category": "ai",
+    "duration": 18,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "同一工具节点经历报错、持久执行和恢复；线路状态原位变化，代码沙箱进入时整张运行图连续让位。",
+    "adaptationNotes": "依据Bruce Cao的19.093秒原片多阶段观察。横屏重排、18秒节奏与沙箱示例代码重新编写；仅浏览器工具恢复，未执行真实服务或完成其余任务。",
+    "tags": [
+      "Collect UI",
+      "AI Flow",
+      "自纠错",
+      "持久执行",
+      "运行时",
+      "错误恢复"
+    ],
+    "params": {
+      "title": "TENSORLAKE",
+      "result": "RESUMED"
+    }
+  },
+  {
+    "id": "interaction-module-preview-search",
+    "title": "模块目录 · 分类预览与即时搜索",
+    "category": "interaction",
+    "duration": 20,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "同一模块目录中选择财务，原位展开发票预览；打开搜索后背景持续模糊，查询逐字过滤结果并收拢面板，停在未提交状态。",
+    "adaptationNotes": "原片1872×1080、6.933333秒，主要链为全部模块→财务6项与发票预览→搜索浮层→in的两项→Inte的一项，未选择结果或跳转。横屏20秒重排并延长阅读；英文标签配中文，输入默认为小写inte。山水原图改为独立CSS渐变，图标为独立SVG。发票内容为明确示例；目录计数沿用源画面示意，非已实现业务数量。新增轻微窗口入场和点击环，光标路径与缓动近似。搜索只对六条本地示例名称过滤；没有真实模块、开票、登录或网络调用。",
+    "tags": [
+      "Collect UI",
+      "Sidebar",
+      "Command Bar",
+      "Search",
+      "Dark Mode",
+      "原位预览",
+      "连续过滤"
+    ],
+    "params": {
+      "title": "模块目录",
+      "prompt": "inte",
+      "result": "年度活动 · 发票预览"
+    },
+    "paramLimits": {
+      "title": 20,
+      "prompt": 24,
+      "result": 28
+    },
+    "sectionRanges": {
+      "directory": [
+        0,
+        4
+      ],
+      "finance": [
+        4,
+        11
+      ],
+      "search": [
+        11,
+        20
+      ]
+    }
+  },
+  {
+    "id": "software-signal-node-patch",
+    "title": "Signal Studio · 拖线接入实时预览",
+    "category": "software",
+    "duration": 18,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "黑黄音画工作台：启用 Glitch Cut、参数原位变化，光标把 Mic words glitch 的 FX out 拖到 Scene output；虚线吸附成实线，预览短暂清空后显示原创点阵故障画面。",
+    "adaptationNotes": "依据Lee Black视频的参数面板、拖线中间态及连线完成态重建，重新编排为18秒横屏。原人物背景、媒体与音轨不分发，缩略图和可视化为原创SVG；密集已有线路按可见结构概括重排，不代表完整56秒原片或音频驱动引擎。",
+    "tags": [
+      "Collect UI",
+      "AI Flow",
+      "节点拖拽",
+      "实时预览",
+      "黑黄",
+      "参数面板"
+    ],
+    "params": {
+      "title": "One Hour Set",
+      "result": "FLOW / 026"
+    }
+  },
+  {
+    "id": "software-codex-task",
+    "title": "Codex · 从指令到可见成果",
+    "category": "software",
+    "duration": 14,
+    "description": "光标输入需求、发送任务、依次检查与修改文件，再点击预览标签查看成果。",
+    "tags": [
+      "Codex",
+      "软件操作",
+      "代码生成",
+      "界面示意"
+    ],
+    "sourceStatus": "illustrative-product",
+    "params": {
+      "title": "把一句需求，变成可预览的页面",
+      "prompt": "创建一个简洁的 AI 工作台首页，支持任务与文件预览。",
+      "result": "页面已完成，预览已就绪。"
+    }
+  },
+  {
+    "id": "software-doubao-answer",
+    "title": "豆包 · 对话变为文档",
+    "category": "software",
+    "duration": 14,
+    "description": "输入创作问题并发送，回答逐字生成，点击生成文档后在同一窗口展开可阅读的成果。",
+    "tags": [
+      "豆包",
+      "流式回答",
+      "文档展开",
+      "界面示意"
+    ],
+    "sourceStatus": "illustrative-product",
+    "params": {
+      "title": "从一次提问，到一份清楚的创作提纲",
+      "prompt": "帮我写一份 AI 工具视频提纲，分成开场、演示和总结。",
+      "result": "开场用结果抓住注意力；演示保留真实操作；最后回到观众可以采取的行动。"
+    }
+  },
+  {
+    "id": "software-workbuddy-flow",
+    "title": "WorkBuddy · 计划执行与文件交付",
+    "category": "software",
+    "duration": 14,
+    "description": "在专属任务导航中提交需求，四项任务逐步完成并折叠，执行日志接续产出链接，点击文件展开正文。",
+    "tags": [
+      "WorkBuddy",
+      "计划执行",
+      "文件成果",
+      "界面示意"
+    ],
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "illustrative-product",
+    "params": {
+      "title": "让一项工作，从计划走到交付",
+      "prompt": "整理这周的项目资料，生成一份可以直接查看的周报。",
+      "result": "周报已整理完成，包含进展、问题和下一步。"
+    }
+  },
+  {
+    "id": "ai-workflow-nodes",
+    "title": "AI 流程 · 连线传播与分支折叠",
+    "category": "ai",
+    "duration": 14,
+    "description": "点击运行后数据沿连线传递，检索与整理分支逐步点亮，完成的分支折叠成一个可交付结果。",
+    "tags": [
+      "AI Flow",
+      "节点",
+      "分支",
+      "执行链"
+    ],
+    "sourceStatus": "original-extension",
+    "params": {
+      "title": "看见 AI 怎样一步步完成任务",
+      "prompt": "整理输入资料，并形成有来源的结论",
+      "result": "一份可继续使用的报告"
+    }
+  },
+  {
+    "id": "ai-context-handoff",
+    "title": "上下文交接 · 文档随操作移动",
+    "category": "ai",
+    "duration": 14,
+    "description": "在资料窗口选中文档，光标拖动同一个文档进入新上下文，随后发送需求并生成接续结果。",
+    "tags": [
+      "上下文",
+      "拖拽",
+      "文档交接",
+      "连续对象"
+    ],
+    "sourceStatus": "original-extension",
+    "params": {
+      "title": "把资料交过去，让上下文接得上",
+      "prompt": "基于这份资料，整理下一步的执行建议。",
+      "result": "已读取项目简报。接下来先确认目标，再拆分可执行步骤。"
+    }
+  },
+  {
+    "id": "ai-search-citations",
+    "title": "AI 检索 · 从列表追到原文",
+    "category": "ai",
+    "duration": 14,
+    "description": "输入检索问题后列表重排，点击相关来源展开原文并标记对应段落，结论附带可追溯引用。",
+    "tags": [
+      "检索",
+      "引用",
+      "原文高亮",
+      "证据定位"
+    ],
+    "sourceStatus": "original-extension",
+    "params": {
+      "title": "让答案与来源，始终连在一起",
+      "prompt": "这个项目的关键交付要求是什么？",
+      "result": "核心要求是：保留来源、呈现操作过程，并交付可编辑的结果。"
+    }
+  },
+  {
+    "id": "software-doubao-work",
+    "title": "豆包工作 · 任务模式与电脑操作",
+    "category": "software",
+    "duration": 14,
+    "description": "选择云电脑环境、输入任务，执行动作逐项推进；电脑区域定位表格内容、生成周报并打开预览。",
+    "tags": [
+      "豆包工作",
+      "任务模式",
+      "云电脑",
+      "执行进度",
+      "界面示意"
+    ],
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "illustrative-product",
+    "params": {
+      "title": "把工作交给 AI，也看得见它如何完成",
+      "prompt": "读取项目表格，整理本周进展，并生成一份周报。",
+      "result": "周报已生成，项目进展与下一步行动已整理。"
+    }
+  },
+  {
+    "id": "interaction-solid-command-draft",
+    "title": "Solid 命令栏 · 搜索与 AI 草稿",
+    "category": "interaction",
+    "duration": 20,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "static-image",
+    "description": "深色面板保留橙色 AI 入口、两条最近搜索、三条快捷动作和键位页脚；同窗筛选、打开本地预览、ESC 返回及清空恢复。",
+    "adaptationNotes": "实看2289×2397单张静态图及作品卡片；面板右端在源图中被裁切，本版保留裁切且不补隐藏控件。独立绘制实心图标和1920×1080画面，所有输入、选行、筛选、预览、ESC和清空均原创。AI 草稿与统计预览没有发送、生成、发布或连接真实数据。未使用任何源像素。",
+    "tags": [
+      "Collect UI",
+      "Command Bar",
+      "Solid Icons",
+      "深色搜索",
+      "AI草稿",
+      "原创连续操作"
+    ],
+    "params": {
+      "title": "Solid Icons",
+      "prompt": "Write a short launch post",
+      "result": "Review the draft before sending"
+    },
+    "paramLimits": {
+      "title": 22,
+      "prompt": 42,
+      "result": 60
+    },
+    "paramMeaning": {
+      "title": "原创画面上方的工作区标题",
+      "prompt": "仅在本地预览的AI请求草稿",
+      "result": "草稿预览说明，非AI生成结果"
+    }
+  },
+  {
+    "id": "continuous-codex-story",
+    "title": "Codex · 一镜到底的创作过程",
+    "category": "software",
+    "duration": 20,
+    "description": "标题冲击与透视窗口显露后，在同一 Codex 窗口输入需求、执行任务，最后推近已生成的预览并停留。",
+    "tags": [
+      "Codex",
+      "连续操作",
+      "镜头推进",
+      "成果预览",
+      "界面示意"
+    ],
+    "sourceStatus": "illustrative-product",
+    "params": {
+      "title": "从一句需求，到一个成品",
+      "prompt": "创建一个简洁的 AI 工作台首页，支持任务与文件预览。",
+      "result": "页面已完成，预览已就绪。"
+    }
+  },
+  {
+    "id": "interaction-supercmd-memory-preview",
+    "title": "SuperCmd · 选中文本与本地命令预览",
+    "category": "interaction",
+    "duration": 18,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "static-image",
+    "description": "同一个深色命令窗口保留 Selected Text、Recent 八行和底栏；打开选中文本的本地预览，输入正文、查看反馈，再返回搜索剪贴板命令。",
+    "adaptationNotes": "依据1904×1222静态图独立重建1920×1080。光标、输入、筛选、预览及返回均为原创；只在演示窗口内展示文字，无真实系统 Memory 保存或命令执行。",
+    "tags": [
+      "Collect UI",
+      "Command Bar",
+      "Selected Text",
+      "Recent",
+      "本地预览",
+      "连续输入"
+    ],
+    "params": {
+      "title": "SuperCmd",
+      "prompt": "把软件操作做成连续画面",
+      "result": "同一对象，输入后再显示反馈。"
+    },
+    "paramLimits": {
+      "title": 20,
+      "prompt": 40,
+      "result": 64
+    }
+  },
+  {
+    "id": "interaction-bear-switch-on-off",
+    "title": "角色开关 · 开启后由熊推回关闭",
+    "category": "interaction",
+    "duration": 26,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "video-paused-frames",
+    "description": "立体感开关从灰槽左端滑到绿色右端；镜头改变构图，戴帽熊出现，手臂覆盖前景并把同一手柄推回左端，随后退回开关后面。",
+    "adaptationNotes": "源1440×1080、14.28秒。保留开关框/凹槽/圆柄/投影、角色头耳帽/脸/躯干/双臂、手与手柄前后遮挡及构图变化；独立CSS/SVG渐变重建为可编辑矢量视觉，26秒增加动作阅读停留。源中是角色碰触手柄，不是已观察到真人鼠标点击；初次开启触发未知。图注与OFF/ON文字为原创参数入口，不对应系统设置或真实业务执行。",
+    "tags": [
+      "Collect UI",
+      "Switch Button",
+      "Character motion",
+      "Continuous interaction"
+    ],
+    "params": {
+      "title": "Playful switch",
+      "prompt": "OFF",
+      "result": "ON"
+    },
+    "paramLimits": {
+      "title": 24,
+      "prompt": 10,
+      "result": 10
+    }
+  },
+  {
+    "id": "interaction-github-sidebar-tabs-tour",
+    "title": "GitHub 侧栏 · 标签滑动与工作流保留",
+    "category": "interaction",
+    "duration": 26,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "video-paused-frames",
+    "description": "同一深色应用中，Actions 运行筛选弹层打开并关闭，侧栏列表横滑至 Issues、Pull Requests，局部滚动后返回 Issues；已打开的 CI 元数据与任务状态连续保留。",
+    "adaptationNotes": "依据2170×1592、14.127621秒源片13个真实暂停解码帧保留顶栏、三种列表、搜索/添加/筛选、工作流标签、六项元数据、Bun全部可见步骤、Rust任务头及状态栏。26秒横屏扩大阅读；独立SVG头像与抽象林地背景替代源照片。未新增正文打开、筛选执行或真实GitHub服务操作。",
+    "tags": [
+      "Collect UI",
+      "Code Editor",
+      "Tabs",
+      "Mac App",
+      "Sidebar",
+      "GitHub",
+      "局部滑动"
+    ],
+    "params": {
+      "title": "athasdev",
+      "prompt": "Bump openssl from 0.10.79 to 0.10.80",
+      "result": "dependabot/cargo/openssl-0.10.80"
+    },
+    "paramLimits": {
+      "title": 20,
+      "prompt": 48,
+      "result": 32
+    }
+  },
+  {
+    "id": "result-tech-text-inspect",
+    "title": "科技文字 · 字形检查与还原",
+    "category": "result",
+    "duration": 9,
+    "description": "按已观察的 Tech Text 悬停机制适配：光标依次经过同一行字，当前字切换为浅色填充与虚线轮廓，显示尺寸框和八个控制点，离开后恢复完整实心标题。",
+    "tags": [
+      "Collect UI",
+      "Text Effect",
+      "Tech Text",
+      "字形描边",
+      "编辑器"
+    ],
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "params": {
+      "title": "让想法落地",
+      "prompt": "悬停字符，查看形状与尺寸。",
+      "result": "每个细节，回到完整表达。"
+    }
+  },
+  {
+    "id": "interaction-terminal-ecosystem-village-tour",
+    "title": "终端生态 · 村落与预览往返",
+    "category": "interaction",
+    "duration": 30,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "同一浏览器中的双区生态目录与密码预览，淡入完整字符村落；两次地图布局切换后返回生态，左侧说明逐字恢复。导航、九项目录、预览表单、轮播、村落控件和页脚全部保留。",
+    "adaptationNotes": "按1600×1054、22.165秒原片多个paused readyState4且rVFC匹配帧独立重建1920×1080、30秒。源显示生态→村落第一布局→带seed第二布局→生态说明逐字恢复；精确按键、点击和事件处理未知。独立SVG背景、草景、村落地形/建筑/人物替代全部源照片和像素；文字改为独立示例。指针路径、点击环、说明边界与更长阅读时间是原创解释。密码/submit、Team List、社交、GitHub、Go to Apps和about没有添加未经观察的执行或成功结果。",
+    "parameterNotes": "title是左侧生态manifesto，140Unicode字符；prompt是Juko预览中央说明，140字符；result是密码框占位文字，28字符，仅占位不显示执行结果。默认长正文是独立写作示例。短中文特殊字符按字面escape，上限截断与字体适配。",
+    "params": {
+      "title": "A SMALL ECOSYSTEM OF TOOLS, EXPERIMENTS, AND CREATIVE PEOPLE, BUILT WITH CARE.",
+      "prompt": "JUKO IS A QUIET PLACE FOR COLLECTING SMALL IDEAS. LEAVE A NOTE, THEN RETURN WHEN YOU NEED A NEW BEGINNING.",
+      "result": "Input password here..."
+    },
+    "paramLimits": {
+      "title": 140,
+      "prompt": 140,
+      "result": 28
+    },
+    "tags": [
+      "Collect UI",
+      "Terminal Aesthetic",
+      "生态目录",
+      "字符村落",
+      "seed重排",
+      "逐字恢复"
+    ]
+  },
+  {
+    "id": "interaction-rolling-number-documentation-tour",
+    "title": "滚动数字 · 格式与过渡连续巡览",
+    "category": "interaction",
+    "duration": 30,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "video-paused-frames",
+    "description": "同一 Numbers 文档持续滚动：逐位计数、进位、五种格式、五种过渡、相反方向、模糊对照、代码展开、参数表，再回到概览。",
+    "adaptationNotes": "源为2692×1642、60.016667秒的组件文档演示。保留顶部导航、完整可见侧栏、八项页内导航和所有主要示例区；以独立CSS/SVG与确定性数字条带重建为1920×1080/30秒。压缩重复点击与停留，文字说明改写，部分数字样例和中间值为本地演示数据。代码片段仅显示，不安装、运行或声称真实业务。源首卡Tech Text已确认旧作重复，本件仅映射第二卡Numbers。",
+    "tags": [
+      "Collect UI",
+      "Text Effect",
+      "Motion",
+      "Rolling numbers",
+      "Continuous documentation"
+    ],
+    "params": {
+      "title": "Numbers",
+      "prompt": "A number that changes should be seen to change.",
+      "result": "Preview of Numbers."
+    },
+    "paramLimits": {
+      "title": 14,
+      "prompt": 64,
+      "result": 32
+    }
+  },
+  {
+    "id": "ai-workflow-configuration-gate",
+    "title": "工作流构建 · 思考步骤与配置门槛",
+    "category": "ai",
+    "duration": 18,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "同一白色聊天窗口完成发送、思考、五步构建、设置说明与账户连接折叠面板；尾态保留待配置门槛。",
+    "adaptationNotes": "依据 Timothy 原片 14 个暂停点重建，24.12 秒压缩至 18 秒；横屏扩大布局并改写中文文案、绘制独立图标与渐变背景。原片尾态仍有 14 项未配置，不显示已连接或已启用，也不执行真实工作流。",
+    "tags": [
+      "Collect UI",
+      "AI Flow",
+      "Chat Layout",
+      "Thinking",
+      "进度反馈",
+      "工作流",
+      "账户连接"
+    ],
+    "params": {
+      "title": "Xami AI",
+      "prompt": "监控所有社交媒体消息，按情绪分类，把紧急消息转交管理人员，并将处理记录保存到表格。",
+      "result": "工作流已构建，等待配置"
+    }
+  },
+  {
+    "id": "interaction-paperclip-share-popover",
+    "title": "纸夹分享弹层 · 预览与背页收放",
+    "category": "interaction",
+    "duration": 24,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "multiple-video-times",
+    "description": "白画布中的Share入口打开完整分享弹层；纸张预览由模糊转清晰，回形针入场。指针靠近纸夹时背页收齐、离开时扇开，最后保持弹层打开。",
+    "adaptationNotes": "按1186×1080、6.316667秒原片11个真正解码暂停帧独立重建为1920×1080、24秒。保留Share、Ask Meetball/⌘E、Share transcript/关闭X、完整纸张预览与回形针、Add to下的Drive/Notion/Linear/Jira/Slack、URL与Copy link栏。保留出现→清晰→纸夹入场→离夹扇开/近夹收齐重复→回Share仍打开的顺序。纸夹与应用符号是独立SVG；正文为独立示例。横屏白画布扩宽、阅读停留、纸夹的弹性插入曲线及Share点击环是原创重排。源可见指针与状态关联，无法确认鼠标按键或具体DOM事件；没有复制、外部分享、AI回答或关闭动作，不添加这些结果。未验证音频、全片连续观看或实际服务。",
+    "parameterNotes": "title为弹层标题，限28字符；prompt为纸张预览标题，限80字符；result为固定纸张中的正文节选，限420字符，底部按源渐隐裁切。默认正文独立写作，参数清理空白、按Unicode字符截断并escape。长标题缩小字体以自然换行，五个目的地与固定功能标签不受参数影响。",
+    "params": {
+      "title": "Share transcript",
+      "prompt": "Project notes need a final review before Friday",
+      "result": "The studio reviewed the launch checklist, sample screens, and meeting notes together. The first preview should explain the main idea before showing the supporting examples. Keep the navigation short and give each section enough space to read. We will collect feedback from the team, compare the open questions, and prepare a focused revision for the next review."
+    },
+    "paramLimits": {
+      "title": 28,
+      "prompt": 80,
+      "result": 420
+    },
+    "tags": [
+      "Collect UI",
+      "Tooltip / Popover",
+      "纸夹",
+      "分享弹层",
+      "悬停收放"
+    ]
+  },
+  {
+    "id": "interaction-transfer-confirm",
+    "title": "转账确认 · 金额联动与滑动发送",
+    "category": "interaction",
+    "duration": 9.5,
+    "description": "重建已观察的转账机制与卡片结构：选中并替换金额，换汇结果同步更新，滑块拖到终点后同一卡片显示 Sent 与 Successful；布局和运动曲线为原创重建，非像素级复刻。",
+    "tags": [
+      "转账",
+      "金额输入",
+      "联动反馈",
+      "滑动确认",
+      "E-Wallet"
+    ],
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "params": {
+      "title": "Transfer",
+      "prompt": "Slide to send",
+      "result": "Successful",
+      "initialAmount": 2500,
+      "amount": 4000,
+      "rate": 0.92,
+      "fromSymbol": "$",
+      "toSymbol": "€",
+      "fromCurrency": "USD",
+      "toCurrency": "EUR"
+    }
+  },
+  {
+    "id": "interaction-workflow-replace",
+    "title": "Replace Workflow Nodes",
+    "category": "interaction",
+    "duration": 11,
+    "description": "参考 Kevin 的静态界面重建，交互节奏为原创演示：打开 Replace 浮层并保留原图菜单状态，再搜索 Airtable，原位替换节点 provider 与说明。",
+    "tags": [
+      "Workflow",
+      "Replace",
+      "App picker",
+      "静态界面参考"
+    ],
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "static-image",
+    "params": {
+      "title": "ChatGPT Summary",
+      "prompt": "Creates a short, Slack-friendly summary that includes the task name, current status, and a direct link.",
+      "result": "Creates an Airtable record with the task name, current status, a short summary, and a direct link."
+    }
+  },
+  {
+    "id": "interaction-node-config",
+    "title": "Workflow Node Configuration",
+    "category": "interaction",
+    "duration": 12,
+    "description": "参考 Kevin 的静态界面重建，交互节奏为原创演示：进入 Node Mode，显示用户要求与 Authentication required，指针停在 Add Credentials 附近，不执行授权或发送消息。",
+    "tags": [
+      "Workflow",
+      "Node Mode",
+      "Authentication",
+      "静态界面参考"
+    ],
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "static-image",
+    "params": {
+      "title": "Send Channel Message",
+      "prompt": "Send a message to the #general channel with an AI project update summary as a structured bullet list."
+    }
+  },
+  {
+    "id": "interaction-workflow-context-agent",
+    "title": "工作流菜单 · 添加并配置代理",
+    "category": "interaction",
+    "duration": 26,
+    "source": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "sourceStatus": "observed-reconstruction",
+    "sourceObservation": "static-image",
+    "description": "保留窄导航栏、搜索和双列工具菜单；原创补充从加号打开菜单、选AI代理、连入流程并应用配置的连续操作。",
+    "adaptationNotes": "依据2400×1800静态图重建菜单区域，流程画布、节点、指针动作、配置与反馈全部是原创扩展。无源动效时序或真实服务执行依据；界面示意，不调用应用或网络。",
+    "parameterNotes": "title是原创流程标题，限20字符；prompt是原创代理配置中的指令，限64字符；result是配置完成的示意反馈，限24字符。源菜单标签保持实际观察的英文。",
+    "tags": [
+      "Collect UI",
+      "Command Bar",
+      "工作流菜单",
+      "节点配置",
+      "原创交互"
+    ],
+    "params": {
+      "title": "内容整理工作流",
+      "prompt": "归纳输入中的关键内容，按主题整理，保留来源。",
+      "result": "配置已应用 · 等待运行"
+    },
+    "paramLimits": {
+      "title": 20,
+      "prompt": 64,
+      "result": 24
+    }
+  }
+]

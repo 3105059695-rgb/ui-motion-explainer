@@ -1,0 +1,129 @@
+{
+  "checkedOn": "2026-09-30",
+  "completedAtUtc": "2026-09-30 12:49:53 UTC",
+  "status": "observation-pending-media-decode",
+  "candidateAttempts": [
+    {
+      "inventoryEntryId": "loading-animation-p1-001",
+      "authorName": "Chloé Maillot",
+      "authorHandle": "@ChloMaillott",
+      "designerPage": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "displayedTagLabels": [
+        "装载",
+        "加载动画"
+      ],
+      "tagCategoryHrefs": [
+        "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+        "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      ],
+      "authorStatement": "stop picking loaders by vibes. pick them by how long the wait actually is",
+      "originalHrefReadFromVisibleModal": true,
+      "authorAndTagsReadFromVisibleModal": true,
+      "mediaObservationStatus": "not-observed",
+      "referenceDownloaded": false,
+      "decodeStates": [
+        {
+          "surface": "Collect UI modal",
+          "currentTime": 0,
+          "durationSeconds": null,
+          "readyState": 0,
+          "paused": true,
+          "decodedWidth": 0,
+          "decodedHeight": 0,
+          "actualFrameObserved": false
+        },
+        {
+          "surface": "Independent Edge native video, after play button",
+          "currentTime": 0,
+          "durationSeconds": null,
+          "readyState": 0,
+          "paused": false,
+          "decodedWidth": 0,
+          "decodedHeight": 0,
+          "mediaError": null,
+          "actualFrameObserved": false
+        },
+        {
+          "surface": "Same Edge native video, after one reload and final same-handle check",
+          "currentTime": 0,
+          "durationSeconds": null,
+          "readyState": 0,
+          "paused": true,
+          "decodedWidth": 0,
+          "decodedHeight": 0,
+          "mediaError": null,
+          "actualFrameObserved": false
+        }
+      ],
+      "blockingEvidence": [
+        "Native-media navigation timed out on Page.navigate; tab was nevertheless created and reused.",
+        "After visible play and same-handle checks, native player stayed at buffering, currentTime0, readyState0, no decoded dimensions.",
+        "One reload timed out on Page.getFrameTree; subsequent same-handle DOM check still returned readyState0."
+      ],
+      "visualMechanismsObserved": [],
+      "selectionOutcome": "Pending. No evidence that its visual design is unsuitable for horizontal AI openings; fallback was technical, not an aesthetic judgment."
+    },
+    {
+      "inventoryEntryId": "loading-animation-p1-003",
+      "authorName": "CZ",
+      "authorHandle": "@wherescz",
+      "designerPage": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "displayedTagLabels": [
+        "装载",
+        "加载动画"
+      ],
+      "tagCategoryHrefs": [
+        "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+        "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      ],
+      "authorStatement": "Spinners are such a fun component to play with. Some use nine cells, some sixteen, with a few different animations and interactions.",
+      "originalHrefReadFromVisibleModal": true,
+      "authorAndTagsReadFromVisibleModal": true,
+      "mediaObservationStatus": "not-observed",
+      "referenceDownloaded": false,
+      "decodeStates": [
+        {
+          "surface": "Collect UI modal",
+          "currentTime": 0,
+          "durationSeconds": null,
+          "readyState": 0,
+          "paused": true,
+          "decodedWidth": 0,
+          "decodedHeight": 0,
+          "actualFrameObserved": false
+        },
+        {
+          "surface": "Independent Edge native video, after visible play button and same-handle DOM check",
+          "currentTime": 0,
+          "durationSeconds": null,
+          "readyState": 0,
+          "paused": false,
+          "decodedWidth": 0,
+          "decodedHeight": 0,
+          "mediaError": null,
+          "actualFrameObserved": false
+        }
+      ],
+      "blockingEvidence": [
+        "Native-media navigation timed out on Page.navigate; existing tab was reused through its actual URL.",
+        "Visible play returned pausedFalse but currentTime0, duration unavailable, readyState0 and decoded dimensions0. Player screenshot shows buffering and no source frame."
+      ],
+      "visualMechanismsObserved": [],
+      "selectionOutcome": "Second candidate is also pending decode; no loader mechanism is inferred from its author statement."
+    }
+  ],
+  "verification": {
+    "modalMetadataVerified": true,
+    "actualDecodedFrameCount": 0,
+    "sourceMediaDownloaded": false,
+    "paidModelsCalled": false,
+    "globalFilesEdited": false,
+    "presetFileDidNotExistBeforeAttempt": true,
+    "underlyingFailureCause": "Unknown. Observed buffering and CDP timeouts do not prove a specific CDN, network, or browser fault."
+  },
+  "scope": "两条作品仅核实弹层原作链接与作者标签；未解码出任何源帧，未实现加载动效。"
+}

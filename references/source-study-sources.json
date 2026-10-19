@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "purpose": "逐句来源的数据注册；ID只解析到此处列出的本地研究文件，不用用户输入拼接路径。方法与实际画面、完整视听和复刻认可分别记录。",
+  "path_base": "ui-motion-fusion skill root",
+  "sources": [
+    {
+      "id": "workflow",
+      "title": "秋芝2046 · 创作工作流",
+      "collection_id": "qiuzhi2046-20261014",
+      "alignment": "references/evidence/qiuzhi2046-study/workflow.json",
+      "manifest": "references/evidence/qiuzhi2046-study/index.json"
+    },
+    {
+      "id": "creative",
+      "title": "秋芝2046 · 创意制作",
+      "collection_id": "qiuzhi2046-20261014",
+      "alignment": "references/evidence/qiuzhi2046-study/creative.json",
+      "manifest": "references/evidence/qiuzhi2046-study/index.json"
+    },
+    {
+      "id": "network",
+      "title": "秋芝2046 · 网络与证据讲解",
+      "collection_id": "qiuzhi2046-20261014",
+      "alignment": "references/evidence/qiuzhi2046-study/network.json",
+      "manifest": "references/evidence/qiuzhi2046-study/index.json"
+    },
+    {
+      "id": "claude",
+      "title": "秋芝2046 · Claude",
+      "collection_id": "qiuzhi2046-20261014",
+      "alignment": "references/evidence/qiuzhi2046-study/claude.json",
+      "manifest": "references/evidence/qiuzhi2046-study/index.json"
+    },
+    {
+      "id": "fred-argon",
+      "title": "FredTalk · Gemini4 Argon UI 讲解参考",
+      "collection_id": "fred-argon-20261015",
+      "alignment": "references/evidence/fred-argon-study/alignment.json",
+      "manifest": "references/evidence/fred-argon-study/index.json"
+    },
+    {
+      "id": "fred-jev",
+      "title": "FredTalk · 开源 JEV 部署 UI 讲解参考",
+      "collection_id": "fred-jev-20261016",
+      "alignment": "references/evidence/fred-jev-study/alignment.json",
+      "manifest": "references/evidence/fred-jev-study/index.json"
+    }
+  ]
+}

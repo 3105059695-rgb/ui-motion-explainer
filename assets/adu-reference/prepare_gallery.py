@@ -1,0 +1,61 @@
+from pathlib import Path
+import os,json,csv
+ROOT=Path(__file__).resolve().parent
+for p in (ROOT/'preview').rglob('*.html'):
+    rel=os.path.relpath(ROOT/'preview/bridge.js',p.parent).replace('\\','/')
+    s=p.read_text(encoding='utf-8')
+    if 'src="'+rel+'"' not in s:
+        s=s.replace('</body>','<script src="'+rel+'"></script></body>')
+        p.write_text(s,encoding='utf-8')
+catalog=json.loads((ROOT/'catalog.json').read_text(encoding='utf-8'))
+with (ROOT/'展示条目与代码对应表.csv').open('w',encoding='utf-8-sig',newline='') as f:
+    w=csv.writer(f);w.writerow(['ID','名称','类别','开始秒','结束秒','说明','原始代码文件','开始行','结束行','预览入口','素材说明'])
+    for i in catalog['items']:w.writerow([i['id'],i['title'],i['group'],i['start'],i['end'],i['description'],i['source'],i['line'],i['endLine'],i.get('preview',i.get('image','')),i.get('mediaNote','')])
+counts=catalog['counts']
+v=ROOT/'verification.json';checked=json.loads(v.read_text(encoding='utf-8')) if v.exists() else None
+summary=f'''# adu-motion-video 完整提取与动态展示
+
+打开 `index.html`，或运行 `start-preview.ps1` 启动本地展示页。无需安装网站依赖。推荐本地服务器：`python server.py --port 8766`，然后打开 http://127.0.0.1:8766/index.html。
+
+仓库：https://github.com/adunext/adu-motion-video
+提取日期：2026-09-30
+源码提交：{catalog['commit']}
+
+## 你可以直接看什么
+
+- 21 个完整宏场景：anim3 12 场、anim4 9 场，复用整段原编舞。
+- {counts.get('detail',0)} 个细分动作：单独定位到动作的源时间段，能循环看清发生过程。
+- {counts.get('ui',0)} 个 UI 组件：使用原始 CSS、HTML 或组件函数。
+- {counts.get('template',0)} 个基础 TPL：运行原模板函数和完整示例时间表。
+- {counts.get('effect',0)} 个公共动效演示：入场/退出、逐词、数字、弹簧、缓动、推镜、震动、作品墙、转场等。
+- {counts.get('example',0)} 个历史版本/示例片段：两套历史场景版本、手绘续接、无声图文、字幕和竖屏布局。历史场景与完整包有同源关系，不计作新增21种原创场景。
+- {counts.get('audio',0)} 个声音试听：68 种音效与16种配乐音色/处理示例，调用仓库原函数合成 WAV。
+- {counts.get('asset',0)} 个随仓库发布的原图/示意素材。
+- 全部 {len(catalog['files'])} 个跟踪文件：保持原路径、完整内容、许可与第三方声明。`source-manifest.json` 包含每个文件 SHA256。
+
+这些是展示条目，不是互不重叠的原创效果数量。细分条目、原语和完整场景可以展示同一个源码动作。
+
+## 怎么看
+
+左侧选择分类；点击缩略图播放。可暂停、重播、倍速、拖动源时间轴、逐帧前进/后退，或连播整个分类。右侧动作节点可以直接定位；“查看对应代码”展开真实源代码，可切换完整文件与复制。全部源码页面也可查看所有脚本、文档、清单和许可。
+
+## 源码与预览
+
+`source/` 是原仓库，只读保留；`preview/` 是展示适配副本；`gallery-data.js` 是离线索引与源代码；`展示条目与代码对应表.csv` 是完整对应表；`inventory-extra.json` 是详细盘点；`posters/` 是各预览截图；`verification.json` 是实际运行检查。
+
+仓库未附原人物视频、照片、透明道具、作品墙作品或录屏。展示副本用明确标注的程序生成插画、设备和动态图样补齐这些媒体。作品墙389格循环27种示意图样，不代表389件真实作品。动画运行原场景代码；原作者人物、作品和口播效果无法从缺失素材中恢复。
+
+展示中的文字、数字、品牌、评论为原源码示例。预览静音；音效单独试听，音频配方与343个宏场景音效事件保留在源代码/清单中。没有把预览包装成与原成片完全一致的结果。
+
+原版SF/PingFang/macOS字体在本机缺失时，展示副本使用本机可用字体；具体适配保留在preview目录，原字体声明仍在source文件。
+
+## 实际验证
+
+{('所有 '+str(len(checked['checked']))+' 个动态展示条目已执行前后时间点渲染并生成缩略图；错误组 '+str(len(checked['errors']))+'。详情见verification.json。' if checked else '全量动态条目截图与运行检查正在生成。')}
+
+宏场景运行记录：`preview/anim3/runtime-check.json`。基础模板和示例运行记录：`preview/primitives/check-results.json`。声音生成记录：`audio-generation.json`。源码文件清单以Git跟踪文件为准，不将Python缓存视为仓库内容。
+
+这份交付是动态展示库与完整可编辑源码。没有逐场导出MP4，没有恢复原作者缺失媒体，也没有宣称完整原片声画对照验收。
+'''
+(ROOT/'提取说明.md').write_text(summary,encoding='utf-8')
+print('Prepared bridge, CSV and readme',flush=True)

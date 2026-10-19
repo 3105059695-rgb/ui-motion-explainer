@@ -1,0 +1,1411 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-01",
+  "scope": {
+    "site": "Collect UI",
+    "category": "Folder",
+    "categoryUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "listingUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "observedDate": "2026-10-01",
+    "timezone": "Asia/Shanghai",
+    "enumerationComplete": true,
+    "pagesCatalogued": [
+      1,
+      2
+    ],
+    "sourcePaginationControlsPresent": true,
+    "paginationMode": "actual-pagination-button-pages",
+    "lastPageEvidence": {
+      "snapshotId": "folder-page-2-2026-10-01",
+      "pageNumber": 2,
+      "activePage": 2,
+      "nextPageDisabled": true,
+      "paginationControlsObserved": true,
+      "observedCardCount": 2,
+      "evidenceKind": "loaded-rendered-DOM-two-stable-reads-next-disabled"
+    },
+    "enumerationMeaning": "仅当时实际浏览的完整分页快照，不代表媒体已观看、独立原作总数或全站完成。",
+    "notes": [
+      "Accordion、Empty States、Notepad、Badge为完整已加载单列表；实际到达页面底部后完整双读一致，没有源分页，p1仅归档。",
+      "Tooltip / Popover与Folder实际Next逐页导航；旧首卡脱离、当前页和新首卡确认后取完整集合双读，末Next禁用。",
+      "到达底部前的即时滚动中间状态单独丢弃保留；未纳入accepted快照、卡片或媒体计数。",
+      "可见翻译标签、完整tag href、hidden +N、实际图片alt与归属href原样保留；隐藏标签不补造。",
+      "原名仅在derivedOriginalCategoryName独立按159类真实完整href映射，不覆盖实际可见标签。",
+      "外部归属链接不冒充原作href，authorProfile null不补造；原作链接按实际精确卡弹层另外丰富。",
+      "目录清点新增媒体观看0、适配0；已有观察只按完整媒体URL分别关联。"
+    ]
+  },
+  "enumerationEvidence": {
+    "frozenRawSha256": "1277a34cfd05bb4f71b54397e7841114853fffb056c86b760959cca62a2ee331",
+    "rawMetadata": {
+      "category": "Folder",
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "observedAt": "2026-10-01T08:35:30.075Z",
+      "sourcePaginationControlsPresent": true,
+      "collectionComplete": true,
+      "twoReadsMatch": true,
+      "mediaObservationClaims": 0,
+      "navigation": [
+        {
+          "fromPage": 1,
+          "toPage": 2,
+          "oldFirstDetached": true,
+          "activePageConfirmed": 2,
+          "newFirstCardId": "b0bd24fa-b957-41d8-84ae-6d65f733b9a1",
+          "dialogCount": 0
+        }
+      ],
+      "completionEvidence": {
+        "allPageCollectionsReadTwice": true,
+        "pagesExplicitlyVisited": [
+          1,
+          2
+        ],
+        "oldFirstDetachedBeforeAcceptedRead": true,
+        "sourceActivePage": 2,
+        "lastNextDisabled": true
+      },
+      "collection": {
+        "kind": "actual-entire-loaded-rendered-DOM",
+        "sourceMediaDownloaded": false,
+        "cardModalOpened": false,
+        "mediaFrameObservationPerformed": false,
+        "derivedCategoryNameMapping": {
+          "association": "exact complete href; separate derived field; observed visible label unchanged",
+          "usedMapping": {
+            "https://collectui.com/designs/folder-ui-design-inspiration": "Folder",
+            "https://collectui.com/designs/ui-interaction-ui-design-inspiration": "UI Interaction",
+            "https://collectui.com/designs/portfolio-ui-design-inspiration": "Portfolio",
+            "https://collectui.com/designs/invoice-ui-design-inspiration": "Invoice",
+            "https://collectui.com/designs/framer-ui-design-inspiration": "Framer",
+            "https://collectui.com/designs/dashboard-ui-design-inspiration": "Dashboard",
+            "https://collectui.com/designs/stamp-ui-design-inspiration": "Stamp",
+            "https://collectui.com/designs/mobile-app-ui-design-inspiration": "Mobile App",
+            "https://collectui.com/designs/illustration-ui-design-inspiration": "Illustration"
+          }
+        }
+      },
+      "rejectedReads": [],
+      "notes": [
+        "Only directory enumeration. No source work original URL or media frame was observed; future batch23 raw research, not integrated into release21."
+      ]
+    },
+    "rawSourceFile": "batch23-folder-enumeration.json"
+  },
+  "listingSnapshots": [
+    {
+      "id": "folder-page-1-2026-10-01",
+      "pageNumber": 1,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "Folder UI Design Inspiration",
+      "activePage": 1,
+      "pagination": [
+        {
+          "active": null,
+          "current": null,
+          "disabled": true,
+          "label": "Go to previous page",
+          "text": "Previous"
+        },
+        {
+          "active": "true",
+          "current": "page",
+          "disabled": false,
+          "label": "Page 1",
+          "text": "1"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 2",
+          "text": "2"
+        },
+        {
+          "active": null,
+          "current": null,
+          "disabled": false,
+          "label": "Go to next page",
+          "text": "Next"
+        }
+      ],
+      "cardCount": 24,
+      "cardCollectionSignature": "a0384fb5b2907052fc2f34d362882619ac3b18d37e94e42354bad69092cd4684",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "57247b20a0e615d662c497d1ca940fde79158b65367e74099d3a5e0cd139a590",
+        "second": "57247b20a0e615d662c497d1ca940fde79158b65367e74099d3a5e0cd139a590"
+      },
+      "pageEnumerationEvidence": {
+        "twoReadsMatch": true
+      }
+    },
+    {
+      "id": "folder-page-2-2026-10-01",
+      "pageNumber": 2,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "Folder UI Design Inspiration",
+      "activePage": 2,
+      "pagination": [
+        {
+          "active": null,
+          "current": null,
+          "disabled": false,
+          "label": "Go to previous page",
+          "text": "Previous"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 1",
+          "text": "1"
+        },
+        {
+          "active": "true",
+          "current": "page",
+          "disabled": false,
+          "label": "Page 2",
+          "text": "2"
+        },
+        {
+          "active": null,
+          "current": null,
+          "disabled": true,
+          "label": "Go to next page",
+          "text": "Next"
+        }
+      ],
+      "cardCount": 2,
+      "cardCollectionSignature": "8f1ddf3878bac69363d5cbd911ceb610ae405664c1a432cb3194a34be1f13f2a",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "0b8b256fae91071ddb51ed6153331f7a632e8f530d52064243f47411c675a4aa",
+        "second": "0b8b256fae91071ddb51ed6153331f7a632e8f530d52064243f47411c675a4aa"
+      },
+      "pageEnumerationEvidence": {
+        "twoReadsMatch": true
+      }
+    }
+  ],
+  "summary": {
+    "cataloguedEntries": 26,
+    "uniqueMedia": 26,
+    "duplicateMediaOccurrences": 0,
+    "mediaTypes": {
+      "video": 17,
+      "image": 9
+    },
+    "mediaObservationsClaimed": 0
+  },
+  "entries": [
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "raul_dronca",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FOLDER"
+        }
+      ],
+      "firstVisibleTag": "FOLDER",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "444fecb7-f7a0-456a-8c30-b691fd86a5ec",
+      "title": null,
+      "titleSource": null,
+      "id": "folder-p1-001",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-001"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "shedsgns",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "UI INTERACTION"
+        }
+      ],
+      "firstVisibleTag": "UI INTERACTION",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "3099e83f-3bc8-4335-a2b9-f789e5049482",
+      "title": null,
+      "titleSource": null,
+      "id": "folder-p1-002",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-002"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "designbyaron",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 3,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FOLDER"
+        }
+      ],
+      "firstVisibleTag": "FOLDER",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "34793816-fd7b-43de-aec0-7f011044e796",
+      "title": null,
+      "titleSource": null,
+      "id": "folder-p1-003",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-003"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "madebyvishesh",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 4,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "PORTFOLIO"
+        }
+      ],
+      "firstVisibleTag": "PORTFOLIO",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "803cb642-d55c-406b-84fa-7e3b4a0b87e9",
+      "title": null,
+      "titleSource": null,
+      "id": "folder-p1-004",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-004"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "flornkm",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 5,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "UI INTERACTION"
+        }
+      ],
+      "firstVisibleTag": "UI INTERACTION",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "3b7b86ca-96cc-4006-820e-9564a18f2d7f",
+      "title": null,
+      "titleSource": null,
+      "id": "folder-p1-005",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-005"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "gow88_",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 6,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FOLDER"
+        }
+      ],
+      "firstVisibleTag": "FOLDER",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "8713b7db-8df5-455e-a6ed-f0b63e99f18d",
+      "title": null,
+      "titleSource": null,
+      "id": "folder-p1-006",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-006"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "proskuaaa",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 7,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "INVOICE"
+        }
+      ],
+      "firstVisibleTag": "INVOICE",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "efa326bc-fe1a-4d0d-9807-9d0c6874ef1e",
+      "title": null,
+      "titleSource": null,
+      "id": "folder-p1-007",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-007"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "AdityaSur11",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 8,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FOLDER"
+        }
+      ],
+      "firstVisibleTag": "FOLDER",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "98641f3d-32fe-4186-8750-1fa2824ceb94",
+      "title": null,
+      "titleSource": null,
+      "id": "folder-p1-008",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-008"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "luizafurdui",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 9,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "UI INTERACTION"
+        }
+      ],
+      "firstVisibleTag": "UI INTERACTION",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "7bcf6066-e80b-4441-a270-66a54a65c620",
+      "title": null,
+      "titleSource": null,
+      "id": "folder-p1-009",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-009"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "tranmautritam",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 10,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FRAMER"
+        }
+      ],
+      "firstVisibleTag": "FRAMER",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "8e4411d5-fee1-478e-a65a-3cc5d5650071",
+      "title": null,
+      "titleSource": null,
+      "id": "folder-p1-010",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-010"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "AdityaSur11",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 11,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FOLDER"
+        }
+      ],
+      "firstVisibleTag": "FOLDER",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "e65ec37f-aef2-4fd4-96e2-439a802e709e",
+      "title": null,
+      "titleSource": null,
+      "id": "folder-p1-011",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-011"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "CedrikStephen",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 12,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FOLDER"
+        }
+      ],
+      "firstVisibleTag": "FOLDER",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "1a1e962f-4a84-4abb-b2d7-6636791f8103",
+      "title": "Organized work folders for web",
+      "titleSource": "actual-media-image-alt",
+      "id": "folder-p1-012",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-012"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "keviduk",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 13,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DASHBOARD"
+        }
+      ],
+      "firstVisibleTag": "DASHBOARD",
+      "hiddenTagCount": 3,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "e148d0bc-4081-4637-8ab4-b0971194f0c9",
+      "title": "knowledgebase / components ",
+      "titleSource": "actual-media-image-alt",
+      "id": "folder-p1-013",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-013"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "rahulluthra22",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 14,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DASHBOARD"
+        }
+      ],
+      "firstVisibleTag": "DASHBOARD",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "6f7c179a-2380-488b-9550-27f776a59c8d",
+      "title": "new product design work",
+      "titleSource": "actual-media-image-alt",
+      "id": "folder-p1-014",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-014"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "AdityaSur11",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 15,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "STAMP"
+        }
+      ],
+      "firstVisibleTag": "STAMP",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "7eba70c1-113c-4f6b-894c-34d15a6d3a7c",
+      "title": null,
+      "titleSource": null,
+      "id": "folder-p1-015",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-015"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "tar_uniqueee",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 16,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FOLDER"
+        }
+      ],
+      "firstVisibleTag": "FOLDER",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "f025640e-505a-4336-bfc0-c29e4a8846d4",
+      "title": "As many of you asked I am giving away a set of folder icons for MacOS, so you can replace default ones. \nLink in a first reply ",
+      "titleSource": "actual-media-image-alt",
+      "id": "folder-p1-016",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-016"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "AliGrids",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 17,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MOBILE APP"
+        }
+      ],
+      "firstVisibleTag": "MOBILE APP",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "22126c3c-2b41-43c7-b3c3-d18d959616a4",
+      "title": null,
+      "titleSource": null,
+      "id": "folder-p1-017",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-017"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "hckmstrrahul",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 18,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "UI INTERACTION"
+        }
+      ],
+      "firstVisibleTag": "UI INTERACTION",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "b2262c57-70cd-4e68-9852-f53b016e3b7e",
+      "title": null,
+      "titleSource": null,
+      "id": "folder-p1-018",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-018"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "raul_dronca",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 19,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "ILLUSTRATION"
+        }
+      ],
+      "firstVisibleTag": "ILLUSTRATION",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "65a7aed5-70a3-4b92-8414-4ed7dbb0bb6f",
+      "title": "Folders",
+      "titleSource": "actual-media-image-alt",
+      "id": "folder-p1-019",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-019"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "elayadesigns",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 20,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FOLDER"
+        }
+      ],
+      "firstVisibleTag": "FOLDER",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "6e6d1dc5-5460-4484-a94c-193a7ab14862",
+      "title": null,
+      "titleSource": null,
+      "id": "folder-p1-020",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-020"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "akwaabaaa",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 21,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MOBILE APP"
+        }
+      ],
+      "firstVisibleTag": "MOBILE APP",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "484a4035-cdb7-46d4-8ae2-0d2a1ba7b212",
+      "title": "Moodboard ",
+      "titleSource": "actual-media-image-alt",
+      "id": "folder-p1-021",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-021"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "Ashutosh_7x7",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 22,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FOLDER"
+        }
+      ],
+      "firstVisibleTag": "FOLDER",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "fbfa8de9-1444-4052-a6f9-962d20fa6266",
+      "title": null,
+      "titleSource": null,
+      "id": "folder-p1-022",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-022"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "AugustasDesign",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 23,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FOLDER"
+        }
+      ],
+      "firstVisibleTag": "FOLDER",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "5b9d02ea-1721-4645-8378-ad2046c10a3f",
+      "title": "This folder has way too many details ",
+      "titleSource": "actual-media-image-alt",
+      "id": "folder-p1-023",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-023"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "kvnkld",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 24,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DASHBOARD"
+        }
+      ],
+      "firstVisibleTag": "DASHBOARD",
+      "hiddenTagCount": 3,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "28281548-1c4b-4fba-8722-a90d83ae0b37",
+      "title": "Organizing Documents / AI Knowledge Base",
+      "titleSource": "actual-media-image-alt",
+      "id": "folder-p1-024",
+      "pageNumber": 1,
+      "snapshotId": "folder-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-024"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "EnriTarta",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FOLDER"
+        }
+      ],
+      "firstVisibleTag": "FOLDER",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "b0bd24fa-b957-41d8-84ae-6d65f733b9a1",
+      "title": null,
+      "titleSource": null,
+      "id": "folder-p2-001",
+      "pageNumber": 2,
+      "snapshotId": "folder-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-025"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "reijowrites",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FOLDER"
+        }
+      ],
+      "firstVisibleTag": "FOLDER",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "25d0b469-b98e-4736-b2b6-44aca1bb81b0",
+      "title": null,
+      "titleSource": null,
+      "id": "folder-p2-002",
+      "pageNumber": 2,
+      "snapshotId": "folder-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Folder",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "folder-media-026"
+    }
+  ],
+  "mediaGroups": [
+    {
+      "id": "folder-media-001",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-001"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-002",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-002"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-003",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-003"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-004",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-004"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-005",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-005"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-006",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-006"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-007",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-007"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-008",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-008"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-009",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-009"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-010",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-010"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-011",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-011"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-012",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-012"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-013",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-013"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-014",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-014"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-015",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-015"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-016",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-016"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-017",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-017"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-018",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-018"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-019",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-019"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-020",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-020"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-021",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-021"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-022",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-022"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-023",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-023"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-024",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p1-024"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-025",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p2-001"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "folder-media-026",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "folder-p2-002"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    }
+  ],
+  "enrichments": [
+    {
+      "entryId": "folder-p1-005",
+      "date": "2026-10-01",
+      "field": "originalWorkUrl",
+      "value": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "basis": "Actual exact-card modal href; association solely by complete media URL. Historical catalogued-only status retained.",
+      "evidence": "../observations/batch23.json"
+    }
+  ]
+}

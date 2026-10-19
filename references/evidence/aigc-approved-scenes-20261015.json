@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "evidence_id": "aigc-approved-scenes-20261015",
+  "approval": {
+    "schema_version": 1,
+    "event_id": "20261015-qiuzhi-girl-scenes-approved",
+    "date": "2026-10-15",
+    "source": "direct_user_message",
+    "user_quote": "可以可以，就这些场景图很不错了，目前把skill里面的aigc内容完善一下吧，什么地方使用aigc，以及aigc怎么使用，什么节奏使用，以及最关键的是aigc生成的视频的风格，这些都要整理归纳，之前你读取整理的都可以加入进去了",
+    "approved_asset_ids": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08"
+    ],
+    "approval_state": "approved_static_scene",
+    "scope": "8张静态场景的整体方向、场景选型与女孩手绘风格可复用。",
+    "not_approved_by_this_event": [
+      "新生成视频的连续运动和剪辑节奏",
+      "已记录的发夹方向、人物比例、配角材质偏差成为角色新标准",
+      "既往普通男性、猫、仓鼠或通用空场景作为默认IP/场景"
+    ],
+    "video_verified": false,
+    "known_deviations_preserved": "local-only/verification.json",
+    "generation_plan_policy": "replica-plan.json保留当时candidate状态作为生成历史；当前认可状态以本文件为准。",
+    "reuse_policy": "已认可方向直接按口播语义复用，不逐图或逐次重新请求风格确认；新素材完成后检查身份、画风和动作。",
+    "profile_scope": "user-ui默认AIGC风格；更具体的账号/项目档案优先，不覆盖adiao、fangmu；UI外观继续遵循原账号UI档案。"
+  },
+  "style_registry": "references/aigc-assets.json",
+  "gallery_approval_record": "local-only/approval.json",
+  "character_references": [
+    "assets/aigc/girl/references/girl-expressions.png",
+    "assets/aigc/girl/references/girl-life-poses.png"
+  ],
+  "assets": [
+    {
+      "id": "qiuzhi-girl-01",
+      "title": "工具间搬运",
+      "image_path": "assets/aigc/girl/scenes/01-manual-toolchain.png",
+      "source_frame": "local-only/creative-0064.jpg",
+      "source_video": "local-only/人人都要学！Agent 视觉创作全流程～【小白教程】 #AI#秋芝2046 #tapnow #creativeos #创作万岁.mp4",
+      "source_time": 64,
+      "approval_state": "approved_static_scene",
+      "video_verified": false,
+      "observations": [
+        "保留俯视机位、四站布局、紫色/蓝色机器、纸张与线缆；女孩在紫色工位拿图。纸条连接紫色机器，单张尚不能说明上一站到下一站的完整移动，动画时需明确产物来源。"
+      ]
+    },
+    {
+      "id": "qiuzhi-girl-02",
+      "title": "Agent 接管",
+      "image_path": "assets/aigc/girl/scenes/02-agent-takeover.png",
+      "source_frame": "local-only/creative-0077.jpg",
+      "source_video": "local-only/人人都要学！Agent 视觉创作全流程～【小白教程】 #AI#秋芝2046 #tapnow #creativeos #创作万岁.mp4",
+      "source_time": 77,
+      "approval_state": "approved_static_scene",
+      "video_verified": false,
+      "observations": [
+        "保留左侧休息女孩、中间蓝机器、右侧紫机器，以及机器人送入图片的关系。女孩服装与原设定一致；机器人仅为该场景候选，未与其他场景统一成同一机器设计。"
+      ]
+    },
+    {
+      "id": "qiuzhi-girl-03",
+      "title": "森林递资料",
+      "image_path": "assets/aigc/girl/scenes/03-context-handoff.png",
+      "source_frame": "local-only/creative-0948.jpg",
+      "source_video": "local-only/人人都要学！Agent 视觉创作全流程～【小白教程】 #AI#秋芝2046 #tapnow #creativeos #创作万岁.mp4",
+      "source_time": 948,
+      "approval_state": "approved_static_scene",
+      "video_verified": false,
+      "observations": [
+        "保留森林清地、左女孩右机器人、双方共同抓住书箱、旁边工具箱及红旗。女孩腿部比原始Q版参考稍长；侧面发夹位置存在偏差，未当作角色标准。"
+      ]
+    },
+    {
+      "id": "qiuzhi-girl-04",
+      "title": "师徒打铁",
+      "image_path": "assets/aigc/girl/scenes/04-learning-blacksmith.png",
+      "source_frame": "local-only/extra-0265.000.jpg",
+      "source_video": "local-only/为了让所有人都用好AI，我做了这个…… #AI #秋芝2046 #炉子 #能力网络 #前沿科技趋势发布月.mp4",
+      "source_time": 265,
+      "approval_state": "approved_static_scene",
+      "video_verified": false,
+      "observations": [
+        "保留铁砧、热铁、长钳、炉火与师徒共同握同一锤柄。围裙为工作道具，白毛衣保留；师傅和金属呈现比女孩更接近原片立体质感，侧面发夹也需后续统一。"
+      ]
+    },
+    {
+      "id": "qiuzhi-girl-05",
+      "title": "迁移纸箱",
+      "image_path": "assets/aigc/girl/scenes/05-migration-burden.png",
+      "source_frame": "local-only/network-0604.jpg",
+      "source_video": "local-only/为了让所有人都用好AI，我做了这个…… #AI #秋芝2046 #炉子 #能力网络 #前沿科技趋势发布月.mp4",
+      "source_time": 604,
+      "approval_state": "approved_static_scene",
+      "video_verified": false,
+      "observations": [
+        "保留三类箱子的前景分层、工具/齿轮/档案内容和主角为难表情。右侧原片角色改为白机器人；标签留空，准确说明由后期制作。未把迁移困难改成迁移成功。"
+      ]
+    },
+    {
+      "id": "qiuzhi-girl-06",
+      "title": "能力拼装",
+      "image_path": "assets/aigc/girl/scenes/06-capability-assembly.png",
+      "source_frame": "local-only/extra-1045.500.jpg",
+      "source_video": "local-only/为了让所有人都用好AI，我做了这个…… #AI #秋芝2046 #炉子 #能力网络 #前沿科技趋势发布月.mp4",
+      "source_time": 1045.5,
+      "approval_state": "approved_static_scene",
+      "video_verified": false,
+      "observations": [
+        "保留纵深能力货架、蓝橙两块相接、双手承托及后方排队角色。原片橙色品牌机器人换为白色助手；新图为组合的接触状态，未验证后续动作。"
+      ]
+    },
+    {
+      "id": "qiuzhi-girl-07",
+      "title": "书堆过载",
+      "image_path": "assets/aigc/girl/scenes/07-information-overload.png",
+      "source_frame": "local-only/chibi-overload.jpg",
+      "source_video": "local-only/全网最全！60分钟全面掌握Claude Code～ 【附完整文档】 #AI #秋芝2046 #ClaudeCode #AI教程 #前沿科技趋势发布月.mp4",
+      "source_time": 1578.5,
+      "approval_state": "approved_static_scene",
+      "video_verified": false,
+      "observations": [
+        "保留电脑在左、打开的书和停下的笔在前、书堆围困、女孩双手抱头。换成用户长发女孩与服装；画面中电脑屏幕与书页为生成示意，不能当真实软件证据。"
+      ]
+    },
+    {
+      "id": "qiuzhi-girl-08",
+      "title": "游戏存档点",
+      "image_path": "assets/aigc/girl/scenes/08-game-savepoint.png",
+      "source_frame": "local-only/hybrid-save-point.jpg",
+      "source_video": "local-only/全网最全！60分钟全面掌握Claude Code～ 【附完整文档】 #AI #秋芝2046 #ClaudeCode #AI教程 #前沿科技趋势发布月.mp4",
+      "source_time": 1397.75,
+      "approval_state": "approved_static_scene",
+      "video_verified": false,
+      "observations": [
+        "保留横向平台、中央绿色旗、左侧树与女孩向右到达的空间锚点。像素场景改为手绘游戏场景，尚只生成到达存档这一状态，未生成失败/返回两状态；侧面发夹方向待统一。"
+      ]
+    }
+  ],
+  "provenance": {
+    "generation_plan": "local-only/replica-plan.json",
+    "generation_files": "local-only/generated-files.json",
+    "visual_inspection": "local-only/verification.json",
+    "approval_updates_history": false
+  },
+  "review_limits": [
+    "用户明确认可当前8张场景图的整体方向。",
+    "逐图已有可见偏差保留；不将偏差反向写入IP标准。",
+    "当前8场景未生成并验收连续视频。",
+    "早期3段女孩视频的检查和缺陷不因本次静图认可自动改变。"
+  ]
+}

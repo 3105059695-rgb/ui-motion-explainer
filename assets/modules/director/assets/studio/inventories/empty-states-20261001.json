@@ -1,0 +1,507 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-01",
+  "scope": {
+    "site": "Collect UI",
+    "category": "Empty States",
+    "categoryUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "listingUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "observedDate": "2026-10-01",
+    "timezone": "Asia/Shanghai",
+    "enumerationComplete": true,
+    "pagesCatalogued": [
+      1
+    ],
+    "sourcePaginationControlsPresent": false,
+    "paginationMode": "single-loaded-list-no-pagination-controls",
+    "lastPageEvidence": {
+      "snapshotId": "empty-states-page-1-2026-10-01",
+      "pageNumber": 1,
+      "activePage": null,
+      "nextPageDisabled": null,
+      "paginationControlsObserved": false,
+      "observedCardCount": 8,
+      "evidenceKind": "complete-loaded-list-two-stable-reads-no-pagination-controls"
+    },
+    "enumerationMeaning": "仅当时实际浏览的完整分页快照，不代表媒体已观看、独立原作总数或全站完成。",
+    "notes": [
+      "Accordion、Empty States、Notepad、Badge为完整已加载单列表；实际到达页面底部后完整双读一致，没有源分页，p1仅归档。",
+      "Tooltip / Popover与Folder实际Next逐页导航；旧首卡脱离、当前页和新首卡确认后取完整集合双读，末Next禁用。",
+      "到达底部前的即时滚动中间状态单独丢弃保留；未纳入accepted快照、卡片或媒体计数。",
+      "可见翻译标签、完整tag href、hidden +N、实际图片alt与归属href原样保留；隐藏标签不补造。",
+      "原名仅在derivedOriginalCategoryName独立按159类真实完整href映射，不覆盖实际可见标签。",
+      "外部归属链接不冒充原作href，authorProfile null不补造；原作链接按实际精确卡弹层另外丰富。",
+      "目录清点新增媒体观看0、适配0；已有观察只按完整媒体URL分别关联。"
+    ]
+  },
+  "enumerationEvidence": {
+    "frozenRawSha256": "e5be092e167747417300876268aaa56395f4b7c335ad287ed8d006860fc85cf2",
+    "rawMetadata": {
+      "category": "Empty States",
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "observedAt": "2026-10-01T08:32:34.073Z",
+      "sourcePaginationControlsPresent": false,
+      "collectionComplete": true,
+      "twoReadsMatch": true,
+      "mediaObservationClaims": 0,
+      "navigation": [],
+      "completionEvidence": {
+        "singleLoadedList": true,
+        "noSourcePaginationControls": true,
+        "sourceActivePage": null,
+        "allPageCollectionsReadTwice": true,
+        "wholeLoadedCollectionStable": true,
+        "actualDocumentBottomReached": true,
+        "bottomState": {
+          "clientHeight": 720,
+          "dialogCount": 0,
+          "paginationSemanticButtons": [],
+          "scrollHeight": 1956,
+          "scrollTop": 1236
+        }
+      },
+      "collection": {
+        "kind": "actual-entire-loaded-rendered-DOM",
+        "sourceMediaDownloaded": false,
+        "cardModalOpened": false,
+        "mediaFrameObservationPerformed": false,
+        "derivedCategoryNameMapping": {
+          "association": "exact complete href; separate derived field; observed visible label unchanged",
+          "usedMapping": {
+            "https://collectui.com/designs/empty-states-ui-design-inspiration": "Empty States",
+            "https://collectui.com/designs/app-screens-ui-design-inspiration": "App Screens"
+          }
+        }
+      },
+      "rejectedReads": [
+        {
+          "reason": "Immediate Control+End measurement was still scrolling; not accepted as bottom proof.",
+          "measurement": {
+            "scrollTop": 618,
+            "scrollHeight": 1956,
+            "clientHeight": 720,
+            "dialogCount": 0
+          },
+          "includedInAcceptedSnapshots": false
+        }
+      ],
+      "notes": [
+        "Future batch23 raw enumeration only, no source media observation or release21 inventory mutation."
+      ]
+    },
+    "rawSourceFile": "batch23-empty-states-enumeration.json"
+  },
+  "listingSnapshots": [
+    {
+      "id": "empty-states-page-1-2026-10-01",
+      "pageNumber": 1,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "Empty States UI Design Inspiration",
+      "activePage": null,
+      "pagination": [],
+      "cardCount": 8,
+      "cardCollectionSignature": "68955333c5b91067a785af34cedc23c284218e7bec32f58ed511f14b0d509d0e",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "33afc32036be21428d2e62b826b07ebddd73fc9717111eba06b46a587f817bf0",
+        "second": "33afc32036be21428d2e62b826b07ebddd73fc9717111eba06b46a587f817bf0"
+      },
+      "pageEnumerationEvidence": {
+        "sourcePageNumber": null,
+        "archiveMeaning": "p1 is an archive index for the entire loaded list, not a source website page number",
+        "twoReadsMatch": true
+      }
+    }
+  ],
+  "summary": {
+    "cataloguedEntries": 8,
+    "uniqueMedia": 7,
+    "duplicateMediaOccurrences": 1,
+    "mediaTypes": {
+      "video": 5,
+      "image": 3
+    },
+    "mediaObservationsClaimed": 0
+  },
+  "entries": [
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "moguzbulbul",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "EMPTY STATES"
+        }
+      ],
+      "firstVisibleTag": "EMPTY STATES",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "df809150-b8b6-4956-afce-e6549ba15256",
+      "title": null,
+      "titleSource": null,
+      "id": "empty-states-p1-001",
+      "pageNumber": 1,
+      "snapshotId": "empty-states-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Empty States",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "empty-states-media-001"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "uxmiles",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "APP SCREENS"
+        }
+      ],
+      "firstVisibleTag": "APP SCREENS",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "65854f22-e4c1-436e-a592-42d984d4acc2",
+      "title": "Predict with your friends on @pulsepredicts",
+      "titleSource": "actual-media-image-alt",
+      "id": "empty-states-p1-002",
+      "pageNumber": 1,
+      "snapshotId": "empty-states-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Empty States",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "empty-states-media-002"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "zedsxyz",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 3,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "EMPTY STATES"
+        }
+      ],
+      "firstVisibleTag": "EMPTY STATES",
+      "hiddenTagCount": 3,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "88241e94-cf94-45b6-a175-02c319d13c4b",
+      "title": "Empty states don't have to be boring.",
+      "titleSource": "actual-media-image-alt",
+      "id": "empty-states-p1-003",
+      "pageNumber": 1,
+      "snapshotId": "empty-states-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Empty States",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "empty-states-media-003"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "omererdgan",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 4,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "APP SCREENS"
+        }
+      ],
+      "firstVisibleTag": "APP SCREENS",
+      "hiddenTagCount": 3,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c67e1dcd-f5b7-45ed-bf61-aada69f7c19f",
+      "title": "Mobile filter and empty states",
+      "titleSource": "actual-media-image-alt",
+      "id": "empty-states-p1-004",
+      "pageNumber": 1,
+      "snapshotId": "empty-states-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Empty States",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "empty-states-media-004"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "blanqspaceui",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 5,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "EMPTY STATES"
+        }
+      ],
+      "firstVisibleTag": "EMPTY STATES",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "1d40319b-b73c-4ec6-9b80-0cf391f82512",
+      "title": null,
+      "titleSource": null,
+      "id": "empty-states-p1-005",
+      "pageNumber": 1,
+      "snapshotId": "empty-states-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Empty States",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "empty-states-media-005"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "moguzbulbul",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 6,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "EMPTY STATES"
+        }
+      ],
+      "firstVisibleTag": "EMPTY STATES",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "4143965d-b28c-477f-af06-752f47acd006",
+      "title": null,
+      "titleSource": null,
+      "id": "empty-states-p1-006",
+      "pageNumber": 1,
+      "snapshotId": "empty-states-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Empty States",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "empty-states-media-001"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "nusualabuga",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 7,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "EMPTY STATES"
+        }
+      ],
+      "firstVisibleTag": "EMPTY STATES",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "97cc7a38-0964-490f-aa35-e030a856aa5d",
+      "title": null,
+      "titleSource": null,
+      "id": "empty-states-p1-007",
+      "pageNumber": 1,
+      "snapshotId": "empty-states-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Empty States",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "empty-states-media-006"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "kitlangton",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 8,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "EMPTY STATES"
+        }
+      ],
+      "firstVisibleTag": "EMPTY STATES",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "9443d0dc-c2e6-406b-88a8-8056d30b3419",
+      "title": null,
+      "titleSource": null,
+      "id": "empty-states-p1-008",
+      "pageNumber": 1,
+      "snapshotId": "empty-states-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Empty States",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "empty-states-media-007"
+    }
+  ],
+  "mediaGroups": [
+    {
+      "id": "empty-states-media-001",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "empty-states-p1-001",
+        "empty-states-p1-006"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "empty-states-media-002",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "empty-states-p1-002"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "empty-states-media-003",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "empty-states-p1-003"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "empty-states-media-004",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "empty-states-p1-004"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "empty-states-media-005",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "empty-states-p1-005"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "empty-states-media-006",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "empty-states-p1-007"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "empty-states-media-007",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "empty-states-p1-008"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    }
+  ],
+  "enrichments": [
+    {
+      "entryId": "empty-states-p1-001",
+      "date": "2026-10-01",
+      "field": "originalWorkUrl",
+      "value": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "basis": "Actual exact-card modal href; association solely by complete media URL. Historical catalogued-only status retained.",
+      "evidence": "../observations/batch23.json"
+    },
+    {
+      "entryId": "empty-states-p1-006",
+      "date": "2026-10-01",
+      "field": "originalWorkUrl",
+      "value": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "basis": "Actual exact-card modal href; association solely by complete media URL. Historical catalogued-only status retained.",
+      "evidence": "../observations/batch23.json"
+    }
+  ]
+}

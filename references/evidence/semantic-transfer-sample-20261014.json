@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-14",
+  "purpose": "Use the updated Skill with a new narration and produce actual reusable code plus a concrete AIGC request.",
+  "script": "local-only/口播测试稿.txt",
+  "script_sha256": "07b04ea4b54ebd4f7207af502c5c9eea24112380da3a205b68df630f626815cd",
+  "plan": "local-only/director-plan.json",
+  "preview_html": "local-only/index.html",
+  "preview_mp4": "local-only/口播调用_无声结构预览.mp4",
+  "implementation": "local-only/timeline.js",
+  "selected_recipes": [
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S08"
+  ],
+  "implemented_effects": [
+    "compare",
+    "focus-mask",
+    "match-handoff",
+    "causal-chain"
+  ],
+  "style_scope": "A01 black-white/pale-purple selected for this sample only; no new global defaults or approval.",
+  "sample_seconds": 32,
+  "time_basis": "script-estimate",
+  "audio_present": false,
+  "generated_media": {
+    "status": "not-generated",
+    "planning_interval": [
+      21,
+      32
+    ],
+    "placeholder": "Explicitly labelled storyboard, not continuous AIGC video",
+    "prompt": "local-only/tool-assembly-prompt.txt",
+    "offline_request": "local-only/tool-assembly-request.json",
+    "submitted": false
+  },
+  "checks": {
+    "browser_report": "local-only/report.json",
+    "plan_report": "local-only/director-plan-check.json",
+    "render_report": "local-only/preview-render-check.json",
+    "decode_passed": true,
+    "keyframes_viewed": true,
+    "full_realtime_av_review": false,
+    "user_aesthetic_approval": false
+  },
+  "source_integrity": "Narration unchanged. No network, paid generation, or external publication.",
+  "test_design_limits": {
+    "narration_authored_by": "The same root agent implementing the upgrade.",
+    "topic_overlap": "Both component demo and test narration use materials, target readers, missing conditions, and a resulting brief. This is same-domain reuse, not a held-out-topic test.",
+    "style_selection": "The production agent was explicitly told to use A01 black-white/pale-purple; independent discovery of the appropriate user style was not tested.",
+    "generation_scope": "Prompt and offline request only; no newly generated AIGC action or natural integration tested.",
+    "audio_scope": "No narration audio and no full real-time audiovisual review.",
+    "supported_conclusion": "The helper, four editing components, and offline generation planning can be used together in one same-domain local example.",
+    "not_established": [
+      "Reliable semantic transfer to unfamiliar narration",
+      "Automatic style selection without extra direction",
+      "Reference-level editing quality",
+      "Actual AIGC action quality and integration",
+      "Stable production results without user reminders"
+    ],
+    "user_goal_acceptance": "Not yet established by the available test."
+  }
+}

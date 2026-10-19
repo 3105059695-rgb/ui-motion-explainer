@@ -1,0 +1,113 @@
+{
+  "slug": "jake11moran-a269c4",
+  "title": "Animated agent session story",
+  "date": "2026-09-24",
+  "tags": [
+    "skill"
+  ],
+  "promptShared": true,
+  "handle": "jake11moran",
+  "poster": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "preview": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "video": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "width": 1920,
+  "height": 1080,
+  "schema_version": "1.0.0",
+  "collected_at": "2026-10-07T02:48:43+00:00",
+  "source_page": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "source_post": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "attribution": "Videos and prompts belong to their creators, linked on each entry.",
+  "source_html_sha256": "0d377bfdef822de576945e5f9202707e64276eebcf50dcc912187993b3f623f6",
+  "prompt": null,
+  "prompt_characters": 0,
+  "prompt_sha256": null,
+  "prompt_extraction": "full HTML #entry-prompt (unfolded source text)",
+  "prompt_rsc_match": null,
+  "prompt_source_note": null,
+  "stack": "HyperFrames",
+  "model": "Opus 5.5",
+  "effort": null,
+  "iterations": null,
+  "detail_fields": {
+    "Model": "Opus 5.5",
+    "Stack": "HyperFrames",
+    "Posted": "Sep 24, 2026"
+  },
+  "skill_repo": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "skill_description": "Has your agent read your local Claude Code history and turn a typical session with you into a short scored animated film rendered in HyperFrames.",
+  "skill_install_command": "npx skills add heygen-com/hyperframes-community-skills --skill session-story",
+  "category": "general-motion",
+  "category_inferred": true,
+  "status": "reference-collected",
+  "collection_errors": [],
+  "local_poster": "assets/reference/posters/jake11moran-a269c4.webp",
+  "local_preview": null,
+  "local_video_absolute": null,
+  "detail_request_retries": [],
+  "media_transfers": {
+    "poster": {
+      "status": "cached",
+      "bytes": 61558,
+      "attempts": []
+    },
+    "preview": {
+      "status": "cached",
+      "bytes": 215584,
+      "attempts": []
+    },
+    "video": {
+      "status": "cached",
+      "bytes": 37756817,
+      "attempts": []
+    }
+  },
+  "media_probe": {
+    "poster": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "webp",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "duration": null,
+      "error": null
+    },
+    "preview": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 720,
+          "height": 406
+        }
+      ],
+      "duration": "4.000000",
+      "error": null
+    },
+    "video": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "duration": "52.672000",
+      "error": null
+    }
+  },
+  "distribution_status": "catalog-and-starters; historical reconstruction and original video not bundled"
+}

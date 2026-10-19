@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-13",
+  "source": "direct user feedback after generated sample",
+  "sample": "local-only/女主街头漫画_5秒.mp4",
+  "user_quote": "缺点是什么，你这个动漫的动作幅度小，以及有些时候可能需要表达的意思是多个的转场多镜头的，5s之内可能包含很多动作以及镜头，不是这么简单的，第二，做这个aigc是为了帮助用户辅助去理解我讲的这些东西的，不是用来直接看的，你这个不太能辅助理解，所以需要修改一下",
+  "scope": "本次具体样片及用户明确补充的AIGC解释用途，不把每段5秒或固定快切数升级为通用要求",
+  "result": "revision_required_for_semantic_support_and_motion_design",
+  "confirmed_principles": [
+    "先确定口播解释任务",
+    "按语义需要安排多个动作、镜头和转场",
+    "动作变化应在正常观看尺寸下可辨",
+    "表情可以辅助，不能替代概念所需的过程",
+    "保留结果可读时间"
+  ],
+  "selected_rewrite_sentence": "脑子里的画面很清楚，输入时却只剩几个零散的词。",
+  "rewrite_status": "revised_video_effect_approved_by_user",
+  "approval_date": "2026-10-13",
+  "approval_quote": "可以可以，这就是我想要的效果，我需要的是那些抽象的，都要做成这种的，来方便观众理解",
+  "approved_scope": "本次修订样片的解释效果；今后需要B-roll解释的抽象口播默认采用这种具象事件、连续动作及多镜头因果演绎，按句意重新设计。不是固定鲸鱼主题、三个镜头或五秒时长。",
+  "heroine_and_style_reference": "local-only/女主画风与身份参考.png",
+  "revised_sample": "local-only/脑中画面变成零散词_5秒.mp4",
+  "character_scope": {
+    "date": "2026-10-13",
+    "ip": "阿刁",
+    "user_quote": "好的，其他的视频，不同的IP需要调用的是不同的主人公，所以只有阿刁的视频是这个主人公来",
+    "rule": "本次确认的女主仅用于阿刁动漫 B-roll。其他 IP 使用各自确认的主人公与参考；不可用阿刁女主作为默认回退。",
+    "shared_scope": "抽象口播的具象事件、连续动作与因果演绎方法可以共用，角色身份与整体画风按各 IP 档案选择。"
+  },
+  "boundaries": {
+    "technical_decode_previously_passed": true,
+    "initial_sample_semantic_acceptance": false,
+    "revised_sample_semantic_acceptance": true,
+    "completed_revision_paid_generation_authorized": true,
+    "additional_paid_generation_authorized": false
+  }
+}

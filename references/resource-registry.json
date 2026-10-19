@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "entry": "ui-motion-fusion",
+  "pathBase": "skillRoot",
+  "basePreference": [
+    "base-packaged"
+  ],
+  "description": "Public portable implementations behind the single entry. Packaged engines are the default; --base and --module-root provide explicit local overrides. Optional private context and historical media do not become mandatory install dependencies.",
+  "modules": [
+    {
+      "id": "source-study",
+      "path": ".",
+      "purpose": "逐句口播与 B-roll 对齐证据、来源方法和可检索蒸馏记录。",
+      "required": [
+        "scripts/source_study.py",
+        "references/source-study-guide.md",
+        "references/source-study-methods.json",
+        "references/source-study-sources.json",
+        "references/evidence/fred-argon-study/index.json",
+        "references/evidence/fred-argon-study/alignment.json",
+        "references/evidence/qiuzhi2046-study/index.json",
+        "references/evidence/qiuzhi2046-study/workflow.json",
+        "references/evidence/qiuzhi2046-study/creative.json",
+        "references/evidence/qiuzhi2046-study/network.json",
+        "references/evidence/qiuzhi2046-study/claude.json",
+        "references/evidence/fred-jev-study/index.json",
+        "references/evidence/fred-jev-study/alignment.json"
+      ],
+      "commands": {
+        "study": "scripts/source_study.py"
+      },
+      "required_for_install": true
+    },
+    {
+      "id": "semantic-directing",
+      "path": ".",
+      "purpose": "语义选材、剪辑配方与实际蒙版、交接和聚焦组件。",
+      "required": [
+        "scripts/director.py",
+        "references/semantic-directing.md",
+        "references/semantic-editing-recipes.json",
+        "assets/editing-kit/editing-kit.js"
+      ],
+      "commands": {
+        "direct": "scripts/director.py"
+      },
+      "required_for_install": true
+    },
+    {
+      "id": "style-profiles",
+      "path": ".",
+      "purpose": "解析已确认的账号或项目风格及样片实现，不把未认可样片自动升级为风格。",
+      "required": [
+        "scripts/style_registry.py",
+        "references/profiles/registry.json",
+        "references/style-profiles.md",
+        "references/fred-ui-direction.md",
+        "references/evidence/fred-reference-approved-20261015.json"
+      ],
+      "commands": {
+        "styles": "scripts/style_registry.py"
+      },
+      "required_for_install": true
+    },
+    {
+      "id": "fusion",
+      "path": ".",
+      "purpose": "主剪辑工程创建、融合机制与确定性视频渲染。",
+      "required": [
+        "scripts/new_project.py",
+        "scripts/render.py",
+        "assets/fusion-studio/project.json"
+      ],
+      "commands": {
+        "new": "scripts/new_project.py",
+        "render": "scripts/render.py"
+      },
+      "required_for_install": true
+    },
+    {
+      "id": "base-local",
+      "path": "assets/local-only/base",
+      "purpose": "Optional private base slot; no sibling skill is selected automatically. Use --base for an explicit engine version.",
+      "required": [
+        "scripts/new_project.py",
+        "scripts/render_portable.py",
+        "assets/portable-studio/fonts",
+        "references/style-system.md"
+      ],
+      "commands": {
+        "new": "scripts/new_project.py",
+        "render": "scripts/render_portable.py"
+      },
+      "required_for_install": false
+    },
+    {
+      "id": "base-packaged",
+      "path": "assets/base-skill",
+      "purpose": "Versioned packaged base engine; the default on every installation.",
+      "required": [
+        "scripts/new_project.py",
+        "scripts/render_portable.py",
+        "assets/portable-studio/fonts",
+        "references/style-system.md"
+      ],
+      "commands": {
+        "new": "scripts/new_project.py",
+        "render": "scripts/render_portable.py"
+      },
+      "required_for_install": true
+    },
+    {
+      "id": "director",
+      "path": "assets/modules/director",
+      "purpose": "保留原软件窗口、设备和导演预设的创建与渲染实现。",
+      "required": [
+        "scripts/new_project.py",
+        "scripts/render.py",
+        "references/presets.json",
+        "assets/studio/index.html",
+        "assets/studio/project.json",
+        "assets/studio/player.js",
+        "assets/studio/fonts"
+      ],
+      "commands": {
+        "new": "scripts/new_project.py",
+        "render": "scripts/render.py"
+      },
+      "required_for_install": true,
+      "distribution": {
+        "studio": "packaged",
+        "historical_previews": "optional, not bundled"
+      }
+    },
+    {
+      "id": "reference",
+      "path": "assets/modules/reference",
+      "purpose": "保留已有参考索引、逐例检索和重建源码入口。",
+      "required": [
+        "scripts/toolkit.py",
+        "scripts/rebuild.py",
+        "references/catalog.json",
+        "assets/motion-core.js",
+        "assets/templates/ui-morph/project.json",
+        "assets/templates/launch-film/project.json",
+        "references/storage-mode.json"
+      ],
+      "commands": {
+        "toolkit": "scripts/toolkit.py",
+        "rebuild": "scripts/rebuild.py"
+      },
+      "required_for_install": true,
+      "distribution": {
+        "catalog_cases": 230,
+        "starter_templates": 2,
+        "historical_reconstructions": "optional, not bundled",
+        "original_videos": "optional, not bundled",
+        "historical_previews": "optional, not bundled"
+      }
+    },
+    {
+      "id": "editorial",
+      "path": "assets/modules/editorial",
+      "purpose": "保留编辑式 UI 的 Remotion 工程模板、锁文件和创建脚本。",
+      "required": [
+        "scripts/new_project.py",
+        "assets/remotion-template/package.json",
+        "assets/remotion-template/package-lock.json",
+        "assets/remotion-template/src/index.ts",
+        "references/template-contract.md"
+      ],
+      "commands": {
+        "new": "scripts/new_project.py"
+      },
+      "required_for_install": true
+    },
+    {
+      "id": "adiao-context",
+      "path": "assets/modules/adiao-context",
+      "purpose": "阿刁已确认风格、项目指针与续作上下文；仅适用于该账号。",
+      "required": [
+        "references/approved-style-20261004.md",
+        "references/latest-project.json"
+      ],
+      "commands": {},
+      "required_for_install": false,
+      "distribution": {
+        "rules": "packaged",
+        "latest_project": "private-local-only; deliberately not bundled",
+        "identity": "voice and avatar assets are not bundled"
+      }
+    },
+    {
+      "id": "adiao-workflow",
+      "path": "assets/modules/adiao-workflow",
+      "purpose": "阿刁制作流程、状态检查、圆形人物合成、动效配方与原 CSS。",
+      "required": [
+        "defaults.json",
+        "assets/adiao-ui.css",
+        "scripts/adiao_state.py",
+        "scripts/check_edit_plan.py",
+        "scripts/circle_presenter.py",
+        "references/workflow.md",
+        "references/motion-recipes.md",
+        "references/handoff.md"
+      ],
+      "commands": {
+        "state": "scripts/adiao_state.py",
+        "check-plan": "scripts/check_edit_plan.py",
+        "circle-presenter": "scripts/circle_presenter.py"
+      },
+      "required_for_install": true
+    },
+    {
+      "id": "adiao-ui-editing",
+      "path": "assets/modules/adiao-ui-editing",
+      "purpose": "阿刁 UI 剪辑历史创意、生产约束和本地上下文；由主 Skill 的账号档案接入。",
+      "required": [
+        "references/local-context.md",
+        "references/creative-direction.md",
+        "references/production.md"
+      ],
+      "commands": {},
+      "required_for_install": true
+    },
+    {
+      "id": "apple-kinetic-promo",
+      "path": "assets/modules/apple-kinetic-promo",
+      "purpose": "保留历史动态排版与解释视频制作经验，外观仍以当前已确认档案为准。",
+      "required": [
+        "references/explainer-production-lessons.md"
+      ],
+      "commands": {},
+      "required_for_install": true
+    }
+  ]
+}

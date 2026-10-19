@@ -1,0 +1,947 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-01",
+  "scope": {
+    "site": "Collect UI",
+    "sourceEnumerationBatch": 25,
+    "category": "Progress Bar",
+    "categoryUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "listingUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "observedDate": "2026-10-01",
+    "timezone": "Asia/Shanghai",
+    "enumerationComplete": true,
+    "pagesCatalogued": [
+      1
+    ],
+    "sourcePaginationControlsPresent": false,
+    "paginationMode": "single-loaded-list-no-pagination-controls",
+    "lastPageEvidence": {
+      "snapshotId": "progress-bar-page-1-2026-10-01",
+      "pageNumber": 1,
+      "activePage": null,
+      "nextPageDisabled": null,
+      "paginationControlsObserved": false,
+      "observedCardCount": 17,
+      "evidenceKind": "complete-loaded-list-two-stable-reads-no-pagination-controls"
+    },
+    "enumerationMeaning": "仅当时实际浏览的完整分页快照，不代表媒体已观看、独立原作总数或全站完成。",
+    "notes": [
+      "Progress、Switch Button、Progress Bar为完整已加载单列表；实际到达页面底部后完整双读一致，没有源分页，p1仅归档。",
+      "Text Effect与Terminal Aesthetic实际Next逐页导航；旧首卡脱离、当前页和新首卡确认后取完整集合双读，末Next禁用。",
+      "到达底部前的即时滚动中间状态单独丢弃保留；未纳入accepted快照、卡片或媒体计数。",
+      "实际可见大写英文标签、完整tag href、hidden +N、实际图片alt与归属href原样保留；隐藏标签不补造。",
+      "原名仅在derivedOriginalCategoryName独立按159类真实完整href映射，不覆盖实际可见标签。",
+      "外部归属链接不冒充原作href，authorProfile null不补造；原作链接按实际精确卡弹层另外丰富。",
+      "目录清点新增媒体观看0、适配0；已有观察只按完整媒体URL分别关联。"
+    ]
+  },
+  "enumerationEvidence": {
+    "frozenRawSha256": "4e6c406af529ac47ee4ccc7fb840d501fae8f93e4091dfb9b48064b3f32e6e65",
+    "rawBatch": 25,
+    "rawMetadata": {
+      "category": "Progress Bar",
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "observedAt": "2026-10-01T09:35:46.805Z",
+      "sourcePaginationControlsPresent": false,
+      "collectionComplete": true,
+      "twoReadsMatch": true,
+      "mediaObservationClaims": 0,
+      "navigationNote": "Actual document bottom reached; 17-card entire loaded list read twice unchanged. No source page/Next/Previous/load-more controls; p1 means archive only.",
+      "navigation": [],
+      "completionEvidence": {
+        "singleLoadedList": true,
+        "noSourcePaginationControls": true,
+        "sourceActivePage": null,
+        "allPageCollectionsReadTwice": true,
+        "wholeLoadedCollectionStable": true,
+        "actualDocumentBottomReached": true,
+        "bottomState": {
+          "clientHeight": 720,
+          "dialogCount": 0,
+          "paginationSemanticButtons": [],
+          "scrollHeight": 2906,
+          "scrollTop": 2186
+        }
+      },
+      "collection": {
+        "kind": "actual-entire-loaded-rendered-DOM",
+        "sourceMediaDownloaded": false,
+        "cardModalOpened": false,
+        "mediaFrameObservationPerformed": false,
+        "derivedCategoryNameMapping": {
+          "association": "exact complete href; separate derived field; observed visible label unchanged",
+          "usedMapping": {
+            "https://collectui.com/designs/motion-ui-design-inspiration": "Motion",
+            "https://collectui.com/designs/progress-bar-ui-design-inspiration": "Progress Bar",
+            "https://collectui.com/designs/range-slider-ui-design-inspiration": "Range Slider",
+            "https://collectui.com/designs/modal-ui-design-inspiration": "Modal",
+            "https://collectui.com/designs/card-ui-design-inspiration": "Card",
+            "https://collectui.com/designs/file-upload-ui-design-inspiration": "File Upload",
+            "https://collectui.com/designs/user-profile-ui-design-inspiration": "User Profile",
+            "https://collectui.com/designs/widget-ui-design-inspiration": "Widget",
+            "https://collectui.com/designs/ai-ui-design-inspiration": "AI",
+            "https://collectui.com/designs/ai-flow-ui-design-inspiration": "AI Flow",
+            "https://collectui.com/designs/mobile-app-ui-design-inspiration": "Mobile App"
+          }
+        }
+      },
+      "rejectedReads": [
+        {
+          "reason": "Immediate Control+End scroll was intermediate; bottom not yet reached",
+          "bottomState": {
+            "clientHeight": 720,
+            "dialogCount": 0,
+            "paginationSemanticButtons": [],
+            "scrollHeight": 2906,
+            "scrollTop": 1093
+          }
+        }
+      ],
+      "notes": [
+        "Future batch25 raw research only; no source media viewing or main mutation."
+      ]
+    },
+    "rawSourceFile": "batch25-progress-bar-enumeration.json"
+  },
+  "listingSnapshots": [
+    {
+      "id": "progress-bar-page-1-2026-10-01",
+      "pageNumber": 1,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "Progress Bar UI Design Inspiration",
+      "activePage": null,
+      "pagination": [],
+      "cardCount": 17,
+      "cardCollectionSignature": "03bb23ceedc1a76989d9df137ffb921a5830d1dadf3898b65c841920b28ffbcb",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "d4924429f924449ed5feb6dd5cd46bbba1e099976f63ce6f68ca39b12b7e7dbc",
+        "second": "d4924429f924449ed5feb6dd5cd46bbba1e099976f63ce6f68ca39b12b7e7dbc"
+      },
+      "pageEnumerationEvidence": {
+        "sourcePageNumber": null,
+        "archiveMeaning": "p1 is an archive index for one entire loaded list, not an observed source pagination page",
+        "twoReadsMatch": true
+      }
+    }
+  ],
+  "summary": {
+    "cataloguedEntries": 17,
+    "uniqueMedia": 17,
+    "duplicateMediaOccurrences": 0,
+    "mediaTypes": {
+      "video": 11,
+      "image": 6
+    },
+    "mediaObservationsClaimed": 0
+  },
+  "entries": [
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "kippe07",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MOTION",
+          "derivedOriginalCategoryName": "Motion"
+        }
+      ],
+      "firstVisibleTag": "MOTION",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "7b03cdb6-702f-41f3-b85a-6cd36ca6de30",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-bar-p1-001",
+      "pageNumber": 1,
+      "snapshotId": "progress-bar-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress Bar",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-bar-media-001"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "ujjwalagg2603",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "PROGRESS BAR",
+          "derivedOriginalCategoryName": "Progress Bar"
+        }
+      ],
+      "firstVisibleTag": "PROGRESS BAR",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "7d96e72b-3500-481b-ab6c-96ef1f7e7027",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-bar-p1-002",
+      "pageNumber": 1,
+      "snapshotId": "progress-bar-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress Bar",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-bar-media-002"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "Manixh02",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 3,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "RANGE SLIDER",
+          "derivedOriginalCategoryName": "Range Slider"
+        }
+      ],
+      "firstVisibleTag": "RANGE SLIDER",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "aa694fd0-877c-4044-807f-36776f719b64",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-bar-p1-003",
+      "pageNumber": 1,
+      "snapshotId": "progress-bar-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress Bar",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-bar-media-003"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "jeetnirnejak",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 4,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MODAL",
+          "derivedOriginalCategoryName": "Modal"
+        }
+      ],
+      "firstVisibleTag": "MODAL",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "9d0cffdb-8672-4adc-a331-48018569012a",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-bar-p1-004",
+      "pageNumber": 1,
+      "snapshotId": "progress-bar-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress Bar",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-bar-media-004"
+    },
+    {
+      "attributionDisplayedText": "Post by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": null,
+      "cardOrder": 5,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "PROGRESS BAR",
+          "derivedOriginalCategoryName": "Progress Bar"
+        }
+      ],
+      "firstVisibleTag": "PROGRESS BAR",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "16416c6e-7315-4043-8d54-05fad96dac73",
+      "title": "A sci-fi HUD-style loading screen component with a red neon progress bar, numeric counter, and weapon arsenal status text.",
+      "titleSource": "actual-media-image-alt",
+      "id": "progress-bar-p1-005",
+      "pageNumber": 1,
+      "snapshotId": "progress-bar-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress Bar",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-bar-media-005"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "AbrarInPixels",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 6,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "CARD",
+          "derivedOriginalCategoryName": "Card"
+        }
+      ],
+      "firstVisibleTag": "CARD",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "709a2ea9-b451-4e31-90cd-b091c54b2add",
+      "title": "Design recap",
+      "titleSource": "actual-media-image-alt",
+      "id": "progress-bar-p1-006",
+      "pageNumber": 1,
+      "snapshotId": "progress-bar-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress Bar",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-bar-media-006"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "disarto_max",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 7,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FILE UPLOAD",
+          "derivedOriginalCategoryName": "File Upload"
+        }
+      ],
+      "firstVisibleTag": "FILE UPLOAD",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "0223f724-c69c-495b-b339-31142af55995",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-bar-p1-007",
+      "pageNumber": 1,
+      "snapshotId": "progress-bar-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress Bar",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-bar-media-007"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "dqnamo",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 8,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FILE UPLOAD",
+          "derivedOriginalCategoryName": "File Upload"
+        }
+      ],
+      "firstVisibleTag": "FILE UPLOAD",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "562d5256-3445-49ab-9d4c-8682d7034d8f",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-bar-p1-008",
+      "pageNumber": 1,
+      "snapshotId": "progress-bar-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress Bar",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-bar-media-008"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "disarto_max",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 9,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "PROGRESS BAR",
+          "derivedOriginalCategoryName": "Progress Bar"
+        }
+      ],
+      "firstVisibleTag": "PROGRESS BAR",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "5873cd36-cca5-4f37-85e3-4abd66d35292",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-bar-p1-009",
+      "pageNumber": 1,
+      "snapshotId": "progress-bar-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress Bar",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-bar-media-009"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "disarto_max",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 10,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FILE UPLOAD",
+          "derivedOriginalCategoryName": "File Upload"
+        }
+      ],
+      "firstVisibleTag": "FILE UPLOAD",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "33cb1133-a865-4cec-b8e9-ef3c4aa1e637",
+      "title": "Upload files [UI component]",
+      "titleSource": "actual-media-image-alt",
+      "id": "progress-bar-p1-010",
+      "pageNumber": 1,
+      "snapshotId": "progress-bar-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress Bar",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-bar-media-010"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "_heyrico",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 11,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "USER PROFILE",
+          "derivedOriginalCategoryName": "User Profile"
+        }
+      ],
+      "firstVisibleTag": "USER PROFILE",
+      "hiddenTagCount": 3,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "86db0fb5-1dc1-4afb-aa37-60cc50abedc8",
+      "title": "cooking some product exploration ",
+      "titleSource": "actual-media-image-alt",
+      "id": "progress-bar-p1-011",
+      "pageNumber": 1,
+      "snapshotId": "progress-bar-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress Bar",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-bar-media-011"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "Swaraj524",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 12,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "WIDGET",
+          "derivedOriginalCategoryName": "Widget"
+        }
+      ],
+      "firstVisibleTag": "WIDGET",
+      "hiddenTagCount": 3,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "ffb9d49c-b1d1-4011-b13e-7cceba0c002b",
+      "title": "Recent widgets I designed ",
+      "titleSource": "actual-media-image-alt",
+      "id": "progress-bar-p1-012",
+      "pageNumber": 1,
+      "snapshotId": "progress-bar-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress Bar",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-bar-media-012"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "jeetnirnejak",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 13,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "AI",
+          "derivedOriginalCategoryName": "AI"
+        }
+      ],
+      "firstVisibleTag": "AI",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "1f0bdcc2-9127-42ee-b3eb-69b4c212d890",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-bar-p1-013",
+      "pageNumber": 1,
+      "snapshotId": "progress-bar-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress Bar",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-bar-media-013"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "jeetnirnejak",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 14,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "AI",
+          "derivedOriginalCategoryName": "AI"
+        }
+      ],
+      "firstVisibleTag": "AI",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "b2588b32-0757-41fd-bada-c2bf9dd4c198",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-bar-p1-014",
+      "pageNumber": 1,
+      "snapshotId": "progress-bar-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress Bar",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-bar-media-014"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "jeetnirnejak",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 15,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "AI FLOW",
+          "derivedOriginalCategoryName": "AI Flow"
+        }
+      ],
+      "firstVisibleTag": "AI FLOW",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "08262e9b-5da3-4c42-b0a8-c58fe845c3bb",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-bar-p1-015",
+      "pageNumber": 1,
+      "snapshotId": "progress-bar-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress Bar",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-bar-media-015"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "shiri_shh",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 16,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MOBILE APP",
+          "derivedOriginalCategoryName": "Mobile App"
+        }
+      ],
+      "firstVisibleTag": "MOBILE APP",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "a4e9571b-b943-4372-8c88-cf584dd7f6a3",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-bar-p1-016",
+      "pageNumber": 1,
+      "snapshotId": "progress-bar-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress Bar",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-bar-media-016"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "disarto_max",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 17,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FILE UPLOAD",
+          "derivedOriginalCategoryName": "File Upload"
+        }
+      ],
+      "firstVisibleTag": "FILE UPLOAD",
+      "hiddenTagCount": 3,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "8955c0b4-0918-432d-9695-cc461b8b6685",
+      "title": "Some dark mode UI elements ",
+      "titleSource": "actual-media-image-alt",
+      "id": "progress-bar-p1-017",
+      "pageNumber": 1,
+      "snapshotId": "progress-bar-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress Bar",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-bar-media-017"
+    }
+  ],
+  "mediaGroups": [
+    {
+      "id": "progress-bar-media-001",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-bar-p1-001"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-bar-media-002",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-bar-p1-002"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-bar-media-003",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-bar-p1-003"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-bar-media-004",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-bar-p1-004"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-bar-media-005",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-bar-p1-005"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-bar-media-006",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-bar-p1-006"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-bar-media-007",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-bar-p1-007"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-bar-media-008",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-bar-p1-008"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-bar-media-009",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-bar-p1-009"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-bar-media-010",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-bar-p1-010"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-bar-media-011",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-bar-p1-011"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-bar-media-012",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-bar-p1-012"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-bar-media-013",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-bar-p1-013"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-bar-media-014",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-bar-p1-014"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-bar-media-015",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-bar-p1-015"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-bar-media-016",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-bar-p1-016"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-bar-media-017",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-bar-p1-017"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    }
+  ],
+  "enrichments": [
+    {
+      "entryId": "progress-bar-p1-001",
+      "date": "2026-10-01",
+      "field": "originalWorkUrl",
+      "value": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "basis": "Actual exact-card modal href; association solely by complete media URL. Historical catalogued-only status retained.",
+      "evidence": "../observations/batch24.json"
+    }
+  ]
+}

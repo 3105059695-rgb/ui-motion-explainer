@@ -1,0 +1,10 @@
+/* Opt-in helpers only. The host supplies every project theme value. */
+.uek-stage { position:relative; overflow:hidden; isolation:isolate; background:var(--uek-background); color:var(--uek-ink); font-family:var(--uek-font); }
+.uek-stage *, .uek-stage *::before, .uek-stage *::after { box-sizing:border-box; }
+.uek-layer { position:absolute; inset:0; }
+.uek-surface { background:var(--uek-surface); border:1px solid var(--uek-border); border-radius:var(--uek-radius); }
+.uek-shade { position:absolute; pointer-events:none; }
+.uek-label { color:var(--uek-muted); }
+.uek-accent { color:var(--uek-accent); }
+.uek-media { display:block; width:100%; height:100%; object-fit:contain; }
+/* Effects are frame-driven. Do not add CSS transitions to their owned properties. */

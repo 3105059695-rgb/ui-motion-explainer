@@ -1,0 +1,113 @@
+{
+  "slug": "twoclipping-6dd14e",
+  "title": "UGC ad generator promo",
+  "date": "2026-09-23",
+  "tags": [
+    "prompt"
+  ],
+  "promptShared": true,
+  "handle": "twoclipping",
+  "poster": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "preview": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "video": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "width": 1920,
+  "height": 1080,
+  "schema_version": "1.0.0",
+  "collected_at": "2026-10-07T02:47:03+00:00",
+  "source_page": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "source_post": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "attribution": "Videos and prompts belong to their creators, linked on each entry.",
+  "source_html_sha256": "c5ff64631bfe002e5b3c655b94a253a057ed42fd026d49fd1e3cee624c2dbbd0",
+  "prompt": "<inputs>\nAsk me for: the product name and a one-line promise, 3 to 5 UI moments to show, one accent color, 10 to 20 real vertical clips I own, and a royalty-free song with a clear drop (e.g. Mixkit, free for commercial use).\n</inputs>\n\n<direction>\nHigh-end minimal. One idea per shot, lots of empty space, one accent color, one clean sans (Geist or Inter) with tight tracking. Masked type reveals, match cuts, one smooth camera language. Real footage only, never placeholder cards. No full stops in on-screen text.\nBanned: shockwave rings, particle bursts, RGB split, camera shake, lens flares, neon glows, grid floors, flashing backgrounds, bouncy easing.\n</direction>\n\n<structure>\n10 bars at 120 BPM, 2 seconds each.\nBar 1: the hook lands word by word on the beats.\nBar 2: one hook word morphs into the product UI. A cursor types and clicks.\nThe drop: a circle opens out of the button into a dark scene.\nThen one move per bar: a wall of real clips with a scan line and 3 winners, the key output as big type, a 3D carousel of real videos with floor reflections and a motion-blurred whip onto one hero clip, the hero in a phone next to a panel that flips into results, big stats on push cuts, a 3-word ticker, a logo reveal, a fade to black.\n</structure>\n\n<build>\n1. One HTML file at 1920x1080. Every style is computed from time inside \nhttLOCAL_ASSET_NOT_DISTRIBUTED\nwindow.seek(t): no CSS animations, no timers, no state between frames.\n2. Real video: extract clips to 30fps JPEG sequences with ffmpeg and swap img sources per frame. seek awaits the image decodes.\n3. Analyze the song with numpy: tempo, beat grid, energy per bar, the drop. Calibrate the grid to the real kick hits. Every cut sits on a downbeat, every UI hit on a beat.\n4. Render with Playwright: 3 subframes per frame at t minus, at, and plus 1/240s, then blend with ffmpeg tmix for real motion blur at 60fps.\n5. Place each sound effect so its measured peak, not its file start, lands on the event. Keep the effects quiet under the music. Loudnorm to -14 LUFS.\n6. Probe 20 or more frames before the full render. Fix anything cluttered, overlapping or hard to read.\n</build>\n\n<gotchas>\nNever set opacity or filter on a preserve-3d element, because it flattens and both faces show. Fade its wrapper instead. Measure element positions at runtime for match cuts. Only use music and sound effects whose license allows commercial use.\n</gotchas>\n\n<start>\nAsk me for the inputs, then show me a storyboard with every timing on the beat grid before you write any code.\n</start>",
+  "prompt_characters": 2515,
+  "prompt_sha256": "66575c7ef58781ce359da17bd86bf8da0ba44d14985bc3b02f3f817e7db172a1",
+  "prompt_extraction": "full HTML #entry-prompt (unfolded source text)",
+  "prompt_rsc_match": true,
+  "prompt_source_note": "This prompt was taken directly from @twoclipping’s post (opens in a new tab).",
+  "stack": "HTML + Playwright",
+  "model": "Opus 5.5",
+  "effort": null,
+  "iterations": null,
+  "detail_fields": {
+    "Model": "Opus 5.5",
+    "Stack": "HTML + Playwright",
+    "Posted": "Sep 23, 2026"
+  },
+  "skill_repo": null,
+  "skill_description": null,
+  "skill_install_command": null,
+  "category": "product-film",
+  "category_inferred": true,
+  "status": "reference-collected",
+  "collection_errors": [],
+  "local_poster": "assets/reference/posters/twoclipping-6dd14e.webp",
+  "local_preview": null,
+  "local_video_absolute": null,
+  "detail_request_retries": [],
+  "media_transfers": {
+    "poster": {
+      "status": "cached",
+      "bytes": 4970,
+      "attempts": []
+    },
+    "preview": {
+      "status": "cached",
+      "bytes": 41497,
+      "attempts": []
+    },
+    "video": {
+      "status": "cached",
+      "bytes": 5201766,
+      "attempts": []
+    }
+  },
+  "media_probe": {
+    "poster": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "webp",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "duration": null,
+      "error": null
+    },
+    "preview": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 720,
+          "height": 406
+        }
+      ],
+      "duration": "4.000000",
+      "error": null
+    },
+    "video": {
+      "readable": true,
+      "returncode": 0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "duration": "20.061995",
+      "error": null
+    }
+  },
+  "distribution_status": "catalog-and-starters; historical reconstruction and original video not bundled"
+}

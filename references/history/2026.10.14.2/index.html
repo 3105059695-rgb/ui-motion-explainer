@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>我的 UI 动效剪辑 · 四层导航</title>
+  <style>
+    @font-face { font-family: Noto; font-weight: 100 900; font-display: swap; src: url('assets/base-skill/assets/portable-studio/fonts/NotoSansSC.ttf'); }
+    :root { --ink: #202b36; --muted: #586673; --line: #d9e1e5; --paper: #fff; --bg: #f5f7f8; --link: #195d76; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: Noto, "Microsoft YaHei", sans-serif; line-height: 1.75; }
+    a { color: var(--link); text-underline-offset: .22em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 3px solid #147da0; outline-offset: 5px; border-radius: 2px; }
+    .skip { position: absolute; left: 20px; top: -100px; padding: 10px 18px; background: #fff; z-index: 1; }
+    .skip:focus { top: 16px; }
+    main { max-width: 1040px; margin: auto; padding: 52px 28px 36px; }
+    .eyebrow { margin: 0 0 12px; color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .12em; }
+    h1 { margin: 0 0 14px; font-size: clamp(29px, 4vw, 42px); line-height: 1.35; letter-spacing: -.025em; }
+    .intro { max-width: 730px; margin: 0; font-size: 17px; color: var(--muted); }
+    .entry { margin: 24px 0 32px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; font-size: 14px; }
+    .call { background: #e7eef1; color: #264957; border-radius: 5px; padding: 5px 10px; font-family: Consolas, monospace; }
+    nav { display: flex; gap: 8px; flex-wrap: wrap; border-top: 1px solid var(--line); padding: 18px 0; margin-bottom: 12px; }
+    nav a { border: 1px solid var(--line); background: #fff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 14px; }
+    .layer { display: grid; grid-template-columns: 56px 1fr; gap: 20px; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 26px; margin: 0 0 16px; scroll-margin-top: 18px; }
+    .number { color: #57798a; font-size: 29px; font-weight: 500; line-height: 1.45; }
+    h2 { margin: 0 0 8px; font-size: 23px; line-height: 1.5; }
+    h2 a { text-decoration: none; }
+    .layer p { margin: 0 0 14px; color: var(--muted); font-size: 15px; }
+    .links { display: flex; flex-wrap: wrap; gap: 10px 22px; padding: 0; margin: 0; list-style: none; font-size: 14px; }
+    .resources { margin-top: 23px; padding-top: 18px; border-top: 1px solid var(--line); }
+    h3 { margin: 0 0 8px; font-size: 15px; font-weight: 600; }
+    .resources p { font-size: 13px; margin-bottom: 14px; }
+    .demos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0; padding: 0; list-style: none; }
+    .demos li { border-left: 2px solid #c9d8df; padding-left: 13px; }
+    .demos a { font-size: 14px; }
+    .demos small { display: block; color: var(--muted); font-size: 12px; margin-top: 3px; }
+    footer { padding: 16px 2px 0; color: var(--muted); font-size: 12px; }
+    footer p { margin: 0 0 7px; }
+    @media (max-width: 620px) { main { padding: 30px 18px; } .layer { grid-template-columns: 32px 1fr; gap: 12px; padding: 20px 17px; } .number { font-size: 23px; } h2 { font-size: 20px; } .demos { grid-template-columns: 1fr; gap: 16px; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#layers">跳到四层导航</a>
+  <main>
+    <header>
+      <p class="eyebrow">UI MOTION FUSION · 2026.10.14.2</p>
+      <h1>我的 UI 动效剪辑</h1>
+      <p class="intro">从内容出发，按账号沿用风格，再选择需要的剪辑能力。流程、风格、效果与参考各有入口，已有积累继续保留。</p>
+      <div class="entry"><code class="call">$ui-motion-fusion</code><a href="SKILL.md">打开统一技能入口</a><a href="references/global-use.md">在其他对话中调用</a></div>
+    </header>
+    <nav aria-label="四层目录">
+      <a href="#workflow">01 主流程</a><a href="#profiles">02 账号风格</a><a href="#library">03 可用效果库</a><a href="#history">04 参考与历史</a>
+    </nav>
+    <div id="layers">
+      <section class="layer" id="workflow" aria-labelledby="workflow-heading">
+        <div class="number" aria-hidden="true">01</div>
+        <div>
+          <h2 id="workflow-heading"><a href="references/workflow.md">主流程 →</a></h2>
+          <p>接到任务后从这里开始：确定交付范围、理解内容、规划画面，进入制作与交付。统一的判断顺序在这一处维护。</p>
+          <ul class="links"><li><a href="references/workflow.md">读取制作流程</a></li></ul>
+        </div>
+      </section>
+      <section class="layer" id="profiles" aria-labelledby="profiles-heading">
+        <div class="number" aria-hidden="true">02</div>
+        <div>
+          <h2 id="profiles-heading"><a href="references/style-profiles.md">账号风格 →</a></h2>
+          <p>找到当前账号的字体、配色、人物处理与已确认样片。具体认可范围与实际实现随档案读取。</p>
+          <ul class="links"><li><a href="references/style-profiles.md">风格选择入口</a></li><li><a href="references/profiles/adiao.md">阿刁档案</a></li><li><a href="references/profiles/fangmu.md">方木档案</a></li></ul>
+        </div>
+      </section>
+      <section class="layer" id="library" aria-labelledby="library-heading">
+        <div class="number" aria-hidden="true">03</div>
+        <div>
+          <h2 id="library-heading"><a href="references/library.md">可用效果库 →</a></h2>
+          <p>按这段要表达的意思选择动作、镜头、文字、人物或界面。条目说明参考、代码、验证与认可状态，并指向实际资源。</p>
+          <ul class="links"><li><a href="references/library.md">按表达任务选能力</a></li><li><a href="references/capability-catalog.json">结构化能力目录</a></li><li><a href="references/engine-routing.md">引擎与资源路由</a></li></ul>
+          <div class="resources">
+            <h3>保留的原展示与源码</h3>
+            <p>以下展示供观察动作或查找实现。示例配色、人物占位和演示数据属于各自样例；新片的外观从账号风格层读取。点击后才打开预览。</p>
+            <ul class="demos">
+              <li><a href="assets/fusion-studio/index.html">8 类 F 融合机制 · 原展示</a><small>无声界面示意 · <a href="assets/fusion-studio/scenes.js">场景源码</a></small></li>
+              <li><a href="assets/base-gallery.html">原 O/X 动效与制作资源</a><small>保留原库导航与能力入口</small></li>
+              <li><a href="assets/adu-reference/index.html">阿渡参考展示与代码对应</a><small>原参考库 · <a href="assets/adu-reference/展示条目与代码对应表.csv">条目与源码对应表</a></small></li>
+              <li><a href="assets/fusion-studio/previews/preview.mp4">72 秒 F 融合预览</a><small>原无声示意视频，展示状态见能力目录</small></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="layer" id="history" aria-labelledby="history-heading">
+        <div class="number" aria-hidden="true">04</div>
+        <div>
+          <h2 id="history-heading"><a href="references/history.md">参考与历史 →</a></h2>
+          <p>需要追溯时再进入：蒸馏报告、标注依据、旧规则与调整记录。保留学习来源，也能分清哪些已成为当前约定。</p>
+          <ul class="links"><li><a href="references/history.md">查看参考与历史索引</a></li><li><a href="references/local-video-design-distillation.md">本地参考视频 · 16 条剪辑配方</a></li></ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <p>这是本机离线导航。Markdown 文档和 JSON 目录可交给 Agent 读取；本页不加载播放器或远程资源。</p>
+      <p>本机规则版本 2026.10.14.2 · 远程发布状态另行核对。</p>
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,28 @@
+/* 阿刁基底，按1920x1080坐标布局。项目须嵌入自己的字体子集并等待加载。 */
+:root {
+  --adiao-bg: #f8f7fb;
+  --adiao-paper: #ffffff;
+  --adiao-ink: #17131e;
+  --adiao-muted: #6f697b;
+  --adiao-purple: #7645b7;
+  --adiao-selection: #eee6f7;
+  --adiao-line: #e5dfed;
+  --adiao-gradient: linear-gradient(112deg, #32223e 0%, #7645b7 34%, #9666ce 67%, #5b348c 100%);
+  --adiao-font: 'ProjectSans', sans-serif;
+  --adiao-display: 'ProjectDisplay', 'ProjectSans', sans-serif;
+  --adiao-safe: 48px;
+  --adiao-circle: 400px;
+}
+.adiao-stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; isolation: isolate; color: var(--adiao-ink); background: var(--adiao-bg); font-family: var(--adiao-font); font-synthesis: none; }
+.adiao-stage * { box-sizing: border-box; }
+.adiao-title { font-size: 88px; line-height: 1.12; font-weight: 700; letter-spacing: -.025em; margin: 0; }
+.adiao-body { font-size: 36px; line-height: 1.45; font-weight: 400; }
+.adiao-accent { color: var(--adiao-purple); }
+.adiao-gradient-word { background: var(--adiao-gradient); background-clip: text; -webkit-background-clip: text; color: transparent; }
+.adiao-window { border: 1px solid var(--adiao-line); border-radius: 24px; background: var(--adiao-paper); box-shadow: 0 12px 40px #17131e14; overflow: hidden; }
+.adiao-source-label { color: var(--adiao-muted); font-size: 24px; line-height: 1.3; }
+.adiao-presenter-circle { position: absolute; left: var(--adiao-safe); bottom: var(--adiao-safe); width: var(--adiao-circle); height: var(--adiao-circle); overflow: hidden; border-radius: 50%; }
+/* 正文字幕默认避开人物；素材焦点占用该区域时需重新布局，不是免检安全区。 */
+.adiao-caption-body { position: absolute; left: 500px; right: 64px; bottom: 48px; text-align: center; font-size: 44px; line-height: 1.3; font-weight: 700; }
+.adiao-caption-opening { position: absolute; left: 240px; right: 240px; bottom: 48px; text-align: center; font-size: 44px; line-height: 1.3; font-weight: 700; }
+/* 无预置“飞入”动画；运动由当期可定位时间轴按语义驱动。 */

@@ -1,0 +1,28 @@
+{
+  "source": "User supplied reference video",
+  "source_file": "b8a8d3042ddbdeb88c71cc850b7dc219.mp4",
+  "source_time_seconds": 3.8,
+  "license_note": "User-supplied reference derivatives for local style study; not claimed to be authored illustrations or independently licensed assets.",
+  "assets": [
+    {
+      "file": "poster-shortcuts.png",
+      "ffmpeg_filter": "crop=140:232:43:228,perspective=x0=4:y0=8:x1=128:y1=1:x2=13:y2=229:x3=139:y3=223:sense=source:interpolation=cubic,scale=252:456"
+    },
+    {
+      "file": "poster-time.png",
+      "ffmpeg_filter": "crop=130:230:206:204,perspective=x0=3:y0=3:x1=127:y1=3:x2=3:y2=225:x3=128:y3=225:sense=source:interpolation=cubic,scale=252:456"
+    },
+    {
+      "file": "poster-million.png",
+      "ffmpeg_filter": "crop=144:234:358:177,perspective=x0=16:y0=4:x1=140:y1=9:x2=4:y2=225:x3=130:y3=232:sense=source:interpolation=cubic,scale=252:456"
+    }
+  ],
+  "native_layers": [
+    "paper background",
+    "semantic typography",
+    "individual poster planes and motion",
+    "connection paths",
+    "skill label",
+    "curved code editor"
+  ]
+}

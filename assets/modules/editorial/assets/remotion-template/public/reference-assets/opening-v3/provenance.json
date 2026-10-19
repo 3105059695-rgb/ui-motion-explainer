@@ -1,0 +1,78 @@
+{
+  "source_file": "b8a8d3042ddbdeb88c71cc850b7dc219.mp4",
+  "source_kind": "User-supplied video; local reference-study derivatives",
+  "usage": "Independent information-feed thumbnails only; no full-frame video background or baked camera playback",
+  "assets": [
+    {
+      "file": "feed-0.jpg",
+      "time_seconds": 0.15,
+      "ffmpeg_filter": "crop=544:306:0:0"
+    },
+    {
+      "file": "feed-1.jpg",
+      "time_seconds": 0.4,
+      "ffmpeg_filter": "crop=544:306:0:0"
+    },
+    {
+      "file": "feed-2.jpg",
+      "time_seconds": 0.65,
+      "ffmpeg_filter": "crop=544:306:0:0"
+    },
+    {
+      "file": "feed-3.jpg",
+      "time_seconds": 0.85,
+      "ffmpeg_filter": "crop=544:306:0:0"
+    },
+    {
+      "file": "feed-4.jpg",
+      "time_seconds": 1.1,
+      "ffmpeg_filter": "crop=544:306:0:0"
+    },
+    {
+      "file": "feed-5.jpg",
+      "time_seconds": 1.5,
+      "ffmpeg_filter": "crop=544:306:0:0"
+    },
+    {
+      "file": "feed-6.jpg",
+      "time_seconds": 1.73,
+      "ffmpeg_filter": "crop=544:306:0:0"
+    },
+    {
+      "file": "feed-bottom-0.jpg",
+      "time_seconds": 0.15,
+      "ffmpeg_filter": "crop=544:192:0:528"
+    },
+    {
+      "file": "feed-bottom-3.jpg",
+      "time_seconds": 0.85,
+      "ffmpeg_filter": "crop=438:192:106:528"
+    },
+    {
+      "file": "lens-map.png",
+      "source_kind": "Procedurally generated RGB displacement data, not source video imagery",
+      "formula": "R=127.5+255*(x-272)*0.17*r2/256; G=127.5+255*(y-354)*0.17*r2/256; r2=((x-272)/350)^2+((y-354)/480)^2"
+    }
+  ],
+  "retained_v2_assets": "../opening/provenance.json",
+  "native_layers": [
+    "feed card typography and highlight bars",
+    "feed framing and montage motion",
+    "foreground claim",
+    "poster planes, lighting and camera move",
+    "semantic titles and numbered labels",
+    "animated branches and skill enclosure",
+    "all editor content and chrome",
+    "two-dimensional lens deformation",
+    "selection and cursor",
+    "sidebar and drag-and-drop file",
+    "SRT editor switch",
+    "terminal window and typing"
+  ],
+  "limitations": [
+    "thumbnail crops retain the source compression and blur",
+    "poster interiors are static sampled artwork",
+    "lens model is an authored radial approximation",
+    "the original font family was not recovered"
+  ]
+}

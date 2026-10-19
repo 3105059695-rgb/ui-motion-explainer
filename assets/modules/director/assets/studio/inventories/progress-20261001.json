@@ -1,0 +1,1254 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-01",
+  "scope": {
+    "site": "Collect UI",
+    "sourceEnumerationBatch": 24,
+    "category": "Progress",
+    "categoryUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "listingUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "observedDate": "2026-10-01",
+    "timezone": "Asia/Shanghai",
+    "enumerationComplete": true,
+    "pagesCatalogued": [
+      1
+    ],
+    "sourcePaginationControlsPresent": false,
+    "paginationMode": "single-loaded-list-no-pagination-controls",
+    "lastPageEvidence": {
+      "snapshotId": "progress-page-1-2026-10-01",
+      "pageNumber": 1,
+      "activePage": null,
+      "nextPageDisabled": null,
+      "paginationControlsObserved": false,
+      "observedCardCount": 24,
+      "evidenceKind": "complete-loaded-list-two-stable-reads-no-pagination-controls"
+    },
+    "enumerationMeaning": "仅当时实际浏览的完整分页快照，不代表媒体已观看、独立原作总数或全站完成。",
+    "notes": [
+      "Progress、Switch Button、Progress Bar为完整已加载单列表；实际到达页面底部后完整双读一致，没有源分页，p1仅归档。",
+      "Text Effect与Terminal Aesthetic实际Next逐页导航；旧首卡脱离、当前页和新首卡确认后取完整集合双读，末Next禁用。",
+      "到达底部前的即时滚动中间状态单独丢弃保留；未纳入accepted快照、卡片或媒体计数。",
+      "实际可见大写英文标签、完整tag href、hidden +N、实际图片alt与归属href原样保留；隐藏标签不补造。",
+      "原名仅在derivedOriginalCategoryName独立按159类真实完整href映射，不覆盖实际可见标签。",
+      "外部归属链接不冒充原作href，authorProfile null不补造；原作链接按实际精确卡弹层另外丰富。",
+      "目录清点新增媒体观看0、适配0；已有观察只按完整媒体URL分别关联。"
+    ]
+  },
+  "enumerationEvidence": {
+    "frozenRawSha256": "d0cc2897d0558b8b1ce228b37053da77eb98ced14600e872815742ec17f10823",
+    "rawBatch": 24,
+    "rawMetadata": {
+      "category": "Progress",
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "observedAt": "2026-10-01T08:47:20.783Z",
+      "sourcePaginationControlsPresent": false,
+      "collectionComplete": true,
+      "twoReadsMatch": true,
+      "mediaObservationClaims": 0,
+      "navigation": [],
+      "completionEvidence": {
+        "singleLoadedList": true,
+        "noSourcePaginationControls": true,
+        "sourceActivePage": null,
+        "allPageCollectionsReadTwice": true,
+        "wholeLoadedCollectionStable": true,
+        "actualDocumentBottomReached": true,
+        "bottomState": {
+          "clientHeight": 720,
+          "dialogCount": 0,
+          "possiblePaginationControls": [],
+          "scrollHeight": 3757,
+          "scrollTop": 3037
+        }
+      },
+      "collection": {
+        "kind": "actual-entire-loaded-rendered-DOM",
+        "sourceMediaDownloaded": false,
+        "cardModalOpened": false,
+        "mediaFrameObservationPerformed": false,
+        "derivedCategoryNameMapping": {
+          "association": "exact complete href; separate derived field; observed visible label unchanged",
+          "usedMapping": {
+            "https://collectui.com/designs/motion-ui-design-inspiration": "Motion",
+            "https://collectui.com/designs/progress-ui-design-inspiration": "Progress",
+            "https://collectui.com/designs/animation-ui-design-inspiration": "Animation",
+            "https://collectui.com/designs/range-slider-ui-design-inspiration": "Range Slider",
+            "https://collectui.com/designs/modal-ui-design-inspiration": "Modal",
+            "https://collectui.com/designs/widget-ui-design-inspiration": "Widget",
+            "https://collectui.com/designs/onboarding-ui-design-inspiration": "Onboarding",
+            "https://collectui.com/designs/ai-agents-ui-design-inspiration": "AI Agents",
+            "https://collectui.com/designs/form-ui-design-inspiration": "Form",
+            "https://collectui.com/designs/accordion-ui-design-inspiration": "Accordion",
+            "https://collectui.com/designs/card-ui-design-inspiration": "Card"
+          }
+        }
+      },
+      "rejectedReads": [
+        {
+          "reason": "Immediate Control+End measurement was still scrolling; excluded from bottom proof.",
+          "measurement": {
+            "scrollTop": 1518,
+            "scrollHeight": 3757,
+            "clientHeight": 720
+          },
+          "includedInAcceptedSnapshots": false
+        }
+      ],
+      "notes": [
+        "Future batch24 raw enumeration only; not integrated into release21 or batch23. Zero original work or media-frame observations."
+      ]
+    },
+    "rawSourceFile": "batch24-progress-enumeration.json"
+  },
+  "listingSnapshots": [
+    {
+      "id": "progress-page-1-2026-10-01",
+      "pageNumber": 1,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "Progress UI Design Inspiration",
+      "activePage": null,
+      "pagination": [],
+      "cardCount": 24,
+      "cardCollectionSignature": "c2cf572970eef776faa1183a4bf592cf4a186553ed37ad7acf6a4d56a1ac7e6a",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "812f6e193d07ada4219b2c9e14ff26b20e130a3866f0bcc2bd1209628d559eb5",
+        "second": "812f6e193d07ada4219b2c9e14ff26b20e130a3866f0bcc2bd1209628d559eb5"
+      },
+      "pageEnumerationEvidence": {
+        "sourcePageNumber": null,
+        "archiveMeaning": "p1 is an archive index for the entire loaded list, not a source website page number",
+        "twoReadsMatch": true
+      }
+    }
+  ],
+  "summary": {
+    "cataloguedEntries": 24,
+    "uniqueMedia": 24,
+    "duplicateMediaOccurrences": 0,
+    "mediaTypes": {
+      "video": 14,
+      "image": 10
+    },
+    "mediaObservationsClaimed": 0
+  },
+  "entries": [
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "kippe07",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MOTION"
+        }
+      ],
+      "firstVisibleTag": "MOTION",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "7b03cdb6-702f-41f3-b85a-6cd36ca6de30",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-p1-001",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-001"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "ShohanUIX",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "PROGRESS"
+        }
+      ],
+      "firstVisibleTag": "PROGRESS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "b512a5db-c9f8-43e6-a918-fcf667ca1ca4",
+      "title": "Aivo Session Progress & Recovery Timeline UI",
+      "titleSource": "actual-media-image-alt",
+      "id": "progress-p1-002",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-002"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "alexroyhe",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 3,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "ANIMATION"
+        }
+      ],
+      "firstVisibleTag": "ANIMATION",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "7e036d1d-a8a9-42c8-99e7-d498290f5541",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-p1-003",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-003"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "gabriell_lab",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 4,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "PROGRESS"
+        }
+      ],
+      "firstVisibleTag": "PROGRESS",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "48322700-b9c4-4699-8f19-397e1970b955",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-p1-004",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-004"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "Manixh02",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 5,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "RANGE SLIDER"
+        }
+      ],
+      "firstVisibleTag": "RANGE SLIDER",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "aa694fd0-877c-4044-807f-36776f719b64",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-p1-005",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-005"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "jeetnirnejak",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 6,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MODAL"
+        }
+      ],
+      "firstVisibleTag": "MODAL",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "9d0cffdb-8672-4adc-a331-48018569012a",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-p1-006",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-006"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "disarto_max",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 7,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "WIDGET"
+        }
+      ],
+      "firstVisibleTag": "WIDGET",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "7e8f0297-e1a6-4044-958f-c7ac88ef120f",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-p1-007",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-007"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "timothymaarv",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 8,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "ONBOARDING"
+        }
+      ],
+      "firstVisibleTag": "ONBOARDING",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "a26881b6-e5d8-4a22-8c09-e9eb23237ef4",
+      "title": "Ownership details",
+      "titleSource": "actual-media-image-alt",
+      "id": "progress-p1-008",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-008"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "_heyrico",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 9,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "AI AGENTS"
+        }
+      ],
+      "firstVisibleTag": "AI AGENTS",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "37528fc3-0609-4a32-ba6f-39cab6b6867f",
+      "title": "all in these vibes ",
+      "titleSource": "actual-media-image-alt",
+      "id": "progress-p1-009",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-009"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "dejvdesign",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 10,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "FORM"
+        }
+      ],
+      "firstVisibleTag": "FORM",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "cd08289f-9303-4caa-a689-17becd4c8289",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-p1-010",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-010"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "halil_works",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 11,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MODAL"
+        }
+      ],
+      "firstVisibleTag": "MODAL",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "4721b238-08af-428a-8e94-d8e90c446522",
+      "title": "Transfer Detail page ",
+      "titleSource": "actual-media-image-alt",
+      "id": "progress-p1-011",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-011"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "ersadwork",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 12,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "ACCORDION"
+        }
+      ],
+      "firstVisibleTag": "ACCORDION",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "283b5ee8-cf52-442e-bc26-010af2c80ea1",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-p1-012",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-012"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "RobertLigthart_",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 13,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "ONBOARDING"
+        }
+      ],
+      "firstVisibleTag": "ONBOARDING",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "cf5c627d-fd08-4eb7-b2d8-deeea0a7ed0f",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-p1-013",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-013"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "kvnkld",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 14,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "WIDGET"
+        }
+      ],
+      "firstVisibleTag": "WIDGET",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "054187fa-b23c-4273-ae49-0bc3023dcd83",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-p1-014",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-014"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "JasonUXUI",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 15,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "CARD"
+        }
+      ],
+      "firstVisibleTag": "CARD",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "adfb4091-de01-43b7-bdbe-02514602b346",
+      "title": "Project card components",
+      "titleSource": "actual-media-image-alt",
+      "id": "progress-p1-015",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-015"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "GotinGeorgiG",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 16,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "CARD"
+        }
+      ],
+      "firstVisibleTag": "CARD",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "f547217e-6c29-4f10-84f5-c8ea559e63a0",
+      "title": "card designs for a reading app ",
+      "titleSource": "actual-media-image-alt",
+      "id": "progress-p1-016",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-016"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "disarto_max",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 17,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "PROGRESS"
+        }
+      ],
+      "firstVisibleTag": "PROGRESS",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "5e86c52e-00a9-4212-b004-fc1ee968b991",
+      "title": "Collection of clean dark mode UI elements ",
+      "titleSource": "actual-media-image-alt",
+      "id": "progress-p1-017",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-017"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "MarkKnd",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 18,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "ONBOARDING"
+        }
+      ],
+      "firstVisibleTag": "ONBOARDING",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c5e3175b-ef71-4f21-b37d-50ff49c8ce71",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-p1-018",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-018"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "ade_sky_",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 19,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "PROGRESS"
+        }
+      ],
+      "firstVisibleTag": "PROGRESS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c9e3e315-3580-4df5-9b2f-8f54fae0dcf4",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-p1-019",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-019"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "justvasi",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 20,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "PROGRESS"
+        }
+      ],
+      "firstVisibleTag": "PROGRESS",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "02682bb0-2c49-45ae-b45e-6d1c5aed39fe",
+      "title": "The next iteration of the same early concept: mixing sequential and non-sequential steps within the same group.",
+      "titleSource": "actual-media-image-alt",
+      "id": "progress-p1-020",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-020"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "zzzzshawn",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 21,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "PROGRESS"
+        }
+      ],
+      "firstVisibleTag": "PROGRESS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "29c1d093-7925-49ce-b0eb-95f2304ffd48",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-p1-021",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-021"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "elayadesigns",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 22,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "PROGRESS"
+        }
+      ],
+      "firstVisibleTag": "PROGRESS",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "ce3545b8-53f1-41fd-b5e5-4a3059ce665b",
+      "title": "User Progress Card",
+      "titleSource": "actual-media-image-alt",
+      "id": "progress-p1-022",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-022"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "zzzzshawn",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 23,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "PROGRESS"
+        }
+      ],
+      "firstVisibleTag": "PROGRESS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "ae2bcf1a-d737-4ffe-b85c-21945908af42",
+      "title": null,
+      "titleSource": null,
+      "id": "progress-p1-023",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-023"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "shedsgns",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 24,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "CARD"
+        }
+      ],
+      "firstVisibleTag": "CARD",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "84fd8d7d-fed4-4693-98cd-c7ed78c716fa",
+      "title": "sync progress overview ",
+      "titleSource": "actual-media-image-alt",
+      "id": "progress-p1-024",
+      "pageNumber": 1,
+      "snapshotId": "progress-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Progress",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "progress-media-024"
+    }
+  ],
+  "mediaGroups": [
+    {
+      "id": "progress-media-001",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-001"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-002",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-002"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-003",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-003"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-004",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-004"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-005",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-005"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-006",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-006"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-007",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-007"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-008",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-008"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-009",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-009"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-010",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-010"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-011",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-011"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-012",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-012"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-013",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-013"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-014",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-014"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-015",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-015"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-016",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-016"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-017",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-017"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-018",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-018"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-019",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-019"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-020",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-020"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-021",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-021"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-022",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-022"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-023",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-023"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "progress-media-024",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "progress-p1-024"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    }
+  ],
+  "enrichments": [
+    {
+      "entryId": "progress-p1-001",
+      "date": "2026-10-01",
+      "field": "originalWorkUrl",
+      "value": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "basis": "Actual exact-card modal href; association solely by complete media URL. Historical catalogued-only status retained.",
+      "evidence": "../observations/batch24.json"
+    }
+  ]
+}

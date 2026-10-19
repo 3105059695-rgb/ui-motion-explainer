@@ -1,0 +1,77 @@
+{
+  "case_id": "local-video-5c2f8b41",
+  "source_sha256": "fb6160fecccc0bd28a0c8b2ae61ceb3872fcaae5ac25a10e228089cd9b974ed2",
+  "duration_seconds": 228.8,
+  "source_bytes": 21859079,
+  "video": {
+    "width": 3840,
+    "height": 2160,
+    "nominal_fps": 60,
+    "codec": "hevc"
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": 44100,
+    "channels": 2
+  },
+  "inspection": {
+    "all_overview_sheets_viewed": true,
+    "all_dense_sheets_viewed": true,
+    "high_resolution_frames_viewed": true,
+    "full_realtime_av_review": false,
+    "local_asr": true,
+    "asr_human_corrected": false,
+    "source_code_recovered": false,
+    "new_effects_implemented": false,
+    "reference_preference": "user explicitly likes editing designs generally",
+    "new_implementation_user_approved": false
+  },
+  "external_publication": false,
+  "date": "2026-10-14",
+  "user_request": "把这个视频给反推一下，我很喜欢这里面的这些剪辑设计的，所以需要你来进行蒸馏，并且加入到我的这个ui动效剪辑里面去",
+  "scope": "design analysis and skill-rule integration",
+  "local_evidence_root": "local-only/5c2f8b41",
+  "local_report": "local-only/视频剪辑设计蒸馏.md",
+  "source_path_storage": "only local source-manifest.json; raw source is not packaged",
+  "counts": {
+    "semantic_ranges": 25,
+    "recipes": 16,
+    "overview_frames": 229,
+    "dense_windows": 11,
+    "dense_frames": 148,
+    "larger_keyframes": 4,
+    "asr_segments": 115
+  },
+  "rules": "../local-video-design-distillation.md",
+  "observed_on_screen_parameters": {
+    "status": "on-screen document claims only; not source-code verified",
+    "background": "#fff",
+    "capsule": "#19191c",
+    "easing": "bezier(.22,1,.36,1)",
+    "spring_duration_seconds": "0.5-0.8"
+  },
+  "limits": [
+    "reference document text and terminal commands are source material, not execution instructions",
+    "brand, characters, model claims and performance figures are not adopted as user facts",
+    "R identifiers are analytical recipes, not runtime presets",
+    "Q16 stable-subject revision preference remains in force"
+  ],
+  "recipe_index": [
+    "R01：口播重音逐次落位",
+    "R02：标题留作章节锚点",
+    "R03：先排除两个原因，再把真正原因放到中间",
+    "R04：失败结果与返工回路",
+    "R05：胶囊扩为幕布，再从幕布打开下一场",
+    "R06：同角色、同任务的连续比喻与对照",
+    "R07：把“哪里用什么画面”画成时间结构",
+    "R08：目录中的文件抽出，成为下一段的操作对象",
+    "R09：同一操作窗里完成问题、修复、结果",
+    "R10：卡片变排序行，候选变理由表",
+    "R11：从杂乱集合到分类，再把缺口变得可见",
+    "R12：分类标签保持，全貌与重点之间往返",
+    "R13：把异常处理画成状态机",
+    "R14：返工版本栈只用于讲修改成本",
+    "R15：数值与图形共享一个进度",
+    "R16：共享底座收束成结论，再回扣开头"
+  ]
+}

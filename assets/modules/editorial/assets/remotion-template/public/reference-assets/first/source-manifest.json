@@ -1,0 +1,571 @@
+{
+  "source": "user-provided reference.mp4",
+  "purpose": "Independent perspective object / pedestal cutouts. No whole scene or video. Native grid, camera, tile choreography, flip state and layout remain editable.",
+  "extraction": "FFmpeg frame crop + convex-polygon alpha masks",
+  "assets": [
+    {
+      "file": "wallet-0.png",
+      "sourceTime": 37.6,
+      "crop": [
+        132,
+        107,
+        114,
+        96
+      ],
+      "polygon": [
+        [
+          188,
+          108
+        ],
+        [
+          244,
+          135
+        ],
+        [
+          189,
+          201
+        ],
+        [
+          133,
+          174
+        ]
+      ],
+      "additionalPolygon": null
+    },
+    {
+      "file": "wallet-1.png",
+      "sourceTime": 37.6,
+      "crop": [
+        188,
+        124,
+        114,
+        107
+      ],
+      "polygon": [
+        [
+          244,
+          135
+        ],
+        [
+          300,
+          163
+        ],
+        [
+          245,
+          229
+        ],
+        [
+          189,
+          201
+        ]
+      ],
+      "additionalPolygon": [
+        [
+          250,
+          125
+        ],
+        [
+          280,
+          140
+        ],
+        [
+          270,
+          165
+        ],
+        [
+          237,
+          149
+        ]
+      ]
+    },
+    {
+      "file": "wallet-2.png",
+      "sourceTime": 37.6,
+      "crop": [
+        244,
+        162,
+        115,
+        98
+      ],
+      "polygon": [
+        [
+          300,
+          163
+        ],
+        [
+          357,
+          191
+        ],
+        [
+          302,
+          258
+        ],
+        [
+          245,
+          229
+        ]
+      ],
+      "additionalPolygon": null
+    },
+    {
+      "file": "wallet-3.png",
+      "sourceTime": 37.6,
+      "crop": [
+        301,
+        190,
+        115,
+        99
+      ],
+      "polygon": [
+        [
+          357,
+          191
+        ],
+        [
+          414,
+          219
+        ],
+        [
+          360,
+          287
+        ],
+        [
+          302,
+          258
+        ]
+      ],
+      "additionalPolygon": null
+    },
+    {
+      "file": "logo-0.png",
+      "sourceTime": 37.6,
+      "crop": [
+        132,
+        440,
+        114,
+        96
+      ],
+      "polygon": [
+        [
+          188,
+          441
+        ],
+        [
+          244,
+          468
+        ],
+        [
+          189,
+          534
+        ],
+        [
+          133,
+          507
+        ]
+      ],
+      "additionalPolygon": null
+    },
+    {
+      "file": "logo-1.png",
+      "sourceTime": 37.6,
+      "crop": [
+        188,
+        457,
+        114,
+        107
+      ],
+      "polygon": [
+        [
+          244,
+          468
+        ],
+        [
+          300,
+          496
+        ],
+        [
+          245,
+          562
+        ],
+        [
+          189,
+          534
+        ]
+      ],
+      "additionalPolygon": [
+        [
+          250,
+          458
+        ],
+        [
+          280,
+          473
+        ],
+        [
+          270,
+          498
+        ],
+        [
+          237,
+          482
+        ]
+      ]
+    },
+    {
+      "file": "logo-2.png",
+      "sourceTime": 37.6,
+      "crop": [
+        244,
+        495,
+        115,
+        98
+      ],
+      "polygon": [
+        [
+          300,
+          496
+        ],
+        [
+          357,
+          524
+        ],
+        [
+          302,
+          591
+        ],
+        [
+          245,
+          562
+        ]
+      ],
+      "additionalPolygon": null
+    },
+    {
+      "file": "logo-3.png",
+      "sourceTime": 37.6,
+      "crop": [
+        301,
+        523,
+        115,
+        99
+      ],
+      "polygon": [
+        [
+          357,
+          524
+        ],
+        [
+          414,
+          552
+        ],
+        [
+          360,
+          620
+        ],
+        [
+          302,
+          591
+        ]
+      ],
+      "additionalPolygon": null
+    },
+    {
+      "file": "back-wallet-0.png",
+      "sourceTime": 38.8,
+      "crop": [
+        152,
+        117,
+        74,
+        66
+      ],
+      "polygon": [
+        [
+          176,
+          118
+        ],
+        [
+          224,
+          140
+        ],
+        [
+          205,
+          181
+        ],
+        [
+          153,
+          158
+        ]
+      ],
+      "additionalPolygon": null
+    },
+    {
+      "file": "back-wallet-1.png",
+      "sourceTime": 38.8,
+      "crop": [
+        213,
+        151,
+        64,
+        49
+      ],
+      "polygon": [
+        [
+          234,
+          152
+        ],
+        [
+          275,
+          168
+        ],
+        [
+          255,
+          198
+        ],
+        [
+          214,
+          181
+        ]
+      ],
+      "additionalPolygon": null
+    },
+    {
+      "file": "back-wallet-2.png",
+      "sourceTime": 38.8,
+      "crop": [
+        272,
+        181,
+        65,
+        50
+      ],
+      "polygon": [
+        [
+          292,
+          182
+        ],
+        [
+          335,
+          200
+        ],
+        [
+          315,
+          229
+        ],
+        [
+          273,
+          211
+        ]
+      ],
+      "additionalPolygon": null
+    },
+    {
+      "file": "back-wallet-3.png",
+      "sourceTime": 38.8,
+      "crop": [
+        329,
+        213,
+        62,
+        48
+      ],
+      "polygon": [
+        [
+          350,
+          214
+        ],
+        [
+          389,
+          232
+        ],
+        [
+          373,
+          259
+        ],
+        [
+          330,
+          240
+        ]
+      ],
+      "additionalPolygon": null
+    },
+    {
+      "file": "back-logo-0.png",
+      "sourceTime": 38.8,
+      "crop": [
+        152,
+        447,
+        73,
+        64
+      ],
+      "polygon": [
+        [
+          180,
+          448
+        ],
+        [
+          223,
+          469
+        ],
+        [
+          207,
+          509
+        ],
+        [
+          153,
+          486
+        ]
+      ],
+      "additionalPolygon": null
+    },
+    {
+      "file": "back-logo-1.png",
+      "sourceTime": 38.8,
+      "crop": [
+        212,
+        479,
+        71,
+        63
+      ],
+      "polygon": [
+        [
+          237,
+          480
+        ],
+        [
+          281,
+          500
+        ],
+        [
+          259,
+          540
+        ],
+        [
+          213,
+          519
+        ]
+      ],
+      "additionalPolygon": null
+    },
+    {
+      "file": "back-logo-2.png",
+      "sourceTime": 38.8,
+      "crop": [
+        270,
+        500,
+        61,
+        61
+      ],
+      "polygon": [
+        [
+          286,
+          501
+        ],
+        [
+          326,
+          520
+        ],
+        [
+          329,
+          552
+        ],
+        [
+          307,
+          559
+        ],
+        [
+          271,
+          532
+        ]
+      ],
+      "additionalPolygon": null
+    },
+    {
+      "file": "back-logo-3.png",
+      "sourceTime": 38.8,
+      "crop": [
+        325,
+        534,
+        72,
+        59
+      ],
+      "polygon": [
+        [
+          355,
+          535
+        ],
+        [
+          395,
+          552
+        ],
+        [
+          390,
+          577
+        ],
+        [
+          362,
+          591
+        ],
+        [
+          326,
+          571
+        ]
+      ],
+      "additionalPolygon": null
+    },
+    {
+      "file": "ending-phone.png",
+      "sourceTime": 40.7,
+      "crop": [
+        325,
+        200,
+        79,
+        73
+      ],
+      "polygon": [
+        [
+          352,
+          201
+        ],
+        [
+          402,
+          225
+        ],
+        [
+          382,
+          271
+        ],
+        [
+          326,
+          248
+        ]
+      ],
+      "additionalPolygon": null
+    },
+    {
+      "file": "ending-cat.png",
+      "sourceTime": 40.7,
+      "crop": [
+        327,
+        531,
+        73,
+        62
+      ],
+      "polygon": [
+        [
+          355,
+          532
+        ],
+        [
+          398,
+          553
+        ],
+        [
+          379,
+          591
+        ],
+        [
+          328,
+          571
+        ]
+      ],
+      "additionalPolygon": null
+    }
+  ]
+}

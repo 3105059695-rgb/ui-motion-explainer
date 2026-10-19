@@ -1,0 +1,1652 @@
+{
+  "schema_version": 1,
+  "evidence_id": "broll-calibration-20261012",
+  "recorded_date": "2026-10-12",
+  "date_basis": "conversation client date, Asia/Shanghai; no fabricated per-answer timestamp",
+  "kind": "user_annotations_and_questionnaire_choices",
+  "authority": {
+    "source": "direct_user_messages_in_current_conversation",
+    "persistence_authorized": true,
+    "authorization_quote": "那你把我们这次的标注和50道题总结出的规律写进ui-motion-fusion里，让其他窗口也能用。以后剪辑先分析口播的句意、上下文和人物情绪，再决定哪些地方放什么B-roll、怎么动，后面再根据实际视频继续完善。",
+    "scope": "Global local ui-motion-fusion skill; reusable in other chats. Current explicit task instructions still take precedence."
+  },
+  "source_questionnaire": {
+    "id": "broll-preference-20261012-v1",
+    "title": "你的 B-roll 镜头选择 · 50 题",
+    "groups": [
+      "名词和对象",
+      "操作过程",
+      "抽象概念",
+      "情绪与漫画",
+      "镜头与节奏"
+    ],
+    "source_path": "local-only/questions.json",
+    "sha256": "6e1d6bf064d9a08803dc25388c2b543b015b7ccd17aea0badf4f7998b4e9a920",
+    "source_role": "Sentence and option definitions only; this evidence copies all questions and options and does not require the local source file at runtime."
+  },
+  "answer_provenance": {
+    "source": "User pasted answer export in chat",
+    "reported_answered": 49,
+    "reported_total": 50,
+    "not_used": "checks/test-answer-export.json and any test/default/browser answers",
+    "unanswered_ids": [
+      34
+    ],
+    "letters_are_local_option_ids_not_styles": true
+  },
+  "annotation_rounds": [
+    {
+      "id": "folia-lyrics-round",
+      "source": "direct user annotation",
+      "coverage": "Only items 1-5 were substantively annotated. A trailing 6 was unfinished; no choices for items 6-10 are inferred.",
+      "annotations": [
+        {
+          "item": 1,
+          "sentence": "你有没有发现，有些音乐视频，明明只有几行歌词，却让人忍不住一直看下去？",
+          "user_annotation_quote": "几行歌词你可以用romotion来表示几行的歌词出来，那种简洁的一行一行的感觉",
+          "interpretation": "用代码/Remotion 表现简洁歌词逐行出现；romotion 按上下文理解为 Remotion，不据此限制其他合适引擎。",
+          "evidence_level": "user_description_not_rendered_approval"
+        },
+        {
+          "item": 2,
+          "sentence": "以前我也试过自己做，打开剪辑软件，一句一句打字，再挨个加动画。",
+          "user_annotation_quote": "以前我也试过自己做，打开剪辑软件这个，可以做那种真的UI界面，真的自己尝试做的那种效果，以及拖入动画来",
+          "interpretation": "展示软件操作过程、自己尝试与拖入动画；逼真表达不构成伪造真实软件操作的授权。",
+          "evidence_level": "user_description_not_rendered_approval"
+        },
+        {
+          "item": 3,
+          "sentence": "一首歌还没做完，人已经不想听这首歌了。",
+          "user_annotation_quote": "人已经不想听了，这种用代码不好说出来的，你可以先用漫画来代替，后期我会做aigc来",
+          "interpretation": "人的疲惫/厌烦先用漫画表现，后续用户可用 AIGC 替换。",
+          "evidence_level": "user_description_not_rendered_approval"
+        },
+        {
+          "item": 4,
+          "sentence": "后来我发现，歌词也可以跟着音乐，在画面里变成主角。",
+          "user_annotation_quote": "正常",
+          "interpretation": "常规口播处理；用户未指定特殊 B-roll。",
+          "evidence_level": "user_description_not_rendered_approval"
+        },
+        {
+          "item": 5,
+          "sentence": "安静的时候，文字慢慢浮出来；节奏一起来，整句话直接冲到你面前。",
+          "user_annotation_quote": "这个比较抽象的我觉得尽量用代码去做出来，还原出来，3d的也行",
+          "interpretation": "歌词浮现/冲近是可用代码实现的运动；可用 3D，不能把所有抽象句都归入 AIGC。",
+          "evidence_level": "user_description_not_rendered_approval"
+        }
+      ]
+    },
+    {
+      "id": "ai-prompt-round",
+      "source": "direct user annotation",
+      "annotations": [
+        {
+          "item": 1,
+          "sentence": "别人用 AI，十分钟就把工作做完了。你用 AI，光改提示词就折腾了半小时。",
+          "user_annotation_quote": "这个我需要做对比，并且是真的代码动画那种，就是真的在动，类似与真的在工作，不只是PPT这种的，然后两个进行对比，提示词折腾半小时，我会做成提示词从天而降掉下来砸住，显得折腾半小时的样子",
+          "interpretation": "同步运转的对比；提示词下落堆积表达折腾/负担，需真实动作和状态变化。",
+          "evidence_level": "user_description_not_rendered_approval"
+        },
+        {
+          "item": 2,
+          "sentence": "对话框越拉越长，答案生成了一版又一版，能直接用的却没几句。",
+          "user_annotation_quote": "对话框越拉越长，可以做成那种移动的类似于斜着展示ai对话框，然后一直很长的，答案生成一版一版可以做成，一份答案然后一个特效，再一份答案，再一份音效，这种的",
+          "interpretation": "长对话可斜向跟随；早期提出答案逐版出现配特效/声音。后续问卷第 16 题对此类反复修改优先选择固定答案、显色修改与版本增长，须保留更新关系。",
+          "evidence_level": "user_description_not_rendered_approval"
+        },
+        {
+          "item": 3,
+          "sentence": "最后你盯着屏幕，深吸一口气：算了，我自己来。",
+          "user_annotation_quote": "这种比较类似于抽象的了，就是aigc的那种，我觉得可以先用漫画图表示，你应该能知道我说了比较多的抽象的用aigc的这种了",
+          "interpretation": "叹气/放弃等人物表演先用漫画，AIGC 是后续可用路线。",
+          "evidence_level": "user_description_not_rendered_approval"
+        },
+        {
+          "item": 4,
+          "sentence": "问题可能出在，你脑子里想的是一幅完整的画，发给它的却只有几个零散的词。",
+          "user_annotation_quote": "这个可以先出现脑子，然后脑子放大转场一副画，然后最后结果画拖入对话框里面就是几个零散的词来",
+          "interpretation": "脑子→放大进入完整画面→同一幅画拖入对话框→变为零散词语；强调对象连续交接。",
+          "evidence_level": "user_description_not_rendered_approval"
+        },
+        {
+          "item": 5,
+          "sentence": "就像你坐上出租车，只跟司机说“去个好地方”，然后期待他把你送到目的地。",
+          "user_annotation_quote": "也是的，我觉得还是那种这个抽象的，尽量用代码做出那种来还原动画，不是简单的ppt，而是真的像动画那种的",
+          "interpretation": "出租车隐喻尽量用代码还原连续运动和情境，不只摆图换页。",
+          "evidence_level": "user_description_not_rendered_approval"
+        },
+        {
+          "item": 6,
+          "sentence": "试着把需求拆成三件事：给谁看、要解决什么问题、最后交付什么。",
+          "user_annotation_quote": "这个好做，就是正常拆分3件事",
+          "interpretation": "结构清楚的内容可简洁拆分，不要求复杂表演。",
+          "evidence_level": "user_description_not_rendered_approval"
+        },
+        {
+          "item": 7,
+          "sentence": "比如，把“帮我写个文案”，换成“给第一次养猫的人，写一段介绍自动喂食器的口播，语气像朋友聊天”。",
+          "user_annotation_quote": "这个正常的逼真ui就可以了",
+          "interpretation": "提示词修改用逼真的输入/修改 UI；具体操作事实以真实界面为据。",
+          "evidence_level": "user_description_not_rendered_approval"
+        },
+        {
+          "item": 8,
+          "sentence": "再把你喜欢的例子放进去，圈出哪一句好，告诉它为什么好。",
+          "user_annotation_quote": "这个也是逼真的ui来",
+          "interpretation": "例子上传、圈注与解释使用逼真 UI。",
+          "evidence_level": "user_description_not_rendered_approval"
+        },
+        {
+          "item": 9,
+          "sentence": "好的地方一点点留下来，跑偏的地方一次次纠正，你们之间的偏差才会慢慢缩小。",
+          "user_annotation_quote": "这种有点儿抽象了，所以可能还是需要aigc或者是单独的代码动画来表示",
+          "interpretation": "偏差缩小允许 AIGC 或独立代码动画；用户没有锁死其中一种。",
+          "evidence_level": "user_description_not_rendered_approval"
+        },
+        {
+          "item": 10,
+          "sentence": "等到它终于交出一份你愿意直接用的结果，你才能关掉电脑，安心去喝那杯已经凉了的咖啡。",
+          "user_annotation_quote": "这个更加抽象，要么代码做出逼真的agic，要么就是直接aigc",
+          "interpretation": "关电脑、喝咖啡需要具有人物动作与生活情境的表现，代码逼真表现或 AIGC 均可；不把这条理解为只允许某个引擎。",
+          "evidence_level": "user_description_not_rendered_approval"
+        }
+      ]
+    }
+  ],
+  "comic_clarification": {
+    "source": "later direct user correction",
+    "user_quote": "并且这个漫画代替aigc是一张图多个动作，然后垫着来出那种几s多图显示那种动漫的效果来的",
+    "interpretation": "One comic source sheet contains consecutive actions of the same character; split/crop panels or action images and sequence/overlay them across a few seconds for animation-like performance. Preserve character, scene and action continuity. A slow zoom on one unchanged pose does not meet this intent.",
+    "unresolved": [
+      "exact drawing style",
+      "number of poses and timing per scene",
+      "AIGC replacement assets"
+    ]
+  },
+  "questionnaire": {
+    "total": 50,
+    "answered": 49,
+    "questions": [
+      {
+        "id": 1,
+        "group": "名词和对象",
+        "sentence": "今天介绍的这个工具，叫 WorkBuddy。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "名称和官方标识短暂出现，随后缩到角落，真实工作台展开。",
+            "tag": "标识进入界面"
+          },
+          {
+            "letter": "B",
+            "text": "从桌面双击应用开始，窗口打开，镜头跟着光标进入工作区。",
+            "tag": "真实启动"
+          },
+          {
+            "letter": "C",
+            "text": "先展示它完成的一份真实成果，再拉远，露出工作台和工具名称。",
+            "tag": "成果先行"
+          }
+        ],
+        "selected_letter": "B",
+        "selected_text": "从桌面双击应用开始，窗口打开，镜头跟着光标进入工作区。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 2,
+        "group": "名词和对象",
+        "sentence": "这个开源 Skill，专门用来处理表格。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "一个标有名称的文件包进入工作台，随后调用表格处理任务；中间标示意。",
+            "tag": "模块接入"
+          },
+          {
+            "letter": "B",
+            "text": "先播放表格处理前后的变化，再缩出画面，露出 Skill 名称与来源。",
+            "tag": "效果说明"
+          },
+          {
+            "letter": "C",
+            "text": "进入真实仓库，聚焦项目名与说明，再展开相关文件和演示。",
+            "tag": "项目来源"
+          }
+        ],
+        "selected_letter": "B",
+        "selected_text": "先播放表格处理前后的变化，再缩出画面，露出 Skill 名称与来源。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 3,
+        "group": "名词和对象",
+        "sentence": "这个网站，专门用来找动效参考。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "几个真实作品同时运动，镜头穿过它们，落到网站的作品目录。",
+            "tag": "多素材进入"
+          },
+          {
+            "letter": "B",
+            "text": "从地址栏进入真实网站，滚动作品列表，点开一个动效。",
+            "tag": "浏览路径"
+          },
+          {
+            "letter": "C",
+            "text": "先全屏播放一个动效，再拉远到作品页，露出网站名称。",
+            "tag": "内容先行"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "几个真实作品同时运动，镜头穿过它们，落到网站的作品目录。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 4,
+        "group": "名词和对象",
+        "sentence": "这个项目是开源的，你可以自己继续改。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "展示原版和实际修改版，拖动对比线，最后露出仓库来源。",
+            "tag": "修改结果"
+          },
+          {
+            "letter": "B",
+            "text": "项目结构像可拆装模型展开，取出一个部件修改，再放回；标示意。",
+            "tag": "可拆改隐喻"
+          },
+          {
+            "letter": "C",
+            "text": "真实仓库中打开许可证与文件，再修改一小段内容并预览。",
+            "tag": "真实证据"
+          }
+        ],
+        "selected_letter": "B",
+        "selected_text": "项目结构像可拆装模型展开，取出一个部件修改，再放回；标示意。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 5,
+        "group": "名词和对象",
+        "sentence": "这三个工具，我想放在一起比较。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "三个真实窗口并排，各自执行同一个任务，逐渐出现不同结果。",
+            "tag": "同步过程对比"
+          },
+          {
+            "letter": "B",
+            "text": "先把三份成果放到一起比较，选中哪份，就展开它对应的工具。",
+            "tag": "成果反查"
+          },
+          {
+            "letter": "C",
+            "text": "同一任务留在画面中央，镜头依次进入三个工具，查看各自操作。",
+            "tag": "逐一进入"
+          }
+        ],
+        "selected_letter": "B",
+        "selected_text": "先把三份成果放到一起比较，选中哪份，就展开它对应的工具。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 6,
+        "group": "名词和对象",
+        "sentence": "装好这个 Skill，工作台就多了一项本领。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "新模块接入工作台，连接路径亮起，再进入真实任务；衔接标示意。",
+            "tag": "接入隐喻"
+          },
+          {
+            "letter": "B",
+            "text": "展示实际安装与调用过程，完成后立即执行一个相关任务。",
+            "tag": "真实安装"
+          },
+          {
+            "letter": "C",
+            "text": "同一个任务先演示原有做法，再演示安装后的做法，操作变化清晰可见。",
+            "tag": "前后对照"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "新模块接入工作台，连接路径亮起，再进入真实任务；衔接标示意。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 7,
+        "group": "名词和对象",
+        "sentence": "素材库里有很多选择，但我只需要其中几种。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "真实素材页连续滚动，筛选条件生效，光标打开几个合适的素材。",
+            "tag": "真实筛选"
+          },
+          {
+            "letter": "B",
+            "text": "不同素材在空间里持续播放，选中的靠近镜头，其余逐渐退远。",
+            "tag": "空间筛选"
+          },
+          {
+            "letter": "C",
+            "text": "先把几种素材放进实际作品试用，再返回素材库，交代各自来源。",
+            "tag": "应用先行"
+          }
+        ],
+        "selected_letter": "B",
+        "selected_text": "不同素材在空间里持续播放，选中的靠近镜头，其余逐渐退远。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 8,
+        "group": "名词和对象",
+        "sentence": "名字可能记不住，但这个图标你应该见过。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "图标从小到大清晰显现，名称在旁边补齐，再接入真实界面。",
+            "tag": "品牌识别"
+          },
+          {
+            "letter": "B",
+            "text": "先展示熟悉的操作和结果，窗口缩小时露出图标，完成名称介绍。",
+            "tag": "功能唤起"
+          },
+          {
+            "letter": "C",
+            "text": "图标在常见的真实使用位置被找到，镜头靠近，再展开软件界面。",
+            "tag": "使用场景识别"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "图标从小到大清晰显现，名称在旁边补齐，再接入真实界面。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 9,
+        "group": "名词和对象",
+        "sentence": "这是一个提示词模板，换掉内容就能拿来用。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "同时演示两份不同内容填进同一模板，并排展示生成后的两个例子。",
+            "tag": "复用对比"
+          },
+          {
+            "letter": "B",
+            "text": "真实文档中选中可替换部分，逐个填入内容，再复制到对话框。",
+            "tag": "实际填充"
+          },
+          {
+            "letter": "C",
+            "text": "模板像带空槽的表单，词块依次落入对应位置，最后组合成完整句子。",
+            "tag": "结构具象"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "同时演示两份不同内容填进同一模板，并排展示生成后的两个例子。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 10,
+        "group": "名词和对象",
+        "sentence": "从这个网站下载的文件，接下来要放进剪辑软件。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "先看到文件已在软件里使用，镜头回看它的网页来源，再接着剪辑。",
+            "tag": "用途先行"
+          },
+          {
+            "letter": "B",
+            "text": "保持文件缩略图连续移动，网页退后、软件展开，文件落入真实素材区。",
+            "tag": "对象交接"
+          },
+          {
+            "letter": "C",
+            "text": "展示真实下载，再从文件夹拖入剪辑软件，导入后出现时间线素材。",
+            "tag": "完整路径"
+          }
+        ],
+        "selected_letter": "C",
+        "selected_text": "展示真实下载，再从文件夹拖入剪辑软件，导入后出现时间线素材。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 11,
+        "group": "操作过程",
+        "sentence": "把文件拖进来，剩下的交给它处理。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "完整展示真实拖拽、接收反馈、处理状态和结果出现。",
+            "tag": "真实全过程"
+          },
+          {
+            "letter": "B",
+            "text": "先展现实际结果，再短暂回到拖入文件的动作，突出操作很少。",
+            "tag": "结果倒叙"
+          },
+          {
+            "letter": "C",
+            "text": "镜头贴着文件移动，越过窗口边界后拉远，露出正在变化的处理区。",
+            "tag": "跟随对象"
+          }
+        ],
+        "selected_letter": "C",
+        "selected_text": "镜头贴着文件移动，越过窗口边界后拉远，露出正在变化的处理区。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 12,
+        "group": "操作过程",
+        "sentence": "这个按钮藏得有点深，第一次很容易找不到。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "先放大目标按钮，再拉远还原它所在的菜单层级，随后操作一次。",
+            "tag": "目标反推"
+          },
+          {
+            "letter": "B",
+            "text": "沿真实菜单逐层展开，镜头随光标移动，找到按钮时停住。",
+            "tag": "寻找过程"
+          },
+          {
+            "letter": "C",
+            "text": "先在完整界面找一遍，再展开局部放大视图，把位置与按钮同时保留。",
+            "tag": "全局加局部"
+          }
+        ],
+        "selected_letter": "C",
+        "selected_text": "先在完整界面找一遍，再展开局部放大视图，把位置与按钮同时保留。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 13,
+        "group": "操作过程",
+        "sentence": "原来要重复点十次，现在一次就够了。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "两边同步执行同一任务，一边多次点击，另一边批量完成。",
+            "tag": "同步效率"
+          },
+          {
+            "letter": "B",
+            "text": "先连续演示十次操作，再回到起点，用一次操作完成同一结果。",
+            "tag": "顺序对照"
+          },
+          {
+            "letter": "C",
+            "text": "真实操作轨迹在画面中保留，十次路径逐渐收拢为一次短路径。",
+            "tag": "轨迹压缩"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "两边同步执行同一任务，一边多次点击，另一边批量完成。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 14,
+        "group": "操作过程",
+        "sentence": "刚才这一步选错了，所以后面的结果也跟着错了。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "让错误选项携带颜色标记，沿流程传到结果，修正后重新通过。",
+            "tag": "因果追踪"
+          },
+          {
+            "letter": "B",
+            "text": "把正确和错误的操作同时运行，镜头停在两条路径开始分叉的位置。",
+            "tag": "分叉对比"
+          },
+          {
+            "letter": "C",
+            "text": "从错误结果回到真实设置，修改选项后重新生成，核对变化。",
+            "tag": "纠错过程"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "让错误选项携带颜色标记，沿流程传到结果，修正后重新通过。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 15,
+        "group": "操作过程",
+        "sentence": "我改一个参数，你看画面会怎么变。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "依次设置三个实际参数值，每次保留一个效果，最后并排比较。",
+            "tag": "状态样本"
+          },
+          {
+            "letter": "B",
+            "text": "真实滑块缓慢移动，预览同步变化，光标停下时保留最终效果。",
+            "tag": "直接联动"
+          },
+          {
+            "letter": "C",
+            "text": "参数控制区与效果局部并列，镜头优先跟踪变化最明显的部分。",
+            "tag": "局部对照"
+          }
+        ],
+        "selected_letter": "B",
+        "selected_text": "真实滑块缓慢移动，预览同步变化，光标停下时保留最终效果。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 16,
+        "group": "操作过程",
+        "sentence": "答案生成了一版又一版，我还在反复改。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "固定一份答案，只让修改的句子替换并短暂显色，版本记录不断增加。",
+            "tag": "变化聚焦"
+          },
+          {
+            "letter": "B",
+            "text": "每版答案生成后留在后方，新版向前展开，几次不同提示音形成节奏。",
+            "tag": "版本堆叠"
+          },
+          {
+            "letter": "C",
+            "text": "真实对话不断向下延伸，每次生成都先出现新回答，再继续修改。",
+            "tag": "长对话"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "固定一份答案，只让修改的句子替换并短暂显色，版本记录不断增加。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 17,
+        "group": "操作过程",
+        "sentence": "把这两份文档里的重复内容合并一下。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "在真实文档中定位重复段落，复制整理，合并后只保留一份。",
+            "tag": "实际整理"
+          },
+          {
+            "letter": "B",
+            "text": "先显示合并后的文档，点选一段就展开它在两份原文中的出处。",
+            "tag": "结果溯源"
+          },
+          {
+            "letter": "C",
+            "text": "两份文档并排展开，相同段落靠近对齐，再合成一份连续文档。",
+            "tag": "内容合并"
+          }
+        ],
+        "selected_letter": "B",
+        "selected_text": "先显示合并后的文档，点选一段就展开它在两份原文中的出处。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 18,
+        "group": "操作过程",
+        "sentence": "它还在处理，先看看现在进行到哪一步了。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "镜头跟着任务经过连续工序，当前工序仍在运动，后面保持等待。",
+            "tag": "流程空间"
+          },
+          {
+            "letter": "B",
+            "text": "打开实际任务详情，已经完成、正在执行和待执行状态依次可见。",
+            "tag": "真实进度"
+          },
+          {
+            "letter": "C",
+            "text": "保持正在处理的真实界面，局部放大持续变化的内容，体现工作还在继续。",
+            "tag": "进行中细节"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "镜头跟着任务经过连续工序，当前工序仍在运动，后面保持等待。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 19,
+        "group": "操作过程",
+        "sentence": "把这个例子发给它，再说清楚你喜欢哪里。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "拖入真实例子，框选具体部分，在旁边输入喜欢的原因，再发送。",
+            "tag": "具体示范"
+          },
+          {
+            "letter": "B",
+            "text": "例子先全屏展开，喜欢的部分被圈出，整体缩成带标注的附件进入对话。",
+            "tag": "标注交接"
+          },
+          {
+            "letter": "C",
+            "text": "先展示例子和目标结果的关系，再回到对话里输入针对性的修改要求。",
+            "tag": "目标对照"
+          }
+        ],
+        "selected_letter": "B",
+        "selected_text": "例子先全屏展开，喜欢的部分被圈出，整体缩成带标注的附件进入对话。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 20,
+        "group": "操作过程",
+        "sentence": "文件导出了，但先别急着关，打开检查一遍。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "镜头跟随导出文件离开软件、进入播放器，再靠近正在查看的内容。",
+            "tag": "文件旅程"
+          },
+          {
+            "letter": "B",
+            "text": "源工程与导出结果并排同步查看，关键位置放大对齐，确认没有缺失。",
+            "tag": "源结果对照"
+          },
+          {
+            "letter": "C",
+            "text": "真实导出完成后打开文件，播放或翻页，检查到最后一处再结束。",
+            "tag": "完整核对"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "镜头跟随导出文件离开软件、进入播放器，再靠近正在查看的内容。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 21,
+        "group": "抽象概念",
+        "sentence": "复杂的需求，往往要一层一层补充，才能说清楚。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "镜头连续穿过半透明需求层，零散条件在中心拼成完整模型。",
+            "tag": "空间组合"
+          },
+          {
+            "letter": "B",
+            "text": "建筑草图逐层长出结构，每补一个条件，就补齐一处缺口。",
+            "tag": "物理隐喻"
+          },
+          {
+            "letter": "C",
+            "text": "真实对话逐次补充对象、用途和限制，旁边的结果同步更新。",
+            "tag": "真实过程"
+          }
+        ],
+        "selected_letter": "C",
+        "selected_text": "真实对话逐次补充对象、用途和限制，旁边的结果同步更新。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 22,
+        "group": "抽象概念",
+        "sentence": "资料越多，越需要先把真正有用的信息找出来。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "镜头穿行资料长廊，相关内容逐渐靠近，无关内容退到远处。",
+            "tag": "空间筛选"
+          },
+          {
+            "letter": "B",
+            "text": "在真实文档中搜索、定位、标记，再把相关段落拖入整理区。",
+            "tag": "真实过程"
+          },
+          {
+            "letter": "C",
+            "text": "资料经过多层筛网，无关内容滑落，有用段落继续向前。",
+            "tag": "物理筛选"
+          }
+        ],
+        "selected_letter": "C",
+        "selected_text": "资料经过多层筛网，无关内容滑落，有用段落继续向前。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 23,
+        "group": "抽象概念",
+        "sentence": "后面的步骤做不下去，可能是前面还少了一个条件。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "小球沿轨道前进，在缺失桥面前停住，补上后继续滚动。",
+            "tag": "物理因果"
+          },
+          {
+            "letter": "B",
+            "text": "镜头沿数据流追到断点，找到缺失输入，接通后流程恢复。",
+            "tag": "关系追踪"
+          },
+          {
+            "letter": "C",
+            "text": "界面的下一步保持禁用，补齐缺失字段后，按钮立即可用。",
+            "tag": "真实状态"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "小球沿轨道前进，在缺失桥面前停住，补上后继续滚动。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 24,
+        "group": "抽象概念",
+        "sentence": "要求越具体，结果就越不容易跑偏。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "逐次补充字数、受众与语气，生成内容随每条要求发生变化。",
+            "tag": "真实迭代"
+          },
+          {
+            "letter": "B",
+            "text": "小车原本四处偏移，轨道逐段铺好后，稳定驶向目标。",
+            "tag": "物理约束"
+          },
+          {
+            "letter": "C",
+            "text": "候选结果分布在空间里，条件依次收紧范围，留下匹配结果。",
+            "tag": "空间收敛"
+          }
+        ],
+        "selected_letter": "B",
+        "selected_text": "小车原本四处偏移，轨道逐段铺好后，稳定驶向目标。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 25,
+        "group": "抽象概念",
+        "sentence": "同一份资料，换一个目标，整理出来的重点也会不同。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "同一束资料进入两条分拣通道，分别组合成学习笔记与汇报提纲。",
+            "tag": "分流隐喻"
+          },
+          {
+            "letter": "B",
+            "text": "保留同一份文档，只切换任务要求，两侧生成不同重点。",
+            "tag": "真实对照"
+          },
+          {
+            "letter": "C",
+            "text": "资料原位不动，镜头换个角度，分散的重点重新连成一组。",
+            "tag": "视角重组"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "同一束资料进入两条分拣通道，分别组合成学习笔记与汇报提纲。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 26,
+        "group": "抽象概念",
+        "sentence": "每次只省下一点时间，但重复一百次，差距就出来了。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "同一操作分别手动和自动执行，重复加速播放，累计耗时持续变化。",
+            "tag": "真实计时"
+          },
+          {
+            "letter": "B",
+            "text": "每轮省下的一小段时间留在画面里，逐段接成长长的时间带。",
+            "tag": "时间实体化"
+          },
+          {
+            "letter": "C",
+            "text": "两条传送带每轮只差一点速度，任务累积，完成数量逐渐拉开。",
+            "tag": "累积隐喻"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "同一操作分别手动和自动执行，重复加速播放，累计耗时持续变化。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 27,
+        "group": "抽象概念",
+        "sentence": "你以为少了一个步骤，其实它只是被放到了后台。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "界面整体翻转，露出背后的流程层，任务从背面执行后回到前台。",
+            "tag": "空间揭示"
+          },
+          {
+            "letter": "B",
+            "text": "前台机器只剩启动键，镜头钻进内部，看到完整机构依次运转。",
+            "tag": "机械剖面"
+          },
+          {
+            "letter": "C",
+            "text": "前台点击一次完成任务，再展开实际日志，显示执行过的步骤。",
+            "tag": "真实后台"
+          }
+        ],
+        "selected_letter": "B",
+        "selected_text": "前台机器只剩启动键，镜头钻进内部，看到完整机构依次运转。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 28,
+        "group": "抽象概念",
+        "sentence": "真正拖慢整件事的，可能只是中间那一小段。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "沿流程管道追踪光点，在拥堵处停下，修复后光点恢复流动。",
+            "tag": "空间流动"
+          },
+          {
+            "letter": "B",
+            "text": "逐段回放实际任务，耗时记录显示某一步停留明显，镜头聚焦此处。",
+            "tag": "真实诊断"
+          },
+          {
+            "letter": "C",
+            "text": "包裹在传送带窄口排队，拓宽后队伍逐渐消散。",
+            "tag": "瓶颈隐喻"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "沿流程管道追踪光点，在拥堵处停下，修复后光点恢复流动。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 29,
+        "group": "抽象概念",
+        "sentence": "两个看起来没关系的想法，连起来，可能就是一个新方法。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "两个用途不同的零件靠近、咬合，组合后完成一个新的动作。",
+            "tag": "物理组合"
+          },
+          {
+            "letter": "B",
+            "text": "镜头进入两个想法之间，共同部分重叠，再连续变形成新结构。",
+            "tag": "连续变形"
+          },
+          {
+            "letter": "C",
+            "text": "把两段真实笔记拖到一起，圈出联系，再演示组合后的用法。",
+            "tag": "真实推演"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "两个用途不同的零件靠近、咬合，组合后完成一个新的动作。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 30,
+        "group": "抽象概念",
+        "sentence": "把最重要的问题先解决，后面的选择反而会简单很多。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "先确定任务目标，不适用的选项随之收起，只留下相关项。",
+            "tag": "真实决策"
+          },
+          {
+            "letter": "B",
+            "text": "中央主齿轮转动，周围散乱的机构逐个咬合，装置开始运行。",
+            "tag": "联动物理"
+          },
+          {
+            "letter": "C",
+            "text": "路线关键节点被选定，前方多余岔路收起，主路线清晰延伸。",
+            "tag": "空间决策"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "先确定任务目标，不适用的选项随之收起，只留下相关项。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 31,
+        "group": "情绪与漫画",
+        "sentence": "导出成功的那一刻，我悬着的心才终于落了地。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "同角色漫画切换攥手、松拳、呼气三格，最后肩膀放下来。",
+            "tag": "漫画连续动作"
+          },
+          {
+            "letter": "B",
+            "text": "AIGC近拍紧绷的脸，完成提示响起后闭眼呼气，再露出笑容。",
+            "tag": "AIGC细微表演"
+          },
+          {
+            "letter": "C",
+            "text": "一颗悬在细线上的心，在完成提示响起后，缓缓落进柔软靠垫。",
+            "tag": "代码拟物隐喻"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "同角色漫画切换攥手、松拳、呼气三格，最后肩膀放下来。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 32,
+        "group": "情绪与漫画",
+        "sentence": "改到第五遍的时候，我已经开始怀疑自己的审美了。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "作品在五个画框间轮换，挑选光标左右徘徊，最后停住。",
+            "tag": "代码选择行为"
+          },
+          {
+            "letter": "B",
+            "text": "漫画连切自信点头、皱眉、歪头、揉脸，景别逐格推近。",
+            "tag": "漫画情绪递进"
+          },
+          {
+            "letter": "C",
+            "text": "AIGC人物反复凑近、退后看屏幕，最后托着下巴迟迟不能决定。",
+            "tag": "AIGC人物表演"
+          }
+        ],
+        "selected_letter": "B",
+        "selected_text": "漫画连切自信点头、皱眉、歪头、揉脸，景别逐格推近。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 33,
+        "group": "情绪与漫画",
+        "sentence": "最怕刚做完，就有人说方向全错了。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "AIGC人物起身伸懒腰，看到新消息后动作停住，重新坐下。",
+            "tag": "AIGC动作中断"
+          },
+          {
+            "letter": "B",
+            "text": "积木逐步搭成高塔，一个方向箭头落下，指向完全相反的一侧。",
+            "tag": "代码物理隐喻"
+          },
+          {
+            "letter": "C",
+            "text": "漫画人物先举手庆祝，再读消息僵住，双手缓缓放回桌上。",
+            "tag": "漫画反应落差"
+          }
+        ],
+        "selected_letter": "C",
+        "selected_text": "漫画人物先举手庆祝，再读消息僵住，双手缓缓放回桌上。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 34,
+        "group": "情绪与漫画",
+        "sentence": "明明只想休息五分钟，一抬头，窗外已经黑了。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "AIGC固定机位，人物窝在椅子里刷手机，天色加速变暗后突然抬头。",
+            "tag": "AIGC环境叙事"
+          },
+          {
+            "letter": "B",
+            "text": "代码做微缩桌面场景，手机内容持续上滑，阳光沿桌面移动直到消失。",
+            "tag": "代码场景叙事"
+          },
+          {
+            "letter": "C",
+            "text": "同角色漫画从坐直到侧躺再蜷缩，切换时窗外同步由亮变暗。",
+            "tag": "漫画时间流逝"
+          }
+        ],
+        "selected_letter": null,
+        "selected_text": null,
+        "selection_source": null,
+        "status": "unanswered_no_inference"
+      },
+      {
+        "id": 35,
+        "group": "情绪与漫画",
+        "sentence": "第一次有人认真夸我的作品，我把那条消息看了好几遍。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "消息被反复点开、收起，又轻轻放大其中一句，最后加入收藏。",
+            "tag": "操作寄托情绪"
+          },
+          {
+            "letter": "B",
+            "text": "同角色漫画连续切低头阅读、抿嘴笑、抱住手机、偷偷再看。",
+            "tag": "漫画开心表演"
+          },
+          {
+            "letter": "C",
+            "text": "AIGC人物看手机嘴角扬起，锁屏片刻后，又忍不住重新打开。",
+            "tag": "AIGC克制表演"
+          }
+        ],
+        "selected_letter": "B",
+        "selected_text": "同角色漫画连续切低头阅读、抿嘴笑、抱住手机、偷偷再看。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 36,
+        "group": "情绪与漫画",
+        "sentence": "交稿前最后一分钟，我连呼吸都不敢太大声。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "漫画交替切手指、眼神、时钟，切换越来越快，提交瞬间停住。",
+            "tag": "漫画快切张力"
+          },
+          {
+            "letter": "B",
+            "text": "AIGC近拍悬在鼠标上的手指，再切眼睛和紧抿的嘴，提交后才放松。",
+            "tag": "AIGC局部特写"
+          },
+          {
+            "letter": "C",
+            "text": "文件经过窄桥，倒计时逐步归零，在最后一刻滑入接收口。",
+            "tag": "代码紧张隐喻"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "漫画交替切手指、眼神、时钟，切换越来越快，提交瞬间停住。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 37,
+        "group": "情绪与漫画",
+        "sentence": "看到别人做得那么好，我把刚打开的工程，又默默关上了。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "漫画从前倾欣赏，到低头看自己的作品，再缩回椅子里关上电脑。",
+            "tag": "漫画失落递进"
+          },
+          {
+            "letter": "B",
+            "text": "AIGC先拍屏幕映在眼中的光，再拍笑容消失，轻轻合上笔记本。",
+            "tag": "AIGC写实情绪"
+          },
+          {
+            "letter": "C",
+            "text": "自己的小画布展开，旁边优秀作品陆续亮起，小画布慢慢卷回去。",
+            "tag": "代码对象拟人"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "漫画从前倾欣赏，到低头看自己的作品，再缩回椅子里关上电脑。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 38,
+        "group": "情绪与漫画",
+        "sentence": "先做出一个粗糙的版本，我反而没那么害怕了。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "漫画人物先捂住作品，再掀开一角，最后把草稿推出来，身体坐直。",
+            "tag": "漫画动作释压"
+          },
+          {
+            "letter": "B",
+            "text": "AIGC人物犹豫着按预览，看到粗糙成果后点点头，重新靠近键盘。",
+            "tag": "AIGC信心变化"
+          },
+          {
+            "letter": "C",
+            "text": "遮住草稿的厚重封皮一点点打开，粗稿进入工作台，后续动作开始顺畅。",
+            "tag": "代码阻力变化"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "漫画人物先捂住作品，再掀开一角，最后把草稿推出来，身体坐直。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 39,
+        "group": "情绪与漫画",
+        "sentence": "有时候，最解气的动作，就是关掉那个反复报错的窗口。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "漫画拆成忍耐、攥鼠标、重重点下、靠回椅背，按下时短促震动。",
+            "tag": "漫画夸张释放"
+          },
+          {
+            "letter": "B",
+            "text": "AIGC人物看见错误后抿嘴，果断关闭窗口，再向椅背一靠呼气。",
+            "tag": "AIGC释放表演"
+          },
+          {
+            "letter": "C",
+            "text": "错误窗口不断回弹，最后一次关闭将它压成纸团，弹出画面。",
+            "tag": "代码夸张反馈"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "漫画拆成忍耐、攥鼠标、重重点下、靠回椅背，按下时短促震动。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 40,
+        "group": "情绪与漫画",
+        "sentence": "待办终于清空的时候，整个人都轻了。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "漫画从埋头勾选到放下笔，再伸腰站起，最后轻快走出桌前。",
+            "tag": "漫画连续收尾"
+          },
+          {
+            "letter": "B",
+            "text": "AIGC人物逐项打勾，合上本子伸展双臂，镜头随起身缓缓拉远。",
+            "tag": "AIGC自然收尾"
+          },
+          {
+            "letter": "C",
+            "text": "任务纸片逐张盖章收走，压弯的桌面渐渐回正，灯光变暖。",
+            "tag": "代码负担卸除"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "漫画从埋头勾选到放下笔，再伸腰站起，最后轻快走出桌前。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 41,
+        "group": "镜头与节奏",
+        "sentence": "这一页看起来很复杂，其实只需要关注这里。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "完整界面保留，周围稍微压暗，相关区域清晰高亮，光标开始操作。",
+            "tag": "全局聚焦"
+          },
+          {
+            "letter": "B",
+            "text": "从完整界面提起局部放大窗，原位置仍能看见，两处同步变化。",
+            "tag": "局部放大"
+          },
+          {
+            "letter": "C",
+            "text": "镜头平滑推进关键区域，保留少量上下文边缘，再展示操作。",
+            "tag": "镜头推进"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "完整界面保留，周围稍微压暗，相关区域清晰高亮，光标开始操作。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 42,
+        "group": "镜头与节奏",
+        "sentence": "这一步处理好了，我们去另一个工具里继续。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "按真实操作切换窗口，导入刚才的成果，镜头跟着光标走。",
+            "tag": "操作转场"
+          },
+          {
+            "letter": "B",
+            "text": "当前成果成为连续移动的对象，原窗口收起，下一工具展开接住它。",
+            "tag": "对象接力"
+          },
+          {
+            "letter": "C",
+            "text": "先停一下展示当前结果，再沿相同画面位置切到另一工具中的同一内容。",
+            "tag": "匹配剪辑"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "按真实操作切换窗口，导入刚才的成果，镜头跟着光标走。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 43,
+        "group": "镜头与节奏",
+        "sentence": "前面都准备好了，接下来只差最后一步。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "沿同一条操作路径持续推进，经过完成的步骤，停在最后的按钮前。",
+            "tag": "连续推进"
+          },
+          {
+            "letter": "B",
+            "text": "准备过程用三个短镜头回顾，最后一步切为较长镜头并实际完成。",
+            "tag": "快慢反差"
+          },
+          {
+            "letter": "C",
+            "text": "一直保留真实工作界面，已完成区域收起，最后一步自然成为主画面。",
+            "tag": "界面状态变化"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "沿同一条操作路径持续推进，经过完成的步骤，停在最后的按钮前。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 44,
+        "group": "镜头与节奏",
+        "sentence": "先别急，我们把刚才那一步看清楚。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "回到动作前，放大操作区域，分成选择、执行、反馈三个清晰节拍。",
+            "tag": "局部拆解"
+          },
+          {
+            "letter": "B",
+            "text": "操作画面停在关键处，用短暂示意动画解释原理，再接回真实动作。",
+            "tag": "原理插入"
+          },
+          {
+            "letter": "C",
+            "text": "重放一次实际操作，速度放慢，保持整个界面可见。",
+            "tag": "慢放全景"
+          }
+        ],
+        "selected_letter": "C",
+        "selected_text": "重放一次实际操作，速度放慢，保持整个界面可见。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 45,
+        "group": "镜头与节奏",
+        "sentence": "点一下，结果就出来了。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "点击、处理中、结果出现接成三个清晰节拍，声音与三个状态对应。",
+            "tag": "节拍剪辑"
+          },
+          {
+            "letter": "B",
+            "text": "实际点击配一个轻触音，结果出现再配一个轻完成音，动作正常速度。",
+            "tag": "事件音效"
+          },
+          {
+            "letter": "C",
+            "text": "镜头稍微靠近点击处，结果出现时拉开，保留口播和软件原声。",
+            "tag": "镜头表达"
+          }
+        ],
+        "selected_letter": "C",
+        "selected_text": "镜头稍微靠近点击处，结果出现时拉开，保留口播和软件原声。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 46,
+        "group": "镜头与节奏",
+        "sentence": "三种音乐画面，我都做了一版。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "一个主画面持续播放，另两种在两侧运动，随着节拍依次接过主位置。",
+            "tag": "主次换位"
+          },
+          {
+            "letter": "B",
+            "text": "每种效果占满画面播放几秒，通过相似的文字或图形动作衔接。",
+            "tag": "满屏接续"
+          },
+          {
+            "letter": "C",
+            "text": "三个真实效果同时播放，镜头依次推进每个，再回到整体。",
+            "tag": "多屏巡游"
+          }
+        ],
+        "selected_letter": "C",
+        "selected_text": "三个真实效果同时播放，镜头依次推进每个，再回到整体。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 47,
+        "group": "镜头与节奏",
+        "sentence": "这里错了，我们退回去改一下。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "用实际撤销或返回操作，回到错误位置，修改后继续播放。",
+            "tag": "真实回退"
+          },
+          {
+            "letter": "B",
+            "text": "直接切回错误步骤，短暂圈出问题，马上展示修改和结果变化。",
+            "tag": "直接定位"
+          },
+          {
+            "letter": "C",
+            "text": "把刚才的对象运动倒放到错误起点，再恢复正向，展示修正过程。",
+            "tag": "运动回溯"
+          }
+        ],
+        "selected_letter": "B",
+        "selected_text": "直接切回错误步骤，短暂圈出问题，马上展示修改和结果变化。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 48,
+        "group": "镜头与节奏",
+        "sentence": "做到这里，你已经把整个流程走完了。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "镜头沿刚走过的路线回看，节点各播放一小段，最后回到成片。",
+            "tag": "路径回顾"
+          },
+          {
+            "letter": "B",
+            "text": "最终成果放大播放，之前的步骤缩到边缘，随后自然退出。",
+            "tag": "成果收尾"
+          },
+          {
+            "letter": "C",
+            "text": "回到人物口播，旁边保留正在播放的成果，最后留一拍结束。",
+            "tag": "人物收尾"
+          }
+        ],
+        "selected_letter": "B",
+        "selected_text": "最终成果放大播放，之前的步骤缩到边缘，随后自然退出。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 49,
+        "group": "镜头与节奏",
+        "sentence": "但我最喜欢的，其实是接下来这个小细节。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "先给全貌，镜头缓慢靠近细节，在对应的词上开始演示。",
+            "tag": "渐进揭示"
+          },
+          {
+            "letter": "B",
+            "text": "先近拍细节怎样运动，再拉远交代它在完整作品中的位置。",
+            "tag": "细节先行"
+          },
+          {
+            "letter": "C",
+            "text": "保持全貌继续播放，用一次短暂高亮引导视线，随后恢复自然画面。",
+            "tag": "轻提示"
+          }
+        ],
+        "selected_letter": "A",
+        "selected_text": "先给全貌，镜头缓慢靠近细节，在对应的词上开始演示。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      },
+      {
+        "id": 50,
+        "group": "镜头与节奏",
+        "sentence": "这段可以慢一点，让观众看清楚它是怎么变的。",
+        "options": [
+          {
+            "letter": "A",
+            "text": "先看初态，再近看发生变化的细节，最后回到完整结果。",
+            "tag": "景别拆分"
+          },
+          {
+            "letter": "B",
+            "text": "先完整播放一次，再单独重放最关键的变化，让观众第二遍看懂。",
+            "tag": "重复解释"
+          },
+          {
+            "letter": "C",
+            "text": "同一镜头连续展示从初态到结果的全过程，关键处适当放慢。",
+            "tag": "连续变化"
+          }
+        ],
+        "selected_letter": "B",
+        "selected_text": "先完整播放一次，再单独重放最关键的变化，让观众第二遍看懂。",
+        "selection_source": "user_chat_answer_export",
+        "status": "user_selected"
+      }
+    ]
+  },
+  "observed_facts": [
+    {
+      "claim": "49/50 questions answered; Q34 is unanswered",
+      "question_ids": [
+        34
+      ],
+      "kind": "count_from_user_choices"
+    },
+    {
+      "claim": "All 9 answered items in the emotion group select comic action sequences",
+      "question_ids": [
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "kind": "count_from_user_choices"
+    },
+    {
+      "claim": "Q16 selects a fixed answer with highlighted sentence changes and an increasing version history",
+      "question_ids": [
+        16
+      ],
+      "kind": "user_choice"
+    },
+    {
+      "claim": "Q47 selects a direct cut back to the error; Q50 selects complete playback followed by replay of the key change",
+      "question_ids": [
+        47,
+        50
+      ],
+      "kind": "user_choice"
+    }
+  ],
+  "contextual_inferences": [
+    {
+      "id": "noun-by-purpose",
+      "summary": "A named object should enter according to why it is mentioned: launch/identity, demonstrated capability, modifiability, added capability, or discovery through content. Avoid one universal logo reveal.",
+      "question_ids": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "status": "derived_from_choices_not_visual_approval"
+    },
+    {
+      "id": "visible-state-change",
+      "summary": "Concrete operations need visible cause and feedback. Cursor movement alone is insufficient.",
+      "question_ids": [
+        10,
+        11,
+        13,
+        14,
+        15,
+        18,
+        19,
+        20,
+        21,
+        42
+      ],
+      "status": "derived_from_choices_not_visual_approval"
+    },
+    {
+      "id": "abstract-mechanisms",
+      "summary": "Use moving mechanisms for conceptual relationships when these explain the relation; use actual UI/process when that already explains it.",
+      "question_ids": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "status": "derived_from_choices_not_visual_approval"
+    },
+    {
+      "id": "emotion-performance",
+      "summary": "Current preference for human emotional beats is consecutive comic performance, with AIGC available later.",
+      "question_ids": [
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "status": "derived_from_choices_not_visual_approval"
+    },
+    {
+      "id": "multiple-live-assets",
+      "summary": "For multi-material displays, simultaneously active real assets can establish variety, then the camera or selected item approaches before returning to the whole. Tool comparisons prioritize comparable results.",
+      "question_ids": [
+        3,
+        5,
+        7,
+        46
+      ],
+      "status": "derived_from_choices_not_visual_approval"
+    },
+    {
+      "id": "orientation-before-detail",
+      "summary": "Maintain spatial context when locating controls or explaining details; continuous transitions are not mandatory when direct cuts or replay aid understanding.",
+      "question_ids": [
+        12,
+        41,
+        44,
+        47,
+        49,
+        50
+      ],
+      "status": "derived_from_choices_not_visual_approval"
+    },
+    {
+      "id": "result-entry-and-exit",
+      "summary": "Results can be the entry for explaining capability/comparison/provenance and the exit after a completed workflow.",
+      "question_ids": [
+        2,
+        5,
+        17,
+        48
+      ],
+      "status": "derived_from_choices_not_visual_approval"
+    }
+  ],
+  "updates_and_limits": [
+    {
+      "earlier": "ai-prompt-round item 2 proposed repeated answer appearances with effects and sounds",
+      "later": "Questionnaire Q16 selects fixed-answer change tracking",
+      "application": "For the corresponding repeated-revision context prefer the later Q16 choice; do not erase the earlier idea or ban all multiple-answer montages/sound effects."
+    },
+    {
+      "earlier": "continuous object handoffs valued",
+      "later": "Q47 direct correction cut and Q50 replay selected",
+      "application": "Continuity serves comprehension; do not impose one-take motion on every sentence."
+    },
+    {
+      "choice": "Q45 retains narration and software sound with modest camera movement",
+      "application": "Do not default to an added click sound for every action; this does not establish a general dislike of sound design."
+    }
+  ],
+  "validation_status": {
+    "questionnaire_choices": "direct user selected",
+    "annotation_meanings": "interpretations recorded beside direct wording",
+    "summary_acceptance": "User agreed with the prior contextual summary and explicitly requested persistence",
+    "rendered_sample_approval": false,
+    "full_visual_style_approval": false,
+    "platform_approval": false,
+    "unverified_dimensions": [
+      "comic drawing style",
+      "exact timing and pacing",
+      "effect intensity",
+      "3D realism",
+      "sticker style and frequency",
+      "global sound-design preference"
+    ],
+    "do_not_infer": [
+      "Q34 preference",
+      "unanswered Folia items",
+      "all abstract phrases require AIGC",
+      "all shots require UI",
+      "every sentence requires B-roll",
+      "all transitions must be continuous"
+    ]
+  }
+}

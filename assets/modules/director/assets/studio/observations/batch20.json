@@ -1,0 +1,1292 @@
+{
+  "schemaVersion": 1,
+  "batch": 20,
+  "recordedAt": "2026-10-01",
+  "targetFormat": "1920x1080 landscape",
+  "scope": "Three specifically observed dynamic sources with their actual categories, preserving continuous mechanisms and major regions. Menu/File Tree/Hover State/Orb directory enumeration separately adds zero observations. Original media/research screenshots not bundled. Whole-site goal remains incomplete.",
+  "works": [
+    {
+      "id": "batch20-chmiel",
+      "title": "图标侧栏 · 悬停展开与选中保留",
+      "author": "@chmielwork",
+      "sourceURL": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "inventoryEntryId": "sidebar-p1-008",
+      "categoryNames": [
+        "Menu",
+        "Sidebar",
+        "Hover State"
+      ],
+      "observationDepth": "multiple-video-times-observed",
+      "sourceDuration": 25.383333,
+      "sourceDimensions": {
+        "width": 1322,
+        "height": 1322
+      },
+      "acceptedPausedFrameCount": 12,
+      "acceptedSamples": [
+        {
+          "timeSeconds": 0,
+          "requestedTimeSeconds": 0,
+          "frameTime": 0,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 1,
+          "decodedFrameConfirmed": true,
+          "description": "Initial Home selected: solid house and Home label remain visible. Search, Strategies, Campaigns and Chats are gray outlines in a five-row vertical rail; entire remaining canvas white."
+        },
+        {
+          "timeSeconds": 2.000283,
+          "requestedTimeSeconds": 2,
+          "frameTime": 2,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 52,
+          "decodedFrameConfirmed": true,
+          "description": "Home hovered. Rounded light-gray capsule expands around icon and label; current Home stays selected."
+        },
+        {
+          "timeSeconds": 5.783378,
+          "requestedTimeSeconds": 5,
+          "frameTime": 5.816667,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 51,
+          "decodedFrameConfirmed": true,
+          "description": "Campaigns hovered with light-gray expanding capsule and black outline. Home remains solid and labeled; previous/next hover label can fade during transition."
+        },
+        {
+          "timeSeconds": 7.596413,
+          "requestedTimeSeconds": null,
+          "frameTime": 7.633333,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 100,
+          "decodedFrameConfirmed": true,
+          "description": "Cursor left the navigation. Hover capsule and transient labels retract; Home solid icon and name remain."
+        },
+        {
+          "timeSeconds": 10,
+          "requestedTimeSeconds": 10,
+          "frameTime": 10,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 53,
+          "decodedFrameConfirmed": true,
+          "description": "Strategies selected with solid black circle and white keyhole. Its name remains while pointer is away; Home returns to gray outline."
+        },
+        {
+          "timeSeconds": 11.6,
+          "requestedTimeSeconds": 11.6,
+          "frameTime": 11.6,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 57,
+          "decodedFrameConfirmed": true,
+          "description": "Campaigns hovered with black outline and gray capsule while Strategies remains selected and labeled."
+        },
+        {
+          "timeSeconds": 12.4,
+          "requestedTimeSeconds": 12.4,
+          "frameTime": 12.4,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 59,
+          "decodedFrameConfirmed": true,
+          "description": "Campaigns selected: bowl icon is solid black with white inset. Other icons gray; selected Campaigns name remains."
+        },
+        {
+          "timeSeconds": 13,
+          "requestedTimeSeconds": 13,
+          "frameTime": 13,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 54,
+          "decodedFrameConfirmed": true,
+          "description": "Chats selected with two filled bubbles. Campaigns label fading out while pointer sits on Chats."
+        },
+        {
+          "timeSeconds": 16,
+          "requestedTimeSeconds": 16,
+          "frameTime": 16,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 58,
+          "decodedFrameConfirmed": true,
+          "description": "Search selected: bold concentric lens mark and Search label; other four icons gray. Cursor moved to blank canvas."
+        },
+        {
+          "timeSeconds": 19,
+          "requestedTimeSeconds": 19,
+          "frameTime": 19,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 55,
+          "decodedFrameConfirmed": true,
+          "description": "Search stays selected while Campaigns is hovered and expands its own capsule/name."
+        },
+        {
+          "timeSeconds": 22.5,
+          "requestedTimeSeconds": 22.5,
+          "frameTime": 22.5,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 60,
+          "decodedFrameConfirmed": true,
+          "description": "Strategies selected again, with Home hovered as gray capsule and black outline; both selected and hover labels visible."
+        },
+        {
+          "timeSeconds": 24.8,
+          "requestedTimeSeconds": 24.8,
+          "frameTime": 24.8,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 56,
+          "decodedFrameConfirmed": true,
+          "description": "Final Home selected again, solid house and persistent Home name, hover capsule around current cursor."
+        }
+      ],
+      "observedImageCount": 0,
+      "mechanisms": [
+        "Single persistent white workspace with five vertically spaced icon entries: Search, Home, Strategies, Campaigns and Chats",
+        "Inactive items show only gray outline icons",
+        "Hover expands a light-gray rounded capsule and reveals a black item label; multiple transient labels can fade during pointer movement",
+        "Current selection retains a black label after pointer leaves while its icon changes from outline to solid/bold form",
+        "Selected entry and a different hovered entry can display their labels simultaneously",
+        "Selecting a new entry fades the previous selected label and returns its icon to gray outline",
+        "Pointer exits into white workspace, removing hover capsule but retaining selection",
+        "Continuous up/down navigation and return to Home, with no page/card cuts"
+      ],
+      "differences": [
+        "Square 1322x1322 source adapted to 1920x1080 white workspace, preserving all five entries and the blank region; navigation spacing and size adjusted for landscape reading",
+        "Independent editable SVG paths and CSS replace source icon pixels; no reference video or screenshot embedded or distributed",
+        "Source 25.383333s expanded to 32s for hover, click and selected-name reading",
+        "Observed selected states and repeated returns reconstructed; precise cursor timings and intermediate easing are original",
+        "Home, Campaigns and Chats names are editable parameters; no business/service behavior added"
+      ],
+      "unknowns": [
+        "No business page content, navigation destinations, account context, backend calls, search input or service results appear in source",
+        "Exact implementation framework, icon library, source easing and event logic are unknown",
+        "Exact click instants between sampled source frames are not claimed; source samples establish visible hover/selected states"
+      ],
+      "sourceObservationMethod": "Exact source card modal and original href read; original remote video actually paused/viewed at accepted decoded samples. No remote pixels distributed. Not a full original source-code replica or real service execution.",
+      "implementation": {
+        "presetId": "interaction-sidebar-hover-expand-select",
+        "title": "图标侧栏 · 悬停展开与选中保留",
+        "modulePath": "../presets/chmielsidebar.js",
+        "duration": 32,
+        "params": {
+          "title": "Home",
+          "prompt": "Campaigns",
+          "result": "Chats"
+        },
+        "paramLimits": {
+          "title": 20,
+          "prompt": 24,
+          "result": 20
+        },
+        "paramSemantics": {
+          "title": "Home navigation label, initially and finally selected",
+          "prompt": "Campaigns navigation label, hovered and selected twice",
+          "result": "Chats navigation label, hovered and selected once"
+        },
+        "keyTimes": [
+          {
+            "seconds": 0,
+            "state": "Home initially selected; five-entry rail and white workspace"
+          },
+          {
+            "seconds": 1.9,
+            "state": "Home hover capsule"
+          },
+          {
+            "seconds": 3.9,
+            "state": "Strategies hover; Home remains selected"
+          },
+          {
+            "seconds": 5.9,
+            "state": "Campaigns hover"
+          },
+          {
+            "seconds": 7.8,
+            "state": "Chats hover"
+          },
+          {
+            "seconds": 9.4,
+            "state": "Pointer leaves; only Home name persists"
+          },
+          {
+            "seconds": 13.4,
+            "state": "Strategies selected"
+          },
+          {
+            "seconds": 14.5,
+            "state": "Strategies selected after hover release"
+          },
+          {
+            "seconds": 16.8,
+            "state": "Campaigns selected"
+          },
+          {
+            "seconds": 19.2,
+            "state": "Chats selected"
+          },
+          {
+            "seconds": 20.6,
+            "state": "Chats selected after hover release"
+          },
+          {
+            "seconds": 23,
+            "state": "Search selected"
+          },
+          {
+            "seconds": 24,
+            "state": "Search selected after hover release"
+          },
+          {
+            "seconds": 26.3,
+            "state": "Campaigns selected again"
+          },
+          {
+            "seconds": 27.95,
+            "state": "Strategies selected again; previous label fading"
+          },
+          {
+            "seconds": 29.9,
+            "state": "Home selected again"
+          },
+          {
+            "seconds": 32,
+            "state": "Home persists after cursor leaves"
+          }
+        ],
+        "module": "../presets/chmielsidebar.js"
+      },
+      "mainGalleryValidation": {
+        "label": "chmiel",
+        "presetId": "interaction-sidebar-hover-expand-select",
+        "seconds": 32,
+        "samples": [
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\nHome\nStrategies\nCampaigns\nChats",
+            "time": "0.00 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\nHome\nStrategies\nCampaigns\nChats",
+            "time": "1.90 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\nHome\nStrategies\nCampaigns\nChats",
+            "time": "3.90 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\nHome\nStrategies\nCampaigns\nChats",
+            "time": "5.90 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\nHome\nStrategies\nCampaigns\nChats",
+            "time": "7.80 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\nHome\nStrategies\nCampaigns\nChats",
+            "time": "9.40 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\nHome\nStrategies\nCampaigns\nChats",
+            "time": "13.40 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\nHome\nStrategies\nCampaigns\nChats",
+            "time": "16.80 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\nHome\nStrategies\nCampaigns\nChats",
+            "time": "19.20 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\nHome\nStrategies\nCampaigns\nChats",
+            "time": "23.00 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\nHome\nStrategies\nCampaigns\nChats",
+            "time": "26.30 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\nHome\nStrategies\nCampaigns\nChats",
+            "time": "27.95 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\nHome\nStrategies\nCampaigns\nChats",
+            "time": "29.90 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\nHome\nStrategies\nCampaigns\nChats",
+            "time": "32.00 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\n测试<&>\nStrategies\n中文输入<&>\n结果<&>",
+            "time": "0.00 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "short-params"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\n测试<&>\nStrategies\n中文输入<&>\n结果<&>",
+            "time": "5.90 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "short-params"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\n测试<&>\nStrategies\n中文输入<&>\n结果<&>",
+            "time": "13.40 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "short-params"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\n测试<&>\nStrategies\n中文输入<&>\n结果<&>",
+            "time": "19.20 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "short-params"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\n测试<&>\nStrategies\n中文输入<&>\n结果<&>",
+            "time": "23.00 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "short-params"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\n测试<&>\nStrategies\n中文输入<&>\n结果<&>",
+            "time": "29.90 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "short-params"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-hover-expand-select",
+            "scene": "Search\n测试<&>\nStrategies\n中文输入<&>\n结果<&>",
+            "time": "32.00 / 32.00",
+            "title": "图标侧栏 · 悬停展开与选中保留",
+            "phase": "short-params"
+          }
+        ],
+        "majorStateScreenshotViewed": true,
+        "tailToZeroMatches": true,
+        "shortParamsChecked": true,
+        "logs": [],
+        "tailState": {
+          "error": "",
+          "id": "interaction-sidebar-hover-expand-select",
+          "scene": "Search\nHome\nStrategies\nCampaigns\nChats",
+          "time": "32.00 / 32.00",
+          "title": "图标侧栏 · 悬停展开与选中保留"
+        },
+        "resetState": {
+          "error": "",
+          "id": "interaction-sidebar-hover-expand-select",
+          "scene": "Search\nHome\nStrategies\nCampaigns\nChats",
+          "time": "0.00 / 32.00",
+          "title": "图标侧栏 · 悬停展开与选中保留"
+        }
+      },
+      "exportValidation": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "frames": 960,
+        "seconds": 32,
+        "audio": false,
+        "fullDecode": "passed",
+        "sampledVisualReview": true,
+        "fullyWatched": false,
+        "sourceSha256": "acbaadad8da2b602342f1b1c2b48fb55e2f9c154d52a214ba8c5dfb11e59c9b5"
+      },
+      "previewFile": "icon-sidebar-hover.mp4"
+    },
+    {
+      "id": "batch20-filetree",
+      "title": "嵌套侧栏 · 子项切换与折叠",
+      "author": "@guerriero_se",
+      "sourceURL": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "inventoryEntryId": "sidebar-p1-009",
+      "categoryNames": [
+        "Sidebar",
+        "File Tree",
+        "UI Interaction"
+      ],
+      "observationDepth": "multiple-video-times-observed",
+      "sourceDuration": 12.050998,
+      "sourceDimensions": {
+        "width": 1080,
+        "height": 1080
+      },
+      "acceptedPausedFrameCount": 11,
+      "acceptedSamples": [
+        {
+          "seconds": 0,
+          "paused": true,
+          "readyState": 4,
+          "frameTime": 0,
+          "description": "Dark application: logo and plus button above Home/Activities/Agents/Team/Settings. Home is blue selected, Activities has right chevron and is closed. Right main area retains search box and multiple grey placeholder bars/dividers; ordinary arrow below navigation."
+        },
+        {
+          "seconds": 1.5,
+          "paused": true,
+          "readyState": 4,
+          "frameTime": 1.5,
+          "description": "Activities expands Tasks, Meetings and Calls, its chevron points down and lower root rows move downward. Home remains blue; Tasks has grey hover and hand cursor. Three child dots visible, no second nesting level."
+        },
+        {
+          "seconds": 2.1,
+          "paused": true,
+          "readyState": 4,
+          "frameTime": 2.1,
+          "description": "Home still blue while hand cursor hovers Meetings in grey. A rounded vertical connector spans the Tasks and Meetings dots. This confirms initial Tasks/Meetings hovering is separate from selection."
+        },
+        {
+          "seconds": 3,
+          "paused": true,
+          "readyState": 4,
+          "frameTime": 3,
+          "description": "Meetings is blue selected and Home neutral. Hand cursor hovers Calls in grey; vertical dot connector extends across all three child positions. Right content remains placeholder layout."
+        },
+        {
+          "seconds": 4.5,
+          "paused": true,
+          "readyState": 4,
+          "frameTime": 4.5,
+          "description": "Calls is blue selected; hand cursor now hovers Tasks in grey. Connector trail is absent/faded at this frame, while all child dots and lower root rows remain."
+        },
+        {
+          "seconds": 6,
+          "paused": true,
+          "readyState": 4,
+          "frameTime": 6,
+          "description": "Tasks is now blue selected. Hand cursor hovers Calls in grey; vertical connector spans the three child dots again. Main content does not show new business data."
+        },
+        {
+          "seconds": 6.6,
+          "paused": true,
+          "readyState": 4,
+          "frameTime": 6.6,
+          "description": "Calls label/background is blue selected again. Blue bead is visibly settling toward Calls' dot while connector persists and hand stays over Calls."
+        },
+        {
+          "seconds": 7.5,
+          "paused": true,
+          "readyState": 4,
+          "frameTime": 7.5,
+          "description": "Calls selected with its blue dot aligned and full grey connector. Activities is still expanded; all lower root entries remain shifted down."
+        },
+        {
+          "seconds": 9,
+          "paused": true,
+          "readyState": 4,
+          "frameTime": 9,
+          "description": "Home returns to blue selection while Activities remains expanded. Hand cursor hovers Activities in grey, preparing the group-fold action. Child labels remain neutral."
+        },
+        {
+          "seconds": 10.5,
+          "paused": true,
+          "readyState": 4,
+          "frameTime": 10.5,
+          "description": "Activities is closed again with right chevron. Agents/Team/Settings return upward; Home stays blue. Ordinary arrow below menu; main search and placeholder sections remain."
+        },
+        {
+          "seconds": 11.9,
+          "paused": true,
+          "readyState": 4,
+          "frameTime": 11.9,
+          "description": "Tail remains closed and Home selected. Hand cursor hovers Activities in grey, with right chevron; no new expansion or business result at this frame."
+        }
+      ],
+      "observedImageCount": 0,
+      "mechanisms": [
+        "One persistent dark application with left navigation and a large right content region; source main content contains search and grey placeholder sections throughout.",
+        "Activities is a one-level accordion containing Tasks, Meetings and Calls. Expand/collapse changes child clipping height, chevron direction and lower Agents/Team/Settings positions.",
+        "Root Home remains blue during initial child hovering. Initial Tasks hover is not treated as a verified Tasks selection.",
+        "Observed selected-state order is Home -> Meetings -> Calls -> Tasks -> Calls -> Home; hover hand and grey row backgrounds can differ from the currently blue selected row.",
+        "Blue rounded selection background, selected label color and blue child bead change together. Grey rounded connector between child dots is visible during hover/selection movement and fades in some frames.",
+        "Home can be selected while Activities remains expanded. Closing Activities then returns lower entries upward; tail includes another hover of the closed group.",
+        "Logo, plus action and right search area are retained visually. No plus action, search execution, actual file content or business page completion was shown."
+      ],
+      "differences": [
+        "1080x1080/12.050998-second source is adapted to a 1920x1080, 28-second widescreen application with longer readable holds and authored interpolation.",
+        "Source knot-like brand mark is replaced with an independently coded geometric symbol. All navigation icons, cursor artwork and main placeholders are independently coded SVG/CSS; no source pixels are used.",
+        "Adapted menu row height is 76px, branch expansion 228px, sidebar/main split 596px within the 1736px window. These are authored widescreen geometry, not claimed source pixel measurements.",
+        "Entry animation, explicit click rings, pointer press feedback, exact connector fade timing and bottom explanatory label are original additions. Source pointer events were not instrumented.",
+        "Grey right-side placeholder sections remain visually present; they are not interpreted as a working loading pipeline, fetched records or generated results.",
+        "No source audio is used or imitated. The source mentions sound but its audio was not reviewed.",
+        "Preset is a deterministic paused GSAP demonstration; live user navigation and source application behavior beyond the visible sequence are not claimed."
+      ],
+      "unknowns": [
+        "Actual application, source implementation, event logs, exact easing and connector fade algorithm are not verified.",
+        "Grey placeholder areas' real loading or content purpose is unknown; no activity data or file results were shown.",
+        "Plus action, Agents, Team, Settings and search behavior were not exercised in the source observations.",
+        "Source audio content and sound timing are unverified.",
+        "Only one child depth was observed. File Tree is a category label and does not establish deeper folders or file-opening behavior."
+      ],
+      "sourceObservationMethod": "Exact source card modal and original href read; original remote video actually paused/viewed at accepted decoded samples. No remote pixels distributed. Not a full original source-code replica or real service execution.",
+      "implementation": {
+        "presetId": "interaction-nested-activity-sidebar",
+        "staging": false,
+        "title": "嵌套侧栏 · 子项切换与折叠",
+        "duration": 28,
+        "dimensions": {
+          "width": 1920,
+          "height": 1080
+        },
+        "params": {
+          "title": "Activities",
+          "prompt": "Tasks",
+          "result": "Calls"
+        },
+        "paramLimits": {
+          "title": 24,
+          "prompt": 24,
+          "result": 24
+        },
+        "parameterSemantics": {
+          "title": "Accordion group label",
+          "prompt": "First child label",
+          "result": "Third child label"
+        },
+        "keyTimes": [
+          {
+            "seconds": 0.8,
+            "state": "closed group, Home selected",
+            "branchHeight": 0,
+            "selection": "Home"
+          },
+          {
+            "seconds": 4.2,
+            "state": "expanded group, Tasks hover only",
+            "branchHeight": 228,
+            "selection": "Home"
+          },
+          {
+            "seconds": 5.8,
+            "state": "Meetings hover only, short connector visible",
+            "branchHeight": 228,
+            "selection": "Home"
+          },
+          {
+            "seconds": 8.3,
+            "state": "Meetings selected",
+            "branchHeight": 228,
+            "selection": "Meetings"
+          },
+          {
+            "seconds": 10.7,
+            "state": "Calls selected",
+            "branchHeight": 228,
+            "selection": "Calls"
+          },
+          {
+            "seconds": 13.8,
+            "state": "Tasks selected with full connector",
+            "branchHeight": 228,
+            "selection": "Tasks"
+          },
+          {
+            "seconds": 16.1,
+            "state": "Calls selected again",
+            "branchHeight": 228,
+            "selection": "Calls"
+          },
+          {
+            "seconds": 20.3,
+            "state": "Home selected while expanded; Activities hover",
+            "branchHeight": 228,
+            "selection": "Home"
+          },
+          {
+            "seconds": 21.15,
+            "state": "original press ring at Activities and fold beginning",
+            "selection": "Home"
+          },
+          {
+            "seconds": 23.4,
+            "state": "closed group and ordinary cursor below menu",
+            "branchHeight": 0,
+            "selection": "Home"
+          },
+          {
+            "seconds": 28,
+            "state": "final closed group with Activities hover",
+            "branchHeight": 0,
+            "selection": "Home"
+          }
+        ],
+        "frozen": true,
+        "sha256": "B86FDA226E590CC42025F204CED7E25997E953CF7549CD25804B24161D7D9F9E",
+        "module": "../presets/guerrierofilesidebar.js"
+      },
+      "mainGalleryValidation": {
+        "label": "filetree",
+        "presetId": "interaction-nested-activity-sidebar",
+        "seconds": 28,
+        "samples": [
+          {
+            "error": "",
+            "id": "interaction-nested-activity-sidebar",
+            "scene": "Home\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+            "time": "0.00 / 28.00",
+            "title": "嵌套侧栏 · 子项切换与折叠",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-nested-activity-sidebar",
+            "scene": "Home\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+            "time": "0.80 / 28.00",
+            "title": "嵌套侧栏 · 子项切换与折叠",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-nested-activity-sidebar",
+            "scene": "Home\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+            "time": "4.20 / 28.00",
+            "title": "嵌套侧栏 · 子项切换与折叠",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-nested-activity-sidebar",
+            "scene": "Home\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+            "time": "5.80 / 28.00",
+            "title": "嵌套侧栏 · 子项切换与折叠",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-nested-activity-sidebar",
+            "scene": "Home\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+            "time": "8.30 / 28.00",
+            "title": "嵌套侧栏 · 子项切换与折叠",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-nested-activity-sidebar",
+            "scene": "Home\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+            "time": "10.70 / 28.00",
+            "title": "嵌套侧栏 · 子项切换与折叠",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-nested-activity-sidebar",
+            "scene": "Home\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+            "time": "13.80 / 28.00",
+            "title": "嵌套侧栏 · 子项切换与折叠",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-nested-activity-sidebar",
+            "scene": "Home\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+            "time": "16.10 / 28.00",
+            "title": "嵌套侧栏 · 子项切换与折叠",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-nested-activity-sidebar",
+            "scene": "Home\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+            "time": "20.30 / 28.00",
+            "title": "嵌套侧栏 · 子项切换与折叠",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-nested-activity-sidebar",
+            "scene": "Home\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+            "time": "21.15 / 28.00",
+            "title": "嵌套侧栏 · 子项切换与折叠",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-nested-activity-sidebar",
+            "scene": "Home\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+            "time": "23.40 / 28.00",
+            "title": "嵌套侧栏 · 子项切换与折叠",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-nested-activity-sidebar",
+            "scene": "Home\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+            "time": "28.00 / 28.00",
+            "title": "嵌套侧栏 · 子项切换与折叠",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-nested-activity-sidebar",
+            "scene": "Home\n测试<&>\n中文输入<&>\nMeetings\n结果<&>\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+            "time": "0.00 / 28.00",
+            "title": "嵌套侧栏 · 子项切换与折叠",
+            "phase": "short-params"
+          },
+          {
+            "error": "",
+            "id": "interaction-nested-activity-sidebar",
+            "scene": "Home\n测试<&>\n中文输入<&>\nMeetings\n结果<&>\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+            "time": "4.20 / 28.00",
+            "title": "嵌套侧栏 · 子项切换与折叠",
+            "phase": "short-params"
+          },
+          {
+            "error": "",
+            "id": "interaction-nested-activity-sidebar",
+            "scene": "Home\n测试<&>\n中文输入<&>\nMeetings\n结果<&>\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+            "time": "8.30 / 28.00",
+            "title": "嵌套侧栏 · 子项切换与折叠",
+            "phase": "short-params"
+          },
+          {
+            "error": "",
+            "id": "interaction-nested-activity-sidebar",
+            "scene": "Home\n测试<&>\n中文输入<&>\nMeetings\n结果<&>\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+            "time": "10.70 / 28.00",
+            "title": "嵌套侧栏 · 子项切换与折叠",
+            "phase": "short-params"
+          },
+          {
+            "error": "",
+            "id": "interaction-nested-activity-sidebar",
+            "scene": "Home\n测试<&>\n中文输入<&>\nMeetings\n结果<&>\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+            "time": "13.80 / 28.00",
+            "title": "嵌套侧栏 · 子项切换与折叠",
+            "phase": "short-params"
+          },
+          {
+            "error": "",
+            "id": "interaction-nested-activity-sidebar",
+            "scene": "Home\n测试<&>\n中文输入<&>\nMeetings\n结果<&>\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+            "time": "20.30 / 28.00",
+            "title": "嵌套侧栏 · 子项切换与折叠",
+            "phase": "short-params"
+          },
+          {
+            "error": "",
+            "id": "interaction-nested-activity-sidebar",
+            "scene": "Home\n测试<&>\n中文输入<&>\nMeetings\n结果<&>\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+            "time": "23.40 / 28.00",
+            "title": "嵌套侧栏 · 子项切换与折叠",
+            "phase": "short-params"
+          },
+          {
+            "error": "",
+            "id": "interaction-nested-activity-sidebar",
+            "scene": "Home\n测试<&>\n中文输入<&>\nMeetings\n结果<&>\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+            "time": "28.00 / 28.00",
+            "title": "嵌套侧栏 · 子项切换与折叠",
+            "phase": "short-params"
+          }
+        ],
+        "majorStateScreenshotViewed": true,
+        "tailToZeroMatches": true,
+        "shortParamsChecked": true,
+        "logs": [],
+        "tailState": {
+          "error": "",
+          "id": "interaction-nested-activity-sidebar",
+          "scene": "Home\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+          "time": "28.00 / 28.00",
+          "title": "嵌套侧栏 · 子项切换与折叠"
+        },
+        "resetState": {
+          "error": "",
+          "id": "interaction-nested-activity-sidebar",
+          "scene": "Home\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n界面示意 · 一级嵌套导航机制重建",
+          "time": "0.00 / 28.00",
+          "title": "嵌套侧栏 · 子项切换与折叠"
+        }
+      },
+      "exportValidation": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "frames": 840,
+        "seconds": 28,
+        "audio": false,
+        "fullDecode": "passed",
+        "sampledVisualReview": true,
+        "fullyWatched": false,
+        "sourceSha256": "b86fda226e590cc42025f204ced7e25997e953cf7549cd25804b24161d7d9f9e"
+      },
+      "previewFile": "nested-activity-sidebar.mp4"
+    },
+    {
+      "id": "batch20-orb",
+      "title": "双图像加载 · 点阵与粒子球揭示",
+      "author": "@ahmetloca",
+      "sourceURL": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "inventoryEntryId": "orb-p1-001",
+      "categoryNames": [
+        "Loading",
+        "Orb",
+        "AI"
+      ],
+      "observationDepth": "multiple-video-times-observed",
+      "sourceDuration": 6.208333,
+      "sourceDimensions": {
+        "width": 2284,
+        "height": 1362
+      },
+      "acceptedPausedFrameCount": 7,
+      "acceptedSamples": [
+        {
+          "timeSeconds": 0,
+          "requestedTimeSeconds": 0,
+          "frameTime": 0,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 1,
+          "decodedFrameConfirmed": true,
+          "description": "Two persistent dark rounded portrait panels. Left caption Making the first draft... with a gray dot matrix. Right caption Forming the shapes... with a dense particle sphere enclosed by purple/blue/cyan luminous multiple rings. Faint colored edge light around panels."
+        },
+        {
+          "timeSeconds": 1.000699,
+          "requestedTimeSeconds": 1,
+          "frameTime": 1,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 2,
+          "decodedFrameConfirmed": true,
+          "description": "Left dot-size/brightness wave shifted; right particle highlight rotated to the upper-right hemisphere while outer rings changed shape and colored highlight."
+        },
+        {
+          "timeSeconds": 2.000917,
+          "requestedTimeSeconds": 2,
+          "frameTime": 2,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 3,
+          "decodedFrameConfirmed": true,
+          "description": "Sphere highlight travels through the right/lower hemisphere; left dot wave keeps flowing. Both initial captions remain."
+        },
+        {
+          "timeSeconds": 3.001339,
+          "requestedTimeSeconds": 3,
+          "frameTime": 3.008333,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 5,
+          "decodedFrameConfirmed": true,
+          "description": "Dense sphere highlight moved to lower-left; blue/cyan/purple rings and panel-edge highlights continue moving. Same two panels and captions retained."
+        },
+        {
+          "timeSeconds": 4.000316,
+          "requestedTimeSeconds": 4,
+          "frameTime": 4,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 6,
+          "decodedFrameConfirmed": true,
+          "description": "Captions changed to Sketching it out... and Gathering the light...; both loaders continue with a new bright particle region and edge-light phase."
+        },
+        {
+          "timeSeconds": 5.000161,
+          "requestedTimeSeconds": 5,
+          "frameTime": 5,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 7,
+          "decodedFrameConfirmed": true,
+          "description": "Both panels start blurred central image revelation while dot matrix and particle orb remain visible; circular retry glyphs appear at the upper-right of both panels."
+        },
+        {
+          "timeSeconds": 6.100312,
+          "requestedTimeSeconds": 6.1,
+          "frameTime": 6.1,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrames": 8,
+          "decodedFrameConfirmed": true,
+          "description": "Two identical black-and-white full-panel images: central standing person in a dark racing/sports suit and two blurred walking foreground figures. Loader captions/dots/orb disappear; retry glyphs remain. No cursor/click or real AI request shown."
+        }
+      ],
+      "observedImageCount": 0,
+      "mechanisms": [
+        "Single continuous dark work area containing two persistent parallel portrait image panels",
+        "Left loader: a regular dot matrix with moving wave of dot radius and brightness",
+        "Right loader: rotating/projected particle sphere with moving highlight and several softly luminous purple, blue and cyan rings",
+        "Faint colored highlight travels around panel edges",
+        "Initial captions Making the first draft... / Forming the shapes... crossfade to Sketching it out... / Gathering the light...",
+        "Blurred central revelation grows to fill both image panels while loaders and status captions disappear",
+        "Two circular retry glyphs appear and persist over the final matching images",
+        "Both loaders reveal the same monochrome composition; no scene/card replacement or observed pointer interaction"
+      ],
+      "differences": [
+        "2284x1362 source adapted to editable 1920x1080; both full panels and all visual stages retained",
+        "Source 6.208333s adapted to 9s for readable captions, continuous loading and image-reveal hold",
+        "Original deterministic SVG dot field, 1260-point projected sphere and analytic multi-ring paths reproduce mechanisms, rather than copying source shader/pixels",
+        "Independent original monochrome SVG sportswear portrait with two blurred walking figures substitutes source photo, person identity and garment branding; same illustration appears in both panels",
+        "Blurred circular reveal and crossfade timings/easing are original approximations based on observed stages",
+        "No original media, screenshots, network requests, real AI execution or invented retry click embedded in runtime"
+      ],
+      "unknowns": [
+        "No visible AI request, model execution, backend response, progress metric or user prompt appears in source",
+        "Retry controls are visible but source shows no click; their real behavior is unknown",
+        "Source shader, easing, lighting, exact particle count and image reveal mask implementation are unknown",
+        "Identity and rights of original photograph subjects are not inferred or reproduced"
+      ],
+      "sourceObservationMethod": "Exact source card modal and original href read; original remote video actually paused/viewed at accepted decoded samples. No remote pixels distributed. Not a full original source-code replica or real service execution.",
+      "implementation": {
+        "presetId": "interaction-dual-image-loader-orb-reveal",
+        "title": "双图像加载 · 点阵与粒子球揭示",
+        "modulePath": "../presets/ahmetorb.js",
+        "duration": 9,
+        "params": {
+          "title": "Making the first draft...",
+          "prompt": "Forming the shapes...",
+          "result": "Gathering the light..."
+        },
+        "paramLimits": {
+          "title": 32,
+          "prompt": 32,
+          "result": 32
+        },
+        "paramSemantics": {
+          "title": "Initial left dot-loader status caption",
+          "prompt": "Initial right particle-sphere status caption",
+          "result": "Second right loading status caption, shown after the source-observed status transition"
+        },
+        "keyTimes": [
+          {
+            "seconds": 0,
+            "state": "Dual loaders visible; first status captions"
+          },
+          {
+            "seconds": 1.5,
+            "state": "Moving grid wave and sphere highlight lower-right"
+          },
+          {
+            "seconds": 3,
+            "state": "Particle highlight lower-left; multi-ring and edge light moving"
+          },
+          {
+            "seconds": 4.4,
+            "state": "First captions fade upward"
+          },
+          {
+            "seconds": 5.4,
+            "state": "Sketching it out... / editable Gathering the light... fully visible"
+          },
+          {
+            "seconds": 6.3,
+            "state": "Blurred circular image revelation starts in both panels"
+          },
+          {
+            "seconds": 6.9,
+            "state": "Retry glyphs visible; central image beginning to emerge"
+          },
+          {
+            "seconds": 7.4,
+            "state": "Both image bodies fill panels through blur while loaders fade"
+          },
+          {
+            "seconds": 8.15,
+            "state": "Full original monochrome image bodies; captions and loaders hidden"
+          },
+          {
+            "seconds": 9,
+            "state": "Stable matching image panels and retry glyphs, ready to join UI body"
+          }
+        ],
+        "joinUIBody": {
+          "semanticUse": "Visual opening for image creation, creative tools or showing two visualizations resolving into one artifact; this is an illustrative loader, not evidence of real AI execution",
+          "preferredJoinSeconds": 8.15,
+          "anchorRects": [
+            {
+              "x": 464,
+              "y": 145,
+              "width": 470,
+              "height": 750
+            },
+            {
+              "x": 988,
+              "y": 145,
+              "width": 470,
+              "height": 750
+            }
+          ],
+          "continuation": "Match the revealed image rectangle into an image workspace or asset detail, preserving its position/content while controls expand around it. Alternatively use the two equal image outputs to introduce a compare workflow. No body continuation is claimed as observed in the source."
+        },
+        "module": "../presets/ahmetorb.js"
+      },
+      "mainGalleryValidation": {
+        "label": "orb",
+        "presetId": "interaction-dual-image-loader-orb-reveal",
+        "seconds": 9,
+        "samples": [
+          {
+            "error": "",
+            "id": "interaction-dual-image-loader-orb-reveal",
+            "scene": "Making the first draft...\nSketching it out...\nMOTION\nSTUDIO / 01\nForming the shapes...\nGathering the light...\nMOTION\nSTUDIO / 01",
+            "time": "0.00 / 9.00",
+            "title": "双图像加载 · 点阵与粒子球揭示",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-dual-image-loader-orb-reveal",
+            "scene": "Making the first draft...\nSketching it out...\nMOTION\nSTUDIO / 01\nForming the shapes...\nGathering the light...\nMOTION\nSTUDIO / 01",
+            "time": "1.50 / 9.00",
+            "title": "双图像加载 · 点阵与粒子球揭示",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-dual-image-loader-orb-reveal",
+            "scene": "Making the first draft...\nSketching it out...\nMOTION\nSTUDIO / 01\nForming the shapes...\nGathering the light...\nMOTION\nSTUDIO / 01",
+            "time": "3.00 / 9.00",
+            "title": "双图像加载 · 点阵与粒子球揭示",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-dual-image-loader-orb-reveal",
+            "scene": "Making the first draft...\nSketching it out...\nMOTION\nSTUDIO / 01\nForming the shapes...\nGathering the light...\nMOTION\nSTUDIO / 01",
+            "time": "4.40 / 9.00",
+            "title": "双图像加载 · 点阵与粒子球揭示",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-dual-image-loader-orb-reveal",
+            "scene": "Making the first draft...\nSketching it out...\nMOTION\nSTUDIO / 01\nForming the shapes...\nGathering the light...\nMOTION\nSTUDIO / 01",
+            "time": "5.40 / 9.00",
+            "title": "双图像加载 · 点阵与粒子球揭示",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-dual-image-loader-orb-reveal",
+            "scene": "Making the first draft...\nSketching it out...\nMOTION\nSTUDIO / 01\nForming the shapes...\nGathering the light...\nMOTION\nSTUDIO / 01",
+            "time": "6.30 / 9.00",
+            "title": "双图像加载 · 点阵与粒子球揭示",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-dual-image-loader-orb-reveal",
+            "scene": "Making the first draft...\nSketching it out...\nMOTION\nSTUDIO / 01\nForming the shapes...\nGathering the light...\nMOTION\nSTUDIO / 01",
+            "time": "6.90 / 9.00",
+            "title": "双图像加载 · 点阵与粒子球揭示",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-dual-image-loader-orb-reveal",
+            "scene": "Making the first draft...\nSketching it out...\nMOTION\nSTUDIO / 01\nForming the shapes...\nGathering the light...\nMOTION\nSTUDIO / 01",
+            "time": "7.40 / 9.00",
+            "title": "双图像加载 · 点阵与粒子球揭示",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-dual-image-loader-orb-reveal",
+            "scene": "Making the first draft...\nSketching it out...\nMOTION\nSTUDIO / 01\nForming the shapes...\nGathering the light...\nMOTION\nSTUDIO / 01",
+            "time": "8.15 / 9.00",
+            "title": "双图像加载 · 点阵与粒子球揭示",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-dual-image-loader-orb-reveal",
+            "scene": "Making the first draft...\nSketching it out...\nMOTION\nSTUDIO / 01\nForming the shapes...\nGathering the light...\nMOTION\nSTUDIO / 01",
+            "time": "9.00 / 9.00",
+            "title": "双图像加载 · 点阵与粒子球揭示",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-dual-image-loader-orb-reveal",
+            "scene": "测试<&>\nSketching it out...\nMOTION\nSTUDIO / 01\n中文输入<&>\n结果<&>\nMOTION\nSTUDIO / 01",
+            "time": "0.00 / 9.00",
+            "title": "双图像加载 · 点阵与粒子球揭示",
+            "phase": "short-params"
+          },
+          {
+            "error": "",
+            "id": "interaction-dual-image-loader-orb-reveal",
+            "scene": "测试<&>\nSketching it out...\nMOTION\nSTUDIO / 01\n中文输入<&>\n结果<&>\nMOTION\nSTUDIO / 01",
+            "time": "3.00 / 9.00",
+            "title": "双图像加载 · 点阵与粒子球揭示",
+            "phase": "short-params"
+          },
+          {
+            "error": "",
+            "id": "interaction-dual-image-loader-orb-reveal",
+            "scene": "测试<&>\nSketching it out...\nMOTION\nSTUDIO / 01\n中文输入<&>\n结果<&>\nMOTION\nSTUDIO / 01",
+            "time": "5.40 / 9.00",
+            "title": "双图像加载 · 点阵与粒子球揭示",
+            "phase": "short-params"
+          },
+          {
+            "error": "",
+            "id": "interaction-dual-image-loader-orb-reveal",
+            "scene": "测试<&>\nSketching it out...\nMOTION\nSTUDIO / 01\n中文输入<&>\n结果<&>\nMOTION\nSTUDIO / 01",
+            "time": "6.90 / 9.00",
+            "title": "双图像加载 · 点阵与粒子球揭示",
+            "phase": "short-params"
+          },
+          {
+            "error": "",
+            "id": "interaction-dual-image-loader-orb-reveal",
+            "scene": "测试<&>\nSketching it out...\nMOTION\nSTUDIO / 01\n中文输入<&>\n结果<&>\nMOTION\nSTUDIO / 01",
+            "time": "8.15 / 9.00",
+            "title": "双图像加载 · 点阵与粒子球揭示",
+            "phase": "short-params"
+          },
+          {
+            "error": "",
+            "id": "interaction-dual-image-loader-orb-reveal",
+            "scene": "测试<&>\nSketching it out...\nMOTION\nSTUDIO / 01\n中文输入<&>\n结果<&>\nMOTION\nSTUDIO / 01",
+            "time": "9.00 / 9.00",
+            "title": "双图像加载 · 点阵与粒子球揭示",
+            "phase": "short-params"
+          }
+        ],
+        "majorStateScreenshotViewed": true,
+        "tailToZeroMatches": true,
+        "shortParamsChecked": true,
+        "logs": [],
+        "tailState": {
+          "error": "",
+          "id": "interaction-dual-image-loader-orb-reveal",
+          "scene": "Making the first draft...\nSketching it out...\nMOTION\nSTUDIO / 01\nForming the shapes...\nGathering the light...\nMOTION\nSTUDIO / 01",
+          "time": "9.00 / 9.00",
+          "title": "双图像加载 · 点阵与粒子球揭示"
+        },
+        "resetState": {
+          "error": "",
+          "id": "interaction-dual-image-loader-orb-reveal",
+          "scene": "Making the first draft...\nSketching it out...\nMOTION\nSTUDIO / 01\nForming the shapes...\nGathering the light...\nMOTION\nSTUDIO / 01",
+          "time": "0.00 / 9.00",
+          "title": "双图像加载 · 点阵与粒子球揭示"
+        }
+      },
+      "exportValidation": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "frames": 270,
+        "seconds": 9,
+        "audio": false,
+        "fullDecode": "passed",
+        "sampledVisualReview": true,
+        "fullyWatched": false,
+        "sourceSha256": "f77cec7d027f80804ce5679042ff980ebc488cae36df739a1bbc8eec7a9fcc6f"
+      },
+      "previewFile": "dual-image-loader-orb.mp4"
+    }
+  ],
+  "mainDiagnostics": {
+    "svgCoordinates": {
+      "passed": true,
+      "inside": {
+        "x": 50,
+        "y": 24,
+        "width": 20.387985229492188,
+        "height": 20
+      },
+      "outside": {
+        "x": -100,
+        "y": 24,
+        "width": 29.481979370117188,
+        "height": 20
+      }
+    },
+    "textClipping": {
+      "passed": true,
+      "issues": [
+        {
+          "text": "outside-canvas-test",
+          "type": "outside-canvas"
+        }
+      ]
+    },
+    "total": 3,
+    "errors": [],
+    "seekFailures": [],
+    "layoutFlags": []
+  }
+}

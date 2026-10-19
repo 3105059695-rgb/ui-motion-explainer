@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-15",
+  "skill_version": "2026.10.15.1",
+  "unit_tests": {
+    "command": "python -X utf8 -m unittest test_director test_style_registry test_source_study test_aigc_assets",
+    "cwd": "local-only/scripts",
+    "passed": 61,
+    "failed": 0,
+    "scope": "引用加载、项目和账号选择、AIGC计划引用与时间结构、旧计划兼容，以及既有导演和来源规则。不是媒体内容或审美验收。"
+  },
+  "skill_quick_validation": {
+    "command": "python -X utf8 local-only/quick_validate.py local-only/ui-motion-fusion",
+    "result": "Skill is valid!"
+  },
+  "installed_entry_invocation": {
+    "verification_script": "local-only/verify_invocation.py",
+    "report": "local-only/verification.json",
+    "caller_cwd": "local-only/山有扶苏",
+    "new_narration": "local-only/新口播.txt",
+    "passed": true,
+    "user_ui": {
+      "selected_style_set": "qiuzhi-girl-painterly",
+      "character_reference_count": 2,
+      "approved_static_scene_count": 8,
+      "research_source_count": 17,
+      "checked_path_count": 43,
+      "missing_path_count": 0
+    },
+    "adiao_and_fangmu": "分别保留原账号选择，没有自动套用通用女孩；仍带入研究入口。",
+    "registered_project_root_without_profile": "local-only/qiuzhi-aigc-samples 正确定位 qiuzhi-girl-painterly"
+  },
+  "generation_submitted": false,
+  "not_verified": [
+    "另一个实际聊天窗口的完整 Agent 制作过程",
+    "新生成视频的身份与画风连续性、动作可读性、节奏和音画对齐"
+  ],
+  "approval_boundary": "8张场景静图已有用户认可；新动画不继承该认可。"
+}

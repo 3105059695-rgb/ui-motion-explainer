@@ -1,0 +1,2078 @@
+{
+  "schemaVersion": 1,
+  "auditedAt": "2026-09-30",
+  "auditType": "inventory-media-group-to-observation-record-join",
+  "scope": {
+    "site": "Collect UI",
+    "category": "AI Flow",
+    "categoryUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "inventorySnapshotDate": "2026-09-27",
+    "pages": [
+      1,
+      2
+    ],
+    "inventoryPath": "../../references/work-inventory.json",
+    "coveragePath": "coverage.json",
+    "presetCatalogPath": "../../references/presets.json",
+    "visuallyRewatchedByThisAudit": false,
+    "scopeMeaning": "仅审计2026-09-27本次两页快照中的媒体是否有后续实际观察记录及代码机制映射；不是刷新全站作品列表、重看全部原片或证明完整原作复刻。"
+  },
+  "matchingRules": [
+    "以卡片独立核实originalWorkUrl精确关联coverage.observedWorks[].url，或以完整referenceMedia URL精确关联mediaGroup媒体。",
+    "观察成立要求工作记录为observed、具有具体观察深度和observedDetails；目录登记或作者名称不能替代观察。",
+    "旧schema的adaptedMechanism和adaptedMechanisms都纳入机制映射；适配状态按当前记录保留，不因本审计自动升级。",
+    "p1-005仅通过与p1-003相同完整mediaUrl的media-003关联观察，保留独立原作URL为null。",
+    "不修改旧快照catalogued-only/not-observed状态，不升级分类，不把取样观察等同逐帧/像素/完整原片复制。"
+  ],
+  "summary": {
+    "cardEntries": 26,
+    "distinctMediaGroups": 25,
+    "distinctVideoMedia": 14,
+    "distinctImageMedia": 11,
+    "knownOriginalUrlCardEntries": 25,
+    "independentOriginalUrlUnknownEntryIds": [
+      "ai-flow-p1-005"
+    ],
+    "observedMediaGroups": 25,
+    "unobservedMediaGroupIds": [],
+    "matchedDistinctObservedWorks": 25,
+    "mappedDistinctAdaptedPresets": 26,
+    "observationDepthCounts": {
+      "multiple-video-times-observed": 14,
+      "static-image-observed": 11
+    },
+    "allCurrentSnapshotMediaGroupsHaveObservedEvidence": true,
+    "completeOriginalReplicasVerified": 0,
+    "categoryStatusChangedByAudit": false,
+    "wholeSiteComplete": false
+  },
+  "mediaGroups": [
+    {
+      "mediaGroupId": "media-001",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-001",
+          "pageNumber": 1,
+          "cardOrder": 1,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "chris-ai-kit-2098056952198676721"
+      ],
+      "observationDepths": [
+        "multiple-video-times-observed"
+      ],
+      "observations": [
+        {
+          "workId": "chris-ai-kit-2098056952198676721",
+          "title": "AI 产品 UI kit",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "multiple-video-times-observed",
+          "observedAt": "2026-09-27",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-001"
+              ]
+            }
+          ],
+          "observedDetails": [
+            "原片28.183333秒；实看4.890、11.996、20.196与末帧。",
+            "多个页面展示需要用户决策的选择区、深色流程节点与右侧设置、流式回答组件、人工接管提示卡。",
+            "部分画面存在运动模糊，未测量精确字体和尺寸。",
+            "本轮追加23.537、25.359、26.999秒实看：Handoff组件由文档页被推近；底部复制代码条从Copy install script变成Copied提示，接管业务按钮未执行。"
+          ],
+          "unresolvedDetails": [
+            "目前只实现Handoff与复制反馈片段，其余UI kit组件尚未实现。",
+            "未完整追踪全部交互过程；模糊目录和字体细节不能据标题补造。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "ai-handoff-copy-component"
+      ],
+      "adaptations": [
+        {
+          "workId": "chris-ai-kit-2098056952198676721",
+          "presetId": "ai-handoff-copy-component",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "重建Handoff组件、连续推近与复制前后反馈；目录细项自写简化，未执行接管、提高限额或退款。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-002",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-002",
+          "pageNumber": 1,
+          "cardOrder": 2,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "lee-signal-studio-2086949571712999904"
+      ],
+      "observationDepths": [
+        "multiple-video-times-observed"
+      ],
+      "observations": [
+        {
+          "workId": "lee-signal-studio-2086949571712999904",
+          "title": "Signal audiovisual studio",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "multiple-video-times-observed",
+          "observedAt": "2026-09-27",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-002"
+              ]
+            },
+            {
+              "method": "referenceMedia-exact-match",
+              "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+            }
+          ],
+          "observedDetails": [
+            "56.330998秒视频；实际查看9.716482、15.503457、20.170925、30.133394、32.716256、41.424399秒。",
+            "黑黄音画节点工作台，效果参数、右侧检查面板和浮动Scene preview。",
+            "Mic words glitch的FX out拖向Scene output的FX in时为虚线，目标有绿色加号；后变为实线，检查面板切到Scene output。",
+            "参数从0.23/0.28/0.42/0.38变成0.72/1.00/0.22/0.78，Glitch Cut为激活；连接后预览短暂黑色，后段出现黑白故障画面。"
+          ],
+          "unresolvedDetails": [
+            "原人物背景、媒体和音轨不分发，以纯色与原创SVG替换。",
+            "密集旧连线按可见结构概括重排；未重建全部56秒及音频/MIDI引擎。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "software-signal-node-patch"
+      ],
+      "adaptations": [
+        {
+          "workId": "lee-signal-studio-2086949571712999904",
+          "presetId": "software-signal-node-patch",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "18秒横屏重排参数启用、虚线拖拽、端口吸附、实线确认和预览更新；缩略图与点阵故障效果原创。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-003",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "cardOccurrences": 2,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-003",
+          "pageNumber": 1,
+          "cardOrder": 3,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        },
+        {
+          "entryId": "ai-flow-p1-005",
+          "pageNumber": 1,
+          "cardOrder": 5,
+          "originalWorkUrl": null,
+          "originalUrlIndependentlyKnown": false,
+          "observationAssociation": {
+            "method": "same-complete-mediaUrl-in-mediaGroup",
+            "throughEntryIds": [
+              "ai-flow-p1-003"
+            ],
+            "note": "仅关联同媒体的观察证据；不复制或推造该重复卡片的独立原作URL。"
+          }
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "ayda-ai-agents-2067614756756676711"
+      ],
+      "observationDepths": [
+        "multiple-video-times-observed"
+      ],
+      "observations": [
+        {
+          "workId": "ayda-ai-agents-2067614756756676711",
+          "title": "AI agents 软件界面",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "multiple-video-times-observed",
+          "observedAt": "2026-09-27",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-003"
+              ]
+            }
+          ],
+          "observedDetails": [
+            "原片78.75秒；本批实看4.651、11.851、13.826、16.311、19.815与78.75秒稳定画面。",
+            "前段为白色应用窗、左导航、My Agents两行三列卡片与Browse Agents；后切Agent Hub显示5/32/9/6/5状态计数和活动列表。",
+            "16.311秒Offer Letter Generator活动展开并推移下面各行；19.815秒该行收回，Resume Review失败活动展开浅红错误框及Re-run/Manage workflow。",
+            "末帧右侧Activity详情仍显示失败步骤；多时点观察不等同完整连续78秒逐帧检验。",
+            "本轮追加26.441、31.729、33.896秒实看：四节点工作流窗口、红色缺资料节点，以及右侧Slack配置抽屉。"
+          ],
+          "unresolvedDetails": [
+            "只重建页签和列表展开片段，不包含原片全部后续编辑流程。",
+            "原片同一失败行曾更换名称；代码统一为Resume Review以保持对象连续。",
+            "头像、背景与时间编排为原创。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "software-agent-hub",
+        "software-agent-workflow-inspect"
+      ],
+      "adaptations": [
+        {
+          "workId": "ayda-ai-agents-2067614756756676711",
+          "presetId": "software-agent-hub",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "只覆盖My Agents/Agent Hub切换与活动展开片段；头像、背景和节奏原创，统一失败行名称以保持对象连续。",
+          "verificationEvidence": "../../verification.md"
+        },
+        {
+          "workId": "ayda-ai-agents-2067614756756676711",
+          "presetId": "software-agent-workflow-inspect",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "只覆盖工作流四节点检查与Slack抽屉；背景简化，布局与节奏重排，Failed保留，未执行连接或发送。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [
+          "ai-flow-p1-005"
+        ],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-004",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-004",
+          "pageNumber": 1,
+          "cardOrder": 4,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "mikun-invoice-2058855625845571854"
+      ],
+      "observationDepths": [
+        "static-image-observed"
+      ],
+      "observations": [
+        {
+          "workId": "mikun-invoice-2058855625845571854",
+          "title": "Invoice processing draft",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "static-image-observed",
+          "observedAt": "2026-09-27",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-004"
+              ]
+            }
+          ],
+          "observedDetails": [
+            "2048×2048静态图：顶部面包屑与Draft，右侧四个纵向流程节点，Extract Invoice Data为琥珀色选区。",
+            "白色点阵画布、左留白、底部125%缩放控件。"
+          ],
+          "unresolvedDetails": [
+            "仅有静态参考；点击和推近由本包原创。",
+            "节点说明被截断，补写部分为概括文案；未见执行结果。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "interaction-invoice-node-focus"
+      ],
+      "adaptations": [
+        {
+          "workId": "mikun-invoice-2058855625845571854",
+          "presetId": "interaction-invoice-node-focus",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "静态草稿界面的横屏重排；选择节点和推近为原创，截断文案概括补写，未表示执行成功。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-005",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-006",
+          "pageNumber": 1,
+          "cardOrder": 6,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "gabriel-reasoning-2055319425578918101"
+      ],
+      "observationDepths": [
+        "static-image-observed"
+      ],
+      "observations": [
+        {
+          "workId": "gabriel-reasoning-2055319425578918101",
+          "title": "Agentic reasoning for image and video generation.",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "static-image-observed",
+          "observedAt": "2026-09-27",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-006"
+              ]
+            }
+          ],
+          "observedDetails": [
+            "原图4096×3073，为点阵素材画布上的深灰磨砂玻璃大面板。",
+            "可见Agentic/Chat History页签、REASONING计时、缩略图、主题概述及Content Hierarchy/Visual Layout两个纵向步骤。",
+            "背景是鲨鱼、建筑、夕阳等图片卡片；玻璃面板底部延伸到源图以外，只见下一步骤的部分计时。"
+          ],
+          "unresolvedDetails": [
+            "静态图无法证明面板滑入、步骤推进或滚动的原作曲线。",
+            "原照片不随包分发，原创SVG素材仅保留相近明暗和构图作用。",
+            "没有观察到完整第三步或生成完成结果。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "ai-reasoning-glass-panel"
+      ],
+      "adaptations": [
+        {
+          "workId": "gabriel-reasoning-2055319425578918101",
+          "presetId": "ai-reasoning-glass-panel",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "横屏重排磨砂玻璃面板与素材卡；素材替换为原创SVG，入场与两段步骤聚焦原创，尾帧仍在处理。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-006",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-007",
+          "pageNumber": 1,
+          "cardOrder": 7,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "jeet-coding-agent-2049115937677447621"
+      ],
+      "observationDepths": [
+        "multiple-video-times-observed"
+      ],
+      "observations": [
+        {
+          "workId": "jeet-coding-agent-2049115937677447621",
+          "title": "Coding Agent progress",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "multiple-video-times-observed",
+          "observedAt": "2026-09-27",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-007"
+              ]
+            },
+            {
+              "method": "referenceMedia-exact-match",
+              "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+            }
+          ],
+          "observedDetails": [
+            "16.616667秒组件视频，实看0.238942、5.215704、8.345953、10.960510、14.307187、16.616667秒。",
+            "同一浅灰Coding Agent组件内，五项清单逐项勾选划线；下方区域在文件、搜索、思考、编写、修改和成果之间原位更新。",
+            "六阶段颜色依次为紫、蓝、橙、绿、粉、绿，进度从0/5到5/5；Files/GitHub选中态联动，最后出现Run again。"
+          ],
+          "unresolvedDetails": [
+            "18秒横屏版调整大小、阶段时间与部分说明文字，不是逐帧或像素复制。",
+            "用量、费用、模型名和完成反馈是演示数据，不代表真实服务调用。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "ai-coding-agent-progress"
+      ],
+      "adaptations": [
+        {
+          "workId": "jeet-coding-agent-2049115937677447621",
+          "presetId": "ai-coding-agent-progress",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "重建六阶段连续组件，保留同一清单、原位内容与工具状态；可改五条任务文案，默认示例不执行编码服务。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-007",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-008",
+          "pageNumber": 1,
+          "cardOrder": 8,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "sayan-context-clear-2041168298998440020"
+      ],
+      "observationDepths": [
+        "multiple-video-times-observed"
+      ],
+      "observations": [
+        {
+          "workId": "sayan-context-clear-2041168298998440020",
+          "title": "Clear conversation context",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "multiple-video-times-observed",
+          "observedAt": "2026-09-27",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-008"
+              ]
+            },
+            {
+              "method": "referenceMedia-exact-match",
+              "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+            }
+          ],
+          "observedDetails": [
+            "0.320409s：同一白色窗口，Project Nexus标题、两条用户消息、回复、Python代码卡、底部输入框。",
+            "6.413908s：镜头聚焦输入框，蓝色/clear已完整输入，发送按钮仍向上箭头。",
+            "7.28552s：镜头回到完整窗口，底部消息消失，代码下部文字弯曲、拉伸、褪色；窗口及输入框保留。",
+            "7.518987s：正文已清空，中心机器人和提示短暂呈青/品红/黄色分离影像；标题尚为Project Nexus。",
+            "9.1s：标题变为New chat，灰色中心提示稳定，输入框Ask anything。"
+          ],
+          "unresolvedDetails": [
+            "横屏重排、12秒节奏、文字形变和光标为独立实现，不是逐帧复刻。",
+            "只演示清空机制，不执行真实软件操作。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "interaction-context-clear"
+      ],
+      "adaptations": [
+        {
+          "workId": "sayan-context-clear-2041168298998440020",
+          "presetId": "interaction-context-clear",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "持续窗口，命令输入、消息逐层卷走、色彩分离及新会话稳定态。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-008",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-009",
+          "pageNumber": 1,
+          "cardOrder": 9,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "bruce-selfcorrect-2017702095437369707"
+      ],
+      "observationDepths": [
+        "multiple-video-times-observed"
+      ],
+      "observations": [
+        {
+          "workId": "bruce-selfcorrect-2017702095437369707",
+          "title": "Self-correcting agent",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "multiple-video-times-observed",
+          "observedAt": "2026-09-30",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-009"
+              ]
+            },
+            {
+              "method": "referenceMedia-exact-match",
+              "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+            }
+          ],
+          "observedDetails": [
+            "0.239313s：黑底绿线运行图：左侧Tensorlake/Agent Runtime外框、中央Agent Harness芯片与周围小端点、右侧Browser Tool/Download from SEC.GOV/Get structured data三节点。灰色虚线连接，无错误标志。",
+            "3.395245s：Browser Tool节点及运行连接线为红色，红色方块沿线分布，其余两个节点仍灰绿。",
+            "6.444197s：Browser Tool上方OPEN FAILED标签和小重启图标；下方展开DURABLE EXECUTION条，后两个节点向下让位。",
+            "9.243527s：错误标签和Durable Execution条已收起，Browser Tool与路径变为青绿色。",
+            "12.103337s：青绿RESTARTING标签，Browser Tool前有勾号，下方青绿Durable Execution条再次展开。",
+            "13.93285s：Browser Tool保持勾号与青绿边框，重启标签及Durable Execution条收起。",
+            "17.035292s：原运行图整体右移，左侧Code Sandbox卡展开并连接Runtime；Browser Tool上方RESUMED标签。",
+            "18.729153s：Code Sandbox与完整连接图稳定，Browser Tool前勾号，RESUMED标签已收起，后两节点仍未完成。"
+          ],
+          "unresolvedDetails": [
+            "原视频只在浏览器观察，未下载分发。",
+            "代码沙箱示例文字会重新编写；动画不能作为实际服务执行的证据。",
+            "不根据尾帧推断全部工具成功。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "ai-runtime-self-correct"
+      ],
+      "adaptations": [
+        {
+          "workId": "bruce-selfcorrect-2017702095437369707",
+          "presetId": "ai-runtime-self-correct",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "黑绿运行图中保持同一工具经历失败、重启和恢复，Code Sandbox进入时图连续右移。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-009",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-010",
+          "pageNumber": 1,
+          "cardOrder": 10,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "nanda-dns-tables-2007467074957045907"
+      ],
+      "observationDepths": [
+        "multiple-video-times-observed"
+      ],
+      "observations": [
+        {
+          "workId": "nanda-dns-tables-2007467074957045907",
+          "title": "DNS tables",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "multiple-video-times-observed",
+          "observedAt": "2026-09-30",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-010"
+              ]
+            },
+            {
+              "method": "referenceMedia-exact-match",
+              "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+            }
+          ],
+          "observedDetails": [
+            "0s：Left article discusses dividing domain names into suffix groups. Right pane shows .com and .fyi five-row tables side by side, table tops around viewport y212. No root-server cards or wires. The next Problem passage is entering at the bottom.",
+            "1.059518s：Composition is nearly unchanged from the initial state; the two table panels retain their position.",
+            "2.47012s：The article has visibly moved upward. A Problem callout appears in the lower half of the left column, followed by prose about changing suffix/server address lists. The right tables stay at their earlier screen position; no root cards or wires.",
+            "3.059438s：Further upward article movement brings the Problem callout to mid-left and the root-server explanation below it. Both right tables are still at the original vertical position, with no root cards or lines.",
+            "3.354097s：Two upper root-server mini cards are faintly visible, each with a mint dot. The DNS tables have moved downward, roughly 28 viewport pixels from their initial position. No connector lines are yet visible in this sampled frame.",
+            "3.554715s：Root mini cards are almost opaque and DNS tables have reached nearly their final lower position. A line descends from the left root card and a short curve begins toward the right. The connector network is still incomplete.",
+            "3.774142s：The left vertical connector nearly reaches its table; the right vertical connector is partial. Two curved crossing connectors are extending between root cards and opposite table positions. The paths are visibly incomplete compared with the later frame.",
+            "4.006108s：Both upper root cards are visible. All four paths now connect the two root cards with both DNS tables. Tables occupy the lower illustration area; root cards remain above. The article scroll has moved the Problem callout into the upper half of the left column.",
+            "5.454326s：The completed diagram stays fixed. The article moves farther upward, and a separator and the beginning of the subsequent lookup-algorithm section are entering at the bottom.",
+            "6.946429s：Source end state shows the same completed root/server/table network. The lower edge reveals the next section beginning; no additional network change appears."
+          ],
+          "unresolvedDetails": [
+            "源片没有打字、点击发送或真实DNS请求；预设不发起请求。",
+            "中文、示例域名地址和横屏外壳为重新设计，不是逐帧复刻。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "interaction-dns-scroll-explain"
+      ],
+      "adaptations": [
+        {
+          "workId": "nanda-dns-tables-2007467074957045907",
+          "presetId": "interaction-dns-scroll-explain",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "单一文章滚动，表格驻留后下移，两张根卡显现并生长四条连接，12秒横屏重排。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-010",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-011",
+          "pageNumber": 1,
+          "cardOrder": 11,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "kevin-workflow-replace-2005663739803206121"
+      ],
+      "observationDepths": [
+        "static-image-observed"
+      ],
+      "observations": [
+        {
+          "workId": "kevin-workflow-replace-2005663739803206121",
+          "title": "Replace Workflow Nodes",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "static-image-observed",
+          "observedAt": "2026-09-27",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-011"
+              ]
+            }
+          ],
+          "observedDetails": [
+            "静态图内ChatGPT Summary节点、右侧4个工具按钮、Replace浮层。",
+            "浮层保留Favorites中Slack/ChatGPT及All Apps中7个应用，ActiveCampaign行处于悬停状态。"
+          ],
+          "unresolvedDetails": [
+            "源图无动画；点击、搜索Airtable和更换节点为原创演示，不是已观察原作动作。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "interaction-workflow-replace"
+      ],
+      "adaptations": [
+        {
+          "workId": "kevin-workflow-replace-2005663739803206121",
+          "presetId": "interaction-workflow-replace",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "依据静态图重建节点及完整应用菜单；点击、搜索及替换节奏为原创，非原图中已观察的交互。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-011",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-012",
+          "pageNumber": 1,
+          "cardOrder": 12,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "elaya-workflow-2005253620019925430"
+      ],
+      "observationDepths": [
+        "static-image-observed"
+      ],
+      "observations": [
+        {
+          "workId": "elaya-workflow-2005253620019925430",
+          "title": "Workflow automation",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "static-image-observed",
+          "observedAt": "2026-09-27",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-012"
+              ]
+            }
+          ],
+          "observedDetails": [
+            "原图1919×1537，静态深色界面：左窄工具栏、黑色节点画布、右项目聊天栏。",
+            "画布有Trigger与Subreddit Posts Scraper两个节点，水平箭头连线；Scraper显示粉红Missing Information。",
+            "右上Project为Reddit monthly Leads，右下有自然语言输入区；画布顶部Properties/Code及Run按钮。"
+          ],
+          "unresolvedDetails": [
+            "源图未展示输入、执行或成功结果；所有动画节奏为原创。",
+            "保持Missing Information，不补造数据抓取或CRM发送结果。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "software-workflow-automation"
+      ],
+      "adaptations": [
+        {
+          "workId": "elaya-workflow-2005253620019925430",
+          "presetId": "software-workflow-automation",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "保留深色画布、两节点、右侧项目聊天栏；输入、Run与缺信息聚焦为原创动画，未模拟CRM成功。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-012",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-013",
+          "pageNumber": 1,
+          "cardOrder": 13,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "stephen-scenes-2004865468323299492"
+      ],
+      "observationDepths": [
+        "static-image-observed"
+      ],
+      "observations": [
+        {
+          "workId": "stephen-scenes-2004865468323299492",
+          "title": "Scenes composer",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "static-image-observed",
+          "observedAt": "2026-09-27",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-013"
+              ]
+            }
+          ],
+          "observedDetails": [
+            "3277×4096静态图：Scenes白色圆角输入窗、三张网球场景缩略图、两行输入文字与蓝色caret。",
+            "底部加号/连接图标/Image/Video/麦克风/发送箭头，Video选中。"
+          ],
+          "unresolvedDetails": [
+            "原照片不随包复制，以原创SVG代替。",
+            "未观察发送后状态；模式选择、输入和悬停为原创。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "interaction-scenes-composer"
+      ],
+      "adaptations": [
+        {
+          "workId": "stephen-scenes-2004865468323299492",
+          "presetId": "interaction-scenes-composer",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "静态输入窗按横屏放大，照片改原创SVG；切换模式、打字和悬停原创，停在待发送。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-013",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-014",
+          "pageNumber": 1,
+          "cardOrder": 14,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "timothy-workflow-gate-2004473140513329536"
+      ],
+      "observationDepths": [
+        "multiple-video-times-observed"
+      ],
+      "observations": [
+        {
+          "workId": "timothy-workflow-gate-2004473140513329536",
+          "title": "Workflow thinking and configuration gate",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "multiple-video-times-observed",
+          "observedAt": "2026-09-30",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-014"
+              ]
+            },
+            {
+              "method": "referenceMedia-exact-match",
+              "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+            }
+          ],
+          "observedDetails": [
+            "原片1584×1080、24.116667秒；浏览器实际查看14个暂停状态，原片未下载。",
+            "0s：Large white window with mostly empty conversation. English request is already filled in the bottom composer. Send arrow is bright blue; cursor is above and right of the conversation column.",
+            "0.619598s：Request remains in the composer. Visible pointer has moved down and right toward the blue send arrow; no conversation card has appeared yet.",
+            "1.096212s：Pointer tip is directly over the blue send-arrow button. Request remains in the composer in this sample; submission itself falls between this sample and 1.930286.",
+            "1.930286s：Request is now a bordered You message near the top of the column. Composer is empty with What would you like to automate? placeholder. Second Xami AI card has begun streaming its acknowledgement, visibly partial as I'll s.",
+            "4.956785s：Acknowledgement is complete: I'll set up that workflow for you! A gray Thinking panel contains the introductory thought plus triggers for Twitter, Slack, Facebook; Azure OpenAI; urgent routing; and a partially written Logging line. Purple spinner/title and blue stop-square in the composer.",
+            "8.007114s：Thinking details have collapsed. A shallow gray Working bar remains beneath the agent heading, before the build-step list is substantially visible. Composer still shows stop control.",
+            "9.55611s：Working bar persists. Search for nodes is visible under it with an active pale purple marker; additional list content is faint/entering rather than complete.",
+            "11.105105s：Five steps are visible: Search for nodes green complete, Get node details active, Add nodes / Updating node parameters / Validate workflow pale pending. No nested node list visible yet.",
+            "15.03717s：Search for nodes, Get node details and Add nodes are green completed. Add nodes has expanded a bordered list: Workflow Configuration, Slack Messages, Get Facebook Messages node, Azure OpenAI Model. Updating node parameters is green; Validate workflow is lower and partly obscured by the fixed composer/fade edge. Conversation moved slightly up.",
+            "16.609995s：Same completed build list and four nested node entries. Validate workflow appears pale/green near the lower fade edge. The status bar is still Working; no activation result yet.",
+            "18.516452s：Working region replaced by Workflow ready to activate with green check and chevron. How to Setup prose lists Workflow Configuration, managementEmail, sheetId and Slack channel instructions. Lower instructions continue below the fixed composer; no credential connection has occurred.",
+            "19.790756s：Conversation has scrolled down to pink 14 items need configuration warning. Connect your accounts panel is expanded with 0/6 and six Connect rows: Twitter (Formerly X) API, Slack workspace, Facebook Graph API, Azure OpenAI, Gmail, Google Sheets. Configure workflow header is collapsed with 0/8.",
+            "21.590612s：Conversation is scrolled further down to Configure workflow 0/8 and eight Set rows: management email, Google Sheet ID, Twitter User, Twitter Text, Slack channel ID/name, Slack search query/name, Facebook message Graph API endpoint, Azure OpenAI deployment name. Values remain unset; no Set-dialog success is shown.",
+            "24.116667s：Tail returns to warning and accounts-open panel, still 14 items need configuration and 0/6. Configure workflow is collapsed with 0/8. Six Connect buttons are visible. Composer says What would you like to add or modify? No activation or connected account state."
+          ],
+          "unresolvedDetails": [
+            "18秒横屏、中文内容、SVG图标和渐变为独立实现；初始需求预填，不添加源片未见的初始打字。",
+            "折叠过渡连接已观察状态，完整源片点击过程未逐帧取样；14项待配置、账户0/6、参数0/8保持。",
+            "构建完成不等于已配置、已启用或已执行；没有真实账户连接。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "ai-workflow-configuration-gate"
+      ],
+      "adaptations": [
+        {
+          "workId": "timothy-workflow-gate-2004473140513329536",
+          "presetId": "ai-workflow-configuration-gate",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "重建预填发送、思考收合、五步构建、节点细节和配置面板；18秒中文横屏重排，保留全部配置待办。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-014",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-015",
+          "pageNumber": 1,
+          "cardOrder": 15,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "nanda-nested-steps-2004213111486820795"
+      ],
+      "observationDepths": [
+        "multiple-video-times-observed"
+      ],
+      "observations": [
+        {
+          "workId": "nanda-nested-steps-2004213111486820795",
+          "title": "Nested steps",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "multiple-video-times-observed",
+          "observedAt": "2026-09-30",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-015"
+              ]
+            },
+            {
+              "method": "referenceMedia-exact-match",
+              "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+            }
+          ],
+          "observedDetails": [
+            "原片720×720、9.775862秒；浏览器实际查看12个暂停状态，原片未下载。",
+            "0s：Initial expanded group with two do steps, orange selected header, gray three-way fork and lower merged write task; no Enter capsule.",
+            "0.751989s：Expanded selected state remains visible before the first closing action.",
+            "1.142445s：Expanded state still present, with two inner cards and lower output card; no Enter feedback visible in this sampled frame.",
+            "1.30152s：Enter capsule is visible; inner cards and group are beginning to fade/contract, and the bottom card has started moving upward. This is an intermediate closing frame rather than a completed collapsed state.",
+            "1.475056s：Compact collapsed parseApi header with downward chevron. Inner cards absent, side branches inward, bottom write card raised, connector paths shortened. Enter capsule visible.",
+            "1.981202s：Collapsed geometry persists with orange focus and Return/Enter feedback.",
+            "3.195954s：First reopening has restored tall group and both inner steps. Side cards are outward and bottom write card is lower again. Enter feedback remains visible.",
+            "3.571949s：Expanded selected state, complete two-step group and full-height branch wiring, with Return capsule.",
+            "5.524229s：Expanded content is visible near the beginning of the second closing action; nested border/cards are faint and slightly contracted versus the stable expanded sample. Enter feedback present.",
+            "7.736813s：Second collapsed state: downward chevron, compact group, side cards inward and lower write card moved up. Enter feedback visible.",
+            "8.821413s：Second opening has restored the expanded group with two inner steps and full-sized connector network; orange selection and Return feedback still visible.",
+            "9.775862s：Tail holds the expanded workflow. Orange focus outline and key capsule have disappeared; gray network remains, with no execution status/result change."
+          ],
+          "unresolvedDetails": [
+            "720方形构图重排为14秒横屏，文字放大、底部任务缩短和阅读停留为独立编排。",
+            "原片只见Enter反馈，未见标题点击；不将计划标签演成API、审批或写入执行结果。",
+            "保留两步嵌套与三分支；没有完整逐帧或像素复制。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "interaction-nested-step-toggle"
+      ],
+      "adaptations": [
+        {
+          "workId": "nanda-nested-steps-2004213111486820795",
+          "presetId": "interaction-nested-step-toggle",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "同一两步子流程重复收起与展开；容器、端口、侧支、底部任务和路径连续重排，14秒横屏适配。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-015",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-016",
+          "pageNumber": 1,
+          "cardOrder": 16,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "kevin-node-config-2002053876627964276"
+      ],
+      "observationDepths": [
+        "static-image-observed"
+      ],
+      "observations": [
+        {
+          "workId": "kevin-node-config-2002053876627964276",
+          "title": "Workflow Node Configuration",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "static-image-observed",
+          "observedAt": "2026-09-27",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-016"
+              ]
+            }
+          ],
+          "observedDetails": [
+            "静态图中蓝边Node Mode、Slack Send Channel Message标题、用户消息、Authentication required与Add Credentials。",
+            "上部局部ChatGPT节点、右侧局部Output，底部Describe what should happen输入框。"
+          ],
+          "unresolvedDetails": [
+            "源图是局部界面，横屏扩展画布和进入节点的节奏为原创。",
+            "未观察授权成功或消息发送，不添加这类结果。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "interaction-node-config"
+      ],
+      "adaptations": [
+        {
+          "workId": "kevin-node-config-2002053876627964276",
+          "presetId": "interaction-node-config",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "依据静态图重建居中Node Mode标签及认证卡；进入和悬停节奏原创，未模拟授权或发送成功。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-016",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-017",
+          "pageNumber": 1,
+          "cardOrder": 17,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "siddharth-flow-2001253591798186010"
+      ],
+      "observationDepths": [
+        "static-image-observed"
+      ],
+      "observations": [
+        {
+          "workId": "siddharth-flow-2001253591798186010",
+          "title": "Workflow builder concept",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "static-image-observed",
+          "observedAt": "2026-09-27",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-017"
+              ]
+            }
+          ],
+          "observedDetails": [
+            "原图2880×1800，森林桌面背景中白色软件窗口：左导航、顶部agent信息和多页签。",
+            "Build Options包括Actions、Build、Content及Conditions标题；右侧浅点阵Flow画布。",
+            "三个竖直相连节点为Trigger、Sales Playbook Deck和Question，末端蓝色加号；源图已有这三个节点。"
+          ],
+          "unresolvedDetails": [
+            "拖入Deck并插入连线是原创演示，源图没有呈现拖动过程。",
+            "Hubspot名义下的作者概念界面不代表当前官方产品或实际执行。",
+            "背景与图标重画，不分发原森林插画。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "interaction-flow-deck-insert"
+      ],
+      "adaptations": [
+        {
+          "workId": "siddharth-flow-2001253591798186010",
+          "presetId": "interaction-flow-deck-insert",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "保留白色流程编辑器与三节点稳定态；Deck拖入、节点连线让位为原创动画，背景另绘。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-017",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-018",
+          "pageNumber": 1,
+          "cardOrder": 18,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "avdey-add-job-1997994747408101448"
+      ],
+      "observationDepths": [
+        "multiple-video-times-observed"
+      ],
+      "observations": [
+        {
+          "workId": "avdey-add-job-1997994747408101448",
+          "title": "Add job hub",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "multiple-video-times-observed",
+          "observedAt": "2026-09-30",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-018"
+              ]
+            },
+            {
+              "method": "referenceMedia-exact-match",
+              "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+            }
+          ],
+          "observedDetails": [
+            "原片4.25秒；浏览器实际查看14个暂停状态，原片未下载。",
+            "0s：Expanded Add job panel; six rounded tiles and description input; pointer on enrich. Four surrounding ports and horizontal wires visible.",
+            "0.505578s：Same expanded panel and pointer inside enrich, six colored icons visible. No typing, click feedback or selected task.",
+            "0.982617s：Pointer now outside the panel toward lower right; panel remains expanded at this observed frame. The first seek reported readyState 1, then this same time was re-read at readyState 4 before relying on the image.",
+            "1.484763s：Panel is beginning to contract; six tiles and title are smaller. Top/bottom ports approach panel edges, and left/right connection ports move inward. Pointer remains outside below.",
+            "1.654238s：Menu/text have disappeared; center dot and four surrounding black ports visible, still somewhat separated. Wire endpoints now near compact hub.",
+            "2.012017s：Fully compact central five-dot hub on light dot canvas; horizontal wires approach it from both sides; pointer below to right.",
+            "2.514163s：Same compact hub held with pointer still away from it.",
+            "3.016309s：Pointer has moved back to just below/right of compact hub. The menu has not yet expanded.",
+            "3.261105s：Pointer over lower-right part of compact hub; five-dot state held.",
+            "3.430579s：Compact hub remains while pointer waits on it.",
+            "3.650268s：Compact hub continues to hold; no click ring or extra node appears.",
+            "3.932726s：Four surrounding ports move outward from hub and wire gap grows; expansion begins, pointer remains at hub.",
+            "4.083369s：White rounded panel nearly restored, all six labels/icons and description input visible again. Ports near restored panel edges; pointer inside enrich.",
+            "4.25s：Final fully expanded panel with six task entries and description/microphone; inner tile/input corners appear tighter than the first frame. Pointer inside enrich. No task execution or text entry."
+          ],
+          "unresolvedDetails": [
+            "完整悬停展开、收拢、等待与再展开；9秒横屏、中文标签和图标呼吸为独立编排，没有任务点击、输入或录音。",
+            "Square reference reflowed to a 1920 by 1080 horizontal canvas, with longer connection lines and a larger Chinese-readable panel",
+            "4.25 second source retimed to 9 seconds for reading: exit 1.2 seconds, collapse 2.25 seconds, re-enter 4.85 seconds, expand 6 seconds, final reading through 9 seconds",
+            "Six task labels translated to Chinese with small English secondary labels; Add job/More/description localized",
+            "Title, description-placeholder and external explanatory caption exposed as escaped title/prompt/result parameters",
+            "Outer explanatory caption and small interface-demo disclosure added",
+            "Soft icon breathing authored for this rebuild; no source claim of icon selection or animation trigger",
+            "Rounded inner tiles retained throughout instead of reproducing the subtle tighter final corners",
+            "最终统一诊断与导出检查见verification.md；不以源码存在推定通过。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "interaction-add-job-hub-hover"
+      ],
+      "adaptations": [
+        {
+          "workId": "avdey-add-job-1997994747408101448",
+          "presetId": "interaction-add-job-hub-hover",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "完整悬停展开、收拢、等待与再展开；9秒横屏、中文标签和图标呼吸为独立编排，没有任务点击、输入或录音。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-018",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-019",
+          "pageNumber": 1,
+          "cardOrder": 19,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "ailker-ad-assets-1997049221858680877"
+      ],
+      "observationDepths": [
+        "multiple-video-times-observed"
+      ],
+      "observations": [
+        {
+          "workId": "ailker-ad-assets-1997049221858680877",
+          "title": "Product ad assets workflow",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "multiple-video-times-observed",
+          "observedAt": "2026-09-30",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-019"
+              ]
+            },
+            {
+              "method": "referenceMedia-exact-match",
+              "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+            }
+          ],
+          "observedDetails": [
+            "原片45.461秒；浏览器实际查看23个暂停状态，原片未下载。",
+            "0s：Input close-up: Request - Inputs, Inputs/Defaults tabs, image_urls field, Add Image/link controls, two existing thumbnails, text_field running shoe, Custom model google/gemini-3-pro-preview. Multiple gray wires leave orange ports on the right.",
+            "0.413878s：Same populated input remains in close-up; no typing or click is visible before the next sampled running state.",
+            "1.099175s：Camera is pulled back and moved right: input partially on left, OpenRouter (Vision) prominent, purple six-lobed ring and Generating code, highlighted border, outgoing dashed curved connections. Downstream OpenRouter/Text Concat cards show dark rings and Waiting for your input.",
+            "2.857112s：Vision continues running with a blue six-lobed ring, three visible dashed outgoing routes, hand cursor below the node. Same dependent nodes still waiting.",
+            "5.80687s：Camera farther right: three stacked OpenRouter creative cards display JSON-like descriptive prose, three Text Concat cards display combined text; purple solid wires converge into Merge Text, which is actively generating with purple ring.",
+            "7.80317s：Another running OpenRouter stage on left has a pink ring; dashed fan-out reaches several Text Concat/OpenRouter/Nano Banana Pro cards to the right, which are still waiting. Canvas context and colored square ports persist.",
+            "9.948469s：Whole graph view: earlier prompt stages display prose, six image routes spread vertically, several model nodes show blue/pink/purple rings, two right-side video nodes show dark waiting rings, Response shows eight purple result rows.",
+            "11.825567s：Whole graph retained. First portrait image, an orange-square image and white-background output have replaced their model loaders; other image nodes still running. Upper video node now active, lower still waiting, eight-item Response remains on right.",
+            "14.834916s：More image previews have completed: portrait neon, portrait carbon, orange square, wide tunnel, and white product. One image node still shows a blue running ring. Upper video active; lower dark waiting. Camera and network remain continuous.",
+            "18.857313s：All six image nodes have previews; both video nodes have preview content, and tall Response displays corresponding thumbnails. Dense orange/purple connections remain. No preview-opening click is visible.",
+            "19.870361s：Red/pink surface is wiping upward across the completed graph, with pixel-style decorative elements entering; first product image rises from below.",
+            "20.853614s：White-background horizontal close-up of metallic shoe centered on red/pink surround; no editing controls visible.",
+            "22.373186s：Square diagonal metallic shoe against cyan/navy streaks replaces the first result on the same red/pink surround.",
+            "24.041736s：The cyan square is moving upward through a vertical transition; its lower part remains near the top of the red surface.",
+            "25.054784s：Wide tunnel result: side-view shoe on wet reflective ground, teal and orange lights stretched along tunnel perspective.",
+            "27.885359s：Portrait neon result: shoe diagonally suspended against teal/orange ceiling streaks, centered and uncropped inside tall image.",
+            "30.000842s：Portrait carbon-fiber result: diagonally upright shoe against black woven backdrop; same surrounding red surface.",
+            "32.026939s：Square orange-energy result: shoe over dark patterned platform with orange glow, cyan electric accents and ground lines.",
+            "34.023239s：First motion result begins: cyan/navy square close-up shoe, with changed view and product orientation relative to earlier still.",
+            "35.930153s：Same square motion result with visibly different product orientation/cropping; shoe remains recognizable and red surround unchanged.",
+            "38.939502s：Second motion result is portrait: shoe tilted over illuminated platform, orange sole lights and teal/orange streak background.",
+            "42.961899s：Promotional end card: large pale six-lobed ring centered on red/pink background. Product previews and graph absent.",
+            "45.461s：Final decoded frame retains the pale ring on red/pink background."
+          ],
+          "unresolvedDetails": [
+            "保留输入、Vision、三路创意合并、六图两视频、八项Response及全段展示；36秒中文，素材全部独立SVG，运行按下反馈为原创补充。",
+            "Chinese copy and short readable node contents replace original English JSON prose. The product description parameter appears in Request and creative branches; exact original full prompts were not reconstructed.",
+            "Independent inline SVG shoe and A visual mark replace all original branded reference/AI-generated assets. No source media or generated photo is included. SVG product previews are illustrations rather than photorealistic reconstruction.",
+            "A Run button and pointer click were added at 1.85 seconds to make the authored demonstration causal. This action was not observed in the original source.",
+            "Camera pans vertically to show the third creative branch and the lower image branches at readable scale, then pulls back to reveal all dependencies. Source camera timing and node spacing are adapted for the horizontal readable composition.",
+            "Source is 45.461 seconds; this timeline is 36 seconds, with process on 0-18 seconds, all six still outputs on 18.8-28.3 seconds, two SVG motion previews on 28.8-33.25 seconds, and end emphasis through 36 seconds.",
+            "Output video movements are deterministic SVG transforms and a light sweep, not the original image-to-video footage. The original red/pink result presentation is retained with independently drawn restrained decoration.",
+            "Port details and repetitive intermediate prompt prose are simplified; the full dependency stages and six-plus-two output structure remain visible. No real model, network, upload, export, or paid operation is performed.",
+            "最终统一诊断与导出检查见verification.md；不以源码存在推定通过。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "ai-product-ad-assets-pipeline"
+      ],
+      "adaptations": [
+        {
+          "workId": "ailker-ad-assets-1997049221858680877",
+          "presetId": "ai-product-ad-assets-pipeline",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "保留输入、Vision、三路创意合并、六图两视频、八项Response及全段展示；36秒中文，素材全部独立SVG，运行按下反馈为原创补充。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [
+          "ai-product-ad-assets-pipeline"
+        ],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-019",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-020",
+          "pageNumber": 1,
+          "cardOrder": 20,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "kevin-workflow-builder-1998424398630715509"
+      ],
+      "observationDepths": [
+        "static-image-observed"
+      ],
+      "observations": [
+        {
+          "workId": "kevin-workflow-builder-1998424398630715509",
+          "title": "Workflow Builder",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "static-image-observed",
+          "observedAt": "2026-09-27",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-020"
+              ]
+            },
+            {
+              "method": "referenceMedia-exact-match",
+              "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+            }
+          ],
+          "observedDetails": [
+            "静态图为应用左部，浅灰桌面、Mac窗口、窄工具栏、Workflow Project面包屑。",
+            "蓝色Trigger标签的PayPal Payment节点及向右出画的连接线。"
+          ],
+          "unresolvedDetails": [
+            "1600×1808静态参考仅见左部PayPal节点，不能推断画外工作流。",
+            "纵深入场、Trigger聚焦及镜头回正为原创，说明文案概括改写。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "opening-workflow-canvas"
+      ],
+      "adaptations": [
+        {
+          "workId": "kevin-workflow-builder-1998424398630715509",
+          "presetId": "opening-workflow-canvas",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "保持Mac窗口与局部PayPal触发器结构，原创空间入场、光标聚焦并回到稳定阅读，不补画外节点。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-020",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-021",
+          "pageNumber": 1,
+          "cardOrder": 21,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "james-cloud-topology-1995492796426551538"
+      ],
+      "observationDepths": [
+        "multiple-video-times-observed"
+      ],
+      "observations": [
+        {
+          "workId": "james-cloud-topology-1995492796426551538",
+          "title": "Cloud topology health",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "multiple-video-times-observed",
+          "observedAt": "2026-09-30",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-021"
+              ]
+            },
+            {
+              "method": "referenceMedia-exact-match",
+              "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+            }
+          ],
+          "observedDetails": [
+            "原片5.583333秒；浏览器实际查看8个暂停状态，原片未下载。",
+            "0s：Whole topology present. A thin pale hover outline surrounds gw-e5f6. White hand pointer is below that card near the vertical center. gw-g7h8 already has Unstable and amber status; it does not transition from healthy during this clip.",
+            "0.489739s：Normal outline has gone. Amber outline and soft glow surround gw-g7h8, with pointer just below its lower edge. The throughput number on lower-right gw-m3n4 is out of its clipped pill while the icon remains. Warning text is moving horizontally.",
+            "1.005999s：Amber hover outline has faded. Pointer is near the top of the dim lower central replica. gw-m3n4 throughput 200 is visible again. Bottom-left gw-c3d4 memory indicator is temporarily truncated/partly slid from view. Other topology and Unstable state persist.",
+            "1.504579s：Pointer is still above gw-i9j0. Lower-left metric 52% is visible again. Warning ticker exposes the health check failures phrase with a different clipping position. No card insertion or state repair.",
+            "2.010231s：Pointer moves upward into the blank area below the unstable card. Lower-right cpu pill's icon and number are briefly sliding/partly clipped. Dotted wire placements differ. Node count and metric values remain those of the initial topology.",
+            "3.017999s：No obvious hand pointer in the central lower gap now. Warning text continues its horizontal marquee. Lower-left cpu and lower-right memory digits show temporary clipping motion. gw-g7h8 remains amber and Unstable.",
+            "4.043447s：All clear numeric labels are back. Topology and cards remain fixed. Warning ticker now reaches a Metrics fragment after health check failures. No focus outline or intervention menu.",
+            "5.369458s：Tail preserves exactly the same three regions / seven replicas and amber exception. Warning ticker continues; no restored/healthy success card. This was checked before the true terminal frame at 5.583333."
+          ],
+          "unresolvedDetails": [
+            "三地区七副本、局部悬停、虚线、指标滑回与持续异常；8秒横屏，底部未读指标明确为示例，不添加修复成功。",
+            "3670×1998 source reflowed and enlarged to 1920×1080 with larger readable typography",
+            "5.583333-second source extended to an independently authored 8-second timeline while preserving all observed mechanisms",
+            "Title, warning, and status changed to editable Chinese example copy; full warning is an independent rewrite, not a transcription of unreadable trailing text",
+            "Country flags and UI icons independently drawn as SVG rather than copied source pixels",
+            "An arrow cursor represents the source's small hand pointer, with authored motion timing and geometry",
+            "Metric local rollout timings are independently authored from observed movements; their values remain constant",
+            "The dim lower central replica is fully included rather than being partially cropped; its values are declared example data because the source bottom was not completely legible",
+            "No activation click, correction success, real monitoring, network call, or product capability is fabricated",
+            "最终统一诊断与导出检查见verification.md；不以源码存在推定通过。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "ambient-cloud-topology-health"
+      ],
+      "adaptations": [
+        {
+          "workId": "james-cloud-topology-1995492796426551538",
+          "presetId": "ambient-cloud-topology-health",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "三地区七副本、局部悬停、虚线、指标滑回与持续异常；8秒横屏，底部未读指标明确为示例，不添加修复成功。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-021",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-022",
+          "pageNumber": 1,
+          "cardOrder": 22,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "marcel-branch-workflow-1993778795648839775"
+      ],
+      "observationDepths": [
+        "static-image-observed"
+      ],
+      "observations": [
+        {
+          "workId": "marcel-branch-workflow-1993778795648839775",
+          "title": "Condition branches workflow",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "static-image-observed",
+          "observedAt": "2026-09-27",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-022"
+              ]
+            },
+            {
+              "method": "referenceMedia-exact-match",
+              "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+            }
+          ],
+          "observedDetails": [
+            "4096×3231静态图：白色Acme工作流编辑器，左侧Build/Data/Monitor导航、顶部Build/Activity与Draft。",
+            "Attribute updated触发器、Is high value条件、If True和If False两路分别接Send alert email和Post to Slack。",
+            "右侧触发器抽屉含Step details、Trigger settings和Available data；底部仅见Run history局部。"
+          ],
+          "unresolvedDetails": [
+            "原图为静态状态；点击、抽屉进入与两支路的强调时序为原创。",
+            "未见完整运行历史，不补成功状态，不执行Save、Share或Upgrade。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "software-branch-workflow"
+      ],
+      "adaptations": [
+        {
+          "workId": "marcel-branch-workflow-1993778795648839775",
+          "presetId": "software-branch-workflow",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "横屏重排同一四节点工作流，原创查看触发器配置并依次聚焦双路径，保留Draft。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-022",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-023",
+          "pageNumber": 1,
+          "cardOrder": 23,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "tuki-logistics-1989691748004573519"
+      ],
+      "observationDepths": [
+        "static-image-observed"
+      ],
+      "observations": [
+        {
+          "workId": "tuki-logistics-1989691748004573519",
+          "title": "Logistics route map",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "static-image-observed",
+          "observedAt": "2026-09-27",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-023"
+              ]
+            },
+            {
+              "method": "referenceMedia-exact-match",
+              "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+            }
+          ],
+          "observedDetails": [
+            "4096×2867静态图：黑色点阵物流工作区、双行日期/筛选工具栏、橙棕节点和分组框。",
+            "Origin、两个depot、Main Hub内Zone-1/Zone-2、Retail Node内Shop A/Shop B；多条带u/hr数值的曲线。",
+            "Main Hub至Shop A既有连线标85u/hr，右侧其他线越出原图边界。"
+          ],
+          "unresolvedDetails": [
+            "没有观察到流量数据变化；运行点与局部确认属于原创。",
+            "右侧画外终点未知，不补造节点，不执行Import、Export或Manage。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "software-logistics-route-map"
+      ],
+      "adaptations": [
+        {
+          "workId": "tuki-logistics-1989691748004573519",
+          "presetId": "software-logistics-route-map",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "横屏重建黑橙节点图，选择Main Hub并沿既有路径播放运行点，85u/hr仅强调一次，数据保持。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-023",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p1-024",
+          "pageNumber": 1,
+          "cardOrder": 24,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "max-chat-canvas-1989431455186063453"
+      ],
+      "observationDepths": [
+        "multiple-video-times-observed"
+      ],
+      "observations": [
+        {
+          "workId": "max-chat-canvas-1989431455186063453",
+          "title": "Context branching chat canvas",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "multiple-video-times-observed",
+          "observedAt": "2026-09-30",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p1-024"
+              ]
+            },
+            {
+              "method": "referenceMedia-exact-match",
+              "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+            }
+          ],
+          "observedDetails": [
+            "原片1920×1080、36.246009秒；浏览器实际查看12个暂停状态，原片未下载。",
+            "0s：Purple-blue desktop surrounding a large black fine-grid canvas; toolbar includes Saved and four tools; a single small empty Gemini 2.5 Flash prompt node; minimap lower right.",
+            "5.894375s：Same node holds what is maxly.chat? and a collapsed web-search row labelled maxly.chat with 3 results; answer is not yet visible at this sample.",
+            "9.061502s：View is zoomed into same node; answer paragraph present, white fork and plus controls at its bottom; source pointer over text.",
+            "10.175861s：GitHub for LLMs is blue-highlighted inline, a small plus control appears just right of node at the selection's vertical position; canvas pulled back.",
+            "12.639182s：New connected node focused while original remains partially at left; new node's top quote is GitHub for LLMs and typed question reads do you know its features?",
+            "16.070236s：Original node now above first child with vertical connecting line; run parallel prompts is selected in blue and a plus sits beside it.",
+            "21.547511s：Two child nodes below a common fork: left quote GitHub for LLMs has question, answer and expanded three-result search list; right quote run parallel prompts has thats pretty cool! and a paragraph answer. Original is above viewport edge.",
+            "26.158123s：Overview shows original and two curved child connections; search overlay above original has typed what, highlighted matching first result, Both filter, keyboard help, and a lower keystroke toast showing Command-A.",
+            "29.559852s：Search overlay is closed; view focuses long first child answer, second child persists at right and same connections above; no theme switch seen.",
+            "32.052498s：Another connected empty node is focused, sign up at max is being typed; no response observed at this point.",
+            "34.193241s：Black promotional end slate with large white maxly.chat text.",
+            "35.923431s：Same maxly.chat black end slate remains."
+          ],
+          "unresolvedDetails": [
+            "20秒横屏重排、中文示例、光标和Enter反馈为独立编排；不包含第三个推广输入节点和广告尾页。",
+            "没有主题切换或真实模型、搜索、注册调用；两条子问题和选区内容需结合新的口播修改源码。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "interaction-chat-canvas-branch"
+      ],
+      "adaptations": [
+        {
+          "workId": "max-chat-canvas-1989431455186063453",
+          "presetId": "interaction-chat-canvas-branch",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "保持原文选区与引用连接，重建两个子分支、来源展开和搜索返回；仅是20秒中文机制适配。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-024",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "video",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p2-001",
+          "pageNumber": 2,
+          "cardOrder": 1,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "krea-nodes-1986459811462926574"
+      ],
+      "observationDepths": [
+        "multiple-video-times-observed"
+      ],
+      "observations": [
+        {
+          "workId": "krea-nodes-1986459811462926574",
+          "title": "Krea Nodes",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "multiple-video-times-observed",
+          "observedAt": "2026-09-30",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p2-001"
+              ]
+            },
+            {
+              "method": "referenceMedia-exact-match",
+              "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+            }
+          ],
+          "observedDetails": [
+            "原片22.592秒；浏览器实际查看14个暂停状态，原片未下载。",
+            "0s：灰白背景，中心灰色Introducing，画面尚无UI。",
+            "2.339624s：Introducing Nodes灰色大字仍叠在中心，节点群从右侧进入；左Image已为粉车人物图，蓝线连到屏幕右边局部LLM输入。",
+            "4.057786s：左侧人物粉色敞篷车图片节点，蓝色Image线已接到LLM，LLM内Low angle和Create new views；黄色Prompt线接右Nano Banana空图片节点，图像输出与提示端口可见，黑白大指针停在LLM旁Run。",
+            "5.483495s：镜头持续推近右移，LLM正显示Close，右Nano Banana中已有粉车人物的新角度图片，蓝黄连线仍在；指针在Run按钮旁。",
+            "7.1651s：LLM为Close up，右生成图改成车头和车轮的近景，左图仍保留，镜头继续向右；Run按钮与大光标仍在同一位置关系。",
+            "8.627365s：LLM与右节点提示框均为Car only，右图人物消失只剩粉车，三节点连接和画布持续存在。",
+            "10.820763s：镜头继续沿画布向右，Nano Banana图像输出蓝线接到Hunyuan3D Reference Image输入；右节点灰底中粉车为去背景3D对象，紫色3D Object输出端口，Run与大指针出现在其旁。",
+            "11.917462s：Hunyuan3D灰底粉车已从正面旋转到侧后方；Nano Banana输出蓝线仍接Reference Image，紫色3D Object没有看到后续连接。",
+            "13.489398s：画布切到三张并排Veo3.1节点，三个蓝色Start Frame连接来自左上同一图像；三张初始均粉车。提示依次Clouds appear and starts to fly、Turns into a plane and lifts off、Turns into a boat and sails away；绿色Video输出，指针拖选第一张有半透明选框。",
+            "15.573126s：淡蓝圆角选区包住三张Veo节点，组旁Run Nodes与大指针，三张画面仍是初始粉车，蓝线输入均持续存在。",
+            "17.364401s：三视频在同一组里同时变化：第一车上方云朵用细线连车，第二粉车长出机翼，第三变成粉色船并出现水面；人物重新出现在三结果里。",
+            "19.557799s：三路视频继续在各自节点内运动：云朵挂起的车与飞机车升空，第三船前向驶过水面，节点端口提示和组选区保持。",
+            "20.983508s：节点结果消失后，灰白背景中心为黑色Krea抽象标志，没有推广文字。",
+            "21.93398s：尾部画面完全为灰白背景，已没有节点或文字。"
+          ],
+          "unresolvedDetails": [
+            "完整主要图像→语言→图像→三维及并行三视频链；29秒中文，程序车、XYZ面投影几何与代码运动，按下反馈和n.尾页为原创补充。",
+            "将参考人物及照片替换为原创程序绘制产品，保留同一内容对象的视角与形态变化。",
+            "替换中文文案、横屏重新排布与延长阅读时间；非像素或逐帧完整原作。",
+            "原片指针靠近Run和Run Nodes，暂停样本未证实按下瞬间；新片的按下反馈属创作补充。",
+            "不调用模型服务、图片或视频生成服务，不执行原作推广请求。",
+            "最终统一诊断与导出检查见verification.md；不以源码存在推定通过。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "ai-image-model-video-nodes"
+      ],
+      "adaptations": [
+        {
+          "workId": "krea-nodes-1986459811462926574",
+          "presetId": "ai-image-model-video-nodes",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "完整主要图像→语言→图像→三维及并行三视频链；29秒中文，程序车、XYZ面投影几何与代码运动，按下反馈和n.尾页为原创补充。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [
+          "ai-image-model-video-nodes"
+        ],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    },
+    {
+      "mediaGroupId": "media-025",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaTypeFromExtension": "image",
+      "cardOccurrences": 1,
+      "cards": [
+        {
+          "entryId": "ai-flow-p2-002",
+          "pageNumber": 2,
+          "cardOrder": 2,
+          "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "originalUrlIndependentlyKnown": true
+        }
+      ],
+      "observed": true,
+      "observedWorkIds": [
+        "ayda-command-block-1987158458567717093"
+      ],
+      "observationDepths": [
+        "static-image-observed"
+      ],
+      "observations": [
+        {
+          "workId": "ayda-command-block-1987158458567717093",
+          "title": "Command Block / web { @intrfacer }",
+          "originalUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "recordStatus": "observed",
+          "observationDepth": "static-image-observed",
+          "observedAt": "2026-09-27",
+          "observedEvidencePresent": true,
+          "joinEvidence": [
+            {
+              "method": "originalWorkUrl-exact-match",
+              "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+              "entryIds": [
+                "ai-flow-p2-002"
+              ]
+            },
+            {
+              "method": "referenceMedia-exact-match",
+              "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+            }
+          ],
+          "observedDetails": [
+            "1920×1080静态图：黑色Command Block、绿黄等宽指令、9 PM/6 AM/CET+3时间胶囊。",
+            "左侧完整块以白色柔性光纤连接右侧部分出画的卡片；端口有漏斗状柔光。",
+            "弹层发布者Ayda Oz，正文web { @intrfacer }；未据提及推定原设计署名。"
+          ],
+          "unresolvedDetails": [
+            "右卡只保留已见文字片段，不补完整逻辑。",
+            "定位between、时间确认和单次光流为原创，不表示真实设备执行。"
+          ]
+        }
+      ],
+      "adaptedPresetIds": [
+        "ai-command-block-link"
+      ],
+      "adaptations": [
+        {
+          "workId": "ayda-command-block-1987158458567717093",
+          "presetId": "ai-command-block-link",
+          "registeredInCatalog": true,
+          "recordedStatus": "implemented-and-browser-checked",
+          "difference": "保持黑色双块局部构图和固定时间，用可回拖的光标确认与单束光流展示条件关系。",
+          "verificationEvidence": "../../verification.md"
+        }
+      ],
+      "unresolved": {
+        "originalUrlUnknownEntryIds": [],
+        "missingObservedEvidence": false,
+        "missingRegisteredPresetIds": [],
+        "finalValidationPendingPresetIds": [],
+        "completeOriginalReplicaVerified": false,
+        "note": "每组的原作缓动、素材、像素和全段完整复刻均未在此审计中证明；具体差异/未解决项保留在observations。"
+      }
+    }
+  ],
+  "limitations": [
+    "本次25媒体均能关联实际观察记录，视频证据为多时点取样、图片为静态观察；证据深度不构成完整原片逐帧覆盖。",
+    "实现仍包含中文重排、原创素材、原创操作反馈或局部机制改编；映射预设不等于完整原作品复刻。",
+    "第1页第5卡的独立原作URL仍未核实，不因媒体重复填补该字段。",
+    "统一诊断和导出验证以verification.md为准；本审计只保存当前机制状态，不重新运行所有预设。",
+    "AI Flow外其余分类、跨分类重复项与更新后的站点列表未在此审计中完成。"
+  ]
+}

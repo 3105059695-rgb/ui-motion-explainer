@@ -1,0 +1,1407 @@
+{
+  "schemaVersion": 1,
+  "batch": 19,
+  "recordedAt": "2026-10-01",
+  "targetFormat": "1920x1080 landscape",
+  "scope": "Three specifically observed dynamic Sidebar sources, preserving their actual mechanisms and major interface regions. UI Tips/Dashboard directory enumeration separately adds zero observations. Original sample media/research screenshots not bundled. Whole-site goal remains incomplete.",
+  "works": [
+    {
+      "id": "batch19-gustavo",
+      "title": "长侧边栏 · 彩色锚点与滚动渐隐",
+      "author": "@heyimgustavo",
+      "sourceURL": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "inventoryEntryId": "sidebar-p1-005",
+      "categoryNames": [
+        "Sidebar"
+      ],
+      "observationDepth": "multiple-video-times-observed",
+      "sourceDuration": 10.991667,
+      "sourceDimensions": {
+        "width": 936,
+        "height": 1190
+      },
+      "acceptedPausedFrameCount": 8,
+      "acceptedSamples": [
+        {
+          "timeSeconds": 0,
+          "frameTime": 0,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "description": "Initial scrolled sidebar: Image Outlines pink dot. Typography tail, Color, Layout and Motion groups; edge fades; cursor near Nested Border Radius."
+        },
+        {
+          "timeSeconds": 2.000345,
+          "frameTime": 2,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "description": "Nested Border Radius selected with amber dot; cursor hovering Hit Areas, whose text is darker."
+        },
+        {
+          "timeSeconds": 4.000532,
+          "frameTime": 4,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "description": "Sidebar scrolled upward to Typography. Blue dot near Optical Alignment while cursor hovers Tabular Numbers; anchor transition visible."
+        },
+        {
+          "timeSeconds": 5.000794,
+          "frameTime": 5,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "description": "Tabular Numbers selected with blue dot. Cursor moved down to Noise New badge."
+        },
+        {
+          "timeSeconds": 6.000284,
+          "frameTime": 6,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "description": "Noise selected with pink dot; Typography, Color and Layout remain in same sidebar viewport."
+        },
+        {
+          "timeSeconds": 8.000288,
+          "frameTime": 8,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "description": "Sidebar scrolled back to top showing Index, GOATs, Resources, Craft and Typography. Cursor around references link; selected lower Color item outside viewport."
+        },
+        {
+          "timeSeconds": 9.500933,
+          "frameTime": 9.5,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "description": "Novelty Budget selected with orange dot. Cursor hovering Letter Spacing."
+        },
+        {
+          "timeSeconds": 10.80032,
+          "frameTime": 10.8,
+          "paused": true,
+          "readyState": 4,
+          "decodedFrameConfirmed": true,
+          "description": "Final Text Wrapping selected with blue dot; same top sidebar, New badges and lower fade retained."
+        }
+      ],
+      "observedImageCount": 0,
+      "mechanisms": [
+        "Single persistent long sidebar over a landscape background",
+        "Top-level Index, GOATs and Resources links",
+        "Craft, Typography, Color, Layout and Motion groups with colored SVG icons",
+        "Mint New badges on selected documented items",
+        "Hover text darkens while current selection remains distinct",
+        "Single colored anchor dot changes position and category color across selections",
+        "Inner scrolling reveals earlier groups while top and bottom fades obscure boundary rows",
+        "Selection sequence Image Outlines to Nested Border Radius to Optical Alignment to Tabular Numbers to Noise to Novelty Budget to Text Wrapping"
+      ],
+      "differences": [
+        "Portrait936x1190 adapted to1920x1080 landscape with same persistent sidebar and source blank area.",
+        "24-second readable timing preserves continuous selection and scrolling sequence; exact key/click events between accepted samples are not observed.",
+        "Landscape redrawn as independent local SVG; no source media or screenshots included in module.",
+        "Resources, Nested Border Radius and Text Wrapping labels are editable parameters.",
+        "No invented document content, search input, service result or persistence added."
+      ],
+      "unknowns": [
+        "Exact click bindings, hover timing and anchor easing between samples",
+        "Full source website identity and body content outside the captured sidebar",
+        "Whether navigation changes URL, scrolls a document or loads content",
+        "Backend services and real persistence",
+        "Content below Motion Interruptibility or inside hidden menus"
+      ],
+      "sourceObservationMethod": "Exact source card modal and original href read; original remote video actually paused/viewed at accepted samples. No remote pixels distributed. Not a full original source-code replica or real service execution.",
+      "implementation": {
+        "presetId": "interaction-sidebar-colored-anchor-trail",
+        "title": "长侧边栏 · 彩色锚点与滚动渐隐",
+        "duration": 24,
+        "params": {
+          "title": "Resources",
+          "prompt": "Nested Border Radius",
+          "result": "Text Wrapping"
+        },
+        "paramLimits": {
+          "title": 20,
+          "prompt": 32,
+          "result": 28
+        },
+        "paramSemantics": {
+          "title": "Top-level Resources navigation label",
+          "prompt": "Layout section Nested Border Radius label and first selected target",
+          "result": "Typography section Text Wrapping label and final selected target"
+        },
+        "keyTimes": {
+          "0": "Image Outlines initial lower sidebar",
+          "3.5": "Nested Border Radius selected",
+          "5": "Hit Areas hover",
+          "8.3": "Optical Alignment selected after upward scroll",
+          "10.3": "Tabular Numbers selected",
+          "12.4": "Noise selected",
+          "14.8": "Top-level and Craft revealed",
+          "16.8": "Novelty Budget selected",
+          "18.7": "Letter Spacing hover",
+          "21.5": "Text Wrapping final selection",
+          "24": "End hold"
+        },
+        "module": "../presets/gustavosidebar.js"
+      },
+      "mainGalleryValidation": {
+        "presetId": "interaction-sidebar-colored-anchor-trail",
+        "samples": [
+          {
+            "error": "",
+            "id": "interaction-sidebar-colored-anchor-trail",
+            "scene": "Index\nGOATs\nResources\nCraft\nPerformance Is Design\nHow to Get References\nNovelty Budget\nTaste Is Trained\nTimelessness\nTypography\nLetter Spacing\nText Wrapping\nTabular Numbers\nNew\nOptical Alignment\nNew\nIcons\nFont Smoothing\nColor\nOKLCH\nNoise\nNew\nShadows, Not Borders\nImage Outlines\nLayout\nNested Border Radius\nNew\nHit Areas\nHTML Background\nNew\nClip-Path\nScroll Fades\nMotion\nIcon Morph\nButton Press\nEasings\nStagger\nInterruptibility\n侧边栏机制独立重建 · SVG 风景 · 示例导航文字",
+            "time": "0.00 / 24.00",
+            "title": "长侧边栏 · 彩色锚点与滚动渐隐",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-colored-anchor-trail",
+            "scene": "Index\nGOATs\nResources\nCraft\nPerformance Is Design\nHow to Get References\nNovelty Budget\nTaste Is Trained\nTimelessness\nTypography\nLetter Spacing\nText Wrapping\nTabular Numbers\nNew\nOptical Alignment\nNew\nIcons\nFont Smoothing\nColor\nOKLCH\nNoise\nNew\nShadows, Not Borders\nImage Outlines\nLayout\nNested Border Radius\nNew\nHit Areas\nHTML Background\nNew\nClip-Path\nScroll Fades\nMotion\nIcon Morph\nButton Press\nEasings\nStagger\nInterruptibility\n侧边栏机制独立重建 · SVG 风景 · 示例导航文字",
+            "time": "3.50 / 24.00",
+            "title": "长侧边栏 · 彩色锚点与滚动渐隐",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-colored-anchor-trail",
+            "scene": "Index\nGOATs\nResources\nCraft\nPerformance Is Design\nHow to Get References\nNovelty Budget\nTaste Is Trained\nTimelessness\nTypography\nLetter Spacing\nText Wrapping\nTabular Numbers\nNew\nOptical Alignment\nNew\nIcons\nFont Smoothing\nColor\nOKLCH\nNoise\nNew\nShadows, Not Borders\nImage Outlines\nLayout\nNested Border Radius\nNew\nHit Areas\nHTML Background\nNew\nClip-Path\nScroll Fades\nMotion\nIcon Morph\nButton Press\nEasings\nStagger\nInterruptibility\n侧边栏机制独立重建 · SVG 风景 · 示例导航文字",
+            "time": "5.00 / 24.00",
+            "title": "长侧边栏 · 彩色锚点与滚动渐隐",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-colored-anchor-trail",
+            "scene": "Index\nGOATs\nResources\nCraft\nPerformance Is Design\nHow to Get References\nNovelty Budget\nTaste Is Trained\nTimelessness\nTypography\nLetter Spacing\nText Wrapping\nTabular Numbers\nNew\nOptical Alignment\nNew\nIcons\nFont Smoothing\nColor\nOKLCH\nNoise\nNew\nShadows, Not Borders\nImage Outlines\nLayout\nNested Border Radius\nNew\nHit Areas\nHTML Background\nNew\nClip-Path\nScroll Fades\nMotion\nIcon Morph\nButton Press\nEasings\nStagger\nInterruptibility\n侧边栏机制独立重建 · SVG 风景 · 示例导航文字",
+            "time": "8.30 / 24.00",
+            "title": "长侧边栏 · 彩色锚点与滚动渐隐",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-colored-anchor-trail",
+            "scene": "Index\nGOATs\nResources\nCraft\nPerformance Is Design\nHow to Get References\nNovelty Budget\nTaste Is Trained\nTimelessness\nTypography\nLetter Spacing\nText Wrapping\nTabular Numbers\nNew\nOptical Alignment\nNew\nIcons\nFont Smoothing\nColor\nOKLCH\nNoise\nNew\nShadows, Not Borders\nImage Outlines\nLayout\nNested Border Radius\nNew\nHit Areas\nHTML Background\nNew\nClip-Path\nScroll Fades\nMotion\nIcon Morph\nButton Press\nEasings\nStagger\nInterruptibility\n侧边栏机制独立重建 · SVG 风景 · 示例导航文字",
+            "time": "10.30 / 24.00",
+            "title": "长侧边栏 · 彩色锚点与滚动渐隐",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-colored-anchor-trail",
+            "scene": "Index\nGOATs\nResources\nCraft\nPerformance Is Design\nHow to Get References\nNovelty Budget\nTaste Is Trained\nTimelessness\nTypography\nLetter Spacing\nText Wrapping\nTabular Numbers\nNew\nOptical Alignment\nNew\nIcons\nFont Smoothing\nColor\nOKLCH\nNoise\nNew\nShadows, Not Borders\nImage Outlines\nLayout\nNested Border Radius\nNew\nHit Areas\nHTML Background\nNew\nClip-Path\nScroll Fades\nMotion\nIcon Morph\nButton Press\nEasings\nStagger\nInterruptibility\n侧边栏机制独立重建 · SVG 风景 · 示例导航文字",
+            "time": "12.40 / 24.00",
+            "title": "长侧边栏 · 彩色锚点与滚动渐隐",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-colored-anchor-trail",
+            "scene": "Index\nGOATs\nResources\nCraft\nPerformance Is Design\nHow to Get References\nNovelty Budget\nTaste Is Trained\nTimelessness\nTypography\nLetter Spacing\nText Wrapping\nTabular Numbers\nNew\nOptical Alignment\nNew\nIcons\nFont Smoothing\nColor\nOKLCH\nNoise\nNew\nShadows, Not Borders\nImage Outlines\nLayout\nNested Border Radius\nNew\nHit Areas\nHTML Background\nNew\nClip-Path\nScroll Fades\nMotion\nIcon Morph\nButton Press\nEasings\nStagger\nInterruptibility\n侧边栏机制独立重建 · SVG 风景 · 示例导航文字",
+            "time": "14.80 / 24.00",
+            "title": "长侧边栏 · 彩色锚点与滚动渐隐",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-colored-anchor-trail",
+            "scene": "Index\nGOATs\nResources\nCraft\nPerformance Is Design\nHow to Get References\nNovelty Budget\nTaste Is Trained\nTimelessness\nTypography\nLetter Spacing\nText Wrapping\nTabular Numbers\nNew\nOptical Alignment\nNew\nIcons\nFont Smoothing\nColor\nOKLCH\nNoise\nNew\nShadows, Not Borders\nImage Outlines\nLayout\nNested Border Radius\nNew\nHit Areas\nHTML Background\nNew\nClip-Path\nScroll Fades\nMotion\nIcon Morph\nButton Press\nEasings\nStagger\nInterruptibility\n侧边栏机制独立重建 · SVG 风景 · 示例导航文字",
+            "time": "16.80 / 24.00",
+            "title": "长侧边栏 · 彩色锚点与滚动渐隐",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-colored-anchor-trail",
+            "scene": "Index\nGOATs\nResources\nCraft\nPerformance Is Design\nHow to Get References\nNovelty Budget\nTaste Is Trained\nTimelessness\nTypography\nLetter Spacing\nText Wrapping\nTabular Numbers\nNew\nOptical Alignment\nNew\nIcons\nFont Smoothing\nColor\nOKLCH\nNoise\nNew\nShadows, Not Borders\nImage Outlines\nLayout\nNested Border Radius\nNew\nHit Areas\nHTML Background\nNew\nClip-Path\nScroll Fades\nMotion\nIcon Morph\nButton Press\nEasings\nStagger\nInterruptibility\n侧边栏机制独立重建 · SVG 风景 · 示例导航文字",
+            "time": "18.70 / 24.00",
+            "title": "长侧边栏 · 彩色锚点与滚动渐隐",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-colored-anchor-trail",
+            "scene": "Index\nGOATs\nResources\nCraft\nPerformance Is Design\nHow to Get References\nNovelty Budget\nTaste Is Trained\nTimelessness\nTypography\nLetter Spacing\nText Wrapping\nTabular Numbers\nNew\nOptical Alignment\nNew\nIcons\nFont Smoothing\nColor\nOKLCH\nNoise\nNew\nShadows, Not Borders\nImage Outlines\nLayout\nNested Border Radius\nNew\nHit Areas\nHTML Background\nNew\nClip-Path\nScroll Fades\nMotion\nIcon Morph\nButton Press\nEasings\nStagger\nInterruptibility\n侧边栏机制独立重建 · SVG 风景 · 示例导航文字",
+            "time": "21.50 / 24.00",
+            "title": "长侧边栏 · 彩色锚点与滚动渐隐",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-colored-anchor-trail",
+            "scene": "Index\nGOATs\nResources\nCraft\nPerformance Is Design\nHow to Get References\nNovelty Budget\nTaste Is Trained\nTimelessness\nTypography\nLetter Spacing\nText Wrapping\nTabular Numbers\nNew\nOptical Alignment\nNew\nIcons\nFont Smoothing\nColor\nOKLCH\nNoise\nNew\nShadows, Not Borders\nImage Outlines\nLayout\nNested Border Radius\nNew\nHit Areas\nHTML Background\nNew\nClip-Path\nScroll Fades\nMotion\nIcon Morph\nButton Press\nEasings\nStagger\nInterruptibility\n侧边栏机制独立重建 · SVG 风景 · 示例导航文字",
+            "time": "24.00 / 24.00",
+            "title": "长侧边栏 · 彩色锚点与滚动渐隐",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-colored-anchor-trail",
+            "scene": "Index\nGOATs\n测试<&>\nCraft\nPerformance Is Design\nHow to Get References\nNovelty Budget\nTaste Is Trained\nTimelessness\nTypography\nLetter Spacing\n结果<&>\nTabular Numbers\nNew\nOptical Alignment\nNew\nIcons\nFont Smoothing\nColor\nOKLCH\nNoise\nNew\nShadows, Not Borders\nImage Outlines\nLayout\n中文输入<&>\nNew\nHit Areas\nHTML Background\nNew\nClip-Path\nScroll Fades\nMotion\nIcon Morph\nButton Press\nEasings\nStagger\nInterruptibility\n侧边栏机制独立重建 · SVG 风景 · 示例导航文字",
+            "time": "0.00 / 24.00",
+            "title": "长侧边栏 · 彩色锚点与滚动渐隐",
+            "phase": "short-Chinese-and-escaped"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-colored-anchor-trail",
+            "scene": "Index\nGOATs\n测试<&>\nCraft\nPerformance Is Design\nHow to Get References\nNovelty Budget\nTaste Is Trained\nTimelessness\nTypography\nLetter Spacing\n结果<&>\nTabular Numbers\nNew\nOptical Alignment\nNew\nIcons\nFont Smoothing\nColor\nOKLCH\nNoise\nNew\nShadows, Not Borders\nImage Outlines\nLayout\n中文输入<&>\nNew\nHit Areas\nHTML Background\nNew\nClip-Path\nScroll Fades\nMotion\nIcon Morph\nButton Press\nEasings\nStagger\nInterruptibility\n侧边栏机制独立重建 · SVG 风景 · 示例导航文字",
+            "time": "3.50 / 24.00",
+            "title": "长侧边栏 · 彩色锚点与滚动渐隐",
+            "phase": "short-Chinese-and-escaped"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-colored-anchor-trail",
+            "scene": "Index\nGOATs\n测试<&>\nCraft\nPerformance Is Design\nHow to Get References\nNovelty Budget\nTaste Is Trained\nTimelessness\nTypography\nLetter Spacing\n结果<&>\nTabular Numbers\nNew\nOptical Alignment\nNew\nIcons\nFont Smoothing\nColor\nOKLCH\nNoise\nNew\nShadows, Not Borders\nImage Outlines\nLayout\n中文输入<&>\nNew\nHit Areas\nHTML Background\nNew\nClip-Path\nScroll Fades\nMotion\nIcon Morph\nButton Press\nEasings\nStagger\nInterruptibility\n侧边栏机制独立重建 · SVG 风景 · 示例导航文字",
+            "time": "21.50 / 24.00",
+            "title": "长侧边栏 · 彩色锚点与滚动渐隐",
+            "phase": "short-Chinese-and-escaped"
+          },
+          {
+            "error": "",
+            "id": "interaction-sidebar-colored-anchor-trail",
+            "scene": "Index\nGOATs\n测试<&>\nCraft\nPerformance Is Design\nHow to Get References\nNovelty Budget\nTaste Is Trained\nTimelessness\nTypography\nLetter Spacing\n结果<&>\nTabular Numbers\nNew\nOptical Alignment\nNew\nIcons\nFont Smoothing\nColor\nOKLCH\nNoise\nNew\nShadows, Not Borders\nImage Outlines\nLayout\n中文输入<&>\nNew\nHit Areas\nHTML Background\nNew\nClip-Path\nScroll Fades\nMotion\nIcon Morph\nButton Press\nEasings\nStagger\nInterruptibility\n侧边栏机制独立重建 · SVG 风景 · 示例导航文字",
+            "time": "24.00 / 24.00",
+            "title": "长侧边栏 · 彩色锚点与滚动渐隐",
+            "phase": "short-Chinese-and-escaped"
+          }
+        ],
+        "tailToZeroMatches": true,
+        "shortParamsChecked": true,
+        "majorStateScreenshotViewed": true,
+        "logs": [],
+        "scope": "Major default states checked in actual main-gallery DOM and selected full-gallery frames viewed. Short Chinese <&> via form Enter and tail→0 checked. No maximum-length certification or full continuous viewing."
+      },
+      "exportValidation": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "frames": 720,
+        "seconds": 24,
+        "audio": false,
+        "fullDecode": "passed",
+        "sampledVisualReview": true,
+        "fullyWatched": false
+      },
+      "previewFile": "gustavo-craft-sidebar.mp4"
+    },
+    {
+      "id": "batch19-guerriero",
+      "title": "Lab01 · 十二段交互原型连续巡览",
+      "author": "@guerriero_se",
+      "sourceURL": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "inventoryEntryId": "sidebar-p1-006",
+      "categoryNames": [
+        "Sidebar"
+      ],
+      "observationDepth": "multiple-video-times-observed",
+      "sourceDuration": 33.135011,
+      "sourceDimensions": {
+        "width": 1080,
+        "height": 1080
+      },
+      "acceptedPausedFrameCount": 16,
+      "acceptedSamples": [
+        {
+          "time": 0.021587,
+          "frameTime": 0.033333,
+          "paused": true,
+          "duration": 33.135011,
+          "width": 1080,
+          "height": 1080,
+          "readyState": 4,
+          "description": "Appearance: portfolio header Lab01 by Sebastiano Guerriero with Follow on X and Hire Me; Dark theme selected among Dark/Light/Gold; Sidebar transparent toggle off; Cancel and Save visible."
+        },
+        {
+          "time": 2.542472,
+          "frameTime": 2.2,
+          "paused": true,
+          "duration": 33.135011,
+          "width": 1080,
+          "height": 1080,
+          "readyState": 4,
+          "description": "Mail: Inbox selected and Sent hovered; eight navigation items and eleven sender/subject-prefix rows; Sofia Rossi row and checkbox selected."
+        },
+        {
+          "time": 5.098686,
+          "frameTime": 5.066667,
+          "paused": true,
+          "duration": 33.135011,
+          "width": 1080,
+          "height": 1080,
+          "readyState": 4,
+          "description": "Timeline: dark rail, Day active beside Week/Month, Today three entries, Yesterday four entries, Feb 8 one entry; history remains readable."
+        },
+        {
+          "time": 8.014929,
+          "frameTime": 8.033333,
+          "paused": true,
+          "duration": 33.135011,
+          "width": 1080,
+          "height": 1080,
+          "readyState": 4,
+          "description": "Layer menu: Rotate Layer, Bring to Front, Replace Layer, Open Prototype, View Hotkeys and shortcuts; Replace Layer hovered only."
+        },
+        {
+          "time": 10.981452,
+          "frameTime": 10.3,
+          "paused": true,
+          "duration": 33.135011,
+          "width": 1080,
+          "height": 1080,
+          "readyState": 4,
+          "description": "Board before drag: To Do has Define Requirements, Setup Dev Environment and Implement Login Feature; Doing has Design Home Page, Database Schema Design and API Integration; lower source area is cropped."
+        },
+        {
+          "time": 11.527582,
+          "frameTime": 11.533333,
+          "paused": true,
+          "duration": 33.135011,
+          "width": 1080,
+          "height": 1080,
+          "readyState": 4,
+          "description": "Board after drag: the same Define Requirements card has moved to the top of Doing; To Do now begins Setup Dev Environment then Implement Login Feature and Write Unit Tests."
+        },
+        {
+          "time": 13.529869,
+          "frameTime": 13.533333,
+          "paused": true,
+          "duration": 33.135011,
+          "width": 1080,
+          "height": 1080,
+          "readyState": 4,
+          "description": "Studio/schema: Sebastiano Guerriero / Acme Co.; Quick Actions, Settings, Studio selected; Spaces Customer Service, Marketing, Warehouse, Finance; Builds Jobs/Database; Product schema editor and Validating schema… state."
+        },
+        {
+          "time": 14.93006,
+          "frameTime": 14.933333,
+          "paused": true,
+          "duration": 33.135011,
+          "width": 1080,
+          "height": 1080,
+          "readyState": 4,
+          "description": "Opportunities before resize: full black rail and wide secondary sidebar; All 4, Archived 0; Status New 5, Open 2, Solved 1, Add Status; Group Marketing 3, Sales 1, Design 4; right content skeleton and boundary handle."
+        },
+        {
+          "time": 15.974155,
+          "frameTime": 15.366667,
+          "paused": true,
+          "duration": 33.135011,
+          "width": 1080,
+          "height": 1080,
+          "readyState": 4,
+          "description": "Opportunities after resize: black icon rail remains; secondary sidebar becomes narrow and labels briefly dim; right area remains the source skeleton layout."
+        },
+        {
+          "time": 18.52846,
+          "frameTime": 18.533333,
+          "paused": true,
+          "duration": 33.135011,
+          "width": 1080,
+          "height": 1080,
+          "readyState": 4,
+          "description": "Block action menu: search field, Comment, Ask AI hovered, Delete, Duplicate, Copy link to block; shortcuts and Last edited by Seb today at 12:25 PM footer; no AI execution visible."
+        },
+        {
+          "time": 20.096051,
+          "frameTime": 20.066667,
+          "paused": true,
+          "duration": 33.135011,
+          "width": 1080,
+          "height": 1080,
+          "readyState": 4,
+          "description": "Activities initial: Home selected blue, Activities collapsed, Agents hovered; Team/Settings and right search/skeleton layout visible."
+        },
+        {
+          "time": 21.946701,
+          "frameTime": 21.3,
+          "paused": true,
+          "duration": 33.135011,
+          "width": 1080,
+          "height": 1080,
+          "readyState": 4,
+          "description": "Activities after expansion: Tasks, Meetings and Calls children visible; Calls selected in blue and Home no longer selected; Agents, Team and Settings retained below."
+        },
+        {
+          "time": 24.030113,
+          "frameTime": 24.033333,
+          "paused": true,
+          "duration": 33.135011,
+          "width": 1080,
+          "height": 1080,
+          "readyState": 4,
+          "description": "Draft toolbar: back, DRAFT and Starting a busine… control, Undo/Redo, AI switch off; dropdown Duplicate, Change Status, Download, Version History, Archive; dark document skeleton retained."
+        },
+        {
+          "time": 26.966307,
+          "frameTime": 26.333333,
+          "paused": true,
+          "duration": 33.135011,
+          "width": 1080,
+          "height": 1080,
+          "readyState": 4,
+          "description": "Floating search: light document skeleton with three circular placeholders; rounded bottom Search control remains empty and shows insertion focus."
+        },
+        {
+          "time": 29.028659,
+          "frameTime": 29.033333,
+          "paused": true,
+          "duration": 33.135011,
+          "width": 1080,
+          "height": 1080,
+          "readyState": 4,
+          "description": "Time picker initial: AM selected, 09:22 displayed; cursor at hour hand and corresponding hand positions."
+        },
+        {
+          "time": 32.980481,
+          "frameTime": 32.4,
+          "paused": true,
+          "duration": 33.135011,
+          "width": 1080,
+          "height": 1080,
+          "readyState": 4,
+          "description": "Time picker final: AM selected, PM inactive; display 03:40 and matching hour/minute hand positions."
+        }
+      ],
+      "observedImageCount": 0,
+      "mechanisms": [
+        "One Lab01 page vertically scrolls through twelve distinct coded prototypes, retaining captions and container relationships.",
+        "Dark selected among three previews; transparency off and Cancel/Save visible; no theme switch accepted.",
+        "Inbox active, Sent hover, selected Sofia checkbox, all eight nav labels and eleven sender rows; no send action.",
+        "Day active, grouped Today/Yesterday/Feb 8 history with a narrow icon rail.",
+        "Five actions with keyboard hints and Replace Layer hover; no selected action output.",
+        "Define Requirements is dragged from To Do into Doing, and remaining cards shift to make space.",
+        "Studio active, full Spaces/Builds sidebar beside Product schema and Validating schema… state.",
+        "Secondary sidebar narrows while black icon rail persists; divider moves and visible main skeleton grows.",
+        "Search/menu/shortcuts/footer remain; Ask AI hover only.",
+        "Collapsed Home selection becomes expanded Tasks/Meetings/Calls group, then Calls selection; lower nav moves.",
+        "Document title control opens five-option dropdown; Undo/Redo and AI-off control stay visible.",
+        "Empty rounded Search field gains insertion focus against a light placeholder document.",
+        "AM selected; hands and two-digit values move from 09:22 to 03:40."
+      ],
+      "differences": [
+        "Independent editable 1920x1080 DOM/CSS/SVG adaptation; original 1080x1080 source pixels, photographs, avatars and video are not copied or packaged.",
+        "All twelve prototypes remain in one scrolling portfolio composition. Sticky readable header, horizontal region sizing, 66-second timing, pointer routes, easing and click feedback are original.",
+        "Source states are preserved without claiming real account, mail, schema, AI or service operations. Theme remains Dark; mail is not sent; schema remains visibly Validating schema…; Ask AI is only hovered; draft options are not executed; search remains empty.",
+        "Original wave SVG replaces photo background; generic original line icons, cube/orbit marks and SG monograms replace source images.",
+        "Wide-screen placeholder bars, exact progress ratios and extra spacing are original geometry; cropped or shortened source subject/task text stays visibly abbreviated rather than inventing business content.",
+        "Time picker is an illustrated local interaction, with original pacing and drag path; it is not live system time."
+      ],
+      "unknowns": [
+        "No confirmed theme-change, transparent-sidebar or Save outcome.",
+        "No confirmed mail send/route changes or full truncated subject content.",
+        "No Layer menu selection outcome, Ask AI execution, or generated result.",
+        "No schema-valid completion or backend semantics.",
+        "No real Opportunities dataset behind the visible skeleton.",
+        "No Draft command execution, download file or version history contents.",
+        "No typed search query or returned search results.",
+        "Not all intermediate source drag coordinates and off-screen regions can be read from the square cropped recording."
+      ],
+      "sourceObservationMethod": "Exact source card modal and original href read; original remote video actually paused/viewed at accepted samples. No remote pixels distributed. Not a full original source-code replica or real service execution.",
+      "implementation": {
+        "presetId": "interaction-lab01-prototype-tour",
+        "title": "Lab01 · 十二段交互原型连续巡览",
+        "duration": 66,
+        "params": {
+          "title": "Lab01",
+          "prompt": "Define Requirements",
+          "result": "Opportunities"
+        },
+        "paramLimits": {
+          "title": 24,
+          "prompt": 30,
+          "result": 28
+        },
+        "paramMeaning": {
+          "title": "Portfolio heading",
+          "prompt": "Same Board task dragged between columns",
+          "result": "Opportunities secondary sidebar title"
+        },
+        "keyTimes": [
+          {
+            "region": "Appearance",
+            "start": 0,
+            "end": 4,
+            "states": [
+              {
+                "time": 0,
+                "label": "Dark selected / transparent off"
+              }
+            ]
+          },
+          {
+            "region": "Mail",
+            "start": 4,
+            "end": 8.8,
+            "states": [
+              {
+                "time": 6.5,
+                "label": "Inbox active, Sofia checked, Sent hover"
+              }
+            ]
+          },
+          {
+            "region": "Timeline",
+            "start": 8.8,
+            "end": 13.8,
+            "states": [
+              {
+                "time": 11.8,
+                "label": "Day / Today / Yesterday / Feb 8"
+              }
+            ]
+          },
+          {
+            "region": "Layer menu",
+            "start": 13.8,
+            "end": 17.8,
+            "states": [
+              {
+                "time": 16.5,
+                "label": "Replace Layer hover"
+              }
+            ]
+          },
+          {
+            "region": "Board",
+            "start": 17.8,
+            "end": 25.5,
+            "states": [
+              {
+                "time": 20.5,
+                "label": "Before drag"
+              },
+              {
+                "time": 21.27,
+                "label": "Pickup"
+              },
+              {
+                "time": 22.4,
+                "label": "Same card moving"
+              },
+              {
+                "time": 23.25,
+                "label": "Drop"
+              },
+              {
+                "time": 24.6,
+                "label": "Reflowed columns"
+              }
+            ]
+          },
+          {
+            "region": "Studio / Schema",
+            "start": 25.5,
+            "end": 30.5,
+            "states": [
+              {
+                "time": 28.5,
+                "label": "Studio selected / visible Validating schema…"
+              }
+            ]
+          },
+          {
+            "region": "Opportunities",
+            "start": 30.5,
+            "end": 37.3,
+            "states": [
+              {
+                "time": 31.8,
+                "label": "Wide"
+              },
+              {
+                "time": 32.65,
+                "label": "Grab handle"
+              },
+              {
+                "time": 33.8,
+                "label": "Resize in progress"
+              },
+              {
+                "time": 35.3,
+                "label": "Narrow"
+              }
+            ]
+          },
+          {
+            "region": "Block actions",
+            "start": 37.3,
+            "end": 41.5,
+            "states": [
+              {
+                "time": 39.5,
+                "label": "Ask AI hover, no execution"
+              }
+            ]
+          },
+          {
+            "region": "Activities",
+            "start": 41.5,
+            "end": 48,
+            "states": [
+              {
+                "time": 42.9,
+                "label": "Home active / collapsed"
+              },
+              {
+                "time": 43.95,
+                "label": "Click expand"
+              },
+              {
+                "time": 44.5,
+                "label": "Expansion"
+              },
+              {
+                "time": 45.25,
+                "label": "Click Calls"
+              },
+              {
+                "time": 45.7,
+                "label": "Calls active"
+              }
+            ]
+          },
+          {
+            "region": "Draft toolbar",
+            "start": 48,
+            "end": 53,
+            "states": [
+              {
+                "time": 49.86,
+                "label": "Click title control"
+              },
+              {
+                "time": 51,
+                "label": "Complete dropdown visible"
+              }
+            ]
+          },
+          {
+            "region": "Floating search",
+            "start": 53,
+            "end": 58.5,
+            "states": [
+              {
+                "time": 54.86,
+                "label": "Click empty field"
+              },
+              {
+                "time": 56,
+                "label": "Empty query focused"
+              }
+            ]
+          },
+          {
+            "region": "Time picker",
+            "start": 58.5,
+            "end": 66,
+            "states": [
+              {
+                "time": 59.8,
+                "label": "09:22 AM"
+              },
+              {
+                "time": 60.4,
+                "label": "Hour hand pickup"
+              },
+              {
+                "time": 61.8,
+                "label": "03:22 AM"
+              },
+              {
+                "time": 62.3,
+                "label": "Minute hand pickup"
+              },
+              {
+                "time": 63.2,
+                "label": "Minute hand in motion"
+              },
+              {
+                "time": 65.5,
+                "label": "03:40 AM final"
+              }
+            ]
+          }
+        ],
+        "module": "../presets/guerrierosidebar.js"
+      },
+      "mainGalleryValidation": {
+        "presetId": "interaction-lab01-prototype-tour",
+        "samples": [
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "0.00 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "6.50 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "11.80 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "16.50 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "20.50 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "22.40 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "24.60 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "28.50 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "31.80 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "33.80 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "35.30 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "39.50 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "42.90 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "44.50 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "45.70 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "51.00 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "56.00 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "59.80 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n03\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "61.80 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n03\n:\n32\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "63.20 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n03\n:\n40\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "65.50 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\nLab01 by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\nDefine Requirements\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\nOpportunities\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n03\n:\n40\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "66.00 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\n测试<&> by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\n中文输入<&>\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\n结果<&>\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "0.00 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "short-Chinese-and-escaped"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\n测试<&> by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\n中文输入<&>\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\n结果<&>\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "22.40 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "short-Chinese-and-escaped"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\n测试<&> by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\n中文输入<&>\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\n结果<&>\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "35.30 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "short-Chinese-and-escaped"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\n测试<&> by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\n中文输入<&>\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\n结果<&>\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n09\n:\n22\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "56.00 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "short-Chinese-and-escaped"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\n测试<&> by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\n中文输入<&>\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\n结果<&>\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n03\n:\n40\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "65.50 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "short-Chinese-and-escaped"
+          },
+          {
+            "error": "",
+            "id": "interaction-lab01-prototype-tour",
+            "scene": "01\n测试<&> by Sebastiano Guerriero\n\nDesigning best-in-class web apps.Follow on X\n\nHire Me\nAppearance\nTheme\n\nCustomize UI colors\n\nSidebar\n\nMake the sidebar transparent\n\nCancel\nSave\n01 — Appearance\nInbox\nSnoozed\nSent\nDraft\nSpam\nImportant\nScheduled\nTrash\nJamie Knox\nWeekly P…\nAvery Chen\nDesign r…\nNoah Patel\nInvoice s…\n✓\nSofia Rossi\nWeekend …\nLiam J.\nYour pac…\nMila Nguyen\nEvent re…\nEthan Brooks\nRe: meet…\nPriya Shah\nSubscrip…\nOlivia Hart\nFinal ed…\nKai W.\nFwd: scr…\nTess C.\nQuick q…\n02 — Mail\nTimeline\nDay\nWeek\nMonth\nToday\nAsked for a high-protein meal plan\nWorked on the b402 dashboard UX\nBrainstormed side projects\nYesterday\nResearched ETF investing strategies\nDrafted a polite client email\nAsked about improving sleep quality\nGenerated tagline ideas for a landing page\nFeb 8, 2026\nExplained a TypeScript generic error\n03 — Timeline\nRotate Layer\nR\nBring to Front\n]\nReplace Layer\n⇧R\nOpen Prototype\n⇧P\nView Hotkeys\n⇧H\n04 — Layer menu\nBoard\nCalendar\nTemplates\nTo Do\nDoing\n中文输入<&>\n\nGather and document all project specifications from stakeholders.\n\nSetup Dev Environment\n\nConfigure all necessary development tools and access f…\n\nImplement Login Feature\n\nDevelop secure login functionality with session management.\n\nSG\nWrite Unit Tests\n\nCover auth flows, drag-and-drop logic, and card state updates wi…\n\nDesign Home Page\n\nCreate wireframes and prototypes for the main landing…\n\nDatabase Schema Design\n\nDefine and create the database architecture for efficient data…\n\nSG\nAPI Integration\n\nDevelop and integrate necessary APIs for third-party services.\n\n05 — Board\nSG\nSebastiano Guerri…\n\nAcme Co.\n\nQuick Actions\nSettings\nStudio\nSpaces\nCustomer Service\nMarketing\nWarehouse\nFinance\nBuilds\nJobs\nDatabase\nValidating schema…\n1\n// Product schema\n2\nmodel Product {\n3\n  fields {\n4\n    name Text\n5\n    description Text?\n6\n    imageUrl Text?\n7\n    gtin Text @unique\n8\n    price Number\n9\n    stockLocation ProductStockLocation\n10\n  }\n11\n12\n  actions {\n13\n    get getProduct(id)\n14\n    create createProduct()\n15\n    list listProducts()\n16\n    update updateProduct(id)\n17\n    update updateProductPrice(id) …\n18\n      @permission(roles: [Admin])\n19\n    }\n20\n    delete deleteProduct(id)\n21\n  }\n22\n23\n  @permission(\n24\n    actions: [list, create, update, …]\n06 — Studio / Schema\n结果<&>\nAll\n4\nArchived\n0\nStatus\nNew\n5\nOpen\n2\nSolved\n1\nAdd Status\nGroup\nMarketing\n3\nSales\n1\nDesign\n4\n07 — Opportunities\nSearch actions…\nComment\n⌘+Shift+M\nAsk AI\n⌘+J\nDelete\nDel\nDuplicate\n⌘+D\nCopy link to block\n⌥+Shift+L\nLast edited by Seb today at 12:25 PM\n08 — Block actions\nHome\nActivities\nTasks\nMeetings\nCalls\nAgents\nTeam\nSettings\n09 — Activities\nDRAFT\nStarting a busine…\nAI\nDuplicate\nChange Status\nDownload\nVersion History\nArchive\n10 — Draft toolbar\nSearch\n11 — Floating search\nAM\nPM\n03\n:\n40\n12\n3\n6\n9\n12 — Time picker\n界面示意 · 独立重建与原创时序",
+            "time": "66.00 / 66.00",
+            "title": "Lab01 · 十二段交互原型连续巡览",
+            "phase": "short-Chinese-and-escaped"
+          }
+        ],
+        "tailToZeroMatches": true,
+        "shortParamsChecked": true,
+        "majorStateScreenshotViewed": true,
+        "logs": [],
+        "scope": "Major default states checked in actual main-gallery DOM and selected full-gallery frames viewed. Short Chinese <&> via form Enter and tail→0 checked. No maximum-length certification or full continuous viewing.",
+        "majorRegionsActuallyViewed": [
+          {
+            "label": "appearance",
+            "time": 0,
+            "capture": "full-page"
+          },
+          {
+            "label": "mail",
+            "time": 6.5,
+            "capture": "full-page"
+          },
+          {
+            "label": "timeline",
+            "time": 11.8,
+            "capture": "full-page"
+          },
+          {
+            "label": "layer",
+            "time": 16.5,
+            "capture": "full-page"
+          },
+          {
+            "label": "board-drop",
+            "time": 24.6,
+            "capture": "full-page"
+          },
+          {
+            "label": "studio",
+            "time": 28.5,
+            "capture": "full-page"
+          },
+          {
+            "label": "opportunities-wide",
+            "time": 31.8,
+            "capture": "full-page"
+          },
+          {
+            "label": "opportunities-narrow",
+            "time": 35.3,
+            "capture": "full-page"
+          },
+          {
+            "label": "block-menu",
+            "time": 39.5,
+            "capture": "full-page"
+          },
+          {
+            "label": "activities",
+            "time": 45.7,
+            "capture": "full-page"
+          },
+          {
+            "label": "draft",
+            "time": 51,
+            "capture": "full-page"
+          },
+          {
+            "label": "search",
+            "time": 56,
+            "capture": "full-page"
+          },
+          {
+            "label": "clock-start",
+            "time": 59.8,
+            "capture": "full-page"
+          },
+          {
+            "label": "clock-final",
+            "time": 65.5,
+            "capture": "full-page"
+          }
+        ],
+        "discardedCaptureAttempt": "Initial clip captures had tool coordinate offsets and were not used to validate full-region layout; all major-region captures were repeated with full-page screenshots and viewed."
+      },
+      "exportValidation": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "frames": 1980,
+        "seconds": 66,
+        "audio": false,
+        "fullDecode": "passed",
+        "sampledVisualReview": true,
+        "fullyWatched": false
+      },
+      "previewFile": "lab01-prototype-tour.mp4"
+    },
+    {
+      "id": "batch19-jamie",
+      "title": "财务侧栏 · 拖动收起与展开",
+      "author": "@Jamie_Merrill",
+      "sourceURL": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "referenceMedia": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "inventoryEntryId": "sidebar-p1-007",
+      "categoryNames": [
+        "Sidebar"
+      ],
+      "observationDepth": "multiple-video-times-observed",
+      "sourceDuration": 6.566667,
+      "sourceDimensions": {
+        "width": 1440,
+        "height": 1440
+      },
+      "acceptedPausedFrameCount": 8,
+      "acceptedSamples": [
+        {
+          "seconds": 0,
+          "paused": true,
+          "readyState": 4,
+          "frameTime": 0,
+          "description": "Black application window on a muted blue/peach gradient. Fixed icon rail, expanded Finance navigation with all ten rows and Overview selected. White Finance > Overview page is empty below its header; ordinary arrow in the white content area."
+        },
+        {
+          "seconds": 0.8,
+          "paused": true,
+          "readyState": 4,
+          "frameTime": 0.8,
+          "description": "Same expanded layout. Cursor reaches the navigation/page boundary near the first row; grey vertical resize handle and horizontal double-arrow cursor appear."
+        },
+        {
+          "seconds": 1.7,
+          "paused": true,
+          "readyState": 4,
+          "frameTime": 1.7,
+          "description": "Expanded side navigation remains at original width. Boundary cursor is lower, beside Payment history; grey handle and dark Drag to resize tooltip are clearly visible."
+        },
+        {
+          "seconds": 2.7,
+          "paused": true,
+          "readyState": 4,
+          "frameTime": 2.7,
+          "description": "Text navigation becomes very narrow. Finance and all menu labels are clipped to leading characters; selection background narrows. Fixed icon rail remains intact while white page grows leftward. Handle/cursor stay on its boundary."
+        },
+        {
+          "seconds": 3.7,
+          "paused": true,
+          "readyState": 4,
+          "frameTime": 3.7,
+          "description": "Text navigation is fully collapsed; only the fixed icon rail remains. White page begins directly beside rail, still showing Finance > Overview header and empty body. Resize handle remains on left page edge."
+        },
+        {
+          "seconds": 4.8,
+          "paused": true,
+          "readyState": 4,
+          "frameTime": 4.8,
+          "description": "Text sidebar is dragged back into view at an intermediate width. Full menu labels and Overview selection reappear; page boundary and resize cursor move right together."
+        },
+        {
+          "seconds": 6.4,
+          "paused": true,
+          "readyState": 4,
+          "frameTime": 6.4,
+          "description": "Sidebar is wider than at the beginning, white page narrower; full menu remains. Cursor is now an ordinary arrow near the boundary, grey resize handle still visible."
+        },
+        {
+          "seconds": 6.53,
+          "paused": true,
+          "readyState": 4,
+          "frameTime": 6.516667,
+          "description": "Tail returns close to the original sidebar width. Grey handle has disappeared and ordinary arrow remains in white content area. All ten menu rows and unchanged Overview header remain. Whether this return comes from application behavior or recording edit is unverified."
+        }
+      ],
+      "observedImageCount": 0,
+      "mechanisms": [
+        "Persistent three-region application: fixed narrow icon rail, variable-width text sidebar, white main content page.",
+        "Finance navigation includes Overview, Pay, Balances, Payment history, Billing, Expenses, Contractor adjustments, Expense card, Liability payments and Liability payment dates. Overview stays selected throughout.",
+        "Hovering the navigation/page boundary reveals a grey resize handle, horizontal double-arrow cursor and dark Drag to resize tooltip.",
+        "Dragging toward the rail first clips navigation text and selection width, then fully collapses only the text sidebar. The rail remains visible and white page expands continuously.",
+        "Dragging right restores navigation to an intermediate width and then a wider-than-initial width, with main page and grip positions synchronized.",
+        "Tail returns near the original sidebar width with ordinary cursor and hidden handle; causal rule is unknown.",
+        "Main header always shows sidebar icon, Finance breadcrumb and Overview page name; its content body stays blank. No navigation or finance-data operation was observed."
+      ],
+      "differences": [
+        "Source 1440x1440/6.566667 seconds is adapted to 1920x1080/20 seconds with a wider application window and extended reading holds.",
+        "All glyphs, rail icons and cursors are independently coded SVG. Background is independent CSS gradient; no source video, image or screenshot pixels are used in the preset.",
+        "Adapted text-sidebar widths are 500 -> 76 -> 0 -> 414 -> 574 -> 500 pixels; these are authored widescreen widths that preserve expanded, clipped, collapsed, intermediate and tail-return states rather than claimed source pixel measurements.",
+        "Entry animation, drag-press ring and chosen interpolation speeds are original explanatory additions. The ring is attached to the moving divider, not evidence of a source click.",
+        "Parameter title changes module labels, prompt changes hover tooltip and result changes selected page labels. These substitutions are demonstration edits.",
+        "The tail return is rendered as a short transition for continuity. It is not presented as a verified snap-back or threshold behavior.",
+        "Preset is a deterministic paused GSAP demonstration. It does not implement or claim live finance operations or live pointer event handling."
+      ],
+      "unknowns": [
+        "Exact source application, source code, pointer-event implementation, resize bounds and snap behavior are not verified.",
+        "The reason for the last-frame return to initial width may be application behavior or an edit/loop in the recording.",
+        "Financial data and actual functions behind menu entries were not shown. The empty page is preserved; no balances, transfers or business results are generated.",
+        "Stable sampled frames establish visible states, not every intermediate frame or the exact duration/easing of original drags."
+      ],
+      "sourceObservationMethod": "Exact source card modal and original href read; original remote video actually paused/viewed at accepted samples. No remote pixels distributed. Not a full original source-code replica or real service execution.",
+      "implementation": {
+        "presetId": "interaction-finance-sidebar-resize",
+        "title": "财务侧栏 · 拖动收起与展开",
+        "duration": 20,
+        "dimensions": {
+          "width": 1920,
+          "height": 1080
+        },
+        "params": {
+          "title": "Finance",
+          "prompt": "Drag to resize",
+          "result": "Overview"
+        },
+        "paramLimits": {
+          "title": 24,
+          "prompt": 28,
+          "result": 24
+        },
+        "parameterSemantics": {
+          "title": "Module name in navigation and header",
+          "prompt": "Hover resize tooltip",
+          "result": "Selected first row and header page name"
+        },
+        "keyTimes": [
+          {
+            "seconds": 0.8,
+            "state": "expanded initial navigation after entry",
+            "navWidth": 500
+          },
+          {
+            "seconds": 4.5,
+            "state": "expanded with resize cursor, grey handle and tooltip",
+            "navWidth": 500
+          },
+          {
+            "seconds": 5.6,
+            "state": "original drag-press ring at divider",
+            "navWidth": 500
+          },
+          {
+            "seconds": 7.8,
+            "state": "narrow text sidebar with clipped leading characters",
+            "navWidth": 76
+          },
+          {
+            "seconds": 9.6,
+            "state": "fully collapsed text navigation, rail remains",
+            "navWidth": 0
+          },
+          {
+            "seconds": 13.6,
+            "state": "intermediate restored text navigation",
+            "navWidth": 414
+          },
+          {
+            "seconds": 16,
+            "state": "wider than initial navigation",
+            "navWidth": 574
+          },
+          {
+            "seconds": 17.5,
+            "state": "returned to initial width, ordinary cursor and hidden handle",
+            "navWidth": 500
+          },
+          {
+            "seconds": 20,
+            "state": "final hold at initial width",
+            "navWidth": 500
+          }
+        ],
+        "frozen": true,
+        "sha256": "F9CCAB7AC31CA282D8B3A04F105EB589319C54817C5E04087FFE4E510BFB3A89",
+        "module": "../presets/jamiesidebar.js"
+      },
+      "mainGalleryValidation": {
+        "presetId": "interaction-finance-sidebar-resize",
+        "samples": [
+          {
+            "error": "",
+            "id": "interaction-finance-sidebar-resize",
+            "scene": "Finance\nOverview\nPay\nBalances\nPayment history\nBilling\nExpenses\nContractor adjustments\nExpense card\nLiability payments\nLiability payment dates\nFinance\n›\nOverview\nDrag to resize\n界面示意 · 依据侧栏调整机制重建",
+            "time": "0.00 / 20.00",
+            "title": "财务侧栏 · 拖动收起与展开",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-finance-sidebar-resize",
+            "scene": "Finance\nOverview\nPay\nBalances\nPayment history\nBilling\nExpenses\nContractor adjustments\nExpense card\nLiability payments\nLiability payment dates\nFinance\n›\nOverview\nDrag to resize\n界面示意 · 依据侧栏调整机制重建",
+            "time": "0.80 / 20.00",
+            "title": "财务侧栏 · 拖动收起与展开",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-finance-sidebar-resize",
+            "scene": "Finance\nOverview\nPay\nBalances\nPayment history\nBilling\nExpenses\nContractor adjustments\nExpense card\nLiability payments\nLiability payment dates\nFinance\n›\nOverview\nDrag to resize\n界面示意 · 依据侧栏调整机制重建",
+            "time": "4.50 / 20.00",
+            "title": "财务侧栏 · 拖动收起与展开",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-finance-sidebar-resize",
+            "scene": "Finance\nOverview\nPay\nBalances\nPayment history\nBilling\nExpenses\nContractor adjustments\nExpense card\nLiability payments\nLiability payment dates\nFinance\n›\nOverview\nDrag to resize\n界面示意 · 依据侧栏调整机制重建",
+            "time": "5.60 / 20.00",
+            "title": "财务侧栏 · 拖动收起与展开",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-finance-sidebar-resize",
+            "scene": "Finance\nOverview\nPay\nBalances\nPayment history\nBilling\nExpenses\nContractor adjustments\nExpense card\nLiability payments\nLiability payment dates\nFinance\n›\nOverview\nDrag to resize\n界面示意 · 依据侧栏调整机制重建",
+            "time": "7.80 / 20.00",
+            "title": "财务侧栏 · 拖动收起与展开",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-finance-sidebar-resize",
+            "scene": "Finance\nOverview\nPay\nBalances\nPayment history\nBilling\nExpenses\nContractor adjustments\nExpense card\nLiability payments\nLiability payment dates\nFinance\n›\nOverview\nDrag to resize\n界面示意 · 依据侧栏调整机制重建",
+            "time": "9.60 / 20.00",
+            "title": "财务侧栏 · 拖动收起与展开",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-finance-sidebar-resize",
+            "scene": "Finance\nOverview\nPay\nBalances\nPayment history\nBilling\nExpenses\nContractor adjustments\nExpense card\nLiability payments\nLiability payment dates\nFinance\n›\nOverview\nDrag to resize\n界面示意 · 依据侧栏调整机制重建",
+            "time": "13.60 / 20.00",
+            "title": "财务侧栏 · 拖动收起与展开",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-finance-sidebar-resize",
+            "scene": "Finance\nOverview\nPay\nBalances\nPayment history\nBilling\nExpenses\nContractor adjustments\nExpense card\nLiability payments\nLiability payment dates\nFinance\n›\nOverview\nDrag to resize\n界面示意 · 依据侧栏调整机制重建",
+            "time": "16.00 / 20.00",
+            "title": "财务侧栏 · 拖动收起与展开",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-finance-sidebar-resize",
+            "scene": "Finance\nOverview\nPay\nBalances\nPayment history\nBilling\nExpenses\nContractor adjustments\nExpense card\nLiability payments\nLiability payment dates\nFinance\n›\nOverview\nDrag to resize\n界面示意 · 依据侧栏调整机制重建",
+            "time": "17.50 / 20.00",
+            "title": "财务侧栏 · 拖动收起与展开",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-finance-sidebar-resize",
+            "scene": "Finance\nOverview\nPay\nBalances\nPayment history\nBilling\nExpenses\nContractor adjustments\nExpense card\nLiability payments\nLiability payment dates\nFinance\n›\nOverview\nDrag to resize\n界面示意 · 依据侧栏调整机制重建",
+            "time": "20.00 / 20.00",
+            "title": "财务侧栏 · 拖动收起与展开",
+            "phase": "default"
+          },
+          {
+            "error": "",
+            "id": "interaction-finance-sidebar-resize",
+            "scene": "测试<&>\n结果<&>\nPay\nBalances\nPayment history\nBilling\nExpenses\nContractor adjustments\nExpense card\nLiability payments\nLiability payment dates\n测试<&>\n›\n结果<&>\n中文输入<&>\n界面示意 · 依据侧栏调整机制重建",
+            "time": "0.00 / 20.00",
+            "title": "财务侧栏 · 拖动收起与展开",
+            "phase": "short-Chinese-and-escaped"
+          },
+          {
+            "error": "",
+            "id": "interaction-finance-sidebar-resize",
+            "scene": "测试<&>\n结果<&>\nPay\nBalances\nPayment history\nBilling\nExpenses\nContractor adjustments\nExpense card\nLiability payments\nLiability payment dates\n测试<&>\n›\n结果<&>\n中文输入<&>\n界面示意 · 依据侧栏调整机制重建",
+            "time": "4.50 / 20.00",
+            "title": "财务侧栏 · 拖动收起与展开",
+            "phase": "short-Chinese-and-escaped"
+          },
+          {
+            "error": "",
+            "id": "interaction-finance-sidebar-resize",
+            "scene": "测试<&>\n结果<&>\nPay\nBalances\nPayment history\nBilling\nExpenses\nContractor adjustments\nExpense card\nLiability payments\nLiability payment dates\n测试<&>\n›\n结果<&>\n中文输入<&>\n界面示意 · 依据侧栏调整机制重建",
+            "time": "9.60 / 20.00",
+            "title": "财务侧栏 · 拖动收起与展开",
+            "phase": "short-Chinese-and-escaped"
+          },
+          {
+            "error": "",
+            "id": "interaction-finance-sidebar-resize",
+            "scene": "测试<&>\n结果<&>\nPay\nBalances\nPayment history\nBilling\nExpenses\nContractor adjustments\nExpense card\nLiability payments\nLiability payment dates\n测试<&>\n›\n结果<&>\n中文输入<&>\n界面示意 · 依据侧栏调整机制重建",
+            "time": "16.00 / 20.00",
+            "title": "财务侧栏 · 拖动收起与展开",
+            "phase": "short-Chinese-and-escaped"
+          },
+          {
+            "error": "",
+            "id": "interaction-finance-sidebar-resize",
+            "scene": "测试<&>\n结果<&>\nPay\nBalances\nPayment history\nBilling\nExpenses\nContractor adjustments\nExpense card\nLiability payments\nLiability payment dates\n测试<&>\n›\n结果<&>\n中文输入<&>\n界面示意 · 依据侧栏调整机制重建",
+            "time": "20.00 / 20.00",
+            "title": "财务侧栏 · 拖动收起与展开",
+            "phase": "short-Chinese-and-escaped"
+          }
+        ],
+        "tailToZeroMatches": true,
+        "shortParamsChecked": true,
+        "majorStateScreenshotViewed": true,
+        "logs": [],
+        "scope": "Major default states checked in actual main-gallery DOM and selected full-gallery frames viewed. Short Chinese <&> via form Enter and tail→0 checked. No maximum-length certification or full continuous viewing."
+      },
+      "exportValidation": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "frames": 600,
+        "seconds": 20,
+        "audio": false,
+        "fullDecode": "passed",
+        "sampledVisualReview": true,
+        "fullyWatched": false
+      },
+      "previewFile": "finance-sidebar-resize.mp4"
+    }
+  ],
+  "mainDiagnostics": {
+    "svgCoordinates": {
+      "passed": true,
+      "inside": {
+        "x": 50,
+        "y": 24,
+        "width": 20.387985229492188,
+        "height": 20
+      },
+      "outside": {
+        "x": -100,
+        "y": 24,
+        "width": 29.481979370117188,
+        "height": 20
+      }
+    },
+    "textClipping": {
+      "passed": true,
+      "issues": [
+        {
+          "text": "outside-canvas-test",
+          "type": "outside-canvas"
+        }
+      ]
+    },
+    "total": 3,
+    "errors": [],
+    "seekFailures": [],
+    "layoutFlags": []
+  }
+}

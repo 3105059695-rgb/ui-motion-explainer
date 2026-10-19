@@ -1,0 +1,195 @@
+{
+  "template": "ui-morph",
+  "title": "Shape morphing through UI states",
+  "duration": 14,
+  "width": 1440,
+  "height": 1440,
+  "fps": 60,
+  "bpm": 120,
+  "brand": "MOTION",
+  "accent": "#080808",
+  "background": "#eceee8",
+  "paper": "#ffffff",
+  "font": "Geist, 'Microsoft YaHei', 'PingFang SC', sans-serif",
+  "provenance": "independent-reimplementation",
+  "reference_url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+  "reference_creator": "@twoclipping",
+  "audio": null,
+  "texts": {
+    "button": "Generate",
+    "song": "motion study 02",
+    "artist": "made in code",
+    "album": "",
+    "songLength": "2:41",
+    "tabOne": "Day",
+    "tabTwo": "Week",
+    "tabThree": "Month",
+    "chartLabel": "total views",
+    "chartValue": "84,320",
+    "chartWeekValue": "19,204",
+    "chartUnit": "",
+    "chartChange": "",
+    "chartDay": "",
+    "chartTooltipValue": "74,835",
+    "searchPlaceholder": "Search",
+    "commandPlaceholder": "Type a command",
+    "commandQuery": "frame",
+    "commandHint": "",
+    "commandNew": "New project",
+    "commandExport": "Export video",
+    "commandResult": "Frame rate · 60fps",
+    "commandOtherOne": "Every frame is code",
+    "commandOtherTwo": "Motion blur",
+    "commandFooter": "",
+    "commandEnter": "",
+    "toast": "Every frame is code",
+    "toastDetail": ""
+  },
+  "marks": [
+    {
+      "time": 0,
+      "phase": "button",
+      "action": "Generate 按钮；鼠标在右下方"
+    },
+    {
+      "time": 0.5,
+      "phase": "loader",
+      "action": "点击后收缩，圆环旋转"
+    },
+    {
+      "time": 0.95,
+      "phase": "check",
+      "action": "加载完成，描出勾号"
+    },
+    {
+      "time": 1.25,
+      "phase": "dynamic-island",
+      "action": "展开为黑色胶囊，红紫封面与白色波形"
+    },
+    {
+      "time": 1.75,
+      "phase": "player",
+      "action": "展开黑色播放器"
+    },
+    {
+      "time": 2.6,
+      "phase": "player",
+      "action": "点击播放，图标变为暂停"
+    },
+    {
+      "time": 3,
+      "phase": "scrub",
+      "action": "按住播放进度"
+    },
+    {
+      "time": 3.7,
+      "phase": "scrub",
+      "action": "直接拖动至右端"
+    },
+    {
+      "time": 3.8,
+      "phase": "volume-drag",
+      "action": "播放进度接续为黑色音量轨道"
+    },
+    {
+      "time": 4.45,
+      "phase": "volume-drag",
+      "action": "拖动至低音量"
+    },
+    {
+      "time": 4.7,
+      "phase": "volume-drag",
+      "action": "继续拖向最大值"
+    },
+    {
+      "time": 5.0,
+      "phase": "volume-drag",
+      "action": "越过最大值后松手、弹簧回弹"
+    },
+    {
+      "time": 5.25,
+      "phase": "toggle",
+      "action": "收缩为开关并快速打开"
+    },
+    {
+      "time": 6.35,
+      "phase": "liquid-tabs",
+      "action": "白色 Day / Week / Month 标签条"
+    },
+    {
+      "time": 6.8,
+      "phase": "liquid-tabs",
+      "action": "切换至 Week"
+    },
+    {
+      "time": 7.15,
+      "phase": "liquid-tabs",
+      "action": "切换至 Month"
+    },
+    {
+      "time": 7.35,
+      "phase": "chart-tooltip",
+      "action": "展开白色方图表，84,320 total views"
+    },
+    {
+      "time": 8.0,
+      "phase": "chart-tooltip",
+      "action": "左侧数据点提示"
+    },
+    {
+      "time": 8.5,
+      "phase": "chart-tooltip",
+      "action": "右侧数据点提示 74,835"
+    },
+    {
+      "time": 9.2,
+      "phase": "chart-tooltip",
+      "action": "切回 Week，19,204 和新曲线重新绘制"
+    },
+    {
+      "time": 9.9,
+      "phase": "command-search",
+      "action": "收缩为白色 Search 胶囊"
+    },
+    {
+      "time": 10.45,
+      "phase": "command-search",
+      "action": "展开 Type a command 命令列表"
+    },
+    {
+      "time": 10.75,
+      "phase": "command-search",
+      "action": "逐字输入 frame，筛选至两项"
+    },
+    {
+      "time": 11.5,
+      "phase": "command-search",
+      "action": "键盘选择 Every frame is code"
+    },
+    {
+      "time": 11.8,
+      "phase": "toast",
+      "action": "Enter，收缩为黑色成功提示"
+    },
+    {
+      "time": 12.4,
+      "phase": "button",
+      "action": "回到 Generate"
+    },
+    {
+      "time": 12.85,
+      "phase": "button",
+      "action": "几何、鼠标、镜头归位"
+    },
+    {
+      "time": 14,
+      "phase": "button",
+      "action": "严格返回首帧"
+    }
+  ],
+  "reference_timing": "observed-video-v2",
+  "appearance": "reference-default",
+  "reference_slug": "twoclipping-5cba86",
+  "implementation_status": "reference-compared",
+  "font_source": "Google Fonts ofl/geist; SIL OFL 1.1 bundled in assets/fonts/geist-OFL.txt"
+}

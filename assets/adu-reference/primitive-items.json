@@ -1,0 +1,1580 @@
+[
+  {
+    "id": "primitive-entrance-up",
+    "title": "上移淡入 · up",
+    "group": "effect",
+    "description": "运行 show(..., {k:\"up\"})，在 0.7 秒入场，4.4 秒按原函数淡出并增添模糊。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=entrance-up",
+    "source": "source/template/lib.js",
+    "line": 46,
+    "endLine": 58,
+    "tags": [
+      "公共原语",
+      "entrance-up"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-entrance-down",
+    "title": "下移淡入 · down",
+    "group": "effect",
+    "description": "运行 show(..., {k:\"down\"})，在 0.7 秒入场，4.4 秒按原函数淡出并增添模糊。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=entrance-down",
+    "source": "source/template/lib.js",
+    "line": 47,
+    "endLine": 58,
+    "tags": [
+      "公共原语",
+      "entrance-down"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-entrance-left",
+    "title": "左侧滑入 · left",
+    "group": "effect",
+    "description": "运行 show(..., {k:\"left\"})，在 0.7 秒入场，4.4 秒按原函数淡出并增添模糊。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=entrance-left",
+    "source": "source/template/lib.js",
+    "line": 48,
+    "endLine": 58,
+    "tags": [
+      "公共原语",
+      "entrance-left"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-entrance-right",
+    "title": "右侧滑入 · right",
+    "group": "effect",
+    "description": "运行 show(..., {k:\"right\"})，在 0.7 秒入场，4.4 秒按原函数淡出并增添模糊。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=entrance-right",
+    "source": "source/template/lib.js",
+    "line": 49,
+    "endLine": 58,
+    "tags": [
+      "公共原语",
+      "entrance-right"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-entrance-pop",
+    "title": "弹性缩放 · pop",
+    "group": "effect",
+    "description": "运行 show(..., {k:\"pop\"})，在 0.7 秒入场，4.4 秒按原函数淡出并增添模糊。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=entrance-pop",
+    "source": "source/template/lib.js",
+    "line": 50,
+    "endLine": 58,
+    "tags": [
+      "公共原语",
+      "entrance-pop"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-entrance-zoom",
+    "title": "缩放去模糊 · zoom",
+    "group": "effect",
+    "description": "运行 show(..., {k:\"zoom\"})，在 0.7 秒入场，4.4 秒按原函数淡出并增添模糊。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=entrance-zoom",
+    "source": "source/template/lib.js",
+    "line": 51,
+    "endLine": 58,
+    "tags": [
+      "公共原语",
+      "entrance-zoom"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-entrance-slam",
+    "title": "冲击大字 · slam",
+    "group": "effect",
+    "description": "运行 show(..., {k:\"slam\"})，在 0.7 秒入场，4.4 秒按原函数淡出并增添模糊。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=entrance-slam",
+    "source": "source/template/lib.js",
+    "line": 52,
+    "endLine": 58,
+    "tags": [
+      "公共原语",
+      "entrance-slam"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-entrance-blur",
+    "title": "模糊清晰化 · blur",
+    "group": "effect",
+    "description": "运行 show(..., {k:\"blur\"})，在 0.7 秒入场，4.4 秒按原函数淡出并增添模糊。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=entrance-blur",
+    "source": "source/template/lib.js",
+    "line": 53,
+    "endLine": 58,
+    "tags": [
+      "公共原语",
+      "entrance-blur"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-entrance-mask",
+    "title": "遮罩向上揭示 · mask",
+    "group": "effect",
+    "description": "运行 show(..., {k:\"mask\"})，在 0.7 秒入场，4.4 秒按原函数淡出并增添模糊。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=entrance-mask",
+    "source": "source/template/lib.js",
+    "line": 54,
+    "endLine": 58,
+    "tags": [
+      "公共原语",
+      "entrance-mask"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-ease-out",
+    "title": "立方减速 · EZ.out",
+    "group": "effect",
+    "description": "原缓动函数控制方块从左向右移动；蓝曲线显示该函数的进度，灰色直线为线性参照。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=ease-out",
+    "source": "source/template/lib.js",
+    "line": 8,
+    "endLine": 8,
+    "tags": [
+      "公共原语",
+      "ease-out"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "begin",
+        "title": "曲线起点",
+        "time": 0.7
+      },
+      {
+        "id": "middle",
+        "title": "曲线与位移",
+        "time": 1.7
+      },
+      {
+        "id": "end",
+        "title": "达到终点",
+        "time": 3
+      }
+    ]
+  },
+  {
+    "id": "primitive-ease-out5",
+    "title": "五次减速 · EZ.out5",
+    "group": "effect",
+    "description": "原缓动函数控制方块从左向右移动；蓝曲线显示该函数的进度，灰色直线为线性参照。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=ease-out5",
+    "source": "source/template/lib.js",
+    "line": 9,
+    "endLine": 9,
+    "tags": [
+      "公共原语",
+      "ease-out5"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "begin",
+        "title": "曲线起点",
+        "time": 0.7
+      },
+      {
+        "id": "middle",
+        "title": "曲线与位移",
+        "time": 1.7
+      },
+      {
+        "id": "end",
+        "title": "达到终点",
+        "time": 3
+      }
+    ]
+  },
+  {
+    "id": "primitive-ease-expo",
+    "title": "指数减速 · EZ.expo",
+    "group": "effect",
+    "description": "原缓动函数控制方块从左向右移动；蓝曲线显示该函数的进度，灰色直线为线性参照。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=ease-expo",
+    "source": "source/template/lib.js",
+    "line": 10,
+    "endLine": 10,
+    "tags": [
+      "公共原语",
+      "ease-expo"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "begin",
+        "title": "曲线起点",
+        "time": 0.7
+      },
+      {
+        "id": "middle",
+        "title": "曲线与位移",
+        "time": 1.7
+      },
+      {
+        "id": "end",
+        "title": "达到终点",
+        "time": 3
+      }
+    ]
+  },
+  {
+    "id": "primitive-ease-inout",
+    "title": "三次加减速 · EZ.inout",
+    "group": "effect",
+    "description": "原缓动函数控制方块从左向右移动；蓝曲线显示该函数的进度，灰色直线为线性参照。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=ease-inout",
+    "source": "source/template/lib.js",
+    "line": 11,
+    "endLine": 11,
+    "tags": [
+      "公共原语",
+      "ease-inout"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "begin",
+        "title": "曲线起点",
+        "time": 0.7
+      },
+      {
+        "id": "middle",
+        "title": "曲线与位移",
+        "time": 1.7
+      },
+      {
+        "id": "end",
+        "title": "达到终点",
+        "time": 3
+      }
+    ]
+  },
+  {
+    "id": "primitive-ease-in",
+    "title": "三次加速 · EZ.in",
+    "group": "effect",
+    "description": "原缓动函数控制方块从左向右移动；蓝曲线显示该函数的进度，灰色直线为线性参照。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=ease-in",
+    "source": "source/template/lib.js",
+    "line": 12,
+    "endLine": 12,
+    "tags": [
+      "公共原语",
+      "ease-in"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "begin",
+        "title": "曲线起点",
+        "time": 0.7
+      },
+      {
+        "id": "middle",
+        "title": "曲线与位移",
+        "time": 1.7
+      },
+      {
+        "id": "end",
+        "title": "达到终点",
+        "time": 3
+      }
+    ]
+  },
+  {
+    "id": "primitive-ease-back",
+    "title": "回越终点 · EZ.back",
+    "group": "effect",
+    "description": "原缓动函数控制方块从左向右移动；蓝曲线显示该函数的进度，灰色直线为线性参照。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=ease-back",
+    "source": "source/template/lib.js",
+    "line": 13,
+    "endLine": 13,
+    "tags": [
+      "公共原语",
+      "ease-back"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "begin",
+        "title": "曲线起点",
+        "time": 0.7
+      },
+      {
+        "id": "middle",
+        "title": "曲线与位移",
+        "time": 1.7
+      },
+      {
+        "id": "end",
+        "title": "达到终点",
+        "time": 3
+      }
+    ]
+  },
+  {
+    "id": "primitive-ease-spring",
+    "title": "阻尼弹簧 · EZ.spring",
+    "group": "effect",
+    "description": "原缓动函数控制方块从左向右移动；蓝曲线显示该函数的进度，灰色直线为线性参照。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=ease-spring",
+    "source": "source/template/lib.js",
+    "line": 15,
+    "endLine": 15,
+    "tags": [
+      "公共原语",
+      "ease-spring"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "begin",
+        "title": "曲线起点",
+        "time": 0.7
+      },
+      {
+        "id": "middle",
+        "title": "曲线与位移",
+        "time": 1.7
+      },
+      {
+        "id": "end",
+        "title": "达到终点",
+        "time": 3
+      }
+    ]
+  },
+  {
+    "id": "primitive-exit",
+    "title": "统一出场 · 淡出/位移/缩放/模糊",
+    "group": "effect",
+    "description": "show 的 out、ox、oy、os、ob 参数共同控制离场。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=exit",
+    "source": "source/template/lib.js",
+    "line": 55,
+    "endLine": 58,
+    "tags": [
+      "公共原语",
+      "exit"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-place",
+    "title": "基础变换 · 位移/旋转/缩放/透明度",
+    "group": "effect",
+    "description": "place 每帧写入绝对位置、非等比缩放、旋转、透明度与模糊。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=place",
+    "source": "source/template/lib.js",
+    "line": 31,
+    "endLine": 40,
+    "tags": [
+      "公共原语",
+      "place"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-mk",
+    "title": "绝对定位与锚点 · mk",
+    "group": "effect",
+    "description": "展示 mk 创建的左上锚点与中心锚点，两块元素由 place 驱动。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=mk",
+    "source": "source/template/lib.js",
+    "line": 20,
+    "endLine": 26,
+    "tags": [
+      "公共原语",
+      "mk"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-img",
+    "title": "透明素材定位 · img",
+    "group": "effect",
+    "description": "原 img 工具创建示意人物图片，默认底部中心锚点；用 place 展示锚点的旋转与轻微弹性。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=img",
+    "source": "source/template/lib.js",
+    "line": 27,
+    "endLine": 29,
+    "tags": [
+      "公共原语",
+      "img"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-words",
+    "title": "逐词出现 · words / wordsAt",
+    "group": "effect",
+    "description": "普通抬升、slam 冲击与 pop 弹出按原文字分段时间先后出现。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=words",
+    "source": "source/template/lib.js",
+    "line": 63,
+    "endLine": 84,
+    "tags": [
+      "公共原语",
+      "words"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-counter",
+    "title": "数字滚动与千分位 · counter / fmt",
+    "group": "effect",
+    "description": "从 0 到 12,480 的原 counter 缓动计数与 fmt 千分位格式。示意数值。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=counter",
+    "source": "source/template/lib.js",
+    "line": 107,
+    "endLine": 107,
+    "tags": [
+      "公共原语",
+      "counter"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-shake",
+    "title": "衰减噪声震动 · shake",
+    "group": "effect",
+    "description": "原 shake 用两路 noise 产生衰减震动；左右框比较固定参照与实际震动。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=shake",
+    "source": "source/template/lib.js",
+    "line": 106,
+    "endLine": 106,
+    "tags": [
+      "公共原语",
+      "shake"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-bob",
+    "title": "人物待机摇动 · bob",
+    "group": "effect",
+    "description": "原 bob 小幅正弦上下摆动，旁边曲线显示位置变化。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=bob",
+    "source": "source/template/lib.js",
+    "line": 102,
+    "endLine": 102,
+    "tags": [
+      "公共原语",
+      "bob"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-breathe",
+    "title": "人物呼吸缩放 · breathe",
+    "group": "effect",
+    "description": "原 breathe 缩放幅度为 ±0.006；数值显示真实微幅缩放。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=breathe",
+    "source": "source/template/lib.js",
+    "line": 103,
+    "endLine": 103,
+    "tags": [
+      "公共原语",
+      "breathe"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-hop",
+    "title": "换姿态跳入 · hopIn",
+    "group": "effect",
+    "description": "原 hopIn 在 0.45 秒内弹性上移、放大与显现。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=hop",
+    "source": "source/template/lib.js",
+    "line": 105,
+    "endLine": 105,
+    "tags": [
+      "公共原语",
+      "hop"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-cam-card",
+    "title": "大口播卡 · camCard / camAt",
+    "group": "effect",
+    "description": "原口播卡创建与位置缩放，展示仓库演示插画，不含真人口型。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=cam-card",
+    "source": "source/template/lib.js",
+    "line": 136,
+    "endLine": 167,
+    "tags": [
+      "公共原语",
+      "cam-card"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-cam-round",
+    "title": "圆形人物窗 · faceAt / camAt",
+    "group": "effect",
+    "description": "原圆窗依据 faceAt 的演示默认脸部位置计算裁切与缩放。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=cam-round",
+    "source": "source/template/lib.js",
+    "line": 140,
+    "endLine": 167,
+    "tags": [
+      "公共原语",
+      "cam-round"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-cam-morph",
+    "title": "人物卡缩小与脸部居中",
+    "group": "effect",
+    "description": "原 camAt 读取 _sm 从 0 到 1，矩形卡逐渐缩小并把人物脸部居中。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=cam-morph",
+    "source": "source/template/lib.js",
+    "line": 153,
+    "endLine": 167,
+    "tags": [
+      "公共原语",
+      "cam-morph"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-video-tile",
+    "title": "视频卡片 · vtile / seqAt / setFrame",
+    "group": "effect",
+    "description": "原视频卡片播放 30 帧示意序列，展示帧序列读取与圆角媒体容器。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=video-tile",
+    "source": "source/template/lib.js",
+    "line": 168,
+    "endLine": 171,
+    "tags": [
+      "公共原语",
+      "video-tile"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-mac-window",
+    "title": "macOS 窗口 · macWin",
+    "group": "effect",
+    "description": "原窗口外框、三色交通灯、标题栏、内容图的布局与缩放入场。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=mac-window",
+    "source": "source/template/lib.js",
+    "line": 172,
+    "endLine": 175,
+    "tags": [
+      "公共原语",
+      "mac-window"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-wall",
+    "title": "作品墙 · buildWall / wallTick",
+    "group": "effect",
+    "description": "36 张示意精灵格按中心距离波纹入场，每格 4×4 帧按原算法循环。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=wall",
+    "source": "source/template/lib.js",
+    "line": 176,
+    "endLine": 197,
+    "tags": [
+      "公共原语",
+      "wall"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-race",
+    "title": "底部赛道 · race / raceAt",
+    "group": "effect",
+    "description": "原赛道标记和蓝色发光进度点按三段时间前进。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=race",
+    "source": "source/template/lib.js",
+    "line": 198,
+    "endLine": 210,
+    "tags": [
+      "公共原语",
+      "race"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-tags",
+    "title": "角标与时间码 · tags / tc",
+    "group": "effect",
+    "description": "原角标淡入、右上品牌和 60fps 时码随时间更新。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=tags",
+    "source": "source/template/lib.js",
+    "line": 95,
+    "endLine": 100,
+    "tags": [
+      "公共原语",
+      "tags"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-scene",
+    "title": "场景与网格 · Scene",
+    "group": "effect",
+    "description": "原 Scene 创建三类纸白/墨黑/科技蓝网格，按时间切换完整场景。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=scene",
+    "source": "source/template/lib.js",
+    "line": 86,
+    "endLine": 93,
+    "tags": [
+      "公共原语",
+      "scene"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-camera",
+    "title": "整屏镜头 · 推近/平移/震动",
+    "group": "effect",
+    "description": "Scene.cam 输出位置与缩放；原 main.js 用整屏 transform 实现镜头，再叠加原 shake。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=camera",
+    "source": "source/template/main.js",
+    "line": 33,
+    "endLine": 40,
+    "tags": [
+      "公共原语",
+      "camera"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  },
+  {
+    "id": "primitive-transition-wipe",
+    "title": "横向色板擦除 · wipe",
+    "group": "effect",
+    "description": "运行原 main.js 的 wipe 转场，中心位于 3 秒；前后画面用 A/B 标记便于看清遮罩关系。",
+    "start": 2.4,
+    "end": 3.6,
+    "preview": "preview/primitives/index.html?demo=transition-wipe",
+    "source": "source/template/main.js",
+    "line": 18,
+    "endLine": 21,
+    "tags": [
+      "公共原语",
+      "transition-wipe"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "before",
+        "title": "转场前",
+        "time": 2.78
+      },
+      {
+        "id": "middle",
+        "title": "转场中",
+        "time": 3
+      },
+      {
+        "id": "after",
+        "title": "转场后",
+        "time": 3.22
+      }
+    ]
+  },
+  {
+    "id": "primitive-transition-circle",
+    "title": "圆形遮罩扩张 · circle",
+    "group": "effect",
+    "description": "运行原 main.js 的 circle 转场，中心位于 3 秒；前后画面用 A/B 标记便于看清遮罩关系。",
+    "start": 2.4,
+    "end": 3.6,
+    "preview": "preview/primitives/index.html?demo=transition-circle",
+    "source": "source/template/main.js",
+    "line": 22,
+    "endLine": 26,
+    "tags": [
+      "公共原语",
+      "transition-circle"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "before",
+        "title": "转场前",
+        "time": 2.78
+      },
+      {
+        "id": "middle",
+        "title": "转场中",
+        "time": 3
+      },
+      {
+        "id": "after",
+        "title": "转场后",
+        "time": 3.22
+      }
+    ]
+  },
+  {
+    "id": "primitive-transition-flash",
+    "title": "白色闪屏 · flash",
+    "group": "effect",
+    "description": "运行原 main.js 的 flash 转场，中心位于 3 秒；前后画面用 A/B 标记便于看清遮罩关系。",
+    "start": 2.4,
+    "end": 3.6,
+    "preview": "preview/primitives/index.html?demo=transition-flash",
+    "source": "source/template/main.js",
+    "line": 27,
+    "endLine": 27,
+    "tags": [
+      "公共原语",
+      "transition-flash"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "before",
+        "title": "转场前",
+        "time": 2.78
+      },
+      {
+        "id": "middle",
+        "title": "转场中",
+        "time": 3
+      },
+      {
+        "id": "after",
+        "title": "转场后",
+        "time": 3.22
+      }
+    ]
+  },
+  {
+    "id": "primitive-transition-blur",
+    "title": "整屏模糊转场 · blur",
+    "group": "effect",
+    "description": "运行原 main.js 的 blur 转场，中心位于 3 秒；前后画面用 A/B 标记便于看清遮罩关系。",
+    "start": 2.4,
+    "end": 3.6,
+    "preview": "preview/primitives/index.html?demo=transition-blur",
+    "source": "source/template/main.js",
+    "line": 28,
+    "endLine": 28,
+    "tags": [
+      "公共原语",
+      "transition-blur"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "before",
+        "title": "转场前",
+        "time": 2.78
+      },
+      {
+        "id": "middle",
+        "title": "转场中",
+        "time": 3
+      },
+      {
+        "id": "after",
+        "title": "转场后",
+        "time": 3.22
+      }
+    ]
+  },
+  {
+    "id": "primitive-transition-fade",
+    "title": "片尾淡黑 · fade",
+    "group": "effect",
+    "description": "原 main.js 在 END 前 0.45 秒开始黑色透明罩，0.4 秒内淡黑。",
+    "start": 5.3,
+    "end": 5.99,
+    "preview": "preview/primitives/index.html?demo=transition-fade",
+    "source": "source/template/main.js",
+    "line": 42,
+    "endLine": 42,
+    "tags": [
+      "公共原语",
+      "transition-fade"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "begin",
+        "title": "开始淡黑",
+        "time": 5.55
+      },
+      {
+        "id": "mid",
+        "title": "淡黑中",
+        "time": 5.75
+      },
+      {
+        "id": "end",
+        "title": "完全淡黑",
+        "time": 5.98
+      }
+    ]
+  },
+  {
+    "id": "primitive-terminal-cursor",
+    "title": "终端输入光标 · 周期闪烁",
+    "group": "effect",
+    "description": "使用 TPL.outro 原逐字切片与光标 opacity 公式；仓库没有独立鼠标 cursor API。",
+    "start": 0,
+    "end": 6,
+    "preview": "preview/primitives/index.html?demo=terminal-cursor",
+    "source": "source/template/templates.js",
+    "line": 168,
+    "endLine": 170,
+    "tags": [
+      "公共原语",
+      "terminal-cursor"
+    ],
+    "mediaNote": "用仓库实际函数制作的独立展示；展示参数与媒体为示意，动画未替代原函数。",
+    "cues": [
+      {
+        "id": "start",
+        "title": "入场/启动",
+        "time": 0.7
+      },
+      {
+        "id": "motion",
+        "title": "运动中",
+        "time": 1.05
+      },
+      {
+        "id": "hold",
+        "title": "结果停留",
+        "time": 3
+      },
+      {
+        "id": "exit",
+        "title": "退出阶段",
+        "time": 4.5
+      }
+    ]
+  }
+]

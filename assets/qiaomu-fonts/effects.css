@@ -1,0 +1,37 @@
+/* Optional UI-motion-fusion effects. Upstream provides the fonts, not these effects. */
+.qm-fx {
+  --qm-ink: #101112;
+  --qm-purple: #7451b8;
+  --qm-lilac: #cdb7f5;
+  color: var(--qm-ink);
+  display: inline-block;
+  position: relative;
+  isolation: isolate;
+  line-height: 1.25;
+}
+.qm-fx-plain { color: var(--qm-ink); }
+.qm-fx-highlight {
+  background: linear-gradient(transparent 64%,var(--qm-lilac) 64%,var(--qm-lilac) 92%,transparent 92%);
+  padding-inline: .05em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.qm-fx-sticker {
+  color: var(--qm-purple);
+  -webkit-text-stroke: .035em white;
+  paint-order: stroke fill;
+  text-shadow: .035em .045em 0 var(--qm-ink);
+  padding: .03em .07em .07em;
+}
+.qm-fx-depth {
+  color: var(--qm-ink);
+  text-shadow: .012em .012em 0 var(--qm-lilac), .024em .024em 0 var(--qm-lilac), .036em .036em 0 var(--qm-lilac), .048em .048em 0 var(--qm-lilac), .060em .060em 0 var(--qm-lilac);
+  padding: .02em .08em .08em .02em;
+}
+.qm-fx-outline {
+  color: var(--qm-purple);
+  -webkit-text-stroke: .012em var(--qm-ink);
+  paint-order: stroke fill;
+  text-shadow: .035em .04em 0 var(--qm-lilac);
+  padding: .025em .07em .06em .025em;
+}

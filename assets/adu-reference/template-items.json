@@ -1,0 +1,387 @@
+[
+  {
+    "id": "tpl-hero",
+    "title": "开场标题 · 砸入与震动",
+    "group": "template",
+    "description": "第一行迅速从大缩小，第二行强调字砸入；右侧口播卡轻弹，镜头震动。",
+    "start": 0,
+    "end": 4,
+    "preview": "preview/template/index.html",
+    "source": "source/template/templates.js",
+    "line": 37,
+    "endLine": 49,
+    "tags": [
+      "TPL.hero",
+      "基础模板",
+      "1920×1080"
+    ],
+    "mediaNote": "运行仓库原模板和原 scenes.js 时间表；插画人物为仓库自带 demo-presenter.svg；媒体与统计为示意，无音频。",
+    "cues": [
+      {
+        "id": "cue-0",
+        "title": "动作节点 1",
+        "time": 0
+      },
+      {
+        "id": "cue-1",
+        "title": "动作节点 2",
+        "time": 0.12
+      },
+      {
+        "id": "cue-2",
+        "title": "动作节点 3",
+        "time": 1.2
+      },
+      {
+        "id": "cue-3",
+        "title": "动作节点 4",
+        "time": 1.4
+      },
+      {
+        "id": "cue-4",
+        "title": "动作节点 5",
+        "time": 2.0
+      }
+    ]
+  },
+  {
+    "id": "tpl-point",
+    "title": "观点文字 · 滑入要点卡",
+    "group": "template",
+    "description": "逐词抬升；强调词冲击放大，三张黑色要点卡依次从右侧滑入。",
+    "start": 4,
+    "end": 8,
+    "preview": "preview/template/index.html",
+    "source": "source/template/templates.js",
+    "line": 52,
+    "endLine": 61,
+    "tags": [
+      "TPL.point",
+      "基础模板",
+      "1920×1080"
+    ],
+    "mediaNote": "运行仓库原模板和原 scenes.js 时间表；插画人物为仓库自带 demo-presenter.svg；媒体与统计为示意，无音频。",
+    "cues": [
+      {
+        "id": "cue-0",
+        "title": "动作节点 1",
+        "time": 4.3
+      },
+      {
+        "id": "cue-1",
+        "title": "动作节点 2",
+        "time": 4.8
+      },
+      {
+        "id": "cue-2",
+        "title": "动作节点 3",
+        "time": 5.8
+      },
+      {
+        "id": "cue-3",
+        "title": "动作节点 4",
+        "time": 6.3
+      },
+      {
+        "id": "cue-4",
+        "title": "动作节点 5",
+        "time": 6.8
+      }
+    ]
+  },
+  {
+    "id": "tpl-number",
+    "title": "数字滚动 · 进度条填充",
+    "group": "template",
+    "description": "关键数字从 480 滚动到 60，横向进度条随同填满，随后出现说明。数值为仓库示意数据。",
+    "start": 8,
+    "end": 12,
+    "preview": "preview/template/index.html",
+    "source": "source/template/templates.js",
+    "line": 64,
+    "endLine": 79,
+    "tags": [
+      "TPL.number",
+      "基础模板",
+      "1920×1080"
+    ],
+    "mediaNote": "运行仓库原模板和原 scenes.js 时间表；插画人物为仓库自带 demo-presenter.svg；媒体与统计为示意，无音频。",
+    "cues": [
+      {
+        "id": "cue-0",
+        "title": "动作节点 1",
+        "time": 8.4
+      },
+      {
+        "id": "cue-1",
+        "title": "动作节点 2",
+        "time": 9.2
+      },
+      {
+        "id": "cue-2",
+        "title": "动作节点 3",
+        "time": 10
+      },
+      {
+        "id": "cue-3",
+        "title": "动作节点 4",
+        "time": 11
+      }
+    ]
+  },
+  {
+    "id": "tpl-compare",
+    "title": "双栏对比 · 划线与盖章",
+    "group": "template",
+    "description": "左右卡片入场，旧做法被红线划掉，随后红色印章砸入并震动。",
+    "start": 12,
+    "end": 16,
+    "preview": "preview/template/index.html",
+    "source": "source/template/templates.js",
+    "line": 82,
+    "endLine": 98,
+    "tags": [
+      "TPL.compare",
+      "基础模板",
+      "1920×1080"
+    ],
+    "mediaNote": "运行仓库原模板和原 scenes.js 时间表；插画人物为仓库自带 demo-presenter.svg；媒体与统计为示意，无音频。",
+    "cues": [
+      {
+        "id": "cue-0",
+        "title": "动作节点 1",
+        "time": 12.2
+      },
+      {
+        "id": "cue-1",
+        "title": "动作节点 2",
+        "time": 13
+      },
+      {
+        "id": "cue-2",
+        "title": "动作节点 3",
+        "time": 14
+      },
+      {
+        "id": "cue-3",
+        "title": "动作节点 4",
+        "time": 14.35
+      },
+      {
+        "id": "cue-4",
+        "title": "动作节点 5",
+        "time": 14.6
+      }
+    ]
+  },
+  {
+    "id": "tpl-steps",
+    "title": "步骤时间线 · 逐节点点亮",
+    "group": "template",
+    "description": "三步圆节点弹入，连接线按时间逐段延伸。",
+    "start": 16,
+    "end": 20,
+    "preview": "preview/template/index.html",
+    "source": "source/template/templates.js",
+    "line": 101,
+    "endLine": 114,
+    "tags": [
+      "TPL.steps",
+      "基础模板",
+      "1920×1080"
+    ],
+    "mediaNote": "运行仓库原模板和原 scenes.js 时间表；插画人物为仓库自带 demo-presenter.svg；媒体与统计为示意，无音频。",
+    "cues": [
+      {
+        "id": "cue-0",
+        "title": "动作节点 1",
+        "time": 16.4
+      },
+      {
+        "id": "cue-1",
+        "title": "动作节点 2",
+        "time": 17.2
+      },
+      {
+        "id": "cue-2",
+        "title": "动作节点 3",
+        "time": 18
+      },
+      {
+        "id": "cue-3",
+        "title": "动作节点 4",
+        "time": 18.5
+      }
+    ]
+  },
+  {
+    "id": "tpl-quote",
+    "title": "整屏金句 · 冲击与慢推",
+    "group": "template",
+    "description": "两行金句在蓝色背景砸入，震动后缓慢推近。",
+    "start": 20,
+    "end": 23,
+    "preview": "preview/template/index.html",
+    "source": "source/template/templates.js",
+    "line": 117,
+    "endLine": 127,
+    "tags": [
+      "TPL.quote",
+      "基础模板",
+      "1920×1080"
+    ],
+    "mediaNote": "运行仓库原模板和原 scenes.js 时间表；插画人物为仓库自带 demo-presenter.svg；媒体与统计为示意，无音频。",
+    "cues": [
+      {
+        "id": "cue-0",
+        "title": "动作节点 1",
+        "time": 20.2
+      },
+      {
+        "id": "cue-1",
+        "title": "动作节点 2",
+        "time": 20.4
+      },
+      {
+        "id": "cue-2",
+        "title": "动作节点 3",
+        "time": 21.4
+      },
+      {
+        "id": "cue-3",
+        "title": "动作节点 4",
+        "time": 22.4
+      }
+    ]
+  },
+  {
+    "id": "tpl-demo",
+    "title": "软件窗口 · 功能卡打勾",
+    "group": "template",
+    "description": "macOS 风格窗口缩放入场，右侧三条功能卡逐项滑入。原仓库自带录屏占位界面。",
+    "start": 23,
+    "end": 27,
+    "preview": "preview/template/index.html",
+    "source": "source/template/templates.js",
+    "line": 130,
+    "endLine": 145,
+    "tags": [
+      "TPL.demo",
+      "基础模板",
+      "1920×1080"
+    ],
+    "mediaNote": "运行仓库原模板和原 scenes.js 时间表；插画人物为仓库自带 demo-presenter.svg；媒体与统计为示意，无音频。",
+    "cues": [
+      {
+        "id": "cue-0",
+        "title": "动作节点 1",
+        "time": 23.1
+      },
+      {
+        "id": "cue-1",
+        "title": "动作节点 2",
+        "time": 23.6
+      },
+      {
+        "id": "cue-2",
+        "title": "动作节点 3",
+        "time": 24.3
+      },
+      {
+        "id": "cue-3",
+        "title": "动作节点 4",
+        "time": 25
+      },
+      {
+        "id": "cue-4",
+        "title": "动作节点 5",
+        "time": 25.6
+      }
+    ]
+  },
+  {
+    "id": "tpl-checklist",
+    "title": "检查清单 · 弹性打勾",
+    "group": "template",
+    "description": "每一行清单从左侧滑入，蓝色勾选圆弹性放大。",
+    "start": 27,
+    "end": 31,
+    "preview": "preview/template/index.html",
+    "source": "source/template/templates.js",
+    "line": 148,
+    "endLine": 158,
+    "tags": [
+      "TPL.checklist",
+      "基础模板",
+      "1920×1080"
+    ],
+    "mediaNote": "运行仓库原模板和原 scenes.js 时间表；插画人物为仓库自带 demo-presenter.svg；媒体与统计为示意，无音频。",
+    "cues": [
+      {
+        "id": "cue-0",
+        "title": "动作节点 1",
+        "time": 27.4
+      },
+      {
+        "id": "cue-1",
+        "title": "动作节点 2",
+        "time": 28
+      },
+      {
+        "id": "cue-2",
+        "title": "动作节点 3",
+        "time": 28.6
+      },
+      {
+        "id": "cue-3",
+        "title": "动作节点 4",
+        "time": 29.2
+      }
+    ]
+  },
+  {
+    "id": "tpl-outro",
+    "title": "终端片尾 · 逐字输入",
+    "group": "template",
+    "description": "标题与说明上移入场，终端提示词逐字打出，光标周期闪烁。",
+    "start": 31,
+    "end": 36,
+    "preview": "preview/template/index.html",
+    "source": "source/template/templates.js",
+    "line": 161,
+    "endLine": 173,
+    "tags": [
+      "TPL.outro",
+      "基础模板",
+      "1920×1080"
+    ],
+    "mediaNote": "运行仓库原模板和原 scenes.js 时间表；插画人物为仓库自带 demo-presenter.svg；媒体与统计为示意，无音频。",
+    "cues": [
+      {
+        "id": "cue-0",
+        "title": "动作节点 1",
+        "time": 31.15
+      },
+      {
+        "id": "cue-1",
+        "title": "动作节点 2",
+        "time": 31.7
+      },
+      {
+        "id": "cue-2",
+        "title": "动作节点 3",
+        "time": 32
+      },
+      {
+        "id": "cue-3",
+        "title": "动作节点 4",
+        "time": 33.4
+      },
+      {
+        "id": "cue-4",
+        "title": "动作节点 5",
+        "time": 35
+      }
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+name: Validate portable skill
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  portable-release:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    env:
+      PYTHONUTF8: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.11'
+      - name: Verify release bytes and required resources
+        run: python -B -X utf8 scripts/verify_package.py
+      - name: Test routing, current contracts and directing
+        run: python -B -X utf8 -m unittest discover -s scripts -p "test_*.py"
+      - name: Test install, update, privacy and rollback
+        run: python -B -X utf8 -m unittest discover -s tests -p "test_install_release.py"

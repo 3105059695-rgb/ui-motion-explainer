@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Collect UI · 作品与复刻覆盖记录</title><link rel="stylesheet" href="base.css">
+<style>
+[hidden]{display:none!important}.cv-page{max-width:1180px;padding:48px 26px 72px;margin:auto}.cv-back{font-size:13px;color:#806198;text-decoration:none}.cv-heading{margin:32px 0 13px;font-size:36px;font-weight:600;letter-spacing:-1.1px;line-height:1.4}.cv-intro{max-width:840px;margin:0;color:#858996;font-size:14px;line-height:1.9}.cv-summary{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:28px 0 18px}.cv-stat{background:white;padding:23px 20px;border:1px solid #E5E6EE;border-radius:14px}.cv-stat strong{font:700 35px ProjectDisplay,sans-serif;display:block;color:#34313D}.cv-stat span{display:block;font-size:11px;color:#95929E;margin-top:7px;line-height:1.65}.cv-boundary{display:flex;align-items:flex-start;gap:10px;padding:13px 17px;border:1px solid #E7E0F0;border-radius:11px;background:#F5F1FA;color:#93849F;font-size:12px;line-height:1.8}.cv-boundary b{font-weight:550;color:#826B96;white-space:nowrap}.cv-toolbar{margin:29px 0 17px;display:flex;align-items:center;gap:18px;justify-content:space-between}.cv-switch{display:inline-flex;gap:4px;padding:4px;border:1px solid #E6E3EC;background:#EEEAF3;border-radius:11px;flex-shrink:0}.cv-switch button{border:1px solid transparent;border-radius:8px;background:transparent;color:#9A90A4;padding:10px 16px;font-size:12px;display:flex;align-items:center;gap:10px}.cv-switch button[aria-pressed="true"]{background:#FFF;border-color:#E8E1EF;color:#745288;box-shadow:0 2px 6px #33283E05}.cv-count{font:700 11px ProjectDisplay,sans-serif;opacity:.7}.cv-search-wrap{max-width:420px;width:100%}.cv-search-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.cv-search{display:block;width:100%;border:1px solid #E4E4EB;background:white;border-radius:10px;padding:12px 14px;font-size:12px;color:#565360}.cv-result-count{font-size:12px;color:#9C97A4;margin:0 0 17px;line-height:1.8}
+.cv-works{display:grid;gap:18px}.cv-work{border:1px solid #E3E4EC;border-radius:17px;background:white;overflow:hidden}.cv-work-top{padding:23px 25px 21px;display:flex;gap:22px;justify-content:space-between;align-items:flex-start;border-bottom:1px solid #F0EDF5}.cv-work-index{font:700 10px ProjectDisplay,sans-serif;letter-spacing:1.6px;color:#B4A2C2;margin-bottom:8px}.cv-work h2{font-size:21px;font-weight:550;letter-spacing:-.4px;margin:0 0 10px;line-height:1.45;color:#46414F}.cv-meta{display:flex;flex-wrap:wrap;gap:7px 17px;color:#A59CAB;font-size:11px;line-height:1.8}.cv-meta b{font-weight:500;color:#8D819A}.cv-links{display:flex;flex-wrap:wrap;gap:9px 17px;margin-top:11px;font-size:11px}.cv-link{color:#866599;text-decoration:none;overflow-wrap:anywhere}.cv-link:hover{text-decoration:underline}.cv-unavailable{color:#B5ACBE;font-size:11px;line-height:1.8}.cv-work-status{display:flex;flex-direction:column;align-items:flex-end;gap:8px;flex-shrink:0}.cv-status-label{font-size:10px;color:#ADA4B6}.cv-chip{display:inline-flex;align-items:center;border:1px solid #E9E1F1;border-radius:7px;padding:5px 9px;background:#F5F0FA;font-size:11px;color:#9B81AF;white-space:nowrap}.cv-chip.is-implemented{background:#EEE8F7;color:#7B5999;border-color:#DECFEC}.cv-chip.is-queued{background:#F7F7FA;color:#A4A0AD;border-color:#ECEBF1}.cv-work-body{display:grid;grid-template-columns:minmax(0,1.13fr) minmax(0,1fr)}.cv-observation{padding:22px 25px 24px}.cv-section-title{margin:0 0 12px;color:#8F7DA0;font-size:11px;font-weight:550;letter-spacing:.6px}.cv-depth{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:14px;font-size:11px;color:#A496AF}.cv-code{font:10px ui-monospace,SFMono-Regular,Consolas,monospace;color:#AD9CBD;background:#FAF7FD;border:1px solid #EEE7F5;padding:4px 6px;border-radius:5px;overflow-wrap:anywhere}.cv-details{padding-left:17px;margin:0;color:#96909E;font-size:12px;line-height:1.95}.cv-details li+li{margin-top:8px}.cv-categories{display:flex;flex-wrap:wrap;gap:6px;margin-top:17px}.cv-category-chip{font-size:10px;background:#FAF9FC;color:#B1A5BC;border:1px solid #F0EBF6;border-radius:5px;padding:4px 7px}.cv-adaptations{border-left:1px solid #F0EDF5;padding:22px 25px 24px;background:#FDFBFF}.cv-adaptation+.cv-adaptation{border-top:1px solid #EAE2F2;padding-top:17px;margin-top:17px}.cv-adaptation-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:12px}.cv-adaptation p,.cv-original p{font-size:12px;color:#9B90A7;line-height:1.95;margin:10px 0 0}.cv-adapt-status{font-size:11px;color:#AD99BD;line-height:1.8}.cv-preview{display:inline-flex;align-items:center;gap:8px;border:1px solid #E2D7ED;border-radius:8px;color:#8D6AA6;background:#F1EAF8;padding:9px 12px;text-decoration:none;font-size:11px;margin-top:14px}.cv-preview:hover{background:#EAE0F4}.cv-evidence{margin-left:14px;font-size:11px}.cv-pending{margin-top:18px;border-top:1px solid #EEEAF4;padding-top:14px}.cv-pending summary{font-size:11px;color:#A495B1;cursor:pointer;line-height:1.8}.cv-pending ul{margin-top:11px}.cv-original{padding:18px 25px;border-top:1px solid #F0EDF5;background:#FFFEFF}.cv-original-top{display:flex;align-items:center;flex-wrap:wrap;gap:12px}.cv-original .cv-section-title{margin:0}.cv-original .cv-preview{margin-top:11px;margin-right:8px}.cv-empty{padding:36px 22px;text-align:center;color:#A295AD;background:#FFF;border:1px solid #E9E2F1;border-radius:14px;font-size:13px;line-height:1.8}
+.cv-table-wrap{overflow:auto;border:1px solid #E5E5ED;border-radius:13px;background:#FFF}.cv-table{border-collapse:collapse;width:100%;min-width:650px;font-size:12px}.cv-table th,.cv-table td{text-align:left;padding:15px 19px;border-bottom:1px solid #EFEDF4;vertical-align:top;line-height:1.8}.cv-table th{font-size:11px;color:#A393B2;font-weight:500;background:#FDFCFE}.cv-table td{color:#9B94A5}.cv-table tbody tr:last-child td{border-bottom:0}.cv-table td:first-child{color:#7D718A;font-weight:450;width:29%}.cv-table .cv-preview{padding:4px 7px;margin:0 5px 5px 0;font-size:10px}.cv-footnotes{margin-top:25px;padding:21px 24px;border:1px solid #E7E4ED;border-radius:12px;background:#FBFAFD}.cv-footnotes h2{margin:0 0 12px;font-size:12px;font-weight:550;color:#9B8CAC}.cv-footnotes ul{padding-left:17px;margin:0;color:#AAA0B3;font-size:11px;line-height:1.9}.cv-footnotes li+li{margin-top:6px}.cv-updated{font-size:10px;color:#B9AEC3;margin-top:17px;line-height:1.8}.cv-error{color:#9B5967;background:#FFF6F8;border:1px solid #EDCBD5;border-radius:12px;padding:20px;margin-top:25px;font-size:13px;line-height:1.8}
+.cv-switch{flex-wrap:wrap;max-width:100%}.cv-inventory-summary{font-size:12px;color:#93849f;line-height:1.85;margin:13px 2px 0}.cv-inventory-note{font-size:12px;color:#96909e;line-height:1.9;margin:0 0 17px}.cv-inventory-table{min-width:780px}.cv-inventory-table td:first-child{width:13%;min-width:100px}.cv-inventory-table td:nth-child(2){width:39%}.cv-inventory-title{font-size:14px;color:#686071;font-weight:500;line-height:1.7;margin-bottom:7px}.cv-inventory-detail{font-size:11px;line-height:1.85;margin-top:5px;color:#aaa0b3}.cv-inventory-links{display:flex;flex-direction:column;gap:8px;align-items:flex-start}.cv-duplicate{color:#a691b8;margin-top:8px;font-size:10px;line-height:1.7}
+@media(max-width:900px){.cv-summary{grid-template-columns:repeat(3,minmax(0,1fr))}.cv-work-body{grid-template-columns:1fr}.cv-adaptations{border-left:0;border-top:1px solid #F0EDF5}.cv-work h2{font-size:19px}}
+@media(max-width:600px){.cv-page{padding:30px 16px 45px}.cv-heading{font-size:28px}.cv-summary{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.cv-stat{padding:18px 15px}.cv-stat strong{font-size:30px}.cv-toolbar{flex-direction:column;align-items:stretch;gap:13px}.cv-switch{align-self:flex-start}.cv-search-wrap{max-width:none}.cv-work-top{padding:20px;gap:12px}.cv-observation,.cv-adaptations,.cv-original{padding:20px}.cv-work-status{max-width:115px}.cv-chip{white-space:normal;line-height:1.6}.cv-boundary{display:block}.cv-boundary b{display:block;margin-bottom:5px}.cv-footnotes{padding:18px}}
+</style></head>
+<body><main class="cv-page">
+<a class="cv-back" href="index.html">← 返回动效工作室</a>
+<h1 class="cv-heading">每一个参考，都有进度。</h1>
+<p class="cv-intro">按实际作品查看观察记录、作者来源与对应代码，也可以浏览分类目录和待拆解作品清单。卡片清点、作品观察、完整复刻与交互机制适配分别记录。</p>
+<div class="cv-summary" id="summary" aria-label="当前覆盖统计"></div>
+<div class="cv-boundary"><b>进度如何计数</b><span id="scope-note">正在读取当前记录…</span></div>
+<p class="cv-inventory-summary" id="inventory-summary" aria-live="polite">作品清单元数据正在载入…</p>
+<p class="cv-inventory-summary" id="inventory-total" hidden></p>
+<div class="cv-toolbar"><div class="cv-switch" role="group" aria-label="选择清单类型">
+<button type="button" id="works-button" aria-pressed="true" aria-controls="works-view">作品记录 <span class="cv-count" id="works-count">—</span></button>
+<button type="button" id="categories-button" aria-pressed="false" aria-controls="categories-view">分类目录 <span class="cv-count" id="categories-count">—</span></button>
+<button type="button" id="inventory-button" aria-pressed="false" aria-controls="inventory-view">作品清单 <span class="cv-count" id="inventory-count">—</span></button>
+</div><div class="cv-search-wrap"><label class="cv-search-label" for="filter">按作品、作者、标题、标签、预设或分类关键词筛选</label><input class="cv-search" id="filter" type="search" placeholder="搜索作品、作者、交互或预设…" autocomplete="off"></div></div>
+<p class="cv-result-count" id="result-count" aria-live="polite">正在载入清单…</p>
+<section class="cv-works" id="works-view" aria-label="实际作品观察与复刻清单"></section>
+<section id="categories-view" aria-label="分类覆盖目录" hidden><div class="cv-table-wrap"><table class="cv-table"><thead><tr><th scope="col">分类</th><th scope="col">分类状态</th><th scope="col">对应预设</th><th scope="col">来源</th></tr></thead><tbody id="rows"></tbody></table></div></section>
+<section id="inventory-view" aria-label="分类列表卡片清点，未等同作品观察" hidden><div class="cv-toolbar"><label for="inventory-category">选择已清点分类</label><select class="cv-search" id="inventory-category" style="max-width:320px" disabled><option>正在读取分类…</option></select></div><p class="cv-inventory-note" id="inventory-note">正在载入待拆解清单…</p><div id="inventory-content"></div><nav id="inventory-pager" class="cv-toolbar" aria-label="本地卡片清单分页" hidden><button type="button" class="cv-preview" id="inventory-prev">上一页</button><span class="cv-result-count" id="inventory-page-label"></span><button type="button" class="cv-preview" id="inventory-next">下一页</button></nav></section>
+<div class="cv-error" id="error" role="alert" hidden></div>
+<section class="cv-footnotes" id="notes-section" hidden><h2>当前范围与待完成事项</h2><ul id="notes"></ul><div class="cv-updated" id="updated"></div></section>
+</main>
+<script>
+'use strict';
+const $ = selector => document.querySelector(selector);
+const state = { data: null, inventory: null, inventoryLoading: true, inventoryError: null, inventoryCatalog: [], inventoryPage: 0, inventoryRequest: 0, view: 'works', query: '' };
+const inventoryPageSize = 24;
+const statusLabels = { queued: '待观察与拆解', observed: '已观察', implemented: '已实现并验证', 'catalogued-only': '仅卡片清点' };
+const depthLabels = {'static-image-observed':'已观察静态界面','interaction-observed':'已观察交互变化','ui-observed':'已观察界面','homepage-preview-only':'仅首页预览','multiple-video-times-observed':'已观察多个视频时间点','full-video-observed':'已观察完整视频','frame-by-frame-observed':'已逐帧观察'};
+const mechanismLabels = {queued:'待制作',observed:'已观察，待制作',implemented:'已实现','implemented-and-browser-checked':'已实现 · 浏览器已检查','implemented-not-checked':'已实现 · 尚未检查'};
+function array(value) { return Array.isArray(value) ? value : []; }
+function adaptations(work) {
+  if (Array.isArray(work.adaptedMechanisms)) return work.adaptedMechanisms;
+  if (Array.isArray(work.adaptedMechanism)) return work.adaptedMechanism;
+  return work.adaptedMechanism && typeof work.adaptedMechanism === 'object' ? [work.adaptedMechanism] : [];
+}
+function el(tag, className, value) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (value !== undefined && value !== null) node.textContent = String(value);
+  return node;
+}
+function chip(status) {
+  const node = el('span', 'cv-chip', statusLabels[status] || status || '状态未记录');
+  if (status === 'implemented') node.classList.add('is-implemented');
+  if (status === 'queued' || status === 'catalogued-only') node.classList.add('is-queued');
+  return node;
+}
+function externalLink(value, label) {
+  try {
+    const url = new URL(value);
+    if (!['https:', 'http:'].includes(url.protocol)) return null;
+    const link = el('a', 'cv-link', label);
+    link.href = url.href; link.target = '_blank'; link.rel = 'noopener noreferrer';
+    return link;
+  } catch (_) { return null; }
+}
+function evidenceLink(value) {
+  if (typeof value !== 'string' || !value.trim()) return null;
+  try {
+    const url = new URL(value, location.href);
+    if (url.origin !== location.origin || !['file:', 'http:', 'https:'].includes(url.protocol)) return null;
+    const link = el('a', 'cv-link cv-evidence', '验证记录 ↗');
+    link.href = url.href; link.target = '_blank'; link.rel = 'noopener noreferrer';
+    return link;
+  } catch (_) { return null; }
+}
+function previewLink(preset, label) {
+  if (typeof preset !== 'string' || !preset.trim()) return null;
+  const link = el('a', 'cv-preview', label || '打开本地动效 →');
+  link.href = 'index.html?preset=' + encodeURIComponent(preset);
+  return link;
+}
+function bulletList(items) {
+  const list = el('ul', 'cv-details');
+  for (const item of array(items)) list.append(el('li', '', item));
+  return list;
+}
+function sourceLinks(work) {
+  const links = el('div', 'cv-links');
+  let originalUrl = typeof work.workUrl === 'string' && work.workUrl ? work.workUrl : null;
+  if (!Object.prototype.hasOwnProperty.call(work, 'workUrl')) originalUrl = work.url;
+  // The discovery homepage is not a verified standalone work page.
+  try {
+    const url = new URL(originalUrl);
+    if (url.hostname.replace(/^www\./, '') === 'collectui.com' && (url.pathname === '/' || url.pathname === '')) originalUrl = null;
+  } catch (_) { originalUrl = null; }
+  const original = externalLink(originalUrl, '原作链接 ↗');
+  if (original) links.append(original);
+  else links.append(el('span', 'cv-unavailable', '独立原作链接待核实'));
+  const discovery = externalLink(work.discoveredOn || work.url, '发现页面 ↗');
+  if (discovery && discovery.href !== original?.href) links.append(discovery);
+  return links;
+}
+function renderWork(work, index) {
+  const article = el('article', 'cv-work'), top = el('div', 'cv-work-top'), identity = el('div');
+  identity.append(el('div', 'cv-work-index', 'REFERENCE ' + String(index + 1).padStart(2, '0')));
+  identity.append(el('h2', '', work.title || work.id || '未命名作品'));
+  const meta = el('div', 'cv-meta'), author = el('span');
+  author.append(el('b', '', '作者 '), document.createTextNode(work.author || '待核实'));
+  meta.append(author);
+  if (work.observedAt) meta.append(el('span', '', '观察日期 ' + work.observedAt));
+  identity.append(meta, sourceLinks(work));
+  const status = el('div', 'cv-work-status');
+  status.append(el('span', 'cv-status-label', '作品层级状态'), chip(work.status));
+  top.append(identity, status);
+  const body = el('div', 'cv-work-body'), observation = el('section', 'cv-observation');
+  observation.append(el('h3', 'cv-section-title', '已观察到的内容'));
+  const depth = el('div', 'cv-depth'), rawDepth = work.observationDepth || '未记录';
+  depth.append(el('span', '', depthLabels[rawDepth] || '观察深度'), el('code', 'cv-code', rawDepth));
+  observation.append(depth);
+  if (array(work.observedDetails).length) observation.append(bulletList(work.observedDetails));
+  else observation.append(el('p', 'cv-unavailable', '尚未记录具体观察细节。'));
+  if (array(work.categoryNames).length) {
+    const tags = el('div', 'cv-categories');
+    for (const name of work.categoryNames) tags.append(el('span', 'cv-category-chip', name));
+    observation.append(tags);
+  }
+  if (array(work.pendingDetails).length) {
+    const pending = el('details', 'cv-pending');
+    pending.append(el('summary', '', '尚未覆盖的细节 · ' + work.pendingDetails.length), bulletList(work.pendingDetails));
+    observation.append(pending);
+  }
+  const mechanisms = el('section', 'cv-adaptations');
+  mechanisms.append(el('h3', 'cv-section-title', '交互机制适配'));
+  const mapped = adaptations(work);
+  if (!mapped.length) mechanisms.append(el('p', 'cv-unavailable', '尚无已记录的机制适配。作品观察不会自动计为代码实现。'));
+  for (const item of mapped) {
+    const adaptation = el('div', 'cv-adaptation'), head = el('div', 'cv-adaptation-head');
+    head.append(el('code', 'cv-code', item.presetId || '预设待指定')); adaptation.append(head);
+    adaptation.append(el('div', 'cv-adapt-status', mechanismLabels[item.status] || item.status || '适配状态未记录'));
+    adaptation.append(el('p', '', item.difference || '与原作的差异尚未记录。'));
+    const preview = previewLink(item.presetId), evidence = evidenceLink(item.evidence);
+    if (preview) adaptation.append(preview);
+    if (evidence) adaptation.append(evidence);
+    mechanisms.append(adaptation);
+  }
+  body.append(observation, mechanisms);
+  const original = el('section', 'cv-original'), originalTop = el('div', 'cv-original-top');
+  originalTop.append(el('h3', 'cv-section-title', '原作完整复刻'), chip(work.status)); original.append(originalTop);
+  original.append(el('p', '', work.status === 'implemented' ? '该作品在清单中标记为已实现；对应预设与验证依据如下。' : '当前记录未将此原作品标记为完整复刻。上方的机制适配单独计数。'));
+  for (const preset of array(work.presetIds)) { const preview = previewLink(preset, preset + ' →'); if (preview) original.append(preview); }
+  const originalEvidence = evidenceLink(typeof work.verification === 'string' ? work.verification : work.verification?.evidence);
+  if (originalEvidence) original.append(originalEvidence);
+  article.append(top, body, original);
+  return article;
+}
+function workSearchText(work) {
+  return [work.id,work.title,work.author,work.status,statusLabels[work.status],work.observationDepth,depthLabels[work.observationDepth],...array(work.categoryNames),...array(work.observedDetails),...array(work.pendingDetails),...array(work.presetIds),...adaptations(work).flatMap(item=>[item.presetId,item.status,item.difference,mechanismLabels[item.status]])].filter(Boolean).join(' ').toLocaleLowerCase();
+}
+function categorySearchText(category) {
+  return [category.name,category.status,statusLabels[category.status],...array(category.presetIds)].filter(Boolean).join(' ').toLocaleLowerCase();
+}
+function inventorySearchText(entry) {
+  return [entry.id,entry.title,entry.authorProfile?.handle,entry.authorProfile?.url,entry.attributionRole,entry.attributionUrl,entry.firstVisibleTag,...array(entry.displayedTags).flatMap(tag=>[tag.label,tag.href]),entry.status,statusLabels[entry.status],entry.mediaTypeFromExtension,entry.mediaGroupId].filter(Boolean).join(' ').toLocaleLowerCase();
+}
+function attributionLabel(entry) {
+  let account = '';
+  try { account = new URL(entry.attributionUrl).pathname.split('/').filter(Boolean).pop() || ''; } catch (_) {}
+  return (entry.attributionRole || '归属链接') + (account ? ' · ' + account : '') + ' ↗';
+}
+function renderInventoryRow(entry, entries) {
+  const row=el('tr'),position=el('td'),identity=el('td'),status=el('td'),links=el('td'),linkList=el('div','cv-inventory-links');
+  position.append(el('div','','第 '+(entry.pageNumber ?? '—')+' 页'),el('div','','第 '+(entry.cardOrder ?? '—')+' 卡'));
+  identity.append(el('div','cv-inventory-title',entry.title || '标题未提供'));
+  if(entry.authorProfile){
+    identity.append(externalLink(entry.authorProfile.url,'作者 · '+(entry.authorProfile.handle || '资料页')+' ↗') || el('span','cv-unavailable',entry.authorProfile.handle || '作者资料待核实'));
+  }else if(entry.attributionUrl){
+    identity.append(externalLink(entry.attributionUrl,attributionLabel(entry)) || el('span','cv-unavailable','归属链接待核实'));
+    identity.append(el('div','cv-inventory-detail','未提供站内作者资料；Post by 链接不等同原作链接。'));
+  }else identity.append(el('span','cv-unavailable','作者或归属资料未提供'));
+  const tags=el('div','cv-categories');
+  const shownTags=array(entry.displayedTags);
+  if(shownTags.length)for(const tag of shownTags)tags.append(el('span','cv-category-chip',tag.label || '标签未提供'));
+  else tags.append(el('span','cv-category-chip','首个标签 · '+(entry.firstVisibleTag || '未提供')));
+  if(entry.hiddenTagCount>0)tags.append(el('span','cv-category-chip','+'+entry.hiddenTagCount+' 未展开'));
+  identity.append(tags);
+  const type=entry.mediaTypeFromExtension==='video'?'视频 URL':entry.mediaTypeFromExtension==='image'?'图片 URL':'媒体类型未记录';
+  identity.append(el('div','cv-inventory-detail',type+(entry.mediaGroupId?' · '+entry.mediaGroupId:'')));
+  const duplicates=entries.filter(other=>entry.mediaUrl && other.id!==entry.id && other.mediaUrl===entry.mediaUrl);
+  if(duplicates.length)identity.append(el('div','cv-duplicate','相同媒体还出现在 '+duplicates.map(other=>'第 '+other.pageNumber+' 页第 '+other.cardOrder+' 卡').join('、')+'；保留原卡片。'));
+  status.append(chip(entry.status || 'catalogued-only'),el('div','cv-inventory-detail','清点不等于已观察或已实现。'));
+  const original=externalLink(entry.originalWorkUrl,'原作链接 ↗');
+  linkList.append(original || el('span','cv-unavailable','原作链接待核实'));
+  const media=externalLink(entry.mediaUrl,'参考媒体链接 ↗');
+  linkList.append(media || el('span','cv-unavailable','媒体链接未提供'));
+  linkList.append(el('span','cv-unavailable','仅链接，不内嵌播放。'));links.append(linkList);
+  row.append(position,identity,status,links);return row;
+}
+function drawInventory(query) {
+  $('#inventory-pager').hidden=true;
+  if(!state.inventory){
+    const message=state.inventoryLoading?'作品清单正在载入…':'作品清单未载入：'+(state.inventoryError || '暂无可用数据')+'。作品记录和分类目录仍可单独查看。';
+    $('#inventory-note').textContent=message;
+    $('#inventory-content').replaceChildren(el('div','cv-empty',message));
+    $('#result-count').textContent=state.inventoryLoading?'正在载入作品清单。':'作品清单未载入，未显示任何清点或完成数量。';
+    return;
+  }
+  const entries=array(state.inventory.entries),filtered=entries.filter(entry=>!query||inventorySearchText(entry).includes(query));
+  const pageCount=Math.max(1,Math.ceil(filtered.length/inventoryPageSize));
+  state.inventoryPage=Math.max(0,Math.min(state.inventoryPage,pageCount-1));
+  const offset=state.inventoryPage*inventoryPageSize, pageEntries=filtered.slice(offset,offset+inventoryPageSize);
+  const scope=state.inventory.scope || {};
+  $('#inventory-note').textContent='仅为 '+(scope.category || '分类')+' 列表快照，保留分页、卡片顺序与重复项。未展开的标签未补造；媒体类型依据文件扩展名。'+(scope.enumerationComplete?'本次可见分页已清点，':'本次分页仍待清点，')+'不代表独立原作总数、媒体已观看或全站完成。站点更新后清单可能变化。';
+  if(!filtered.length){
+    $('#inventory-content').replaceChildren(el('div','cv-empty',query?'没有匹配的清点条目。试试作者、标题或首个标签。':'当前快照没有卡片条目。'));
+  }else{
+    const wrap=el('div','cv-table-wrap'),table=el('table','cv-table cv-inventory-table'),head=el('thead'),headRow=el('tr'),body=el('tbody');
+    for(const title of ['页码 / 序号','卡片元数据','登记状态','参考来源']){const cell=el('th','',title);cell.setAttribute('scope','col');headRow.append(cell);}
+    head.append(headRow);body.append(...pageEntries.map(entry=>renderInventoryRow(entry,entries)));table.append(head,body);wrap.append(table);$('#inventory-content').replaceChildren(wrap);
+    $('#inventory-pager').hidden=false;
+    $('#inventory-prev').disabled=state.inventoryPage===0;
+    $('#inventory-next').disabled=state.inventoryPage===pageCount-1;
+    $('#inventory-page-label').textContent='本地清单 '+(state.inventoryPage+1)+' / '+pageCount+' 页 · '+(offset+1)+'–'+(offset+pageEntries.length)+' / '+filtered.length+' 卡';
+  }
+  $('#result-count').textContent='匹配 '+filtered.length+' / '+entries.length+' 张卡片，本页显示 '+pageEntries.length+' 张；重复卡片保留，不计作已观察作品。';
+}
+function draw() {
+  const query = state.query.trim().toLocaleLowerCase(), workView = state.view === 'works', categoryView = state.view === 'categories', inventoryView = state.view === 'inventory';
+  $('#works-button').setAttribute('aria-pressed',String(workView)); $('#categories-button').setAttribute('aria-pressed',String(categoryView)); $('#inventory-button').setAttribute('aria-pressed',String(inventoryView));
+  $('#works-view').hidden=!workView; $('#categories-view').hidden=!categoryView; $('#inventory-view').hidden=!inventoryView;
+  $('#filter').placeholder=workView?'搜索作品、作者、交互或预设…':categoryView?'搜索分类、状态或预设…':'搜索作者、标题或首个标签…';
+  if(inventoryView){drawInventory(query);return;}
+  if(!state.data){$('#result-count').textContent='作品观察与分类数据尚未载入。';return;}
+  const works = array(state.data.observedWorks), categories = array(state.data.categories);
+  if (workView) {
+    const filtered=works.map((work,index)=>({work,index})).filter(item=>!query||workSearchText(item.work).includes(query));
+    const nodes=filtered.map(item=>renderWork(item.work,item.index));
+    if (!nodes.length) nodes.push(el('div','cv-empty',query?'没有匹配的作品记录。试试作者、交互动作或预设名称。':'目前还没有作品观察记录。'));
+    $('#works-view').replaceChildren(...nodes);
+    $('#result-count').textContent='显示 '+filtered.length+' / '+works.length+' 条作品记录；此清单不是全站作品总数。';
+  } else {
+    const filtered=categories.filter(category=>!query||categorySearchText(category).includes(query));
+    const rows=filtered.map(category=>{
+      const row=el('tr'), status=el('td'), presets=el('td'), source=el('td'); status.append(chip(category.status));
+      for(const id of array(category.presetIds)){const preview=previewLink(id,id+' →');if(preview)presets.append(preview);}
+      if(!presets.childNodes.length)presets.append(el('span','cv-unavailable','尚未映射'));
+      source.append(externalLink(category.url,'来源 ↗')||el('span','cv-unavailable','链接待核实'));
+      row.append(el('td','',category.name||'未命名分类'),status,presets,source);return row;
+    });
+    if(!rows.length){const row=el('tr'),cell=el('td','','没有匹配的分类。');cell.colSpan=4;row.append(cell);rows.push(row);}
+    $('#rows').replaceChildren(...rows);
+    $('#result-count').textContent='显示 '+filtered.length+' / '+categories.length+' 个分类；分类建档不代表完成该分类下的作品复刻。';
+  }
+}
+function initialize(data) {
+  state.data=data;
+  const works=array(data.observedWorks),categories=array(data.categories),completeWorks=works.filter(work=>work.status==='implemented').length,mechanismCount=works.reduce((sum,work)=>sum+adaptations(work).length,0);
+  const presetCount=Number.isFinite(data.library?.presetCount)?data.library.presetCount:'—';
+  const stats=[[presetCount,'可运行代码预设'],[categories.length,'已建档分类'],[works.length,'作品观察记录'],[completeWorks,'原作完整复刻记录'],[mechanismCount,'机制适配记录']];
+  $('#summary').replaceChildren(...stats.map(([count,label])=>{const card=el('div','cv-stat');card.append(el('strong','',count),el('span','',label));return card;}));
+  $('#works-count').textContent=String(works.length);$('#categories-count').textContent=String(categories.length);
+  const exactCount=data.summary?.exactSiteWorkCount;
+  $('#scope-note').textContent='机制适配不计为原作完整复刻。分类、作品状态与适配状态均按 coverage.json 的实际记录显示。'+(Number.isFinite(exactCount)?' 已记录的全站作品总数为 '+exactCount+'。':' 全站作品总数尚未核实，暂无全站完成比例。');
+  $('#notes').replaceChildren(...array(data.limitations).map(note=>el('li','',note)));$('#notes-section').hidden=false;
+  $('#updated').textContent='记录更新：'+(data.updatedAt||'未记录')+' · 数据来源：本地 coverage.json';draw();
+}
+function initializeInventory(data) {
+  if(!data || !Array.isArray(data.entries) || data.entries.some(entry=>!entry || typeof entry!=='object'))throw Error('作品清单格式无效');
+  state.inventory=data;state.inventoryLoading=false;state.inventoryError=null;
+  const entries=data.entries,uniqueMedia=new Set(entries.map(entry=>entry.mediaUrl).filter(value=>typeof value==='string' && value)).size;
+  $('#inventory-count').textContent=String(entries.length);
+  $('#inventory-summary').textContent='清点 '+entries.length+' 卡 / '+uniqueMedia+' 个媒体 URL，仅 '+(data.scope?.category || '分类')+' 快照 · '+(data.updatedAt || '日期未记录')+'。卡片清点与上方作品观察记录分别计数。';
+  draw();
+}
+function inventoryLoadFailed(error) {
+  state.inventoryLoading=false;state.inventoryError=error.message || String(error);
+  $('#inventory-count').textContent='未载入';
+  $('#inventory-summary').textContent='作品清单未载入；作品记录和分类目录可继续查看。';draw();
+}
+async function loadInventory(paths) {
+  let lastError;
+  // The skill package and copied standalone projects keep references at different depths.
+  for(const path of paths || ['../../references/work-inventory.json','./references/work-inventory.json']){
+    try{
+      const resolved=new URL(path,location.href);
+      if(resolved.origin!==location.origin)throw Error('仅可读取同源清单');
+      const response=await fetch(path,{mode:'same-origin',redirect:'error'});
+      if(!response.ok)throw Error(path+' · HTTP '+response.status);
+      const data=await response.json();
+      if(!data || !Array.isArray(data.entries) || data.entries.some(entry=>!entry || typeof entry!=='object'))throw Error(path+' · 作品清单格式无效');
+      return data;
+    }catch(error){lastError=error;}
+  }
+  throw lastError || Error('本地作品清单未找到');
+}
+async function selectInventory(item) {
+  const request=++state.inventoryRequest;
+  state.inventory=null;state.inventoryPage=0;state.inventoryLoading=true;state.inventoryError=null;
+  $('#inventory-count').textContent='…';$('#inventory-summary').textContent='正在读取 '+item.category+' 分类清单…';
+  draw();
+  try{
+    const data=await loadInventory(item.paths || [item.path]);
+    if(request!==state.inventoryRequest)return;
+    initializeInventory(data);
+  }catch(error){if(request===state.inventoryRequest)inventoryLoadFailed(error);}
+}
+async function initializeInventoryCatalog() {
+  let items;
+  try{
+    const response=await fetch('inventory-catalog.json',{mode:'same-origin',redirect:'error'});
+    if(!response.ok)throw Error('HTTP '+response.status);
+    const data=await response.json();
+    if(!Array.isArray(data.inventories)||!data.inventories.length)throw Error('没有已登记清单');
+    items=data.inventories;
+    const ids=new Set();
+    for(const item of items){
+      if(!item.id||ids.has(item.id)||typeof item.category!=='string'||typeof item.path!=='string')throw Error('分类清单索引无效');
+      const url=new URL(item.path,location.href);
+      if(url.origin!==location.origin)throw Error('索引包含非本地清单');
+      ids.add(item.id);
+    }
+  }catch(_){items=[{id:'ai-flow',category:'AI Flow',paths:['../../references/work-inventory.json','./references/work-inventory.json']}];}
+  state.inventoryCatalog=items;
+  $('#inventory-category').replaceChildren(...items.map(item=>{const option=el('option','',item.category);option.value=item.id;return option;}));
+  try{
+    const response=await fetch('inventory-summary.json',{mode:'same-origin',redirect:'error'});
+    if(response.ok){
+      const totals=(await response.json()).summary;
+      if(totals && ['inventoriedCategories','pages','cardOccurrences','uniqueMedia'].every(key=>Number.isFinite(totals[key])&&totals[key]>=0)){
+        $('#inventory-total').textContent='已登记 '+totals.inventoriedCategories+' 个分类快照、'+totals.pages+' 个归档分页/列表、'+totals.cardOccurrences+' 张卡片；按完整URL去重为 '+totals.uniqueMedia+' 个媒体。分类间重复保留，不代表全站作品总数或复刻完成数。';
+        $('#inventory-total').hidden=false;
+      }
+    }
+  }catch(_){} // Older portable projects can still display the selected inventory.
+  const requested=new URLSearchParams(location.search).get('inventory');
+  const selected=items.find(item=>item.id===requested) || items[0];
+  $('#inventory-category').value=selected.id;
+  if(requested===selected.id)state.view='inventory';
+  await selectInventory(selected);
+  $('#inventory-category').disabled=false;
+}
+$('#works-button').addEventListener('click',()=>{state.view='works';draw();});
+$('#categories-button').addEventListener('click',()=>{state.view='categories';draw();});
+$('#inventory-button').addEventListener('click',()=>{state.view='inventory';draw();});
+$('#filter').addEventListener('input',event=>{state.query=event.target.value;state.inventoryPage=0;draw();});
+$('#inventory-category').addEventListener('change',event=>{const item=state.inventoryCatalog.find(item=>item.id===event.target.value);if(item)selectInventory(item);});
+$('#inventory-prev').addEventListener('click',()=>{state.inventoryPage--;draw();});
+$('#inventory-next').addEventListener('click',()=>{state.inventoryPage++;draw();});
+fetch('coverage.json').then(response=>{if(!response.ok)throw Error('HTTP '+response.status);return response.json();}).then(initialize).catch(error=>{
+  $('#error').hidden=false;$('#error').textContent='清单载入失败：'+error.message+'。请通过动效工作室的本地服务打开本页后重试。';
+  $('#result-count').textContent='尚未载入记录。';$('#scope-note').textContent='当前数据未载入，未显示任何完成数量。';
+});
+initializeInventoryCatalog().catch(inventoryLoadFailed);
+</script></body></html>

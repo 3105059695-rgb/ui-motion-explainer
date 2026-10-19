@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>黑白紫 UI 进阶动效 · 可编辑展示</title>
+  <link rel="stylesheet" href="studio.css">
+  <script src="scenes.js" defer></script>
+  <script src="studio.js" defer></script>
+</head>
+<body>
+  <div id="exhibition">
+    <header class="exhibition-head"><div><p class="eyebrow">UI MOTION FUSION</p><h1>你的视觉语言，新的连续动作</h1><p>同一窗口、同一对象，先操作，再看结果。</p></div><span class="exhibition-tag">8 个可编辑场景 · 50 fps</span></header>
+    <nav id="scene-tabs" aria-label="选择动效场景"></nav>
+    <div id="stage-host"><main id="stage" data-composition-id="fusion" data-width="1920" data-height="1080" data-fps="50" data-duration="72">
+      <div class="outside-top"><div class="outside-name"><i></i><span>研究工作台</span></div><span class="outside-note">界面示意 · 示例数据</span></div>
+      <section id="workspace" class="window" aria-label="研究工作台界面示意">
+        <div class="chrome"><div class="chrome-dots"><i></i><i></i><i></i></div><span class="chrome-path">研究工作台 / 市场调研</span><span class="chrome-end">— &nbsp; ▢</span></div>
+        <aside class="sidebar"><div class="side-brand"><span class="brand-mark">研</span>研究工作台</div><div class="side-group">工作空间</div><div class="side-nav"><div class="nav-item" data-nav="资料库"><span>▤</span>资料库 <small>6</small></div><div class="nav-item" data-nav="工作流"><span>⌘</span>工作流 <small>4</small></div><div class="nav-item" data-nav="报告"><span>▥</span>报告</div><div class="nav-item" data-nav="设置"><span>⚙</span>设置</div></div><div class="side-project"><span>当前项目</span><strong><i></i>市场调研</strong><p>资料 → 分析 → 结果</p></div><div class="side-person"><b>林</b><div>林然<small>个人工作空间</small></div></div></aside>
+        <section class="app-main"><div class="app-heading"><p id="breadcrumb">市场调研 / 资料库</p><h2 id="page-title">项目资料</h2><p id="page-subtitle">选择资料，沿着它继续工作</p><div class="header-action" id="header-action">共享空间</div><div class="presence"><span>协作成员</span><b>林</b><b>陈</b></div></div>
+          <div id="scene-content"></div>
+          <div class="app-footer"><span id="app-state">资料已同步</span><span>工作台为原创示意，非真实产品录屏</span></div>
+          <div id="scene-curtain"></div>
+        </section>
+      </section>
+      <div id="presenter" aria-label="几何人物占位，仅供构图示意"><svg id="presenter-art" viewBox="0 0 440 580" aria-hidden="true"><rect width="440" height="580" rx="20" fill="#eeeaf3"/><path d="M25 580v-84c0-90 60-144 130-155h130c70 11 130 65 130 155v84" fill="#25232a"/><path d="M185 286h70v85c-16 22-54 22-70 0z" fill="#bab0cb"/><ellipse cx="220" cy="210" rx="100" ry="125" fill="#cfc6dc"/><path d="M116 207c-5-93 40-151 110-151 65 0 111 59 102 148-24-15-34-43-45-77-26 31-78 50-146 49z" fill="#4d4658"/><path d="M177 223h22M244 223h22" stroke="#57515f" stroke-width="9" stroke-linecap="round"/><path id="presenter-mouth" d="M205 279h31" stroke="#7a6b87" stroke-width="7" stroke-linecap="round"/><path d="m155 358 65 72 65-72" fill="none" stroke="#8061c7" stroke-width="12"/><path d="M222 432v148" stroke="#40394b" stroke-width="4"/></svg><video id="presenter-video" playsinline preload="auto"></video></div>
+      <div id="presenter-label">几何人物占位 · 可替换原素材</div>
+      <div id="media-clock">单一媒体时钟 <b>00:00.00</b></div>
+      <svg id="cursor" viewBox="0 0 32 40" aria-hidden="true"><path d="M4 3v29l8-8 7 13 5-3-7-12h11z" fill="#17191f" stroke="#fff" stroke-width="2.2"/></svg>
+      <div id="click-ring" aria-hidden="true"></div>
+      <div class="outside-bottom"><span id="scene-caption">F01 · 同一份资料，从列表进入详情</span><span>黑白紫 UI 进阶动效</span></div>
+    </main></div>
+    <section class="transport" aria-label="播放控制"><button id="play-pause" type="button" aria-label="暂停播放">暂停</button><button id="replay" type="button">重播</button><label class="time-control"><span id="time-label">00:00 / 01:12</span><input id="time-slider" type="range" min="0" max="72" step="0.02" value="0" aria-label="时间轴"></label><label class="speed-control">速度 <select id="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option></select></label><button id="all-scenes" type="button">全部连播</button><button id="fullscreen" type="button">全屏</button></section>
+    <section class="scene-info"><div><p class="eyebrow" id="scene-id">F01</p><h2 id="scene-title">列表聚焦与详情展开</h2><p id="scene-logic"></p><p class="keyboard-note">空格：播放 / 暂停　← / →：逐帧　Shift + ← / →：前后 1 秒</p></div><details><summary>动作机制与源码对应</summary><dl id="source-map"></dl><p class="mapping-note">保留机制，重新设计布局与节奏；展示数据均为示例。原仓库源码按对应范围追溯。</p></details></section>
+  </div>
+</body>
+</html>

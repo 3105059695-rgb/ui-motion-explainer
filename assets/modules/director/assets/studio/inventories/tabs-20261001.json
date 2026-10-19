@@ -1,0 +1,2744 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-01",
+  "scope": {
+    "site": "Collect UI",
+    "category": "Tabs",
+    "categoryUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "listingUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "observedDate": "2026-10-01",
+    "timezone": "Asia/Shanghai",
+    "enumerationComplete": true,
+    "pagesCatalogued": [
+      1,
+      2,
+      3
+    ],
+    "sourcePaginationControlsPresent": true,
+    "paginationMode": "actual-pagination-button-pages",
+    "lastPageEvidence": {
+      "snapshotId": "tabs-page-3-2026-10-01",
+      "pageNumber": 3,
+      "activePage": 3,
+      "nextPageDisabled": true,
+      "paginationControlsObserved": true,
+      "observedCardCount": 7,
+      "evidenceKind": "loaded-rendered-DOM-two-stable-reads-next-disabled"
+    },
+    "enumerationMeaning": "仅当时实际浏览的完整分页快照，不代表媒体已观看、独立原作总数或全站完成。",
+    "notes": [
+      "每个归档页/列表完整已载入卡片集合两次DOM读取一致，卡片顺序及重复均保留；有源分页者末页Next禁用。",
+      "Tabs使用Next分页；Dropdown旧raw的误开弹层及Page 3备注只作纠错历史，accepted快照来自另存的实际换卡双读纠正raw及本次导航。",
+      "Navigation/Mobile App瞬时旧集合只保留discard证据，不参与accepted快照、卡片或URL汇总。",
+      "Code Editor为实际完整加载单列表且无源分页控件，p1仅归档编号；Mac App实际Next一次至末Page 2。",
+      "可见翻译标签、原始tag href、hidden +N、实际图片alt与外部归属href均保留；未展开标签不补造。",
+      "derivedOriginalCategoryName及映射来源独立保留，不覆盖或冒充观察到的可见标签。",
+      "原作href初始null；外部归属链接不冒充原作href，authorProfile null不补造作者身份。",
+      "目录清点新增媒体观看0、适配0；既有真实观察只由汇总脚本按完整媒体URL关联。"
+    ]
+  },
+  "enumerationEvidence": {
+    "frozenRawSha256": "1a52207fb13326645ae0d34611955fbb30d3727810cddc71b628c8b4598617cb",
+    "rawMetadata": {
+      "category": "Tabs",
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "mediaObservationClaims": 0
+    },
+    "rawSourceFile": "batch21-tabs-enumeration.json"
+  },
+  "listingSnapshots": [
+    {
+      "id": "tabs-page-1-2026-10-01",
+      "pageNumber": 1,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "Tabs UI Design Inspiration",
+      "activePage": 1,
+      "pagination": [
+        {
+          "active": null,
+          "current": null,
+          "disabled": true,
+          "label": "Go to previous page",
+          "text": "Previous"
+        },
+        {
+          "active": "true",
+          "current": "page",
+          "disabled": false,
+          "label": "Page 1",
+          "text": "1"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 2",
+          "text": "2"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 3",
+          "text": "3"
+        },
+        {
+          "active": null,
+          "current": null,
+          "disabled": false,
+          "label": "Go to next page",
+          "text": "Next"
+        }
+      ],
+      "cardCount": 24,
+      "cardCollectionSignature": "fbe4d44c2c9032105d682cafd406049ce00a242ac3c7c381ad8428026f851737",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "71f1955a914b578a982a5a773b9f2f76db17b89addeaa2fe582af222a57ed3c9",
+        "second": "71f1955a914b578a982a5a773b9f2f76db17b89addeaa2fe582af222a57ed3c9"
+      },
+      "pageEnumerationEvidence": {}
+    },
+    {
+      "id": "tabs-page-2-2026-10-01",
+      "pageNumber": 2,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "Tabs UI Design Inspiration",
+      "activePage": 2,
+      "pagination": [
+        {
+          "active": null,
+          "current": null,
+          "disabled": false,
+          "label": "Go to previous page",
+          "text": "Previous"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 1",
+          "text": "1"
+        },
+        {
+          "active": "true",
+          "current": "page",
+          "disabled": false,
+          "label": "Page 2",
+          "text": "2"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 3",
+          "text": "3"
+        },
+        {
+          "active": null,
+          "current": null,
+          "disabled": false,
+          "label": "Go to next page",
+          "text": "Next"
+        }
+      ],
+      "cardCount": 24,
+      "cardCollectionSignature": "9fca242d1e6934f9ea3c6d53109de65d1e15960b3aa16d572ff3700a4d935842",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "d4c05f5407c18efcb70832a75e486b50bee61da9fe570831d36d3f06d81a50fd",
+        "second": "d4c05f5407c18efcb70832a75e486b50bee61da9fe570831d36d3f06d81a50fd"
+      },
+      "pageEnumerationEvidence": {}
+    },
+    {
+      "id": "tabs-page-3-2026-10-01",
+      "pageNumber": 3,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "Tabs UI Design Inspiration",
+      "activePage": 3,
+      "pagination": [
+        {
+          "active": null,
+          "current": null,
+          "disabled": false,
+          "label": "Go to previous page",
+          "text": "Previous"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 1",
+          "text": "1"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 2",
+          "text": "2"
+        },
+        {
+          "active": "true",
+          "current": "page",
+          "disabled": false,
+          "label": "Page 3",
+          "text": "3"
+        },
+        {
+          "active": null,
+          "current": null,
+          "disabled": true,
+          "label": "Go to next page",
+          "text": "Next"
+        }
+      ],
+      "cardCount": 7,
+      "cardCollectionSignature": "77b4ba6838fcbd9f4e8561aea33bde94a50c9ea743dae8b2535aa2c6b3b0bb9d",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "52e1bd9631a1b9f63bc646b61e12c792cf1ffecffe20f92ababd0d1e7d2b5078",
+        "second": "52e1bd9631a1b9f63bc646b61e12c792cf1ffecffe20f92ababd0d1e7d2b5078"
+      },
+      "pageEnumerationEvidence": {}
+    }
+  ],
+  "summary": {
+    "cataloguedEntries": 55,
+    "uniqueMedia": 54,
+    "duplicateMediaOccurrences": 1,
+    "mediaTypes": {
+      "video": 42,
+      "image": 13
+    },
+    "mediaObservationsClaimed": 0
+  },
+  "entries": [
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "tell_me_mur",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "NAVIGATION"
+        }
+      ],
+      "firstVisibleTag": "NAVIGATION",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "adc3ce43-ffff-4f6c-8ded-f4ee3d519320",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-001",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-001"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "srbh_here",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "78b58e00-9316-4152-8bf8-b165e32d70cc",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-002",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-002"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "rusbznr",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 3,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c4254cc6-ccb1-4543-9469-8e0d6d65db24",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-003",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-003"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "SwamiMalode",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 4,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "1859d1a8-7cda-4d8b-9755-fcd8a605dceb",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-004",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-004"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "guerriero_se",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 5,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "655378bc-c2d8-40ec-a4a4-6468c775c33f",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-005",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-005"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "shawn_kel",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 6,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "274fada7-e4b3-497d-b0c9-f420d1f5097f",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-006",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-006"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "kvnkld",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 7,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "AI AGENTS"
+        }
+      ],
+      "firstVisibleTag": "AI AGENTS",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "9c67f15b-fa42-47e1-bf76-7c9c96aed443",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-007",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-007"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "marcelkargul",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 8,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "38080c55-3c72-426c-bfe2-5d690d24a4fc",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-008",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-008"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "shawn_kel",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 9,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "a9b927b3-1336-477f-84a4-9d0f53f6a00e",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-009",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-009"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "hugosaintemarie",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 10,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "1868c1bf-5c88-46f6-82fb-cb25aa7e4f39",
+      "title": "Paper Desktop has tabs!\n\nHere's a little in-app announcement card (in both dark and light mode of course)",
+      "titleSource": "actual-media-image-alt",
+      "id": "tabs-p1-010",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-010"
+    },
+    {
+      "attributionDisplayedText": "Post by",
+      "attributionUrl": "httLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": null,
+      "cardOrder": 11,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "UI INTERACTION"
+        }
+      ],
+      "firstVisibleTag": "UI INTERACTION",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "f9b54488-ff40-4ade-91e7-6e94d97131f5",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-011",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-011"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "raul_dronca",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 12,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "b7404012-bf1d-4ae3-9dce-422e181b6026",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-012",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-012"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "omererdgan",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 13,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "CARD"
+        }
+      ],
+      "firstVisibleTag": "CARD",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "167cf145-e8e8-4cf4-87bc-b32f3a779335",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-013",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-013"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "Wuraoladesigns",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 14,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "SOCIAL MEDIA"
+        }
+      ],
+      "firstVisibleTag": "SOCIAL MEDIA",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "b3eba0e0-9271-47b8-9b70-2ffda35e523a",
+      "title": "Posting this again because the algorithm was not it this morning ",
+      "titleSource": "actual-media-image-alt",
+      "id": "tabs-p1-014",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-014"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "disarto_max",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 15,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "2b37fb5c-6cd3-4325-982e-b7c3c597b967",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-015",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-015"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "seltugba_",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 16,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "CALENDAR"
+        }
+      ],
+      "firstVisibleTag": "CALENDAR",
+      "hiddenTagCount": 2,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "98496b36-56c2-449b-a11e-4e7fe98e20a3",
+      "title": "A closer look at the calendar, week view ",
+      "titleSource": "actual-media-image-alt",
+      "id": "tabs-p1-016",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-016"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "JonyMac_ux",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 17,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MENU"
+        }
+      ],
+      "firstVisibleTag": "MENU",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "6734f36c-83b4-4260-9e07-92a77ae55140",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-017",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-017"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "kvnkld",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 18,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "db29b713-5e59-46e9-95aa-2784a6d71b30",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-018",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-018"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "moguzbulbul",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 19,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "LANDING SECTION"
+        }
+      ],
+      "firstVisibleTag": "LANDING SECTION",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "9a55f1b1-cd35-4bd7-9ab6-2103e907d5af",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-019",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-019"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "aaronmahlke",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 20,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "LANDING SECTION"
+        }
+      ],
+      "firstVisibleTag": "LANDING SECTION",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "35fcc0db-7d79-4399-96e6-5b54ede41bdf",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-020",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-020"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "emilyhanyf",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 21,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "UI INTERACTION"
+        }
+      ],
+      "firstVisibleTag": "UI INTERACTION",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "cded6379-ee12-43d8-9e8d-bc0b55d22d28",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-021",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-021"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "basit_designs",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 22,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "PRICING"
+        }
+      ],
+      "firstVisibleTag": "PRICING",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "b64af8c6-5168-4828-97fa-46ab40e03129",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-022",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-022"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "kail_designs",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 23,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "NAVIGATION"
+        }
+      ],
+      "firstVisibleTag": "NAVIGATION",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "bf71a0fa-3cd9-45f2-93e1-8322a43e2863",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-023",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-023"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "athasdev",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 24,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "CODE EDITOR"
+        }
+      ],
+      "firstVisibleTag": "CODE EDITOR",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "6d0ff77c-7ca8-4f51-9c6b-6bf7968d684c",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p1-024",
+      "pageNumber": 1,
+      "snapshotId": "tabs-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-024"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "alibey_10",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c97d69c7-e7ab-41cb-a419-4edba5c5490c",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p2-001",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-025"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "tilljanek",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "49354809-5397-4d54-86c8-7b23ebcbfeab",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p2-002",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-026"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "_heyrico",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 3,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "REDESIGN"
+        }
+      ],
+      "firstVisibleTag": "REDESIGN",
+      "hiddenTagCount": 3,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "9bbccd06-775f-43fd-9539-2d99535e3f08",
+      "title": "What if @github with new design vibes ",
+      "titleSource": "actual-media-image-alt",
+      "id": "tabs-p2-003",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-027"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "DawoodUI",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 4,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "542fc1cf-5ded-4714-bc69-1200621363d9",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p2-004",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-028"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "kvnkld",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 5,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "UI INTERACTION"
+        }
+      ],
+      "firstVisibleTag": "UI INTERACTION",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "ad223d20-f627-405c-9891-7623a3154b62",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p2-005",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-029"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "iamsahilvhora",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 6,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "5d7bf9cb-ad06-4cad-856c-d4aa9dd2df71",
+      "title": "Designed these tabs for my fintech product.",
+      "titleSource": "actual-media-image-alt",
+      "id": "tabs-p2-006",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-030"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "atlou_",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 7,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "be256f4c-7dd0-4f6f-8fe2-d51b20922e5e",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p2-007",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-031"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "dejvdesign",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 8,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DASHBOARD"
+        }
+      ],
+      "firstVisibleTag": "DASHBOARD",
+      "hiddenTagCount": 3,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "5dd2016b-d475-47ae-b84b-fca91d356b73",
+      "title": "Ticket Dashboard – Smart Notifications Feature",
+      "titleSource": "actual-media-image-alt",
+      "id": "tabs-p2-008",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-032"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "dejvdesign",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 9,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "ANALYTICS CHART"
+        }
+      ],
+      "firstVisibleTag": "ANALYTICS CHART",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c0c0236d-892e-43ab-85b5-9aaf4f58fa0c",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p2-009",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-033"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "micka_design",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 10,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "LIST ITEMS"
+        }
+      ],
+      "firstVisibleTag": "LIST ITEMS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "2510a343-b99e-4fea-975d-c4d602bcd074",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p2-010",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-034"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "kvnkld",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 11,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "9340fdd9-9787-4667-8cb0-af26c097369b",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p2-011",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-018"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "micka_design",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 12,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "8216876e-093f-4bcd-9944-b4440b6a7aaf",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p2-012",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-035"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "kumailnanji",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 13,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "47e780d0-22c8-47ee-b6df-ad03c33cabbd",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p2-013",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-036"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "aliszu",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 14,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DARK MODE"
+        }
+      ],
+      "firstVisibleTag": "DARK MODE",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "5c45e2da-4cee-4fe1-ac9e-58294ef43d45",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p2-014",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-037"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "diegohaz",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 15,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "557c13c4-dabb-45db-aac0-acc6eb639804",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p2-015",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-038"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "jakubkrehel",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 16,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "e3788ab0-d980-4223-8efe-b7b26912598a",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p2-016",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-039"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "Karthik_designs",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 17,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 3,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "b38b9213-9f8e-4c15-b022-88dbf8ac8c00",
+      "title": "When the UI understands you",
+      "titleSource": "actual-media-image-alt",
+      "id": "tabs-p2-017",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-040"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "moguzbulbul",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 18,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "LANDING SECTION"
+        }
+      ],
+      "firstVisibleTag": "LANDING SECTION",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c7816edd-50a2-4ac8-9453-620fb7778044",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p2-018",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-041"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "Ishanzaad",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 19,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "d59e26b6-2f38-46aa-854a-703c9337a089",
+      "title": "Both light and dark versions",
+      "titleSource": "actual-media-image-alt",
+      "id": "tabs-p2-019",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-042"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "ersadwork",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 20,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "WIDGET"
+        }
+      ],
+      "firstVisibleTag": "WIDGET",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "fc3d6fba-0f2b-425b-9325-6e03e911de6e",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p2-020",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-043"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "roman_designer",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 21,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c3edad71-44f3-46da-a40a-7576b36da799",
+      "title": "Chat app components.",
+      "titleSource": "actual-media-image-alt",
+      "id": "tabs-p2-021",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-044"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "raul_dronca",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 22,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "148662d6-0c30-4b89-a504-f78c94722bce",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p2-022",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-045"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "roman_designer",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 23,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MOBILE APP"
+        }
+      ],
+      "firstVisibleTag": "MOBILE APP",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "e2d237da-dc54-496a-a3bd-ee3b33b0cd01",
+      "title": "This one is experimental. Teaser of an explorations of a Art & Culture app ",
+      "titleSource": "actual-media-image-alt",
+      "id": "tabs-p2-023",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-046"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "zzzzshawn",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 24,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "103990d1-2814-4cfb-9103-f767444c70da",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p2-024",
+      "pageNumber": 2,
+      "snapshotId": "tabs-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-047"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "rit3zh",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MENU"
+        }
+      ],
+      "firstVisibleTag": "MENU",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "743f2760-9180-4d21-b4f4-b77b7b6d8158",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p3-001",
+      "pageNumber": 3,
+      "snapshotId": "tabs-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-048"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "k_grajeda",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "6a2a6bf0-2da5-4620-9033-279fec576f68",
+      "title": "now that we have squircles on the web with the new corner-shape property, who’s gonna make the tailwind plugin for it? would be perfect to use without worrying about browser fallbacks",
+      "titleSource": "actual-media-image-alt",
+      "id": "tabs-p3-002",
+      "pageNumber": 3,
+      "snapshotId": "tabs-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-049"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "aaroniker",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 3,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "LOADING"
+        }
+      ],
+      "firstVisibleTag": "LOADING",
+      "hiddenTagCount": 5,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "cd00acd4-46c2-4cb0-9302-61f486547681",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p3-003",
+      "pageNumber": 3,
+      "snapshotId": "tabs-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-050"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "guerriero_se",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 4,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "205aff04-1ec1-44b8-9bce-03df06f899ec",
+      "title": "Sometimes AI won’t cut it. Sometimes you have to draw every rectangle yourself.\n\nIcons → @nucleoicons",
+      "titleSource": "actual-media-image-alt",
+      "id": "tabs-p3-004",
+      "pageNumber": 3,
+      "snapshotId": "tabs-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-051"
+    },
+    {
+      "attributionDisplayedText": "Post by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": null,
+      "cardOrder": 5,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MAC APP"
+        }
+      ],
+      "firstVisibleTag": "MAC APP",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "d66648a1-2db8-4caa-b226-6f4077c9b07f",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p3-005",
+      "pageNumber": 3,
+      "snapshotId": "tabs-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-052"
+    },
+    {
+      "attributionDisplayedText": "Post by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": null,
+      "cardOrder": 6,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "SIDEBAR"
+        }
+      ],
+      "firstVisibleTag": "SIDEBAR",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "16c8a790-0181-419d-ad53-0689fe8d74af",
+      "title": " Layout panel design",
+      "titleSource": "actual-media-image-alt",
+      "id": "tabs-p3-006",
+      "pageNumber": 3,
+      "snapshotId": "tabs-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-053"
+    },
+    {
+      "attributionDisplayedText": "Post by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": null,
+      "cardOrder": 7,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABS"
+        }
+      ],
+      "firstVisibleTag": "TABS",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "04470c41-cc78-4ce9-9d61-e411cb767156",
+      "title": null,
+      "titleSource": null,
+      "id": "tabs-p3-007",
+      "pageNumber": 3,
+      "snapshotId": "tabs-page-3-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tabs",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tabs-media-054"
+    }
+  ],
+  "mediaGroups": [
+    {
+      "id": "tabs-media-001",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-001"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-002",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-002"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-003",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-003"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-004",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-004"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-005",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-005"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-006",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-006"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-007",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-007"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-008",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-008"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-009",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-009"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-010",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-010"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-011",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-011"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-012",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-012"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-013",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-013"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-014",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-014"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-015",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-015"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-016",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-016"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-017",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-017"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-018",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-018",
+        "tabs-p2-011"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-019",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-019"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-020",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-020"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-021",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-021"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-022",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-022"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-023",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-023"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-024",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p1-024"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-025",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-001"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-026",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-002"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-027",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-003"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-028",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-004"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-029",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-005"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-030",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-006"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-031",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-007"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-032",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-008"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-033",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-009"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-034",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-010"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-035",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-012"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-036",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-013"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-037",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-014"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-038",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-015"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-039",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-016"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-040",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-017"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-041",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-018"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-042",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-019"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-043",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-020"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-044",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-021"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-045",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-022"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-046",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-023"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-047",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p2-024"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-048",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p3-001"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-049",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p3-002"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-050",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p3-003"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-051",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p3-004"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-052",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p3-005"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-053",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p3-006"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tabs-media-054",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tabs-p3-007"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    }
+  ],
+  "enrichments": [
+    {
+      "entryId": "tabs-p1-001",
+      "date": "2026-10-01",
+      "field": "originalWorkUrl",
+      "value": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "basis": "Actual exact-card modal href; association solely by complete media URL. Historical catalogued-only status retained.",
+      "evidence": "../observations/batch21.json"
+    },
+    {
+      "entryId": "tabs-p1-024",
+      "date": "2026-10-01",
+      "field": "originalWorkUrl",
+      "value": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "basis": "Actual exact-card modal href; association solely by complete media URL. Historical catalogued-only status retained.",
+      "evidence": "../observations/batch21.json"
+    }
+  ]
+}

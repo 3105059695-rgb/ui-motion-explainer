@@ -1,0 +1,1600 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-01",
+  "scope": {
+    "site": "Collect UI",
+    "category": "Tooltip / Popover",
+    "categoryUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "listingUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+    "observedDate": "2026-10-01",
+    "timezone": "Asia/Shanghai",
+    "enumerationComplete": true,
+    "pagesCatalogued": [
+      1,
+      2
+    ],
+    "sourcePaginationControlsPresent": true,
+    "paginationMode": "actual-pagination-button-pages",
+    "lastPageEvidence": {
+      "snapshotId": "tooltip-popover-page-2-2026-10-01",
+      "pageNumber": 2,
+      "activePage": 2,
+      "nextPageDisabled": true,
+      "paginationControlsObserved": true,
+      "observedCardCount": 6,
+      "evidenceKind": "loaded-rendered-DOM-two-stable-reads-next-disabled"
+    },
+    "enumerationMeaning": "仅当时实际浏览的完整分页快照，不代表媒体已观看、独立原作总数或全站完成。",
+    "notes": [
+      "Accordion、Empty States、Notepad、Badge为完整已加载单列表；实际到达页面底部后完整双读一致，没有源分页，p1仅归档。",
+      "Tooltip / Popover与Folder实际Next逐页导航；旧首卡脱离、当前页和新首卡确认后取完整集合双读，末Next禁用。",
+      "到达底部前的即时滚动中间状态单独丢弃保留；未纳入accepted快照、卡片或媒体计数。",
+      "可见翻译标签、完整tag href、hidden +N、实际图片alt与归属href原样保留；隐藏标签不补造。",
+      "原名仅在derivedOriginalCategoryName独立按159类真实完整href映射，不覆盖实际可见标签。",
+      "外部归属链接不冒充原作href，authorProfile null不补造；原作链接按实际精确卡弹层另外丰富。",
+      "目录清点新增媒体观看0、适配0；已有观察只按完整媒体URL分别关联。"
+    ]
+  },
+  "enumerationEvidence": {
+    "frozenRawSha256": "742a09c14b53412c0eb5dbc44ac64d30ec9b8f2c38f83549d3534eae3acbfdf1",
+    "rawMetadata": {
+      "category": "Tooltip / Popover",
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "observedAt": "2026-10-01T08:30:05.231Z",
+      "sourcePaginationControlsPresent": true,
+      "collectionComplete": true,
+      "twoReadsMatch": true,
+      "mediaObservationClaims": 0,
+      "navigation": [
+        {
+          "fromPage": 1,
+          "toPage": 2,
+          "oldFirstDetached": true,
+          "activePageConfirmed": 2,
+          "newFirstCardId": "20fc93e4-d8ec-4bbf-beea-bc07e29aeea1",
+          "dialogCount": 0
+        }
+      ],
+      "completionEvidence": {
+        "allPageCollectionsReadTwice": true,
+        "pagesExplicitlyVisited": [
+          1,
+          2
+        ],
+        "oldFirstDetachedBeforeAcceptedRead": true,
+        "sourceActivePage": 2,
+        "lastNextDisabled": true
+      },
+      "collection": {
+        "kind": "actual-entire-loaded-rendered-DOM",
+        "sourceMediaDownloaded": false,
+        "cardModalOpened": false,
+        "mediaFrameObservationPerformed": false,
+        "derivedCategoryNameMapping": {
+          "association": "exact complete href; separate derived field; observed visible label unchanged",
+          "usedMapping": {
+            "https://collectui.com/designs/tooltip-popover-ui-design-inspiration": "Tooltip / Popover",
+            "https://collectui.com/designs/testimonials-ui-design-inspiration": "Testimonials",
+            "https://collectui.com/designs/menu-ui-design-inspiration": "Menu",
+            "https://collectui.com/designs/hover-state-ui-design-inspiration": "Hover State",
+            "https://collectui.com/designs/crypto-ui-design-inspiration": "Crypto",
+            "https://collectui.com/designs/typography-ui-design-inspiration": "Typography",
+            "https://collectui.com/designs/hero-section-ui-design-inspiration": "Hero Section",
+            "https://collectui.com/designs/text-editor-ui-design-inspiration": "Text Editor",
+            "https://collectui.com/designs/analytics-chart-ui-design-inspiration": "Analytics Chart",
+            "https://collectui.com/designs/dropdown-ui-design-inspiration": "Dropdown",
+            "https://collectui.com/designs/table-ui-design-inspiration": "Table",
+            "https://collectui.com/designs/mac-app-ui-design-inspiration": "Mac App",
+            "https://collectui.com/designs/ui-interaction-ui-design-inspiration": "UI Interaction",
+            "https://collectui.com/designs/portfolio-ui-design-inspiration": "Portfolio"
+          }
+        }
+      },
+      "rejectedReads": [],
+      "notes": [
+        "Only directory enumeration. No source work original URL or media frame was observed; future batch23 raw research, not integrated into release21."
+      ]
+    },
+    "rawSourceFile": "batch23-tooltip-enumeration.json"
+  },
+  "listingSnapshots": [
+    {
+      "id": "tooltip-popover-page-1-2026-10-01",
+      "pageNumber": 1,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "Tooltip / Popover UI Design Inspiration",
+      "activePage": 1,
+      "pagination": [
+        {
+          "active": null,
+          "current": null,
+          "disabled": true,
+          "label": "Go to previous page",
+          "text": "Previous"
+        },
+        {
+          "active": "true",
+          "current": "page",
+          "disabled": false,
+          "label": "Page 1",
+          "text": "1"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 2",
+          "text": "2"
+        },
+        {
+          "active": null,
+          "current": null,
+          "disabled": false,
+          "label": "Go to next page",
+          "text": "Next"
+        }
+      ],
+      "cardCount": 24,
+      "cardCollectionSignature": "a00327101a3fce81d2f2bd907d247a627db0a15114c403d4563dd28b9d0931a9",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "d360f14f5177cda0c451981570ee177af5011f063281ad5e9ec9859097b2688e",
+        "second": "d360f14f5177cda0c451981570ee177af5011f063281ad5e9ec9859097b2688e"
+      },
+      "pageEnumerationEvidence": {
+        "twoReadsMatch": true
+      }
+    },
+    {
+      "id": "tooltip-popover-page-2-2026-10-01",
+      "pageNumber": 2,
+      "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "title": "Tooltip / Popover UI Design Inspiration",
+      "activePage": 2,
+      "pagination": [
+        {
+          "active": null,
+          "current": null,
+          "disabled": false,
+          "label": "Go to previous page",
+          "text": "Previous"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "disabled": false,
+          "label": "Page 1",
+          "text": "1"
+        },
+        {
+          "active": "true",
+          "current": "page",
+          "disabled": false,
+          "label": "Page 2",
+          "text": "2"
+        },
+        {
+          "active": null,
+          "current": null,
+          "disabled": true,
+          "label": "Go to next page",
+          "text": "Next"
+        }
+      ],
+      "cardCount": 6,
+      "cardCollectionSignature": "d6f9c43de403f9ee6de742d3ac261d051f3f8a53a4d10f10f863822b6df76228",
+      "twoReadsMatch": true,
+      "acceptedReadSignatures": {
+        "first": "612ff401a38ca947c55af09320c576a2d0643361e7244e005d24817513e9c4ef",
+        "second": "612ff401a38ca947c55af09320c576a2d0643361e7244e005d24817513e9c4ef"
+      },
+      "pageEnumerationEvidence": {
+        "twoReadsMatch": true
+      }
+    }
+  ],
+  "summary": {
+    "cataloguedEntries": 30,
+    "uniqueMedia": 30,
+    "duplicateMediaOccurrences": 0,
+    "mediaTypes": {
+      "video": 23,
+      "image": 7
+    },
+    "mediaObservationsClaimed": 0
+  },
+  "entries": [
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "SyadySyarief",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TOOLTIP / POPOVER"
+        }
+      ],
+      "firstVisibleTag": "TOOLTIP / POPOVER",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "d9c19562-2a67-4ae5-b8b6-83ab687cb68c",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p1-001",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-001"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "koppxo",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TOOLTIP / POPOVER"
+        }
+      ],
+      "firstVisibleTag": "TOOLTIP / POPOVER",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "aea4165f-6267-4d1a-8031-2286bd8f355e",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p1-002",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-002"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "a1x45h",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 3,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TOOLTIP / POPOVER"
+        }
+      ],
+      "firstVisibleTag": "TOOLTIP / POPOVER",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "f7305713-2dd7-4ca3-9d62-4af7e03de7bc",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p1-003",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-003"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "AdityaSur11",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 4,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TESTIMONIALS"
+        }
+      ],
+      "firstVisibleTag": "TESTIMONIALS",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "a8490ede-db7b-4007-b26f-95b1311c824b",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p1-004",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-004"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "gabriell_lab",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 5,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MENU"
+        }
+      ],
+      "firstVisibleTag": "MENU",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "2f568eb8-0fbe-4de8-bf4f-8f1f3c5042f1",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p1-005",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-005"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "nonzeroexitcode",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 6,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "HOVER STATE"
+        }
+      ],
+      "firstVisibleTag": "HOVER STATE",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "f7b95081-aef3-4750-bb98-a00e64122d28",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p1-006",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-006"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "JonyMac_ux",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 7,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MENU"
+        }
+      ],
+      "firstVisibleTag": "MENU",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "6734f36c-83b4-4260-9e07-92a77ae55140",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p1-007",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-007"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "_heyrico",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 8,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "CRYPTO"
+        }
+      ],
+      "firstVisibleTag": "CRYPTO",
+      "hiddenTagCount": 3,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "46db3d00-1345-407f-b031-b19326d5fd49",
+      "title": "still one of the best crypto designs we have had so far ",
+      "titleSource": "actual-media-image-alt",
+      "id": "tooltip-popover-p1-008",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-008"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "zanweiguo",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 9,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TOOLTIP / POPOVER"
+        }
+      ],
+      "firstVisibleTag": "TOOLTIP / POPOVER",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "30e894e1-f1dd-4b9a-8d14-0fbe9a940d97",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p1-009",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-009"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "marvinkennis",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 10,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TOOLTIP / POPOVER"
+        }
+      ],
+      "firstVisibleTag": "TOOLTIP / POPOVER",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "d15bb7d3-eb13-4fde-94ee-dea411f5d02f",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p1-010",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-010"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "zzzzshawn",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 11,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TYPOGRAPHY"
+        }
+      ],
+      "firstVisibleTag": "TYPOGRAPHY",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "ad5097d6-e25a-4618-ad1d-1e5bc6aae807",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p1-011",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-011"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "uxkosta",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 12,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "HERO SECTION"
+        }
+      ],
+      "firstVisibleTag": "HERO SECTION",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "3bc2d740-0745-4275-aad3-c0b9771a9b6e",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p1-012",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-012"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "piyushsphere",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 13,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TOOLTIP / POPOVER"
+        }
+      ],
+      "firstVisibleTag": "TOOLTIP / POPOVER",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "6ccca27c-7595-4097-ad5d-babdbf7ae81f",
+      "title": "Peak product work",
+      "titleSource": "actual-media-image-alt",
+      "id": "tooltip-popover-p1-013",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-013"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "mnowakdesign",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 14,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TOOLTIP / POPOVER"
+        }
+      ],
+      "firstVisibleTag": "TOOLTIP / POPOVER",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "a19b3bb7-bc34-4b57-b10b-98c4eeb54c2f",
+      "title": "blocks ",
+      "titleSource": "actual-media-image-alt",
+      "id": "tooltip-popover-p1-014",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-014"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "DavidMarkov",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 15,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TEXT EDITOR"
+        }
+      ],
+      "firstVisibleTag": "TEXT EDITOR",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "83bf5fbc-1ca1-45db-b5a1-4b21de4fa554",
+      "title": "Text editor - Light mode V2",
+      "titleSource": "actual-media-image-alt",
+      "id": "tooltip-popover-p1-015",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-015"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "shedsgns",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 16,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TOOLTIP / POPOVER"
+        }
+      ],
+      "firstVisibleTag": "TOOLTIP / POPOVER",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "169276a8-b00f-4b62-a75e-fa68742e3821",
+      "title": "branding actions popover menu ",
+      "titleSource": "actual-media-image-alt",
+      "id": "tooltip-popover-p1-016",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-016"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "dejvdesign",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 17,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "ANALYTICS CHART"
+        }
+      ],
+      "firstVisibleTag": "ANALYTICS CHART",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c0c0236d-892e-43ab-85b5-9aaf4f58fa0c",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p1-017",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-017"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "Nacho_Gavilanes",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 18,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TOOLTIP / POPOVER"
+        }
+      ],
+      "firstVisibleTag": "TOOLTIP / POPOVER",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "27fbf242-2fc5-468e-b17b-1d6832fba22a",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p1-018",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-018"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "pqoqubbw",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 19,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "DROPDOWN"
+        }
+      ],
+      "firstVisibleTag": "DROPDOWN",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "8248b42a-667d-459f-9365-fe4ff364f8b9",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p1-019",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-019"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "Nomandsign",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 20,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TOOLTIP / POPOVER"
+        }
+      ],
+      "firstVisibleTag": "TOOLTIP / POPOVER",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "56dc56c4-8d06-4cb7-a0a5-82ab3956df4a",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p1-020",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-020"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "tfalexandrino",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 21,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TABLE"
+        }
+      ],
+      "firstVisibleTag": "TABLE",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "25cd41a0-56d3-43fc-a13b-0af35dda43ba",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p1-021",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-021"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "balintorosz",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 22,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "MAC APP"
+        }
+      ],
+      "firstVisibleTag": "MAC APP",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "14283892-7df0-4d69-84fc-e5f50b515f72",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p1-022",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-022"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "raul_dronca",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 23,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TOOLTIP / POPOVER"
+        }
+      ],
+      "firstVisibleTag": "TOOLTIP / POPOVER",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "8b8be599-e24a-48b7-8544-c0d27545bdbb",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p1-023",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-023"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "joshpuckett",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 24,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TOOLTIP / POPOVER"
+        }
+      ],
+      "firstVisibleTag": "TOOLTIP / POPOVER",
+      "hiddenTagCount": 0,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "81d36f88-3172-4294-b637-b98edaa1a6cb",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p1-024",
+      "pageNumber": 1,
+      "snapshotId": "tooltip-popover-page-1-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-024"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "victorwill__",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 1,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "UI INTERACTION"
+        }
+      ],
+      "firstVisibleTag": "UI INTERACTION",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "20fc93e4-d8ec-4bbf-beea-bc07e29aeea1",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p2-001",
+      "pageNumber": 2,
+      "snapshotId": "tooltip-popover-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-025"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "kvnkld",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 2,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TOOLTIP / POPOVER"
+        }
+      ],
+      "firstVisibleTag": "TOOLTIP / POPOVER",
+      "hiddenTagCount": 1,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "d891a47f-858d-41f4-8a83-6c8d3b5d036c",
+      "title": "Workflow Version History",
+      "titleSource": "actual-media-image-alt",
+      "id": "tooltip-popover-p2-002",
+      "pageNumber": 2,
+      "snapshotId": "tooltip-popover-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-026"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "fayazara",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 3,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "PORTFOLIO"
+        }
+      ],
+      "firstVisibleTag": "PORTFOLIO",
+      "hiddenTagCount": 3,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "1d0ee657-a461-400a-b101-5cf9b945f4f4",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p2-003",
+      "pageNumber": 2,
+      "snapshotId": "tooltip-popover-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-027"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "Praha37v",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 4,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TESTIMONIALS"
+        }
+      ],
+      "firstVisibleTag": "TESTIMONIALS",
+      "hiddenTagCount": 2,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "ca01fed8-9dca-4154-903e-8084639f0d44",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p2-004",
+      "pageNumber": 2,
+      "snapshotId": "tooltip-popover-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-028"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "thevaibhavme",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 5,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TOOLTIP / POPOVER"
+        }
+      ],
+      "firstVisibleTag": "TOOLTIP / POPOVER",
+      "hiddenTagCount": 1,
+      "mediaElementType": "video",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "c5fe98f0-8c57-44cf-b8a2-354aab4fa93a",
+      "title": null,
+      "titleSource": null,
+      "id": "tooltip-popover-p2-005",
+      "pageNumber": 2,
+      "snapshotId": "tooltip-popover-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "video",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-029"
+    },
+    {
+      "attributionDisplayedText": "Design by",
+      "attributionUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "authorProfile": {
+        "displayedLinkText": "Design by",
+        "handle": "nilseller",
+        "url": "httpLOCAL_ASSET_NOT_DISTRIBUTED"
+      },
+      "cardOrder": 6,
+      "displayedTags": [
+        {
+          "href": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+          "label": "TOOLTIP / POPOVER"
+        }
+      ],
+      "firstVisibleTag": "TOOLTIP / POPOVER",
+      "hiddenTagCount": 0,
+      "mediaElementType": "image",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "otherTags": null,
+      "sourceCardId": "90b23209-ebd8-45ea-a6c4-48dd70b66bf6",
+      "title": "Software development should feel like making art",
+      "titleSource": "actual-media-image-alt",
+      "id": "tooltip-popover-p2-006",
+      "pageNumber": 2,
+      "snapshotId": "tooltip-popover-page-2-2026-10-01",
+      "observedDate": "2026-10-01",
+      "category": "Tooltip / Popover",
+      "mediaTypeFromExtension": "image",
+      "originalWorkUrl": null,
+      "status": "catalogued-only",
+      "mediaObservationStatus": "not-observed",
+      "presetIds": [],
+      "attributionIsCategoryFallback": false,
+      "mediaGroupId": "tooltip-popover-media-030"
+    }
+  ],
+  "mediaGroups": [
+    {
+      "id": "tooltip-popover-media-001",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-001"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-002",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-002"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-003",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-003"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-004",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-004"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-005",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-005"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-006",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-006"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-007",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-007"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-008",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-008"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-009",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-009"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-010",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-010"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-011",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-011"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-012",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-012"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-013",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-013"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-014",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-014"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-015",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-015"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-016",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-016"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-017",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-017"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-018",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-018"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-019",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-019"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-020",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-020"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-021",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-021"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-022",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-022"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-023",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-023"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-024",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p1-024"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-025",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p2-001"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-026",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p2-002"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-027",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p2-003"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-028",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p2-004"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-029",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p2-005"
+      ],
+      "mediaTypeFromExtension": "video",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    },
+    {
+      "id": "tooltip-popover-media-030",
+      "mediaUrl": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "entryIds": [
+        "tooltip-popover-p2-006"
+      ],
+      "mediaTypeFromExtension": "image",
+      "observationStatus": "not-observed",
+      "presetIds": []
+    }
+  ],
+  "enrichments": [
+    {
+      "entryId": "tooltip-popover-p1-001",
+      "date": "2026-10-01",
+      "field": "originalWorkUrl",
+      "value": "httpLOCAL_ASSET_NOT_DISTRIBUTED",
+      "basis": "Actual exact-card modal href; association solely by complete media URL. Historical catalogued-only status retained.",
+      "evidence": "../observations/batch23.json"
+    }
+  ]
+}

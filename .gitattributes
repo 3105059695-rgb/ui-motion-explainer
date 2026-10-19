@@ -1,12 +1,2 @@
-* text=auto
-*.md text eol=lf
-*.py text eol=lf
-*.html text eol=lf
-*.json text eol=lf
-*.svg text eol=lf
-*.mp4 binary
-*.wav binary
-*.gif binary
-*.jpg binary
-*.png binary
-*.woff2 binary
+# Release hashes must survive Git checkouts unchanged on every platform.
+* -text

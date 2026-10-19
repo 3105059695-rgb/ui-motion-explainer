@@ -1,0 +1,127 @@
+{
+  "series": "阿刁",
+  "version": 4,
+  "confirmed_preferences_date": "2026-09-21",
+  "input_kinds": [
+    "topic",
+    "reference_video",
+    "assets",
+    "script"
+  ],
+  "voice": {
+    "name": "阿刁",
+    "profile_path": null,
+    "reuse_identity": true,
+    "per_episode_audio_approval_required": true,
+    "rate_policy": "Use the episode's selected settings; record global rate separately from relative segment speed."
+  },
+  "presenter": {
+    "provider_preference": "HeyGen",
+    "identity": "current-user-authorized-presenter",
+    "avatar_id": null,
+    "connection_verified": false,
+    "opening_layout": "original_large_presenter",
+    "body_layout": "bottom_left_circular_presenter",
+    "layout_switch": "Aim for a complete hook ending at 10–20 seconds of approved narration; then switch from Avatar V large presenter to Avatar III circle.",
+    "connection_verification_scope": "Not verified for the installing user; provide their authorized identity and connection.",
+    "avatar_roles": {
+      "opening": {
+        "avatar_id": null,
+        "group_id": null,
+        "source_video_id": null,
+        "source_duration_seconds": 25.5632,
+        "observed_engine": "avatar_v",
+        "description": "白底桌前、手臂展开的大画面人物，开头完整钩子段使用",
+        "required_engine": "avatar_v",
+        "engine_user_confirmed": true
+      },
+      "body": {
+        "avatar_id": null,
+        "group_id": null,
+        "source_video_id": null,
+        "source_duration_seconds": 292.504,
+        "observed_engine": "avatar_iii",
+        "description": "正面半身圆形展示人物，正式讲解时剪辑放到左下角",
+        "required_engine": "avatar_iii",
+        "engine_user_confirmed": true
+      }
+    },
+    "avatar_selection_policy": "Select avatar_roles.opening or avatar_roles.body by segment; no single-avatar fallback.",
+    "identity_reference": null,
+    "engine_policy": "Opening uses Avatar 5; body lower-left uses Avatar 3. Explicit user requirement. Do not auto-switch engines.",
+    "body_mask": "circle",
+    "body_generation_layout": "original_then_local_chest_up_circle",
+    "body_circle_must_exist_before_generation": false,
+    "post_crop_is_not_a_valid_substitute": false,
+    "body_native_circle_route_verified": false,
+    "approved_circle": {
+      "preview": "LOCAL_ASSET_NOT_DISTRIBUTED",
+      "reference": "LOCAL_ASSET_NOT_DISTRIBUTED",
+      "crop_xywh_for_test_source": [
+        270,
+        0,
+        800,
+        800
+      ],
+      "diameter": 400,
+      "left": 48,
+      "bottom": 48,
+      "framing": "chest-up; face centered; no desk; head near upper circle edge",
+      "future_source_policy": "Inspect new source and adapt crop; preserve confirmed chest-up framing. Existing slight head-top truncation was disclosed and accepted for the test; do not claim crop restores missing pixels. Check new source for complete head movement."
+    },
+    "opening_segmentation": {
+      "automatic": true,
+      "target_seconds": [
+        10,
+        20
+      ],
+      "preferred_seconds": 15,
+      "boundary": "complete hook sentence; measured against approved narration, not guessed from text length",
+      "generation": "split approved narration at the same boundary; opening audio only to Avatar V and remaining audio to Avatar III",
+      "exceptions": "10–20 seconds is a preference, not permission to cut words or silently rewrite approved narration; choose a nearby natural boundary and report a material overrun"
+    }
+  },
+  "audio": {
+    "narration_only": true,
+    "bgm": false,
+    "sfx": false
+  },
+  "review_gates": [
+    "voice",
+    "opening"
+  ],
+  "visual": {
+    "style": "white_nearblack_purple",
+    "effects": "selected_by_content",
+    "product_identity_in_opening": true,
+    "width": 1920,
+    "height": 1080,
+    "fps": 50
+  },
+  "cover": {
+    "mode": "user_web_workflow",
+    "required_for_video_delivery": false
+  },
+  "publishing": {
+    "auto_publish": false,
+    "include_copy": true
+  },
+  "costs": {
+    "automatic_paid_fallback": false,
+    "heygen_avatar3_free_status": "unverified_for_current_account_and_mcp_route",
+    "heygen_require_route_cost_check_before_full_generation": true
+  },
+  "postproduction": {
+    "entry": "references/post-production.md",
+    "ui_source_of_truth": "references/ui-adiao.md",
+    "motion": "references/motion-recipes.md",
+    "base_css": "assets/adiao-ui.css",
+    "edit_plan": "references/edit-plan.md",
+    "checker": "scripts/check_edit_plan.py",
+    "checks": "references/editing-checklist.md",
+    "real_demo_playback_rate": 1,
+    "two_review_gates_only_by_default": true,
+    "test_scope": "Skill integration and local tooling only; no new episode render or paid generation."
+  },
+  "distribution": "Methods only. Avatar, voice and private project identities are not distributed."
+}
