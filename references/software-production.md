@@ -27,15 +27,15 @@
 - 保留能识别产品的导航、输入、执行和成果结构，再调整镜头与非关键信息密度。
 - 只把官方文字说明当成功能依据；按钮位置、栏宽和图标需要看得到的画面依据。
 - 概念重绘保留可替换的图标、截图与内容入口，标注与证据范围遵循主流程。
-- 外部包装采用 [账号风格](style-profiles.md)，真实产品与手机素材保留自己的颜色。
+- 外部包装沿[Fred Talk 默认](aesthetic-preferences.md)，从[效果库](library.md)选择适用实现；真实产品与手机素材保留自己的颜色。
 - 打开浮层后保留原节点，展开列表时下方内容连续让位，切换页签时保留同一外壳。
 - 待授权、缺配置或失败就是该段真实末态，不自动改为成功；示意动画不证明实际执行。
 
-[产品依据记录](../../../ai-ui-director/references/product-evidence.md)提供历史观察和待核实项。该记录的旧核查日期不代表当前版本已验证。
+[产品依据记录](../assets/modules/director/references/product-evidence.md)提供历史观察和待核实项。该记录的旧核查日期不代表当前版本已验证。
 
 ## 选择并改造预设
 
-先查[预设用途与来源](../../../ai-ui-director/references/preset-catalog.md)，需要准确 ID、基准时长和代码时再看[注册数据](../../../ai-ui-director/references/presets.json)与[源码目录](../../../ai-ui-director/assets/studio/presets)。
+先查[预设用途与来源](../assets/modules/director/references/preset-catalog.md)，需要准确 ID、基准时长和代码时再看[注册数据](../assets/modules/director/references/presets.json)与[源码目录](../assets/modules/director/assets/studio/presets)。
 
 1. 按动作语义选一个主机制，查看它的起始、中间、结束状态及真实可配置参数。
 2. 连续软件故事优先在同一场景内保留窗口，不把多个独立预设直接拼成翻页。
@@ -44,11 +44,11 @@
 5. 节点数量、分支、端口或长文本改变时，同步修改布局、连接线和时间轴。
 6. 将新实现与原参考机制分别记载，目录数量和换色数量不等于完成复刻数量。
 
-工作室与参考目录保留于[资源目录](../../../ai-ui-director/assets/studio)。Collect UI 包含多个作者的风格；取其交互机制，不自动继承样例配色与文案。
+工作室与参考目录保留于[资源目录](../assets/modules/director/assets/studio)。Collect UI 包含多个作者的风格；取其交互机制，不自动继承样例配色与文案。
 
 ## 工程与时间映射
 
-具体字段和场景限制见[项目格式](../../../ai-ui-director/references/project-format.md)。复用现有格式，不自行添加导出器尚未支持的字段。
+具体字段和场景限制见[项目格式](../assets/modules/director/references/project-format.md)。复用现有格式，不自行添加导出器尚未支持的字段。
 
 - `clips` 按顺序、连续且无重叠，最后一段结束与项目 `duration` 一致。
 - `params.title`、`params.prompt`、`params.result` 只是通用文本；阶段内容、节点和素材可能仍写在对应源码中。
@@ -62,9 +62,9 @@
 
 ## 接入与针对性检查
 
-按 [引擎合同](engine-routing.md) 选择创建和导出路径；本库现有 [创建器](../../../ai-ui-director/scripts/new_project.py) 与 [导出器](../../../ai-ui-director/scripts/render.py) 继续按其真实参数使用。
+按 [引擎合同](engine-routing.md) 选择创建和导出路径；本库现有 [创建器](../assets/modules/director/scripts/new_project.py) 与 [导出器](../assets/modules/director/scripts/render.py) 继续按其真实参数使用。
 
-本库接口为 `window.ready()` 与 `window.render(t, masterTime)`；依赖和支持范围见[渲染说明](../../../ai-ui-director/references/rendering.md)。不要把另一引擎的 `seek(t)` 或参数直接套入。尚未实现时间采样模糊的预设，不因主入口支持模糊就宣称自身具备该效果。
+本库接口为 `window.ready()` 与 `window.render(t, masterTime)`；依赖和支持范围见[渲染说明](../assets/modules/director/references/rendering.md)。不要把另一引擎的 `seek(t)` 或参数直接套入。尚未实现时间采样模糊的预设，不因主入口支持模糊就宣称自身具备该效果。
 
 软件场景重点复查：
 

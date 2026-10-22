@@ -1,4 +1,4 @@
 interface:
   display_name: "我的 UI 动效剪辑"
-  short_description: "按口播主动选素材、AIGC 与剪辑手法，沿用已定风格落实到工程"
-  default_prompt: "使用 $ui-motion-fusion，先读取当前入口和我的适用风格档案及已选参考方向，理解这份口播并主动调用合适的素材、AIGC 与剪辑手法，完成当前授权的画面和工程。"
+  short_description: "默认沿用 Fred Talk 整体风格，按原声编排素材、连续动作与剪辑"
+  default_prompt: "使用 $ui-motion-fusion，读取当前入口与 aesthetic-preferences.md，一起继承 Fred Talk 整体 UI、AE 感、开头和禁忌，查看真实参考，按本期口播编排素材和连续事件，保留原稿、原声及人物身份，内部检查修正后交付当前授权范围；仅检查 Skill 时不制作视频。"

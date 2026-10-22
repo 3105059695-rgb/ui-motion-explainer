@@ -23,7 +23,7 @@ SCRIPT = Path(__file__).resolve().parent
 
 
 def run(args):
-    result = subprocess.run([str(a) for a in args], capture_output=True, text=True)
+    result = subprocess.run([str(a) for a in args], capture_output=True, text=True, encoding='utf-8', errors='replace')
     if result.returncode:
         raise RuntimeError(f"{Path(str(args[0])).name} failed ({result.returncode}):\n{result.stderr[-6000:]}")
     return result.stdout
@@ -107,7 +107,7 @@ def concat_video(work, boundaries, fps):
         lines.append(f"file 'part_{i:03}.mp4'\n")
         lines.append(f'duration {duration_us // 1_000_000}.{duration_us % 1_000_000:06d}\n')
     listing = work / 'concat.txt'
-    listing.write_text(''.join(lines))
+    listing.write_text(''.join(lines), encoding='utf-8')
     video = work / 'video.mp4'
     # Quantize each existing PTS and DTS separately. Setting both to packet N
     # would corrupt B-frame presentation order. No video is decoded/re-encoded.

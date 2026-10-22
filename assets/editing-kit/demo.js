@@ -56,7 +56,7 @@
     document.querySelectorAll('[data-effect]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.effect===name)));
     renderAt(0);
   }
-  for(const name of K.names){const b=document.createElement('button');b.textContent=descriptions[name][0];b.dataset.effect=name;b.addEventListener('click',()=>selectEffect(name));$('tabs').append(b);}
+  for(const name of K.names.filter(name=>builders[name])){const b=document.createElement('button');b.textContent=descriptions[name][0];b.dataset.effect=name;b.addEventListener('click',()=>selectEffect(name));$('tabs').append(b);}
   function fit(){stage.style.transform=`scale($('viewport').clientWidth/1280)`;}
   K.setTheme(stage,schemes[scheme]);selectEffect(active);fit();addEventListener('resize',fit);
   $('theme').addEventListener('click',()=>{scheme=(scheme+1)%schemes.length;K.setTheme(stage,schemes[scheme]);renderAt(time);});

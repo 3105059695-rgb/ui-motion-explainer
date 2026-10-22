@@ -2,9 +2,9 @@
 
 **范围更新：本文件保留早期重点抽样形成的 S01–S10 配方说明，不代表四片最终研究。** 用户要求逐句细看后，已另完成四片 103:41 的口播与画面对照及来源方法；当前入口见 [逐句研究接入](source-study-guide.md)、[36 条来源方法](source-study-methods.json)和[研究索引](evidence/qiuzhi2046-study/index.json)。新研究保留此处原配方与边界，不把原推论改写成原片事实。两轮均未完成全片实时音画听审。
 
-第三层的段落配方说明。从[可用效果库](library.md)按表达任务进入；本文件不替代[主流程](workflow.md)、[账号档案](style-profiles.md)或[用户 B-roll 偏好](broll-preferences.md)。详细数据在 [semantic-editing-recipes.json](semantic-editing-recipes.json)，来源范围在[证据记录](evidence/qiuzhi2046-methods.json)。
+第三层的段落配方说明。从[可用效果库](library.md)按表达任务进入；本文件不替代[主流程](workflow.md)、[参考使用](style-profiles.md)或[用户 B-roll 偏好](broll-preferences.md)。详细数据在 [semantic-editing-recipes.json](semantic-editing-recipes.json)，来源范围在[证据记录](evidence/qiuzhi2046-methods.json)。
 
-这次吸收的是参考如何让画面帮助观众理解：作品先展示、真实证据聚焦、同一对象交接、比较与因果、角色在一个空间中连续取用和组合。不是把长教程章节模板变成所有视频的剪法，也不将参考的人物、黑底、荧光色、品牌或坐标设成全局默认。
+这次吸收的是秋芝参考如何让画面帮助观众理解：作品先展示、真实证据聚焦、同一对象交接、比较与因果、角色在一个空间中连续取用和组合。它提供方法，整体视觉与剪辑沿[当前 Fred Talk 默认](aesthetic-preferences.md)；不照搬秋芝的人物、品牌、坐标或长教程章节结构。
 
 ## 先作判断，后选配方
 
@@ -46,7 +46,7 @@
 
 S08–S10 的 `generation` 内有可填的 `still_image_prompt_template` 与 `video_prompt_template`，并列出角色参考、世界关系、动作拍点、入口/出口、约束和合成检查。它们是本技能的制作设计，不是对作者所用模型或提示词的推断；本次尚未调用生成、没有新素材验收。
 
-使用时先读取当前账号的角色和整体画风。没有明确角色时按当前任务解决身份，不跨账号沿用阿刁女主，也不复制秋芝角色或炉子吉祥物。首帧是单个可播放场景；多格分镜可以辅助规划，但不将整张漫画格作为最终视频。
+使用时先读取本期人物身份和 AIGC 画风，见[参考使用](style-profiles.md)。没有明确角色时按当前任务设计，不跨项目沿用阿刁女主，也不复制秋芝角色或炉子吉祥物。首帧是单个可播放场景；多格分镜可以辅助规划，但不将整张漫画格作为最终视频。
 
 ### S08：把取用与组合演成事件
 

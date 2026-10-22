@@ -215,7 +215,7 @@
     {
       "id": "adiao-ui-editing",
       "path": "assets/modules/adiao-ui-editing",
-      "purpose": "阿刁 UI 剪辑历史创意、生产约束和本地上下文；由主 Skill 的账号档案接入。",
+      "purpose": "阿刁 UI 剪辑历史创意、生产约束和本地上下文；仅供显式历史查询，普通制作不采用账号视觉路由。",
       "required": [
         "references/local-context.md",
         "references/creative-direction.md",
@@ -227,11 +227,29 @@
     {
       "id": "apple-kinetic-promo",
       "path": "assets/modules/apple-kinetic-promo",
-      "purpose": "保留历史动态排版与解释视频制作经验，外观仍以当前已确认档案为准。",
+      "purpose": "保留历史动态排版与解释视频制作经验，本期整体设计从效果库选择。",
       "required": [
         "references/explainer-production-lessons.md"
       ],
       "commands": {},
+      "required_for_install": true
+    },
+    {
+      "id": "fredtalk-library",
+      "path": ".",
+      "purpose": "FredTalk 公开素材源码候选、依赖核验与本期工程取源；不指定默认风格。",
+      "required": [
+        "scripts/fredtalk_library.py",
+        "assets/fredtalk-library/catalog.json",
+        "assets/fredtalk-library/index.html",
+        "assets/fredtalk-library/LICENSE",
+        "assets/fredtalk-library/THIRD_PARTY_NOTICES.md",
+        "assets/fredtalk-library/README.md",
+        "assets/fredtalk-library/upstream-license-scope.md"
+      ],
+      "commands": {
+        "fredtalk": "scripts/fredtalk_library.py"
+      },
       "required_for_install": true
     }
   ]

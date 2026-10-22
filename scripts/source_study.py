@@ -18,7 +18,8 @@ MANIFEST_FILE = EVIDENCE_DIR + '/index.json'
 SOURCE_REGISTRY_FILE = 'references/source-study-sources.json'
 VIDEOS = ('workflow', 'creative', 'network', 'claude')
 COMPACT_KEYS = ('id', 'title', 'category', 'semantic_use', 'viewer_gap',
-                'state_chain', 'polarity', 'avoid', 'source_examples')
+                'state_chain', 'polarity', 'avoid', 'source_examples',
+                'implementation', 'validation')
 
 
 def load_json(path):
@@ -237,6 +238,17 @@ def validate_refs(refs, root=ROOT):
             continue
         if usage == 'adapt' and explicitly_negative(method):
             errors.append(label + ': explicitly negative method cannot be an adaptation example')
+        implementation = method.get('implementation') or {}
+        if usage == 'adapt' and isinstance(implementation, dict):
+            scope = implementation.get('scope')
+            customization = implementation.get('customization_required')
+            if populated(scope) or customization:
+                notes = [scope] if populated(scope) else []
+                if customization:
+                    notes.append('本期仍需定制：' + (customization if isinstance(customization, str)
+                                 else '；'.join(str(item) for item in customization)))
+                warnings.append(label + ' ' + ident + '：' + '；'.join(notes)
+                                + '；须核对本期实际实现，引用或原语入口存在不证明已经使用、完成或获认可。')
         examples = ref.get('examples', [])
         if not isinstance(examples, list):
             errors.append(label + '.examples: must be a list')

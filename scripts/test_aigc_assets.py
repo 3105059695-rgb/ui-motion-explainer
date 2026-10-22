@@ -60,6 +60,27 @@ class AigcAssetTests(unittest.TestCase):
     def save_override(self, value, file='project.json'):
         (self.project / file).write_text(json.dumps({'aigc': {'direction_override': value}}, ensure_ascii=False), encoding='utf-8')
 
+    def test_unified_reference_is_independent_of_account_and_does_not_bind_identity(self):
+        self.data['routing_policy'] = {'default_style_id': 'qiuzhi-girl-painterly', 'account_routing': False}
+        self.data['style_sets'][0]['default_for_profiles'] = []
+        self.save()
+        for profile in ('user-ui', 'adiao', 'fangmu', None):
+            result = self.resolve(profile, self.root / 'ordinary-new-project')
+            self.assertEqual(result['selection_source'], 'unified-aigc-reference')
+            self.assertEqual(result['selected_style_set'], 'qiuzhi-girl-painterly')
+            self.assertTrue(result['style_references'])
+            self.assertIsNone(result['selected_character_set'])
+            self.assertEqual(result['identity_references'], [])
+            self.assertFalse(result['video_approval_inherited'])
+
+    def test_explicit_project_override_precedes_unified_art_reference(self):
+        self.data['routing_policy'] = {'default_style_id': 'qiuzhi-girl-painterly', 'account_routing': False}
+        self.save()
+        self.local_override()
+        result = self.resolve('adiao')
+        self.assertEqual(result['selected_style_set'], 'project-local-aigc')
+        self.assertEqual(result['identity_references'], [])
+
     def test_sourced_project_override_does_not_load_default_girl_or_imply_approval(self):
         self.local_override()
         resolution = {'resolved_profile': 'user-ui', 'binding': {'example': 'unchanged UI'}}
@@ -137,6 +158,138 @@ class AigcAssetTests(unittest.TestCase):
         self.assertIn('每期先理解口播句意', result['instruction'])
         self.assertIn('当前工程明确指定的固定 IP', result['character_policy'])
 
+    def test_unselected_style_exposes_scoped_candidates_without_default_or_historical_instructions(self):
+        style = self.data['style_sets'][0]
+        style.update(default_for_profiles=[], applicable_profiles=['user-ui'],
+                     current_scope={'style': 'candidate only', 'video_methods': ['handoff']})
+        style['approval'].update(event_id='static-event', reuse_policy='obsolete default instruction',
+            subsequent_video_approvals=[{'event_id': 'sample-event', 'video_path': 'source.mp4',
+                'evidence_path': 'references/approval.json', 'reuse_rules': ['obsolete global rule'],
+                'scope': ['old UI appearance']}])
+        style['assets'][0].update(meaning='manual work to handoff', semantic_use=['handoff'])
+        self.save()
+        result = self.resolve('user-ui', self.root / 'fresh-project')
+        self.assertEqual(result['status'], 'candidates-available')
+        self.assertIsNone(result['selected_style_set'])
+        self.assertEqual(result['style_rules'], {})
+        self.assertEqual(result['identity_rules'], {})
+        self.assertEqual(result['approval'], {})
+        self.assertEqual(result['warnings'], [])
+        candidate = result['available_style_sets'][0]
+        self.assertTrue(candidate['applicable'])
+        self.assertFalse(candidate['automatic_selection'])
+        self.assertTrue(candidate['reference_videos'][0]['exists'])
+        self.assertEqual(candidate['reference_videos'][0]['usage_scope'], ['handoff'])
+        self.assertEqual(candidate['semantic_examples'][0]['meaning'], 'manual work to handoff')
+        self.assertNotIn('obsolete', json.dumps(result))
+        self.assertNotIn('old UI appearance', json.dumps(result))
+        self.assertEqual(candidate['approval']['event_ids'], ['static-event', 'sample-event'])
+        self.assertFalse(self.resolve('adiao')['available_style_sets'][0]['applicable'])
+
+    def test_style_choice_filters_legacy_identity_and_history_while_explicit_identity_is_independent(self):
+        style = self.data['style_sets'][0]
+        style['style_rules'].update(identity=['brown hair'], wardrobe=['white sweater'], identity_scope='legacy')
+        style['approval']['reuse_rules'] = ['all projects must use this girl']
+        style['assets'][0].update(scene_invariants=['same old costume'], action_chain=['girl hands over book'])
+        self.save()
+        result = self.resolve('user-ui')
+        self.assertEqual(result['style_rules'], {'rendering': 'painted'})
+        self.assertEqual(result['identity_rules'], {})
+        self.assertEqual(result['identity_references'], [])
+        self.assertEqual(result['style_references'][0]['path'], str((self.root / 'character.png').resolve()))
+        self.assertTrue(result['approval']['historical_only'])
+        self.assertNotIn('reuse_rules', result['approval'])
+        self.assertNotIn('scene_invariants', result['approved_static_assets'][0])
+        self.assertEqual(result['approved_static_assets'][0]['reference_action_chain'], ['girl hands over book'])
+        (self.project / 'project.json').write_text(json.dumps({'aigc': {
+            'character_style_set_id': style['id']}}), encoding='utf-8')
+        bound = self.resolve('user-ui')
+        self.assertEqual(bound['identity_rules'], {'identity': ['brown hair'], 'wardrobe': ['white sweater']})
+        self.assertEqual(bound['style_rules'], result['style_rules'])
+        self.assertEqual(bound['selected_character_set'], style['id'])
+        self.assertEqual(bound['identity_references'][0]['usage_role'], 'project-explicit-identity-reference')
+        self.assertEqual(bound['style_references'], result['style_references'])
+        for row in [*bound['style_references'], *bound['character_references']]:
+            self.assertEqual(row['usage_role'], 'style-reference-only')
+            self.assertFalse(row['identity_binding_default'])
+        self.assertEqual(selection_contract.aigc_style_binding(bound), selection_contract.aigc_style_binding(result))
+        self.assertEqual(self.resolve('user-ui', self.project / 'src')['identity_rules'], {})
+
+    def test_explicit_character_can_continue_with_an_independent_current_style_override(self):
+        self.data['style_sets'][0]['identity_rules'] = {'identity': ['brown hair']}
+        self.save()
+        override = self.local_override()
+        (self.project / 'project.json').write_text(json.dumps({'aigc': {
+            'direction_override': override, 'character_style_set_id': 'qiuzhi-girl-painterly'}}), encoding='utf-8')
+        result = self.resolve('user-ui')
+        self.assertEqual(result['selected_style_set'], 'project-local-aigc')
+        self.assertEqual(result['style_rules'], {'rendering': override['direction']})
+        self.assertEqual(result['identity_rules'], {'identity': ['brown hair']})
+        self.assertEqual(result['approval'], {})
+
+    def test_unknown_and_conflicting_character_selections_are_not_assumed(self):
+        (self.project / 'project.json').write_text('{"aigc":{"character_style_set_id":"missing"}}', encoding='utf-8')
+        self.assertEqual(self.resolve('user-ui')['status'], 'invalid-project-character')
+        (self.project / 'current-project.json').write_text('{"aigc":{"character_style_set_id":"another"}}', encoding='utf-8')
+        result = self.resolve('user-ui')
+        self.assertEqual(result['identity_rules'], {})
+        self.assertTrue(any('Conflicting character' in warning for warning in result['warnings']))
+
+    def test_shipped_catalog_has_current_art_reference_and_preserves_historical_approval(self):
+        result = aigc_assets.directing_context(self.project, {'resolved_profile': 'user-ui'})
+        self.assertEqual(result['status'], 'resolved')
+        self.assertEqual(result['selected_style_set'], 'qiuzhi-girl-painterly')
+        self.assertEqual(result['selection_source'], 'unified-aigc-reference')
+        self.assertIsNone(result['selected_character_set'])
+        self.assertFalse(result['approval']['current_output_approved'])
+        candidate = next(row for row in result['available_style_sets'] if row['id'] == 'qiuzhi-girl-painterly')
+        self.assertTrue(candidate['applicable'])
+        self.assertIn('20261015-girl-agent-sample-approved', candidate['approval']['event_ids'])
+        self.assertNotIn('user_quote', candidate['approval'])
+        self.assertTrue(candidate['semantic_examples'])
+        self.assertTrue(candidate['reference_videos'])
+
+    def test_scoped_local_reference_and_video_use_existing_overlay_and_bind_when_selected(self):
+        style = self.data['style_sets'][0]
+        style.update(default_for_profiles=[], applicable_profiles=['user-ui'], character_references=[],
+            style_references=[{'path': 'local-only/frame.png', 'resource_id': 'aigc-style:local:frame'}],
+            approval_kind='method-only', current_scope={'limits': ['UI rejected; no global style approval']})
+        style['approval']['subsequent_video_approvals'] = [{'event_id': 'local-method',
+            'video_path': 'local-only/video.mp4', 'resource_id': 'aigc-video:local'}]
+        self.save()
+        (self.root / 'references/resources.local.json').write_text(json.dumps({'schema_version': 1,
+            'files': {'aigc-style:local:frame': {'path': 'frame.jpg'},
+                      'aigc-video:local': {'path': 'source.mp4'}}}), encoding='utf-8')
+        (self.project / 'project.json').write_text(json.dumps({'aigc': {'style_set_id': style['id']}}), encoding='utf-8')
+        result = self.resolve('user-ui')
+        self.assertTrue(result['production_references_ready'])
+        self.assertEqual(result['style_references'][0]['path'], str((self.root / 'frame.jpg').resolve()))
+        self.assertEqual(result['style_references'], result['available_style_sets'][0]['style_references'])
+        self.assertEqual(result['style_references'], result['character_references'])
+        self.assertEqual(result['identity_references'], [])
+        self.assertEqual(result['identity_rules'], {})
+        self.assertFalse(result['style_references'][0]['identity_binding_default'])
+        self.assertEqual(result['style_references'][0]['usage_role'], 'style-reference-only')
+        self.assertEqual(result['character_references'][0]['path'], str((self.root / 'frame.jpg').resolve()))
+        self.assertEqual(result['approval']['approval_kind'], 'method-only')
+        self.assertFalse(result['approval']['current_output_approved'])
+        self.assertTrue(result['available_style_sets'][0]['reference_videos'][0]['exists'])
+        self.assertIn((self.root / 'frame.jpg').resolve(), aigc_assets.reference_only_paths(self.root))
+        self.assertEqual(selection_contract.aigc_style_binding(result)['style_set_id'], style['id'])
+        (self.root / 'frame.jpg').unlink()
+        missing = self.resolve('user-ui')
+        self.assertFalse(missing['style_references'][0]['exists'])
+        self.assertFalse(missing['production_references_ready'])
+        self.assertIn(str((self.root / 'frame.jpg').resolve()), missing['missing_resources'])
+
+    def test_registered_project_selection_remains_applicable_after_profile_default_is_removed(self):
+        self.data['style_sets'][0].update(default_for_profiles=[], applicable_profiles=['user-ui'])
+        self.save()
+        result = self.resolve('user-ui')
+        self.assertEqual(result['status'], 'resolved')
+        self.assertEqual(result['selection_source'], 'registered-project-root')
+        self.assertIsNone(self.resolve('adiao')['selected_style_set'])
+
     def test_other_accounts_do_not_inherit_girl_even_inside_sample_project(self):
         for profile in ('adiao', 'fangmu'):
             with self.subTest(profile=profile):
@@ -203,10 +356,10 @@ class AigcAssetTests(unittest.TestCase):
         self.assertIsNone(context['style']['profile'])
         self.assertEqual(context['aigc']['selected_style_set'], 'qiuzhi-girl-painterly')
         self.assertEqual(len(context['aigc']['approved_static_assets']), 1)
-        self.assertTrue(any(item['path'].endswith('aigc-directing.md') for item in context['required_reading']))
+        self.assertTrue(context['production']['on_demand']['aigc']['path'].endswith('aigc-directing.md'))
         self.assertTrue(context['aigc']['reference_only'])
         self.assertFalse(context['aigc']['default_character_required'])
-        self.assertIn('例图不得自动变成首帧或成片', (self.project / 'director-brief.md').read_text(encoding='utf-8'))
+        self.assertIn('参考图不自动成为首帧或固定主角', (self.project / 'director-brief.md').read_text(encoding='utf-8'))
 
     def test_reference_only_path_index_includes_style_examples_not_source_video(self):
         paths = aigc_assets.reference_only_paths(self.root)

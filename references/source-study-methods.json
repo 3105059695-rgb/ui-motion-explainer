@@ -3,10 +3,10 @@
   "collection_id": "source-studies-qiuzhi2046-fred-20261015",
   "purpose": "从逐句对照提炼的选择候选；Agent先理解本稿，再查例证、改写事件并实现。",
   "scope": {
-    "videos": 6,
-    "duration_seconds": 6723.182948,
-    "source_asr_segments": 2703,
-    "aligned_rows": 2340,
+    "videos": 7,
+    "duration_seconds": 6914.8829479999995,
+    "source_asr_segments": 2808,
+    "aligned_rows": 2445,
     "supplemental_rows": 18,
     "full_realtime_av_review": false,
     "author_generation_pipeline_known": false
@@ -88,6 +88,33 @@
           "polarity": "positive",
           "binding": "原ASR或字幕行与事件严格时间重叠；观察精度及未听审边界见来源。",
           "learning_scope": "由开头受众分流扩展到结尾条件推荐：先出现条件再给方案，旧方案保留降权，多条动机可汇到同一方案。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 171,
+          "end": 191.7,
+          "row_ids": [
+            "A-L092",
+            "A-L093",
+            "A-L094",
+            "A-L095",
+            "A-L096",
+            "A-L097",
+            "A-L098",
+            "A-L099",
+            "A-L100",
+            "A-L101",
+            "A-L102",
+            "A-L103",
+            "A-L104",
+            "A-L105"
+          ],
+          "shot_ids": [
+            "A-S031"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "建立需求到推荐的明确映射并收束；用户明确排除原片配色，UI仍取当前正式审美偏好。"
         }
       ],
       "polarity": "positive",
@@ -241,6 +268,22 @@
             "W044"
           ],
           "polarity": "positive"
+        },
+        {
+          "video": "arun-membership",
+          "start": 88,
+          "end": 94,
+          "row_ids": [
+            "A-L047",
+            "A-L048",
+            "A-L049"
+          ],
+          "shot_ids": [
+            "A-S023"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "过程不可见与等待后才能获知结果；用户明确排除原片配色，UI仍取当前正式审美偏好。"
         }
       ],
       "polarity": "positive",
@@ -1145,6 +1188,25 @@
           "polarity": "positive",
           "binding": "原ASR或字幕行与事件严格时间重叠；观察精度及未听审边界见来源。",
           "learning_scope": "使用权、控制权和材料去向通过两端位置、请求/数据移动、付费计数与受阻路径解释；受限菜谱接成可下载模型，保留对象身份。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 109,
+          "end": 121,
+          "row_ids": [
+            "A-L057",
+            "A-L058",
+            "A-L059",
+            "A-L060",
+            "A-L061",
+            "A-L062"
+          ],
+          "shot_ids": [
+            "A-S026"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "解释不同额度互不影响；用户明确排除原片配色，UI仍取当前正式审美偏好。"
         }
       ],
       "polarity": "positive",
@@ -1625,6 +1687,38 @@
           ],
           "video": "network",
           "polarity": "positive"
+        },
+        {
+          "video": "arun-membership",
+          "start": 28.6,
+          "end": 32.3,
+          "row_ids": [
+            "A-L012",
+            "A-L013",
+            "A-L014"
+          ],
+          "shot_ids": [
+            "A-S010"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "把单个聊天产品与整套生态分开解释。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 49.7,
+          "end": 52.7,
+          "row_ids": [
+            "A-L023",
+            "A-L024",
+            "A-L025"
+          ],
+          "shot_ids": [
+            "A-S016"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "把零散权益重新归纳为一个购买单位。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
         }
       ],
       "polarity": "positive",
@@ -2518,6 +2612,39 @@
             "C122",
             "C123"
           ]
+        },
+        {
+          "video": "arun-membership",
+          "start": 38.4,
+          "end": 43,
+          "row_ids": [
+            "A-L017",
+            "A-L018",
+            "A-L019"
+          ],
+          "shot_ids": [
+            "A-S013"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "能力判断有作品可看，素材承担例证。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 45.7,
+          "end": 49.7,
+          "row_ids": [
+            "A-L020",
+            "A-L021",
+            "A-L022",
+            "A-L023"
+          ],
+          "shot_ids": [
+            "A-S015"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "按能力类型换材料，保持主次，而非全片同款框装字。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
         }
       ],
       "implementation": {
@@ -2929,7 +3056,7 @@
       "id": "F-M01",
       "collection": "fred-argon-20261015",
       "report_section": "4.1",
-      "style_policy": "遵循当前已确认账号UI和女孩身份；参考片提供内容展示语法，素材仍按本稿生成。用户已确认参考方向，不等于新实现/新样片获批。",
+      "style_policy": "UI遵循当前公共方向及本期明确覆盖；AIGC独立读取当前画风，人物图仅作风格参考，只有本期明确固定IP时保持该身份。参考片提供内容展示方法，素材按本稿设计；方向认可不等于新实现或新样片获批。",
       "source_examples": [
         {
           "video": "fred-argon",
@@ -2948,6 +3075,43 @@
           ],
           "polarity": "positive",
           "binding": "严格时间重叠且行所绑定事件属于本例；边界精度沿用研究限制。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 5.9,
+          "end": 8.8,
+          "row_ids": [
+            "A-L002",
+            "A-L003"
+          ],
+          "shot_ids": [
+            "A-S002"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "每份证据有来源，一眼知道哪项产品对应哪份结果。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 122,
+          "end": 133,
+          "row_ids": [
+            "A-L063",
+            "A-L064",
+            "A-L065",
+            "A-L066",
+            "A-L067",
+            "A-L068",
+            "A-L069",
+            "A-L070",
+            "A-L071"
+          ],
+          "shot_ids": [
+            "A-S027"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "从实际产出归纳能力再回收评级；用户明确排除原片配色，UI仍取当前正式审美偏好。"
         }
       ],
       "polarity": "positive",
@@ -3006,7 +3170,7 @@
       "id": "F-M02",
       "collection": "fred-argon-20261015",
       "report_section": "4.2",
-      "style_policy": "遵循当前已确认账号UI和女孩身份；参考片提供内容展示语法，素材仍按本稿生成。用户已确认参考方向，不等于新实现/新样片获批。",
+      "style_policy": "UI遵循当前公共方向及本期明确覆盖；AIGC独立读取当前画风，人物图仅作风格参考，只有本期明确固定IP时保持该身份。参考片提供内容展示方法，素材按本稿设计；方向认可不等于新实现或新样片获批。",
       "source_examples": [
         {
           "video": "fred-argon",
@@ -3147,11 +3311,71 @@
           "polarity": "positive",
           "binding": "原ASR或字幕行与事件严格时间重叠；观察精度及未听审边界见来源。",
           "learning_scope": "现有对象让位以加入新参照或条件；重点移动时旧项保留，最终回到整体再突出选择。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 8.8,
+          "end": 9.45,
+          "row_ids": [
+            "A-L004"
+          ],
+          "shot_ids": [
+            "A-S003"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "下一场承接同一组对象，不让观众重新辨认。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 19.5,
+          "end": 23.6,
+          "row_ids": [
+            "A-L008",
+            "A-L009"
+          ],
+          "shot_ids": [
+            "A-S007"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "先让真实证据可见，再让评价进入。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 34.1,
+          "end": 38.4,
+          "row_ids": [
+            "A-L015",
+            "A-L016",
+            "A-L017"
+          ],
+          "shot_ids": [
+            "A-S012"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "付费对象、实际页面与具体权益同场可追踪。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 43,
+          "end": 45.7,
+          "row_ids": [
+            "A-L019",
+            "A-L020"
+          ],
+          "shot_ids": [
+            "A-S014"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "讲比较时改变双方距离而非只更换标题。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
         }
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "observed_method_with_reusable_primitives_and_project_customization",
+        "status": "shared-component-implemented",
         "recipe_ids": [
           "S05",
           "S06"
@@ -3161,6 +3385,11 @@
           "assets/editing-kit/editing-kit.js"
         ],
         "primitives": [
+          {
+            "name": "comparison-reflow",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "shared-component-implemented"
+          },
           {
             "name": "match-handoff",
             "path": "assets/editing-kit/editing-kit.js",
@@ -3173,10 +3402,22 @@
           }
         ],
         "customization_required": [
-          "双栏重排与回主位时序由宿主安排",
-          "compare原语是受控揭示而非现成双窗模板；可只用match-handoff实现布局"
+          "本期素材与比较依据由宿主提供，布局矩形、层次和动作时窗按口播与安全区确定；返回主位时继续使用原节点设置下一段几何",
+          "输入图片或界面须保持可读，完成本期真实素材渲染及连续播放视觉验收；不把技术测试当用户认可"
         ],
-        "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。"
+        "scope": "Fred整段未重建；comparison-reflow已实现两个原DOM节点的旧对象让位、新对象进入和独立时窗。可复用该连续组合；本期素材、构图、节奏与实际输出仍需接入验收。",
+        "effect": "comparison-reflow",
+        "api": "UIEditingKit.apply('comparison-reflow', options, progress)",
+        "required_options": [
+          "previous",
+          "next",
+          "previousFrom",
+          "previousTo",
+          "nextFrom",
+          "nextTo",
+          "timing.previous",
+          "timing.next"
+        ]
       },
       "validation": {
         "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
@@ -3184,7 +3425,12 @@
         "new_render_verified": false,
         "user_approved": false,
         "reference_direction_user_approved": true,
-        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
+        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。",
+        "component_check": {
+          "command": "node assets/editing-kit/smoke-test.cjs",
+          "passed": true,
+          "scope": "初中末几何、同节点保持、乱序seek与无效参数检查；不是浏览器视觉验收、整段音画审阅或用户认可"
+        }
       },
       "refinements": [
         {
@@ -3221,7 +3467,7 @@
       "id": "F-M03",
       "collection": "fred-argon-20261015",
       "report_section": "4.3",
-      "style_policy": "遵循当前已确认账号UI和女孩身份；参考片提供内容展示语法，素材仍按本稿生成。用户已确认参考方向，不等于新实现/新样片获批。",
+      "style_policy": "UI遵循当前公共方向及本期明确覆盖；AIGC独立读取当前画风，人物图仅作风格参考，只有本期明确固定IP时保持该身份。参考片提供内容展示方法，素材按本稿设计；方向认可不等于新实现或新样片获批。",
       "source_examples": [
         {
           "video": "fred-argon",
@@ -3347,11 +3593,42 @@
           "polarity": "positive",
           "binding": "原ASR或字幕行与事件严格时间重叠；观察精度及未听审边界见来源。",
           "learning_scope": "先交代页面身份，再在框内聚焦菜单、型号、价格或按钮；不适合缩放全页时可裁出相关栏目继续读。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 23.6,
+          "end": 26.3,
+          "row_ids": [
+            "A-L010",
+            "A-L011"
+          ],
+          "shot_ids": [
+            "A-S008"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "突出原始证据中支持当前判断的字段。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 56.5,
+          "end": 60,
+          "row_ids": [
+            "A-L027",
+            "A-L028",
+            "A-L029"
+          ],
+          "shot_ids": [
+            "A-S018"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "用原页面承接新的价值依据。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
         }
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "observed_method_with_reusable_primitives_and_project_customization",
+        "status": "shared-component-implemented",
         "recipe_ids": [
           "S03"
         ],
@@ -3361,16 +3638,32 @@
         ],
         "primitives": [
           {
+            "name": "viewport-focus",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "shared-component-implemented"
+          },
+          {
             "name": "focus-mask",
             "path": "assets/editing-kit/editing-kit.js",
             "status": "existing_shared_primitive"
           }
         ],
         "customization_required": [
-          "为原窗口增加裁切层并对内部内容应用独立transform",
-          "focus-mask可提供几何与放大参照，内部滚动和媒体时钟仍由宿主控制"
+          "为本期原内容提供裁切容器与同一内容节点、原尺寸和全景/细节取景区；按口播设置聚焦及可选返回时窗，不沿用原作者固定坐标",
+          "媒体载入、滚动状态与媒体时钟仍由宿主管理；完成本期真实素材可读性及连续播放视觉验收"
         ],
-        "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。"
+        "scope": "Fred整段未重建；viewport-focus已实现稳定外框裁切、同一内部内容的等比聚焦/平移和可选返回。无需另写内部相机几何；本期素材、取景、节奏与实际输出仍需接入验收。",
+        "effect": "viewport-focus",
+        "api": "UIEditingKit.apply('viewport-focus', options, progress)",
+        "required_options": [
+          "frame",
+          "content",
+          "frameRect",
+          "contentSize",
+          "from",
+          "to",
+          "timing.focus"
+        ]
       },
       "validation": {
         "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
@@ -3378,7 +3671,12 @@
         "new_render_verified": false,
         "user_approved": false,
         "reference_direction_user_approved": true,
-        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
+        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。",
+        "component_check": {
+          "command": "node assets/editing-kit/smoke-test.cjs",
+          "passed": true,
+          "scope": "初中末几何、同节点保持、乱序seek与无效参数检查；不是浏览器视觉验收、整段音画审阅或用户认可"
+        }
       },
       "refinements": [
         {
@@ -3415,7 +3713,7 @@
       "id": "F-M04",
       "collection": "fred-argon-20261015",
       "report_section": "4.4",
-      "style_policy": "遵循当前已确认账号UI和女孩身份；参考片提供内容展示语法，素材仍按本稿生成。用户已确认参考方向，不等于新实现/新样片获批。",
+      "style_policy": "UI遵循当前公共方向及本期明确覆盖；AIGC独立读取当前画风，人物图仅作风格参考，只有本期明确固定IP时保持该身份。参考片提供内容展示方法，素材按本稿设计；方向认可不等于新实现或新样片获批。",
       "source_examples": [
         {
           "video": "fred-argon",
@@ -3493,7 +3791,7 @@
       "id": "F-M05",
       "collection": "fred-argon-20261015",
       "report_section": "4.5",
-      "style_policy": "遵循当前已确认账号UI和女孩身份；参考片提供内容展示语法，素材仍按本稿生成。用户已确认参考方向，不等于新实现/新样片获批。",
+      "style_policy": "UI遵循当前公共方向及本期明确覆盖；AIGC独立读取当前画风，人物图仅作风格参考，只有本期明确固定IP时保持该身份。参考片提供内容展示方法，素材按本稿设计；方向认可不等于新实现或新样片获批。",
       "source_examples": [
         {
           "video": "fred-argon",
@@ -3513,6 +3811,56 @@
           ],
           "polarity": "positive",
           "binding": "严格时间重叠且行所绑定事件属于本例；边界精度沿用研究限制。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 74,
+          "end": 82,
+          "row_ids": [
+            "A-L037",
+            "A-L038",
+            "A-L039",
+            "A-L040",
+            "A-L041"
+          ],
+          "shot_ids": [
+            "A-S021"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "解释少量运行时间与额度消耗之间的反差；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 88,
+          "end": 94,
+          "row_ids": [
+            "A-L047",
+            "A-L048",
+            "A-L049"
+          ],
+          "shot_ids": [
+            "A-S023"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "过程不可见与等待后才能获知结果；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 105,
+          "end": 109,
+          "row_ids": [
+            "A-L055",
+            "A-L056",
+            "A-L057"
+          ],
+          "shot_ids": [
+            "A-S025"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "使返工成本有物体和数量证据；用户明确排除原片配色，UI仍取当前正式审美偏好。"
         }
       ],
       "polarity": "positive",
@@ -3571,7 +3919,7 @@
       "id": "F-M06",
       "collection": "fred-argon-20261015",
       "report_section": "4.6",
-      "style_policy": "遵循当前已确认账号UI和女孩身份；参考片提供内容展示语法，素材仍按本稿生成。用户已确认参考方向，不等于新实现/新样片获批。",
+      "style_policy": "UI遵循当前公共方向及本期明确覆盖；AIGC独立读取当前画风，人物图仅作风格参考，只有本期明确固定IP时保持该身份。参考片提供内容展示方法，素材按本稿设计；方向认可不等于新实现或新样片获批。",
       "source_examples": [
         {
           "video": "fred-argon",
@@ -3680,6 +4028,125 @@
           "polarity": "positive",
           "binding": "原ASR或字幕行与事件严格时间重叠；观察精度及未听审边界见来源。",
           "learning_scope": "同一载体从加载到失败、请求到回复、复制到已复制、调用到连通；状态要留给观众核对。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 9.45,
+          "end": 12.6,
+          "row_ids": [
+            "A-L004"
+          ],
+          "shot_ids": [
+            "A-S004"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "用同一个空间载体展示比较任务。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 32.3,
+          "end": 34.1,
+          "row_ids": [
+            "A-L014",
+            "A-L015"
+          ],
+          "shot_ids": [
+            "A-S011"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "在信息层级变化时提醒观众这一笔钱买的是什么。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 69,
+          "end": 74,
+          "row_ids": [
+            "A-L034",
+            "A-L035",
+            "A-L036",
+            "A-L037"
+          ],
+          "shot_ids": [
+            "A-S020"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "引入待评价对象并转入理由；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 74,
+          "end": 82,
+          "row_ids": [
+            "A-L037",
+            "A-L038",
+            "A-L039",
+            "A-L040",
+            "A-L041"
+          ],
+          "shot_ids": [
+            "A-S021"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "解释少量运行时间与额度消耗之间的反差；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 82,
+          "end": 88,
+          "row_ids": [
+            "A-L041",
+            "A-L042",
+            "A-L043",
+            "A-L044",
+            "A-L045",
+            "A-L046",
+            "A-L047"
+          ],
+          "shot_ids": [
+            "A-S022"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "让额度耗尽的实际工作后果可见；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 105,
+          "end": 109,
+          "row_ids": [
+            "A-L055",
+            "A-L056",
+            "A-L057"
+          ],
+          "shot_ids": [
+            "A-S025"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "使返工成本有物体和数量证据；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 109,
+          "end": 121,
+          "row_ids": [
+            "A-L057",
+            "A-L058",
+            "A-L059",
+            "A-L060",
+            "A-L061",
+            "A-L062"
+          ],
+          "shot_ids": [
+            "A-S026"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "解释不同额度互不影响；用户明确排除原片配色，UI仍取当前正式审美偏好。"
         }
       ],
       "polarity": "positive",
@@ -3755,7 +4222,7 @@
       "id": "F-M07",
       "collection": "fred-argon-20261015",
       "report_section": "4.7",
-      "style_policy": "遵循当前已确认账号UI和女孩身份；参考片提供内容展示语法，素材仍按本稿生成。用户已确认参考方向，不等于新实现/新样片获批。",
+      "style_policy": "UI遵循当前公共方向及本期明确覆盖；AIGC独立读取当前画风，人物图仅作风格参考，只有本期明确固定IP时保持该身份。参考片提供内容展示方法，素材按本稿设计；方向认可不等于新实现或新样片获批。",
       "source_examples": [
         {
           "video": "fred-argon",
@@ -3838,7 +4305,7 @@
       "id": "F-M08",
       "collection": "fred-argon-20261015",
       "report_section": "4.8",
-      "style_policy": "遵循当前已确认账号UI和女孩身份；参考片提供内容展示语法，素材仍按本稿生成。用户已确认参考方向，不等于新实现/新样片获批。",
+      "style_policy": "UI遵循当前公共方向及本期明确覆盖；AIGC独立读取当前画风，人物图仅作风格参考，只有本期明确固定IP时保持该身份。参考片提供内容展示方法，素材按本稿设计；方向认可不等于新实现或新样片获批。",
       "source_examples": [
         {
           "video": "fred-argon",
@@ -3860,6 +4327,151 @@
           ],
           "polarity": "positive",
           "binding": "严格时间重叠且行所绑定事件属于本例；边界精度沿用研究限制。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 0,
+          "end": 5.9,
+          "row_ids": [
+            "A-L001",
+            "A-L002"
+          ],
+          "shot_ids": [
+            "A-S001"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "先让观众知道比较条件与候选是谁。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 12.6,
+          "end": 16.9,
+          "row_ids": [
+            "A-L005",
+            "A-L006"
+          ],
+          "shot_ids": [
+            "A-S005"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "把总体排名与局部能力不等价的冲突具象化。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 52.7,
+          "end": 56.5,
+          "row_ids": [
+            "A-L025",
+            "A-L026",
+            "A-L027"
+          ],
+          "shot_ids": [
+            "A-S017"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "看见差异后再突出作者判断。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 60,
+          "end": 69,
+          "row_ids": [
+            "A-L029",
+            "A-L030",
+            "A-L031",
+            "A-L032",
+            "A-L033",
+            "A-L034"
+          ],
+          "shot_ids": [
+            "A-S019"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "区分单项体验与生态总价值；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 95,
+          "end": 105,
+          "row_ids": [
+            "A-L050",
+            "A-L051",
+            "A-L052",
+            "A-L053",
+            "A-L054",
+            "A-L055"
+          ],
+          "shot_ids": [
+            "A-S024"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "把能力和审美两个判断分开；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 134,
+          "end": 145,
+          "row_ids": [
+            "A-L072",
+            "A-L073",
+            "A-L074",
+            "A-L075",
+            "A-L076",
+            "A-L077",
+            "A-L078",
+            "A-L079"
+          ],
+          "shot_ids": [
+            "A-S028"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "把三个比较维度聚合到产品；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 145,
+          "end": 160,
+          "row_ids": [
+            "A-L079",
+            "A-L080",
+            "A-L081",
+            "A-L082",
+            "A-L083",
+            "A-L084",
+            "A-L085",
+            "A-L086"
+          ],
+          "shot_ids": [
+            "A-S029"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "区分能力、额度、使用风险；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 161,
+          "end": 170,
+          "row_ids": [
+            "A-L086",
+            "A-L087",
+            "A-L088",
+            "A-L089",
+            "A-L090",
+            "A-L091"
+          ],
+          "shot_ids": [
+            "A-S030"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "已有结论留存，切换到如何选的共同问题；用户明确排除原片配色，UI仍取当前正式审美偏好。"
         }
       ],
       "polarity": "positive",
@@ -3925,7 +4537,7 @@
       "id": "F-M09",
       "collection": "fred-argon-20261015",
       "report_section": "4.9",
-      "style_policy": "遵循当前已确认账号UI和女孩身份；参考片提供内容展示语法，素材仍按本稿生成。用户已确认参考方向，不等于新实现/新样片获批。",
+      "style_policy": "UI遵循当前公共方向及本期明确覆盖；AIGC独立读取当前画风，人物图仅作风格参考，只有本期明确固定IP时保持该身份。参考片提供内容展示方法，素材按本稿设计；方向认可不等于新实现或新样片获批。",
       "source_examples": [
         {
           "video": "fred-argon",
@@ -4044,7 +4656,7 @@
       "id": "F-M10",
       "collection": "fred-argon-20261015",
       "report_section": "4.10",
-      "style_policy": "遵循当前已确认账号UI和女孩身份；参考片提供内容展示语法，素材仍按本稿生成。用户已确认参考方向，不等于新实现/新样片获批。",
+      "style_policy": "UI遵循当前公共方向及本期明确覆盖；AIGC独立读取当前画风，人物图仅作风格参考，只有本期明确固定IP时保持该身份。参考片提供内容展示方法，素材按本稿设计；方向认可不等于新实现或新样片获批。",
       "source_examples": [
         {
           "video": "fred-argon",
@@ -4168,6 +4780,41 @@
           "polarity": "positive",
           "binding": "原ASR或字幕行与事件严格时间重叠；观察精度及未听审边界见来源。",
           "learning_scope": "请求必须穿过路径并触发计次，限流阻断同一路径；公开、下载、装入、运行各有不同可见结果；结尾行动按依赖依次接上。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 26.3,
+          "end": 28.6,
+          "row_ids": [
+            "A-L011",
+            "A-L012"
+          ],
+          "shot_ids": [
+            "A-S009"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "舍不得放弃通过动作表达，并明确是示意。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 82,
+          "end": 88,
+          "row_ids": [
+            "A-L041",
+            "A-L042",
+            "A-L043",
+            "A-L044",
+            "A-L045",
+            "A-L046",
+            "A-L047"
+          ],
+          "shot_ids": [
+            "A-S022"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "让额度耗尽的实际工作后果可见；用户明确排除原片配色，UI仍取当前正式审美偏好。"
         }
       ],
       "polarity": "positive",
@@ -4243,7 +4890,7 @@
       "id": "F-M11",
       "collection": "fred-argon-20261015",
       "report_section": "4.11",
-      "style_policy": "遵循当前已确认账号UI和女孩身份；参考片提供内容展示语法，素材仍按本稿生成。用户已确认参考方向，不等于新实现/新样片获批。",
+      "style_policy": "UI遵循当前公共方向及本期明确覆盖；AIGC独立读取当前画风，人物图仅作风格参考，只有本期明确固定IP时保持该身份。参考片提供内容展示方法，素材按本稿设计；方向认可不等于新实现或新样片获批。",
       "source_examples": [
         {
           "video": "fred-argon",
@@ -4338,6 +4985,33 @@
           "polarity": "positive",
           "binding": "原ASR或字幕行与事件严格时间重叠；观察精度及未听审边界见来源。",
           "learning_scope": "预置题目/方案/步骤骨架，按口播填入当前项，已讲项保留；选择时再回全貌，而不是每个短句换一张新卡。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 171,
+          "end": 191.7,
+          "row_ids": [
+            "A-L092",
+            "A-L093",
+            "A-L094",
+            "A-L095",
+            "A-L096",
+            "A-L097",
+            "A-L098",
+            "A-L099",
+            "A-L100",
+            "A-L101",
+            "A-L102",
+            "A-L103",
+            "A-L104",
+            "A-L105"
+          ],
+          "shot_ids": [
+            "A-S031"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "建立需求到推荐的明确映射并收束；用户明确排除原片配色，UI仍取当前正式审美偏好。"
         }
       ],
       "polarity": "positive",
@@ -4399,7 +5073,7 @@
       "id": "F-M12",
       "collection": "fred-argon-20261015",
       "report_section": "4.12",
-      "style_policy": "遵循当前已确认账号UI和女孩身份；参考片提供内容展示语法，素材仍按本稿生成。用户已确认参考方向，不等于新实现/新样片获批。",
+      "style_policy": "UI遵循当前公共方向及本期明确覆盖；AIGC独立读取当前画风，人物图仅作风格参考，只有本期明确固定IP时保持该身份。参考片提供内容展示方法，素材按本稿设计；方向认可不等于新实现或新样片获批。",
       "source_examples": [
         {
           "video": "fred-argon",
@@ -4483,6 +5157,188 @@
           "polarity": "positive",
           "binding": "原ASR或字幕行与事件严格时间重叠；观察精度及未听审边界见来源。",
           "learning_scope": "数字先落在来源材料上，再提炼成可读标签和比较；单位、样本量、执行条件和评价依据随数字一起保留。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 19.5,
+          "end": 23.6,
+          "row_ids": [
+            "A-L008",
+            "A-L009"
+          ],
+          "shot_ids": [
+            "A-S007"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "先让真实证据可见，再让评价进入。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 23.6,
+          "end": 26.3,
+          "row_ids": [
+            "A-L010",
+            "A-L011"
+          ],
+          "shot_ids": [
+            "A-S008"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "突出原始证据中支持当前判断的字段。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 34.1,
+          "end": 38.4,
+          "row_ids": [
+            "A-L015",
+            "A-L016",
+            "A-L017"
+          ],
+          "shot_ids": [
+            "A-S012"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "付费对象、实际页面与具体权益同场可追踪。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 52.7,
+          "end": 56.5,
+          "row_ids": [
+            "A-L025",
+            "A-L026",
+            "A-L027"
+          ],
+          "shot_ids": [
+            "A-S017"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "看见差异后再突出作者判断。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 60,
+          "end": 69,
+          "row_ids": [
+            "A-L029",
+            "A-L030",
+            "A-L031",
+            "A-L032",
+            "A-L033",
+            "A-L034"
+          ],
+          "shot_ids": [
+            "A-S019"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "区分单项体验与生态总价值；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 74,
+          "end": 82,
+          "row_ids": [
+            "A-L037",
+            "A-L038",
+            "A-L039",
+            "A-L040",
+            "A-L041"
+          ],
+          "shot_ids": [
+            "A-S021"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "解释少量运行时间与额度消耗之间的反差；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 95,
+          "end": 105,
+          "row_ids": [
+            "A-L050",
+            "A-L051",
+            "A-L052",
+            "A-L053",
+            "A-L054",
+            "A-L055"
+          ],
+          "shot_ids": [
+            "A-S024"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "把能力和审美两个判断分开；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 122,
+          "end": 133,
+          "row_ids": [
+            "A-L063",
+            "A-L064",
+            "A-L065",
+            "A-L066",
+            "A-L067",
+            "A-L068",
+            "A-L069",
+            "A-L070",
+            "A-L071"
+          ],
+          "shot_ids": [
+            "A-S027"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "从实际产出归纳能力再回收评级；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 134,
+          "end": 145,
+          "row_ids": [
+            "A-L072",
+            "A-L073",
+            "A-L074",
+            "A-L075",
+            "A-L076",
+            "A-L077",
+            "A-L078",
+            "A-L079"
+          ],
+          "shot_ids": [
+            "A-S028"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "把三个比较维度聚合到产品；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 145,
+          "end": 160,
+          "row_ids": [
+            "A-L079",
+            "A-L080",
+            "A-L081",
+            "A-L082",
+            "A-L083",
+            "A-L084",
+            "A-L085",
+            "A-L086"
+          ],
+          "shot_ids": [
+            "A-S029"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "区分能力、额度、使用风险；用户明确排除原片配色，UI仍取当前正式审美偏好。"
         }
       ],
       "polarity": "positive",
@@ -4561,7 +5417,7 @@
       "id": "F-M13",
       "collection": "fred-argon-20261015",
       "report_section": "4.13",
-      "style_policy": "遵循当前已确认账号UI和女孩身份；参考片提供内容展示语法，素材仍按本稿生成。用户已确认参考方向，不等于新实现/新样片获批。",
+      "style_policy": "UI遵循当前公共方向及本期明确覆盖；AIGC独立读取当前画风，人物图仅作风格参考，只有本期明确固定IP时保持该身份。参考片提供内容展示方法，素材按本稿设计；方向认可不等于新实现或新样片获批。",
       "source_examples": [
         {
           "video": "fred-argon",
@@ -4696,11 +5552,76 @@
           "polarity": "positive",
           "binding": "原ASR或字幕行与事件严格时间重叠；观察精度及未听审边界见来源。",
           "learning_scope": "章节标题或步骤总览读清后，同一组缩到导航位；后续内容只改变当前项状态，持续交代位置。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 8.8,
+          "end": 9.45,
+          "row_ids": [
+            "A-L004"
+          ],
+          "shot_ids": [
+            "A-S003"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "下一场承接同一组对象，不让观众重新辨认。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 16.9,
+          "end": 19.5,
+          "row_ids": [
+            "A-L007",
+            "A-L008"
+          ],
+          "shot_ids": [
+            "A-S006"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "缩小后的榜单继续有用途，后文随结论更新。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 69,
+          "end": 74,
+          "row_ids": [
+            "A-L034",
+            "A-L035",
+            "A-L036",
+            "A-L037"
+          ],
+          "shot_ids": [
+            "A-S020"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "引入待评价对象并转入理由；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 161,
+          "end": 170,
+          "row_ids": [
+            "A-L086",
+            "A-L087",
+            "A-L088",
+            "A-L089",
+            "A-L090",
+            "A-L091"
+          ],
+          "shot_ids": [
+            "A-S030"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "已有结论留存，切换到如何选的共同问题；用户明确排除原片配色，UI仍取当前正式审美偏好。"
         }
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "observed_method_with_reusable_primitives_and_project_customization",
+        "status": "shared-component-implemented",
         "recipe_ids": [
           "S07",
           "S06"
@@ -4710,6 +5631,11 @@
           "assets/editing-kit/editing-kit.js"
         ],
         "primitives": [
+          {
+            "name": "chapter-dock",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "shared-component-implemented"
+          },
           {
             "name": "occlusion-reveal",
             "path": "assets/editing-kit/editing-kit.js",
@@ -4722,10 +5648,21 @@
           }
         ],
         "customization_required": [
-          "翻面、穿字孔洞和章节字形遮罩由宿主实现；occlusion-reveal仅支持直线前景条",
-          "归角位移可用match-handoff，导航位置服从本账号布局"
+          "本期章节标题、导航位置、正文内容与动作时窗按口播和账号安全区设计，后续当前步骤高亮由宿主状态驱动",
+          "翻面、穿字孔洞和特殊章节字形遮罩仍需按需定制；chapter-dock只提供同标题归位以及正文淡入/直线裁切揭示",
+          "完成本期真实内容渲染及连续播放视觉验收；通用组合与技术测试不等于原片整段重建或用户认可"
         ],
-        "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。"
+        "scope": "Fred整段未重建；chapter-dock已实现同一标题从主舞台等比缩放到导航位，并按独立时窗显现正文。没有第二份标题假交接；翻面、穿字孔洞和特殊字形遮罩未实现，本期素材、构图、节奏与实际输出仍需接入验收。",
+        "effect": "chapter-dock",
+        "api": "UIEditingKit.apply('chapter-dock', options, progress)",
+        "required_options": [
+          "title",
+          "content",
+          "from",
+          "to",
+          "timing.title",
+          "timing.content"
+        ]
       },
       "validation": {
         "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
@@ -4733,7 +5670,12 @@
         "new_render_verified": false,
         "user_approved": false,
         "reference_direction_user_approved": true,
-        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
+        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。",
+        "component_check": {
+          "command": "node assets/editing-kit/smoke-test.cjs",
+          "passed": true,
+          "scope": "初中末几何、同节点保持、乱序seek与无效参数检查；不是浏览器视觉验收、整段音画审阅或用户认可"
+        }
       },
       "refinements": [
         {
@@ -4781,7 +5723,7 @@
       "id": "F-M14",
       "collection": "fred-argon-20261015",
       "report_section": "4.14",
-      "style_policy": "遵循当前已确认账号UI和女孩身份；参考片提供内容展示语法，素材仍按本稿生成。用户已确认参考方向，不等于新实现/新样片获批。",
+      "style_policy": "UI遵循当前公共方向及本期明确覆盖；AIGC独立读取当前画风，人物图仅作风格参考，只有本期明确固定IP时保持该身份。参考片提供内容展示方法，素材按本稿设计；方向认可不等于新实现或新样片获批。",
       "source_examples": [
         {
           "video": "fred-argon",
@@ -4861,6 +5803,39 @@
           "polarity": "positive",
           "binding": "原ASR或字幕行与事件严格时间重叠；观察精度及未听审边界见来源。",
           "learning_scope": "已有证据退后，解释到前景；手动负担逐项出现并划除后，立即接实际接管入口；前景结论有来处。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 45.7,
+          "end": 49.7,
+          "row_ids": [
+            "A-L020",
+            "A-L021",
+            "A-L022",
+            "A-L023"
+          ],
+          "shot_ids": [
+            "A-S015"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "按能力类型换材料，保持主次，而非全片同款框装字。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
+        },
+        {
+          "video": "arun-membership",
+          "start": 56.5,
+          "end": 60,
+          "row_ids": [
+            "A-L027",
+            "A-L028",
+            "A-L029"
+          ],
+          "shot_ids": [
+            "A-S018"
+          ],
+          "polarity": "positive",
+          "binding": "Source ASR overlaps observed event; boundaries are approximate.",
+          "learning_scope": "用原页面承接新的价值依据。；用户明确排除原片配色，UI仍取当前正式审美偏好。"
         }
       ],
       "polarity": "positive",
@@ -4938,7 +5913,13 @@
         "Q-W01"
       ],
       "policy": "同类语义方法复用原ID并追加实例，不按每条新视频复制一套方法。"
+    },
+    {
+      "id": "arun-membership-20261021",
+      "manifest": "references/evidence/arun-membership-study/index.json",
+      "new_method_count": 0,
+      "policy": "同类方法追加原片实例；保留现有方法ID。"
     }
   ],
-  "last_updated": "2026-10-16"
+  "last_updated": "2026-10-21"
 }

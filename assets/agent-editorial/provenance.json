@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "module": "agent-editorial",
+  "source_archive": "local-only/fangmu-ten-agents-20261021/handoff/方木-十款Agent-动效源码与制作手册.zip",
+  "source_archive_sha256": "14ec414df9e31b530bc0f978b024953e1e4e0eaf2877b5e1298c267ca5d56fbc",
+  "retained_source_files": [
+    {
+      "archive_member": "ten-agents-ranking/project/film.js",
+      "retained_path": "source/film.js",
+      "sha256": "7af6d7371b251d9b7e7944655317bb28be07754b7378833ffc5cb2ba090ab23d",
+      "bytes": 13527
+    },
+    {
+      "archive_member": "ten-agents-ranking/project/body-a.js",
+      "retained_path": "source/body-a.js",
+      "sha256": "a082e4507c8eef3395048f62e9c391b6827b50f737a05b0d52b30b7d11d46d32",
+      "bytes": 15688
+    },
+    {
+      "archive_member": "ten-agents-ranking/project/body-b.js",
+      "retained_path": "source/body-b.js",
+      "sha256": "d87d39e15ac6da2e409cd66a7651fb69d727edcb5ba7b0310330af403bff7fe2",
+      "bytes": 20109
+    },
+    {
+      "archive_member": "ten-agents-ranking/project/motion-core.js",
+      "retained_path": "source/motion-core.js",
+      "sha256": "d593edbcec7c4ac8e4d191494856c713d59bb147f927f1651832c1538c282536",
+      "bytes": 10710
+    },
+    {
+      "archive_member": "ten-agents-ranking/project/opening-v2.js",
+      "retained_path": "source/opening-v2.js",
+      "sha256": "53e1e8b6f20dae263f36b0c3f9eb0ad3c6c89f47ac2876ef5a8dcd728d8361f1",
+      "bytes": 8729
+    },
+    {
+      "archive_member": "ten-agents-ranking/project/timing.json",
+      "retained_path": "source/timing.json",
+      "sha256": "e5a025f806cb0850dc30e81fa7d5b0218f8d502b529117065a8e8f474a9c08f1",
+      "bytes": 14053
+    },
+    {
+      "archive_member": "ten-agents-ranking/handoff/制作流程与动效心得.md",
+      "retained_path": "source/制作流程与动效心得.md",
+      "sha256": "9ed5180795aa71c8273a2d0ccd05b9084265f30764dd0e5e7232d78b2698fc9b",
+      "bytes": 12700
+    }
+  ],
+  "source_usage": "Source files are preserved evidence of the episode, not automatic runtime scripts. Their product names, rankings, exact positions and timestamps are not the reusable API.",
+  "user_authorization": {
+    "reference": "Current conversation: user approves the ten-agent episode motion, color and material quality, asks to upgrade using its production approach and actual source while retaining the entire effects library.",
+    "opening": "With a presenter opening source, preserve the complete original scene and constrain effects to measured clear areas. Without that source, an authored UI opening may be used.",
+    "body": "Left presenter/section area and right content are a baseline composition; focus can occupy full stage, then return when content calls for it.",
+    "adaptation": "Every new narration requires new event/content/asset/layout design; no fixed ranking, product list or opening timings."
+  },
+  "extraction_map": [
+    {
+      "api": "palette, create.text/rr/image/pill/line/arrow/shadow",
+      "source": [
+        "source/film.js"
+      ],
+      "adaptation": "Exact six-color palette; drawing helpers parameterized by context, viewport, material and font; product logo/ranking functions not generalized."
+    },
+    {
+      "api": "create.card/sheet/file/check/progress",
+      "source": [
+        "source/body-a.js",
+        "source/body-b.js",
+        "source/opening-v2.js"
+      ],
+      "adaptation": "Physical offset backs, edge weight, neutral material surfaces, accent purple, bold type and causal progress marks exposed as parameterized drawing; no product-specific labels or timelines."
+    },
+    {
+      "api": "motion",
+      "source": [
+        "source/motion-core.js"
+      ],
+      "adaptation": "Original dependency-free deterministic motion implementation copied byte-for-byte at module root; not claimed to be AE or original-author Adobe source."
+    },
+    {
+      "api": "ease/out/rectMix/stagger",
+      "source": [
+        "source/opening-v2.js",
+        "source/film.js"
+      ],
+      "adaptation": "Quartic acceleration/deceleration, delayed spring landings and rectangular handoff geometry expose timing and geometry parameters."
+    },
+    {
+      "api": "cue/phase/activeCue",
+      "source": [
+        "source/body-a.js",
+        "source/body-b.js",
+        "source/timing.json"
+      ],
+      "adaptation": "Narration-cue-driven absolute timing; unknown cue fails clearly rather than silently activating at chapter start."
+    },
+    {
+      "api": "safeRegions/safeOverlay/opening",
+      "source": [
+        "source/film.js",
+        "source/body-b.js"
+      ],
+      "adaptation": "New reusable measured-region protection derived from original complete-scene presenter and content clipping. Disjoint actual Canvas clip subtracts presenter/gesture/subtitle rectangles. No automatic person detector is claimed. Opening draws complete original frame first; missing protection prevents effects from drawing."
+    },
+    {
+      "api": "layout/create.frame/create.withRect/create.place",
+      "source": [
+        "source/film.js",
+        "source/opening-v2.js"
+      ],
+      "adaptation": "New generic viewport/layout wrappers allow caller-specified body and full-focus regions. No episode sidebar width or right-side opening coordinate is forced."
+    }
+  ],
+  "runtime_files": {
+    "agent-editorial.js": {
+      "sha256": "3f7ec2bf61e8f7ef92fd519293ada922f14f1d8759232ea7e745191da468cda4",
+      "bytes": 11645
+    },
+    "motion-core.js": {
+      "sha256": "d593edbcec7c4ac8e4d191494856c713d59bb147f927f1651832c1538c282536",
+      "bytes": 10710
+    },
+    "palette.json": {
+      "sha256": "843f112b0b0c17b6fdf0211d8a7a2514a2e87dd273c5649a934af75fc75e01a6",
+      "bytes": 135
+    }
+  },
+  "checks": {
+    "node_commonjs_import": "passed",
+    "safe_region_geometry": "passed; overlap removed, exclusion area and disjoint fragments checked",
+    "actual_clip_call": "passed with recording Canvas API; pixel test delegated to integrated renderer",
+    "cue_timing": "passed pre/post cue, missing cue and active cue cases",
+    "presenter_fail_closed": "passed: original frame draws, missing measured protection prevents overlay",
+    "visual_approval": "not asserted for generated new samples",
+    "media_source_or_dependencies_copied": false
+  },
+  "source_archive_resource_id": "source-archive:fangmu-ten-agents-20261021",
+  "distribution_note": "The source archive is local-only and is not included in the release. Resolve its stable resource ID through references/resources.local.json on the original machine. Retained source files are included unchanged; machine paths inside historical source or its original handbook are provenance, not production runtime dependencies."
+}

@@ -7,10 +7,10 @@
 | 当前工作 | 读取/调用 | 得到什么 |
 |---|---|---|
 | 恢复分集与版本 | 本技能 `scripts/adiao_state.py`，当期 project.json | 当前配音、开头确认及有效资产 |
-| 定字体/排版/人物占位 | [唯一 UI 规范](ui-adiao.md)，[CSS 底座](../assets/adiao-ui.css) | 稳定画面与遮挡安全区 |
+| 定字体/排版/人物占位 | [当前统一审美](../../../../references/aesthetic-preferences.md)，[CSS 底座](../assets/adiao-ui.css) | 稳定画面与遮挡安全区 |
 | 为口播选镜头 | 本页、[动效配方](motion-recipes.md) | 素材与场景、对象的前后状态 |
-| 需要具体动画实现 | [ui-motion-explainer](../../ui-motion-explainer/SKILL.md) 的相应参考 | 按语义选已有动作/原创动作，不整片套演示工程 |
-| 字体子集/抽帧 | [production.md](../../ui-motion-explainer/references/production.md) 中 prepare_fonts.py、extract_reference_frames.py | 真实字体与可复核导出帧 |
+| 需要具体动画实现 | [正式引擎路由](../../../../references/engine-routing.md) 的相应参考 | 按语义选已有动作/原创动作，不整片套演示工程 |
+| 字体子集/抽帧 | [包内生产说明](../../../base-skill/references/production.md) 中 prepare_fonts.py、extract_reference_frames.py | 真实字体与可复核导出帧 |
 | 渲染 | 复用当期已有 Python/HTML/GSAP/HyperFrames/Remotion 路线，按需读取对应已安装技能 | 实际视频文件；仅用户指定 AE 时才要求 AE 工程 |
 | 圆形胸像 | 本技能 `scripts/circle_presenter.py` 或同参数的透明遮罩图层 | 保留原声和时间关系的正文人物层 |
 | 成片检查 | [检查清单](editing-checklist.md)、`scripts/check_edit_plan.py` | 区分技术检查、实际视觉检查和未检查项 |

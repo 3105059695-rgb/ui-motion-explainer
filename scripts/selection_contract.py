@@ -12,6 +12,7 @@ from urllib.parse import unquote
 
 import aigc_assets
 import source_study
+from selection import library_contribution_allowed, component_records
 import style_registry
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -37,6 +38,116 @@ def number(value):
 
 def read_json(path):
     return json.loads(Path(path).read_text(encoding='utf-8-sig'))
+
+
+def library_source_options(record, catalog, root=None):
+    """Resolve this catalog entry's recorded sources, not arbitrary nearby files."""
+    source = record.get('source', [])
+    options = [dict(item) for item in source if isinstance(item, dict) and item.get('path')] \
+        if isinstance(source, list) else []
+    if isinstance(source, dict) and source.get('path'):
+        options.append(dict(source))
+    if isinstance(source, dict) and source.get('catalog'):
+        match = re.fullmatch(r'families\[([^\]]+)\]\.source', source['catalog'])
+        family = next((row for row in catalog.get('families', [])
+                       if isinstance(row, dict) and match and row.get('id') == match.group(1)), None)
+        if family:
+            options.extend({**item, 'selector': source.get('selector')}
+                           for item in family.get('source', [])
+                           if isinstance(item, dict) and item.get('path'))
+    implementation = record.get('implementation') or {}
+    if implementation.get('kind') == 'editing-kit' and text(implementation.get('path')):
+        options.append({'path': implementation['path'], 'selector': implementation.get('effect')})
+    options.extend(dict(item) for item in implementation.get('sources', [])
+                   if isinstance(item, dict) and item.get('path'))
+    options.extend(dict(item) for item in (record.get('current_media_presence') or {}).values()
+                   if isinstance(item, dict) and item.get('path'))
+    if root is not None and any(row.get('id') == record.get('id') for row in catalog.get('reference_cases', [])):
+        # Use the same explicit module overlay as inspect. Historical relative
+        # paths are not a license to bind arbitrary neighboring files.
+        from resource_inventory import inspect_reference
+        try:
+            current = inspect_reference(record['id'], root=root)
+        except (OSError, ValueError, KeyError, TypeError):
+            return options  # Missing optional local history adds no source authority.
+        project = Path(current['project']).resolve() if current.get('project') else None
+        for value in current.get('entrypoints', []):
+            entry = Path(value).resolve()
+            if project is None or not entry.is_relative_to(project) or not entry.is_file():
+                continue
+            if entry.suffix.lower() in TEXT_EXTENSIONS:
+                try:
+                    graph, _ = dependency_graph(entry)
+                except (OSError, ValueError, UnicodeError):
+                    continue
+                options.extend({'path': str(path), 'require_selector': True}
+                               for path in graph if path.is_relative_to(project))
+            elif entry.suffix.lower() == '.py':
+                options.append({'path': str(entry), 'require_selector': True})
+        options.extend({'path': value['path']} for value in current.get('media', {}).values()
+                       if value.get('exists') and value.get('path'))
+    return options
+
+
+def library_source_matches(record, catalog, root, bound_path, binding):
+    """Check registered bytes and item selector; this cannot judge visual similarity."""
+    selector = binding.get('selector')
+    if record.get('id') == 'adu-mechanisms':
+        # The family spans hundreds of scenes; bind the existing item ID and its
+        # recorded source/preview/poster rather than any file under the pack.
+        base = root / 'assets/adu-reference'
+        try:
+            item = next((item for item in read_json(base / 'catalog.json').get('items', [])
+                         if isinstance(item, dict) and item.get('id') == selector), None)
+            return bool(item and any(
+                text(item.get(key)) and (base / item[key]).is_file()
+                and digest(base / item[key]) == binding.get('sha256')
+                for key in ('source', 'preview', 'poster')))
+        except (OSError, ValueError, TypeError):
+            return False
+    options = library_source_options(record, catalog, root)
+    all_records = [row for key in ('capabilities', 'families', 'software_presets', 'reference_cases', 'sample_records', 'recipes')
+                   for row in catalog.get(key, []) if isinstance(row, dict)]
+    other_paths = {(root / option['path']).resolve() for row in all_records
+                   if row is not record and row.get('id') != record.get('id')
+                   for option in library_source_options(row, catalog)}
+    for option in options:
+        original = (root / option['path']).resolve()
+        from_directory = original.is_dir()
+        if from_directory:
+            # A registered source directory permits its actual local child, not
+            # a hash search over unrelated projects or a synthetic screenshot.
+            if not bound_path.is_relative_to(original):
+                continue
+            original = bound_path
+        if not original.is_file() or digest(original) != binding.get('sha256'):
+            continue
+        expected = option.get('selector')
+        if text(expected):
+            if selector != expected:
+                continue
+        elif from_directory or original in other_paths or option.get('require_selector'):
+            if not text(selector):
+                continue
+            if not from_directory and not option.get('require_selector'):
+                ident = str(record.get('id', ''))
+                if selector not in (ident, '#' + ident.lower(), 'render' + ident):
+                    continue
+        elif selector is not None and not text(selector):
+            continue
+        if text(selector):
+            try:
+                value = original.read_text(encoding='utf-8-sig')
+            except (UnicodeError, OSError):
+                continue
+            # Catalog JSON locators and documented Markdown/HTML anchors retain
+            # their original selector syntax. Verify the selected ID is present.
+            match = re.fullmatch(r'(?:\w+)?\[(?:id|slug)=([^\]]+)\]|(?:id|slug)=(.+)', selector)
+            token = next((group for group in match.groups() if group), '') if match else selector.lstrip('#')
+            if token.lower() not in value.lower():
+                continue
+        return True
+    return False
 
 
 def aigc_style_binding(context):
@@ -337,7 +448,7 @@ def validate(plan, project, root=ROOT, source_text=None):
         if not isinstance(evidence, list):
             error(where + '.selection.evidence', 'must be an array of file/hash/role bindings')
             evidence = []
-        evidence_paths, evidence_hashes, art_paths = set(), set(), set()
+        evidence_paths, evidence_hashes, art_paths, design_paths = set(), set(), set(), set()
         for n, record in enumerate(evidence):
             target = bound_file(record, where + f'.selection.evidence[{n}]')
             if not isinstance(record, dict) or not text(record.get('role')):
@@ -347,10 +458,94 @@ def validate(plan, project, root=ROOT, source_text=None):
                 evidence_hashes.add(record['sha256'])
                 if record.get('role') == 'art-style-reference':
                     art_paths.add(target)
+                if record.get('role') == 'library-design-reference':
+                    design_paths.add(target)
         refs = segment.get('source_study_refs', [])
+        library_refs = selection.get('library_refs', [])
+        if not isinstance(library_refs, list):
+            error(where + '.selection.library_refs', 'must be an array of specific effect-library entries')
+            library_refs = []
         if mode == 'reference':
-            if not isinstance(refs, list) or not refs or not any(isinstance(ref, dict) and ref.get('usage', 'adapt') == 'adapt' for ref in refs):
-                error(where + '.source_study_refs', 'reference selection needs an adapted method and concrete source example')
+            adapted_study = isinstance(refs, list) and any(isinstance(ref, dict) and ref.get('usage', 'adapt') == 'adapt' for ref in refs)
+            if not adapted_study and not library_refs:
+                error(where + '.source_study_refs', 'reference selection needs a concrete source-study example or an effect-library design reference')
+        if library_refs:
+            indexes = {'capability': 'capabilities', 'family': 'families',
+                       'software-preset': 'software_presets', 'reference': 'reference_cases', 'sample': 'sample_records',
+                       'recipe': 'recipes', 'component': 'components'}
+            required_catalogs, loaded_catalogs = set(), {}
+            for n, ref in enumerate(library_refs):
+                target = where + f'.selection.library_refs[{n}]'
+                if not isinstance(ref, dict) or ref.get('kind') not in indexes:
+                    error(target, 'select capability, family, software-preset, reference, sample, recipe or component with its scoped contribution')
+                    continue
+                is_fredtalk = ref['kind'] == 'software-preset' and str(ref.get('id', '')).startswith('fredtalk:')
+                record = None
+                source_hashes = set()
+                if is_fredtalk:
+                    import fredtalk_library
+                    catalog_path = (root / fredtalk_library.CATALOG).resolve()
+                    required_catalogs.add(catalog_path)
+                    try:
+                        inspected = fredtalk_library.inspect(root, ref['id'])
+                        record = inspected['record']
+                        current = inspected['current_sources']
+                        if not current['available']:
+                            error(target, 'FredTalk source is unavailable or failed integrity verification: ' + '; '.join(current['issues']))
+                        else:
+                            source_hashes = {row['sha256'].lower() for row in current['sources'] if row.get('hash_verified')}
+                            design_hashes = {digest(path) for path in design_paths}
+                            if not source_hashes.intersection(design_hashes):
+                                error(where + '.selection.evidence', 'bind a verified FredTalk entrypoint as library-design-reference, using its original blob or exact materialized source')
+                    except (OSError, ValueError, TypeError, KeyError) as exc:
+                        error(target, 'cannot resolve FredTalk source: ' + str(exc))
+                else:
+                    catalog_path = (root / ('references/semantic-editing-recipes.json' if ref['kind'] == 'recipe'
+                                            else 'references/capability-catalog.json')).resolve()
+                    required_catalogs.add(catalog_path)
+                    if catalog_path not in loaded_catalogs:
+                        try:
+                            loaded_catalogs[catalog_path] = read_json(catalog_path)
+                        except (OSError, ValueError, TypeError) as exc:
+                            loaded_catalogs[catalog_path] = {}
+                            error(target, 'cannot read effect-library catalog: ' + str(exc))
+                    records = (component_records(root, loaded_catalogs[catalog_path]) if ref['kind'] == 'component'
+                               else loaded_catalogs[catalog_path].get(indexes[ref['kind']], []))
+                    record = next((row for row in records if row.get('id') == ref.get('id')), None)
+                    if record is None:
+                        error(target, 'unknown effect-library entry')
+                if record is not None:
+                    application = ref.get('application')
+                    contribution = application.get('contribution') if isinstance(application, dict) else None
+                    if contribution in ('motion', 'design') and not library_contribution_allowed(record, contribution):
+                        error(target, f'the entry explicitly excludes the adopted {contribution} contribution; appearance rejection alone does not reject motion')
+                if not text(ref.get('adaptation_reason')):
+                    error(target + '.adaptation_reason', 'explain the actual composition, material, window organization or action adopted for this narration')
+                source_binding = ref.get('source_binding')
+                source_path = bound_file(source_binding, target + '.source_binding')
+                if source_path is not None and record is not None:
+                    if is_fredtalk:
+                        matched = source_binding.get('sha256') in source_hashes
+                    else:
+                        matched = library_source_matches(record, loaded_catalogs.get(catalog_path, {}),
+                                                         root, source_path, source_binding)
+                    if not matched:
+                        error(target + '.source_binding', 'must bind this entry\'s registered source/preview bytes and its item selector; an arbitrary screenshot, another entry or generic motion helper is insufficient')
+                application = ref.get('application')
+                application_path = bound_file(application, target + '.application')
+                contribution = application.get('contribution') if isinstance(application, dict) else None
+                if contribution not in ('design', 'motion'):
+                    error(target + '.application.contribution', 'state design or motion; a low-level motion call does not establish whole-scene design reuse')
+                application_marker = application.get('marker') if isinstance(application, dict) else None
+                if application_path is not None:
+                    if application_path not in graph:
+                        error(target + '.application', 'adopted design/motion location must be reachable from the actual render entry')
+                    elif not text(application_marker) or graph[application_path].count(application_marker) != 1:
+                        error(target + '.application.marker', 'identify one unique non-comment code/DOM location applying this reference')
+            if required_catalogs - evidence_paths:
+                error(where + '.selection.evidence', 'bind SHA-256 of the effect-library catalog: ' + ', '.join(str(path) for path in sorted(required_catalogs - evidence_paths)))
+            if not design_paths - required_catalogs:
+                error(where + '.selection.evidence', 'bind the actual example frame, source or implementation as library-design-reference; a catalog link alone is insufficient')
         needed_sources = set()
         if isinstance(refs, list) and refs:
             needed_sources.add(root / source_study.CATALOG_FILE)
@@ -462,6 +657,12 @@ def validate(plan, project, root=ROOT, source_text=None):
                 error(where + '.source_audio', 'preserved narration and output durations differ by more than 0.1s; do not silently retime original audio')
         ledger.append({'segment_id': ident, 'source_span': span, 'output': segment.get('output'),
                        'selection_mode': mode, 'source_methods': [ref.get('method_id') for ref in refs if isinstance(ref, dict)] if isinstance(refs, list) else [],
+                       'library_refs': [{'kind': ref.get('kind'), 'id': ref.get('id'),
+                                         'adaptation_reason': ref.get('adaptation_reason'),
+                                         'source_binding': ref.get('source_binding'),
+                                         'application': ref.get('application')}
+                                        for ref in library_refs if isinstance(ref, dict)],
+                       'recipe_ids': segment.get('recipe_ids', []),
                        'implementation': expected_row['implementation'], 'assets': runtime_assets,
                        'review_intent': {key: segment.get(key) for key in ('meaning', 'viewer_gap', 'events', 'continuity')},
                        'aigc': {'use': uses_aigc, 'style_binding': segment.get('aigc', {}).get('style_binding')
@@ -482,4 +683,18 @@ def validate(plan, project, root=ROOT, source_text=None):
         error('delivery.timeline', 'mapped output must cover the declared duration')
     result.update(ready=not errors, delivery_scope=delivery['scope'], duration_seconds=duration,
                   entrypoint=manifest.get('entrypoint'), timeline=manifest.get('timeline'))
+    result['reuse_declarations'] = {
+        'segment_count': len(ledger),
+        'segments_with_source_methods': sum(bool(row['source_methods']) for row in ledger),
+        'segments_with_library_design': sum(any(
+            isinstance(ref.get('application'), dict) and ref['application'].get('contribution') == 'design'
+            for ref in row['library_refs']) for row in ledger),
+        'segments_with_library_motion': sum(any(
+            isinstance(ref.get('application'), dict) and ref['application'].get('contribution') == 'motion'
+            for ref in row['library_refs']) for row in ledger),
+        'segments_with_recipes': sum(bool(row['recipe_ids']) for row in ledger),
+        'execution_verified': False,
+        'scope': 'Per-entry source and reachable application declarations only, not executed API calls or visual comparison. '
+                 'Design and motion are reported separately; low-level motion calls do not certify whole-scene design. '
+                 'Original composition may reuse existing primitives; zero declarations neither proves absence of reuse nor satisfies a requested reuse demonstration.'}
     return result

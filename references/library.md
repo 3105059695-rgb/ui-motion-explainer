@@ -1,25 +1,43 @@
-# 第三层：按表达目的选能力
+# 效果库：按表达目的找实现
 
-先由[主流程](workflow.md)确定这一段要让观众理解什么，再在这里选动作；外观与人物身份读取[账号风格](style-profiles.md)。一次只展开相关配方和源码，不并行加载整套旧 Skill。
+这里提供落实 **Fred Talk 整体视觉与剪辑默认** 的源码和方法，不能因方便调用某库而更换风格。先看[Fred 实际参考](fred-ui-direction.md)，结合整篇口播和逐句证据，再从 FredTalk、EditingKit、F、O/X、阿渡等条目选择适用部分，改编为本期对象和节奏。完整审美只在[审美偏好](aesthetic-preferences.md)维护，人物与 AIGC 的用途边界见[参考使用](style-profiles.md)。
 
 详细条目、原路径、实现状态、历史检查和认可范围统一查 [capability-catalog.json](capability-catalog.json)。它是可检索目录，不是运行时预设表；`Rxx`、`Oxx` 不能直接当作创建命令的 `--scene`。
 
-实际脚本和资源通过 [resource-registry.json](resource-registry.json)接入 `scripts/ui.py`，用 `modules check` 核对。需要底层工具时用 `guides --id <工具名>` 定位[内部指南](backend-guides.json)，无需用户另行调用旧 Skill。已有认可依据由 `styles -- resolve --project <工程>` 返回，并由 `direct -- prepare` 自动纳入本期上下文。
+采用整体设计与采用运动函数分开记录：整体设计要落到本期的构图、材料、窗口关系、字级或层次；运动函数只证明对应动作被实现。先看所选场景的连续展示与源码，再改编布局，不先完成一套自创版式后补库名。每个选中条目按[引用格式](director-plan-contract.md#效果库设计引用)绑定自己的来源、共享文件中的定位及本期具体实现；另一项的截图或通用 EditingKit 文件不能代替这个来源。
+
+实际脚本和资源通过 [resource-registry.json](resource-registry.json)接入 `scripts/ui.py`，用 `modules check` 核对。需要底层工具时用 `guides --id <工具名>` 定位[内部指南](backend-guides.json)，无需用户另行调用旧 Skill。`direct -- prepare` 提供本段设计候选与实际实现，普通制作不再优先推送几部旧整片。
 
 [逐句来源方法目录](source-study-methods.json)统一保留秋芝及 Fred 各片例证，提供蒙版、对象交接、连续 B-roll/AIGC、开头与正文讲解的实际出处，默认按[研究接入](source-study-guide.md)选用。`Q-*` / `F-M*` 用于来源追溯，保留1条明确反例；方法记录不等于完整事件已实现。由同一 S 配方或 O/X/F/R 原语能够承担的部分继续复用，不重复造库。
 
-普通正文自动读取公共 [Fred 展示方向](fred-ui-direction.md)，账号身份及本期 AIGC 画风单独接续。它指导同一材料怎样连续展开、聚焦、比较、更新和收拢；各方法的定制缺口分别记录。此确认是参考方向，不往已制作样片清单添加一个尚未制作的 Fred 成片。
+Fred Talk 默认跨窗口继承；账号名称与目录不自动指定另一套外观。继承整体设计关系，不等于固定每条原片的色值、人物、对象、镜头顺序或时长；其他库的视觉包装需适配当前默认。
 
-口播制作先走[语义导演接入](semantic-directing.md)，主动选择适用的 [S01–S10 语义配方](semantic-editing-recipes.json)。S01–S07 组合调用[六种参数化剪辑组件](../assets/editing-kit/README.md)，S08–S10 提供连续 AIGC 动作与接入配方；后者需要按本期内容生成并检查。S 编号同样不是 `--scene` 参数。组件有源码、配方能准备请求，不等于所有新片已有素材或已获审美认可。
+口播制作的配方接线见[语义导演](semantic-directing.md)。完整场景当前接通阿渡 21 场的内容绑定和源码实例化，但该技术覆盖不意味着可用阿渡外观替换 Fred Talk 默认；若不适合，改用 Fred 源码或做明确适配。完整场景与自定义实现的真实生产接口见[引擎路由](engine-routing.md)。S 编号不是 `--scene` 参数；源码、请求准备、实际素材和审美认可分别判断。
 
-[打开可播放的组件演示](../assets/editing-kit/demo.html)。演示主题仅用于说明机制；真实制作必须传入当前工程的风格与内容。原 O/X/F/R、软件、参考和账号样片继续按下表使用，不被新配方替代。
+[打开可播放的组件演示](../assets/editing-kit/demo.html)。演示可用于观察整体构图、材料层次、窗口组织和动作；真实制作改编为本期内容。原 O/X/F/R、软件、参考继续按下表使用，不被新配方替代。
 
-当前样片先看下方[已认可内容](#已认可的内容从这里接续)。早期无声结构预览仍作为接入历史保留，不作为最新成果推荐。
+需要相关机制时查看[EditingKit 演示](../assets/editing-kit/demo.html)、[F 融合展示](../assets/fusion-studio/index.html)、[O/X 原库](../assets/base-gallery.html)、[阿渡展示与源码](../assets/adu-reference/index.html)及[72 秒融合预览](../assets/fusion-studio/previews/preview.mp4)。这些是实现候选，适用性、可执行性和认可范围逐项判断，不形成平行风格入口。
+
+## FredTalk 公开源码接入
+
+[打开 FredTalk 库](../assets/fredtalk-library/index.html)。固定上游版本 `eec77dcfa99318f565c391bf557f5d43042ec061`：目录共 432 条，普通检索纳入 101 条未归档公开源码；142 条归档公开条目和 189 条会员条目保留元数据供显式查询，本轮未下载其源码。它提供当前 Fred Talk 方向的重要实现来源，但目录标签与检索分数不能代替实际设计适用性判断。
+
+`direct -- prepare` / `select` 中命中的条目使用 `kind:software-preset`、`id:fredtalk:<referenceId>`。先检查完整源码及其依赖：
+
+```text
+python -B -X utf8 scripts/ui.py inspect --kind software-preset --id fredtalk:<referenceId>
+python -B -X utf8 scripts/ui.py fredtalk materialize --id fredtalk:<referenceId> --project <本期工程>
+```
+
+第二条命令会把核验过的源码及本地依赖复制到 `vendor/fredtalk/<referenceId>/`，附上原路径、版本、文件哈希和许可说明。它不安装依赖、不执行源码，也不覆盖不同内容。多数源码是完整场景快照，需要按本期口播改编；把实际调用位置写进本期实现证据后，再验证画面。缺少的媒体、外部依赖与未解析导入由检查结果明确列出，不能直接声称可运行。
+
+归档、会员预览和上游 keep 标签不构成用户认可。会员源码没有被获取；预览可见、源码存在、本期运行和用户认可分别记录。`ui.py fredtalk search <关键词> --include-archived --include-unavailable` 仅在需要历史或缺件条目时显式使用。
 
 ## 按句意找入口
 
 | 这一段要表达什么 | 优先查什么 | 具体入口 |
 | --- | --- | --- |
+| 人物全屏开场、材料错峰展开与实体质感 | `family/presenter-opening`，按本期构图与原声时窗适配 | [实际模块与预览](../assets/presenter-opening/README.md) |
 | 建立主题、问题、章节 | O01/O29/O31，X01/X09/X10，R01/R02 | [动态文字](kinetic-type.md)、[R 配方](local-video-design-distillation.md) |
 | 从全貌聚焦重点，再返回上下文 | O02/O17/O20/O21，X03/X07/X22，F01/F02，R12 | [原动作图鉴](../assets/base-skill/docs/gallery.md)、[F 机制](mechanisms.md)、[截图舞台](editorial-motion.md) |
 | 同一对象跨场、来源进入成果 | O04/O05/O08/O11/O12/O28/O32，X04/X21/X23，F03/F05，R05/R08/R16 | [对象与运镜](motion-direction.md)、[F 机制](mechanisms.md)、[R 配方](local-video-design-distillation.md) |
@@ -42,23 +60,19 @@
 | 软件操作 | [103 条注册记录](../assets/modules/director/references/presets.json)、[用途目录](../assets/modules/director/references/preset-catalog.md)及包内源码 | 103 条 ID 均定位到候选源码模块；不是本轮 103 项运行通过 |
 | 参考案例 | [230 条来源目录](../assets/modules/reference/references/catalog.json)、[包内重建状态](../assets/modules/reference/references/rebuild-status.json)与[资源边界](distribution-scope.md) | 包内有230条文本/海报与2个通用起点，不含逐案例历史工程。本机可通过资源映射自动接续保留的旧源码；当前存在、历史记录和运行验证分开报告 |
 | 字体与花字 | [34 个字体文件](../assets/qiaomu-fonts/index.json)、[12 套搭配](../assets/qiaomu-fonts/pairings.json)、CSS、预览与导出入口 | 字体资源存在不等于当前稿件无缺字，需在实际后端接入 |
-| 截图、人物、动漫、设备、动态字、adu | 9 个能力族各有原模块、来源与实现入口 | 查看机器目录 `families`；方法、模板、账号成片和外部生成服务不混为同一种预设 |
+| 截图、人物、动漫、设备、动态字、adu | 各能力族保留原模块、来源与实现入口；新增人物开场模块见上表 | 查看机器目录 `families`；方法、模板、账号成片和外部生成服务不混为同一种预设 |
 
 上述数量有重叠，**不相加成“已实现／已验证／已认可的动效数”**。此前四层整理只核对原库路径与目录，没有重新渲染或播放整库。此次新组件的运行检查单列于 [editing-kit/validation.json](../assets/editing-kit/validation.json)，不扩大成原库或在线生成服务全部通过。
 
-## 已认可的内容从这里接续
+## AIGC 参考与历史资料
 
-- [女孩 AIGC × UI 完整样片](../assets/approved-girl-sample/output/preview.mp4)：11.3 秒，用户已明确认可女孩观感、动作、利落节奏与 UI 衔接。[确认记录](evidence/girl-agent-sample-approved-20261015.json)、[可编辑工程](../assets/approved-girl-sample/README.md)与[用户档案](profiles/user-ui.md)提供实际实现；统一风格查询和 AIGC 上下文均可定位。新口播复用方法与画风，重新设计具体事件。
-- [8 张女孩场景例图](../assets/aigc/girl/scenes)与[AIGC 注册集](aigc-assets.json)：2张角色原图和8张场景例图均已随包。2026-10-15 明确认可静态场景方向；2026-10-19 明确这些图片仅作画风参考，每期按口播设计新素材。`direct prepare` 提供实际例图、口播与动作链，并单独报告原作者视频、原帧和私有研究资料的可用情况；使用条件、节奏和视频画风按[AIGC 导演](aigc-directing.md)。静图认可与新视频检查分开，原动效源码按已确认方法改编使用，不代表历史皮肤、未认可效果或例图可以直接进入新片。
-- [A01 基础短样](../assets/base-skill/assets/approved-demo/preview.mp4)与[通用 UI 档案](profiles/user-ui.md)：认可的是该短样组合与风格方向，已注册供 local-only/ui 接续。[原证据](../assets/base-skill/references/reference-evidence.md)保留过渡警告及未可靠试听的边界。
-- [方木档案](profiles/fangmu.md) → 本机样片与实现索引（原始资料未随公开包）：按制作模式读取当前已认可样片及实现；Token 历史整片的技术检查和其他后续认可分别保留，不从一个旧项目概括整个账号状态。
-- [阿刁档案](profiles/adiao.md) → [公开包范围与私人项目接入](distribution-scope.md)：保留《失业手册》v3 开头修订接受范围；本机最新项目指针不随公开包分发，由对应工程提供并核对本期。
-- [阿刁动漫修订样片证据](evidence/anime-semantic-feedback-20261013.json)：认可抽象意思的具象事件与连续动作解释效果；女主仅属阿刁，方法可以共用。
-- [完整试用样片的局部反馈](evidence/full-transfer-feedback-20261014.json)：AIGC 衔接获肯定，UI 外观被否定；可学其衔接方法，不能沿用它作为 UI 基线。
+[柔和手绘画风参考](../assets/approved-girl-sample/README.md)及[场景例图索引](aigc-assets.json)用于本期新图和视频。当前用途是 AIGC 画风，不能扩大为这支旧片的 UI 模板或固定主角。
+
+旧整片推荐列表已撤下。原片、源码和原始认可仍可从[历史索引](history.md)及显式 `inspect --kind sample --id <ID>` 查询，不再构成普通制作的必选基线。
 
 ## 机器检索与维护
 
-历史接入示例：[32 秒无声结构预览](evidence/semantic-transfer-sample-20261014.json)保留早期代码调用及离线请求；21–32 秒是待生成占位，未获审美认可。原工程保留供查代码，不取代上面的完整认可样片。
+历史接入示例：[32 秒无声结构预览](evidence/semantic-transfer-sample-20261014.json)保留早期代码调用及离线请求；21–32 秒是待生成占位，未获审美认可。原工程保留供查代码，不作为普通制作的整片基线。
 
 `capability-catalog.json` 的当前路径相对 **ui-motion-fusion 根目录**解析；`historical_*`保留旧快照，不作为当前可用性判断。按 `semantic_routes` 找用途，按 `capabilities[].id` 查全部 80 个 O/X/F/R 编号，按 `software_presets`、`reference_cases` 查询子目录，按 `sample_records` 查询样片。
 

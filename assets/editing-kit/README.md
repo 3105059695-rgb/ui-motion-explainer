@@ -1,6 +1,6 @@
 # 可植入现有工程的剪辑组件
 
-这是一组无依赖浏览器 DOM 机制，不是新引擎或自动成片系统。把 `editing-kit.js`、可选 `editing-kit.css` 接入当前工程，在原来的确定性渲染函数中调用；保留现有字体、账号档案、素材、母带与导出器。六项均已有本目录独立演示，不只是参考配方。
+这是一组无依赖浏览器 DOM 机制，不是新引擎或自动成片系统。把 `editing-kit.js`、可选 `editing-kit.css` 接入当前工程，在原来的确定性渲染函数中调用；保留现有字体、账号档案、素材、母带与导出器。现有六项基础机制保留独立演示，另有三项可直接调用的连续动作组合；三项组合的范围与调用参数见下文。
 
 ## 立即预览
 
@@ -34,7 +34,7 @@ const state = K.apply('match-handoff', options, progress);
 K.reset(object); // 恢复该节点由组件修改过的原有内联样式
 ```
 
-`apply(name, options, progress)` 同步返回当前状态。`progress` 必须为有限数字，自动限制到 0–1；任何时点可直接重算，结果不依赖上一帧。没有随机、自由播放、定时器、网络请求或 DOM 测量。`K.names` 列出六个机制；`K.phase(p,start,end)` 提供限幅的 smoothstep。
+`apply(name, options, progress)` 同步返回当前状态。`progress` 必须为有限数字，自动限制到 0–1；任何时点可直接重算，结果不依赖上一帧。没有随机、自由播放、定时器、网络请求或 DOM 测量。`K.names` 列出九个机制；`K.phase(p,start,end)` 提供限幅的 smoothstep。
 
 **所有外观由项目传入。** `setTheme` 要求背景、表面、文字、次级文字、强调色、边界、字体、圆角八项，不内置阿刁/方木主题；只有未指定的遮罩与阴影使用中性实现起点。各内容节点的布局和正文样式仍由宿主控制。
 
@@ -132,6 +132,63 @@ K.apply('result-pullback', {
 
 缩放与平移整个 `world`，从 focus 所在成果退回原场景坐标，不复制结果卡。返回 `{progress,scale,x,y}`。整个 world 外层需要裁切；不要同时由外层相机再次缩放相同内容。
 
+## 三项连续动作组合
+
+这三项把研究中的通用动作接成可调用代码，对应 F-M02 的旧对象让位、F-M03 的框内聚焦、F-M13 的章节归位。它们**不等于完整 Fred 原片复刻，也没有用户对新输出的审美认可**。素材、布局、口播时点和动作选择仍由本期内容决定；翻面、穿字孔洞和特殊字形蒙版不在这三项范围内。
+
+所有 `timing` 窗口都必须由宿主显式提供 `[start,end]`，满足 `0 <= start < end <= 1`，相对于本动作的归一化进度。窗口前保持初态，窗口后保持末态；组合不内置主题、角色、口播秒点或主舞台坐标。放到已有 `render` 中，传入原先的节点引用即可。
+
+### `viewport-focus`：外框不动，同一内容聚焦、平移并返回
+
+```javascript
+K.apply('viewport-focus', {
+  frame: pageViewport,                 // 装饰外框内的独立裁切层
+  content: pageContent,                // 必须是 frame 内的同一个内容节点
+  frameRect: layout.pageViewport,
+  contentSize: {width: pageWidth, height: pageHeight},
+  from: view.overview,                 // 内容坐标中的初始取景矩形
+  to: view.detail,                     // 内容坐标中的目标取景矩形
+  timing: {focus: [.1, .45], return: [.75, 1]} // return 可省略，省略则停留细节
+}, p);
+```
+
+`frameRect` 在父容器坐标中，整个动作保持不变；组件为其设置 `overflow:hidden`。`from`、`to` 必须完全在 `contentSize` 内，组件按各取景区的中心与 contain 比例计算内部相机，再连续插值。非同宽高比时会看到取景区周围的额外内容或空白；由宿主选择有足够上下文的取景区。可将 `from` 与 `to` 都设为细节区实现框内平移。若传 `return`，开始时间必须不早于 focus 结束时间，完成后精确回到初始取景。
+
+裁切层应无内边距/边框，外观装饰放在外层；`content` 原始大小由 `contentSize` 给出。组件不克隆内容、不改媒体时间、不移动外部标题。返回 `{progress,focusProgress,scale,x,y,frame}`。
+
+### `comparison-reflow`：旧对象让位，新对象进入，双方身份持续
+
+```javascript
+K.apply('comparison-reflow', {
+  previous: existingResult, next: incomingResult,
+  previousFrom: layout.main,
+  previousTo: layout.side,
+  nextFrom: layout.entry,
+  nextTo: layout.comparison,
+  timing: {previous: [0, .65], next: [.2, .9]}
+}, p);
+```
+
+必须传两个不同的持久节点。旧对象始终可见并移动到 side；新对象从 entry 移动到宿主选择的 main/并列位置，同时随自身入场进度显现。所有位置、大小与开始/结束时点都来自宿主。外壳宽高采用重排方式，内部图片由宿主设置 `object-fit`；不把标题文字非等比拉伸。组件不复制旧对象，不删除比较依据，不自动制造另一张结果。
+
+返回 `{progress,previousProgress,nextProgress,previousRect,nextRect}`。叠层由宿主控制，两个运动窗口可重叠或错开。若需要两侧返回或交换主位，在后续动作中继续传原节点及新的矩形。
+
+### `chapter-dock`：同一个标题缩放归位，内容区开始展示
+
+```javascript
+K.apply('chapter-dock', {
+  title: existingChapterTitle, content: chapterContent,
+  from: layout.chapterHero,
+  to: layout.chapterNavigation,
+  timing: {title: [0, .7], content: [.35, 1]},
+  reveal: 'x'                         // fade（默认）、x 或 y
+}, p);
+```
+
+标题保留 `from` 的原始排版尺寸，通过同一节点的等比缩放和平移进入 `to`。目标宽高比不一致时居中 contain，不强行拉伸文字。`content` 是独立内容层，不应包裹 title，避免揭示内容时把标题一起裁掉。fade 只淡入；x/y 使用裁切揭示，不生成前景遮挡物，也不冒充穿字转场。内容层的坐标、尺寸、图片和文字均保留宿主设置。
+
+返回 `{progress,titleProgress,contentProgress,scale,rect}`；`rect` 是缩放后的可见标题范围。全文只使用调用者传入的同一个 title，没有标题副本、交叉淡化或 DOM 替换。可从末帧直接 seek 回初帧。
+
 ## 接入 base / fusion，不换引擎
 
 ```javascript
@@ -158,4 +215,4 @@ node --check demo.js
 node smoke-test.cjs
 ```
 
-smoke test 检查六项端点、乱序重算、无媒体时钟改写、参数错误、主题注入与样式复位。它不代替浏览器画面检查、真实素材音画同步或账号审美认可。最终检查记录见 [validation.json](validation.json)。
+smoke test 检查九项的初中末状态、乱序重算、原节点保持、内部聚焦返回、标题等比归位、无媒体时钟改写、错误参数不产生部分样式写入、主题注入与样式复位。它不代替浏览器画面检查、真实素材音画同步或账号审美认可。[validation.json](validation.json) 是原六项演示的既有记录，不是新增组合的视觉验收。

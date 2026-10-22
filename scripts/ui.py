@@ -117,13 +117,27 @@ def main(argv=None):
     # Keep selection arguments with their own small parser, including --help.
     # Existing backend routing and production checks remain unchanged.
     actual_argv = list(sys.argv[1:] if argv is None else argv)
+    if actual_argv[:1] == ['scene']:
+        import scene_builder
+        forwarded = actual_argv[1:]
+        if forwarded[:1] == ['--']:
+            forwarded = forwarded[1:]
+        return scene_builder.main(forwarded)
     if actual_argv[:1] and actual_argv[0] in ('select', 'inspect'):
         import selection
         return selection.main(actual_argv)
+    if actual_argv[:1] == ['fredtalk']:
+        import fredtalk_library
+        forwarded = actual_argv[1:]
+        if forwarded[:1] == ['--']:
+            forwarded = forwarded[1:]
+        return fredtalk_library.main(forwarded)
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='action', required=True)
     sub.add_parser('select', help='Retrieve per-narration method/recipe/implementation candidates, pending Agent judgment.')
     sub.add_parser('inspect', help='Read an exact method, recipe, capability, family or reference and available source paths.')
+    sub.add_parser('fredtalk', help='Search, inspect, or copy verified public FredTalk source into the current project.')
+    sub.add_parser('scene', help='Select and bind complete authored library scenes to current narration, then build/render.')
     sub.add_parser('status', help='Check local resources without installing or rendering.')
     child = sub.add_parser('verify-output', help='Check rendered media duration/streams/hash against the current plan; no aesthetic approval.')
     child.add_argument('--project', required=True, type=Path)
@@ -150,8 +164,9 @@ def main(argv=None):
         child.add_argument('--base', type=Path, help='Fix the base version for base/fusion operations.')
         child.add_argument('--module-root', type=Path, help='Explicit local director/editorial module override; packaged modules are the default.')
         if action == 'new':
-            child.add_argument('--profile', help='Current registered account profile; historical templates are not automatically restyled.')
+            child.add_argument('--profile', help='Historical profile compatibility only; ordinary production uses the unified effect library. --scene explicitly selects historical demos.')
             child.add_argument('--script', type=Path, help='Preserved narration used to prepare the new directing context.')
+            child.add_argument('--canvas-story', action='store_true', help='Forward to the fusion Canvas story starter; also pass --custom-layout after --.')
         else:
             child.add_argument('--plan', type=Path, help='Current director plan in the project root; default director-plan.json.')
             child.add_argument('--demo', action='store_true', help='Export a historical demonstration, explicitly not a production deliverable.')
@@ -181,6 +196,10 @@ def main(argv=None):
             print(json.dumps(report, ensure_ascii=False, indent=2))
             return 1 if args.operation == 'check' and not report['available'] else 0
         forwarded = args.backend_args
+        if args.action == 'new' and args.canvas_story:
+            if args.engine != 'fusion':
+                raise ValueError('--canvas-story is supported by --engine fusion only.')
+            forwarded = [*forwarded, '--canvas-story']
         if args.action in ('new', 'render') and not any(x in ('--help', '-h') for x in forwarded):
             forwarded, options = production_entry.forwarded_options(
                 args.action, forwarded, profile=getattr(args, 'profile', None),
@@ -199,6 +218,8 @@ def main(argv=None):
                     forwarded += ['--profile', resolution['resolved_profile']]
             else:
                 export_report = production_entry.export_check(project, options['plan'], options['demo'], root=ROOT)
+                if export_report.get('backend') == 'complete-scenes':
+                    raise ValueError('This project uses the complete-scene renderer; use ui.py scene render --project <project> --out <video.mp4>.')
         backend_argv = command(args.action, getattr(args, 'engine', None), getattr(args, 'base', None),
                        getattr(args, 'tool', None), forwarded,
                        module_root=getattr(args, 'module_root', None))
@@ -234,8 +255,8 @@ def main(argv=None):
                 return 1
     if result == 0 and resolution is not None:
         try:
-            # An authored director --plan may declare its account in project.json.
-            # Preserve that choice unless this invocation explicitly selected another.
+            # Resolve the authored project again so explicit local choices survive.
+            # Legacy account tags remain metadata under unified production.
             if options['profile'] is None:
                 created_resolution = production_entry.style_registry.resolve(project, root=ROOT)
                 if created_resolution.get('status') != 'resolved':

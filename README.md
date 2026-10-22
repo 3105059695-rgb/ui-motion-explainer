@@ -1,32 +1,36 @@
 # 我的 UI 动效剪辑 · ui-motion-fusion
 
-**版本 2026.10.19.4**。仓库地址继续使用 `ui-motion-explainer`，安装与调用统一为 **`$ui-motion-fusion`**。
+**当前版本见 [VERSION](VERSION)**。仓库地址继续使用 `ui-motion-explainer`，安装与调用统一为 **`$ui-motion-fusion`**。此处描述当前本地源码；远端发布状态以实际发布记录为准。
 
-按口播的意思、上下文与情绪选择真实素材、B-roll、AIGC 和 UI，让对象完成可看懂的动作，再用蒙版、聚焦、变形与转场接起来。保留当前已确认风格，交付视频和可编辑工程。
+**Fred Talk 是跨窗口默认的整体视觉与剪辑风格。** 按口播的意思、上下文与情绪选择材料，让对象完成可看懂的动作，再用蒙版、聚焦、变形与转场接起来。效果库提供实现；人物身份和 AIGC 画风独立保存。具体偏好见[UI、AE 感、开头与禁忌](references/aesthetic-preferences.md)，流程见[唯一入口](SKILL.md)。
 
 ## 给 AI 这一句就能安装
 
 > 请读取 https://github.com/3105059695-rgb/ui-motion-explainer/blob/main/AI-START.md ，安装或更新最新版 ui-motion-fusion，保留我的工程和自定义内容，完成安装检查。以后使用这个唯一入口按已确认风格剪辑。
 
-本版仓库源码就是完整 Skill；GitHub `Download ZIP` 或 [最新完整源码包](https://github.com/3105059695-rgb/ui-motion-explainer/archive/refs/heads/main.zip) 都可安装，Release页面的 `Source code (zip)` 提供固定版本。解压后进入含 `SKILL.md` 和 `install.py` 的目录，不再依赖作者 E 盘或七个额外入口。复用已有 Python、Node、FFmpeg 与浏览器，不为每个项目另装运行时。
+当前仓库包含完整 Skill 实现与随包资源；GitHub `Download ZIP` 或 [最新源码包](https://github.com/3105059695-rgb/ui-motion-explainer/archive/refs/heads/main.zip) 都可安装，最新 Release 页面的 `Source code (zip)` 提供固定版本。私人原片和未随包历史媒体的范围见下文。解压后进入含 `SKILL.md` 和 `install.py` 的目录，不再依赖作者 E 盘或七个额外入口。复用已有 Python、Node、FFmpeg 与浏览器，不为每个项目另装运行时。
 
 ## 本版修正
 
-- 正文 UI、账号身份、AIGC 画风分别选择。`user-ui`、阿刁、方木共用当前 Fred 黑紫正文，历史白淡紫档案不再因目录名自动接管。真人开头、明确模式及有依据的旧项目保留适用范围。
+- 方木十款 Agent 已认可正文的颜色、实体质感与连续动作已提炼为[实际制作模块](assets/agent-editorial/README.md)。新连续 UI 工程通过 `new --engine fusion -- --custom-layout --canvas-story` 实际复制并加载代码；本期场景与事件按新口播设计，不内置排行榜。
+- 有开头人物原片时保留完整原构图，特效裁剪到实测空白区并扣除人物、手势和字幕保护区；没有开头人物时按内容设计全屏 UI。旧开场源码继续保留为可选实现，旧读书样片不是当前质量基线。
+- 完整效果目录独立于关键词前几名，中文标签接通参考检索，跨库调用保留实际源码绑定；阿闰新增参考一起保留。
+
+- 整体 UI、账号身份、AIGC 画风分别处理。`user-ui`、阿刁、方木一起继承当前 Fred Talk UI、AE 感、开头与禁忌；旧“仅中段”、白淡紫档案及父目录工程设置不自动接管。明确的本期要求或指定旧工程续作只覆盖其范围。
 - 摄影写实等本期 AIGC 要求独立记录原话与参考；不要求套女孩手绘绑定，不改变 UI，也不自动变成其他视频的新默认。
 - 正式预检使用 `direct -- check --plan <计划> --production`。旧计划能做结构诊断，不代表可以生产；正式渲染继续检查当前绑定、稿件覆盖、素材及实际时间线实现。
 - 按句意选择实际素材、对象动作与交接；参考配方和原语供实现，不以数量或填表证明效果。实际连续片段对照与技术检查分别记录。
-- 既有动效、源码、230条参考索引、三张 UI 校准图、两张人物画风参考、八张场景例图与认可样片继续保留。图片默认作画风参考，本期按稿设计，不固定复用同一女孩或旧场景。
+- 既有动效、源码、230条历史参考索引、参考图片、场景例图与认可样片继续按各自范围保留。当前颜色、质感与认可范围以审美偏好为准，不能把几张旧图作为唯一 UI 标准。AIGC 图片作画风参考，本期按稿设计，不固定复用同一女孩或旧场景。
 
 ## 装好后直接使用
 
 > 使用 $ui-motion-fusion，根据这份口播与素材，沿用已确认风格完成整片和可编辑工程。
 
-账号工程接续身份与布局习惯，正文继承当前公共 UI；明确工程例外需有依据。普通换稿不重复确认基础审美，角色和声音不跨账号混用。
+账号工程接续身份与适用经验，整体风格、开头与禁忌继承当前统一要求；明确工程例外需有依据。普通换稿不重复确认基础审美，角色和声音不跨账号混用。
 
 制作链是 **口播稿 → 声音克隆 → 数字人 → 剪辑成品**。本 Skill 主要承担最后一环；上游服务按用户请求、可用工具及授权调用，不伪称所有服务已自动打通。
 
-[主入口](SKILL.md) · [当前风格](references/profiles/user-ui.md) · [能力与源码](index.html) · [参考数量与实际范围](docs/reference-library.md) · [安装与更新](docs/install.md) · [发行范围](references/distribution-scope.md) · [验证记录](docs/release-2026.10.19.4.md)
+[主入口](SKILL.md) · [当前风格](references/aesthetic-preferences.md) · [能力与源码](index.html) · [参考数量与实际范围](docs/reference-library.md) · [安装与更新](docs/install.md) · [发行范围](references/distribution-scope.md) · [当前偏好与升级依据](references/aesthetic-preferences.md)
 
 公开包保留230条历史参考索引与两套可运行starter，不含全部原作者视频和230套历史重建媒体；已有历史库可通过本机资源映射自动接续，也支持明确的 `--module-root`。本机路径不进入公开包。阿刁/方木规则保留，私人音色、数字人及账号影片不公开。旧版本可从Git历史和历史Release查询。
 

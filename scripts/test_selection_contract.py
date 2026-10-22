@@ -108,12 +108,22 @@ window.renderFrame = (t) => {
         self.assertFalse(report['production_ready'], report)
         self.assertTrue(any(phrase in item for item in report['errors']), report)
 
-    def test_original_full_scope_without_effect_recipe_is_production_ready(self):
+    def test_original_text_fixture_passes_preflight_but_proves_no_effect_or_quality(self):
         report = self.check()
         self.assertTrue(report['production_ready'], report)
+        self.assertTrue(report['preflight_ready'], report)
+        self.assertEqual('technical-preflight', report['assessment']['stage'])
+        for aspect in ('runtime_actions', 'semantic_fit', 'visual_style', 'full_realtime_av', 'user_approval'):
+            self.assertEqual('not-assessed', report['assessment'][aspect])
         self.assertTrue(report['selection_ready'])
         self.assertEqual('original', report['selection_evidence']['ledger'][0]['selection_mode'])
-        self.assertTrue(production_entry.export_check(self.project, root=self.root)['production_ready'])
+        reuse = report['selection_evidence']['reuse_declarations']
+        self.assertEqual(0, reuse['segments_with_source_methods'])
+        self.assertEqual(0, reuse['segments_with_recipes'])
+        self.assertFalse(reuse['execution_verified'])
+        exported = production_entry.export_check(self.project, root=self.root)
+        self.assertTrue(exported['preflight_ready'])
+        self.assertEqual(report['assessment'], exported['assessment'])
 
     def test_old_current_style_plan_is_readable_but_not_production_ready(self):
         del self.plan['selection_contract_version']
@@ -162,6 +172,272 @@ window.renderFrame = (t) => {
         self.assertTrue(self.check()['production_ready'])
         (self.root / 'references/probe-alignment.json').write_text('{}', encoding='utf-8')
         self.assert_blocked('SHA-256')
+
+    def test_effect_library_can_supply_composition_without_forced_source_study(self):
+        self.write(self.root / 'references/capability-catalog.json', {'capabilities': [
+            {'id': 'F01', 'title': '整体窗口展开', 'user_approval': {'status': 'unknown'},
+             'source': [{'path': 'design.html'}]}]})
+        (self.root / 'design.html').write_text('<main>existing window design</main>', encoding='utf-8')
+        segment = self.plan['segments'][0]
+        segment['selection'].update(mode='reference', library_refs=[{
+            'kind': 'capability', 'id': 'F01',
+            'source_binding': self.file('design.html', 'skill'),
+            'application': {**self.file('main.js'), 'marker': '"shot-1"', 'contribution': 'design'},
+            'adaptation_reason': '采用窗口从资料展开的构图与材料层次，本期文字和图形由同一来源更新'}])
+        self.assert_blocked('effect-library catalog')
+        segment['selection']['evidence'] = [self.file('references/capability-catalog.json', 'skill', 'library-catalog')]
+        self.assert_blocked('library-design-reference')
+        segment['selection']['evidence'].append(self.file('design.html', 'skill', 'library-design-reference'))
+        report = self.check()
+        self.assertTrue(report['production_ready'], report)
+        self.assertEqual([], report['selection_evidence']['ledger'][0]['source_methods'])
+        self.assertEqual('F01', report['selection_evidence']['ledger'][0]['library_refs'][0]['id'])
+        self.assertEqual(1, report['selection_evidence']['reuse_declarations']['segments_with_library_design'])
+        self.assertEqual('not-assessed', report['assessment']['visual_style'])
+        segment['selection']['library_refs'][0].pop('adaptation_reason')
+        self.assert_blocked('adaptation_reason')
+        segment['selection']['library_refs'][0]['adaptation_reason'] = '具体构图依据'
+        segment['selection']['library_refs'][0]['id'] = 'not-registered'
+        self.assert_blocked('unknown effect-library entry')
+        segment['selection']['library_refs'][0].update(kind='sample', id='A01')
+        self.assert_blocked('unknown effect-library entry')
+
+    def test_sample_motion_reuse_survives_appearance_rejection_but_not_motion_rejection(self):
+        catalog = {'sample_records': [{'id': 'sample-motion', 'title': '历史卡片展开动作',
+                    'user_approval': {'status': 'rejected-ui-baseline'},
+                    'implementation': {'sources': [{'path': 'sample.html'}]}}]}
+        (self.root / 'sample.html').write_text('<main>existing motion source</main>', encoding='utf-8')
+        segment = self.plan['segments'][0]
+        def bind_catalog():
+            self.write(self.root / 'references/capability-catalog.json', catalog)
+            segment['selection']['evidence'] = [self.file('references/capability-catalog.json', 'skill', 'library-catalog'),
+                                                self.file('sample.html', 'skill', 'library-design-reference')]
+        segment['selection'].update(mode='reference', library_refs=[{
+            'kind': 'sample', 'id': 'sample-motion', 'source_binding': self.file('sample.html', 'skill'),
+            'application': {**self.file('main.js'), 'marker': '"shot-1"', 'contribution': 'motion'},
+            'adaptation_reason': '只采用展开动作，本期内容与黑紫包装重新适配，不继承旧故事和配色'}])
+        bind_catalog()
+        self.assertTrue(self.check()['production_ready'])
+        segment['selection']['library_refs'][0]['application']['contribution'] = 'design'
+        self.assert_blocked('explicitly excludes the adopted design')
+        segment['selection']['library_refs'][0]['application']['contribution'] = 'motion'
+        catalog['sample_records'][0]['user_approval']['status'] = 'rejected-motion'
+        bind_catalog()
+        self.assert_blocked('explicitly excludes the adopted motion')
+
+    def test_reference_binding_resolves_registered_local_module_dependencies_only(self):
+        module = Path(self.temp.name) / 'retained-reference'
+        (module / 'references').mkdir(parents=True)
+        scene = module / 'assets/reconstructions/test-reference'
+        scene.mkdir(parents=True)
+        self.write(module / 'references/catalog.json', {'entries': [{'slug': 'test-reference', 'title': 'reference'}]})
+        self.write(module / 'references/rebuild-status.json', {'entries': [
+            {'slug': 'test-reference', 'project': 'assets/reconstructions/test-reference', 'status': 'historical'}]})
+        (scene / 'index.html').write_text('<script src="motion.js"></script>', encoding='utf-8')
+        (scene / 'motion.js').write_text('function cover() { return 1; }', encoding='utf-8')
+        (scene / 'unlinked.js').write_text('function unrelated() {}', encoding='utf-8')
+        self.write(self.root / 'references/resource-registry.json', {'schemaVersion': 1, 'pathBase': 'skillRoot',
+            'modules': [{'id': 'reference', 'path': 'missing-pack', 'required': ['references/catalog.json']}]})
+        self.write(self.root / 'references/resources.local.json', {'schema_version': 1, 'modules': {'reference': str(module)}, 'files': {}})
+        record = {'id': 'test-reference', 'implementation': {'sources': [{'path': 'missing-pack/assets/test-reference'}]}}
+        catalog = {'reference_cases': [record]}
+        motion = scene / 'motion.js'
+        binding = {'sha256': contract.digest(motion), 'selector': 'function cover('}
+        self.assertTrue(contract.library_source_matches(record, catalog, self.root, motion, binding))
+        self.assertFalse(contract.library_source_matches(record, catalog, self.root, motion, {**binding, 'selector': 'wrong'}))
+        self.assertFalse(contract.library_source_matches(record, catalog, self.root, motion, {**binding, 'sha256': '0'*64}))
+        unlinked = scene / 'unlinked.js'
+        self.assertFalse(contract.library_source_matches(record, catalog, self.root, unlinked,
+                         {'sha256': contract.digest(unlinked), 'selector': 'function unrelated('}))
+        metadata = module / 'references/catalog.json'
+        self.assertFalse(contract.library_source_matches(record, catalog, self.root, metadata,
+                         {'sha256': contract.digest(metadata), 'selector': 'test-reference'}))
+
+    def test_existing_recipe_can_bind_its_actual_component_source_without_fake_capability(self):
+        self.write(self.root / 'references/semantic-editing-recipes.json', {'recipes': [{
+            'id': 'S07', 'title': '遮挡揭示', 'implementation': {
+                'kind': 'editing-kit', 'path': 'editing-kit.js', 'effect': 'occlusion-reveal'}}]})
+        (self.root / 'editing-kit.js').write_text("const effects = {'occlusion-reveal': () => 1};", encoding='utf-8')
+        segment = self.plan['segments'][0]
+        segment['recipe_ids'] = ['S07']
+        segment['selection'].update(mode='reference', library_refs=[{
+            'kind': 'recipe', 'id': 'S07',
+            'source_binding': {**self.file('editing-kit.js', 'skill'), 'selector': 'occlusion-reveal'},
+            'application': {**self.file('main.js'), 'marker': '"shot-1"', 'contribution': 'motion'},
+            'adaptation_reason': '采用已有配方所指的真实遮挡组件，本期对象和时序重新编排'}],
+            evidence=[self.file('references/semantic-editing-recipes.json', 'skill', 'library-catalog'),
+                      self.file('editing-kit.js', 'skill', 'library-design-reference')])
+        self.assertTrue(self.check()['production_ready'])
+        segment['selection']['library_refs'][0]['source_binding']['selector'] = 'focus-mask'
+        self.assert_blocked('registered source/preview bytes')
+
+    def test_component_binding_uses_exported_api_name_and_cannot_claim_design(self):
+        self.write(self.root / 'references/capability-catalog.json', {'semantic_directing': {
+            'implementation': {'path': 'editing-kit.js'}}})
+        (self.root / 'editing-kit.js').write_text("const names = Object.freeze(['occlusion-reveal']);\n"
+                                               "const effects = {'occlusion-reveal': () => 1};", encoding='utf-8')
+        segment = self.plan['segments'][0]
+        segment['selection'].update(mode='reference', library_refs=[{
+            'kind': 'component', 'id': 'occlusion-reveal',
+            'source_binding': {**self.file('editing-kit.js', 'skill'), 'selector': 'occlusion-reveal'},
+            'application': {**self.file('main.js'), 'marker': '"shot-1"', 'contribution': 'motion'},
+            'adaptation_reason': '只采用底层遮挡组件，不认领完整配方的自然物件衔接设计'}],
+            evidence=[self.file('references/capability-catalog.json', 'skill', 'library-catalog'),
+                      self.file('editing-kit.js', 'skill', 'library-design-reference')])
+        self.assertTrue(self.check()['production_ready'])
+        segment['selection']['library_refs'][0]['application']['contribution'] = 'design'
+        self.assert_blocked('explicitly excludes the adopted design')
+        segment['selection']['library_refs'][0]['application']['contribution'] = 'motion'
+        segment['selection']['library_refs'][0]['id'] = 'unregistered-api'
+        self.assert_blocked('unknown effect-library entry')
+
+    def test_fredtalk_library_reference_binds_its_catalog_and_verified_source(self):
+        base = self.root / 'assets/fredtalk-library'
+        (base / 'blobs').mkdir(parents=True)
+        data = b'export const Demo = () => "fixture";'
+        blob = base / 'blobs/fixture.tsx'
+        blob.write_bytes(data)
+        source = {'blob_path': 'assets/fredtalk-library/blobs/fixture.tsx',
+                  'upstream_path': 'src/Demo.tsx', 'sha256': hashlib.sha256(data).hexdigest(),
+                  'git_blob': hashlib.sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest(),
+                  'bytes': len(data)}
+        active = {'id': 'fixture', 'title': '资料展开', 'source_access': 'public',
+                  'sources': [source], 'closure': [source]}
+        self.write(base / 'catalog.json', {'schema_version': 1, 'items': [active,
+            dict(active, id='members', source_access='members')]})
+        segment = self.plan['segments'][0]
+        segment['selection'].update(mode='reference', library_refs=[{
+            'kind': 'software-preset', 'id': 'fredtalk:fixture',
+            'source_binding': self.file('assets/fredtalk-library/blobs/fixture.tsx', 'skill'),
+            'application': {**self.file('main.js'), 'marker': '"shot-1"', 'contribution': 'design'},
+            'adaptation_reason': '继承此源码的窗口组织，让资料在同一界面展开'}])
+        segment['selection']['evidence'] = [self.file('assets/fredtalk-library/catalog.json', 'skill', 'library-catalog'),
+                                           self.file('main.js', role='library-design-reference')]
+        self.assert_blocked('verified FredTalk entrypoint')
+        # An exact project copy of the verified source binds without a new schema.
+        (self.project / 'adopted.tsx').write_bytes(data)
+        segment['selection']['evidence'][1] = self.file('adopted.tsx', role='library-design-reference')
+        report = self.check()
+        self.assertTrue(report['production_ready'], report)
+        self.assertEqual('fredtalk:fixture', report['selection_evidence']['ledger'][0]['library_refs'][0]['id'])
+        self.assertEqual('not-assessed', report['assessment']['runtime_actions'])
+        segment['selection']['library_refs'][0]['id'] = 'fredtalk:members'
+        self.assert_blocked('unavailable')
+        segment['selection']['library_refs'][0]['id'] = 'fredtalk:fixture'
+        blob.write_bytes(b'changed source')
+        self.assert_blocked('integrity verification')
+
+    def library_plan(self):
+        """Two registered entries deliberately share a source but not its selector."""
+        (self.root / 'scenes.js').write_text(
+            'function renderF01(){return "list"}\nfunction renderF02(){return "focus"}',
+            encoding='utf-8')
+        self.write(self.root / 'references/capability-catalog.json', {'capabilities': [
+            {'id': ident, 'source': [{'path': 'scenes.js', 'selector': 'render' + ident}]}
+            for ident in ('F01', 'F02')]})
+        selection = self.plan['segments'][0]['selection']
+        selection.update(mode='reference', library_refs=[{
+            'kind': 'capability', 'id': 'F02', 'adaptation_reason': '采用原窗口中的字段焦点与旁注关系',
+            'source_binding': {**self.file('scenes.js', 'skill'), 'selector': 'renderF02'},
+            'application': {**self.file('main.js'), 'marker': '"shot-1"', 'contribution': 'design'}}])
+        selection['evidence'] = [
+            self.file('references/capability-catalog.json', 'skill', 'library-catalog'),
+            self.file('scenes.js', 'skill', 'library-design-reference')]
+        return selection['library_refs'][0]
+
+    def test_library_reference_requires_its_own_source_and_selector(self):
+        ref = self.library_plan()
+        self.assertTrue(self.check()['preflight_ready'])
+        ref['source_binding']['selector'] = 'renderF01'
+        self.assert_blocked('source_binding')
+        ref['source_binding'].pop('selector')
+        self.assert_blocked('source_binding')
+        ref.pop('source_binding')
+        self.assert_blocked('source_binding')
+
+    def test_arbitrary_picture_or_motion_api_cannot_stand_in_for_another_entry(self):
+        ref = self.library_plan()
+        for name, content in [('F01.jpg', b'arbitrary captured frame'),
+                              ('editing-kit.js', b'function genericMove(){}')]:
+            (self.project / name).write_bytes(content)
+            ref['source_binding'] = self.file(name)
+            self.plan['segments'][0]['selection']['evidence'].append(
+                self.file(name, role='library-design-reference'))
+            self.assert_blocked('source_binding')
+
+    def test_exact_source_copy_is_allowed_but_changed_copy_is_not(self):
+        ref = self.library_plan()
+        (self.project / 'adopted.js').write_bytes((self.root / 'scenes.js').read_bytes())
+        ref['source_binding'] = {**self.file('adopted.js'), 'selector': 'renderF02'}
+        self.assertTrue(self.check()['preflight_ready'])
+        (self.project / 'adopted.js').write_text('function renderF02(){return "unrelated"}', encoding='utf-8')
+        ref['source_binding'] = {**self.file('adopted.js'), 'selector': 'renderF02'}
+        self.assert_blocked('source_binding')
+
+    def test_library_application_requires_reachable_unique_non_comment_location(self):
+        ref = self.library_plan()
+        self.assertTrue(self.check()['preflight_ready'])
+        ref.pop('application')
+        self.assert_blocked('application')
+        (self.project / 'unused.js').write_text('window.applyF02 = () => 1;', encoding='utf-8')
+        ref['application'] = {**self.file('unused.js'), 'marker': 'window.applyF02', 'contribution': 'design'}
+        self.assert_blocked('reachable')
+        ref['application'] = {**self.file('main.js'), 'marker': 'not-present', 'contribution': 'design'}
+        self.assert_blocked('application.marker')
+        with (self.project / 'main.js').open('a', encoding='utf-8') as stream:
+            stream.write('\n// adopted-F02-only-in-comment\n')
+        self.refresh_runtime()
+        ref['application'] = {**self.file('main.js'), 'marker': 'adopted-F02-only-in-comment', 'contribution': 'design'}
+        self.assert_blocked('application.marker')
+        ref['application']['marker'] = 'active'
+        self.assert_blocked('application.marker')
+
+    def test_motion_declaration_does_not_count_as_library_design(self):
+        ref = self.library_plan()
+        ref['application']['contribution'] = 'motion'
+        report = self.check()
+        self.assertTrue(report['preflight_ready'], report)
+        counts = report['selection_evidence']['reuse_declarations']
+        self.assertEqual(0, counts['segments_with_library_design'])
+        self.assertEqual(1, counts['segments_with_library_motion'])
+        self.assertFalse(counts['execution_verified'])
+        ref['application']['contribution'] = 'both'
+        self.assert_blocked('contribution')
+
+    def test_shared_fusion_source_requires_the_selected_renderer(self):
+        ref = self.library_plan()
+        self.write(self.root / 'references/capability-catalog.json', {'capabilities': [
+            {'id': ident, 'implementation': {'sources': [{'path': 'scenes.js'}]}}
+            for ident in ('F01', 'F02')]})
+        self.plan['segments'][0]['selection']['evidence'][0] = self.file(
+            'references/capability-catalog.json', 'skill', 'library-catalog')
+        self.assertTrue(self.check()['preflight_ready'])
+        ref['source_binding']['selector'] = 'renderF01'
+        self.assert_blocked('source_binding')
+        ref['source_binding'].pop('selector')
+        self.assert_blocked('source_binding')
+
+    def test_adu_family_binds_an_existing_item_not_any_pack_file(self):
+        ref = self.library_plan()
+        base = self.root / 'assets/adu-reference'
+        (base / 'source').mkdir(parents=True)
+        (base / 'source/scenes.js').write_text('function migrateDevice(){return 1}', encoding='utf-8')
+        (base / 'source/unrelated.js').write_text('function anotherScene(){return 2}', encoding='utf-8')
+        self.write(base / 'catalog.json', {'items': [
+            {'id': 'anim3-s04', 'source': 'source/scenes.js', 'line': 1, 'endLine': 1}]})
+        self.write(self.root / 'references/capability-catalog.json', {'families': [
+            {'id': 'adu-mechanisms', 'implementation': {'sources': [{'path': 'assets/adu-reference/source'}]}}]})
+        ref.update(kind='family', id='adu-mechanisms', source_binding={
+            **self.file('assets/adu-reference/source/scenes.js', 'skill'), 'selector': 'anim3-s04'})
+        self.plan['segments'][0]['selection']['evidence'] = [
+            self.file('references/capability-catalog.json', 'skill', 'library-catalog'),
+            self.file('assets/adu-reference/source/scenes.js', 'skill', 'library-design-reference')]
+        self.assertTrue(self.check()['preflight_ready'])
+        ref['source_binding']['selector'] = 'anim3-s99'
+        self.assert_blocked('source_binding')
+        ref['source_binding'] = {
+            **self.file('assets/adu-reference/source/unrelated.js', 'skill'), 'selector': 'anim3-s04'}
+        self.assert_blocked('source_binding')
 
     def test_extra_sidecar_without_entry_link_does_not_prove_implementation(self):
         (self.project / 'index.html').write_text('<main>unrelated screen</main>', encoding='utf-8')

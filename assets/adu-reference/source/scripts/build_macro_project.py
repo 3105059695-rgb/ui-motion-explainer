@@ -115,7 +115,7 @@ def prepare_face(stage: Path, spec: dict, needed: bool, fps: int, frames: int) -
         if sys.platform != 'darwin' or not shutil.which('swiftc'):
             fail('Automatic face tracking needs macOS Vision and Swift; supply faceTracking:{mode:fixed,cx,cy,h} and inspect every cropped shot')
         subprocess.run(['bash', str(ROOT / 'scripts' / 'face_track.sh'), str(stage)], check=True)
-        script = (stage / 'face.js').read_text()
+        script = (stage / 'face.js').read_text(encoding='utf-8')
         match = re.fullmatch(r'\s*const FACE\s*=\s*(\{.*\})\s*;\s*', script, flags=re.S)
         if not match: fail('Face tracking did not produce valid FACE data')
         data = json.loads(match[1]); face = data.get('clip_000', {})
@@ -130,7 +130,7 @@ def prepare_face(stage: Path, spec: dict, needed: bool, fps: int, frames: int) -
         if any(not isinstance(x, (float, int)) or isinstance(x, bool) or not 0 < x <= 1 for x in values.values()):
             fail('A fixed crop needs normalized cx,cy,h in (0,1], measured from the new 720x1280 talk frame')
         face = {'f': [1, frames], **{k: [v, v] for k, v in values.items()}}
-        (stage / 'face.js').write_text('const FACE=' + json.dumps({'clip_000': face}) + ';\n')
+        (stage / 'face.js').write_text('const FACE=' + json.dumps({'clip_000': face}) + ';\n', encoding='utf-8')
         return {'mode': 'explicit-fixed', **values, 'review': 'Check every crop; this is not tracking'}
     fail('faceTracking.mode must be auto, fixed or none')
 
@@ -192,7 +192,7 @@ def copy_media(stage: Path, pack: dict, item: dict, source_scene: dict, block: s
 def scaffold(pack: dict, output: Path) -> None:
     if output.exists(): fail(f'Refusing existing file: {output}')
     data: dict = {'pack': pack['id'], 'fps': pack['fps'], 'brand': '',
-                  'presenterLabel': '// on air · 主讲人', 'scenes': []}
+                  'presenterLabel': '// on air · 主讲人', 'music': {'mode': 'none'}, 'scenes': []}
     for scene in pack['scenes']:
         start, end = scene['source']['start'], scene['source']['end']
         slots = {}
@@ -205,7 +205,7 @@ def scaffold(pack: dict, output: Path) -> None:
                                'durationFrames': round((end - start) * pack['fps']),
                                'cues': {cue['id']: {'at': cue['at']} for cue in scene.get('cues', [])},
                                'slots': slots})
-    output.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n')
+    output.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
 
 def write_project_audio(stage: Path, music: dict) -> None:
@@ -214,15 +214,54 @@ def write_project_audio(stage: Path, music: dict) -> None:
     runtime.mkdir(exist_ok=True)
     for name in ('macro_audio.py', 'audiolib.py'):
         shutil.copy2(ROOT / 'scripts' / name, runtime / name)
-    (stage / 'macro_music.json').write_text(json.dumps(music, ensure_ascii=False, indent=2) + '\n')
+    (stage / 'macro_music.json').write_text(json.dumps(music, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     (stage / 'audio.py').write_text('''import sys, json
 from pathlib import Path
 project = Path(__file__).resolve().parent
 sys.path.insert(0, str(project / "audio_runtime"))
 from macro_audio import render
-music = json.loads((project / "macro_music.json").read_text())
-render(project, project / music["path"] if music["mode"] == "track" else None, music.get("offset", 0))
-''')
+music = json.loads((project / "macro_music.json").read_text(encoding='utf-8'))
+render(project, project / music["path"] if music["mode"] == "track" else None, music.get("offset", 0), mode=music["mode"])
+''', encoding='utf-8')
+
+
+def configure_text_font(css: str, stage: Path, spec: dict, spec_dir: Path) -> tuple[str, dict]:
+    """Preserve authored typography geometry while providing local glyph coverage."""
+    fallback = "'Microsoft YaHei','PingFang SC'"
+    css = css.replace("'PingFang SC'", fallback)
+    custom = spec.get('textFontFile')
+    report = {'mode': 'system-font-stack', 'windowsFallback': 'Microsoft YaHei'}
+    family = '-apple-system,' + fallback + ',sans-serif'
+    if custom is not None:
+        if not isinstance(custom, str) or not custom.strip():
+            fail('textFontFile must name a supplied licensed font file')
+        font = (spec_dir / custom).resolve()
+        if not font.is_file() or font.suffix.lower() not in ('.ttf', '.otf', '.woff', '.woff2'):
+            fail('textFontFile must be a supplied font file with redistribution rights')
+        target = stage / 'assets' / ('text' + font.suffix.lower())
+        shutil.copy2(font, target)
+        family = "'AduText'," + family
+        css = css.replace('font-family:-apple-system', "font-family:'AduText',-apple-system")
+        css = css.replace(fallback, "'AduText'," + fallback)
+        css = "@font-face{font-family:'AduText';src:url(" + json.dumps('assets/' + target.name) + ");}\n" + css
+        report = {'mode': 'supplied', 'file': 'assets/' + target.name, 'windowsFallback': 'Microsoft YaHei'}
+    # Authored inline labels can name macOS fonts separately from the stylesheet.
+    # Override only their font family, never size, weight, spacing or choreography.
+    css += '\n[style*="font-family:-apple-system"]{font-family:' + family + '!important}\n'
+    return css, report
+
+
+def presenter_crop_args(spec: dict) -> list[str]:
+    crop = spec.get('presenterCrop')
+    if crop is None:
+        return []
+    values = [crop.get(key) for key in ('x', 'y', 'width', 'height')] if isinstance(crop, dict) else crop
+    if not isinstance(values, list) or len(values) != 4 or any(type(value) is not int for value in values):
+        fail('presenterCrop must contain integer source-pixel x,y,width,height, as an object or four-item array')
+    if min(values[:2]) < 0 or min(values[2:]) < 2:
+        fail('presenterCrop needs nonnegative x/y and width/height of at least two pixels')
+    # import_talk verifies these values against the actual source stream.
+    return ['--crop', *map(str, values)]
 
 
 def build(pack_dir: Path, spec_path: Path, talk: Path, output: Path, subs_js: Path | None) -> None:
@@ -230,6 +269,7 @@ def build(pack_dir: Path, spec_path: Path, talk: Path, output: Path, subs_js: Pa
     if not output.parent.is_dir(): fail(f'Project parent does not exist: {output.parent}')
     pack = read_json(pack_dir / 'manifest.json'); spec = read_json(spec_path)
     if not talk.is_file(): fail(f'Missing edited talk video: {talk}')
+    crop_args = presenter_crop_args(spec)
     brand = spec.get('brand')
     if not isinstance(brand, str) or not brand.strip():
         fail('Set spec.brand to your own brand/account name before building')
@@ -239,7 +279,7 @@ def build(pack_dir: Path, spec_path: Path, talk: Path, output: Path, subs_js: Pa
     subtitle_preset = spec.get('subtitlePreset', 'large-en')
     if subtitle_preset not in ('standard', 'large-en'):
         fail('subtitlePreset must be standard or large-en')
-    source = (pack_dir / 'scenes.js').read_text()
+    source = (pack_dir / 'scenes.js').read_text(encoding='utf-8')
     prelude, authored_scenes = scene_parts(source)
     if len(authored_scenes) != len(pack['scenes']):
         fail(f'Pack scene count mismatch: manifest={len(pack["scenes"])} source={len(authored_scenes)}')
@@ -248,9 +288,9 @@ def build(pack_dir: Path, spec_path: Path, talk: Path, output: Path, subs_js: Pa
         shutil.copytree(ROOT / 'template', stage)
         (stage / 'sc').mkdir(); (stage / 'talk').mkdir()
         for data in ('talkmap.js', 'face.js', 'subs.js'):
-            (stage / data).write_text('// Optional data absent. Generated data may replace this stub.\n')
-        subprocess.run([sys.executable, str(ROOT / 'scripts' / 'import_talk.py'), str(stage), str(talk),
-                        '--fps', str(spec.get('fps', pack['fps']))], check=True)
+            (stage / data).write_text('// Optional data absent. Generated data may replace this stub.\n', encoding='utf-8')
+        subprocess.run([sys.executable, '-X', 'utf8', str(ROOT / 'scripts' / 'import_talk.py'), str(stage), str(talk),
+                        '--fps', str(spec.get('fps', pack['fps'])), *crop_args], check=True)
         audio_timeline_path = pack_dir / 'audio_timeline.json'
         audio_timeline = read_json(audio_timeline_path) if audio_timeline_path.is_file() else None
         plan = compile_plan(pack, spec, spec_dir=spec_path.parent, project=stage,
@@ -261,12 +301,12 @@ def build(pack_dir: Path, spec_path: Path, talk: Path, output: Path, subs_js: Pa
         imported.pop('source', None)
         imported.update(narrationAssets={'frames': 'talk/clip_000', 'audio': 'voice.wav'},
                         sourceEmbedded=False)
-        (stage / 'import.json').write_text(json.dumps(imported, ensure_ascii=False, indent=2) + '\n')
+        (stage / 'import.json').write_text(json.dumps(imported, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         face_report = prepare_face(stage, spec, needs_face_tracking(pack, plan, prelude), plan['fps'], imported['frames'])
         if subs_js:
             if not subs_js.is_file(): fail(f'Missing generated subtitle data: {subs_js}')
             shutil.copy2(subs_js, stage / 'subs.js')
-        css = (pack_dir / 'style.css').read_text()
+        css = (pack_dir / 'style.css').read_text(encoding='utf-8')
         font_report = {'mode': 'system-font-stack'}
         if re.search(r"['\"]SFM['\"]", css):
             css = re.sub(r"@font-face\s*\{[^}]*font-family\s*:\s*['\"]SFM['\"][^}]*\}", '', css)
@@ -285,16 +325,17 @@ def build(pack_dir: Path, spec_path: Path, talk: Path, output: Path, subs_js: Pa
                 font_url = font.as_uri()
                 font_report = {'mode': 'macOS-system-SFM', 'portable': False}
             css = "@font-face{font-family:'SFM';src:url(" + json.dumps(font_url) + ");}\n" + css
-        (stage / 'style.css').write_text(css)
+        css, text_font_report = configure_text_font(css, stage, spec, spec_path.parent)
+        (stage / 'style.css').write_text(css, encoding='utf-8')
         # Use the hardened shared library: missing talk/wall media fail explicitly,
         # 60fps timecode, deterministic frame readiness, optional face fallback.
-        lib = (ROOT / 'template' / 'lib.js').read_text()
+        lib = (ROOT / 'template' / 'lib.js').read_text(encoding='utf-8')
         lib = lib.replace('const talkSrc = t => {', 'const talkSrc = t => {\n  t = window.MACRO_OUTPUT_T ?? t;')
         lib = lib.replace('function faceAt(t) {', 'function faceAt(t) {\n  t = window.MACRO_OUTPUT_T ?? t;')
         lib = lib.replace('const tc = t => {', 'const tc = t => { t = window.MACRO_OUTPUT_T ?? t;')
         lib = lib.replace('const seqSrc = (dir, i, n) => `sc/${dir}/',
                           'const seqSrc = (dir, i, n) => `sc/${window.MACRO_MEDIA_ALIAS?.[dir] || dir}/')
-        (stage / 'lib.js').write_text(lib)
+        (stage / 'lib.js').write_text(lib, encoding='utf-8')
         # anim4's authored faceAt assumes tracking is always present. Shared
         # fallback preserves the geometry while accepting projects without it.
         prelude = re.sub(r'function faceAt\(t\) \{[\s\S]*?\n\}(?=\nfunction camAt)', '', prelude, count=1)
@@ -353,7 +394,7 @@ function raceAt(e, sourceTime, opacity=1) {
                 shutil.copy2(asset, target_wall / asset.name)
             metadata = source_wall / 'index.json'
             if metadata.is_file():
-                entries = json.loads(metadata.read_text())
+                entries = json.loads(metadata.read_text(encoding='utf-8'))
                 if not isinstance(entries, list) or len(entries) != count:
                     fail(f'Wall index.json count must equal the {count} sprite sheets')
                 wall = [[str(entry.get('slug', f'work_{i:03d}')), str(entry.get('author', ''))]
@@ -367,28 +408,28 @@ function raceAt(e, sourceTime, opacity=1) {
             if not isinstance(unique, int) or isinstance(unique, bool) or not 27 <= unique <= count:
                 fail('wall-meta.json uniqueWorks must be an integer from 27 through 389')
             (stage / 'wall.js').write_text('const WALL = ' + json.dumps(wall, ensure_ascii=False) + ';\n'
-                                          f'window.PACK_WALL_UNIQUE_COUNT={unique};\n')
+                                          f'window.PACK_WALL_UNIQUE_COUNT={unique};\n', encoding='utf-8')
         else:
-            (stage / 'wall.js').write_text('const WALL = [];\n')
-        (stage / 'scenes.js').write_text(''.join(generated))
+            (stage / 'wall.js').write_text('const WALL = [];\n', encoding='utf-8')
+        (stage / 'scenes.js').write_text(''.join(generated), encoding='utf-8')
         (stage / 'macro_plan.js').write_text('window.MACRO_PLAN = ' + json.dumps(plan, ensure_ascii=False) + ';\n'
                                              'window.MACRO_MEDIA_BY_INSTANCE = ' + json.dumps(media_aliases) + ';\n'
                                              'window.MACRO_NUMBERS_BY_INSTANCE = ' + json.dumps(number_maps) + ';\n'
-                                             'window.MACRO_RACE_SEGMENTS = ' + json.dumps(race_segments) + ';\n')
-        (stage / 'macro_plan.json').write_text(json.dumps(plan, ensure_ascii=False, indent=2) + '\n')
-        (stage / 'macro_main.js').write_text((ROOT / 'scripts' / 'macro_runtime.js').read_text())
-        config = (stage / 'config.js').read_text() + (f'\nCONFIG.demo=false; CONFIG.fps={plan["fps"]}; '
+                                             'window.MACRO_RACE_SEGMENTS = ' + json.dumps(race_segments) + ';\n', encoding='utf-8')
+        (stage / 'macro_plan.json').write_text(json.dumps(plan, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        (stage / 'macro_main.js').write_text((ROOT / 'scripts' / 'macro_runtime.js').read_text(encoding='utf-8'), encoding='utf-8')
+        config = (stage / 'config.js').read_text(encoding='utf-8') + (f'\nCONFIG.demo=false; CONFIG.fps={plan["fps"]}; '
                   f'CONFIG.end={plan["durationSeconds"]}; CONFIG.subtitles={str(bool(subs_js)).lower()};\n'
                   f'CONFIG.brand={json.dumps(brand, ensure_ascii=False)}; '
                   f'CONFIG.account={json.dumps(brand, ensure_ascii=False)};\n'
                   f'CONFIG.subtitlePreset={json.dumps(subtitle_preset)};\n'
                   f'window.PACK_BRAND={json.dumps(brand, ensure_ascii=False)}; '
                   f'window.PACK_PRESENTER_LABEL={json.dumps(html.escape(presenter_label, quote=True), ensure_ascii=False)};\n')
-        (stage / 'config.js').write_text(config)
+        (stage / 'config.js').write_text(config, encoding='utf-8')
         fade_seconds = spec.get('fadeEndSeconds', 0)
         if not isinstance(fade_seconds, (int, float)) or isinstance(fade_seconds, bool) or not 0 <= fade_seconds <= 2:
             fail('fadeEndSeconds must be between 0 and 2; use only for a deliberate silent tail')
-        with (stage / 'config.js').open('a') as stream: stream.write(f'CONFIG.fadeEndSeconds={fade_seconds};\n')
+        with (stage / 'config.js').open('a', encoding='utf-8') as stream: stream.write(f'CONFIG.fadeEndSeconds={fade_seconds};\n')
         # Build a clean load order. The source subtitle IIFE is deliberately
         # omitted: its absolute source clock would desync new narration.
         (stage / 'index.html').write_text('''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
@@ -397,11 +438,12 @@ function raceAt(e, sourceTime, opacity=1) {
 <script src="config.js"></script><script src="talkmap.js"></script><script src="face.js"></script>
 <script src="subs.js"></script><script src="wall.js"></script><script src="macro_plan.js"></script>
 <script src="lib.js"></script><script src="scenes.js"></script><script src="subtitles.js"></script>
-<script src="macro_main.js"></script></body></html>\n''')
-        # Recompose the complete mapped score, never the generic starter score.
-        music = spec.get('music', {'mode': 'synth'})
-        if not isinstance(music, dict) or music.get('mode') not in ('synth', 'track'):
-            fail('music must be an object with mode synth or track')
+<script src="macro_main.js"></script></body></html>\n''', encoding='utf-8')
+        # Narration does not authorize a new musical score. SFX remain explicit
+        # runtime scene cues; source synth music requires a deliberate selection.
+        music = spec.get('music', {'mode': 'none'})
+        if not isinstance(music, dict) or music.get('mode') not in ('none', 'synth', 'track'):
+            fail('music must be an object with mode none, synth or track')
         music = dict(music)
         if music['mode'] == 'track':
             path = music.get('path'); offset = music.get('offset')
@@ -412,11 +454,11 @@ function raceAt(e, sourceTime, opacity=1) {
             dst_music = stage / 'assets' / ('music' + src_music.suffix.lower())
             shutil.copy2(src_music, dst_music); music['path'] = 'assets/' + dst_music.name
         write_project_audio(stage, music)
-        (stage / 'macro_build_report.json').write_text(json.dumps({'face': face_report, 'font': font_report,
+        (stage / 'macro_build_report.json').write_text(json.dumps({'face': face_report, 'font': font_report, 'textFont': text_font_report,
              'narrationFrames': imported['frames'], 'outputFrames': plan['end_frame'], 'subtitlePreset': subtitle_preset,
-             'status': 'built-not-visually-accepted'}, ensure_ascii=False, indent=2) + '\n')
-        (stage / 'macro_source_audio.json').write_text((pack_dir / 'audio_timeline.json').read_text()
-                                                      if (pack_dir / 'audio_timeline.json').exists() else '{}\n')
+             'status': 'built-not-visually-accepted'}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        (stage / 'macro_source_audio.json').write_text((pack_dir / 'audio_timeline.json').read_text(encoding='utf-8')
+                                                      if (pack_dir / 'audio_timeline.json').exists() else '{}\n', encoding='utf-8')
         stage.rename(output)
     print(json.dumps({'project': str(output), 'pack': pack['id'], 'scenes': len(plan['scenes']),
                       'frames': plan['end_frame'], 'fps': plan['fps']}, ensure_ascii=False))

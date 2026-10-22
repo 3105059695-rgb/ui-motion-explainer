@@ -1,28 +1,32 @@
-# 从口播找到可用参考，再落实到成片
+# 方法与实现的选用接口
 
-主入口仍是 `$ui-motion-fusion`。新窗口先读取当前 `SKILL.md` 和适用账号档案；`direct -- prepare` 自动把按稿候选写入 `director-context.json` 的 `selection`，不需要用户再点名参考库或 AIGC 子模块。
+本页维护查询、候选状态及引用落点。导演判断读[口播选材](script-visual-planning.md)，Fred Talk 默认与参考范围读[审美偏好](aesthetic-preferences.md)，制作阶段读[主流程](workflow.md)。`direct -- prepare` 将整篇研究和按段候选写入 `director-context.json.selection`。
 
-## 每段如何取舍
+## 从候选到实际选用
 
-1. 通读完整原稿，确认当前原声、目标和上下文。`selection.segments` 的原句与字符位置只用于定位，不是逐句换镜头指令；连续几句可以共享一个事件。
-2. 查看本段方法、配方和效果候选中的 `fit`、`avoid`、动作链和出处。候选携带原片 ID、秒点、逐句行号、研究文件位置及当前源码资源事实；选择之前至少读取相关出处。需要核对动作时打开相应原片片段，而不是把文字研究当作本次已观看。
-3. Agent 根据观众理解缺口作决定：适合就借用机制；不适合就说明理由并原创；人物已讲清就保留口播。检索未命中不意味着没有可用方法，也不要求硬塞 AIGC 或特效。不要直接复制候选列表作为已完成的分镜。
-4. 把决定落到当前工程的真实素材、动作和衔接；在[导演计划合同](director-plan-contract.md)中登记选用依据、实现文件和成片时间段。`source_study_refs` 记录研究方法的具体行号，原生素材、原创表达和不加覆盖的段落也保留理由。正式预检运行 `direct -- check --plan <计划> --production`，普通结构检查的成功不能代替生产就绪。
-5. 对照成片核验：原句的重点是否可见、动作结果是否读得懂、上下文是否连续，UI/AIGC 是否遵守当前档案。资源存在、决策结构完整与实际画面合适是三件不同的事。记录正常速度视听和未检查范围，不从结构检查推断用户认可。
+1. `selection.segments` 的原句与字符位置仅用于定位。先看 `narration_study` 的来源原句、上下文与画面证据，再看相关候选的实际展示、接口和定制部分；连续几句可以共用事件，候选排名不决定分镜。
+2. FredTalk 的 `software-preset/fredtalk:<ID>` 用 `inspect` 核对真实源码、依赖和缺件；`ui.py fredtalk materialize --id <ID> --project <工程>` 取得本期 `vendor/fredtalk/` 后还需实际接入。复制完成不等于运行完成。整库动作都可检索和改编；外观设计与配色分别处理，不因某个演示的配色反馈排除其动作。
+3. 在同一计划记录本段采用、改编、原创或保留人物的实际理由和实现位置。`library_refs.source_binding` 指向该项真实来源，`application` 指向本期实现；`design` 与 `motion` 的区别及字段见[引用格式](director-plan-contract.md#效果库设计引用)。`source_study_refs` 记录来源方法，`recipe_ids` 记录配方，不凑引用数量。
+4. 预检和实际输出按主流程完成；计划变化后同步实现，禁止事后给所有段批量填同一句原创理由。检查账本记录的是声明与落点，不能代替观看画面。
 
-候选只复用解释方法。外观服从当前风格合同；旧示例中的淡紫 UI、人物、题材、示例数字和时长都不能自动成为本期设置。AIGC 例图只用于画风参考，本期人物、场景和动作按稿设计；当前工程明确固定的 IP 才保持同一身份。
+参考人物、示例数字和旧稿件不自动成为本期内容；素材用途与身份边界见[参考使用](style-profiles.md)。
+
+句子检索前几名不是全部能力。`selection.library_directory` 保留完整效果目录及对应 inspect 入口，不受每句 top-N 限制；`context.source_study.method_directory` 保留完整方法简表。先理解整段，再用适合的视觉对象/动作描述查询；未命中时可以浏览整库或直接 inspect 已定位项，不强塞低相关候选。中文标签帮助发现英文案例，不等于自动完成语义导演。
 
 ## 可直接运行的查询
 
 在实际安装目录运行；下例不生成媒体、不改原稿、不联网或产生费用。
 
 ```powershell
+python -B -X utf8 scripts/ui.py select --list-library
 python -B -X utf8 scripts/ui.py select --script 'E:/项目/口播.txt' --format markdown
 python -B -X utf8 scripts/ui.py select --script 'E:/项目/口播.txt'
 python -B -X utf8 scripts/ui.py inspect --kind method --id F-M01
 python -B -X utf8 scripts/ui.py inspect --kind recipe --id S06
 python -B -X utf8 scripts/ui.py inspect --kind capability --id F03
 python -B -X utf8 scripts/ui.py inspect --kind family --id software-presets
+python -B -X utf8 scripts/ui.py inspect --kind sample --id A01
+python -B -X utf8 scripts/ui.py inspect --kind software-preset --id interaction-account-setup-accordion
 ```
 
 `select` 默认输出 JSON，`--format markdown` 输出可读摘要；`--limit` 控制每段方法候选数，允许 1–10。也可用 `--text '本段原句'` 查询短句。JSON 保留前后句、检索线索及排序依据，所有决定都是 `pending-agent`；不会偷偷自动确认镜头。

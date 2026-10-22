@@ -4540,6 +4540,113 @@
         "scope": "未找到本项独立认可记录；不从同族、参考喜好或导出成功推断。",
         "evidence": []
       }
+    },
+    {
+      "id": "presenter-opening",
+      "title": "全屏人物开头、素材错峰入场与实体质感",
+      "semantic_use": "在人物真实空白展开成果、素材、前后层次、重点聚焦、蒙版衔接正文；书本或纸张需要实体厚度与阴影时使用。",
+      "source": [
+        {
+          "path": "assets/presenter-opening/README.md",
+          "present": true
+        }
+      ],
+      "implementation": {
+        "status": "source-present",
+        "sources": [
+          {
+            "path": "assets/presenter-opening/opening-stage.js",
+            "present": true
+          },
+          {
+            "path": "assets/presenter-opening/motion-library.js",
+            "present": true
+          },
+          {
+            "path": "assets/presenter-opening/premium-materials.js",
+            "present": true
+          }
+        ]
+      },
+      "validation": {
+        "status": "sample-rendered",
+        "evidence": [
+          {
+            "path": "assets/presenter-opening/validation.json",
+            "present": true
+          }
+        ],
+        "scope": "实际45.2秒样片调用；可寻址模块；全片解码与开头时点取样，不是整库验收。",
+        "full_realtime_av_review": false
+      },
+      "user_approval": {
+        "status": "reference-only-below-target",
+        "scope": "User subsequently said this reading sample is only a reference and far below requirements. Keep implementation; do not use as quality baseline.",
+        "evidence": [
+          {
+            "path": "references/evidence/agent-editorial-upgrade-20261021.json",
+            "present": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "agent-editorial",
+      "title": "已认可连续 UI 制作源码：材质、运动、口播事件与人物开头",
+      "semantic_use": "按本期口播设计对象变化、任务推进、分解组合、局部聚焦、真实材料展开与结论回收；沿方木十款 Agent 已认可正文的配色与实体质感。整体效果库保持开放，不固定榜单。",
+      "source": [
+        {
+          "path": "assets/agent-editorial/README.md",
+          "present": true
+        },
+        {
+          "path": "assets/agent-editorial/provenance.json",
+          "present": true
+        }
+      ],
+      "implementation": {
+        "status": "source-present",
+        "sources": [
+          {
+            "path": "assets/agent-editorial/agent-editorial.js",
+            "present": true
+          },
+          {
+            "path": "assets/agent-editorial/motion-core.js",
+            "present": true
+          },
+          {
+            "path": "assets/fusion-studio/story-starter/runtime.js",
+            "present": true
+          }
+        ],
+        "note": "Runtime loads this SDK and consumes episode-authored segments/scenes; preserved source is evidence, not the default whole episode."
+      },
+      "validation": {
+        "status": "technical-integration-passed",
+        "evidence": [
+          {
+            "path": "assets/agent-editorial/validation.json",
+            "present": true
+          }
+        ],
+        "scope": "Fresh project imports and uses actual SDK; silent 6s/150 frame non-ranking runtime probe, pixel protection and decode passed. Not aesthetic approval.",
+        "full_realtime_av_review": false
+      },
+      "user_approval": {
+        "status": "source-body-style-approved",
+        "scope": "Original body motion, colors and UI material; explicit implementation upgrade authorized. Original ranking opening and new generated outputs not automatically approved.",
+        "evidence": [
+          {
+            "path": "references/evidence/agent-editorial-upgrade-20261021.json",
+            "present": true
+          },
+          {
+            "path": "references/evidence/fangmu-ten-agents-body-style-20261021/index.json",
+            "present": true
+          }
+        ]
+      }
     }
   ],
   "software_presets": [

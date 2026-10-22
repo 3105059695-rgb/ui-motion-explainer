@@ -1,12 +1,6 @@
 {
   "schema_version": 1,
-  "purpose": "Account routing preserves identity and layout. All continuous body UI profiles inherit one current Fred contract; an evidenced project UI exception has its own body-ui scope.",
-  "shared_ui_direction": {
-    "id": "fred-explainer-20261015",
-    "label": "当前正文 UI · Fred 黑紫统一方向",
-    "guidance_path": "references/evidence/fred-reference-approved-20261015.json",
-    "reading": ["references/fred-ui-direction.md"]
-  },
+  "purpose": "One production entry with Fred Talk as the persistent default visual and editing direction. The effect library supplies implementations; account history never silently changes the default.",
   "unregistered_profiles": {},
   "excluded_ui_projects": [
     {
@@ -19,13 +13,13 @@
   "profiles": [
     {
       "id": "user-ui",
-      "label": "用户通用 UI · Fred 黑紫当前方向、A01 与女孩已认可实现",
+      "label": "统一制作兼容标识 · Fred Talk 默认风格",
       "aliases": [
         "user-ui"
       ],
       "profile_path": "references/profiles/user-ui.md",
       "project_roots": [],
-      "ui_direction": "shared",
+      "ui_direction": "historical",
       "sources": [
         {
           "kind": "documented-baseline",
@@ -64,7 +58,19 @@
               "references/library.md",
               "assets/base-skill/references/style-system.md"
             ],
-            "current_usage": "Historical implementation reference; current body UI follows the latest Fred contract."
+            "current_usage": "Historical implementation reference; current body UI follows the latest Fred contract.",
+            "retrieval": {
+              "title": "A01 同一对象的内容组织与连续收拢",
+              "semantic_use": "信息与材料组织，多个结果窗口连续汇入同一对象，聚焦重点并保留阅读时间",
+              "relation_tags": [
+                "handoff",
+                "combine",
+                "navigation"
+              ],
+              "mode": "continuous-ui",
+              "method_scope": "信息与材料组织，多个结果窗口连续汇入同一对象，聚焦重点并保留阅读时间",
+              "cross_profile": false
+            }
           }
         },
         {
@@ -89,7 +95,7 @@
               "公共示意配音被指定为永久账号声音",
               "已完成独立的全片正常速度听审",
               "覆盖阿刁、方木等独立档案",
-              "后续通用 user-ui 口播任务以此片校准女孩画风、动作与衔接，不重复确认；当前正文UI外观以最新Fred方向合同为准。",
+              "历史样片保留为画风、连续动作与衔接候选；没有本期或工程明确选择时，不将其绑定为通用AIGC默认。当前正文UI外观以最新Fred方向合同为准。",
               "先理解新口播句意、因果与情绪，再选场景和动作；不固定复用这份口播、三段顺序、11.3 秒长度或坐标。",
               "图片仅作画风参考；当前工程明确固定该女孩IP时才约束身份，其他稿件按内容设计。",
               "复用已成功实现的连续动作与转场代码，视频导出核验实际解码画面和定位，不能只看 currentTime。"
@@ -110,13 +116,70 @@
               "assets/approved-girl-sample/validation/final-check.json",
               "assets/approved-girl-sample/validation/visual-review.json"
             ],
-            "current_usage": "Style, causal action and transition methods only; design new assets per narration. Do not automatically reuse example images or character identity. Current UI follows the latest Fred contract."
+            "current_usage": "Historical scoped sample candidate for causal action, rhythm and AIGC-to-UI handoff. No unconditional AIGC style or character default; current UI follows the Fred contract.",
+            "retrieval": {
+              "title": "女孩搬运、接管与进入UI的11.3秒样片",
+              "semantic_use": "人物反复搬运产生负担，Agent接管任务，同一对象聚焦收拢并交接进入UI",
+              "relation_tags": [
+                "friction",
+                "emotion",
+                "handoff"
+              ],
+              "mode": "continuous-ui",
+              "method_scope": "人物反复搬运产生负担，Agent接管任务，同一对象聚焦收拢并交接进入UI",
+              "cross_profile": false
+            }
+          }
+        },
+        {
+          "kind": "documented-baseline",
+          "path": "references/evidence/full-transfer-feedback-20261014.json",
+          "acceptance_marker": "我就是想要以后的剪辑里面aigc能搭配着这么顺",
+          "baseline": {
+            "id": "full-transfer-aigc-integration",
+            "path": "local-only/full-transfer-sample/renders/完整样片.mp4",
+            "status": "approved_aigc_integration_only_ui_rejected",
+            "approval_kind": "method-only",
+            "media_kind": "video",
+            "quote": "很好，我就是想要以后的剪辑里面aigc能搭配着这么顺",
+            "scope": "仅认可语义AIGC连续动作按口播衔接进入UI的顺畅方法；同片UI外观明确被否定，整片未认可。",
+            "whole_film_approved": false,
+            "new_projects_approved": false,
+            "boundaries": [
+              "ui_appearance_accepted=false",
+              "whole_film_approved=false",
+              "不把纸张、黑袖双手、固定模型、原白紫UI或面板布局升级为默认。",
+              "只看原片动作与交接；本期UI按当前共享合同重做。"
+            ],
+            "implementations": [
+              "local-only/full-transfer-sample/src/timeline.js",
+              "local-only/full-transfer-sample/src/report-scene.js",
+              "local-only/full-transfer-sample/production-map.json"
+            ],
+            "retrieval": {
+              "title": "同一份资料：重复搬运变一次交接的AIGC衔接",
+              "semantic_use": "同样一份资料以前在三个工具里反复复制，现在一次交接，报告和图表一起更新；同一实体资料跨工位搬运、接管与进入UI，解释重复劳动和同步更新",
+              "relation_tags": [
+                "friction",
+                "handoff",
+                "sync",
+                "compare"
+              ],
+              "mode": "continuous-ui",
+              "method_scope": "同样一份资料以前在三个工具里反复复制，现在一次交接，报告和图表一起更新；同一实体资料跨工位搬运、接管与进入UI，解释重复劳动和同步更新",
+              "cross_profile": true
+            },
+            "related_visuals": [
+              "local-only/full-transfer-sample/assets/repeated-transfer.mp4",
+              "local-only/full-transfer-sample/assets/single-handoff.mp4"
+            ]
           }
         }
       ],
       "required_reading": [
         "references/evidence/aigc-reference-scope-20261019.json"
-      ]
+      ],
+      "distribution_note": "历史资料兼容入口；普通新稿不按账号或目录选择 UI，当前人物、声音与固定 IP 由本期素材和明确工程声明保留。"
     },
     {
       "id": "adiao",
@@ -127,9 +190,57 @@
       ],
       "profile_path": "references/profiles/adiao.md",
       "project_roots": [],
-      "ui_direction": "shared",
-      "sources": [],
-      "distribution_note": "账号规则可读；私有样片/声音/人物由账号工程提供，不自动用通用女孩替代。"
+      "ui_direction": "historical",
+      "sources": [
+        {
+          "kind": "documented-baseline",
+          "path": "references/evidence/anime-semantic-feedback-20261013.json",
+          "acceptance_marker": "可以可以，这就是我想要的效果，我需要的是那些抽象的，都要做成这种的，来方便观众理解",
+          "baseline": {
+            "id": "anime-expression-loss-5s",
+            "path": "local-only/anime-expression-loss/脑中画面变成零散词_5秒.mp4",
+            "status": "approved_abstract_explanation_method",
+            "media_kind": "video",
+            "approval_kind": "method-only",
+            "quote": "可以可以，这就是我想要的效果，我需要的是那些抽象的，都要做成这种的，来方便观众理解",
+            "scope": "本次5秒修订样片的抽象解释效果；具象事件、连续动作和多镜头因果演绎方法可共用，角色与整体画风按各IP选择。",
+            "source_range": [
+              0,
+              5
+            ],
+            "media_range": [
+              0,
+              5
+            ],
+            "whole_film_approved": false,
+            "audio_review": "silent_visual_sample_no_narration_alignment",
+            "boundaries": [
+              "角色仅适用于阿刁动漫B-roll；其他IP不可默认调用此角色或身份参考。",
+              "不固定鲸鱼、三个镜头或五秒时长；不是所有账号统一画风。",
+              "原样片无口播，不声称已对齐新稿原声或已完整试听。"
+            ],
+            "implementations": [
+              "local-only/anime-expression-loss/shot-plan.json",
+              "local-only/anime-expression-loss/video-plan.json"
+            ],
+            "retrieval": {
+              "title": "脑中完整画面变零散词：信息损失的具象解释",
+              "semantic_use": "脑子里的画面很清楚，输入时却只剩几个零散的词；丰富想象收拢为同一图像、迁移至输入区、细节剥落成少量关键词，解释表达和信息传递损失",
+              "relation_tags": [
+                "loss",
+                "handoff"
+              ],
+              "mode": "continuous-ui",
+              "method_scope": "脑子里的画面很清楚，输入时却只剩几个零散的词；丰富想象收拢为同一图像、迁移至输入区、细节剥落成少量关键词，解释表达和信息传递损失",
+              "cross_profile": true,
+              "required_relation_tags": [
+                "loss"
+              ]
+            }
+          }
+        }
+      ],
+      "distribution_note": "历史资料兼容入口；普通新稿不按账号或目录选择 UI，当前人物、声音与固定 IP 由本期素材和明确工程声明保留。"
     },
     {
       "id": "fangmu",
@@ -145,10 +256,36 @@
       "required_reading": [
         "references/profiles/fangmu-current.md"
       ],
-      "distribution_note": "保留当前规则，私有视频与账号素材不公开；使用账号工程中的已确认资源。",
-      "ui_direction": "shared",
-      "direction_update": "2026-10-19: current user choice joins the Fred black-purple UI contract; retain Fangmu identity, source audio, opening guidance and explicitly selected whiteboard mode."
+      "distribution_note": "历史资料兼容入口；普通新稿不按账号或目录选择 UI，当前人物、声音与固定 IP 由本期素材和明确工程声明保留。",
+      "ui_direction": "historical",
+      "direction_update": "2026-10-20: account visual routing retired; original records retained for historical lookup."
     }
   ],
-  "default_profile": "user-ui"
+  "default_profile": "user-ui",
+  "historical_shared_ui_direction": {
+    "id": "fred-explainer-20261015",
+    "label": "当前正文 UI · Fred 黑紫统一方向",
+    "guidance_path": "references/evidence/fred-reference-approved-20261015.json",
+    "reading": [
+      "references/fred-ui-direction.md"
+    ]
+  },
+  "unified_production": {
+    "enabled": true,
+    "profile_id": "user-ui",
+    "guidance_path": "references/aesthetic-preferences.md",
+    "label": "统一制作 · Fred Talk 默认风格",
+    "direction_source": "fred-talk-default",
+    "required_reading": [
+      "references/library.md"
+    ],
+    "default_direction": {
+      "id": "fred-talk-default-20261020",
+      "label": "Fred Talk · 跨窗口默认视觉与剪辑",
+      "guidance_path": "references/evidence/fred-default-correction-20261020.json"
+    },
+    "account_visual_routing": false,
+    "whole_film_recommendations": false,
+    "evidence_path": "references/evidence/fred-default-correction-20261020.json"
+  }
 }

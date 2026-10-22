@@ -13,6 +13,7 @@ CATALOG = 'references/aigc-assets.json'
 GUIDE = 'references/aigc-directing.md'
 PROJECT_FILES = ('project.json', 'current-project.json', 'director-plan.json')
 IMAGE_EXTENSIONS = {'.png', '.jpg', '.jpeg', '.webp', '.gif', '.avif', '.bmp', '.tif', '.tiff'}
+IDENTITY_KEYS = {'identity', 'wardrobe', 'identity_scope'}
 
 
 def _read(path):
@@ -120,6 +121,80 @@ def _project_override(project):
     return found[0]
 
 
+def _character_choice(project):
+    """Identity is an explicit choice in this project, independent of art style."""
+    choices = set()
+    for name in PROJECT_FILES:
+        path = Path(project).resolve() / name
+        if not path.is_file():
+            continue
+        doc = _read(path)
+        aigc = doc.get('aigc') if isinstance(doc, dict) else None
+        value = aigc.get('character_style_set_id') if isinstance(aigc, dict) else None
+        if value is not None:
+            if not isinstance(value, str) or not value.strip():
+                raise ValueError('aigc.character_style_set_id must name an explicitly selected character reference set.')
+            choices.add(value.strip())
+    if len(choices) > 1:
+        raise ValueError('Conflicting character_style_set_id declarations in this project; identity was not assumed.')
+    return next(iter(choices), None)
+
+
+def _style_references(style, root):
+    return [{**(row if isinstance(row, dict) else {}), **_reference_fact(row, root),
+             'role': 'reference', 'usage_role': 'style-reference-only', 'identity_binding_default': False,
+             'auto_use_as_first_frame': False, 'auto_use_as_output': False}
+            for row in [*style.get('style_references', []), *style.get('character_references', [])]]
+
+
+def _reference_fact(value, root):
+    if isinstance(value, dict) and value.get('resource_id'):
+        return resource_fact(value['resource_id'], value.get('path'), root)
+    return _path_fact(value, root)
+
+
+def _approval_context(style, root):
+    """Expose bounded current use and provenance, never historical instructions."""
+    approval = style.get('approval', {})
+    events = [approval, *approval.get('subsequent_video_approvals', [])]
+    return {
+        'historical_only': True,
+        'catalog_record': str((Path(root) / CATALOG).resolve()) + '#style_sets/' + style['id'] + '/approval',
+        'event_ids': list(dict.fromkeys(row['event_id'] for row in events if row.get('event_id'))),
+        'evidence_paths': [_path_fact(path, root) for path in dict.fromkeys(
+            row['evidence_path'] for row in events if row.get('evidence_path'))],
+        'approval_kind': style.get('approval_kind', 'scoped-historical-reference'),
+        'current_scope': style.get('current_scope', {}),
+        'current_scope_evidence': [_path_fact(value, root) for key, value in style.get('current_scope', {}).items()
+                                   if key.endswith('_evidence')],
+        'current_output_approved': False,
+    }
+
+
+def _candidate(style, root, profile, project):
+    profiles = style.get('applicable_profiles', style.get('default_for_profiles', []))
+    applicable = not profile or not profiles or profile in profiles
+    return {
+        'id': style['id'], 'title': style.get('title', style['id']),
+        'applicable': applicable, 'applicable_profiles': profiles,
+        'project_match': any(_under(project, p, root) for p in style.get('project_roots', [])),
+        'automatic_selection': False,
+        'current_scope': style.get('current_scope', {}),
+        'style_references': _style_references(style, root),
+        'semantic_examples': [
+            {**{key: row[key] for key in ('id', 'title', 'narration', 'meaning', 'semantic_use') if key in row},
+             'reference_image': _reference_fact(row.get('image_path'), root)}
+            for row in style.get('assets', []) if isinstance(row, dict)],
+        'reference_videos': [
+            {**_reference_fact({'path': row.get('video_path'), 'resource_id': row.get('resource_id')}, root), 'event_id': row.get('event_id'),
+             'usage_scope': style.get('current_scope', {}).get('video_methods', []),
+             'historical_approval_only': True}
+            for row in style.get('approval', {}).get('subsequent_video_approvals', [])
+            if row.get('video_path')],
+        'approval': _approval_context(style, root),
+    }
+
+
 def reference_only_paths(root=ROOT):
     """Catalog images teach style; a path match does not authorize production use."""
     root = Path(root)
@@ -134,10 +209,10 @@ def reference_only_paths(root=ROOT):
     for style in sets:
         if not isinstance(style, dict):
             raise ValueError('AIGC style_sets entries must be objects')
-        values = list(style.get('character_references', []))
+        values = [*style.get('style_references', []), *style.get('character_references', [])]
         values += [row.get('image_path') for row in style.get('assets', []) if isinstance(row, dict)]
         for value in values:
-            fact = _path_fact(value, root)
+            fact = _reference_fact(value, root)
             if isinstance(fact['path'], str) and fact['path'] and '://' not in fact['path']:
                 paths.add(Path(fact['path']))
     return paths
@@ -152,8 +227,14 @@ def directing_context(project, style_resolution=None, root=ROOT):
         'guide': _path_fact(GUIDE, root), 'status': 'unresolved',
         'selection_source': None, 'selected_style_set': None,
         'character_references': [], 'style_references': [], 'style_rules': {}, 'approval': {},
+        'selected_character_set': None, 'identity_source': None, 'identity_rules': {}, 'identity_references': [],
+        'identity_references_ready': False,
         'approved_static_assets': [], 'research_sources': [],
         'available_style_sets': [], 'warnings': warnings,
+        'available_method_references': [row for row in (style_resolution or {}).get('method_examples', [])
+                                        if row.get('approval_kind') == 'method-only' or
+                                        'aigc' in str(row.get('retrieval', {})).lower() or
+                                        'anime' in str(row.get('id', '')).lower()],
         'reference_only': True, 'default_character_required': False,
         'auto_use_as_first_frame': False, 'auto_use_as_output': False,
         'character_policy': '参考图中的人物不是所有稿件的默认主角；人物按本期句意设计。当前工程明确指定的固定 IP 继续保持身份、服装和画风连续，不因换场景重置。',
@@ -164,6 +245,7 @@ def directing_context(project, style_resolution=None, root=ROOT):
     }
     try:
         override = _project_override(project)
+        character_choice = _character_choice(project)
     except (OSError, ValueError, TypeError, UnicodeError) as exc:
         context['status'] = 'invalid-project-override'
         warnings.append(str(exc))
@@ -176,7 +258,8 @@ def directing_context(project, style_resolution=None, root=ROOT):
                        style_references=override['style_references'],
                        production_references_ready=True,
                        reference_readiness_scope='Sourced AIGC-only direction and current reference files. No reference or generated-output aesthetic approval is inferred.')
-        return context
+        if character_choice is None:
+            return context
     if not catalog.is_file():
         context['status'] = 'missing-catalog'
         warnings.append('AIGC asset catalog is missing; references were not silently invented.')
@@ -199,18 +282,43 @@ def directing_context(project, style_resolution=None, root=ROOT):
         for row in data.get('research_sources', [])]
     context['research_sources_present'] = sum(row['resource']['file_exists'] for row in context['research_sources'])
     context['research_readiness_scope'] = 'Optional provenance/research paths, separate from packaged style images; absent originals are not claimed as available.'
-    context['available_style_sets'] = [
-        {key: row[key] for key in ('id', 'title', 'label', 'default_for_profiles', 'project_roots', 'approval') if key in row}
-        for row in sets]
-    choice, origin = _project_choice(project, warnings)
     profile = (style_resolution or {}).get('resolved_profile')
-    if origin is None:
-        if profile:
+    context['available_style_sets'] = [_candidate(row, root, profile, project) for row in sets]
+    context['selection_instruction'] = ('AIGC 画风参考用于本期新图和视频，不指定 UI 或人物身份。'
+        '本期明确方向和工程选择优先；否则使用用户指定的统一画风参考。'
+        '先查看实际参考材质，再按完整口播设计新情境与动作。')
+    if character_choice is not None:
+        character = next((row for row in sets if row['id'] == character_choice), None)
+        rules = (character.get('identity_rules') or {key: value for key, value in character.get('style_rules', {}).items()
+                 if key in ('identity', 'wardrobe')}) if character else {}
+        if character is None or not rules:
+            context['status'] = 'invalid-project-character'
+            warnings.append('Unknown or unavailable explicit character reference set: ' + character_choice)
+            return context
+        context.update(selected_character_set=character_choice,
+                       identity_source='project-metadata:' + str(Path(project).resolve()), identity_rules=rules,
+                       identity_references=[{**row, 'usage_role': 'project-explicit-identity-reference'}
+                                            for row in _style_references(character, root)])
+        context['identity_references_ready'] = bool(context['identity_references']) and all(
+            row['exists'] for row in context['identity_references'])
+        if not context['identity_references_ready']:
+            warnings.append('The explicitly selected identity references are missing; character continuity is not ready.')
+    if override is not None:
+        return context
+    choice, origin = _project_choice(project, warnings)
+    policy = data.get('routing_policy', {})
+    if origin is None and policy.get('default_style_id'):
+        choice = policy['default_style_id']
+        origin = 'unified-aigc-reference'
+    if origin is None and policy.get('account_routing', True):
+        candidates = [row for row in sets if
+            (not profile or not row.get('applicable_profiles', row.get('default_for_profiles', [])) or
+             profile in row.get('applicable_profiles', row.get('default_for_profiles', []))) and
+            any(_under(project, p, root) for p in row.get('project_roots', []))]
+        origin = 'registered-project-root' if candidates else None
+        if not candidates and profile:
             candidates = [row for row in sets if profile in row.get('default_for_profiles', [])]
             origin = 'profile-default:' + profile if candidates else None
-        else:
-            candidates = [row for row in sets if any(_under(project, p, root) for p in row.get('project_roots', []))]
-            origin = 'registered-project-root' if candidates else None
         if len(candidates) == 1:
             choice = candidates[0]['id']
         elif len(candidates) > 1:
@@ -220,16 +328,15 @@ def directing_context(project, style_resolution=None, root=ROOT):
     if selected is None:
         if choice:
             warnings.append('Unknown explicit AIGC style set: ' + choice + '; no default substituted.')
-        else:
-            warnings.append('No applicable AIGC style is selected. Read the current request or account direction; do not impose another account\'s character.')
+        elif origin is None and any(row['applicable'] for row in context['available_style_sets']):
+            context['status'] = 'candidates-available'
         return context
     context.update(status='resolved', selected_style_set=selected['id'],
-                   style_rules=selected.get('style_rules', {}), approval=selected.get('approval', {}))
-    context['character_references'] = [
-        {**(row if isinstance(row, dict) else {}), **_path_fact(row, root),
-         'role': 'reference', 'usage_role': 'style-reference-only', 'identity_binding_default': False,
-         'auto_use_as_first_frame': False, 'auto_use_as_output': False}
-        for row in selected.get('character_references', [])]
+                   style_rules={key: value for key, value in selected.get('style_rules', {}).items() if key not in IDENTITY_KEYS},
+                   approval=_approval_context(selected, root))
+    context['style_references'] = _style_references(selected, root)
+    # Compatibility name only: these remain style references, never identity bindings.
+    context['character_references'] = [dict(row) for row in context['style_references']]
     for asset in selected.get('assets', []):
         if not isinstance(asset, dict) or asset.get('approval_state') != 'approved_static_scene':
             continue
@@ -239,17 +346,23 @@ def directing_context(project, style_resolution=None, root=ROOT):
             checks['source_video'] = resource_fact('source-video:' + asset['source_key'], asset['source_video'], root)
         if asset.get('source_frame'):
             checks['source_frame'] = resource_fact('aigc-source-frame:' + asset['id'], asset['source_frame'], root)
-        context['approved_static_assets'].append({**asset, 'resource_checks': checks,
+        example = {key: asset[key] for key in ('id', 'title', 'gallery_asset_id', 'narration', 'meaning',
+                   'semantic_use', 'approval_state', 'video_verified', 'source_time', 'source_range') if key in asset}
+        context['approved_static_assets'].append({**example, 'resource_checks': checks,
+                                                 'historical_scene_record': str(catalog.resolve()) + '#style_sets/' + selected['id'] + '/assets/' + asset['id'],
+                                                 'reference_action_chain': asset.get('action_chain', []),
+                                                 'reference_action_scope': '历史例片的动作解释方法；本期重新设计人物、场景和具体动作，不继承原场景的身份、服装与布局。',
                                                  'role': 'reference', 'usage_role': 'style-reference-only',
                                                  'auto_use_as_first_frame': False, 'auto_use_as_output': False,
                                                  'reference_ready': bool(checks.get('image_path', {}).get('exists')),
                                                 'video_approval_inherited': False})
-    missing = [row['path'] for row in context['character_references'] if not row['exists']]
+    missing = [row['path'] for row in context['style_references'] if not row['exists']]
     missing += [row['resource_checks']['image_path']['path'] for row in context['approved_static_assets']
                 if 'image_path' in row['resource_checks'] and not row['reference_ready']]
     context['character_references_ready'] = bool(context['character_references']) and all(
         row['exists'] for row in context['character_references'])
-    context['production_references_ready'] = context['character_references_ready'] and all(
+    context['production_references_ready'] = bool(context['style_references']) and all(
+        row['exists'] for row in context['style_references']) and all(
         row['reference_ready'] for row in context['approved_static_assets'])
     context['reference_readiness_scope'] = ('Style-reference inventory availability only, not ready production assets or automatic first frames. '
         'Design each narration anew and preserve only a project-explicit fixed IP. A plan checks references it actually uses; '

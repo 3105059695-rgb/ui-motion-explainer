@@ -1,0 +1,478 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-21",
+  "status": "user preference confirmed; candidate implementation; no automatic approval of new videos",
+  "records": [
+    {
+      "record": "round1.json",
+      "data": {
+        "purpose": "分轮审美访谈；选择只适用于具体片段及具体维度",
+        "formal_skill_modified": false,
+        "answers": {
+          "source": "direct_user_questionnaire_reply",
+          "A": "整体喜欢：UI 外观和动作都要学习",
+          "B": "整体喜欢：样式和连续解释方式都要学习",
+          "C": "喜欢动作和衔接，但要换成我认可的手绘画风",
+          "scope": "只记录具体原片片段与所选维度，不构成未来成片认可或固定模板。"
+        },
+        "references": [
+          {
+            "id": "A",
+            "source": "D:\\用户数据迁移\\下载\\FredTalk\\Gemini4 Argon终于发布了，到底是夯是拉？！ #抖音精选App知识充电站 #抖音精选App征稿中 #抖音前沿科技首发计划#AI新星计划 #vibecoding大赏.mp4",
+            "source_start": 40.0,
+            "duration": 15.0,
+            "description": "结果展开、内部聚焦、返回比较",
+            "excerpt": "E:\\ui\\aesthetic-interview\\A.mp4",
+            "approval": "reference-ui-and-motion-liked",
+            "basis": "original reference, not a reproduction"
+          },
+          {
+            "id": "B",
+            "source": "D:\\用户数据迁移\\下载\\FredTalk\\不用巨资买显卡了，我自己部署了开源版 JEV #抖音精选App知识充电站 #抖音精选App征稿中 #抖音前沿科技首发计划#器灵soulmate #JEV.mp4",
+            "source_start": 51.6,
+            "duration": 10.6,
+            "description": "菜谱、模型文件和机器之间连续交接",
+            "excerpt": "E:\\ui\\aesthetic-interview\\B.mp4",
+            "approval": "reference-appearance-and-causal-sequence-liked",
+            "basis": "original reference, not a reproduction"
+          },
+          {
+            "id": "C",
+            "source": "D:\\用户数据迁移\\xwechat_files\\wxid_9lkiawff6e8y22_46d6\\msg\\video\\2026-10\\5c2f8b419307641aa51934b99e7b846c.mp4",
+            "source_start": 30.1,
+            "duration": 8.5,
+            "description": "形状展开为蒙版，接入人物动作场景",
+            "excerpt": "E:\\ui\\aesthetic-interview\\C.mp4",
+            "approval": "motion-and-handoff-liked-replace-art-style",
+            "basis": "original reference, not a reproduction"
+          }
+        ]
+      }
+    },
+    {
+      "record": "round10/questions.json",
+      "data": {
+        "purpose": "明确当前四例的包装配色处理，不授权正式Skill修改或制作",
+        "question": "针对刚才 L／M／N／O 四个例子，保留你喜欢的设计和动作后，配色应怎样处理？",
+        "options": [
+          "四例的包装配色都统一为我之前确定的黑紫方向",
+          "主要调整 M、O；L、N 目前的配色也可以保留",
+          "不必统一黑紫，我会补充具体不喜欢的颜色或组合"
+        ],
+        "answer": "四例的包装配色都统一为我之前确定的黑紫方向",
+        "scope": [
+          "L",
+          "M",
+          "N",
+          "O"
+        ],
+        "confirmed_interpretation": {
+          "motion": "喜欢，可保留",
+          "visual_design": "喜欢，可保留",
+          "wrapper_palette": "统一到此前已确定的黑紫方向",
+          "not_inferred": "不自动认可整库其他条目；不将之前失败样片归结为仅差配色；不将UI包装配色套成AIGC的画风。"
+        },
+        "formal_skill_modified": false
+      }
+    },
+    {
+      "record": "round11/questions.json",
+      "data": {
+        "answers": [
+          {
+            "question": "真实产品截图、网页和品牌素材本身可能是白色、绿色等。统一黑紫风格时，你希望怎样处理？",
+            "answer": "按画面效果决定，两种方式都可以"
+          },
+          {
+            "question": "某句口播找不到直接对应、质量足够好的真实素材时，怎样处理最符合你的要求？",
+            "answer": "优先选能讲清这句话的表达：局部实拍、UI示意、AIGC或人物讲述都可，不强行配图"
+          },
+          {
+            "question": "效果库的动作都保留。实际剪一段内容时，你更希望怎样使用这些动作？",
+            "answer": "两种都可以，以最后好看、讲得清楚为准，不固定制作方式"
+          }
+        ],
+        "next_step_authorization": "问卷确定后开始升级；沿用先副本、样片认可后再更新正式Skill的边界。"
+      }
+    },
+    {
+      "record": "round2.json",
+      "data": {
+        "purpose": "画风容许范围与AIGC使用条件；正式Skill未修改",
+        "references": [
+          {
+            "label": "D · 之前保留的工作室场景",
+            "path": "C:\\Users\\山有扶苏\\.codex\\skills\\ui-motion-fusion\\assets\\approved-girl-sample\\assets\\manual-face-lock.png"
+          },
+          {
+            "label": "E · 后来生成的图书馆场景",
+            "path": "E:\\ui\\fusion-release-work\\candidate-skill\\sample\\assets\\reading-library.png"
+          }
+        ],
+        "answers": {
+          "source": "direct_user_questionnaire_reply",
+          "style": "D 更接近；E 已经偏离我想要的画风",
+          "aigc_usage": "抽象概念、情绪或比喻优先用 AIGC；具体产品和操作优先用真实素材",
+          "scope": "D作为本轮更接近的画风参考；不将工作室、人物身份或固定构图扩张为所有新稿模板。E不能作为已认可画风引用。"
+        }
+      }
+    },
+    {
+      "record": "round3.json",
+      "data": {
+        "purpose": "画风否决原因、开头默认选择、运动力度",
+        "source": "direct_user_questionnaire_reply",
+        "formal_skill_modified": false,
+        "answers": {
+          "E_style_rejection_main_reason": "背景太繁复、太像风景插画，主体事件不清楚",
+          "opening_default": "默认先展示真正有吸引力的成果或变化，再接人物解释",
+          "motion": "贴近原片：该动时连续变化，重点出现后留稳看清"
+        },
+        "interpretation_limits": [
+          "不能将E的否决简单扩大为全局禁止金色或暖色。",
+          "不能将D的画面描述为细节少；其可借鉴的是事件主体与操作空间更清楚。",
+          "成果先行必须有本期素材支持，不虚构产品结果，不固定秒点或模板。",
+          "原片是运动感觉参照，不规定每句都动或全局固定快切。"
+        ]
+      }
+    },
+    {
+      "record": "round4.json",
+      "data": {
+        "purpose": "正文人物出镜、真实素材处理与AIGC转场",
+        "source": "direct_user_questionnaire_reply",
+        "formal_skill_modified": false,
+        "answers": {
+          "presenter": "内容需要时可以暂时消失，让素材占满画面，解释后再回来",
+          "real_material": "保留真实内容，重新裁切、分层和聚焦，放进 Fred 风格的展示结构里",
+          "aigc_transition": "按观感自由选择，不要求对象接力，但转场不要喧宾夺主"
+        },
+        "interpretation_limits": [
+          "不将数字人固定为全程常驻的小圆窗，也不将此选择扩大为全片去掉人物。",
+          "包装保留真实内容与原意，不把重绘的示意当成产品实际结果。",
+          "对象接力是可选手法；自然切换、遮挡或蒙版可按相邻画面选择，不强制形变。",
+          "目前为问卷选择；没有新成片通过审美认可。"
+        ]
+      }
+    },
+    {
+      "record": "round5.json",
+      "data": {
+        "purpose": "具体口播选材、真实操作展示顺序及声音包装",
+        "source": "direct_user_questionnaire_reply",
+        "formal_skill_modified": false,
+        "answers": {
+          "choosing_book_example": "没有固定偏好，选择其中最贴合上下文、素材质量最好的一种",
+          "highlight_export_example": "连续展示：真实划线局部 → 导出操作 → 卡片成品；关键位置放大，其他信息退后",
+          "sound": "音乐存在感明显一些，剪辑跟着节拍，音效也更丰富"
+        },
+        "interpretation_limits": [
+          "选书例句没有被锁定成手绘、实拍或UI的唯一配方；要结合上下文和素材质量判断。",
+          "划线导出例句选择连续过程，不把它扩大成所有开头禁止成果先行。",
+          "音乐更有存在感、音效更丰富，不等于覆盖口播或每个元素都加音效。",
+          "保留第三轮的运动偏好：连续变化后留稳看清；不能为了音乐节拍强切尚未读完的重点。"
+        ]
+      }
+    },
+    {
+      "record": "round6/questions.json",
+      "data": {
+        "purpose": "比较不同完整画面，继续界定整体UI偏好；不制作新样片、不修改Skill",
+        "source_type": "原效果库预览，不是本次改编，不是整库已认可",
+        "online_source": "https://www.fred-fu.com/visual-library-app/objects/114dc5de25aca6e102f81f70f5ed0dca20b261b87a77920318aedc26fda33974.mp4",
+        "references": [
+          {
+            "label": "F",
+            "title": "黑色大窗口与关键词前景",
+            "source": "E:\\ui\\fusion-release-work\\candidate-skill\\library-compare\\reference\\B009-original.mp4",
+            "duration": 10.867
+          },
+          {
+            "label": "G",
+            "title": "卡片浮起、归位与报告展开",
+            "source": "E:\\ui\\fusion-release-work\\candidate-skill\\library-compare\\reference\\X014-original.mp4",
+            "duration": 6
+          },
+          {
+            "label": "H",
+            "title": "多图比较、局部特写与提示词",
+            "source": "E:\\ui\\aesthetic-interview\\round6\\E14-original.mp4",
+            "duration": 20
+          }
+        ],
+        "answers": [
+          {
+            "label": "F",
+            "answer": "整体不喜欢"
+          },
+          {
+            "label": "G",
+            "answer": "整体不符合我的审美"
+          },
+          {
+            "label": "H",
+            "answer": "不喜欢，而且我素材库里面很多视频，不要老是一个视频逮着用"
+          }
+        ],
+        "scope": "仅记录三个具体完整演示的否定；尚未确认具体不喜欢的原因，不外推为颜色、材质或某动作的全面禁用。",
+        "sampling_correction": "后续扩大来源至不同原视频、效果库和用户实际创作，不能围绕一个视频反复抽样；历史认可不自动变为当前整套UI认可。"
+      }
+    },
+    {
+      "record": "round7/questions.json",
+      "data": {
+        "purpose": "继续审美访谈，跨不同项目取样，未制作新样片或修改正式Skill",
+        "references": [
+          {
+            "label": "I",
+            "title": "Skill 开头：成果、人物与页面",
+            "source": "E:\\方木\\skill-opening\\方木_Skill完整开头_连续镜头与机械卡点_v7_校正.mp4",
+            "source_start": 0,
+            "duration": 13.64,
+            "excerpt": "E:\\ui\\aesthetic-interview\\round7\\I.mp4",
+            "current_preference": "喜欢剪辑表达，但外观不作为当前 UI 标准",
+            "scope": "历史局部认可仅用于找回候选；本轮不预设当前认可，不延伸到原片其他部分",
+            "compilation_start": 0,
+            "current_scope": "本轮所示节选；I/J/K只保留剪辑表达，不作为当前UI外观标准；L保留外观与剪辑，不自动推广为唯一模板或整片认可。"
+          },
+          {
+            "label": "J",
+            "title": "小王子：真实游戏进入讲解",
+            "source": "E:\\阿刁\\little-prince-game-20261015\\exports\\阿刁-小王子游戏-开头样段-v1.mp4",
+            "source_start": 0,
+            "duration": 11.76,
+            "excerpt": "E:\\ui\\aesthetic-interview\\round7\\J.mp4",
+            "current_preference": "喜欢剪辑表达，但外观不作为当前 UI 标准",
+            "scope": "历史局部认可仅用于找回候选；本轮不预设当前认可，不延伸到原片其他部分",
+            "compilation_start": 13.64,
+            "current_scope": "本轮所示节选；I/J/K只保留剪辑表达，不作为当前UI外观标准；L保留外观与剪辑，不自动推广为唯一模板或整片认可。"
+          },
+          {
+            "label": "K",
+            "title": "API 奶茶：材料与人物交接",
+            "source": "E:\\方木\\api-milk-tea\\方木_API奶茶科普_新参考开头预览.mp4",
+            "source_start": 11.14,
+            "duration": 13.48,
+            "excerpt": "E:\\ui\\aesthetic-interview\\round7\\K.mp4",
+            "current_preference": "喜欢剪辑表达，但外观不作为当前 UI 标准",
+            "scope": "历史局部认可仅用于找回候选；本轮不预设当前认可，不延伸到原片其他部分",
+            "compilation_start": 25.4,
+            "current_scope": "本轮所示节选；I/J/K只保留剪辑表达，不作为当前UI外观标准；L保留外观与剪辑，不自动推广为唯一模板或整片认可。"
+          },
+          {
+            "label": "L",
+            "title": "Token：汽车拆解连续解释",
+            "source": "E:\\方木\\token-full\\方木_Token正文_重做样段_v2.mp4",
+            "source_start": 0,
+            "duration": 17,
+            "excerpt": "E:\\ui\\aesthetic-interview\\round7\\L.mp4",
+            "current_preference": "整体喜欢：外观和剪辑都可保留",
+            "scope": "历史局部认可仅用于找回候选；本轮不预设当前认可，不延伸到原片其他部分",
+            "compilation_start": 38.88,
+            "current_scope": "本轮所示节选；I/J/K只保留剪辑表达，不作为当前UI外观标准；L保留外观与剪辑，不自动推广为唯一模板或整片认可。",
+            "round10_resolution": "保留设计与剪辑；包装配色统一为既定黑紫方向。"
+          }
+        ],
+        "answers": [
+          {
+            "label": "I",
+            "answer": "喜欢剪辑表达，但外观不作为当前 UI 标准"
+          },
+          {
+            "label": "J",
+            "answer": "喜欢剪辑表达，但外观不作为当前 UI 标准"
+          },
+          {
+            "label": "K",
+            "answer": "喜欢剪辑表达，但外观不作为当前 UI 标准"
+          },
+          {
+            "label": "L",
+            "answer": "整体喜欢：外观和剪辑都可保留"
+          }
+        ]
+      }
+    },
+    {
+      "record": "round8/questions.json",
+      "data": {
+        "purpose": "跨作者的效果库原作审美问卷；未修改正式Skill",
+        "references": [
+          {
+            "label": "M",
+            "title": "产品页面与图标",
+            "original_title": "Frame by Frame launch video",
+            "author": "notdwd",
+            "slug": "notdwd-7de38a",
+            "original_video": "https://media.prompt-motion.com/notdwd-another-one-1000-ai/video.c8dc9ba6.mp4",
+            "source_page": "https://prompt-motion.com/notdwd-7de38a",
+            "duration_catalog": 12.074,
+            "scope": "评价本条具体原作的外观与动作，不预设已认可；颜色、品牌与文案不自动固定为新稿模板。",
+            "current_preference": "只喜欢动作，外观不作为我的 UI 标准",
+            "latest_interpretation": "第九/十轮纠正：动作与外观设计喜欢，包装配色统一为既定黑紫方向。"
+          },
+          {
+            "label": "N",
+            "title": "音乐封面与播放器",
+            "original_title": "Spotify product film",
+            "author": "brainextends",
+            "slug": "brainextends-e19ac3",
+            "original_video": "https://media.prompt-motion.com/brainextends-opus-5-5-is-f-cking/video.783005a8.mp4",
+            "source_page": "https://prompt-motion.com/brainextends-e19ac3",
+            "duration_catalog": 18.065011,
+            "scope": "评价本条具体原作的外观与动作，不预设已认可；颜色、品牌与文案不自动固定为新稿模板。",
+            "current_preference": "外观和动作都喜欢",
+            "latest_interpretation": "第九/十轮纠正：动作与外观设计喜欢，包装配色统一为既定黑紫方向。"
+          },
+          {
+            "label": "O",
+            "title": "信息卡片与空间运动",
+            "original_title": "SaaS launch video",
+            "author": "aschapmann",
+            "slug": "aschapmann-131210",
+            "original_video": "https://media.prompt-motion.com/aschapmann-i-couldn-t-resist-to/video.fb3e8bec.mp4",
+            "source_page": "https://prompt-motion.com/aschapmann-131210",
+            "duration_catalog": 30.101,
+            "scope": "评价本条具体原作的外观与动作，不预设已认可；颜色、品牌与文案不自动固定为新稿模板。",
+            "current_preference": "只喜欢动作，外观不作为我的 UI 标准",
+            "latest_interpretation": "第九/十轮纠正：动作与外观设计喜欢，包装配色统一为既定黑紫方向。"
+          }
+        ],
+        "answers": [
+          {
+            "label": "M",
+            "answer": "只喜欢动作，外观不作为我的 UI 标准"
+          },
+          {
+            "label": "N",
+            "answer": "外观和动作都喜欢"
+          },
+          {
+            "label": "O",
+            "answer": "只喜欢动作，外观不作为我的 UI 标准"
+          }
+        ],
+        "inspection": "已查看每条3个实际时间点截图；不据此声称完整原速视听或用户认可。",
+        "videos": "在线播放原链接；未在本机保存原视频副本。",
+        "interpretation_boundary": "第九轮用户补充优先：动作与外观设计都喜欢，色彩另行确认；原第八轮答案留作原始记录，不作为当前否定整体外观的依据。",
+        "later_clarification": {
+          "round": 9,
+          "raw_answer": "我都喜欢这些动作，外观的话也喜欢，只是色彩不太喜欢的",
+          "effect": "此前M/O只喜欢动作的选项不能继续解释为否定整体外观设计；应分别记录动作、设计与配色。",
+          "color_scope": "尚待确认具体哪些配色不喜欢，不能将全部色彩直接判为否定。"
+        },
+        "round10_resolution": {
+          "answer": "四例的包装配色都统一为我之前确定的黑紫方向",
+          "scope": [
+            "L",
+            "M",
+            "N",
+            "O"
+          ],
+          "latest_preference": "动作与外观设计可保留；包装配色统一为既定黑紫方向。"
+        }
+      }
+    },
+    {
+      "record": "round9/questions.json",
+      "data": {
+        "purpose": "核对已认可与仅认可动作的外观差异；不重新判定已有答案",
+        "image": "外观偏好对照.jpg",
+        "hypothesis_unconfirmed": "L/N中物体或素材成为视觉中心、文字辅助可能是共同偏好；不是已确认规则。",
+        "question": "对比 L、N（外观也喜欢）和 M、O（只喜欢动作），哪一点最接近你判断外观的关键？如果是多项共同作用，可以直接写组合。",
+        "options": [
+          "主体突出：物体或图片是主角，文字辅助，第一眼知道看哪里",
+          "质感到位：物体、窗口、光影和细节的精致程度更重要",
+          "整体构图：大小比例、位置、留白和色彩搭配更重要",
+          "L、N 各有喜欢的原因，不能用上面某一条概括"
+        ],
+        "answer": "我都喜欢这些动作，外观的话也喜欢，只是色彩不太喜欢的",
+        "formal_skill_modified": false,
+        "interpretation": "纠正上一轮把整体外观与色彩合并判断的方式：当前L/M/N/O对照中的动作与外观设计可以保留；具体不喜欢哪些配色及统一方式待核对。",
+        "scope": "先适用于当前L/M/N/O对照；不自动推翻F/G/H的明确否定，也不扩展到未展示的整库。",
+        "hypothesis_status": "此前主体突出等共性推测未得到确认，不提升为已确认偏好。",
+        "round10_resolution": {
+          "answer": "四例的包装配色都统一为我之前确定的黑紫方向",
+          "scope": [
+            "L",
+            "M",
+            "N",
+            "O"
+          ],
+          "latest_preference": "动作与外观设计可保留；包装配色统一为既定黑紫方向。"
+        }
+      }
+    }
+  ],
+  "later_scope_clarification": {
+    "quote": "我觉得素材库里面的那些动作都是我很喜欢的，所以不要以偏概全的设置来",
+    "meaning": "整库动作保持开放；问卷个例不构成动作白名单或同类动作禁用。"
+  },
+  "latest_decisions": {
+    "wrapper": "以三条 Fred 原片已确认的颜色关系与 UI 质感为准，详见 aesthetic-preferences.md；不由色名推导固定背景。",
+    "motion_library": "整库动作均属用户喜欢的范围，按内容选用；实现可用性另查",
+    "reference_dimensions": "动作/外观设计/配色分别判断；L/M/N/O设计和动作可保留，整库动作开放；颜色与质感按最新三原片理解。",
+    "real_material_color": "保留原色或按真实内容重绘均可，按画面效果决定",
+    "missing_material": "选择讲得清的实拍局部、UI示意、AIGC或人物，不强行配图",
+    "construction": "复用整段或组合动作均可，以好看、讲清楚为准",
+    "opening": "有开头人物原片保留完整全景；只在实际空白展开特效，避开脸、身体、手势与字幕。无开头人物可用本期全屏UI；不固定右侧坐标。",
+    "aigc": "认可的柔和手绘；参考限定画风，不固定人物或场景",
+    "sound": "音乐存在感明显、跟节拍，音效更丰富；重点留稳看清",
+    "visual_implementation_status": "最新用户确认方木十款Agent正文动效、颜色与UI质感，并授权实际源码升级。旧读书样片明确只作参考且低于要求，不作为质量基线。新输出不自动认可。"
+  },
+  "production_scope": "最新用户授权直接更新正式安装；此前候选等待范围保留在历史事件中。",
+  "candidate_visual_correction": {
+    "date": "2026-10-21",
+    "status": "visual_direction_rejected_as_reported_by_peer",
+    "source_thread": "01a15cb5-4ea7-7482-8920-40b4cf6550e8",
+    "provenance": "旁聊转达的直接用户纠正；该临时聊天不支持读取历史，未独立复读原会话。",
+    "reported_user_quotes": [
+      "这不我之前讨论那么多，我不喜欢这种风格的，怎么还做这种的？",
+      "我不是说黑紫色，你始终不理解我到底喜欢的是什么颜色吗？",
+      "可以，直接操作，不要让主页面继续错误下去"
+    ],
+    "action": "停止当前视觉方向的再渲染和扩产；保留素材、源码与功能修复；正式 Skill 不更新；先做实际参考与候选的画面对照。",
+    "interpretation_boundary": "不改写原问卷答案，不据此猜测新色板或排除整类动作；候选实际配色未获认可。"
+  },
+  "color_material_confirmation": {
+    "date": "2026-10-21",
+    "source": "direct user message in this chat",
+    "user_quote": "对的，目前颜色和质感方面你清楚的了，这样以后调用就希望你不要老是出错误的了",
+    "scope": "确认对三条 Fred Talk 原片颜色关系与 UI 质感的理解；不代表认可此前失败候选样片，不授权跳过实际样片认可而更新正式 Skill。",
+    "primary_reference_videos": [
+      "Gemini4 Argon终于发布了，到底是夯是拉？！",
+      "一周 AI 大事，这周居然发生了这个？！",
+      "不用巨资买显卡了，我自己部署了开源版 JEV"
+    ],
+    "observation_record": "E:/ui/aesthetic-interview/fred-sequence-study/三条原片-颜色与UI质感.md",
+    "canonical_preference_file": "references/aesthetic-preferences.md",
+    "principles": [
+      "黑白灰建立有分量的明暗结构，底色随场景变化",
+      "紫色用于重点，暗底浅紫与亮底较浓紫分别处理",
+      "实体边缘、适当圆角、柔和投影、局部厚度与遮挡形成质感",
+      "粗字、大数字、主体尺寸与虚实组织重点，布局随内容变化",
+      "真实素材可保留原色，准确重绘也可，按画面决定",
+      "整库动作保持开放，不由这三条原片缩小动作范围"
+    ],
+    "candidate_video_approved": false,
+    "formal_skill_updated": false
+  },
+  "sample_v2_revision_feedback": {
+    "source": "direct user message",
+    "user_quote": "修改点：1.开头几s人物一般都是全屏，然后素材直接在人物的右边空白处展示2.素材看着很廉价，需要稍微进行一个升级质感，3动作ae感不足4.颜色看着不是很好看，没有那种质感",
+    "sample_approved": false,
+    "formal_promoted": false,
+    "revision_sample": "E:\\ui\\fusion-release-work\\interview-candidate\\sample-v2\\读书Skill-人物开场与质感修订-45秒.mp4"
+  },
+  "formal_upgrade_authorization": {
+    "date": "2026-10-21",
+    "source": "direct user message in this chat",
+    "user_quote": "目前来说，开头再好点儿就好了，目前skill相对比较稳定了，再添加开头感觉和质感，直接升级整顿skill吧",
+    "scope": "认可当前相对稳定，授权直接升级正式 Skill 并继续精修开头；不声称精修输出或未来成片全部获审美认可。",
+    "version": "2026.10.21.1",
+    "previous_sample": "E:\\ui\\fusion-release-work\\interview-candidate\\sample-v2\\读书Skill-人物开场与质感修订-45秒.mp4",
+    "refined_sample": "E:\\ui\\fusion-release-work\\interview-candidate\\sample-v2\\读书Skill-开头精修-45秒.mp4",
+    "formal_promoted": true
+  },
+  "latest_upgrade_record": "references/evidence/agent-editorial-upgrade-20261021.json"
+}

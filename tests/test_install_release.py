@@ -1,6 +1,8 @@
 """Exercise real portable installation, safe updates and ZIP payload selection."""
 from pathlib import Path
 import importlib.util
+import base64
+import hashlib
 import json
 import shutil
 import subprocess
@@ -29,26 +31,60 @@ def write(root, relative, data='fixture'):
 def fixture(root):
     root.mkdir(parents=True)
     for relative in ['install.py', 'scripts/release_manifest.py', 'scripts/package.py',
-                     'scripts/verify_package.py']:
+                     'scripts/verify_package.py', 'scripts/scene_builder.py', 'scripts/scene_plan.py',
+                     'scripts/style_registry.py', 'scripts/fredtalk_library.py']:
         destination = root / relative
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(ROOT / relative, destination)
-    for relative in ['SKILL.md', 'agents/openai.yaml', 'scripts/ui.py', 'assets/core/source.js']:
+    for relative in ['SKILL.md', 'agents/openai.yaml', 'scripts/ui.py', 'assets/core/source.js',
+                     'references/library.md', 'references/aesthetic-preferences.md']:
         write(root, relative)
     write(root, 'references/resource-registry.json', {'modules': [
         {'id': 'core', 'path': '.', 'required': ['assets/core/source.js'],
          'commands': {'ui': 'scripts/ui.py'}, 'required_for_install': True},
         {'id': 'optional-private', 'path': 'assets/local-only',
          'required': ['missing.json'], 'required_for_install': False}]})
-    anchors = [{'frame': f'assets/fred/anchor-{i}.jpg'} for i in range(3)]
+    # Small real images and one hash-verified source closure exercise the actual
+    # release checks without copying the production media library into each test.
+    pixel = base64.b64decode(
+        'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+a4zsAAAAASUVORK5CYII=')
+    anchors = [{'frame': f'assets/fred/anchor-{i}.png'} for i in range(3)]
     for row in anchors:
         write(root, row['frame'])
+        (root / row['frame']).write_bytes(pixel)
     write(root, 'references/evidence/fred-reference-approved-20261015.json', {
         'direction_contract': {'visual_calibration': {'anchors': anchors}}})
+    direction_path = 'references/evidence/fred-default-correction-20261020.json'
+    direction_id = 'fred-talk-default-20261020'
+    write(root, direction_path, {
+        'id': direction_id, 'status': 'user_selected_reference_direction',
+        'direction_contract': {'summary': 'Fixture direction',
+            'visual_calibration': {'view_before_design': True, 'anchors': anchors}}})
+    write(root, 'references/evidence/library-entry-correction-20261020.json', {})
+    write(root, 'references/profiles/registry.json', {
+        'schema_version': 1, 'profiles': [], 'unified_production': {
+            'enabled': True, 'profile_id': 'user-ui', 'direction_source': 'fred-talk-default',
+            'guidance_path': 'references/aesthetic-preferences.md',
+            'default_direction': {'id': direction_id, 'guidance_path': direction_path}}})
+    library = 'assets/fredtalk-library'
+    code = b'export const fixture = 1;\n'
+    blob = hashlib.sha1(b'blob ' + str(len(code)).encode('ascii') + b'\0' + code).hexdigest()
+    blob_path = library + '/blobs/' + blob + '.js'
+    write(root, blob_path)
+    (root / blob_path).write_bytes(code)
+    source = {'upstream_path': 'projects/fixture/src/example.js', 'blob_path': blob_path,
+              'git_blob': blob, 'sha256': hashlib.sha256(code).hexdigest(), 'bytes': len(code)}
+    write(root, library + '/catalog.json', {'schema_version': 1, 'items': [{
+        'id': 'fredtalk:fixture', 'reference_id': 'fixture', 'source_access': 'public',
+        'archived': False, 'sources': [source], 'closure': [source]}]})
+    for name in ['index.html', 'LICENSE', 'THIRD_PARTY_NOTICES.md', 'README.md',
+                 'upstream-license-scope.md']:
+        write(root, library + '/' + name)
     characters = ['assets/girl/identity-1.png', 'assets/girl/identity-2.png']
     scenes = [{'gallery_asset_id': str(i), 'image_path': f'assets/girl/scene-{i}.png'} for i in range(8)]
     for name in characters + [row['image_path'] for row in scenes]:
         write(root, name)
+        (root / name).write_bytes(pixel)
     write(root, 'references/aigc-assets.json', {'style_sets': [{
         'id': 'qiuzhi-girl-painterly', 'character_references': characters,
         'approval': {'approved_asset_ids': [str(i) for i in range(8)]}, 'assets': scenes}]})

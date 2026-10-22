@@ -6,6 +6,7 @@ from contextlib import redirect_stdout
 from pathlib import Path
 import tempfile
 import unittest
+import subprocess
 from unittest.mock import patch
 
 import director
@@ -13,6 +14,30 @@ import style_registry
 
 
 class DirectorTests(unittest.TestCase):
+    def test_presenter_source_preserves_embedded_audio_without_claiming_alignment(self):
+        media = self.root / 'presenter.mp4'
+        media.write_bytes(b'fixture')
+        probe = {'format': {'duration': '12.5'}, 'streams': [
+            {'index': 0, 'codec_type': 'video', 'width': 1920, 'height': 1080},
+            {'index': 1, 'codec_type': 'audio', 'sample_rate': '48000'}]}
+        with patch.object(director.shutil, 'which', return_value='ffprobe'), patch.object(director.subprocess, 'run', return_value=subprocess.CompletedProcess([], 0, json.dumps(probe), '')):
+            result = director.presenter_context(media)
+        self.assertEqual(result['audio_master']['path'], str(media.resolve()))
+        self.assertEqual(result['audio_master']['stream_index'], 1)
+        self.assertEqual(result['audio_master']['playback_rate'], 1)
+        self.assertEqual(result['alignment_status'], 'not-yet-aligned')
+        self.assertFalse(result['full_realtime_av_review'])
+        self.assertEqual(result['sha256'], hashlib.sha256(media.read_bytes()).hexdigest())
+
+    def test_presenter_source_rejects_missing_audio_or_video(self):
+        media = self.root / 'source.mp4'
+        media.write_bytes(b'fixture')
+        for stream, message in (({'index': 0, 'codec_type': 'video'}, 'no embedded voice'),
+                                ({'index': 0, 'codec_type': 'audio'}, 'real video stream')):
+            with self.subTest(stream=stream), patch.object(director.shutil, 'which', return_value='ffprobe'), patch.object(director.subprocess, 'run', return_value=subprocess.CompletedProcess([], 0, json.dumps({'format': {'duration': '12'}, 'streams': [stream]}), '')):
+                with self.assertRaisesRegex(ValueError, message):
+                    director.presenter_context(media)
+
     def test_production_cli_distinguishes_structure_diagnostic_from_preflight(self):
         report = {'plan_valid': True, 'render_ready': True, 'current_style_ready': True, 'production_ready': False}
         for flag, expected in (([], 0), (['--production'], 1), (['--require-production'], 1)):
@@ -100,6 +125,74 @@ class DirectorTests(unittest.TestCase):
         self.assertFalse(report['production_ready'], report)
         self.assertFalse(report['selection_ready'], report)
         self.assertIn('not rendered-style or aesthetic approval', report['style_readiness_scope'])
+
+    def enable_unified(self):
+        self.bind_current_style()
+        registry_path = self.root / style_registry.REGISTRY
+        registry = director.load_json(registry_path)
+        registry['unified_production'] = {'enabled': True, 'profile_id': 'user-ui',
+            'guidance_path': 'references/library.md', 'account_visual_routing': False,
+            'whole_film_recommendations': False}
+        registry_path.write_text(json.dumps(registry), encoding='utf-8')
+        (self.root / 'references/library.md').write_text('Current effect-library design source', encoding='utf-8')
+
+    def test_unified_fixture_without_default_direction_warns_on_historical_binding(self):
+        self.enable_unified()
+        (self.root / 'direction.json').unlink()
+        (self.root / 'anchor.png').unlink()
+        self.plan['style'].update(profile='missing-old-account.md', baseline='missing-old-whole-film.mp4', applied=True)
+        report = self.run_check()
+        self.assertTrue(report['plan_valid'], report)
+        self.assertTrue(report['current_style_ready'], report)
+        self.assertTrue(any('historical binding is not current' in value for value in report['warnings']))
+        self.assertEqual(report['assessment']['visual_style'], 'not-assessed')
+        self.assertEqual(report['assessment']['user_approval'], 'not-assessed')
+        self.assertFalse(report['production_ready'])  # Selection/runtime evidence is still absent.
+
+    def test_unified_current_binding_detects_changed_library(self):
+        self.enable_unified()
+        self.plan['style']['binding'] = style_registry.current_binding(style_registry.resolve(self.root, root=self.root))
+        self.assertTrue(self.run_check()['current_style_ready'])
+        (self.root / 'references/library.md').write_text('Updated current library', encoding='utf-8')
+        report = self.run_check()
+        self.assertFalse(report['current_style_ready'])
+        self.assertTrue(any('effect-library' in value and 'stale' in value for value in report['errors']))
+
+    def test_shared_default_requires_current_binding_and_never_grants_visual_approval(self):
+        self.enable_unified()
+        registry_path = self.root / style_registry.REGISTRY
+        registry = director.load_json(registry_path)
+        registry['unified_production'].update(
+            default_direction={'id': 'current', 'guidance_path': 'direction.json'},
+            direction_source='fred-talk-default')
+        registry_path.write_text(json.dumps(registry), encoding='utf-8')
+        for binding in (self.plan['style']['binding'], None):
+            self.plan['style']['binding'] = binding
+            report = self.run_check()
+            self.assertFalse(report['current_style_ready'])
+            self.assertTrue(any('must be bound from direct prepare' in error for error in report['errors']))
+        self.plan['style']['binding'] = style_registry.current_binding(style_registry.resolve(self.root, root=self.root))
+        report = self.run_check()
+        self.assertTrue(report['current_style_ready'], report)
+        self.assertEqual(report['assessment']['visual_style'], 'not-assessed')
+
+    def test_unified_current_resources_and_actual_media_still_fail_when_missing(self):
+        self.enable_unified()
+        (self.root / 'references/library.md').unlink()
+        self.assertFalse(self.run_check()['current_style_ready'])
+        (self.root / 'references/library.md').write_text('Current library', encoding='utf-8')
+        self.plan['segments'][0]['assets'] = [{'kind': 'real', 'status': 'ready', 'path': 'missing-current-video.mp4',
+            'purpose': 'Current narration footage'}]
+        self.audio.unlink()
+        report = self.run_check()
+        self.assertTrue(any('missing-current-video.mp4' in value for value in report['errors']))
+        self.assertTrue(any('timing.audio_source.path' in value for value in report['errors']))
+
+    def test_unified_without_legacy_binding_can_use_current_library(self):
+        self.enable_unified()
+        del self.plan['style_contract_version']
+        del self.plan['style']['binding']
+        self.assertTrue(self.run_check()['current_style_ready'])
 
     def test_legacy_plan_cannot_select_a_globally_rejected_baseline(self):
         self.bind_current_style()
@@ -487,6 +580,86 @@ class DirectorTests(unittest.TestCase):
         self.assertEqual(self.script.read_bytes(), original)
         second = director.prepare(self.script, folder, root=self.root)
         self.assertEqual(len(second['unchanged']), 2)
+
+    def test_prepare_exposes_all_complete_scenes_before_primitives_without_blank_starter_default(self):
+        rows = [{'id': f'adu:anim3:s{i:02d}', 'pack': 'anim3', 'scene_id': f's{i:02d}',
+                 'title': f'complete scene {i}', 'role': 'source scene', 'native_duration_seconds': 2,
+                 'source': {'path': 'source.html', 'selector': f's{i:02d}'},
+                 'manifest': {'path': 'manifest.json', 'sha256': 'recorded-hash'},
+                 'preview': {'entry': 'preview.html', 'start': i, 'end': i + 2},
+                 'build_status': 'requires-current-narration-bindings', 'runtime_verified_this_run': False}
+                for i in range(1, 22)]
+        directory = {'scene_count': 21, 'scenes': rows,
+                     'packs': [{'id': 'anim3', 'title': 'source pack', 'manifest': {'path': 'manifest.json'}}],
+                     'commands': dict(director.selection.SCENE_COMMANDS), 'runtime_verified_this_run': False}
+        folder = self.root / 'complete-scene-project'
+        with patch.object(director.selection, 'scene_directory', return_value=directory):
+            director.prepare(self.script, folder, root=self.root)
+        context = director.load_json(folder / 'director-context.json')
+        self.assertEqual(directory, context['production']['complete_scenes'])
+        self.assertIsNone(context['style']['profile'])
+        self.assertEqual('先看关系。\r\n再看结果。', context['source']['text'])
+        brief = (folder / 'director-brief.md').read_text(encoding='utf-8')
+        self.assertIn('complete scene 21', brief)
+        self.assertIn('ui.py scene scaffold --pack anim3 --scenes s01,s04', brief)
+        self.assertIn('ui.py scene build --plan project/director-plan.json --presenter input.mp4', brief)
+        self.assertNotIn('ui.py new --engine', brief)
+        self.assertLess(brief.index('## 完整场景构建入口'), brief.index('## 按这条路径制作'))
+        self.assertIn('F/X 方法、配方和 Fred 源码', brief)
+        self.assertIn('跨库组合仍须符合当前方向', brief)
+        self.assertEqual({'director-context.json', 'director-brief.md'}, {p.name for p in folder.iterdir()})
+
+    def test_production_context_keeps_sample_source_and_reuse_scope_together(self):
+        code = {'path': str(self.impl), 'exists': True, 'reuse': 'retain object identity'}
+        resolution = {'confirmed_baselines': [
+            {'id': 'chosen-account/approved-opening', 'path': str(self.root / 'opening.mp4'),
+             'exists': False, 'scope': 'opening only', 'current_usage': 'motion only; current UI governs',
+             'source_range': [0, 5], 'boundaries': ['no whole-film approval'], 'implementations': [code]}],
+            'available_profiles': [{'confirmed_baselines': [{'id': 'unrelated-account'}]}]}
+        context = director.production_context(resolution, self.root)
+        self.assertEqual(len(context['approved_examples']), 1)
+        sample = context['approved_examples'][0]
+        self.assertEqual(sample['reuse_scope'], 'motion only; current UI governs')
+        self.assertEqual(sample['implementations'], [code])
+        self.assertEqual(sample['boundaries'], ['no whole-film approval'])
+        self.assertFalse(sample['preview']['exists'])
+        self.assertNotIn('unrelated-account', json.dumps(context))
+        self.assertTrue(context['production_starter']['path'].endswith('README.md'))
+
+    def test_prepare_limits_details_but_keeps_unmatched_and_negative_method_discovery(self):
+        folder = self.root / 'project'
+        study = director.source_study.directing_context(self.root)
+        study.update(count=3, methods=[{'id': 'chosen', 'implementation': {'api': 'actual API'}},
+                                       {'id': 'other', 'semantic_use': '完整事件而非局部词语'},
+                                       {'id': 'negative', 'polarity': 'negative'}])
+        full_library = {'entry_count': 2, 'counts_by_kind': {'reference': 1, 'sample': 1},
+                        'entries': [{'id': 'unmatched-original', 'kind': 'reference'},
+                                    {'id': 'historical-motion', 'kind': 'sample'}],
+                        'truncated': False, 'list_command': 'ui.py select --list-library'}
+        candidates = {'segments': [{'methods': [{'id': 'chosen'}]}], 'library_directory': full_library}
+        with patch.object(director.source_study, 'directing_context', return_value=study), \
+             patch.object(director.selection, 'build_selection_context', return_value=candidates), \
+             patch.object(director.selection, 'render_selection_brief', return_value='candidate brief'):
+            director.prepare(self.script, folder, root=self.root)
+        context = director.load_json(folder / 'director-context.json')
+        self.assertEqual(context['source_study']['catalog_count'], 3)
+        self.assertEqual(context['source_study']['count'], 1)
+        self.assertEqual(context['source_study']['methods'][0]['implementation']['api'], 'actual API')
+        self.assertEqual(context['source_study']['catalog'], study['catalog'])
+        directory = {row['id']: row for row in context['source_study']['method_directory']}
+        self.assertEqual(set(directory), {'chosen', 'other', 'negative'})
+        self.assertEqual(directory['other']['semantic_use'], '完整事件而非局部词语')
+        self.assertEqual(directory['negative']['usage'], 'avoid')
+        self.assertNotIn('implementation', directory['chosen'])
+        self.assertIn('on_demand', context['production'])
+        self.assertEqual(len(context['required_reading']), 2)
+        self.assertEqual(full_library, context['selection']['library_directory'])
+        brief = (folder / 'director-brief.md').read_text(encoding='utf-8')
+        self.assertIn('API', brief)
+        self.assertIn('完整保留 2 项', brief)
+        self.assertIn('selection.library_directory.entries', brief)
+        self.assertNotIn('先看 context.production.complete_scenes', brief)
+        self.assertLess(brief.index('## 完整效果库入口'), brief.index('## 完整场景构建入口'))
 
     def test_prepare_requires_force_and_never_overwrites_unowned_file(self):
         folder = self.root / 'project'

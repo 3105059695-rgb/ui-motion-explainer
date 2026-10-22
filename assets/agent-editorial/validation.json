@@ -1,0 +1,49 @@
+{
+  "version": "2026.10.21.2",
+  "status": "technical-integration-passed",
+  "tested_from": "installed formal scripts/ui.py new --engine fusion --custom-layout --canvas-story with a new narration",
+  "actual_runtime": {
+    "sdk_copied_and_loaded": true,
+    "timeline_segments_consumed": true,
+    "scenes_executed": [
+      "extract",
+      "summarize",
+      "focus"
+    ],
+    "frames": 150,
+    "fps": 25,
+    "duration_seconds": 6,
+    "audio": "silent technical probe, no narration alignment claimed",
+    "decode": "passed",
+    "protected_pixels": {
+      "different": 0,
+      "total": 1572000
+    }
+  },
+  "test_scope": "101 director/production/selection checks: 99 passed initially; 2 affected checks passed after availability routing and new-family count correction. Worker reports 13 starter regressions plus JS timing/protection checks passed.",
+  "preservation": {
+    "existing_catalog_ids_removed": {
+      "semantic_routes": [],
+      "capabilities": [],
+      "families": [],
+      "software_presets": [],
+      "reference_cases": [],
+      "sample_records": []
+    },
+    "old_manifest_paths_missing": [],
+    "original_episode_sources_verified": 6
+  },
+  "evidence": {
+    "project": "local-only/agent-editorial-upgrade-20261021/probe",
+    "video": "local-only/agent-editorial-upgrade-20261021/check/runtime-probe.mp4",
+    "runtime_trace": "local-only/agent-editorial-upgrade-20261021/check/runtime-check.json",
+    "backup": "local-only/agent-editorial-upgrade-20261021/backup",
+    "video_resource_id": "validation:agent-editorial-20261021:video",
+    "runtime_trace_resource_id": "validation:agent-editorial-20261021:runtime-trace",
+    "project_entry_resource_id": "validation:agent-editorial-20261021:project-entry",
+    "backup_entry_resource_id": "validation:agent-editorial-20261021:backup-entry",
+    "distribution_note": "Technical probe files and backup are local-only historical evidence, not included release assets. File resource IDs resolve through references/resources.local.json; project and backup IDs identify index.html and SKILL.md inside their original directories."
+  },
+  "viewing": "Two rendered states inspected; not a full normal-speed A/V viewing or creative acceptance. Internal probe is not a new quality baseline.",
+  "production_render_gate": "Not exercised by this silent probe; existing production gate unchanged; no demo mode used to claim a finished production."
+}

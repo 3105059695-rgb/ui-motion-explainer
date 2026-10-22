@@ -14,42 +14,57 @@ import director
 @unittest.skipUnless(os.environ.get('UI_MOTION_LOCAL_ROUTES') == '1',
                      'Optional author-machine integration: set UI_MOTION_LOCAL_ROUTES=1')
 class LocalRoutes(unittest.TestCase):
-    def test_unnamed_ui_uses_recorded_a01_without_broadening_approval(self):
+    def test_unnamed_ui_uses_library_while_a01_history_keeps_original_approval_scope(self):
         result = styles.resolve('E:/ui')
         self.assertEqual(result['status'], 'resolved')
         self.assertEqual(result['resolved_profile'], 'user-ui')
-        self.assertEqual([b['id'] for b in result['confirmed_baselines']],
-                         ['A01', 'user-ui/girl-agent-sample-20261015'])
-        baseline = result['confirmed_baselines'][0]
+        self.assertEqual(result['confirmed_baselines'], [])
+        self.assertEqual([d['id'] for d in result['reference_directions']], ['fred-talk-default-20261020'])
+        self.assertEqual(Path(result['guidance']['path']).name, 'aesthetic-preferences.md')
+        history = next(p for p in styles.listing()['available_profiles'] if p['id'] == 'user-ui')
+        baseline = next(p for p in history['confirmed_baselines'] if p['id'] == 'A01')
         self.assertTrue(baseline['exists'])
         self.assertEqual(baseline['quote'], '对对对，我就想要这种风格的')
         self.assertEqual(baseline['audio_review'], 'not_reliably_auditioned')
         self.assertFalse(baseline['new_projects_approved'])
+        self.assertEqual(Path(baseline['source']['path']).name, 'reference-evidence.md')
+        self.assertIn(baseline['quote'], Path(baseline['source']['path']).read_text(encoding='utf-8-sig'))
         self.assertTrue(any(Path(x['path']).name == 'index.html' and x['exists']
                             for x in baseline['implementations']))
 
-    def test_unregistered_directory_stays_unresolved(self):
+    def test_unregistered_directory_uses_packaged_default_without_account_inheritance(self):
         with tempfile.TemporaryDirectory(prefix='style-registry-') as folder:
             result = styles.resolve(folder)
-        self.assertEqual(result['status'], 'unresolved')
-        self.assertIsNone(result['resolved_profile'])
-        self.assertEqual({p['id'] for p in result['available_profiles']}, {'user-ui', 'adiao', 'fangmu'})
+            self.assertEqual(result['status'], 'resolved')
+            self.assertEqual(result['resolved_profile'], 'user-ui')
+            self.assertEqual(result['selection_source'], 'unified-production')
+            self.assertEqual(result['confirmed_baselines'], [])
+            self.assertEqual(result['method_examples'], [])
+            registry = styles.load_registry()
+            registry.pop('default_profile', None)
+            unresolved = styles.resolve(folder, registry=registry)
+        self.assertEqual(unresolved['status'], 'resolved')
+        self.assertEqual(unresolved['selection_source'], 'unified-production')
+        self.assertEqual(unresolved['available_profiles'], [])
 
-    def test_real_account_roots_and_current_indices(self):
+    def test_real_account_roots_use_library_and_history_is_explicit(self):
+        historical = {p['id']: p for p in styles.listing()['available_profiles']}
         for account, path in [('adiao', 'E:/阿刁'), ('fangmu', 'E:/方木')]:
             with self.subTest(account=account):
                 result = styles.resolve(path)
-                self.assertEqual(result['resolved_profile'], account)
+                self.assertEqual(result['resolved_profile'], 'user-ui')
                 self.assertTrue(Path(result['profile_path']).is_file())
-                self.assertTrue(result['confirmed_baselines'])
+                self.assertEqual(result['confirmed_baselines'], [])
+                self.assertEqual([d['id'] for d in result['reference_directions']], ['fred-talk-default-20261020'])
                 self.assertTrue(result['requires_visual_comparison'])
-                for baseline in result['confirmed_baselines']:
+                self.assertTrue(historical[account]['confirmed_baselines'])
+                for baseline in historical[account]['confirmed_baselines']:
                     self.assertEqual(baseline['exists'], Path(baseline['path']).is_file())
                     self.assertTrue(baseline['source']['exists'])
                     self.assertTrue(baseline['implementations'])
 
     def test_fangmu_pending_outputs_not_confirmed(self):
-        result = styles.resolve('E:/方木')
+        result = next(p for p in styles.listing()['available_profiles'] if p['id'] == 'fangmu')
         confirmed = {s['id']: s for s in result['confirmed_baselines']}
         ids = set(confirmed)
         self.assertIn('opening-v5', ids)
@@ -57,8 +72,9 @@ class LocalRoutes(unittest.TestCase):
         self.assertNotIn('full-v3', ids)
         self.assertNotIn('material-captions-v3', ids)
 
+        # Only explicit history lookup opens the machine-local account overlay.
         # V7's corrected opening was later accepted; its older trials were not.
-        registry = styles.read_json(styles.ROOT / styles.REGISTRY)
+        registry = styles.load_registry(include_historical=True)
         config = next(p for p in registry['profiles'] if p['id'] == 'fangmu')
         spec = next(s for s in config['sources'] if s['kind'] == 'asset-map')
         index_path = styles.local_path(spec['path'], styles.ROOT)
@@ -93,11 +109,10 @@ class LocalRoutes(unittest.TestCase):
     def test_full_transfer_never_becomes_ui_baseline(self):
         result = styles.resolve('E:/ui/skill-evolution/full-transfer-sample')
         self.assertEqual(result['resolved_profile'], 'user-ui')
-        self.assertEqual([b['id'] for b in result['confirmed_baselines']],
-                         ['A01', 'user-ui/girl-agent-sample-20261015'])
+        self.assertEqual(result['confirmed_baselines'], [])
         self.assertTrue(any('full-transfer-sample' in x['path'] for x in result['excluded_baselines']))
         explicit = styles.resolve('E:/ui/skill-evolution/full-transfer-sample', 'fangmu')
-        self.assertEqual(explicit['resolved_profile'], 'fangmu')
+        self.assertEqual(explicit['resolved_profile'], 'user-ui')
         self.assertFalse(any('full-transfer-sample' in x['path'] for x in explicit['confirmed_baselines']))
 
     def test_rejected_ui_is_reported_in_new_contexts_with_scope_preserved(self):
@@ -116,7 +131,7 @@ class LocalRoutes(unittest.TestCase):
             source = project / 'narration.txt'
             source.write_text('同一份资料，继续更新。', encoding='utf-8')
             before = styles.resolve(project)
-            self.assertEqual(before['selection_source'], 'registered-project-root')
+            self.assertEqual(before['selection_source'], 'unified-production')
             first = director.prepare(source, project)
             self.assertEqual(len(first['created_or_updated']), 2)
             self.assertEqual(styles.resolve(project), before)
@@ -131,14 +146,14 @@ class LocalRoutes(unittest.TestCase):
                                           'style': {'profile': 'fangmu'}}), encoding='utf-8')
             self.assertEqual(styles.resolve(project)['resolved_profile'], 'user-ui')
             (project / 'director-plan.json').write_text(json.dumps({'style': {'profile': 'adiao'}}), encoding='utf-8')
-            self.assertEqual(styles.resolve(project)['resolved_profile'], 'adiao')
+            self.assertEqual(styles.resolve(project)['resolved_profile'], 'user-ui')
 
-    def test_explicit_user_ui_selects_existing_evidence_outside_ui_folder(self):
+    def test_explicit_legacy_profile_hint_does_not_select_whole_films_outside_ui_folder(self):
         result = styles.resolve('E:/方木', 'user-ui')
         self.assertEqual(result['resolved_profile'], 'user-ui')
-        self.assertEqual(result['selection_source'], 'explicit-profile')
-        self.assertEqual([b['id'] for b in result['confirmed_baselines']],
-                         ['A01', 'user-ui/girl-agent-sample-20261015'])
+        self.assertEqual(result['selection_source'], 'unified-production')
+        self.assertEqual(result['confirmed_baselines'], [])
+        self.assertEqual(result['historical_profile_hints'][0]['value'], 'user-ui')
 
     def test_reference_contract_is_loaded_separately_from_approved_reproductions(self):
         with tempfile.TemporaryDirectory(prefix='reference-direction-fixture-') as folder:
@@ -180,46 +195,52 @@ class LocalRoutes(unittest.TestCase):
             self.assertFalse(missing['reference_directions'][0]['guidance_loaded'])
             self.assertTrue(missing['missing'])
 
-    def test_cross_directory_prepare_carries_fred_rules_and_reading_without_new_approval(self):
-        with tempfile.TemporaryDirectory(prefix='fred-cross-directory-') as folder:
+    def test_cross_directory_prepare_carries_library_and_keeps_original_source(self):
+        with tempfile.TemporaryDirectory(prefix='unified-cross-directory-') as folder:
             project = Path(folder)
             source = project / '口播.txt'
             source.write_text('先看结果，再把两个版本放在一起。', encoding='utf-8')
-            self.assertEqual(styles.resolve(project)['status'], 'unresolved')
+            default = styles.resolve(project)
+            self.assertEqual(default['resolved_profile'], 'user-ui')
+            self.assertEqual(default['selection_source'], 'unified-production')
             report = director.prepare(source, project, profile='user-ui')
             context = director.load_json(project / 'director-context.json')
             self.assertFalse(report['plan_authored'])
             self.assertFalse(report['generation_submitted'])
             self.assertEqual(context['style']['resolution']['resolved_profile'], 'user-ui')
-            self.assertEqual([b['id'] for b in context['style']['resolution']['confirmed_baselines']],
-                             ['A01', 'user-ui/girl-agent-sample-20261015'])
-            direction = next(d for d in context['style']['reference_directions']
-                             if d['id'] == 'fred-explainer-20261015')
-            self.assertTrue(direction['guidance_loaded'])
-            evidence = styles.read_json(direction['guidance_source']['path'])
-            self.assertEqual(direction['direction_contract'], evidence['direction_contract'])
+            self.assertEqual(context['style']['resolution']['selection_source'], 'unified-production')
+            self.assertEqual(context['style']['resolution']['confirmed_baselines'], [])
+            self.assertEqual([d['id'] for d in context['style']['reference_directions']], ['fred-talk-default-20261020'])
             reading = {Path(p['path']).name for p in context['required_reading']}
-            self.assertTrue({'user-ui.md', 'fred-ui-direction.md'}.issubset(reading))
-            self.assertTrue(any(s['id'] == 'fred-argon' for s in context['source_study']['sources']))
-            self.assertIn(direction['direction_contract']['summary'],
-                          (project / 'director-brief.md').read_text(encoding='utf-8'))
+            self.assertIn('library.md', reading)
+            self.assertIn('fred-ui-direction.md', reading)
+            self.assertEqual(context['source']['text'], source.read_text(encoding='utf-8'))
+            self.assertEqual(context['production']['approved_examples'], [])
+            self.assertIn('主要设计来源', (project / 'director-brief.md').read_text(encoding='utf-8'))
 
-    def test_fred_body_ui_is_shared_without_merging_account_identity(self):
+    def test_fred_default_is_kept_for_every_legacy_account_hint(self):
         user = styles.resolve('E:/ui')
-        self.assertEqual([d['id'] for d in user['reference_directions']], ['fred-explainer-20261015'])
+        self.assertEqual([d['id'] for d in user['reference_directions']], ['fred-talk-default-20261020'])
         for account in ('adiao', 'fangmu'):
             selected = styles.resolve('E:/ui', account)
-            self.assertEqual(selected['resolved_profile'], account)
-            self.assertEqual([d['id'] for d in selected['reference_directions']], ['fred-explainer-20261015'])
-            self.assertTrue(any(Path(p['path']).name == 'fred-ui-direction.md'
-                                 for p in selected['required_reading']))
+            self.assertEqual(selected['resolved_profile'], 'user-ui')
+            self.assertEqual(selected['confirmed_baselines'], [])
+            self.assertEqual(selected['method_examples'], [])
+            self.assertEqual([d['id'] for d in selected['reference_directions']], ['fred-talk-default-20261020'])
+            self.assertEqual(styles.current_binding(selected), styles.current_binding(user))
         with tempfile.TemporaryDirectory(prefix='no-reference-default-') as folder:
-            unresolved = styles.resolve(folder)
-            self.assertEqual(unresolved['status'], 'unresolved')
-            self.assertEqual(unresolved['reference_directions'], [])
-            self.assertEqual(unresolved['required_reading'], [])
+            default = styles.resolve(folder)
+            self.assertEqual(default['resolved_profile'], 'user-ui')
+            self.assertEqual(default['selection_source'], 'unified-production')
+            self.assertEqual([d['id'] for d in default['reference_directions']], ['fred-talk-default-20261020'])
+            registry = styles.load_registry()
+            registry.pop('default_profile', None)
+            unresolved = styles.resolve(folder, registry=registry)
+            self.assertEqual(unresolved['status'], 'resolved')
+            self.assertEqual([d['id'] for d in unresolved['reference_directions']], ['fred-talk-default-20261020'])
+            self.assertEqual(Path(unresolved['required_reading'][0]['path']).name, 'aesthetic-preferences.md')
 
-    def test_project_profile_overrides_folder_and_baseline_claim_is_not_approval(self):
+    def test_project_material_and_tokens_are_retained_without_promoting_a_baseline(self):
         with tempfile.TemporaryDirectory(prefix='style-registry-') as folder:
             project = Path(folder)
             draft = project / 'new-draft.mp4'
@@ -228,23 +249,26 @@ class LocalRoutes(unittest.TestCase):
                 'style': {'profile': 'fangmu', 'baseline': str(draft), 'tokens': {'background': '#fff'}}
             }), encoding='utf-8')
             (project / 'src').mkdir()
-            result = styles.resolve(project / 'src')
-            self.assertEqual(result['resolved_profile'], 'fangmu')
-            self.assertTrue(result['selection_source'].startswith('project-metadata:'))
+            result = styles.resolve(project)
+            self.assertEqual(result['resolved_profile'], 'user-ui')
+            self.assertEqual(result['selection_source'], 'unified-production')
             self.assertNotIn(str(draft.resolve()), [x['path'] for x in result['confirmed_baselines']])
-            self.assertIn(str(draft.resolve()), [x['path'] for x in result['excluded_baselines']])
-            self.assertEqual(styles.resolve(project, 'adiao')['resolved_profile'], 'adiao')
+            self.assertEqual(result['current_project_style']['baseline'], str(draft))
+            self.assertEqual(result['current_project_style']['tokens'], {'background': '#fff'})
+            self.assertEqual(styles.resolve(project, 'adiao')['resolved_profile'], 'user-ui')
 
-    def test_conflicting_or_unknown_project_profiles_do_not_fall_through(self):
+    def test_conflicting_or_unknown_legacy_profiles_do_not_block_unified_production(self):
         with tempfile.TemporaryDirectory(prefix='style-registry-') as folder:
             project = Path(folder)
             config = project / 'project.json'
             config.write_text(json.dumps({'account': 'adiao', 'style': {'profile': 'fangmu'}}), encoding='utf-8')
-            self.assertEqual(styles.resolve(project)['status'], 'unresolved')
+            resolved = styles.resolve(project)
+            self.assertEqual(resolved['status'], 'resolved')
+            self.assertEqual({h['value'] for h in resolved['historical_profile_hints']}, {'adiao', 'fangmu'})
             config.write_text(json.dumps({'profile': 'unregistered-account'}), encoding='utf-8')
-            self.assertEqual(styles.resolve(project)['status'], 'unresolved')
+            self.assertEqual(styles.resolve(project)['status'], 'resolved')
 
-    def test_more_specific_root_then_project_account_then_explicit_selection(self):
+    def test_nested_account_roots_and_profile_hints_cannot_switch_visual_direction(self):
         registry = styles.read_json(styles.ROOT / styles.REGISTRY)
         with tempfile.TemporaryDirectory(prefix='style-registry-') as folder:
             project = Path(folder)
@@ -254,13 +278,13 @@ class LocalRoutes(unittest.TestCase):
                 config['project_roots'] = ([str(project)] if config['id'] == 'user-ui' else
                                            [str(named)] if config['id'] == 'fangmu' else [])
             self.assertEqual(styles.resolve(project, registry=registry)['resolved_profile'], 'user-ui')
-            self.assertEqual(styles.resolve(named / 'src', registry=registry)['resolved_profile'], 'fangmu')
+            self.assertEqual(styles.resolve(named / 'src', registry=registry)['resolved_profile'], 'user-ui')
             (named / 'project.json').write_text(json.dumps({'account': 'adiao'}), encoding='utf-8')
-            self.assertEqual(styles.resolve(named / 'src', registry=registry)['resolved_profile'], 'adiao')
+            self.assertEqual(styles.resolve(named / 'src', registry=registry)['resolved_profile'], 'user-ui')
             self.assertEqual(styles.resolve(named / 'src', 'user-ui', registry=registry)['resolved_profile'], 'user-ui')
 
     def test_current_asset_map_is_reread_and_false_approval_is_respected(self):
-        registry = styles.read_json(styles.ROOT / styles.REGISTRY)
+        registry = styles.load_registry(include_historical=True)
         config = next(p for p in registry['profiles'] if p['id'] == 'fangmu')
         real_read = styles.read_json
 
@@ -312,6 +336,219 @@ class PortableRoutes(unittest.TestCase):
 
     def resolve(self, profile='user-ui', root=None):
         return styles.resolve(self.project, profile, root=root or self.root)
+
+    def enable_unified(self):
+        (self.root / 'references/library.md').write_text('Effects: composition, materials, windows and actions.', encoding='utf-8')
+        self.registry['unified_production'] = {'enabled': True, 'profile_id': 'user-ui',
+            'guidance_path': 'references/library.md', 'label': 'Unified production',
+            'account_visual_routing': False, 'whole_film_recommendations': False}
+        (self.root / styles.REGISTRY).write_text(json.dumps(self.registry), encoding='utf-8')
+
+    def test_unified_does_not_load_historical_profiles_or_fred_contract(self):
+        self.enable_unified()
+        (self.root / 'references/direction.json').unlink()
+        (self.root / 'assets/anchor.png').unlink()
+        self.registry['profiles'][1]['project_roots'] = [str(self.project)]
+        (self.root / styles.REGISTRY).write_text(json.dumps(self.registry), encoding='utf-8')
+        (self.project / 'project.json').write_text('{"profile":"fangmu","account":"unknown"}', encoding='utf-8')
+        with patch.object(styles, 'load_profile', side_effect=AssertionError('Historical profile loaded')):
+            for profile in (None, 'user-ui', 'fangmu', 'adiao', 'unknown'):
+                with self.subTest(profile=profile):
+                    result = self.resolve(profile)
+                    self.assertEqual(result['resolved_profile'], 'user-ui')
+                    self.assertEqual(result['selection_source'], 'unified-production')
+                    self.assertEqual(result['ui_direction_source'], 'effect-library')
+                    self.assertTrue(result['style_references_ready'])
+                    for key in ('confirmed_baselines', 'method_examples', 'reference_directions', 'available_profiles'):
+                        self.assertEqual(result[key], [])
+                    self.assertEqual(styles.current_binding(result)['mode'], 'unified-production')
+
+    def test_unified_preserves_current_inputs_without_inheriting_account_identity(self):
+        self.enable_unified()
+        metadata = {'profile': 'fangmu', 'presenter': {'path': 'current-presenter.mp4'},
+                    'identity': {'ip': 'current character'}, 'audio_source': 'original.wav',
+                    'style': {'tokens': {'background': 'white'}, 'baseline': 'old-export.mp4'}}
+        path = self.project / 'project.json'
+        path.write_text(json.dumps(metadata), encoding='utf-8')
+        before = path.read_bytes()
+        result = self.resolve()
+        self.assertEqual(result['current_project_inputs'], {key: metadata[key] for key in ('presenter', 'identity', 'audio_source')})
+        self.assertEqual(result['current_project_style'], metadata['style'])
+        self.assertEqual(path.read_bytes(), before)
+        self.assertEqual(result['confirmed_baselines'], [])
+
+    def test_unified_existing_project_override_keeps_its_sources_without_account_baselines(self):
+        self.enable_unified()
+        self.write_project_ui_override()
+        result = self.resolve()
+        self.assertTrue(result['style_references_ready'])
+        self.assertEqual(result['reference_directions'][0]['id'], 'whiteboard')
+        self.assertEqual(result['confirmed_baselines'], [])
+        self.assertIn('ui_override', styles.current_binding(result))
+        (self.project / 'whiteboard.png').unlink()
+        self.assertFalse(self.resolve()['style_references_ready'])
+
+    def test_unified_binding_only_tracks_library_and_current_project_materials(self):
+        self.enable_unified()
+        before = styles.current_binding(self.resolve())
+        self.contract['revision'] = 'retired revision changed'
+        self.save_direction()
+        (self.root / 'references/profiles/user-ui.md').write_text('Retired profile changed', encoding='utf-8')
+        self.assertEqual(styles.current_binding(self.resolve()), before)
+        (self.root / 'references/library.md').write_text('Current effect library changed', encoding='utf-8')
+        self.assertNotEqual(styles.current_binding(self.resolve()), before)
+        (self.root / 'references/library.md').unlink()
+        self.assertFalse(self.resolve()['style_references_ready'])
+
+    def test_unified_listing_preserves_explicit_historical_lookup(self):
+        self.enable_unified()
+        self.registry['historical_shared_ui_direction'] = self.registry.pop('shared_ui_direction')
+        (self.root / styles.REGISTRY).write_text(json.dumps(self.registry), encoding='utf-8')
+        listing = styles.listing(self.root)
+        self.assertEqual({row['id'] for row in listing['available_profiles']}, {'user-ui', 'fangmu', 'adiao'})
+        self.assertEqual(listing['available_profiles'][0]['reference_directions'][0]['id'], 'current')
+        self.assertEqual(self.resolve()['reference_directions'], [])
+
+    def test_unified_does_not_depend_on_malformed_unused_account_overlay(self):
+        self.enable_unified()
+        (self.root / styles.LOCAL_REGISTRY).write_text('{broken historical overlay', encoding='utf-8')
+        self.assertTrue(self.resolve()['style_references_ready'])
+        with self.assertRaisesRegex(ValueError, 'Invalid local style registry'):
+            styles.listing(self.root)
+
+    def test_unified_prepare_uses_library_and_never_claims_style_approval(self):
+        self.enable_unified()
+        script = self.project / 'script.txt'
+        script.write_text('同一份资料，报告和图表一起更新。', encoding='utf-8')
+        director.prepare(script, self.project, profile='fangmu', root=self.root)
+        context = styles.read_json(self.project / 'director-context.json')
+        self.assertEqual(context['production']['approved_examples'], [])
+        self.assertEqual(context['production']['primary_design_source']['role'], 'primary-design-library')
+        self.assertEqual(context['style']['reference_directions'], [])
+        self.assertEqual(context['style']['binding']['mode'], 'unified-production')
+        self.assertIn('style.applied', context['style']['instruction'])
+        self.assertEqual(context['source']['text'], script.read_text(encoding='utf-8'))
+
+    def enable_persistent_direction(self):
+        self.enable_unified()
+        self.registry['unified_production'].update(
+            direction_source='fred-talk-default',
+            default_direction={'id': 'current', 'guidance_path': 'references/direction.json'})
+        (self.root / styles.REGISTRY).write_text(json.dumps(self.registry), encoding='utf-8')
+
+    def test_persistent_direction_survives_legacy_profile_and_new_directory(self):
+        self.enable_persistent_direction()
+        expected = styles.current_binding(self.resolve())
+        for profile in (None, 'fangmu', 'adiao', 'unknown'):
+            other = self.base / ('new-' + str(profile))
+            resolved = styles.resolve(other, profile, root=self.root)
+            self.assertEqual(resolved['ui_direction_source'], 'fred-talk-default')
+            self.assertEqual(resolved['reference_directions'][0]['id'], 'current')
+            self.assertEqual(styles.current_binding(resolved), expected)
+            self.assertEqual(resolved['confirmed_baselines'], [])
+
+    def test_default_direction_missing_anchor_blocks_without_choosing_another_style(self):
+        self.enable_persistent_direction()
+        (self.root / 'assets/anchor.png').unlink()
+        selected = self.resolve()
+        self.assertFalse(selected['style_references_ready'])
+        self.assertEqual(selected['ui_direction_source'], 'fred-talk-default')
+        self.assertEqual(selected['reference_directions'][0]['id'], 'current')
+
+    def test_default_direction_binding_changes_when_visual_anchor_or_contract_changes(self):
+        self.enable_persistent_direction()
+        before = styles.current_binding(self.resolve())
+        (self.root / 'assets/anchor.png').write_bytes(b'changed reference pixels')
+        after_anchor = styles.current_binding(self.resolve())
+        self.assertNotEqual(before, after_anchor)
+        self.contract['revision'] = 'new direction'
+        self.save_direction()
+        self.assertNotEqual(after_anchor, styles.current_binding(self.resolve()))
+
+    def test_explicit_sourced_override_replaces_persistent_default(self):
+        self.enable_persistent_direction()
+        self.write_project_ui_override()
+        selected = self.resolve()
+        self.assertTrue(selected['style_references_ready'])
+        self.assertEqual(selected['reference_directions'][0]['id'], 'whiteboard')
+        self.assertEqual(selected['ui_direction_source'], 'project-body-ui')
+        self.assertIn('ui_override', styles.current_binding(selected))
+
+    def test_unified_child_does_not_inherit_parent_mode_inputs_or_valid_override(self):
+        self.enable_persistent_direction()
+        metadata, _ = self.write_project_ui_override()
+        metadata.update(editing_mode='whiteboard', presenter='old-presenter.mp4',
+                        identity={'ip': 'old character'}, audio_source='old-audio.wav')
+        metadata['style']['tokens'] = {'background': 'old whiteboard'}
+        (self.project / 'project.json').write_text(json.dumps(metadata), encoding='utf-8')
+        child = self.project / 'new-episode'
+        selected = styles.resolve(child, root=self.root)
+        self.assertEqual(selected['editing_mode'], 'continuous-ui')
+        self.assertEqual(selected['reference_directions'][0]['id'], 'current')
+        self.assertNotIn('mode_source', selected)
+        self.assertNotIn('current_project_inputs', selected)
+        self.assertNotIn('current_project_style', selected)
+        self.assertNotIn('ui_override', selected)
+        self.assertNotIn('current_project_metadata_path', selected)
+        continued = self.resolve()
+        self.assertEqual(continued['editing_mode'], 'whiteboard')
+        self.assertEqual(continued['current_project_inputs']['presenter'], 'old-presenter.mp4')
+        self.assertEqual(continued['reference_directions'][0]['id'], 'whiteboard')
+        self.assertTrue(continued['style_references_ready'])
+        self.assertFalse(continued['ui_override']['user_identity_verified'])
+
+    def test_body_override_keeps_default_reading_and_binding_for_opening_and_exclusions(self):
+        self.enable_persistent_direction()
+        preference = self.root / 'references/aesthetic-preferences.md'
+        preference.write_text('# Preferences\n## UI\nSolid forms\n## AE\nContinuous action\n'
+                              '## Opening\nMeaningful first event\n## Exclusions\nNo empty cards\n',
+                              encoding='utf-8')
+        self.registry['unified_production']['guidance_path'] = 'references/aesthetic-preferences.md'
+        self.registry['unified_production']['required_reading'] = ['references/library.md']
+        (self.root / styles.REGISTRY).write_text(json.dumps(self.registry), encoding='utf-8')
+        self.write_project_ui_override()
+        selected = self.resolve()
+        reading = {Path(row['path']).name for row in selected['required_reading']}
+        self.assertTrue({'aesthetic-preferences.md', 'library.md', 'user-ui.md', 'whiteboard.md'} <= reading)
+        self.assertEqual(selected['default_reference_directions'][0]['id'], 'current')
+        self.assertEqual(selected['reference_directions'][0]['id'], 'whiteboard')
+        self.assertEqual(len(selected['reference_directions'][0]['visual_anchors']), 1)
+        self.assertEqual(Path(selected['reference_directions'][0]['visual_anchors'][0]['path']).name,
+                         'whiteboard.png')
+        binding = styles.current_binding(selected)
+        self.assertEqual(binding['guidance_sha256'], styles.content_sha256(preference))
+        self.assertEqual(binding['default_directions'][0]['id'], 'current')
+        preference.write_text(preference.read_text(encoding='utf-8') + 'Keep faces clear\n', encoding='utf-8')
+        self.assertNotEqual(binding, styles.current_binding(self.resolve()))
+        script = self.project / 'script.txt'
+        script.write_text('One continuous event.', encoding='utf-8')
+        director.prepare(script, self.project, root=self.root)
+        context = styles.read_json(self.project / 'director-context.json')
+        self.assertEqual(context['style']['preferences']['text'], preference.read_bytes().decode('utf-8-sig'))
+        self.assertIn('Meaningful first event', context['style']['preferences']['text'])
+        self.assertIn('No empty cards', context['style']['preferences']['text'])
+        self.assertEqual(context['style']['default_reference_directions'][0]['id'], 'current')
+        self.assertEqual(context['style']['reference_directions'][0]['id'], 'whiteboard')
+
+    def test_body_override_keeps_default_missing_reading_and_independent_anchor_requirements(self):
+        self.enable_persistent_direction()
+        self.write_project_ui_override()
+        original_anchor = (self.root / 'assets/anchor.png').read_bytes()
+        (self.root / 'assets/anchor.png').unlink()
+        selected = self.resolve()
+        self.assertFalse(selected['style_references_ready'])
+        self.assertIn(str((self.root / 'assets/anchor.png').resolve()),
+                      {item['path'] for item in selected['missing']})
+        self.assertTrue(selected['reference_directions'][0]['visual_references_ready'])
+        (self.root / 'assets/anchor.png').write_bytes(original_anchor)
+        (self.project / 'whiteboard.png').unlink()
+        self.assertFalse(self.resolve()['style_references_ready'])
+        (self.project / 'whiteboard.png').write_bytes(b'body-anchor')
+        (self.root / 'references/profiles/user-ui.md').unlink()
+        selected = self.resolve()
+        self.assertFalse(selected['style_references_ready'])
+        self.assertIn(str((self.root / 'references/profiles/user-ui.md').resolve()),
+                      {item['path'] for item in selected['missing']})
 
     def test_relocated_package_resolves_relative_anchor_and_same_binding(self):
         before = self.resolve()
@@ -408,6 +645,48 @@ class PortableRoutes(unittest.TestCase):
         self.assertEqual(result['confirmed_baselines'], [])
         self.assertTrue(any(row['path'] == str(draft.resolve()) for row in result['excluded_baselines']))
 
+    def test_partial_method_survives_rejected_ui_without_becoming_visual_baseline(self):
+        evidence = self.root / 'partial-approval.md'
+        evidence.write_text('AIGC handoff accepted, UI rejected', encoding='utf-8')
+        spec = {'kind': 'documented-baseline', 'path': str(evidence),
+                'acceptance_marker': 'AIGC handoff accepted',
+                'baseline': {'id': 'partial', 'path': 'full-transfer-sample/movie.mp4',
+                    'status': 'approved_aigc_only', 'approval_kind': 'method-only',
+                    'scope': 'AIGC handoff only; UI rejected', 'media_kind': 'video',
+                    'whole_film_approved': False, 'implementations': [],
+                    'retrieval': {'method_scope': 'same object handoff', 'cross_profile': True}}}
+        self.registry['excluded_ui_projects'] = [{'path': 'full-transfer-sample',
+            'path_component': 'full-transfer-sample', 'evidence': str(evidence), 'reason': 'UI rejected'}]
+        self.registry['profiles'][0]['sources'] = [spec]
+        result = styles.resolve(self.project, 'user-ui', root=self.root, registry=self.registry)
+        self.assertFalse(result['confirmed_baselines'])
+        self.assertEqual(result['confirmed_methods'][0]['id'], 'partial')
+        cross = styles.resolve(self.project, 'adiao', root=self.root, registry=self.registry)
+        example = cross['method_examples'][0]
+        self.assertEqual(example['usage'], 'method-reference-only')
+        self.assertFalse(example['identity_reuse_allowed'])
+        self.assertFalse(example['media_reuse_automatic'])
+        self.assertFalse(example['whole_film_approved'])
+        self.assertFalse(cross['confirmed_baselines'])
+
+    def test_local_sources_merge_without_hiding_packaged_method(self):
+        spec = {'kind': 'documented-baseline', 'path': 'approval.md', 'acceptance_marker': 'accepted',
+                'baseline': {'id': 'packaged-method', 'path': 'preview.mp4', 'status': 'approved',
+                    'scope': 'method only', 'media_kind': 'video', 'implementations': []}}
+        self.registry['profiles'][0]['sources'] = [spec]
+        (self.root / styles.REGISTRY).write_text(json.dumps(self.registry), encoding='utf-8')
+        overlay = {'schema_version': 1, 'profiles': [{'id': 'user-ui', 'sources': [
+            {'kind': 'asset-map', 'path': 'private-index.json', 'accepted_statuses': ['approved']}]}]}
+        (self.root / styles.LOCAL_REGISTRY).write_text(json.dumps(overlay), encoding='utf-8')
+        sources = styles.load_registry(self.root)['profiles'][0]['sources']
+        self.assertEqual(len(sources), 2)
+        self.assertEqual(sources[0]['baseline']['id'], 'packaged-method')
+        overlay['profiles'][0]['sources'].append(dict(spec, baseline=dict(spec['baseline'], path='private.mp4')))
+        (self.root / styles.LOCAL_REGISTRY).write_text(json.dumps(overlay), encoding='utf-8')
+        sources = styles.load_registry(self.root)['profiles'][0]['sources']
+        self.assertEqual(len(sources), 2)
+        self.assertEqual(sources[0]['baseline']['path'], 'private.mp4')
+
     def test_local_overlay_restores_account_sources_in_resolve_and_listing(self):
         local = self.root / 'local'
         local.mkdir()
@@ -432,6 +711,34 @@ class PortableRoutes(unittest.TestCase):
         self.assertEqual(listed['confirmed_baselines'], result['confirmed_baselines'])
         unchanged = styles.load_registry(self.root)['profiles'][0]
         self.assertEqual(unchanged, self.registry['profiles'][0])
+
+    def test_accepted_opening_trial_duplicates_only_its_registered_approval(self):
+        sample = self.root / 'assets/sample.mp4'
+        sample.write_bytes(b'path fixture, not a rendered video')
+        config = dict(self.registry['profiles'][1], sources=[{
+            'kind': 'asset-map', 'path': 'assets/asset-map.json',
+            'accepted_statuses': ['approved_opening_direction']}])
+        approved = {'id': 'opening-v7', 'path': 'sample.mp4',
+                    'status': 'approved_opening_direction', 'aestheticApproval': True,
+                    'approvalScope': 'opening only', 'implementationIds': []}
+        trial = {'path': './sample.mp4', 'status': 'approved_opening_direction',
+                 'aestheticApproval': True,
+                 'approvalAtDelivery': {'status': 'pending_user_feedback', 'aestheticApproval': False}}
+        cases = [
+            ('same current approval', [approved], trial, True, False),
+            ('new explicit rejection', [approved], dict(trial, status='rejected_motion_feel',
+                                                       userQuote='This revision no longer works'), False, True),
+            ('current approval flag denied', [approved], dict(trial, aestheticApproval=False), False, True),
+            ('unregistered accepted trial', [], trial, False, True),
+        ]
+        for label, samples, current, confirmed, excluded in cases:
+            with self.subTest(label=label):
+                (self.root / 'assets/asset-map.json').write_text(json.dumps({
+                    'samples': samples, 'openingTrialStatus': {'v7': current}}), encoding='utf-8')
+                result = styles.load_profile(config, self.registry, self.root)
+                target = str(sample.resolve())
+                self.assertEqual(target in {row['path'] for row in result['confirmed_baselines']}, confirmed)
+                self.assertEqual(target in {row['path'] for row in result['excluded_baselines']}, excluded)
 
     def test_invalid_local_overlay_fails_instead_of_falling_back(self):
         invalid = [
@@ -591,8 +898,8 @@ class PortableRoutes(unittest.TestCase):
         self.assertTrue(result['style_references_ready'])
 
 
-class PackagedSharedDirection(unittest.TestCase):
-    def test_shipped_registry_routes_each_account_to_the_same_contract(self):
+class PackagedUnifiedProduction(unittest.TestCase):
+    def test_shipped_registry_keeps_fred_talk_in_every_account_directory(self):
         registry = styles.read_json(styles.ROOT / styles.REGISTRY)
         with tempfile.TemporaryDirectory() as folder:
             default = styles.resolve(folder, root=styles.ROOT, registry=registry)
@@ -600,9 +907,41 @@ class PackagedSharedDirection(unittest.TestCase):
             for profile in ('user-ui', 'adiao', 'fangmu'):
                 selected = styles.resolve(folder, profile, registry=registry)
                 self.assertTrue(selected['style_references_ready'])
-                self.assertEqual(selected['resolved_profile'], profile)
-                self.assertEqual([row['id'] for row in selected['reference_directions']], ['fred-explainer-20261015'])
-                self.assertEqual(len(selected['reference_directions'][0]['visual_anchors']), 3)
+                self.assertEqual(selected['resolved_profile'], 'user-ui')
+                self.assertEqual(selected['selection_source'], 'unified-production')
+                self.assertEqual([d['id'] for d in selected['reference_directions']],
+                                 ['fred-talk-default-20261020'])
+                self.assertEqual(selected['ui_direction_source'], 'fred-talk-default')
+                self.assertEqual(styles.current_binding(selected), styles.current_binding(default))
+                self.assertEqual(selected['confirmed_baselines'], [])
+                self.assertEqual(Path(selected['guidance']['path']).name, 'aesthetic-preferences.md')
+
+    def test_fresh_prepare_carries_default_and_preserves_script_without_rendering(self):
+        with tempfile.TemporaryDirectory() as folder:
+            project = Path(folder)
+            script = project / '原稿.txt'
+            script.write_text('先看结果，再沿同一份材料找到原因。', encoding='utf-8')
+            original = script.read_bytes()
+            report = director.prepare(script, project, profile='fangmu')
+            context = styles.read_json(project / 'director-context.json')
+            self.assertEqual(context['style']['reference_directions'][0]['id'],
+                             'fred-talk-default-20261020')
+            self.assertEqual(script.read_bytes(), original)
+            self.assertFalse(report['plan_authored'])
+            self.assertFalse(report['generation_submitted'])
+            self.assertIn('fred-ui-direction.md', {Path(p['path']).name
+                                                  for p in context['required_reading']})
+            preference_path = styles.ROOT / 'references/aesthetic-preferences.md'
+            preferences = context['style']['preferences']
+            self.assertEqual(preferences['text'], preference_path.read_bytes().decode('utf-8-sig'))
+            self.assertEqual(preferences['sha256'], styles.content_sha256(preference_path))
+            self.assertEqual(preferences['sha256'], context['style']['binding']['guidance_sha256'])
+            for section in ('统一视觉', '画面', '动作', '开头', 'AIGC', '反馈'):
+                self.assertTrue(any(section in heading for heading in preferences['sections']), section)
+            brief = (project / 'director-brief.md').read_text(encoding='utf-8')
+            self.assertIn('context.style.preferences.text', brief)
+            self.assertIn('UI、AE 感、开头与禁忌', brief)
+            self.assertIn('完整开头事件', brief)
 
 
 if __name__ == '__main__':

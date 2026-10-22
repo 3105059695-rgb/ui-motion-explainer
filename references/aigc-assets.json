@@ -1,55 +1,41 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-19",
+  "updated_at": "2026-10-20",
   "routing_policy": {
     "priority": [
       "当前用户明确指定",
-      "当前项目/账号专属AIGC档案",
-      "user-ui默认风格"
+      "当前工程已明确选择的AIGC画风",
+      "用户指定的统一AIGC画风参考"
     ],
     "default_style_id": "qiuzhi-girl-painterly",
-    "excluded_automatic_overrides": [
-      "adiao",
-      "fangmu"
-    ],
+    "excluded_automatic_overrides": [],
     "repeat_style_confirmation_required": false,
     "media_policy": "跨机器发行携带已确认角色、8张场景与必要样片；原作者整片、私有音色、数字人和账号工程不随包。local-only标注仅是未携带的研究原址，不用于生成首帧。",
-    "ui_policy": "只约束AIGC叙事镜头，UI外观继续读取原账号/项目UI风格。",
+    "ui_policy": "UI 的整体设计与剪辑从效果库选择；本画风只用于 AIGC 生图与视频。",
     "selection_policy": "先理解每期口播句意、上下文、情绪与因果，再新设计人物、场景、道具和动作；参考图用于学习画风与方法，不从八张旧图中默认挑素材。",
-    "fallback": "保持已确认画风并设计匹配本期内容的新素材；不强塞已有场景或强制同一人物。",
+    "fallback": "已有明确的柔和手绘画风参考，按本期口播设计新素材；不要求用户重新指定，不固定角色或旧场景。",
     "historical_candidates_policy": "cat-v1、animal-ip、旧男性视频及girl-assets-v1通用空景保留历史，不作默认或已认可风格。",
     "reference_usage_default": "style-reference-only",
     "scene_generation_policy": "new-per-narration",
-    "current_scope_evidence": "references/evidence/aigc-reference-scope-20261019.json"
+    "current_scope_evidence": "references/evidence/aigc-reference-scope-20261019.json",
+    "current_selection_evidence": "references/evidence/library-entry-correction-20261020.json",
+    "account_routing": false
   },
   "style_sets": [
     {
       "id": "qiuzhi-girl-painterly",
-      "title": "柔和手绘画风 × 按口播设计具体事件",
-      "scope": "通用user-ui默认画风参考；图中身份及场景不是所有新稿的固定内容，当前工程明确IP除外。",
-      "default_for_profiles": [
-        "user-ui"
-      ],
+      "title": "AIGC 画风参考 · 柔和手绘",
+      "scope": "用户明确指定的 AIGC 生图与视频画风参考；每期新设计情境、人物和动作。不是本片 UI 认可，不默认复用原图、场景或女孩身份。",
+      "default_for_profiles": [],
       "project_roots": [
-        "local-only/qiuzhi-aigc-samples"
+        "local-only/qiuzhi-aigc-samples",
+        "assets/approved-girl-sample"
       ],
       "character_references": [
         "assets/aigc/girl/references/girl-expressions.png",
         "assets/aigc/girl/references/girl-life-poses.png"
       ],
       "style_rules": {
-        "identity": [
-          "同一长巧克力棕发Q版女孩",
-          "酒红发夹在角色自身左侧太阳穴，正面即观众右侧",
-          "大头短身，约2头身，保持小手短腿",
-          "棕玫瑰色大眼、柔和腮红与小鼻口"
-        ],
-        "wardrobe": [
-          "米白针织毛衣",
-          "浅灰宽松裤",
-          "白鞋",
-          "允许确有任务作用的围裙等道具；不顺手换掉固定衣着"
-        ],
         "rendering": [
           "细腻柔和的二维手绘/彩铅水彩感",
           "细暖色轮廓、发丝细节、针织布料纹理",
@@ -81,8 +67,7 @@
           "简单动作只占完成理解所需时长，生成时长不等于剪辑使用时长",
           "保持首帧手绘材质，不让视频模型自动转为3D",
           "不将8张静图认可等同任何运动片认可"
-        ],
-        "identity_scope": "identity与wardrobe仅描述历史女孩示例；只有工程明确沿用该IP时才作为身份约束，不强制所有稿件同一人物。"
+        ]
       },
       "approval": {
         "schema_version": 1,
@@ -543,7 +528,182 @@
         }
       ],
       "usage_role": "style-reference-only",
-      "default_character_required": false
+      "default_character_required": false,
+      "applicable_profiles": [
+        "user-ui"
+      ],
+      "current_scope": {
+        "art_style": "用户于2026-10-20明确该样片用于AIGC创作的画风参考，供生成这种画风的新图并制作视频。",
+        "video_methods": [
+          "按本期事件设计动作，参考素材保持手绘材质；旧动作不自动成为本期内容。"
+        ],
+        "identity": "仅当前工程明确固定IP时约束身份，画风本身不绑定女孩。",
+        "ui": "不从本片指定UI；UI设计从效果库选取。",
+        "selection_evidence": "references/evidence/library-entry-correction-20261020.json"
+      },
+      "identity_rules": {
+        "identity": [
+          "同一长巧克力棕发Q版女孩",
+          "酒红发夹在角色自身左侧太阳穴，正面即观众右侧",
+          "大头短身，约2头身，保持小手短腿",
+          "棕玫瑰色大眼、柔和腮红与小鼻口"
+        ],
+        "wardrobe": [
+          "米白针织毛衣",
+          "浅灰宽松裤",
+          "白鞋",
+          "允许确有任务作用的围裙等道具；不顺手换掉固定衣着"
+        ]
+      },
+      "identity_scope": "identity与wardrobe仅描述历史女孩示例；只有工程明确沿用该IP时才作为身份约束，不强制所有稿件同一人物。"
+    },
+    {
+      "id": "photographic-transfer",
+      "title": "实体资料搬运与单次交接（AIGC衔接局部认可）",
+      "scope": "full-transfer样片中AIGC衔接方法获认可，UI被否定；实体材质为该片可观察的载体，不是全局写实画风认可。",
+      "approval_kind": "method-only",
+      "default_for_profiles": [],
+      "applicable_profiles": [
+        "user-ui"
+      ],
+      "project_roots": [],
+      "style_references": [
+        {
+          "path": "local-only/full-transfer-aigc-frame.jpg",
+          "resource_id": "aigc-style:photographic-transfer:frame",
+          "scope": "仅参考原生成视频的实体纸张、双手接触与自然光材质；不继承样片UI。"
+        }
+      ],
+      "style_rules": {
+        "rendering": [
+          "本期明确选用这个载体时，参考原视频可见的真实纸张、设备、双手接触与自然光；这是例片材质说明，不是新全局默认。"
+        ],
+        "scene_policy": [
+          "按当前口播选承载物与交接事件，不固定纸张、桌面或黑袖双手。"
+        ],
+        "motion_policy": [
+          "同一资料在多个工具之间搬运，或一次交接后由工具继续处理；接触和物件去向必须看见。",
+          "将同一物件交接到精确UI，UI读取本期独立方向，不沿用被否定样片外观。"
+        ]
+      },
+      "current_scope": {
+        "style": "仅作为具象事件的可选择载体；未获得永久摄影画风或整片审美认可。",
+        "identity": "没有跨项目固定角色或黑袖身份。",
+        "video_methods": [
+          "语义连续动作随原声剪切",
+          "同一资料从生成素材交接到精确UI动作"
+        ],
+        "limits": [
+          "只认可AIGC配合衔接；该片UI外观明确否定。",
+          "纸张、桌面、黑袖双手、模型与白紫UI均非固定默认。",
+          "选用须匹配本期句意；不因这次样片可用而改变其他项目画风。"
+        ],
+        "reference_scope_evidence": "references/evidence/full-transfer-feedback-20261014.json"
+      },
+      "approval": {
+        "event_id": "20261014-full-transfer-aigc-integration",
+        "evidence_path": "references/evidence/full-transfer-feedback-20261014.json",
+        "scope": "AIGC integration accepted; UI appearance and whole film not approved.",
+        "subsequent_video_approvals": [
+          {
+            "event_id": "20261014-full-transfer-aigc-integration",
+            "approval_state": "accepted_aigc_integration_only",
+            "video_path": "local-only/完整样片.mp4",
+            "resource_id": "aigc-video:photographic-transfer",
+            "evidence_path": "references/evidence/full-transfer-feedback-20261014.json"
+          }
+        ]
+      },
+      "assets": [
+        {
+          "id": "photographic-transfer-continuity",
+          "title": "反复复制到一次交接",
+          "narration": "同样一份资料，以前要在三个工具里反复复制。现在一次交接，报告和图表一起更新；哪一步出错，就回到上一次确认的版本。",
+          "meaning": "重复搬运的执行负担变成一次交接，后续用精确UI显示共同更新与回退。",
+          "semantic_use": [
+            "多个工具之间反复复制同一份资料",
+            "重复搬运与一次交接对照",
+            "AIGC对象交接到连续UI更新与回退"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adiao-anime-semantic",
+      "title": "阿刁：脑中画面变成零散词（修订解释效果认可）",
+      "scope": "阿刁五秒修订样片的具象解释效果；方法可按句意共用，女主与整体画风限阿刁当前适用工程。",
+      "approval_kind": "revised-explanation-sample",
+      "default_for_profiles": [],
+      "applicable_profiles": [
+        "adiao"
+      ],
+      "project_roots": [],
+      "character_references": [
+        {
+          "path": "local-only/女主画风与身份参考.png",
+          "resource_id": "aigc-style:adiao-anime-semantic:character"
+        }
+      ],
+      "style_rules": {
+        "rendering": [
+          "参考已确认女主图中二维动漫线稿、平涂与纸感细节、人物和生活空间统一的画法。"
+        ],
+        "scene_policy": [
+          "依据抽象句意设计可见事件、多个关键状态与因果镜头，不固定鲸鱼、三镜或五秒。"
+        ],
+        "motion_policy": [
+          "想象中的完整画面经历表达损失，变成输入中的零散词；动作与转场用于说明关系，结果保留可读时间。"
+        ]
+      },
+      "identity_rules": {
+        "identity": [
+          "只有本期阿刁工程明确沿用时，使用其已确认女主参考，不将她移作其他账号默认人物。"
+        ],
+        "wardrobe": [
+          "连续镜头按本期采用的女主参考与场景保持衣着；不由通用女孩素材覆盖。"
+        ]
+      },
+      "current_scope": {
+        "style": "阿刁修订样片及其画风参考的适用候选，不覆盖user-ui或方木。",
+        "identity": "女主仅阿刁；本期独立绑定身份后保持连续。",
+        "video_methods": [
+          "将抽象关系转成具象事件",
+          "用多动作与因果镜头表达脑中画面到零散输入的变化"
+        ],
+        "limits": [
+          "认可的是修订后的解释效果；首版动作小且语义不足被要求修改。",
+          "五秒、鲸鱼、固定镜头数不是通用模板。",
+          "跨账号只借解释方法，不复制女主或据此自动采用动漫画风。"
+        ],
+        "reference_scope_evidence": "references/evidence/anime-semantic-feedback-20261013.json"
+      },
+      "approval": {
+        "event_id": "20261013-anime-semantic-revision",
+        "evidence_path": "references/evidence/anime-semantic-feedback-20261013.json",
+        "scope": "Revised explanation sample; character only for adiao.",
+        "subsequent_video_approvals": [
+          {
+            "event_id": "20261013-anime-semantic-revision",
+            "approval_state": "revised_video_effect_approved",
+            "video_path": "local-only/脑中画面变成零散词_5秒.mp4",
+            "resource_id": "aigc-video:adiao-anime-semantic",
+            "evidence_path": "references/evidence/anime-semantic-feedback-20261013.json"
+          }
+        ]
+      },
+      "assets": [
+        {
+          "id": "adiao-expression-loss",
+          "title": "完整脑中画面变成零散词",
+          "narration": "脑子里的画面很清楚，输入时却只剩几个零散的词。",
+          "meaning": "清晰的想象在输入表达时丢失关系与细节。",
+          "semantic_use": [
+            "脑中完整画面到零散词语",
+            "抽象表达损失的具象化",
+            "连续动作与多镜头说明因果"
+          ]
+        }
+      ]
     }
   ],
   "research_sources": [
@@ -623,7 +783,7 @@
       "id": "aigc-style-synthesis",
       "kind": "synthesis",
       "path": "local-only/秋芝AIGC画风拆解.md",
-      "scope": "综合语义动作与媒介衔接；其中原片3D画风为研究对象，当前默认输出材质仍是用户女孩手绘。"
+      "scope": "综合语义动作与媒介衔接；原片3D画风为研究对象，不能自动决定本期画风。"
     },
     {
       "id": "alignment-reader",

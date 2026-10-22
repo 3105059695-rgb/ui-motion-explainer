@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-21",
+  "id": "agent-editorial-upgrade-20261021",
+  "quote": "可以，就按这套制作方法和实际源码升级我的skill，动效、色彩和质感参考这期，整个效果库都保留。有人物的开头保留人物全景，特效别挡住人。以后换口播要重新设计画面，别固定套排行榜，也别再只加文档和规则了。",
+  "source": "direct user instruction in current chat",
+  "prior_approved_body": "references/evidence/fangmu-ten-agents-body-style-20261021/index.json",
+  "source_archive": "local-only/fangmu-ten-agents-20261021/handoff/方木-十款Agent-动效源码与制作手册.zip",
+  "implementation": "assets/agent-editorial/provenance.json",
+  "scope": {
+    "motion_colors_material": "Current reusable production implementation; use actual approved body source across ordinary new productions, with full effects library open.",
+    "opening": "When supplied opening presenter exists, retain complete original fullframe and clip overlays to measured vacant areas minus face/body/moving hands/subtitle protection. Without opening presenter footage, design full UI opening for current narration.",
+    "body": "Base presenter or section information left / content right; can expand to fullscreen emphasis or real operation, then return as content needs.",
+    "new_narration": "Redesign objects, assets, causal events, composition and timing; rankings, product list, three-card opener and sample seconds are not inherited.",
+    "aigc": "Existing approved handpainted style and full AIGC pipeline remain; reference images are not fixed identity or default footage."
+  },
+  "correction": {
+    "reading_sample_45s": "User stated reference only, far below requirements; not the quality baseline. Retain code and historical checks.",
+    "new_output_approval": false,
+    "reading_sample_resource_id": "source-video:reading-opening-historical-probe"
+  },
+  "source_archive_resource_id": "source-archive:fangmu-ten-agents-20261021",
+  "source_archive_included": false,
+  "local_resource_note": "原始交付 ZIP 与历史样片不随包；local-only 只记录出处，resource_id 通过本机 references/resources.local.json 查找。实际提炼实现见 implementation。"
+}

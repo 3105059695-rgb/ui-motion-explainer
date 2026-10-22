@@ -2,7 +2,7 @@
 (function (global) {
   'use strict';
   const originals = new WeakMap();
-  const names = Object.freeze(['focus-mask', 'occlusion-reveal', 'match-handoff', 'compare', 'causal-chain', 'result-pullback']);
+  const names = Object.freeze(['focus-mask', 'occlusion-reveal', 'match-handoff', 'compare', 'causal-chain', 'result-pullback', 'viewport-focus', 'comparison-reflow', 'chapter-dock']);
   const clamp = (n) => Math.max(0, Math.min(1, n));
   const mix = (a, b, p) => a + (b - a) * p;
   const smooth = (p) => p * p * (3 - 2 * p);
@@ -142,7 +142,66 @@
     if(o.focusOutline){box(o.focusOutline,f);styles(o.focusOutline,{opacity:1-q,border:'2px solid var(--uek-accent)',borderRadius:'var(--uek-radius)'});}
     return {progress:p,scale:s,x:tx,y:ty};
   }
-  const effects={'focus-mask':focusMask,'occlusion-reveal':occlusionReveal,'match-handoff':matchHandoff,compare,'causal-chain':causalChain,'result-pullback':resultPullback};
+  function node(value, name) {
+    if (!value || !value.style || typeof value.style.setProperty !== 'function') throw new TypeError(name + ' must be a DOM element with .style');
+    return value;
+  }
+  function timing(value, name) {
+    if (!Array.isArray(value) || value.length !== 2) throw new TypeError(name + ' must be [start,end]');
+    const a=finite(value[0],name+'.start'),b=finite(value[1],name+'.end');
+    if (!(0<=a && a<b && b<=1)) throw new RangeError(name + ' must satisfy 0 <= start < end <= 1');
+    return value;
+  }
+  function camera(view, size) {
+    const scale=Math.min(size.width/view.width,size.height/view.height);
+    return {scale,x:(size.width-view.width*scale)/2-view.x*scale,y:(size.height-view.height*scale)/2-view.y*scale};
+  }
+  function viewportFocus(o,p) {
+    const frame=node(o.frame,'frame'),content=node(o.content,'content'),frameRect=rect(o.frameRect,'frameRect');
+    const size=viewport(o.contentSize),from=rect(o.from,'from'),to=rect(o.to,'to');
+    const focus=timing(o.timing&&o.timing.focus,'timing.focus');
+    const back=o.timing.return===undefined?null:timing(o.timing.return,'timing.return');
+    if(frame===content || (typeof frame.contains==='function'&&!frame.contains(content))) throw new RangeError('content must be a distinct descendant of frame');
+    if(back&&back[0]<focus[1]) throw new RangeError('timing.return must start after timing.focus ends');
+    for(const [name,view] of [['from',from],['to',to]]) {
+      if(view.x<0||view.y<0||view.x+view.width>size.width||view.y+view.height>size.height) throw new RangeError(name+' must remain inside contentSize');
+    }
+    const q=phase(p,focus[0],focus[1])*(back?1-phase(p,back[0],back[1]):1);
+    const a=camera(from,frameRect),b=camera(to,frameRect);
+    const scale=mix(a.scale,b.scale,q),x=mix(a.x,b.x,q),y=mix(a.y,b.y,q);
+    box(frame,frameRect);styles(frame,{overflow:'hidden'});
+    box(content,{x:0,y:0,width:size.width,height:size.height});
+    styles(content,{transformOrigin:'0 0',transform:`translate(${x}px, ${y}px) scale(${scale})`});
+    return {progress:p,focusProgress:q,scale,x,y,frame:frameRect};
+  }
+  function comparisonReflow(o,p) {
+    const previous=node(o.previous,'previous'),next=node(o.next,'next');
+    const previousFrom=rect(o.previousFrom,'previousFrom'),previousTo=rect(o.previousTo,'previousTo');
+    const nextFrom=rect(o.nextFrom,'nextFrom'),nextTo=rect(o.nextTo,'nextTo');
+    const oldTime=timing(o.timing&&o.timing.previous,'timing.previous'),newTime=timing(o.timing&&o.timing.next,'timing.next');
+    if(previous===next) throw new RangeError('comparison-reflow needs two distinct persistent nodes');
+    const oldProgress=phase(p,oldTime[0],oldTime[1]),newProgress=phase(p,newTime[0],newTime[1]);
+    const previousRect=interpolateBox(previousFrom,previousTo,oldProgress),nextRect=interpolateBox(nextFrom,nextTo,newProgress);
+    box(previous,previousRect);styles(previous,{opacity:1,transform:'none'});
+    box(next,nextRect);styles(next,{opacity:newProgress,transform:'none'});
+    return {progress:p,previousProgress:oldProgress,nextProgress:newProgress,previousRect,nextRect};
+  }
+  function chapterDock(o,p) {
+    const title=node(o.title,'title'),content=node(o.content,'content'),from=rect(o.from,'from'),to=rect(o.to,'to');
+    const titleTime=timing(o.timing&&o.timing.title,'timing.title'),contentTime=timing(o.timing&&o.timing.content,'timing.content');
+    const reveal=o.reveal===undefined?'fade':o.reveal;
+    if(title===content) throw new RangeError('title and content must be distinct persistent nodes');
+    if(!['fade','x','y'].includes(reveal)) throw new RangeError('reveal must be fade, x, or y');
+    const titleProgress=phase(p,titleTime[0],titleTime[1]),contentProgress=phase(p,contentTime[0],contentTime[1]);
+    const targetScale=Math.min(to.width/from.width,to.height/from.height),scale=mix(1,targetScale,titleProgress);
+    const target={x:to.x+(to.width-from.width*targetScale)/2,y:to.y+(to.height-from.height*targetScale)/2,width:from.width*targetScale,height:from.height*targetScale};
+    const position=interpolateBox(from,target,titleProgress);
+    box(title,{x:position.x,y:position.y,width:from.width,height:from.height});
+    styles(title,{opacity:1,transformOrigin:'0 0',transform:`scale(${scale})`});
+    styles(content,{opacity:reveal==='fade'?contentProgress:1,clipPath:reveal==='fade'?'none':reveal==='x'?`inset(0 ${(1-contentProgress)*100}% 0 0)`:`inset(0 0 ${(1-contentProgress)*100}% 0)`});
+    return {progress:p,titleProgress,contentProgress,scale,rect:position};
+  }
+  const effects={'focus-mask':focusMask,'occlusion-reveal':occlusionReveal,'match-handoff':matchHandoff,compare,'causal-chain':causalChain,'result-pullback':resultPullback,'viewport-focus':viewportFocus,'comparison-reflow':comparisonReflow,'chapter-dock':chapterDock};
   function apply(name,options,progress){
     if(!effects[name])throw new RangeError('Unknown effect '+name);
     if(!options)throw new TypeError('Effect options are required');

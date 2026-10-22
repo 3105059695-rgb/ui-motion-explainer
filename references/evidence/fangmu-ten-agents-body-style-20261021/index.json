@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "id": "fangmu-ten-agents-body-style-20261021",
+  "date": "2026-10-21",
+  "quote": "这个是我很喜欢的一个例子，以后按照这种风格来，开头除外，这种风格颜色ui动态都很好",
+  "approval_kind": "user_approved_body_visual_style",
+  "scope": "本片开头以外的正文及后续段落：颜色、UI外观和动态整体获认可，作为以后方木视频正文的直接风格参照。开头明确除外。",
+  "approval_dimensions": [
+    "colors",
+    "ui_design",
+    "motion"
+  ],
+  "opening_included": false,
+  "primary_sample": {
+    "path": "local-only/fangmu-ten-agents-20261021/deliverables/方木-十款Agent从夯到拉-开头重制版.mp4",
+    "sha256": "c9209eab90da2aaad26b9ddf57e48a48d2e06af239c5bda90f34737912335aec",
+    "source_range": [
+      15,
+      300.04
+    ],
+    "range_note": "15 秒为当前工程开头结束后的取样边界，不规定未来开头时长。",
+    "resource_id": "source-video:fangmu-ten-agents-final-20261021",
+    "included_in_package": false
+  },
+  "full_movie": {
+    "path": "local-only/fangmu-ten-agents-20261021/deliverables/方木-十款Agent从夯到拉-开头重制版.mp4",
+    "sha256": "c9209eab90da2aaad26b9ddf57e48a48d2e06af239c5bda90f34737912335aec",
+    "duration": 300.04,
+    "resource_id": "source-video:fangmu-ten-agents-final-20261021",
+    "included_in_package": false
+  },
+  "implementations": [
+    {
+      "path": "local-only/fangmu-ten-agents-20261021/project/film.js",
+      "sha256": "7af6d7371b251d9b7e7944655317bb28be07754b7378833ffc5cb2ba090ab23d",
+      "resource_id": "source-code:fangmu-ten-agents-20261021:film.js",
+      "retained_source": "assets/agent-editorial/source/film.js"
+    },
+    {
+      "path": "local-only/fangmu-ten-agents-20261021/project/body-a.js",
+      "sha256": "a082e4507c8eef3395048f62e9c391b6827b50f737a05b0d52b30b7d11d46d32",
+      "resource_id": "source-code:fangmu-ten-agents-20261021:body-a.js",
+      "retained_source": "assets/agent-editorial/source/body-a.js"
+    },
+    {
+      "path": "local-only/fangmu-ten-agents-20261021/project/body-b.js",
+      "sha256": "d87d39e15ac6da2e409cd66a7651fb69d727edcb5ba7b0310330af403bff7fe2",
+      "resource_id": "source-code:fangmu-ten-agents-20261021:body-b.js",
+      "retained_source": "assets/agent-editorial/source/body-b.js"
+    },
+    {
+      "path": "local-only/fangmu-ten-agents-20261021/project/motion-core.js",
+      "sha256": "d593edbcec7c4ac8e4d191494856c713d59bb147f927f1651832c1538c282536",
+      "resource_id": "source-code:fangmu-ten-agents-20261021:motion-core.js",
+      "retained_source": "assets/agent-editorial/source/motion-core.js"
+    },
+    {
+      "path": "local-only/fangmu-ten-agents-20261021/project/timing.json",
+      "sha256": "e5a025f806cb0850dc30e81fa7d5b0218f8d502b529117065a8e8f474a9c08f1",
+      "resource_id": "source-code:fangmu-ten-agents-20261021:timing.json",
+      "retained_source": "assets/agent-editorial/source/timing.json"
+    },
+    {
+      "path": "local-only/fangmu-ten-agents-20261021/project/captions.json",
+      "sha256": "f9b49fb97d51f651d1d0a8d408420cbf2c6349717357fd11602f732ed0fdaf93",
+      "resource_id": "source-code:fangmu-ten-agents-20261021:captions.json"
+    }
+  ],
+  "palette": {
+    "black": "#0B0B0F",
+    "white": "#FFFFFF",
+    "purple": "#8750FF",
+    "muted": "#777780",
+    "line": "#DBDBE0",
+    "paper": "#F3F3F5"
+  },
+  "reuse": [
+    "正文配色关系与实际色彩",
+    "实体 UI、字体层级与清楚可读的布局",
+    "同对象展开/收拢/腾位/聚焦的连续动作",
+    "真实产品材料与讲述对应",
+    "短促进入与稳定阅读的节奏"
+  ],
+  "redesign": [
+    "按新口播重新设计材料、事件、构图与时序",
+    "按新内容设计开头，不将本片开头当成已认可范式"
+  ],
+  "handbook": "local-only/fangmu-ten-agents-20261021/handoff/制作流程与动效心得.md",
+  "supersedes": "fangmu-ten-agents-opening-v2-20261021",
+  "correction": "上一轮助手把泛称喜欢的特效归档到开头，这是范围误读；本条用户明确纠正为开头除外，并且同时认可颜色、UI、动态。",
+  "current_visual_authority": "references/aesthetic-preferences.md",
+  "normal_speed_full_human_av_review": false,
+  "future_films_already_approved": false,
+  "handbook_resource_id": "source-handbook:fangmu-ten-agents-20261021",
+  "retained_handbook": "assets/agent-editorial/source/制作流程与动效心得.md",
+  "local_resource_note": "原片及完整原工程不随公开包；local-only 是历史出处占位，通过 resource_id 查询本机 references/resources.local.json。retained_source/retained_handbook 为包内保留副本，实际通用制作入口为 assets/agent-editorial/README.md。"
+}

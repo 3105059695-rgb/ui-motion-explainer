@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "id": "fangmu-ten-agents-opening-v2-20261021",
+  "date": "2026-10-21",
+  "quote": "把这个视频制作的这些代码以及视频制作的流程心得发我，我很喜欢这个特效，以后都要参考这种的",
+  "approval_kind": "user_approved_motion_design_reference",
+  "scope": "本期重制开头及其连续动效方法得到认可，今后按新内容参考；不推定整片每个细节均已认可。",
+  "primary_sample": {
+    "path": "local-only/fangmu-ten-agents-20261021/deliverables/方木-十款Agent-新版开头15秒.mp4",
+    "sha256": "09626ff86a506fa9f07680ff56ca87cda38595b6d3f2c9d0453f8b5bfc6a0f1d",
+    "source_range": [
+      0,
+      15
+    ],
+    "resource_id": "source-video:fangmu-ten-agents-opening-v2-20261021",
+    "included_in_package": false
+  },
+  "full_movie": {
+    "path": "local-only/fangmu-ten-agents-20261021/deliverables/方木-十款Agent从夯到拉-开头重制版.mp4",
+    "sha256": "c9209eab90da2aaad26b9ddf57e48a48d2e06af239c5bda90f34737912335aec",
+    "duration": 300.04,
+    "resource_id": "source-video:fangmu-ten-agents-final-20261021",
+    "included_in_package": false
+  },
+  "implementations": [
+    {
+      "path": "local-only/fangmu-ten-agents-20261021/project/opening-v2.js",
+      "sha256": "53e1e8b6f20dae263f36b0c3f9eb0ad3c6c89f47ac2876ef5a8dcd728d8361f1",
+      "resource_id": "source-code:fangmu-ten-agents-20261021:opening-v2.js",
+      "retained_source": "assets/agent-editorial/source/opening-v2.js"
+    },
+    {
+      "path": "local-only/fangmu-ten-agents-20261021/project/film.js",
+      "sha256": "7af6d7371b251d9b7e7944655317bb28be07754b7378833ffc5cb2ba090ab23d",
+      "resource_id": "source-code:fangmu-ten-agents-20261021:film.js",
+      "retained_source": "assets/agent-editorial/source/film.js"
+    },
+    {
+      "path": "local-only/fangmu-ten-agents-20261021/project/body-a.js",
+      "sha256": "a082e4507c8eef3395048f62e9c391b6827b50f737a05b0d52b30b7d11d46d32",
+      "resource_id": "source-code:fangmu-ten-agents-20261021:body-a.js",
+      "retained_source": "assets/agent-editorial/source/body-a.js"
+    },
+    {
+      "path": "local-only/fangmu-ten-agents-20261021/project/body-b.js",
+      "sha256": "d87d39e15ac6da2e409cd66a7651fb69d727edcb5ba7b0310330af403bff7fe2",
+      "resource_id": "source-code:fangmu-ten-agents-20261021:body-b.js",
+      "retained_source": "assets/agent-editorial/source/body-b.js"
+    },
+    {
+      "path": "local-only/fangmu-ten-agents-20261021/project/motion-core.js",
+      "sha256": "d593edbcec7c4ac8e4d191494856c713d59bb147f927f1651832c1538c282536",
+      "resource_id": "source-code:fangmu-ten-agents-20261021:motion-core.js",
+      "retained_source": "assets/agent-editorial/source/motion-core.js"
+    },
+    {
+      "path": "local-only/fangmu-ten-agents-20261021/project/revise_opening_audio.py",
+      "sha256": "e5e28ef734a84fb4b3e5ec33ca127c4efe7966a249c45c0f74ad036375e5d16f",
+      "resource_id": "source-code:fangmu-ten-agents-20261021:revise_opening_audio.py"
+    },
+    {
+      "path": "local-only/fangmu-ten-agents-20261021/project/render.py",
+      "sha256": "3ef4661be7bb22dd3657f9d041c13957d1261edfca2e2e6a609b31f84808d0a5",
+      "resource_id": "source-code:fangmu-ten-agents-20261021:render.py"
+    },
+    {
+      "path": "local-only/fangmu-ten-agents-20261021/project/assemble_opening_v2.py",
+      "sha256": "3a6372e9e5383f3b3f327be794fa47b1e40845ea971d5348b568d248fc98699c",
+      "resource_id": "source-code:fangmu-ten-agents-20261021:assemble_opening_v2.py"
+    }
+  ],
+  "handbook": "local-only/fangmu-ten-agents-20261021/handoff/制作流程与动效心得.md",
+  "reuse": [
+    "同一对象连续交接",
+    "真实材料与讲述一一对应",
+    "总览让位给细节",
+    "主次层次与动静节奏",
+    "按动作落点设计音效"
+  ],
+  "not_fixed": [
+    "三张卡",
+    "排行榜",
+    "10款产品",
+    "15秒",
+    "黑底与具体色值",
+    "全屏图形开场或左下人物位置",
+    "21个音效与原时码"
+  ],
+  "current_visual_authority": "references/aesthetic-preferences.md",
+  "normal_speed_full_human_av_review": false,
+  "future_films_already_approved": false,
+  "old_technical_logs": "保留交付当时等待反馈的记录，本次认可另立事件，不改写历史检查。",
+  "status": "superseded_by_user_scope_correction",
+  "active_approval": false,
+  "opening_approval": false,
+  "superseded_by": "references/evidence/fangmu-ten-agents-body-style-20261021/index.json",
+  "correction_quote": "这个是我很喜欢的一个例子，以后按照这种风格来，开头除外，这种风格颜色ui动态都很好",
+  "correction": "上一轮助手把泛称喜欢的特效归档到开头，这是范围误读；本条用户明确纠正为开头除外，并且同时认可颜色、UI、动态。",
+  "handbook_resource_id": "source-handbook:fangmu-ten-agents-20261021",
+  "retained_handbook": "assets/agent-editorial/source/制作流程与动效心得.md",
+  "local_resource_note": "原片及完整原工程不随公开包；local-only 是历史出处占位，通过 resource_id 查询本机 references/resources.local.json。retained_source/retained_handbook 为包内保留副本，实际通用制作入口为 assets/agent-editorial/README.md。"
+}

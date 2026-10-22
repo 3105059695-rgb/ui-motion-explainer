@@ -95,14 +95,17 @@ class ResourceRegistryTests(unittest.TestCase):
         self.assertEqual(project['styleProfile'], 'user-ui')
         self.assertFalse(project['current_style_applied'])
         self.assertFalse(project['aestheticApproval'])
-        self.assertIn('direct -- prepare', (output / 'PROJECT-NOTES.md').read_text(encoding='utf-8'))
+        context = json.loads((output / 'project-style-context.json').read_text(encoding='utf-8'))
+        self.assertIn('direct -- prepare', context['next'])
+        self.assertEqual('unified-production', context['style']['binding']['mode'])
 
     def test_missing_historical_reconstruction_does_not_become_a_starter(self):
         import subprocess
         import sys
         output = Path(self.temp.name) / 'must-not-be-created'
         result = subprocess.run([sys.executable, '-B', '-X', 'utf8',
-                                 str(ui.ROOT / 'scripts/ui.py'), 'reference', '--tool', 'rebuild', '--',
+                                 str(ui.ROOT / 'scripts/ui.py'), 'reference', '--tool', 'rebuild',
+                                 '--module-root', str(ui.ROOT / 'assets/modules/reference'), '--',
                                  'clone', '1', '--out', str(output)],
                                 capture_output=True, text=True, encoding='utf-8')
         self.assertNotEqual(result.returncode, 0)

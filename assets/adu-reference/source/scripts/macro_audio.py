@@ -116,15 +116,21 @@ def load_track(path, offset, end):
     return np.pad(raw, ((0, max(0, A.N - len(raw))), (0, 0)))[:A.N]
 
 
-def render(project: Path, track: Path | None = None, offset: float = 0):
-    plan = json.loads((project / 'macro_plan.json').read_text())
-    cues = json.loads((project / 'sfx.json').read_text())
+def render(project: Path, track: Path | None = None, offset: float = 0, *, mode: str | None = None):
+    mode = mode or ('track' if track else 'none')
+    if mode not in ('none', 'synth', 'track'):
+        raise ValueError('Music mode must be none, synth or track')
+    if (mode == 'track') != bool(track):
+        raise ValueError('A supplied track requires mode track; none/synth cannot consume a track')
+    plan = json.loads((project / 'macro_plan.json').read_text(encoding='utf-8'))
+    cues = json.loads((project / 'sfx.json').read_text(encoding='utf-8'))
     end = plan['end_frame'] / plan['fps']
     if abs(cues['end'] - end) > .5 / plan['fps']: raise ValueError('SFX and video duration disagree; recollect S() cues')
     unknown = {c['type'] for c in cues['sfx']} - A.GEN.keys()
     if unknown: raise ValueError(f'Missing source SFX generators: {sorted(unknown)}')
-    score = plan.get('audio')
-    if not score or score.get('sfxMixSource') != 'runtime-scene-S-only': raise ValueError('Missing mapped source score')
+    score = plan.get('audio') or {}
+    if mode != 'none' and score.get('sfxMixSource') != 'runtime-scene-S-only':
+        raise ValueError('Missing mapped source score')
     A.init(end); A.rng = np.random.default_rng(11)
     music = np.zeros((A.N, 2)); sections = []
     if track:
@@ -135,10 +141,10 @@ def render(project: Path, track: Path | None = None, offset: float = 0):
             filtered = np.stack([A.lowpass(music[:, c], dark.get('cutoffHz', 900)) for c in range(2)], 1)
             music = music * (1 - w[:, None]) + filtered * w[:, None] * dark.get('gain', 1.15)
         music *= .9 / max(1e-9, np.max(np.abs(music)))
-    else:
+    elif mode == 'synth':
         sections = render_bed(music, score['sections'])
     fx = np.zeros_like(music)
-    special = score.get('specialEvents', [])
+    special = score.get('specialEvents', []) if mode != 'none' else []
     # Risers crossing an authored scene boundary continue as one sound.
     joined = []
     for event in special:
@@ -152,38 +158,40 @@ def render(project: Path, track: Path | None = None, offset: float = 0):
             render_special(fx, event)
             rendered_special += 1
     crashes = []
-    for hit in score.get('hits', []):
+    for hit in score.get('hits', []) if mode != 'none' else []:
         if hit['kind'] == 'subDrops': A.add(fx, A.pan(A.sub_drop(1.1, .5), 0), hit['at'])
         elif hit['kind'] == 'crashes': crashes.append(hit)
         else: raise ValueError(f'Unimplemented source hit: {hit["kind"]}')
     music += fx * (.6 if track else 1.)
-    keys = [(e['at'], e['db']) for e in score.get('envelope', [])]
+    keys = [(e['at'], e['db']) for e in score.get('envelope', [])] if mode != 'none' else []
     if keys: music *= A.env_curve(keys)[:, None]
     for hit in crashes: A.add(music, A.pan(A.crash_cym(), (hit['at'] % 2) - .5), hit['at'])
-    for fade in score.get('fade', []):
+    for fade in score.get('fade', []) if mode != 'none' else []:
         a, b = round(fade['start'] * A.SR), round(fade['end'] * A.SR)
         if b <= a: raise ValueError('Zero-length musical fade')
         music[a:b] *= np.clip(1 - np.arange(b-a) / (b-a), 0, 1)[:, None] ** 1.3
         if fade['endFrame'] >= plan['end_frame'] - 1: music[b:] = 0
     sfx = A.render_sfx(cues['sfx'])
-    music = A.reverb(music, 1.1, .12); sfx = A.reverb(sfx, .9, .12)
+    if mode != 'none': music = A.reverb(music, 1.1, .12)
+    sfx = A.reverb(sfx, .9, .12)
     samples = round(end * A.SR)
     for name, data in (('bgm', music), ('sfx', sfx)):
         data = data[:samples]
         data /= max(np.max(np.abs(data)) * 1.1, 1e-9)
         A.write_wav(str(project / f'{name}.wav'), data)
-    report = {'mode': 'track' if track else 'source-synth', 'duration': end, 'sampleRate': A.SR,
+    report = {'mode': mode, 'duration': end, 'sampleRate': A.SR,
               'renderedSections': len(sections), 'bars': sum(s['bars'] for s in sections),
-              'specialEvents': rendered_special, 'plannedSpecialEvents': len(joined), 'hits': len(score.get('hits', [])),
+              'specialEvents': rendered_special, 'plannedSpecialEvents': len(joined), 'hits': len(score.get('hits', [])) if mode != 'none' else 0,
               'sfx': len(cues['sfx']), 'voiceRetimed': False,
               'review': 'Structure rendered; listening and source/reference comparison still required.'}
-    (project / 'macro_audio_report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
+    (project / 'macro_audio_report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps(report, ensure_ascii=False))
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('project', type=Path); parser.add_argument('--track', type=Path)
+    parser.add_argument('--mode', choices=('none', 'synth', 'track'), help='default none, or track when --track is supplied; synth is opt-in')
     parser.add_argument('--offset', type=float, default=0)
     args = parser.parse_args()
-    render(args.project, args.track, args.offset)
+    render(args.project, args.track, args.offset, mode=args.mode)

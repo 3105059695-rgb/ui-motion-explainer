@@ -1,6 +1,6 @@
-# 已认可女孩动作与衔接样片
+# AIGC 画风参考 · 柔和手绘
 
-`output/preview.mp4` 是保留的11.3秒历史样片，可直接播放。用户已认可该片观感；当前复用范围是女孩手绘画风、动作、节奏及接入UI的衔接。当前正文外观以主Skill的Fred黑紫合同为准，不能照搬本片历史淡紫UI。
+`output/preview.mp4` 是11.3秒历史样片。2026-10-20用户明确它用于AIGC创作的画风参考：生成这种画风的新图，再制作本期视频。不是当前UI模板，也不固定原图、女孩身份或场景。UI从主Skill效果库选择；本期固定IP与明确画风要求优先。历史认可记录不删除，本轮用途见 ../../references/evidence/library-entry-correction-20261020.json。
 
 可编辑播放工程包含 `index.html`、`project.json`、`src/player.js`、`src/style.css`、实际用到的3条动作视频/首帧和 `audio/mix.wav`。配音是公开示意音色，不是作者私人声音克隆。
 

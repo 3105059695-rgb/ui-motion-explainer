@@ -25,7 +25,7 @@ def read_json(path):
     return json.loads(Path(path).read_bytes().decode('utf-8-sig'))
 
 
-def load_registry(root=ROOT):
+def load_registry(root=ROOT, include_historical=False):
     """Merge an optional, explicit machine-local overlay without changing defaults.
 
     Account data may be local, but the current shared UI is package-owned.
@@ -34,6 +34,10 @@ def load_registry(root=ROOT):
     """
     root = Path(root)
     registry = read_json(root / REGISTRY)
+    if unified_production(registry) and not include_historical:
+        # A stale private account overlay must not choose or block the unified
+        # design source. The existing explicit listing still opens that history.
+        return registry
     overlay_path = root / LOCAL_REGISTRY
     if not overlay_path.exists():
         return registry
@@ -101,7 +105,14 @@ def load_registry(root=ROOT):
             if item.get('profile_path') and item['profile_path'] != current['profile_path']:
                 reading.append(current['profile_path'])
             reading.extend(item.get('required_reading', []))
-            current.update({key: value for key, value in item.items() if key not in {'id', 'required_reading'}})
+            # Private resource overlays must not hide newly registered methods.
+            if 'sources' in item:
+                def source_key(source):
+                    return (source['kind'], (source.get('baseline') or {}).get('id') or source['path'])
+                sources = {source_key(source): source for source in current.get('sources', [])}
+                sources.update({source_key(source): source for source in item['sources']})
+                current['sources'] = list(sources.values())
+            current.update({key: value for key, value in item.items() if key not in {'id', 'required_reading', 'sources'}})
             if reading:
                 current['required_reading'] = list(dict.fromkeys(reading))
         return registry
@@ -126,6 +137,26 @@ def contract_sha256(contract):
 
 def current_binding(resolution):
     """Portable identities/hashes for a plan; absolute install paths stay out."""
+    def directions(rows):
+        return [{'id': row['id'], 'revision': row.get('contract_revision'),
+                 'sha256': row.get('contract_sha256'),
+                 'anchors': [{'index': index, 'sha256': fact.get('sha256')}
+                             for index, fact in enumerate(row.get('visual_anchors', []))]}
+                for row in rows]
+
+    if resolution.get('unified_production', {}).get('enabled') is True:
+        guide = resolution.get('guidance', {})
+        if not guide.get('exists'):
+            return None
+        binding = {'schema_version': 1, 'mode': 'unified-production',
+                'profile_id': resolution['resolved_profile'],
+                'guidance_sha256': content_sha256(guide['path']),
+                'directions': directions(resolution.get('reference_directions', []))}
+        if resolution.get('ui_override'):
+            binding['ui_override'] = {key: resolution['ui_override'][key] for key in
+                                     ('id', 'scope', 'approval_source_sha256', 'quote_sha256')}
+            binding['default_directions'] = directions(resolution.get('default_reference_directions', []))
+        return binding
     profile = resolution.get('profile_path')
     if not resolution.get('resolved_profile') or not profile or not Path(profile).is_file():
         return None
@@ -178,7 +209,7 @@ def load_profile(config, registry, root=ROOT):
     """Read current source indices on every call; do not cache their approval state."""
     profile = path_fact(config['profile_path'], root, 'profile')
     result = {'id': config['id'], 'label': config['label'], 'profile_path': profile['path'],
-              'profile_exists': profile['exists'], 'confirmed_baselines': [],
+              'profile_exists': profile['exists'], 'confirmed_baselines': [], 'confirmed_methods': [],
               'reference_directions': [], 'required_reading': [profile],
               'excluded_baselines': [], 'sources': [], 'missing': [], 'warnings': [],
               'project_roots': [str(local_path(p, root)) for p in config.get('project_roots', [])]}
@@ -196,7 +227,7 @@ def load_profile(config, registry, root=ROOT):
         add_reading(value)
     directions = config.get('reference_directions', [])
     if config.get('ui_direction') == 'shared':
-        shared = registry.get('shared_ui_direction')
+        shared = registry.get('shared_ui_direction') or registry.get('historical_shared_ui_direction')
         if not isinstance(shared, dict) or not shared.get('id') or not shared.get('guidance_path'):
             result['warnings'].append('The shared body UI direction is missing or malformed; no historical palette fallback is allowed.')
             result['style_references_ready'] = False
@@ -268,6 +299,15 @@ def load_profile(config, registry, root=ROOT):
             result['warnings'].append('Cannot read reference direction ' + spec['id'] + ': ' + str(exc))
 
     def add_baseline(item):
+        item['profile_id'] = config['id']
+        # Partial AIGC method approval may coexist with rejected UI. It cannot
+        # revive the same video as a visual baseline.
+        if item.get('approval_kind') == 'method-only':
+            if not (item.get('retrieval') or {}).get('method_scope'):
+                result['warnings'].append('Method-only approval requires an explicit method scope: ' + item['id'])
+                return
+            result['confirmed_methods'].append(item)
+            return
         rejected = _excluded_path(item['path'], registry, root)
         if rejected:
             result['excluded_baselines'].append(rejected)
@@ -289,11 +329,12 @@ def load_profile(config, registry, root=ROOT):
                 record = spec['baseline']
                 visual = path_fact(record['path'], root, 'confirmed-visual')
                 impl = [path_fact(p, root, 'implementation') for p in record['implementations']]
-                related = [path_fact(p, root, 'encoded-frames') for p in record.get('related_visuals', [])]
+                related = [path_fact(p, root, 'reference-media') for p in record.get('related_visuals', [])]
                 evidence = [source, *[path_fact(p, root, 'supporting-evidence') for p in record.get('evidence', [])]]
                 facts.extend([visual, *impl, *related, *evidence])
                 boundaries = {key: record[key] for key in ('quote', 'source_range', 'audio_review',
-                              'new_projects_approved', 'boundaries', 'current_usage', 'superseded_visual_scope') if key in record}
+                              'new_projects_approved', 'boundaries', 'current_usage', 'superseded_visual_scope',
+                              'retrieval', 'approval_kind', 'whole_film_approved', 'media_range') if key in record}
                 add_baseline({**visual, 'id': record['id'], 'status': record['status'],
                               'scope': record['scope'], 'media_kind': record['media_kind'],
                               'source': source, 'evidence': evidence, 'implementations': impl,
@@ -321,7 +362,7 @@ def load_profile(config, registry, root=ROOT):
                               'status': 'approved_opening_revision_only', 'scope': acceptance['scope'],
                               'quote': acceptance['quote'], 'source': source, 'evidence': evidence,
                               'implementations': impl, 'source_range': [0, doc.get('intro_boundary_seconds')],
-                              'whole_film_approved': False})
+                              'whole_film_approved': False, 'retrieval': spec.get('retrieval', {})})
                 continue
             if spec['kind'] != 'asset-map':
                 result['warnings'].append('Unsupported source adapter: ' + spec['kind'])
@@ -350,14 +391,40 @@ def load_profile(config, registry, root=ROOT):
                 if sample.get('record'):
                     evidence.append(path_fact(sample['record'], path.parent, 'approval-record'))
                 facts.extend([visual, *impl, *evidence])
+                approval = sample.get('approval') or {}
+                boundaries = [value for value in (sample.get('doesNotAssert'), approval.get('doesNotAssert')) if value]
+                for key in ('fullFilmUserApproval', 'aigcUserApproval', 'fullHumanPlaybackAndListening', 'humanFullAVReview'):
+                    if sample.get(key) is False or approval.get(key) is False:
+                        boundaries.append(key + '=false')
+                retrieval = (spec.get('sample_retrieval') or {}).get(sample.get('id'), sample.get('retrieval', {}))
                 add_baseline({**visual, 'id': sample.get('id'), 'status': sample['status'],
                               'scope': sample.get('approvalScope'), 'source': source, 'evidence': evidence,
                               'implementations': impl, 'source_range': sample.get('sourceRange'),
-                              'later_reference_calibration': sample.get('laterReferenceCalibration')})
+                              'later_reference_calibration': sample.get('laterReferenceCalibration'),
+                              'quote': approval.get('quote', approval.get('approvalQuote')),
+                              'boundaries': boundaries, 'retrieval': retrieval,
+                              'media_range': [0, sample.get('durationSeconds')],
+                              'whole_film_approved': sample.get('fullFilmUserApproval', approval.get('fullFilmUserApproval'))})
             # Current trial exports are not silently promoted just because they exist.
             for key, trial in doc.get('openingTrialStatus', {}).items():
                 if isinstance(trial, dict) and trial.get('path'):
-                    result['excluded_baselines'].append({**path_fact(trial['path'], path.parent, 'trial'),
+                    visual = path_fact(trial['path'], path.parent, 'trial')
+                    matching = [item for item in result['confirmed_baselines']
+                                if item['path'] == visual['path'] and item['source']['path'] == source['path']]
+                    denied = any(trial.get(flag) is False for flag in
+                                 ('aestheticApproval', 'fullFilmUserApproval', 'separateAestheticApprovalRecorded'))
+                    rejected = 'rejected' in str(trial.get('status', '')).split('_')
+                    # A current accepted trial may repeat the same approved sample.
+                    # Neither a matching path alone nor historical approvalAtDelivery
+                    # can override the current entry's explicit rejection.
+                    if (not denied and not rejected and trial.get('status') in spec['accepted_statuses']
+                            and any(item['status'] == trial['status'] for item in matching)):
+                        continue
+                    if matching and (denied or rejected):
+                        result['confirmed_baselines'] = [item for item in result['confirmed_baselines']
+                                                        if item not in matching]
+                        result['warnings'].append('Current opening trial rejects a previously listed baseline: ' + visual['path'])
+                    result['excluded_baselines'].append({**visual,
                         'id': key, 'status': trial.get('status'), 'source': source,
                         'reason': 'Trial status is separate from confirmed samples; use the current profile and index.'})
             for key in ('implementationGuide',):
@@ -456,14 +523,127 @@ def project_ui_override(declaration, metadata, config, registry, root):
     return resolved
 
 
+def unified_production(registry):
+    """Only the package's explicit switch retires legacy account visual routing."""
+    value = registry.get('unified_production')
+    return value if isinstance(value, dict) and value.get('enabled') is True else None
+
+
+def resolve_unified(project, profile, registry, root):
+    """Resolve the current shared direction without account or whole-film routing.
+
+    Existing account/profile metadata is a history hint, not a visual choice.
+    Current project inputs and sourced UI overrides survive independently; they
+    cannot promote a prior export or its style.applied flag to approval.
+    """
+    config = unified_production(registry)
+    guide = path_fact(config['guidance_path'], root, 'primary-design-library')
+    target = Path(project or Path.cwd()).expanduser().resolve()
+    directory = target.parent if target.is_file() else target
+    result = {'status': 'resolved' if guide['exists'] else 'missing-guidance',
+              'resolved_profile': config.get('profile_id', 'user-ui'),
+              'profile_path': guide['path'], 'guidance': guide,
+              'project': str(directory), 'selection_source': 'unified-production',
+              'ui_direction_source': 'effect-library', 'editing_mode': 'continuous-ui',
+              'unified_production': {**config, 'account_visual_routing': False,
+                                     'whole_film_recommendations': False},
+              'confirmed_baselines': [], 'confirmed_methods': [], 'method_examples': [],
+              'reference_directions': [], 'available_profiles': [],
+              'required_reading': [guide], 'missing': [] if guide['exists'] else [guide],
+              'style_references_ready': guide['exists'], 'requires_visual_comparison': True,
+              'excluded_baselines': known_exclusions(registry, root, directory),
+              'historical_profile_hints': [], 'warnings': [],
+              'historical_query': 'ui.py styles -- list',
+              'scope': 'Effect-library resource discovery only; no visual review or aesthetic approval. '
+                       'Account history, AIGC art references and current source identity do not choose UI aesthetics.'}
+    # A current user-selected direction is separate from historical profiles.
+    # Loading it here persists the choice across directories and fresh chats.
+    direction = config.get('default_direction')
+    if direction is not None:
+        if not isinstance(direction, dict) or not direction.get('id') or not direction.get('guidance_path'):
+            result['style_references_ready'] = False
+            result['warnings'].append('The configured default UI direction is invalid; do not choose another style.')
+        else:
+            selected = load_profile({
+                'id': result['resolved_profile'], 'label': config.get('label', 'Shared direction'),
+                'profile_path': config['guidance_path'], 'sources': [],
+                'reference_directions': [direction],
+                'required_reading': config.get('required_reading', []),
+            }, registry, root)
+            for key in ('reference_directions', 'required_reading', 'missing', 'style_references_ready'):
+                result[key] = selected[key]
+            result['default_reference_directions'] = selected['reference_directions']
+            result['warnings'].extend(selected['warnings'])
+            result['ui_direction_source'] = config.get('direction_source', 'shared-default')
+            result['scope'] = ('The user-selected default visual/editing direction applies across new chats and '
+                               'project directories. Library entries implement that direction; an explicit sourced '
+                               'project request may override it. Resource checks do not certify visual application.')
+    if profile:
+        result['historical_profile_hints'].append({'value': str(profile), 'source': 'explicit-profile'})
+    # A new child directory is not an implicit continuation of its parent.
+    # Continuing an existing project means passing that project's actual root.
+    for folder in (directory,):
+        metadata = folder / 'project.json'
+        if not metadata.is_file():
+            continue
+        try:
+            doc = read_json(metadata)
+            if not isinstance(doc, dict):
+                raise ValueError('project metadata must be an object')
+        except (OSError, ValueError) as exc:
+            result['warnings'].append('Unreadable project metadata: ' + str(metadata) + ': ' + str(exc))
+            break
+        style = doc.get('style') if isinstance(doc.get('style'), dict) else {}
+        for record in (doc, style):
+            for key in PROFILE_KEYS:
+                if isinstance(record.get(key), str) and record[key].strip():
+                    result['historical_profile_hints'].append({'value': record[key], 'source': str(metadata)})
+        mode = style.get('mode') or doc.get('editing_mode') or doc.get('mode')
+        if mode in {'whiteboard', 'continuous-ui'}:
+            result.update(editing_mode=mode, mode_source=str(metadata))
+        # Keep current inputs and identity as supplied. Do not import another
+        # account's presenter, voice, character or baseline through its profile.
+        result['current_project_inputs'] = {key: doc[key] for key in
+            ('source', 'presenter', 'identity', 'character', 'ip', 'audio', 'audio_source', 'narration') if key in doc}
+        result['current_project_style'] = {key: style[key] for key in
+                                          ('tokens', 'profile', 'baseline', 'ui_override') if key in style}
+        result['current_project_metadata_path'] = str(metadata)
+        if 'ui_override' in style:
+            try:
+                # Reuse the existing sourced request contract, but do not pull
+                # account sources or old whole-film baselines into this project.
+                project_config = {'id': result['resolved_profile'], 'label': config.get('label', 'Unified production'),
+                                  'profile_path': guide['path'], 'sources': []}
+                override = project_ui_override(style['ui_override'], metadata, project_config, registry, root)
+                # Only body UI changes. Global preferences, opening/exclusions
+                # and their reading/reference readiness remain independently bound.
+                for key in ('required_reading', 'missing'):
+                    known = {item['path'] for item in result[key]}
+                    result[key].extend(item for item in override[key] if item['path'] not in known)
+                result['style_references_ready'] = (
+                    result['style_references_ready'] and override['style_references_ready'])
+                for key in ('ui_override', 'reference_directions'):
+                    result[key] = override[key]
+                result['ui_direction_source'] = override.get('ui_direction_source', 'project-body-ui')
+                result['warnings'].extend(override['warnings'])
+            except (OSError, ValueError, KeyError, TypeError) as exc:
+                result['style_references_ready'] = False
+                result['warnings'].append('Invalid project UI override: ' + str(exc))
+        break
+    return result
+
+
 def resolve(project=None, profile=None, root=ROOT, registry=None):
     registry = load_registry(root) if registry is None else registry
+    if unified_production(registry):
+        return resolve_unified(project, profile, registry, root)
     configs = registry['profiles']
     available = [load_profile(config, registry, root) for config in configs]
     project_path = Path(project or Path.cwd()).expanduser().resolve()
     directory = project_path.parent if project_path.is_file() else project_path
     result = {'status': 'unresolved', 'resolved_profile': None, 'profile_path': None,
-              'project': str(directory), 'confirmed_baselines': [], 'missing': [],
+              'project': str(directory), 'confirmed_baselines': [], 'confirmed_methods': [], 'method_examples': [], 'missing': [],
+              'editing_mode': 'continuous-ui',
               'reference_directions': [], 'required_reading': [], 'style_references_ready': False,
               'requires_visual_comparison': True, 'selection_source': None,
               'warnings': [], 'excluded_baselines': known_exclusions(registry, root, directory),
@@ -499,6 +679,12 @@ def resolve(project=None, profile=None, root=ROOT, registry=None):
                 # Reading it back would freeze old routing and make prepare drift.
                 continue
             style = doc.get('style', {})
+            if name == 'project.json' and not result.get('mode_source'):
+                mode = style.get('mode') if isinstance(style, dict) else None
+                mode = mode or doc.get('editing_mode') or doc.get('mode')
+                if mode in {'whiteboard', 'continuous-ui'}:
+                    result['editing_mode'] = mode
+                    result['mode_source'] = str(path)
             values = [(k, doc.get(k)) for k in PROFILE_KEYS]
             if isinstance(style, dict):
                 values += [(k, style.get(k)) for k in PROFILE_KEYS]
@@ -564,12 +750,21 @@ def resolve(project=None, profile=None, root=ROOT, registry=None):
                       reference_directions=selected['reference_directions'],
                       required_reading=selected['required_reading'],
                       style_references_ready=selected['style_references_ready'],
-                      confirmed_baselines=selected['confirmed_baselines'], missing=selected['missing'])
+                      confirmed_baselines=selected['confirmed_baselines'], confirmed_methods=selected['confirmed_methods'], missing=selected['missing'])
         result['ui_direction_source'] = selected.get('ui_direction_source')
         if selected.get('ui_override'):
             result['ui_override'] = selected['ui_override']
         result['excluded_baselines'].extend(selected['excluded_baselines'])
         result['warnings'].extend(selected['warnings'])
+        for account in available:
+            for row in [*account['confirmed_baselines'], *account['confirmed_methods']]:
+                retrieval = row.get('retrieval') or {}
+                same_account = account['id'] == selection
+                if retrieval and (same_account or (retrieval.get('cross_profile') is True and retrieval.get('method_scope'))):
+                    result['method_examples'].append({**row,
+                        'usage': 'account-reference' if same_account else 'method-reference-only',
+                        'identity_reuse_allowed': False, 'media_reuse_automatic': False,
+                        'style_reuse_automatic': False})
         result['available_profiles'] = []
     else:
         result['warnings'].append('No applicable account is identified. Inspect the listed baselines; do not treat palette tokens or a new sample as approval.')
@@ -586,12 +781,13 @@ def resolve(project=None, profile=None, root=ROOT, registry=None):
 
 
 def listing(root=ROOT):
-    registry = load_registry(root)
+    registry = load_registry(root, include_historical=True)
     return {'status': 'listed', 'resolved_profile': None, 'profile_path': None,
             'confirmed_baselines': [], 'missing': [], 'requires_visual_comparison': True,
             'reference_directions': [], 'required_reading': [],
             'excluded_baselines': known_exclusions(registry, root),
             'available_profiles': [load_profile(c, registry, root) for c in registry['profiles']],
+            'usage': 'Historical query only; these profiles and whole films are not ordinary production defaults.',
             'unregistered_profiles': registry.get('unregistered_profiles', {})}
 
 
@@ -601,7 +797,7 @@ def main(argv=None):
     commands.add_parser('list')
     command = commands.add_parser('resolve')
     command.add_argument('--project', type=Path, default=Path.cwd())
-    command.add_argument('--profile', help='Explicit style: adiao, fangmu, or user-ui (current Fred direction and approved AIGC references).')
+    command.add_argument('--profile', help='Legacy account hint; new work retains the shared default visual direction.')
     args = parser.parse_args(argv)
     try:
         output = listing() if args.command == 'list' else resolve(args.project, args.profile)

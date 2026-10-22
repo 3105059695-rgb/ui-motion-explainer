@@ -1,21 +1,21 @@
 # 导演计划：本地工具合同
 
-`scripts/director.py` 只做配方查阅、输入整理和静态检查。它不理解口播、不自动选素材或配方、不审美审批，不调用生成服务。语义判断仍由 Agent 读取[语义导演方法](semantic-directing.md)后完成。
+本文件是普通路线与完整场景路线共同的计划字段和检查状态合同。`scripts/director.py` 负责输入整理与静态检查，不代替 Agent 的[导演判断](script-visual-planning.md)或[实际观看](visual-quality.md)，不调用生成服务。
 
 ```powershell
 python -X utf8 scripts/ui.py direct recipes
 python -X utf8 scripts/ui.py direct recipes --id S01
-python -X utf8 scripts/ui.py direct prepare --script <原稿.txt> --project <当前工程目录> --profile <适用档案.md>
+python -X utf8 scripts/ui.py direct prepare --script <原稿.txt> --project <当前工程目录>
 python -X utf8 scripts/ui.py direct check --plan <导演计划.json> --production
 ```
 
 统一入口如果使用 `--` 传递参数，以 `scripts/ui.py direct --help` 的实际帮助为准；也可直接调用 `scripts/director.py` 的同名子命令。
 
-正式预检必须加 `--production`（同义参数 `--require-production`）：仅 `production_ready=true` 才退出 0。省略参数是历史结构诊断，退出 0 只说明 `plan_valid=true`，不代表可以正式制作；返回值同时标明 `check_mode` 与 `check_passed`。现有 `ui.py render` 原本就会检查生产就绪，这次不重复增加另一道导出流程。
+正式预检必须加 `--production`（同义参数 `--require-production`）：仅 `preflight_ready=true` 才退出 0，旧 `production_ready` 保留为相同值的兼容字段。省略参数是历史结构诊断，退出 0 只说明 `plan_valid=true`。`assessment.stage=technical-preflight` 明确这只是技术预检，动作执行、句意匹配、视觉风格、完整视听与用户认可均为 `not-assessed`；静态工具不将它们自动升为通过。现有 `ui.py render` 沿用该预检，不增加创作审批流程。
 
-`prepare` 生成 `director-context.json` 与 `director-brief.md`，包含完整原文、原文件 SHA-256、风格选择状态和必读文件路径。它调用本机风格注册表，按显式 `--profile`、工程配置、注册的项目根目录解析；无依据或有冲突时保持未确定，不猜账号。`context.style.resolution` 保存档案、认可样片、实现、证据和未认可范围。`context.selection` 根据原文位置与上下文检索方法、配方和源码候选，保留出处、适用条件与负例；它不是已完成的选材决定，允许跨句连续场景、原创或保留人物。Agent 仍须实际阅读并落实本期工程。同内容跳过；不同内容拒绝覆盖，除非明确 `--force`，且原文件确由本工具生成。两份输出先一起检查；源稿、其他文件以及链接目标不覆盖。
+`prepare` 生成 `director-context.json` 与 `director-brief.md`，保留完整原文、原文件 SHA-256 和本期视频原声来源，同时携带当前 Fred Talk 默认及实际参考。`selection.narration_study` 提供来源原句、上下文与画面证据；候选不等于已完成设计。字段变更时重新准备，同内容跳过；不同内容仅在明确 `--force` 且确由工具生成时更新，源稿和其他文件不覆盖。
 
-`context.aigc` 独立加载 [AIGC 注册集](aigc-assets.json)：当前工程的 `aigc_style_id` 或 `aigc.style_set_id` 优先，其次匹配已解析的账号／项目范围。通用 `user-ui` 默认带入两张女孩原图、8 张已认可场景及既有研究路径；阿刁、方木保留各自档案。找不到选择或设置冲突时明确标记未解决，不猜选画风。它检查资产路径是否存在，但场景是否符合新句意、实际图像是否适用仍由 Agent 按 [AIGC 导演方法](aigc-directing.md)判断。`context.style` 继续约束 UI；AIGC 参考不会替换 UI 外观。
+`context.aigc` 独立加载[AIGC注册集](aigc-assets.json)。本期 `aigc.direction_override` 或明确的 `aigc.style_set_id` 优先；否则使用用户已明确的统一柔和手绘画风参考。账号和目录不改变该选择。画风不绑定女孩身份；当前工程显式固定IP才提供 `identity_rules/identity_references`。原始认可保留，当前用途是制作这种画风的新图和视频，不代表该旧片UI或新输出已认可。未知/冲突显式声明仍报未解决，不静默回退。
 
 本期明确要求与注册画风不同（例如摄影写实）时，可在本工程 `project.json` 的 `aigc.direction_override` 保存有出处的局部方向，优先于注册选择：
 
@@ -34,15 +34,17 @@ python -X utf8 scripts/ui.py direct check --plan <导演计划.json> --productio
 
 ## 当前风格绑定与跨机器调用
 
-新制作计划写 `"style_contract_version": 1`，将 `prepare` 的 `context.style.binding` 原样复制到计划的 `style.binding`。绑定包含注册档案 ID、档案文件哈希，以及各当前方向的 ID、修订号、规范化合同 SHA-256 和视觉锚点文件哈希；不包含安装机的绝对路径，因此相同包可以迁移。不要手填哈希来掩盖过期：发生更新时重新 `prepare`，查看新反馈并落实本期工程后再更新计划。
+新制作计划使用 `style_contract_version:1`，把 `context.style.binding` 原样复制到 `style.binding`。当前默认仍使用 `mode:"unified-production"`；兼容 ID `profile_id:"user-ui"` 不表示按账号换肤。`guidance_sha256` 绑定[审美偏好](aesthetic-preferences.md)，`directions` 绑定 `fred-talk-default-20261020` 方向合同、revision、合同哈希及三张真实校准图的索引与哈希，不能用空数组替代。
 
-`styles resolve` 和 `prepare` 返回各方向的 `visual_anchors`（实际路径、存在性、哈希、用途）及 `style_references_ready` / `context.style.references_ready`。合同正文加载成功与图片齐备是两个事实；必读图片缺失时继续定位包内基线或已授权本地资产，不退回旧模板，不要求用户重新描述已经确认的偏好。
+`styles resolve` 与 `prepare` 普通输出为 `ui_direction_source:"fred-talk-default"`；`reference_directions` 携带方向合同与 `visual_anchors`，`guidance` 指向当前审美入口。`style_references_ready` 只说明绑定资料可读，不证明已经查看参考、应用构图或通过审美检查。
 
-分发包可在风格注册表显式设置 `default_profile`，在没有当前账号、工程声明或目录匹配时使用该包的默认风格。它不覆盖明确账号；冲突或未知工程声明仍需解决，不能静默回落到默认女孩或另一账号。没有该字段的旧包保持未确定状态。
+`context.style.preferences` 从唯一审美页派生 `path/text/sha256/sections`，携带全文及章节定位；简报明确继承 UI、AE 感、开头与禁忌，不维护第二份规则。正文例外生效时，`default_reference_directions` 继续保存默认方向，`binding.default_directions` 绑定其合同和参考图；当前正文方向仍在 `reference_directions`。默认与正文参考各自验证，正文覆盖不免除全局必读要求。
 
-`check` 对版本 1 重新读取当前注册表，核对档案、合同修订、合同内容和图像哈希；拒绝被否定／试稿方向、被否定的 UI 基线，以及与当前工程明确账号冲突的绑定。没有现行绑定、缺少必读视觉锚点或绑定过期时，`render_ready=false`。没有方向合同的账号至少需要现存的已认可视觉基线，不能仅凭档案文字报依据齐备。`style.profile` 如填写仍使用实际文件路径，且须属于绑定档案；绑定已经选择账号时可省略该冗余字段。
+旧账号注册项和本机 overlay 留作历史兼容，可用 `styles list` 查询；不由目录或旧 profile 改变全局默认。统一路由只读取指定工程根目录的 `project.json`，父目录的模式、原声、身份或旧例外不传播给新工程；指定续作从其根目录进入。有真实来源的 `style.ui_override` 仅覆盖本工程 `body-ui`，保留整体偏好、开头与禁忌的必读资料；不能由 Agent 自写“用户已确认”绕过默认。
 
-旧计划继续按原结构检查，但未写版本 1 时 `current_style_ready=false`，并给出兼容性警告；旧计划即使 `render_ready=true`，也只表示旧静态检查就绪。`current_style_ready=true` 只证明当前约束与所需风格依据已绑定且可读，**不证明已看过图片、已实际应用主题或画面达到审美要求**。实看片段、听审和用户认可仍分别记录，非空 `tokens` 不是风格验收。
+`check` 校验当前方向和显式工程覆盖。旧绑定、缺少当前方向／校准图或哈希失效会阻止正式导出，需重新 `prepare` 并核对来源后更新计划；不自动改写历史计划。默认不要求照搬某一部旧整片，实际素材、源音频与实现仍独立校验。
+
+旧计划仍可做来源、素材、时序和实现结构诊断。`current_style_ready` 表示当前 Fred Talk 方向或明确工程覆盖依据有效；`style.applied` 和非空 tokens 也只记录实现状态，不等于视觉应用正确、完整视听或用户认可。
 
 AIGC 另外返回 `character_references_ready`、每个场景的 `reference_ready`、整个目录的 `production_references_ready`；这些是资源盘点，不是每片必须使用所有场景。`optional_provenance_missing` 只列原作者视频／原片帧等可选溯源缺件，不把它们当作角色图缺失。实际计划仅校验本片使用的角色、场景、画风参考。没有 AIGC 的片段不受未用场景缺图影响；选用的角色或场景缺失不得用别的 IP 静默替换。版本 1 的风格计划若含 AIGC 动作，也必须填写下文的动作参考合同，不能利用旧计划兼容性跳过。
 
@@ -56,8 +58,15 @@ AIGC 另外返回 `character_references_ready`、每个场景的 `reference_read
   "style_contract_version": 1,
   "source": {"path": "口播稿.txt", "sha256": "原文件字节的真实SHA-256"},
   "style": {
-    "profile": "适用风格档案.md",
-    "binding": {"schema_version": 1, "profile_id": "当前注册档案ID", "profile_sha256": "从context.style.binding复制", "directions": []},
+    "binding": {
+      "schema_version": 1, "mode": "unified-production", "profile_id": "user-ui",
+      "guidance_sha256": "从context.style.binding原样复制",
+      "directions": [{
+        "id": "fred-talk-default-20261020", "revision": "从当前上下文复制",
+        "sha256": "当前方向合同真实哈希",
+        "anchors": [{"index": 0, "sha256": "校准图0真实哈希"}, {"index": 1, "sha256": "校准图1真实哈希"}, {"index": 2, "sha256": "校准图2真实哈希"}]
+      }]
+    },
     "tokens": {"background": "当前工程确认的背景", "type": "当前字体体系"}
   },
   "timing": {"basis": "script-estimate"},
@@ -83,10 +92,21 @@ AIGC 另外返回 `character_references_ready`、每个场景的 `reference_read
 
 - 计划中的所有相对文件路径以**计划 JSON 所在目录**解析；绝对路径保持原址。`prepare` 的命令行相对路径以当前终端目录解析。
 - 原文以 UTF-8 或 UTF-8 BOM 解码，保留 CRLF/LF。哈希针对原文件字节，包含 BOM；改稿后必须更新上下文与计划。
-- `style.tokens` 必须是非空对象；`profile`、`baseline` 可选，有值时必须是存在的本地路径。`binding` 必须完整复制当前上下文（包括真实的 `directions`，上面的空数组只是结构占位）。这些字段记录选用依据，不代表渲染已生效或用户已认可。
+- `style.tokens` 是本期实现参数，必须非空；统一制作不以旧profile或baseline作为样式门槛。新绑定应来自当前上下文，当前源素材和实现文件仍必须真实可用。字段记录不证明画面已达标。
 - `carrier` 取 `presenter / real-media / diagram / aigc / mixed`；所有语义说明必须非空。`objects` 可用字符串 ID，或含非空 `id` 的对象。
 - `recipe_ids` 可为 `[]`。新语义配方按 [S01–S10 原目录](semantic-editing-recipes.json)的 ID 核查；纯人物或复用既有 O/X/F 源码时无需强迫选择 S 配方，直接写实际 `implementation.path`。该路径必须已存在；工具不会替 Agent 创建实现。
 - `assets` 字段必须显式提供。无需外部素材的图形可用 `[]`；纯人物已在既有工程轨道内时也可用 `[]`，由 Agent 复查原轨道。`real-media/mixed` 的空素材列表会阻断静态就绪；`aigc` 没有完成的视频不可报就绪。
+
+## 效果库设计引用
+
+`selection.mode:reference` 可以采用现有效果库，不强迫同时挂某条秋芝/Fred方法。每个 `selection.library_refs[]` 保存 `kind/id/adaptation_reason` 以及下面两项；kind可为 `capability/family/software-preset/reference`，id来自现有能力目录，或 `kind:software-preset` 的 `fredtalk:<referenceId>`。
+
+- `source_binding:{path,sha256,origin,selector?}`：该条目登记的实际来源。`origin` 为 `skill` 或 `project`；精确复制的源文件可按内容哈希核对，共享文件按该条目的具体 selector 定位。通过 `inspect` 查看实际条目及路径，不拿 F01 截图、目录本身或通用 EditingKit 文件给所有引用作依据。原条目只有观察 GIF 时可绑定对应 GIF，但不能称为已经移植了现成源码。
+- `application:{contribution,path,sha256,marker}`：本期从渲染入口可达的实现位置，marker 必须唯一且不只是注释。`contribution` 为 `design` 或 `motion`；前者借用了构图、材料、窗口组织、字级或层次，后者仅借动作。`adaptation_reason` 说明本段保留与改造了什么，不能用“有缩放”代替整体设计。
+
+`selection.evidence` 继续绑定目录哈希和实际设计来源；不另建重复清单。`source_binding` 将来源归到具体条目，`application` 将它落到本期实现。纯原创和人物段落仍可不用库引用；不得把“原创”当作跳过用户既定视觉意图的理由。修改旧计划时真实核对后再补字段，工具不自动填写合格声明。
+
+检查仅验证文件、来源归属和静态实现位置，不能证明这个代码位置运行时产生了相似画面。设计声明与动作声明分别统计；实际调用及[正文画面对照](visual-quality.md#用实际样片校准)仍须检查，不能根据数量宣布效果库整体风格已复用。旧整片可显式查阅，但不再是普通设计的默认候选。
 
 ## 来源方法引用
 
@@ -185,7 +205,7 @@ AIGC 另外返回 `character_references_ready`、每个场景的 `reference_read
 ## 怎样理解检查结果
 
 - `errors`：结构、原稿哈希/锚点/原序、配方或本地路径不成立，`plan_valid=false`。
-- `warnings`：需要 Agent 判断的缺口，例如未绑定账号、尚未核对音轨证据内容。
+- `warnings`：需要 Agent 判断的缺口，例如尚未核对音轨证据内容。
 - `readiness_blockers`：只有估时、素材未齐或生成尚未完成。计划可结构有效，但 `render_ready=false`。
 - `render_ready=true`：仅表示本检查涉及的结构和路径就绪；版本 1 的风格计划还要求当前绑定与必读视觉依据齐备。旧计划的兼容性通过不等于当前风格齐备，应同时查看 `current_style_ready`。语义恰当、事实准确、工程能运行、媒体真实内容、画面效果、完整试听及用户认可均须另查；本工具不作这些认证。
 
@@ -205,7 +225,7 @@ AIGC 另外返回 `character_references_ready`、每个场景的 `reference_read
 
 历史画风认可不能填作本期用图依据。正常按口播制作的新图不需要这个例外，也不要求用户逐图确认。此检查按已注册路径匹配，不能识别复制改名文件、判断理由真实性或代替最终画面审查。
 
-`production_ready = render_ready && current_style_ready && selection_ready`。旧计划保留结构兼容，但缺当前风格或本期选用／实现证据不能进入统一生产导出；任何版本声明被否定的基线都会拒绝。统一 `ui.py render` 检查生产就绪后才调用底层渲染器；明确 `--demo` 仅用于历史机制演示，不算正式制作通过。
+`preflight_ready = render_ready && current_style_ready && selection_ready`，旧兼容名为 `production_ready`。缺本期所用资料或选用／实现映射不能进入统一生产导出；旧账号整片绑定不再构成普通制作要求。`selection_evidence.reuse_declarations` 单独统计计划声明过来源方法或配方的段落；声明不是 API 执行证据，零声明也不证明没有调用基础函数。验证 Skill 复用时须继续查看实际调用与连续输出，不能把全部原创的结构通过当成复用成功。明确 `--demo` 仅用于历史机制演示。
 
 检查报告的 `selection_evidence.ledger` 将每段句意、观众疑问、事件与前后交接随实际素材、实现标记及输出范围一起列出，便于实片逐段对照。它复用同一计划，不增加另填的审批表，也不判断这些文字是否已经变成清晰画面。原创、静止阅读、保留人物等合法选择不需要凑配方或参考数量。
 
@@ -245,7 +265,7 @@ AIGC 另外返回 `character_references_ready`、每个场景的 `reference_read
 
 `mode` 为 `reference / original / presenter`。`presenter` 对应保留人物载体；无需强加效果或 AIGC。三种情况都写本句实际理由；机器只验证说明存在，Agent 要复核说明是否成立。`aigc.use` 必须与该段实际生成资产／生成请求一致；没有 AIGC 时明确为何不用，而不是缺字段让其他窗口猜。
 
-`reference` 模式至少选择一个正向来源方法，使用已有 `source_study_refs` 填方法、具体 `video/row_ids`、`adaptation_reason`。相应方法目录与逐句对照文件同时放入 `selection.evidence`：
+`reference` 模式至少包含一个正向 `source_study_refs`，或一项具体 `selection.library_refs`；可以只采用效果库引用，不强迫额外挂来源方法。库引用遵循[效果库设计引用](#效果库设计引用)并按实际贡献标记 `design/motion`。采用来源方法时，才在 `source_study_refs` 填入方法、具体 `video/row_ids` 和 `adaptation_reason`，并把相应方法目录与逐句对照文件放入 `selection.evidence`：
 
 ```json
 {"path":"references/source-study-methods.json","origin":"skill","sha256":"真实文件哈希","role":"source-method"}
@@ -325,4 +345,42 @@ window.renderFrame = t => {
 
 `selection_ready` 表示上述本期来源、覆盖和实现映射成立。`production_entry.verify_output(project, media, ..., expected_plan_sha256=导出前计划哈希)` 在实际渲染后重新核对输入绑定，并通过本机已有 ffprobe 检查导出文件的视频／音频流、时长和文件 SHA-256。成片时长与映射时长的误差容限为 0.12 秒；缺 ffprobe 或媒体解码元信息失败时明确未通过，不自动下载工具。输出报告保留 `traceability` 逐段落点，并明确 `aesthetic_approval:false`、`full_realtime_av_review:false`。技术通过仍不等于句意适合、动画真实、观感满意或听审完成。
 
-目前这个生产导出／导出后检查入口面向读取 `index.html` 与 `project.json.duration` 的 base/fusion/director 后端。自定义 Editorial/Remotion 工程的入口和时钟不同，尚不受这套导出适配器支持，不能宣称已经统一验收；需使用其真实入口的专用适配与媒体检查。
+生产预检与输出复核支持 base/fusion/director，以及下文的 `complete-scenes` 适配器。自定义 Editorial/Remotion 工程的入口和时钟不同，仍需其真实入口的专用适配与媒体检查，不能宣称全部后端已经统一。
+
+## 完整场景路线共用同一计划
+
+`production.backend:"complete-scenes"` 选择完整场景适配器。保留前述原稿、风格、语义、选用、素材、交付和对齐字段；只增加后端需要的 `production` 与每段 `scene`，不另手写一份场景 spec 的文案和时间。
+
+```json
+{
+  "production": {
+    "backend": "complete-scenes",
+    "pack": "anim3",
+    "settings": {"brand": "本期项目名", "music": {"mode": "none"}}
+  },
+  "segments": [{
+    "id": "本期语义段ID",
+    "output": {"start_seconds": 0, "end_seconds": 3},
+    "source_audio": {"start_seconds": 0, "end_seconds": 3},
+    "scene": {
+      "id": "从scene inspect选择的场景ID",
+      "slots": {"实际槽名": "本期内容或素材"},
+      "cues": {"实际cue名": {"at": 1.2}}
+    }
+  }]
+}
+```
+
+这是追加字段示意，不是可直接构建的完整计划。场景 ID、槽名、cue 和保护动作窗由 `scene inspect --pack <包> --scene <ID>` 返回的实际 manifest 决定。
+
+- `production.pack` 当前为 `anim3` 或 `anim4`，单工程只支持一个 pack；尚未支持跨包自动混编。
+- `production.settings.brand` 必填；可选 `presenterLabel/subtitlePreset/faceTracking/presenterCrop/textFontFile/monoFontFile/music/fadeEndSeconds`。不把段落文案、场景列表或时间放进 settings。字体和素材路径仍相对计划目录。
+- `timing.basis` 必须为 `audio-aligned`；`audio_source.path/sha256` 绑定 `scene build --presenter` 的实际原声视频。`alignment_evidence/alignment_sha256` 使用前述对齐 JSON，绑定同一原稿、原声和逐段 span。
+- 当前适配器保留所给原声视频的完整时钟：各段 `output` 与 `source_audio` 相同，连续覆盖 0 到 `delivery.duration_seconds`，并对齐 pack 帧率。节选先从母带按真实区间准备片段与字幕，保持来源记录；不由编译器重排、调速或补空白。
+- `scene.cues` 只接受绝对原声秒数 `{"at":...}`；槽值、媒体、动作保护窗仍由原 pack 编译器检查。原声时间不足时改编场景或换实现，不拉慢口型。
+
+`scene compile --plan <工程/director-plan.json> --out <派生配置.json>` 仅校验并派生参数，报告 `production_ready:false`、`media_generated:false`。`scene build --plan ...` 在准备目录内构建并保留 `scene-spec.json`、`macro_plan.json` 和 `scene-build-receipt.json`，绑定原计划、来源编译器／包、人物及实际输出文件哈希。配置和宏时间线由同一计划派生，改计划后重新构建到新目录，不手改派生文件以绕过绑定。
+
+`direct check --production` 与 `scene render` 都使用共同预检：计划、源文件、对齐、样式、素材及构建产物发生漂移均不能继续正式导出。导出后通过 `production_entry.verify_output` 复查当前绑定和媒体结果。`scene render` 的 `.scene.json` 记录技术结果，持续保留实际视听和审美未验证的边界。
+
+旧 `scene scaffold` 与手写 spec 仍保留兼容；构建或导出这类工程必须显式 `--legacy-spec`，报告不作为正式生产就绪。已绑定导演计划的工程不能用该标志绕过共同预检。实际命令与后端限制见[引擎路由](engine-routing.md#完整场景制作)。

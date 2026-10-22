@@ -2,15 +2,15 @@
 
 > 统一后的任务与规则见 [主入口](../SKILL.md) 和 [模块映射](module-map.md)。本文件保留原 O/X/F 能力及来源索引；不再作为独立制作入口。
 
-第三层的原始能力与来源子索引，按[效果库](library.md)需要展开。原 `ui-motion-explainer` 的内容、资源和脚本保留；其白／浅灰、近黑窗口、局部紫色是历史主题，当前外观由[适用档案](style-profiles.md)决定。F01–F08 是可选机制，不替代原能力。
+原始能力与来源子索引，按[效果库](library.md)需要展开。原 `ui-motion-explainer` 的内容、资源和脚本保留；其构图、材料、窗口与动作只在适合本期表达和 Fred Talk 默认时选用或适配。整体审美由[审美偏好](aesthetic-preferences.md)维护；F01–F08 是可选机制，不替代原能力。
 
-“全部涉及”指每项原能力都能被找到、阅读和调用，也能进入当前任务的制作流程。它不要求一条视频遍历全部动作、四种开场或全部账号规则。每个语义段仍选一个主动作。
+“覆盖”指保留原能力与来源的可查索引。观察记录可供阅读；只有具有实际源码的部分才可调用，仍须检查接口和本期适配缺口。不能把每项可查等同于每项已实现，也不要求一条视频遍历全部动作、四种开场或全部账号规则。
 
 ## 完整性与版本选择
 
 随包快照位于 [assets/base-skill](../assets/base-skill/GUIDE.md)。[base-manifest.json](base-manifest.json) 记录每个原文件的路径、字节数和 SHA-256；245 个文件均原样保留。原技能正文、18 份 references、图鉴、参考视频、原可编辑工程、字体、许可证、脚本与已有验证记录一起保留。统一入口整合只调整同机技能的入口与元信息；原资源和脚本位置不变，旧入口原文保存在各自的 `SKILL.legacy.md`。
 
-base／fusion 按[引擎路由](engine-routing.md)选择同机基础或包内快照，固定实现、字体、资产与脚本版本。表中链接指向快照；选择同机基础时读取其对应文件。当前风格与流程仍由本技能第一、二层管理；下列旧文档中的历史流程和默认值不是新的权威入口，旧验证也不能替代本次检查。
+base／fusion 按[引擎路由](engine-routing.md)固定实现、字体、资产与脚本版本。表中链接指向快照，显式选择外部基础时读取对应文件。当前审美与流程由本技能权威入口管理；下列旧文档的历史流程和默认值不是新的执行入口，旧验证也不能替代本次检查。
 
 当前原动效总数以 [effects.md](../assets/base-skill/references/effects.md) 的 O01–O33 和 X01–X23 为准：**33 个参考观察动作 + 23 个原创扩展 = 56 项**。原快照中的历史页面可能沿用“53 项”等旧表述，或重复提及 X21–X23；保留原文作为历史材料，调用时不重复计数。A01 是组合示例，不另算一种独立动效。
 
@@ -18,9 +18,9 @@ base／fusion 按[引擎路由](engine-routing.md)选择同机基础或包内快
 
 | 原文件与内容 | 本扩展中的使用方式 | 继续保留的约束 |
 | --- | --- | --- |
-| [series-feedback-20260930.md](../assets/base-skill/references/series-feedback-20260930.md)：2026-09-30 系列反馈 | 历史圈径、音轨与模板修订依据；当前阿刁制作先读账号档案 | 174px 是历史 1080p 实例，不能一律固定 |
-| [series-style.md](../assets/base-skill/references/series-style.md)：公开视觉与人物方法 | 查原配色、字体、Mac 结构和人物交接实现；当前外观读档案 | 品牌保留原色；中文字体真正进入渲染；人物源时间不重播 |
-| [style-system.md](../assets/base-skill/references/style-system.md)：视觉、节奏和其他账号反馈 | 排稳定状态、字号、阴影、注意力与阅读段 | 数值是起点；黑白紫不等于固定卡片版式；账号反馈只作用于对应账号 |
+| [series-feedback-20260930.md](../assets/base-skill/references/series-feedback-20260930.md)：2026-09-30 系列反馈 | 历史圈径、音轨与模板修订依据；当前制作保留本期素材身份，不按账号指定审美 | 174px 是历史 1080p 实例，不能一律固定 |
+| [series-style.md](../assets/base-skill/references/series-style.md)：公开视觉与人物方法 | 查原配色、字体、Mac 结构和人物交接实现；适配当前 Fred Talk 默认 | 品牌保留原色；中文字体真正进入渲染；人物源时间不重播 |
+| [style-system.md](../assets/base-skill/references/style-system.md)：视觉、节奏和其他账号反馈 | 排稳定状态、字号、阴影、注意力与阅读段 | 数值是起点；黑白紫不等于固定卡片版式；历史账号反馈不自动规定新稿外观 |
 | [adiao-profile.md](../assets/base-skill/references/adiao-profile.md)：账号可选路由 | 同机有对应账号技能且当前确属阿刁时衔接；独立安装用公共入口 | 不把阿刁身份、音色、人物或历史服务状态套到其他人；旧无SFX不覆盖最新明确要求 |
 | [portable-production.md](../assets/base-skill/references/portable-production.md)：可移植全流程 | 保留四种模式、素材获取、CPU 渲染与可移植实现；日常按 workflow 复用环境 | 无私人服务依赖；示例工程需按本期内容重排，不能只换标题 |
 | [opening-design.md](../assets/base-skill/references/opening-design.md)：每期主事件与差异 | 开头选机制前读取，再按需引入F类动作 | 已认可开头锁定；主事件随内容变化；没有历史样片仍可继续，不增审批 |

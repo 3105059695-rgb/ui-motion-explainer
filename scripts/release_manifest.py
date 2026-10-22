@@ -12,7 +12,7 @@ from urllib.parse import unquote
 
 MANIFEST = 'release-manifest.json'
 STATE = '.install-state.json'
-VERSION = '2026.10.19.4'
+VERSION = '2026.10.22.1'
 EXCLUDED_DIRS = {'.git', 'node_modules', '__pycache__', '.cache', 'cache', 'caches',
                  '.venv', 'venv', '.pytest_cache', '.mypy_cache', '.ruff_cache',
                  'runtime', 'runtimes', 'browser-cache'}
@@ -26,7 +26,9 @@ ENTRY_DOCUMENTS = ('SKILL.md', 'references/workflow.md', 'references/style-profi
                    'references/semantic-directing.md', 'references/script-visual-planning.md',
                    'references/source-study-guide.md', 'references/aigc-directing.md',
                    'references/engine-routing.md', 'references/distribution-scope.md',
-                   'references/selection-workflow.md')
+                   'references/selection-workflow.md', 'references/aesthetic-preferences.md',
+                   'references/visual-quality.md', 'references/broll-calibration-cases.md',
+                   'references/editing-lessons.md')
 
 
 def sha256(path: Path) -> str:
@@ -142,10 +144,18 @@ def validate_entry_links(root: Path) -> int:
 def validate_resources(root: Path) -> dict:
     """Validate mandatory module resources and portable approved visual inputs."""
     required = ['SKILL.md', 'install.py', 'agents/openai.yaml',
-                'scripts/ui.py', 'scripts/package.py', 'scripts/verify_package.py',
+                'scripts/ui.py', 'scripts/scene_builder.py', 'scripts/scene_plan.py',
+                'scripts/package.py', 'scripts/verify_package.py',
                 'scripts/release_manifest.py', 'references/resource-registry.json',
                 'references/aigc-assets.json',
-                'references/evidence/fred-reference-approved-20261015.json']
+                'references/library.md', 'references/profiles/registry.json',
+                'references/evidence/library-entry-correction-20261020.json',
+                'references/aesthetic-preferences.md',
+                'references/evidence/fred-default-correction-20261020.json',
+                'scripts/fredtalk_library.py', 'assets/fredtalk-library/catalog.json',
+                'assets/fredtalk-library/index.html', 'assets/fredtalk-library/LICENSE',
+                'assets/fredtalk-library/THIRD_PARTY_NOTICES.md',
+                'assets/fredtalk-library/README.md', 'assets/fredtalk-library/upstream-license-scope.md']
     for name in required:
         if not checked_path(root, name).is_file():
             raise ValueError(f'Missing required release file: {name}')
@@ -167,14 +177,15 @@ def validate_resources(root: Path) -> dict:
             if path.is_dir() and not any(p.is_file() for p in path.rglob('*')):
                 raise ValueError(f'Empty required module resource: {name}')
         modules.append(module['id'])
-    evidence = read_json(root / 'references/evidence/fred-reference-approved-20261015.json')
-    anchors = evidence['direction_contract']['visual_calibration']['anchors']
-    if len(anchors) < 3:
-        raise ValueError('Fred calibration needs at least 3 bundled visual anchors')
-    for anchor in anchors:
-        path = checked_path(root, anchor['frame'])
-        if not path.is_file() or not path.stat().st_size:
-            raise ValueError(f'Missing Fred calibration image: {anchor["frame"]}')
+    # Keep historical evidence; validate the current cross-chat default separately.
+    historical = root / 'references/evidence/fred-reference-approved-20261015.json'
+    anchors = read_json(historical).get('direction_contract', {}).get('visual_calibration', {}).get('anchors', []) if historical.is_file() else []
+    import style_registry
+    default_style = style_registry.resolve(root, root=root, registry=read_json(root / style_registry.REGISTRY))
+    if (default_style.get('ui_direction_source') != 'fred-talk-default'
+            or not default_style.get('style_references_ready')
+            or [d['id'] for d in default_style.get('reference_directions', [])] != ['fred-talk-default-20261020']):
+        raise ValueError('The persistent Fred Talk default or its reference resources are unavailable.')
     catalog = read_json(root / 'references/aigc-assets.json')
     styles = [s for s in catalog['style_sets'] if s['id'] == 'qiuzhi-girl-painterly']
     if len(styles) != 1:
@@ -184,16 +195,27 @@ def validate_resources(root: Path) -> dict:
     approved_ids = set(style['approval']['approved_asset_ids'])
     scenes = [a for a in style['assets'] if a.get('gallery_asset_id') in approved_ids]
     if len(characters) != 2 or len(scenes) != 8 or len(approved_ids) != 8:
-        raise ValueError('The approved girl pack requires 2 identity references and 8 scenes')
+        raise ValueError('The approved girl pack requires 2 style reference images and 8 scenes')
     images = [*characters, *[scene['image_path'] for scene in scenes]]
     if len(set(images)) != 10:
-        raise ValueError('Girl identity and scene references must be 10 distinct images')
+        raise ValueError('Girl style and scene references must be 10 distinct images')
     for name in images:
         path = checked_path(root, name)
         if not path.is_file() or not path.stat().st_size:
             raise ValueError(f'Missing approved girl image: {name}')
+    import fredtalk_library
+    fredtalk_rows = [row for row in fredtalk_library.records(root, include_unavailable=True)
+                     if row.get('source_access') == 'public']
+    if not fredtalk_rows:
+        raise ValueError('FredTalk active public source catalog is empty')
+    for row in fredtalk_rows:
+        resolved = fredtalk_library.resolve_sources(root, row['id'])
+        if not resolved['available']:
+            raise ValueError('FredTalk source integrity failed for ' + row['id'] + ': ' + '; '.join(resolved['issues']))
     return {'required_modules': modules, 'active_document_links': validate_entry_links(root),
-            'fred_visual_anchors': len(anchors),
+            'fredtalk_active_public_sources_verified': len(fredtalk_rows),
+            'historical_fred_visual_anchors': len(anchors),
+            'default_ui_direction': 'fred-talk-default-20261020',
             'girl_identity_images': len(characters), 'girl_scene_images': len(scenes)}
 
 

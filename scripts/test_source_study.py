@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 import director
 import source_study
@@ -129,21 +130,62 @@ class SourceStudyTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'unique'):
             source_study.alignment('creative', self.root)
 
-    def test_prepare_automatically_embeds_methods_and_manifest_without_selection(self):
+    def test_prepare_preserves_full_study_when_candidate_search_is_unavailable(self):
         project = self.root / 'project'
         report = director.prepare(self.script, project, root=self.root)
         self.assertFalse(report['plan_authored'])
         context = director.load_json(project / 'director-context.json')
         study = context['source_study']
-        self.assertEqual(study['count'], 2)
-        self.assertEqual(study['methods'][0]['state_chain'], self.catalog['methods'][0]['state_chain'])
-        self.assertEqual(study['methods'][0]['source_examples'][0]['row_ids'], ['N-L001'])
-        self.assertEqual(study['methods'][0]['avoid'], ['不要遮住关键状态'])
-        self.assertEqual(study['methods'][1]['polarity'], 'negative')
-        self.assertEqual(study['methods'][1]['avoid'], ['仅作反例，不作正向适配'])
+        self.assertEqual(study['count'], 0)
+        self.assertEqual(study['catalog_count'], 2)
+        self.assertEqual(context['selection']['status'], 'unavailable')
+        original = source_study.directing_context(self.root)
+        self.assertEqual(original['methods'][0]['state_chain'], self.catalog['methods'][0]['state_chain'])
+        self.assertEqual(original['methods'][0]['source_examples'][0]['row_ids'], ['N-L001'])
+        self.assertEqual(original['methods'][0]['avoid'], ['不要遮住关键状态'])
+        self.assertEqual(original['methods'][1]['polarity'], 'negative')
+        self.assertEqual(original['methods'][1]['avoid'], ['仅作反例，不作正向适配'])
         self.assertEqual(study['manifest'], str((self.root / source_study.MANIFEST_FILE).resolve()))
-        self.assertTrue(any(r['path'].endswith('source-study-guide.md') for r in context['required_reading']))
+        self.assertTrue(context['production']['on_demand']['source_study']['path'].endswith('source-study-guide.md'))
         self.assertNotIn('selected_method', study)
+
+    def test_prepare_retains_real_fred_implementation_and_validation_boundaries(self):
+        method = source_study.read_method('F-M01')
+        self.catalog['methods'].append(method)
+        self.write(source_study.CATALOG_FILE, self.catalog)
+        project = self.root / 'project'
+        candidates = {'segments': [{'methods': [{'id': 'F-M01'}]}]}
+        with patch.object(director.selection, 'build_selection_context', return_value=candidates), \
+             patch.object(director.selection, 'render_selection_brief', return_value='candidate brief'):
+            director.prepare(self.script, project, root=self.root)
+        context = director.load_json(project / 'director-context.json')
+        compact = next(row for row in context['source_study']['methods'] if row['id'] == 'F-M01')
+        self.assertEqual(compact['implementation'], method['implementation'])
+        self.assertEqual(compact['validation'], method['validation'])
+        self.assertIn('Fred整段未重建', compact['implementation']['scope'])
+        self.assertFalse(compact['validation']['new_render_verified'])
+        self.assertFalse(compact['validation']['user_approved'])
+        self.assertNotIn('implementation', source_study.compact(self.catalog['methods'][0]))
+        empty = source_study.compact({'id': 'empty', 'implementation': {}, 'validation': None})
+        self.assertEqual(empty, {'id': 'empty', 'implementation': {}, 'validation': None})
+
+    def test_real_fred_adaptation_warns_about_work_remaining_without_blocking(self):
+        method = source_study.read_method('F-M01')
+        source = method['source_examples'][0]
+        ref = {'method_id': 'F-M01', 'usage': 'adapt',
+               'examples': [{'video': source['video'], 'row_ids': source['row_ids']}]}
+        errors, warnings = source_study.validate_refs([ref])
+        self.assertEqual(errors, [])
+        warning = next(w for w in warnings if 'Fred整段未重建' in w)
+        self.assertIn('match-handoff只搬运同一节点', warning)
+        self.assertIn('须核对本期实际实现', warning)
+        ref['usage'] = 'avoid'
+        errors, warnings = source_study.validate_refs([ref])
+        self.assertEqual(errors, [])
+        self.assertFalse(any('须核对本期实际实现' in w for w in warnings))
+        self.catalog['methods'][0]['implementation'] = None
+        self.write(source_study.CATALOG_FILE, self.catalog)
+        self.assertEqual(source_study.validate_refs([self.ref()], self.root), ([], []))
 
     def test_missing_study_data_is_explicit_without_breaking_legacy_prepare(self):
         (self.root / source_study.CATALOG_FILE).unlink()
@@ -272,7 +314,8 @@ class SourceStudyTests(unittest.TestCase):
         source = next(s for s in context['source_study']['sources'] if s['id'] == 'fred-argon')
         self.assertTrue(source['alignment_exists'])
         self.assertTrue(source['manifest_exists'])
-        self.assertTrue(any(m['id'] == 'F-M01' for m in context['source_study']['methods']))
+        self.assertTrue(any(m['id'] == 'F-M01' for m in source_study.method_records(self.root)))
+        self.assertEqual(context['source_study']['catalog_count'], len(source_study.method_records(self.root)))
         (self.root / records[-1]['alignment']).unlink()
         report = director.prepare(self.script, project, force=True, root=self.root)
         self.assertTrue(any('fred-argon' in w for w in report['warnings']))

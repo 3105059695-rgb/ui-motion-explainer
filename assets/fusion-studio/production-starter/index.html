@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>剪辑工程</title>
+  <link rel="stylesheet" href="lib/editing-kit.css"><link rel="stylesheet" href="studio.css">
+</head>
+<body>
+  <main id="viewport"><div id="stage" class="uek-stage">
+    <!-- Keep authored HTML nodes here. Register them as type:"host" in timeline.json. -->
+    <div id="objects"></div><div id="caption" aria-live="off"></div>
+  </div></main>
+  <aside id="empty-state">工程尚未制作。请根据原稿补齐 timeline.json 的素材、对象与动作。</aside>
+  <nav id="controls"><button id="play" type="button">播放 / 暂停</button><input id="seek" type="range" min="0" max="0" step="0.01" value="0" aria-label="时间"><output id="time">0.00 s</output><button id="trace" type="button">保存实际调用记录</button><audio id="narration" preload="auto"></audio></nav>
+  <script src="lib/editing-kit.js"></script><script src="runtime.js"></script>
+</body>
+</html>

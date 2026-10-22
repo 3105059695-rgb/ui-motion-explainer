@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "fred-talk-default-20261020",
+  "event_id": "20261020-fred-default-correction",
+  "date": "2026-10-20",
+  "source": "direct_user_message_in_current_skill_cleanup_conversation",
+  "thread_id": "01a1539f-fbba-7b61-8a51-4398033b39a6",
+  "user_quote": "我喜欢的视频风格就是fred talk的风格，所以不要乱给我想风格，我就说每次新开怎么都要重新说一遍",
+  "quote": "我喜欢的视频风格就是fred talk的风格，所以不要乱给我想风格，我就说每次新开怎么都要重新说一遍",
+  "context": "用户已授权在现有 Skill 整理六步、保留素材源码和有效经验、先不做新视频，并要求先说清其 UI、AE 感、开头与不要出现的内容。助手将不固定同一部旧片误读为取消 Fred 默认；用户在执行中明确纠正。",
+  "status": "user_selected_reference_direction",
+  "direction_contract": {
+    "id": "fred-talk-default-20261020",
+    "revision": "2026.10.20.4",
+    "summary": "Fred Talk 是跨新窗口持久默认的整体 UI 与剪辑语言：实体黑色载体、醒目紫色重点、大字级、前后深度与连续解释动作共同成立。整体风格稳定，每期具体材料与镜头编排依原声重做；效果库服务实现，不能自行换风格。",
+    "reading": [
+      "references/aesthetic-preferences.md",
+      "references/fred-ui-direction.md",
+      "assets/fredtalk-library/README.md"
+    ],
+    "visual_calibration": {
+      "view_before_design": true,
+      "anchors": [
+        {
+          "frame": "assets/style-calibration/fred/anchor-01.jpg",
+          "source": "fred-jev",
+          "event": "J-S011",
+          "learn": "已有原参考帧：白场、实体黑色胶囊、粗大白字和醒目紫色关键词，旧对象留在模糊后景。"
+        },
+        {
+          "frame": "assets/style-calibration/fred/anchor-02.jpg",
+          "source": "fred-jev",
+          "event": "J-S220",
+          "learn": "已有原参考帧：黑白主体对照、黑底亮紫大数字、实体圆角和投影；来源退焦，条件仍可读。"
+        },
+        {
+          "frame": "assets/style-calibration/fred/anchor-03.jpg",
+          "source": "fred-jev",
+          "event": "J-S118",
+          "learn": "已有原参考帧：章节黑色块扩张后归位导航，黑紫重点与连续转场结合；静帧本身不证明已检查动态。"
+        }
+      ],
+      "limits": "沿用原参考视觉锚点，不声称测得原作者精确色值、字体或曲线；本轮没有新作品审美确认。"
+    },
+    "preference_authority": "references/aesthetic-preferences.md",
+    "maintenance": "Detailed UI, motion, opening and exclusions are maintained only in preference_authority. This evidence keeps the original user statement, scope and visual-reference identity."
+  },
+  "corrects": {
+    "record": "references/evidence/library-entry-correction-20261020.json",
+    "scope": "纠正此前将逐图说明理解为取消 Fred 当前风格、允许效果库任意选择整体风格的解释。",
+    "history_policy": "历史原话与原始记录保持不变；当前执行优先本条更晚且明确的用户纠正。",
+    "still_valid": [
+      "不要重复套同一部视频的整段模板",
+      "效果库需要实际进入制作",
+      "女孩样片可提供 AIGC 画风，不默认固定女孩身份",
+      "不同目录或旧账号字符串不能自行切换视觉风格"
+    ]
+  },
+  "visual_and_method_sources": [
+    "references/evidence/fred-reference-approved-20261015.json",
+    "assets/style-calibration/fred/anchor-01.jpg",
+    "assets/style-calibration/fred/anchor-02.jpg",
+    "assets/style-calibration/fred/anchor-03.jpg",
+    "references/evidence/fred-argon-study/index.json",
+    "references/evidence/fred-jev-study/index.json",
+    "references/source-study-methods.json",
+    "assets/fredtalk-library/README.md"
+  ],
+  "not_claimed": [
+    "本轮产生或完成任何新视频",
+    "新增样片审美认可",
+    "效果库所有条目均已获用户认可",
+    "所有源码已完成可运行适配",
+    "原参考全部正常速度音画审看",
+    "保证一次生成即获满意"
+  ]
+}

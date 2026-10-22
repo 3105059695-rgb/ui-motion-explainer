@@ -46,6 +46,46 @@ def write_subtitles(captions, start, end, path):
             rows.append(f"{len(rows)+1}\n{stamp(left-start)} --> {stamp(right-start)}\n{c['text']}\n")
     path.write_text('\n'.join(rows),encoding='utf-8')
 
+
+def reset_runtime_trace(tab):
+    """Old projects need not implement the production starter's observation API."""
+    tab.evaluate('''() => {
+      const runtime = window.UIFusionRuntime;
+      if (runtime && typeof runtime.resetTrace === 'function') runtime.resetTrace();
+    }''')
+
+
+def write_runtime_trace(tab, dest, start, end, fps, stills_only):
+    """Capture once while the rendering page is alive; never infer visual quality."""
+    snapshot = tab.evaluate('''() => {
+      const runtime = window.UIFusionRuntime;
+      if (!runtime || typeof runtime.getTrace !== 'function') return null;
+      const trace = runtime.getTrace(2000);
+      const calls = Array.isArray(trace.calls) ? trace.calls : [];
+      const last = Array.isArray(trace.lastFrame) ? trace.lastFrame : [];
+      return {...trace, calls: calls.slice(0, 2000), lastFrame: last.slice(-200),
+        omittedFromSnapshot: (trace.omittedFromSnapshot || 0) + Math.max(0, calls.length - 2000),
+        omittedFromLastFrame: Math.max(0, last.length - 200)};
+    }''')
+    available = snapshot is not None
+    payload = {'schema_version': 1, 'generated_by': 'ui-motion-fusion/render_portable.py',
+               'status': 'captured' if available else 'unavailable',
+               'capture': 'sampled-stills' if stills_only else 'render-frame-sampling',
+               'range': [start, end], 'fps': fps,
+               'scope': 'Only successful runtime calls observed in this browser, identified by runtime.origin. '
+                        'Counts include motion-blur samples; retained details are bounded. '
+                        'This does not establish semantic fit, visual quality, audio review or approval.',
+               'runtime': snapshot}
+    if not available:
+        payload['reason'] = 'This project does not expose UIFusionRuntime.getTrace; no calls were inferred.'
+    # Also replace an older trace with an explicit unavailable record when reusing
+    # an output folder for a historical project; do not leave stale call evidence.
+    target = Path(dest) / 'editing-kit-runtime-trace.json'
+    target.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    return {'available': available, 'path': target.name,
+            'totalCalls': snapshot.get('totalCalls') if available else None,
+            'scope': payload['scope']}
+
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--project', required=True, type=Path)
@@ -81,6 +121,7 @@ def main():
     encoder=None
     duration=end-a.start
     count=math.ceil(duration*fps-1e-8)
+    runtime_trace = None
     try:
         with sync_playwright() as pw:
             browser=pw.chromium.launch(headless=True,args=['--autoplay-policy=no-user-gesture-required'])
@@ -88,6 +129,7 @@ def main():
             tab.on('pageerror',lambda e:errors.append(str(e)))
             tab.goto(url,wait_until='load')
             tab.evaluate('window.ready()')
+            reset_runtime_trace(tab)
             for i,t in enumerate(marks):
                 tab.evaluate('t=>window.render(t,t)',t)
                 tab.screenshot(path=str(dest/f'frame-{i+1}.jpg'),type='jpeg',quality=94)
@@ -98,6 +140,8 @@ def main():
                 draw.text((i%3*320+10,i//3*294+8),f'{t:.2f}s',fill='#4f2b78')
             sheet.save(dest/'contact-sheet.jpg',quality=92)
             if not a.stills_only:
+                # The initial contact sheet is not part of the rendered-film trace.
+                reset_runtime_trace(tab)
                 encoder=subprocess.Popen([ffmpeg,'-y','-v','error','-f','image2pipe','-vcodec','mjpeg','-framerate',str(fps),'-i','pipe:0',
                     '-an','-c:v','libx264','-preset','fast','-crf','18','-pix_fmt','yuv420p','-movflags','+faststart',str(dest/'silent.mp4')],stdin=subprocess.PIPE)
                 started=time.time()
@@ -116,6 +160,8 @@ def main():
                 encoder.stdin.close()
                 if encoder.wait()!=0:raise RuntimeError('FFmpeg frame encoding failed')
                 encoder=None
+            if errors:raise RuntimeError('Browser errors: '+'; '.join(errors))
+            runtime_trace=write_runtime_trace(tab,dest,a.start,end,fps,a.stills_only)
             browser.close()
         if errors:raise RuntimeError('Browser errors: '+'; '.join(errors))
     finally:
@@ -126,7 +172,8 @@ def main():
     write_subtitles(config.get('captions',[]),a.start,end,dest/'captions.srt')
     report={'mode':config['mode'],'resolution':[a.width,height],'fps':fps,'range':[a.start,end],
             'motionBlur':'three temporal samples during fast motion; source media/captions fixed' if not a.no_motion_blur else 'off',
-            'browserErrors':errors,'rendered':not a.stills_only,'humanVisualReview':False}
+            'browserErrors':errors,'rendered':not a.stills_only,'humanVisualReview':False,
+            'editingKitRuntimeTrace':runtime_trace}
     if not a.stills_only:
         audio=config.get('audio') or config.get('presenter')
         has_audio=False

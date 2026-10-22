@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "event_id": "aigc-selection-correction-20261019",
+  "date": "2026-10-19",
+  "source": "original user response_item message; streamed and verified in repair chat",
+  "source_thread_id": "01a13825-eac7-78a3-a31d-0402ca90fd09",
+  "source_line": 12574,
+  "user_quote": "AIGC你都整错了，我认可的aigc不是这样的，我感觉你也出幻觉了，整理完成新开一个窗口重新开始，总是很乱，越修越乱",
+  "scope": "用户否定当前对AIGC的整理与默认解释，要求从Skill找回实际认可；未指定新的统一画风。",
+  "current_application": [
+    "取消无条件的user-ui女孩画风绑定；不擅自换成另一个旧画风。",
+    "保留历史认可原话与视频；按当前任务、账号和片段用途提供候选。",
+    "画风选择不隐含固定人物、发夹、服装或首帧复用。"
+  ],
+  "does_not_assert": [
+    "撤销女孩原片在5173行的历史认可",
+    "确认阿刁动漫或其他旧画风为全部账号默认",
+    "当前新成片已获认可"
+  ],
+  "related_evidence": [
+    "references/evidence/girl-agent-sample-approved-20261015.json",
+    "references/evidence/aigc-reference-scope-20261019.json",
+    "references/evidence/anime-semantic-feedback-20261013.json"
+  ]
+}

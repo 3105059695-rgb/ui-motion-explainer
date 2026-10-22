@@ -4,7 +4,7 @@
 
 ## 首次安装
 
-解压完整发布包，进入解压后的 `ui-motion-fusion`，运行：
+获取仓库主分支或最新 Release 的完整源码包，解压后进入含 `SKILL.md`、`VERSION` 和 `install.py` 的包根目录，运行：
 
 ```powershell
 python -B -X utf8 install.py
@@ -40,7 +40,7 @@ python -B -X utf8 install.py --update --replace-modified
 
 每个备份包含 `backup-plan.json` 和 `files/` 中的原文件。更新过程中发生异常会自动恢复本次已触及的原文件，并移除本次新增的文件；结果标明 `rolled_back` 或 `rollback_incomplete` 及准确备份位置。若异常同时阻止恢复，保留备份，依据 `originals` 将 `files/<相对路径>` 恢复到报告中的 `target`，依据 `created_paths` 检查本次新增项；不要删除整个 Skill 或 `skills` 目录。停电/强制结束进程时也用这份备份计划恢复，不能假称这类中断已自动回滚。
 
-更新完成后，在新窗口调用 `$ui-motion-fusion`。旧窗口应重新读取安装后的 `SKILL.md`，不要继续沿用缓存中的旧规则。
+更新完成后，在新窗口调用 `$ui-motion-fusion`。旧窗口应重新读取安装后的 `SKILL.md` 和 `references/aesthetic-preferences.md`，按主入口接入当前制作模块，不继续沿用缓存中的旧规则。已有工程可能内含旧版代码副本；续作时核对其真实引用，按工程需要迁移，安装更新不会直接改写用户工程。
 
 ## 本机账号覆盖
 
@@ -59,16 +59,17 @@ python -B -X utf8 scripts/verify_package.py --installed
 python -B -X utf8 scripts/ui.py modules check
 ```
 
-第一条验证受管文件哈希、必需模块、Fred 视觉锚点、女孩两张角色图和八张场景图，同时容许本机自加文件。第二条检查模块入口资源。它们不等于完整视频审美或音画验收。
+第一条验证受管文件哈希及必需模块、随包参考资源，同时容许本机自加文件。第二条检查模块入口资源。图片存在不代表本期应固定使用这些人物或场景；这两项检查也不等于完整视频审美或音画验收。
 
 ## 维护者生成发布包
 
 所有代码、文档、脱敏配置和媒体定稿后，再生成本次清单：
 
 ```powershell
-python -B -X utf8 scripts/release_manifest.py --write --version 2026.10.19.3
+$skillVersion = (Get-Content -LiteralPath VERSION -Raw).Trim()
+python -B -X utf8 scripts/release_manifest.py --write --version $skillVersion
 python -B -X utf8 scripts/verify_package.py
-python -B -X utf8 scripts/package.py --out "../ui-motion-fusion-2026.10.19.3.zip"
+python -B -X utf8 scripts/package.py --out "../ui-motion-fusion-$skillVersion.zip"
 python -B -X utf8 -m unittest discover -s tests -p "test_install_release.py" -v
 ```
 

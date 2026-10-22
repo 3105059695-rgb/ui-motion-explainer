@@ -192,7 +192,7 @@ def probe_media(path: Path, expected: str) -> dict:
         return {"width": width, "height": height}
     require(bool(shutil.which("ffprobe")), "ffprobe is required to validate media slots; run doctor")
     proc = subprocess.run(["ffprobe", "-v", "error", "-show_streams", "-show_format", "-of", "json", str(path)],
-                          capture_output=True, text=True, check=False)
+                          capture_output=True, text=True, encoding="utf-8", errors="replace", check=False)
     require(proc.returncode == 0, f"Unreadable {expected} media {path}: {proc.stderr.strip()[:280]}")
     try:
         meta = json.loads(proc.stdout)

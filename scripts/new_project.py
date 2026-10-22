@@ -1,51 +1,98 @@
-"""Create a self-contained editable fusion demonstration without overwriting projects."""
+"""Create an explicitly custom workspace or historical demo; full scenes use ui.py scene."""
 import argparse
 import json
 from pathlib import Path
 import shutil
 import production_entry
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def copy_new_files(pairs, destination):
+    """Check all destinations before copying; never overwrite prepared originals."""
+    for source, relative in pairs:
+        if not source.is_file():
+            raise ValueError('Required packaged resource is missing: ' + str(source))
+        target = destination / relative
+        if target.exists():
+            raise ValueError('Refusing to replace an existing file: ' + str(target))
+    for source, relative in pairs:
+        target = destination / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, target)
+
+
+def create(out, scene=None, title=None, profile=None, base=None, root=ROOT, custom_layout=False, canvas_story=False):
+    if canvas_story and (scene is not None or not custom_layout):
+        raise ValueError('--canvas-story requires --custom-layout and cannot be combined with a historical --scene.')
+    if scene is None and not custom_layout:
+        raise ValueError(
+            'No complete library scene was selected. Use ui.py scene list / inspect / scaffold / build '
+            'to inherit an authored design. For intentional custom/source-adaptation work only, '
+            'pass --custom-layout; the empty runtime does not supply a visual design.')
+    out = Path(out).expanduser().resolve()
+    base = Path(base) if base else Path(root) / 'assets/base-skill'
+    resolution = production_entry.creation_resolution(out, profile, root=root)
+    source = Path(root) / 'assets/fusion-studio'
+    if scene is None:
+        starter = source / ('story-starter' if canvas_story else 'production-starter')
+        pairs = [(path, path.relative_to(starter)) for path in starter.rglob('*') if path.is_file()]
+        if not pairs:
+            raise ValueError('Production starter is missing.')
+        pairs += [(Path(root) / 'assets/editing-kit' / name, Path('lib') / name)
+                  for name in ('editing-kit.js', 'editing-kit.css')]
+        if canvas_story:
+            pairs += [(Path(root) / 'assets/agent-editorial' / name, Path('lib/agent-editorial') / name)
+                      for name in ('agent-editorial.js', 'motion-core.js', 'palette.json')]
+        # Small redistributable Latin font; Chinese uses an installed system font.
+        # Do not duplicate the 17 MB demo font or the full font/media libraries.
+        pairs += [(base / 'assets/portable-studio/fonts' / name, Path('fonts') / name)
+                  for name in ('Outfit-Bold.ttf', 'Outfit-OFL.txt')]
+        copy_new_files(pairs, out)
+        config = json.loads((out / 'project.json').read_text(encoding='utf-8-sig'))
+        config.update(title=title or '待制作工程', styleProfile=resolution['resolved_profile'])
+    else:
+        if scene not in ['all'] + [f'F{i:02}' for i in range(1, 9)]:
+            raise ValueError('Unknown historical scene: ' + str(scene))
+        pairs = [(path, path.relative_to(source)) for path in source.rglob('*')
+                 if path.is_file() and not {'production-starter', 'story-starter', 'previews', 'renders', '__pycache__'} & set(path.relative_to(source).parts)]
+        fonts = base / 'assets/portable-studio/fonts'
+        pairs += [(path, Path('fonts') / path.relative_to(fonts)) for path in fonts.rglob('*') if path.is_file()]
+        copy_new_files(pairs, out)
+        for path in out.glob('*.css'):
+            text = path.read_text(encoding='utf-8')
+            path.write_text(text.replace('../base-skill/assets/portable-studio/fonts/', 'fonts/'), encoding='utf-8')
+        config = json.loads((out / 'project.json').read_text(encoding='utf-8-sig'))
+        config.update(scene=scene, duration=72 if scene == 'all' else 9, title=title or '历史融合动作示意',
+                      mode='fusion', demo=True, styleProfile=resolution['resolved_profile'])
+    (out / 'project.json').write_text(json.dumps(config, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    context = production_entry.attach_creation_context(out, resolution, root=root)
+    return {'project': str(out), 'kind': ('canvas-story-starter' if canvas_story else 'production-starter') if scene is None else 'historical-demo',
+            'scene': scene, 'duration': config['duration'], **context,
+            'next': 'Read README.md; author timeline.json from the preserved narration and actual media.'}
+
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--out',required=True,type=Path)
-    p.add_argument('--scene',choices=['all']+[f'F{i:02}' for i in range(1,9)],default='all')
-    p.add_argument('--title',default='黑白紫 UI 进阶动效')
-    p.add_argument('--profile',help='Applicable profile ID for directing; default from the current registry, not a restyling operation.')
-    p.add_argument('--base',type=Path,default=ROOT/'assets/base-skill',help='Selected original skill version; default packaged snapshot')
-    a=p.parse_args()
-    if a.out.exists():p.error('Use a new project directory')
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--out', required=True, type=Path)
+    parser.add_argument('--scene', choices=['all'] + [f'F{i:02}' for i in range(1, 9)],
+                        help='Explicit historical demonstration only.')
+    parser.add_argument('--custom-layout', action='store_true',
+                        help='Explicit empty runtime for an intentional custom design or source adaptation. '
+                             'Normal complete-scene production uses ui.py scene.')
+    parser.add_argument('--canvas-story', action='store_true',
+                        help='Use the real Agent Editorial Canvas SDK with episode-authored scenes and narration-timed events; requires --custom-layout.')
+    parser.add_argument('--title')
+    parser.add_argument('--profile')
+    parser.add_argument('--base', type=Path, default=ROOT / 'assets/base-skill')
+    args = parser.parse_args()
     try:
-        resolution=production_entry.creation_resolution(a.out,a.profile,root=ROOT)
-    except (OSError,ValueError) as exc:
-        p.error(str(exc))
-    a.profile=resolution['resolved_profile']
-    source=ROOT/'assets/fusion-studio'
-    if not (source/'project.json').is_file():p.error('Fusion studio missing')
-    fonts=a.base/'assets/portable-studio/fonts'
-    if not fonts.is_dir():p.error('Selected base has no portable fonts')
-    shutil.copytree(source,a.out,ignore=shutil.ignore_patterns('previews','renders','__pycache__'))
-    shutil.copytree(fonts,a.out/'fonts')
-    for path in a.out.glob('*.css'):
-        text=path.read_text(encoding='utf-8')
-        path.write_text(text.replace('../base-skill/assets/portable-studio/fonts/','fonts/'),encoding='utf-8')
-    config=json.loads((a.out/'project.json').read_text(encoding='utf-8-sig'))
-    config.update({'scene':a.scene,'duration':72 if a.scene=='all' else 9,'title':a.title,
-                   'mode':'fusion','demo':True,'styleProfile':a.profile,
-                   'production_status':'mechanism-demo-awaiting-narration-directed-design',
-                   'current_style_applied':False,'aestheticApproval':False})
-    (a.out/'project.json').write_text(json.dumps(config,ensure_ascii=False,indent=2),encoding='utf-8')
-    (a.out/'PROJECT-NOTES.md').write_text(
-        '# 可编辑融合示意\n\n这是一套动作机制底座。根据实际文案重新设计状态、素材和时间轴，'
-        '不要只换标题就当成新片。真实产品操作需真实依据；几何人物占位需用户授权原片替换。'
-        '完整字体与许可已复制，工程不依赖本技能目录。\n\n'
-        f'已登记风格档案 `{a.profile}`，但示意模板尚未按当前风格重新设计，不是最新风格成片。'
-        '下一步从主 Skill 调用 `ui.py direct -- prepare --script <口播稿> --project <本工程>`，'
-        '读取当前风格合同与原始口播后设计真实画面。\n',encoding='utf-8')
-    production_entry.attach_creation_context(a.out,resolution,root=ROOT)
-    print(json.dumps({'project':str(a.out.resolve()),'scene':a.scene,'duration':config['duration'],
-                     'style_profile':a.profile,'current_style_applied':False,
-                     'next':'ui.py direct -- prepare --script <narration> --project <project>'},ensure_ascii=False))
+        result = create(args.out, args.scene, args.title, args.profile, args.base,
+                        custom_layout=args.custom_layout, canvas_story=args.canvas_story)
+    except (OSError, ValueError) as exc:
+        parser.error(str(exc))
+    print(json.dumps(result, ensure_ascii=False))
 
-if __name__=='__main__':main()
+
+if __name__ == '__main__':
+    main()
