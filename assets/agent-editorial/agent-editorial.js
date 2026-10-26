@@ -11,7 +11,7 @@
 })(typeof globalThis !== 'undefined' ? globalThis : this, function (motion) {
   'use strict';
   if (!motion) throw new Error('Load agent-editorial/motion-core.js before agent-editorial.js');
-  const palette = Object.freeze({black:'#0B0B0F',white:'#FFFFFF',purple:'#8750FF',muted:'#777780',line:'#DBDBE0',paper:'#F3F3F5'});
+  const palette = Object.freeze({black:'#0B0B0F',white:'#FFFFFF',purple:'#D6C2FF',muted:'#777780',line:'#DBDBE0',paper:'#F3F3F5'});
   const {clamp, mix} = motion;
   const out = n => 1 - Math.pow(1 - clamp(n), 4);
   const ease = n => { n = clamp(n); return n < .5 ? 8*n*n*n*n : 1-Math.pow(-2*n+2,4)/2; };
@@ -113,7 +113,7 @@
     function line(x1,y1,x2,y2,color=C.black,width=3) {
       ctx.save();ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.strokeStyle=color;ctx.lineWidth=width;ctx.lineCap='round';ctx.stroke();ctx.restore();
     }
-    function arrow(x1,y1,x2,y2,color=C.purple,width=4) {
+    function arrow(x1,y1,x2,y2,color=C.black,width=4) {
       line(x1,y1,x2,y2,color,width);const a=Math.atan2(y2-y1,x2-x1),head=Math.max(15,width*3.2);
       line(x2,y2,x2-head*Math.cos(a-.55),y2-head*Math.sin(a-.55),color,width);
       line(x2,y2,x2-head*Math.cos(a+.55),y2-head*Math.sin(a+.55),color,width);
@@ -143,16 +143,17 @@
     function pill(s,value,opts={}) {
       const r=rect(value),size=opts.size??30;
       rr(r.x,r.y,r.w,r.h,opts.radius??r.h*.28,opts.fill||C.black);
-      text(s,r.x+r.w/2,r.y+r.h/2+size*.35,size,opts.color||C.white,opts.weight??800,'center',r.w-(opts.padding??24));
+      text(s,r.x+r.w/2,r.y+r.h/2+size*.35,size,opts.color||(opts.fill===C.purple?C.black:C.white),opts.weight??800,'center',r.w-(opts.padding??24));
     }
     function check(x,y,r=22,opts={}) {
       ctx.save();ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fillStyle=opts.fill||C.purple;ctx.fill();ctx.restore();
-      line(x-r*.43,y,x-r*.08,y+r*.32,opts.color||C.white,opts.width??4);
-      line(x-r*.08,y+r*.32,x+r*.5,y-r*.35,opts.color||C.white,opts.width??4);
+      const ink=opts.color||(!opts.fill||opts.fill===C.purple?C.black:C.white);
+      line(x-r*.43,y,x-r*.08,y+r*.32,ink,opts.width??4);
+      line(x-r*.08,y+r*.32,x+r*.5,y-r*.35,ink,opts.width??4);
     }
     function progress(value,amount,opts={}) {
       const r=rect(value),radius=opts.radius??r.h/2;
-      rr(r.x,r.y,r.w,r.h,radius,opts.track||C.line);
+      rr(r.x,r.y,r.w,r.h,radius,opts.track||C.black);
       rr(r.x,r.y,r.w*clamp(amount),r.h,radius,opts.fill||C.purple);
     }
     function sheet(value,title,opts={}) {
@@ -193,5 +194,5 @@
       opening:(opts,draw)=>opening(ctx,opts,()=>draw(api))};
     return Object.freeze(api);
   }
-  return Object.freeze({version:'1.0.0',palette,motion,clamp,mix,out,ease,rectMix,intersection,subtractRect,safeRegions,safeOverlay,opening,cue,phase,activeCue,stagger,layout,create});
+  return Object.freeze({version:'1.0.1',palette,motion,clamp,mix,out,ease,rectMix,intersection,subtractRect,safeRegions,safeOverlay,opening,cue,phase,activeCue,stagger,layout,create});
 });

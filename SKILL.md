@@ -2,7 +2,7 @@
 name: ui-motion-fusion
 description: "按 Fred Talk 默认视觉与剪辑风格，将口播和素材制作成 UI 动效、B-roll、AIGC 解释视频及可编辑工程；根据句意组织材料、连续事件和原声时间，完成内部检查与返修。"
 metadata:
-  version: "2026.10.22.1"
+  version: "2026.10.26.1"
 ---
 
 # 我的 UI 动效剪辑
