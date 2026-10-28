@@ -110,6 +110,7 @@ def attach_creation_context(project, resolution, script=None, root=ROOT):
     folder = Path(project).resolve()
     if not folder.is_dir():
         raise ValueError('Backend did not create the requested project directory: ' + str(folder))
+    current_requirements = director.requirements_context(root, include_text=False)
     config_path = folder / 'project.json'
     config = (json.loads(config_path.read_text(encoding='utf-8-sig')) if config_path.exists()
               else {'generated_by': OWNER})
@@ -121,10 +122,12 @@ def attach_creation_context(project, resolution, script=None, root=ROOT):
         'current_style_applied': False,
         'aestheticApproval': False,
         'style_context': 'project-style-context.json',
+        'requirements_context': 'project-style-context.json#requirements',
     }
     context = {
         'schema_version': 1, 'generated_by': OWNER, **status,
         'style': {'resolution': resolution, 'binding': style_registry.current_binding(resolution)},
+        'requirements': current_requirements,
         'next': 'ui.py direct -- prepare --script <narration> --project <project>',
         'scope': ('Empty production workspace wired to the existing EditingKit. No narration, scene, media or approval is invented.'
                   if is_starter else 'Current style references only. The copied historical demo has not been restyled or approved.'),
@@ -148,6 +151,7 @@ def attach_creation_context(project, resolution, script=None, root=ROOT):
             director.prepare(script, folder, resolution['resolved_profile'], root=root)
         prepared = True
     return {'project': str(folder), **status, 'context': str(target),
+            'requirements': current_requirements,
             'director_context_prepared': prepared}
 
 

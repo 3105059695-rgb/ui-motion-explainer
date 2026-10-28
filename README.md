@@ -12,6 +12,11 @@
 
 ## 本版修正
 
+- 新窗口先逐页完整读取[现行要求清单](references/requirements.json)的原文；`ui.py requirements --part 1` 给出正文和下一页，不用摘要代替全文。
+- 准备工程带入完整要求正文，新建工程带入当前清单与读取命令；要求、案例与源码用途分清，重复条款回到各自维护位置。已输出正文不代表已理解或画面通过。
+
+## 已有制作能力
+
 - 先把本期真实材料、AIGC 有效动作和结果剪入原声时间线，再精修 UI；缺材需补足或明确改选表达，不能悄悄用标题卡填满。
 - Canvas 工程新增实际 `material_shots`：源内入出点、材料内部推近／裁切／返回、同源多时刻比较，与定制 UI 状态变化一起运行。每段可改变表面明暗与配色，源材料保留本色，强调紫按需使用。
 - 实际音效文件可按动作与切点混入导出，保留原声时钟与增益；浏览器预览仍只含原口播，导出的 `preview.mp4` 才含事件音效。具体字段与限制见[素材剪辑和声音接口](references/director-plan-contract.md#实际素材剪辑与声音事件)。技术检查与实际观感、听审、用户认可仍分别记录。
@@ -36,7 +41,7 @@
 
 制作链是 **口播稿 → 声音克隆 → 数字人 → 剪辑成品**。本 Skill 主要承担最后一环；上游服务按用户请求、可用工具及授权调用，不伪称所有服务已自动打通。
 
-[阿闰整片参考模式](references/reference-replication.md) · [主入口](SKILL.md) · [当前风格](references/aesthetic-preferences.md) · [能力与源码](index.html) · [参考数量与实际范围](docs/reference-library.md) · [安装与更新](docs/install.md) · [发行范围](references/distribution-scope.md) · [当前偏好与升级依据](references/aesthetic-preferences.md)
+[完整现行要求](references/requirements.json) · [阿闰整片参考模式](references/reference-replication.md) · [主入口](SKILL.md) · [当前风格](references/aesthetic-preferences.md) · [能力与源码](index.html) · [参考数量与实际范围](docs/reference-library.md) · [安装与更新](docs/install.md) · [发行范围](references/distribution-scope.md) · [当前偏好与升级依据](references/aesthetic-preferences.md)
 
 公开包保留230条历史参考索引与两套可运行starter，不含全部原作者视频和230套历史重建媒体；已有历史库可通过本机资源映射自动接续，也支持明确的 `--module-root`。本机路径不进入公开包。阿刁/方木规则保留，私人音色、数字人及账号影片不公开。旧版本可从Git历史和历史Release查询。
 

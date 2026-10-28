@@ -56,6 +56,10 @@ class DirectorTests(unittest.TestCase):
         (self.root / 'references').mkdir()
         for name in director.REQUIRED_REFS:
             (self.root / name).write_text('Reference', encoding='utf-8')
+        (self.root / 'references/requirements.json').write_text(json.dumps({
+            'schema_version': 1, 'documents': [
+                {'id': 'fixture-workflow', 'title': 'Fixture workflow', 'path': director.REQUIRED_REFS[0]}]}),
+            encoding='utf-8')
         (self.root / director.RECIPE_FILE).write_text(json.dumps({'recipes': [
             {'id': 'S01', 'title': '关系逐步建立', 'semantic_use': '解释因果'}]}), encoding='utf-8')
         self.script = self.root / '稿件.txt'
@@ -652,7 +656,8 @@ class DirectorTests(unittest.TestCase):
         self.assertEqual(directory['negative']['usage'], 'avoid')
         self.assertNotIn('implementation', directory['chosen'])
         self.assertIn('on_demand', context['production'])
-        self.assertEqual(len(context['required_reading']), 2)
+        self.assertEqual([row['path'] for row in context['required_reading']],
+                         [row['path'] for row in context['requirements']['documents']])
         self.assertEqual(full_library, context['selection']['library_directory'])
         brief = (folder / 'director-brief.md').read_text(encoding='utf-8')
         self.assertIn('API', brief)

@@ -1,5 +1,5 @@
 # 从这里开始
 
-安装更新读 [AI-START.md](AI-START.md)；制作调用唯一入口 `$ui-motion-fusion` 并读当前安装的 [SKILL.md](SKILL.md) 与[审美偏好](references/aesthetic-preferences.md)，按主入口进入实际制作模块。历史安装器和模板不覆盖当前版本。
+制作调用唯一入口 `$ui-motion-fusion`：读取实际安装的 [SKILL.md](SKILL.md)，按其中命令逐页读完[全部现行要求](references/requirements.json)，再进入制作。新窗口不以旧聊天摘要、目录或少数偏好条款代替全文。
 
-此页只导航；当前版本以 [VERSION](VERSION) 为准，完整制作流程只在主入口维护。
+安装或更新读 [AI-START.md](AI-START.md)；版本以 [VERSION](VERSION) 为准。此页只导航，不维护第二份制作规则。

@@ -21,6 +21,9 @@ class SourceStudyTests(unittest.TestCase):
             p = self.root / rel
             p.parent.mkdir(parents=True, exist_ok=True)
             p.write_text('Local fixture, not production evidence.', encoding='utf-8')
+        self.write('references/requirements.json', {
+            'schema_version': 1, 'documents': [
+                {'id': 'fixture-workflow', 'title': 'Fixture workflow', 'path': director.REQUIRED_REFS[0]}]})
         self.catalog = {'schema_version': 1, 'collection_id': 'test-only', 'methods': [
             {'id': 'M1', 'title': '保留上下文的聚焦', 'category': 'editing',
              'semantic_use': '定位真实操作入口', 'viewer_gap': '不知道入口属于哪里',

@@ -312,6 +312,10 @@ class PortableRoutes(unittest.TestCase):
         (self.root / 'assets').mkdir()
         for name in director.REQUIRED_REFS:
             (self.root / name).write_text('fixture guide', encoding='utf-8')
+        (self.root / 'references/requirements.json').write_text(json.dumps({
+            'schema_version': 1, 'documents': [
+                {'id': 'fixture-workflow', 'title': 'Fixture workflow', 'path': director.REQUIRED_REFS[0]}]}),
+            encoding='utf-8')
         (self.root / director.RECIPE_FILE).write_text('{"recipes":[]}', encoding='utf-8')
         for profile in ('user-ui', 'fangmu', 'adiao'):
             (self.root / f'references/profiles/{profile}.md').write_text(profile, encoding='utf-8')

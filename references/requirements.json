@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "scope": "现行制作要求的完整正文。新窗口按顺序全文读取，不能用摘要、检索命中或前几页替代。条件性条款读完后按本期适用范围执行。",
+  "documents": [
+    {"id": "entry", "title": "统一入口与全文读取", "path": "SKILL.md"},
+    {"id": "aesthetics", "title": "已确认 UI、质感、开头、声音与 AIGC 画风", "path": "references/aesthetic-preferences.md"},
+    {"id": "workflow", "title": "制作阶段、原稿原声、来源和交付", "path": "references/workflow.md"},
+    {"id": "narration", "title": "口播理解、真实材料与画面设计", "path": "references/script-visual-planning.md"},
+    {"id": "broll", "title": "不同语境的 B-roll、漫画表演与偏好条件", "path": "references/broll-preferences.md"},
+    {"id": "study", "title": "逐句研究与参考证据的使用", "path": "references/source-study-guide.md"},
+    {"id": "selection", "title": "整库发现、选择与实际应用", "path": "references/selection-workflow.md"},
+    {"id": "library", "title": "全部能力家族与实现状态", "path": "references/library.md"},
+    {"id": "implementation", "title": "语义配方到实际源码的接线", "path": "references/semantic-directing.md"},
+    {"id": "reference", "title": "整片参考与复刻范围", "path": "references/reference-replication.md"},
+    {"id": "identity", "title": "画风、人物身份和历史范围", "path": "references/style-profiles.md"},
+    {"id": "aigc", "title": "AIGC 的使用、画风、动作与剪辑节奏", "path": "references/aigc-directing.md"},
+    {"id": "generation", "title": "生成接口、请求状态与费用边界", "path": "references/anime-video-generation.md"},
+    {"id": "presenter", "title": "数字人、真实素材与合成", "path": "references/presenter-editing.md"},
+    {"id": "engines", "title": "实际后端、创建与导出接口", "path": "references/engine-routing.md"},
+    {"id": "plan", "title": "同一导演计划、实现证据与时间线", "path": "references/director-plan-contract.md"},
+    {"id": "review", "title": "实际画面、声音检查与返修", "path": "references/visual-quality.md"},
+    {"id": "ownership", "title": "规则唯一归属与内部资源分类", "path": "references/module-map.md"}
+  ],
+  "resource_policy": {
+    "current_requirements": "上表是现行全局要求与制作合同的唯一全文清单；新增或迁移现行要求必须同步登记。正文仅在原权威文件维护，读取工具实时汇集，不维护另一份手写总则。",
+    "selected_resources": "读完要求后查看当前 UI 的真实图像和连续动作；按本期口播从整个效果库选择，实际阅读所选完整设计、源码、后端接口和依赖。不能用已读要求代替观看、素材取得或实现。",
+    "historical_material": "evidence、历史账号、旧 Skill 原文、旧工程和案例说明保留为来源资料。它们不能追加或覆盖当前全局要求；只有本期明确续作范围才接续相应历史设置。",
+    "status": "输出全文、文件哈希和版本只证明本次提供了哪些要求，不证明 Agent 已读懂、已执行、已观看或成片已获认可。"
+  }
+}

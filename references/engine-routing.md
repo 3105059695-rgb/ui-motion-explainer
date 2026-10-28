@@ -1,6 +1,6 @@
 # 引擎路由与时间轴合同
 
-本页只维护后端的真实接口、时钟和限制。审美按[Fred Talk 默认](aesthetic-preferences.md)，阶段与交付按[主流程](workflow.md)，共同数据按[导演计划合同](director-plan-contract.md)。先识别已有工程，不为统一入口重写可用工程或混用时间 API。
+本页只维护后端的真实接口、时钟和限制。审美按[当前已认可正文基准](aesthetic-preferences.md)，阶段与交付按[主流程](workflow.md)，共同数据按[导演计划合同](director-plan-contract.md)。先识别已有工程，不为统一入口重写可用工程或混用时间 API。
 
 ## 完整场景制作
 

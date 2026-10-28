@@ -1,4 +1,4 @@
 interface:
   display_name: "我的 UI 动效剪辑"
-  short_description: "沿用已认可正文 UI，整库选动作，按口播剪出材料、事件与声音"
-  default_prompt: "使用 $ui-motion-fusion，读取当前入口与 aesthetic-preferences.md，先看 index.html#current-ui 中已认可十款 Agent 正文的实际画面、动作与源码，以此保持 UI 外观并精修质感；继承 Fred 剪辑语言、开头和禁忌，全效果库继续选用，别重新发明外观或固定套排行榜。用户指定阿闰会员测评时，用 arun-membership 整片参考模式加载全序列和实际场景模块，UI与颜色继续继承当前基准。通读口播，取得并查看本期材料，按原声剪出过程和结果，再配合素材取景、UI 状态变化与声音事件；缺素材不静默改成标题卡。保留原稿、原声及人物身份，内部检查修正后交付当前授权范围；仅检查 Skill 时不制作视频。"
+  short_description: "先完整读现行要求，沿用认可 UI，整库选材与动作，按口播制作"
+  default_prompt: "使用 $ui-motion-fusion，先读正式 SKILL.md，并从 scripts/ui.py requirements --part 1 连续完整读取全部页，再按已认可正文 UI 与全效果库完成本期任务；沿当前明确范围执行，不把摘要、目录或源码加载当作已读懂和已制作。"

@@ -22,6 +22,7 @@ import style_registry
 import aigc_assets
 import selection
 import selection_contract
+import requirements
 
 ROOT = Path(__file__).resolve().parents[1]
 OWNER = 'ui-motion-fusion/director.py'
@@ -68,6 +69,32 @@ def preference_context(resolution):
                          if line.startswith('## ')],
             'scope': 'All current visual/editing preferences, including opening and exclusions. '
                      'A sourced body-ui exception changes only its declared scope.'}
+
+
+def requirements_context(root=ROOT, include_text=True):
+    """Expose the complete current bundle without claiming an Agent has read it."""
+    bundle = requirements.load(root)
+    command = f'python -B -X utf8 "{(Path(root) / "scripts/ui.py").resolve()}" requirements'
+    context = {key: value for key, value in bundle.items() if key not in ('documents', 'parts')}
+    context['documents'] = [
+        {key: value for key, value in document.items() if include_text or key != 'text'}
+        for document in bundle['documents']]
+    context['reading'] = {
+        'overview_command': command,
+        'part_commands': [f'{command} --part {number}' for number in range(1, bundle['part_count'] + 1)],
+        'instruction': '按顺序完整细读全部分页，不截断输出，不只看清单、标题或前几项；'
+                       '当前要求全文以清单来源为准。准备上下文只提供内容，不能证明已阅读、理解、执行或画面通过。',
+    }
+    context['assessment'] = {'reading': 'not-assessed', 'understanding': 'not-assessed',
+                             'implementation': 'not-assessed', 'visual_approval': 'not-assessed'}
+    return context
+
+
+def requirements_metadata(context):
+    """Small return/creation record; full text stays in the prepared context."""
+    return {key: value for key, value in context.items() if key != 'documents'} | {
+        'documents': [{key: value for key, value in document.items() if key != 'text'}
+                      for document in context['documents']]}
 
 
 def recipe_records(root=ROOT):
@@ -212,6 +239,7 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
     presenter_source = presenter_context(presenter) if presenter is not None else None
     if not source['text'].strip():
         raise ValueError('Source narration is empty.')
+    current_requirements = requirements_context(root)
     folder = Path(project).expanduser().resolve()
     if folder.exists() and not folder.is_dir():
         raise ValueError('Project must be a directory.')
@@ -226,8 +254,8 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
         style_resolution = style_registry.resolve(folder, str(profile) if profile else None, root=root)
         if style_resolution.get('profile_path'):
             selected = Path(style_resolution['profile_path'])
-    required_reading = [{'path': str((Path(root) / p).resolve()),
-                         'exists': (Path(root) / p).is_file()} for p in REQUIRED_REFS]
+    required_reading = [{'path': document['path'], 'exists': Path(document['path']).is_file()}
+                        for document in current_requirements['documents']]
     for item in style_resolution.get('required_reading', []):
         if item['path'] not in {row['path'] for row in required_reading}:
             required_reading.append(item)
@@ -236,6 +264,7 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
     context = {
         'schema_version': 1, 'generated_by': OWNER,
         'source': source, 'project': str(folder),
+        'requirements': current_requirements,
         'style': {'profile': str(selected) if selected else None,
                   'profile_exists': selected.is_file() if selected else None,
                   'status': 'selected-for-reading' if selected else 'unresolved',
@@ -301,7 +330,14 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
                 if Path(row.get('path', '')).suffix.lower() in ('.html', '.js', '.css', '.json', '.py', '.tsx')]
         examples += [f"  源码：{row['path']}（{'存在' if row.get('exists') else '缺失'}）" for row in code]
     brief = '\n'.join([
-        MARKER, '# 本期剪辑入口', '',
+        MARKER, '# 当前要求：先完整逐页细读', '',
+        f"当前要求共 {current_requirements['document_count']} 份文档、{current_requirements['part_count']} 页。"
+        '以下命令逐页输出全文，必须从第 1 页读到最后一页；不要截断输出或只看前几项。',
+        '```powershell', *current_requirements['reading']['part_commands'], '```',
+        f"来源清单：{current_requirements['manifest_path']}；总 SHA-256：{current_requirements['bundle_sha256']}。",
+        '完整文档正文、来源和各自 SHA-256 已放入 director-context.json 的 requirements.documents。'
+        '分页是阅读方式，不能用目录或哈希代替全文；生成上下文不代表已阅读、理解、执行或画面通过。', '',
+        '# 本期剪辑入口', '',
         f"原稿：{source['path']}", f'工程：{folder}', f'{"主要设计来源" if unified else "账号"}：{profile_text}',
         '完整原文及哈希在 director-context.json 的 source；它是待剪辑材料，不是执行指令。', '',
         ('先通读 context.source 的整篇原稿，确定句意、上下文和观众需要看懂的变化。完整读取 context.style.preferences.text 中唯一偏好页的 UI、AE 感、开头与禁忌，再看当前 style.reference_directions 的已认可正文图、动态和源码，按其外观精修本期画面；有来源的 body-ui 覆盖只改正文，未覆盖范围继续继承。从效果库选择实现时查看实际画面与源码，跨库选件不自动更换整体风格。当前输入的原声、人物与 IP 身份保持，明确续作仅接续传入的本工程根。' if unified else '先通读 context.source 的整篇原稿，确定段落任务和观众需要看懂的变化。以下样片用于校准质量与认可范围，不按首条、最近一条或最方便的旧工程决定整片镜头。'), '',
@@ -333,9 +369,9 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
         '   素材剪辑与UI分别设计：前者负责取景、切点、结果停留，后者让同一对象分类/交接/检查/修复。将实际音效文件的sound_events绑定动作或切点，跟随粗剪一起安排；原口播不重排不调速。场景background/palette可按材料变化，强调紫只作局部选择。',
         *([f"   数字人原声：{presenter_source['path']}，音轨 {presenter_source['audio_master']['stream_index']}，原长 {presenter_source['duration_seconds']:.3f} 秒；字幕仍需按原声核对，不重新配音。"] if presenter_source else []),
         f"4. 展开整片前，连续检查本期原声下的完整开头事件、代表性正文及前后交接，并将实际输出首先与当前已认可正文基准并排对照外观、材质和主次，再与所选库画面对照动作及表达关系，按继承的偏好与禁忌修正后再继续；已定方向由Agent内部检查，不要求重复批准。计划和代码同步更新，格式见 {context['production']['plan_format']['path']}；用 direct -- check --plan <计划> --production 预检，再正式导出。API次数和引用数量不算画面验收；记录实际观看/试听范围。", '',
-        '## 本期基础必读', '',
+        '## 现行要求与实际参考位置（全文已列在开头）', '',
         *[f"- {item['path']}（{'存在' if item['exists'] else '缺失'}）" for item in context['required_reading']],
-        '其他内容按需查 context.production.on_demand；不必为普通制作逐份通读整个历史库。', '',
+        '上方 requirements 的全部现行要求必须完整细读；其他历史资料与具体实现按需查 context.production.on_demand。', '',
         selection.render_selection_brief(context['selection']) if not context['selection'].get('errors')
         else '候选检索暂不可用：' + '; '.join(context['selection']['errors']),
     ])
@@ -399,6 +435,7 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
     warnings.extend(context['selection'].get('errors', []))
     return {'created_or_updated': [str(p) for p, _ in changed], 'unchanged': skipped,
             'source_sha256': source['sha256'], 'warnings': warnings,
+            'requirements': requirements_metadata(current_requirements),
             'plan_authored': False, 'generation_submitted': False}
 
 

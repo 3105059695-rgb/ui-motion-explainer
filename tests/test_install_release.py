@@ -32,13 +32,15 @@ def fixture(root):
     root.mkdir(parents=True)
     for relative in ['install.py', 'scripts/release_manifest.py', 'scripts/package.py',
                      'scripts/verify_package.py', 'scripts/scene_builder.py', 'scripts/scene_plan.py',
-                     'scripts/style_registry.py', 'scripts/fredtalk_library.py']:
+                     'scripts/style_registry.py', 'scripts/fredtalk_library.py', 'scripts/requirements.py']:
         destination = root / relative
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(ROOT / relative, destination)
     for relative in ['SKILL.md', 'agents/openai.yaml', 'scripts/ui.py', 'assets/core/source.js',
                      'references/library.md', 'references/aesthetic-preferences.md']:
         write(root, relative)
+    write(root, 'references/requirements.json', {'schema_version': 1, 'documents': [
+        {'id': 'fixture-entry', 'title': 'Fixture entry', 'path': 'SKILL.md'}]})
     write(root, 'references/resource-registry.json', {'modules': [
         {'id': 'core', 'path': '.', 'required': ['assets/core/source.js'],
          'commands': {'ui': 'scripts/ui.py'}, 'required_for_install': True},
@@ -102,6 +104,16 @@ class InstallReleaseTests(unittest.TestCase):
 
     def install(self, **kwargs):
         return installer.install(self.source, self.target, **kwargs)
+
+    def test_release_rejects_missing_registered_requirement(self):
+        manifest = {'schema_version': 1, 'documents': [
+            {'id': 'current', 'title': 'Current requirement', 'path': 'references/current-only.md'}]}
+        write(self.source, 'references/requirements.json', manifest)
+        write(self.source, 'references/current-only.md', 'Required complete production instructions.')
+        validate_resources(self.source)
+        (self.source / 'references/current-only.md').unlink()
+        with self.assertRaisesRegex(ValueError, 'Requirement document 1 is missing'):
+            validate_resources(self.source)
 
     def test_release_tracks_registered_default_instead_of_historical_id(self):
         config_path = self.source / 'references/profiles/registry.json'

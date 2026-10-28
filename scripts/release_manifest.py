@@ -12,7 +12,7 @@ from urllib.parse import unquote
 
 MANIFEST = 'release-manifest.json'
 STATE = '.install-state.json'
-VERSION = '2026.10.28.3'
+VERSION = '2026.10.28.4'
 EXCLUDED_DIRS = {'.git', 'node_modules', '__pycache__', '.cache', 'cache', 'caches',
                  '.venv', 'venv', '.pytest_cache', '.mypy_cache', '.ruff_cache',
                  'runtime', 'runtimes', 'browser-cache'}
@@ -144,6 +144,7 @@ def validate_entry_links(root: Path) -> int:
 def validate_resources(root: Path) -> dict:
     """Validate mandatory module resources and portable approved visual inputs."""
     required = ['SKILL.md', 'install.py', 'agents/openai.yaml',
+                'scripts/requirements.py', 'references/requirements.json',
                 'scripts/ui.py', 'scripts/scene_builder.py', 'scripts/scene_plan.py',
                 'scripts/package.py', 'scripts/verify_package.py',
                 'scripts/release_manifest.py', 'references/resource-registry.json',
@@ -159,6 +160,8 @@ def validate_resources(root: Path) -> dict:
     for name in required:
         if not checked_path(root, name).is_file():
             raise ValueError(f'Missing required release file: {name}')
+    import requirements
+    requirements.load(root)  # Every registered current requirement must ship in full.
     registry = read_json(root / 'references/resource-registry.json')
     modules = []
     for module in registry['modules']:

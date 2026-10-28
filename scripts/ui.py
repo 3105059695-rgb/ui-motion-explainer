@@ -139,6 +139,10 @@ def main(argv=None):
     sub.add_parser('fredtalk', help='Search, inspect, or copy verified public FredTalk source into the current project.')
     sub.add_parser('scene', help='Select and bind complete authored library scenes to current narration, then build/render.')
     sub.add_parser('status', help='Check local resources without installing or rendering.')
+    child = sub.add_parser('requirements', help='List every current requirement or read its complete, numbered text pages.')
+    requirement_output = child.add_mutually_exclusive_group()
+    requirement_output.add_argument('--part', type=int, help='Print one complete page; follow the next-page command to read all content.')
+    requirement_output.add_argument('--json', action='store_true', help='Print manifest/document hashes and page metadata, without body text.')
     child = sub.add_parser('verify-output', help='Check rendered media duration/streams/hash against the current plan; no aesthetic approval.')
     child.add_argument('--project', required=True, type=Path)
     child.add_argument('--media', required=True, type=Path)
@@ -181,6 +185,20 @@ def main(argv=None):
     project = resolution = export_report = None
     options = {}
     try:
+        if args.action == 'requirements':
+            import requirements
+            bundle = requirements.load(ROOT)
+            if args.json:
+                print(json.dumps(requirements.metadata(bundle), ensure_ascii=False, indent=2))
+            elif args.part is not None:
+                # Windows newline conversion would turn preserved CRLF source
+                # text into CRCRLF. Keep each page's characters unchanged.
+                if hasattr(sys.stdout, 'reconfigure'):
+                    sys.stdout.reconfigure(newline='')
+                print(requirements.render_part(bundle, args.part), end='')
+            else:
+                print(requirements.overview(bundle))
+            return 0
         if args.action == 'status':
             print(json.dumps(status(), ensure_ascii=False, indent=2))
             return 0

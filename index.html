@@ -57,7 +57,7 @@
   <a class="skip" href="#layers">跳到制作与效果库</a>
   <main>
     <header>
-      <p class="eyebrow">UI MOTION FUSION · 2026.10.28.3</p>
+      <p class="eyebrow">UI MOTION FUSION · 2026.10.28.4</p>
       <h1>我的 UI 动效剪辑</h1>
       <p class="intro">默认沿用下方已认可正文的具体 UI 外观，跨窗口保持，沿此精修质感；Fred 原片作为补充。根据口播重新组织本期材料、构图与动作，效果库负责实现。AIGC 画风与人物身份单独保留。</p>
       <div class="entry"><code class="call">$ui-motion-fusion</code><a href="#library">打开效果库</a><a href="SKILL.md">打开统一技能入口</a><a href="references/global-use.md">在其他对话中调用</a><a href="references/engine-routing.md#完整场景制作">从完整场景绑定口播并制作</a></div>
@@ -99,8 +99,14 @@
         <li><strong>逐句研究参考：</strong>秋芝与 Fred 原片逐句证据统一登记；相同方法追加实例，按条目读取实现状态。</li>
       </ul>
     </section>
+    <section class="capabilities" id="requirements" aria-labelledby="requirements-heading">
+      <h2 id="requirements-heading">新窗口先完整读取现行要求</h2>
+      <p>以下是当前制作要求的全文清单，各条款只在对应原文件维护。AI 从 <code>scripts/ui.py requirements --part 1</code> 开始，按页末命令读到最后一页，再进入制作；输出被截断要补读，目录和摘要不算全文。</p>
+      <p>历史研究与案例保留作依据，源码用于实际制作；它们不会另设全局审美。读完要求后仍要查看真实参考、选取素材并落实到时间线。</p>
+      <ul class="links"><li><a href="SKILL.md">01 · 统一入口与全文读取</a></li><li><a href="references/aesthetic-preferences.md">02 · 已确认 UI、质感、开头、声音与 AIGC 画风</a></li><li><a href="references/workflow.md">03 · 制作阶段、原稿原声、来源和交付</a></li><li><a href="references/script-visual-planning.md">04 · 口播理解、真实材料与画面设计</a></li><li><a href="references/broll-preferences.md">05 · 不同语境的 B-roll、漫画表演与偏好条件</a></li><li><a href="references/source-study-guide.md">06 · 逐句研究与参考证据的使用</a></li><li><a href="references/selection-workflow.md">07 · 整库发现、选择与实际应用</a></li><li><a href="references/library.md">08 · 全部能力家族与实现状态</a></li><li><a href="references/semantic-directing.md">09 · 语义配方到实际源码的接线</a></li><li><a href="references/reference-replication.md">10 · 整片参考与复刻范围</a></li><li><a href="references/style-profiles.md">11 · 画风、人物身份和历史范围</a></li><li><a href="references/aigc-directing.md">12 · AIGC 的使用、画风、动作与剪辑节奏</a></li><li><a href="references/anime-video-generation.md">13 · 生成接口、请求状态与费用边界</a></li><li><a href="references/presenter-editing.md">14 · 数字人、真实素材与合成</a></li><li><a href="references/engine-routing.md">15 · 实际后端、创建与导出接口</a></li><li><a href="references/director-plan-contract.md">16 · 同一导演计划、实现证据与时间线</a></li><li><a href="references/visual-quality.md">17 · 实际画面、声音检查与返修</a></li><li><a href="references/module-map.md">18 · 规则唯一归属与内部资源分类</a></li></ul>
+    </section>
     <nav aria-label="制作目录">
-      <a href="#workflow">01 主流程</a><a href="#library">02 可用效果库</a><a href="#history">03 参考与历史</a>
+      <a href="#requirements">开工全文</a><a href="#workflow">01 主流程</a><a href="#library">02 可用效果库</a><a href="#history">03 参考与历史</a>
     </nav>
     <div id="layers">
       <section class="layer" id="workflow" aria-labelledby="workflow-heading">
@@ -133,7 +139,7 @@
             <p>9 种带参数的剪辑组件，接入现有工程；10 条按句意选择的配方，包含 3 类连续 AIGC 动作设计。AIGC 按本期内容生成，设计按本期表达从库中选择，演示数据不直接成为本期事实。</p>
             <ul class="demos">
               <li><a href="assets/editing-kit/demo.html">播放蒙版、遮挡、转场与对象交接</a><small>可暂停和拖动 · <a href="assets/editing-kit/README.md">实际组件接口</a></small></li>
-              <li><a href="references/semantic-directing.md">口播如何自动选到这些能力</a><small><a href="references/semantic-editing-recipes.json">10 条可检索配方</a> · <a href="references/qiuzhi-editing-methods.md">参考观察与适用边界</a></small></li>
+              <li><a href="references/semantic-directing.md">口播怎样选用并接入这些能力</a><small><a href="references/semantic-editing-recipes.json">10 条可检索配方</a> · <a href="references/qiuzhi-editing-methods.md">参考观察与适用边界</a></small></li>
             </ul>
           </div>
           <div class="resources">
@@ -173,7 +179,7 @@
     </div>
     <footer>
       <p>这是本机离线导航。Markdown 文档和 JSON 目录可交给 Agent 读取；本页不加载播放器或远程资源。</p>
-      <p>规则版本 2026.10.28.3 · 整体设计与底层动作分开核对，每项引用对应自己的来源和本期实现。已配置的本机历史资源自动接续，公开包缺件明确标注。实际画面对照、声音检查与用户认可分别记录。</p>
+      <p>规则版本 2026.10.28.4 · 整体设计与底层动作分开核对，每项引用对应自己的来源和本期实现。已配置的本机历史资源自动接续，公开包缺件明确标注。实际画面对照、声音检查与用户认可分别记录。</p>
     </footer>
   </main>
 </body>
