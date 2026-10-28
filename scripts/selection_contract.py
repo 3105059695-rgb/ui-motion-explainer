@@ -335,6 +335,7 @@ def validate(plan, project, root=ROOT, source_text=None):
 
     manifest_path = bound_file(plan.get('implementation_manifest'), 'implementation_manifest')
     manifest, timeline, graph, edges = {}, {}, {}, []
+    entry = None
     if manifest_path is not None:
         try:
             manifest = read_json(manifest_path)
@@ -386,6 +387,40 @@ def validate(plan, project, root=ROOT, source_text=None):
     if len({row['id'] for row in timeline_rows}) != len(timeline_rows):
         error('implementation_manifest.timeline.segments', 'duplicate segment IDs')
     mapped = {row['id']: row for row in timeline_rows}
+
+    # These are the actual export inputs, not a second sound plan. Old projects
+    # without event audio remain valid; declared audio must reach the timeline.
+    sound_events = plan.get('sound_events', [])
+    if sound_events != timeline.get('sound_events', []):
+        error('sound_events', 'plan and consumed timeline must contain the same event audio, including source ranges and gain')
+    if not isinstance(sound_events, list):
+        error('sound_events', 'must be an array')
+        sound_events = []
+    sound_ids = set()
+    for i, sound in enumerate(sound_events):
+        where = f'sound_events[{i}]'
+        if not isinstance(sound, dict):
+            error(where, 'must be an actual sound file and timed event')
+            continue
+        if not text(sound.get('id')) or sound['id'] in sound_ids:
+            error(where + '.id', 'must be nonempty and unique')
+        sound_ids.add(sound.get('id') if isinstance(sound.get('id'), str) else None)
+        bound_file(sound, where)
+        if not number(sound.get('at')) or sound['at'] < 0 or (duration is not None and sound['at'] >= duration):
+            error(where + '.at', 'must start on the absolute output clock within the delivery')
+        if not number(sound.get('source_in')) or not number(sound.get('source_out')) or not 0 <= sound['source_in'] < sound['source_out']:
+            error(where, 'requires finite 0 <= source_in < source_out; decoded duration is checked by the exporter')
+        if not number(sound.get('gain', 0.3)) or not 0 <= sound.get('gain', 0.3) <= 1:
+            error(where + '.gain', 'must be finite between 0 and 1')
+        if sound.get('segment_id'):
+            linked = mapped.get(sound['segment_id'])
+            if linked is None:
+                error(where + '.segment_id', 'must identify a timeline segment')
+            elif sound.get('event_id') and not any(isinstance(event, dict) and event.get('id') == sound['event_id']
+                                                   for event in linked.get('events', [])):
+                error(where + '.event_id', 'must identify an event of the linked segment')
+        elif sound.get('event_id'):
+            error(where + '.event_id', 'also specify segment_id to locate the action')
 
     timing = plan.get('timing') if isinstance(plan.get('timing'), dict) else {}
     alignment = {}
@@ -637,6 +672,31 @@ def validate(plan, project, root=ROOT, source_text=None):
                                'sha256': impl.get('sha256') if isinstance(impl, dict) else None, 'marker': marker},
             'assets': runtime_assets}
         actual_row = mapped.get(ident)
+        # Material cuts and scene surfaces are authored once in the plan, then
+        # copied into this consumed timeline. Runtime checks geometry and seeks.
+        for field in ('material_shots', 'background', 'palette'):
+            if field in segment or (isinstance(actual_row, dict) and field in actual_row):
+                if not isinstance(actual_row, dict) or segment.get(field) != actual_row.get(field):
+                    error(where + '.' + field, 'plan and runtime timeline differ; update the actual edit, not only its description')
+        shots = segment.get('material_shots', [])
+        if not isinstance(shots, list):
+            error(where + '.material_shots', 'must be an array')
+            shots = []
+        media = timeline.get('media', {})
+        media_assets = media.get('assets', []) if isinstance(media, dict) else []
+        media_by_id = {row.get('id'): row for row in media_assets if isinstance(row, dict) and text(row.get('id'))} \
+            if isinstance(media_assets, list) else {}
+        ready_paths = {Path(row['path']) for row in runtime_assets}
+        for n, shot in enumerate(shots):
+            target = where + f'.material_shots[{n}]'
+            asset_id = shot.get('asset') if isinstance(shot, dict) else None
+            material = media_by_id.get(asset_id) if isinstance(asset_id, str) else None
+            if not material or not text(material.get('src')) or entry is None:
+                error(target + '.asset', 'must reference an actual timeline.media.assets source')
+                continue
+            material_path = (entry.parent / unquote(material['src'])).resolve()
+            if material_path not in ready_paths:
+                error(target + '.asset', 'source must also be a ready output asset with matching file hash in this segment')
         try:
             normalized = {key: actual_row.get(key) for key in expected_row} if isinstance(actual_row, dict) else {}
             if isinstance(normalized.get('implementation'), dict):
@@ -665,6 +725,7 @@ def validate(plan, project, root=ROOT, source_text=None):
                        'recipe_ids': segment.get('recipe_ids', []),
                        'implementation': expected_row['implementation'], 'assets': runtime_assets,
                        'review_intent': {key: segment.get(key) for key in ('meaning', 'viewer_gap', 'events', 'continuity')},
+                       'material_shots': shots,
                        'aigc': {'use': uses_aigc, 'style_binding': segment.get('aigc', {}).get('style_binding')
                                 if isinstance(segment.get('aigc'), dict) else None}})
     if covered != requested:

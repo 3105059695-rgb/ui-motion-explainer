@@ -196,6 +196,13 @@ def export_check(project, plan=None, demo=False, root=ROOT):
         raise ValueError('Production export must bind this renderer\'s actual project/index.html entry, not a separate demonstration or evidence-only entry.')
     config_path = folder / 'project.json'
     config = json.loads(config_path.read_text(encoding='utf-8-sig')) if config_path.is_file() else {}
+    plan_data = json.loads(selected.read_text(encoding='utf-8-sig'))
+    planned_sounds = plan_data.get('sound_events', [])
+    if not scene_route and config.get('sceneRuntime') != 'canvas-story-v1':
+        if config.get('sound_events', []) != planned_sounds:
+            raise ValueError('Export project.sound_events must match the sound events in the plan and bound timeline.')
+    elif scene_route and planned_sounds:
+        raise ValueError('Event audio is supported by the portable renderer; complete-scenes needs its native audio implementation, not ignored sound_events.')
     duration = (json.loads((folder / 'macro_plan.json').read_text(encoding='utf-8-sig')).get('durationSeconds')
                 if scene_route else config.get('duration'))
     if type(duration) not in (int, float) or not math.isfinite(duration) \

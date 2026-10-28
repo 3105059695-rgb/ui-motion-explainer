@@ -125,6 +125,58 @@ window.renderFrame = (t) => {
         self.assertTrue(exported['preflight_ready'])
         self.assertEqual(report['assessment'], exported['assessment'])
 
+    def bind_edit_timeline(self, media=None, sounds=None):
+        timeline = director.load_json(self.project / 'timeline.json')
+        for segment, row in zip(self.plan['segments'], timeline['segments']):
+            for field in ('material_shots', 'palette', 'background'):
+                if field in segment:
+                    row[field] = copy.deepcopy(segment[field])
+        if media is not None:
+            timeline['media'] = {'assets': media}
+        if sounds is not None:
+            timeline['sound_events'] = copy.deepcopy(sounds)
+        self.write(self.project / 'timeline.json', timeline)
+        manifest = director.load_json(self.project / 'manifest.json')
+        manifest['timeline'].update(self.file('timeline.json'))
+        self.write(self.project / 'manifest.json', manifest)
+        self.plan['implementation_manifest'] = self.file('manifest.json')
+
+    def material_edit_fixture(self):
+        (self.project / 'detail.png').write_bytes(b'file-binding fixture, not decoded media')
+        segment = self.plan['segments'][0]
+        segment['assets'] = [{**self.file('detail.png'), 'kind': 'real', 'status': 'ready', 'purpose': 'inspect the source detail'}]
+        segment['material_shots'] = [{'id': 'detail', 'asset': 'actual', 'start': 0, 'end': 2}]
+        segment['background'] = '#F3F3F5'
+        self.refresh_runtime()
+        self.bind_edit_timeline(media=[{'id': 'actual', 'type': 'image', 'src': 'detail.png'}])
+
+    def test_material_edit_binds_actual_source_and_trace(self):
+        self.material_edit_fixture()
+        result = self.check()
+        self.assertTrue(result['preflight_ready'], result)
+        self.assertEqual(self.plan['segments'][0]['material_shots'], result['selection_evidence']['ledger'][0]['material_shots'])
+
+    def test_material_edit_cannot_drift_or_load_unbound_substitute(self):
+        self.material_edit_fixture()
+        self.plan['segments'][0]['material_shots'][0]['start'] = 0.4
+        self.assert_blocked('material_shots')
+        self.bind_edit_timeline(media=[{'id': 'actual', 'type': 'image', 'src': 'another.png'}])
+        self.assert_blocked('ready output asset')
+
+    def test_event_audio_requires_the_same_real_file_in_plan_and_export(self):
+        (self.project / 'effect.wav').write_bytes(b'audio file binding fixture')
+        sounds = [{**self.file('effect.wav'), 'id': 'confirm', 'at': 1, 'source_in': 0, 'source_out': 0.5, 'gain': 0.2}]
+        self.plan['sound_events'] = sounds
+        self.assert_blocked('sound_events')
+        self.bind_edit_timeline(sounds=sounds)
+        self.assertTrue(self.check()['preflight_ready'])
+        with self.assertRaisesRegex(ValueError, 'project.sound_events'):
+            production_entry.export_check(self.project, root=self.root)
+        self.write(self.project / 'project.json', {'duration': 2, 'sound_events': sounds})
+        self.assertTrue(production_entry.export_check(self.project, root=self.root)['preflight_ready'])
+        (self.project / 'effect.wav').write_bytes(b'changed audio')
+        self.assert_blocked('SHA-256 differs')
+
     def test_old_current_style_plan_is_readable_but_not_production_ready(self):
         del self.plan['selection_contract_version']
         report = self.check()

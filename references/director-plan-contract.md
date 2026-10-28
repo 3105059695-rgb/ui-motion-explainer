@@ -159,6 +159,8 @@ AIGC 另外返回 `character_references_ready`、每个场景的 `reference_read
 
 `kind` 取 `real / generated / concept`；`status` 取 `ready / pending / planned`。`ready` 必须有存在的本地文件；`pending/planned` 可以没有路径，但会阻断 `render_ready`。图片存在不证明人物正在连续动作。
 
+素材的 `purpose/source` 记录实际查看到的内容、可用部分与缺失动作；段落 `events.initial/trigger/change/result` 写需要发生的对象变化，并对照实际粗剪。AIGC 继续用 `aigc.action_beats` 记录选段内可见动作。若预期是交接、实际只有持物站立，保留缺口并修正素材或明确改选表达，不能只把状态改成 `ready`。这些是同一计划的内容说明，不另建完成清单，也不由静态检查认证表演成立。
+
 `carrier=aigc` 需要以下 `generation`，或者已有 **ready 的 generated 视频文件及 `source` 来源说明**：
 
 ```json
@@ -327,6 +329,55 @@ window.renderFrame = t => {
 ```
 
 时间线每行的原文位置、输出落点、实现文件／唯一 marker、实际输出素材的 `path/sha256` 必须与计划相符。可附加当前渲染所需的事件、对象等字段。实现 marker 必须在入口可达的真实代码或 DOM 中出现一次，注释不算。`role:reference/first-frame` 不冒充最终上屏素材；实际输出素材写入该行 assets，静态校验不判断 MP4 内部动作质量。
+
+### 实际素材剪辑与声音事件
+
+Canvas Story 可在同一计划的段落添加 `material_shots`、`background`、`palette`，并原样写入渲染实际读取的 `timeline.segments`；预检校验两处一致。它们让材料先进入可观看的粗剪，之后再由 `scene` 补 UI 对象与状态变化。下面仅示意新增字段，不是完整生产计划：
+
+```json
+{
+  "id": "detail-01",
+  "output": {"start_seconds": 10, "end_seconds": 13},
+  "layout": {"mode": "focus"},
+  "background": "#F3F3F5",
+  "palette": {"paper": "#FFFFFF"},
+  "material_shots": [{
+    "id": "inspect-source", "asset": "screen-recording",
+    "start": 0, "end": 3, "source_in": 12, "source_out": 15,
+    "target": {"x": 0, "y": 0, "w": 1920, "h": 1080}, "fit": "contain",
+    "crop_keyframes": [
+      {"at": 0, "x": 0, "y": 0, "w": 1, "h": 1},
+      {"at": 0.6, "x": 0.25, "y": 0.25, "w": 0.5, "h": 0.5},
+      {"at": 2, "x": 0.25, "y": 0.25, "w": 0.5, "h": 0.5},
+      {"at": 2.7, "x": 0, "y": 0, "w": 1, "h": 1}
+    ]
+  }]
+}
+```
+
+- `asset` 引用 `timeline.media.assets` 中的 `image/video`，例如 `{"id":"screen-recording","type":"video","src":"media/operation.mp4"}`。该 `src` 必须同时对应本段 `assets` 内已绑定真实哈希的 `ready` 输出素材；仅有参考图或空文件名不能填充画面。
+- `start/end`、裁切关键帧 `at` 都是**段内秒数**，镜头区间左闭右开。视频 `source_in/source_out` 是源文件内秒数，必须原速且两段时长相等；解码后另查源长，越界报错，不拉伸时间或冻结尾帧。图片省略源时间。
+- `crop_keyframes` 的 `x/y/w/h` 是原材料内部的归一化矩形，范围在 0–1；关键帧间平滑插值，首尾外保持最近取景。`target` 是本期逻辑舞台像素，省略则用 `layout.contentRect`；`fit` 为 `contain`（默认）或 `cover`。可同时摆放不同镜头作同尺度比较。
+- 片段／镜头选择和解码帧使用主 `mediaTime`，取景与 UI 动画使用 `animationTime`；运动模糊子采样不能越过切点混入另一源镜头。同源多次出现使用独立解码位置，不必复制媒体文件。
+- 有实际 `material_shots` 时可省略 `scene`；显式写入不存在的场景仍报错。材料先绘制，定制场景后绘制。纯素材段的生产 `implementation` 可绑定工程内 `runtime.js` 真实哈希及唯一代码 marker `function createRuntime(binding,host)`；这指向实际共用实现，不是伪造空场景。
+- `background/palette` 只改本段绘制表面和 SDK 颜色，其他项继承工程默认，源材料不统一染色。人物开头的材料、背景与 UI 全部受既有实测安全区裁剪，人物完整源画面保持；原声和字幕仍按母带。
+- `getTrace()` 的 `successful-CanvasStory-draws` 记录实际绘制的素材 ID、源时刻、裁切与目标矩形。它证明调用发生，不能证明句意正确或审美通过。旧工程保留其已复制运行时，需明确升级代码才能取得新接口。
+
+补充音效沿用同一计划顶层的 `sound_events`，原样写入实际时间线。例子仍是局部字段，哈希换成真实文件值：
+
+```json
+{"sound_events":[{
+  "id":"paper-transfer", "path":"media/paper.wav", "sha256":"实际音频SHA-256",
+  "at":10.6, "source_in":0.15, "source_out":0.62, "gain":0.3,
+  "segment_id":"detail-01"
+}]}
+```
+
+- `id` 唯一；`path` 为工程内现有文件的相对路径，不能是 URL、绝对路径或越界路径。`at` 是输出母带上的绝对秒数；`source_in/source_out` 为音效源内有效区间，导出前用已有 ffprobe 核对实际音轨和源长。可选 `gain` 默认 0.3，有限且在 0–1；同一文件可多次或重叠使用。
+- 可选 `segment_id` 指向实际时间线段落；`event_id` 需同时提供 `segment_id` 并指向其 `events` 中的真实 ID。声音可略早于画面进入或尾音跨到下一镜，不改原口播句子、速度或时钟。
+- Canvas 的声音输入仅为 `timeline.json.sound_events`，不能再给 `project.json` 非空竞争数组。其他使用 portable 渲染器的后端需将同一数组同步到 `project.json.sound_events`；计划、时间线和实际消费配置必须一致。`complete-scenes` 不支持此数组，需用其原生音频能力，不声称所有后端已接通。
+- 导出按请求范围截取并偏移音效，以 FFmpeg 混入 `preview.mp4`；原声保持增益 1，不自动压低、归一化或加限制器。实际音效增益与重叠需试听决定，工具不会自动生成或加入音乐。
+- **浏览器编辑预览仍只有原口播；音效在导出的 `preview.mp4` 中试听。** `verification.json.soundEvents` 记录选段、落点、增益与实际混入范围，`listeningReview:false` 表示程序未完成听审。技术混音通过不等于声音合适或用户认可。
 
 ### 对齐与导出后的检查
 

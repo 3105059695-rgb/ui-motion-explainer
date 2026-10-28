@@ -4,9 +4,9 @@
 
 ## 从候选到实际选用
 
-1. `selection.segments` 的原句与字符位置仅用于定位。先看 `narration_study` 的来源原句、上下文与画面证据，再看相关候选的实际展示、接口和定制部分；连续几句可以共用事件，候选排名不决定分镜。
+1. `selection.segments` 的原句与字符位置仅用于定位。先确定本段需要的具体材料、事件或证据和承载方式，再选素材剪法与动效实现。查看 `narration_study` 的来源原句、上下文与画面证据，以及候选的实际展示、接口和定制部分；连续几句可以共用事件，候选排名不决定分镜。
 2. FredTalk 的 `software-preset/fredtalk:<ID>` 用 `inspect` 核对真实源码、依赖和缺件；`ui.py fredtalk materialize --id <ID> --project <工程>` 取得本期 `vendor/fredtalk/` 后还需实际接入。复制完成不等于运行完成。整库动作都可检索和改编；外观设计与配色分别处理，不因某个演示的配色反馈排除其动作。
-3. 在同一计划记录本段采用、改编、原创或保留人物的实际理由和实现位置。`library_refs.source_binding` 指向该项真实来源，`application` 指向本期实现；`design` 与 `motion` 的区别及字段见[引用格式](director-plan-contract.md#效果库设计引用)。`source_study_refs` 记录来源方法，`recipe_ids` 记录配方，不凑引用数量。
+3. 在同一计划记录本段采用、改编、原创或保留人物的理由和实现位置。所选聚焦、对比、接力等能力要绑定本期实际材料、关键区域与有效时间；“选中效果”不等于已剪进片子。`library_refs.source_binding` 指向该项真实来源，`application` 指向本期实现；`design` 与 `motion` 的区别及字段见[引用格式](director-plan-contract.md#效果库设计引用)。`source_study_refs` 记录来源方法，`recipe_ids` 记录配方，不凑引用数量。
 4. 预检和实际输出按主流程完成；计划变化后同步实现，禁止事后给所有段批量填同一句原创理由。检查账本记录的是声明与落点，不能代替观看画面。
 
 参考人物、示例数字和旧稿件不自动成为本期内容；素材用途与身份边界见[参考使用](style-profiles.md)。

@@ -10,7 +10,11 @@
 python -B -X utf8 scripts/ui.py new --engine fusion -- --custom-layout --canvas-story --out <工程>
 ```
 
-命令复制 SDK 到工程 `lib/agent-editorial/`，`index.html` 实际加载它。新工程仍是未制作状态：Agent 根据完整口播，在本期 `scenes.js` 注册场景函数；`timeline.json` 的 `segments`、事件及素材直接参与绘制。段落不是自动关键词模板，没有排行榜、十款产品、旧人物或固定秒点。场景、素材和实现绑定沿用同一导演计划，正式导出沿用已有 `ui.py render --engine fusion`。
+命令复制 SDK 到工程 `lib/agent-editorial/`，`index.html` 实际加载它。新工程仍是未制作状态：先把本期材料与事件剪入 `timeline.json`，再按完整口播在 `scenes.js` 注册需要的 UI 场景。段落不是自动关键词模板，没有排行榜、十款产品、旧人物或固定秒点。场景、素材和实现绑定沿用同一导演计划，正式导出沿用已有 `ui.py render --engine fusion`。
+
+`segments[].material_shots` 可剪取原速源视频，用原材料内部的裁切关键帧完成全貌、聚焦、停留和返回，也可并置同源不同时间片段。纯素材粗剪可省略 `scene`；有 UI 时在材料之后绘制。每段 `background/palette` 可按内容调整，源图原色保持；有人的开头继续受实测保护区约束。字段、实际调用标记与声音接口只在[计划合同](../../references/director-plan-contract.md#实际素材剪辑与声音事件)维护，避免另起一套导演计划。
+
+声音事件能随实际源区间与切点混入导出的 `preview.mp4`；当前浏览器预览仍只播放原口播，需导出后试听。旧工程使用已复制的运行时，更新 Skill 不会悄悄改旧片；升级当前工程时才同步所需实现并复看受影响区间。
 
 已有工程可直接引入 `motion-core.js` → `agent-editorial.js`，沿原后端时间调用。整个效果库的 DOM、Canvas、完整场景及 AIGC 能力继续开放；按真实接口组合或适配，不用这几个绘图函数代替全部效果。
 

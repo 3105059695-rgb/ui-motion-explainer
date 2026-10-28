@@ -24,6 +24,10 @@ for package_root in Path(__file__).resolve().parents:
 else:
     raise ImportError('Shared media server is missing; keep this renderer inside the complete ui-motion-fusion package.')
 from media_server import SingleRangeHTTPRequestHandler
+# scripts/render.py invokes this file through runpy, so resolve the sibling
+# helper explicitly rather than relying on the launcher's sys.path.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from event_audio import load_events, mix_command, event_report
 
 
 class QuietHandler(SingleRangeHTTPRequestHandler):
@@ -113,6 +117,8 @@ def main():
     if (dest/'preview.mp4').exists() and not a.overwrite: p.error('Output exists; use a new folder or --overwrite')
     dest.mkdir(parents=True,exist_ok=True)
     ffmpeg = ffmpeg_path()
+    # Check real sound files/ranges before the expensive frame render.
+    sound_plan = load_events(root, config, a.start, end, ffmpeg)
     server = ThreadingHTTPServer(('127.0.0.1',0),partial(QuietHandler,directory=str(root)))
     threading.Thread(target=server.serve_forever,daemon=True).start()
     url = f'http://127.0.0.1:{server.server_port}/index.html?render=1'
@@ -173,7 +179,8 @@ def main():
     report={'mode':config['mode'],'resolution':[a.width,height],'fps':fps,'range':[a.start,end],
             'motionBlur':'three temporal samples during fast motion; source media/captions fixed' if not a.no_motion_blur else 'off',
             'browserErrors':errors,'rendered':not a.stills_only,'humanVisualReview':False,
-            'editingKitRuntimeTrace':runtime_trace}
+            'editingKitRuntimeTrace':runtime_trace,
+            'soundEvents':event_report(sound_plan, not a.stills_only)}
     if not a.stills_only:
         audio=config.get('audio') or config.get('presenter')
         has_audio=False
@@ -183,7 +190,11 @@ def main():
             probe=subprocess.run([ffmpeg,'-hide_banner','-i',str(audio)],capture_output=True,text=True,encoding='utf-8',errors='replace')
             has_audio='Audio:' in probe.stderr
             if config.get('audio') and not has_audio:raise ValueError('Configured audio has no audio stream')
-        if has_audio:
+        if sound_plan['active']:
+            subprocess.run(mix_command(ffmpeg, dest/'silent.mp4', dest/'preview.mp4', a.start, end,
+                sound_plan['active'], master=audio if has_audio else None,
+                master_offset=float(config.get('sourceOffset',0)) if not config.get('audio') else 0), check=True)
+        elif has_audio:
             audio_start=a.start+(float(config.get('sourceOffset',0)) if not config.get('audio') else 0)
             subprocess.run([ffmpeg,'-y','-v','error','-i',str(dest/'silent.mp4'),'-ss',str(audio_start),'-i',str(audio),
                 '-map','0:v:0','-map','1:a:0','-c:v','copy','-c:a','aac','-b:a','192k','-af','apad',
@@ -191,7 +202,7 @@ def main():
         else:shutil.copy2(dest/'silent.mp4',dest/'preview.mp4')
         subprocess.run([ffmpeg,'-v','error','-i',str(dest/'preview.mp4'),'-f','null','-'],check=True)
         subprocess.run([ffmpeg,'-y','-v','error','-ss',str(duration*.54),'-i',str(dest/'preview.mp4'),'-frames:v','1',str(dest/'encoded-frame.jpg')],check=True)
-        report.update({'frames':count,'audio':bool(has_audio),'fullDecode':'passed','encodedFrame':'encoded-frame.jpg'})
+        report.update({'frames':count,'audio':bool(has_audio or sound_plan['active']),'fullDecode':'passed','encodedFrame':'encoded-frame.jpg'})
     (dest/'verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps(report,ensure_ascii=False))
 
