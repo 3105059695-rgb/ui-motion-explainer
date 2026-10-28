@@ -34,7 +34,7 @@ python -X utf8 scripts/ui.py direct check --plan <导演计划.json> --productio
 
 ## 当前风格绑定与跨机器调用
 
-新制作计划使用 `style_contract_version:1`，把 `context.style.binding` 原样复制到 `style.binding`。当前默认仍使用 `mode:"unified-production"`；兼容 ID `profile_id:"user-ui"` 不表示按账号换肤。`guidance_sha256` 绑定[审美偏好](aesthetic-preferences.md)，`directions` 绑定 `fred-talk-default-20261020` 方向合同、revision、合同哈希及三张真实校准图的索引与哈希，不能用空数组替代。
+新制作计划使用 `style_contract_version:1`，把 `context.style.binding` 原样复制到 `style.binding`。当前默认仍使用 `mode:"unified-production"`；兼容 ID `profile_id:"user-ui"` 不表示按账号换肤。`guidance_sha256` 绑定[审美偏好](aesthetic-preferences.md)，`directions` 绑定当前上下文实际返回的方向合同、revision、合同哈希及全部校准图索引与哈希，不能写死历史 ID、图数或用空数组替代。当前具体外观从已认可正文读取；整片剪辑参考独立于 UI 绑定。
 
 `styles resolve` 与 `prepare` 普通输出为 `ui_direction_source:"fred-talk-default"`；`reference_directions` 携带方向合同与 `visual_anchors`，`guidance` 指向当前审美入口。`style_references_ready` 只说明绑定资料可读，不证明已经查看参考、应用构图或通过审美检查。
 
@@ -62,9 +62,9 @@ AIGC 另外返回 `character_references_ready`、每个场景的 `reference_read
       "schema_version": 1, "mode": "unified-production", "profile_id": "user-ui",
       "guidance_sha256": "从context.style.binding原样复制",
       "directions": [{
-        "id": "fred-talk-default-20261020", "revision": "从当前上下文复制",
+        "id": "从当前context.style.binding复制", "revision": "从当前上下文复制",
         "sha256": "当前方向合同真实哈希",
-        "anchors": [{"index": 0, "sha256": "校准图0真实哈希"}, {"index": 1, "sha256": "校准图1真实哈希"}, {"index": 2, "sha256": "校准图2真实哈希"}]
+        "anchors": [{"index": 0, "sha256": "这里只示意字段；必须复制当前绑定中的完整anchors数组"}]
       }]
     },
     "tokens": {"background": "当前工程确认的背景", "type": "当前字体体系"}

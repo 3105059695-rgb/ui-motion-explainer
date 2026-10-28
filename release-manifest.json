@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "name": "ui-motion-fusion",
-  "version": "2026.10.28.2",
+  "version": "2026.10.28.3",
   "resources": {
     "required_modules": [
       "source-study",
@@ -17,7 +17,7 @@
       "apple-kinetic-promo",
       "fredtalk-library"
     ],
-    "active_document_links": 315,
+    "active_document_links": 319,
     "fredtalk_active_public_sources_verified": 101,
     "historical_fred_visual_anchors": 3,
     "default_ui_direction": "approved-body-default-20261028",
@@ -67,8 +67,8 @@
     },
     {
       "path": "README.md",
-      "size": 6023,
-      "sha256": "be22150d14d16b8784bfdcb3b29394955a8175fde67d64696703585adc09acce"
+      "size": 6090,
+      "sha256": "ca2dd198dffd235fbdcba0e083e148a9eefe2887225af4bb2f2be0e15f2daed3"
     },
     {
       "path": "SKILL.legacy.md",
@@ -77,8 +77,8 @@
     },
     {
       "path": "SKILL.md",
-      "size": 4787,
-      "sha256": "5d148ac63814e3fb6bd65761da1abb5ff25dc71bb622c7945817789013bd5e38"
+      "size": 5811,
+      "sha256": "d4c6e440c7cbe8ac1db6782c49906574c41bfcf9055ceb7f7e6dfe75532100bc"
     },
     {
       "path": "START-HERE.md",
@@ -88,12 +88,12 @@
     {
       "path": "VERSION",
       "size": 14,
-      "sha256": "225e8b48ba09fb2daba6487ec30c91d83c48d7497a8831607e5259af4969dfba"
+      "sha256": "6463f9105939e0c012d7a6658ddeab06a597fb2cd8b9a93166554c27329dea53"
     },
     {
       "path": "agents/openai.yaml",
-      "size": 809,
-      "sha256": "283a5011064ee5d11568adf6ecb1a6f249ea07dc83be98c85792f0fe41bca6c5"
+      "size": 960,
+      "sha256": "6420104b6c4cf2511af2b992e3fec0658011eaa26996eac753b3d433e28f3a53"
     },
     {
       "path": "assets/adu-reference/all-visual-contact-sheet.jpg",
@@ -14591,6 +14591,26 @@
       "sha256": "90ee551673a9695207bb8b2ac7307027a165e4a732b9202c0a813e2487f85720"
     },
     {
+      "path": "assets/reference-films/arun-membership/README.md",
+      "size": 3875,
+      "sha256": "346464b0517cd7dce8c917a101eb22cdda795d362ed56bd20919a8a068737ef4"
+    },
+    {
+      "path": "assets/reference-films/arun-membership/demo.html",
+      "size": 1530,
+      "sha256": "ed4402ace6c5c5c5bec03f8c8df29e18864f9ab3a0715cacdf01dcbb6500119e"
+    },
+    {
+      "path": "assets/reference-films/arun-membership/demo.js",
+      "size": 4339,
+      "sha256": "65b010215c3d422bfbe031f121da260764c96c814b23cdfeba2050439153dcf7"
+    },
+    {
+      "path": "assets/reference-films/arun-membership/reference-scene.js",
+      "size": 14817,
+      "sha256": "d725d8a36992f16e37af5d49913a42bfa09f868b8c0259724930f558c23ff900"
+    },
+    {
       "path": "assets/style-calibration/README.md",
       "size": 432,
       "sha256": "39d74a1228953ce187765d8d3ba366b471167b8ec9dd185b4dcea35309c3b79f"
@@ -14707,8 +14727,8 @@
     },
     {
       "path": "index.html",
-      "size": 18644,
-      "sha256": "142b87150fff2876ad01aae04851362c0b146edd4a6b0238fe355ceef56776aa"
+      "size": 19410,
+      "sha256": "e414a1bdc2269e071ac218ec45e578d65a6b00ab8727153e6eb5dd5cdb04921d"
     },
     {
       "path": "install.py",
@@ -14717,8 +14737,8 @@
     },
     {
       "path": "references/aesthetic-preferences.md",
-      "size": 14862,
-      "sha256": "2b8d61ca422062071af35ad0a9234556d9af11f6b4000a7617bfea3cc933a89e"
+      "size": 15437,
+      "sha256": "78c522e699eb886d753e9a326eb27dd69511fb3dc9f75a2b925ab42eb9e8b3ab"
     },
     {
       "path": "references/aigc-assets.json",
@@ -14767,8 +14787,8 @@
     },
     {
       "path": "references/director-plan-contract.md",
-      "size": 39243,
-      "sha256": "4801ed4b6809c5e348162ceffb89961ffefca94ba413d8b26ccd44405fb39cfc"
+      "size": 39307,
+      "sha256": "2586f8f50f7b5adf50ecdbf3d58d0f36005a0446f1900651c7859fde3a356324"
     },
     {
       "path": "references/distribution-scope.md",
@@ -14847,8 +14867,13 @@
     },
     {
       "path": "references/evidence/arun-membership-study/index.json",
-      "size": 2760,
-      "sha256": "368fadefc6a2bac812d779c9794f31680967ca7968080a95f31eb4978ce308d5"
+      "size": 3528,
+      "sha256": "e7c7a54b65167b47797dfc6454fee1b9bbb5a2fb0e4ecceedea7b1e91f5b0216"
+    },
+    {
+      "path": "references/evidence/arun-membership-study/reproduction.json",
+      "size": 39924,
+      "sha256": "13dde2a62e688168affca5235892de59bd135d1080fb96cfe7b7998e2cb27b2e"
     },
     {
       "path": "references/evidence/arun-membership-study/动效拆解与迁移.md",
@@ -14977,8 +15002,8 @@
     },
     {
       "path": "references/global-use.md",
-      "size": 1411,
-      "sha256": "eded205b8ee39fa0208fafdf3ac4913e93402ba022b5e6efce47e89b8c38f688"
+      "size": 1620,
+      "sha256": "79cb42ebeb3882225bad683ed6d5e45c39d5182b1102b022cc1fc67ac15ec245"
     },
     {
       "path": "references/high-fidelity-device-motion.md",
@@ -15207,8 +15232,8 @@
     },
     {
       "path": "references/library.md",
-      "size": 11965,
-      "sha256": "8dd9cf7b1ece1591abb8ab495d684118c2341c6aa132739e7cebe78f996de83e"
+      "size": 12350,
+      "sha256": "52f285935820aec0ec45c37d421d22e4ce3abc437f931c854fa7ad021031916e"
     },
     {
       "path": "references/local-video-design-distillation.md",
@@ -15276,9 +15301,14 @@
       "sha256": "4cdc89fa09252ef1dfef38c6426b198f17390ec100c2052e869e05e810b25c58"
     },
     {
+      "path": "references/reference-films.json",
+      "size": 908,
+      "sha256": "a105b8583c2af9999a931824ee761164ba47da7b5e4b3388bd9f2f7c19dd6ecd"
+    },
+    {
       "path": "references/reference-replication.md",
-      "size": 6659,
-      "sha256": "269546514c6d925e66e42441ac83fb5d0469c91305c142a05aeed0eb4d03868b"
+      "size": 9009,
+      "sha256": "8738183bd3d6ae31e32f2c68b5f938d3756ff9baf2f66fed987a6ff886bc36e6"
     },
     {
       "path": "references/resource-registry.json",
@@ -15367,8 +15397,8 @@
     },
     {
       "path": "scripts/director.py",
-      "size": 63882,
-      "sha256": "d0ac393232151ceaa7ea2fb984aa137d2f679727bbab7eaa54fbdc2f70d062a6"
+      "size": 64896,
+      "sha256": "351e71594d6c9b8d96baf26bad453edd197c0a9ebc5d2c330bc304fc8424daaa"
     },
     {
       "path": "scripts/export_qiaomu_fonts.py",
@@ -15402,8 +15432,8 @@
     },
     {
       "path": "scripts/new_project.py",
-      "size": 5854,
-      "sha256": "92a982a4c63855274c3a49915bf0fd8531c0305dbafb36f2d5306fbec990302d"
+      "size": 7451,
+      "sha256": "c4b60272fbe45b64b17e315f6b02f7961f7c0ee7b46a58e50e542a4c0b5f1417"
     },
     {
       "path": "scripts/package.py",
@@ -15416,9 +15446,14 @@
       "sha256": "645047575d45d7919dffa83450f0235b074955016d0e3ade29bfb7764f5e0275"
     },
     {
+      "path": "scripts/reference_film.py",
+      "size": 9909,
+      "sha256": "499ef50d332b64b4ab133510543cea46139c24232b670a89de74427f2565b3c5"
+    },
+    {
       "path": "scripts/release_manifest.py",
       "size": 14495,
-      "sha256": "a5f6f2b2dd34feec64d8131ae3ef2d6de5c07632c64aa32e7e10aec975d61850"
+      "sha256": "eb3921d7c1cd7c093b6c778633205af0be439040c42f6b02f6b314715f65b15b"
     },
     {
       "path": "scripts/render.py",
@@ -15487,8 +15522,8 @@
     },
     {
       "path": "scripts/test_canvas_story.py",
-      "size": 2578,
-      "sha256": "688f7d7ffc78aa7da04342c90070111ac4be424c1813f1ab5bb68ab6365a83b5"
+      "size": 3928,
+      "sha256": "77ee7376bc743b3b8ee76cfc3a76b759962903524dbf43d8e0c92e0bd6ede514"
     },
     {
       "path": "scripts/test_director.py",
@@ -15524,6 +15559,16 @@
       "path": "scripts/test_production_starter.py",
       "size": 9331,
       "sha256": "357c41696e53bdc88d47f0720a2c218da5daae03f7ce9c78fa911ffad342b77b"
+    },
+    {
+      "path": "scripts/test_reference_film.py",
+      "size": 7143,
+      "sha256": "3babfe975f34e04350313a8e407b5caf61953b519f262fcfc5a851954103e42c"
+    },
+    {
+      "path": "scripts/test_reference_motion.js",
+      "size": 1970,
+      "sha256": "71d7636095fb95ca52636ab6d1b4c1d21816589fc0ffd8a747349502ff7b2e9a"
     },
     {
       "path": "scripts/test_resource_inventory.py",

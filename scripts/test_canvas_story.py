@@ -32,6 +32,26 @@ class CanvasStoryTests(unittest.TestCase):
                 project / 'timeline.json', 'binding', project / 'index.html'))
             self.assertLess(sum(p.stat().st_size for p in project.rglob('*') if p.is_file()), 400000)
 
+    def test_selected_reference_is_reachable_and_identity_persists_in_this_project(self):
+        with tempfile.TemporaryDirectory() as directory:
+            project = Path(directory) / 'story'
+            new_project.create(project, custom_layout=True, canvas_story=True, reference='阿闰会员测评')
+            module = project / 'lib/reference-films/arun-membership/reference-scene.js'
+            self.assertEqual(module.read_bytes(), (new_project.ROOT / 'assets/reference-films/arun-membership/reference-scene.js').read_bytes())
+            graph, _ = selection_contract.dependency_graph(project / 'index.html')
+            self.assertIn(module.resolve(), graph)
+            config = json.loads((project / 'project.json').read_text(encoding='utf-8'))
+            self.assertEqual({'id':'arun-membership'}, config['editing_reference'])
+            self.assertFalse(config['aestheticApproval'])
+            self.assertEqual(config['duration'], 0)
+
+    def test_reference_does_not_silently_run_a_different_engine(self):
+        with tempfile.TemporaryDirectory() as directory:
+            project = Path(directory) / 'story'
+            with self.assertRaisesRegex(ValueError, '--reference requires'):
+                new_project.create(project, custom_layout=True, reference='arun-membership')
+            self.assertFalse(project.exists())
+
     def test_requires_explicit_custom_mode_and_cannot_mix_historical_demo(self):
         with tempfile.TemporaryDirectory() as directory:
             project = Path(directory) / 'story'

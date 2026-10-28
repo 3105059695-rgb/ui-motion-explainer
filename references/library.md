@@ -18,6 +18,10 @@ Fred Talk 默认跨窗口继承；账号名称与目录不自动指定另一套�
 
 需要相关机制时查看[EditingKit 演示](../assets/editing-kit/demo.html)、[F 融合展示](../assets/fusion-studio/index.html)、[O/X 原库](../assets/base-gallery.html)、[阿渡展示与源码](../assets/adu-reference/index.html)及[72 秒融合预览](../assets/fusion-studio/previews/preview.mp4)。这些是实现候选，适用性、可执行性和认可范围逐项判断，不形成平行风格入口。
 
+## 完整参考路线
+
+[阿闰会员测评整片模式](reference-replication.md#阿闰会员测评完整参考路线)保留完整口播对应、连续章节与实际场景模块。明确指定时整体使用其叙事、构图与动作，UI 和颜色沿当前已认可正文；普通制作仍可从全库选取。它与零散方法查询并存，不成为唯一允许的参考。
+
 ## FredTalk 公开源码接入
 
 [打开 FredTalk 库](../assets/fredtalk-library/index.html)。固定上游版本 `eec77dcfa99318f565c391bf557f5d43042ec061`：目录共 432 条，普通检索纳入 101 条未归档公开源码；142 条归档公开条目和 189 条会员条目保留元数据供显式查询，本轮未下载其源码。它提供当前 Fred Talk 方向的重要实现来源，但目录标签与检索分数不能代替实际设计适用性判断。

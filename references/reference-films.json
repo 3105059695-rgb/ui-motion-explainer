@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "films": [
+    {
+      "id": "arun-membership",
+      "label": "阿闰会员测评 · 整片表达复刻",
+      "study_video": "arun-membership",
+      "sequence_path": "references/evidence/arun-membership-study/reproduction.json",
+      "implementation": "assets/reference-films/arun-membership/reference-scene.js",
+      "guide": "assets/reference-films/arun-membership/README.md",
+      "preview": "assets/reference-films/arun-membership/demo.html",
+      "aliases": ["阿闰会员测评", "阿闰会员对比", "阿闰整片", "arun"],
+      "scope": "完整参考构图、素材组织、连续动作、蒙版、转场、节奏与前后回扣；UI材质和颜色继承当前已认可正文基准。",
+      "color_policy": "current-approved-ui",
+      "selection": "明确点名时加载整片；普通任务保留为完整参考选项，不替换全效果库。"
+    }
+  ]
+}

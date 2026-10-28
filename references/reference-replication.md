@@ -2,13 +2,31 @@
 
 第三层「可用效果库」的参考复刻方法；任务包含具体原片／产品动效案例时，从 [效果总目录](library.md) 进入。先取得可观察的运动证据，再写实现。已蒸馏资料及旧反馈归第四层 [参考与历史](history.md)，不直接成为当前全局规则。
 
+## 阿闰会员测评：完整参考路线
+
+自然调用：**“用 ui-motion-fusion，按阿闰会员测评这条的完整剪辑方式做，UI 用已认可的。”** 用户已确认这组搭配，不再询问喜欢哪套颜色；新稿先全文理解再按整片语言重做。
+
+```powershell
+python -B -X utf8 scripts/ui.py direct -- prepare --reference arun-membership --script <本期口播> --presenter <本期数字人> --project <工程>
+python -B -X utf8 scripts/ui.py new --engine fusion -- --custom-layout --canvas-story --reference arun-membership --out <工程>
+```
+
+无人物时省略 `--presenter`。新建命令装入真实场景模块并记录本工程选择，`prepare` 带入完整 105 句与 31 段观察、全片连续章节、原片位置和源代码；两者不代替本期素材取得、导演和成片。已有工程按原后端接入实现，不覆盖已有画面。`editing_reference:{"id":"arun-membership"}` 可在本工程 `project.json` 接续，父目录不参与选择。
+
+- [全片动作与前后衔接](evidence/arun-membership-study/reproduction.json)：从共同条件、作品举证、总览缩导航，一直到限制可视化、结论更新、需求选择与回扣；原片时间仅用于找参考。
+- [实际场景模块](../assets/reference-films/arun-membership/README.md)：实体卡与证据交接、总览缩导航、生态展开、耗尽与卡住、开箱、独立额度、改稿版本、比较表、需求到答案等。
+- [运行机制演示](../assets/reference-films/arun-membership/demo.html)：验证模块如何动；是重建机制演示，不能冒充 191.7 秒原片的完整音画复刻。
+- [105句与画面一一对照](evidence/arun-membership-study/alignment.json)：完整来源保留，不以检索前几项替代。本机原片仍由研究索引/资源映射读取，未随公开包发布。
+
+同稿逐段复刻时，逐项落实所有对应源区间、真实材料与动作，记录未还原部分；换稿复用同一设计语言时，保留对象身份与叙事衔接，按新稿重排，不把三家会员、排行榜、原句或秒点强塞进新题材。声音需要按实际原片试听与本期可用音源实现；尚未听清的音效不能凭描述宣称一致。当前配色与 UI 基准始终见[审美偏好](aesthetic-preferences.md)。
+
 ## 已蒸馏的本地参考
 
 [local-video-5c2f8b41：对象接力与语义演出](local-video-design-distillation.md)保留了 16 条可选剪辑配方、适用句意、原片时间段、状态链和重建边界；[证据记录](evidence/local-video-5c2f8b41.json)索引本机关键帧与完整报告。分析与技能规则接入已完成，未将其注册为新可运行预设；未完成整片正常速度试听。
 
 ## 先选复刻方式
 
-模式和外观优先级统一按 [风格档案](style-profiles.md)；下面保留两种方式对实现的实际影响。
+模式和外观优先级统一按[当前审美](aesthetic-preferences.md)；明确“阿闰整片、当前 UI”时采用上面的指定组合，不继承原片配色。以下通用方式仅在用户明确选择其他复刻范围时使用。
 
 - **严格逐帧复刻**：保留参考配色、字体、画幅、动作顺序、时长和镜头路线；差异逐项记录。
 - **动作风格融合**：提取对象关系、动作、运镜和节奏，沿用当前账号／项目外观；替换内容后重排文字和阅读时间。
@@ -35,7 +53,7 @@
 - 快速运动时才用轻微模糊；停稳后清晰。玻璃折射、三维材质等需要匹配实现，不能以普通透明框替代后声称一致。
 - 使用闭式函数、预计算路径或可寻址时间线；随机量固定种子，同一时刻得到同一状态。
 
-具体对照方法见[复刻合同](../../../prompt-motion-replica/references/rebuild-contract.md)。这些规则也适用于用户本地视频，不要求原片来自某个网站。
+具体对照方法见[本期计划与实际实现合同](director-plan-contract.md)。这些规则也适用于用户本地视频，不要求原片来自某个网站。
 
 ## 素材与声音
 
@@ -49,9 +67,9 @@
 
 ## 按需使用案例和引擎
 
-已有目录、源码和媒体的实际状态见[存储模式](../../../prompt-motion-replica/references/storage-mode.md)。先检查当前文件，不把历史验证或源码数量当作现有可播放成片。
+已有目录、源码和媒体的实际状态见[资源登记](resource-registry.json)。先检查当前文件，不把历史验证或源码数量当作现有可播放成片。
 
-只读取当前案例及其相关资源，不自动恢复全站批量下载或渲染。查找、原片分析、创建与对照的真实命令见[工具说明](../../../prompt-motion-replica/references/tools.md)；需要已有工程时使用其实际复制入口，在新工程内修改。
+只读取当前案例及其相关资源，不自动恢复全站批量下载或渲染。查找、原片分析、创建与对照的真实命令见[当前引擎入口](engine-routing.md)；需要已有工程时使用其实际复制入口，在新工程内修改。
 
 | 参考的主要机制 | 实现方向 |
 | --- | --- |
@@ -60,7 +78,7 @@
 | 手机、相机、真实三维光影或复杂玻璃 | Three.js / WebGL 或与参考匹配的专用实现 |
 | 真人录屏和较长素材剪辑 | 时间线剪辑，保留源素材时序与真实操作速度 |
 
-统一接口见 [引擎合同](engine-routing.md)，案例专用方法保留在 [原复刻实现说明](../../../prompt-motion-replica/references/workflows.md)。先复用兼容环境，缺失时仅安装当前工程所需依赖；不为统一入口降低效果。来源、许可证及固定版本见 [归属记录](../../../prompt-motion-replica/references/provenance.md)。
+统一接口见 [引擎合同](engine-routing.md)，案例专用方法保留在 [实际场景模块](../assets/reference-films/arun-membership/README.md)。先复用兼容环境，缺失时仅安装当前工程所需依赖；不为统一入口降低效果。来源、许可证及固定版本见 [来源研究索引](source-study-sources.json)。
 
 HTML 复刻工程通常使用 `ready()`、`seek(t)`、`duration`，可另设 `getState()`；进入导出模式后停用自动播放循环。统一导出入口应适配真实接口，不把其他项目的 `render(t, mediaTime)` 直接当作同一合同。
 

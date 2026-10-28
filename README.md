@@ -36,7 +36,7 @@
 
 制作链是 **口播稿 → 声音克隆 → 数字人 → 剪辑成品**。本 Skill 主要承担最后一环；上游服务按用户请求、可用工具及授权调用，不伪称所有服务已自动打通。
 
-[主入口](SKILL.md) · [当前风格](references/aesthetic-preferences.md) · [能力与源码](index.html) · [参考数量与实际范围](docs/reference-library.md) · [安装与更新](docs/install.md) · [发行范围](references/distribution-scope.md) · [当前偏好与升级依据](references/aesthetic-preferences.md)
+[阿闰整片参考模式](references/reference-replication.md) · [主入口](SKILL.md) · [当前风格](references/aesthetic-preferences.md) · [能力与源码](index.html) · [参考数量与实际范围](docs/reference-library.md) · [安装与更新](docs/install.md) · [发行范围](references/distribution-scope.md) · [当前偏好与升级依据](references/aesthetic-preferences.md)
 
 公开包保留230条历史参考索引与两套可运行starter，不含全部原作者视频和230套历史重建媒体；已有历史库可通过本机资源映射自动接续，也支持明确的 `--module-root`。本机路径不进入公开包。阿刁/方木规则保留，私人音色、数字人及账号影片不公开。旧版本可从Git历史和历史Release查询。
 

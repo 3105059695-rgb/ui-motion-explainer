@@ -1,0 +1,1118 @@
+{
+  "schema_version": 1,
+  "id": "arun-membership",
+  "title": "阿闰会员对比：完整连续解释参考路线",
+  "source_duration": 191.7,
+  "source_sha256": "aeaaa52b2e0f14ff3a63dd015cf089f0aba2c68f763a7e1d54cc0414259a17be",
+  "alignment": "references/evidence/arun-membership-study/alignment.json",
+  "source_index": "references/evidence/arun-membership-study/index.json",
+  "purpose": "完整学习整片构图、材料组织、对象状态、连续动作、转场与解释节奏；原片配色不继承，UI外观沿当前已认可基准。",
+  "source_time_policy": "source_range仅定位本条参考。原31段观察和105句口播保留在alignment，通过shot_ids/row_ids引用；它不是未来口播的固定时间线。",
+  "object_roles": [
+    {
+      "id": "subject",
+      "source_form": "会员卡、品牌圆标、导航标识",
+      "continuity": "同一对象改变尺寸与职责，跨场保持可追踪身份；卡片与圆标的交接可见。"
+    },
+    {
+      "id": "overview",
+      "source_form": "排行榜",
+      "continuity": "主位展开用于判断，边角缩小用于定位，状态随着论据更新。新题材可用流程或关系总览。"
+    },
+    {
+      "id": "evidence",
+      "source_form": "真实截图、作品、页面、视频区间",
+      "continuity": "从所属对象附近展开，重点可读后再给判断；归入能力卡时保持来源关系。"
+    },
+    {
+      "id": "measure",
+      "source_form": "额度、完成度、秒表、比较量表",
+      "continuity": "每一种量有明确名称与口径，变化服务因果，示意与实测分开。"
+    },
+    {
+      "id": "verdict",
+      "source_form": "印章、圈注、勾叉、数字与限定词",
+      "continuity": "依附证据或正在讨论的对象，先依据后判断，限定不能被夸张数字遮蔽。"
+    },
+    {
+      "id": "mechanism",
+      "source_form": "黑箱、箱盖、版本纸堆、独立容器",
+      "continuity": "物体动作对应语义动词及可见结果，不作为每期常驻装饰。"
+    },
+    {
+      "id": "decision",
+      "source_form": "需求行、箭头、推荐标识",
+      "continuity": "先条件后答案，旧行保留，结尾回到熟悉总览。"
+    }
+  ],
+  "reproduction_modes": {
+    "same_script": {
+      "goal": "同稿、相同对象关系下按完整章节重建原片的解释链与运动感觉。",
+      "timing": "原片时间用于对照动作与停留。制作以本期获授权原声时钟对齐，不擅自重配、加速或重排口播。",
+      "materials": "逐项取得可用原材料或准确替代材料；保留真实证据与示意的区别，缺件不能悄悄替成通用文字卡。",
+      "scope": "保留本参考整体构图逻辑、对象连续性、节奏与转场；UI表面、字级与配色按当前已认可基准适配。"
+    },
+    "new_script": {
+      "goal": "迁移整片连续解释的组织能力，按照新稿重新设计材料、对象和状态链。",
+      "timing": "按新原声和语义重写事件时窗，不套191.7秒、原片秒点或机械一章一句。",
+      "structure": "不是所有题材都用三产品、排行榜或右上总榜。保持对象身份、证据让位、变量变化、总结回收等关系，允许合并、拆分或不用不适合的章节。",
+      "materials": "本期具体产品与操作优先真实材料；抽象机制可做明确示意；AIGC采用当前已认可画风并按本期内容创作。"
+    }
+  },
+  "appearance_binding": {
+    "ui_authority": "director-context.json:style.binding and style.reference_directions",
+    "preferences": "references/aesthetic-preferences.md",
+    "palette": "assets/agent-editorial/palette.json",
+    "source_colors_inherited": false,
+    "policy": "原片蓝、绿、棕分章包装不继承；读取当前已认可UI基准及palette，不在此数据写死另一套颜色。真实产品截图、照片与官方标识本色按当前偏好处理。",
+    "presenter": "本参考没有真人；本期有开头人物时仍保留完整原构图、保护脸/身体/手势/字幕，参考不能自动取消人物。"
+  },
+  "implementation": {
+    "module": "assets/reference-films/arun-membership/reference-scene.js",
+    "factory": "createScene(spec)",
+    "kinds": [
+      "blackbox",
+      "blocked",
+      "comparison",
+      "decision",
+      "dock",
+      "ecosystem",
+      "evidence",
+      "independent",
+      "objects",
+      "quota",
+      "versions"
+    ],
+    "surface_module": "assets/agent-editorial/agent-editorial.js",
+    "motion_module": "assets/agent-editorial/motion-core.js",
+    "integration": "将本期参数、素材、对象状态和时间窗绑定到同一director-plan及实际场景；原研究只给事件组织依据。",
+    "readiness": "全链已索引；本期参数与素材仍须创作和绑定。模块存在、测试通过或索引覆盖不代表已完成原片的完整复刻。"
+  },
+  "chapters": [
+    {
+      "id": "AR-C01",
+      "title": "共同条件与候选身份",
+      "source_range": [
+        0,
+        5.9
+      ],
+      "shot_ids": [
+        "A-S001"
+      ],
+      "row_ids": [
+        "A-L001",
+        "A-L002"
+      ],
+      "chain": [
+        "先建立同一预算条件",
+        "三张同尺寸会员卡横排，保留产品身份",
+        "注意力依次移给候选",
+        "问号接住选择疑问，后方总览保持退后"
+      ],
+      "reading_hold": "候选和共同条件建立后留稳，观众能读出比较的是谁、条件相同在哪里。",
+      "connections": {
+        "entry": "由本期原声的共同问题建立主体；同稿可对应原三产品，新稿按实际对象数量设计。",
+        "exit": "候选保持身份，准备缩小下移，为各自真实产出腾出空间。"
+      },
+      "replacement_materials": [
+        {
+          "type": "真实身份材料",
+          "description": "本期产品或方案名称、官方标识、可核对的共同条件",
+          "role": "evidence"
+        },
+        {
+          "type": "比较载体",
+          "description": "对应身份的卡片及选择标记",
+          "role": "explanation"
+        }
+      ],
+      "implementation_kinds": [
+        "objects"
+      ],
+      "implementation_status": "Requires this production to author parameters, object states, media and narration timing; not a finished reproduction."
+    },
+    {
+      "id": "AR-C02",
+      "title": "所属产出展开并收成总览候选",
+      "source_range": [
+        5.9,
+        9.45
+      ],
+      "shot_ids": [
+        "A-S002",
+        "A-S003"
+      ],
+      "row_ids": [
+        "A-L002",
+        "A-L003",
+        "A-L004"
+      ],
+      "chain": [
+        "原候选一起缩小下移",
+        "真实作品从所属对象附近错峰向上展开",
+        "证据稳定后判断章短促进入",
+        "作品退走，会员卡收为同身份标识",
+        "后方总览前移接管主位"
+      ],
+      "reading_hold": "各份产出可辨认后再给判断；最后总览落位清楚，不把整段做成匀速漂移。",
+      "connections": {
+        "entry": "承接前章同一组候选，作品与候选保持一一对应。",
+        "exit": "卡片缩成标识后继续进入总览，不换成无关的新对象。"
+      },
+      "replacement_materials": [
+        {
+          "type": "实际产出",
+          "description": "本期真实网页、图片、文档或视频成果，须可见其关键内容",
+          "role": "evidence"
+        },
+        {
+          "type": "判断标记",
+          "description": "与已展示证据对应的短判断",
+          "role": "explanation"
+        }
+      ],
+      "implementation_kinds": [
+        "objects",
+        "evidence",
+        "dock"
+      ],
+      "implementation_status": "Requires this production to author parameters, object states, media and narration timing; not a finished reproduction."
+    },
+    {
+      "id": "AR-C03",
+      "title": "评价框架与反差问题",
+      "source_range": [
+        9.45,
+        16.9
+      ],
+      "shot_ids": [
+        "A-S004",
+        "A-S005"
+      ],
+      "row_ids": [
+        "A-L004",
+        "A-L005",
+        "A-L006"
+      ],
+      "chain": [
+        "候选标识在同一总览里改变位置",
+        "预演后回到候选位置，不假装已有最终结论",
+        "首尾位置改为问号和名次关系",
+        "弧形虚线连接反差，将总评价与单项优势分开"
+      ],
+      "reading_hold": "问题与首尾关系形成后停稳，观众能看懂后文需要回答的矛盾。",
+      "connections": {
+        "entry": "沿用前章总览和同一组候选标识。",
+        "exit": "保留总览身份，下一章将它缩成持续可见的导航。"
+      },
+      "replacement_materials": [
+        {
+          "type": "评价依据",
+          "description": "本期比较维度、条件与尚待论证的问题",
+          "role": "evidence"
+        },
+        {
+          "type": "总览载体",
+          "description": "按题材选择排行、流程、地图或关系总览",
+          "role": "explanation"
+        }
+      ],
+      "implementation_kinds": [
+        "objects",
+        "comparison"
+      ],
+      "implementation_status": "Requires this production to author parameters, object states, media and narration timing; not a finished reproduction."
+    },
+    {
+      "id": "AR-C04",
+      "title": "总览缩成导航，单对象接主位",
+      "source_range": [
+        16.9,
+        19.5
+      ],
+      "shot_ids": [
+        "A-S006"
+      ],
+      "row_ids": [
+        "A-L007",
+        "A-L008"
+      ],
+      "chain": [
+        "旧强调与弧线先退",
+        "章节定位到位",
+        "大总览缩向边角并保留状态",
+        "当前产品卡由侧方接入中心，轻微转角后落稳"
+      ],
+      "reading_hold": "当前对象到位后停稳，缩小总览仅负责定位，不让观众读其细字。",
+      "connections": {
+        "entry": "使用同一个总览实例与已建立的对象状态。",
+        "exit": "当前产品卡保留，下一章主动给真实证据让位。"
+      },
+      "replacement_materials": [
+        {
+          "type": "当前对象身份",
+          "description": "本期将要解释的产品或方案",
+          "role": "evidence"
+        },
+        {
+          "type": "导航状态",
+          "description": "保留刚建立的总览关系",
+          "role": "explanation"
+        }
+      ],
+      "implementation_kinds": [
+        "dock",
+        "objects"
+      ],
+      "implementation_status": "Requires this production to author parameters, object states, media and narration timing; not a finished reproduction."
+    },
+    {
+      "id": "AR-C05",
+      "title": "身份腾位，真实证据支持转折",
+      "source_range": [
+        19.5,
+        28.6
+      ],
+      "shot_ids": [
+        "A-S007",
+        "A-S008",
+        "A-S009"
+      ],
+      "row_ids": [
+        "A-L008",
+        "A-L009",
+        "A-L010",
+        "A-L011",
+        "A-L012"
+      ],
+      "chain": [
+        "当前产品卡向侧边缩小",
+        "真实聊天或使用界面展开到主要阅读区域",
+        "价格与评价贴在对应证据附近",
+        "换到限制证据，放大内部字段并圈注",
+        "证据退走，原产品回到中心",
+        "取消按钮与接近的光标表现犹豫，明确示意性质"
+      ],
+      "reading_hold": "关键原字段先清晰可读，再落结论；按钮犹豫动作完成后留出转折的理解时间。",
+      "connections": {
+        "entry": "延续当前产品及导航，旧主体给新证据腾位。",
+        "exit": "通过当前对象的转折，进入它背后的组合价值或系统关系。"
+      },
+      "replacement_materials": [
+        {
+          "type": "真实操作与限制",
+          "description": "本期真实截图或录屏及关键字段，不能由虚构界面替代",
+          "role": "evidence"
+        },
+        {
+          "type": "概念操作",
+          "description": "表达犹豫、保留或放弃的按钮和光标动作，标为示意",
+          "role": "explanation"
+        }
+      ],
+      "implementation_kinds": [
+        "evidence",
+        "objects"
+      ],
+      "implementation_status": "Requires this production to author parameters, object states, media and narration timing; not a finished reproduction."
+    },
+    {
+      "id": "AR-C06",
+      "title": "生态展开、归拢与权益证据",
+      "source_range": [
+        28.6,
+        38.4
+      ],
+      "shot_ids": [
+        "A-S010",
+        "A-S011",
+        "A-S012"
+      ],
+      "row_ids": [
+        "A-L012",
+        "A-L013",
+        "A-L014",
+        "A-L015",
+        "A-L016",
+        "A-L017"
+      ],
+      "chain": [
+        "中心标识接替单一产品卡",
+        "附属节点错峰展开，连线显示包含关系",
+        "生态降低权重，会员或归属对象重新回到主位",
+        "归属对象缩角，真实权益页面从附近展开",
+        "关键数字贴在证据前景并保留来源关系"
+      ],
+      "reading_hold": "节点关系建立后可读；进入真实权益页面后，把停留时间留给关键数字和条件。",
+      "connections": {
+        "entry": "承接上一章舍不得放弃的转折，解释组合价值来自哪里。",
+        "exit": "从权益页面进入实际产出例子，继续保留所属对象。"
+      },
+      "replacement_materials": [
+        {
+          "type": "真实关系与权益",
+          "description": "本期真实产品群、服务包含关系、权益页面与限定条件",
+          "role": "evidence"
+        },
+        {
+          "type": "关系图",
+          "description": "按实际包含关系设计中心与节点",
+          "role": "explanation"
+        }
+      ],
+      "implementation_kinds": [
+        "ecosystem",
+        "objects",
+        "evidence"
+      ],
+      "implementation_status": "Requires this production to author parameters, object states, media and narration timing; not a finished reproduction."
+    },
+    {
+      "id": "AR-C07",
+      "title": "实际作品、双边比较与工具证据",
+      "source_range": [
+        38.4,
+        49.7
+      ],
+      "shot_ids": [
+        "A-S013",
+        "A-S014",
+        "A-S015"
+      ],
+      "row_ids": [
+        "A-L017",
+        "A-L018",
+        "A-L019",
+        "A-L020",
+        "A-L021",
+        "A-L022",
+        "A-L023"
+      ],
+      "chain": [
+        "实际视频作品轮换接管中心展示区",
+        "保留来源标识和有效过程，不只展示海报",
+        "双方品牌条拉开再靠拢，比较符号进入间隙",
+        "图片作品形成有序网格",
+        "真实工具页面放大到前景，旧网格退后"
+      ],
+      "reading_hold": "作品需展示可观察的结果或变化；双边比较与网格落位后各有可辨认的阅读状态。",
+      "connections": {
+        "entry": "从前章权益转为看得见的实际产出。",
+        "exit": "多个能力例证准备归回同一购买单位或系统主体。"
+      },
+      "replacement_materials": [
+        {
+          "type": "真实作品",
+          "description": "本期实际视频有效区间、图片集合、作品页面",
+          "role": "evidence"
+        },
+        {
+          "type": "比较与页面",
+          "description": "真实对比对象和工具页面，比较指标来自本期材料",
+          "role": "evidence"
+        }
+      ],
+      "implementation_kinds": [
+        "evidence",
+        "comparison",
+        "objects"
+      ],
+      "implementation_status": "Requires this production to author parameters, object states, media and narration timing; not a finished reproduction."
+    },
+    {
+      "id": "AR-C08",
+      "title": "权益归拢、同题对照与新证据覆盖",
+      "source_range": [
+        49.7,
+        60
+      ],
+      "shot_ids": [
+        "A-S016",
+        "A-S017",
+        "A-S018"
+      ],
+      "row_ids": [
+        "A-L023",
+        "A-L024",
+        "A-L025",
+        "A-L026",
+        "A-L027",
+        "A-L028",
+        "A-L029"
+      ],
+      "chain": [
+        "多工具重新围绕同一会员或总对象建立连线",
+        "同题产出并置，来源标在对应内容上方",
+        "选中项保持清晰，其余项降低权重",
+        "结论章在对应项附近出现",
+        "新活动或条件原页面从后景前移",
+        "划线强调关键期限，旧对照退后"
+      ],
+      "reading_hold": "先让对照内容可辨，再突出判断；新证据覆盖时保留支持结论的原字段和条件。",
+      "connections": {
+        "entry": "收拢前章分散的成果，回到一个清楚的价值单位。",
+        "exit": "新条件接入原产品卡，用价格或价值状态变化归纳。"
+      },
+      "replacement_materials": [
+        {
+          "type": "同题材料",
+          "description": "同一任务下可核对的多份真实产出",
+          "role": "evidence"
+        },
+        {
+          "type": "活动或条件证据",
+          "description": "本期真实活动页、期限、适用条件和来源",
+          "role": "evidence"
+        }
+      ],
+      "implementation_kinds": [
+        "ecosystem",
+        "comparison",
+        "evidence"
+      ],
+      "implementation_status": "Requires this production to author parameters, object states, media and narration timing; not a finished reproduction."
+    },
+    {
+      "id": "AR-C09",
+      "title": "单项判断与组合价值并置",
+      "source_range": [
+        60,
+        69
+      ],
+      "shot_ids": [
+        "A-S019"
+      ],
+      "row_ids": [
+        "A-L029",
+        "A-L030",
+        "A-L031",
+        "A-L032",
+        "A-L033",
+        "A-L034"
+      ],
+      "chain": [
+        "原产品卡承接活动条件，旧价格被划掉并显示新状态",
+        "回到总览给出单项判断",
+        "单项结论保留，加入更大系统的节点群",
+        "组合价值结论在相应关系旁出现"
+      ],
+      "reading_hold": "让单项判断与组合条件同场成立，观众能看清评价口径变化而非以为结论自相矛盾。",
+      "connections": {
+        "entry": "延续前章实际条件，不凭空改价格。",
+        "exit": "保留已完成的总览状态，切入下一对象章节。"
+      },
+      "replacement_materials": [
+        {
+          "type": "价值条件",
+          "description": "本期真实价格或条件变化及其来源",
+          "role": "evidence"
+        },
+        {
+          "type": "不同评价口径",
+          "description": "单项与组合关系及已论证结论",
+          "role": "explanation"
+        }
+      ],
+      "implementation_kinds": [
+        "objects",
+        "comparison",
+        "ecosystem"
+      ],
+      "implementation_status": "Requires this production to author parameters, object states, media and narration timing; not a finished reproduction."
+    },
+    {
+      "id": "AR-C10",
+      "title": "下一对象与暂未确定的评价",
+      "source_range": [
+        69,
+        74
+      ],
+      "shot_ids": [
+        "A-S020"
+      ],
+      "row_ids": [
+        "A-L034",
+        "A-L035",
+        "A-L036",
+        "A-L037"
+      ],
+      "chain": [
+        "新对象卡先居中介绍",
+        "卡缩侧，总览回主位",
+        "该对象标识带问号进入总览，表示评价尚需展开",
+        "主总览缩回导航，具体状态量条接入主位"
+      ],
+      "reading_hold": "身份先明确再进入理由；问号表示未定，不先给最终结论。",
+      "connections": {
+        "entry": "接续总览中已有其他对象的位置和结论。",
+        "exit": "把注意力从总评价交给具体过程和证据。"
+      },
+      "replacement_materials": [
+        {
+          "type": "当前对象",
+          "description": "本期第二个论述对象及其身份材料",
+          "role": "evidence"
+        },
+        {
+          "type": "过程量",
+          "description": "接下来要解释的资源或状态量",
+          "role": "explanation"
+        }
+      ],
+      "implementation_kinds": [
+        "objects",
+        "dock",
+        "quota"
+      ],
+      "implementation_status": "Requires this production to author parameters, object states, media and narration timing; not a finished reproduction."
+    },
+    {
+      "id": "AR-C11",
+      "title": "消耗反差与工作被阻断的后果",
+      "source_range": [
+        74,
+        88
+      ],
+      "shot_ids": [
+        "A-S021",
+        "A-S022"
+      ],
+      "row_ids": [
+        "A-L037",
+        "A-L038",
+        "A-L039",
+        "A-L040",
+        "A-L041",
+        "A-L042",
+        "A-L043",
+        "A-L044",
+        "A-L045",
+        "A-L046",
+        "A-L047"
+      ],
+      "chain": [
+        "资源额度条和真实任务证据同场建立",
+        "圈注当前任务，计时增加同时额度减少",
+        "额度耗尽后接真实耗尽提示",
+        "明确换成任务完成进度，开始推进",
+        "进度中途停止并灰化，受阻标记落在停止处",
+        "光标尝试人工接手，失败标记说明后果"
+      ],
+      "reading_hold": "量变化后的状态留稳；额度与完成度必须有各自标题和语义，不能让观众把两个量混淆。",
+      "connections": {
+        "entry": "延续前章引入的具体状态量，截图负责证据、量条负责解释。",
+        "exit": "受阻任务留在后层，下一章将不可见过程具象化。"
+      },
+      "replacement_materials": [
+        {
+          "type": "任务与失败证据",
+          "description": "本期真实任务、耗尽通知或操作录屏",
+          "role": "evidence"
+        },
+        {
+          "type": "量变化演示",
+          "description": "有依据的时间、消耗和完成度；非实测数值须明确示意",
+          "role": "explanation"
+        }
+      ],
+      "implementation_kinds": [
+        "quota",
+        "evidence",
+        "blocked"
+      ],
+      "implementation_status": "Requires this production to author parameters, object states, media and narration timing; not a finished reproduction."
+    },
+    {
+      "id": "AR-C12",
+      "title": "不可见过程、等待与揭示",
+      "source_range": [
+        88,
+        95
+      ],
+      "shot_ids": [
+        "A-S023"
+      ],
+      "row_ids": [
+        "A-L047",
+        "A-L048",
+        "A-L049",
+        "A-L050"
+      ],
+      "chain": [
+        "封闭实体覆盖原受阻区域",
+        "倒计时成为唯一变化重点，其他对象保持位置",
+        "计时归零后箱盖抬起",
+        "结果位置出现问号，表达此前不可见",
+        "主体退出并清场，交给下一判断维度"
+      ],
+      "reading_hold": "闭合、等待结束、开启与结果分别可辨；不把黑箱文本淡入等同于事件已经发生。",
+      "connections": {
+        "entry": "箱体与原任务区域有空间关系，承接前章无法接手的后果。",
+        "exit": "清场后下一维度的大标题接主位；94–95 秒为近似过渡补记。"
+      },
+      "replacement_materials": [
+        {
+          "type": "真实过程边界",
+          "description": "本期确实不可见或待揭示的过程与条件",
+          "role": "evidence"
+        },
+        {
+          "type": "机制物体",
+          "description": "封闭体、计时、打开与结果，为解释示意而非真实软件界面",
+          "role": "explanation"
+        }
+      ],
+      "implementation_kinds": [
+        "blackbox",
+        "blocked"
+      ],
+      "implementation_status": "Requires this production to author parameters, object states, media and narration timing; not a finished reproduction."
+    },
+    {
+      "id": "AR-C13",
+      "title": "评价维度分开，返工成本可见",
+      "source_range": [
+        95,
+        109
+      ],
+      "shot_ids": [
+        "A-S024",
+        "A-S025"
+      ],
+      "row_ids": [
+        "A-L050",
+        "A-L051",
+        "A-L052",
+        "A-L053",
+        "A-L054",
+        "A-L055",
+        "A-L056",
+        "A-L057"
+      ],
+      "chain": [
+        "评价关键词先居中明确，再缩为上方标签",
+        "具体任务卡补充评价范围",
+        "两条量表把能力与质量等不同维度分开",
+        "稿件带局部位移残影进入并停稳",
+        "划改线出现，同一稿件的新版本相继叠入",
+        "版本堆保留数量与先后关系"
+      ],
+      "reading_hold": "关键词、比较与首版稿件先可读，再产生变化；版本增加后给观众看见累积结果。",
+      "connections": {
+        "entry": "接前章清场后的新判断维度，仍保留当前产品身份。",
+        "exit": "通过新增版本的后果过渡到纠正过度负面判断。"
+      },
+      "replacement_materials": [
+        {
+          "type": "任务与版本",
+          "description": "本期真实任务类型、可展示的稿件或版本差异",
+          "role": "evidence"
+        },
+        {
+          "type": "维度量表",
+          "description": "定性或定量比较必须区分实测与示意",
+          "role": "explanation"
+        }
+      ],
+      "implementation_kinds": [
+        "objects",
+        "comparison",
+        "versions"
+      ],
+      "implementation_status": "Requires this production to author parameters, object states, media and narration timing; not a finished reproduction."
+    },
+    {
+      "id": "AR-C14",
+      "title": "否定过度推断，解释相互独立",
+      "source_range": [
+        109,
+        122
+      ],
+      "shot_ids": [
+        "A-S026"
+      ],
+      "row_ids": [
+        "A-L057",
+        "A-L058",
+        "A-L059",
+        "A-L060",
+        "A-L061",
+        "A-L062",
+        "A-L063"
+      ],
+      "chain": [
+        "临时低评价与叉先否定全盘负面推断",
+        "多个独立容器按口播逐项出现并标明身份",
+        "分隔建立独立关系",
+        "只让当前讨论的一项耗尽，其余保持不变",
+        "仍可用的项增加确认标记",
+        "容器退场，准备实际产出证据"
+      ],
+      "reading_hold": "重点是一个变量改变而其他变量保持；结果停稳，观众能直接看出互不影响。",
+      "connections": {
+        "entry": "承接前章负面经历，明确这不是对整个对象的全盘否定。",
+        "exit": "从独立可用能力转入可见产出，121–122 秒为近似过渡补记。"
+      },
+      "replacement_materials": [
+        {
+          "type": "独立关系",
+          "description": "本期真实可分开计算或独立运行的模块、资源、权限等",
+          "role": "evidence"
+        },
+        {
+          "type": "容器状态",
+          "description": "按真实关系演示一项变化、其他保持；示意数值明确标记",
+          "role": "explanation"
+        }
+      ],
+      "implementation_kinds": [
+        "comparison",
+        "independent"
+      ],
+      "implementation_status": "Requires this production to author parameters, object states, media and narration timing; not a finished reproduction."
+    },
+    {
+      "id": "AR-C15",
+      "title": "从产出到能力归纳再回收评价",
+      "source_range": [
+        122,
+        134
+      ],
+      "shot_ids": [
+        "A-S027"
+      ],
+      "row_ids": [
+        "A-L063",
+        "A-L064",
+        "A-L065",
+        "A-L066",
+        "A-L067",
+        "A-L068",
+        "A-L069",
+        "A-L070",
+        "A-L071"
+      ],
+      "chain": [
+        "实际作品界面先大展示",
+        "界面缩成能力卡里的缩略图，身份连续",
+        "其他能力依次加入，各项确认后划线归组",
+        "回原产品卡给出价值判断",
+        "同一标识回到总览上移",
+        "对夸张评价补限制，再退出切换下一章节"
+      ],
+      "reading_hold": "作品内容先能辨认；能力归组与总评价各留停稳，限制条件不能被大结论掩盖。",
+      "connections": {
+        "entry": "承接仍可使用的能力，给出实际结果作为归纳依据。",
+        "exit": "已更新总览保留，133–134 秒为下一品牌舞台进入的近似过渡。"
+      },
+      "replacement_materials": [
+        {
+          "type": "真实产出与能力",
+          "description": "本期真实作品集合及对应能力证据",
+          "role": "evidence"
+        },
+        {
+          "type": "结论与限定",
+          "description": "基于已展示材料的总判断及适用边界",
+          "role": "explanation"
+        }
+      ],
+      "implementation_kinds": [
+        "evidence",
+        "objects",
+        "comparison",
+        "dock"
+      ],
+      "implementation_status": "Requires this production to author parameters, object states, media and narration timing; not a finished reproduction."
+    },
+    {
+      "id": "AR-C16",
+      "title": "第三对象与按维度建立的比较表",
+      "source_range": [
+        134,
+        145
+      ],
+      "shot_ids": [
+        "A-S028"
+      ],
+      "row_ids": [
+        "A-L072",
+        "A-L073",
+        "A-L074",
+        "A-L075",
+        "A-L076",
+        "A-L077",
+        "A-L078",
+        "A-L079"
+      ],
+      "chain": [
+        "新对象卡居中后缩到侧面",
+        "评价先进入总览，再转向理由",
+        "比较表按口播逐行建立，保持相同维度对齐",
+        "列框框住被讨论对象，逐项确认归入该列"
+      ],
+      "reading_hold": "每行加入后能读出共同维度；列框收束时不遮挡数据和限制。",
+      "connections": {
+        "entry": "接前章结束后的新对象身份，沿用已有总览状态。",
+        "exit": "从整体维度比较缩进更具体的模型或指标比较。"
+      },
+      "replacement_materials": [
+        {
+          "type": "同口径比较材料",
+          "description": "本期真实对象、维度、数值、日期与来源",
+          "role": "evidence"
+        },
+        {
+          "type": "比较表与列框",
+          "description": "只组织真实材料，不擅自捏造胜负或指标",
+          "role": "explanation"
+        }
+      ],
+      "implementation_kinds": [
+        "objects",
+        "comparison",
+        "dock"
+      ],
+      "implementation_status": "Requires this production to author parameters, object states, media and narration timing; not a finished reproduction."
+    },
+    {
+      "id": "AR-C17",
+      "title": "优势数字、不同口径与使用风险",
+      "source_range": [
+        145,
+        161
+      ],
+      "shot_ids": [
+        "A-S029"
+      ],
+      "row_ids": [
+        "A-L079",
+        "A-L080",
+        "A-L081",
+        "A-L082",
+        "A-L083",
+        "A-L084",
+        "A-L085",
+        "A-L086"
+      ],
+      "chain": [
+        "两个具体对象标签对齐，比较符号建立关系",
+        "关键数字成为视觉中心",
+        "限定词紧跟数字保留判断范围",
+        "切到不同时间口径的多组额度，各组分开摆放",
+        "回同一产品卡，风险折线和标记作用在卡面",
+        "产品卡退出，回收总评价"
+      ],
+      "reading_hold": "数字及限定一起可读；不同时间尺度不混在一条量表上；风险结果停稳后再回总览。",
+      "connections": {
+        "entry": "承接比较表中的相同对象，细化前章论据。",
+        "exit": "160–161 秒为风险卡退场、总榜接位的近似过渡。"
+      },
+      "replacement_materials": [
+        {
+          "type": "具体指标证据",
+          "description": "本期可核对的指标、适用口径、日期、限定条件",
+          "role": "evidence"
+        },
+        {
+          "type": "风险机制",
+          "description": "本期真实限制或风险，用可识别状态作用于同一对象",
+          "role": "explanation"
+        }
+      ],
+      "implementation_kinds": [
+        "comparison",
+        "quota",
+        "objects"
+      ],
+      "implementation_status": "Requires this production to author parameters, object states, media and narration timing; not a finished reproduction."
+    },
+    {
+      "id": "AR-C18",
+      "title": "回扣开头反差并转入共同选择",
+      "source_range": [
+        161,
+        171
+      ],
+      "shot_ids": [
+        "A-S030"
+      ],
+      "row_ids": [
+        "A-L086",
+        "A-L087",
+        "A-L088",
+        "A-L089",
+        "A-L090",
+        "A-L091",
+        "A-L092"
+      ],
+      "chain": [
+        "总览显示已论证的结果",
+        "曲线箭头回扣首尾仍有单项优势的开场问题",
+        "对应生态或条件群重新出现，恢复已建立的依据",
+        "大总览带位移变化缩为边角导航",
+        "多个候选卡从侧方进入并站定"
+      ],
+      "reading_hold": "回扣关系先看清，再把主位交给共同选择；卡片到位后保持可比位置。",
+      "connections": {
+        "entry": "接上一章更新后的总评价，恢复开头悬念与后文证据。",
+        "exit": "170–171 秒为候选站定、不等号开始出现的近似连接；接选择条件。"
+      },
+      "replacement_materials": [
+        {
+          "type": "已论证结论",
+          "description": "本期已经建立的差异、条件与结果",
+          "role": "evidence"
+        },
+        {
+          "type": "共同候选",
+          "description": "与开头同身份的对象再次归队",
+          "role": "explanation"
+        }
+      ],
+      "implementation_kinds": [
+        "comparison",
+        "ecosystem",
+        "dock",
+        "objects"
+      ],
+      "implementation_status": "Requires this production to author parameters, object states, media and narration timing; not a finished reproduction."
+    },
+    {
+      "id": "AR-C19",
+      "title": "需求先行、答案累积与结尾回收",
+      "source_range": [
+        171,
+        191.7
+      ],
+      "shot_ids": [
+        "A-S031"
+      ],
+      "row_ids": [
+        "A-L092",
+        "A-L093",
+        "A-L094",
+        "A-L095",
+        "A-L096",
+        "A-L097",
+        "A-L098",
+        "A-L099",
+        "A-L100",
+        "A-L101",
+        "A-L102",
+        "A-L103",
+        "A-L104",
+        "A-L105"
+      ],
+      "chain": [
+        "候选间的不等关系逐项出现，说明不可完全替代",
+        "第一条需求先进入，再生长出箭头和对应答案",
+        "后续需求行按口播累积，旧行保留供比较",
+        "完整选择映射停稳",
+        "回熟悉的总览",
+        "问号与互动气泡进入，保留最终画面至结束"
+      ],
+      "reading_hold": "先读需求再见答案；多行结果完整停留，结尾回总览后不给观众新增难辨框架。",
+      "connections": {
+        "entry": "承接前章归队的候选与保留的总览导航。",
+        "exit": "以已熟悉总览结束；原音轨最后一句后保留的尾帧按本期音轨设计。"
+      },
+      "replacement_materials": [
+        {
+          "type": "需求与答案",
+          "description": "本期真实受众需求、条件与已论证建议",
+          "role": "evidence"
+        },
+        {
+          "type": "需求映射与收尾",
+          "description": "按先因后果建立行、箭头、答案，再回收主总览",
+          "role": "explanation"
+        }
+      ],
+      "implementation_kinds": [
+        "decision",
+        "comparison",
+        "dock"
+      ],
+      "implementation_status": "Requires this production to author parameters, object states, media and narration timing; not a finished reproduction."
+    }
+  ],
+  "approximate_transition_addenda": [
+    {
+      "source_range": [
+        94,
+        95
+      ],
+      "chapter_id": "AR-C12",
+      "description": "黑箱主体退出至新评价标题进入",
+      "evidence": "本轮查看既有1fps顺序overview；为章节连续覆盖补入的过渡范围，不是原作者精确关键帧或逐帧边界。"
+    },
+    {
+      "source_range": [
+        121,
+        122
+      ],
+      "chapter_id": "AR-C14",
+      "description": "独立容器退出至真实作品界面进入",
+      "evidence": "本轮查看既有1fps顺序overview；为章节连续覆盖补入的过渡范围，不是原作者精确关键帧或逐帧边界。"
+    },
+    {
+      "source_range": [
+        133,
+        134
+      ],
+      "chapter_id": "AR-C15",
+      "description": "总评价退出至下一品牌章节进入",
+      "evidence": "本轮查看既有1fps顺序overview；为章节连续覆盖补入的过渡范围，不是原作者精确关键帧或逐帧边界。"
+    },
+    {
+      "source_range": [
+        160,
+        161
+      ],
+      "chapter_id": "AR-C17",
+      "description": "风险会员卡退出至完整总览进入",
+      "evidence": "本轮查看既有1fps顺序overview；为章节连续覆盖补入的过渡范围，不是原作者精确关键帧或逐帧边界。"
+    },
+    {
+      "source_range": [
+        170,
+        171
+      ],
+      "chapter_id": "AR-C18",
+      "description": "候选卡停稳至不等关系符号进入",
+      "evidence": "本轮查看既有1fps顺序overview；为章节连续覆盖补入的过渡范围，不是原作者精确关键帧或逐帧边界。"
+    }
+  ],
+  "coverage": {
+    "source_range": [
+      0,
+      191.7
+    ],
+    "continuous_chapters": 19,
+    "gap_seconds": 0,
+    "overlap_seconds": 0,
+    "source_shots": 31,
+    "referenced_shots": 31,
+    "source_narration_rows": 105,
+    "referenced_narration_rows": 105,
+    "missing_shot_ids": [],
+    "missing_row_ids": [],
+    "overlap_rule": "同一句跨章时，在两章都引用；覆盖计数按唯一ID去重。"
+  },
+  "review_boundaries": {
+    "existing_evidence": "完整视频工具报告、完整音轨ASR、31段动作观察；本轮顺序查看已有overview-00至09并读105句对照。",
+    "full_realtime_av_review": false,
+    "full_frame_by_frame_review": false,
+    "audio_effects_auditioned": false,
+    "author_plugins_or_precise_curves_known": false,
+    "new_complete_reproduction_rendered": false,
+    "visual_similarity_verified": false,
+    "future_film_user_approval": false,
+    "notes": [
+      "31段研究中的5处约1秒空隙作为近似过渡补记，不修改原alignment。",
+      "声音需按实际动作和本期授权素材设计并试听，不能凭画面编造原片精确音效。",
+      "原视频价格、能力、额度、排名等是作者当时主张，不是本Skill核实的当期事实。"
+    ]
+  }
+}
