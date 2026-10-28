@@ -348,6 +348,10 @@ class AigcAssetTests(unittest.TestCase):
     def test_prepare_carries_independent_aigc_context_without_changing_ui_selection(self):
         for name in director.REQUIRED_REFS:
             (self.root / name).write_text('fixture', encoding='utf-8')
+        (self.root / 'references/requirements.json').write_text(json.dumps({
+            'schema_version': 1, 'documents': [
+                {'id': 'fixture-workflow', 'title': 'Fixture workflow', 'path': director.REQUIRED_REFS[0]}]}),
+            encoding='utf-8')
         (self.root / director.RECIPE_FILE).write_text('{"recipes":[]}', encoding='utf-8')
         script = self.project / 'script.txt'
         script.write_text('把资料交给助手。', encoding='utf-8')

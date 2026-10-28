@@ -2,7 +2,7 @@
 name: ui-motion-fusion
 description: "完整读取现行制作要求，沿用已认可十款 Agent 正文 UI 与 Fred 剪辑语言，从整库选择设计与动作，按口播制作真实材料、AIGC、人物和声音组成的视频及可编辑工程。"
 metadata:
-  version: "2026.10.28.4"
+  version: "2026.10.28.5"
 ---
 
 # 我的 UI 动效剪辑
