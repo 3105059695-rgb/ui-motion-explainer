@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "name": "ui-motion-fusion",
-  "version": "2026.10.28.1",
+  "version": "2026.10.28.2",
   "resources": {
     "required_modules": [
       "source-study",
@@ -17,10 +17,10 @@
       "apple-kinetic-promo",
       "fredtalk-library"
     ],
-    "active_document_links": 309,
+    "active_document_links": 315,
     "fredtalk_active_public_sources_verified": 101,
     "historical_fred_visual_anchors": 3,
-    "default_ui_direction": "fred-talk-default-20261020",
+    "default_ui_direction": "approved-body-default-20261028",
     "girl_identity_images": 2,
     "girl_scene_images": 8
   },
@@ -67,8 +67,8 @@
     },
     {
       "path": "README.md",
-      "size": 5847,
-      "sha256": "502524148bca7b1eeaa8c341c615c894828ff9aa14623cb7b95a12ae5a3b4121"
+      "size": 6023,
+      "sha256": "be22150d14d16b8784bfdcb3b29394955a8175fde67d64696703585adc09acce"
     },
     {
       "path": "SKILL.legacy.md",
@@ -77,8 +77,8 @@
     },
     {
       "path": "SKILL.md",
-      "size": 4518,
-      "sha256": "61307bf7161095c6887a0feb384afc493989ec9babec5f54568d47cece17ff7a"
+      "size": 4787,
+      "sha256": "5d148ac63814e3fb6bd65761da1abb5ff25dc71bb622c7945817789013bd5e38"
     },
     {
       "path": "START-HERE.md",
@@ -88,12 +88,12 @@
     {
       "path": "VERSION",
       "size": 14,
-      "sha256": "8b02c79187307270d9b3a6a3a436f189aa43beca546891aa10d5cdf243abaad8"
+      "sha256": "225e8b48ba09fb2daba6487ec30c91d83c48d7497a8831607e5259af4969dfba"
     },
     {
       "path": "agents/openai.yaml",
-      "size": 609,
-      "sha256": "0a2aecda3c1f8b383472b64060d617e06311811f28a93cc769432e73b12223a0"
+      "size": 809,
+      "sha256": "283a5011064ee5d11568adf6ecb1a6f249ea07dc83be98c85792f0fe41bca6c5"
     },
     {
       "path": "assets/adu-reference/all-visual-contact-sheet.jpg",
@@ -14596,6 +14596,36 @@
       "sha256": "39d74a1228953ce187765d8d3ba366b471167b8ec9dd185b4dcea35309c3b79f"
     },
     {
+      "path": "assets/style-calibration/approved-body/delivery.png",
+      "size": 55935,
+      "sha256": "4b4bdad7c28733f6688c15999c2ae37502d26e42f675d67899a13584c8c31ceb"
+    },
+    {
+      "path": "assets/style-calibration/approved-body/devices.png",
+      "size": 44393,
+      "sha256": "a586153ded0cc742b16d9fc09d3e4329bd5aca4220353968983ef0ff602020f6"
+    },
+    {
+      "path": "assets/style-calibration/approved-body/motion.mp4",
+      "size": 312544,
+      "sha256": "daeab8d8682e28839ddfb564095e82b1932148e5ff91a2d489a2598fec122d03"
+    },
+    {
+      "path": "assets/style-calibration/approved-body/parallel-process.png",
+      "size": 42143,
+      "sha256": "3b50bcec3d8ea922e60ff62ee39a990b933841962d4235ceb0d5e8459d734161"
+    },
+    {
+      "path": "assets/style-calibration/approved-body/real-material.png",
+      "size": 135788,
+      "sha256": "581c1a1676bff9e0decc8bcb68bf034ba43c3faaacd119c833e2f0f82a7d79a8"
+    },
+    {
+      "path": "assets/style-calibration/approved-body/source.json",
+      "size": 2872,
+      "sha256": "1561e9482221b40d6bd6e04fa28eb7e336a0bde42261b38c819174e9c18de592"
+    },
+    {
       "path": "assets/style-calibration/fred/anchor-01.jpg",
       "size": 63237,
       "sha256": "da7b4616c0c21d64a214b4fc7b3143b6a87665bc930f2f47cd858d5cfa78f5b1"
@@ -14677,8 +14707,8 @@
     },
     {
       "path": "index.html",
-      "size": 16736,
-      "sha256": "67e21563c731182c9b8cdadaeb9ecd2d8b0c5fff153fd3256c1c3b3503e56edc"
+      "size": 18644,
+      "sha256": "142b87150fff2876ad01aae04851362c0b146edd4a6b0238fe355ceef56776aa"
     },
     {
       "path": "install.py",
@@ -14687,8 +14717,8 @@
     },
     {
       "path": "references/aesthetic-preferences.md",
-      "size": 13563,
-      "sha256": "55aff23626fa21d4afd3f53b1fffd23b42c6fd8114aa3ecfb810a66bfa0012d6"
+      "size": 14862,
+      "sha256": "2b8d61ca422062071af35ad0a9234556d9af11f6b4000a7617bfea3cc933a89e"
     },
     {
       "path": "references/aigc-assets.json",
@@ -14804,6 +14834,11 @@
       "path": "references/evidence/anime-semantic-feedback-20261013.json",
       "size": 2605,
       "sha256": "2c5b8197b23a9bfdc264bc75093108530013597287be6b5f5e007a40915da778"
+    },
+    {
+      "path": "references/evidence/approved-body-default-20261028.json",
+      "size": 4501,
+      "sha256": "32a73c35100aba36ea9092fa66e20cabba6277714e22389056a7db86f3cdea7f"
     },
     {
       "path": "references/evidence/arun-membership-study/alignment.json",
@@ -14937,13 +14972,13 @@
     },
     {
       "path": "references/fred-ui-direction.md",
-      "size": 5153,
-      "sha256": "69713a1d871facbef63c39abe7dab94ec3c70832dc122d978338775965ab1659"
+      "size": 5292,
+      "sha256": "81658c16fb57fa6b62f75336f54d02e4c2eec457146bf4ac031248195895a9a5"
     },
     {
       "path": "references/global-use.md",
-      "size": 1321,
-      "sha256": "2e79f8222b558f9e1d8413a41c795b848d64693d61031cc394335ff587fb5497"
+      "size": 1411,
+      "sha256": "eded205b8ee39fa0208fafdf3ac4913e93402ba022b5e6efce47e89b8c38f688"
     },
     {
       "path": "references/high-fidelity-device-motion.md",
@@ -15172,8 +15207,8 @@
     },
     {
       "path": "references/library.md",
-      "size": 11874,
-      "sha256": "db92aa3b0561798c9576d1f6dbdec1774aefd046a6db7f7b821666d949f454f5"
+      "size": 11965,
+      "sha256": "8dd9cf7b1ece1591abb8ab495d684118c2341c6aa132739e7cebe78f996de83e"
     },
     {
       "path": "references/local-video-design-distillation.md",
@@ -15222,13 +15257,13 @@
     },
     {
       "path": "references/profiles/registry.json",
-      "size": 15072,
-      "sha256": "e7dedeaa0e8b9ff86c2efa2e0f47571672405df3861de980732de3f35f72616d"
+      "size": 15077,
+      "sha256": "b77b45ec2948783fed19e0af765e0fdfc0f7892d0cc29b29eeb81271af56e275"
     },
     {
       "path": "references/profiles/user-ui.md",
-      "size": 1641,
-      "sha256": "bfeaf7d69c80490c0ac372766dfb349f8b06df4ce5b6582a55229f31864edd9a"
+      "size": 1704,
+      "sha256": "419b2d21d7cd6665af0f402d509cf0cd5e2d9508194b89075961bade70d7d096"
     },
     {
       "path": "references/qiaomu-typography.md",
@@ -15332,8 +15367,8 @@
     },
     {
       "path": "scripts/director.py",
-      "size": 63249,
-      "sha256": "f08f4df39ee488cd132c4118c77f3acb490c88c2cbf77b6eee57b5bcee9d63f3"
+      "size": 63882,
+      "sha256": "d0ac393232151ceaa7ea2fb984aa137d2f679727bbab7eaa54fbdc2f70d062a6"
     },
     {
       "path": "scripts/export_qiaomu_fonts.py",
@@ -15382,8 +15417,8 @@
     },
     {
       "path": "scripts/release_manifest.py",
-      "size": 14335,
-      "sha256": "9a7c579747e8c9a50b734f4779ada8a0832306473d70b6bccb2e77d847c9039e"
+      "size": 14495,
+      "sha256": "a5f6f2b2dd34feec64d8131ae3ef2d6de5c07632c64aa32e7e10aec975d61850"
     },
     {
       "path": "scripts/render.py",
@@ -15457,8 +15492,8 @@
     },
     {
       "path": "scripts/test_director.py",
-      "size": 41773,
-      "sha256": "3c0e6a4ce21448daceccf37732cb8aed93a96126bc9759914d0d308489cfa63f"
+      "size": 43551,
+      "sha256": "0d139fed7600253b93707c79ca159fd83bcbda0b4c414868a564c51da09417c1"
     },
     {
       "path": "scripts/test_event_audio.py",
@@ -15527,8 +15562,8 @@
     },
     {
       "path": "scripts/test_style_registry.py",
-      "size": 63115,
-      "sha256": "7940eac9738e8d2d6d578d167e1ad9450a14dd2c26a26e0fab5f343222aacbfa"
+      "size": 64910,
+      "sha256": "c59557c1587e139fe5daf3f3e491754ebbacc6a0d43699cbd651c6a6da7ea9aa"
     },
     {
       "path": "scripts/ui.py",
@@ -15547,8 +15582,8 @@
     },
     {
       "path": "tests/test_install_release.py",
-      "size": 18407,
-      "sha256": "36ac55c86f0d90ae0f320cb4fba4aec4aea6e0becf240d392aa5abcc337dcb14"
+      "size": 19462,
+      "sha256": "a83872533c4266a4f80963f6d9bdd574fa0d41749aab3766431e3c3bf756de5d"
     }
   ]
 }

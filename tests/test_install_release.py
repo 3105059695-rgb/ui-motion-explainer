@@ -103,6 +103,22 @@ class InstallReleaseTests(unittest.TestCase):
     def install(self, **kwargs):
         return installer.install(self.source, self.target, **kwargs)
 
+    def test_release_tracks_registered_default_instead_of_historical_id(self):
+        config_path = self.source / 'references/profiles/registry.json'
+        config = json.loads(config_path.read_text(encoding='utf-8'))
+        direction = config['unified_production']['default_direction']
+        original = self.source / direction['guidance_path']
+        evidence = json.loads(original.read_text(encoding='utf-8'))
+        evidence['id'] = 'new-approved-body'
+        direction.update(id=evidence['id'], guidance_path='references/evidence/new-body.json')
+        write(self.source, direction['guidance_path'], evidence)
+        write(self.source, 'references/profiles/registry.json', config)
+        self.assertEqual('new-approved-body', validate_resources(self.source)['default_ui_direction'])
+        # Existing history still ships; a missing current reference cannot fall back to it.
+        (self.source / direction['guidance_path']).unlink()
+        with self.assertRaises(ValueError):
+            validate_resources(self.source)
+
     def test_new_install_with_spaces_and_chinese_path_and_cli(self):
         target = self.base / '中文 profile' / 'skills' / 'ui-motion-fusion'
         completed = subprocess.run([sys.executable, '-B', '-X', 'utf8', str(self.source / 'install.py'),

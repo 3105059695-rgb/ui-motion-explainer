@@ -2,7 +2,7 @@
 
 **当前版本见 [VERSION](VERSION)**。仓库地址继续使用 `ui-motion-explainer`，安装与调用统一为 **`$ui-motion-fusion`**。此处描述当前本地源码；远端发布状态以实际发布记录为准。
 
-**Fred Talk 是跨窗口默认的整体视觉与剪辑风格。** 按口播的意思、上下文与情绪选择材料，让对象完成可看懂的动作，再用蒙版、聚焦、变形与转场接起来。效果库提供实现；人物身份和 AIGC 画风独立保存。具体偏好见[UI、AE 感、开头与禁忌](references/aesthetic-preferences.md)，流程见[唯一入口](SKILL.md)。
+**当前默认 UI 是用户认可的「十款 Agent」正文外观，先看[实际画面与动作](index.html#current-ui)。** 它把 Fred 整体方向落实到具体作品，沿此提高材质和运动精度；整个效果库继续开放。 按口播的意思、上下文与情绪选择材料，让对象完成可看懂的动作，再用蒙版、聚焦、变形与转场接起来。效果库提供实现；人物身份和 AIGC 画风独立保存。具体偏好见[UI、AE 感、开头与禁忌](references/aesthetic-preferences.md)，流程见[唯一入口](SKILL.md)。
 
 ## 给 AI 这一句就能安装
 

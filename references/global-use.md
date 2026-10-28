@@ -1,6 +1,6 @@
 # 跨窗口使用
 
-只调用 `$ui-motion-fusion`，先读实际安装的 [SKILL.md](../SKILL.md)，再按其读取顺序继续。Fred Talk 整体视觉与剪辑语言默认跨窗口保持，UI、AE 感、开头和禁忌一起从[审美偏好](aesthetic-preferences.md)继承，用户不用再次选择风格。
+只调用 `$ui-motion-fusion`，先读实际安装的 [SKILL.md](../SKILL.md)，再按其读取顺序继续。先看[当前已认可正文的实际 UI 图与动作](../index.html#current-ui)，其具体外观默认跨窗口保持；Fred 是整体设计来源，UI、AE 感、开头和禁忌一起从[审美偏好](aesthetic-preferences.md)继承，用户不用再次选择风格。
 
 新工程使用自己的工程目录。旧账号文档、历史笔记、父目录的 `project.json` 和旧“Fred 仅中段”范围不自动决定本期风格。指定旧工程续作时从那个工程根目录进入；其中有来源的局部例外只作用于声明范围，正文例外不能抹掉开头与禁忌。
 

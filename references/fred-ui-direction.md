@@ -1,6 +1,6 @@
 # Fred Talk 默认方向与来源方法
 
-用户最新明确“我喜欢的视频风格就是 fred talk 的风格”，见[本轮纠正](evidence/fred-default-correction-20261020.json)。整体视觉与剪辑语言作为跨窗口默认；完整审美规则只在[审美偏好](aesthetic-preferences.md)维护，本页负责定位真实原片、校准图和逐句方法。[效果库](library.md)服务这一方向，保留各项源码、适配状态与原认可范围。
+当前先以用户自己的[已认可正文 UI](../index.html#current-ui)校准具体外观。本页保留 Fred 原片作为补充来源。用户此前明确“我喜欢的视频风格就是 fred talk 的风格”，见[当时纠正](evidence/fred-default-correction-20261020.json)。整体视觉与剪辑语言作为跨窗口默认；完整审美规则只在[审美偏好](aesthetic-preferences.md)维护，本页负责定位真实原片、校准图和逐句方法。[效果库](library.md)服务这一方向，保留各项源码、适配状态与原认可范围。
 
 ## JEV 逐句研究
 

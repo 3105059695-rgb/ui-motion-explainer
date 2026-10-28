@@ -12,7 +12,7 @@ from urllib.parse import unquote
 
 MANIFEST = 'release-manifest.json'
 STATE = '.install-state.json'
-VERSION = '2026.10.28.1'
+VERSION = '2026.10.28.2'
 EXCLUDED_DIRS = {'.git', 'node_modules', '__pycache__', '.cache', 'cache', 'caches',
                  '.venv', 'venv', '.pytest_cache', '.mypy_cache', '.ruff_cache',
                  'runtime', 'runtimes', 'browser-cache'}
@@ -181,10 +181,13 @@ def validate_resources(root: Path) -> dict:
     historical = root / 'references/evidence/fred-reference-approved-20261015.json'
     anchors = read_json(historical).get('direction_contract', {}).get('visual_calibration', {}).get('anchors', []) if historical.is_file() else []
     import style_registry
-    default_style = style_registry.resolve(root, root=root, registry=read_json(root / style_registry.REGISTRY))
+    style_config = read_json(root / style_registry.REGISTRY)
+    expected_direction = style_config.get('unified_production', {}).get('default_direction', {}).get('id')
+    default_style = style_registry.resolve(root, root=root, registry=style_config)
     if (default_style.get('ui_direction_source') != 'fred-talk-default'
             or not default_style.get('style_references_ready')
-            or [d['id'] for d in default_style.get('reference_directions', [])] != ['fred-talk-default-20261020']):
+            or not expected_direction
+            or [d['id'] for d in default_style.get('reference_directions', [])] != [expected_direction]):
         raise ValueError('The persistent Fred Talk default or its reference resources are unavailable.')
     catalog = read_json(root / 'references/aigc-assets.json')
     styles = [s for s in catalog['style_sets'] if s['id'] == 'qiuzhi-girl-painterly']
@@ -215,7 +218,7 @@ def validate_resources(root: Path) -> dict:
     return {'required_modules': modules, 'active_document_links': validate_entry_links(root),
             'fredtalk_active_public_sources_verified': len(fredtalk_rows),
             'historical_fred_visual_anchors': len(anchors),
-            'default_ui_direction': 'fred-talk-default-20261020',
+            'default_ui_direction': expected_direction,
             'girl_identity_images': len(characters), 'girl_scene_images': len(scenes)}
 
 

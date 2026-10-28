@@ -19,7 +19,7 @@ class LocalRoutes(unittest.TestCase):
         self.assertEqual(result['status'], 'resolved')
         self.assertEqual(result['resolved_profile'], 'user-ui')
         self.assertEqual(result['confirmed_baselines'], [])
-        self.assertEqual([d['id'] for d in result['reference_directions']], ['fred-talk-default-20261020'])
+        self.assertEqual([d['id'] for d in result['reference_directions']], ['approved-body-default-20261028'])
         self.assertEqual(Path(result['guidance']['path']).name, 'aesthetic-preferences.md')
         history = next(p for p in styles.listing()['available_profiles'] if p['id'] == 'user-ui')
         baseline = next(p for p in history['confirmed_baselines'] if p['id'] == 'A01')
@@ -55,7 +55,7 @@ class LocalRoutes(unittest.TestCase):
                 self.assertEqual(result['resolved_profile'], 'user-ui')
                 self.assertTrue(Path(result['profile_path']).is_file())
                 self.assertEqual(result['confirmed_baselines'], [])
-                self.assertEqual([d['id'] for d in result['reference_directions']], ['fred-talk-default-20261020'])
+                self.assertEqual([d['id'] for d in result['reference_directions']], ['approved-body-default-20261028'])
                 self.assertTrue(result['requires_visual_comparison'])
                 self.assertTrue(historical[account]['confirmed_baselines'])
                 for baseline in historical[account]['confirmed_baselines']:
@@ -210,7 +210,7 @@ class LocalRoutes(unittest.TestCase):
             self.assertEqual(context['style']['resolution']['resolved_profile'], 'user-ui')
             self.assertEqual(context['style']['resolution']['selection_source'], 'unified-production')
             self.assertEqual(context['style']['resolution']['confirmed_baselines'], [])
-            self.assertEqual([d['id'] for d in context['style']['reference_directions']], ['fred-talk-default-20261020'])
+            self.assertEqual([d['id'] for d in context['style']['reference_directions']], ['approved-body-default-20261028'])
             reading = {Path(p['path']).name for p in context['required_reading']}
             self.assertIn('library.md', reading)
             self.assertIn('fred-ui-direction.md', reading)
@@ -220,24 +220,24 @@ class LocalRoutes(unittest.TestCase):
 
     def test_fred_default_is_kept_for_every_legacy_account_hint(self):
         user = styles.resolve('E:/ui')
-        self.assertEqual([d['id'] for d in user['reference_directions']], ['fred-talk-default-20261020'])
+        self.assertEqual([d['id'] for d in user['reference_directions']], ['approved-body-default-20261028'])
         for account in ('adiao', 'fangmu'):
             selected = styles.resolve('E:/ui', account)
             self.assertEqual(selected['resolved_profile'], 'user-ui')
             self.assertEqual(selected['confirmed_baselines'], [])
             self.assertEqual(selected['method_examples'], [])
-            self.assertEqual([d['id'] for d in selected['reference_directions']], ['fred-talk-default-20261020'])
+            self.assertEqual([d['id'] for d in selected['reference_directions']], ['approved-body-default-20261028'])
             self.assertEqual(styles.current_binding(selected), styles.current_binding(user))
         with tempfile.TemporaryDirectory(prefix='no-reference-default-') as folder:
             default = styles.resolve(folder)
             self.assertEqual(default['resolved_profile'], 'user-ui')
             self.assertEqual(default['selection_source'], 'unified-production')
-            self.assertEqual([d['id'] for d in default['reference_directions']], ['fred-talk-default-20261020'])
+            self.assertEqual([d['id'] for d in default['reference_directions']], ['approved-body-default-20261028'])
             registry = styles.load_registry()
             registry.pop('default_profile', None)
             unresolved = styles.resolve(folder, registry=registry)
             self.assertEqual(unresolved['status'], 'resolved')
-            self.assertEqual([d['id'] for d in unresolved['reference_directions']], ['fred-talk-default-20261020'])
+            self.assertEqual([d['id'] for d in unresolved['reference_directions']], ['approved-body-default-20261028'])
             self.assertEqual(Path(unresolved['required_reading'][0]['path']).name, 'aesthetic-preferences.md')
 
     def test_project_material_and_tokens_are_retained_without_promoting_a_baseline(self):
@@ -899,22 +899,50 @@ class PortableRoutes(unittest.TestCase):
 
 
 class PackagedUnifiedProduction(unittest.TestCase):
+    def assert_current_body_reference(self, selected):
+        self.assertTrue(selected['style_references_ready'], selected.get('warnings'))
+        self.assertEqual([row['id'] for row in selected['reference_directions']],
+                         ['approved-body-default-20261028'])
+        direction = selected['reference_directions'][0]
+        anchors = direction['visual_anchors']
+        self.assertEqual(len(anchors), 4)
+        anchor_root = (styles.ROOT / 'assets/style-calibration/approved-body').resolve()
+        self.assertEqual(len({row['path'] for row in anchors}), 4)
+        for anchor in anchors:
+            self.assertEqual(Path(anchor['path']).parent, anchor_root)
+            self.assertTrue(anchor['exists'])
+            self.assertEqual(anchor['sha256'], styles.content_sha256(anchor['path']))
+        reading = {Path(row['path']).resolve(): row['exists']
+                   for row in selected['required_reading']}
+        for relative in ('assets/agent-editorial/palette.json',
+                         'assets/agent-editorial/source/body-a.js',
+                         'assets/agent-editorial/source/body-b.js',
+                         'assets/agent-editorial/source/film.js',
+                         'assets/style-calibration/approved-body/motion.mp4'):
+            path = (styles.ROOT / relative).resolve()
+            self.assertIn(path, reading)
+            self.assertTrue(reading[path], relative)
+
     def test_shipped_registry_keeps_fred_talk_in_every_account_directory(self):
         registry = styles.read_json(styles.ROOT / styles.REGISTRY)
         with tempfile.TemporaryDirectory() as folder:
             default = styles.resolve(folder, root=styles.ROOT, registry=registry)
             self.assertEqual(default['resolved_profile'], 'user-ui')
+            self.assert_current_body_reference(default)
             for profile in ('user-ui', 'adiao', 'fangmu'):
                 selected = styles.resolve(folder, profile, registry=registry)
-                self.assertTrue(selected['style_references_ready'])
+                self.assert_current_body_reference(selected)
                 self.assertEqual(selected['resolved_profile'], 'user-ui')
                 self.assertEqual(selected['selection_source'], 'unified-production')
                 self.assertEqual([d['id'] for d in selected['reference_directions']],
-                                 ['fred-talk-default-20261020'])
+                                 ['approved-body-default-20261028'])
                 self.assertEqual(selected['ui_direction_source'], 'fred-talk-default')
                 self.assertEqual(styles.current_binding(selected), styles.current_binding(default))
                 self.assertEqual(selected['confirmed_baselines'], [])
                 self.assertEqual(Path(selected['guidance']['path']).name, 'aesthetic-preferences.md')
+            child = styles.resolve(Path(folder) / 'unregistered' / 'new-project', registry=registry)
+            self.assert_current_body_reference(child)
+            self.assertEqual(styles.current_binding(child), styles.current_binding(default))
 
     def test_fresh_prepare_carries_default_and_preserves_script_without_rendering(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -925,7 +953,7 @@ class PackagedUnifiedProduction(unittest.TestCase):
             report = director.prepare(script, project, profile='fangmu')
             context = styles.read_json(project / 'director-context.json')
             self.assertEqual(context['style']['reference_directions'][0]['id'],
-                             'fred-talk-default-20261020')
+                             'approved-body-default-20261028')
             self.assertEqual(script.read_bytes(), original)
             self.assertFalse(report['plan_authored'])
             self.assertFalse(report['generation_submitted'])

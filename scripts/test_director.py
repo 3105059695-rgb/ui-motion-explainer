@@ -700,5 +700,32 @@ class DirectorTests(unittest.TestCase):
         self.assertGreaterEqual(len(report['errors']), 4)
 
 
+class PackagedVisualBaseline(unittest.TestCase):
+    def test_fresh_prepare_prioritizes_approved_body_without_filtering_effects(self):
+        root = Path(director.__file__).resolve().parents[1]
+        expected_library = director.selection.library_directory(root=root)
+        with tempfile.TemporaryDirectory() as folder:
+            project = Path(folder)
+            script = project / 'narration.txt'
+            script.write_text('把这份资料分给三个任务，同时处理后再看实际结果。', encoding='utf-8')
+            director.prepare(script, project, profile='adiao', root=root)
+            context = director.load_json(project / 'director-context.json')
+            brief = (project / 'director-brief.md').read_text(encoding='utf-8')
+        direction = context['style']['reference_directions'][0]
+        self.assertEqual(direction['id'], 'approved-body-default-20261028')
+        self.assertEqual(len(direction['visual_anchors']), 4)
+        for anchor in direction['visual_anchors']:
+            self.assertIn(anchor['path'], brief)
+        self.assertLess(brief.index('## 当前 UI 外观基准'), brief.index('## 完整效果库入口'))
+        library = context['selection']['library_directory']
+        self.assertFalse(library['truncated'])
+        self.assertFalse(library['ranking_applied'])
+        self.assertEqual({(row['kind'], row['id']) for row in library['entries']},
+                         {(row['kind'], row['id']) for row in expected_library['entries']})
+        self.assertEqual(library['entry_count'], expected_library['entry_count'])
+        reading = {Path(row['path']).resolve() for row in context['required_reading']}
+        self.assertIn((root / 'assets/style-calibration/approved-body/motion.mp4').resolve(), reading)
+
+
 if __name__ == '__main__':
     unittest.main()

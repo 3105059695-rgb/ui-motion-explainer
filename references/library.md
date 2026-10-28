@@ -1,6 +1,6 @@
 # 效果库：按表达目的找实现
 
-这里提供落实 **Fred Talk 整体视觉与剪辑默认** 的源码和方法，不能因方便调用某库而更换风格。先看[Fred 实际参考](fred-ui-direction.md)，结合整篇口播和逐句证据，再从 FredTalk、EditingKit、F、O/X、阿渡等条目选择适用部分，改编为本期对象和节奏。完整审美只在[审美偏好](aesthetic-preferences.md)维护，人物与 AIGC 的用途边界见[参考使用](style-profiles.md)。
+这里提供落实 **Fred Talk 整体视觉与剪辑默认** 的源码和方法，不能因方便调用某库而更换风格。先看[当前已认可正文的实际外观](../index.html#current-ui)及对应源码，以[Fred 实际参考](fred-ui-direction.md)补充，结合整篇口播和逐句证据，再从 FredTalk、EditingKit、F、O/X、阿渡等条目选择适用部分，改编为本期对象和节奏。完整审美只在[审美偏好](aesthetic-preferences.md)维护，人物与 AIGC 的用途边界见[参考使用](style-profiles.md)。
 
 详细条目、原路径、实现状态、历史检查和认可范围统一查 [capability-catalog.json](capability-catalog.json)。它是可检索目录，不是运行时预设表；`Rxx`、`Oxx` 不能直接当作创建命令的 `--scene`。
 

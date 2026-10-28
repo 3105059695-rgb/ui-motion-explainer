@@ -1,6 +1,6 @@
 # user-ui 兼容入口
 
-当前统一制作入口是 [ui-motion-fusion](../../SKILL.md)，整体视觉与剪辑默认沿用 [Fred Talk](../aesthetic-preferences.md)。`user-ui` 保留为工程/API 兼容标识；效果库提供实现，每期对象、素材与编排随口播变化。最新原话与适用范围见[默认风格纠正](../evidence/fred-default-correction-20261020.json)。
+当前统一制作入口是 [ui-motion-fusion](../../SKILL.md)，整体视觉与剪辑默认沿用 [Fred Talk](../aesthetic-preferences.md)。`user-ui` 保留为工程/API 兼容标识；效果库提供实现，每期对象、素材与编排随口播变化。当前具体外观采用[十款 Agent 正文基准](../../index.html#current-ui)，最新确认见[跨窗口基准](../evidence/approved-body-default-20261028.json)。
 
 普通制作不通过账号名、目录或历史样片切换视觉风格。AIGC 使用[画风参考说明](../style-profiles.md)，本期人物与原声独立保留。早先的[逐图记录](../evidence/library-entry-correction-20261020.json)保留为历史，风格默认以本轮最新纠正为准。
 

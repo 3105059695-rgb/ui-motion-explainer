@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "purpose": "Portable visual references for the approved body UI. These are actual source renders, not newly generated artwork or a new approved film.",
+  "source_resource_id": "source-code:fangmu-ten-agents-20261021:film.js",
+  "source_video_resource_id": "source-video:fangmu-ten-agents-final-20261021",
+  "approval_evidence": "references/evidence/fangmu-ten-agents-body-style-20261021/index.json",
+  "retained_source": "assets/agent-editorial/source/",
+  "source_files_sha256": {
+    "film.js": "7af6d7371b251d9b7e7944655317bb28be07754b7378833ffc5cb2ba090ab23d",
+    "body-a.js": "a082e4507c8eef3395048f62e9c391b6827b50f737a05b0d52b30b7d11d46d32",
+    "body-b.js": "d87d39e15ac6da2e409cd66a7651fb69d727edcb5ba7b0310330af403bff7fe2",
+    "motion-core.js": "d593edbcec7c4ac8e4d191494856c713d59bb147f927f1651832c1538c282536",
+    "timing.json": "e5a025f806cb0850dc30e81fa7d5b0218f8d502b529117065a8e8f474a9c08f1",
+    "index.html": "3289a91660b1961515ca29e5c5e82ce909ae36d52825becfefea93490b53ba79"
+  },
+  "source_project_unchanged": true,
+  "adaptation": "Current palette applied in browser memory. Original scene geometry and events retained; public preview crops out presenter, account sidebar, chapter navigation and narration subtitles.",
+  "palette": {
+    "black": "#0B0B0F",
+    "white": "#FFFFFF",
+    "purple": "#D6C2FF",
+    "muted": "#777780",
+    "line": "#DBDBE0",
+    "paper": "#F3F3F5"
+  },
+  "palette_source": "assets/agent-editorial/palette.json",
+  "crop_in_source_pixels": {
+    "x": 420,
+    "y": 176,
+    "width": 1490,
+    "height": 750
+  },
+  "source_canvas_size": [
+    1920,
+    1080
+  ],
+  "images": [
+    {
+      "file": "parallel-process.png",
+      "source_seconds": 33.0
+    },
+    {
+      "file": "delivery.png",
+      "source_seconds": 88.9
+    },
+    {
+      "file": "devices.png",
+      "source_seconds": 164.8
+    },
+    {
+      "file": "real-material.png",
+      "source_seconds": 240.2
+    }
+  ],
+  "motion": {
+    "file": "motion.mp4",
+    "fps": 25,
+    "duration_seconds": 12.0,
+    "ranges": [
+      {
+        "source_in": 32.0,
+        "source_out": 35.0
+      },
+      {
+        "source_in": 86.4,
+        "source_out": 89.4
+      },
+      {
+        "source_in": 161.8,
+        "source_out": 164.8
+      },
+      {
+        "source_in": 239.0,
+        "source_out": 242.0
+      }
+    ],
+    "audio": false,
+    "full_decode_passed": true,
+    "note": "Four chronological UI excerpts with direct joins. The joins are an excerpt assembly, not a recommended transition or complete narration edit."
+  },
+  "privacy": "No presenter image, voice, private identity or local absolute paths are included.",
+  "current_ui_runtime_not_exercised": true,
+  "new_film_aesthetic_approval": false,
+  "full_realtime_av_review": false
+}

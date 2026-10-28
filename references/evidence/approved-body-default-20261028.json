@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "approved-body-default-20261028",
+  "date": "2026-10-28",
+  "source": "direct_user_message_after_current_palette_body_previews",
+  "quote": "这个我就很好奇，skill里面也有我喜欢的ui视频，为什么老是别的窗口调取是选择那种很垃圾的，而且做出来也很垃圾，能不能直接说明这个视频的ui风格就是我喜欢的ui风格，我就想要这种的，并且还要更加的渲染高级感的那种",
+  "status": "user_selected_reference_direction",
+  "scope": "十款 Agent 正文的 UI 外观、层次与动态，按当前 A 色重渲染后作为所有新窗口的具体 UI 基准；提高渲染精细度。不是仅方木账号有效。原片开头仍不在认可范围。",
+  "approval": {
+    "original_body_evidence": "references/evidence/fangmu-ten-agents-body-style-20261021/index.json",
+    "current_confirmation": "刚展示的四张正文图及其对应源视频的风格方向；不是新成片验收。",
+    "opening_included": false,
+    "new_film_approved": false
+  },
+  "direction_contract": {
+    "id": "approved-body-default-20261028",
+    "revision": "2026.10.28.2",
+    "summary": "用用户自己的十款 Agent 正文作为当前 UI 的具体长相基准：白/轻灰舞台、近黑实体窗口、粗字、清楚层次和当前 A 色重点。沿此风格提升材质与运动精度，再从全效果库改编合适的设计和动作；不重新猜一套 Fred 外观，不套榜单。",
+    "reading": [
+      "references/aesthetic-preferences.md",
+      "assets/agent-editorial/README.md",
+      "assets/agent-editorial/palette.json",
+      "assets/agent-editorial/source/body-a.js",
+      "assets/agent-editorial/source/body-b.js",
+      "assets/agent-editorial/source/film.js",
+      "assets/style-calibration/approved-body/motion.mp4",
+      "assets/style-calibration/approved-body/source.json",
+      "references/evidence/fangmu-ten-agents-body-style-20261021/index.json",
+      "references/fred-ui-direction.md"
+    ],
+    "visual_calibration": {
+      "view_before_design": true,
+      "anchors": [
+        {
+          "frame": "assets/style-calibration/approved-body/parallel-process.png",
+          "source": "fangmu-ten-agents-body-current-palette",
+          "event": "body@33.0",
+          "learn": "对象与并行进度有真实关系，近黑载体、浅紫状态与明亮舞台形成层次。"
+        },
+        {
+          "frame": "assets/style-calibration/approved-body/delivery.png",
+          "source": "fangmu-ten-agents-body-current-palette",
+          "event": "body@88.9",
+          "learn": "资料进入成品窗口；黑色标题栏与白色内容区有清楚重量和尺寸关系。"
+        },
+        {
+          "frame": "assets/style-calibration/approved-body/devices.png",
+          "source": "fangmu-ten-agents-body-current-palette",
+          "event": "body@164.8",
+          "learn": "设备和内容保持身份，在空间中展开与交接；不同实体保留各自形态。"
+        },
+        {
+          "frame": "assets/style-calibration/approved-body/real-material.png",
+          "source": "fangmu-ten-agents-body-current-palette",
+          "event": "body@240.2",
+          "learn": "真实产品内容放入清楚的实体框架，保留材料原色与可读细节。"
+        }
+      ],
+      "limits": "四张为原正文源码按当前 palette 的实际重渲染，公开图仅截取无私人人物的 UI 区。motion.mp4 是同源无声动态摘录；完整来源和原片资源 ID 见历史证据。不将几个镜头作为全部效果白名单。"
+    },
+    "preference_authority": "references/aesthetic-preferences.md",
+    "palette_source": "assets/agent-editorial/palette.json",
+    "motion_library_scope": "whole-library; redesign composition, content and timing to the narration",
+    "opening_policy": "current preference authority; preserve full presenter frame and protect person",
+    "maintenance": "Appearance and premium finish details are maintained only in preference_authority; this contract binds the selected visual evidence, current palette and retained implementation."
+  },
+  "previous_direction": "references/evidence/fred-default-correction-20261020.json",
+  "relationship": "本次把已认可的具体正文提到跨窗口默认首位，细化 Fred 整体方向。Fred 三条原片、旧证据和全效果库保留，作为补充而非竞争外观。"
+}
