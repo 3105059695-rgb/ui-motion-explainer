@@ -2,11 +2,81 @@
 import argparse
 from functools import partial
 from http.server import ThreadingHTTPServer
-from pathlib import Path
+from io import BytesIO
+import json
+from pathlib import Path, PureWindowsPath
+from urllib.parse import quote, unquote, urlsplit
 from media_server import SingleRangeHTTPRequestHandler
+from resource_inventory import load_overlay
+
+
+RESOURCE_PREFIXES = ('source-video:', 'source-design-media:')
+BODY_REFERENCE = 'source-video:fangmu-ten-agents-final-20261021'
+
+
+def mapped_media(root):
+    """Only explicit local file registrations may become viewer URLs."""
+    try:
+        files = load_overlay(root)['files']
+    except (OSError, ValueError):
+        return {}
+    return {ident: (Path(root) / Path(row['path']).expanduser()).resolve()
+            for ident, row in files.items() if ident.startswith(RESOURCE_PREFIXES)}
+
+
+def resource_url(ident):
+    return '/__resource/' + quote(ident, safe='')
+
+
+def reference_manifest(root):
+    references, design_media = [], {}
+    for ident, path in sorted(mapped_media(root).items()):
+        exists = path.is_file()
+        if ident.startswith('source-design-media:'):
+            if exists:
+                design_media[ident.removeprefix('source-design-media:')] = resource_url(ident)
+            continue
+        # Windows path syntax must never leak when a public copy runs elsewhere.
+        title = PureWindowsPath(str(path)).stem.split(' #', 1)[0]
+        references.append({'id': ident, 'title': title,
+                           'url': resource_url(ident) if exists else None, 'exists': exists,
+                           'scope': ('body only; opening excluded' if ident == BODY_REFERENCE
+                                     else 'original reference; approval scope is not implied')})
+    return {'status': 'available' if design_media or any(r['exists'] for r in references) else 'unavailable',
+            'references': references, 'design_media': design_media}
 
 class QuietHandler(SingleRangeHTTPRequestHandler):
     def log_message(self,*args):pass
+
+    def translate_path(self, path):
+        selected = getattr(self, '_registered_media_path', None)
+        return str(selected) if selected is not None else super().translate_path(path)
+
+    def send_head(self):
+        self._registered_media_path = None
+        route = urlsplit(self.path).path
+        if route == '/__references':
+            payload = json.dumps(reference_manifest(self.directory), ensure_ascii=False).encode('utf-8')
+            self._advertise_ranges = False
+            self._copy_range = None
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json; charset=utf-8')
+            self.send_header('Content-Length', str(len(payload)))
+            self.send_header('Cache-Control', 'no-store')
+            self.end_headers()
+            return BytesIO(payload)
+        if route == '/__resource' or route.startswith('/__resource/'):
+            ident = unquote(route.removeprefix('/__resource/'))
+            target = mapped_media(self.directory).get(ident) if ident.startswith(RESOURCE_PREFIXES) else None
+            if target is None or not target.is_file():
+                self.send_error(404, 'Registered media unavailable')
+                return None
+            self._registered_media_path = target
+        elif Path(super().translate_path(self.path)).resolve() == (Path(self.directory) / 'references/resources.local.json').resolve():
+            self.send_error(404, 'Not found')
+            return None
+        # Use the existing bounded range implementation for GET and HEAD.
+        return super().send_head()
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)

@@ -1,6 +1,7 @@
 """Create an explicitly custom workspace or historical demo; full scenes use ui.py scene."""
 import argparse
 import json
+import os
 from pathlib import Path
 import shutil
 import production_entry
@@ -20,7 +21,15 @@ def copy_new_files(pairs, destination):
     for source, relative in pairs:
         target = destination / relative
         target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(source, target)
+        # The approved Chinese typeface already exists in this installation.
+        # Reuse its bytes on the same volume rather than duplicating 17 MB per film.
+        if source.name == 'NotoSansSC.ttf':
+            try:
+                os.link(source, target)
+            except OSError:
+                shutil.copy2(source, target)
+        else:
+            shutil.copy2(source, target)
 
 
 def create(out, scene=None, title=None, profile=None, base=None, root=ROOT, custom_layout=False, canvas_story=False, reference=None):
@@ -48,7 +57,11 @@ def create(out, scene=None, title=None, profile=None, base=None, root=ROOT, cust
                   for name in ('editing-kit.js', 'editing-kit.css')]
         if canvas_story:
             pairs += [(Path(root) / 'assets/agent-editorial' / name, Path('lib/agent-editorial') / name)
-                      for name in ('agent-editorial.js', 'motion-core.js', 'palette.json')]
+                      for name in ('agent-editorial.js', 'motion-core.js', 'palette.json',
+                                   'source-designs.js', 'source-designs.json',
+                                   'source/body-a.js', 'source/body-b.js', 'source/timing.json')]
+            pairs += [(base / 'assets/portable-studio/fonts' / name, Path('fonts') / name)
+                      for name in ('NotoSansSC.ttf', 'NotoSansSC-OFL.txt')]
         if reference_spec:
             reference_location = Path('lib/reference-films') / reference_spec['id'] / Path(reference_spec['implementation']).name
             pairs.append((Path(root) / reference_spec['implementation'], reference_location))

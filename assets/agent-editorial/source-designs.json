@@ -1,0 +1,3562 @@
+{
+  "schema": "ui-motion-fusion/source-designs@1",
+  "provenance": {
+    "source": "approved ten-agents body-a/body-b executable source",
+    "helper_source": "source/film.js drawing helpers adapted only for copy/media binding and current AgentEditorial palette",
+    "source_untouched": true,
+    "slot_sampling_fps": 30,
+    "scope": "design references and code reuse; no original media or narration embedded",
+    "clock": "local graphical time maps piecewise to original chapter time; source media and narration clocks are never changed"
+  },
+  "designs": [
+    {
+      "id": "parallel-workflow",
+      "label": "任务分解与并行交付",
+      "engine": "BodyA",
+      "source_file": "source/body-a.js",
+      "source_sha256": "a082e4507c8eef3395048f62e9c391b6827b50f737a05b0d52b30b7d11d46d32",
+      "approved_scope": "original body design and continuous motion; original topic, product, ranking, opening and narration are not defaults",
+      "source_range": [
+        13.86,
+        44.52
+      ],
+      "source_viewport": {
+        "x": 426,
+        "y": 178,
+        "w": 1400,
+        "h": 724
+      },
+      "chapter": {
+        "id": "codex",
+        "start": 13.86,
+        "end": 45.48,
+        "cues": [
+          {
+            "id": "expert-to-beginner",
+            "start": 15,
+            "end": 21.36
+          },
+          {
+            "id": "old-terminal-branch",
+            "start": 21.44,
+            "end": 25.66
+          },
+          {
+            "id": "folder-request",
+            "start": 26.66,
+            "end": 29.68
+          },
+          {
+            "id": "work",
+            "start": 29.68,
+            "end": 31.32
+          },
+          {
+            "id": "parallel",
+            "start": 31.32,
+            "end": 33.94
+          },
+          {
+            "id": "slow",
+            "start": 33.94,
+            "end": 37.7
+          },
+          {
+            "id": "token",
+            "start": 37.7,
+            "end": 39.74
+          },
+          {
+            "id": "workflow",
+            "start": 39.74,
+            "end": 43.34
+          }
+        ]
+      },
+      "cues": [
+        {
+          "id": "expert-to-beginner",
+          "source_time": 15,
+          "description": "专业玩法变成小白可用"
+        },
+        {
+          "id": "old-terminal-branch",
+          "source_time": 21.44,
+          "description": "终端和代码分支"
+        },
+        {
+          "id": "folder-request",
+          "source_time": 26.66,
+          "description": "扔文件夹、提要求"
+        },
+        {
+          "id": "work",
+          "source_time": 29.68,
+          "description": "自己闷头干活"
+        },
+        {
+          "id": "parallel",
+          "source_time": 31.32,
+          "description": "几个任务并行互不打扰"
+        },
+        {
+          "id": "slow",
+          "source_time": 33.94,
+          "description": "复杂活慢，小半个小时"
+        },
+        {
+          "id": "token",
+          "source_time": 37.7,
+          "description": "Token消耗"
+        },
+        {
+          "id": "workflow",
+          "source_time": 39.74,
+          "description": "普通人零门槛用专业工作流"
+        }
+      ],
+      "copy_slots": [
+        {
+          "source": "Codex",
+          "intervals": [
+            [
+              13.86,
+              21.44
+            ]
+          ]
+        },
+        {
+          "source": "专业工作流",
+          "intervals": [
+            [
+              13.86,
+              21.44
+            ]
+          ]
+        },
+        {
+          "source": "终端 · 分支 · 并行",
+          "intervals": [
+            [
+              13.86,
+              21.44
+            ]
+          ]
+        },
+        {
+          "source": "直接说需求",
+          "intervals": [
+            [
+              13.86,
+              21.44
+            ]
+          ]
+        },
+        {
+          "source": "普通人也能上手",
+          "intervals": [
+            [
+              13.86,
+              21.44
+            ]
+          ]
+        },
+        {
+          "source": "把操作门槛，藏进工作流里",
+          "intervals": [
+            [
+              13.86,
+              21.44
+            ]
+          ]
+        },
+        {
+          "source": "以前",
+          "intervals": [
+            [
+              21.44,
+              26.66
+            ]
+          ]
+        },
+        {
+          "source": "终端命令",
+          "intervals": [
+            [
+              21.44,
+              26.66
+            ]
+          ]
+        },
+        {
+          "source": "分支 A",
+          "intervals": [
+            [
+              21.44,
+              26.66
+            ]
+          ]
+        },
+        {
+          "source": "分支 B",
+          "intervals": [
+            [
+              21.44,
+              26.66
+            ]
+          ]
+        },
+        {
+          "source": "官方 CLI 历史界面",
+          "intervals": [
+            [
+              21.44,
+              26.66
+            ]
+          ]
+        },
+        {
+          "source": "你的项目",
+          "intervals": [
+            [
+              26.66,
+              44.52
+            ]
+          ]
+        },
+        {
+          "source": "文件夹",
+          "intervals": [
+            [
+              26.66,
+              44.52
+            ]
+          ]
+        },
+        {
+          "source": "帮我把这个项目做好",
+          "intervals": [
+            [
+              26.66,
+              44.52
+            ]
+          ]
+        },
+        {
+          "source": "改页面",
+          "intervals": [
+            [
+              26.66,
+              44.52
+            ]
+          ]
+        },
+        {
+          "source": "执行中",
+          "intervals": [
+            [
+              26.66,
+              39.926667
+            ]
+          ]
+        },
+        {
+          "source": "内容解释示意",
+          "intervals": [
+            [
+              26.66,
+              44.52
+            ]
+          ]
+        },
+        {
+          "source": "补测试",
+          "intervals": [
+            [
+              31.326667,
+              44.52
+            ]
+          ]
+        },
+        {
+          "source": "整理文件",
+          "intervals": [
+            [
+              31.326667,
+              44.52
+            ]
+          ]
+        },
+        {
+          "source": "复杂任务",
+          "intervals": [
+            [
+              33.96,
+              40.293333
+            ]
+          ]
+        },
+        {
+          "source": "要等一会儿",
+          "intervals": [
+            [
+              33.96,
+              40.293333
+            ]
+          ]
+        },
+        {
+          "source": "TOKEN",
+          "intervals": [
+            [
+              37.726667,
+              40.293333
+            ]
+          ]
+        },
+        {
+          "source": "一个目标，多条任务同时推进",
+          "intervals": [
+            [
+              39.76,
+              44.52
+            ]
+          ]
+        }
+      ],
+      "media_slots": [
+        {
+          "key": "assets/codex-cli-official.png",
+          "intervals": [
+            [
+              21.44,
+              26.66
+            ]
+          ]
+        }
+      ],
+      "logo_slots": [
+        {
+          "key": "codex",
+          "intervals": [
+            [
+              13.86,
+              21.44
+            ]
+          ]
+        }
+      ],
+      "constraints": [],
+      "selection": "optional complete design or explicitly bounded continuous subrange; not a required chapter sequence"
+    },
+    {
+      "id": "premise-to-report",
+      "label": "前提改变与报告结果",
+      "engine": "BodyA",
+      "source_file": "source/body-a.js",
+      "source_sha256": "a082e4507c8eef3395048f62e9c391b6827b50f737a05b0d52b30b7d11d46d32",
+      "approved_scope": "original body design and continuous motion; original topic, product, ranking, opening and narration are not defaults",
+      "source_range": [
+        45.48,
+        69.94
+      ],
+      "source_viewport": {
+        "x": 426,
+        "y": 178,
+        "w": 1400,
+        "h": 724
+      },
+      "chapter": {
+        "id": "doubao",
+        "start": 45.48,
+        "end": 71.2,
+        "cues": [
+          {
+            "id": "easy",
+            "start": 47.12,
+            "end": 52.24
+          },
+          {
+            "id": "agree",
+            "start": 52.24,
+            "end": 57.86
+          },
+          {
+            "id": "wrong-premise",
+            "start": 57.86,
+            "end": 63.06
+          },
+          {
+            "id": "fake-report",
+            "start": 63.06,
+            "end": 67.8
+          }
+        ]
+      },
+      "cues": [
+        {
+          "id": "easy",
+          "source_time": 47.12,
+          "description": "入口浅、说人话、零门槛"
+        },
+        {
+          "id": "agree",
+          "source_time": 52.24,
+          "description": "老好人，顺着你的话编"
+        },
+        {
+          "id": "wrong-premise",
+          "source_time": 57.86,
+          "description": "错误前提不纠正，继续找补"
+        },
+        {
+          "id": "fake-report",
+          "source_time": 63.06,
+          "description": "编数据，凑成假资料"
+        }
+      ],
+      "copy_slots": [
+        {
+          "source": "挑一个功能",
+          "intervals": [
+            [
+              45.48,
+              52.24
+            ]
+          ]
+        },
+        {
+          "source": "直接追加任务要求",
+          "intervals": [
+            [
+              45.48,
+              52.24
+            ]
+          ]
+        },
+        {
+          "source": "入口浅",
+          "intervals": [
+            [
+              45.48,
+              52.24
+            ]
+          ]
+        },
+        {
+          "source": "说人话",
+          "intervals": [
+            [
+              45.48,
+              52.24
+            ]
+          ]
+        },
+        {
+          "source": "易上手",
+          "intervals": [
+            [
+              45.48,
+              52.24
+            ]
+          ]
+        },
+        {
+          "source": "官方功能宣传图 · 局部放大",
+          "intervals": [
+            [
+              45.48,
+              52.24
+            ]
+          ]
+        },
+        {
+          "source": "豆包工作",
+          "intervals": [
+            [
+              52.24,
+              69.94
+            ]
+          ]
+        },
+        {
+          "source": "我有一个想法……",
+          "intervals": [
+            [
+              52.24,
+              57.946667
+            ]
+          ]
+        },
+        {
+          "source": "“你说得对……”",
+          "intervals": [
+            [
+              52.24,
+              57.946667
+            ]
+          ]
+        },
+        {
+          "source": "附和感，不等于可靠性",
+          "intervals": [
+            [
+              52.24,
+              63.18
+            ]
+          ]
+        },
+        {
+          "source": "情景示意 · 非实际对话录屏",
+          "intervals": [
+            [
+              52.24,
+              69.94
+            ]
+          ]
+        },
+        {
+          "source": "前提就错了",
+          "intervals": [
+            [
+              57.88,
+              69.94
+            ]
+          ]
+        },
+        {
+          "source": "假设：一个月有 32 天",
+          "intervals": [
+            [
+              57.946667,
+              69.94
+            ]
+          ]
+        },
+        {
+          "source": "顺着错误前提继续解释",
+          "intervals": [
+            [
+              57.946667,
+              69.94
+            ]
+          ]
+        },
+        {
+          "source": "分析报告",
+          "intervals": [
+            [
+              63.08,
+              69.94
+            ]
+          ]
+        },
+        {
+          "source": "看着像，不代表对",
+          "intervals": [
+            [
+              63.08,
+              69.94
+            ]
+          ]
+        },
+        {
+          "source": "未核实",
+          "intervals": [
+            [
+              63.08,
+              69.94
+            ]
+          ]
+        },
+        {
+          "source": "资料排得再漂亮，也要核对事实",
+          "intervals": [
+            [
+              63.18,
+              69.94
+            ]
+          ]
+        }
+      ],
+      "media_slots": [
+        {
+          "key": "assets/doubao-hero.png",
+          "intervals": [
+            [
+              45.48,
+              52.24
+            ]
+          ],
+          "source_region": [
+            75,
+            235,
+            1509,
+            755
+          ],
+          "mapping": "cover new image crop into the original pixel-crop domain; preserve animated source crop"
+        }
+      ],
+      "logo_slots": [
+        {
+          "key": "doubao",
+          "intervals": [
+            [
+              52.24,
+              69.94
+            ]
+          ]
+        }
+      ],
+      "constraints": [],
+      "selection": "optional complete design or explicitly bounded continuous subrange; not a required chapter sequence"
+    },
+    {
+      "id": "connected-delivery",
+      "label": "连接资料到交付修改",
+      "engine": "BodyA",
+      "source_file": "source/body-a.js",
+      "source_sha256": "a082e4507c8eef3395048f62e9c391b6827b50f737a05b0d52b30b7d11d46d32",
+      "approved_scope": "original body design and continuous motion; original topic, product, ranking, opening and narration are not defaults",
+      "source_range": [
+        71.2,
+        95.2
+      ],
+      "source_viewport": {
+        "x": 426,
+        "y": 178,
+        "w": 1400,
+        "h": 724
+      },
+      "chapter": {
+        "id": "workbuddy",
+        "start": 71.2,
+        "end": 96.16,
+        "cues": [
+          {
+            "id": "office",
+            "start": 73.66,
+            "end": 78.22
+          },
+          {
+            "id": "connections",
+            "start": 78.22,
+            "end": 82.26
+          },
+          {
+            "id": "task",
+            "start": 82.36,
+            "end": 86.38
+          },
+          {
+            "id": "split-deliver",
+            "start": 86.38,
+            "end": 90.7
+          },
+          {
+            "id": "revise",
+            "start": 90.7,
+            "end": 92.26
+          }
+        ]
+      },
+      "cues": [
+        {
+          "id": "office",
+          "source_time": 73.66,
+          "description": "国内职场"
+        },
+        {
+          "id": "connections",
+          "source_time": 78.22,
+          "description": "微信、企微、腾讯文档、腾讯会议连接"
+        },
+        {
+          "id": "task",
+          "source_time": 82.36,
+          "description": "资料、表格、方案"
+        },
+        {
+          "id": "split-deliver",
+          "source_time": 86.38,
+          "description": "拆解步骤，交付文档和PPT"
+        },
+        {
+          "id": "revise",
+          "source_time": 90.7,
+          "description": "不满意继续改"
+        }
+      ],
+      "copy_slots": [
+        {
+          "source": "官方客户端 · 任务输入区放大",
+          "intervals": [
+            [
+              71.2,
+              78.22
+            ]
+          ]
+        },
+        {
+          "source": "微信",
+          "intervals": [
+            [
+              78.22,
+              95.2
+            ]
+          ]
+        },
+        {
+          "source": "企微",
+          "intervals": [
+            [
+              78.22,
+              95.2
+            ]
+          ]
+        },
+        {
+          "source": "腾讯文档",
+          "intervals": [
+            [
+              78.22,
+              95.2
+            ]
+          ]
+        },
+        {
+          "source": "腾讯会议",
+          "intervals": [
+            [
+              78.22,
+              95.2
+            ]
+          ]
+        },
+        {
+          "source": "办公工具连起来，工作接着做",
+          "intervals": [
+            [
+              78.22,
+              86.5
+            ]
+          ]
+        },
+        {
+          "source": "内容解释示意",
+          "intervals": [
+            [
+              78.22,
+              95.2
+            ]
+          ]
+        },
+        {
+          "source": "资料",
+          "intervals": [
+            [
+              82.366667,
+              95.2
+            ]
+          ]
+        },
+        {
+          "source": "表格",
+          "intervals": [
+            [
+              82.366667,
+              95.2
+            ]
+          ]
+        },
+        {
+          "source": "方案",
+          "intervals": [
+            [
+              82.366667,
+              95.2
+            ]
+          ]
+        },
+        {
+          "source": "先拆步骤，再动手",
+          "intervals": [
+            [
+              82.366667,
+              95.2
+            ]
+          ]
+        },
+        {
+          "source": "收集",
+          "intervals": [
+            [
+              82.366667,
+              95.2
+            ]
+          ]
+        },
+        {
+          "source": "整理",
+          "intervals": [
+            [
+              82.366667,
+              95.2
+            ]
+          ]
+        },
+        {
+          "source": "制作",
+          "intervals": [
+            [
+              82.366667,
+              95.2
+            ]
+          ]
+        },
+        {
+          "source": "项目方案.pptx",
+          "intervals": [
+            [
+              86.4,
+              95.2
+            ]
+          ]
+        },
+        {
+          "source": "可继续编辑",
+          "intervals": [
+            [
+              86.4,
+              90.8
+            ]
+          ]
+        },
+        {
+          "source": "项目计划",
+          "intervals": [
+            [
+              86.4,
+              90.766667
+            ]
+          ]
+        },
+        {
+          "source": "交付",
+          "intervals": [
+            [
+              86.4,
+              95.2
+            ]
+          ]
+        },
+        {
+          "source": "结果能打开，也能接着改",
+          "intervals": [
+            [
+              86.5,
+              95.2
+            ]
+          ]
+        },
+        {
+          "source": "补充结论 ✓",
+          "intervals": [
+            [
+              90.733333,
+              95.2
+            ]
+          ]
+        },
+        {
+          "source": "结论：先做好最关键的一步",
+          "intervals": [
+            [
+              90.766667,
+              95.2
+            ]
+          ]
+        },
+        {
+          "source": "修改后",
+          "intervals": [
+            [
+              90.8,
+              95.2
+            ]
+          ]
+        }
+      ],
+      "media_slots": [
+        {
+          "key": "assets/workbuddy-hero.webp",
+          "intervals": [
+            [
+              71.2,
+              78.22
+            ]
+          ],
+          "source_region": [
+            540,
+            210,
+            1350,
+            660
+          ],
+          "mapping": "cover new image crop into the original pixel-crop domain; preserve animated source crop"
+        }
+      ],
+      "logo_slots": [
+        {
+          "key": "workbuddy",
+          "intervals": [
+            [
+              78.22,
+              95.2
+            ]
+          ]
+        }
+      ],
+      "constraints": [],
+      "selection": "optional complete design or explicitly bounded continuous subrange; not a required chapter sequence"
+    },
+    {
+      "id": "module-assembly",
+      "label": "模块拆装与组合",
+      "engine": "BodyA",
+      "source_file": "source/body-a.js",
+      "source_sha256": "a082e4507c8eef3395048f62e9c391b6827b50f737a05b0d52b30b7d11d46d32",
+      "approved_scope": "original body design and continuous motion; original topic, product, ranking, opening and narration are not defaults",
+      "source_range": [
+        96.16,
+        119.88
+      ],
+      "source_viewport": {
+        "x": 426,
+        "y": 178,
+        "w": 1400,
+        "h": 724
+      },
+      "chapter": {
+        "id": "harness",
+        "start": 96.16,
+        "end": 121.42,
+        "cues": [
+          {
+            "id": "plugins",
+            "start": 98.24,
+            "end": 101.1
+          },
+          {
+            "id": "not-finished-app",
+            "start": 101.1,
+            "end": 104.56
+          },
+          {
+            "id": "lego",
+            "start": 104.56,
+            "end": 107.98
+          },
+          {
+            "id": "modules",
+            "start": 107.98,
+            "end": 111
+          },
+          {
+            "id": "swap",
+            "start": 111,
+            "end": 113.04
+          },
+          {
+            "id": "personal-agent",
+            "start": 113.04,
+            "end": 117.08
+          },
+          {
+            "id": "ceiling",
+            "start": 117.08,
+            "end": 118.46
+          }
+        ]
+      },
+      "cues": [
+        {
+          "id": "plugins",
+          "source_time": 98.24,
+          "description": "一切皆可插件"
+        },
+        {
+          "id": "not-finished-app",
+          "source_time": 101.1,
+          "description": "不是下载就用的成品"
+        },
+        {
+          "id": "lego",
+          "source_time": 104.56,
+          "description": "自己说了算的乐高积木"
+        },
+        {
+          "id": "modules",
+          "source_time": 107.98,
+          "description": "模型、工具、记忆、界面"
+        },
+        {
+          "id": "swap",
+          "source_time": 111,
+          "description": "模块自由更换"
+        },
+        {
+          "id": "personal-agent",
+          "source_time": 113.04,
+          "description": "组合专属Agent"
+        },
+        {
+          "id": "ceiling",
+          "source_time": 117.08,
+          "description": "上限高"
+        }
+      ],
+      "copy_slots": [
+        {
+          "source": "插件管理",
+          "intervals": [
+            [
+              96.16,
+              104.56
+            ]
+          ]
+        },
+        {
+          "source": "官方插件管理界面 · 列表局部放大",
+          "intervals": [
+            [
+              96.16,
+              104.56
+            ]
+          ]
+        },
+        {
+          "source": "一切皆可插件",
+          "intervals": [
+            [
+              98.24,
+              104.56
+            ]
+          ]
+        },
+        {
+          "source": "模型",
+          "intervals": [
+            [
+              104.56,
+              119.88
+            ]
+          ]
+        },
+        {
+          "source": "插件模块",
+          "intervals": [
+            [
+              104.56,
+              108.093333
+            ]
+          ]
+        },
+        {
+          "source": "工具",
+          "intervals": [
+            [
+              104.56,
+              119.88
+            ]
+          ]
+        },
+        {
+          "source": "记忆",
+          "intervals": [
+            [
+              104.56,
+              111.093333
+            ]
+          ]
+        },
+        {
+          "source": "界面",
+          "intervals": [
+            [
+              104.56,
+              119.88
+            ]
+          ]
+        },
+        {
+          "source": "不是固定成品，是一套可组合模块",
+          "intervals": [
+            [
+              104.56,
+              108.093333
+            ]
+          ]
+        },
+        {
+          "source": "内容解释示意",
+          "intervals": [
+            [
+              104.56,
+              119.88
+            ]
+          ]
+        },
+        {
+          "source": "可独立替换",
+          "intervals": [
+            [
+              108.093333,
+              119.88
+            ]
+          ]
+        },
+        {
+          "source": "模型、工具、记忆、界面，都能换",
+          "intervals": [
+            [
+              108.093333,
+              113.16
+            ]
+          ]
+        },
+        {
+          "source": "拔出 → 换上",
+          "intervals": [
+            [
+              111.026667,
+              113.16
+            ]
+          ]
+        },
+        {
+          "source": "新记忆",
+          "intervals": [
+            [
+              111.093333,
+              119.88
+            ]
+          ]
+        },
+        {
+          "source": "你的专属",
+          "intervals": [
+            [
+              113.06,
+              119.88
+            ]
+          ]
+        },
+        {
+          "source": "Agent",
+          "intervals": [
+            [
+              113.06,
+              119.88
+            ]
+          ]
+        },
+        {
+          "source": "按你的习惯，组合工作方式",
+          "intervals": [
+            [
+              113.16,
+              119.88
+            ]
+          ]
+        }
+      ],
+      "media_slots": [
+        {
+          "key": "assets/deepseek-hero.webp",
+          "intervals": [
+            [
+              96.16,
+              104.56
+            ]
+          ],
+          "source_region": [
+            80,
+            625,
+            1100,
+            963
+          ],
+          "mapping": "cover new image crop into the original pixel-crop domain; preserve animated source crop"
+        }
+      ],
+      "logo_slots": [
+        {
+          "key": "deepseek",
+          "intervals": [
+            [
+              113.06,
+              119.88
+            ]
+          ]
+        }
+      ],
+      "constraints": [],
+      "selection": "optional complete design or explicitly bounded continuous subrange; not a required chapter sequence"
+    },
+    {
+      "id": "clarify-and-gate",
+      "label": "杂乱输入到清晰产出与门槛",
+      "engine": "BodyA",
+      "source_file": "source/body-a.js",
+      "source_sha256": "a082e4507c8eef3395048f62e9c391b6827b50f737a05b0d52b30b7d11d46d32",
+      "approved_scope": "original body design and continuous motion; original topic, product, ranking, opening and narration are not defaults",
+      "source_range": [
+        121.42,
+        148.24
+      ],
+      "source_viewport": {
+        "x": 426,
+        "y": 178,
+        "w": 1400,
+        "h": 724
+      },
+      "chapter": {
+        "id": "claude",
+        "start": 121.42,
+        "end": 149.14,
+        "cues": [
+          {
+            "id": "ability",
+            "start": 123.74,
+            "end": 128.24
+          },
+          {
+            "id": "messy-to-clear",
+            "start": 128.24,
+            "end": 133.28
+          },
+          {
+            "id": "clean-output",
+            "start": 133.28,
+            "end": 138.44
+          },
+          {
+            "id": "access",
+            "start": 138.44,
+            "end": 140.78
+          },
+          {
+            "id": "ban",
+            "start": 140.78,
+            "end": 144.98
+          }
+        ]
+      },
+      "cues": [
+        {
+          "id": "ability",
+          "source_time": 123.74,
+          "description": "模型能力第一梯队"
+        },
+        {
+          "id": "messy-to-clear",
+          "source_time": 128.24,
+          "description": "复杂需求整理清楚"
+        },
+        {
+          "id": "clean-output",
+          "source_time": 133.28,
+          "description": "干净代码与文案"
+        },
+        {
+          "id": "access",
+          "source_time": 138.44,
+          "description": "国内使用不友好"
+        },
+        {
+          "id": "ban",
+          "source_time": 140.78,
+          "description": "门槛高，工作中账号突然消失"
+        }
+      ],
+      "copy_slots": [
+        {
+          "source": "处理复杂需求",
+          "intervals": [
+            [
+              121.42,
+              128.24
+            ]
+          ]
+        },
+        {
+          "source": "官方历史界面 · 终端功能区放大",
+          "intervals": [
+            [
+              121.42,
+              128.24
+            ]
+          ]
+        },
+        {
+          "source": "改页面",
+          "intervals": [
+            [
+              128.24,
+              138.44
+            ]
+          ]
+        },
+        {
+          "source": "写文案",
+          "intervals": [
+            [
+              128.24,
+              138.44
+            ]
+          ]
+        },
+        {
+          "source": "补测试",
+          "intervals": [
+            [
+              128.24,
+              138.44
+            ]
+          ]
+        },
+        {
+          "source": "查资料",
+          "intervals": [
+            [
+              128.24,
+              138.44
+            ]
+          ]
+        },
+        {
+          "source": "修问题",
+          "intervals": [
+            [
+              128.24,
+              138.44
+            ]
+          ]
+        },
+        {
+          "source": "整理清楚",
+          "intervals": [
+            [
+              128.24,
+              138.44
+            ]
+          ]
+        },
+        {
+          "source": "1  明确目标",
+          "intervals": [
+            [
+              128.24,
+              138.44
+            ]
+          ]
+        },
+        {
+          "source": "2  拆出步骤",
+          "intervals": [
+            [
+              128.24,
+              138.44
+            ]
+          ]
+        },
+        {
+          "source": "3  形成交付",
+          "intervals": [
+            [
+              128.24,
+              138.44
+            ]
+          ]
+        },
+        {
+          "source": "先把混乱理顺，再往下做",
+          "intervals": [
+            [
+              128.24,
+              133.386667
+            ]
+          ]
+        },
+        {
+          "source": "内容解释示意",
+          "intervals": [
+            [
+              128.24,
+              138.44
+            ]
+          ]
+        },
+        {
+          "source": "整理后的交付",
+          "intervals": [
+            [
+              133.286667,
+              138.44
+            ]
+          ]
+        },
+        {
+          "source": "代码",
+          "intervals": [
+            [
+              133.286667,
+              138.44
+            ]
+          ]
+        },
+        {
+          "source": "文案",
+          "intervals": [
+            [
+              133.286667,
+              138.44
+            ]
+          ]
+        },
+        {
+          "source": "function deliver() {",
+          "intervals": [
+            [
+              133.286667,
+              138.44
+            ]
+          ]
+        },
+        {
+          "source": "  clarifyGoal();",
+          "intervals": [
+            [
+              133.286667,
+              138.44
+            ]
+          ]
+        },
+        {
+          "source": "  executePlan();",
+          "intervals": [
+            [
+              133.286667,
+              138.44
+            ]
+          ]
+        },
+        {
+          "source": "  return result;",
+          "intervals": [
+            [
+              133.286667,
+              138.44
+            ]
+          ]
+        },
+        {
+          "source": "}",
+          "intervals": [
+            [
+              133.286667,
+              138.44
+            ]
+          ]
+        },
+        {
+          "source": "复杂需求，变成清楚的交付",
+          "intervals": [
+            [
+              133.386667,
+              138.44
+            ]
+          ]
+        },
+        {
+          "source": "工作正在进行",
+          "intervals": [
+            [
+              138.44,
+              148.24
+            ]
+          ]
+        },
+        {
+          "source": "文案  /  代码  /  任务",
+          "intervals": [
+            [
+              138.44,
+              148.24
+            ]
+          ]
+        },
+        {
+          "source": "账号通行",
+          "intervals": [
+            [
+              138.44,
+              148.24
+            ]
+          ]
+        },
+        {
+          "source": "使用门槛",
+          "intervals": [
+            [
+              138.44,
+              140.886667
+            ]
+          ]
+        },
+        {
+          "source": "能力之外，还要考虑使用体验",
+          "intervals": [
+            [
+              138.44,
+              148.24
+            ]
+          ]
+        },
+        {
+          "source": "使用风险示意 · 非实际报错界面",
+          "intervals": [
+            [
+              138.44,
+              148.24
+            ]
+          ]
+        },
+        {
+          "source": "工作被中断",
+          "intervals": [
+            [
+              140.886667,
+              148.24
+            ]
+          ]
+        }
+      ],
+      "media_slots": [
+        {
+          "key": "assets/claude-hero.webp",
+          "intervals": [
+            [
+              121.42,
+              128.24
+            ]
+          ],
+          "source_region": [
+            300,
+            125,
+            1045,
+            465
+          ],
+          "mapping": "cover new image crop into the original pixel-crop domain; preserve animated source crop"
+        }
+      ],
+      "logo_slots": [
+        {
+          "key": "claude",
+          "intervals": [
+            [
+              138.44,
+              148.24
+            ]
+          ]
+        }
+      ],
+      "constraints": [],
+      "selection": "optional complete design or explicitly bounded continuous subrange; not a required chapter sequence"
+    },
+    {
+      "id": "cross-device-continuity",
+      "label": "同一任务跨设备继续",
+      "engine": "BodyB",
+      "source_file": "source/body-b.js",
+      "source_sha256": "d87d39e15ac6da2e409cd66a7651fb69d727edcb5ba7b0310330af403bff7fe2",
+      "approved_scope": "original body design and continuous motion; original topic, product, ranking, opening and narration are not defaults",
+      "source_range": [
+        149.14,
+        177.94
+      ],
+      "source_viewport": {
+        "x": 426,
+        "y": 178,
+        "w": 1400,
+        "h": 724
+      },
+      "chapter": {
+        "id": "trae",
+        "start": 149.14,
+        "end": 178.9,
+        "cues": [
+          {
+            "id": "three-modes",
+            "start": 150.86,
+            "end": 156.9
+          },
+          {
+            "id": "history",
+            "start": 156.9,
+            "end": 162.72
+          },
+          {
+            "id": "cross-device",
+            "start": 162.72,
+            "end": 166.72
+          },
+          {
+            "id": "revision",
+            "start": 166.72,
+            "end": 169.92
+          },
+          {
+            "id": "rules-queue",
+            "start": 169.92,
+            "end": 174.04
+          },
+          {
+            "id": "quota",
+            "start": 174.04,
+            "end": 176.68
+          }
+        ]
+      },
+      "cues": [
+        {
+          "id": "three-modes",
+          "source_time": 150.86,
+          "description": "办公、代码、设计进入同一个工作区"
+        },
+        {
+          "id": "material-end",
+          "source_time": 153.2,
+          "description": "原素材从完整展示连续收至次要证据位置；仅图形时钟锚点"
+        },
+        {
+          "id": "history",
+          "source_time": 156.9,
+          "description": "资料代码页面与历史记录同项目"
+        },
+        {
+          "id": "cross-device",
+          "source_time": 162.72,
+          "description": "电脑没干完的活转网页继续"
+        },
+        {
+          "id": "revision",
+          "source_time": 166.72,
+          "description": "来回修改"
+        },
+        {
+          "id": "rules-queue",
+          "source_time": 169.92,
+          "description": "积分排队和规则变化"
+        },
+        {
+          "id": "quota",
+          "source_time": 174.04,
+          "description": "任务一半，额度先归零"
+        }
+      ],
+      "copy_slots": [
+        {
+          "source": "TRAE Work · 从一个工作区开始",
+          "intervals": [
+            [
+              149.14,
+              153.2
+            ]
+          ]
+        },
+        {
+          "source": "官方未登录网页局部 · 原始静态素材",
+          "intervals": [
+            [
+              149.14,
+              153.2
+            ]
+          ]
+        },
+        {
+          "source": "讲解示意",
+          "intervals": [
+            [
+              153.2,
+              177.94
+            ]
+          ]
+        },
+        {
+          "source": "办公 · 代码 · 设计 → 同一工作区",
+          "intervals": [
+            [
+              153.2,
+              156.9
+            ]
+          ]
+        },
+        {
+          "source": "项目 A",
+          "intervals": [
+            [
+              153.2,
+              162.72
+            ]
+          ]
+        },
+        {
+          "source": "同一工作区",
+          "intervals": [
+            [
+              153.2,
+              162.72
+            ]
+          ]
+        },
+        {
+          "source": "DOC",
+          "intervals": [
+            [
+              153.2,
+              162.72
+            ]
+          ]
+        },
+        {
+          "source": "办公",
+          "intervals": [
+            [
+              153.2,
+              162.72
+            ]
+          ]
+        },
+        {
+          "source": "</>",
+          "intervals": [
+            [
+              153.2,
+              162.72
+            ]
+          ]
+        },
+        {
+          "source": "代码",
+          "intervals": [
+            [
+              153.2,
+              162.72
+            ]
+          ]
+        },
+        {
+          "source": "Aa",
+          "intervals": [
+            [
+              153.2,
+              162.72
+            ]
+          ]
+        },
+        {
+          "source": "设计",
+          "intervals": [
+            [
+              153.2,
+              162.72
+            ]
+          ]
+        },
+        {
+          "source": "一份项目承接资料、代码、页面与历史",
+          "intervals": [
+            [
+              153.2,
+              162.72
+            ]
+          ]
+        },
+        {
+          "source": "官方素材局部",
+          "intervals": [
+            [
+              153.506667,
+              156.9
+            ]
+          ]
+        },
+        {
+          "source": "资料、代码、页面，都留在项目里",
+          "intervals": [
+            [
+              156.9,
+              162.72
+            ]
+          ]
+        },
+        {
+          "source": "资料.pdf",
+          "intervals": [
+            [
+              156.906667,
+              162.72
+            ]
+          ]
+        },
+        {
+          "source": "页面.tsx",
+          "intervals": [
+            [
+              156.906667,
+              162.72
+            ]
+          ]
+        },
+        {
+          "source": "修改记录",
+          "intervals": [
+            [
+              156.906667,
+              162.72
+            ]
+          ]
+        },
+        {
+          "source": "历史跟着项目走",
+          "intervals": [
+            [
+              156.906667,
+              162.72
+            ]
+          ]
+        },
+        {
+          "source": "同一个项目，换个入口接着做",
+          "intervals": [
+            [
+              162.72,
+              169.92
+            ]
+          ]
+        },
+        {
+          "source": "桌面端",
+          "intervals": [
+            [
+              162.72,
+              177.94
+            ]
+          ]
+        },
+        {
+          "source": "网页端",
+          "intervals": [
+            [
+              162.72,
+              177.94
+            ]
+          ]
+        },
+        {
+          "source": "本期项目",
+          "intervals": [
+            [
+              162.72,
+              177.94
+            ]
+          ]
+        },
+        {
+          "source": "接续当前进度",
+          "intervals": [
+            [
+              162.72,
+              166.72
+            ]
+          ]
+        },
+        {
+          "source": "桌面 → 网页：交接的是同一个任务",
+          "intervals": [
+            [
+              162.72,
+              174.04
+            ]
+          ]
+        },
+        {
+          "source": "同一项目 A",
+          "intervals": [
+            [
+              162.74,
+              177.94
+            ]
+          ]
+        },
+        {
+          "source": "修改第 2 版",
+          "intervals": [
+            [
+              166.72,
+              169.92
+            ]
+          ]
+        },
+        {
+          "source": "修改记录 01 → 02",
+          "intervals": [
+            [
+              166.74,
+              177.94
+            ]
+          ]
+        },
+        {
+          "source": "修改还在继续，规则先变了",
+          "intervals": [
+            [
+              169.92,
+              174.04
+            ]
+          ]
+        },
+        {
+          "source": "排队等待",
+          "intervals": [
+            [
+              169.92,
+              174.04
+            ]
+          ]
+        },
+        {
+          "source": "积分余额",
+          "intervals": [
+            [
+              169.94,
+              177.94
+            ]
+          ]
+        },
+        {
+          "source": "排队 · 计费 · 规则",
+          "intervals": [
+            [
+              169.94,
+              174.04
+            ]
+          ]
+        },
+        {
+          "source": "活干到一半，额度先归零",
+          "intervals": [
+            [
+              174.04,
+              177.94
+            ]
+          ]
+        },
+        {
+          "source": "额度不足 · 已暂停",
+          "intervals": [
+            [
+              174.04,
+              177.94
+            ]
+          ]
+        },
+        {
+          "source": "余额耗尽",
+          "intervals": [
+            [
+              174.04,
+              177.94
+            ]
+          ]
+        },
+        {
+          "source": "任务进度停住，接力链路也被切断",
+          "intervals": [
+            [
+              174.04,
+              177.94
+            ]
+          ]
+        }
+      ],
+      "media_slots": [
+        {
+          "key": "@hero/trae",
+          "intervals": [
+            [
+              149.14,
+              156.9
+            ]
+          ],
+          "source_region": [
+            470,
+            260,
+            950,
+            430
+          ],
+          "mapping": "cover new image crop into the original pixel-crop domain; preserve animated source crop"
+        }
+      ],
+      "logo_slots": [],
+      "constraints": [],
+      "selection": "optional complete design or explicitly bounded continuous subrange; not a required chapter sequence"
+    },
+    {
+      "id": "remote-execution-chain",
+      "label": "远程指令到执行维护",
+      "engine": "BodyB",
+      "source_file": "source/body-b.js",
+      "source_sha256": "d87d39e15ac6da2e409cd66a7651fb69d727edcb5ba7b0310330af403bff7fe2",
+      "approved_scope": "original body design and continuous motion; original topic, product, ranking, opening and narration are not defaults",
+      "source_range": [
+        178.9,
+        205.58
+      ],
+      "source_viewport": {
+        "x": 426,
+        "y": 178,
+        "w": 1400,
+        "h": 724
+      },
+      "chapter": {
+        "id": "openclaw",
+        "start": 178.9,
+        "end": 206.92,
+        "cues": [
+          {
+            "id": "lobster",
+            "start": 178.9,
+            "end": 184.78
+          },
+          {
+            "id": "remote",
+            "start": 184.78,
+            "end": 190.46
+          },
+          {
+            "id": "common",
+            "start": 190.46,
+            "end": 196.2
+          },
+          {
+            "id": "setup",
+            "start": 196.62,
+            "end": 201.06
+          },
+          {
+            "id": "maintenance",
+            "start": 201.06,
+            "end": 202.84
+          },
+          {
+            "id": "ordinary-user",
+            "start": 202.84,
+            "end": 205.1
+          }
+        ]
+      },
+      "cues": [
+        {
+          "id": "remote",
+          "source_time": 184.78,
+          "description": "微信飞书远程叫电脑24小时跑任务"
+        },
+        {
+          "id": "common",
+          "source_time": 190.46,
+          "description": "远程定时已经常见"
+        },
+        {
+          "id": "setup",
+          "source_time": 196.62,
+          "description": "配置模型、API、插件"
+        },
+        {
+          "id": "maintenance",
+          "source_time": 201.06,
+          "description": "崩了自己维护"
+        },
+        {
+          "id": "ordinary-user",
+          "source_time": 202.84,
+          "description": "普通人不建议折腾"
+        }
+      ],
+      "copy_slots": [
+        {
+          "source": "OpenClaw · 小龙虾",
+          "intervals": [
+            [
+              178.9,
+              184.78
+            ]
+          ]
+        },
+        {
+          "source": "官方品牌宣传图 · 非软件操作界面",
+          "intervals": [
+            [
+              178.9,
+              184.78
+            ]
+          ]
+        },
+        {
+          "source": "讲解示意",
+          "intervals": [
+            [
+              184.78,
+              205.58
+            ]
+          ]
+        },
+        {
+          "source": "手机发指令，电脑接着干活",
+          "intervals": [
+            [
+              184.78,
+              190.46
+            ]
+          ]
+        },
+        {
+          "source": "手机消息",
+          "intervals": [
+            [
+              184.78,
+              205.58
+            ]
+          ]
+        },
+        {
+          "source": "把任务跑完",
+          "intervals": [
+            [
+              184.78,
+              205.58
+            ]
+          ]
+        },
+        {
+          "source": "远程指令",
+          "intervals": [
+            [
+              184.78,
+              205.58
+            ]
+          ]
+        },
+        {
+          "source": "已发送",
+          "intervals": [
+            [
+              184.78,
+              205.58
+            ]
+          ]
+        },
+        {
+          "source": "你的电脑",
+          "intervals": [
+            [
+              184.78,
+              205.58
+            ]
+          ]
+        },
+        {
+          "source": "本期项目",
+          "intervals": [
+            [
+              184.78,
+              196.62
+            ]
+          ]
+        },
+        {
+          "source": "定时执行 · 持续运行",
+          "intervals": [
+            [
+              184.78,
+              196.62
+            ]
+          ]
+        },
+        {
+          "source": "24 h",
+          "intervals": [
+            [
+              184.78,
+              196.62
+            ]
+          ]
+        },
+        {
+          "source": "消息触发任务；场景动画为功能讲解",
+          "intervals": [
+            [
+              184.78,
+              196.62
+            ]
+          ]
+        },
+        {
+          "source": "远程、定时，逐渐成为常见能力",
+          "intervals": [
+            [
+              190.46,
+              196.62
+            ]
+          ]
+        },
+        {
+          "source": "远程调用",
+          "intervals": [
+            [
+              190.466667,
+              196.62
+            ]
+          ]
+        },
+        {
+          "source": "定时任务",
+          "intervals": [
+            [
+              190.466667,
+              196.62
+            ]
+          ]
+        },
+        {
+          "source": "结果回传",
+          "intervals": [
+            [
+              190.466667,
+              196.62
+            ]
+          ]
+        },
+        {
+          "source": "这些能力不再稀缺",
+          "intervals": [
+            [
+              190.466667,
+              196.62
+            ]
+          ]
+        },
+        {
+          "source": "能力跑起来之前，要先自己装好",
+          "intervals": [
+            [
+              196.62,
+              201.06
+            ]
+          ]
+        },
+        {
+          "source": "模型",
+          "intervals": [
+            [
+              196.62,
+              205.58
+            ]
+          ]
+        },
+        {
+          "source": "API",
+          "intervals": [
+            [
+              196.62,
+              205.58
+            ]
+          ]
+        },
+        {
+          "source": "插件",
+          "intervals": [
+            [
+              196.62,
+              205.58
+            ]
+          ]
+        },
+        {
+          "source": "等待接通",
+          "intervals": [
+            [
+              196.62,
+              201.06
+            ]
+          ]
+        },
+        {
+          "source": "把零件逐一接入",
+          "intervals": [
+            [
+              196.62,
+              201.06
+            ]
+          ]
+        },
+        {
+          "source": "装配、排障、维护成本，由使用者承担",
+          "intervals": [
+            [
+              196.62,
+              205.58
+            ]
+          ]
+        },
+        {
+          "source": "一处故障，整条链路停住",
+          "intervals": [
+            [
+              201.06,
+              202.84
+            ]
+          ]
+        },
+        {
+          "source": "任务中断",
+          "intervals": [
+            [
+              201.06,
+              205.58
+            ]
+          ]
+        },
+        {
+          "source": "检查模型 / 密钥 / 插件",
+          "intervals": [
+            [
+              201.06,
+              205.58
+            ]
+          ]
+        },
+        {
+          "source": "最后，维护工作回到你手里",
+          "intervals": [
+            [
+              202.84,
+              205.58
+            ]
+          ]
+        },
+        {
+          "source": "待你处理：修复并重启",
+          "intervals": [
+            [
+              202.866667,
+              205.58
+            ]
+          ]
+        }
+      ],
+      "media_slots": [
+        {
+          "key": "@hero/openclaw",
+          "intervals": [
+            [
+              178.9,
+              184.78
+            ]
+          ]
+        }
+      ],
+      "logo_slots": [],
+      "constraints": [],
+      "selection": "optional complete design or explicitly bounded continuous subrange; not a required chapter sequence"
+    },
+    {
+      "id": "capacity-and-bottleneck",
+      "label": "数量能力与实际瓶颈",
+      "engine": "BodyB",
+      "source_file": "source/body-b.js",
+      "source_sha256": "d87d39e15ac6da2e409cd66a7651fb69d727edcb5ba7b0310330af403bff7fe2",
+      "approved_scope": "original body design and continuous motion; original topic, product, ranking, opening and narration are not defaults",
+      "source_range": [
+        206.92,
+        237.52
+      ],
+      "source_viewport": {
+        "x": 426,
+        "y": 178,
+        "w": 1400,
+        "h": 724
+      },
+      "chapter": {
+        "id": "kimi",
+        "start": 206.92,
+        "end": 238.64,
+        "cues": [
+          {
+            "id": "300-agents",
+            "start": 208.58,
+            "end": 212.5
+          },
+          {
+            "id": "database",
+            "start": 212.5,
+            "end": 217.26
+          },
+          {
+            "id": "not-300-speed",
+            "start": 217.26,
+            "end": 222.6
+          },
+          {
+            "id": "lag",
+            "start": 222.6,
+            "end": 225.78
+          },
+          {
+            "id": "thinking",
+            "start": 225.78,
+            "end": 229.8
+          },
+          {
+            "id": "broken-code",
+            "start": 229.8,
+            "end": 232.02
+          },
+          {
+            "id": "restore-yourself",
+            "start": 232.02,
+            "end": 234.5
+          },
+          {
+            "id": "promise-reality",
+            "start": 234.5,
+            "end": 236.54
+          }
+        ]
+      },
+      "cues": [
+        {
+          "id": "300-agents",
+          "source_time": 208.58,
+          "description": "宣传同时三百Agent"
+        },
+        {
+          "id": "material-end",
+          "source_time": 211.1,
+          "description": "原素材从完整展示连续收至次要证据位置；仅图形时钟锚点"
+        },
+        {
+          "id": "database",
+          "source_time": 212.5,
+          "description": "金融学术数据库，投研论文"
+        },
+        {
+          "id": "not-300-speed",
+          "source_time": 217.26,
+          "description": "三百Agent不等于三百倍效率"
+        },
+        {
+          "id": "lag",
+          "source_time": 222.6,
+          "description": "窗口卡、上下文慢"
+        },
+        {
+          "id": "thinking",
+          "source_time": 225.78,
+          "description": "长时间思考"
+        },
+        {
+          "id": "broken-code",
+          "source_time": 229.8,
+          "description": "代码改崩"
+        },
+        {
+          "id": "restore-yourself",
+          "source_time": 232.02,
+          "description": "让你自己找回原版"
+        },
+        {
+          "id": "promise-reality",
+          "source_time": 234.5,
+          "description": "承诺与落地落差"
+        }
+      ],
+      "copy_slots": [
+        {
+          "source": "Kimi Work · 官方任务入口",
+          "intervals": [
+            [
+              206.92,
+              211.1
+            ]
+          ]
+        },
+        {
+          "source": "官方界面素材局部 · Agent / Agent 集群入口",
+          "intervals": [
+            [
+              206.92,
+              211.1
+            ]
+          ]
+        },
+        {
+          "source": "讲解示意",
+          "intervals": [
+            [
+              211.1,
+              237.52
+            ]
+          ]
+        },
+        {
+          "source": "300 个小单位，聚合一项任务",
+          "intervals": [
+            [
+              211.1,
+              212.5
+            ]
+          ]
+        },
+        {
+          "source": "20 × 15 = 300",
+          "intervals": [
+            [
+              211.1,
+              229.8
+            ]
+          ]
+        },
+        {
+          "source": "数量是分工规模，不能直接当作效率倍数",
+          "intervals": [
+            [
+              211.1,
+              229.8
+            ]
+          ]
+        },
+        {
+          "source": "官方素材局部",
+          "intervals": [
+            [
+              211.42,
+              212.5
+            ]
+          ]
+        },
+        {
+          "source": "并发分工，汇入一份研究结果",
+          "intervals": [
+            [
+              212.5,
+              217.26
+            ]
+          ]
+        },
+        {
+          "source": "研究报告",
+          "intervals": [
+            [
+              212.52,
+              229.8
+            ]
+          ]
+        },
+        {
+          "source": "投研 / 论文",
+          "intervals": [
+            [
+              212.52,
+              229.8
+            ]
+          ]
+        },
+        {
+          "source": "资料 → 分析 → 汇总",
+          "intervals": [
+            [
+              212.52,
+              229.8
+            ]
+          ]
+        },
+        {
+          "source": "300 个 Agent ≠ 300 倍效率",
+          "intervals": [
+            [
+              217.26,
+              222.6
+            ]
+          ]
+        },
+        {
+          "source": "≠ 300×",
+          "intervals": [
+            [
+              217.286667,
+              229.8
+            ]
+          ]
+        },
+        {
+          "source": "更多单元，挤过同一段上下文",
+          "intervals": [
+            [
+              222.6,
+              225.78
+            ]
+          ]
+        },
+        {
+          "source": "上下文",
+          "intervals": [
+            [
+              222.6,
+              229.8
+            ]
+          ]
+        },
+        {
+          "source": "处理瓶颈",
+          "intervals": [
+            [
+              222.6,
+              229.8
+            ]
+          ]
+        },
+        {
+          "source": "任务仍停在“思考中”",
+          "intervals": [
+            [
+              225.78,
+              229.8
+            ]
+          ]
+        },
+        {
+          "source": "思考中…",
+          "intervals": [
+            [
+              225.78,
+              229.8
+            ]
+          ]
+        },
+        {
+          "source": "同一份代码，改完却跑不起来",
+          "intervals": [
+            [
+              229.8,
+              232.02
+            ]
+          ]
+        },
+        {
+          "source": "project / app.tsx",
+          "intervals": [
+            [
+              229.8,
+              237.52
+            ]
+          ]
+        },
+        {
+          "source": "function buildReport(data) {",
+          "intervals": [
+            [
+              229.8,
+              237.52
+            ]
+          ]
+        },
+        {
+          "source": "  const result = analyze(data);",
+          "intervals": [
+            [
+              229.8,
+              237.52
+            ]
+          ]
+        },
+        {
+          "source": "  return result.rows.map(render);",
+          "intervals": [
+            [
+              229.8,
+              237.52
+            ]
+          ]
+        },
+        {
+          "source": "}",
+          "intervals": [
+            [
+              229.8,
+              237.52
+            ]
+          ]
+        },
+        {
+          "source": "运行失败：报告未生成",
+          "intervals": [
+            [
+              229.8,
+              232.02
+            ]
+          ]
+        },
+        {
+          "source": "代码修改与恢复动作均为讲解示意",
+          "intervals": [
+            [
+              229.8,
+              237.52
+            ]
+          ]
+        },
+        {
+          "source": "原版恢复，又交回给使用者",
+          "intervals": [
+            [
+              232.02,
+              237.52
+            ]
+          ]
+        },
+        {
+          "source": "请找回之前的版本",
+          "intervals": [
+            [
+              232.02,
+              237.52
+            ]
+          ]
+        },
+        {
+          "source": "原版文件",
+          "intervals": [
+            [
+              232.02,
+              237.52
+            ]
+          ]
+        },
+        {
+          "source": "恢复动作交回用户",
+          "intervals": [
+            [
+              232.02,
+              237.52
+            ]
+          ]
+        },
+        {
+          "source": "承诺  ≠  落地",
+          "intervals": [
+            [
+              234.52,
+              237.52
+            ]
+          ]
+        }
+      ],
+      "media_slots": [
+        {
+          "key": "@hero/kimi",
+          "intervals": [
+            [
+              206.92,
+              212.5
+            ]
+          ],
+          "source_region": [
+            1040,
+            600,
+            1820,
+            720
+          ],
+          "mapping": "cover new image crop into the original pixel-crop domain; preserve animated source crop"
+        }
+      ],
+      "logo_slots": [],
+      "constraints": [
+        "The original geometry contains 300 small units (20 x 15). Copy replacement alone cannot change this quantity. Select this design only when this quantity is meaningful, or explicitly label the illustration as schematic."
+      ],
+      "selection": "optional complete design or explicitly bounded continuous subrange; not a required chapter sequence"
+    },
+    {
+      "id": "editable-change-undo",
+      "label": "定位修改到差异与撤销",
+      "engine": "BodyB",
+      "source_file": "source/body-b.js",
+      "source_sha256": "d87d39e15ac6da2e409cd66a7651fb69d727edcb5ba7b0310330af403bff7fe2",
+      "approved_scope": "original body design and continuous motion; original topic, product, ranking, opening and narration are not defaults",
+      "source_range": [
+        238.64,
+        266.34
+      ],
+      "source_viewport": {
+        "x": 426,
+        "y": 178,
+        "w": 1400,
+        "h": 724
+      },
+      "chapter": {
+        "id": "cursor",
+        "start": 238.64,
+        "end": 268.4,
+        "cues": [
+          {
+            "id": "models",
+            "start": 242.52,
+            "end": 247.96
+          },
+          {
+            "id": "editor",
+            "start": 247.96,
+            "end": 252.76
+          },
+          {
+            "id": "request",
+            "start": 252.76,
+            "end": 254.54
+          },
+          {
+            "id": "find-change-run",
+            "start": 254.54,
+            "end": 257.1
+          },
+          {
+            "id": "diff",
+            "start": 257.1,
+            "end": 258.96
+          },
+          {
+            "id": "undo",
+            "start": 258.96,
+            "end": 260.8
+          },
+          {
+            "id": "own-model",
+            "start": 260.8,
+            "end": 263.22
+          },
+          {
+            "id": "beginner-editor",
+            "start": 263.22,
+            "end": 266.26
+          }
+        ]
+      },
+      "cues": [
+        {
+          "id": "models",
+          "source_time": 242.52,
+          "description": "Claude、GPT、Gemini、自有模型"
+        },
+        {
+          "id": "editor",
+          "source_time": 247.96,
+          "description": "编程工具集中编辑器"
+        },
+        {
+          "id": "request",
+          "source_time": 252.76,
+          "description": "打开项目提需求"
+        },
+        {
+          "id": "find-change-run",
+          "source_time": 254.54,
+          "description": "找文件、改代码、跑命令"
+        },
+        {
+          "id": "diff",
+          "source_time": 257.1,
+          "description": "高亮修改"
+        },
+        {
+          "id": "undo",
+          "source_time": 258.96,
+          "description": "一键撤回"
+        },
+        {
+          "id": "own-model",
+          "source_time": 260.8,
+          "description": "自研模型局限"
+        },
+        {
+          "id": "beginner-editor",
+          "source_time": 263.22,
+          "description": "容易上手的代码编辑器"
+        }
+      ],
+      "copy_slots": [
+        {
+          "source": "Cursor · 先看真实工作区",
+          "intervals": [
+            [
+              238.64,
+              242.52
+            ]
+          ]
+        },
+        {
+          "source": "官网 Desktop 展示区局部 · 静态官方素材，非实操录屏",
+          "intervals": [
+            [
+              238.64,
+              247.96
+            ]
+          ]
+        },
+        {
+          "source": "同一个编辑器，容纳不同模型",
+          "intervals": [
+            [
+              242.52,
+              247.96
+            ]
+          ]
+        },
+        {
+          "source": "稿中提到的模型",
+          "intervals": [
+            [
+              242.54,
+              247.96
+            ]
+          ]
+        },
+        {
+          "source": "Claude",
+          "intervals": [
+            [
+              242.54,
+              266.34
+            ]
+          ]
+        },
+        {
+          "source": "GPT",
+          "intervals": [
+            [
+              242.54,
+              266.34
+            ]
+          ]
+        },
+        {
+          "source": "Gemini",
+          "intervals": [
+            [
+              242.54,
+              266.34
+            ]
+          ]
+        },
+        {
+          "source": "自有模型",
+          "intervals": [
+            [
+              242.54,
+              266.34
+            ]
+          ]
+        },
+        {
+          "source": "讲解示意",
+          "intervals": [
+            [
+              247.96,
+              266.34
+            ]
+          ]
+        },
+        {
+          "source": "文件、模型、命令，集中在同一处",
+          "intervals": [
+            [
+              247.96,
+              252.76
+            ]
+          ]
+        },
+        {
+          "source": "PROJECT / 编辑器工作流",
+          "intervals": [
+            [
+              247.96,
+              266.34
+            ]
+          ]
+        },
+        {
+          "source": "项目 A",
+          "intervals": [
+            [
+              247.96,
+              266.34
+            ]
+          ]
+        },
+        {
+          "source": "  src/",
+          "intervals": [
+            [
+              247.96,
+              266.34
+            ]
+          ]
+        },
+        {
+          "source": "  app.tsx",
+          "intervals": [
+            [
+              247.96,
+              266.34
+            ]
+          ]
+        },
+        {
+          "source": "  utils.ts",
+          "intervals": [
+            [
+              247.96,
+              266.34
+            ]
+          ]
+        },
+        {
+          "source": "  package.json",
+          "intervals": [
+            [
+              247.96,
+              266.34
+            ]
+          ]
+        },
+        {
+          "source": "const project = open(\"project-a\");",
+          "intervals": [
+            [
+              247.96,
+              266.34
+            ]
+          ]
+        },
+        {
+          "source": "const output = run(task);",
+          "intervals": [
+            [
+              247.96,
+              254.54
+            ],
+            [
+              258.96,
+              266.34
+            ]
+          ]
+        },
+        {
+          "source": "render(output);",
+          "intervals": [
+            [
+              247.96,
+              266.34
+            ]
+          ]
+        },
+        {
+          "source": "终端与任务区",
+          "intervals": [
+            [
+              247.96,
+              252.76
+            ]
+          ]
+        },
+        {
+          "source": "等待输入",
+          "intervals": [
+            [
+              247.96,
+              254.54
+            ]
+          ]
+        },
+        {
+          "source": "代码与操作为讲解示意；真实产品页面在本段开头展示",
+          "intervals": [
+            [
+              247.96,
+              266.34
+            ]
+          ]
+        },
+        {
+          "source": "打开项目，直接提需求",
+          "intervals": [
+            [
+              252.76,
+              254.54
+            ]
+          ]
+        },
+        {
+          "source": "需求：让这个任务自动完成",
+          "intervals": [
+            [
+              252.76,
+              266.34
+            ]
+          ]
+        },
+        {
+          "source": "找文件 → 改代码 → 跑命令",
+          "intervals": [
+            [
+              254.54,
+              257.1
+            ]
+          ]
+        },
+        {
+          "source": "const output = await agent.run(task);",
+          "intervals": [
+            [
+              254.54,
+              258.96
+            ]
+          ]
+        },
+        {
+          "source": "$ run project   →  执行完成",
+          "intervals": [
+            [
+              254.54,
+              258.96
+            ]
+          ]
+        },
+        {
+          "source": "改在哪里，看得见",
+          "intervals": [
+            [
+              257.1,
+              258.96
+            ]
+          ]
+        },
+        {
+          "source": "+ 修改高亮",
+          "intervals": [
+            [
+              257.1,
+              258.96
+            ]
+          ]
+        },
+        {
+          "source": "同一处修改，一键撤回",
+          "intervals": [
+            [
+              258.96,
+              260.8
+            ]
+          ]
+        },
+        {
+          "source": "已撤回到修改前",
+          "intervals": [
+            [
+              258.96,
+              266.34
+            ]
+          ]
+        },
+        {
+          "source": "↶ 撤回",
+          "intervals": [
+            [
+              258.96,
+              266.34
+            ]
+          ]
+        },
+        {
+          "source": "模型选择，仍要匹配任务",
+          "intervals": [
+            [
+              260.8,
+              263.22
+            ]
+          ]
+        },
+        {
+          "source": "把编程操作收进一个编辑器",
+          "intervals": [
+            [
+              263.22,
+              266.34
+            ]
+          ]
+        }
+      ],
+      "media_slots": [
+        {
+          "key": "@hero/cursor",
+          "intervals": [
+            [
+              238.64,
+              247.96
+            ]
+          ],
+          "source_region": [
+            260,
+            367,
+            1080,
+            403
+          ],
+          "mapping": "cover new image crop into the original pixel-crop domain; preserve animated source crop"
+        }
+      ],
+      "logo_slots": [],
+      "constraints": [],
+      "selection": "optional complete design or explicitly bounded continuous subrange; not a required chapter sequence"
+    },
+    {
+      "id": "tool-convergence",
+      "label": "多项工具汇入一个工作台",
+      "engine": "BodyB",
+      "source_file": "source/body-b.js",
+      "source_sha256": "d87d39e15ac6da2e409cd66a7651fb69d727edcb5ba7b0310330af403bff7fe2",
+      "approved_scope": "original body design and continuous motion; original topic, product, ranking, opening and narration are not defaults",
+      "source_range": [
+        268.4,
+        290.7
+      ],
+      "source_viewport": {
+        "x": 426,
+        "y": 178,
+        "w": 1400,
+        "h": 724
+      },
+      "chapter": {
+        "id": "qwen",
+        "start": 268.4,
+        "end": 291.84,
+        "cues": [
+          {
+            "id": "integration",
+            "start": 270.64,
+            "end": 277.62
+          },
+          {
+            "id": "chat-office-web",
+            "start": 277.62,
+            "end": 280.78
+          },
+          {
+            "id": "internal-tools",
+            "start": 280.78,
+            "end": 283.92
+          },
+          {
+            "id": "team",
+            "start": 284.36,
+            "end": 286.54
+          },
+          {
+            "id": "memberships",
+            "start": 286.54,
+            "end": 289.2
+          }
+        ]
+      },
+      "cues": [
+        {
+          "id": "integration",
+          "source_time": 270.64,
+          "description": "各工具零碎能力打包"
+        },
+        {
+          "id": "material-end",
+          "source_time": 272.9,
+          "description": "原素材从完整展示连续收至次要证据位置；仅图形时钟锚点"
+        },
+        {
+          "id": "chat-office-web",
+          "source_time": 277.62,
+          "description": "聊天、Office、网页"
+        },
+        {
+          "id": "internal-tools",
+          "source_time": 280.78,
+          "description": "内部办公软件，一地集中"
+        },
+        {
+          "id": "team",
+          "source_time": 284.36,
+          "description": "公司团队省心"
+        },
+        {
+          "id": "memberships",
+          "source_time": 286.54,
+          "description": "不用分买会员插件"
+        }
+      ],
+      "copy_slots": [
+        {
+          "source": "千问办公 · 多项能力聚在这里",
+          "intervals": [
+            [
+              268.4,
+              272.9
+            ]
+          ]
+        },
+        {
+          "source": "官方界面素材局部 · 任务输入与办公能力入口",
+          "intervals": [
+            [
+              268.4,
+              272.9
+            ]
+          ]
+        },
+        {
+          "source": "讲解示意",
+          "intervals": [
+            [
+              272.9,
+              290.7
+            ]
+          ]
+        },
+        {
+          "source": "把分散的能力，收进一个工作台",
+          "intervals": [
+            [
+              272.9,
+              277.62
+            ]
+          ]
+        },
+        {
+          "source": "工作台",
+          "intervals": [
+            [
+              272.9,
+              290.7
+            ]
+          ]
+        },
+        {
+          "source": "同一份任务",
+          "intervals": [
+            [
+              272.9,
+              290.7
+            ]
+          ]
+        },
+        {
+          "source": "Aa",
+          "intervals": [
+            [
+              272.9,
+              290.7
+            ]
+          ]
+        },
+        {
+          "source": "聊天",
+          "intervals": [
+            [
+              272.9,
+              290.7
+            ]
+          ]
+        },
+        {
+          "source": "W / X",
+          "intervals": [
+            [
+              272.9,
+              290.7
+            ]
+          ]
+        },
+        {
+          "source": "Office",
+          "intervals": [
+            [
+              272.9,
+              290.7
+            ]
+          ]
+        },
+        {
+          "source": "www",
+          "intervals": [
+            [
+              272.9,
+              290.7
+            ]
+          ]
+        },
+        {
+          "source": "网页",
+          "intervals": [
+            [
+              272.9,
+              290.7
+            ]
+          ]
+        },
+        {
+          "source": "围绕同一项工作汇合，减少工具间搬运",
+          "intervals": [
+            [
+              272.9,
+              290.7
+            ]
+          ]
+        },
+        {
+          "source": "官方素材局部",
+          "intervals": [
+            [
+              273.233333,
+              277.62
+            ]
+          ]
+        },
+        {
+          "source": "聊天、Office、网页，围绕同一项工作",
+          "intervals": [
+            [
+              277.62,
+              280.78
+            ]
+          ]
+        },
+        {
+          "source": "资料 → 处理 → 交付",
+          "intervals": [
+            [
+              277.633333,
+              290.7
+            ]
+          ]
+        },
+        {
+          "source": "内部办公工具，也接进来",
+          "intervals": [
+            [
+              280.78,
+              284.36
+            ]
+          ]
+        },
+        {
+          "source": "内部文档",
+          "intervals": [
+            [
+              280.78,
+              290.7
+            ]
+          ]
+        },
+        {
+          "source": "团队系统",
+          "intervals": [
+            [
+              280.78,
+              290.7
+            ]
+          ]
+        },
+        {
+          "source": "团队在同一处接着协作",
+          "intervals": [
+            [
+              284.36,
+              286.54
+            ]
+          ]
+        },
+        {
+          "source": "共同工作",
+          "intervals": [
+            [
+              284.36,
+              290.7
+            ]
+          ]
+        },
+        {
+          "source": "少几份单独订阅，少几次来回切换",
+          "intervals": [
+            [
+              286.54,
+              290.7
+            ]
+          ]
+        },
+        {
+          "source": "多入口 → 一处",
+          "intervals": [
+            [
+              286.566667,
+              290.7
+            ]
+          ]
+        }
+      ],
+      "media_slots": [
+        {
+          "key": "assets/qwen-hero-safe.png",
+          "intervals": [
+            [
+              268.4,
+              277.62
+            ]
+          ],
+          "source_region": [
+            470,
+            235,
+            790,
+            270
+          ],
+          "mapping": "cover new image crop into the original pixel-crop domain; preserve animated source crop"
+        }
+      ],
+      "logo_slots": [
+        {
+          "key": "qwen",
+          "intervals": [
+            [
+              272.9,
+              290.7
+            ]
+          ]
+        }
+      ],
+      "constraints": [],
+      "selection": "optional complete design or explicitly bounded continuous subrange; not a required chapter sequence"
+    }
+  ]
+}

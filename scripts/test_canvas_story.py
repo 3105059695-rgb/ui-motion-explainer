@@ -22,7 +22,8 @@ class CanvasStoryTests(unittest.TestCase):
             self.assertEqual(config['sceneRuntime'], 'canvas-story-v1')
             self.assertEqual(config['production_status'], 'unmade-awaiting-authored-timeline')
             self.assertFalse(config['current_style_applied'])
-            for name in ('agent-editorial.js', 'motion-core.js', 'palette.json'):
+            for name in ('agent-editorial.js', 'motion-core.js', 'palette.json', 'source-designs.js',
+                         'source-designs.json', 'source/body-a.js', 'source/body-b.js'):
                 self.assertEqual((project / 'lib/agent-editorial' / name).read_bytes(),
                                  (new_project.ROOT / 'assets/agent-editorial' / name).read_bytes())
             graph, edges = selection_contract.dependency_graph(project / 'index.html')
@@ -30,7 +31,13 @@ class CanvasStoryTests(unittest.TestCase):
             self.assertTrue(selection_contract._timeline_assignment(
                 (project / 'runtime.js').read_text(encoding='utf-8'), project / 'runtime.js',
                 project / 'timeline.json', 'binding', project / 'index.html'))
-            self.assertLess(sum(p.stat().st_size for p in project.rglob('*') if p.is_file()), 400000)
+            self.assertIn((project / 'lib/agent-editorial/source/body-a.js').resolve(), graph)
+            self.assertIn((project / 'lib/agent-editorial/source/body-b.js').resolve(), graph)
+            self.assertIn((project / 'lib/agent-editorial/source-designs.js').resolve(), graph)
+            self.assertEqual(config['captionStyle'], 'approved-source')
+            self.assertEqual((project / 'fonts/NotoSansSC.ttf').read_bytes(),
+                             (new_project.ROOT / 'assets/base-skill/assets/portable-studio/fonts/NotoSansSC.ttf').read_bytes())
+            self.assertLess(sum(p.stat().st_size for p in project.rglob('*') if p.is_file() and p.name!='NotoSansSC.ttf'), 600000)
 
     def test_selected_reference_is_reachable_and_identity_persists_in_this_project(self):
         with tempfile.TemporaryDirectory() as directory:

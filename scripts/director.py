@@ -23,6 +23,7 @@ import aigc_assets
 import selection
 import selection_contract
 import requirements
+import source_designs
 
 ROOT = Path(__file__).resolve().parents[1]
 OWNER = 'ui-motion-fusion/director.py'
@@ -157,14 +158,19 @@ def production_context(resolution, root=ROOT):
                                   'implementation': resource('assets/presenter-opening/opening-stage.js'),
                                   'usage': '历史可选实现；对应读书样片不是质量基线。当前制作优先读取editorial_source，整库开放。'},
         'editorial_source': {**resource('assets/agent-editorial/README.md'),
-                             'implementation': resource('assets/agent-editorial/agent-editorial.js'),
+                             'implementation': resource('assets/agent-editorial/source-designs.js'),
+                             'drawing_primitives': resource('assets/agent-editorial/agent-editorial.js'),
+                             'design_catalog': resource('assets/agent-editorial/source-designs.json'),
+                             'available_designs': source_designs.listing(root)['designs'] if (Path(root) / source_designs.MANIFEST).is_file() else [],
+                             'dynamic_viewer': resource('assets/agent-editorial/designs.html'),
+                             'original_bodies': [resource('assets/agent-editorial/source/body-a.js'), resource('assets/agent-editorial/source/body-b.js')],
                              'motion': resource('assets/agent-editorial/motion-core.js'),
                              'provenance': resource('assets/agent-editorial/provenance.json'),
                              'starter': resource('assets/fusion-studio/story-starter/index.html'),
                              'material_runtime': resource('assets/fusion-studio/story-starter/runtime.js'),
                              'edit_contract': resource('references/director-plan-contract.md'),
-                             'create_command': 'ui.py new --engine fusion -- --custom-layout --canvas-story --out <project>',
-                             'usage': 'Build the actual material/event rough cut first. Canvas material_shots trim original-speed media, reframe source crops and hold results; scenes add the required UI state changes. Full effects library remains open.'},
+                             'create_command': 'ui.py designs list; ui.py designs inspect --id <design>; ui.py designs scaffold --design <design> --out <binding.json>; ui.py designs build --spec <binding.json> --out <project>',
+                             'usage': 'Approved complete BodyA/BodyB source executes with current copy/media/cue bindings. Watch the complete relevant source sequence, not only posters. Choose or combine with the whole effects library; ten scene families are not a ranking template or a whitelist. Explicit custom adaptation remains available. Source UI clock never retimes narration/media.'},
         'complete_scenes': selection.scene_directory(root),
         'production_starter': {**resource('assets/fusion-studio/production-starter/README.md'),
                                'usage': 'custom-scene-runtime-fallback'},
@@ -344,7 +350,7 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
         *([f"完整偏好来源：{context['style']['preferences']['path']}；全文和 SHA-256 已带入 context.style.preferences。",
            '来源章节：' + '；'.join(context['style']['preferences'].get('sections', [])), '']
           if (context['style']['preferences'] or {}).get('exists') else []),
-        *([f"当前实际制作模块：{context['production']['editorial_source']['path']}。新连续 UI 工程使用 {context['production']['editorial_source']['create_command']}，自动复制并加载配色、材质、运动与人物开头保护实现。读取API后为本稿写scenes.js和timeline.segments事件，不能停在源码引用；不开排行榜模板。整个效果库继续选用，已有工程按原后端适配。", '']
+        *([f"当前完整源码设计：{context['production']['editorial_source']['path']}。入口 {context['production']['editorial_source']['create_command']}。先连续查看所选设计与原片语境，再填写本稿内容与口播锚点；build真实调用原BodyA/BodyB，不要求从基础绘图函数重新画一套UI。仅新构图才作明确源码适配；不套排行榜。整个效果库继续选用，已有工程按原后端适配。", '']
           if unified and context['production']['editorial_source']['implementation']['exists'] else []),
         ('## 当前 UI 外观基准' if unified else '## 接续外观与认可范围，不固定镜头模板'), '',
         *[f"- UI：{item.get('direction_contract', {}).get('summary', item['id'])}" for item in reference_directions],

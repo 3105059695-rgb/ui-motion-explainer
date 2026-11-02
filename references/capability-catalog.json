@@ -4592,7 +4592,7 @@
     },
     {
       "id": "agent-editorial",
-      "title": "已认可连续 UI 制作源码：材质、运动、口播事件与人物开头",
+      "title": "已认可完整 UI 原设计：BodyA/BodyB 内容与口播绑定",
       "semantic_use": "按本期口播设计对象变化、任务推进、分解组合、局部聚焦、真实材料展开与结论回收；沿方木十款 Agent 已认可正文的配色与实体质感。整体效果库保持开放，不固定榜单。",
       "source": [
         {
@@ -4612,6 +4612,18 @@
             "present": true
           },
           {
+            "path": "assets/agent-editorial/source-designs.js",
+            "present": true
+          },
+          {
+            "path": "assets/agent-editorial/source/body-a.js",
+            "present": true
+          },
+          {
+            "path": "assets/agent-editorial/source/body-b.js",
+            "present": true
+          },
+          {
             "path": "assets/agent-editorial/motion-core.js",
             "present": true
           },
@@ -4620,7 +4632,7 @@
             "present": true
           }
         ],
-        "note": "Runtime loads this SDK and consumes episode-authored segments/scenes; preserved source is evidence, not the default whole episode."
+        "note": "Runtime executes original BodyA/BodyB through SourceDesigns with new copy, media and cue anchors. Ten designs can be selected, trimmed and rearranged with the full library; original ranking, topic and opening are not inherited."
       },
       "validation": {
         "status": "technical-integration-passed",

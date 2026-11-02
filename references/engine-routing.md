@@ -58,7 +58,7 @@ python -X utf8 scripts/metaso_video.py status
 ```
 
 - `status` 只检查本地资源与入口，不联网、不安装、不启动旧任务。
-- 当前新连续 UI 解释制作通常选 `--custom-layout --canvas-story`，实际装入本次源码模块；Agent 为每稿重写场景对象、因果过程、布局与时间，不需要用户另外指定模块。`timeline.json` 的 `segments` 真正控制渲染，每段 `scene` 对应本期 `StoryScenes` 函数，保留计划绑定字段。空起点没有成片内容，不能把起点导出当完成。DOM EditingKit、完整场景及既有后端继续可用，不为统一皮肤强改框架。
+- 当前正文原设计通过 `ui.py designs list/inspect/scaffold/build` 直接绑定本期内容；新工程加载未改写的 `BodyA/BodyB` 和 `SourceDesigns`，保留完整对象关系与连续状态。接口与完整动态查看只在[源码模块](../assets/agent-editorial/README.md)维护。`--custom-layout --canvas-story` 是明确需要新构图或源码适配时的空起点，不再作为每次从头画 UI 的默认。`timeline.json` 实际调用本期绑定函数，DOM EditingKit、其他完整场景及既有后端继续可用。
 - 普通制作先选择适用的完整源码。`new --engine fusion` 不再默默返回空画布；明确 `--custom-layout` 才创建自定义环境。明确 `--scene F01` 至 `F08` 或 `all` 仍创建历史演示，不能当作本期成片。
 - `new/render --engine base|fusion` 默认使用包内基础，不扫描或自动切换兄弟旧包；明确 `--base <目录>` 才固定外部版本。已有工程使用原创建版本与后端。
 - `editorial` 只统一创建入口，渲染在生成的 Remotion 工程内按 [模块命令](editorial-motion.md) 运行。

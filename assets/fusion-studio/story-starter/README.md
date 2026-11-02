@@ -1,6 +1,6 @@
 # 本期口播事件工程
 
-已加载方木十款 Agent 实际源码提取的 `AgentEditorial` 视觉与动作模块。工程是空白且未制作的：`scenes.js` 没有预设排行榜、卡片场景或主题。完整效果库仍可选用，将合适的实现接入本期场景。
+已加载原 `BodyA/BodyB`、`SourceDesigns`、`AgentEditorial`、Noto 字体与原字幕皮肤。用 `ui.py designs scaffold/build` 可把本期文字、素材与口播时间直接绑定到完整原设计；用显式 `--custom-layout --canvas-story` 创建时仍为空白。完整效果库继续可选，不将原排行榜、产品和开头带入新稿。
 
 1. 读完整原稿，按真实音频确认各句与事件时间，选择能解释它们的对象和素材。
 2. 在 `scenes.js` 写本期的 `StoryScenes.<场景名>` 函数；每个函数按实际动作改变对象状态、位置或画面，而非只替换文字。SDK 接口在正式 Skill 的 `assets/agent-editorial/README.md`。

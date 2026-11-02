@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>已认可 UI · 完整设计与原片</title>
+<style>
+@font-face{font-family:Noto;src:url('../base-skill/assets/portable-studio/fonts/NotoSansSC.ttf');font-weight:100 900;font-display:block}
+*{box-sizing:border-box}body{margin:0;background:#f3f3f5;color:#0b0b0f;font:16px/1.7 Noto,sans-serif}main{max-width:1440px;margin:auto;padding:28px}h1{font-size:30px;margin:6px 0}h2{font-size:21px;margin:8px 0}p{margin:8px 0}a{color:#433179}header{margin-bottom:22px}.card{background:white;border:1px solid #dbdbe0;border-radius:16px;padding:20px;margin:20px 0}.toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:12px 0}select,button{font:inherit;padding:8px 12px;border:1px solid #777780;border-radius:7px;background:white;color:#0b0b0f}button{cursor:pointer}button:disabled{opacity:.4;cursor:default}input[type=range]{flex:1;min-width:140px}canvas{display:block;background:white;width:100%;aspect-ratio:1400/724;border:1px solid #dbdbe0}video{display:block;width:100%;max-height:74vh;background:#0b0b0f}small,.note{color:#555560}.error{color:#a71937}code{background:#f3f3f5;padding:2px 5px}details{margin-top:14px}pre{white-space:pre-wrap;font-size:13px}.tag{background:#0b0b0f;color:#d6c2ff;border-radius:5px;padding:3px 8px}#cue-list{display:flex;gap:8px;flex-wrap:wrap}#cue-list button{font-size:13px}#video-note{white-space:pre-wrap}
+</style></head><body><main>
+<header><a href="../../index.html#library">← 整个效果库</a><h1>完整设计与原片</h1><p>从你认可的实际源码进入。查看连续变化、停稳与衔接，再绑定新口播；这一组不是全库的上限，也不是固定排行榜。</p></header>
+<section class="card"><h2>原场景连续播放</h2><p class="note">原 BodyA / BodyB 直接绘制，使用当前 A 色。这里保留原案例文字用于观察；新工程必须另填本期文字、素材和口播时间。未加载排行榜、人物或旧开头。</p>
+<div class="toolbar"><select id="design" aria-label="选择完整设计"></select><span class="tag">源码实时绘制</span><a id="source" href="source/body-a.js">查看原实现</a></div>
+<canvas id="stage" width="1400" height="724"></canvas>
+<div class="toolbar"><button id="play" disabled>播放完整设计</button><input id="seek" type="range" min="0" max="1" step="0.01" value="0" aria-label="设计时间"><output id="clock">0.00 s</output></div>
+<p id="state" role="status">正在加载原设计…</p><div id="cue-list"></div><details><summary>本设计来源与本期绑定接口</summary><pre id="info"></pre></details></section>
+<section class="card"><h2>完整原片与前后语境</h2><p>当前正文基准、Fred 原片及其他已登记参考分别保留。每条认可范围以对应证据为准；十款 Agent 的开头不属于当前正文认可范围。原视频从本机读取，不上传、不复制。</p>
+<div class="toolbar"><select id="reference" aria-label="选择完整原片"></select><button id="load-video">打开原片</button><a href="../../index.html#library">全部效果库与其他动态参考</a></div>
+<video id="reference-video" controls preload="none"></video><p class="note" id="video-note"></p></section>
+<section class="card"><h2>换稿从真实设计开始</h2><pre>python -B -X utf8 scripts/ui.py designs list
+python -B -X utf8 scripts/ui.py designs inspect --id &lt;设计 ID&gt;
+python -B -X utf8 scripts/ui.py designs scaffold --design &lt;设计 ID&gt; --out &lt;绑定.json&gt;
+# 按本稿填写时间、文案、材料；可选连续子段、任意重排或结合其他库实现
+python -B -X utf8 scripts/ui.py designs build --spec &lt;绑定.json&gt; --out &lt;新工程&gt;</pre><a href="README.md">实际制作接口</a> · <a href="../../references/aesthetic-preferences.md">当前审美与认可范围</a></section>
+</main><script src="motion-core.js"></script><script src="agent-editorial.js"></script><script src="source/body-a.js"></script><script src="source/body-b.js"></script><script src="source-designs.js"></script><script src="designs.js"></script></body></html>

@@ -69,6 +69,7 @@
       const [start,end]=range(row);finite(start,'segment start');finite(end,'segment end');
       if(!(0<=start&&start<end&&end<=binding.duration_seconds))throw new Error('Invalid segment range: '+row.id);
       if((row.scene!==undefined&&typeof scenes?.[row.scene]!=='function')||(!row.scene&&!row.material_shots?.length))throw new Error('Episode scene is missing: '+row.scene);
+      if(row.scene&&scenes[row.scene].validate)scenes[row.scene].validate();
       if(row.palette!==undefined&&(!row.palette||typeof row.palette!=='object'||Array.isArray(row.palette)||Object.values(row.palette).some(v=>typeof v!=='string')))throw new Error('Segment palette must map names to CSS colors');
       if(row.background!==undefined&&typeof row.background!=='string')throw new Error('Segment background must be a CSS color');
       if(!['body','focus','presenter-opening'].includes(row.layout?.mode))throw new Error('Explicit layout mode required: '+row.id);
@@ -139,7 +140,8 @@
           const result=segment.scene?host.scenes[segment.scene](args):undefined;
           if(result&&typeof result.then==='function')throw new Error('Scene drawing must be synchronous after ready(): '+segment.scene);
           totalCalls++;
-          if(trace.length<2000)trace.push({segment:segment.id,scene:segment.scene||null,animationTime:t,mediaTime:mt,layout:layout.mode,material_shots:materials});
+          if(trace.length<2000)trace.push({segment:segment.id,scene:segment.scene||null,animationTime:t,mediaTime:mt,layout:layout.mode,material_shots:materials,
+            source_design:segment.scene&&host.scenes[segment.scene].sourceDesign?{...host.scenes[segment.scene].sourceDesign}:null,source_execution:result?.sourceTime!==undefined?result:null});
         };
         if(layout.mode==='presenter-opening')host.opening({...layout,frame:host.asset(layout.presenter),captions},draw);
         else host.frame(draw);
@@ -204,6 +206,10 @@
     const binding = await (await fetch('./timeline.json')).json();
     const project=await (await fetch('./project.json',{cache:'no-store'})).json();
     const palette=await (await fetch('./lib/agent-editorial/palette.json',{cache:'no-store'})).json();
+    if(global.SourceDesigns){
+      const designs=await (await fetch('./lib/agent-editorial/source-designs.json',{cache:'no-store'})).json();
+      global.SourceDesigns.configure(designs);
+    }
     validate(binding,global.StoryScenes);
     if(project.duration!==binding.duration_seconds||project.width!==binding.width||project.height!==binding.height)throw new Error('project.json and timeline.json size/duration disagree');
     if((project.audio||'')!==(binding.media.audio||'')||JSON.stringify(project.captions||[])!==JSON.stringify(binding.media.captions))throw new Error('Audio/captions must share the original master timeline in project.json and timeline.json');
@@ -224,8 +230,8 @@
       shotNodes.set(shotKey(segment,shot),node);shotVideos.push({node,segment,shot});
     })));
     if(binding.media.audio)await loadMedia(audio,binding.media.audio);
-    await document.fonts.ready;
-    const basePalette=palette.colors||palette,options={width:binding.width,height:binding.height,logicalWidth:binding.width,logicalHeight:binding.height,fontFamily:project.fontFamily||'"Microsoft YaHei",sans-serif'};
+    await document.fonts.load('800 43px Noto');await document.fonts.ready;
+    const basePalette=palette.colors||palette,options={width:binding.width,height:binding.height,logicalWidth:binding.width,logicalHeight:binding.height,fontFamily:project.fontFamily||'Noto, sans-serif'};
     const D=global.AgentEditorial.create(ctx,{...options,palette:basePalette}),scenePainters=new Map();
     for(const segment of binding.segments)if(segment.palette)scenePainters.set(segment.id,global.AgentEditorial.create(ctx,{...options,palette:{...basePalette,...segment.palette}}));
     const asset=id=>{
@@ -247,6 +253,15 @@
         global.AgentEditorial.opening(ctx,{frame:layout.frame,stage:layout.stage,regions:layout.regions||[],protectedRects},draw);
       },
       caption:lines=>{
+        if(project.captionStyle==='approved-source'){
+          if(!lines.length)return;ctx.save();
+          const scale=canvas.width/1920,text=lines.join(' '),fontSize=(project.captionSize||43)*scale;
+          ctx.font=`800 ${fontSize}px ${options.fontFamily}`;ctx.textAlign='center';ctx.textBaseline='alphabetic';
+          const width=Math.min(1680*scale,ctx.measureText(text).width)+76*scale,x=(canvas.width-width)/2,y=canvas.height-104*scale;
+          ctx.beginPath();ctx.roundRect(x,y,width,75*scale,20*scale);ctx.fillStyle=basePalette.black;ctx.fill();
+          ctx.fillStyle=basePalette.purple;ctx.fillRect(x+16*scale,y+19*scale,5*scale,35*scale);
+          ctx.fillStyle=basePalette.white;ctx.fillText(text,canvas.width/2,y+52*scale,width-76*scale);ctx.restore();return;
+        }
         if(!lines.length)return;ctx.save();ctx.font=`600 ${project.captionSize||36}px ${project.fontFamily||'"Microsoft YaHei",sans-serif'}`;
         ctx.textAlign='center';ctx.textBaseline='middle';const text=lines.join(' '),width=Math.min(canvas.width*.92,ctx.measureText(text).width+40);
         ctx.fillStyle='rgba(11,11,15,.9)';ctx.fillRect((canvas.width-width)/2,canvas.height-88,width,58);ctx.fillStyle='#fff';ctx.fillText(text,canvas.width/2,canvas.height-59,width-24);ctx.restore();

@@ -7,10 +7,20 @@
 在 Skill 根目录运行：
 
 ```powershell
-python -B -X utf8 scripts/ui.py new --engine fusion -- --custom-layout --canvas-story --out <工程>
+python -B -X utf8 scripts/ui.py designs list
+python -B -X utf8 scripts/ui.py designs inspect --id <设计>
+python -B -X utf8 scripts/ui.py designs scaffold --design <设计> --out <绑定.json>
+# 填入本期内容，再构建
+python -B -X utf8 scripts/ui.py designs build --spec <绑定.json> --out <工程>
 ```
 
-命令复制 SDK 到工程 `lib/agent-editorial/`，`index.html` 实际加载它。新工程仍是未制作状态：先把本期材料与事件剪入 `timeline.json`，再按完整口播在 `scenes.js` 注册需要的 UI 场景。段落不是自动关键词模板，没有排行榜、十款产品、旧人物或固定秒点。场景、素材和实现绑定沿用同一导演计划，正式导出沿用已有 `ui.py render --engine fusion`。
+在[动态查看页](designs.html)完整查看选中的状态链与原片语境。填入新稿的 `duration/cues/copy/media/logos/layout` 后，build 直接生成调用原 `BodyA.draw/BodyB.draw` 的 `scenes.js` 和时间线。可用 `--source-range <原起点> <原终点>` 取完整事件子区间，多设计以逗号选择后自行安排，不固定原十章顺序。确需定制才用 `new --engine fusion -- --custom-layout --canvas-story --out <工程>`；这条路仍会加载全部原设计，便于按真实代码适配。
+
+素材和声音先取得本机文件，build 导入为工程内 `media/…` 相对 URL。同盘优先硬链接共享原始字节，勿直接修改链接媒体；跨盘复制需显式 `--copy-media`，导入路径与方式保存在工程 `source-media.local.json`。查看完整原片使用 `python -B -X utf8 scripts/serve.py`，再打开本机查看页；未登记的私人原片不会随公开 Skill 下载，也不会被占位图冒充。
+
+新工程真正加载原 BodyA、BodyB、SourceDesigns 与 Noto 字体；几何、对象关系、运动分支沿用原函数，颜色读取当前 palette。原源码不改写，适配器只绑定新内容、素材裁切和口播锚点。`copy` 必须逐槽填本期文字，明确不显示用 `{"omit":true}`；缺槽不默用旧产品。`media/logos` 使用本期 asset ID，像素裁切素材可指定 `crop:[x,y,w,h]`；源图形时间映射不改变口播、人物或真实视频时钟。源码里有固定物件数量的表达，会在 `inspect` 的 constraints 标注，不可只改数字冒充不同数量。
+
+`source-designs.json` 是实际可调用设计目录，`source-designs.js` 是运行代码；原设计来源、哈希及实际源时间写入 CanvasStory 运行记录。静音试验仍只是动态设计，引用和调用成功不代表新稿已获审美认可。10 类设计与其他效果库共同使用，任何一类都不是必须套用的整片模板。正式导出仍沿用原 `ui.py render --engine fusion` 与同一导演计划。
 
 `segments[].material_shots` 可剪取原速源视频，用原材料内部的裁切关键帧完成全貌、聚焦、停留和返回，也可并置同源不同时间片段。纯素材粗剪可省略 `scene`；有 UI 时在材料之后绘制。每段 `background/palette` 可按内容调整，源图原色保持；有人的开头继续受实测保护区约束。字段、实际调用标记与声音接口只在[计划合同](../../references/director-plan-contract.md#实际素材剪辑与声音事件)维护，避免另起一套导演计划。
 

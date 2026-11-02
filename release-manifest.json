@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "name": "ui-motion-fusion",
-  "version": "2026.10.28.5",
+  "version": "2026.11.02.1",
   "resources": {
     "required_modules": [
       "source-study",
@@ -17,7 +17,7 @@
       "apple-kinetic-promo",
       "fredtalk-library"
     ],
-    "active_document_links": 328,
+    "active_document_links": 331,
     "fredtalk_active_public_sources_verified": 101,
     "historical_fred_visual_anchors": 3,
     "default_ui_direction": "approved-body-default-20261028",
@@ -77,8 +77,8 @@
     },
     {
       "path": "SKILL.md",
-      "size": 4678,
-      "sha256": "57a0efffcaf243836f176f6816c7e37b67671a31385959627ad70381c7cc8586"
+      "size": 5365,
+      "sha256": "3631e763f2625570ec9b2570453f0b897b3524fe6d8374c586e03b366e0439c0"
     },
     {
       "path": "START-HERE.md",
@@ -88,7 +88,7 @@
     {
       "path": "VERSION",
       "size": 14,
-      "sha256": "5354b23e53e98c75f6a389fc6181e4db834fa808b6d9957895d385537654e84c"
+      "sha256": "a41efecc7514a15ab2a86099764720686105e74a2d7ff36cb153219292e4976f"
     },
     {
       "path": "agents/openai.yaml",
@@ -3997,13 +3997,23 @@
     },
     {
       "path": "assets/agent-editorial/README.md",
-      "size": 4992,
-      "sha256": "878c75cf9745e816d0eaf48e3f59a5d872ea4f3ec1a191d02e74ebc233fef7f8"
+      "size": 6801,
+      "sha256": "71b1be0aa0af8996e37e9070797876803911437e17d5373d8bcabcbed97f6b89"
     },
     {
       "path": "assets/agent-editorial/agent-editorial.js",
       "size": 11724,
       "sha256": "9aed0aeb46d28646358c6a6c3a1bbe063554dd20eadab755ed543751e1df0192"
+    },
+    {
+      "path": "assets/agent-editorial/designs.html",
+      "size": 4187,
+      "sha256": "0d99986bdee97e65c22bbc6933298689e00e56f72a851bc6d350a29f764814b7"
+    },
+    {
+      "path": "assets/agent-editorial/designs.js",
+      "size": 6023,
+      "sha256": "1e43f9037c0bdb4cdae74eb1061841a49cf1d5607c168ab31cb310c2d6de02bf"
     },
     {
       "path": "assets/agent-editorial/motion-core.js",
@@ -4019,6 +4029,16 @@
       "path": "assets/agent-editorial/provenance.json",
       "size": 6838,
       "sha256": "1a28ba6f77e927038e8ecc6119b5818bdc2c202736c68a5ae3bdcf2c47b57c78"
+    },
+    {
+      "path": "assets/agent-editorial/source-designs.js",
+      "size": 13055,
+      "sha256": "bfd9e748d321d76395ea0b770f17c7b128b019692591a9636b142c6cf853e7eb"
+    },
+    {
+      "path": "assets/agent-editorial/source-designs.json",
+      "size": 76152,
+      "sha256": "46590de1075968409c8609dbd84fbe359092a71416164b1e7ce46491ef9b233a"
     },
     {
       "path": "assets/agent-editorial/source/body-a.js",
@@ -9697,23 +9717,23 @@
     },
     {
       "path": "assets/fusion-studio/story-starter/README.md",
-      "size": 4844,
-      "sha256": "2650b5efafadf7944800d0a6c88fc014fe28a6c43287522faccbc7971beb0097"
+      "size": 4947,
+      "sha256": "ab9652e7aa08a095fcf78db33f37a235f86aa52997734936f7e667bcf3f17348"
     },
     {
       "path": "assets/fusion-studio/story-starter/index.html",
-      "size": 926,
-      "sha256": "456800b59138440c09550962a646e4824ec2dcd37d01d0501b0f1b261ebb37d3"
+      "size": 1107,
+      "sha256": "a87e53d10c7cc52164fd76ae79d4e706cefe150d22a3c3f27253dc13b2e44548"
     },
     {
       "path": "assets/fusion-studio/story-starter/project.json",
-      "size": 378,
-      "sha256": "fad60c530a00d1736937043d12ed71d83c077d0fd49ec49810d517d3bcacaa1d"
+      "size": 451,
+      "sha256": "2f6ea129b9fd4951b637e3b4501617649154725376b3c06e384759c2b09d732c"
     },
     {
       "path": "assets/fusion-studio/story-starter/runtime.js",
-      "size": 22234,
-      "sha256": "91c5f63b43fb5c0b49bd0e6d97271481a1908182d5d142843b3a4f0157de8535"
+      "size": 23523,
+      "sha256": "c1ad3674c13bcff45e4b2df683de921b57f0fff2b3e5da7560da9ee657df95f6"
     },
     {
       "path": "assets/fusion-studio/story-starter/scenes.js",
@@ -9722,8 +9742,8 @@
     },
     {
       "path": "assets/fusion-studio/story-starter/studio.css",
-      "size": 785,
-      "sha256": "9eadb54745136c7c9d0810c1ebb19402b51c6971b865b1223b316087d1c491c7"
+      "size": 885,
+      "sha256": "e75e8610f22896f007d26d3b4e7b09196c5b1a432780ded9268e0386589a6e9e"
     },
     {
       "path": "assets/fusion-studio/story-starter/timeline.json",
@@ -14727,8 +14747,8 @@
     },
     {
       "path": "index.html",
-      "size": 21904,
-      "sha256": "88d75fae4463d25ca9c5987dc974b793990c8653385fc5c47085c312419ca000"
+      "size": 22206,
+      "sha256": "d8caf00955dcc0df1b191e39d9c20f58f0bec4fb5d984f9cbfc13b48c5e42497"
     },
     {
       "path": "install.py",
@@ -14777,8 +14797,8 @@
     },
     {
       "path": "references/capability-catalog.json",
-      "size": 820379,
-      "sha256": "1f47a47969423f4f70977a12a7c6bec2a3d72b5b491da41be7cdb6297326b8b1"
+      "size": 820822,
+      "sha256": "06d911840b4a2c9728017323b00f2ee88ad352f00af5b0af183d6466f0cca43e"
     },
     {
       "path": "references/coverage.md",
@@ -14807,8 +14827,8 @@
     },
     {
       "path": "references/engine-routing.md",
-      "size": 19556,
-      "sha256": "6f82c4bde501bac1ec9b85c87213dc7f2e842e894fbcaff3e0b5faf7fa6703a1"
+      "size": 19602,
+      "sha256": "0e019d2950567412f99457048e2c00fb6b06672173e5cf91435f111df9a3a9c6"
     },
     {
       "path": "references/entry-consolidation.json",
@@ -15402,8 +15422,8 @@
     },
     {
       "path": "scripts/director.py",
-      "size": 67535,
-      "sha256": "8ed11587e78ba4f3b67f63b57b6c5200c7df13614b13f5d9e9a8f00e5c676619"
+      "size": 68432,
+      "sha256": "d70c36ab84473ed8c296b562e598ec1a2d21257fc08c5d94c19b6f4ffbf3aca4"
     },
     {
       "path": "scripts/export_qiaomu_fonts.py",
@@ -15437,8 +15457,8 @@
     },
     {
       "path": "scripts/new_project.py",
-      "size": 7451,
-      "sha256": "c4b60272fbe45b64b17e315f6b02f7961f7c0ee7b46a58e50e542a4c0b5f1417"
+      "size": 8158,
+      "sha256": "8afb2856f1a4508e9748f8cba3ac0011bd6e754afca4d0926abc9cb3b9b90d0b"
     },
     {
       "path": "scripts/package.py",
@@ -15458,7 +15478,7 @@
     {
       "path": "scripts/release_manifest.py",
       "size": 14684,
-      "sha256": "6c99189f945c033627decf520cc4331eab17aa079e188bc818a38b080f037687"
+      "sha256": "c6356e01244034f933c4f501cb0282ce01f7fd7223d621771b1c85ee5f7d8a3e"
     },
     {
       "path": "scripts/render.py",
@@ -15502,8 +15522,13 @@
     },
     {
       "path": "scripts/serve.py",
-      "size": 793,
-      "sha256": "5ba714ffcb1ec682b8f9071b719ebb1a8103ebaa1882e80fd1483189a0df8c2e"
+      "size": 4114,
+      "sha256": "18f4849cab8342b59d4620b5a69fbd3b1db851c7553588da706749656bb7c94d"
+    },
+    {
+      "path": "scripts/source_designs.py",
+      "size": 19500,
+      "sha256": "36516eb048aa32addc66f4c2c66ac1ab31ac5a818ca6bbd05a2f0d1904af3378"
     },
     {
       "path": "scripts/source_study.py",
@@ -15532,8 +15557,8 @@
     },
     {
       "path": "scripts/test_canvas_story.py",
-      "size": 3928,
-      "sha256": "77ee7376bc743b3b8ee76cfc3a76b759962903524dbf43d8e0c92e0bd6ede514"
+      "size": 4630,
+      "sha256": "46e541523476718a66c0d3066c05e7f82a82c4cf5c29ce34873bd589153be4cf"
     },
     {
       "path": "scripts/test_director.py",
@@ -15581,6 +15606,11 @@
       "sha256": "71d7636095fb95ca52636ab6d1b4c1d21816589fc0ffd8a747349502ff7b2e9a"
     },
     {
+      "path": "scripts/test_reference_viewer.py",
+      "size": 3956,
+      "sha256": "8cf5a8ba5408d1eefd3628cefe38b23c76c05d1322f949aa99491f4d90c75f34"
+    },
+    {
       "path": "scripts/test_requirements.py",
       "size": 11834,
       "sha256": "787ee0050b17f337575fb269c70836852efd22646d690d6ab5f52ef92f7f7ca1"
@@ -15621,6 +15651,16 @@
       "sha256": "40a99363716311f3083de56442d98a384c0ef5147b710a181224f630c7ee6bfd"
     },
     {
+      "path": "scripts/test_source_designs.cjs",
+      "size": 11662,
+      "sha256": "338a77896de6adfd2bab19fa05e907e7b27a0c17b5d28713365235d2e482471e"
+    },
+    {
+      "path": "scripts/test_source_designs.py",
+      "size": 9794,
+      "sha256": "5eddbd8c48e9e1e107fe84ed6192bd8466af34856ffbb73da3e7c077bd3d5a3c"
+    },
+    {
       "path": "scripts/test_source_study.py",
       "size": 21716,
       "sha256": "928a6bc1ea0182974853760d90b80586d888c3631b110989a8d0bc3fe10e565e"
@@ -15632,8 +15672,8 @@
     },
     {
       "path": "scripts/ui.py",
-      "size": 18030,
-      "sha256": "17b8275bf1161ea6ce61d91f018ac40fadaaeb00c86b4e578c8a7ad26548727e"
+      "size": 18283,
+      "sha256": "50b3ad0752c7125dcdd7661dfe42c5512148170d4666207925f3a55340ea3654"
     },
     {
       "path": "scripts/verify_package.py",

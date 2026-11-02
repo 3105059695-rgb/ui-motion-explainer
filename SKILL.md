@@ -2,7 +2,7 @@
 name: ui-motion-fusion
 description: "完整读取现行制作要求，沿用已认可十款 Agent 正文 UI 与 Fred 剪辑语言，从整库选择设计与动作，按口播制作真实材料、AIGC、人物和声音组成的视频及可编辑工程。"
 metadata:
-  version: "2026.10.28.5"
+  version: "2026.11.02.1"
 ---
 
 # 我的 UI 动效剪辑
@@ -36,7 +36,9 @@ python -B -X utf8 scripts/ui.py direct -- prepare --script <口播文件> --pres
 
 无人物视频时省略 `--presenter`。准备结果携带全部现行要求正文、全文原稿、当前审美和整库目录；它尚未完成选材、分镜或视频。按[主流程](references/workflow.md)继续：理解全文 → 查看并取得材料 → 查看所选完整设计和源码 → 剪入原声时间线 → 实现对象与事件 → 实际视听修正 → 交付。
 
-先明确本期要继承的构图、材料关系和动作链，再选择能承载它们的实现；命令见[引擎路由](references/engine-routing.md)。新连续 UI 工程可用 `new --engine fusion -- --custom-layout --canvas-story --out <工程>` 加载已认可源码提炼模块，但场景仍须按本期编写，空工程或底层运动函数不等于完整设计。已有工程沿用真实后端；全库、完整场景与源码适配都可选。
+先看[完整连续设计与原片](assets/agent-editorial/designs.html)，从整库选适合本稿的表达。当前正文已有 10 类原设计可直接调用：`ui.py designs list` → `inspect --id <设计>` → `scaffold --design <设计> --out <绑定.json>`，按本稿填写文案、素材、口播锚点后 `build --spec <绑定.json> --out <工程>`。新工程真实执行原 `BodyA/BodyB`，保留构图、实体层次与连续状态；不再只加载几个画图函数让新窗口重画 UI。各设计可选择连续子段、重排、与全库其他实现组合，不固定十款产品或排行榜。
+
+完整观看所选参考事件的铺垫、变化、停稳和衔接，结合原片的前后语境；几帧联系表仅用于定位，不能代替动态参考。查看页能播放本机已映射原片，缺原片时明确显示缺失。需要新构图时在适用源码上改编，`new --engine fusion -- --custom-layout --canvas-story` 保留为明确的定制入口；现有工程沿用真实后端。命令与字段只在[源码模块](assets/agent-editorial/README.md)和[引擎路由](references/engine-routing.md)维护。
 
 保留原稿、原声、字幕和本期人物身份。只维护同一份导演计划，后端配置由它派生；实际选择要落到素材、源码和成片时间段，不能停在候选清单或引用。内部校准后继续完成已授权范围，不另加逐镜审批。
 
