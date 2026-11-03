@@ -7,10 +7,10 @@ import json
 from pathlib import Path, PureWindowsPath
 from urllib.parse import quote, unquote, urlsplit
 from media_server import SingleRangeHTTPRequestHandler
-from resource_inventory import load_overlay
+from resource_inventory import load_overlay, resource_fact
 
 
-RESOURCE_PREFIXES = ('source-video:', 'source-design-media:')
+RESOURCE_PREFIXES = ('source-video:', 'source-design-media:', 'reference-atlas:', 'aigc-video:')
 BODY_REFERENCE = 'source-video:fangmu-ten-agents-final-20261021'
 
 
@@ -36,6 +36,8 @@ def reference_manifest(root):
             if exists:
                 design_media[ident.removeprefix('source-design-media:')] = resource_url(ident)
             continue
+        if not ident.startswith('source-video:'):
+            continue
         # Windows path syntax must never leak when a public copy runs elsewhere.
         title = PureWindowsPath(str(path)).stem.split(' #', 1)[0]
         references.append({'id': ident, 'title': title,
@@ -44,6 +46,34 @@ def reference_manifest(root):
                                      else 'original reference; approval scope is not implied')})
     return {'status': 'available' if design_media or any(r['exists'] for r in references) else 'unavailable',
             'references': references, 'design_media': design_media}
+
+
+def atlas_manifest(root):
+    """Expose only image/video URLs, never author-machine paths from the overlay."""
+    root = Path(root).resolve()
+    path = root / 'references/reference-atlas.json'
+    if not path.is_file():
+        return {'videos': [], 'status': 'unavailable'}
+    data = json.loads(path.read_text(encoding='utf-8-sig'))
+    overlay = load_overlay(root)
+    def url_for(record):
+        fact = resource_fact(record.get('resource_id', ''), record.get('path'), root=root, overlay=overlay)
+        if not fact['usable_file']:
+            return None
+        location = Path(fact['path'])
+        if location.is_relative_to(root):
+            return '/' + quote(location.relative_to(root).as_posix(), safe='/')
+        ident = record.get('resource_id', '')
+        return resource_url(ident) if ident.startswith(RESOURCE_PREFIXES) else None
+    rows = []
+    for row in data.get('videos', []):
+        item = {k: row[k] for k in ('id','title','categories','scope','approval_scope','duration_seconds','sampling','availability_note','source_url') if k in row}
+        item['overview'] = {k:v for k,v in row.get('overview', {}).items() if k!='path'}
+        item['overview']['url'] = url_for(row.get('overview', {}))
+        item['pages'] = [{**{k:v for k,v in p.items() if k!='path'}, 'url':url_for(p)} for p in row.get('pages', [])]
+        item['video_url'] = url_for({'resource_id':row.get('source_resource_id',''), 'path':row.get('source_path')})
+        rows.append(item)
+    return {'videos':rows,'status':'available' if any(r['overview']['url'] for r in rows) else 'unavailable'}
 
 class QuietHandler(SingleRangeHTTPRequestHandler):
     def log_message(self,*args):pass
@@ -55,8 +85,9 @@ class QuietHandler(SingleRangeHTTPRequestHandler):
     def send_head(self):
         self._registered_media_path = None
         route = urlsplit(self.path).path
-        if route == '/__references':
-            payload = json.dumps(reference_manifest(self.directory), ensure_ascii=False).encode('utf-8')
+        if route in ('/__references', '/__atlas'):
+            result = atlas_manifest(self.directory) if route=='/__atlas' else reference_manifest(self.directory)
+            payload = json.dumps(result, ensure_ascii=False).encode('utf-8')
             self._advertise_ranges = False
             self._copy_range = None
             self.send_response(200)

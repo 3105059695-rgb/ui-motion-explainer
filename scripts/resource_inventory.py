@@ -52,9 +52,9 @@ def file_sha256(path):
     return digest.hexdigest()
 
 
-def resource_fact(resource_id, packaged_path=None, root=ROOT, verify_hash=False, expected_sha256=None):
+def resource_fact(resource_id, packaged_path=None, root=ROOT, verify_hash=False, expected_sha256=None, overlay=None):
     """Existing packaged files win. Explicit local mappings fill gaps, never invent media."""
-    overlay = load_overlay(root)
+    overlay = load_overlay(root) if overlay is None else overlay
     candidate = _local_path(packaged_path, root) if isinstance(packaged_path, str) and packaged_path.strip() and '://' not in packaged_path else None
     mapping = overlay['files'].get(resource_id)
     source = 'packaged' if candidate is not None and (candidate.is_file() or candidate.is_dir()) else 'unavailable'

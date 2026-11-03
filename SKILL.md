@@ -2,7 +2,7 @@
 name: ui-motion-fusion
 description: "完整读取现行制作要求，沿用已认可十款 Agent 正文 UI 与 Fred 剪辑语言，从整库选择设计与动作，按口播制作真实材料、AIGC、人物和声音组成的视频及可编辑工程。"
 metadata:
-  version: "2026.11.02.1"
+  version: "2026.11.03.1"
 ---
 
 # 我的 UI 动效剪辑
@@ -28,7 +28,9 @@ python -B -X utf8 scripts/ui.py requirements --part 1
 
 ## 读完后，按当前基准完成实际制作
 
-当前 UI 采用用户认可的「十款 Agent」**正文**：查看[真实 UI 图与连续动作](index.html#current-ui)及对应源码，细节以[审美偏好](references/aesthetic-preferences.md)为准；Fred 原片补充质感与剪辑语言。整个效果库保持开放，不能把风格缩成黑底紫字，也不能固定套排行榜。AIGC 学习已认可画风，每期按口播设计新内容；画风与固定人物身份分开处理。
+每次新制作先运行 `ui.py overviews --brief`，实际打开[全部参考视频的全片分格总览](assets/reference-atlas/index.html)中的所有可用总览图，包括阿闰、秋芝/AIGC 和其他已收录参考。总览用于扫描全片布局、材料与段落变化；需要读清时打开对应细读页，再核对选中事件的连续动作与前后语境。目录加载、文件存在和抽帧联系表都不代表已经完整观看视频；缺图明确说明，不能退回四张旧图后宣称全库已查看。
+
+当前 UI 采用用户认可的「十款 Agent」**正文**及当前 A 配色，细节以[审美偏好](references/aesthetic-preferences.md)为准；Fred 原片补充质感与剪辑语言。四张旧 UI 图只作全片总览之后的次级局部校准。整个效果库保持开放，不能把风格缩成黑底紫字，也不能固定套排行榜。AIGC 学习已认可画风，每期按口播设计新内容；画风与固定人物身份分开处理。查看所有参考不等于每期必须使用 AIGC 或套用任何一片。
 
 ```powershell
 python -B -X utf8 scripts/ui.py direct -- prepare --script <口播文件> --presenter <原声视频> --project <工程目录>
@@ -36,14 +38,14 @@ python -B -X utf8 scripts/ui.py direct -- prepare --script <口播文件> --pres
 
 无人物视频时省略 `--presenter`。准备结果携带全部现行要求正文、全文原稿、当前审美和整库目录；它尚未完成选材、分镜或视频。按[主流程](references/workflow.md)继续：理解全文 → 查看并取得材料 → 查看所选完整设计和源码 → 剪入原声时间线 → 实现对象与事件 → 实际视听修正 → 交付。
 
-先看[完整连续设计与原片](assets/agent-editorial/designs.html)，从整库选适合本稿的表达。当前正文已有 10 类原设计可直接调用：`ui.py designs list` → `inspect --id <设计>` → `scaffold --design <设计> --out <绑定.json>`，按本稿填写文案、素材、口播锚点后 `build --spec <绑定.json> --out <工程>`。新工程真实执行原 `BodyA/BodyB`，保留构图、实体层次与连续状态；不再只加载几个画图函数让新窗口重画 UI。各设计可选择连续子段、重排、与全库其他实现组合，不固定十款产品或排行榜。
+从全片总览选出本稿适用的表达后，查看对应完整动态与实现；其中[已认可正文的连续设计与原片](assets/agent-editorial/designs.html)有 10 类原设计可直接调用：`ui.py designs list` → `inspect --id <设计>` → `scaffold --design <设计> --out <绑定.json>`，按本稿填写文案、素材、口播锚点后 `build --spec <绑定.json> --out <工程>`。新工程真实执行原 `BodyA/BodyB`，保留构图、实体层次与连续状态；不再只加载几个画图函数让新窗口重画 UI。各设计可选择连续子段、重排、与全库其他实现组合，不固定十款产品或排行榜。
 
-完整观看所选参考事件的铺垫、变化、停稳和衔接，结合原片的前后语境；几帧联系表仅用于定位，不能代替动态参考。查看页能播放本机已映射原片，缺原片时明确显示缺失。需要新构图时在适用源码上改编，`new --engine fusion -- --custom-layout --canvas-story` 保留为明确的定制入口；现有工程沿用真实后端。命令与字段只在[源码模块](assets/agent-editorial/README.md)和[引擎路由](references/engine-routing.md)维护。
+完整观看所选参考事件的铺垫、变化、停稳和衔接，结合原片的前后语境；全片联系表提供时段覆盖与定位，不能代替动态参考。查看页能播放本机已映射原片，缺原片时明确显示缺失。需要新构图时在适用源码上改编，`new --engine fusion -- --custom-layout --canvas-story` 保留为明确的定制入口；现有工程沿用真实后端。命令与字段只在[源码模块](assets/agent-editorial/README.md)和[引擎路由](references/engine-routing.md)维护。
 
 保留原稿、原声、字幕和本期人物身份。只维护同一份导演计划，后端配置由它派生；实际选择要落到素材、源码和成片时间段，不能停在候选清单或引用。内部校准后继续完成已授权范围，不另加逐镜审批。
 
 ## 指定整片参考与按需查源
 
-用户说“按阿闰会员测评这条来”时，`direct -- prepare --reference arun-membership` 读取完整序列；新建命令加入 `--reference arun-membership` 实际加载模块。构图、连续动作、蒙版、转场和回扣参考整片，UI 与颜色沿用当前基准。同稿按全序列对照，换稿重新设计对象、材料与时间；完整方法见[参考复刻](references/reference-replication.md)。未指定时该片仍是可选参考，不限制整个效果库。
+用户说“按阿闰会员测评这条来”时，`direct -- prepare --reference arun-membership` 读取完整序列；新建命令加入 `--reference arun-membership` 实际加载模块。构图、连续动作、蒙版、转场和回扣参考整片，UI 与颜色沿用当前基准。同稿按全序列对照，换稿重新设计对象、材料与时间；完整方法见[参考复刻](references/reference-replication.md)。未指定整片复刻时，阿闰与 AIGC 参考仍进入每次全片总览扫描，实际采用哪些设计按口播和认可范围决定，不限制整个效果库。
 
 `select/inspect/study` 查完整目录、来源和实现；`modules check/guides` 查实际资源与后端。历史原片、源码、动效和认可记录全部保留，见[效果库](index.html#library)与[历史](references/history.md)。旧案例不是新的全局要求；维护归属见[规则表](references/module-map.md)。技术检查、连续视听和用户认可分别报告。

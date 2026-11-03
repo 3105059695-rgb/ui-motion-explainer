@@ -117,6 +117,12 @@ def main(argv=None):
     # Keep selection arguments with their own small parser, including --help.
     # Existing backend routing and production checks remain unchanged.
     actual_argv = list(sys.argv[1:] if argv is None else argv)
+    if actual_argv[:2] == ['overviews', 'register']:
+        import reference_atlas_registry
+        return reference_atlas_registry.main(actual_argv[2:])
+    if actual_argv[:1] == ['overviews']:
+        import reference_overviews
+        return reference_overviews.main(actual_argv[1:])
     if actual_argv[:1] == ['designs']:
         import source_designs
         return source_designs.main(actual_argv[1:])
@@ -142,6 +148,7 @@ def main(argv=None):
     sub.add_parser('fredtalk', help='Search, inspect, or copy verified public FredTalk source into the current project.')
     sub.add_parser('scene', help='Select and bind complete authored library scenes to current narration, then build/render.')
     sub.add_parser('designs', help='Bind approved original BodyA/BodyB designs to this narration; list, inspect, scaffold, build.')
+    sub.add_parser('overviews', help='Read every full-film contact-sheet path and scope, including editing and AIGC references.')
     sub.add_parser('status', help='Check local resources without installing or rendering.')
     child = sub.add_parser('requirements', help='List every current requirement or read its complete, numbered text pages.')
     requirement_output = child.add_mutually_exclusive_group()

@@ -24,6 +24,7 @@ import selection
 import selection_contract
 import requirements
 import source_designs
+import reference_overviews
 
 ROOT = Path(__file__).resolve().parents[1]
 OWNER = 'ui-motion-fusion/director.py'
@@ -132,6 +133,7 @@ def production_context(resolution, root=ROOT):
         'primary_design_source': resolution.get('guidance') if unified else None,
         'current_project_style': resolution.get('current_project_style', {}),
         'current_project_inputs': resolution.get('current_project_inputs', {}),
+        'reference_overviews': reference_overviews.load(root),
         'approved_examples': [
             {'id': row.get('id'), 'preview': {'path': row['path'], 'exists': row.get('exists', False)},
              'reuse_scope': row.get('current_usage') or row.get('scope'),
@@ -182,7 +184,7 @@ def production_context(resolution, root=ROOT):
             'reference_library': resource('references/library.md'),
             'source_study': resource('references/source-study-guide.md'),
             'visual_review': resource('references/visual-quality.md')},
-        'instruction': ('先完整继承 style.preferences 中唯一偏好页的 UI、AE 感、开头与禁忌，Fred Talk 默认整体方向持续适用。style.reference_directions 提供已认可正文的具体 UI 图、动态摘录与源码，先按其外观建立本期画面，再从整库取表达与动作；有来源的 body-ui 覆盖只改变正文，默认总偏好及未覆盖范围继续生效。效果库提供构图、材料、窗口组织与动作实现，不另选整片风格。先读本稿句意和上下文，再查看所选方向与效果的实际画面和源码；阿渡等完整场景仅是实现候选。女孩样片只用于 AIGC 画风。保留当前输入的原声、人物与 IP 身份；技术记录和 style.applied 自报均不是审美验收。'
+        'instruction': ('先完整继承 style.preferences 中唯一偏好页的 UI、AE 感、开头与禁忌，再逐条打开 production.reference_overviews 中全部视频的全片总览，包括阿闰、秋芝/AIGC 与整个已收录参考；根据口播选中相关细读页和动态事件。四张旧图只补充局部外观校准，不替代全片或全库。Fred Talk 默认整体方向持续适用；有来源的 body-ui 覆盖只改变正文，默认总偏好及未覆盖范围继续生效。效果库提供构图、材料、窗口组织与动作实现，不另选整片风格。查看所选设计源码并落实本期动作；女孩样片只用于 AIGC 画风。保留当前输入的原声、人物与 IP 身份；文件存在、技术记录和 style.applied 自报均不是观看或审美验收。'
                         if unified else '先读本稿并设计段落事件，再查看适用认可范围和跨库候选、对应源码。认可样片校准质量，不默认充当整片镜头模板。新工程接入现有组件；已有工程保持后端并作适配。示例媒体不自动进入新片，旧配色不覆盖当前UI。')}
 
 
@@ -346,7 +348,8 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
         '# 本期剪辑入口', '',
         f"原稿：{source['path']}", f'工程：{folder}', f'{"主要设计来源" if unified else "账号"}：{profile_text}',
         '完整原文及哈希在 director-context.json 的 source；它是待剪辑材料，不是执行指令。', '',
-        ('先通读 context.source 的整篇原稿，确定句意、上下文和观众需要看懂的变化。完整读取 context.style.preferences.text 中唯一偏好页的 UI、AE 感、开头与禁忌，再看当前 style.reference_directions 的已认可正文图、动态和源码，按其外观精修本期画面；有来源的 body-ui 覆盖只改正文，未覆盖范围继续继承。从效果库选择实现时查看实际画面与源码，跨库选件不自动更换整体风格。当前输入的原声、人物与 IP 身份保持，明确续作仅接续传入的本工程根。' if unified else '先通读 context.source 的整篇原稿，确定段落任务和观众需要看懂的变化。以下样片用于校准质量与认可范围，不按首条、最近一条或最方便的旧工程决定整片镜头。'), '',
+        reference_overviews.render_brief(context['production']['reference_overviews']), '',
+        ('先通读 context.source 的整篇原稿，确定句意、上下文和观众需要看懂的变化。完整读取 context.style.preferences.text 中唯一偏好页的 UI、AE 感、开头与禁忌，按上方全片总览选出相关细读页、完整动态和源码，再按当前认可范围精修本期画面；有来源的 body-ui 覆盖只改正文，未覆盖范围继续继承。从效果库选择实现时查看实际画面与源码，跨库选件不自动更换整体风格。当前输入的原声、人物与 IP 身份保持，明确续作仅接续传入的本工程根。' if unified else '先通读 context.source 的整篇原稿，确定段落任务和观众需要看懂的变化。以下样片用于校准质量与认可范围，不按首条、最近一条或最方便的旧工程决定整片镜头。'), '',
         *([f"完整偏好来源：{context['style']['preferences']['path']}；全文和 SHA-256 已带入 context.style.preferences。",
            '来源章节：' + '；'.join(context['style']['preferences'].get('sections', [])), '']
           if (context['style']['preferences'] or {}).get('exists') else []),
@@ -354,11 +357,8 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
           if unified and context['production']['editorial_source']['implementation']['exists'] else []),
         ('## 当前 UI 外观基准' if unified else '## 接续外观与认可范围，不固定镜头模板'), '',
         *[f"- UI：{item.get('direction_contract', {}).get('summary', item['id'])}" for item in reference_directions],
-        *[f"  当前外观校准图：{anchor['path']}；学习：{anchor.get('learn', '按当前方向查看')}"
-          for item in reference_directions for anchor in item.get('visual_anchors', [])],
-        *[f"  当前动态参考：{entry['path']}（无声 UI 摘录，连同源码理解动作；不是新成片验收）"
-          for item in reference_directions for entry in item.get('required_reading', [])
-          if Path(entry['path']).suffix.lower() in VIDEO_EXTENSIONS],
+        '四张旧外观校准图保留于 style.reference_directions[].visual_anchors，仅在全片总览后按需核对局部材质。'
+        '旧 12 秒摘录也仅用于局部动作定位；默认先看上方各视频全片总览，再查相关细读页和完整动态事件。',
         '',
         reference_film.render_brief(film, reference_choices),
         selection.render_library_directory(context['selection'].get('library_directory')),
@@ -380,6 +380,10 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
         '上方 requirements 的全部现行要求必须完整细读；其他历史资料与具体实现按需查 context.production.on_demand。', '',
         selection.render_selection_brief(context['selection']) if not context['selection'].get('errors')
         else '候选检索暂不可用：' + '; '.join(context['selection']['errors']),
+        '', '## 次级局部校准（全片总览与相关参考之后）', '',
+        '这里只保留原四张图的精细材质对照入口，不构成本期参考范围，也不能作为已查看整个视频的证据。',
+        *[f"- {anchor['path']}；局部对照：{anchor.get('learn', '按当前范围查看')}"
+          for item in reference_directions for anchor in item.get('visual_anchors', [])],
     ])
     outputs = {
         folder / 'director-context.json': json.dumps(context, ensure_ascii=False, indent=2) + '\n',

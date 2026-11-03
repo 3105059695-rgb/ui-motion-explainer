@@ -1,0 +1,24 @@
+(async()=>{'use strict';
+const $=id=>document.getElementById(id);let rows=[],active=null,pageIndex=0,filter='all';
+const groups=[['all','全部参考'],['ui','UI 与质感'],['editing','剪辑与解释'],['aigc','AIGC'],['history','历史范围']];
+const h=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
+function matches(r){return filter==='all'||(r.categories||[]).some(c=>filter==='history'?c.toLowerCase().startsWith('histor'):c.toLowerCase().includes(filter));}
+function display(){const container=$('list');container.replaceChildren();for(const r of rows.filter(matches)){
+ const card=h('section',undefined,'card');card.id=r.id;card.append(h('h2',r.title));const badges=h('div');for(const c of r.categories||[])badges.append(h('span',c,'tag'));card.append(badges);
+ card.append(h('p',r.scope||r.approval_scope||'按来源记录的认可范围使用','scope'));
+ if(r.approval_scope&&r.approval_scope!==r.scope)card.append(h('p',r.approval_scope,'note'));
+ const duration=r.duration_seconds??r.duration;card.append(h('p',`${duration?Number(duration).toFixed(1)+' 秒 · ':''}${r.sampling?.detail_interval_seconds||2} 秒间隔细读 · ${(r.pages||[]).length} 页。${r.overview?.count?r.overview.count+' 格总览。':''}`,'note'));
+ if(r.overview?.url){const a=h('a');a.href=r.overview.url;a.target='_blank';a.rel='noopener';const img=h('img');img.className='thumb';img.src=r.overview.url;img.alt=r.title+'：带时间码的全片分格总览';img.loading='lazy';a.append(img);card.append(a);
+   const bar=h('div',undefined,'bar'),detail=h('button','展开分段细图与原片');detail.onclick=()=>open(r,0);bar.append(detail);const original=h('a','打开总览原图');original.href=r.overview.url;original.target='_blank';bar.append(original);card.append(bar);
+ }else{card.append(h('p',r.availability_note||'本机未找到原视频或图集；未用四张旧图代替。','missing'));if(r.source_url){const a=h('a','查看原来源');a.href=r.source_url;a.target='_blank';a.rel='noopener';card.append(a);}}
+ container.append(card);
+}}
+function showPage(){const p=active.pages?.[pageIndex];if(!p)return;$('pages').value=pageIndex;$('detail').src=p.url||'';$('original-image').href=p.url||'#';$('page-note').textContent=`第 ${pageIndex+1}/${active.pages.length} 页 · ${Number(p.start||0).toFixed(1)}–${Number(p.end||0).toFixed(1)} 秒。点击原尺寸图可放大查看；动作衔接请看对应原片。`;$('jump').value=p.start||0;$('prev').disabled=pageIndex===0;$('next').disabled=pageIndex>=active.pages.length-1;}
+function open(r,index){active=r;pageIndex=index;$('detail-title').textContent=r.title;$('pages').replaceChildren();(r.pages||[]).forEach((p,i)=>$('pages').add(new Option(`第${i+1}页 · ${Number(p.start||0).toFixed(0)}–${Number(p.end||0).toFixed(0)}s`,i)));$('play-source').disabled=!r.video_url;$('dialog').hidden=false;document.body.style.overflow='hidden';showPage();}
+$('close').onclick=()=>{$('dialog').hidden=true;$('video').pause();document.body.style.overflow='';};document.addEventListener('keydown',e=>{if(e.key==='Escape')$('close').click();});
+$('prev').onclick=()=>{pageIndex--;showPage();};$('next').onclick=()=>{pageIndex++;showPage();};$('pages').onchange=()=>{pageIndex=Number($('pages').value);showPage();};
+$('play-source').onclick=()=>{const v=$('video'),t=Number($('jump').value)||0;if(v.dataset.id!==active.id){v.dataset.id=active.id;v.src=active.video_url;v.onloadedmetadata=()=>{v.currentTime=Math.min(t,Math.max(0,v.duration-.05));};v.load();}else v.currentTime=Math.min(t,Math.max(0,v.duration-.05));v.scrollIntoView({behavior:'smooth',block:'center'});};
+$('detail').onclick=e=>{const image=$('detail'),p=active?.pages?.[pageIndex];if(!p?.cells)return;const box=image.getBoundingClientRect(),x=(e.clientX-box.left)*image.naturalWidth/box.width,y=(e.clientY-box.top)*image.naturalHeight/box.height;const cell=p.cells.find(c=>x>=c.x&&x<=c.x+c.w&&y>=c.y&&y<=c.y+c.h);if(cell){$('jump').value=cell.seconds;$('page-note').textContent=`已选 ${Number(cell.seconds).toFixed(2)} 秒。点击“打开对应原片”查看这一格前后的连续动作。`;}};
+for(const [id,label] of groups){const b=h('button',label);b.setAttribute('aria-pressed',id==='all');b.onclick=()=>{filter=id;for(const child of $('filters').children)child.setAttribute('aria-pressed',child===b);display();};$('filters').append(b);}
+try{if(location.protocol==='file:')throw Error('请从 Skill 本地服务打开：python -B -X utf8 scripts/serve.py，然后访问 http://127.0.0.1:8770/assets/reference-atlas/index.html');const response=await fetch('/__atlas',{cache:'no-store'});if(!response.ok)throw Error('当前服务尚未更新，请使用新版 scripts/serve.py。');const data=await response.json();rows=data.videos||[];const available=rows.filter(r=>r.overview?.url).length;$('summary').textContent=`${available}/${rows.length} 条参考已有全片总览。界面展示可用资源，不代表本次制作已经看过或采用。缺失原片单独列出。`;display();window.ReferenceAtlas={rows,open};}catch(e){$('summary').textContent=e.message;$('summary').classList.add('missing');}
+})();
