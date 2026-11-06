@@ -15,9 +15,7 @@ def read_json(path):
 
 def load_overlay(root=ROOT):
     path = Path(root) / LOCAL_FILE
-    if not path.is_file():
-        return {'schema_version': 1, 'modules': {}, 'files': {}}
-    data = read_json(path)
+    data = read_json(path) if path.is_file() else {'schema_version': 1, 'modules': {}, 'files': {}}
     if not isinstance(data, dict) or type(data.get('schema_version')) is not int or data.get('schema_version') != 1 or set(data) - {'schema_version', 'modules', 'files'}:
         raise ValueError('Invalid local resource overlay schema: ' + str(path))
     modules, files = data.get('modules', {}), data.get('files', {})
@@ -35,7 +33,13 @@ def load_overlay(root=ROOT):
             raise ValueError('files mappings require files; directory modules belong under modules: ' + ident)
         if 'sha256' in record and not re.fullmatch('[0-9a-fA-F]{64}', str(record['sha256'])):
             raise ValueError('Invalid SHA-256 in local resource mapping: ' + ident)
-    return {'schema_version': 1, 'modules': modules, 'files': files}
+    from reference_bundle import load_pack
+    portable = load_pack(root)
+    # Portable files are installed package resources; author-machine mappings
+    # remain a fallback and are never copied to another computer.
+    packed = {ident: {'path': row['path'], 'sha256': row['sha256']}
+              for ident, row in portable['files'].items()}
+    return {'schema_version': 1, 'modules': modules, 'files': {**files, **packed}}
 
 
 def _local_path(value, root):

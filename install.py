@@ -15,6 +15,10 @@ ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / 'scripts'))
 from release_manifest import (MANIFEST, STATE, checked_path, is_link, read_manifest,
                               sha256, verify_release)
+from reference_bundle import load_pack, install_pack
+from reference_readiness import report as reference_status
+
+PACK_MANIFEST = 'references/resources.pack.json'
 
 
 def write_json(path: Path, value: dict):
@@ -51,6 +55,7 @@ def install(source: Path, target: Path, *, update: bool = False,
     source = source.resolve()
     release = verify_release(source)
     incoming = read_manifest(source)
+    private_pack = load_pack(source, verify_hash=True)
     target = check_target(target, source)
     exists = target.exists()
     if exists and not update:
@@ -62,12 +67,15 @@ def install(source: Path, target: Path, *, update: bool = False,
     try:
         copy_payload(source, staging)
         if not exists:
+            if private_pack['present']:
+                install_pack(source, staging)
             write_json(staging / STATE, {'version': incoming['version'], 'action': 'install',
                                         'manifest_sha256': sha256(staging / MANIFEST)})
             if target.exists():
                 raise ValueError('Target appeared during installation; refusing to replace it')
             staging.rename(target)
-            return {**release, 'action': 'installed', 'target': str(target), 'backup': None}
+            return {**release, 'action': 'installed', 'target': str(target), 'backup': None,
+                    'reference_readiness': reference_status(target)}
 
         # Plan the entire update before creating a backup or changing destination files.
         old_manifest_path = checked_path(target, MANIFEST)
@@ -117,7 +125,8 @@ def install(source: Path, target: Path, *, update: bool = False,
         stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
         backup = backup_root / ('ui-motion-fusion-' + stamp + '-' + uuid.uuid4().hex[:8])
         backup.mkdir(parents=True, exist_ok=False)
-        changed = [*writes, *deletes, MANIFEST, STATE]
+        changed = [*writes, *deletes, MANIFEST, STATE,
+                   *([PACK_MANIFEST] if private_pack['present'] else [])]
         originals, created = [], []
         for name in changed:
             path = checked_path(target, name)
@@ -147,6 +156,9 @@ def install(source: Path, target: Path, *, update: bool = False,
                 checked_path(target, name).unlink()
             attempted.append(MANIFEST)
             shutil.copy2(staging / MANIFEST, target / MANIFEST)
+            if private_pack['present']:
+                attempted.append(PACK_MANIFEST)
+                install_pack(source, target)
             attempted.append(STATE)
             write_json(target / STATE, {'version': incoming['version'], 'action': 'update',
                                        'backup': str(backup),
@@ -177,6 +189,7 @@ def install(source: Path, target: Path, *, update: bool = False,
                 'written_files': len(writes), 'removed_unmodified_obsolete_files': deletes,
                 'replaced_local_modifications': conflicts,
                 'preserved_modified_obsolete_files': preserved_orphans,
+                'reference_readiness': reference_status(target),
                 'local_user_files': 'Unmanaged files are preserved; colliding files require explicit replacement.'}
     finally:
         if staging.exists():
@@ -199,6 +212,9 @@ def main():
         result = install(ROOT, args.target, update=args.update,
                          replace_modified=args.replace_modified, backup_root=args.backup_root)
         print(json.dumps(result, ensure_ascii=False, indent=2))
+        readiness = result['reference_readiness']
+        if readiness['required'] and not readiness['ready']:
+            parser.exit(2, readiness['message'] + '\n')
     except (OSError, ValueError, RuntimeError) as error:
         parser.exit(1, str(error) + '\n')
 

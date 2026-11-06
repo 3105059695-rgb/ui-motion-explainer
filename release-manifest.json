@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "name": "ui-motion-fusion",
-  "version": "2026.11.03.1",
+  "version": "2026.11.06.1",
   "resources": {
     "required_modules": [
       "source-study",
@@ -37,13 +37,13 @@
     },
     {
       "path": ".gitignore",
-      "size": 181,
-      "sha256": "9dff89ac47706dbaf3a5a75e3704cdd633a37bc9dc9bb806fe9e06a7de3b847b"
+      "size": 240,
+      "sha256": "9124c9ca9481fa3ac052cae787536aeabceb869999bf26a944d3a17184643910"
     },
     {
       "path": "AI-START.md",
-      "size": 1749,
-      "sha256": "ec8b5fe4474ae4af55cb0d622c7223d838f39bbad2283c382b61a7b7120924fb"
+      "size": 1966,
+      "sha256": "c2734d2edf7652e9ca0cb1633dfca44531cb609253c57f4952ca0715cb7df45a"
     },
     {
       "path": "CREDITS.md",
@@ -67,8 +67,8 @@
     },
     {
       "path": "README.md",
-      "size": 7077,
-      "sha256": "4a1e7180972b2495aae10a7c3503393d88f30af4c043c4577415f946092dbf7c"
+      "size": 7973,
+      "sha256": "763da53fd743ad5a00ddd05a13da6d3671dd543597790f624dc0bbdfd84bf702"
     },
     {
       "path": "SKILL.legacy.md",
@@ -77,8 +77,8 @@
     },
     {
       "path": "SKILL.md",
-      "size": 6136,
-      "sha256": "1f5a4a5d632cb370dcccc96933b4a9d910d5f83260a00270277542ac92e8afd6"
+      "size": 6621,
+      "sha256": "85c4991209e95af3423091875aaea3de8bdacfb97fd8082f75bca184fe33caa8"
     },
     {
       "path": "START-HERE.md",
@@ -88,7 +88,7 @@
     {
       "path": "VERSION",
       "size": 14,
-      "sha256": "dc2238929727edf8ba50c4eb49eef8b9fbaac197027d3a91c297ac4afcf6d2a8"
+      "sha256": "a1e58b03a13dd9c5efa30d261896064e292970f9c84343eed5e5e0798b451d3f"
     },
     {
       "path": "agents/openai.yaml",
@@ -14732,8 +14732,8 @@
     },
     {
       "path": "docs/install.md",
-      "size": 6218,
-      "sha256": "19291196f9dc76a2f65a74c173dc1eefd39b88774dc84ffa863d42a6805a8029"
+      "size": 7759,
+      "sha256": "208f94603e0d49f3436673289ef2ac27fba2ddac01dee5e844397db6cc00425f"
     },
     {
       "path": "docs/reference-library.md",
@@ -14797,18 +14797,18 @@
     },
     {
       "path": "index.html",
-      "size": 23532,
-      "sha256": "22b9741446da14a9e95ca9d73aed206a5019f0e8e696717eb030ae52311cd4d0"
+      "size": 23586,
+      "sha256": "714d1fcf52ea05b46dbcf25cc4b775489f9daae258bfa329886ef23586bef7dd"
     },
     {
       "path": "install.py",
-      "size": 10972,
-      "sha256": "e2ffb1400546a3c59b6c2023ee7ec640917f6aef4a755d4969a9a1a8ccb5dc0b"
+      "size": 11783,
+      "sha256": "465e4f56a0e1cf92d8b54524a641997643783180992e28b5bfeb10b076659504"
     },
     {
       "path": "references/aesthetic-preferences.md",
-      "size": 15437,
-      "sha256": "78c522e699eb886d753e9a326eb27dd69511fb3dc9f75a2b925ab42eb9e8b3ab"
+      "size": 15607,
+      "sha256": "b001a38a82e81f7fd696ae1b0d1c72526dd2139d07b56215575379b108f22e0a"
     },
     {
       "path": "references/aigc-assets.json",
@@ -14862,8 +14862,8 @@
     },
     {
       "path": "references/distribution-scope.md",
-      "size": 3521,
-      "sha256": "ebccee4246644fa36aacb3f0f4050b54b2732093ba06a216c42a3fce5b269904"
+      "size": 4288,
+      "sha256": "0e0403df4c9ddb36ee7f67a4e734a77d178c376a34379a09e88308c06bc2ca8b"
     },
     {
       "path": "references/editing-lessons.md",
@@ -15477,8 +15477,8 @@
     },
     {
       "path": "scripts/director.py",
-      "size": 68863,
-      "sha256": "b514dae10baec998b5d3f45cfb821b943c81ee630c9ce9505bb8d009d32e00ba"
+      "size": 69176,
+      "sha256": "df13c3a363c49c4ef228e922af6a9f5c84e9d7dfa97c28ff8cc34245b165f8e8"
     },
     {
       "path": "scripts/export_qiaomu_fonts.py",
@@ -15536,6 +15536,11 @@
       "sha256": "cc94974acb778e432c3b34f411d56a379521ce56d6579a980925b298fac01e0b"
     },
     {
+      "path": "scripts/reference_bundle.py",
+      "size": 13855,
+      "sha256": "1910d27f307e5adf0ba2fccdf1ea5a20df95941d622fc9a0be6df342d9e5f985"
+    },
+    {
       "path": "scripts/reference_film.py",
       "size": 9909,
       "sha256": "499ef50d332b64b4ab133510543cea46139c24232b670a89de74427f2565b3c5"
@@ -15546,9 +15551,14 @@
       "sha256": "f304bde4908c22bae3a0d9b313b7836a4441906ee8f2d001e6805df40a59f10c"
     },
     {
+      "path": "scripts/reference_readiness.py",
+      "size": 6790,
+      "sha256": "d8554d90d479b77c02c19b55bd4232d24e407ee8e0eb004216d8937563405377"
+    },
+    {
       "path": "scripts/release_manifest.py",
-      "size": 14684,
-      "sha256": "2987ca96b05005c4d2159d8ad9cc9d2ba9db6a0a98b258e49c7cf7ab33d15bde"
+      "size": 14786,
+      "sha256": "941409efbdacdf54c7f4131bf024644aab2187d796e79e0a5382af17d8ebde6a"
     },
     {
       "path": "scripts/render.py",
@@ -15562,8 +15572,8 @@
     },
     {
       "path": "scripts/resource_inventory.py",
-      "size": 10233,
-      "sha256": "1e0de776278f8783eeb662b2fa02c1e1eb2ca5be22de63079c0704ff867ddbc6"
+      "size": 10573,
+      "sha256": "677489272dde4afaf8b6dfb3ba9571f70e91d52cbcaa87263d73e4951250df29"
     },
     {
       "path": "scripts/resource_registry.py",
@@ -15592,8 +15602,8 @@
     },
     {
       "path": "scripts/serve.py",
-      "size": 5933,
-      "sha256": "d4ab9aa05514038a2de063ffee0137730ef7fbfdcfe0d0bbad54b8bd9ee3d7c7"
+      "size": 6229,
+      "sha256": "6dbfb57cad7b96ef079edfd5bd773fb6f68b9ff9daafbace831201cf8759bb39"
     },
     {
       "path": "scripts/source_designs.py",
@@ -15671,6 +15681,11 @@
       "sha256": "78a300f4b1d7c9dc41ab60f44bac04d9d246e165cb3fe3827fa605d54e49ee97"
     },
     {
+      "path": "scripts/test_reference_bundle.py",
+      "size": 8194,
+      "sha256": "5914bf51ac5ff2eaf4abb862c7233788360552f68a22859caf6e1c71bdf94290"
+    },
+    {
       "path": "scripts/test_reference_film.py",
       "size": 7143,
       "sha256": "3babfe975f34e04350313a8e407b5caf61953b519f262fcfc5a851954103e42c"
@@ -15684,6 +15699,11 @@
       "path": "scripts/test_reference_overviews.py",
       "size": 4435,
       "sha256": "f2ab5e707c97607364b9b8ee51f2833b36f2c91b36ca048de3653395a30e1a69"
+    },
+    {
+      "path": "scripts/test_reference_readiness.py",
+      "size": 5889,
+      "sha256": "1e05d5896336f0cb39377b288911e97950b49ca76c52a1afc262a567f4317838"
     },
     {
       "path": "scripts/test_reference_viewer.py",
@@ -15752,13 +15772,13 @@
     },
     {
       "path": "scripts/ui.py",
-      "size": 18701,
-      "sha256": "d0c8fd8e6b9f65c7f45a2b37dec7455c8ef3779301c286e6462131d042376f23"
+      "size": 18984,
+      "sha256": "6d150075fe42bb470e66814b7d77766e2179fd44da688b9436c960cc63fd2282"
     },
     {
       "path": "scripts/verify_package.py",
-      "size": 855,
-      "sha256": "82cc6a0fa659e118e34c07d25aaacb089dc433118534b337301d6dce233d0d67"
+      "size": 1256,
+      "sha256": "a09ab5ac42d52de4abcd1f4a32e8aabe72409b2aae18e170d3ca4280808c1005"
     },
     {
       "path": "tests/test_fredtalk_library.py",
@@ -15767,8 +15787,8 @@
     },
     {
       "path": "tests/test_install_release.py",
-      "size": 20297,
-      "sha256": "4013cbaccc3d26c29462a4e7d66b0ded02d0c106a09b21fe97619608afcf8ef5"
+      "size": 22111,
+      "sha256": "6794561c7ae1020f1c4133e5f6caaab5e57f6b5242c11a9a63f51473375adbbd"
     }
   ]
 }

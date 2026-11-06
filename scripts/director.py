@@ -25,6 +25,7 @@ import selection_contract
 import requirements
 import source_designs
 import reference_overviews
+import reference_readiness
 
 ROOT = Path(__file__).resolve().parents[1]
 OWNER = 'ui-motion-fusion/director.py'
@@ -128,12 +129,14 @@ def production_context(resolution, root=ROOT):
         path = (Path(root) / relative).resolve()
         return {'path': str(path), 'exists': path.is_file()}
     unified = resolution.get('unified_production', {}).get('enabled') is True
+    overviews = reference_overviews.load(root)
     return {
         'unified_production': unified,
         'primary_design_source': resolution.get('guidance') if unified else None,
         'current_project_style': resolution.get('current_project_style', {}),
         'current_project_inputs': resolution.get('current_project_inputs', {}),
-        'reference_overviews': reference_overviews.load(root),
+        'reference_overviews': overviews,
+        'reference_readiness': reference_readiness.report(root, atlas_report=overviews),
         'approved_examples': [
             {'id': row.get('id'), 'preview': {'path': row['path'], 'exists': row.get('exists', False)},
              'reuse_scope': row.get('current_usage') or row.get('scope'),
@@ -296,6 +299,9 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
                        'An Agent must read meaning, context and viewer gap; this tool does not infer them.',
                        'No media generation, upload, payment, render or style approval occurs.'],
     }
+    readiness = context['production']['reference_readiness']
+    if readiness['required'] and not readiness['ready']:
+        raise ValueError(readiness['message'])
     if film is not None:
         context['reference_film'] = film
     if presenter_source is not None:

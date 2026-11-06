@@ -30,6 +30,9 @@ def resource_url(ident):
 
 def reference_manifest(root):
     references, design_media = [], {}
+    catalog_path = Path(root) / 'references/reference-atlas.json'
+    catalog = json.loads(catalog_path.read_text(encoding='utf-8-sig')) if catalog_path.is_file() else {}
+    labels = {row.get('source_resource_id'): row for row in catalog.get('videos', [])}
     for ident, path in sorted(mapped_media(root).items()):
         exists = path.is_file()
         if ident.startswith('source-design-media:'):
@@ -39,7 +42,7 @@ def reference_manifest(root):
         if not ident.startswith('source-video:'):
             continue
         # Windows path syntax must never leak when a public copy runs elsewhere.
-        title = PureWindowsPath(str(path)).stem.split(' #', 1)[0]
+        title = labels.get(ident, {}).get('title') or PureWindowsPath(str(path)).stem.split(' #', 1)[0]
         references.append({'id': ident, 'title': title,
                            'url': resource_url(ident) if exists else None, 'exists': exists,
                            'scope': ('body only; opening excluded' if ident == BODY_REFERENCE

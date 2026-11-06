@@ -32,7 +32,9 @@ def fixture(root):
     root.mkdir(parents=True)
     for relative in ['install.py', 'scripts/release_manifest.py', 'scripts/package.py',
                      'scripts/verify_package.py', 'scripts/scene_builder.py', 'scripts/scene_plan.py',
-                     'scripts/style_registry.py', 'scripts/fredtalk_library.py', 'scripts/requirements.py']:
+                     'scripts/style_registry.py', 'scripts/fredtalk_library.py', 'scripts/requirements.py',
+                     'scripts/reference_bundle.py', 'scripts/reference_readiness.py',
+                     'scripts/reference_overviews.py', 'scripts/resource_inventory.py']:
         destination = root / relative
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(ROOT / relative, destination)
@@ -104,6 +106,36 @@ class InstallReleaseTests(unittest.TestCase):
 
     def install(self, **kwargs):
         return installer.install(self.source, self.target, **kwargs)
+
+    def private_pack(self):
+        payload = b'private reference installation fixture'
+        digest = hashlib.sha256(payload).hexdigest()
+        name = 'references/private-media/' + digest + '.bin'
+        write(self.source, name)
+        (self.source / name).write_bytes(payload)
+        write(self.source, 'references/resources.pack.json', {'schema_version': 1, 'private': True,
+              'files': {'source-video:fixture': {'path': name, 'sha256': digest, 'size': len(payload)}}})
+        return name, payload
+
+    def test_private_reference_pack_installs_and_survives_public_update(self):
+        name, payload = self.private_pack()
+        self.install()
+        self.assertEqual((self.target / name).read_bytes(), payload)
+        mapping = json.loads((self.target / 'references/resources.pack.json').read_text(encoding='utf-8'))
+        self.assertEqual(mapping['files']['source-video:fixture']['path'], name)
+        (self.source / 'references/resources.pack.json').unlink()
+        write(self.source, 'assets/core/source.js', 'updated fixture code')
+        build_manifest(self.source, '2')
+        self.install(update=True)
+        self.assertEqual((self.target / name).read_bytes(), payload)
+        self.assertEqual(json.loads((self.target / 'references/resources.pack.json').read_text(encoding='utf-8')), mapping)
+
+    def test_tampered_private_pack_stops_before_install(self):
+        name, _ = self.private_pack()
+        (self.source / name).write_bytes(b'changed')
+        with self.assertRaises(ValueError):
+            self.install()
+        self.assertFalse(self.target.exists())
 
     def test_release_rejects_missing_registered_requirement(self):
         manifest = {'schema_version': 1, 'documents': [

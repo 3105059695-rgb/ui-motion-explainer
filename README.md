@@ -2,16 +2,20 @@
 
 **当前版本见 [VERSION](VERSION)**。仓库地址继续使用 `ui-motion-explainer`，安装与调用统一为 **`$ui-motion-fusion`**。此处描述当前本地源码；远端发布状态以实际发布记录为准。
 
+**换电脑要带上参考资源。** 公开 GitHub 包只有 4 条公开 AIGC 图集；作者本机的 20 条全片参考、连续原片和完整原设计演示素材通过私用完整安装包转移。该包解压后运行同一个 `install.py` 即自动接入相对路径，后续公开代码更新会保留参考。安装结果分别报告“代码已安装”和“参考齐全”，缺件时停止正常制作，详见[跨电脑安装](docs/install.md)。
+
 **先看[各条参考视频的全片分格总览](assets/reference-atlas/index.html)，再选择完整动作与源码。** 当前默认 UI 仍是用户认可的「十款 Agent」正文外观及当前 A 配色；Fred、阿闰、秋芝与 AIGC 按各自认可范围参与参考，整个效果库继续开放。按口播的意思、上下文与情绪选择材料，让对象完成可看懂的动作，再用蒙版、聚焦、变形与转场接起来。人物身份和 AIGC 画风独立保存。具体偏好见[UI、AE 感、开头与禁忌](references/aesthetic-preferences.md)，流程见[唯一入口](SKILL.md)。
 
 ## 给 AI 这一句就能安装
 
-> 请读取 https://github.com/3105059695-rgb/ui-motion-explainer/blob/main/AI-START.md ，安装或更新最新版 ui-motion-fusion，保留我的工程和自定义内容，完成安装检查。以后使用这个唯一入口按已确认风格剪辑。
+> 请读取 https://github.com/3105059695-rgb/ui-motion-explainer/blob/main/AI-START.md ，安装或更新最新版 ui-motion-fusion，保留我的工程和自定义内容。有我提供的私用完整包时一并安装参考；分别报告代码与参考完整性，参考不齐时不要直接开始制作。
 
 当前仓库包含完整 Skill 实现与随包资源；GitHub `Download ZIP` 或 [最新源码包](https://github.com/3105059695-rgb/ui-motion-explainer/archive/refs/heads/main.zip) 都可安装，最新 Release 页面的 `Source code (zip)` 提供固定版本。私人原片和未随包历史媒体的范围见下文。解压后进入含 `SKILL.md` 和 `install.py` 的目录，不再依赖作者 E 盘或七个额外入口。复用已有 Python、Node、FFmpeg 与浏览器，不为每个项目另装运行时。
 
 ## 本版修正
 
+- 修复跨电脑缺参考：支持自动安装带相对路径的私人资源包，包含全片图集、动态原片和 16 项原设计演示素材；公开更新与发布均保留分发边界。
+- `ui.py references check --require` 和制作准备会核对实际资源。仅装公开代码却缺参考时明确报错，不能将 4 条 AIGC 示例当作完整风格库。
 - 全片图集替代四张局部校准图成为首要查看入口；`ui.py overviews --brief` 和准备工程均列出全部已登记总览、细读页、时间码与认可范围。旧四图保留在次级附录，不再代替整库查看。
 - 图集页可查看分段细图、按格定位原片。本机已生成 20 条参考的全片图集；公开包携带 4 条现有 AIGC 演示的派生图，私人图集通过本机映射接续，缺失项明确列出。
 - 新窗口先逐页完整读取[现行要求清单](references/requirements.json)的原文；`ui.py requirements --part 1` 给出正文和下一页，不用摘要代替全文。

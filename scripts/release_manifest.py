@@ -12,7 +12,7 @@ from urllib.parse import unquote
 
 MANIFEST = 'release-manifest.json'
 STATE = '.install-state.json'
-VERSION = '2026.11.03.1'
+VERSION = '2026.11.06.1'
 EXCLUDED_DIRS = {'.git', 'node_modules', '__pycache__', '.cache', 'cache', 'caches',
                  '.venv', 'venv', '.pytest_cache', '.mypy_cache', '.ruff_cache',
                  'runtime', 'runtimes', 'browser-cache'}
@@ -74,7 +74,8 @@ def classify(value: str) -> str:
     lower = [part.lower() for part in parts]
     # Author-machine account routes/documents are never release payload. Exclude
     # before traversing their contents; parent links still get checked_path checks.
-    if (lower == ['references', 'resources.local.json']
+    if (lower in (['references', 'resources.local.json'], ['references', 'resources.pack.json'])
+            or lower[:2] == ['references', 'private-media']
             or lower == ['references', 'profiles', 'registry.local.json']
             or lower[:3] == ['references', 'profiles', 'local']):
         return 'excluded'

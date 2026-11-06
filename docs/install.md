@@ -2,6 +2,8 @@
 
 安装包只创建 `ui-motion-fusion` 一个入口。使用现有 Python 3.10+；安装器不下载 Python、浏览器、Node 或模型，不创建独立 runtime，不修改其他 Skill。渲染工具和服务凭证按实际制作任务另行配置。
 
+**另一台电脑需要同样的视觉参考，请用含参考的私用完整包。** 公开 GitHub 包只带 4 条公开 AIGC 图集，不能独自提供作者本机 20 条参考和 10 类完整原设计演示。完整包还带全片图集、连续原视频及 16 项原设计演示素材，全部以包内相对路径定位，不携带作者电脑的 `resources.local.json`。
+
 ## 首次安装
 
 获取仓库主分支或最新 Release 的完整源码包，解压后进入含 `SKILL.md`、`VERSION` 和 `install.py` 的包根目录，运行：
@@ -17,6 +19,8 @@ python -B -X utf8 install.py --target "D:/my-agent/skills/ui-motion-fusion"
 ```
 
 从下载目录运行安装器；不要先把文件覆盖到已有安装目录。目标已存在时，普通安装会退出并保留原文件。
+
+完整包中的 `references/resources.pack.json` 会被安装器自动识别，逐项核对哈希，再安装 `references/private-media/` 内的内容。安装结果单独报告 `reference_readiness`；若仅代码安装成功而参考缺失，命令退出码为 2，并列出补齐方向。以后从 GitHub 更新代码会保留这套私人参考。
 
 ## 更新已有安装
 
@@ -57,9 +61,12 @@ python -B -X utf8 install.py --update --replace-modified
 ```powershell
 python -B -X utf8 scripts/verify_package.py --installed
 python -B -X utf8 scripts/ui.py modules check
+python -B -X utf8 scripts/ui.py references check --require
 ```
 
-第一条验证受管文件哈希及必需模块、随包参考资源，同时容许本机自加文件。第二条检查模块入口资源。图片存在不代表本期应固定使用这些人物或场景；这两项检查也不等于完整视频审美或音画验收。
+第一条验证受管文件哈希与公开必需资源；第二条检查模块入口；第三条要求实际参考齐全，当前应为 20 张总览、84 张细读图、20 条原片、16 项演示素材及 10 类完整设计资源。三条原本就缺失的外部历史视频另列。文件检查不等于已观看、会运用或审美满意。
+
+已有安装只补参考时，也可运行 `python -B -X utf8 scripts/reference_bundle.py import --source <完整包解压根> --target <已安装Skill根>`。它仅合并允许的参考资源，不改变本机账号覆盖或把示例产品固定为新稿内容。
 
 ## 维护者生成发布包
 
@@ -76,3 +83,5 @@ python -B -X utf8 -m unittest discover -s tests -p "test_install_release.py" -v
 发布校验以新的 `release-manifest.json` 为准；历史 base/adu 快照清单保留溯源价值，不再要求公共脱敏版与本机旧快照逐字一致。清单记录每个受管文件的 SHA-256，后续改动必须重新生成清单。
 
 包中排除 Git 元数据、依赖目录、缓存、虚拟环境、运行环境、安装状态及上述本机账号覆盖；发现其他路径中的 `.env`、密钥、凭证文件或纳入发布的符号链接/目录联接时拒绝构建。ZIP 固定只有 `ui-motion-fusion/` 顶层，输出已存在时拒绝覆盖。此检查是确定性文件规则，不是对任意文档正文泄密的自动保证；发布者仍须检查公开内容。
+
+经授权在自己的电脑间转移完整参考时，使用 `python -B -X utf8 scripts/reference_bundle.py export --root <参考齐全的Skill根> --out <Skill目录外的私用ZIP路径>`。它直接从现有文件生成一份包含代码的完整安装 ZIP，按内容去重，不临时复制原片或依赖。私人包和参考清单均被公开发布流程排除，不上传到公开 Release。
