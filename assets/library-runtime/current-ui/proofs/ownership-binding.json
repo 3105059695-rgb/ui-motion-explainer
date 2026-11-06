@@ -1,0 +1,31 @@
+{
+  "schema": "ui-motion-fusion/library-binding@1",
+  "id": "reference:0xnfrith-5be616",
+  "composition": null,
+  "entry": null,
+  "props": {},
+  "text": {
+    "CHECK IN, OR LOSE IT": "定时确认，超时就交接",
+    "JOB OWNER:": "当前任务：",
+    "CHANNEL": "输出通道",
+    "Each check-in (a LEASE) is good for 10 seconds. Machines renew every ~3.": "任务每 3 秒续期一次，超时后交给下一台执行。",
+    "LEASES · 10S EACH": "状态 · 每项 10 秒",
+    "THE TRADE-OFF": "方案对比"
+  },
+  "media": {},
+  "palette": {
+    "accent": "#D6C2FF",
+    "token_map": {}
+  },
+  "ui_style": {
+    "mode": "approved"
+  },
+  "style_scope": {
+    "baseline": "assets/agent-editorial/source/body-a.js + body-b.js; agent-editorial.js primitives",
+    "material_adapter": "agent-editorial-material-v1",
+    "layout_motion": "original positions, timing, transforms, masks and content pixels retained",
+    "not_claimed": "Role adaptation is not aesthetic approval; exact per-file and unsupported scopes are in ui-style-report.json."
+  },
+  "required_media_slots": [],
+  "binding_notes": "Fill current text/media/props. Original animation/timing remains. No silent media fallback."
+}

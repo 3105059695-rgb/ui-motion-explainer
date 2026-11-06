@@ -144,6 +144,12 @@ def main(argv=None):
     if actual_argv[:2] == ['overviews', 'register']:
         import reference_atlas_registry
         return reference_atlas_registry.main(actual_argv[2:])
+    if actual_argv[:1] == ['read']:
+        import repository_reading
+        return repository_reading.main(actual_argv[1:])
+    if actual_argv[:1] == ['ui-status']:
+        import ui_adaptation
+        return ui_adaptation.main(actual_argv[1:])
     if actual_argv[:1] == ['overviews']:
         import reference_overviews
         return reference_overviews.main(actual_argv[1:])
@@ -167,6 +173,8 @@ def main(argv=None):
         return fredtalk_library.main(forwarded)
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='action', required=True)
+    sub.add_parser('read', help='Read all current requirements, every catalog entry and reference, then full selected source.')
+    sub.add_parser('ui-status', help='Inspect actual per-entry UI adaptation and unresolved coverage.')
     sub.add_parser('materials', help='Plan narration-led searches, collect sources with ego, and export verified local media bindings.')
     sub.add_parser('capabilities', help='Browse the entire capability catalog or retrieve narration candidates without studying source films.')
     sub.add_parser('events', help='Bind and compose parameterized UI events using the retained approved runtime.')

@@ -1,0 +1,33 @@
+{
+  "schema": "ui-motion-fusion/library-binding@1",
+  "id": "fredtalk:interaction-wechat",
+  "composition": "WeChat-Neutral",
+  "entry": "components/projects/interaction-components-20261007/interaction-components/src/index.tsx",
+  "props": {},
+  "text": {
+    "项目沟通记录": "剪辑交付记录",
+    "把这次拍摄的参考资料发我一下": "数字人和口播稿已经发出",
+    "小林：参考图已经上传。": "素材：真实操作已经整理。",
+    "小周：开场用近景，镜头再慢慢拉远。": "动效：原有动作与蒙版保留。",
+    "小林：片尾保留两秒展示结果。": "画面：按确认的 UI 材质制作。",
+    "收到，我先做一版预览": "收到，先看完整动作预览"
+  },
+  "media": {
+    "sfx/message.wav": "skill://assets/adu-reference/preview/audio/bubble_pop.wav"
+  },
+  "palette": {
+    "accent": "#D6C2FF",
+    "token_map": {}
+  },
+  "ui_style": {
+    "mode": "approved"
+  },
+  "style_scope": {
+    "baseline": "assets/agent-editorial/source/body-a.js + body-b.js; agent-editorial.js primitives",
+    "material_adapter": "agent-editorial-material-v1",
+    "layout_motion": "original positions, timing, transforms, masks and content pixels retained",
+    "not_claimed": "Role adaptation is not aesthetic approval; exact per-file and unsupported scopes are in ui-style-report.json."
+  },
+  "required_media_slots": [],
+  "binding_notes": "Fill current text/media/props. Original animation/timing remains. No silent media fallback."
+}

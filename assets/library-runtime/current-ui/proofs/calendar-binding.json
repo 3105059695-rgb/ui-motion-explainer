@@ -1,0 +1,24 @@
+{
+  "schema": "ui-motion-fusion/library-binding@1",
+  "id": "fredtalk:fred-legacy-fix-l81-r001-v2",
+  "composition": "library120-Calendar",
+  "entry": "adapter:fredtalk:fred-legacy-fix-l81-r001-v2",
+  "props": {},
+  "text": {},
+  "media": {},
+  "palette": {
+    "accent": "#D6C2FF",
+    "token_map": {}
+  },
+  "ui_style": {
+    "mode": "approved"
+  },
+  "style_scope": {
+    "baseline": "assets/agent-editorial/source/body-a.js + body-b.js; agent-editorial.js primitives",
+    "material_adapter": "agent-editorial-material-v1",
+    "layout_motion": "original positions, timing, transforms, masks and content pixels retained",
+    "not_claimed": "Role adaptation is not aesthetic approval; exact per-file and unsupported scopes are in ui-style-report.json."
+  },
+  "required_media_slots": [],
+  "binding_notes": "Fill current text/media/props. Original animation/timing remains. No silent media fallback."
+}

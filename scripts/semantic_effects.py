@@ -22,7 +22,7 @@ def read_json(path):
 
 
 def write_json(path, value):
-    Path(path).write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    Path(path).write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
 
 
 def digest(path):
@@ -39,7 +39,8 @@ def inspect(effect):
         raise ValueError('Unknown effect: ' + effect)
     result = {**entry, 'runtime_path': str(ASSETS / 'semantic-motion.js'),
               'gallery_path': str(ASSETS / 'index.html'),
-              'production_binding_required': True,
+              'production_binding_required': True, **source_closure(entry),
+              'ui_adaptation': ui_contract(entry),
               'is_user_approved_new_implementation': False}
     if entry['kind'] == 'source-timeline':
         result['source_path'] = str(ROOT / entry['source_path'])
@@ -49,23 +50,62 @@ def inspect(effect):
     return result
 
 
+def source_closure(entry):
+    """All authored production code; vendor runtime is identified separately."""
+    if entry['kind'] == 'source-timeline':
+        timeline = Path(entry['source_path'])
+        sources = [timeline.as_posix()]
+        if entry['source_group'] == 'motion-lab':
+            sources.append((timeline.parent / 'assets/motion-blur.js').as_posix())
+        return {'source_files': sources,
+                'adapter_files': ['assets/semantic-motion/source-bridge.js',
+                                  'assets/semantic-motion/source-ui.css',
+                                  'scripts/semantic_effects.py'],
+                'definition_files': ['assets/semantic-motion/manifest.json',
+                                     'assets/semantic-motion/source-slots.json'],
+                'runtime_dependency_files': [(timeline.parent / 'assets/gsap.min.js').as_posix()],
+                'source_reading_scope': 'Read the complete original HTML timeline and authored dependencies, then the bridge, role stylesheet and materializer. The bridge alone is not the effect implementation. GSAP is a separately listed third-party engine.'}
+    return {'source_files': ['assets/semantic-motion/semantic-motion.js',
+                             'assets/semantic-motion/host.js'],
+            'adapter_files': ['assets/semantic-motion/theme.css', 'scripts/semantic_effects.py'],
+            'definition_files': ['assets/semantic-motion/manifest.json'],
+            'runtime_dependency_files': [],
+            'source_reading_scope': 'Read the complete shared action implementation and production host. The caller supplies the current objects; demo-fixtures.js is a gallery fixture, not a production dependency or a prescribed layout.'}
+
+
+def ui_contract(entry):
+    source = entry['kind'] == 'source-timeline'
+    return {'style': 'agent-editorial-a',
+            'mode': 'original-scene-role-adapter' if source else 'host-object-opt-in',
+            'stylesheet': 'assets/semantic-motion/source-ui.css' if source else 'assets/semantic-motion/theme.css',
+            'source': 'assets/agent-editorial/agent-editorial.js#card-screen-sheet-pill-file',
+            'current_objects_required': True, 'motion_geometry_and_timing_preserved': True,
+            'aesthetic_approval': 'not-inferred', **source_closure(entry)}
+
+
 def theme_source(source):
-    """Palette-only adaptation. All original DOM/GSAP transforms/timing stay intact."""
+    """Palette normalization before role materials; preserve original GSAP timing."""
     def purple(value):
         r, g, b = (int(value[i:i+2], 16) / 255 for i in (1, 3, 5))
         h, l, s = colorsys.rgb_to_hls(r, g, b)
         return .65 < h < .91 and s > .12
-    # Purple foreground on white becomes legible near-black; accent surfaces use A.
+    # Static purple foreground on paper becomes ink. Quoted JS tween colors stay
+    # accent: those are deliberate states (including light text on dark panels).
     source = re.sub(r"(?<![\w-])(color\s*:\s*['\"]?)(#[0-9a-fA-F]{6})",
-                    lambda m: m[1] + ('#0B0B0F' if purple(m[2]) else m[2]), source)
+                    lambda m: m[1] + (('#D6C2FF' if m[1].rstrip().endswith(('\"', "'")) else '#0B0B0F') if purple(m[2]) else m[2]), source)
     def repl(m):
         value = m[0]
+        if value.lower() == '#d6c2ff':
+            return '#D6C2FF'
         if not purple(value):
             return value
         r, g, b = (int(value[i:i+2], 16) / 255 for i in (1, 3, 5))
         _, light, sat = colorsys.rgb_to_hls(r, g, b)
         if light > .88:
             return '#F3F3F5'
+        # Low-chroma lavender edge/stack tones are neutral structure, not accents.
+        if light > .72 and sat < .5:
+            return '#DBDBE0'
         if light < .3:
             return '#0B0B0F'
         if sat < .23:
@@ -75,17 +115,19 @@ def theme_source(source):
 
 
 def source_spec(entry, bindings=None):
-    return {k: entry[k] for k in ('id', 'kind', 'source_range', 'source_group', 'scene_selector', 'width', 'height')} | {'bindings': bindings or {}}
+    return {k: entry[k] for k in ('id', 'kind', 'source_range', 'source_group', 'scene_selector', 'width', 'height')} | {'bindings': bindings or {}, 'ui_adaptation': ui_contract(entry)}
 
 
 def build_source_html(entry, bindings=None, asset_prefix=None, bridge='source-bridge.js', manifest=None):
     source = (ROOT / entry['source_path']).read_text(encoding='utf-8')
     source = theme_source(source)
+    source = re.sub(r'<body\b', '<body id="semantic-ui-adapted" data-semantic-ui="agent-editorial-a"', source, count=1, flags=re.I)
     # Narration is source-specific, never silently reuse it in a new episode.
     source = re.sub(r'<audio\b.*?</audio>', '', source, flags=re.S | re.I)
     if asset_prefix:
         source = source.replace('assets/', asset_prefix.rstrip('/') + '/')
-    inject = ''
+    # Inline the versioned role adapter so portable projects have no repository URL dependency.
+    inject = '<style data-semantic-ui-adapter="agent-editorial-a">' + (ASSETS / 'source-ui.css').read_text(encoding='utf-8') + '</style>'
     if manifest:
         inject += '<script src="' + manifest + '"></script>'
     else:
@@ -106,7 +148,7 @@ def build_gallery_sources():
         # Paths retain original local bundles rather than multiplying dependencies.
         prefix = '../../../' + str(Path(entry['source_path']).parent / 'assets').replace('\\', '/')
         (folder / (group + '.html')).write_text(build_source_html(entry, asset_prefix=prefix,
-            bridge='../source-bridge.js', manifest='../manifest.js'), encoding='utf-8')
+            bridge='../source-bridge.js', manifest='../manifest.js'), encoding='utf-8', newline='\n')
     return {'groups': list(groups), 'directory': str(folder)}
 
 
@@ -173,6 +215,7 @@ def materialize(effect, output, bindings_path=None, stage=None, duration=None, d
             raise ValueError('duration must be positive')
         for name in ('semantic-motion.js', 'theme.css', 'host.js'):
             copy_file(ASSETS / name, out / name)
+        copy_file(ROOT / 'assets/qiaomu-fonts/fonts/notosans.woff2', out / 'Noto.woff2')
         spec = {'effect': effect, 'duration': length, 'demo': demo, **bindings}
         spec.update(effect=effect, duration=length, demo=demo)
         if demo:
@@ -190,7 +233,7 @@ def materialize(effect, output, bindings_path=None, stage=None, duration=None, d
         page = '<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>' + html.escape(effect) + ' bound motion</title><link rel="stylesheet" href="theme.css"><style>body{margin:0}nav{position:fixed;bottom:0;padding:8px;background:#eee;z-index:100000}#stage{transform-origin:0 0}</style><div id="stage" class="sm-stage">' + body + '</div><nav><button id="play">播放</button><input id="time" type="range" min="0" step=".01" value="0"><span id="time-label"></span></nav><script>window.SemanticHostSpec=' + encoded + ';window.SemanticMediaBase="sources";</script><script src="semantic-motion.js"></script>'
         if demo:
             page += '<script src="demo-fixtures.js"></script>'
-        page += '<script src="host.js"></script></html>'
+        page += '<style>@font-face{font-family:Noto;src:url(Noto.woff2);font-weight:100 900;font-display:block}</style><script src="host.js"></script></html>'
         (out / 'index.html').write_text(page, encoding='utf-8')
         source_hash = digest(ASSETS / 'semantic-motion.js')
         runtime = 'parameterized-existing-dom-svg'
@@ -198,6 +241,8 @@ def materialize(effect, output, bindings_path=None, stage=None, duration=None, d
               'source_sha256': source_hash, 'demo_content': demo,
               'entry': 'index.html', 'seek_api': 'await window.ready(); await window.render(localSeconds)',
               'current_palette': 'A', 'user_approval': 'not-inferred',
+              'ui_adaptation': ui_contract(entry),
+              'ui_stylesheet_sha256': digest(ASSETS / ('source-ui.css' if entry['kind'] == 'source-timeline' else 'theme.css')),
               'source_range': entry.get('source_range'), 'no_private_asset_dependency': True}
     write_json(out / 'motion-binding.json', record)
     return {**record, 'project': str(out), 'html': str(out / 'index.html')}

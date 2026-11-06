@@ -1,0 +1,1121 @@
+{
+  "schema": "ui-motion-fusion/complete-scene-ui-coverage@1",
+  "count": 21,
+  "scope": "All complete source scenes bind to the generated-copy role adapter. Three scene runtime samples do not claim visual approval for all scenes.",
+  "items": [
+    {
+      "id": "adu:anim3:s01",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "current-palette",
+        "headline",
+        "label",
+        "panel",
+        "portable-typography",
+        "presenter-frame",
+        "subtitles"
+      ],
+      "source_block_sha256": "d2ea48326061defb2ca4f0af18845c793a06c29fed48a74c371b468c3c440e68",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "passed",
+        "evidence": "assets/adu-reference/ui-adaptation-verification.json",
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    },
+    {
+      "id": "adu:anim3:s02",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "current-palette",
+        "dark-panel",
+        "label",
+        "panel",
+        "portable-typography",
+        "presenter-frame",
+        "subtitles"
+      ],
+      "source_block_sha256": "6cfc2f87c0bc592cd5628d275587128b4eec6e9e43fca9eb60bfd42fec395c96",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "not-run-in-this-ui-pass",
+        "evidence": null,
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    },
+    {
+      "id": "adu:anim3:s03",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "current-palette",
+        "headline",
+        "panel",
+        "portable-typography",
+        "presenter-frame",
+        "subtitles"
+      ],
+      "source_block_sha256": "48b45ae1ab5f750e9556870b70ba95cae632bd85d9e8926302447b915548127d",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "not-run-in-this-ui-pass",
+        "evidence": null,
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    },
+    {
+      "id": "adu:anim3:s04",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "current-palette",
+        "headline",
+        "label",
+        "panel",
+        "portable-typography",
+        "presenter-frame",
+        "subtitles"
+      ],
+      "source_block_sha256": "a96010aa44a82aa702c9b8d842023ebefa277834a930af887e6c9da6fc90f15f",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "passed",
+        "evidence": "assets/adu-reference/ui-adaptation-verification.json",
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    },
+    {
+      "id": "adu:anim3:s05",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "current-palette",
+        "glass",
+        "headline",
+        "label",
+        "panel",
+        "portable-typography",
+        "presenter-frame",
+        "subtitles"
+      ],
+      "source_block_sha256": "279ea5965a0a5e8b01ea5438f5f54f1f8e72d8de4c1ecabfee7efd7646b6d9b1",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "not-run-in-this-ui-pass",
+        "evidence": null,
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    },
+    {
+      "id": "adu:anim3:s06",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "current-palette",
+        "dark-panel",
+        "headline",
+        "portable-typography",
+        "presenter-frame",
+        "subtitles"
+      ],
+      "source_block_sha256": "e6630e5da3ed7b90be285e2c9d5a528a0eb191311b00ec33eef7177061238b6c",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "not-run-in-this-ui-pass",
+        "evidence": null,
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    },
+    {
+      "id": "adu:anim3:s07",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "current-palette",
+        "headline",
+        "label",
+        "panel",
+        "portable-typography",
+        "presenter-frame",
+        "subtitles"
+      ],
+      "source_block_sha256": "f666a185164eaa0a4866c484cf66d4436b29d94e1ed0df92ff35c35da06d886a",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "not-run-in-this-ui-pass",
+        "evidence": null,
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    },
+    {
+      "id": "adu:anim3:s08",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "current-palette",
+        "dark-panel",
+        "headline",
+        "panel",
+        "portable-typography",
+        "presenter-frame",
+        "subtitles"
+      ],
+      "source_block_sha256": "2df4927128aaa7447b2bdb4102b399319f42e81aaa6f47f7e203bdc5ad91372e",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "not-run-in-this-ui-pass",
+        "evidence": null,
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    },
+    {
+      "id": "adu:anim3:s09",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "current-palette",
+        "headline",
+        "panel",
+        "portable-typography",
+        "presenter-frame",
+        "subtitles",
+        "terminal"
+      ],
+      "source_block_sha256": "8d2a8461c01abe839c8cdfa77987d8d0258f920402a62a6838b1a9d20f5a0988",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "not-run-in-this-ui-pass",
+        "evidence": null,
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    },
+    {
+      "id": "adu:anim3:s10",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "current-palette",
+        "headline",
+        "panel",
+        "portable-typography",
+        "presenter-frame",
+        "speech-surface",
+        "subtitles"
+      ],
+      "source_block_sha256": "3ac4e071fc809b444f7f85f0427482a4bbbe7d263d8a9fce5248b35c3d837ab3",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "not-run-in-this-ui-pass",
+        "evidence": null,
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    },
+    {
+      "id": "adu:anim3:s11",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "check",
+        "current-palette",
+        "headline",
+        "label",
+        "panel",
+        "portable-typography",
+        "presenter-frame",
+        "subtitles"
+      ],
+      "source_block_sha256": "b1c95ab957b4f6118b81d10fd47e8556dd713b480799be73b673d46b69bbe9af",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "passed",
+        "evidence": "assets/adu-reference/ui-adaptation-verification.json",
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    },
+    {
+      "id": "adu:anim3:s12",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "current-palette",
+        "dark-panel",
+        "headline",
+        "label",
+        "panel",
+        "portable-typography",
+        "presenter-frame",
+        "subtitles"
+      ],
+      "source_block_sha256": "20db6a55bd0e297308198603d3748ed8e7e770110e1fed5afd8454589dd84588",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "not-run-in-this-ui-pass",
+        "evidence": null,
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    },
+    {
+      "id": "adu:anim4:s01",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "current-palette",
+        "headline",
+        "panel",
+        "portable-typography",
+        "presenter-frame",
+        "subtitles"
+      ],
+      "source_block_sha256": "1142e829a0e5d5e9b83571b4097f55426ae47982b3786a70f461039c034a019c",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "not-run-in-this-ui-pass",
+        "evidence": null,
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    },
+    {
+      "id": "adu:anim4:s02",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "check",
+        "current-palette",
+        "dark-panel",
+        "label",
+        "panel",
+        "portable-typography",
+        "presenter-frame",
+        "subtitles"
+      ],
+      "source_block_sha256": "ede8ed118d0a3d5af212ae73f3331a4d1d411d0a1d8a493cc09fd427ad3ccaa5",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "not-run-in-this-ui-pass",
+        "evidence": null,
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    },
+    {
+      "id": "adu:anim4:s03",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "check",
+        "current-palette",
+        "dark-panel",
+        "headline",
+        "panel",
+        "portable-typography",
+        "presenter-frame",
+        "subtitles"
+      ],
+      "source_block_sha256": "8878f3de6e3fc995ca0a88eaaf89a6ea51a63e7ba863bd56a252951e76aa26fb",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "not-run-in-this-ui-pass",
+        "evidence": null,
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    },
+    {
+      "id": "adu:anim4:s04",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "current-palette",
+        "headline",
+        "panel",
+        "portable-typography",
+        "presenter-frame",
+        "subtitles"
+      ],
+      "source_block_sha256": "bec628dc5e899c2b01ab4775ab131218b4526de2ac23079d7b90514116842760",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "not-run-in-this-ui-pass",
+        "evidence": null,
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    },
+    {
+      "id": "adu:anim4:s05",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "check",
+        "current-palette",
+        "dark-glass",
+        "headline",
+        "label",
+        "panel",
+        "portable-typography",
+        "presenter-frame",
+        "subtitles"
+      ],
+      "source_block_sha256": "a2837ae80687ba1d27ef4961bedfbc6039d7e373ea67c11524ee1c50872f6fe7",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "not-run-in-this-ui-pass",
+        "evidence": null,
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    },
+    {
+      "id": "adu:anim4:s06",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "current-palette",
+        "headline",
+        "portable-typography",
+        "presenter-frame",
+        "subtitles"
+      ],
+      "source_block_sha256": "7b3edf2c4ea16c375c905bb912d1043c220a5c1fb1f91bcd7784d4056d7c0672",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "not-run-in-this-ui-pass",
+        "evidence": null,
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    },
+    {
+      "id": "adu:anim4:s07",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "current-palette",
+        "headline",
+        "panel",
+        "portable-typography",
+        "presenter-frame",
+        "subtitles"
+      ],
+      "source_block_sha256": "c21c9829b13257fa40305a4fcbd7b48c54d490208498abed098077ab49e2f942",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "not-run-in-this-ui-pass",
+        "evidence": null,
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    },
+    {
+      "id": "adu:anim4:s08",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "current-palette",
+        "headline",
+        "panel",
+        "portable-typography",
+        "presenter-frame",
+        "subtitles"
+      ],
+      "source_block_sha256": "f21b24c36dfabef5ce509cc9f8f91c7a127bab61070e34e6b7b37715bc3c8276",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "not-run-in-this-ui-pass",
+        "evidence": null,
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    },
+    {
+      "id": "adu:anim4:s09",
+      "status": "current-ui-connected",
+      "adapter_files": [
+        "scripts/scene_builder.py",
+        "scripts/library_ui_style.py",
+        "assets/rebuilt-library/adu-current-ui.css",
+        "assets/library-runtime/current-ui/roles.js",
+        "assets/library-runtime/current-ui/transform.cjs",
+        "assets/library-runtime/current-ui/content-scopes.json",
+        "assets/library-runtime/current-ui/scene-overrides.json",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+      ],
+      "adapter_sha256": {
+        "scripts/scene_builder.py": "68568662cddbc5736b9171afb687b9037ba5ddb90a659dcf0dd5c5726d570183",
+        "scripts/library_ui_style.py": "8c5c56034beb4acc0c4c71305faa0e9a8a537115ed5d1041b9bfc1ae701ff46d",
+        "assets/rebuilt-library/adu-current-ui.css": "64c367b5369907dec71da7d42d368965fd55c87038d77f8491e59276a7452b46",
+        "assets/library-runtime/current-ui/roles.js": "50928e158586c47009ac9d29f266d20e84cadfd4fff9ff95920f17e9467e2d53",
+        "assets/library-runtime/current-ui/transform.cjs": "30bfb58617e57133b279f633edb5b5510a9706c17c0cf80a14e388dcac714640",
+        "assets/library-runtime/current-ui/content-scopes.json": "a0bcba8c247e63a1348623261e6c845c6bb0c63c92414a19bd76e7fe29072306",
+        "assets/library-runtime/current-ui/scene-overrides.json": "d706898e3fd812f42f3fc8441a64405f0a3501b829724c5d4921509c295ed932",
+        "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+      },
+      "roles": [
+        "current-palette",
+        "dark-glass",
+        "headline",
+        "label",
+        "panel",
+        "portable-typography",
+        "presenter-frame",
+        "subtitles",
+        "terminal"
+      ],
+      "source_block_sha256": "b8f81294b875c5b7bc5d5fe8fdf6a3526de28dff85722d880c26debfdd9c8371",
+      "changes": [
+        "source-specific material CSS after original scene CSS",
+        "current UI tokens and literal UI shadows/fonts on generated copy",
+        "subtitle accent uses current A"
+      ],
+      "preserved": [
+        "original source block",
+        "motion/events and layout",
+        "narration content",
+        "media pixels",
+        "historical OS examples"
+      ],
+      "validation": {
+        "source_block_integrity": "passed",
+        "build_and_browser_seek": "not-run-in-this-ui-pass",
+        "evidence": null,
+        "full_realtime_av_review": false,
+        "user_approved": false
+      }
+    }
+  ]
+}

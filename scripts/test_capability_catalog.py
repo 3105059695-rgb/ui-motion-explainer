@@ -138,7 +138,7 @@ class CapabilityCatalogTests(unittest.TestCase):
         self.basic()
         for name in catalog.PRODUCTION_FILES:
             if not (self.root / name).exists():
-                self.write(name, 'installed required asset')
+                self.write(name, {} if name.endswith('.json') else 'installed required asset')
         self.write('assets/fredtalk-library/catalog.json', {'schema_version': 1, 'items': []})
         self.write('assets/agent-editorial/source-designs.json', {'schema': 'ui-motion-fusion/source-designs@1', 'designs': []})
         ready = catalog.readiness(self.root)

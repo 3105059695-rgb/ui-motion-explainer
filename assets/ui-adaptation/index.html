@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UI 适配 · 实际运行片段</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f3f5;color:#0b0b0f;font:16px/1.7 system-ui,"Microsoft YaHei",sans-serif}main{max-width:1200px;margin:auto;padding:36px 24px}h1{font-size:32px;margin:12px 0}h2{font-size:21px}a{color:#373040}p{max-width:900px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:24px}figure{margin:0;padding:16px;background:white;border:1px solid #dbdbe0;border-radius:14px}video,img{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:white}figcaption{padding-top:10px}.note{color:#5e5e67;font-size:14px}code{background:#fff;padding:4px 8px;border-radius:4px}nav{display:flex;gap:20px;flex-wrap:wrap}a:focus-visible{outline:3px solid #675090;outline-offset:5px}@media(max-width:460px){.grid{grid-template-columns:1fr}main{padding:24px 14px}}
+</style><main>
+<nav><a href="../../index.html">返回完整效果库</a><a href="../reference-atlas/index.html">认可原片与全部参考</a><a href="../../SKILL.md">新窗口的完整读取顺序</a></nav>
+<h1>UI 适配后的实际运行</h1>
+<p>沿用十款 Agent 正文源码的窗口、纸张、厚度、阴影、字重与当前 A 配色，保留各效果自己的构图和连续动作。下列是本轮技术验证片段，可播放完整动作；示意内容用于检查实现，并非新增的用户认可样片。</p>
+<div class="grid">
+<figure><video controls preload="metadata" poster="../library-runtime/current-ui/proofs/calendar.png" src="../library-runtime/current-ui/proofs/calendar.mp4"></video><figcaption>原 Remotion 源码 · 文字蒙版展开为日历窗口</figcaption><p class="note">原蒙版与连续变化保留，舞台、窗口深度与字体接入当前材质。</p></figure>
+<figure><video controls preload="metadata" poster="../library-runtime/current-ui/proofs/matrix.png" src="../library-runtime/current-ui/proofs/matrix.mp4"></video><figcaption>原 Remotion 源码 · 18 个对象连续展开</figcaption><p class="note">对象数量与运动沿实际源码，本期内容可以重新绑定；这不是固定的视频模板。</p></figure>
+<figure><video controls preload="metadata" poster="../library-runtime/current-ui/proofs/wechat.png" src="../library-runtime/current-ui/proofs/wechat.mp4"></video><figcaption>软件对话 · 保留产品语义颜色</figcaption><p class="note">消息、卡片与动作沿原结构；品牌绿色保留，当前表面与文字层级接入生产适配。</p></figure>
+<figure><video controls preload="metadata" poster="../library-runtime/current-ui/proofs/ownership.png" src="../library-runtime/current-ui/proofs/ownership.mp4"></video><figcaption>Canvas 源码 · 多对象状态交接</figcaption><p class="note">原斜纹、通道、连线和计时过程保留；当前对象使用强调色，其余内容保持中性。</p></figure>
+<figure><video controls preload="metadata" poster="../rebuilt-library/verification/ui-style-samples/episode-scenes-1018-t02m-current.png" src="../rebuilt-library/verification/ui-style-samples/episode-scenes-1018-t02m-current.mp4"></video><figcaption>两个窗口之间建立关系</figcaption><p class="note">沿用原场景运动与对象，修正窗口实体边缘、阴影和文字留白。</p></figure>
+<figure><video controls preload="metadata" poster="../rebuilt-library/verification/ui-style-samples/episode-scenes-1018-t03g-current.png" src="../rebuilt-library/verification/ui-style-samples/episode-scenes-1018-t03g-current.mp4"></video><figcaption>文件进入机器</figcaption><p class="note">窗口框体接入认可源码的 screen 角色，保留投递和接收过程。</p></figure>
+<figure><video controls preload="metadata" poster="../rebuilt-library/verification/ui-style-samples/fred-native-t05d-current.png" src="../rebuilt-library/verification/ui-style-samples/fred-native-t05d-current.mp4"></video><figcaption>表格逐项比较与重点聚焦</figcaption><p class="note">保持表格自身结构；当前信息清楚，背景信息退后，重点使用 A 紫。</p></figure>
+<figure><video controls preload="metadata" poster="../rebuilt-library/verification/ui-style-samples/fred-wave3-40-t09j-current.png" src="../rebuilt-library/verification/ui-style-samples/fred-wave3-40-t09j-current.mp4"></video><figcaption>终端与网页交接验证码</figcaption><p class="note">两种不同的界面材质同时保留；代码、输入格和确认按钮各自按角色绘制。</p></figure>
+</div>
+<h2>其他入口的实际画面</h2>
+<p class="note">以下是不同运行入口的取样画面；完整动作仍从各自效果库查看，不能用这些静帧代替动态判断。</p>
+<div class="grid">
+<figure><img loading="lazy" src="../semantic-motion/ui-verification/x21-depth.jpg" alt="X21 原时间线中的资料归档窗口"><figcaption>原时间线 · 资料归并</figcaption></figure>
+<figure><img loading="lazy" src="../semantic-motion/ui-verification/x23-handoff.jpg" alt="X23 终端资料与报告交接"><figcaption>原时间线 · 结果交接</figcaption></figure>
+<figure><img loading="lazy" src="../semantic-motion/ui-verification/director-workflow.jpg" alt="多步骤工作流与侧边检查面板"><figcaption>软件预设 · 工作流检查</figcaption></figure>
+<figure><img loading="lazy" src="../semantic-motion/ui-verification/director-glass.jpg" alt="玻璃与实体控件保持不同表面材质"><figcaption>软件预设 · 玻璃与实体控件</figcaption></figure>
+</div>
+<h2>整库继续参与选用</h2>
+<p>上面仅展示部分实际验证。完整能力目录和认可参考仍全部保留。AI 新窗口从 <code>ui.py read plan</code> 开始，读完现行要求、全库目录与全部参考队列，选定效果后再读完整实现和依赖。</p>
+<p><code>ui.py ui-status</code> 查询本轮逐条 UI 接线；<code>ui.py capabilities inspect --id &lt;能力ID&gt;</code> 查看实际源码、适配器与验证范围。代码接线、技术检查、完整视听与用户认可分别记录。</p>
+<nav><a href="../rebuilt-library/index.html">192 条独立实现与动态预览</a><a href="../semantic-motion/index.html">O / R / X 动作</a><a href="../modules/director/assets/studio/index.html">软件操作预设</a><a href="../agent-editorial/designs.html">认可正文的实际源码设计</a></nav>
+</main></html>

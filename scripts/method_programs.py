@@ -12,7 +12,12 @@ def records(root=ROOT):
 def inspect(ident,root=ROOT):
  row=next((r for r in records(root) if r['id']==ident),None)
  if not row:raise ValueError('No executable production program; negative examples are not effects: '+ident)
- return row
+ closure={'source_files':['assets/method-runtime/method-runtime.js','assets/method-runtime/programs.json','assets/semantic-motion/semantic-motion.js'],
+          'adapter_files':['assets/semantic-motion/theme.css','scripts/method_programs.py'],
+          'definition_files':['references/source-study-methods.json' if any(x['id']==ident for x in read(root/'references/source-study-methods.json')['methods']) else 'references/semantic-editing-recipes.json'],
+          'effect_dependencies':[{'id':eid,'source_files':['assets/semantic-motion/semantic-motion.js'],'adapter_files':['assets/semantic-motion/theme.css']} for eid in row['effects']],
+          'source_reading_scope':'Read the complete method runtime, compiled phase map, shared action implementation and materializer. All listed effect dependencies execute on current supplied objects. host.js and gallery fixtures are not used by the method runtime.'}
+ return {**row,**closure,'ui_adaptation':{'style':'agent-editorial-a','mode':'current-object-composition','stylesheet':'assets/semantic-motion/theme.css','inherited_effects':row['effects'],'preserves_caller_geometry':True,'aesthetic_approval':'not-inferred',**closure}}
 def scaffold(ident,out,root=ROOT):
  info=inspect(ident,root);p=Path(out)
  if p.exists():raise ValueError('Output exists')
@@ -40,7 +45,7 @@ def build(spec_path,stage,out,root=ROOT):
  page='<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="theme.css"><style>@font-face{font-family:Noto;src:url(Noto.woff2)}body{margin:0}</style><div id="stage" class="sm-stage">'+body+'</div><script src="semantic-motion.js"></script><script src="method-runtime.js"></script><script>const spec='+encoded+''';const stage=document.getElementById('stage');for(const [sel,text]of Object.entries(spec.text||{})){const n=stage.querySelector(sel);if(!n||n.children.length)throw Error('Missing leaf '+sel);n.textContent=text;}for(const [sel,asset]of Object.entries(spec.media||{})){const n=stage.querySelector(sel);if(!n||!['IMG','VIDEO'].includes(n.tagName))throw Error('Missing media '+sel);n.src=asset.src;n.muted=true;}const engine=MethodRuntime.create(spec,stage);const firstReady=(async()=>{await document.fonts.ready;await engine.seek(0)})();window.ready=()=>firstReady;window.seek=async t=>{await firstReady;window.__methodTrace=await engine.seek(t);return window.__methodTrace};window.render=window.seek;</script>'''
  (out/'index.html').write_text(page,encoding='utf-8')
  (out/'method-binding.json').write_text(json.dumps(spec,ensure_ascii=False,indent=2),encoding='utf-8')
- (out/'library-project.json').write_text(json.dumps({'id':'method:'+entry['id'],'engine':'html-seek','entry':'index.html','duration':spec['duration'],'width':1280,'height':720,'fps':30,'fixed_canvas':True,'runtime_status':'not-rendered','user_approved':False},ensure_ascii=False),encoding='utf-8')
+ (out/'library-project.json').write_text(json.dumps({'id':'method:'+entry['id'],'engine':'html-seek','entry':'index.html','duration':spec['duration'],'width':1280,'height':720,'fps':30,'fixed_canvas':True,'runtime_status':'not-rendered','user_approved':False,'ui_adaptation':entry['ui_adaptation'],'ui_stylesheet_sha256':hashlib.sha256((out/'theme.css').read_bytes()).hexdigest()},ensure_ascii=False),encoding='utf-8')
  return {'project':str(out.resolve()),'program':entry['id'],'effects':entry['effects']}
 def main(argv=None):
  p=argparse.ArgumentParser(description=__doc__);s=p.add_subparsers(dest='cmd',required=True);s.add_parser('list');q=s.add_parser('inspect');q.add_argument('--id',required=True);q=s.add_parser('scaffold');q.add_argument('--id',required=True);q.add_argument('--out',required=True);q=s.add_parser('build');q.add_argument('--spec',required=True);q.add_argument('--stage',required=True);q.add_argument('--out',required=True);a=p.parse_args(argv)

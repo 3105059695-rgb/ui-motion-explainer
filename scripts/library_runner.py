@@ -15,11 +15,11 @@ import re
 import shutil
 import subprocess
 import sys
+from library_ui_style import adapt_project, content_scope, STYLE_SCOPE
 
 ROOT=Path(__file__).resolve().parents[1]
 MANIFEST='assets/library-runtime/implementations.json'
 CODE_SUFFIXES={'.tsx','.ts','.jsx','.js','.mjs','.cjs','.json','.css','.txt','.py'}
-STYLE_SCOPE={'layout_motion':'retained original implementation','palette':'Explicit replacement of known wrapper accent tokens; brand images retain their own pixels.','current_accent':'#D6C2FF','not_claimed':'A runnable scene is not proof that every native layout, material or historical palette matches the current approved UI.','production':'Bind current copy and media, then review the resulting composition in context.'}
 
 def read(path):return json.loads(Path(path).read_text(encoding='utf-8-sig'))
 def write(path,value):
@@ -31,6 +31,12 @@ def safe(root,name):
  p=(Path(root)/name).resolve()
  if not p.is_relative_to(Path(root).resolve()):raise ValueError('Path escapes root: '+name)
  return p
+
+def media_source(value,root=ROOT):
+ """Portable packaged assets plus existing absolute/current-directory bindings."""
+ if isinstance(value,str) and value.startswith('skill://'):
+  return safe(root,value.removeprefix('skill://'))
+ return Path(value).expanduser().resolve()
 def _rebuilt(ident,root):
  slug=ident.removeprefix('software-preset:').removeprefix('fredtalk:').removeprefix('reference:')
  if re.fullmatch(r'[a-zA-Z0-9_.-]+',slug) and (Path(root)/'assets/rebuilt-library/scenes'/(slug+'.json')).is_file():
@@ -110,15 +116,17 @@ def fred_inspect(ident,root=ROOT):
   'props':item.get('reusability',{}).get('parameters',[]),'unresolved_imports':item.get('runtime_unresolved_imports',[]),
   'required_packages':item.get('runtime_external_packages',[]),
   'registration_adapter':adapter,
+  'source_closure':[{'path':r['blob_path'],'upstream_path':r['upstream_path'],'sha256':r['sha256']} for r in files],
+  'production_adapter_files':['scripts/library_ui_style.py','assets/library-runtime/current-ui/roles.js','assets/library-runtime/current-ui/transform.cjs','assets/agent-editorial/agent-editorial.js','assets/agent-editorial/palette.json'],
   'style_scope':STYLE_SCOPE,
   'available_palette_tokens':sorted({v.upper() for row in files for v in re.findall(r'#[0-9a-fA-F]{6}\b',_code(root,row))}),
   'source_available':bool(files),'runtime_status':'not-compiled','scope':'Use actual registration and source; bind current content. No source-video study required.'}
  record=_record(root,item['id'])
  if record:
   result['saved_execution']=record
-  if record.get('media_contract_status')=='observed-three-state-requests':
+  if record.get('media_contract_status') in ('observed-three-state-requests','observed-full-render-requests'):
    result['media_slots']=record['required_media']
-   result['media_contract_scope']='Assets requested by the real selected scene at three sampled states; new content may add new assets.'
+   result['media_contract_scope']=record.get('media_contract_scope','Assets requested by the real selected scene at three sampled states; new content may add new assets.')
   result['selected_entry_status']=record.get('runtime_status')
  return result
 def inspect(ident,root=ROOT):
@@ -127,14 +135,15 @@ def inspect(ident,root=ROOT):
  if 'fredtalk:' in ident:return fred_inspect(ident,root)
  rec=_record(root,ident)
  if not rec:raise ValueError('No retained executable adapter registered for '+ident)
- return rec
+ return {**rec,'production_adapter_files':['scripts/library_ui_style.py','assets/library-runtime/current-ui/roles.js','assets/library-runtime/current-ui/transform.cjs','assets/agent-editorial/agent-editorial.js','assets/agent-editorial/palette.json'],
+  'source_closure':[p.relative_to(root).as_posix() for p in (Path(root)/rec['source_dir']).rglob('*') if p.is_file() and p.suffix in CODE_SUFFIXES|{'.html'}] if rec.get('source_dir') else ['assets/fusion-studio/scenes.js','assets/fusion-studio/studio.js','assets/fusion-studio/scenes.json']}
 def scaffold(ident,out,root=ROOT):
  rebuilt=_rebuilt(ident,root)
  if rebuilt:return rebuilt.scaffold(ident,out,root)
  info=inspect(ident,root)
  value={'schema':'ui-motion-fusion/library-binding@1','id':info['id'],'composition':info.get('composition'),
   'entry':info.get('entry_candidates',[None])[0] if info.get('entry_candidates') else None,
-  'props':(info.get('registration_adapter') or {}).get('default_props',{}),'text':{},'media':{},'palette':{'accent':'#D6C2FF','token_map':{}},
+  'props':(info.get('registration_adapter') or {}).get('default_props',{}),'text':{},'media':{},'palette':{'accent':'#D6C2FF','token_map':{}},'ui_style':{'mode':'approved'},
   'style_scope':info.get('style_scope',STYLE_SCOPE),
   'required_media_slots':info.get('media_slots',info.get('required_media',[])),
   'binding_notes':'Fill current text/media/props. Original animation/timing remains. No silent media fallback.'}
@@ -226,7 +235,7 @@ def build(binding,out,root=ROOT):
  if unused:raise ValueError('Text bindings not found in original source: '+', '.join(unused))
  (output/'public').mkdir(exist_ok=True)
  for name,value in spec.get('media',{}).items():
-  src=Path(value).expanduser().resolve()
+  src=media_source(value,root)
   if not src.is_file():raise ValueError('Bound media does not exist: '+str(src))
   dest=safe(output/'public',name);dest.parent.mkdir(parents=True,exist_ok=True)
   try:os.link(src,dest)
@@ -238,9 +247,12 @@ def build(binding,out,root=ROOT):
   'source_files':copied,'bound_text_counts':counts,'media':[{'path':name,'sha256':digest(output/'public'/name)} for name in spec.get('media',{})],
   'runtime_status':'not-compiled','user_approved':False,'source_video_required':False,'style_scope':STYLE_SCOPE,'palette_bindings':spec.get('palette',{})}
  if entry=='library-adapter.tsx':config['source_selections']=selections
+ config['ui_adaptation']=adapt_project(output,config,root,spec)
+ for row in config['source_files']:row['adapted_sha256']=digest(output/row['path'])
  write(output/'library-project.json',config);write(output/'library-binding.json',spec)
  return {'project':str(output),'id':item['id'],'entry':config['entry'],'composition':config['composition'],'copied_sources':len(copied),'runtime_status':'not-compiled','missing_media_not_silently_replaced':True}
 def build_retained(spec,out,root=ROOT):
+ if content_scope(spec['id'],root):spec={**spec,'palette':{'token_map':spec.get('palette',{}).get('token_map',{})}}
  record=_record(root,spec['id'])
  if not record:raise ValueError('No retained executable source for '+spec['id'])
  if record.get('engine')=='fusion-original':return build_fusion(spec,out,record,root)
@@ -302,7 +314,7 @@ def build_retained(spec,out,root=ROOT):
   write(config_file,_bound_values(project_config,spec))
  bound_media=[]
  for original,value in spec.get('media',{}).items():
-  src=Path(value).expanduser().resolve()
+  src=media_source(value,root)
   if not src.is_file():raise ValueError('Bound media does not exist: '+str(src))
   key=digest(src);target='_bound_media/'+key[:20]+src.suffix.lower();dest=safe(output,target);dest.parent.mkdir(exist_ok=True)
   if not dest.exists():
@@ -325,7 +337,8 @@ def build_retained(spec,out,root=ROOT):
   file=output/record['entry'];content=file.read_text(encoding='utf-8')
   bridge="<script>window.ready=()=>document.fonts.ready;window.seek=async t=>{await window.ready();window.__timelines.main.pause().seek(t,false);};window.getState=()=>({time:window.__timelines.main.time(),source:'original-gsap-timeline'});function fit(){document.body.style.transformOrigin='0 0';document.body.style.transform='scale('+Math.min(innerWidth/1920,innerHeight/1080)+')';}fit();addEventListener('resize',fit);</script>"
   file.write_text(content.replace('</body>',bridge+'</body>'),encoding='utf-8')
- write(output/'library-project.json',{'schema':'ui-motion-fusion/library-project@1','id':spec['id'],'engine':record['engine'],'entry':record.get('entry','index.html'),'clock_api':record.get('clock_api'),'duration':record['duration'],'width':record.get('width',1920),'height':record.get('height',1080),'fps':spec.get('fps',record.get('fps',30)),'bound_media':bound_media,'runtime_status':'not-rendered','source_video_required':False,'user_approved':False,'style_scope':record.get('style_scope',STYLE_SCOPE)})
+ ui_adaptation=adapt_project(output,record,root,spec)
+ write(output/'library-project.json',{'schema':'ui-motion-fusion/library-project@1','id':spec['id'],'engine':record['engine'],'entry':record.get('entry','index.html'),'clock_api':record.get('clock_api'),'duration':record['duration'],'width':record.get('width',1920),'height':record.get('height',1080),'fps':spec.get('fps',record.get('fps',30)),'bound_media':bound_media,'runtime_status':'not-rendered','source_video_required':False,'user_approved':False,'style_scope':STYLE_SCOPE,'ui_adaptation':ui_adaptation})
  if record.get('fixed_canvas'):
   config=read(output/'library-project.json');config['fixed_canvas']=True;write(output/'library-project.json',config)
  return {'project':str(output),'id':spec['id'],'engine':record['engine']}
@@ -345,7 +358,7 @@ def build_fusion(spec,out,record,root):
  for key in ('title','product','captions','sourceOffset','presenterCrop','circle'):
   if key in spec.get('props',{}):config[key]=spec['props'][key]
  for slot,value in spec.get('media',{}).items():
-  src=Path(value).resolve()
+  src=media_source(value,root)
   if not src.is_file():raise ValueError('Media missing: '+str(src))
   dest=safe(output,'media/'+src.name);dest.parent.mkdir(exist_ok=True)
   if not dest.exists():
@@ -354,7 +367,8 @@ def build_fusion(spec,out,record,root):
   if slot in ('presenter','audio','soundtrack'):config[slot]=dest.relative_to(output).as_posix()
   else:raise ValueError('Fusion media slots are presenter/audio/soundtrack; bind content text separately')
  write(output/'project.json',config);write(output/'library-binding.json',spec)
- write(output/'library-project.json',{'schema':'ui-motion-fusion/library-project@1',**record,'engine':'html-seek','entry':'index.html','runtime_status':'not-rendered','user_approved':False,'source_video_required':False})
+ ui_adaptation=adapt_project(output,{**record,'engine':'html-seek','entry':'index.html'},root,spec)
+ write(output/'library-project.json',{'schema':'ui-motion-fusion/library-project@1',**record,'engine':'html-seek','entry':'index.html','runtime_status':'not-rendered','user_approved':False,'source_video_required':False,'style_scope':STYLE_SCOPE,'ui_adaptation':ui_adaptation})
  return {'project':str(output),'id':record['id'],'engine':'fusion-original','source_video_required':False}
 def browser_path(preferred=None,playwright_executable=None):
  from playwright.sync_api import sync_playwright

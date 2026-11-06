@@ -25,6 +25,16 @@ COMMANDS = {'list': 'ui.py capabilities list',
             'check': 'ui.py capabilities check --require'}
 PRODUCTION_FILES = (
     'scripts/capability_catalog.py', 'scripts/capability_runtime.py',
+    'scripts/repository_reading.py', 'scripts/requirements.py', 'references/requirements.json',
+    'scripts/ui_adaptation.py', 'scripts/library_ui_style.py',
+    'assets/library-runtime/current-ui/roles.js', 'assets/library-runtime/current-ui/transform.cjs',
+    'assets/library-runtime/current-ui/scene-overrides.json', 'assets/library-runtime/current-ui/coverage.json',
+    'assets/library-runtime/current-ui/content-scopes.json',
+    'assets/rebuilt-library/current-ui.js', 'assets/rebuilt-library/adu-current-ui.css',
+    'assets/rebuilt-library/ui-adaptation.json', 'assets/adu-reference/ui-adaptation.json',
+    'assets/semantic-motion/source-ui.css', 'assets/semantic-motion/theme.css',
+    'assets/semantic-motion/ui-adaptation.json', 'assets/modules/director/ui-adaptation.json',
+    'assets/modules/director/assets/studio/current-ui.js',
     'assets/agent-editorial/capability-runtime.json',
     'assets/agent-editorial/capability-runtime.js',
     'assets/agent-editorial/agent-editorial.js', 'assets/agent-editorial/motion-core.js',
@@ -46,6 +56,7 @@ DIRECTOR_FILES = (
     'scripts/new_project.py', 'scripts/render.py', 'references/presets.json',
     'assets/studio/index.html', 'assets/studio/project.json',
     'assets/studio/player.js', 'assets/studio/core.js', 'assets/studio/fonts',
+    'assets/studio/current-ui.js',
 )
 
 
@@ -301,6 +312,8 @@ def records(root=ROOT):
     rows = _library(root) + _designs(root) + _scenes(root) + _native(root)
     import capability_execution
     rows = capability_execution.apply(rows, root)
+    import ui_adaptation
+    rows = ui_adaptation.apply(rows, root)
     ids = [r['id'] for r in rows]
     if len(ids) != len(set(ids)):
         raise ValueError('Duplicate canonical capability IDs in source catalogs.')
@@ -313,6 +326,8 @@ def compact(row):
             'call', 'preview', 'runtime_verification', 'is_aggregate')
     result = {k: row[k] for k in keys if k in row}
     result['inspect_command'] = 'ui.py capabilities inspect --id ' + row['id']
+    if row.get('ui_adaptation'):
+        result['ui_adaptation'] = {k: row['ui_adaptation'][k] for k in ('status', 'scope', 'evidence_file') if k in row['ui_adaptation']}
     return result
 
 

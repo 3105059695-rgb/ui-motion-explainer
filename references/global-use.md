@@ -1,6 +1,6 @@
 # 跨窗口使用
 
-只调用 `$ui-motion-fusion`。每个新窗口完整读取实际安装的 [SKILL.md](../SKILL.md) 和[当前审美](aesthetic-preferences.md)，再查看[认可原片的全片图集](../assets/reference-atlas/index.html)与各条认可范围；不能以四张旧图或旧窗口记忆代替。首次建立视觉理解后，按本期内容查看相关细图与动态、调用实际代码。后续阶段读取对应流程和接口；需审计全部历史要求时，执行 `ui.py requirements --part 1` 依次读完[全文清单](requirements.json)。
+只调用 `$ui-motion-fusion`。每个新窗口运行 `ui.py read plan`，完整读取现行要求、全库能力目录和全部认可参考的范围，并打开全片总览与必要细图；选定效果后逐文件读完实现及本地依赖。读取细则只在 [SKILL.md](../SKILL.md) 维护，当前审美只在[审美偏好](aesthetic-preferences.md)维护。不能用四张旧图、候选摘要或旧窗口记忆代替完整读取；也不要求重新研究全部历史源码与原片。
 
 读完后查看[当前认可 UI 的真实图像和连续动作](../index.html#current-ui)，再从[整个效果库](library.md)选择本期设计与实际入口。保留源码用 `ui.py library`，方法组合用 `ui.py programs`，语义动作用 `ui.py semantic`；[独立场景播放器](../assets/rebuilt-library/index.html)可直接查看完整时长、拖动和按事件跳转。参考、当前要求和实际实现的职责见[规则归属](module-map.md)，身份与历史范围见[参考使用](style-profiles.md)。
 

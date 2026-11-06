@@ -10,6 +10,7 @@ from collections import Counter
 import hashlib
 import json
 from pathlib import Path
+import re
 import shutil
 import subprocess
 import sys
@@ -305,6 +306,13 @@ def _build_new(spec_path, presenter, output, subs_js, spec, key, pack_dir, manif
     missing = [name for name in required if not (output / name).is_file()]
     if missing:
         raise ValueError('Builder returned without required project outputs: ' + ', '.join(missing))
+    # Bind the generated complete scene to the same executable material adapter
+    # used by the library. The retained pack/source is never rewritten.
+    import library_ui_style
+    ui_binding = library_ui_style.adapt_project(
+        output, {'id': 'adu:' + key, 'engine': 'html-seek', 'entry': 'index.html'},
+        Path(root), {'id': 'adu:' + key, 'ui_style': {'mode': 'approved'}})
+    ui_binding['complete_scene_roles'] = _bind_complete_scene_ui(output, root)
     plan = read_json(output / 'macro_plan.json')
     if '_director_plan' in spec:
         scene_plan.validate_runtime(spec, plan)
@@ -323,8 +331,8 @@ def _build_new(spec_path, presenter, output, subs_js, spec, key, pack_dir, manif
                             for row in spec['scenes']],
         'output': {'entry': 'index.html', 'plan': 'macro_plan.json',
                    **{k: plan.get(k) for k in ('fps', 'width', 'height', 'durationFrames', 'durationSeconds')}},
-        'builder': invocation, 'full_realtime_av_review': False, 'user_approved': False,
-        'source_reuse': 'Selected complete source scene blocks, original CSS and choreography with this spec bindings.',
+        'builder': invocation, 'ui_binding': ui_binding, 'full_realtime_av_review': False, 'user_approved': False,
+        'source_reuse': 'Selected complete source scene blocks and choreography with current bindings; generated UI materials adapted to the accepted body style, retained source unchanged.',
     }
     if source_files != scene_plan.inputs(spec, root) or presenter_fact['sha256'] != sha256(presenter):
         raise ValueError('Source pack/compiler or presenter changed during build; this project is not bound for production.')
@@ -342,6 +350,55 @@ def _build_new(spec_path, presenter, output, subs_js, spec, key, pack_dir, manif
     ]
     write_new(output / 'scene-build-receipt.json', receipt)
     return receipt
+
+
+def _bind_complete_scene_ui(output, root):
+    """Bind Adu's actual CSS roles and literal UI declarations, not media pixels.
+
+    Source HTML lives inside template strings and is not JSX. The general JS
+    adapter cannot infer these declarations, so this source-specific pass keeps
+    the scene's markup/choreography and replaces only its declared UI tokens.
+    """
+    source = Path(root) / 'assets/rebuilt-library/adu-current-ui.css'
+    target = output / '_current-ui/adu-roles.css'
+    shutil.copy2(source, target)
+    palette = {'#2462ea': '#D6C2FF', '#5b8cff': '#E8DCFF', '#6d9bff': '#D6C2FF',
+               '#f7f7f5': '#FFFFFF', '#0a0a0a': '#0B0B0F', '#e7e7e4': '#DBDBE0'}
+    changes = []
+    for path in [output / 'scenes.js', output / 'templates.js', output / 'subtitles.js']:
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding='utf-8')
+        count = 0
+        def style(match):
+            nonlocal count
+            before = match[1]
+            after = re.sub(r'#[0-9a-fA-F]{6}\b', lambda m: palette.get(m[0].lower(), m[0]), before)
+            after = re.sub(r'font-family\s*:[^;]+', 'font-family:UIFusionApproved,Microsoft YaHei,sans-serif', after)
+            after = re.sub(r'box-shadow\s*:[^;]+', 'box-shadow:6px 8px 0 #DBDBE0,0 12px 25px #00000020', after)
+            if after != before:
+                count += 1
+            return 'style="' + after + '"'
+        text = re.sub(r'style="([^"]*)"', style, text)
+        if path.name == 'subtitles.js':
+            # This is the retained subtitle renderer's declared UI highlight,
+            # not a replacement inside narration, product images or user text.
+            text, highlights = re.subn(r"const hot = '#6d9bff';", "const hot = '#D6C2FF';", text)
+            count += highlights
+        if count:
+            path.write_text(text, encoding='utf-8',newline='\n')
+        changes.append({'file': path.name, 'inline_ui_declarations': count, 'sha256': sha256(path)})
+    for path in output.glob('*.html'):
+        text = path.read_text(encoding='utf-8')
+        link = '<link rel="stylesheet" href="_current-ui/adu-roles.css">'
+        if link not in text:
+            text = text.replace('</head>', link + '</head>') if '</head>' in text else text + link
+        path.write_text(text, encoding='utf-8',newline='\n')
+    return {'status': 'role-adapted-needs-visual-review', 'source': str(source.relative_to(root)).replace('\\', '/'),
+            'source_sha256': sha256(source), 'roles': ['card', 'dark-card', 'terminal', 'bubble', 'pill', 'glass', 'dark-glass', 'mac-window', 'check', 'presenter-frame', 'headings', 'subtitles'],
+            'inline_ui': changes, 'motion_parameters_modified': False, 'media_pixels_modified': False,
+            'retained_content': ['bound media', 'historical OS examples', 'scene geometry and event sequence'],
+            'user_approved': False}
 
 
 def build(spec_path, presenter, output, subs_js=None, root=ROOT, plan_path=None, legacy_spec=False):

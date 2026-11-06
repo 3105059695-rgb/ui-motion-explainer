@@ -77,7 +77,7 @@ class RequirementsIntegrationTests(unittest.TestCase):
             director.prepare(self.source, self.project, root=self.root, mode="research")
         self.assertFalse(self.project.exists())
 
-    def test_creation_records_latest_core_without_injecting_all_reading_commands(self):
+    def test_creation_records_full_current_reading_without_relabeling_existing_work(self):
         self.write_bundle()
         first = self.root / "SKILL.md"
         first.write_text("Current core", encoding="utf-8")
@@ -103,9 +103,9 @@ class RequirementsIntegrationTests(unittest.TestCase):
         self.assertEqual(len(metadata['documents']), current['document_count'])
         for actual, expected in zip(metadata['documents'], current['documents']):
             self.assertEqual(actual, {key: value for key, value in expected.items() if key != 'text'})
-        self.assertNotIn('reading', metadata)
-        self.assertEqual(len(metadata['on_demand']), 2)
-        self.assertEqual(metadata['mode'], 'production-core')
+        self.assertEqual(len(metadata['reading']['part_commands']), metadata['part_count'])
+        self.assertEqual(metadata['on_demand'], [])
+        self.assertEqual(metadata['mode'], 'production-full-current')
         self.assertEqual(metadata['status'], 'content-available-not-proof-of-reading')
         self.assertEqual(metadata['assessment']['reading'], 'not-assessed')
         self.assertEqual(report['requirements'], metadata)
@@ -132,7 +132,7 @@ class RequirementsIntegrationTests(unittest.TestCase):
         self.assertEqual(config.read_bytes(), before)
         self.assertFalse((self.project / 'project-style-context.json').exists())
 
-    def test_production_keeps_missing_research_on_demand_without_loading_it(self):
+    def test_production_rejects_missing_registered_current_requirement(self):
         _, last = self.write_bundle()
         last.unlink()
         entry = self.root / 'SKILL.md'
@@ -141,14 +141,9 @@ class RequirementsIntegrationTests(unittest.TestCase):
         manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
         manifest['documents'].insert(0, {'id': 'entry', 'title': 'Core entry', 'path': 'SKILL.md'})
         manifest_path.write_text(json.dumps(manifest), encoding='utf-8')
-        report = director.prepare(self.source, self.project, root=self.root)
-        context = director.load_json(self.project / 'director-context.json')
-        self.assertEqual(report['mode'], 'production')
-        self.assertEqual(context['requirements']['document_count'], 1)
-        self.assertEqual(context['requirements']['documents'][0]['text'], entry.read_text(encoding='utf-8'))
-        self.assertEqual(len(context['requirements']['on_demand']), 2)
-        self.assertNotIn('reading', context['requirements'])
-        self.assertNotIn('source_study', context)
+        with self.assertRaisesRegex(ValueError, 'Requirement document.*missing'):
+            director.prepare(self.source, self.project, root=self.root)
+        self.assertFalse((self.project / 'director-context.json').exists())
         with self.assertRaisesRegex(ValueError, 'Requirement document.*missing'):
             director.prepare(self.source, self.base / 'research', root=self.root, mode='research')
 

@@ -89,6 +89,7 @@ def main():
     parser.add_argument('--title', help='Override the selected preset title; omit to retain its default.')
     parser.add_argument('--prompt', default='')
     parser.add_argument('--result', default='')
+    parser.add_argument('--source-style', action='store_true', help='Historical source comparison only; current UI is the production default.')
     args = parser.parse_args()
     dest = args.out.resolve()
     if dest.exists():
@@ -102,6 +103,9 @@ def main():
                   'duration':args.duration,'clips':[{'id':'scene-1','preset':args.preset,'start':0,'duration':args.duration,'params':params}],
                   'captions':[], 'audio':'', 'demo':True}
     try:
+        config['uiStyle'] = 'source' if args.source_style else 'agent-editorial-a'
+        for clip in config['clips']:
+            clip.setdefault('params', {})['uiStyle'] = config['uiStyle']
         validate(config)
         catalog_path = skill / 'references' / 'presets.json'
         if catalog_path.exists():

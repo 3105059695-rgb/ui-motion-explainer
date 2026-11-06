@@ -513,46 +513,14 @@ def production_context(resolution, root=ROOT):
 
 
 def production_requirements_context(root=ROOT):
-    """Keep the current core and on-demand map without injecting all documents."""
-    core_paths = {'SKILL.md', 'references/aesthetic-preferences.md'}
-    root = Path(root).expanduser().resolve()
-    manifest_path, _ = requirements._local_path(root, requirements.MANIFEST, 'Requirement manifest')
-    raw = requirements._read_bytes(manifest_path, 'Requirement manifest')
-    manifest = json.loads(raw.decode('utf-8-sig'))
-    if manifest.get('schema_version') != 1 or not isinstance(manifest.get('documents'), list):
-        raise ValueError('Requirement manifest needs schema_version 1 and documents.')
-    documents, on_demand, seen_ids, seen_paths = [], [], set(), set()
-    for row in manifest['documents']:
-        ident = requirements._required_string(row, 'id', 'Requirement document')
-        title = requirements._required_string(row, 'title', 'Requirement document')
-        path, relative = requirements._local_path(root, row.get('path'), 'Requirement document')
-        if ident in seen_ids or str(path).casefold() in seen_paths:
-            raise ValueError('Duplicate requirement document: ' + ident)
-        seen_ids.add(ident)
-        seen_paths.add(str(path).casefold())
-        item = {'id': ident, 'title': title, 'path': str(path), 'relative_path': relative}
-        if relative in core_paths:
-            content = requirements._read_bytes(path, 'Requirement document')
-            text = content.decode('utf-8')
-            if not text.lstrip('\ufeff').strip():
-                raise ValueError('Requirement document is empty: ' + str(path))
-            documents.append({**item, 'text': text, 'characters': len(text),
-                              'sha256': hashlib.sha256(content).hexdigest()})
-        else:
-            on_demand.append(item)
-    manifest_hash = hashlib.sha256(raw).hexdigest()
-    digest = hashlib.sha256(json.dumps({'manifest': manifest_hash,
-        'documents': [{k: row[k] for k in ('id', 'relative_path', 'sha256')} for row in documents]},
-        ensure_ascii=False, sort_keys=True).encode('utf-8')).hexdigest()
-    return {'mode': 'production-core', 'manifest_path': str(manifest_path),
-            'manifest_sha256': manifest_hash, 'bundle_sha256': digest,
-            'status': requirements.STATUS, 'document_count': len(documents),
-            'documents': documents,
-            'on_demand': on_demand,
-            'archive_document_count': len(manifest['documents']),
-            'full_read_command': 'ui.py requirements --part 1',
-            'instruction': '日常制作完整读取本入口与当前审美；流程、AIGC、后端、计划等在相关阶段读取对应合同。全部原要求保留供维护审计，日常不逐页重复全部历史研究。',
-            'assessment': {'reading': 'not-assessed', 'understanding': 'not-assessed', 'visual_approval': 'not-assessed'}}
+    """Expose every registered current requirement in normal production."""
+    context = requirements_context(root)
+    context.update(mode='production-full-current', on_demand=[],
+                   archive_document_count=context['document_count'],
+                   full_read_command='ui.py read requirements --part 1',
+                   instruction='新窗口完整阅读清单中的全部现行要求；条件分支是否执行仍由本期内容决定。'
+                               '不重新研究全部历史源码；选中能力后完整读取对应实现与本地依赖。')
+    return context
 
 
 def _write_preparation(folder, source, context, brief, force):
@@ -638,6 +606,12 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
                               'No generation, upload, payment, render or aesthetic approval occurs.']}
     if presenter_source:
         context['presenter'] = presenter_source
+    import repository_reading
+    try:
+        context['repository_reading'] = repository_reading.plan(root)
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        context['repository_reading'] = {'status': 'unavailable', 'error': str(exc),
+                                         'instruction': '完整阅读队列生成失败；不可声称读完仓库。修复目录后运行 ui.py read plan。'}
     # Keep the complete aesthetic text once; legacy/unresolved fixtures retain
     # its core document rather than pointing at an absent style.preferences.
     if (context['style'].get('preferences') or {}).get('text'):
@@ -651,7 +625,7 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
         'style_references', 'selected_character_set', 'identity_rules', 'identity_references',
         'character_policy', 'instruction', 'production_references_ready', 'warnings', 'reference_only', 'default_character_required') if key in aigc}
     context['aigc']['binding'] = selection_contract.aigc_style_binding(aigc)
-    context['aigc']['usage'] = 'Read the AIGC guide and selected style images only when this narration needs generated material; old scenes are not the default new content.'
+    context['aigc']['usage'] = 'Read the current AIGC contract with all current requirements and inspect its approved style references. Generate only when appropriate to this narration; old scenes are not default new content.'
     import material_sourcing
     context['materials'] = material_sourcing.context(source, folder, root)
     material_plan_path = Path(context['materials']['plan_path'])
@@ -675,6 +649,10 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
     brief = '\n'.join([MARKER, '# 本期制作：直接调用已有能力', '',
         f"原稿：{source['path']}", f'工程：{folder}',
         '完整原文在 director-context.json 的 source。先理解对象、变化和结果，再选择具体能力；候选不是自动分镜。', '',
+        '## 新窗口完整阅读', '',
+        f"先运行：python -B -X utf8 \"{(Path(root) / 'scripts/ui.py').resolve()}\" read plan",
+        '依次完整读取现行要求、全库目录全部分页，并实际打开全部认可参考总览与必要细图。完整队列见 context.repository_reading；短候选不能替代目录。',
+        '选中能力后运行 read selected --id <能力ID>，按清单逐文件读完原实现及生产适配器。内容已读且版本未变时当前窗口可复用；新窗口不能仅用旧摘要宣称完成。', '',
         '## 当前 UI 与原声', '',
         f"偏好正文：{(context['style']['preferences'] or {}).get('path', '尚未解析；不可猜测外观')}，位于 context.style.preferences.text。",
         '调用已有材质、排版和动作实现；新稿重新编排材料、对象和时间，不固定榜单、卡片数量或某片顺序。',
@@ -693,11 +671,11 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
         'context.capabilities 给出整库摘要和逐段候选；短候选不是白名单，未命中可以换表达或直接浏览整库。direct 条目可调用，source-adaptation 需要适配，reference-only 不冒充已有实现。', '',
         '## 制作顺序', '',
         '1. 按整篇口播组织对象与事件，实际执行 materials 检索计划，取得并查看本期文件；保持真实证据和原声时钟。',
-        '2. 查看选中能力的参数与短动态预览，优先通过 events/designs/scene 的已有代码绑定与组合；不用重新研究全部原片。',
+        '2. 完整读取选中能力的实现及本地依赖，查看完整动态预览，使用已有代码绑定与组合；不用重新研究全部历史原片。',
         '3. 用 ui.py events scaffold --capability <类型,类型> --out <绑定.json> 建参数；填本期对象、布局、动作时间和素材，再 events validate/build。涉及其他库按 inspect 返回的实际入口适配。',
         '4. 渲染实际片段，检查素材可读性、动作连续性、声音与当前风格；修改的是本期画面，不把一次特例追加成全局禁令。', '',
-        '## 按需展开', '',
-        *[f"- {row['title']}：{row['path']}" for row in core['on_demand']],
+        '## 现行要求来源', '',
+        *[f"- {row['title']}：{row['path']}" for row in core['documents']],
         '原片分格图已列在上方，供建立视觉理解。连续原片和逐句研究在学习新能力、指定复刻或排错时展开；普通制作不要求私人原片齐全，也不需重新实现已有动作。',
         '本准备步骤没有观看或认可本期画面，也没有提交生成或渲染。', ''])
     if reference_id:
@@ -1196,7 +1174,7 @@ def main(argv=None):
     prep.add_argument('--presenter', type=Path, help='Inspect source video and preserve its embedded original voice; no generation or retiming.')
     prep.add_argument('--reference', help='Explicit whole-film editing reference ID or alias; preserves the current UI direction.')
     prep.add_argument('--mode', choices=('production', 'research'), default='production',
-                      help='Production selects executable capabilities; research expands full requirements and reference films.')
+                      help='Both modes read all current requirements; production calls selected implementations, research expands original-film studies.')
     prep.add_argument('--force', action='store_true', help='Replace only this tool\'s own generated context/brief files.')
     validator = sub.add_parser('check', help='Check static structure, source anchors and local resources; use --production for production preflight.')
     validator.add_argument('--plan', required=True, type=Path)

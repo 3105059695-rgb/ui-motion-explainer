@@ -6,11 +6,11 @@
  *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#F3F3F5;font-family:ProjectSans,sans-serif}
  #main{position:relative;width:100%;height:100%;overflow:hidden;background:#F3F3F5}
  .scene-mount{position:absolute;inset:0;opacity:0}
- #lab-footer{position:absolute;left:120px;right:120px;bottom:44px;height:68px;border-top:1px solid #D6C2FF;display:flex;align-items:flex-end;justify-content:space-between;color:#75677F;font-size:23px;z-index:100}
+ #lab-footer{position:absolute;left:120px;right:120px;bottom:44px;height:68px;border-top:1px solid #DBDBE0;display:flex;align-items:flex-end;justify-content:space-between;color:#75677F;font-size:23px;z-index:100}
  #lab-footer strong{font-family:ProjectDisplay,sans-serif;font-size:30px;color:#0B0B0F;margin-right:18px}
  #lab-footer b{font-weight:400;color:#0B0B0F}
  #lab-progress{position:absolute;left:120px;right:120px;height:3px;bottom:112px;background:linear-gradient(90deg,#D6C2FF,#D6C2FF);transform-origin:left center;z-index:100}
- </style><script src="../../../assets/base-skill/assets/motion-lab/assets/gsap.min.js"></script><script src="../../../assets/base-skill/assets/motion-lab/assets/motion-blur.js"></script></head><body>
+ </style><script src="../../../assets/base-skill/assets/motion-lab/assets/gsap.min.js"></script><script src="../../../assets/base-skill/assets/motion-lab/assets/motion-blur.js"></script></head><body id="semantic-ui-adapted" data-semantic-ui="agent-editorial-a">
  <div id="main" data-composition-id="main" data-width="1920" data-height="1080" data-duration="27" data-fps="50">
  <div id="mount-depth" class="scene-mount"></div>
 <div id="mount-zoom" class="scene-mount"></div>
@@ -31,7 +31,7 @@ window.makeDepth = function makeDepth(gsap, mount) {
       .d-wash { position:absolute; left:822px; top:240px; width:900px; height:580px; border-radius:50%; background:radial-gradient(ellipse,rgba(191,166,223,.14),rgba(191,166,223,0) 70%); }
       .d-source { position:absolute; left:0; top:0; width:610px; height:442px; transform-origin:0 0; }
       .d-shadow { position:absolute; inset:0; border-radius:25px; box-shadow:0 28px 45px -26px rgba(42,24,61,.30),0 3px 7px rgba(42,24,61,.055); }
-      .d-shell { position:absolute; left:0; top:0; width:100%; height:442px; overflow:hidden; border:1.5px solid #777780; border-radius:24px; background:#FFF; }
+      .d-shell { position:absolute; left:0; top:0; width:100%; height:442px; overflow:hidden; border:1.5px solid #DBDBE0; border-radius:24px; background:#FFF; }
       .d-chrome { position:absolute; left:0; top:0; width:100%; height:62px; display:flex; align-items:center; gap:9px; padding:0 24px; background:#0B0B0F; color:#0B0B0F; }
       .d-dot { width:10px; height:10px; border-radius:50%; background:#857B8F; }
       .d-chrome-name { margin-left:14px; font-size:22px; line-height:1; }
@@ -48,8 +48,8 @@ window.makeDepth = function makeDepth(gsap, mount) {
       .d-small-file:before { top:15px; } .d-small-file:after { top:27px; }
       .d-document { position:absolute; left:0; top:0; width:1040px; height:620px; transform-origin:0 0; }
       .d-document-shadow { position:absolute; inset:0; border-radius:26px; box-shadow:0 33px 62px -30px rgba(42,24,61,.32),0 3px 7px rgba(42,24,61,.04); }
-      .d-document-shell { position:absolute; inset:0; overflow:hidden; border:1.5px solid #777780; border-radius:25px; background:#FFF; }
-      .d-document-chrome { position:absolute; left:0; top:0; right:0; height:75px; background:#F3F3F5; border-bottom:1px solid #777780; display:flex; align-items:center; padding:0 35px; gap:12px; }
+      .d-document-shell { position:absolute; inset:0; overflow:hidden; border:1.5px solid #DBDBE0; border-radius:25px; background:#FFF; }
+      .d-document-chrome { position:absolute; left:0; top:0; right:0; height:75px; background:#F3F3F5; border-bottom:1px solid #DBDBE0; display:flex; align-items:center; padding:0 35px; gap:12px; }
       .d-doc-icon { width:24px; height:31px; border:2px solid #D6C2FF; border-radius:4px; flex:none; }
       .d-doc-tab { font-size:30px; color:#0B0B0F; }
       .d-doc-tab-final { position:absolute; left:73px; top:20px; font-size:29px; color:#0B0B0F; opacity:0; }
@@ -161,7 +161,7 @@ window.makeDepth = function makeDepth(gsap, mount) {
     .to([el('d-web-body'),el('d-web-meta'),el('d-notes-body'),el('d-notes-meta'),el('d-notes-rule')], { autoAlpha:0, duration:0.22 }, 5.19)
     .to([el('d-web-chrome'),el('d-notes-chrome')], { autoAlpha:0, duration:0.22 }, 5.19)
     .to([el('d-web-shell'),el('d-notes-shell'),el('d-web-shadow'),el('d-notes-shadow')], { height:124, borderRadius:18, duration:0.5, ease }, 5.25)
-    .to([el('d-web-shell'),el('d-notes-shell')], { backgroundColor:'#F3F3F5', borderColor:'#D6C2FF', duration:0.5 }, 5.25)
+    .to([el('d-web-shell'),el('d-notes-shell')], { backgroundColor:'#F3F3F5', borderColor:'#DBDBE0', duration:0.5 }, 5.25)
     .to([el('d-web-shadow'),el('d-notes-shadow')], { opacity:0, duration:0.38 }, 5.25)
     .to([el('d-web-folded'),el('d-notes-folded')], { autoAlpha:1, duration:0.26 }, 5.56)
     .to(file, { x:440, y:220, scale:1, duration:0.65, ease }, 5.25)
@@ -189,14 +189,14 @@ window.makeZoom = function makeZoom(gsap, mount) {
   .z-title{position:absolute;left:120px;top:98px;font-size:62px;font-weight:700;letter-spacing:-1.5px}
   .z-subtitle{position:absolute;left:124px;top:188px;font-size:28px;color:#746B7F}
   .z-step{position:absolute;right:120px;top:125px;font-size:28px;color:#0B0B0F;font-weight:700}
-  .z-window{position:absolute;left:180px;top:268px;width:1560px;height:586px;background:#fff;border:1.5px solid #777780;border-radius:24px;box-shadow:0 25px 55px -26px #3a225c40;overflow:hidden}
+  .z-window{position:absolute;left:180px;top:268px;width:1560px;height:586px;background:#fff;border:1.5px solid #DBDBE0;border-radius:24px;box-shadow:0 25px 55px -26px #3a225c40;overflow:hidden}
   .z-chrome{position:absolute;inset:0 0 auto;height:66px;background:#0B0B0F;color:#fff;display:flex;align-items:center;gap:10px;padding:0 30px;z-index:5}
   .z-chrome i{width:11px;height:11px;border-radius:50%;background:#777780}
   .z-address{margin-left:30px;font-size:24px;color:#0B0B0F}
   .z-view{position:absolute;top:66px;left:0;right:0;bottom:0;overflow:hidden}
   .z-camera{position:absolute;left:0;top:0;width:1560px;height:520px;transform-origin:0 0;background:#fff}
   .z-nav{position:absolute;left:0;top:0;width:305px;bottom:0;border-right:1px solid #F3F3F5;background:#F3F3F5;padding:28px 26px}
-  .z-project{font-size:28px;font-weight:700;margin-bottom:25px}.z-branch{font-size:24px;border:1px solid #D6C2FF;border-radius:9px;padding:8px 16px;background:#fff;display:inline-block;margin-bottom:30px}
+  .z-project{font-size:28px;font-weight:700;margin-bottom:25px}.z-branch{font-size:24px;border:1px solid #DBDBE0;border-radius:9px;padding:8px 16px;background:#fff;display:inline-block;margin-bottom:30px}
   .z-files{font-size:26px;line-height:58px;color:#6E637C}.z-file{height:58px;padding-left:18px;white-space:nowrap;position:relative}
   .z-file span{position:relative;z-index:2}.z-selected{position:absolute;inset:0 -10px;background:#F3F3F5;border-radius:9px;transform-origin:0 50%}
   .z-doc{position:absolute;left:347px;top:30px;width:1160px;height:455px;border:1px solid #F3F3F5;border-radius:14px;overflow:hidden}
@@ -281,13 +281,13 @@ window.makeHandoff = function (gsap, mount) {
       #h-heading{position:absolute;left:120px;top:94px;margin:0;font-size:54px;line-height:1.3;font-weight:700;letter-spacing:-1px}
       #h-subheading{position:absolute;left:122px;top:176px;font-size:32px;line-height:1.4;color:#716A7B;display:flex;gap:20px;align-items:center}
       #h-subheading b{color:#0B0B0F;font-weight:700}
-      #h-source{position:absolute;left:120px;top:256px;width:680px;height:564px;border-radius:24px;background:#fff;border:2px solid #777780;box-shadow:0 20px 56px rgba(35,20,53,.08);transform-origin:50% 50%;z-index:2;overflow:hidden}
+      #h-source{position:absolute;left:120px;top:256px;width:680px;height:564px;border-radius:24px;background:#fff;border:2px solid #DBDBE0;box-shadow:0 20px 56px rgba(35,20,53,.08);transform-origin:50% 50%;z-index:2;overflow:hidden}
       #h-source-code{position:absolute;left:50px;top:174px;font-size:36px;line-height:1.75;white-space:nowrap;color:#0B0B0F}
       #h-source-code .h-code-line{display:flex;gap:24px;align-items:baseline}
       #h-source-code .h-code-no{font-family:ProjectDisplay,ProjectSans,sans-serif;color:#75677F;font-size:28px;width:28px}
       #h-source-code .h-code-value{color:#0B0B0F;font-family:ProjectDisplay,ProjectSans,sans-serif;font-size:40px;font-weight:700}
       #h-source-note{position:absolute;left:50px;bottom:39px;color:#81778C;font-size:28px;letter-spacing:.3px}
-      #h-source-retained{position:absolute;right:34px;bottom:34px;border:1px solid #D6C2FF;border-radius:12px;padding:8px 16px;background:#F3F3F5;color:#0B0B0F;font-size:26px;font-weight:700;opacity:0}
+      #h-source-retained{position:absolute;right:34px;bottom:34px;border:1px solid #DBDBE0;border-radius:12px;padding:8px 16px;background:#F3F3F5;color:#0B0B0F;font-size:26px;font-weight:700;opacity:0}
       #h-source-chrome{position:absolute;left:120px;top:256px;width:680px;height:74px;background:#0B0B0F;border-radius:24px 24px 0 0;z-index:5;color:#fff;display:flex;align-items:center;padding:0 28px;gap:11px;transform-origin:50% 282px}
       #h-source-chrome i{display:block;width:12px;height:12px;border-radius:50%;background:#766D80}
       #h-source-chrome i:nth-child(2){background:#777780}#h-source-chrome i:nth-child(3){background:#D6C2FF}
@@ -300,11 +300,11 @@ window.makeHandoff = function (gsap, mount) {
       #h-target .h-target-title{font-size:48px;font-weight:700;margin-top:18px}
       #h-target .h-target-note{font-size:32px;color:#81778C;margin-top:18px}
       #h-route{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:1;overflow:visible}
-      #h-route-path{fill:none;stroke:#D6C2FF;stroke-width:3;stroke-linecap:round;stroke-dasharray:1120;stroke-dashoffset:1120}
+      #h-route-path{fill:none;stroke:#DBDBE0;stroke-width:3;stroke-linecap:round;stroke-dasharray:1120;stroke-dashoffset:1120}
       #h-transfer-label{position:absolute;left:829px;top:639px;z-index:3;color:#0B0B0F;font-size:28px;font-weight:700;opacity:0}
       #h-object{position:absolute;left:930px;top:232px;width:870px;height:626px;z-index:3;transform-origin:50% 50%;filter:drop-shadow(0 18px 25px rgba(48,28,74,.1))}
-      #h-paper{position:absolute;inset:0;overflow:hidden;clip-path:inset(112px 146px 208px 104px round 18px);background:#fff;border:2px solid #D6C2FF;border-radius:24px}
-      #h-file-outline{position:absolute;left:102px;top:110px;width:620px;height:306px;border:2px solid #D6C2FF;border-radius:18px;pointer-events:none}
+      #h-paper{position:absolute;inset:0;overflow:hidden;clip-path:inset(112px 146px 208px 104px round 18px);background:#fff;border:2px solid #DBDBE0;border-radius:24px}
+      #h-file-outline{position:absolute;left:102px;top:110px;width:620px;height:306px;border:2px solid #DBDBE0;border-radius:18px;pointer-events:none}
       #h-paper-accent{position:absolute;left:0;top:0;width:100%;height:8px;background:#D6C2FF;opacity:0}
       #h-file-label{position:absolute;left:132px;top:134px;display:flex;gap:16px;align-items:center;white-space:nowrap}
       #h-file-icon{width:28px;height:34px;display:block;color:#0B0B0F;flex:none}
@@ -321,7 +321,7 @@ window.makeHandoff = function (gsap, mount) {
       .h-row-number{position:absolute;left:286px;top:0;font-family:ProjectDisplay,ProjectSans,sans-serif;font-size:44px;line-height:60px;font-weight:700;color:#0B0B0F;min-width:70px;text-align:left}
       .h-bar-track{position:absolute;left:255px;top:22px;width:350px;height:16px;background:#F3F3F5;border-radius:8px;opacity:0}
       .h-bar{position:absolute;left:0;top:0;height:16px;border-radius:8px;background:#D6C2FF;transform-origin:left center}
-      #h-bar-1{width:350px;background:#D6C2FF}#h-bar-2{width:262.5px;background:#D6C2FF}#h-bar-3{width:87.5px;background:#D6C2FF}
+      #h-bar-1{width:350px;background:#DBDBE0}#h-bar-2{width:262.5px;background:#D6C2FF}#h-bar-3{width:87.5px;background:#DBDBE0}
       #h-report-summary{position:absolute;left:48px;top:517px;display:flex;align-items:center;gap:15px;font-size:34px;line-height:50px;color:#0B0B0F;clip-path:inset(0 100% 0 0);white-space:nowrap}
       #h-report-summary strong{color:#0B0B0F;font-weight:700}
       #h-summary-dot{width:10px;height:10px;flex:none;border-radius:50%;background:#D6C2FF}
@@ -405,7 +405,7 @@ window.makeHandoff = function (gsap, mount) {
   tl.to(q('#h-target'), { autoAlpha: 0, duration: 0.22, ease: 'power1.out' }, 2.68);
 
   tl.addLabel('file-outline-becomes-report', 3.75);
-  tl.to(q('#h-paper'), { clipPath: 'inset(0px 0px 0px 0px round 24px)', borderColor: '#D6C2FF', duration: 0.75, ease: 'power3.inOut' }, 3.75);
+  tl.to(q('#h-paper'), { clipPath: 'inset(0px 0px 0px 0px round 24px)', borderColor: '#DBDBE0', duration: 0.75, ease: 'power3.inOut' }, 3.75);
   tl.to(q('#h-file-outline'), { opacity: 0, duration: 0.35, ease: 'power2.out' }, 3.78);
   tl.to(q('#h-file-label'), { x: -84, y: -96, duration: 0.7, ease: 'power3.inOut' }, 3.78);
   tl.to(q('#h-file-id'), { opacity: 0, duration: 0.3, ease: 'power1.out' }, 3.83);
@@ -466,4 +466,43 @@ window.makeHandoff = function (gsap, mount) {
  master.time(0.0001,true).time(0,true);
  window.__timelines.main=master;
  // Only the external viewer/renderer drives this registered timeline.
- </script><script src="../manifest.js"></script><script src="../source-bridge.js"></script></body></html>
+ </script><style data-semantic-ui-adapter="agent-editorial-a">/* Role materials from AgentEditorial.card/screen/sheet/pill/file.
+   This layer never writes geometry, transforms, masks, opacity, perspective,
+   filter, display or GSAP time. Original source files remain unchanged. */
+body#semantic-ui-adapted[data-semantic-ui="agent-editorial-a"]{--ui-ink:#0B0B0F;--ui-paper:#F3F3F5;--ui-line:#DBDBE0;--ui-accent:#D6C2FF;--ui-muted:#777780;--ui-shadow:0 12px 25px #00000020;--ui-depth:6px 8px 0 #DBDBE0,0 12px 25px #00000020;color:var(--ui-ink);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body#semantic-ui-adapted[data-semantic-ui] :where(.title,.reveal-type,.qtext,.large,.new-rule,.fragment,.shell-title,.layer-key,.d-title,.d-source-heading,.d-preview-title,.d-result-title,.z-title,.h-title){font-weight:800;letter-spacing:-.02em}
+body#semantic-ui-adapted[data-semantic-ui] :where(.tag,.caption,.origin,.doc-label,.slot-note,.diagram-mini,.diff-heading,.board-note,.d-top-note,.d-source-meta,.d-result-meta,.d-preview-foot,.d-footer,#lab-footer){color:var(--ui-muted)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.card,.sort-row,.diff-card,.viewport,.magnifier,.step-slot,.task-shell,.task-layer,.work-card,.source,.example-item,.concept-bg,.z-window,#h-source){box-shadow:var(--ui-depth);border-color:var(--ui-line);border-width:2px;background-color:#FFFFFF}
+body#semantic-ui-adapted[data-semantic-ui] :where(.source-doc,.match-shell,.viewport,.task-shell,.z-window,#h-source){border-color:var(--ui-ink);border-width:3px}
+body#semantic-ui-adapted[data-semantic-ui] :where(.window-head,.d-chrome,.d-document-chrome,.z-chrome,#h-source-chrome){background:var(--ui-ink);color:#FFFFFF;border-bottom:2px solid var(--ui-ink);font-weight:700}
+body#semantic-ui-adapted[data-semantic-ui] :where(.window-name,.d-chrome-name,.d-doc-tab,.d-doc-tab-final){color:#FFFFFF}
+body#semantic-ui-adapted[data-semantic-ui] :where(.dot,.d-dot,.z-chrome i,#h-source-chrome i){background:var(--ui-accent)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.line,.board-col,.board-item,.recording-slot,.diff-layer){background-color:var(--ui-paper)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.sort-row.urgent,.step-box,.flip-card,.moving-card,.layer1,.claim,.bookmark){background-color:var(--ui-ink);border-color:var(--ui-ink);color:#FFFFFF;box-shadow:var(--ui-depth)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.sort-row.urgent .priority,.step-number,.flip-kicker,.flip-back h2,.moving-card small,.layer1 .layer-num,.layer1 .layer-key,.claim .footnote,.bookmark .question-icon){color:var(--ui-accent)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.flip-face p,.step-content p,.layer1 .layer-desc){color:#C5C1CD}
+body#semantic-ui-adapted[data-semantic-ui] :where(.sort-id,.source-field,.match-button,.diff-new .diff-field.changed,.status-pill,.process-badge,.d-outline-label,.d-saved-icon,.z-doc-tag,#h-source-retained,#h-result-check){background:var(--ui-accent);color:var(--ui-ink);border-color:var(--ui-line);font-weight:700}
+body#semantic-ui-adapted[data-semantic-ui] :where(.small-check,.not-always,.z-context){background:var(--ui-ink);color:var(--ui-accent);box-shadow:0 5px 12px #00000015}
+body#semantic-ui-adapted[data-semantic-ui] :where(.diff-field,.source-field,.board-item,.example-item){box-shadow:0 3px 0 var(--ui-paper),0 7px 16px #0000000D}
+body#semantic-ui-adapted[data-semantic-ui] :where(.sort-row strong,.diagram-label,.doc-title,.slot-title,.diff-row,.step-content h2,.flip-face h2,.work-card,.example-item){font-weight:800}
+body#semantic-ui-adapted[data-semantic-ui] :where(.magnifier,.mag-target,.match-corners,.follow-ring,.z-ring){border-color:var(--ui-ink)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.folder,.folder-tab){background:var(--ui-paper);border-color:var(--ui-line);color:var(--ui-ink)}
+body#semantic-ui-adapted[data-semantic-ui] .folder{box-shadow:8px 10px 0 var(--ui-line),var(--ui-shadow)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-shell,.d-document-shell,.z-doc,#h-paper){background:#FFFFFF;border:2px solid var(--ui-line)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-shell,.d-document-shell){box-shadow:7px 9px 0 var(--ui-line)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-shadow,.d-document-shadow){box-shadow:0 12px 25px #00000020}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-quote,.d-result-summary){background:var(--ui-paper);color:var(--ui-ink)}
+body#semantic-ui-adapted[data-semantic-ui] .d-quote{border-left:5px solid var(--ui-accent)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-small-file,.d-doc-icon,#h-file-outline){border-color:var(--ui-ink)}
+body#semantic-ui-adapted[data-semantic-ui] .d-doc-icon{border-color:var(--ui-accent)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-small-file:before,.d-small-file:after,.step-bar,.h-bar-track){background:var(--ui-ink)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.step-fill,.h-bar,.reveal-underline,.answer-rule,.assembly-line){background:var(--ui-accent)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-note-rule,.d-preview-rule,.shell-divider,.slot-rule){background:var(--ui-line)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-note-number,.d-folded-label,.d-outline-text,.d-result-text,.d-result-kicker,.d-saved,.z-branch){color:var(--ui-ink)}
+body#semantic-ui-adapted[data-semantic-ui] .subtitle span{background:var(--ui-ink);font-weight:800;box-shadow:0 5px 12px #00000015}
+/* State is already expressed by the moving progress bar. Keep label contrast. */
+body#semantic-ui-adapted[data-semantic-ui] .step-label{color:var(--ui-ink)!important}
+body#semantic-ui-adapted[data-semantic-ui] .layer-num{color:var(--ui-muted)}
+body#semantic-ui-adapted[data-semantic-ui] #h-paper-accent{background:var(--ui-line)}
+body#semantic-ui-adapted[data-semantic-ui] .d-doc-icon{background:linear-gradient(var(--ui-accent),var(--ui-accent)) 4px 9px/12px 2px no-repeat,linear-gradient(var(--ui-accent),var(--ui-accent)) 4px 17px/12px 2px no-repeat}
+</style><script src="../manifest.js"></script><script src="../source-bridge.js"></script></body></html>

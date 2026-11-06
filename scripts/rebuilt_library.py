@@ -12,7 +12,7 @@ import sys
 ROOT=Path(__file__).resolve().parents[1]
 BASE=Path('assets/rebuilt-library')
 def read(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
-def write(p,v):Path(p).write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+def write(p,v):Path(p).write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
 def digest(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def safe(root,value):
  p=(Path(root)/value).resolve()
@@ -32,17 +32,22 @@ def inspect(ident,root=ROOT):
   'independent_reconstruction':True,'source':p.relative_to(root).as_posix(),'source_sha256':digest(p),
   'inputs':s.get('inputs',{}),'assets':s.get('assets',{}),'provenance':s.get('provenance',{}),
   'event_sequence':s.get('events',[]),'verification':s.get('verification',{'status':'not-rendered'}),
+  'ui_binding':{'default':'current','id':'ten-agents-body-a','runtime':'assets/rebuilt-library/current-ui.js','source':'assets/agent-editorial/agent-editorial.js','historic_demo_only':True},
   'scope':'A per-reference executable scene program, not the author’s membership source. User approval is separate.'}
 def scaffold(ident,out,root=ROOT):
  p=Path(out)
  if p.exists():raise ValueError('Output already exists')
- s=read(scene_path(ident,root));data={'schema':'ui-motion-fusion/independent-binding@1','id':s['id'],'mode':'production','inputs':s.get('inputs',{}),'assets':{},'media_tracks':{key:{**v,'source_in':0,'rate':1} for key,v in s.get('media_tracks',{}).items()},'required_media_slots':list(s.get('assets',{})),'duration':s['duration'],'fps':30,'purpose':'Replace content and media for the current narration; durations are explicit. Demo assets require explicit mode=demo and are never current project materials.'}
+ s=read(scene_path(ident,root));data={'schema':'ui-motion-fusion/independent-binding@1','id':s['id'],'mode':'production','ui_style':'current','inputs':s.get('inputs',{}),'assets':{},'media_tracks':{key:{**v,'source_in':0,'rate':1} for key,v in s.get('media_tracks',{}).items()},'required_media_slots':list(s.get('assets',{})),'duration':s['duration'],'fps':30,'purpose':'Replace content and media for the current narration; durations are explicit. Demo assets require explicit mode=demo and are never current project materials.'}
  p.parent.mkdir(parents=True,exist_ok=True);write(p,data);return {'output':str(p.resolve()),'id':s['id']}
 def materialize(spec,output,root=ROOT):
  root=Path(root).resolve();spec_path=Path(spec).resolve();binding=read(spec_path);s=read(scene_path(binding['id'],root));output=Path(output).resolve()
  if output.exists():raise ValueError('Project already exists; no overwrite performed')
  mode=binding.get('mode','production')
  if mode not in ('production','demo'):raise ValueError('mode must be production or demo')
+ ui_style=binding.get('ui_style','current')
+ if ui_style not in ('current','historic'):raise ValueError('ui_style must be current or historic')
+ if mode=='production' and ui_style!='current':raise ValueError('Historic UI is a demonstration option only; production uses the accepted current UI')
+ s['ui_style']=ui_style
  if mode=='production':
   unbound=[key for key in s.get('assets',{}) if not binding.get('assets',{}).get(key)]
   if unbound:raise ValueError('Bind current production media; demonstration assets are not a fallback: '+', '.join(unbound))
@@ -86,7 +91,7 @@ def materialize(spec,output,root=ROOT):
   relative='media/'+digest(p)[:20]+p.suffix.lower();planned.append((p,relative));assets[name]=relative
  if set(binding.get('assets',{}))-set(s.get('assets',{})):raise ValueError('Unknown media slot')
  output.mkdir(parents=True)
- for rel in ['assets/agent-editorial/agent-editorial.js','assets/agent-editorial/motion-core.js',str(BASE/'scene-runtime.js').replace('\\','/')]:
+ for rel in ['assets/agent-editorial/agent-editorial.js','assets/agent-editorial/motion-core.js',str(BASE/'current-ui.js').replace('\\','/'),str(BASE/'scene-runtime.js').replace('\\','/')]:
   dest=output/'lib'/Path(rel).name;dest.parent.mkdir(exist_ok=True);shutil.copy2(root/rel,dest)
  extension_tags=[]
  for rel in s.get('extensions',[]):
@@ -104,15 +109,16 @@ def materialize(spec,output,root=ROOT):
    try:os.link(src,dest)
    except OSError:shutil.copy2(src,dest)
  js='window.REBUILT_SPEC='+json.dumps(s,ensure_ascii=False).replace('<','\\u003c')+';\nwindow.REBUILT_INPUTS='+json.dumps(inputs,ensure_ascii=False).replace('<','\\u003c')+';\nwindow.REBUILT_ASSETS='+json.dumps(assets,ensure_ascii=False).replace('<','\\u003c')+';\n'
- (output/'scene.js').write_text(js,encoding='utf-8')
+ (output/'scene.js').write_text(js,encoding='utf-8',newline='\n')
  (output/'index.html').write_text('''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><style>@font-face{font-family:Noto;src:url(fonts/NotoSansSC.ttf)}*{box-sizing:border-box}html,body{margin:0;background:white;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style><canvas id="scene" width="1920" height="1080"></canvas><script src="lib/motion-core.js"></script><script src="lib/agent-editorial.js"></script><script src="lib/scene-runtime.js"></script><script src="scene.js"></script><script>
 const canvas=document.getElementById('scene'),ctx=canvas.getContext('2d'),images={};let engine,time=0,play=false,last=0,readyPromise;window.__sceneTrace=[];
 const loaded=Promise.all(Object.entries(REBUILT_ASSETS).map(([id,url])=>new Promise((resolve,reject)=>{const isVideo=/\\.(mp4|webm|mov|m4v)(?:$|[?#])/i.test(url);const media=isVideo?document.createElement('video'):new Image();const ready=()=>{images[id]=media;resolve()};media.onerror=()=>reject(Error('Failed media '+id));if(isVideo){media.muted=true;media.playsInline=true;media.preload='auto';media.addEventListener('loadeddata',ready,{once:true});}else media.onload=ready;media.src=url;if(isVideo)media.load();})));
 window.ready=()=>readyPromise??=(async()=>{await loaded;await document.fonts.load('32px Noto');await document.fonts.ready;engine=RebuiltScene.create(REBUILT_SPEC,{inputs:REBUILT_INPUTS,assets:images,assetUrls:REBUILT_ASSETS});if(engine.ready)await engine.ready();if(engine.prepare)await engine.prepare(0);engine.draw(ctx,0);return true;})();
 window.seek=async(t)=>{if(!engine)throw Error('Call ready first');time=Math.max(0,Math.min(REBUILT_SPEC.duration,t));if(engine.prepare)await engine.prepare(time);const state=engine.draw(ctx,time);if(window.__sceneTrace.length<1000)window.__sceneTrace.push(state);return state};window.render=window.seek;
 canvas.onclick=()=>{play=!play;last=performance.now()};async function tick(now){if(play&&engine){time+=(now-last)/1000;if(time>REBUILT_SPEC.duration){time=REBUILT_SPEC.duration;play=false;}await window.seek(time);}last=now;requestAnimationFrame(tick)}window.ready().then(()=>requestAnimationFrame(tick)).catch(e=>{window.__runtimeError=e.message;throw e});
-</script></html>'''.replace('<script src="scene.js"></script>',''.join(extension_tags)+'<script src="scene.js"></script>'),encoding='utf-8')
+</script></html>'''.replace('<script src="lib/scene-runtime.js"></script>','<script src="lib/current-ui.js"></script><script src="lib/scene-runtime.js"></script>').replace('<script src="scene.js"></script>',''.join(extension_tags)+'<script src="scene.js"></script>'),encoding='utf-8',newline='\n')
  config={'schema':'ui-motion-fusion/library-project@1','id':s['id'],'engine':'html-seek','entry':'index.html','duration':s['duration'],'width':1920,'height':1080,'fps':binding.get('fps',30),'runtime_status':'not-rendered','source_video_required':False,'independent_reconstruction':True,'demo_content':mode=='demo','user_approved':False,'source_sha256':digest(scene_path(binding['id'],root))}
+ config['ui_binding']={'mode':ui_style,'id':'ten-agents-body-a','accent':'#D6C2FF','runtime_sha256':digest(root/BASE/'current-ui.js'),'sdk_sha256':digest(root/'assets/agent-editorial/agent-editorial.js'),'geometry_and_media_preserved':True,'user_approved':False}
  write(output/'library-project.json',config);write(output/'library-binding.json',binding)
  return {'project':str(output),'id':s['id'],'duration':s['duration'],'independent_reconstruction':True}
 def main(argv=None):

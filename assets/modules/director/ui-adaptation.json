@@ -1,0 +1,3328 @@
+{
+  "schema_version": 1,
+  "style": "agent-editorial-a",
+  "count": 103,
+  "passed": true,
+  "items": [
+    {
+      "id": "software-preset:opening-window-depth",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 3,
+        "paper": 1,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 2
+      },
+      "duration": 7.8,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:opening-command-launch",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 8.4,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:opening-focus-reveal",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 1,
+        "heading": 1
+      },
+      "duration": 7.3,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-slider-confirm",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 2
+      },
+      "duration": 8,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-folder-fan",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 2
+      },
+      "duration": 8.2,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-command-palette",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 2,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 3
+      },
+      "duration": 8.2,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-list-filter",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 8,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-sidebar-detail",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 1,
+        "glass": 0,
+        "control": 1,
+        "heading": 3
+      },
+      "duration": 8,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:result-document-unfold",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 1,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 2
+      },
+      "duration": 8,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:result-compare-wipe",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 3
+      },
+      "duration": 8.5,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:transition-shared-file",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 2,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 2
+      },
+      "duration": 8.5,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:transition-tab-morph",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 1,
+        "heading": 2
+      },
+      "duration": 8.5,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:software-codex-task",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 0,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 1,
+        "heading": 3
+      },
+      "duration": 14,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:software-doubao-answer",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 0,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 1,
+        "heading": 6
+      },
+      "duration": 14,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:software-workbuddy-flow",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 0,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 6
+      },
+      "duration": 14,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:ai-workflow-nodes",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 0,
+        "window": 0,
+        "paper": 0,
+        "card": 4,
+        "glass": 0,
+        "control": 0,
+        "heading": 2
+      },
+      "duration": 14,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:ai-context-handoff",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 0,
+        "window": 0,
+        "paper": 1,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 4
+      },
+      "duration": 14,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:ai-search-citations",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 0,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 1,
+        "heading": 6
+      },
+      "duration": 14,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:software-doubao-work",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 0,
+        "window": 1,
+        "paper": 1,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 7
+      },
+      "duration": 14,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:opening-orb-converge",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 8,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:ai-document-scan",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 1,
+        "glass": 0,
+        "control": 1,
+        "heading": 3
+      },
+      "duration": 9,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:opening-type-mask",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 2
+      },
+      "duration": 7,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:result-chart-draw",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 1,
+        "glass": 0,
+        "control": 1,
+        "heading": 1
+      },
+      "duration": 8,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:ai-stage-progress",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 1,
+        "glass": 0,
+        "control": 0,
+        "heading": 5
+      },
+      "duration": 9,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:ambient-glass-focus",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 2,
+        "control": 0,
+        "heading": 2
+      },
+      "duration": 8,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-inline-edit",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 2
+      },
+      "duration": 8.8,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-dock-switch",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 3
+      },
+      "duration": 8.6,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-progress-morph",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 1,
+        "heading": 1
+      },
+      "duration": 8.6,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-notification-expand",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 3
+      },
+      "duration": 8.8,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-settings-toggle",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 1,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 5
+      },
+      "duration": 8.4,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-table-sort",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 2
+      },
+      "duration": 8.6,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:continuous-codex-story",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 2
+      },
+      "duration": 20,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:ai-orb-image-reveal",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 2,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 8,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:result-tech-text-inspect",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 0
+      },
+      "duration": 9,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-transfer-confirm",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 1,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 9.5,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:ambient-agent-island",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 2
+      },
+      "duration": 10,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-workflow-replace",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 1,
+        "glass": 0,
+        "control": 2,
+        "heading": 1
+      },
+      "duration": 11,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-node-config",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 4,
+        "glass": 0,
+        "control": 2,
+        "heading": 5
+      },
+      "duration": 12,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:software-agent-hub",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 9,
+        "glass": 0,
+        "control": 4,
+        "heading": 15
+      },
+      "duration": 16,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:software-workflow-automation",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 2,
+        "glass": 0,
+        "control": 7,
+        "heading": 2
+      },
+      "duration": 12,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:ai-reasoning-glass-panel",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 3
+      },
+      "duration": 11,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-flow-deck-insert",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 3,
+        "glass": 0,
+        "control": 4,
+        "heading": 4
+      },
+      "duration": 13,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-invoice-node-focus",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 4,
+        "glass": 0,
+        "control": 4,
+        "heading": 0
+      },
+      "duration": 10,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [
+          "interaction-invoice-node-focus-25.png",
+          "interaction-invoice-node-focus-50.png",
+          "interaction-invoice-node-focus-85.png"
+        ],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:ai-handoff-copy-component",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 3
+      },
+      "duration": 12,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:software-agent-workflow-inspect",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 10,
+        "glass": 0,
+        "control": 0,
+        "heading": 8
+      },
+      "duration": 14,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [
+          "software-agent-workflow-inspect-25.png",
+          "software-agent-workflow-inspect-50.png",
+          "software-agent-workflow-inspect-85.png"
+        ],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-scenes-composer",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 11,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:opening-workflow-canvas",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 1,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 10,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:software-logistics-route-map",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 6,
+        "glass": 0,
+        "control": 0,
+        "heading": 6
+      },
+      "duration": 14,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:software-branch-workflow",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 4,
+        "glass": 0,
+        "control": 2,
+        "heading": 10
+      },
+      "duration": 14,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:ai-command-block-link",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 2
+      },
+      "duration": 12,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:ai-coding-agent-progress",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 1,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 18,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [
+          "ai-coding-agent-progress-25.png",
+          "ai-coding-agent-progress-50.png",
+          "ai-coding-agent-progress-85.png"
+        ],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:software-signal-node-patch",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 7,
+        "glass": 0,
+        "control": 0,
+        "heading": 15
+      },
+      "duration": 18,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-context-clear",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 12,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:ai-runtime-self-correct",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 0
+      },
+      "duration": 18,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-dns-scroll-explain",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 3
+      },
+      "duration": 12,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-chat-canvas-branch",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 4,
+        "glass": 0,
+        "control": 1,
+        "heading": 0
+      },
+      "duration": 20,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:ai-workflow-configuration-gate",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 3
+      },
+      "duration": 18,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-nested-step-toggle",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 6,
+        "glass": 0,
+        "control": 1,
+        "heading": 0
+      },
+      "duration": 14,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:ai-product-ad-assets-pipeline",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 24,
+        "glass": 0,
+        "control": 1,
+        "heading": 1
+      },
+      "duration": 36,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:ai-image-model-video-nodes",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 7,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 29,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-add-job-hub-hover",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 9,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:ambient-cloud-topology-health",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 10
+      },
+      "duration": 8,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:loading-sidebar-dot-morph",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 1,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 8,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-liquid-glass-control-suite",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 22,
+        "control": 4,
+        "heading": 2
+      },
+      "duration": 36,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [
+          "interaction-liquid-glass-control-suite-25.png",
+          "interaction-liquid-glass-control-suite-50.png",
+          "interaction-liquid-glass-control-suite-85.png"
+        ],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:ai-voice-recipe-preferences",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 1,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 3
+      },
+      "duration": 70,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-module-preview-search",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 1,
+        "glass": 0,
+        "control": 1,
+        "heading": 3
+      },
+      "duration": 20,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-command-search-assistant",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 0
+      },
+      "duration": 18,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-prompt-design-token-autocomplete",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 16,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-command-scroll-filter",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 1,
+        "card": 0,
+        "glass": 0,
+        "control": 2,
+        "heading": 0
+      },
+      "duration": 22,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-camera-strip-dual-theme",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 12,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-hr-command-multigroup-search",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 4
+      },
+      "duration": 28,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-command-task-config-theme",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 2,
+        "glass": 0,
+        "control": 1,
+        "heading": 4
+      },
+      "duration": 40,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-supercmd-memory-preview",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 18,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-workflow-context-agent",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 0,
+        "window": 1,
+        "paper": 0,
+        "card": 1,
+        "glass": 0,
+        "control": 1,
+        "heading": 3
+      },
+      "duration": 26,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-file-library-search-open",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 2,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 22,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-command-contact-folder-states",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 0,
+        "window": 1,
+        "paper": 0,
+        "card": 2,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 34,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-snippet-search-refine",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 20,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-crm-command-preview",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 8
+      },
+      "duration": 18,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-solid-command-draft",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 20,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-designer-directory-recovery",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 2
+      },
+      "duration": 20,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-folio-library-product-tour",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 2,
+        "paper": 0,
+        "card": 36,
+        "glass": 0,
+        "control": 1,
+        "heading": 26
+      },
+      "duration": 60,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-sidebar-chat-grouping",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 0
+      },
+      "duration": 26,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-draggable-split-snap",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 0,
+        "window": 0,
+        "paper": 0,
+        "card": 2,
+        "glass": 0,
+        "control": 0,
+        "heading": 2
+      },
+      "duration": 26,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-sidebar-colored-anchor-trail",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 1,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 5
+      },
+      "duration": 24,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-finance-sidebar-resize",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 0,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 0
+      },
+      "duration": 20,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-lab01-prototype-tour",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 9
+      },
+      "duration": 66,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-sidebar-hover-expand-select",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 5,
+        "heading": 0
+      },
+      "duration": 32,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-nested-activity-sidebar",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 0,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 0
+      },
+      "duration": 28,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-dual-image-loader-orb-reveal",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 0
+      },
+      "duration": 9,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-foldable-learning-tabs",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 11,
+        "glass": 0,
+        "control": 0,
+        "heading": 8
+      },
+      "duration": 30,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-dropdown-chain-multiselect",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 0,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 4,
+        "heading": 0
+      },
+      "duration": 30,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-github-sidebar-tabs-tour",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 2,
+        "heading": 30
+      },
+      "duration": 26,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:software-glass-code-editor-local-edit",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 2,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 5
+      },
+      "duration": 28,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-morphing-search-notification-nav",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 0,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 0
+      },
+      "duration": 32,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-notification-stack-cycle",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 4,
+        "glass": 0,
+        "control": 0,
+        "heading": 4
+      },
+      "duration": 26,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-account-setup-accordion",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 6,
+        "heading": 4
+      },
+      "duration": 30,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [
+          "interaction-account-setup-accordion-25.png",
+          "interaction-account-setup-accordion-50.png",
+          "interaction-account-setup-accordion-85.png"
+        ],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-paperclip-share-popover",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 0,
+        "window": 0,
+        "paper": 1,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 2
+      },
+      "duration": 24,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-empty-state-workspace-folder-artifact",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 1,
+        "glass": 0,
+        "control": 0,
+        "heading": 3
+      },
+      "duration": 24,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-finder-sticker-peel-drag",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 1,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 4
+      },
+      "duration": 26,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-squeezed-progress-pause-resume",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 0,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 24,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-bear-switch-on-off",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 0,
+        "heading": 1
+      },
+      "duration": 26,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-rolling-number-documentation-tour",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 1,
+        "window": 0,
+        "paper": 0,
+        "card": 8,
+        "glass": 0,
+        "control": 0,
+        "heading": 9
+      },
+      "duration": 30,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    },
+    {
+      "id": "software-preset:interaction-terminal-ecosystem-village-tour",
+      "status": "current-ui-runtime-verified",
+      "adapter_files": [
+        "assets/modules/director/assets/studio/current-ui.js",
+        "assets/modules/director/assets/studio/core.js"
+      ],
+      "roles": {
+        "scene": 0,
+        "window": 2,
+        "paper": 0,
+        "card": 0,
+        "glass": 0,
+        "control": 8,
+        "heading": 1
+      },
+      "duration": 30,
+      "validation": {
+        "browser_seek_passed": true,
+        "deterministic_backseek": true,
+        "sampled_times": [
+          0,
+          0.25,
+          0.5,
+          0.85,
+          1,
+          0
+        ],
+        "images": [],
+        "user_approved": false
+      }
+    }
+  ],
+  "validation_scope": "All 103 actual source builders; full-span sampled seeks and backseek, representative screenshots. Not an aesthetic approval or full normal-speed playback review.",
+  "source_geometry_and_svg_artwork_preserved": true,
+  "historical_source_mode": "params.uiStyle=source",
+  "adapter_sha256": "05b6314c850088ecb0a987166ce8c11d87af155f913ee9646c0686b8a67f02b2"
+}

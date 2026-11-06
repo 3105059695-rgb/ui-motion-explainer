@@ -4,7 +4,7 @@
 
 ## 完整场景制作
 
-`ui.py scene list/inspect` 从实际 manifest 读出阿渡 anim3 的 12 场与 anim4 的 9 场，包括完整布局、预览、文字／图片槽、动作窗和口播 cue。技术接通这些场景不代表自动符合 Fred Talk；选到适用场景才实例化，其余使用 Fred 源码或原后端做明确适配。
+`ui.py scene list/inspect` 从实际 manifest 读出阿渡 anim3 的 12 场与 anim4 的 9 场，包括完整布局、预览、文字／图片槽、动作窗和口播 cue。选到适用场景后实例化，生产构建自动装入当前 UI 的角色适配器；保留原动作、构图和内容槽。实际效果仍需看本期输出，技术接线不自动代表审美通过。
 
 正式制作只编辑同一份 `director-plan.json`：`production.backend:"complete-scenes"`、所选 pack、全局 settings，以及每段 `scene.id/slots/cues`。字段、原声覆盖及对齐要求见[共同计划](director-plan-contract.md#完整场景路线共用同一计划)。`scene compile` 仅生成派生参数供检查；`scene build --plan` 实际提取所选源码块，生成可编辑工程和来源绑定；`scene render` 运行与普通路线共用的生产预检、导出和输出复核。
 

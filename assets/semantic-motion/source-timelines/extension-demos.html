@@ -11,7 +11,7 @@
 .diff-card{position:absolute;left:235px;top:231px;width:810px;height:295px;border-radius:20px;overflow:hidden;background:#F3F3F5;border:1px solid #dfe1e6}.diff-layer{position:absolute;inset:0;padding:30px 40px;background:#F3F3F5}.diff-heading{font-size:24px;color:#787b85;margin-bottom:28px}.diff-row{display:flex;gap:35px;align-items:center;font-size:24px;margin-bottom:23px}.diff-field{background:#fff;border:1px solid #e0e1e6;border-radius:8px;padding:12px 20px;min-width:462px}.diff-new .diff-field.changed{background:#F3F3F5;border-color:#D6C2FF}.diff-divider{height:100%;width:3px;background:#D6C2FF;position:absolute;left:0;top:0}.diff-labels{position:absolute;top:560px;left:235px;display:flex;gap:30px;font-size:23px}.diff-after-label{color:#0B0B0F;font-weight:700}
 .viewport{position:absolute;left:155px;top:208px;width:970px;height:364px;border-radius:21px;overflow:hidden;background:#f0f1f5;border:1px solid #dcdfe6}.world{position:absolute;inset:0;transform-origin:center center}.board-col{position:absolute;top:27px;width:253px;height:291px;background:#e4e6ec;border-radius:12px;padding:18px 20px;font-size:21px;color:#6b7180}.board-item{height:58px;background:#f8f9fb;border-radius:10px;margin-top:21px}.moving-card{position:absolute;left:58px;top:115px;width:228px;height:86px;border-radius:13px;background:#15151a;color:#fff;padding:16px 20px;box-shadow:0 16px 27px -17px #15182499}.moving-card small{display:block;font:700 15px Arial;color:#0B0B0F;letter-spacing:1px;margin-bottom:6px}.moving-card strong{font-size:26px}.follow-ring{position:absolute;inset:-9px;border:2px solid #D6C2FF;border-radius:19px}.pointer{position:absolute;right:11px;bottom:-14px;width:27px;height:32px;fill:#D6C2FF;stroke:#fff;stroke-width:2}.board-note{position:absolute;left:0;right:0;bottom:14px;text-align:center;font-size:17px;color:#8b909b}
 .flip-stage{position:absolute;left:325px;top:216px;width:630px;height:340px;perspective:1400px}.flip-card{position:absolute;inset:0;background:#141519;color:#fff;border-radius:25px;padding:38px 44px;transform-origin:50% 50%;box-shadow:0 20px 40px -24px #15182455;will-change:transform}.flip-face{position:absolute;inset:38px 44px}.flip-kicker{font-size:23px;color:#0B0B0F;font-weight:700}.flip-face h2{font-size:52px;line-height:1.3;margin-top:34px;letter-spacing:-1px}.flip-face p{font-size:23px;color:#c9ccd5;margin-top:22px}.flip-back h2{color:#0B0B0F}.flip-icon{position:absolute;right:0;top:0;font-size:22px;color:#0B0B0F}.flip-state{position:absolute;top:582px;left:0;right:0;text-align:center;font-size:23px;color:#0B0B0F;font-weight:700}
-</style></head><body>
+</style></head><body id="semantic-ui-adapted" data-semantic-ui="agent-editorial-a">
 <main id="root" data-composition-id="main" data-start="0" data-duration="32" data-width="1280" data-height="720" data-fps="30">
 <section class="scene" id="x01"><div class="top"><span class="eyebrow">X01 · 遮罩揭字</span><span class="tag">扩展演示</span></div><h1 class="title">按语义，让标题出现。</h1><div class="reveal-block"><div class="mask"><span class="reveal-type reveal-line" id="reveal1">先把重点</span></div><div class="mask"><span class="reveal-type reveal-line purple" id="reveal2">讲清楚。</span></div><div class="reveal-underline"></div></div><div class="caption"><span>两行揭示 → 完整停留</span><span class="origin">新创作 · 不是原片</span></div></section>
 <section class="scene" id="x02"><div class="top"><span class="eyebrow">X02 · 保位排序</span><span class="tag">扩展演示</span></div><h1 class="title">顺序变了，对象还是它。</h1><div class="sort-list"><div class="sort-row" id="sort-a" style="top:0"><span class="sort-id">A</span><strong>整理需求</strong><span class="priority">常规</span></div><div class="sort-row" id="sort-b" style="top:106px"><span class="sort-id">B</span><strong>收集素材</strong><span class="priority">常规</span></div><div class="sort-row urgent" id="sort-c" style="top:212px"><span class="sort-id">C</span><strong>确认交付</strong><span class="priority">优先处理</span></div></div><div class="sort-state">优先级更新 · C 移到第一位</div><div class="caption"><span>ID、内容与卡片一起移动</span><span class="origin">新创作 · 不是原片</span></div></section>
@@ -51,7 +51,7 @@ tl.from('.match-corners',{opacity:0,duration:.3},12.45)
   .to('.match-corners',{opacity:0,duration:.3},14.08);
 // X05: each segment advances on a completed editorial step, no fake percentages.
 gsap.set('.step-fill',{scaleX:0});gsap.set('.step-content',{autoAlpha:0});
-for(let i=1;i<=4;i++){const at=16.15+(i-1)*.88;tl.to('#fill'+i,{scaleX:1,duration:.24,ease:'power2.out'},at);tl.to('#step-label'+i,{color:'#0B0B0F',duration:.15},at);if(i>1)tl.set('#step-content'+(i-1),{autoAlpha:0},at);tl.fromTo('#step-content'+i,{autoAlpha:0,y:10},{autoAlpha:1,y:0,duration:.22,ease:'power2.out'},at+.02);}
+for(let i=1;i<=4;i++){const at=16.15+(i-1)*.88;tl.to('#fill'+i,{scaleX:1,duration:.24,ease:'power2.out'},at);tl.to('#step-label'+i,{color:'#D6C2FF',duration:.15},at);if(i>1)tl.set('#step-content'+(i-1),{autoAlpha:0},at);tl.fromTo('#step-content'+i,{autoAlpha:0,y:10},{autoAlpha:1,y:0,duration:.22,ease:'power2.out'},at+.02);}
 // X06: same geometry for before and after; one local wipe reveals changed fields.
 tl.from('.diff-new',{clipPath:'inset(0 100% 0 0)',duration:.95,ease:'power2.inOut'},21.0)
   .fromTo('.diff-divider',{x:0,opacity:0},{opacity:1,duration:.1},21.0)
@@ -78,4 +78,43 @@ tl.to('.flip-card',{rotationY:-78,scaleX:.17,duration:.42,ease:'power2.in'},29.1
   .from('.flip-state',{opacity:0,y:8,duration:.3},30.1);
 tl.to({}, {duration:.01},31.99);
 window.__timelines.main=tl;tl.seek(0);
-</script><script src="../manifest.js"></script><script src="../source-bridge.js"></script></body></html>
+</script><style data-semantic-ui-adapter="agent-editorial-a">/* Role materials from AgentEditorial.card/screen/sheet/pill/file.
+   This layer never writes geometry, transforms, masks, opacity, perspective,
+   filter, display or GSAP time. Original source files remain unchanged. */
+body#semantic-ui-adapted[data-semantic-ui="agent-editorial-a"]{--ui-ink:#0B0B0F;--ui-paper:#F3F3F5;--ui-line:#DBDBE0;--ui-accent:#D6C2FF;--ui-muted:#777780;--ui-shadow:0 12px 25px #00000020;--ui-depth:6px 8px 0 #DBDBE0,0 12px 25px #00000020;color:var(--ui-ink);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body#semantic-ui-adapted[data-semantic-ui] :where(.title,.reveal-type,.qtext,.large,.new-rule,.fragment,.shell-title,.layer-key,.d-title,.d-source-heading,.d-preview-title,.d-result-title,.z-title,.h-title){font-weight:800;letter-spacing:-.02em}
+body#semantic-ui-adapted[data-semantic-ui] :where(.tag,.caption,.origin,.doc-label,.slot-note,.diagram-mini,.diff-heading,.board-note,.d-top-note,.d-source-meta,.d-result-meta,.d-preview-foot,.d-footer,#lab-footer){color:var(--ui-muted)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.card,.sort-row,.diff-card,.viewport,.magnifier,.step-slot,.task-shell,.task-layer,.work-card,.source,.example-item,.concept-bg,.z-window,#h-source){box-shadow:var(--ui-depth);border-color:var(--ui-line);border-width:2px;background-color:#FFFFFF}
+body#semantic-ui-adapted[data-semantic-ui] :where(.source-doc,.match-shell,.viewport,.task-shell,.z-window,#h-source){border-color:var(--ui-ink);border-width:3px}
+body#semantic-ui-adapted[data-semantic-ui] :where(.window-head,.d-chrome,.d-document-chrome,.z-chrome,#h-source-chrome){background:var(--ui-ink);color:#FFFFFF;border-bottom:2px solid var(--ui-ink);font-weight:700}
+body#semantic-ui-adapted[data-semantic-ui] :where(.window-name,.d-chrome-name,.d-doc-tab,.d-doc-tab-final){color:#FFFFFF}
+body#semantic-ui-adapted[data-semantic-ui] :where(.dot,.d-dot,.z-chrome i,#h-source-chrome i){background:var(--ui-accent)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.line,.board-col,.board-item,.recording-slot,.diff-layer){background-color:var(--ui-paper)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.sort-row.urgent,.step-box,.flip-card,.moving-card,.layer1,.claim,.bookmark){background-color:var(--ui-ink);border-color:var(--ui-ink);color:#FFFFFF;box-shadow:var(--ui-depth)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.sort-row.urgent .priority,.step-number,.flip-kicker,.flip-back h2,.moving-card small,.layer1 .layer-num,.layer1 .layer-key,.claim .footnote,.bookmark .question-icon){color:var(--ui-accent)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.flip-face p,.step-content p,.layer1 .layer-desc){color:#C5C1CD}
+body#semantic-ui-adapted[data-semantic-ui] :where(.sort-id,.source-field,.match-button,.diff-new .diff-field.changed,.status-pill,.process-badge,.d-outline-label,.d-saved-icon,.z-doc-tag,#h-source-retained,#h-result-check){background:var(--ui-accent);color:var(--ui-ink);border-color:var(--ui-line);font-weight:700}
+body#semantic-ui-adapted[data-semantic-ui] :where(.small-check,.not-always,.z-context){background:var(--ui-ink);color:var(--ui-accent);box-shadow:0 5px 12px #00000015}
+body#semantic-ui-adapted[data-semantic-ui] :where(.diff-field,.source-field,.board-item,.example-item){box-shadow:0 3px 0 var(--ui-paper),0 7px 16px #0000000D}
+body#semantic-ui-adapted[data-semantic-ui] :where(.sort-row strong,.diagram-label,.doc-title,.slot-title,.diff-row,.step-content h2,.flip-face h2,.work-card,.example-item){font-weight:800}
+body#semantic-ui-adapted[data-semantic-ui] :where(.magnifier,.mag-target,.match-corners,.follow-ring,.z-ring){border-color:var(--ui-ink)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.folder,.folder-tab){background:var(--ui-paper);border-color:var(--ui-line);color:var(--ui-ink)}
+body#semantic-ui-adapted[data-semantic-ui] .folder{box-shadow:8px 10px 0 var(--ui-line),var(--ui-shadow)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-shell,.d-document-shell,.z-doc,#h-paper){background:#FFFFFF;border:2px solid var(--ui-line)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-shell,.d-document-shell){box-shadow:7px 9px 0 var(--ui-line)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-shadow,.d-document-shadow){box-shadow:0 12px 25px #00000020}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-quote,.d-result-summary){background:var(--ui-paper);color:var(--ui-ink)}
+body#semantic-ui-adapted[data-semantic-ui] .d-quote{border-left:5px solid var(--ui-accent)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-small-file,.d-doc-icon,#h-file-outline){border-color:var(--ui-ink)}
+body#semantic-ui-adapted[data-semantic-ui] .d-doc-icon{border-color:var(--ui-accent)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-small-file:before,.d-small-file:after,.step-bar,.h-bar-track){background:var(--ui-ink)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.step-fill,.h-bar,.reveal-underline,.answer-rule,.assembly-line){background:var(--ui-accent)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-note-rule,.d-preview-rule,.shell-divider,.slot-rule){background:var(--ui-line)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-note-number,.d-folded-label,.d-outline-text,.d-result-text,.d-result-kicker,.d-saved,.z-branch){color:var(--ui-ink)}
+body#semantic-ui-adapted[data-semantic-ui] .subtitle span{background:var(--ui-ink);font-weight:800;box-shadow:0 5px 12px #00000015}
+/* State is already expressed by the moving progress bar. Keep label contrast. */
+body#semantic-ui-adapted[data-semantic-ui] .step-label{color:var(--ui-ink)!important}
+body#semantic-ui-adapted[data-semantic-ui] .layer-num{color:var(--ui-muted)}
+body#semantic-ui-adapted[data-semantic-ui] #h-paper-accent{background:var(--ui-line)}
+body#semantic-ui-adapted[data-semantic-ui] .d-doc-icon{background:linear-gradient(var(--ui-accent),var(--ui-accent)) 4px 9px/12px 2px no-repeat,linear-gradient(var(--ui-accent),var(--ui-accent)) 4px 17px/12px 2px no-repeat}
+</style><script src="../manifest.js"></script><script src="../source-bridge.js"></script></body></html>

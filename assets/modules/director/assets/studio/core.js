@@ -13,8 +13,11 @@
     const build = builds.get(id);
     if (!build) throw Error('Unknown preset: ' + id);
     const q = s => root.querySelector(s), qa = s => [...root.querySelectorAll(s)];
+    const currentUI = params.uiStyle !== 'source';
+    if (currentUI && !window.DirectorCurrentUI) throw Error('Current UI adapter missing; refusing an unadapted production scene');
     const ctx = {
-      gsap: window.gsap, root, q, qa, esc,
+      gsap: currentUI ? DirectorCurrentUI.gsap(window.gsap,root) : window.gsap,
+      root: currentUI ? DirectorCurrentUI.bindRoot(root) : root, q, qa, esc,
       text(tl, el, value, start, duration) {
         if (!el) throw Error('Missing text element in ' + id);
         const chars = Array.from(String(value ?? ''));
@@ -29,12 +32,14 @@
       }
     };
     root.replaceChildren();
+    delete root.dataset.uiAdapter;
     const scene = build(ctx, params);
+    if (currentUI) DirectorCurrentUI.apply(root);
     if (!scene?.timeline || !(scene.duration > 0)) throw Error('Builder did not return timeline/duration: '+id);
     // Force GSAP's zero-time sets to render synchronously before the first frame.
     // A timeline that has never advanced can otherwise retain its authoring state.
-    scene.timeline.pause().time(0.000001, false).time(0, false);
-    return {...scene, id, destroy() {scene.timeline.kill(); root.replaceChildren();}};
+    scene.timeline.pause().time(scene.duration, true).time(0.000001, true).time(0, true);
+    return {...scene, id, uiAdaptation: {style:currentUI?'agent-editorial-a':'original-source',roles:root.__uiRoleCounts||{},aestheticApproval:false}, destroy() {scene.timeline.kill(); root.replaceChildren();delete root.dataset.uiAdapter;}};
   }
   window.UIFX = {presets, register, mount, esc};
 })();

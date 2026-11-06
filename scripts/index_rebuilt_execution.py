@@ -7,7 +7,9 @@ REPORTS=['root-scene-report.json','batch-001-063-report.json','verification/memb
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def build(root=ROOT):
  rows=[];seen=set()
- for name in REPORTS:
+ current_report=root/BASE/'verification/ui-adaptation-all.json'
+ reports=['verification/ui-adaptation-all.json'] if current_report.is_file() else REPORTS
+ for name in reports:
   d=json.loads((root/BASE/name).read_text(encoding='utf-8'))
   for r in d.get('items',d.get('rows',[])):
    ident=r['id'];slug=ident.removeprefix('fredtalk:').removeprefix('reference:');rel=BASE+'scenes/'+slug+'.json';p=root/rel
@@ -17,6 +19,13 @@ def build(root=ROOT):
    scene=json.loads(p.read_text(encoding='utf-8'));runtime=r.get('runtime_sha256',r.get('executed_runtime_sha256'))
    assert runtime==sha(root/BASE/'scene-runtime.js'),ident+' runtime changed after proof'
    hashes={rel:r['scene_sha256'],BASE+'scene-runtime.js':runtime}
+   if name=='verification/ui-adaptation-all.json':
+    ui_hash=r.get('ui_adapter_sha256')
+    assert ui_hash==sha(root/BASE/'current-ui.js'),ident+' current UI adapter changed after proof'
+    hashes[BASE+'current-ui.js']=ui_hash
+    for path,value in r.get('shared_code_sha256',{}).items():
+     assert value==sha(root/path),ident+' shared drawing code changed after proof: '+path
+     hashes[path]=value
    ext=r.get('extension_hashes',r.get('executed_extension_sha256',{}))
    if r.get('extension_file'):ext={r['extension_file'].removeprefix(BASE):r['extension_sha256']}
    for item in scene.get('extensions',[]):
@@ -27,6 +36,6 @@ def build(root=ROOT):
  actual={json.loads(p.read_text(encoding='utf-8'))['id'] for p in (root/BASE/'scenes').glob('*.json')}
  assert seen==actual,{'unverified':sorted(actual-seen),'unknown':sorted(seen-actual)}
  report={'schema_version':1,'count':len(rows),'scope':'Complete independent scene programs. All actual tested code hashes must match; this does not claim exact original source or user aesthetic approval.','items':rows}
- (root/BASE/'execution.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+ (root/BASE/'execution.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
  return report
 if __name__=='__main__':print(json.dumps({'count':build()['count'],'verified':True}))

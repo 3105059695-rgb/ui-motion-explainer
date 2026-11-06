@@ -1773,8 +1773,10 @@
         "smoke": "passed",
         "distinct_frames": 3
       },
-      "required_media": [],
-      "media_contract_status": "observed-three-state-requests",
+      "required_media": [
+        "sfx/message.wav"
+      ],
+      "media_contract_status": "observed-full-render-requests",
       "proof": {
         "times": [
           1.25,
@@ -1797,7 +1799,8 @@
         "not_claimed": "A runnable scene is not proof that every native layout, material or historical palette matches the current approved UI.",
         "production": "Bind current copy and media, then review the resulting composition in context."
       },
-      "aesthetic_approval": false
+      "aesthetic_approval": false,
+      "media_contract_scope": "Full 12.5s source seek/render also requested incoming-message sound; not visible at prior three-state samples."
     },
     {
       "id": "fredtalk:new30-op03",

@@ -1,0 +1,39 @@
+/* Role materials from AgentEditorial.card/screen/sheet/pill/file.
+   This layer never writes geometry, transforms, masks, opacity, perspective,
+   filter, display or GSAP time. Original source files remain unchanged. */
+body#semantic-ui-adapted[data-semantic-ui="agent-editorial-a"]{--ui-ink:#0B0B0F;--ui-paper:#F3F3F5;--ui-line:#DBDBE0;--ui-accent:#D6C2FF;--ui-muted:#777780;--ui-shadow:0 12px 25px #00000020;--ui-depth:6px 8px 0 #DBDBE0,0 12px 25px #00000020;color:var(--ui-ink);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body#semantic-ui-adapted[data-semantic-ui] :where(.title,.reveal-type,.qtext,.large,.new-rule,.fragment,.shell-title,.layer-key,.d-title,.d-source-heading,.d-preview-title,.d-result-title,.z-title,.h-title){font-weight:800;letter-spacing:-.02em}
+body#semantic-ui-adapted[data-semantic-ui] :where(.tag,.caption,.origin,.doc-label,.slot-note,.diagram-mini,.diff-heading,.board-note,.d-top-note,.d-source-meta,.d-result-meta,.d-preview-foot,.d-footer,#lab-footer){color:var(--ui-muted)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.card,.sort-row,.diff-card,.viewport,.magnifier,.step-slot,.task-shell,.task-layer,.work-card,.source,.example-item,.concept-bg,.z-window,#h-source){box-shadow:var(--ui-depth);border-color:var(--ui-line);border-width:2px;background-color:#FFFFFF}
+body#semantic-ui-adapted[data-semantic-ui] :where(.source-doc,.match-shell,.viewport,.task-shell,.z-window,#h-source){border-color:var(--ui-ink);border-width:3px}
+body#semantic-ui-adapted[data-semantic-ui] :where(.window-head,.d-chrome,.d-document-chrome,.z-chrome,#h-source-chrome){background:var(--ui-ink);color:#FFFFFF;border-bottom:2px solid var(--ui-ink);font-weight:700}
+body#semantic-ui-adapted[data-semantic-ui] :where(.window-name,.d-chrome-name,.d-doc-tab,.d-doc-tab-final){color:#FFFFFF}
+body#semantic-ui-adapted[data-semantic-ui] :where(.dot,.d-dot,.z-chrome i,#h-source-chrome i){background:var(--ui-accent)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.line,.board-col,.board-item,.recording-slot,.diff-layer){background-color:var(--ui-paper)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.sort-row.urgent,.step-box,.flip-card,.moving-card,.layer1,.claim,.bookmark){background-color:var(--ui-ink);border-color:var(--ui-ink);color:#FFFFFF;box-shadow:var(--ui-depth)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.sort-row.urgent .priority,.step-number,.flip-kicker,.flip-back h2,.moving-card small,.layer1 .layer-num,.layer1 .layer-key,.claim .footnote,.bookmark .question-icon){color:var(--ui-accent)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.flip-face p,.step-content p,.layer1 .layer-desc){color:#C5C1CD}
+body#semantic-ui-adapted[data-semantic-ui] :where(.sort-id,.source-field,.match-button,.diff-new .diff-field.changed,.status-pill,.process-badge,.d-outline-label,.d-saved-icon,.z-doc-tag,#h-source-retained,#h-result-check){background:var(--ui-accent);color:var(--ui-ink);border-color:var(--ui-line);font-weight:700}
+body#semantic-ui-adapted[data-semantic-ui] :where(.small-check,.not-always,.z-context){background:var(--ui-ink);color:var(--ui-accent);box-shadow:0 5px 12px #00000015}
+body#semantic-ui-adapted[data-semantic-ui] :where(.diff-field,.source-field,.board-item,.example-item){box-shadow:0 3px 0 var(--ui-paper),0 7px 16px #0000000D}
+body#semantic-ui-adapted[data-semantic-ui] :where(.sort-row strong,.diagram-label,.doc-title,.slot-title,.diff-row,.step-content h2,.flip-face h2,.work-card,.example-item){font-weight:800}
+body#semantic-ui-adapted[data-semantic-ui] :where(.magnifier,.mag-target,.match-corners,.follow-ring,.z-ring){border-color:var(--ui-ink)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.folder,.folder-tab){background:var(--ui-paper);border-color:var(--ui-line);color:var(--ui-ink)}
+body#semantic-ui-adapted[data-semantic-ui] .folder{box-shadow:8px 10px 0 var(--ui-line),var(--ui-shadow)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-shell,.d-document-shell,.z-doc,#h-paper){background:#FFFFFF;border:2px solid var(--ui-line)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-shell,.d-document-shell){box-shadow:7px 9px 0 var(--ui-line)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-shadow,.d-document-shadow){box-shadow:0 12px 25px #00000020}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-quote,.d-result-summary){background:var(--ui-paper);color:var(--ui-ink)}
+body#semantic-ui-adapted[data-semantic-ui] .d-quote{border-left:5px solid var(--ui-accent)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-small-file,.d-doc-icon,#h-file-outline){border-color:var(--ui-ink)}
+body#semantic-ui-adapted[data-semantic-ui] .d-doc-icon{border-color:var(--ui-accent)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-small-file:before,.d-small-file:after,.step-bar,.h-bar-track){background:var(--ui-ink)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.step-fill,.h-bar,.reveal-underline,.answer-rule,.assembly-line){background:var(--ui-accent)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-note-rule,.d-preview-rule,.shell-divider,.slot-rule){background:var(--ui-line)}
+body#semantic-ui-adapted[data-semantic-ui] :where(.d-note-number,.d-folded-label,.d-outline-text,.d-result-text,.d-result-kicker,.d-saved,.z-branch){color:var(--ui-ink)}
+body#semantic-ui-adapted[data-semantic-ui] .subtitle span{background:var(--ui-ink);font-weight:800;box-shadow:0 5px 12px #00000015}
+/* State is already expressed by the moving progress bar. Keep label contrast. */
+body#semantic-ui-adapted[data-semantic-ui] .step-label{color:var(--ui-ink)!important}
+body#semantic-ui-adapted[data-semantic-ui] .layer-num{color:var(--ui-muted)}
+body#semantic-ui-adapted[data-semantic-ui] #h-paper-accent{background:var(--ui-line)}
+body#semantic-ui-adapted[data-semantic-ui] .d-doc-icon{background:linear-gradient(var(--ui-accent),var(--ui-accent)) 4px 9px/12px 2px no-repeat,linear-gradient(var(--ui-accent),var(--ui-accent)) 4px 17px/12px 2px no-repeat}

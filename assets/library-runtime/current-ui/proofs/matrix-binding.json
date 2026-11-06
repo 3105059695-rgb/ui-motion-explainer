@@ -1,0 +1,47 @@
+{
+  "schema": "ui-motion-fusion/library-binding@1",
+  "id": "fredtalk:fred-legacy-fix-l81-c002-v2",
+  "composition": "C002",
+  "entry": "adapter:fredtalk:fred-legacy-fix-l81-c002-v2",
+  "props": {},
+  "text": {
+    "会议记录": "口播拆句",
+    "日常想法": "真实素材",
+    "灵感捕捉": "关键动作",
+    "语音输入": "人物全景",
+    "文字整理": "界面层次",
+    "任务提取": "蒙版聚焦",
+    "内容归档": "连续转场",
+    "知识检索": "结果展示",
+    "上下文": "黑紫包装",
+    "工作复盘": "画面节奏",
+    "录音回听": "原声保留",
+    "重点摘要": "重点停稳",
+    "记录同步": "素材衔接",
+    "笔记关联": "对象交接",
+    "语义查找": "效果检索",
+    "素材整理": "代码复用",
+    "段落定位": "完整预览",
+    "重新使用": "成片输出"
+  },
+  "media": {
+    "fonts/ctw/NotoSansSC.ttf": "skill://assets/modules/director/assets/studio/fonts/NotoSansSC.ttf"
+  },
+  "palette": {
+    "accent": "#D6C2FF",
+    "token_map": {}
+  },
+  "ui_style": {
+    "mode": "approved"
+  },
+  "style_scope": {
+    "baseline": "assets/agent-editorial/source/body-a.js + body-b.js; agent-editorial.js primitives",
+    "material_adapter": "agent-editorial-material-v1",
+    "layout_motion": "original positions, timing, transforms, masks and content pixels retained",
+    "not_claimed": "Role adaptation is not aesthetic approval; exact per-file and unsupported scopes are in ui-style-report.json."
+  },
+  "required_media_slots": [
+    "fonts/ctw/NotoSansSC.ttf"
+  ],
+  "binding_notes": "Fill current text/media/props. Original animation/timing remains. No silent media fallback."
+}

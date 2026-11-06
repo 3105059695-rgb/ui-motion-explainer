@@ -1,29 +1,101 @@
 {
   "schema_version": 1,
-  "scope": "现行要求与条件性制作合同的完整保留清单。默认生产完整读取 SKILL.md 与审美偏好，其余在相关阶段按需读取；requirements 分页全文命令用于维护审计和全面复查。",
+  "scope": "新窗口必须完整读取的现行要求清单，包括条件性制作合同；条件规则是否执行仍按本期任务判断。全库能力目录和全部认可参考由 ui.py read 分页接入，选定后再读完整源码。",
   "documents": [
-    {"id": "entry", "title": "统一生产入口与按需展开", "path": "SKILL.md"},
-    {"id": "aesthetics", "title": "已确认 UI、质感、开头、声音与 AIGC 画风", "path": "references/aesthetic-preferences.md"},
-    {"id": "workflow", "title": "制作阶段、原稿原声、来源和交付", "path": "references/workflow.md"},
-    {"id": "narration", "title": "口播理解、真实材料与画面设计", "path": "references/script-visual-planning.md"},
-    {"id": "broll", "title": "不同语境的 B-roll、漫画表演与偏好条件", "path": "references/broll-preferences.md"},
-    {"id": "study", "title": "逐句研究与参考证据的使用", "path": "references/source-study-guide.md"},
-    {"id": "selection", "title": "整库发现、选择与实际应用", "path": "references/selection-workflow.md"},
-    {"id": "library", "title": "全部能力家族与实现状态", "path": "references/library.md"},
-    {"id": "implementation", "title": "语义配方到实际源码的接线", "path": "references/semantic-directing.md"},
-    {"id": "reference", "title": "整片参考与复刻范围", "path": "references/reference-replication.md"},
-    {"id": "identity", "title": "画风、人物身份和历史范围", "path": "references/style-profiles.md"},
-    {"id": "aigc", "title": "AIGC 的使用、画风、动作与剪辑节奏", "path": "references/aigc-directing.md"},
-    {"id": "generation", "title": "生成接口、请求状态与费用边界", "path": "references/anime-video-generation.md"},
-    {"id": "presenter", "title": "数字人、真实素材与合成", "path": "references/presenter-editing.md"},
-    {"id": "engines", "title": "实际后端、创建与导出接口", "path": "references/engine-routing.md"},
-    {"id": "plan", "title": "同一导演计划、实现证据与时间线", "path": "references/director-plan-contract.md"},
-    {"id": "review", "title": "实际画面、声音检查与返修", "path": "references/visual-quality.md"},
-    {"id": "ownership", "title": "规则唯一归属与内部资源分类", "path": "references/module-map.md"}
+    {
+      "id": "entry",
+      "title": "统一入口与完整读取顺序",
+      "path": "SKILL.md"
+    },
+    {
+      "id": "aesthetics",
+      "title": "已确认 UI、质感、开头、声音与 AIGC 画风",
+      "path": "references/aesthetic-preferences.md"
+    },
+    {
+      "id": "workflow",
+      "title": "制作阶段、原稿原声、来源和交付",
+      "path": "references/workflow.md"
+    },
+    {
+      "id": "narration",
+      "title": "口播理解、真实材料与画面设计",
+      "path": "references/script-visual-planning.md"
+    },
+    {
+      "id": "broll",
+      "title": "不同语境的 B-roll、漫画表演与偏好条件",
+      "path": "references/broll-preferences.md"
+    },
+    {
+      "id": "study",
+      "title": "逐句研究与参考证据的使用",
+      "path": "references/source-study-guide.md"
+    },
+    {
+      "id": "selection",
+      "title": "整库发现、选择与实际应用",
+      "path": "references/selection-workflow.md"
+    },
+    {
+      "id": "library",
+      "title": "全部能力家族与实现状态",
+      "path": "references/library.md"
+    },
+    {
+      "id": "implementation",
+      "title": "语义配方到实际源码的接线",
+      "path": "references/semantic-directing.md"
+    },
+    {
+      "id": "reference",
+      "title": "整片参考与复刻范围",
+      "path": "references/reference-replication.md"
+    },
+    {
+      "id": "identity",
+      "title": "画风、人物身份和历史范围",
+      "path": "references/style-profiles.md"
+    },
+    {
+      "id": "aigc",
+      "title": "AIGC 的使用、画风、动作与剪辑节奏",
+      "path": "references/aigc-directing.md"
+    },
+    {
+      "id": "generation",
+      "title": "生成接口、请求状态与费用边界",
+      "path": "references/anime-video-generation.md"
+    },
+    {
+      "id": "presenter",
+      "title": "数字人、真实素材与合成",
+      "path": "references/presenter-editing.md"
+    },
+    {
+      "id": "engines",
+      "title": "实际后端、创建与导出接口",
+      "path": "references/engine-routing.md"
+    },
+    {
+      "id": "plan",
+      "title": "同一导演计划、实现证据与时间线",
+      "path": "references/director-plan-contract.md"
+    },
+    {
+      "id": "review",
+      "title": "实际画面、声音检查与返修",
+      "path": "references/visual-quality.md"
+    },
+    {
+      "id": "ownership",
+      "title": "规则唯一归属与内部资源分类",
+      "path": "references/module-map.md"
+    }
   ],
   "resource_policy": {
-    "current_requirements": "上表统一登记现行核心、条件性合同和研究方法；正文只在原权威文件维护。生产核心是 SKILL.md 与 aesthetic-preferences.md，后续按相关阶段选读，不把所有文档都作为每期前置。",
-    "selected_resources": "从整个能力目录选择；优先查看所选已有能力的接口与短动态预览并绑定本期参数。需要改编或新能力时才深入源码与原片；不能用已读要求或目录存在代替实际实现。",
+    "current_requirements": "上表所有现行正文在每个新窗口完整读取，正文只在原权威文件维护；已完整读过且版本未变的当前窗口可复用，不重新读全部历史日志。",
+    "selected_resources": "先完整读全库能力目录并打开全部认可参考总览与必要细图；选定能力后完整读取其实现、本地依赖与生产UI适配器，观察完整动作预览，绑定本期参数。不能用候选摘要替代全库，不每次重新研究全部原视频。",
     "historical_material": "evidence、历史账号、旧 Skill 原文、旧工程和案例说明保留为来源资料。它们不能追加或覆盖当前全局要求；只有本期明确续作范围才接续相应历史设置。",
     "status": "输出全文、文件哈希和版本只证明本次提供了哪些要求，不证明 Agent 已读懂、已执行、已观看或成片已获认可。"
   }

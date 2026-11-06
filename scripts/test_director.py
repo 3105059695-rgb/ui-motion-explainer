@@ -725,8 +725,7 @@ class PackagedVisualBaseline(unittest.TestCase):
             script.write_text('把这份资料分给三个任务，同时处理后再看实际结果。', encoding='utf-8')
             with patch.object(director.source_study, 'directing_context', side_effect=AssertionError('Research must be explicit')), \
                  patch.object(director.reference_overviews, 'load', wraps=director.reference_overviews.load) as atlas_load, \
-                 patch.object(director.reference_readiness, 'report', side_effect=AssertionError('No archive gate in production')), \
-                 patch.object(director.requirements, 'load', side_effect=AssertionError('No full-document bundle in production')):
+                 patch.object(director.reference_readiness, 'report', side_effect=AssertionError('No archive gate in production')):
                 report = director.prepare(script, project, profile='adiao', root=root)
             context = director.load_json(project / 'director-context.json')
             brief = (project / 'director-brief.md').read_text(encoding='utf-8')
@@ -741,7 +740,7 @@ class PackagedVisualBaseline(unittest.TestCase):
         self.assertIn('短候选不是白名单', brief)
         self.assertTrue(context['capabilities']['units'])
         self.assertNotIn('source_study', context)
-        atlas_load.assert_called_once_with(root)
+        atlas_load.assert_any_call(root)
         self.assertGreaterEqual(context['production']['reference_overviews']['packaged_overview_count'], 13)
         self.assertEqual(material_plan['source']['text'], context['source']['text'])
         self.assertFalse(context['materials']['automatic_search_performed'])
@@ -749,8 +748,11 @@ class PackagedVisualBaseline(unittest.TestCase):
         self.assertNotIn('selection', context)
         self.assertEqual(report['mode'], 'production')
         reading = {Path(row['path']).resolve() for row in context['required_reading']}
-        self.assertEqual(reading, {(root / 'SKILL.md').resolve(),
-                                   (root / 'references/aesthetic-preferences.md').resolve()})
+        current = director.requirements.load(root)
+        self.assertEqual(reading, {Path(row['path']).resolve() for row in current['documents']})
+        self.assertEqual(context['repository_reading']['catalog']['entry_count'], expected_library['entry_count'])
+        self.assertFalse(context['repository_reading']['catalog']['truncated'])
+        self.assertEqual(context['repository_reading']['assessment']['reading'], 'not-assessed')
         self.assertEqual(context['style']['preferences']['text'],
                          (root / 'references/aesthetic-preferences.md').read_bytes().decode('utf-8-sig'))
 

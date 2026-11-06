@@ -1,0 +1,1348 @@
+{
+  "schema": "ui-motion-fusion/reference-material-classification@1",
+  "count": 48,
+  "counts": {
+    "ui-material-gap": 3,
+    "native-content-retained": 43,
+    "ui-overlay-gap": 2
+  },
+  "scope": "Only 47 reference entries previously marked typography-only or no-supported-source-ui-sites. Native-content-retained means no generic surface adapter should be invented; source motions, typography adaptation and current production wrapper still apply. It does not mean original palette is the users UI baseline or aesthetic approval.",
+  "items": [
+    {
+      "id": "reference:twoclipping-5cba86",
+      "previous_status": "no-supported-source-ui-sites",
+      "classification": "ui-material-gap",
+      "content_kind": "DOM UI shell",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/templates/ui-morph/index.html",
+          "sha256": "aaf61119d73870c98f91af23ee3aa8f36ba7822e51bee1e86c61f2bcca84fbbf"
+        },
+        {
+          "path": "assets/modules/reference/assets/templates/ui-morph/motion.js",
+          "sha256": "ff4310d46707e87ff7c7d6103aac7ab2a058a0eeac0dadf88cb59b88dbf43077"
+        },
+        {
+          "path": "assets/modules/reference/assets/templates/ui-morph/style.css",
+          "sha256": "da27cec3081b61d3d11d2d2a756ab56428e0de1301d67cb07b2b84bd63c1bc74"
+        }
+      ],
+      "source_sites": "style.css: #shape; .button-layer; .player-layer; .modal-layer",
+      "reason": "The shape morphs between a button, loader, dynamic island, player and modal. CSS is the material source; zero JS drawing sites does not mean no UI. Preserve all transforms, springs, layout and content.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:1littlecoder-9fef89",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "kinetic typography",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/1littlecoder-9fef89/composition.js",
+          "sha256": "b07ece9148c874d2ebc4ba7c41dc79bd57e9c4d84bbcc48246da38e73b96e7d0"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/1littlecoder-9fef89/index.html",
+          "sha256": "028285eb08b8fd9d03e35071d732ce75a493fb2f1fc878011a070ae945b66661"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/1littlecoder-9fef89/portable-paths.js",
+          "sha256": "034f7446c42734dceaae7e17c33f2a4072eebc06fb1777eaf9ce47990e058847"
+        }
+      ],
+      "source_sites": "inquiry(t); list(t); draw(t)",
+      "reason": "Moving words, question marks and squiggles. Rectangles are masks for type, not filled interface windows.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:ajith-io-b5626e",
+      "previous_status": "no-supported-source-ui-sites",
+      "classification": "native-content-retained",
+      "content_kind": "abstract motion geometry",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ajith-io-b5626e/index.html",
+          "sha256": "1559b5cde794c44b6f97b4b8c196c2df8554fb57d812da86e8e554cc0d7379f8"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ajith-io-b5626e/motion.js",
+          "sha256": "fe1738cd4c3504ecfe4c58a478a85d39be5fe63c96910cb63a2606d8ad50d8f6"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ajith-io-b5626e/portable-paths.js",
+          "sha256": "0cf9b6aa458cc9d51b213295f347beac82620c119f3a32da5fee27854f2619a2"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ajith-io-b5626e/style.css",
+          "sha256": "9f1e738fa3c1be08c50ace17b47f0cb8acd6b56fce3e40be35ac85894ac0f48f"
+        }
+      ],
+      "source_sites": "pathshape; flowerdots; ribbon; type rings",
+      "reason": "Organic curves, particle cloud, ribbons and rotating type. Drawing rectangles are clipping/shape primitives, not UI surfaces.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:allforbigfire-86ff3c",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "physical 3D illustration",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/allforbigfire-86ff3c/composition.js",
+          "sha256": "bba05c43a97ec8701dee813e40d21ca875b98535fabcdb8e3bcc70ae79adb524"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/allforbigfire-86ff3c/index.html",
+          "sha256": "55efd111c2d2762fafb6012cf84dff29da28cd48944649ed7ded17474624a984"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/allforbigfire-86ff3c/portable-paths.js",
+          "sha256": "88ae4d3e5eb27b46f39c940f986984bcd8802fddbacbca05c71d32f3f806e5b1"
+        }
+      ],
+      "source_sites": "jet; car; tank; chest; robot; desert; docking",
+      "reason": "Vehicles transform into robot parts; box/poly/wheel draw physical faces and terrain. Material replacement as cards would destroy the content.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:axtonliu-0b861d",
+      "previous_status": "no-supported-source-ui-sites",
+      "classification": "native-content-retained",
+      "content_kind": "physical 3D illustration",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/axtonliu-0b861d/composition.js",
+          "sha256": "00097d3a1685917c2f4071db42b8725f861cefa17d785e80ac76e7a3cf43dcc9"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/axtonliu-0b861d/index.html",
+          "sha256": "ab2faba634c62b0436de58196095c17995fd91296dc30332eb456eacfd109126"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/axtonliu-0b861d/portable-paths.js",
+          "sha256": "ec7639118bc18209ca493ec4b5963e7265ddbf70121d689761fa4cef2164c379"
+        }
+      ],
+      "source_sites": "world; bicycle; pelican; camera",
+      "reason": "Pelican and bicycle WebGL geometry; spheres/cuboids are physical mesh components.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:ayushunleashed-ece3e3",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "motion principles geometry",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ayushunleashed-ece3e3/composition.js",
+          "sha256": "f58d2b809675e7345d349caaca295d88fe569b6e8c45197567bcfbfa1086e8bf"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ayushunleashed-ece3e3/index.html",
+          "sha256": "40baf3f299fb0f9169446682ed174016ace6e1336badcc977559577e38aca058"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ayushunleashed-ece3e3/portable-paths.js",
+          "sha256": "e6ba70f0936aba5b6f630d4cc48e296a8c54be8278255239c3549f93b2f10f86"
+        }
+      ],
+      "source_sites": "planeTex; fundamentals; kinetic; sphere; isoCube; morph",
+      "reason": "Texture planes, cubes, spheres and kinetic text form a motion-design demonstration; no reusable window/sheet hierarchy.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:chrisjdimarco-f068db",
+      "previous_status": "no-supported-source-ui-sites",
+      "classification": "native-content-retained",
+      "content_kind": "illustrated character",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/chrisjdimarco-f068db/composition.js",
+          "sha256": "3b924e521876b3e1a56d6f3b84dee053f4950c0a35bdec84a7c90c2f69b392e8"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/chrisjdimarco-f068db/index.html",
+          "sha256": "942eea4a066a8b835042daec3f41bd23b1a07ae91cfa7b4bf91bb8d096dbf35e"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/chrisjdimarco-f068db/portable-paths.js",
+          "sha256": "1568c4f3ae6d5f9b993575365c98e317405e3388b274e7be001b2f1dc44d502c"
+        }
+      ],
+      "source_sites": "pose; body; blade; character; flame",
+      "reason": "Samurai kata and flames. Typography is scene overlay; the actual bodies are character parts.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:davidshulmanfl-371638",
+      "previous_status": "no-supported-source-ui-sites",
+      "classification": "native-content-retained",
+      "content_kind": "clay 3D props",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/davidshulmanfl-371638/clay-engine.js",
+          "sha256": "4a6b4dca739360f4323f0eee4aee2303ec27bf273e77c8890b302d7d567960ce"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/davidshulmanfl-371638/index.html",
+          "sha256": "57dd7e5dbfb9deeda1b70fb2ab9c906055d226b8b22f83a33e178bf4cb3c5548"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/davidshulmanfl-371638/motion-core.js",
+          "sha256": "7e732344f2f5b33c4f673a7a46645a89ff04d872624bd186f9eba9a760c2c885"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/davidshulmanfl-371638/motion.js",
+          "sha256": "c46d57447c60513473da6001a688f4c58266050dd45c2c939f3e0577946f939b"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/davidshulmanfl-371638/portable-paths.js",
+          "sha256": "2dac2450460bd5e7997344d6f0389256b794028093c9556f40f7ec2a59bbb8e8"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/davidshulmanfl-371638/style.css",
+          "sha256": "5e97d8b3acafbbc0940259c72de75eab96985bed2e8a76b88ffb3219c396365c"
+        }
+      ],
+      "source_sites": "browserWall(); worldPhone(); puppet(); theatre()",
+      "reason": "Browser-shaped panels are clay world props built with boxes/spheres in the same 3D theatre as puppet/phone. Preserve authored clay depth/material and camera; do not flatten these into Canvas UI cards.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:eyishazyer-af035b",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "motion principles geometry",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/eyishazyer-af035b/composition.js",
+          "sha256": "ec52c69dc63954cccdc89ba16e82238e8c7124088a3106bc65f3d70d6eb38869"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/eyishazyer-af035b/index.html",
+          "sha256": "6059999b06fc7537a04d243a5f483e5d1ea0d8ebbe769469bf54c9b9a0d47132"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/eyishazyer-af035b/portable-paths.js",
+          "sha256": "ec7639118bc18209ca493ec4b5963e7265ddbf70121d689761fa4cef2164c379"
+        }
+      ],
+      "source_sites": "countdown; confetti; rhythm; projection; dimension; principles",
+      "reason": "Abstract principles montage with text, counters and geometry. Small rounded shapes are motion specimens, not screen panels.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:fionntobin-97b7af",
+      "previous_status": "no-supported-source-ui-sites",
+      "classification": "native-content-retained",
+      "content_kind": "editorial geometry",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/fionntobin-97b7af/index.html",
+          "sha256": "e3dc7bb70132ee644744f9024730298ff923575465dfadb18884b07191ded805"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/fionntobin-97b7af/motion.js",
+          "sha256": "e255bb774e1402a98d51c327714fb4797a1c054ac52babba17b498c61653624e"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/fionntobin-97b7af/portable-paths.js",
+          "sha256": "e908c98137ccb6a8e7ebee913bb6c960f54601c5f8a35cdda8c94afd28144486"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/fionntobin-97b7af/style.css",
+          "sha256": "658c89d9ed7277bd985273bb1a765a3505053338b1858780d4041bdf9d2332c9"
+        }
+      ],
+      "source_sites": "runner; voxel; rounding; halftone; choices; systems",
+      "reason": "Runner, voxel/halftone marks and kinetic editorial titles; rounded rectangles also act as masks. No application/paper shell is present.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:gonzalomacagno-2de1a9",
+      "previous_status": "no-supported-source-ui-sites",
+      "classification": "native-content-retained",
+      "content_kind": "festival poster illustration",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/gonzalomacagno-2de1a9/index.html",
+          "sha256": "61e390d323bbfcf5ea073e908909b58e41c59017bb5de7459c57adbda0994b4f"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/gonzalomacagno-2de1a9/motion.js",
+          "sha256": "25eb9d225f65c22a7429437bd8db51fdee011607fcc2e5e3edabdff138ee7312"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/gonzalomacagno-2de1a9/portable-paths.js",
+          "sha256": "4dff208eb7ed29297dd4b648b5f84e0f879d2dd07eaae577758c8440f05d3516"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/gonzalomacagno-2de1a9/style.css",
+          "sha256": "7c03aa74945e6c2505575094ed65a8e45397a92784ed20f9be50069926942bf8"
+        }
+      ],
+      "source_sites": "ribbon; day; opening; finale",
+      "reason": "Handwritten festival ribbons and poster-day labels are the content, not reusable software chrome. Preserve illustration/stroke; current production packaging is separate.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:gorden-sun-041f56",
+      "previous_status": "no-supported-source-ui-sites",
+      "classification": "native-content-retained",
+      "content_kind": "3D rhythm scene",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/gorden-sun-041f56/composition.js",
+          "sha256": "24c00f9ce6a796067df98c51ab210a2bc374ef4f0c1b6d2f9759c88ce3a9a3ec"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/gorden-sun-041f56/index.html",
+          "sha256": "1fa33d21bfa28b2fce59d97f313003f2f936943118ca9b9ee12d11eecc9fc44f"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/gorden-sun-041f56/portable-paths.js",
+          "sha256": "2af4ec3d2793a812a2045fae39526212235e82eb9a41744008bff51a33eb042d"
+        }
+      ],
+      "source_sites": "actor; platform; rings; bubble",
+      "reason": "Cavern, neon platforms and bouncing actor. Projected speech bubble belongs to the illustrated event and must follow 3D projection; no app screen to rematerialize.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:hbcoop-de365c",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "physical optics illustration",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/hbcoop-de365c/composition.js",
+          "sha256": "b67b1cda723ef6299c9d77d499608b3dd4288756ea3fc97581a3de52f3154d45"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/hbcoop-de365c/index.html",
+          "sha256": "68b0d5dd68ee0133ee977389f72ce41d7550b9e78a074dd6f95627cdc74b0a8d"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/hbcoop-de365c/portable-paths.js",
+          "sha256": "bd670eec78689944c4e57cdddb2f853d59a75b06fbee0a9c18dbf19b4343b0d5"
+        }
+      ],
+      "source_sites": "prepareCode(); lensShot(); ball; flock",
+      "reason": "Code is drawn into an offscreen texture then magnified through a glass sphere. It is image content demonstrating optics, not a code-editor window shell.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:hoyoyoda-3a5c08",
+      "previous_status": "no-supported-source-ui-sites",
+      "classification": "native-content-retained",
+      "content_kind": "pixel illustration",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/hoyoyoda-3a5c08/composition.js",
+          "sha256": "e6ec1e22ef41c1f406d185f5d332793286cc0fa211d5d1d163b70952d35b057c"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/hoyoyoda-3a5c08/index.html",
+          "sha256": "1404333adc2ca092f2f53b83b12d2c81d4f02ab7ee68098ea10e6cd217446b4d"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/hoyoyoda-3a5c08/portable-paths.js",
+          "sha256": "1b65019c660709b3f660e5941b364076cad88904948c3b5538ac3005bd548083"
+        }
+      ],
+      "source_sites": "pixelCircle; pixelLine; hangul; rabbit; city; houses; people",
+      "reason": "Pixel moon-night festival, rabbit/food/people and bitmap lettering. Pixel rectangles are illustration cells; rounded current UI would invalidate the artwork.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:ik-builds-b8bdcf",
+      "previous_status": "typography-only",
+      "classification": "ui-material-gap",
+      "content_kind": "paper presentation",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ik-builds-b8bdcf/index.html",
+          "sha256": "008382a19cd7eea84ddfcd32b620dfcd33486987dff2004024bd82a9c05b9595"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ik-builds-b8bdcf/motion.js",
+          "sha256": "efb8cf7b9d5a0272fac2bc1be6e5d20144edbd2238f536582c6c824404986d8d"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ik-builds-b8bdcf/portable-paths.js",
+          "sha256": "587a93a86a7210b7eeec852bd5f995104d38dff52170f59acc3acf5bfd5ed1da"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ik-builds-b8bdcf/style.css",
+          "sha256": "f6c0c7560126841a27a9d14cec8d5d29ce461751646e049893d2dd36380f28e5"
+        }
+      ],
+      "source_sites": "cardCanvas(id,isDark); paperCards()",
+      "reason": "cardCanvas uses g.fillRect(x,y,w,h) and strokeRect for an actual paper face; paperCards caches those canvases as moving textures. Adapt the paper surface/edge and title hierarchy, retaining handwritten diagrams/stamps and card choreography.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:ismailfahmi-557268",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "particle data diagram",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ismailfahmi-557268/index.html",
+          "sha256": "184aaa4e480b602259ac6a7485a15ffc6fc7fcb09e8cc86a01ff8c3fdafde3ee"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ismailfahmi-557268/motion.js",
+          "sha256": "1c518b89359cd70b0f985ea4f87e1034c8f1752ca20a5927cd7005458116120c"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ismailfahmi-557268/portable-paths.js",
+          "sha256": "b51dee2e8d9c8186c8a00a89ad042ccb80afc130fe426f1548660b90a01ed550"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ismailfahmi-557268/style.css",
+          "sha256": "44203e20d56f5a2b8a1eaf11b3d19ee4e214158f3e64227127b66b3dfdb19ab2"
+        }
+      ],
+      "source_sites": "framework; network; orbit",
+      "reason": "Particles and connected data/brand graph; tiny rectangles are particles and tick marks, not filled UI panels.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:itsuki-dev-10942d",
+      "previous_status": "no-supported-source-ui-sites",
+      "classification": "native-content-retained",
+      "content_kind": "kinetic geometry",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/itsuki-dev-10942d/composition.js",
+          "sha256": "49a9bf633a11e2eaa46d82cbea0b014399c72c7887d6020718b6c98e17a8baea"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/itsuki-dev-10942d/index.html",
+          "sha256": "c118f1cf14accd0de84ffd31bbd66a8fae9b0239ca2d40b5f15402c34e7863bb"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/itsuki-dev-10942d/portable-paths.js",
+          "sha256": "26294d0ec23dcfda72aa74b1361fa7b4913c9c485fb7121b1ec7812c550fab48"
+        }
+      ],
+      "source_sites": "tileField; particles; tunnel; generative; stair; final",
+      "reason": "Abstract geometry, particles and kinetic words; rectangular calls are field tiles/type clipping, not application chrome.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:jake11moran-a269c4",
+      "previous_status": "no-supported-source-ui-sites",
+      "classification": "native-content-retained",
+      "content_kind": "hand-drawn narrative",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/jake11moran-a269c4/adapter.js",
+          "sha256": "08fed37651b0e8932903edde288c262584cddc79f00b887b60dfda1759bf31bb"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/jake11moran-a269c4/index.html",
+          "sha256": "dc27270b4338ce87339af7e4a687ff29ce3f9d90a6ac5edc290ed7e7f0c19f2b"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/jake11moran-a269c4/painter.js",
+          "sha256": "2ce27879daaa74a72805928979e498640a531b5cee93b8ea6705f90ba021155d"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/jake11moran-a269c4/portable-paths.js",
+          "sha256": "59a5535d3aeac55a138ac52428e4c461156e606a3645a4157cdfab6327a722cc"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/jake11moran-a269c4/story.js",
+          "sha256": "99402164a17a602d4e58cd4341cd0479a94364ecbab6b87a3cc3d7eb1bf42ef5"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/jake11moran-a269c4/kit/clawd.js",
+          "sha256": "2c7c19139c0af1dc6e91e82a2166a4862af87b0f0ec1d564b38d8b6532f49b48"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/jake11moran-a269c4/kit/config.js",
+          "sha256": "36851959dc322d9841d5bb63bd867a7b2b4e8e52ff2f089eb9fcb99d7dec30f9"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/jake11moran-a269c4/kit/core.js",
+          "sha256": "abd7f0a20760c687d6f626aeb6f903a4dce5730480ec911a2326202619d4c35d"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/jake11moran-a269c4/kit/hf-bridge.js",
+          "sha256": "9153ed4f210bd332e5d1305bb91518c3f76fcd77eccd6c89fc521a2ce4007b3a"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/jake11moran-a269c4/kit/timeline.js",
+          "sha256": "08e854c4d9e07eba060459152089502b35ea0a2c9ad1a201220e838234cd4bad"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/jake11moran-a269c4/scenes/cast-custom.js",
+          "sha256": "ecb60d3c949efb1d8b092c8b553cd24f6fd390bad3e5dd03ca481d995c4e3022"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/jake11moran-a269c4/scenes/compile.js",
+          "sha256": "2966a9f3033e8ec2e2d3f8804cdd525a2c916a22aff24c35c22eedcbbe52e0ef"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/jake11moran-a269c4/scenes/desk.js",
+          "sha256": "5d6fc3b15d7941600ba0b4c23de095085e98b373c18a95a18940dba10712c044"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/jake11moran-a269c4/scenes/director.js",
+          "sha256": "e755c25bae1415be1ce1607decbd5d85e5397ac5d1cfc4331770a92af294f715"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/jake11moran-a269c4/scenes/paper.js",
+          "sha256": "1870061c3aec827b5118186248a76e6658ca422e29f56b5d3fc9e0febc579192"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/jake11moran-a269c4/scenes/props-custom.js",
+          "sha256": "106cc999a782de415353cd5a0cd0ab38c8f7f816fbc92d7e7b21b966fcaafc3f"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/jake11moran-a269c4/scenes/props.js",
+          "sha256": "68eb7c27fd9b73c3d8d4db2baedd9a6b35373ef4504c6b5f22020db9b7d1f4bf"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/jake11moran-a269c4/_dependencies/3f8a0c739bd3-p5.min.js",
+          "sha256": "1830ed06ead3b4a3d521de79463a984c9ee05be11196b9d4b548b9070fe19fc9"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/jake11moran-a269c4/_dependencies/41c25108c69a-p5.brush.js",
+          "sha256": "a7d16526d05a0b4ee1e74fd4c2e0bed3977fcf6537f56cadf703cf30fddc26d5"
+        }
+      ],
+      "source_sites": "makePaper; inkLine; desk; monitor; notepad; paperPlane",
+      "reason": "p5-brush desk, monitor and paper plane are hand-drawn story objects. Preserve brush/paper texture, not a current UI shell over every rectangle. Vendor p5 source is not an adaptation target.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:kamstudiolabs-c9bb28",
+      "previous_status": "no-supported-source-ui-sites",
+      "classification": "native-content-retained",
+      "content_kind": "illustrated editor narrative",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/kamstudiolabs-c9bb28/composition.js",
+          "sha256": "b8c06ec632fcd8bfad4e7009d2d2bfa7a26df8afb27bda90bebc6b0ad2ebdc8b"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/kamstudiolabs-c9bb28/index.html",
+          "sha256": "a2cf03988b19de57ca281fa9bf74a37c712c24402347f705274fdb6c8b8ca7f5"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/kamstudiolabs-c9bb28/portable-paths.js",
+          "sha256": "6dc81a722db82768c06a0e82788a16f56ca9eeefadda3594c5a4bf287f464c05"
+        }
+      ],
+      "source_sites": "editor(t); tinyEditor(t,x,y,w,h); bug",
+      "reason": "Bug character acts within a deliberately ragged illustrated code editor. tinyEditor paints clipped line bands as a scene prop; it is not the clean product UI baseline. Preserve story rendering; any added production wrapper uses current UI separately.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:leonkohli-6dc01b",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "kinetic geometry",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/leonkohli-6dc01b/composition.js",
+          "sha256": "a384941a6d7457ee9cef8f6572830b62eacfa1e02616b7418cc1075d45900a53"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/leonkohli-6dc01b/index.html",
+          "sha256": "770f1f5c80229c053b25fff8e298dede7617d2197150c42a57844ae1fd08fd07"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/leonkohli-6dc01b/portable-paths.js",
+          "sha256": "f6407d6bbed11d7479e4ccaad4d28fa512808fc0b0fc512db4f38289b9c14172"
+        }
+      ],
+      "source_sites": "sphere; bounce; flood; chunkWord; motif; terrain; liquid; tunnel",
+      "reason": "Spheres, terrain, liquid and type animation. Rectangles/rounded forms are geometry and masks, not window/card hierarchy.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:levabashidze-2d713a",
+      "previous_status": "no-supported-source-ui-sites",
+      "classification": "native-content-retained",
+      "content_kind": "motion principles geometry",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/levabashidze-2d713a/index.html",
+          "sha256": "dc34ca9acb31eac3ee59d052dfad8a11fcbd93e60c849713c0f925c76c05da2d"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/levabashidze-2d713a/motion.js",
+          "sha256": "9e3955e407deed49538d9ce721aeea7f742798383c1ac1e8f417bac6d45c35af"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/levabashidze-2d713a/portable-paths.js",
+          "sha256": "8d20a545b4c1edbdf6f491e64e1d451a7df24b62d2f381bbfbfcf1cc711dc249"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/levabashidze-2d713a/style.css",
+          "sha256": "ca05546a5831786cdf8162c2e5c7a63a6042c292e29a94e646529f6b59d79a10"
+        }
+      ],
+      "source_sites": "timing; easing; morph; voxel; tilesystems; kinetic; renderHUD",
+      "reason": "Swiss motion montage and thin technical guide marks. No filled panel/sheet beyond the animated geometry specimens.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:lexnlin-038035",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "engraving illustration",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/lexnlin-038035/composition.js",
+          "sha256": "811d22735d7ad22f53b48b0f16096ffc8db5e2023b594f05f99b60e442eaf953"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/lexnlin-038035/index.html",
+          "sha256": "ef4ba564e98341c549ab7f2d31a547cd53dc82ab6aac14a89b9eea7723b44a42"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/lexnlin-038035/portable-paths.js",
+          "sha256": "738e498ccf0fc5cee9c2570a9b12098a382aec80dc8771b240a654b4cfb2601c"
+        }
+      ],
+      "source_sites": "archer; scribe; horse; bust; stilllife",
+      "reason": "Engraved figures, horse cycle, sculpted mark and still life. Preserve engraved lines and paper atmosphere rather than converting illustrations to UI panels.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:madhav-xo-f97f20",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "kinetic code diagram",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/madhav-xo-f97f20/index.html",
+          "sha256": "a442c52fc5ddd84be54e1abdba7da05cc22832912e41f8d4821603626cc61399"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/madhav-xo-f97f20/motion.js",
+          "sha256": "f2595b0cd01f242c96a8f06056d47c87b6249e476e2036944fc0171947f5821e"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/madhav-xo-f97f20/portable-paths.js",
+          "sha256": "ee13beac313f511dda1904efe1146a0b543808f1d995f38be8dc01caabbe8627"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/madhav-xo-f97f20/style.css",
+          "sha256": "a0aa783e54c8d822cb11afe294aa65504e660026ac20f7cc07510408c0772231"
+        }
+      ],
+      "source_sites": "terminal(); stack(); particles(); vortex()",
+      "reason": "terminal draws command text and small progress cells without an editor window. stack draws projected line polygons labelled UI/API/DATA/INFRA. These are kinetic/vector content, not cards requiring shell material.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:majin-appsheet-2d3c1a",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "kinetic Japanese type",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/majin-appsheet-2d3c1a/index.html",
+          "sha256": "f1267124ee180cf3f609b329ea2cd7e97370abec3add1daf7e1816d4a19f0955"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/majin-appsheet-2d3c1a/motion.js",
+          "sha256": "b5b1bcd2730fbfaf824c94105eccf27c325199346e62a6cc54b8269a696e4a86"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/majin-appsheet-2d3c1a/portable-paths.js",
+          "sha256": "9e5a6ff4c49ec746daf7a891bd02166862ad255a4147c311d5c2eda2a3fcd339"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/majin-appsheet-2d3c1a/style.css",
+          "sha256": "16fcd99333155eb7aed571bd495246d33066bcdcf1f3db65b772e6536afed7a6"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/majin-appsheet-2d3c1a/assets/fonts/font-subset.css",
+          "sha256": "dba39252b7944089e66970d7bfb73ec6be3bd6f65560edadfcccd219df8d1c56"
+        }
+      ],
+      "source_sites": "glitch; reboot; statement; glyph; wordmark; banner",
+      "reason": "Japanese glyph sequences, glitch and banners; shapes serve type animation and masking.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:math-files-39c9d0",
+      "previous_status": "no-supported-source-ui-sites",
+      "classification": "native-content-retained",
+      "content_kind": "mathematical illustration",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/math-files-39c9d0/composition.js",
+          "sha256": "32219dfdb6105b332525dd6725b6588b4bbcb95a309d45a884184d984c31e06d"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/math-files-39c9d0/index.html",
+          "sha256": "f1946136fa486764cb507498255164c1d09bc20fcb4593528b98842b7890b017"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/math-files-39c9d0/portable-paths.js",
+          "sha256": "ec7639118bc18209ca493ec4b5963e7265ddbf70121d689761fa4cef2164c379"
+        }
+      ],
+      "source_sites": "axes; unitCircle; Fourier; Lissajous; Julia; Euler; phyllotaxis",
+      "reason": "Scientific axes, plotted functions and fields are content with meaningful geometric color relationships; no interface shell.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:maxalexweber-67688b",
+      "previous_status": "no-supported-source-ui-sites",
+      "classification": "native-content-retained",
+      "content_kind": "kinetic brand diagram",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/maxalexweber-67688b/composition.js",
+          "sha256": "bc74beadc890441701c94da67c4da711d374088f1ab7f9cd62c7e6e1b3fd188c"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/maxalexweber-67688b/index.html",
+          "sha256": "297675d4138fd3d2f806b0ae0c79ec83bf5ea150ef525303d7e48a7e65138e8d"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/maxalexweber-67688b/portable-paths.js",
+          "sha256": "007667bae232ac4fc13cbcc95547e3ddeb59e24823e72708432a7ad5e3ee3321"
+        }
+      ],
+      "source_sites": "network(); feature()",
+      "reason": "SAP/CARDANO/MIDNIGHT labels connect to animated brand emblem. feature is a large index, band, headline and icon; round path is icon geometry, not a product UI card.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:mdaman010-e7226a",
+      "previous_status": "typography-only",
+      "classification": "ui-overlay-gap",
+      "content_kind": "3D content with playback bar",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/mdaman010-e7226a/index.html",
+          "sha256": "3c43ffc91016cc5bae9e3e396358a7494363b800f40f7db0f86029a512aae30a"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/mdaman010-e7226a/motion-core.js",
+          "sha256": "7e732344f2f5b33c4f673a7a46645a89ff04d872624bd186f9eba9a760c2c885"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/mdaman010-e7226a/motion.js",
+          "sha256": "cf5cadcf99a43a699fb3c14c886d98f594fcbc7fd88b353f2f85819ef6563b3b"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/mdaman010-e7226a/portable-paths.js",
+          "sha256": "05de285bfed043cb78681b19b3311db193557668b96ecd348afd4aa994d182b7"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/mdaman010-e7226a/style.css",
+          "sha256": "2dbb08bbf11d09ba15c0136be99bc1d8743249c970dfae492356c6691fb4f60c"
+        }
+      ],
+      "source_sites": "motion.js: footer(t); callout(p,title,body,dx,dy,side,opacity)",
+      "reason": "footer contains roundRect(0,914,W,68,[0,0,22,22]) with controls and progress rail. Adapt only that playback chrome; preserve physical data-centre meshes and Power/Data/Heat/Coolant semantic colors and projected callouts.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:micheleharmonic-77628e",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "anime editorial illustration",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/micheleharmonic-77628e/index.html",
+          "sha256": "c6251db169877d1bcd77e85c12b5de10706a7b352234b089f6ebe57d4e5e72a5"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/micheleharmonic-77628e/metal.js",
+          "sha256": "528f550f5bd1fd853ab0aed92a9847d490517cf9e9a000c762cf1e3af2f03494"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/micheleharmonic-77628e/motion.js",
+          "sha256": "43437ef60cfac4a45b8fec78e4bc5b4241e33c8d384405a01986d0923312053f"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/micheleharmonic-77628e/portable-paths.js",
+          "sha256": "0a6dce6bcfe9dbcd0dff827cc4b5386b33ea892a0439fe81231a61646024c79b"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/micheleharmonic-77628e/style.css",
+          "sha256": "5a5a54485fb7d22adadf02f85fbe5eae7b5c0ef25c033f4535997ecd63a60901"
+        }
+      ],
+      "source_sites": "petals; halo; metal; macro; hero; face; eye",
+      "reason": "Character, petals and metallic/logo imagery are scene content; typography-only binding is appropriate for outer text, without replacing the illustration.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:mrtanviir-132457",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "kinetic geometry",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/mrtanviir-132457/index.html",
+          "sha256": "158711c86c17b41bccf8cc0f91fddbe04d9ebce01e198b8ddfdfe9feded3dd9a"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/mrtanviir-132457/motion-core.js",
+          "sha256": "7e732344f2f5b33c4f673a7a46645a89ff04d872624bd186f9eba9a760c2c885"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/mrtanviir-132457/motion.js",
+          "sha256": "ad151ac3e78dec7d740f9ff89ad7d35672eeab34c30c321a5a2e4b95f08f7066"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/mrtanviir-132457/portable-paths.js",
+          "sha256": "8bc17f19dfe7e4d1cd8ac828d25e25fa981a22e34a953e9db2a940834e6d1465"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/mrtanviir-132457/style.css",
+          "sha256": "3a3ef50a22554cb7a83ee36ec50c4fd625cfff202fc1bd606b3d564f382ae5b5"
+        }
+      ],
+      "source_sites": "type; shape; field; space; tube; ringbands",
+      "reason": "Type, rings, tubes and particle fields. No software panel or paper-card hierarchy to replace.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:nft-chen-5f8bb0",
+      "previous_status": "no-supported-source-ui-sites",
+      "classification": "native-content-retained",
+      "content_kind": "physical 3D illustration",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/nft-chen-5f8bb0/composition.js",
+          "sha256": "9d36a5c47af6107df7063e220e600afadc61b4c514121a568138bef676ef09fc"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/nft-chen-5f8bb0/index.html",
+          "sha256": "ecafc825e59ddbf3e07dfd1a56af217bdfff647ef4ddefea6b965cc5fbb38361"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/nft-chen-5f8bb0/portable-paths.js",
+          "sha256": "93b9af8c3b9d402f877ed1708c5dd599f85ef76f32b66ee1206b213278b8e421"
+        }
+      ],
+      "source_sites": "plane; clouds; sunset",
+      "reason": "WebGL plane and sunset clouds. Preserve physical meshes and environment colors.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:rebutonepress-810f78",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "science shader content",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/rebutonepress-810f78/index.html",
+          "sha256": "22daf82fe78d9158953a7434ded45cd9b936fb9798b38788f4a599ce7f34c58e"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/rebutonepress-810f78/motion.js",
+          "sha256": "e144cbd5c0456d140759c6eb4362f566dd4ceab7fa52af8d89cb3358e9327778"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/rebutonepress-810f78/portable-paths.js",
+          "sha256": "b5ff46be9b527e329701b451c859fd3ecf64780adffd93ade8b069cf98e4b85a"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/rebutonepress-810f78/style.css",
+          "sha256": "19e472065aad89a680e929ebb7572a0aab031a23e8d3ab380a8cb32abbd532ea"
+        }
+      ],
+      "source_sites": "shader; stars; physics; camera; titleHUD",
+      "reason": "Space/science shader with camera and small labels. Full-screen rect is render background, not a panel.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:rneayan-ea6129",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "phosphor vector illustration",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/rneayan-ea6129/composition.js",
+          "sha256": "2f60a69410dc60ee2e8fa263dd708475f70b03d27a17b661ef112337ba345d91"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/rneayan-ea6129/index.html",
+          "sha256": "a76749343ad92bb33483d640a74779a85ef7c868d33c26e608121a3261266af6"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/rneayan-ea6129/portable-paths.js",
+          "sha256": "46eefc97c02ed607353f51c3bcf2e0fec7f5f255c485e440dca1de6e6898832f"
+        }
+      ],
+      "source_sites": "signal; Lissajous; process; craft; history; airship; voyage",
+      "reason": "Oscilloscope traces, vector airship and pipeline lines with text. Retain phosphor/vector treatment as content; no filled UI screen chrome.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:ror-fly-9950f1",
+      "previous_status": "typography-only",
+      "classification": "ui-material-gap",
+      "content_kind": "recipe card",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ror-fly-9950f1/index.html",
+          "sha256": "74b9c7b5688641cab30a59f1d913f8608a7f36d63cc406af1f2d3e68c4ec9ce2"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ror-fly-9950f1/motion.js",
+          "sha256": "cdf6fa63d3c1271df62f2792e04fce27a4f7109fe218533668a18a4049957b30"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ror-fly-9950f1/portable-paths.js",
+          "sha256": "e93fe1f82c8283e4a34df3aa7fadcb57c8168030af0644be27e525219c98958f"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ror-fly-9950f1/style.css",
+          "sha256": "dda6e9fe406aa563daef2c7cde47581749bcf604afcdbd0b049701787489da32"
+        }
+      ],
+      "source_sites": "drawCard(); line(path,stroke,edge,fill)",
+      "reason": "drawCard uses two filled Path2D calls via line() for a card front and thickness. It is a material UI/paper card despite the helper name line; adapt front/edge/shadow only, preserving cocktail illustration/ingredients and motion.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:roundtablespace-d3a1be",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "motion principles geometry",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/roundtablespace-d3a1be/index.html",
+          "sha256": "a5ffbcab1219043fe607c7b308d087caba269b150a534c06f9cd9233a292cbf9"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/roundtablespace-d3a1be/motion.js",
+          "sha256": "9b61255a891ad9e14a985507a4bdd7b121864cc14a1a6dabda9bffae8c9471f0"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/roundtablespace-d3a1be/portable-paths.js",
+          "sha256": "f181c44617a8e19c4661a087ade8378af643f72e1edee02bd2d795b64b7a7685"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/roundtablespace-d3a1be/style.css",
+          "sha256": "0ada04abb3d4bd75fdc514cecef3e245a9f5a990e1b50913aa9a0cbcb19d6798"
+        }
+      ],
+      "source_sites": "type; easing; morph; truchet; depth; trails; kinetic",
+      "reason": "Abstract tiles, easing paths and type. Rounded forms are motion specimens and masks.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:ryzoft-4f85bd",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "3D cartoon narrative",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ryzoft-4f85bd/composition.js",
+          "sha256": "8eb2bdcbbdc1ec6496d38629077410acd2d44d5d88e8e6a7645785b0fc3283b7"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ryzoft-4f85bd/index.html",
+          "sha256": "607a4b68539a994eae2cea56c6a1abf4ada406c1ff67673db3c209db6d408b7a"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/ryzoft-4f85bd/portable-paths.js",
+          "sha256": "7d45d2e052587132d2cc3e9ea37eb3dbfc6c1606113b46e18b3fa134e90e6da0"
+        }
+      ],
+      "source_sites": "room; lighthouse; portal; fighter; carrier; cockpit",
+      "reason": "Space cartoon world and captions; meshes are physical story elements, not UI containers.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:sarut0bisasuke-cefa43",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "hand-drawn recipe illustration",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/sarut0bisasuke-cefa43/index.html",
+          "sha256": "3730fa7c91f8dfe21a4c27b787ae27477bb9db6155d7c3689f45ef9466128c96"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/sarut0bisasuke-cefa43/motion.js",
+          "sha256": "2422c95015ca297210b194010249392b2ec435e21e7f4f0a935e2cb5c85fc5e8"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/sarut0bisasuke-cefa43/portable-paths.js",
+          "sha256": "760e748d2e0abfec89dc8e9b592505091460cad0831741825fa8efe03ffd5c8b"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/sarut0bisasuke-cefa43/style.css",
+          "sha256": "d00ab5656aa2a9ef7839a03ae04549e5fc45df685d4b584c145e10c23efe8f68"
+        }
+      ],
+      "source_sites": "side(); left(); glass",
+      "reason": "Ingredient list has drawn check circles and text; step/quantity beside hand-drawn glass. There is no filled sheet face to adapt. Preserve pen drawing instead of inventing a card.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:sayan-shanky-f850d8",
+      "previous_status": "typography-only",
+      "classification": "ui-overlay-gap",
+      "content_kind": "3D content with playback bar",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/sayan-shanky-f850d8/composition.js",
+          "sha256": "03f70d808194990f9b5363ccb5b9af39f8c9701ee9c36e45152beb236c3b7d8a"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/sayan-shanky-f850d8/index.html",
+          "sha256": "a3434ca7b492094f7ec11c803795b39abe2a13a9533a78b185248f489226db28"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/sayan-shanky-f850d8/portable-paths.js",
+          "sha256": "ec7639118bc18209ca493ec4b5963e7265ddbf70121d689761fa4cef2164c379"
+        }
+      ],
+      "source_sites": "composition.js: overlays(t); label(pos,title,body,dx,dy)",
+      "reason": "overlays line51 paints fillRect(0,H-66,W,66) and playback rail/buttons. Adapt this footer shell only. Preserve flow colors, physical meshes and scientific projected callouts; gradient below text is readability scrim, not panel.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:shneural-2abdfa",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "kinetic geometry",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/shneural-2abdfa/index.html",
+          "sha256": "d48942478b5091bc7794e34a8a196afd7f073da05f8ef6fb6eeab220b6445889"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/shneural-2abdfa/motion-core.js",
+          "sha256": "7e732344f2f5b33c4f673a7a46645a89ff04d872624bd186f9eba9a760c2c885"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/shneural-2abdfa/motion.js",
+          "sha256": "a81977c60b850d4845f90be9c2e2b98efe1d2f67b35e756c4b383d47450ba810"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/shneural-2abdfa/portable-paths.js",
+          "sha256": "bd410108d818919181a21de46aa47e224c5dfbc05c0f96f44534f7e452e5d442"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/shneural-2abdfa/style.css",
+          "sha256": "23239f6c4563aca5b589fe90db301de5159e9f69809b35dd44df84d057a8def8"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/shneural-2abdfa/webgl.js",
+          "sha256": "9c10be0a62d192891b375e839d7f0131c9c56ef20685333c35f42f0f38383f13"
+        }
+      ],
+      "source_sites": "rounded(); hudOne(); hudTwo(); physics; ribbon; montage",
+      "reason": "rounded creates specimen shapes; HUD draws thin corners/progress and type. The main content is kinetic typography, voxels, physics and WebGL geometry, not a screen layout.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:souravbhar871-61f424",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "kinetic self-portrait type",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/souravbhar871-61f424/composition.js",
+          "sha256": "8d5b1b894dc3d414754cdffb6fe312691ede46f0d02c4d6856b7c52b66410ecd"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/souravbhar871-61f424/index.html",
+          "sha256": "9bcd80bae79cd2ec07ce0f5b4f4212577f5430820379cbdc1c7fce0a699ed87d"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/souravbhar871-61f424/portable-paths.js",
+          "sha256": "760a6eefb7e6b323f420caf3fd64b27a479d643c6ce55292cba0840865b9bbbe"
+        }
+      ],
+      "source_sites": "listen; read; think; extrude; build; star",
+      "reason": "Words and vector star with extrusion and masks; rectangles only clip/reveal glyphs.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:stephanlivera-df17a2",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "motion principles geometry",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/stephanlivera-df17a2/composition.js",
+          "sha256": "5f9b39bfeb094bf378755984d450300c7ddcb9d2692a176182105cc05793d2e1"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/stephanlivera-df17a2/index.html",
+          "sha256": "bcc1e1c338fa3af1cb89f786f05db59afe6fbaee85a0cf816c956e55b0beb9ef"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/stephanlivera-df17a2/portable-paths.js",
+          "sha256": "1b65019c660709b3f660e5941b364076cad88904948c3b5538ac3005bd548083"
+        }
+      ],
+      "source_sites": "identity; easing; morph; systems; depth; motionword",
+      "reason": "Kinetic type and abstract geometry. No panel/sheet hierarchy to rematerialize.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:tak3sh8-be5012",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "whiteboard scientific diagram",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/tak3sh8-be5012/index.html",
+          "sha256": "0ec2a9b968103476fafc3ca8f127dcf17905aa0b41d4cbd4cbbd328c69966354"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/tak3sh8-be5012/motion.js",
+          "sha256": "3e155bffcc55c4fb7eb165ad4fcc511fa23ed504d83b87bb4cc09889e11e17bd"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/tak3sh8-be5012/portable-paths.js",
+          "sha256": "77828ace93dade49677fd97dbb5ad91845b29e67f87904ffa3ec1f4285900042"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/tak3sh8-be5012/style.css",
+          "sha256": "65899eac82449bbb73b9e2aa8a4b9862c212b2c1ceceae00cdf5b29311022764"
+        }
+      ],
+      "source_sites": "drawCommand(); renderScene(); marker; eraser",
+      "reason": "Whiteboard diagram, marker/eraser and subtitles. White rectangle is board surface; preserve source whiteboard mode and content, not source of general UI card styling.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:tdinh-me-815acb",
+      "previous_status": "no-supported-source-ui-sites",
+      "classification": "native-content-retained",
+      "content_kind": "brand icon animation",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/tdinh-me-815acb/index.html",
+          "sha256": "32294fa93778453cfa115124c0fab44dc4b0482a4ec4434a0061b25adbad51a8"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/tdinh-me-815acb/motion-core.js",
+          "sha256": "7e732344f2f5b33c4f673a7a46645a89ff04d872624bd186f9eba9a760c2c885"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/tdinh-me-815acb/motion.js",
+          "sha256": "168b82d03f10abaa1e71b3bb35d0df4f55ca30145b27f019d6d95656356a8d7f"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/tdinh-me-815acb/portable-paths.js",
+          "sha256": "94d26c6ee864ae78cfd79f02bcf27eb102afbf5256ca1527f0bde9f331689e9c"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/tdinh-me-815acb/style.css",
+          "sha256": "5944ff2b094de746831ca20721033c0278e52f6b8ca4b375e4c04ef64930fc87"
+        }
+      ],
+      "source_sites": "icon; rounded-square; brain path",
+      "reason": "TypingMind rounded-square silhouette and brain path are the logo itself. Do not make the icon a generic card; current wrapper may use current branding separately.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:teslachartz-c58b32",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "kinetic geometry",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/teslachartz-c58b32/composition.js",
+          "sha256": "b16cffe429314eae1c722ecfcb911fb40c8573ce10c194a6ec34a75f2808ad13"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/teslachartz-c58b32/index.html",
+          "sha256": "276f1fb46af66e76e4664d1e89ae3aa70f2e5cf33a9a9c46396fd179a9bc25f0"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/teslachartz-c58b32/portable-paths.js",
+          "sha256": "e09c226cd73ee39e49040a4010212ddaeccc36f34d6fe253390eb06354ca9d5a"
+        }
+      ],
+      "source_sites": "opening; ticker; type; shapegrid; torus; flow; timing",
+      "reason": "Showreel of word/shape animation and torus/flows. Rectangles are glyph masks and tiles.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:umangratani-57f86a",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "kinetic geometry",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/umangratani-57f86a/composition.js",
+          "sha256": "979eec456c1f4540f71e000b69322e19b8f8d967d212fbde76a1530ce21797c1"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/umangratani-57f86a/index.html",
+          "sha256": "51a481e59b5061e29c61f1c78eed6e5f8f1a9f1a9c527212a0218b7b223b25b5"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/umangratani-57f86a/portable-paths.js",
+          "sha256": "27756396a7ba66e959ba4d371bff6e593b3ec96f0e28f294222e1574da406ba3"
+        }
+      ],
+      "source_sites": "split; cropcorners; shapemorph; dots; wave; particles; wordwheel",
+      "reason": "Abstract dot/shape animation and wordwheel. No actual product interface/paper face.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:vanshwtfff-db0466",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "kinetic geometry",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/vanshwtfff-db0466/index.html",
+          "sha256": "9ad7ac6e082d5f773d831e489c47fd3bea3a5ec636e7139314a2f0aa6e256bfd"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/vanshwtfff-db0466/motion.js",
+          "sha256": "eff8b9f8510670eb876e5824257d35b16d40615f97ae0e82de07ae8782c74109"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/vanshwtfff-db0466/portable-paths.js",
+          "sha256": "47cf0ccb50e071927ea6d26534549c73daa44d5e8a8458f33b5d919474909952"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/vanshwtfff-db0466/style.css",
+          "sha256": "f4af25a082cc6d3d9b77ff33f522ef2c702726ef9a4f5f361e57865ec5f0cc41"
+        }
+      ],
+      "source_sites": "guide; type; geometry; squash; field; particles; chartcuts",
+      "reason": "Type, geometric fields and guide lines. Tiny plot rectangles are data/shape primitives, not cards/windows.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:zaqailo-212ad3",
+      "previous_status": "no-supported-source-ui-sites",
+      "classification": "native-content-retained",
+      "content_kind": "kinetic geometry and shader",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/zaqailo-212ad3/composition.js",
+          "sha256": "34625e6fe30dd35f0f53ffc048e45def91fde802d90220d830fb13deb5a45093"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/zaqailo-212ad3/index.html",
+          "sha256": "36674a6c6921941cb43c0bac57d1fc081a70d113e6d655af080e4c70aae54807"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/zaqailo-212ad3/portable-paths.js",
+          "sha256": "c49c8cca28bda94053205910b306fb2e2d880438a71984d36982ad51aa09ff12"
+        }
+      ],
+      "source_sites": "layout; typeStage; tilepattern; pointsmesh; GLfluid; designextrude; rings",
+      "reason": "Typography, repeating tiles and fluid/mesh/extrusion shader. Rectangular masks are compositing operations, not application panels.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:zheke-38deff",
+      "previous_status": "no-supported-source-ui-sites",
+      "classification": "native-content-retained",
+      "content_kind": "kinetic geometry",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/zheke-38deff/effects.js",
+          "sha256": "a3d4acf6c6fdcf48f43d3821f553bbcbcec0471b3257ebbfd9d39e2a6a138cb5"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/zheke-38deff/index.html",
+          "sha256": "b80c84da19eccc51ccdbf6b9c178b6949aa64b359ffe4be82ffb904746bea3fc"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/zheke-38deff/motion-core.js",
+          "sha256": "7e732344f2f5b33c4f673a7a46645a89ff04d872624bd186f9eba9a760c2c885"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/zheke-38deff/motion.js",
+          "sha256": "22acc9a515502da85935d0649d5a79a0b0e542dc4fb3249e32cc601af644cebf"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/zheke-38deff/portable-paths.js",
+          "sha256": "438a02d57ac8d42e6c078185355a1d7ae1a68c982f4c158d655633f59658aca9"
+        },
+        {
+          "path": "assets/modules/reference/assets/reconstructions/zheke-38deff/style.css",
+          "sha256": "966f2926a3e3626a376416c0316ce1b2a540a0c2ccd710bf8d9ed1e23517c41c"
+        }
+      ],
+      "source_sites": "maskText(); squash; stagger; rings; build(); justCode()",
+      "reason": "build creates isometric voxel columns; justCode is large words. Rounded/masked shapes are type/geometry content, no UI shell.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    },
+    {
+      "id": "reference:nikolajankovic-ce4ff4",
+      "previous_status": "typography-only",
+      "classification": "native-content-retained",
+      "content_kind": "hand-drawn narrative illustrations",
+      "source_files": [
+        {
+          "path": "assets/modules/reference/assets/reconstructions/nikolajankovic-ce4ff4/motion.js",
+          "sha256": "93e1edfb42b8718eb4eecdf350095489a47d6a67bb81441ec901cb7627ab593a"
+        }
+      ],
+      "source_sites": "motion.js box(), stroke(), bed(), cup(), thermometer(), txt(): jittered handdrawn paths and Kalam lettering",
+      "reason": "The box primitive is shared by illustrated beds, cups and handdrawn DeFi diagrams. Its pr progress and dashed path animation are content, not generic UI packaging; retain artwork, paper and handwriting without replacing source drawing.",
+      "review_scope": "actual source semantic inspection; no new full realtime video review",
+      "user_approved": false
+    }
+  ]
+}
