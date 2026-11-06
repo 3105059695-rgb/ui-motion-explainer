@@ -18,6 +18,7 @@ import shutil
 import subprocess
 import sys
 import threading
+from urllib.parse import quote
 
 from PIL import Image, ImageDraw, ImageFont
 
@@ -350,6 +351,45 @@ def build(catalog, output, interval=2.0, overview_frames=96, tile_width=320):
     return result
 
 
+def export_web(root):
+    """Write a file://-safe public gallery from packaged images only.
+
+    Never resolve local/portable private overlays into a public JavaScript file.
+    The HTTP gallery may still resolve private images through its local server.
+    """
+    root = Path(root).resolve()
+    catalog = read_json(root / 'references/reference-atlas.json')
+    gallery = root / 'assets/reference-atlas'
+    rows = []
+    def public_image(record):
+        result = {key: value for key, value in record.items() if key != 'path'}
+        relative = record.get('path')
+        location = (root / relative).resolve() if relative else None
+        # This explicit directory boundary prevents accidental private-media exports.
+        if location and location.is_relative_to(gallery / 'public') and location.is_file():
+            result['url'] = quote(location.relative_to(gallery).as_posix(), safe='/')
+        else:
+            result['url'] = None
+        return result
+    for row in catalog.get('videos', []):
+        item = {key: row[key] for key in ('id', 'title', 'categories', 'scope', 'approval_scope',
+                'duration_seconds', 'sampling', 'availability_note', 'source_url', 'attribution',
+                'image_derivative', 'publication') if key in row}
+        item['overview'] = public_image(row.get('overview', {}))
+        item['pages'] = [public_image(page) for page in row.get('pages', [])]
+        # Original recordings are deliberately not published by this export.
+        item['video_url'] = None
+        if not item['overview']['url']:
+            item.setdefault('availability_note', '此条原图仅在本机/私用包中；用 scripts/serve.py 打开本机图集。公开包不包含私人原片。')
+        rows.append(item)
+    result = {'schema_version': 1, 'videos': rows,
+              'available_overviews': sum(bool(row['overview']['url']) for row in rows),
+              'available_detail_pages': sum(bool(page['url']) for row in rows for page in row['pages']),
+              'scope': 'Packaged reference contact sheets only; no private original videos or local paths.'}
+    (gallery / 'atlas-data.js').write_text('window.ReferenceAtlasPack=' + json.dumps(result, ensure_ascii=False, separators=(',', ':')) + ';\n', encoding='utf-8')
+    return {key: value for key, value in result.items() if key != 'videos'}
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='action', required=True)
@@ -359,7 +399,12 @@ def main(argv=None):
     command.add_argument('--interval', type=float, default=2.0)
     command.add_argument('--overview-frames', type=int, default=96)
     command.add_argument('--tile-width', type=int, default=320)
+    export = sub.add_parser('export-web', help='Export packaged image paths for an offline gallery')
+    export.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
     args = parser.parse_args(argv)
+    if args.action == 'export-web':
+        print(json.dumps(export_web(args.root), ensure_ascii=False))
+        return 0
     try:
         result = build(args.catalog, args.out, args.interval, args.overview_frames, args.tile_width)
     except (OSError, ValueError) as exc:

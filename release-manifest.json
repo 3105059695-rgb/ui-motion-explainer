@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "name": "ui-motion-fusion",
-  "version": "2026.11.06.3",
+  "version": "2026.11.06.4",
   "resources": {
     "required_modules": [
       "source-study",
@@ -17,7 +17,7 @@
       "apple-kinetic-promo",
       "fredtalk-library"
     ],
-    "active_document_links": 337,
+    "active_document_links": 341,
     "fredtalk_active_public_sources_verified": 243,
     "historical_fred_visual_anchors": 3,
     "default_ui_direction": "approved-body-default-20261028",
@@ -67,8 +67,8 @@
     },
     {
       "path": "README.md",
-      "size": 7502,
-      "sha256": "bcb70341d02e1b3b62cccae8cdd6f24e8017144b767d467aff6744bce730abeb"
+      "size": 7906,
+      "sha256": "26aa4fa5a795d2141eea7ac647f1531ffbc49c3a0ce33a077c973799c7460d9c"
     },
     {
       "path": "SKILL.legacy.md",
@@ -77,8 +77,8 @@
     },
     {
       "path": "SKILL.md",
-      "size": 7710,
-      "sha256": "374f4d1531a510ca8285f260e1d77ad1e4fc009ad2348b636daeb3940695d759"
+      "size": 8359,
+      "sha256": "d5088b32ea283684f0bcd78beadd5f31798e248c1716e8bbef97fd6cbc223727"
     },
     {
       "path": "START-HERE.md",
@@ -87,8 +87,8 @@
     },
     {
       "path": "VERSION",
-      "size": 14,
-      "sha256": "39f87f8ce8498184e95a44ab8f2c887a77e0acec0566b5e47f09c649655a60b9"
+      "size": 13,
+      "sha256": "8cd6b5541e5d984ec9a1cd542dfff2215d8d33521b747bbffdaa16182188c1a1"
     },
     {
       "path": "agents/openai.yaml",
@@ -13239,6 +13239,16 @@
       "path": "assets/library-runtime/source-data/r011-manifest.json",
       "size": 718,
       "sha256": "4b32d130c0e405187a5420b55a55d5d99fc3e634530db411962747fbc64898f6"
+    },
+    {
+      "path": "assets/material-sourcing/README.md",
+      "size": 6251,
+      "sha256": "8ad49f7980a1c616cf436e983d8640c41c34c092b34dd78523ff0e1bfb276b23"
+    },
+    {
+      "path": "assets/material-sourcing/ego-collect.mjs",
+      "size": 4108,
+      "sha256": "3b1e91134bdb158118d54dfa612068a567c5429cbc7d767acce9e575cf3a0825"
     },
     {
       "path": "assets/method-runtime/method-runtime.js",
@@ -34621,14 +34631,309 @@
       "sha256": "b05d8b32b43c70c209744e38e2680408574cdab0b0f2eefe567c673abf52cc4b"
     },
     {
+      "path": "assets/reference-atlas/atlas-data.js",
+      "size": 648856,
+      "sha256": "926a321ed460892d4830788caeb6b156eb2cd274e656000eca6a3bf4c783ee59"
+    },
+    {
       "path": "assets/reference-atlas/atlas.js",
-      "size": 5240,
-      "sha256": "79f6a57dfcd9e7e70400492b0beb7f86ba973ecf53c0e5f48d7d4a6f7e8d9c2e"
+      "size": 5720,
+      "sha256": "d29c0957648eaff61c6b88a136009172e91ec65190eb5d6c6a0baf22503be4f2"
     },
     {
       "path": "assets/reference-atlas/index.html",
-      "size": 3300,
-      "sha256": "4939846a34f4873e8e96d1ac04130e837e9a3ac96e910b5e3585c348346c15e1"
+      "size": 3337,
+      "sha256": "471bf6c9eb51bf36720c8f7967a699a119593430a25da83eb7278e3dcb4ad299"
+    },
+    {
+      "path": "assets/reference-atlas/public/arun-membership/detail-001.jpg",
+      "size": 759395,
+      "sha256": "41b6a36cd841f69fe19ceb3f8c5758ea2fbe5b249736ffd46546091d4d061bda"
+    },
+    {
+      "path": "assets/reference-atlas/public/arun-membership/detail-002.jpg",
+      "size": 465339,
+      "sha256": "dc1eadc0786d61175d80c6e62299c23ee14661213545a5db2c75c1d57135a1a7"
+    },
+    {
+      "path": "assets/reference-atlas/public/arun-membership/overview.jpg",
+      "size": 1191383,
+      "sha256": "a40d05e2ad203a95b676fce3a690b59444043b2c0edf45bb64e2f32715e939aa"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-001.jpg",
+      "size": 895139,
+      "sha256": "3d437eb64bb191d2b967b47ef0c167a15e7ab14a496df2910e175d4d23cc612f"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-002.jpg",
+      "size": 682506,
+      "sha256": "b9b5a4e9bb301bbab5dd8f924132cef9be671f0b2369ef65a38f9a38355c8958"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-003.jpg",
+      "size": 806460,
+      "sha256": "969ea14db1fd86aab716efa7cd526ffb625b9f623fa3c6e645dd1334646452de"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-004.jpg",
+      "size": 629628,
+      "sha256": "637bb513cc9e82c6739583490723165e53c96870408d97d1ed4d81118c12259b"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-005.jpg",
+      "size": 607621,
+      "sha256": "71dfdce08d05387b740c6787983647dae1c4ee08f3139eab06ab289b951ac096"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-006.jpg",
+      "size": 679996,
+      "sha256": "e229829679fbc5526964cf60690e61a1c720b15b5f357dc91845050999b8e00f"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-007.jpg",
+      "size": 662205,
+      "sha256": "4ac5cfd81dea866d5be9a09bc95deb34ac638330643ba48a1749dae7a45e93ab"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-008.jpg",
+      "size": 659243,
+      "sha256": "1a81fdf8a2de2d8ed39f0c70922da8e4d33a689b5bcad0770d12736eca8c0986"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-009.jpg",
+      "size": 827491,
+      "sha256": "88d04b566e49f8e1d9c4f11ccf9a51d3f1165e839920cbca66e3067ab1801c1a"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-010.jpg",
+      "size": 727735,
+      "sha256": "c2d22a18074eec7dce61a6c135f2a19f5ab4a3d550aedde90298cd36933b819b"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-011.jpg",
+      "size": 704732,
+      "sha256": "6f9d3e81c035e3ba0f7d9fa9f5eb8a44f04bfa2b453f9e82f5433027fd93a225"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-012.jpg",
+      "size": 733271,
+      "sha256": "bc3bd708d7c95a72d300c4d8a39f83bc40188c20556bf1cbf5c20d5e35eed88d"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-013.jpg",
+      "size": 780082,
+      "sha256": "18373c5420ed1b77a4ee05c7eae06f7d78556796f4ac0932121dac2fcd552cc5"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-014.jpg",
+      "size": 701404,
+      "sha256": "263bfe0345e96678e8957583fddf9291fda7ccd185130e24261b2871e1ece056"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-015.jpg",
+      "size": 744657,
+      "sha256": "a99484d183938f679d759291df05428b1e0d67827a263f5c98c3a874dc8f0cf1"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-016.jpg",
+      "size": 708084,
+      "sha256": "7666d467e4eaf13b56eb3c524132be665ee4e7b4cda19b647216708e30a5f7b2"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-017.jpg",
+      "size": 762115,
+      "sha256": "91fb5c0b9f70b9cf413f65a9e4cc4b3f8d10f78d2948d92ff1987d9651f365fb"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-018.jpg",
+      "size": 830248,
+      "sha256": "8937b3954625e6824ae3b4e945f6c4993404166992b41234090705c7cd31cd18"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-019.jpg",
+      "size": 704599,
+      "sha256": "5907b7d383a6ea395b9ab481d36684e808b09acd27861031a58a1cc326a0bc88"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-020.jpg",
+      "size": 822489,
+      "sha256": "6adb98b9617f89049598b972ea75bfa372e193df869571871b9ab7d4aa6c7852"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-021.jpg",
+      "size": 806732,
+      "sha256": "22f1bb9e4e3e29efed85bee07c7f4892cd4bc1e72af16d4928e31c05ead62a4a"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-022.jpg",
+      "size": 772129,
+      "sha256": "6cc7ca34ca609fb14a28b48d1002f4df7d1ca37019d7b101c239d488bced316d"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-023.jpg",
+      "size": 766277,
+      "sha256": "cdff03ff494b9797bf65e5d7e8e1b2571b2db6e12865b649949539f42a574ccb"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-024.jpg",
+      "size": 737439,
+      "sha256": "601a640a689488b177ee45a615e7a522c89e8991d218fb137b8ee006fb595852"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-025.jpg",
+      "size": 745982,
+      "sha256": "5e462377a92b51c3f491fdaf7a0c55fc396dfb6b8425a1fee7f54f85295c1ef2"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-026.jpg",
+      "size": 655942,
+      "sha256": "ce0c6975e62cd2f45ad85acb18b9b95f3ef9bbba4676f6a9ec8a99a483ced7fa"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-027.jpg",
+      "size": 647103,
+      "sha256": "84d35a36d0eae01d0d2725bd73f0cba0237ea4b96d3d451c20d05523d4021757"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-028.jpg",
+      "size": 751054,
+      "sha256": "87801c27636458230f06102f15ad13b13a72b4c13dd2dfbfb0268775be5691f5"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/detail-029.jpg",
+      "size": 27363,
+      "sha256": "99f441e0146779c51c8c5e4aed5d1bcf6dc9c5c89303583c77cd1597182bd4b2"
+    },
+    {
+      "path": "assets/reference-atlas/public/claude/overview.jpg",
+      "size": 1170545,
+      "sha256": "886c28387d30073691cdc5f55d0e322c17d7c2493d6fab3ac056183988ba54c2"
+    },
+    {
+      "path": "assets/reference-atlas/public/creative/detail-001.jpg",
+      "size": 864083,
+      "sha256": "a03f2c5647cc6766dcc4f48e9309f7f902cd558591d308393059f03a0d37e016"
+    },
+    {
+      "path": "assets/reference-atlas/public/creative/detail-002.jpg",
+      "size": 730664,
+      "sha256": "9c7915256535b833c1e63116f6d759ea949b5263e80d221388cf82a07dfc2337"
+    },
+    {
+      "path": "assets/reference-atlas/public/creative/detail-003.jpg",
+      "size": 797946,
+      "sha256": "209838243fb7381e7994d947eb5f05d3648a5e81f9147a7c69712ae38648dbab"
+    },
+    {
+      "path": "assets/reference-atlas/public/creative/detail-004.jpg",
+      "size": 846112,
+      "sha256": "1e3b91934118db2ec2627f0986b763e8809c80399f104f95633914ef84fcbc6c"
+    },
+    {
+      "path": "assets/reference-atlas/public/creative/detail-005.jpg",
+      "size": 822080,
+      "sha256": "2ad505cb775a734c005c8346f613d64f95b6ad07911d7fe5d3c387f17236322e"
+    },
+    {
+      "path": "assets/reference-atlas/public/creative/detail-006.jpg",
+      "size": 779662,
+      "sha256": "0cb2970943bddcbb4f2e1258fdb38992f3a0e23c6ad07f5e99f59b48aabbbfc2"
+    },
+    {
+      "path": "assets/reference-atlas/public/creative/detail-007.jpg",
+      "size": 877148,
+      "sha256": "e6cb260fac73b29ca775d7a23d6378e50f987100095e19be047651d57c43c046"
+    },
+    {
+      "path": "assets/reference-atlas/public/creative/detail-008.jpg",
+      "size": 927842,
+      "sha256": "22ac6a692278c7e3ac3b2f2ab7e0b47d5ac8440116c312cdadbb93cf4ea1d0ba"
+    },
+    {
+      "path": "assets/reference-atlas/public/creative/detail-009.jpg",
+      "size": 51248,
+      "sha256": "3d453d89a21054d0f8d7765f20cf18f31588139e9e561846ef16cbf7729421b0"
+    },
+    {
+      "path": "assets/reference-atlas/public/creative/overview.jpg",
+      "size": 1317471,
+      "sha256": "c6bb1b451c2d7c71cb5de7bb42f28226e6158f56346f1904a6280311b71e0e0c"
+    },
+    {
+      "path": "assets/reference-atlas/public/fangmu-ten-agents-final-20261021/detail-001.jpg",
+      "size": 523832,
+      "sha256": "bb78c56a0ef4e8f3285585249b5a6ed3d380a4a2404336904e7b5c3c6770bfff"
+    },
+    {
+      "path": "assets/reference-atlas/public/fangmu-ten-agents-final-20261021/detail-002.jpg",
+      "size": 647372,
+      "sha256": "6e718d2a63e391ad91c8c7a6ba9049acdfe5523b87cfec0ed97eb657da5ffbc2"
+    },
+    {
+      "path": "assets/reference-atlas/public/fangmu-ten-agents-final-20261021/detail-003.jpg",
+      "size": 347816,
+      "sha256": "d98f857a1ff78a45901ca63d7eaaee071ea9835d119fa550d5fbbc6fe4574f6f"
+    },
+    {
+      "path": "assets/reference-atlas/public/fangmu-ten-agents-final-20261021/overview.jpg",
+      "size": 957226,
+      "sha256": "4accd5b619fcffcd7719eac6e44cd34eade28333254c8d976ea81d9fb3dfa4ea"
+    },
+    {
+      "path": "assets/reference-atlas/public/fred-argon/detail-001.jpg",
+      "size": 754856,
+      "sha256": "1041a1e5d3ea2e7e971a8ad62945f3d7aff5af7bc8d2b1a3099b8cafa387b07d"
+    },
+    {
+      "path": "assets/reference-atlas/public/fred-argon/detail-002.jpg",
+      "size": 705657,
+      "sha256": "12eb56d545f8f0849d06b6c1562654067467b6de2b55b0651d9b4e86d249d304"
+    },
+    {
+      "path": "assets/reference-atlas/public/fred-argon/detail-003.jpg",
+      "size": 317222,
+      "sha256": "777e08e261b0de666731670a5272e056cd3336dfad5277d50dbc5922827b7978"
+    },
+    {
+      "path": "assets/reference-atlas/public/fred-argon/overview.jpg",
+      "size": 1108648,
+      "sha256": "dea4c78fb73c94aff843fbd1fe5502b11bf163c72a16fc7951d0c6b5fe6a0979"
+    },
+    {
+      "path": "assets/reference-atlas/public/fred-jev/detail-001.jpg",
+      "size": 644313,
+      "sha256": "34aca3af89e864e5d970abf425a08c9f007be423883f281352715a16c943d053"
+    },
+    {
+      "path": "assets/reference-atlas/public/fred-jev/detail-002.jpg",
+      "size": 481595,
+      "sha256": "68c74f6fb1861681939a7a57376d5f69cee79fa4bcf2451f77957b7f217c8a32"
+    },
+    {
+      "path": "assets/reference-atlas/public/fred-jev/overview.jpg",
+      "size": 1057366,
+      "sha256": "f4f81529e72d50cd3c47369710689574b87e4521c59f105fd39d59b4635f4c09"
+    },
+    {
+      "path": "assets/reference-atlas/public/fred-weekly/detail-001.jpg",
+      "size": 855784,
+      "sha256": "554c3f3d15dc8b217e48102855274ce0d7f0438358f4eaa67771b2042aecbf59"
+    },
+    {
+      "path": "assets/reference-atlas/public/fred-weekly/detail-002.jpg",
+      "size": 655297,
+      "sha256": "370fcdd0da2ad2e41214326ecca8559711037c8ba6d56c8bd6eadca7baea749b"
+    },
+    {
+      "path": "assets/reference-atlas/public/fred-weekly/detail-003.jpg",
+      "size": 274308,
+      "sha256": "209bd08e5cc7c648a21261448fbce9167b2e8224bd061ceffdf1e2746b2f5f74"
+    },
+    {
+      "path": "assets/reference-atlas/public/fred-weekly/overview.jpg",
+      "size": 1168769,
+      "sha256": "f63f9bb7007c6199b203c44373d547bdbf2adfcc0ffa52eeba7753a46617f8a4"
     },
     {
       "path": "assets/reference-atlas/public/girl-aigc-approved/detail-001.jpg",
@@ -34669,6 +34974,101 @@
       "path": "assets/reference-atlas/public/girl-takeover/overview.jpg",
       "size": 481446,
       "sha256": "cf94cbca1794ef471701dda6e99f051095d438d9285acfe96abc7d3acf0a90ee"
+    },
+    {
+      "path": "assets/reference-atlas/public/network/detail-001.jpg",
+      "size": 857926,
+      "sha256": "e0b3db818a16c81f047d058ac28c95628c79057b7bf1a8d4ff243897ecd6b699"
+    },
+    {
+      "path": "assets/reference-atlas/public/network/detail-002.jpg",
+      "size": 850304,
+      "sha256": "7b22f1d84814494a1bab200fc700449c9a1c69e4a04c545c0042623ed7bfefa9"
+    },
+    {
+      "path": "assets/reference-atlas/public/network/detail-003.jpg",
+      "size": 894841,
+      "sha256": "7c09e4befdd4d649eeb119f8efc15f538ec626132412dac900eeee262bc15a18"
+    },
+    {
+      "path": "assets/reference-atlas/public/network/detail-004.jpg",
+      "size": 797224,
+      "sha256": "bebd409b4cab0a5183c975a3ea0b312dc1729d5829b843eb6ec50bd14ce5f57a"
+    },
+    {
+      "path": "assets/reference-atlas/public/network/detail-005.jpg",
+      "size": 835106,
+      "sha256": "c366827b2ca2baa50c5fd63509328649efa39d4078c920cf5879684ecb62b4be"
+    },
+    {
+      "path": "assets/reference-atlas/public/network/detail-006.jpg",
+      "size": 888964,
+      "sha256": "bf1aa25b6f2e817e0fa042d3f7c114c62c602d04201c66e75e59e489067a3f33"
+    },
+    {
+      "path": "assets/reference-atlas/public/network/detail-007.jpg",
+      "size": 986828,
+      "sha256": "595b41e51c28ed1d4e1822a0fbd968e87983f83d4b56c03a327317f533799cd4"
+    },
+    {
+      "path": "assets/reference-atlas/public/network/detail-008.jpg",
+      "size": 880209,
+      "sha256": "7fde85b6e82ba333c644ae1a03a902656b8ca6e8bf3f1a9f3ed494c0f923247c"
+    },
+    {
+      "path": "assets/reference-atlas/public/network/detail-009.jpg",
+      "size": 911390,
+      "sha256": "feed4c71a28ebe7107b6b79830d572d4502a47ca263cd3116487f33ab79a9253"
+    },
+    {
+      "path": "assets/reference-atlas/public/network/detail-010.jpg",
+      "size": 951163,
+      "sha256": "4b24fe28833288f8a6a508fe83492874ad8d285681b79a0ba53d80d0fed6b8e8"
+    },
+    {
+      "path": "assets/reference-atlas/public/network/detail-011.jpg",
+      "size": 496059,
+      "sha256": "23936511e6f0de20b965ccc32ceb43d565980f3adf1149dc6de6e5814cf49c44"
+    },
+    {
+      "path": "assets/reference-atlas/public/network/overview.jpg",
+      "size": 1357566,
+      "sha256": "c454f8013d39c5d01f0a548be61fd93d36b4346de9fa352d59e66f6387b20853"
+    },
+    {
+      "path": "assets/reference-atlas/public/workflow/detail-001.jpg",
+      "size": 772819,
+      "sha256": "d31469abcc286de0a24721da25eccbd65d15307eed8d70aab7e2bdeb44f7576f"
+    },
+    {
+      "path": "assets/reference-atlas/public/workflow/detail-002.jpg",
+      "size": 1009087,
+      "sha256": "c604eaae244d84b50864916cf8d63b95921263d55592bc40a47deaa5e94b3255"
+    },
+    {
+      "path": "assets/reference-atlas/public/workflow/detail-003.jpg",
+      "size": 1024060,
+      "sha256": "8d0505cecd7a20422970fbaffdbd84d176f4bd98e4c20ba4bc718e1ebdeee428"
+    },
+    {
+      "path": "assets/reference-atlas/public/workflow/detail-004.jpg",
+      "size": 926172,
+      "sha256": "22f9cada54167b74720c6560dd8beff3ddc808c54886f5802e211f1f203a1ef2"
+    },
+    {
+      "path": "assets/reference-atlas/public/workflow/detail-005.jpg",
+      "size": 902768,
+      "sha256": "a5a49b8b83cea7c24c5e9117f0ecbf77367cb3c7f5eaa53a39bd5d8ba7419983"
+    },
+    {
+      "path": "assets/reference-atlas/public/workflow/detail-006.jpg",
+      "size": 236197,
+      "sha256": "39b3f07f45598b909398b3f77de75e738a1dcde5498b2775868f4db86455d7cb"
+    },
+    {
+      "path": "assets/reference-atlas/public/workflow/overview.jpg",
+      "size": 1438577,
+      "sha256": "49681f0c9b8b415eb1ccce7913f64774707b8e8843e9b1ab8fe9e8371cd55e80"
     },
     {
       "path": "assets/reference-films/arun-membership/README.md",
@@ -35157,8 +35557,8 @@
     },
     {
       "path": "docs/install.md",
-      "size": 7821,
-      "sha256": "ad5311d857b15058a168803b9e69fd561980093d2967b17b0a10b4f764602355"
+      "size": 7944,
+      "sha256": "eba0ed3e89b22959c04d539b5b87d002b842765d7c7a74452a7d99aec27a374a"
     },
     {
       "path": "docs/reference-library.md",
@@ -35222,8 +35622,8 @@
     },
     {
       "path": "index.html",
-      "size": 24449,
-      "sha256": "0c2d64a6a69c7e090cb3f027035d0324ec85246f63381dfc488451b02343927b"
+      "size": 24357,
+      "sha256": "bd72990d5f2aba8e3bc993483a88b7b3d50711d606b1f38bc9432bfaf9cea696"
     },
     {
       "path": "install.py",
@@ -35232,8 +35632,8 @@
     },
     {
       "path": "references/aesthetic-preferences.md",
-      "size": 15766,
-      "sha256": "34133d9e4d660aeacd39e229e5cc6dde234252a7c24b4ad44e16bc07bf8f993b"
+      "size": 15853,
+      "sha256": "4ef839cff3812bfcee18f83d7d98dc6a984f7a4ca85116a2d61597f2611bf176"
     },
     {
       "path": "references/aigc-assets.json",
@@ -35287,8 +35687,8 @@
     },
     {
       "path": "references/distribution-scope.md",
-      "size": 5048,
-      "sha256": "24793a8f0a9ad7520e7ff7264271bbaf7e16681c6bf82c2ea03c44930d0cad02"
+      "size": 5051,
+      "sha256": "5d5a39ae2d5c7262a506fa25293c825e1daa583a17c3b097a8a08ab0d6fa8be3"
     },
     {
       "path": "references/editing-lessons.md",
@@ -35497,8 +35897,8 @@
     },
     {
       "path": "references/global-use.md",
-      "size": 1654,
-      "sha256": "0f81352f3978c8b4a0f700b3076cf26503c35fce5f804912328d65aff784839c"
+      "size": 1965,
+      "sha256": "767bca9d9daef28c09dad287cca147d25b5b2cbdd5807a7f7481c0cdb0ceb0d5"
     },
     {
       "path": "references/high-fidelity-device-motion.md",
@@ -35797,8 +36197,8 @@
     },
     {
       "path": "references/reference-atlas.json",
-      "size": 1507183,
-      "sha256": "898772e8ad15f4560e7bec092d32205bc51864b93c9ba9548bb3f05d4e789834"
+      "size": 1528577,
+      "sha256": "aaa24d9692b2168780d275b94f34147df21497e2a5702e67316cfc17c45bb079"
     },
     {
       "path": "references/reference-films.json",
@@ -35822,8 +36222,8 @@
     },
     {
       "path": "references/script-visual-planning.md",
-      "size": 14449,
-      "sha256": "7fd4deaaa0b41a1eb3d6b2c9aba8f9ead72cdf19b49e66b9c63b668eb59c18c0"
+      "size": 17011,
+      "sha256": "d84b97476df10a4cfe5bef56680b5fd1cbbb232d67ffce80a40e3714cf046574"
     },
     {
       "path": "references/selection-workflow.md",
@@ -35922,8 +36322,8 @@
     },
     {
       "path": "scripts/director.py",
-      "size": 87686,
-      "sha256": "a41904600ea2dbc0ac39d246d6aab7ccba99364247f63063a7ac1a8f847e58a5"
+      "size": 88296,
+      "sha256": "b97d9283cdac3e70be216073f35de50455bc68862589e850b6b7b3ece1c23388"
     },
     {
       "path": "scripts/export_qiaomu_fonts.py",
@@ -35959,6 +36359,11 @@
       "path": "scripts/library_runner.py",
       "size": 35243,
       "sha256": "08cee3712f790b899ade9b27326b1854a19876c8ae04ffb06448439248fe0d52"
+    },
+    {
+      "path": "scripts/material_sourcing.py",
+      "size": 22444,
+      "sha256": "edc8c9508ad2ab9258753abf0579e55e37eea39590527c82901e4cbafca2615d"
     },
     {
       "path": "scripts/media_server.py",
@@ -35997,8 +36402,8 @@
     },
     {
       "path": "scripts/reference_atlas.py",
-      "size": 18967,
-      "sha256": "cbd0239db0ea17d106b4b00d5221c075151164198f9543abc896e9be2ca97b83"
+      "size": 21666,
+      "sha256": "4c36c5cd1dcdf0d38c36a9e06b3b0d43d32ce4f2901545b92b35e6ad65e4ea83"
     },
     {
       "path": "scripts/reference_atlas_registry.py",
@@ -36017,8 +36422,8 @@
     },
     {
       "path": "scripts/reference_overviews.py",
-      "size": 6320,
-      "sha256": "f304bde4908c22bae3a0d9b313b7836a4441906ee8f2d001e6805df40a59f10c"
+      "size": 7377,
+      "sha256": "7ea8bce8d297c2d82c4c03c69bd519cdd2177b76e7590dd7c60762605541a8a3"
     },
     {
       "path": "scripts/reference_readiness.py",
@@ -36027,8 +36432,8 @@
     },
     {
       "path": "scripts/release_manifest.py",
-      "size": 15765,
-      "sha256": "3ec07dcea40cadceb8be93f8dcf069f741e7bc0478e575c53f3b39838fdf9662"
+      "size": 15466,
+      "sha256": "a5ed1264a287b6ac35dfb7242287473266b11f6178a1ba4c994926339f866be8"
     },
     {
       "path": "scripts/render.py",
@@ -36127,8 +36532,8 @@
     },
     {
       "path": "scripts/test_director.py",
-      "size": 44812,
-      "sha256": "47c3eb9127bc5bcde768186e9ba1c4c184f66114af1bd14f19c0bc73035bde9b"
+      "size": 45880,
+      "sha256": "b77feb5b3f9411af0bde5e2a8c8429d2f2e7f5f590f2e7e17e80d9725577c6e1"
     },
     {
       "path": "scripts/test_event_audio.py",
@@ -36257,8 +36662,8 @@
     },
     {
       "path": "scripts/ui.py",
-      "size": 20420,
-      "sha256": "535cfe5d4eaebec6be041581f6a6e4eddca3ee4efd9e93cf63d8e8ffb6554995"
+      "size": 20686,
+      "sha256": "ad1acc10ad7b39335005b2c8c738b13830110046208fe65a2f474e8c5486eec8"
     },
     {
       "path": "scripts/verify_package.py",
@@ -36299,6 +36704,11 @@
       "path": "tests/test_library_runner.py",
       "size": 3134,
       "sha256": "819e3732e6bcff7f2acb0d43fb9ac15d6e1f228bb2d6b5ad23e6f1dd6709f59d"
+    },
+    {
+      "path": "tests/test_material_sourcing.py",
+      "size": 6585,
+      "sha256": "e7c52f7b0e2f6beb3ecc2c607076893764b2484f43a3908c6d4a3a63e872fbf7"
     },
     {
       "path": "tests/test_method_programs.py",

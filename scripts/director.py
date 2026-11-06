@@ -474,6 +474,7 @@ def production_context(resolution, root=ROOT):
         'primary_design_source': resolution.get('guidance'),
         'approved_examples': [],
         'continuous_style': continuous_style,
+        'reference_overviews': reference_overviews.load(root),
         'unified_production': resolution.get('unified_production', {}).get('enabled') is True,
         'current_project_style': resolution.get('current_project_style', {}),
         'current_project_inputs': resolution.get('current_project_inputs', {}),
@@ -508,7 +509,7 @@ def production_context(resolution, root=ROOT):
         'research': {'command': 'ui.py direct -- prepare --mode research --script <稿> --project <研究工程>',
                      'original_media_required_for_production': False,
                      'when': 'Only for new capability extraction, explicit whole-film replication, or tracing an observed mismatch.'},
-        'instruction': '继承当前审美和原声约束；首次用continuous_style完整连续风格片及全部原设计状态建立基准，不以四帧代替整段，也不伪称完整观看。随后按口播选整库中的实际实现并填写参数，用统一library或semantic入口运行；只在改编或排错时深入原片。分类不是额外效果，独立实现不是会员原源码，运行验证不是审美认可。检查本期实际画面和声音。'}
+        'instruction': '继承当前审美和原声约束；首次打开reference_overviews里各条原片总览与认可范围，太密时读细图；continuous_style及所选能力预览补充连续运动。原片图集、源码重演和本期素材用途不同；不以四帧替代整库，不伪称完整观看。按口播用ego取得具体素材，选整库中的实现并绑定本期内容；只在改编或排错时深入原片。独立实现不是会员原源码，运行验证不是审美认可。检查本期实际画面和声音。'}
 
 
 def production_requirements_context(root=ROOT):
@@ -651,6 +652,16 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
         'character_policy', 'instruction', 'production_references_ready', 'warnings', 'reference_only', 'default_character_required') if key in aigc}
     context['aigc']['binding'] = selection_contract.aigc_style_binding(aigc)
     context['aigc']['usage'] = 'Read the AIGC guide and selected style images only when this narration needs generated material; old scenes are not the default new content.'
+    import material_sourcing
+    context['materials'] = material_sourcing.context(source, folder, root)
+    material_plan_path = Path(context['materials']['plan_path'])
+    context['materials']['warnings'] = []
+    if material_plan_path.is_file():
+        existing_material_plan = material_sourcing.read(material_plan_path)
+        material_sourcing.validate_plan(existing_material_plan)
+        context['materials']['plan'] = existing_material_plan
+        if existing_material_plan['source'].get('sha256') != source['sha256']:
+            context['materials']['warnings'].append('已有素材计划对应另一稿件版本；保留其采集记录，请核对并重新映射原句后继续选用。')
     try:
         import capability_catalog
         context['capabilities'] = capability_catalog.routing_context(source, root=root, limit=5)
@@ -669,26 +680,34 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
         '调用已有材质、排版和动作实现；新稿重新编排材料、对象和时间，不固定榜单、卡片数量或某片顺序。',
         '有开头人物素材时保留完整原构图，叠加内容避开脸、身体、手势和字幕。原稿、原声与身份保持；当前明确覆盖只作用于其范围。', '',
         'AIGC 参考图不自动成为首帧或固定主角；本期生成内容按口播重新设计。', '',
+        reference_overviews.render_brief(context['production']['reference_overviews']), '',
+        '## 本期素材：主动搜索、取得文件、实际绑定', '',
+        f"检索与来源计划：{context['materials']['plan_path']}。先按全文调整 query/purpose/wanted，再通过当前登录的 ego 搜索 X、B站、抖音或产品原站。",
+        '采集接口：ui.py materials ego-script / download / record / check / export。参数见 ui.py materials --help。',
+        '搜索候选未自动核实；打开源页查看具体过程和结果，下载视频或截取清楚的实际画面，记录有效入出点、对应原句，再绑定素材轨和效果参数。不要等待用户逐句提供例子。',
+        *context['materials']['warnings'], '',
         '## 整个效果库仍可选', '',
         'ui.py capabilities list',
         'ui.py capabilities search --query "本段对象、关系与变化"',
         'ui.py capabilities inspect --id <能力ID>',
         'context.capabilities 给出整库摘要和逐段候选；短候选不是白名单，未命中可以换表达或直接浏览整库。direct 条目可调用，source-adaptation 需要适配，reference-only 不冒充已有实现。', '',
         '## 制作顺序', '',
-        '1. 按整篇口播组织对象与事件，取得本期具体素材，保持真实证据和原声时钟。',
+        '1. 按整篇口播组织对象与事件，实际执行 materials 检索计划，取得并查看本期文件；保持真实证据和原声时钟。',
         '2. 查看选中能力的参数与短动态预览，优先通过 events/designs/scene 的已有代码绑定与组合；不用重新研究全部原片。',
         '3. 用 ui.py events scaffold --capability <类型,类型> --out <绑定.json> 建参数；填本期对象、布局、动作时间和素材，再 events validate/build。涉及其他库按 inspect 返回的实际入口适配。',
         '4. 渲染实际片段，检查素材可读性、动作连续性、声音与当前风格；修改的是本期画面，不把一次特例追加成全局禁令。', '',
         '## 按需展开', '',
         *[f"- {row['title']}：{row['path']}" for row in core['on_demand']],
-        '全片图集、原视频和历史证据完整保留。只有学习新能力、指定整片复刻或排查画面偏差时，再运行 --mode research / overviews / study；普通制作不要求整库原片齐全。',
+        '原片分格图已列在上方，供建立视觉理解。连续原片和逐句研究在学习新能力、指定复刻或排错时展开；普通制作不要求私人原片齐全，也不需重新实现已有动作。',
         '本准备步骤没有观看或认可本期画面，也没有提交生成或渲染。', ''])
     if reference_id:
         brief += '\n' + reference_film.render_brief(context['reference_film'], reference_film.available(root))
     result = _write_preparation(folder, source, context, brief, force)
+    if not material_plan_path.exists():
+        material_sourcing.write_new(material_plan_path, context['materials']['plan'])
     return {**result, 'mode': mode, 'source_sha256': source['sha256'],
             'requirements': requirements_metadata(core),
-            'warnings': [*resolution.get('warnings', []), *context['capabilities'].get('errors', [])],
+            'warnings': [*resolution.get('warnings', []), *context['capabilities'].get('errors', []), *context['materials']['warnings']],
             'context_characters': len(json.dumps(context, ensure_ascii=False)),
             'plan_authored': False, 'generation_submitted': False}
 

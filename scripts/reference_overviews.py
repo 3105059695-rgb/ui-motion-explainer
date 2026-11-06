@@ -50,21 +50,29 @@ def load(root=ROOT):
         item = {'id': row['id'], 'title': row.get('title', row['id']),
                 'categories': row.get('categories', []), 'scope': row.get('scope', ''),
                 'approval_scope': row.get('approval_scope', ''),
+                'attribution': row.get('attribution'),
+                'publication': row.get('publication'),
+                'image_derivative': row.get('image_derivative'),
                 'duration_seconds': row.get('duration_seconds', row.get('duration')),
                 'sampling': row.get('sampling', row.get('policy')),
                 'overview': overview, 'pages': pages, 'source_video': source,
                 'available_detail_pages': sum(p['available'] for p in pages),
                 'source_resource_id': row.get('source_resource_id')}
+        if row.get('private_original_overview'):
+            item['original_full_frame_overview'] = _image(row['private_original_overview'], root, overlay)
         report['videos'].append(item)
         if overview['available']:
             report['overview_images'].append({'id': item['id'], 'title': item['title'],
                                              'path': overview['path'], 'categories': item['categories'],
-                                             'scope': item['scope'], 'approval_scope': item['approval_scope']})
+                                             'scope': item['scope'], 'approval_scope': item['approval_scope'],
+                                             'image_derivative': item['image_derivative']})
         else:
             report['warnings'].append(f"{item['title']}：全片总览图未找到，不能视为已查看。")
     count = len(report['videos'])
     available = len(report['overview_images'])
     report.update(video_count=count, available_overview_count=available,
+                  packaged_overview_count=sum(v['overview']['available'] and v['overview']['selection_source']=='packaged' for v in report['videos']),
+                  packaged_detail_page_count=sum(p['available'] and p['selection_source']=='packaged' for v in report['videos'] for p in v['pages']),
                   status='available' if count and count == available else 'partially-available' if available else 'unavailable')
     return report
 
@@ -73,6 +81,7 @@ def render_brief(report):
     lines = ['## 先看全部视频的全片总览', '', report['instruction'],
              f"共 {report['video_count']} 条参考；当前可打开 {report['available_overview_count']} 张全片总览。"
              '这是一份待查看清单，命令运行成功不代表已查看。', '']
+    lines.append(f"其中 {report.get('packaged_overview_count',0)} 张总览、{report.get('packaged_detail_page_count',0)} 页细图随公开包提供；无须作者电脑的本机路径。")
     for row in report['videos']:
         categories = ' / '.join(str(v) for v in row.get('categories', [])) or '范围见下方'
         lines.append(f"- {row['title']} [{row['id']}] · {categories}")
@@ -82,6 +91,8 @@ def render_brief(report):
         lines.append(f"  参考范围：{row['scope'] or row['approval_scope'] or '按该条来源证据判断，不自动整片认可。'}")
         if row['scope'] and row['approval_scope'] and row['scope'] != row['approval_scope']:
             lines.append('  认可边界：' + str(row['approval_scope']))
+        if (row.get('image_derivative') or {}).get('note'):
+            lines.append('  图像范围：' + row['image_derivative']['note'])
         lines.append(f"  细读页：{row['available_detail_pages']}/{len(row['pages'])} 可用；"
                      f"在 context.production.reference_overviews.videos[id={row['id']}].pages 按起止时间打开。")
     lines += ['', '联系表覆盖全片时间范围，但采样帧不等于每一帧，不能据此判断完整运动与声音。'

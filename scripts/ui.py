@@ -117,6 +117,9 @@ def main(argv=None):
     # Keep selection arguments with their own small parser, including --help.
     # Existing backend routing and production checks remain unchanged.
     actual_argv = list(sys.argv[1:] if argv is None else argv)
+    if actual_argv[:1] == ['materials']:
+        import material_sourcing
+        return material_sourcing.main(actual_argv[1:])
     if actual_argv[:1] == ['capabilities']:
         import capability_catalog
         return capability_catalog.main(actual_argv[1:])
@@ -164,6 +167,7 @@ def main(argv=None):
         return fredtalk_library.main(forwarded)
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='action', required=True)
+    sub.add_parser('materials', help='Plan narration-led searches, collect sources with ego, and export verified local media bindings.')
     sub.add_parser('capabilities', help='Browse the entire capability catalog or retrieve narration candidates without studying source films.')
     sub.add_parser('events', help='Bind and compose parameterized UI events using the retained approved runtime.')
     sub.add_parser('library', help='Bind, compile, test and render the retained complete source library.')

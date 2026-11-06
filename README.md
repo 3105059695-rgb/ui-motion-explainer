@@ -14,7 +14,8 @@
 
 ## 本版修正
 
-- 默认 `direct prepare` 输出当前审美、全文原稿、整库摘要与逐段候选；完整研究保留为 `--mode research`，减少重复上下文和原片重读。
+- 默认 `direct prepare` 输出当前审美、全文原稿、认可原片图集、整库摘要、逐段候选和可编辑的 `materials-plan.json`。Agent 通过 ego 主动去 X、B站、抖音及产品原站取得本期视频/截图；`materials record/check/export` 将来源、原句和可用本地文件接到剪辑参数。
+- [可直接打开的原视频分格图集](assets/reference-atlas/index.html)随包带 13 张总览和 72 页细图，覆盖当前正文 UI、Fred、阿闰、秋芝与女孩 AIGC。它们帮助 AI 建立视觉理解；四张局部图和代码重演中的示意素材不能替代这些原片参考。
 - `capabilities list/search/inspect` 统一发现整库，说明直接调用、需要源码适配、仅参考与缺失状态；短候选不是白名单。
 - `events scaffold/validate/build` 把对象、数量、材料、布局与动作时窗传入实际保留代码，组合蒙版、聚焦、交接、拆分、状态变化与转场；每稿重新设计，不固定套排行榜。
 - 公开包检查生产源码与必需资源；历史私人原片另报完整性，已安装代码不再被历史媒体缺失阻断。

@@ -584,6 +584,15 @@ class DirectorTests(unittest.TestCase):
         self.assertEqual(self.script.read_bytes(), original)
         second = director.prepare(self.script, folder, root=self.root)
         self.assertEqual(len(second['unchanged']), 2)
+        materials_path = folder / 'materials-plan.json'
+        materials = director.load_json(materials_path)
+        materials['units'][0]['query'] = '已结合全文确定的具体检索词'
+        materials_path.write_text(json.dumps(materials, ensure_ascii=False), encoding='utf-8')
+        saved = materials_path.read_bytes()
+        director.prepare(self.script, folder, root=self.root, force=True)
+        self.assertEqual(materials_path.read_bytes(), saved)
+        refreshed = director.load_json(folder / 'director-context.json')
+        self.assertEqual(refreshed['materials']['plan']['units'][0]['query'], materials['units'][0]['query'])
 
     def test_prepare_exposes_all_complete_scenes_before_primitives_without_blank_starter_default(self):
         rows = [{'id': f'adu:anim3:s{i:02d}', 'pack': 'anim3', 'scene_id': f's{i:02d}',
@@ -715,12 +724,13 @@ class PackagedVisualBaseline(unittest.TestCase):
             script = project / 'narration.txt'
             script.write_text('把这份资料分给三个任务，同时处理后再看实际结果。', encoding='utf-8')
             with patch.object(director.source_study, 'directing_context', side_effect=AssertionError('Research must be explicit')), \
-                 patch.object(director.reference_overviews, 'load', side_effect=AssertionError('No raw-video scan in production')), \
+                 patch.object(director.reference_overviews, 'load', wraps=director.reference_overviews.load) as atlas_load, \
                  patch.object(director.reference_readiness, 'report', side_effect=AssertionError('No archive gate in production')), \
                  patch.object(director.requirements, 'load', side_effect=AssertionError('No full-document bundle in production')):
                 report = director.prepare(script, project, profile='adiao', root=root)
             context = director.load_json(project / 'director-context.json')
             brief = (project / 'director-brief.md').read_text(encoding='utf-8')
+            material_plan = director.load_json(project / 'materials-plan.json')
         direction = context['style']['reference_directions'][0]
         self.assertEqual(direction['id'], 'approved-body-default-20261028')
         self.assertNotIn('visual_anchors', direction)
@@ -731,7 +741,11 @@ class PackagedVisualBaseline(unittest.TestCase):
         self.assertIn('短候选不是白名单', brief)
         self.assertTrue(context['capabilities']['units'])
         self.assertNotIn('source_study', context)
-        self.assertNotIn('reference_overviews', context['production'])
+        atlas_load.assert_called_once_with(root)
+        self.assertGreaterEqual(context['production']['reference_overviews']['packaged_overview_count'], 13)
+        self.assertEqual(material_plan['source']['text'], context['source']['text'])
+        self.assertFalse(context['materials']['automatic_search_performed'])
+        self.assertEqual(set(material_plan['units'][0]['search']), {'x', 'bilibili', 'douyin'})
         self.assertNotIn('selection', context)
         self.assertEqual(report['mode'], 'production')
         reading = {Path(row['path']).resolve() for row in context['required_reading']}
