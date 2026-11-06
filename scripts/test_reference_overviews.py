@@ -51,7 +51,7 @@ class ReferenceOverviewTests(unittest.TestCase):
         self.assertIn('aigc', brief)
         self.assertIn('不是每一帧', brief.replace('不等于每一帧', '不是每一帧'))
         with patch.object(director.selection, 'scene_directory', return_value={}):
-            context = director.production_context({'unified_production': {'enabled': True}}, self.root)
+            context = director.research_production_context({'unified_production': {'enabled': True}}, self.root)
         self.assertEqual(len(context['reference_overviews']['overview_images']), 12)
 
     def test_missing_catalog_and_missing_private_images_are_not_four_image_fallback(self):

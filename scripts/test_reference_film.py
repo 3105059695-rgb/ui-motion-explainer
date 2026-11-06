@@ -20,8 +20,8 @@ class PackagedReferenceFilmTests(unittest.TestCase):
             script.write_text('先展示成果，再解释材料如何进入这份成果。', encoding='utf-8')
             original = script.read_bytes()
             plain, selected = base / 'plain', base / 'selected'
-            director.prepare(script, plain)
-            report = director.prepare(script, selected, reference='arun-membership')
+            director.prepare(script, plain, mode="research")
+            report = director.prepare(script, selected, reference='arun-membership', mode='research')
             current = director.load_json(plain / 'director-context.json')
             context = director.load_json(selected / 'director-context.json')
             film = context['reference_film']

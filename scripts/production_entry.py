@@ -110,7 +110,7 @@ def attach_creation_context(project, resolution, script=None, root=ROOT):
     folder = Path(project).resolve()
     if not folder.is_dir():
         raise ValueError('Backend did not create the requested project directory: ' + str(folder))
-    current_requirements = director.requirements_context(root, include_text=False)
+    current_requirements = director.requirements_metadata(director.production_requirements_context(root))
     config_path = folder / 'project.json'
     config = (json.loads(config_path.read_text(encoding='utf-8-sig')) if config_path.exists()
               else {'generated_by': OWNER})

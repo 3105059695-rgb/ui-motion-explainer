@@ -21,6 +21,13 @@ from reference_readiness import report as reference_status
 PACK_MANIFEST = 'references/resources.pack.json'
 
 
+def production_status(root):
+    if not (Path(root) / 'references/capability-catalog.json').is_file():
+        return {'required': False, 'ready': False, 'status': 'not-configured'}
+    from capability_catalog import readiness
+    return readiness(root)
+
+
 def write_json(path: Path, value: dict):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
@@ -75,6 +82,7 @@ def install(source: Path, target: Path, *, update: bool = False,
                 raise ValueError('Target appeared during installation; refusing to replace it')
             staging.rename(target)
             return {**release, 'action': 'installed', 'target': str(target), 'backup': None,
+                    'production_readiness': production_status(target),
                     'reference_readiness': reference_status(target)}
 
         # Plan the entire update before creating a backup or changing destination files.
@@ -189,6 +197,7 @@ def install(source: Path, target: Path, *, update: bool = False,
                 'written_files': len(writes), 'removed_unmodified_obsolete_files': deletes,
                 'replaced_local_modifications': conflicts,
                 'preserved_modified_obsolete_files': preserved_orphans,
+                'production_readiness': production_status(target),
                 'reference_readiness': reference_status(target),
                 'local_user_files': 'Unmanaged files are preserved; colliding files require explicit replacement.'}
     finally:
@@ -212,7 +221,7 @@ def main():
         result = install(ROOT, args.target, update=args.update,
                          replace_modified=args.replace_modified, backup_root=args.backup_root)
         print(json.dumps(result, ensure_ascii=False, indent=2))
-        readiness = result['reference_readiness']
+        readiness = result['production_readiness']
         if readiness['required'] and not readiness['ready']:
             parser.exit(2, readiness['message'] + '\n')
     except (OSError, ValueError, RuntimeError) as error:

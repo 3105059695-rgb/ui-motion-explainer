@@ -37,7 +37,7 @@ class RequirementsIntegrationTests(unittest.TestCase):
     def test_prepare_carries_every_full_document_and_all_reading_commands(self):
         self.write_bundle()
         expected = requirements.load(self.root)
-        report = director.prepare(self.source, self.project, root=self.root)
+        report = director.prepare(self.source, self.project, root=self.root, mode="research")
         context = director.load_json(self.project / 'director-context.json')
         actual = context['requirements']
         self.assertEqual(actual['documents'], expected['documents'])
@@ -67,21 +67,27 @@ class RequirementsIntegrationTests(unittest.TestCase):
 
     def test_prepare_missing_manifest_fails_without_creating_a_partial_context(self):
         with self.assertRaisesRegex(ValueError, 'Requirement manifest.*missing'):
-            director.prepare(self.source, self.project, root=self.root)
+            director.prepare(self.source, self.project, root=self.root, mode="research")
         self.assertFalse(self.project.exists())
 
     def test_prepare_missing_last_document_fails_before_any_output(self):
         _, last = self.write_bundle()
         last.unlink()
         with self.assertRaisesRegex(ValueError, 'Requirement document.*missing'):
-            director.prepare(self.source, self.project, root=self.root)
+            director.prepare(self.source, self.project, root=self.root, mode="research")
         self.assertFalse(self.project.exists())
 
-    def test_creation_records_latest_manifest_and_hash_without_claiming_reading(self):
-        first, _ = self.write_bundle()
-        old_bundle = requirements.load(self.root)
+    def test_creation_records_latest_core_without_injecting_all_reading_commands(self):
+        self.write_bundle()
+        first = self.root / "SKILL.md"
+        first.write_text("Current core", encoding="utf-8")
+        manifest_path = self.root / requirements.MANIFEST
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        manifest["documents"].insert(0, {"id": "entry", "title": "Production entry", "path": "SKILL.md"})
+        manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+        old_bundle = director.production_requirements_context(self.root)
         first.write_bytes(first.read_bytes() + '\n当前新增要求。'.encode('utf-8'))
-        current = requirements.load(self.root)
+        current = director.production_requirements_context(self.root)
         self.project.mkdir()
         config = {'runtime': 'fusion-production-v1', 'preserved': 'existing backend field'}
         (self.project / 'project.json').write_text(json.dumps(config), encoding='utf-8')
@@ -97,7 +103,9 @@ class RequirementsIntegrationTests(unittest.TestCase):
         self.assertEqual(len(metadata['documents']), current['document_count'])
         for actual, expected in zip(metadata['documents'], current['documents']):
             self.assertEqual(actual, {key: value for key, value in expected.items() if key != 'text'})
-        self.assertEqual(len(metadata['reading']['part_commands']), current['part_count'])
+        self.assertNotIn('reading', metadata)
+        self.assertEqual(len(metadata['on_demand']), 2)
+        self.assertEqual(metadata['mode'], 'production-core')
         self.assertEqual(metadata['status'], 'content-available-not-proof-of-reading')
         self.assertEqual(metadata['assessment']['reading'], 'not-assessed')
         self.assertEqual(report['requirements'], metadata)
@@ -109,9 +117,12 @@ class RequirementsIntegrationTests(unittest.TestCase):
         self.assertFalse(saved['aestheticApproval'])
         self.assertEqual((self.project / 'director-plan.json').read_text(encoding='utf-8'), old_plan)
 
-    def test_creation_missing_document_does_not_write_context_or_relabel_project(self):
-        _, last = self.write_bundle()
-        last.unlink()
+    def test_creation_missing_core_document_does_not_write_or_relabel_project(self):
+        self.write_bundle()
+        manifest_path = self.root / requirements.MANIFEST
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        manifest["documents"].insert(0, {"id": "entry", "title": "Required core", "path": "SKILL.md"})
+        manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
         self.project.mkdir()
         config = self.project / 'project.json'
         config.write_text('{"keep":"original"}', encoding='utf-8')
@@ -120,6 +131,26 @@ class RequirementsIntegrationTests(unittest.TestCase):
             production_entry.attach_creation_context(self.project, {'resolved_profile': 'user-ui'}, root=self.root)
         self.assertEqual(config.read_bytes(), before)
         self.assertFalse((self.project / 'project-style-context.json').exists())
+
+    def test_production_keeps_missing_research_on_demand_without_loading_it(self):
+        _, last = self.write_bundle()
+        last.unlink()
+        entry = self.root / 'SKILL.md'
+        entry.write_text('当前入口全文，不可以只读取标题。', encoding='utf-8')
+        manifest_path = self.root / requirements.MANIFEST
+        manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+        manifest['documents'].insert(0, {'id': 'entry', 'title': 'Core entry', 'path': 'SKILL.md'})
+        manifest_path.write_text(json.dumps(manifest), encoding='utf-8')
+        report = director.prepare(self.source, self.project, root=self.root)
+        context = director.load_json(self.project / 'director-context.json')
+        self.assertEqual(report['mode'], 'production')
+        self.assertEqual(context['requirements']['document_count'], 1)
+        self.assertEqual(context['requirements']['documents'][0]['text'], entry.read_text(encoding='utf-8'))
+        self.assertEqual(len(context['requirements']['on_demand']), 2)
+        self.assertNotIn('reading', context['requirements'])
+        self.assertNotIn('source_study', context)
+        with self.assertRaisesRegex(ValueError, 'Requirement document.*missing'):
+            director.prepare(self.source, self.base / 'research', root=self.root, mode='research')
 
 
 class PackagedRequirementsIntegrationTests(unittest.TestCase):
@@ -131,7 +162,7 @@ class PackagedRequirementsIntegrationTests(unittest.TestCase):
             source = folder / 'source.txt'
             source.write_text('打开完整材料，观察具体变化，再把结果交给下一步。', encoding='utf-8')
             project = folder / 'project'
-            director.prepare(source, project, profile='fangmu', reference='arun-membership')
+            director.prepare(source, project, profile='fangmu', reference='arun-membership', mode='research')
             context = director.load_json(project / 'director-context.json')
             resolution = style_registry.resolve(project, 'fangmu', root=director.ROOT)
         self.assertEqual(context['requirements']['documents'], expected['documents'])

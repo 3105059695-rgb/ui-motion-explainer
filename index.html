@@ -57,7 +57,7 @@
   <a class="skip" href="#layers">跳到制作与效果库</a>
   <main>
     <header>
-      <p class="eyebrow">UI MOTION FUSION · 2026.11.06.1</p>
+      <p class="eyebrow">UI MOTION FUSION · 2026.11.06.2</p>
       <h1>我的 UI 动效剪辑</h1>
       <p class="intro">默认沿用下方已认可正文的具体 UI 外观，跨窗口保持，沿此精修质感；Fred 原片作为补充。根据口播重新组织本期材料、构图与动作，效果库负责实现。AIGC 画风与人物身份单独保留。</p>
       <div class="entry"><code class="call">$ui-motion-fusion</code><a href="assets/reference-atlas/index.html">先看全部视频总览</a><a href="#library">打开效果库</a><a href="SKILL.md">打开统一技能入口</a><a href="references/global-use.md">在其他对话中调用</a><a href="references/engine-routing.md#完整场景制作">从完整场景绑定口播并制作</a></div>
@@ -108,20 +108,20 @@
       </ul>
     </section>
     <section class="capabilities" id="requirements" aria-labelledby="requirements-heading">
-      <h2 id="requirements-heading">新窗口先完整读取现行要求</h2>
-      <p>以下是当前制作要求的全文清单，各条款只在对应原文件维护。AI 从 <code>scripts/ui.py requirements --part 1</code> 开始，按页末命令读到最后一页，再进入制作；输出被截断要补读，目录和摘要不算全文。</p>
-      <p>历史研究与案例保留作依据，源码用于实际制作；它们不会另设全局审美。读完要求后仍要查看真实参考、选取素材并落实到时间线。</p>
+      <h2 id="requirements-heading">新窗口从现行审美和本期口播开始</h2>
+      <p>完整读取 <a href="SKILL.md">SKILL.md</a> 和 <a href="references/aesthetic-preferences.md">当前审美</a>，运行 <code>ui.py direct -- prepare --script 口播.txt --project 工程目录</code>，从整库候选选择实际能力。调用已有源码，绑定本期对象、素材和语音时间，不重新研究全部原片。</p>
+      <p>下面保留专题全文供按需查阅；人物、AIGC、原片研究等按本期使用范围读取。新增手法或明确研究原片时进入 <code>--mode research</code>，已学会的能力直接使用。</p>
       <ul class="links"><li><a href="SKILL.md">01 · 统一入口与全文读取</a></li><li><a href="references/aesthetic-preferences.md">02 · 已确认 UI、质感、开头、声音与 AIGC 画风</a></li><li><a href="references/workflow.md">03 · 制作阶段、原稿原声、来源和交付</a></li><li><a href="references/script-visual-planning.md">04 · 口播理解、真实材料与画面设计</a></li><li><a href="references/broll-preferences.md">05 · 不同语境的 B-roll、漫画表演与偏好条件</a></li><li><a href="references/source-study-guide.md">06 · 逐句研究与参考证据的使用</a></li><li><a href="references/selection-workflow.md">07 · 整库发现、选择与实际应用</a></li><li><a href="references/library.md">08 · 全部能力家族与实现状态</a></li><li><a href="references/semantic-directing.md">09 · 语义配方到实际源码的接线</a></li><li><a href="references/reference-replication.md">10 · 整片参考与复刻范围</a></li><li><a href="references/style-profiles.md">11 · 画风、人物身份和历史范围</a></li><li><a href="references/aigc-directing.md">12 · AIGC 的使用、画风、动作与剪辑节奏</a></li><li><a href="references/anime-video-generation.md">13 · 生成接口、请求状态与费用边界</a></li><li><a href="references/presenter-editing.md">14 · 数字人、真实素材与合成</a></li><li><a href="references/engine-routing.md">15 · 实际后端、创建与导出接口</a></li><li><a href="references/director-plan-contract.md">16 · 同一导演计划、实现证据与时间线</a></li><li><a href="references/visual-quality.md">17 · 实际画面、声音检查与返修</a></li><li><a href="references/module-map.md">18 · 规则唯一归属与内部资源分类</a></li></ul>
     </section>
     <nav aria-label="制作目录">
-      <a href="#requirements">开工全文</a><a href="#workflow">01 主流程</a><a href="#library">02 可用效果库</a><a href="#history">03 参考与历史</a>
+      <a href="#requirements">制作入口</a><a href="#workflow">01 主流程</a><a href="#library">02 可用效果库</a><a href="#history">03 参考与历史</a>
     </nav>
     <div id="layers">
       <section class="layer" id="workflow" aria-labelledby="workflow-heading">
         <div class="number" aria-hidden="true">01</div>
         <div>
           <h2 id="workflow-heading"><a href="references/workflow.md">主流程 →</a></h2>
-          <p>先通读整篇口播，结合上下文、因果与情绪，使用下方秋芝研究中的相关原句和实际画面证据理解材料选择，再进入效果库构思本期画面。</p>
+          <p>先通读整篇口播，结合上下文、因果与情绪检索整个效果库，选择能讲清本期内容的能力并绑定素材和时间。历史研究保留为查源依据，日常制作直接调用已实现的动作。</p>
           <ul class="links"><li><a href="references/workflow.md">读取制作流程</a></li><li><a href="references/selection-workflow.md">口播 → 候选 → 实际选用 → 工程与成片</a></li><li><a href="docs/reference-library.md">参考数量与当前可用范围</a></li></ul>
           <div class="resources" id="source-study">
             <h3><a href="references/evidence/qiuzhi2046-study/index.json">秋芝四片逐句对照 →</a></h3>
@@ -135,6 +135,7 @@
         <div class="number" aria-hidden="true">02</div>
         <div>
           <h2 id="library-heading"><a href="references/library.md">可用效果库 →</a></h2>
+          <p><strong><a href="assets/agent-editorial/capabilities.html">直接播放参数化能力，调整对象数量与时间 →</a></strong> 原创示意随公开包提供，换电脑无需原视频即可查看。<code>ui.py capabilities list/search/inspect</code> 搜索整库；条目分别标明参数接口、源码适配、仅参考或缺失，不把目录数量当作已实现效果数量。</p>
           <p>这里提供实现当前已认可 UI 外观的设计、素材组织和动作。按本段表达选择构图、材料形态、窗口组织、字级、层次和动作，查看实际展示与源码再改编。库中条目逐项选择，保留各自验证与认可状态。</p>
           <ul class="links"><li><a href="references/library.md">按表达任务选能力</a></li><li><a href="references/capability-catalog.json">结构化能力目录</a></li><li><a href="references/engine-routing.md">引擎与资源路由</a></li><li><a href="references/resource-registry.json">14 个实际资源模块</a></li><li><a href="references/backend-guides.json">42 类内部工具指南</a></li></ul>
           <div class="resources">
@@ -187,7 +188,7 @@
     </div>
     <footer>
       <p>这是本机离线导航。Markdown 文档和 JSON 目录可交给 Agent 读取；本页不加载播放器或远程资源。</p>
-      <p>规则版本 2026.11.06.1 · 整体设计与底层动作分开核对，每项引用对应自己的来源和本期实现。换电脑使用含参考的私用完整包，自动接续全片图集、原片与演示素材；公开包缺件会明确报告。实际画面对照、声音检查与用户认可分别记录。</p>
+      <p>版本 2026.11.06.2 · 整体设计与底层动作分开核对，每项引用对应自己的来源和本期实现。公开包自带生产源码、当前样式、字体和可运行能力预览；原视频作为可选研究资料，不是日常制作依赖。实际画面对照、声音检查与用户认可分别记录。</p>
     </footer>
   </main>
 </body>

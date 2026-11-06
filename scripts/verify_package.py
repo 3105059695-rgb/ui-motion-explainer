@@ -15,11 +15,16 @@ def main():
     args = parser.parse_args()
     try:
         report = verify_release(args.root, exact=not args.installed)
+        if (args.root / 'references/capability-catalog.json').is_file():
+            from capability_catalog import readiness
+            report['production_readiness'] = readiness(args.root)
         report['reference_readiness'] = reference_status(args.root)
     except (ValueError, KeyError, OSError) as error:
         print(json.dumps({'ok': False, 'error': str(error)}, ensure_ascii=False, indent=2))
         return 1
     print(json.dumps(report, ensure_ascii=False, indent=2))
+    if report.get('production_readiness', {}).get('ready') is False:
+        return 2
     if args.references and report['reference_readiness']['required'] and not report['reference_readiness']['ready']:
         return 2
     return 0

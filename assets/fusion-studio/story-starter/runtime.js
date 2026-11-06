@@ -141,7 +141,8 @@
           if(result&&typeof result.then==='function')throw new Error('Scene drawing must be synchronous after ready(): '+segment.scene);
           totalCalls++;
           if(trace.length<2000)trace.push({segment:segment.id,scene:segment.scene||null,animationTime:t,mediaTime:mt,layout:layout.mode,material_shots:materials,
-            source_design:segment.scene&&host.scenes[segment.scene].sourceDesign?{...host.scenes[segment.scene].sourceDesign}:null,source_execution:result?.sourceTime!==undefined?result:null});
+            source_design:segment.scene&&host.scenes[segment.scene].sourceDesign?{...host.scenes[segment.scene].sourceDesign}:null,source_execution:result?.sourceTime!==undefined?result:null,
+            capability_execution:Array.isArray(result?.capabilities)?result.capabilities:null});
         };
         if(layout.mode==='presenter-opening')host.opening({...layout,frame:host.asset(layout.presenter),captions},draw);
         else host.frame(draw);

@@ -598,7 +598,7 @@ class DirectorTests(unittest.TestCase):
                      'commands': dict(director.selection.SCENE_COMMANDS), 'runtime_verified_this_run': False}
         folder = self.root / 'complete-scene-project'
         with patch.object(director.selection, 'scene_directory', return_value=directory):
-            director.prepare(self.script, folder, root=self.root)
+            director.prepare(self.script, folder, root=self.root, mode='research')
         context = director.load_json(folder / 'director-context.json')
         self.assertEqual(directory, context['production']['complete_scenes'])
         self.assertIsNone(context['style']['profile'])
@@ -620,7 +620,7 @@ class DirectorTests(unittest.TestCase):
              'exists': False, 'scope': 'opening only', 'current_usage': 'motion only; current UI governs',
              'source_range': [0, 5], 'boundaries': ['no whole-film approval'], 'implementations': [code]}],
             'available_profiles': [{'confirmed_baselines': [{'id': 'unrelated-account'}]}]}
-        context = director.production_context(resolution, self.root)
+        context = director.research_production_context(resolution, self.root)
         self.assertEqual(len(context['approved_examples']), 1)
         sample = context['approved_examples'][0]
         self.assertEqual(sample['reuse_scope'], 'motion only; current UI governs')
@@ -644,7 +644,7 @@ class DirectorTests(unittest.TestCase):
         with patch.object(director.source_study, 'directing_context', return_value=study), \
              patch.object(director.selection, 'build_selection_context', return_value=candidates), \
              patch.object(director.selection, 'render_selection_brief', return_value='candidate brief'):
-            director.prepare(self.script, folder, root=self.root)
+            director.prepare(self.script, folder, root=self.root, mode='research')
         context = director.load_json(folder / 'director-context.json')
         self.assertEqual(context['source_study']['catalog_count'], 3)
         self.assertEqual(context['source_study']['count'], 1)
@@ -708,28 +708,37 @@ class DirectorTests(unittest.TestCase):
 class PackagedVisualBaseline(unittest.TestCase):
     def test_fresh_prepare_prioritizes_approved_body_without_filtering_effects(self):
         root = Path(director.__file__).resolve().parents[1]
-        expected_library = director.selection.library_directory(root=root)
+        import capability_catalog
+        expected_library = capability_catalog.listing(root=root)
         with tempfile.TemporaryDirectory() as folder:
             project = Path(folder)
             script = project / 'narration.txt'
             script.write_text('把这份资料分给三个任务，同时处理后再看实际结果。', encoding='utf-8')
-            director.prepare(script, project, profile='adiao', root=root)
+            with patch.object(director.source_study, 'directing_context', side_effect=AssertionError('Research must be explicit')), \
+                 patch.object(director.reference_overviews, 'load', side_effect=AssertionError('No raw-video scan in production')), \
+                 patch.object(director.reference_readiness, 'report', side_effect=AssertionError('No archive gate in production')), \
+                 patch.object(director.requirements, 'load', side_effect=AssertionError('No full-document bundle in production')):
+                report = director.prepare(script, project, profile='adiao', root=root)
             context = director.load_json(project / 'director-context.json')
             brief = (project / 'director-brief.md').read_text(encoding='utf-8')
         direction = context['style']['reference_directions'][0]
         self.assertEqual(direction['id'], 'approved-body-default-20261028')
-        self.assertEqual(len(direction['visual_anchors']), 4)
-        for anchor in direction['visual_anchors']:
-            self.assertIn(anchor['path'], brief)
-        self.assertLess(brief.index('## 当前 UI 外观基准'), brief.index('## 完整效果库入口'))
-        library = context['selection']['library_directory']
-        self.assertFalse(library['truncated'])
-        self.assertFalse(library['ranking_applied'])
-        self.assertEqual({(row['kind'], row['id']) for row in library['entries']},
-                         {(row['kind'], row['id']) for row in expected_library['entries']})
-        self.assertEqual(library['entry_count'], expected_library['entry_count'])
+        self.assertNotIn('visual_anchors', direction)
+        self.assertLess(brief.index('## 当前 UI 与原声'), brief.index('## 整个效果库仍可选'))
+        self.assertEqual(context['capabilities']['summary']['entry_count'], expected_library['entry_count'])
+        self.assertGreaterEqual(expected_library['entry_count'], 541)
+        self.assertIn('ui.py capabilities list', brief)
+        self.assertIn('短候选不是白名单', brief)
+        self.assertTrue(context['capabilities']['units'])
+        self.assertNotIn('source_study', context)
+        self.assertNotIn('reference_overviews', context['production'])
+        self.assertNotIn('selection', context)
+        self.assertEqual(report['mode'], 'production')
         reading = {Path(row['path']).resolve() for row in context['required_reading']}
-        self.assertIn((root / 'assets/style-calibration/approved-body/motion.mp4').resolve(), reading)
+        self.assertEqual(reading, {(root / 'SKILL.md').resolve(),
+                                   (root / 'references/aesthetic-preferences.md').resolve()})
+        self.assertEqual(context['style']['preferences']['text'],
+                         (root / 'references/aesthetic-preferences.md').read_bytes().decode('utf-8-sig'))
 
 
 if __name__ == '__main__':

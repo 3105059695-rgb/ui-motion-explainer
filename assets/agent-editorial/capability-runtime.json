@@ -1,0 +1,546 @@
+{
+  "schema": "ui-motion-fusion/capability-runtime@1",
+  "version": "1.0.0",
+  "runtime": "assets/agent-editorial/capability-runtime.js",
+  "source_path_base": "skill-root",
+  "coordinate_system": {
+    "rect": "Canvas absolute pixels",
+    "internal": "1200 x 650 logical pixels within event.rect",
+    "crop": "Source media pixels",
+    "time": "event.at/end: scene-local seconds; cues: event-local seconds",
+    "presenter": "regions/protectedRects and overlay.rect are canvas pixels; nested overlay time is presenter-event-local",
+    "camera": "from/to use 1200 x 650 logical pixels; existing resultPullback scale/translation math",
+    "reveal": "axis x/y clips the logical viewport and moves a cover band using existing occlusionReveal math"
+  },
+  "scope": "Five parameterized authored expressions plus one explicit retained-design adapter. Other catalog items remain references or source adapters until separately implemented.",
+  "capabilities": [
+    {
+      "id": "material-focus",
+      "label": "材料展开、局部聚焦与收至证据区",
+      "semantic_use": "先展示真实材料，再放大与本句口播有关的局部，最后保留为旁证，可与结果或步骤事件叠放。",
+      "relations": [
+        "evidence",
+        "focus",
+        "handoff"
+      ],
+      "parameters": {
+        "asset": "本期asset ID",
+        "crop": "可选，素材像素 x/y/w/h",
+        "focusCrop": "可选，素材像素局部",
+        "frameRect": "1200×650事件逻辑坐标",
+        "dockRect": "可选，1200×650事件逻辑坐标",
+        "cues": "focus/return(optional)/dock: event-local seconds; return restores the initial media crop",
+        "camera": "{from?:rect,to:rect,at?,duration?,returnAt?,returnDuration?}; internal logical pixels",
+        "reveal": "{axis:'x'|'y',at?,duration?,bandSize?,bandColor?}; actual Canvas clip and cover band"
+      },
+      "example": {
+        "at": 0,
+        "end": 8,
+        "rect": {
+          "x": 60,
+          "y": 80,
+          "w": 1800,
+          "h": 900
+        },
+        "transition": 0.7,
+        "id": "minutes-proof",
+        "type": "material-focus",
+        "title": "把会议纪要里的行动找出来",
+        "asset": "minutes",
+        "focusCrop": {
+          "x": 90,
+          "y": 180,
+          "w": 960,
+          "h": 620
+        },
+        "dockRect": {
+          "x": 24,
+          "y": 175,
+          "w": 400,
+          "h": 300
+        },
+        "caption": "本期演示纪要",
+        "cues": {
+          "focus": 2,
+          "dock": 5
+        }
+      },
+      "source_provenance": [
+        {
+          "path": "assets/agent-editorial/source/body-b.js",
+          "symbol": "materialFrame / materialProof / cropAsset",
+          "adaptation": "保留圆角有厚度素材框、cubic-out展开收至证据位，解除原产品和原坐标绑定。"
+        },
+        {
+          "path": "assets/editing-kit/editing-kit.js",
+          "symbol": "resultPullback / occlusionReveal",
+          "adaptation": "Existing smooth progress and rectangle-to-transform math, actually applied to Canvas transforms and clips."
+        }
+      ],
+      "type": "material-focus",
+      "status": "executable-event",
+      "execution_state": "direct",
+      "adapter_kind": "native-event",
+      "runtime_tested_this_run": false,
+      "source_files": [
+        "assets/agent-editorial/capability-runtime.js",
+        "assets/agent-editorial/agent-editorial.js",
+        "assets/agent-editorial/motion-core.js",
+        "assets/agent-editorial/source/body-b.js",
+        "assets/editing-kit/editing-kit.js"
+      ],
+      "call": "python scripts/ui.py events inspect --id material-focus"
+    },
+    {
+      "id": "input-result",
+      "label": "多份输入归整为一个可继续编辑的结果",
+      "semantic_use": "从多份资料或任务提取结构化结果，保留输入到输出的因果关系，支持结果补充或修订。",
+      "relations": [
+        "result",
+        "handoff",
+        "operation"
+      ],
+      "parameters": {
+        "inputs": "[{id,label,detail?,asset?,from?,to?}]，数量可变",
+        "output": "{title,lines?,asset?,revision?,rect?}",
+        "columns": "输入列数，可选",
+        "cues": "gather/result/revise 为事件内秒数",
+        "camera": "{from?:rect,to:rect,at?,duration?,returnAt?,returnDuration?}; internal logical pixels",
+        "reveal": "{axis:'x'|'y',at?,duration?,bandSize?,bandColor?}; actual Canvas clip and cover band",
+        "inputArea": "Optional x/y/w/h in event logical coordinates; controls input grid area"
+      },
+      "example": {
+        "at": 0,
+        "end": 8,
+        "rect": {
+          "x": 60,
+          "y": 80,
+          "w": 1800,
+          "h": 900
+        },
+        "transition": 0.7,
+        "id": "extract-actions",
+        "type": "input-result",
+        "title": "三条发言，提取三个行动",
+        "inputs": [
+          {
+            "id": "task-a",
+            "label": "整理竞品",
+            "detail": "小林提出"
+          },
+          {
+            "id": "task-b",
+            "label": "确认预算",
+            "detail": "陈经理补充"
+          },
+          {
+            "id": "task-c",
+            "label": "制作首版",
+            "detail": "设计组承接"
+          }
+        ],
+        "output": {
+          "title": "可执行待办",
+          "lines": [
+            "竞品清单",
+            "预算确认",
+            "第一版设计"
+          ],
+          "revision": "每项都需要负责人和日期"
+        },
+        "cues": {
+          "gather": 1.5,
+          "result": 3.6,
+          "revise": 6
+        }
+      },
+      "source_provenance": [
+        {
+          "path": "assets/agent-editorial/source/body-a.js",
+          "symbol": "pop / iconFile / claude messy-to-clear / workbuddy split-deliver",
+          "adaptation": "保留quartic pop、纸张实体、乱序归整、结果交付形态，输入数量与文本可变。"
+        },
+        {
+          "path": "assets/editing-kit/editing-kit.js",
+          "symbol": "resultPullback / occlusionReveal",
+          "adaptation": "Existing smooth progress and rectangle-to-transform math, actually applied to Canvas transforms and clips."
+        }
+      ],
+      "type": "input-result",
+      "status": "executable-event",
+      "execution_state": "direct",
+      "adapter_kind": "native-event",
+      "runtime_tested_this_run": false,
+      "source_files": [
+        "assets/agent-editorial/capability-runtime.js",
+        "assets/agent-editorial/agent-editorial.js",
+        "assets/agent-editorial/motion-core.js",
+        "assets/agent-editorial/source/body-a.js",
+        "assets/editing-kit/editing-kit.js"
+      ],
+      "call": "python scripts/ui.py events inspect --id input-result"
+    },
+    {
+      "id": "parallel-groups",
+      "label": "对象分组、并行推进与逐项完成",
+      "semantic_use": "把任意数量对象按负责人或职责归组，并行展示状态或完成度；同一对象ID在移动前后保持连续。",
+      "relations": [
+        "combine",
+        "operation",
+        "result"
+      ],
+      "parameters": {
+        "objects": "[{id,label,detail?,group,asset?,from?,to?,delay?,speed?}]",
+        "groups": "[{id,label,detail?,columns?}]",
+        "columns": "初始排列列数",
+        "groupColumns": "分组区域列数",
+        "cues": "group/run/complete 为事件内秒数",
+        "camera": "{from?:rect,to:rect,at?,duration?,returnAt?,returnDuration?}; internal logical pixels",
+        "reveal": "{axis:'x'|'y',at?,duration?,bandSize?,bandColor?}; actual Canvas clip and cover band",
+        "showProgress": "false: only group/move objects, without implying task progress or completion",
+        "groupArea": "Optional x/y/w/h in the 1200x650 event coordinate system; controls group panel and object grid area"
+      },
+      "example": {
+        "at": 0,
+        "end": 8,
+        "rect": {
+          "x": 60,
+          "y": 80,
+          "w": 1800,
+          "h": 900
+        },
+        "transition": 0.7,
+        "id": "assign-actions",
+        "type": "parallel-groups",
+        "title": "每件事都有承接人",
+        "objects": [
+          {
+            "id": "task-a",
+            "label": "竞品清单",
+            "detail": "周一 18:00",
+            "group": "lin"
+          },
+          {
+            "id": "task-b",
+            "label": "预算确认",
+            "detail": "周二 12:00",
+            "group": "chen"
+          },
+          {
+            "id": "task-c",
+            "label": "第一版设计",
+            "detail": "周三 17:00",
+            "group": "design"
+          }
+        ],
+        "groups": [
+          {
+            "id": "lin",
+            "label": "小林"
+          },
+          {
+            "id": "chen",
+            "label": "陈经理"
+          },
+          {
+            "id": "design",
+            "label": "设计组"
+          }
+        ],
+        "cues": {
+          "group": 1.8,
+          "run": 3.6,
+          "complete": 6.5
+        }
+      },
+      "source_provenance": [
+        {
+          "path": "assets/agent-editorial/source/body-a.js",
+          "symbol": "codex parallel task rows / progress / pop",
+          "adaptation": "保留分流、黑色任务实体、紫色推进与完成勾选；对象和组数量不受原三个任务约束。"
+        },
+        {
+          "path": "assets/agent-editorial/source/body-b.js",
+          "symbol": "kimi per-unit deterministic iteration",
+          "adaptation": "循环由本期对象数组驱动，无原300个单元限制。"
+        },
+        {
+          "path": "assets/editing-kit/editing-kit.js",
+          "symbol": "resultPullback / occlusionReveal",
+          "adaptation": "Existing smooth progress and rectangle-to-transform math, actually applied to Canvas transforms and clips."
+        }
+      ],
+      "type": "parallel-groups",
+      "status": "executable-event",
+      "execution_state": "direct",
+      "adapter_kind": "native-event",
+      "runtime_tested_this_run": false,
+      "source_files": [
+        "assets/agent-editorial/capability-runtime.js",
+        "assets/agent-editorial/agent-editorial.js",
+        "assets/agent-editorial/motion-core.js",
+        "assets/agent-editorial/source/body-a.js",
+        "assets/agent-editorial/source/body-b.js",
+        "assets/editing-kit/editing-kit.js"
+      ],
+      "call": "python scripts/ui.py events inspect --id parallel-groups"
+    },
+    {
+      "id": "compare-change",
+      "label": "同一对象前后变化与多处同步更新",
+      "semantic_use": "通过稳定对象ID展示日期、状态、数值或文字的前后变化，支持多对象同一cue同步变化、增删与位置转换。",
+      "relations": [
+        "compare",
+        "sync",
+        "operation"
+      ],
+      "parameters": {
+        "before": "[{id,label,detail?,asset?,from?}]",
+        "after": "[{id,label,detail?,asset?,to?}]",
+        "columns": "排列列数",
+        "beforeLabel": "变化前标签",
+        "afterLabel": "变化后标签",
+        "summary": "变化后的结论",
+        "showPrevious": "是否在卡底保留旧label",
+        "cues": "change/compare 为事件内秒数；stagger=0则同时更新",
+        "camera": "{from?:rect,to:rect,at?,duration?,returnAt?,returnDuration?}; internal logical pixels",
+        "reveal": "{axis:'x'|'y',at?,duration?,bandSize?,bandColor?}; actual Canvas clip and cover band",
+        "comparisonArea": "Optional x/y/w/h in event logical coordinates; controls comparison grid area",
+        "highlightFill": "Optional updated surface fill; defaults to approved white, not full purple",
+        "highlightAccent": "Optional thin updated-object accent; defaults to approved purple"
+      },
+      "example": {
+        "at": 0,
+        "end": 8,
+        "rect": {
+          "x": 60,
+          "y": 80,
+          "w": 1800,
+          "h": 900
+        },
+        "transition": 0.7,
+        "id": "date-sync",
+        "type": "compare-change",
+        "title": "改一次日期，相关视图一起更新",
+        "stagger": 0,
+        "before": [
+          {
+            "id": "task",
+            "label": "待办：周三",
+            "detail": "第一版设计"
+          },
+          {
+            "id": "calendar",
+            "label": "日历：周三",
+            "detail": "第一版设计"
+          },
+          {
+            "id": "reminder",
+            "label": "提醒：周三",
+            "detail": "第一版设计"
+          }
+        ],
+        "after": [
+          {
+            "id": "task",
+            "label": "待办：周四",
+            "detail": "第一版设计"
+          },
+          {
+            "id": "calendar",
+            "label": "日历：周四",
+            "detail": "第一版设计"
+          },
+          {
+            "id": "reminder",
+            "label": "提醒：周四",
+            "detail": "第一版设计"
+          }
+        ],
+        "cues": {
+          "change": 3,
+          "compare": 5.5
+        },
+        "summary": "同一事项只维护一份日期"
+      },
+      "source_provenance": [
+        {
+          "path": "assets/agent-editorial/source/body-a.js",
+          "symbol": "workbuddy revise / retained editable output",
+          "adaptation": "保留同一实体的修订强调，解除固定原文与布局；按ID追踪增删变化。"
+        },
+        {
+          "path": "assets/agent-editorial/motion-core.js",
+          "symbol": "progress / deterministic clock",
+          "adaptation": "事件cue和stagger控制同步与错落，不运行计时器。"
+        },
+        {
+          "path": "assets/editing-kit/editing-kit.js",
+          "symbol": "resultPullback / occlusionReveal",
+          "adaptation": "Existing smooth progress and rectangle-to-transform math, actually applied to Canvas transforms and clips."
+        }
+      ],
+      "type": "compare-change",
+      "status": "executable-event",
+      "execution_state": "direct",
+      "adapter_kind": "native-event",
+      "runtime_tested_this_run": false,
+      "source_files": [
+        "assets/agent-editorial/capability-runtime.js",
+        "assets/agent-editorial/agent-editorial.js",
+        "assets/agent-editorial/motion-core.js",
+        "assets/agent-editorial/source/body-a.js",
+        "assets/agent-editorial/motion-core.js",
+        "assets/editing-kit/editing-kit.js"
+      ],
+      "call": "python scripts/ui.py events inspect --id compare-change"
+    },
+    {
+      "id": "presenter-safe",
+      "label": "人物原帧与测量安全区内的素材能力组合",
+      "semantic_use": "保留完整人物视频，在明确测得的空白区域显示任意上述能力，保护人脸、身体和字幕区域。",
+      "relations": [
+        "evidence",
+        "focus",
+        "combine"
+      ],
+      "parameters": {
+        "presenter": "原始完整人物asset ID",
+        "regions": "画布绝对像素可用区域",
+        "protectedRects": "画布绝对像素人物与字幕保护区",
+        "overlays": "事件数组，rect为画布坐标，at/end相对本事件起点"
+      },
+      "example": {
+        "at": 0,
+        "end": 8,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 1920,
+          "h": 1080
+        },
+        "transition": 0.7,
+        "id": "presenter-evidence",
+        "type": "presenter-safe",
+        "presenter": "presenter",
+        "regions": [
+          {
+            "x": 1040,
+            "y": 100,
+            "w": 800,
+            "h": 760
+          }
+        ],
+        "protectedRects": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1000,
+            "h": 1080
+          },
+          {
+            "x": 0,
+            "y": 900,
+            "w": 1920,
+            "h": 180
+          }
+        ],
+        "overlays": [
+          {
+            "id": "safe-minutes",
+            "type": "material-focus",
+            "at": 0,
+            "end": 8,
+            "rect": {
+              "x": 1040,
+              "y": 100,
+              "w": 800,
+              "h": 760
+            },
+            "asset": "minutes",
+            "title": "会议纪要",
+            "cues": {
+              "focus": 2,
+              "dock": 5
+            }
+          }
+        ]
+      },
+      "source_provenance": [
+        {
+          "path": "assets/agent-editorial/agent-editorial.js",
+          "symbol": "opening / safeOverlay / safeRegions",
+          "adaptation": "直接调用已有完整人物帧和矩形相减保护算法，素材动画复用同一事件运行器。"
+        }
+      ],
+      "type": "presenter-safe",
+      "status": "executable-event",
+      "execution_state": "direct",
+      "adapter_kind": "native-event",
+      "runtime_tested_this_run": false,
+      "source_files": [
+        "assets/agent-editorial/capability-runtime.js",
+        "assets/agent-editorial/agent-editorial.js",
+        "assets/agent-editorial/motion-core.js",
+        "assets/agent-editorial/agent-editorial.js"
+      ],
+      "call": "python scripts/ui.py events inspect --id presenter-safe"
+    },
+    {
+      "id": "source-design",
+      "label": "既有十套完整源码设计适配器",
+      "semantic_use": "已适合本稿的完整设计可以作为一个事件组合进来，保留其原有状态顺序与结构限制。",
+      "relations": [
+        "operation",
+        "result"
+      ],
+      "parameters": {
+        "binding": "完整 SourceDesigns.createScene binding；使用 designs scaffold 获取槽位",
+        "rect": "画布绝对像素视口"
+      },
+      "example": {
+        "id": "retained-design",
+        "type": "source-design",
+        "at": 0,
+        "end": 8,
+        "rect": {
+          "x": 60,
+          "y": 80,
+          "w": 1800,
+          "h": 900
+        },
+        "binding": {
+          "design": "connected-delivery",
+          "duration": 8,
+          "sourceRange": [
+            71.2,
+            95.2
+          ],
+          "cues": {},
+          "copy": {},
+          "media": {},
+          "logos": {}
+        }
+      },
+      "source_provenance": [
+        {
+          "path": "assets/agent-editorial/source-designs.js",
+          "symbol": "createScene",
+          "adaptation": "直接执行原BodyA/B，不宣称可任意改对象数量或原结构；示例故意留空绑定，必须通过 designs scaffold 完成本稿槽位。"
+        }
+      ],
+      "type": "source-design",
+      "status": "adapter-executable",
+      "execution_state": "direct",
+      "adapter_kind": "source-design",
+      "runtime_tested_this_run": false,
+      "source_files": [
+        "assets/agent-editorial/capability-runtime.js",
+        "assets/agent-editorial/agent-editorial.js",
+        "assets/agent-editorial/motion-core.js",
+        "assets/agent-editorial/source-designs.js"
+      ],
+      "call": "python scripts/ui.py events inspect --id source-design"
+    }
+  ]
+}

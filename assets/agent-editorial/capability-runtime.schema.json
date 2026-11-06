@@ -1,0 +1,433 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ui-motion-fusion/capability-composition@1",
+  "title": "Narration-bound composable capability events",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "width",
+    "height",
+    "fps",
+    "segments"
+  ],
+  "properties": {
+    "schema": {
+      "const": "ui-motion-fusion/capability-composition@1"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "width": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "height": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "fps": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "audio": {
+      "type": "string"
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "src"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "image",
+              "video"
+            ]
+          },
+          "src": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "captions": {
+      "type": "array"
+    },
+    "segments": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "duration",
+          "events"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "layout": {
+            "type": "object"
+          },
+          "events": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/$defs/event"
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "rect": {
+      "type": "object",
+      "required": [
+        "x",
+        "y",
+        "w",
+        "h"
+      ],
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "w": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "h": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    },
+    "object": {
+      "type": "object",
+      "required": [
+        "id",
+        "label"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "detail": {
+          "type": "string"
+        },
+        "asset": {
+          "type": "string"
+        },
+        "group": {
+          "type": "string"
+        },
+        "from": {
+          "$ref": "#/$defs/rect"
+        },
+        "to": {
+          "$ref": "#/$defs/rect"
+        }
+      }
+    },
+    "event": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "at",
+        "end"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "enum": [
+            "material-focus",
+            "input-result",
+            "parallel-groups",
+            "compare-change",
+            "presenter-safe",
+            "source-design"
+          ]
+        },
+        "at": {
+          "type": "number",
+          "minimum": 0
+        },
+        "end": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "rect": {
+          "$ref": "#/$defs/rect"
+        },
+        "cues": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "transition": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "stagger": {
+          "type": "number",
+          "minimum": 0
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/object"
+          }
+        },
+        "objects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/object"
+          }
+        },
+        "before": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/object"
+          }
+        },
+        "after": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/object"
+          }
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/object"
+          }
+        },
+        "crop": {
+          "$ref": "#/$defs/rect"
+        },
+        "focusCrop": {
+          "$ref": "#/$defs/rect"
+        },
+        "frameRect": {
+          "$ref": "#/$defs/rect"
+        },
+        "dockRect": {
+          "$ref": "#/$defs/rect"
+        },
+        "camera": {
+          "type": "object",
+          "required": [
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "$ref": "#/$defs/rect"
+            },
+            "to": {
+              "$ref": "#/$defs/rect"
+            },
+            "at": {
+              "type": "number",
+              "minimum": 0
+            },
+            "duration": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "returnAt": {
+              "type": "number",
+              "minimum": 0
+            },
+            "returnDuration": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          }
+        },
+        "reveal": {
+          "type": "object",
+          "required": [
+            "axis"
+          ],
+          "properties": {
+            "axis": {
+              "enum": [
+                "x",
+                "y"
+              ]
+            },
+            "at": {
+              "type": "number",
+              "minimum": 0
+            },
+            "duration": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "bandSize": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        },
+        "overlays": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/event"
+          }
+        },
+        "regions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rect"
+          }
+        },
+        "protectedRects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rect"
+          }
+        },
+        "groupArea": {
+          "$ref": "#/$defs/rect"
+        },
+        "inputArea": {
+          "$ref": "#/$defs/rect"
+        },
+        "comparisonArea": {
+          "$ref": "#/$defs/rect"
+        },
+        "showProgress": {
+          "type": "boolean"
+        },
+        "highlightFill": {
+          "type": "string"
+        },
+        "highlightAccent": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "material-focus"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "asset"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "input-result"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "inputs",
+              "output"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "parallel-groups"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "objects",
+              "groups"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "compare-change"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "before",
+              "after"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "presenter-safe"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "presenter",
+              "regions",
+              "protectedRects",
+              "overlays"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "source-design"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "binding"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "$comment": "The JS/Python validator additionally verifies time spans, cue order, IDs, asset references and original source-design binding constraints. JSON schema alone is not the execution gate."
+}

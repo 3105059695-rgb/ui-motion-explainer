@@ -2,7 +2,7 @@
 
 安装包只创建 `ui-motion-fusion` 一个入口。使用现有 Python 3.10+；安装器不下载 Python、浏览器、Node 或模型，不创建独立 runtime，不修改其他 Skill。渲染工具和服务凭证按实际制作任务另行配置。
 
-**另一台电脑需要同样的视觉参考，请用含参考的私用完整包。** 公开 GitHub 包只带 4 条公开 AIGC 图集，不能独自提供作者本机 20 条参考和 10 类完整原设计演示。完整包还带全片图集、连续原视频及 16 项原设计演示素材，全部以包内相对路径定位，不携带作者电脑的 `resources.local.json`。
+**公开包可以直接运行当前 UI 与已有能力。** 新窗口完整读入口和审美，按口播绑定公开实现，不必先重新研究所有参考视频。需要同样的历史原片研究时，额外使用私用完整包补充全片图集、连续原视频与原设计演示素材；全部用相对路径，不携带作者电脑的 `resources.local.json`。
 
 ## 首次安装
 
@@ -20,7 +20,7 @@ python -B -X utf8 install.py --target "D:/my-agent/skills/ui-motion-fusion"
 
 从下载目录运行安装器；不要先把文件覆盖到已有安装目录。目标已存在时，普通安装会退出并保留原文件。
 
-完整包中的 `references/resources.pack.json` 会被安装器自动识别，逐项核对哈希，再安装 `references/private-media/` 内的内容。安装结果单独报告 `reference_readiness`；若仅代码安装成功而参考缺失，命令退出码为 2，并列出补齐方向。以后从 GitHub 更新代码会保留这套私人参考。
+完整包中的 `references/resources.pack.json` 会被安装器自动识别，逐项核对哈希，再安装 `references/private-media/` 内的内容。安装结果分别报告生产能力与 `reference_readiness`；生产必需文件缺失会失败，私人历史原片缺失作为研究范围提示，不阻塞公开能力制作。以后从 GitHub 更新代码会保留这套私人参考。
 
 ## 更新已有安装
 
@@ -61,10 +61,10 @@ python -B -X utf8 install.py --update --replace-modified
 ```powershell
 python -B -X utf8 scripts/verify_package.py --installed
 python -B -X utf8 scripts/ui.py modules check
-python -B -X utf8 scripts/ui.py references check --require
+python -B -X utf8 scripts/ui.py capabilities check --require
 ```
 
-第一条验证受管文件哈希与公开必需资源；第二条检查模块入口；第三条要求实际参考齐全，当前应为 20 张总览、84 张细读图、20 条原片、16 项演示素材及 10 类完整设计资源。三条原本就缺失的外部历史视频另列。文件检查不等于已观看、会运用或审美满意。
+第一条验证受管文件哈希与公开必需资源；第二条检查模块入口；第三条检查实际生产能力与必需源码。需审计历史档案时另运行 `ui.py references check --require`，列出图集、原片和演示素材的实际缺失；该档案检查不作为日常制作门槛。文件检查不等于已观看、会运用或审美满意。
 
 已有安装只补参考时，也可运行 `python -B -X utf8 scripts/reference_bundle.py import --source <完整包解压根> --target <已安装Skill根>`。它仅合并允许的参考资源，不改变本机账号覆盖或把示例产品固定为新稿内容。
 

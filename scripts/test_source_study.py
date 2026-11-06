@@ -135,7 +135,7 @@ class SourceStudyTests(unittest.TestCase):
 
     def test_prepare_preserves_full_study_when_candidate_search_is_unavailable(self):
         project = self.root / 'project'
-        report = director.prepare(self.script, project, root=self.root)
+        report = director.prepare(self.script, project, root=self.root, mode="research")
         self.assertFalse(report['plan_authored'])
         context = director.load_json(project / 'director-context.json')
         study = context['source_study']
@@ -160,7 +160,7 @@ class SourceStudyTests(unittest.TestCase):
         candidates = {'segments': [{'methods': [{'id': 'F-M01'}]}]}
         with patch.object(director.selection, 'build_selection_context', return_value=candidates), \
              patch.object(director.selection, 'render_selection_brief', return_value='candidate brief'):
-            director.prepare(self.script, project, root=self.root)
+            director.prepare(self.script, project, root=self.root, mode="research")
         context = director.load_json(project / 'director-context.json')
         compact = next(row for row in context['source_study']['methods'] if row['id'] == 'F-M01')
         self.assertEqual(compact['implementation'], method['implementation'])
@@ -192,7 +192,7 @@ class SourceStudyTests(unittest.TestCase):
 
     def test_missing_study_data_is_explicit_without_breaking_legacy_prepare(self):
         (self.root / source_study.CATALOG_FILE).unlink()
-        report = director.prepare(self.script, self.root / 'project', root=self.root)
+        report = director.prepare(self.script, self.root / 'project', root=self.root, mode='research')
         self.assertTrue(any('Source-study' in w for w in report['warnings']))
         context = director.load_json(self.root / 'project/director-context.json')
         self.assertEqual(context['source_study']['methods'], [])
@@ -312,7 +312,7 @@ class SourceStudyTests(unittest.TestCase):
     def test_prepare_exposes_registered_sources_and_missing_new_data(self):
         records = self.register_fred_fixture()
         project = self.root / 'project'
-        director.prepare(self.script, project, root=self.root)
+        director.prepare(self.script, project, root=self.root, mode="research")
         context = director.load_json(project / 'director-context.json')
         source = next(s for s in context['source_study']['sources'] if s['id'] == 'fred-argon')
         self.assertTrue(source['alignment_exists'])
@@ -320,7 +320,7 @@ class SourceStudyTests(unittest.TestCase):
         self.assertTrue(any(m['id'] == 'F-M01' for m in source_study.method_records(self.root)))
         self.assertEqual(context['source_study']['catalog_count'], len(source_study.method_records(self.root)))
         (self.root / records[-1]['alignment']).unlink()
-        report = director.prepare(self.script, project, force=True, root=self.root)
+        report = director.prepare(self.script, project, force=True, root=self.root, mode="research")
         self.assertTrue(any('fred-argon' in w for w in report['warnings']))
         context = director.load_json(project / 'director-context.json')
         self.assertFalse(context['source_study']['all_sources_exist'])

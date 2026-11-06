@@ -961,8 +961,8 @@ class PackagedUnifiedProduction(unittest.TestCase):
             self.assertEqual(script.read_bytes(), original)
             self.assertFalse(report['plan_authored'])
             self.assertFalse(report['generation_submitted'])
-            self.assertIn('fred-ui-direction.md', {Path(p['path']).name
-                                                  for p in context['required_reading']})
+            self.assertEqual({'SKILL.md', 'aesthetic-preferences.md'},
+                             {Path(p['path']).name for p in context['required_reading']})
             preference_path = styles.ROOT / 'references/aesthetic-preferences.md'
             preferences = context['style']['preferences']
             self.assertEqual(preferences['text'], preference_path.read_bytes().decode('utf-8-sig'))
@@ -972,8 +972,8 @@ class PackagedUnifiedProduction(unittest.TestCase):
                 self.assertTrue(any(section in heading for heading in preferences['sections']), section)
             brief = (project / 'director-brief.md').read_text(encoding='utf-8')
             self.assertIn('context.style.preferences.text', brief)
-            self.assertIn('UI、AE 感、开头与禁忌', brief)
-            self.assertIn('完整开头事件', brief)
+            self.assertIn('完整原构图', brief)
+            self.assertIn('材质、排版和动作实现', brief)
 
 
 if __name__ == '__main__':

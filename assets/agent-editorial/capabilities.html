@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>可组合 UI 能力 · 实时预览</title>
+  <style>
+    :root{color-scheme:light;--ink:#0B0B0F;--paper:#F3F3F5;--line:#DBDBE0;--accent:#D6C2FF}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 "Microsoft YaHei",system-ui,sans-serif}header{padding:24px 32px 20px;background:#fff;border-bottom:1px solid var(--line)}h1{font-size:25px;margin:0 0 5px}header p{margin:0;color:#55545e}main{display:grid;grid-template-columns:270px minmax(0,1fr);gap:20px;padding:24px 32px;max-width:1600px;margin:auto}aside{display:flex;flex-direction:column;gap:12px}.chooser{display:grid;gap:8px}button,input,select{font:inherit}button{cursor:pointer;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:9px;padding:10px 13px;text-align:left}button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}.panel{background:#fff;border:1px solid var(--line);border-radius:13px;padding:15px}.settings{display:grid;gap:14px}.settings label{display:grid;gap:5px}.settings input[type=number]{width:100%;border:1px solid var(--line);border-radius:7px;padding:6px 9px}.settings .check{display:flex;gap:9px;align-items:center}.settings input[type=range],#seek{accent-color:var(--ink)}.screen{background:#fff;border:1px solid var(--line);border-radius:13px;overflow:hidden;box-shadow:0 10px 28px #0b0b0f0a}canvas{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#fff}.transport{display:flex;align-items:center;gap:14px;padding:13px 18px;border-top:1px solid var(--line);background:#fff}#play{background:var(--accent);border:0;min-width:75px;text-align:center;font-weight:700}#seek{flex:1;min-width:70px}output{font-variant-numeric:tabular-nums;white-space:nowrap}#description{margin:16px 2px 7px;font-size:16px}#status{margin:0 2px;color:#66656f;min-height:25px}.note{font-size:13px;color:#66656f;margin:10px 0 0}a{color:var(--ink);text-underline-offset:3px}summary{cursor:pointer;font-weight:700}pre{overflow:auto;font-size:12px;line-height:1.5;max-height:300px;margin-bottom:0}.foot{padding:10px 32px 28px;max-width:1600px;margin:auto;color:#66656f;font-size:13px}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #8b62cc;outline-offset:3px}@media(max-width:850px){header{padding:20px}main{display:block;padding:18px}aside{margin-bottom:18px}.chooser{grid-template-columns:repeat(2,minmax(0,1fr))}.settings{grid-template-columns:repeat(2,minmax(0,1fr))}.foot{padding:0 20px 20px}}
+  </style>
+</head>
+<body>
+  <header><h1>可组合 UI 能力</h1><p>直接播放，也可以改数量和时间。这里的材料全部是随包提供的原创示意，不需要下载原片。</p></header>
+  <main>
+    <aside>
+      <nav class="chooser" aria-label="选择能力">
+        <button data-type="material-focus" aria-pressed="true">材料展开 → 聚焦 → 回到全局</button>
+        <button data-type="input-result" aria-pressed="false">输入归整 → 可编辑结果</button>
+        <button data-type="parallel-groups" aria-pressed="false">对象分组 → 并行推进</button>
+        <button data-type="compare-change" aria-pressed="false">同一事项 → 多处同步更新</button>
+        <button data-type="presenter-safe" aria-pressed="false">人物安全区 → 材料组合</button>
+      </nav>
+      <section class="panel settings" aria-label="本次演示参数">
+        <label>对象数量 <input id="count" type="number" min="1" max="500" value="3" step="1"></label>
+        <label>动画时长 <input id="duration" type="range" min="5" max="20" value="10" step="1"><output id="duration-label">10 秒</output></label>
+        <label class="check"><input id="camera" type="checkbox">镜头推进后回退</label>
+        <label class="check"><input id="reveal" type="checkbox">遮挡揭示</label>
+        <label class="check"><input id="progress" type="checkbox" checked>显示推进与完成</label>
+      </section>
+      <p class="note">前五项直接执行参数化代码。既有完整设计仍保留结构限制：<a href="designs.html">打开十套源码设计参考</a>。</p>
+    </aside>
+    <section aria-label="实时 Canvas 预览">
+      <div class="screen"><canvas id="stage" width="1920" height="1080" aria-label="所选能力的实时动画"></canvas>
+        <div class="transport"><button id="play" type="button" aria-label="播放动画">播放</button><input id="seek" type="range" min="0" max="10" step="0.01" value="0" aria-label="动画时间"><output id="time">0.00 / 10 秒</output></div>
+      </div>
+      <p id="description"></p><p id="status" role="status">正在载入随包示意材料…</p>
+      <details class="panel" style="margin-top:18px"><summary>查看本次可复用参数</summary><pre id="parameters"></pre></details>
+    </section>
+  </main>
+  <p class="foot">素材、文字、对象和时间可替换；图形仍使用现有 Agent Editorial 色板与绘图。此页面是能力演示，不能代替具体口播的分镜选择和成片视觉验收。</p>
+  <script src="motion-core.js"></script><script src="agent-editorial.js"></script><script src="source-designs.js"></script><script src="capability-runtime.js"></script><script src="capabilities.js"></script>
+</body></html>
