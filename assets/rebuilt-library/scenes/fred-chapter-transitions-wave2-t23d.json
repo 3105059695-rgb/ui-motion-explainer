@@ -1,0 +1,170 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-wave2-t23d",
+  "title": "地平线：一条线划开画面，序号升起",
+  "duration": 3,
+  "background": "#0B0B0F",
+  "inputs": {
+    "index": "03",
+    "title": "从方法到结果"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/9adf1f24803a1c926671036a6a2b74cfbcff9666ea428544ae52d3981f26bb3f.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A rhythmic, high-frequency digital ticking sound, followed by two sharp, percussive 'click' sound effects in quick succession, resembling a mechanical toggle or digital selection.",
+          "label": "Opening Hook",
+          "visual": "Static camera shot of a flat, solid dark charcoal background. The composition is divided by a thin white horizontal line running across the center. Centered above the line are large, bold white numerals. Below the line, smaller white text is visible against the dark backdrop. The lighting is uniform and artificial, with no shadows or depth, creating a 2D graphic aesthetic. The color palette is strictly monochrome (black, white, grey).",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 0.8999999999999999,
+      "action": "Horizontal horizon draws across the center"
+    },
+    {
+      "start": 0.6000000000000001,
+      "end": 1.6500000000000001,
+      "action": "Number rises above and chapter drops below the shared mask"
+    },
+    {
+      "start": 1.6500000000000001,
+      "end": 3,
+      "action": "Hold the complete chapter"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-line",
+      "kind": "b2-growing-line",
+      "x": 160,
+      "y": 540,
+      "w": 1600,
+      "h": 0,
+      "fill": "#FFFFFF",
+      "strokeWidth": 3,
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            0.75,
+            1
+          ]
+        ]
+      },
+      "arrow": false
+    },
+    {
+      "id": "n004-group",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 0,
+          "y": 270,
+          "w": 1920,
+          "h": 230,
+          "text": "{{index}}",
+          "size": 220,
+          "color": "#FFFFFF",
+          "align": "center",
+          "tracks": {
+            "y": [
+              [
+                0,
+                550
+              ],
+              [
+                1.05,
+                270
+              ]
+            ]
+          }
+        }
+      ],
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 540
+      }
+    },
+    {
+      "id": "n005-group",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 0,
+          "y": 585,
+          "w": 1920,
+          "h": 130,
+          "text": "{{title}}",
+          "size": 70,
+          "color": "#FFFFFF",
+          "align": "center",
+          "tracks": {
+            "y": [
+              [
+                0.45,
+                450
+              ],
+              [
+                1.5,
+                585
+              ]
+            ]
+          }
+        }
+      ],
+      "clip": {
+        "x": 0,
+        "y": 540,
+        "w": 1920,
+        "h": 540
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

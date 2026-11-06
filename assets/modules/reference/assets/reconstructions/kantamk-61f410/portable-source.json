@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "slug": "kantamk-61f410",
+  "source_project": "assets/reconstructions/kantamk-61f410/versions/v3",
+  "project": "assets/reconstructions/kantamk-61f410",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "_dependencies/df5002cd8452-motion-measurements.json",
+    "assets/fonts/metadata.json",
+    "assets/motion-measurements.json",
+    "index.html",
+    "motion.js",
+    "project.json",
+    "style.css",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/498efd461f6ddfcb7a11.ttf",
+    "../../reference-shared/fonts/73894e0448cae90a92b6.ttf"
+  ],
+  "replaceable_assets": [],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "../../assets/fonts/Sans.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "../../assets/fonts/Serif.ttf": "../../reference-shared/fonts/498efd461f6ddfcb7a11.ttf",
+    "../../assets/motion-measurements.json": "_dependencies/df5002cd8452-motion-measurements.json",
+    "assets/fonts/metadata.json": "assets/fonts/metadata.json",
+    "assets/fonts/Sans.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "assets/fonts/Serif.ttf": "../../reference-shared/fonts/498efd461f6ddfcb7a11.ttf",
+    "assets/motion-measurements.json": "assets/motion-measurements.json",
+    "index.html": "index.html",
+    "motion.js": "motion.js",
+    "project.json": "project.json",
+    "style.css": "style.css",
+    "Sans.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "Serif.ttf": "../../reference-shared/fonts/498efd461f6ddfcb7a11.ttf",
+    "metadata.json": "assets/fonts/metadata.json"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "slug": "kloss-xyz-fe0c31",
+  "source_project": "assets/reconstructions/kloss-xyz-fe0c31",
+  "project": "assets/reconstructions/kloss-xyz-fe0c31",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "composition.js",
+    "index.html",
+    "project.json",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "../../reference-shared/fonts/a4ba3a92350ebb031da0.ttf"
+  ],
+  "replaceable_assets": [],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "assets/fonts/Anton.ttf": "../../reference-shared/fonts/a4ba3a92350ebb031da0.ttf",
+    "assets/fonts/Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "composition.js": "composition.js",
+    "index.html": "index.html",
+    "project.json": "project.json",
+    "Anton.ttf": "../../reference-shared/fonts/a4ba3a92350ebb031da0.ttf",
+    "Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

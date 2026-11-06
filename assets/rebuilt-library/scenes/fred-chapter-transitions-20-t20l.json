@@ -1,0 +1,266 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t20l",
+  "title": "卡片快扫：作品卡横扫后停在主卡",
+  "duration": 4,
+  "background": "#FFFFFF",
+  "inputs": {},
+  "assets": {
+    "work1": "assets/style-film/media/module-assembly.svg",
+    "work2": "assets/approved-girl-sample/assets/handoff.png",
+    "work3": "assets/style-film/media/premise-to-report.svg"
+  },
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/77f74e2d9ee888251104c58fb169cd187682bbf9ffad76eb026302028946d185.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "Upbeat, energetic electronic pop music with a steady rhythmic beat and synthesizers. No dialogue.",
+          "label": "Opening Hook",
+          "visual": "A series of digital art cards are floating in a 3D white void. The camera pans horizontally from right to left in a smooth motion. The central card is purple with a software interface displayed on it. Other cards feature digital paintings including a character in white robes in a traditional courtyard and a phoenix. Lighting is bright, even, and artificial with soft drop shadows beneath the cards. The color palette is vibrant against the sterile white background.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Continuous upbeat electronic pop music.",
+          "label": "Product Selling Points",
+          "visual": "The camera continues its horizontal pan to the left, focusing on a card featuring a detailed illustration of a golden-orange phoenix with spread wings. To the right of the main image are three smaller zoom-in detail shots of the phoenix's head and wings. To the further right, another card shows a character design sheet. The lighting remains bright and consistent. The transition is a seamless continuation of the previous camera movement.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The music reaches a brief crescendo and then holds a steady tempo. No dialogue.",
+          "label": "Product Information",
+          "visual": "A static shot centered on a single card against a white background. The card displays a high-resolution illustration of a golden phoenix with glowing embers, flanked by smaller cropped detail views on the right side. The colors are highly saturated with warm oranges, yellows, and reds. The lighting is soft and frontal, making the details of the feathers sharp and clear.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 2.4,
+      "action": "Distinct works sweep sideways in one spatial strip"
+    },
+    {
+      "start": 2.4,
+      "end": 3.2,
+      "action": "Main work stops while adjacent cards remain peripheral"
+    },
+    {
+      "start": 3.2,
+      "end": 4,
+      "action": "Keep full work and its crop details visible"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n003-group",
+      "kind": "group",
+      "x": 250,
+      "y": 190,
+      "w": 1160,
+      "h": 700,
+      "children": [
+        {
+          "id": "n001-card",
+          "kind": "card",
+          "x": 0,
+          "y": 0,
+          "w": 1160,
+          "h": 700,
+          "children": [],
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "n002-image",
+          "kind": "image",
+          "x": 15,
+          "y": 15,
+          "w": 1130,
+          "h": 670,
+          "asset": "work1",
+          "fit": "contain"
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            250
+          ],
+          [
+            0.8,
+            -350
+          ],
+          [
+            2.4,
+            -1070
+          ],
+          [
+            3.2,
+            -1070
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            0.85
+          ],
+          [
+            2.4,
+            0.85
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-group",
+      "kind": "group",
+      "x": 1550,
+      "y": 190,
+      "w": 1160,
+      "h": 700,
+      "children": [
+        {
+          "id": "n004-card",
+          "kind": "card",
+          "x": 0,
+          "y": 0,
+          "w": 1160,
+          "h": 700,
+          "children": [],
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "n005-image",
+          "kind": "image",
+          "x": 15,
+          "y": 15,
+          "w": 1130,
+          "h": 670,
+          "asset": "work2",
+          "fit": "contain"
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            1550
+          ],
+          [
+            0.8,
+            950
+          ],
+          [
+            2.4,
+            230
+          ],
+          [
+            3.2,
+            230
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            0.85
+          ],
+          [
+            2.4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-group",
+      "kind": "group",
+      "x": 2850,
+      "y": 190,
+      "w": 1160,
+      "h": 700,
+      "children": [
+        {
+          "id": "n007-card",
+          "kind": "card",
+          "x": 0,
+          "y": 0,
+          "w": 1160,
+          "h": 700,
+          "children": [],
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "n008-image",
+          "kind": "image",
+          "x": 15,
+          "y": 15,
+          "w": 1130,
+          "h": 670,
+          "asset": "work3",
+          "fit": "contain"
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            2850
+          ],
+          [
+            0.8,
+            2250
+          ],
+          [
+            2.4,
+            1530
+          ],
+          [
+            3.2,
+            1530
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            0.85
+          ],
+          [
+            2.4,
+            0.85
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

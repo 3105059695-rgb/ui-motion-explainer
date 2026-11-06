@@ -1,0 +1,330 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t18c",
+  "title": "产品官网介绍：长页滚动，卖点标注",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "section1": "让资料与团队保持同步",
+    "detail1": "明确分工\n共同核对\n持续更新",
+    "section2": "权限和协作\n都在同一处",
+    "focus1": "协作更清楚",
+    "focus2": "权限可控"
+  },
+  "assets": {
+    "website": "assets/style-film/media/premise-to-report.svg",
+    "feature1": "assets/style-film/media/module-assembly.svg",
+    "feature2": "assets/style-film/media/cross-device-continuity.svg"
+  },
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/3ce27f469d3d2ab19bedf613326b348c3067997b501e2dff8f7e54fc8f99a47b.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A bright, digital notification chime sounds, followed by upbeat, mid-tempo electronic background music featuring soft synth melodies.",
+          "label": "Opening Hook",
+          "visual": "A static digital screenshot of a software landing page. The background is a crisp white with a central hero section featuring a blue and white abstract logo. Below the logo, a large download button is centered. The lighting is bright and even, mimicking a standard high-resolution monitor display. The color palette is dominated by professional blues, whites, and soft grays.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The upbeat electronic music continues at a steady volume. A subtle 'whoosh' sound effect accompanies the scroll transition.",
+          "label": "Product Selling Points",
+          "visual": "The screen transitions via a vertical scroll to show a white information panel. On the left, a partial view of a software interface is visible, showing a document list. On the right, clean black text describes collaboration features. A gray button with a small arrow icon is positioned at the bottom of the text block.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The music continues. A sharp, mechanical 'click' sound effect triggers as the pill-shaped button appears on screen.",
+          "label": "Product Selling Points",
+          "visual": "The camera pans slightly right to focus on a large, bold text block in the center of the frame. Below the main description, a dark gray pill-shaped button appears with white text inside. The background remains a clean, minimalist white with soft drop shadows under the text containers.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "The background music persists. Another 'whoosh' sound effect plays during the vertical transition.",
+          "label": "Product Information",
+          "visual": "The screen scrolls vertically again to a new section. On the left, a software dashboard showing permission settings is visible. On the right, a chat interface mockup shows profile icons (a green circle with a stylized bird logo and a blue circle with a silhouette) alongside message bubbles. The aesthetic remains high-contrast and professional.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "The electronic music maintains its tempo. A final 'click' sound effect plays as the button appears, followed by a quick fade-out of the audio.",
+          "label": "Product Information",
+          "visual": "A final slight zoom into the text block on the right. A dark gray pill-shaped button with white text pops into view at the bottom of the screen, mirroring the animation style from Scene 3. The layout is balanced with plenty of white space.",
+          "shot_type": "Wide Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.2000000000000002,
+      "action": "Current landing page hero establishes identity"
+    },
+    {
+      "start": 1.2000000000000002,
+      "end": 3.3000000000000003,
+      "action": "Long page scrolls to first real feature with localized commentary"
+    },
+    {
+      "start": 3.3000000000000003,
+      "end": 4.92,
+      "action": "Same page advances to second feature"
+    },
+    {
+      "start": 4.92,
+      "end": 6,
+      "action": "Second feature holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n010-group",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n009-group",
+          "kind": "group",
+          "x": 260,
+          "y": 100,
+          "w": 1400,
+          "h": 2450,
+          "children": [
+            {
+              "id": "n001-image",
+              "kind": "image",
+              "x": 0,
+              "y": 0,
+              "w": 1400,
+              "h": 800,
+              "asset": "website",
+              "fit": "contain"
+            },
+            {
+              "id": "n005-card",
+              "kind": "card",
+              "x": 0,
+              "y": 850,
+              "w": 1400,
+              "h": 730,
+              "children": [
+                {
+                  "id": "n002-text",
+                  "kind": "text",
+                  "x": 60,
+                  "y": 60,
+                  "w": 1280,
+                  "h": 120,
+                  "text": "{{section1}}",
+                  "size": 68,
+                  "color": "#0B0B0F",
+                  "align": "left"
+                },
+                {
+                  "id": "n003-image",
+                  "kind": "image",
+                  "x": 50,
+                  "y": 240,
+                  "w": 620,
+                  "h": 410,
+                  "asset": "feature1",
+                  "fit": "contain"
+                },
+                {
+                  "id": "n004-text",
+                  "kind": "text",
+                  "x": 760,
+                  "y": 260,
+                  "w": 580,
+                  "h": 350,
+                  "text": "{{detail1}}",
+                  "size": 58,
+                  "color": "#0B0B0F",
+                  "align": "left"
+                }
+              ],
+              "fill": "#FFFFFF"
+            },
+            {
+              "id": "n008-card",
+              "kind": "card",
+              "x": 0,
+              "y": 1680,
+              "w": 1400,
+              "h": 730,
+              "children": [
+                {
+                  "id": "n006-image",
+                  "kind": "image",
+                  "x": 50,
+                  "y": 180,
+                  "w": 680,
+                  "h": 470,
+                  "asset": "feature2",
+                  "fit": "contain"
+                },
+                {
+                  "id": "n007-text",
+                  "kind": "text",
+                  "x": 790,
+                  "y": 180,
+                  "w": 560,
+                  "h": 260,
+                  "text": "{{section2}}",
+                  "size": 62,
+                  "color": "#0B0B0F",
+                  "align": "left"
+                }
+              ],
+              "fill": "#FFFFFF"
+            }
+          ],
+          "tracks": {
+            "y": [
+              [
+                0,
+                100
+              ],
+              [
+                1.2,
+                100
+              ],
+              [
+                2.28,
+                -750
+              ],
+              [
+                3.3,
+                -750
+              ],
+              [
+                4.32,
+                -1580
+              ]
+            ]
+          }
+        }
+      ],
+      "clip": {
+        "x": 180,
+        "y": 80,
+        "w": 1560,
+        "h": 920
+      }
+    },
+    {
+      "id": "n011-pill",
+      "kind": "pill",
+      "x": 1070,
+      "y": 740,
+      "w": 600,
+      "h": 120,
+      "label": "{{focus1}}",
+      "size": 48,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.22,
+            0
+          ],
+          [
+            2.58,
+            1
+          ],
+          [
+            3.36,
+            1
+          ],
+          [
+            3.84,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012-pill",
+      "kind": "pill",
+      "x": 1070,
+      "y": 790,
+      "w": 600,
+      "h": 120,
+      "label": "{{focus2}}",
+      "size": 48,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.62,
+            0
+          ],
+          [
+            5.34,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            4.62,
+            825
+          ],
+          [
+            5.34,
+            790,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

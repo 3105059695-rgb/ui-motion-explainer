@@ -1,0 +1,556 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t20d",
+  "title": "作品错层汇聚后散开，中央让出主题",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "title": "一句话，也能做出这些"
+  },
+  "assets": {
+    "media0": "assets/approved-girl-sample/assets/handoff.png",
+    "media1": "assets/style-film/media/premise-to-report.svg",
+    "media2": "assets/style-film/media/module-assembly.svg",
+    "media3": "assets/style-film/media/cross-device-continuity.svg",
+    "media4": "assets/style-film/media/editable-change-undo.svg",
+    "media5": "assets/style-film/media/connected-delivery.svg"
+  },
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/91c8dab3a73ab272eb5ef728415f74919cf03d65f6659c1a374ead1dc59c5a58.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "Upbeat, fast-paced electronic pop music with a prominent synthesized beat and high-energy tempo. No spoken dialogue.",
+          "label": "Opening Hook",
+          "visual": "A white background features several rectangular cards with rounded corners falling and arranging themselves across the screen. The images on the cards include a woman in traditional dress on a boat, an aerial view of a garden with ponds, a brown and white puppy sitting in green grass, a close-up of a golden abstract architectural structure, a fantasy illustration of a fiery phoenix, and character designs in long flowing white robes. The cards are brightly lit with soft shadows beneath them, giving a layered, three-dimensional effect. The color palette is varied but leans towards vibrant, warm tones.",
+          "shot_type": "Medium Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The upbeat electronic music continues at the same tempo and volume. The sound is consistent with a high-energy transition.",
+          "label": "Product Information",
+          "visual": "The arrangement of the cards shifts slightly as more cards appear to fill the center of the frame. The background remains clean and white. The lighting is bright and even across all product cards, highlighting the detail in the puppy's fur and the intricate patterns on the phoenix. The movement of the cards is smooth and automated, settling into two rows.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 3.75,
+      "action": "Six separate works fall, rotate and settle into two distinct rows"
+    },
+    {
+      "start": 3.75,
+      "end": 5,
+      "action": "Rows move apart to make space for the topic"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 100,
+      "y": 110,
+      "w": 500,
+      "h": 330,
+      "asset": "media0",
+      "fit": "cover",
+      "radius": 16,
+      "tracks": {
+        "x": [
+          [
+            0,
+            700
+          ],
+          [
+            0.5,
+            700
+          ],
+          [
+            2.0,
+            100
+          ],
+          [
+            4.0,
+            100
+          ],
+          [
+            5,
+            30
+          ]
+        ],
+        "y": [
+          [
+            0,
+            -500
+          ],
+          [
+            0.5,
+            -500
+          ],
+          [
+            2.0,
+            110
+          ]
+        ],
+        "rotation": [
+          [
+            0,
+            50
+          ],
+          [
+            2.0,
+            2
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.5,
+            0
+          ],
+          [
+            0.7,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-image",
+      "kind": "image",
+      "x": 680,
+      "y": 90,
+      "w": 500,
+      "h": 330,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 16,
+      "tracks": {
+        "x": [
+          [
+            0,
+            700
+          ],
+          [
+            0.775,
+            700
+          ],
+          [
+            2.275,
+            680
+          ],
+          [
+            4.0,
+            680
+          ],
+          [
+            5,
+            680
+          ]
+        ],
+        "y": [
+          [
+            0,
+            -500
+          ],
+          [
+            0.775,
+            -500
+          ],
+          [
+            2.275,
+            90
+          ]
+        ],
+        "rotation": [
+          [
+            0,
+            -50
+          ],
+          [
+            2.275,
+            -2
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.775,
+            0
+          ],
+          [
+            0.975,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-image",
+      "kind": "image",
+      "x": 1260,
+      "y": 130,
+      "w": 500,
+      "h": 330,
+      "asset": "media2",
+      "fit": "cover",
+      "radius": 16,
+      "tracks": {
+        "x": [
+          [
+            0,
+            700
+          ],
+          [
+            1.05,
+            700
+          ],
+          [
+            2.55,
+            1260
+          ],
+          [
+            4.0,
+            1260
+          ],
+          [
+            5,
+            1330
+          ]
+        ],
+        "y": [
+          [
+            0,
+            -500
+          ],
+          [
+            1.05,
+            -500
+          ],
+          [
+            2.55,
+            130
+          ]
+        ],
+        "rotation": [
+          [
+            0,
+            50
+          ],
+          [
+            2.55,
+            2
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.05,
+            0
+          ],
+          [
+            1.25,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-image",
+      "kind": "image",
+      "x": 130,
+      "y": 600,
+      "w": 500,
+      "h": 330,
+      "asset": "media3",
+      "fit": "cover",
+      "radius": 16,
+      "tracks": {
+        "x": [
+          [
+            0,
+            700
+          ],
+          [
+            1.325,
+            700
+          ],
+          [
+            2.825,
+            130
+          ],
+          [
+            4.0,
+            130
+          ],
+          [
+            5,
+            60
+          ]
+        ],
+        "y": [
+          [
+            0,
+            -500
+          ],
+          [
+            1.325,
+            -500
+          ],
+          [
+            2.825,
+            600
+          ]
+        ],
+        "rotation": [
+          [
+            0,
+            -50
+          ],
+          [
+            2.825,
+            -2
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.325,
+            0
+          ],
+          [
+            1.525,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-image",
+      "kind": "image",
+      "x": 710,
+      "y": 620,
+      "w": 500,
+      "h": 330,
+      "asset": "media4",
+      "fit": "cover",
+      "radius": 16,
+      "tracks": {
+        "x": [
+          [
+            0,
+            700
+          ],
+          [
+            1.6,
+            700
+          ],
+          [
+            3.1,
+            710
+          ],
+          [
+            4.0,
+            710
+          ],
+          [
+            5,
+            710
+          ]
+        ],
+        "y": [
+          [
+            0,
+            -500
+          ],
+          [
+            1.6,
+            -500
+          ],
+          [
+            3.1,
+            620
+          ]
+        ],
+        "rotation": [
+          [
+            0,
+            50
+          ],
+          [
+            3.1,
+            2
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.6,
+            0
+          ],
+          [
+            1.8,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-image",
+      "kind": "image",
+      "x": 1290,
+      "y": 590,
+      "w": 500,
+      "h": 330,
+      "asset": "media5",
+      "fit": "cover",
+      "radius": 16,
+      "tracks": {
+        "x": [
+          [
+            0,
+            700
+          ],
+          [
+            1.875,
+            700
+          ],
+          [
+            3.375,
+            1290
+          ],
+          [
+            4.0,
+            1290
+          ],
+          [
+            5,
+            1360
+          ]
+        ],
+        "y": [
+          [
+            0,
+            -500
+          ],
+          [
+            1.875,
+            -500
+          ],
+          [
+            3.375,
+            590
+          ]
+        ],
+        "rotation": [
+          [
+            0,
+            -50
+          ],
+          [
+            3.375,
+            -2
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.875,
+            0
+          ],
+          [
+            2.075,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 570,
+      "y": 460,
+      "w": 780,
+      "h": 130,
+      "label": "{{title}}",
+      "size": 51,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.85,
+            0
+          ],
+          [
+            4.6,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.85,
+            460
+          ],
+          [
+            4.6,
+            460,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "slug": "utopyaszx-1b2f94",
+  "source_project": "assets/reconstructions/utopyaszx-1b2f94",
+  "project": "assets/reconstructions/utopyaszx-1b2f94",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "assets/textures/horse-rider.png",
+    "index.html",
+    "motion-core.js",
+    "motion.js",
+    "project.json",
+    "shot-plan.json",
+    "style.css",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/73894e0448cae90a92b6.ttf"
+  ],
+  "replaceable_assets": [
+    {
+      "path": "assets/textures/horse-rider.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "ab93fb85b51652bba6ad918e94d34befbfd83d27063150e799cb2ad27078df02"
+    }
+  ],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "assets/fonts/Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "assets/textures/horse-rider.png": "assets/textures/horse-rider.png",
+    "index.html": "index.html",
+    "motion-core.js": "motion-core.js",
+    "motion.js": "motion.js",
+    "project.json": "project.json",
+    "shot-plan.json": "shot-plan.json",
+    "style.css": "style.css",
+    "Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "horse-rider.png": "assets/textures/horse-rider.png"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

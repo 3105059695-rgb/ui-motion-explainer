@@ -1,0 +1,972 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-recording-8-t09w",
+  "title": "一个变多个：同一窗口复制成几份同时跑",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "正在执行本期任务",
+    "text02": "并行任务 1",
+    "text03": "并行任务 2",
+    "text04": "并行任务 3",
+    "text05": "并行任务 4",
+    "text06": "全部完成，结果汇总"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "window",
+      "x": 450,
+      "y": 190,
+      "w": 1020,
+      "h": 650,
+      "label": "{{text01}}",
+      "visible": [
+        0,
+        1.2
+      ]
+    },
+    {
+      "id": "n005",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n002",
+          "kind": "window",
+          "x": 160,
+          "y": 160,
+          "w": 760,
+          "h": 350,
+          "label": "{{text02}}",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                1.08,
+                0
+              ],
+              [
+                1.29,
+                1,
+                "out"
+              ]
+            ],
+            "x": [
+              [
+                0,
+                -640
+              ],
+              [
+                1.08,
+                -640
+              ],
+              [
+                1.29,
+                160,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                0,
+                210
+              ],
+              [
+                1.08,
+                210
+              ],
+              [
+                1.29,
+                160,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n003",
+          "kind": "bar",
+          "x": 220,
+          "y": 335,
+          "w": 640,
+          "h": 27,
+          "fill": "#D6C2FF",
+          "tracks": {
+            "value": [
+              [
+                0,
+                0
+              ],
+              [
+                1.38,
+                0
+              ],
+              [
+                3.3,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n004",
+          "kind": "check",
+          "x": 790,
+          "y": 385,
+          "w": 60,
+          "h": 60,
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                3.42,
+                0
+              ],
+              [
+                3.63,
+                1,
+                "out"
+              ]
+            ],
+            "x": [
+              [
+                0,
+                790
+              ],
+              [
+                3.42,
+                790
+              ],
+              [
+                3.63,
+                790,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                0,
+                435
+              ],
+              [
+                3.42,
+                435
+              ],
+              [
+                3.63,
+                385,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            0
+          ],
+          [
+            5.16,
+            0
+          ],
+          [
+            5.7,
+            0
+          ]
+        ],
+        "y": [
+          [
+            0,
+            0
+          ],
+          [
+            5.16,
+            0
+          ],
+          [
+            5.7,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            5.16,
+            1
+          ],
+          [
+            5.7,
+            0.2
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            5.16,
+            1
+          ],
+          [
+            5.7,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n006",
+          "kind": "window",
+          "x": 1000,
+          "y": 160,
+          "w": 760,
+          "h": 350,
+          "label": "{{text03}}",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                1.17,
+                0
+              ],
+              [
+                1.38,
+                1,
+                "out"
+              ]
+            ],
+            "x": [
+              [
+                0,
+                1800
+              ],
+              [
+                1.17,
+                1800
+              ],
+              [
+                1.38,
+                1000,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                0,
+                210
+              ],
+              [
+                1.17,
+                210
+              ],
+              [
+                1.38,
+                160,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n007",
+          "kind": "bar",
+          "x": 1060,
+          "y": 335,
+          "w": 640,
+          "h": 27,
+          "fill": "#D6C2FF",
+          "tracks": {
+            "value": [
+              [
+                0,
+                0
+              ],
+              [
+                1.47,
+                0
+              ],
+              [
+                3.75,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n008",
+          "kind": "check",
+          "x": 1630,
+          "y": 385,
+          "w": 60,
+          "h": 60,
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                3.87,
+                0
+              ],
+              [
+                4.08,
+                1,
+                "out"
+              ]
+            ],
+            "x": [
+              [
+                0,
+                1630
+              ],
+              [
+                3.87,
+                1630
+              ],
+              [
+                4.08,
+                1630,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                0,
+                435
+              ],
+              [
+                3.87,
+                435
+              ],
+              [
+                4.08,
+                385,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            0
+          ],
+          [
+            5.16,
+            0
+          ],
+          [
+            5.7,
+            0
+          ]
+        ],
+        "y": [
+          [
+            0,
+            0
+          ],
+          [
+            5.16,
+            0
+          ],
+          [
+            5.7,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            5.16,
+            1
+          ],
+          [
+            5.7,
+            0.2
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            5.16,
+            1
+          ],
+          [
+            5.7,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n010",
+          "kind": "window",
+          "x": 160,
+          "y": 560,
+          "w": 760,
+          "h": 350,
+          "label": "{{text04}}",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                1.26,
+                0
+              ],
+              [
+                1.47,
+                1,
+                "out"
+              ]
+            ],
+            "x": [
+              [
+                0,
+                -640
+              ],
+              [
+                1.26,
+                -640
+              ],
+              [
+                1.47,
+                160,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                0,
+                610
+              ],
+              [
+                1.26,
+                610
+              ],
+              [
+                1.47,
+                560,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n011",
+          "kind": "bar",
+          "x": 220,
+          "y": 735,
+          "w": 640,
+          "h": 27,
+          "fill": "#D6C2FF",
+          "tracks": {
+            "value": [
+              [
+                0,
+                0
+              ],
+              [
+                1.56,
+                0
+              ],
+              [
+                4.2,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n012",
+          "kind": "check",
+          "x": 790,
+          "y": 785,
+          "w": 60,
+          "h": 60,
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                4.32,
+                0
+              ],
+              [
+                4.53,
+                1,
+                "out"
+              ]
+            ],
+            "x": [
+              [
+                0,
+                790
+              ],
+              [
+                4.32,
+                790
+              ],
+              [
+                4.53,
+                790,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                0,
+                835
+              ],
+              [
+                4.32,
+                835
+              ],
+              [
+                4.53,
+                785,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            0
+          ],
+          [
+            5.16,
+            0
+          ],
+          [
+            5.7,
+            0
+          ]
+        ],
+        "y": [
+          [
+            0,
+            0
+          ],
+          [
+            5.16,
+            0
+          ],
+          [
+            5.7,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            5.16,
+            1
+          ],
+          [
+            5.7,
+            0.2
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            5.16,
+            1
+          ],
+          [
+            5.7,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n017",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n014",
+          "kind": "window",
+          "x": 1000,
+          "y": 560,
+          "w": 760,
+          "h": 350,
+          "label": "{{text05}}",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                1.35,
+                0
+              ],
+              [
+                1.56,
+                1,
+                "out"
+              ]
+            ],
+            "x": [
+              [
+                0,
+                1800
+              ],
+              [
+                1.35,
+                1800
+              ],
+              [
+                1.56,
+                1000,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                0,
+                610
+              ],
+              [
+                1.35,
+                610
+              ],
+              [
+                1.56,
+                560,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n015",
+          "kind": "bar",
+          "x": 1060,
+          "y": 735,
+          "w": 640,
+          "h": 27,
+          "fill": "#D6C2FF",
+          "tracks": {
+            "value": [
+              [
+                0,
+                0
+              ],
+              [
+                1.65,
+                0
+              ],
+              [
+                4.65,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n016",
+          "kind": "check",
+          "x": 1630,
+          "y": 785,
+          "w": 60,
+          "h": 60,
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                4.77,
+                0
+              ],
+              [
+                4.98,
+                1,
+                "out"
+              ]
+            ],
+            "x": [
+              [
+                0,
+                1630
+              ],
+              [
+                4.77,
+                1630
+              ],
+              [
+                4.98,
+                1630,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                0,
+                835
+              ],
+              [
+                4.77,
+                835
+              ],
+              [
+                4.98,
+                785,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            0
+          ],
+          [
+            5.16,
+            0
+          ],
+          [
+            5.7,
+            0
+          ]
+        ],
+        "y": [
+          [
+            0,
+            0
+          ],
+          [
+            5.16,
+            0
+          ],
+          [
+            5.7,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            5.16,
+            1
+          ],
+          [
+            5.7,
+            0.2
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            5.16,
+            1
+          ],
+          [
+            5.7,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n018",
+      "kind": "pill",
+      "x": 450,
+      "y": 935,
+      "w": 1020,
+      "h": 80,
+      "label": "{{text06}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.98,
+            0
+          ],
+          [
+            5.19,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            450
+          ],
+          [
+            4.98,
+            450
+          ],
+          [
+            5.19,
+            450,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            985
+          ],
+          [
+            4.98,
+            985
+          ],
+          [
+            5.19,
+            935,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/f9153719654b94b092f470afa95fd94ca0de6875c5c2b38a9fc8119cdf9750cb.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "A light, upbeat electronic pop track begins with a steady 4/4 tempo. The sound is bright and synthesized, featuring a rhythmic 'pop' sound effect every half-second.",
+          "label": "Opening Hook",
+          "visual": "A static, flat-lay graphic of a white spreadsheet-style list on a light gray background. The list contains 15 rows of text in black, organized into columns. The lighting is perfectly even and digital, with no shadows. The color palette is minimalist, primarily white, gray, and black.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The upbeat electronic music continues. The 'pop' sound effects increase in frequency, syncing with the appearance of checkmarks on the screen.",
+          "label": "Product Information",
+          "visual": "The screen transitions to a three-column layout. Each column has a header and five bullet points. The background remains a clean, solid light gray. The text is sharp and centered within each column. The transition is a quick cut with no camera movement.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A rapid series of high-pitched 'ding' and 'click' sound effects play in quick succession, mimicking the sound of a digital interface being interacted with at high speed.",
+          "label": "Usage Scenarios",
+          "visual": "Black checkmark icons begin appearing rapidly next to the items in the three columns. The checkmarks appear in a sequence: first the left column fills from top to bottom, then the middle, then the right. The animation is fast-paced and mechanical.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "The music reaches a brief crescendo with a final, resonant 'chime' sound effect. The background track fades out quickly as the video ends.",
+          "label": "Call to Action",
+          "visual": "The three columns remain on screen, now fully populated with checkmarks. A final line of text appears at the bottom center of the frame. The overall composition is balanced and symmetrical. The lighting remains flat and digital.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "一个正在跑任务的窗口 → 分裂成 3–4 个同尺寸小窗，各自进度独立推进、先后完成打勾 → 全部完成后收回一个窗口"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 6.0,
+      "action": "一个正在跑任务的窗口 → 分裂成 3–4 个同尺寸小窗，各自进度独立推进、先后完成打勾 → 全部完成后收回一个窗口"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

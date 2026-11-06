@@ -1,0 +1,872 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t20s",
+  "title": "实拍快切开场：收成一张卡，物料一叠叠累计复制",
+  "duration": 11.933,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "语言版本 1",
+    "text02": "语言版本 2",
+    "text03": "语言版本 3",
+    "text04": "语言版本 4",
+    "media1.start": 0,
+    "media1.speed": 1,
+    "media2.start": 0,
+    "media2.speed": 1,
+    "media3.start": 0,
+    "media3.speed": 1,
+    "media4.start": 0,
+    "media4.speed": 1,
+    "media5.start": 0,
+    "media5.speed": 1,
+    "media6.start": 0,
+    "media6.speed": 1,
+    "media7.start": 0,
+    "media7.speed": 1,
+    "media8.start": 0,
+    "media8.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media2": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media3": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media4": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media5": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media6": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media7": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media8": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "image",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        0.95464
+      ],
+      "tracks": {
+        "scale": [
+          [
+            0.0,
+            1
+          ],
+          [
+            0.95464,
+            1.05
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "image",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "asset": "media2",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.95464,
+        1.90928
+      ],
+      "tracks": {
+        "scale": [
+          [
+            0.95464,
+            1
+          ],
+          [
+            1.90928,
+            1.05
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "image",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "asset": "media3",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        1.90928,
+        2.86392
+      ],
+      "tracks": {
+        "scale": [
+          [
+            1.90928,
+            1
+          ],
+          [
+            2.86392,
+            1.05
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "image",
+      "x": 180,
+      "y": 190,
+      "w": 480,
+      "h": 300,
+      "asset": "media4",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        2.86392,
+        11.934
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            2.86392,
+            0
+          ],
+          [
+            3.28158,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1780
+          ],
+          [
+            2.86392,
+            1780
+          ],
+          [
+            3.28158,
+            180,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            240
+          ],
+          [
+            2.86392,
+            240
+          ],
+          [
+            3.28158,
+            190,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "image",
+      "x": 720,
+      "y": 190,
+      "w": 480,
+      "h": 300,
+      "asset": "media5",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        2.86392,
+        11.934
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.10258,
+            0
+          ],
+          [
+            3.52024,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            -880
+          ],
+          [
+            3.10258,
+            -880
+          ],
+          [
+            3.52024,
+            720,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            240
+          ],
+          [
+            3.10258,
+            240
+          ],
+          [
+            3.52024,
+            190,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "image",
+      "x": 1260,
+      "y": 190,
+      "w": 480,
+      "h": 300,
+      "asset": "media6",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        2.86392,
+        11.934
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.34124,
+            0
+          ],
+          [
+            3.75889,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            2860
+          ],
+          [
+            3.34124,
+            2860
+          ],
+          [
+            3.75889,
+            1260,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            240
+          ],
+          [
+            3.34124,
+            240
+          ],
+          [
+            3.75889,
+            190,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "image",
+      "x": 180,
+      "y": 540,
+      "w": 480,
+      "h": 300,
+      "asset": "media7",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        2.86392,
+        11.934
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.5799,
+            0
+          ],
+          [
+            3.99755,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            -1420
+          ],
+          [
+            3.5799,
+            -1420
+          ],
+          [
+            3.99755,
+            180,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            590
+          ],
+          [
+            3.5799,
+            590
+          ],
+          [
+            3.99755,
+            540,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "image",
+      "x": 720,
+      "y": 540,
+      "w": 480,
+      "h": 300,
+      "asset": "media8",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        2.86392,
+        11.934
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.81856,
+            0
+          ],
+          [
+            4.23621,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            2320
+          ],
+          [
+            3.81856,
+            2320
+          ],
+          [
+            4.23621,
+            720,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            590
+          ],
+          [
+            3.81856,
+            590
+          ],
+          [
+            4.23621,
+            540,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "file",
+      "x": 610,
+      "y": 440,
+      "w": 470,
+      "h": 360,
+      "label": "{{text01}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            7.39846,
+            0
+          ],
+          [
+            7.81611,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            2010
+          ],
+          [
+            7.39846,
+            2010
+          ],
+          [
+            7.81611,
+            610,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            490
+          ],
+          [
+            7.39846,
+            490
+          ],
+          [
+            7.81611,
+            440,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010",
+      "kind": "file",
+      "x": 710,
+      "y": 452,
+      "w": 470,
+      "h": 360,
+      "label": "{{text02}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.23377,
+            0
+          ],
+          [
+            8.65142,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            2110
+          ],
+          [
+            8.23377,
+            2110
+          ],
+          [
+            8.65142,
+            710,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            502
+          ],
+          [
+            8.23377,
+            502
+          ],
+          [
+            8.65142,
+            452,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011",
+      "kind": "file",
+      "x": 810,
+      "y": 464,
+      "w": 470,
+      "h": 360,
+      "label": "{{text03}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            9.06908,
+            0
+          ],
+          [
+            9.48673,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            2210
+          ],
+          [
+            9.06908,
+            2210
+          ],
+          [
+            9.48673,
+            810,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            514
+          ],
+          [
+            9.06908,
+            514
+          ],
+          [
+            9.48673,
+            464,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012",
+      "kind": "file",
+      "x": 910,
+      "y": 476,
+      "w": 470,
+      "h": 360,
+      "label": "{{text04}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            9.90439,
+            0
+          ],
+          [
+            10.32205,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            2310
+          ],
+          [
+            9.90439,
+            2310
+          ],
+          [
+            10.32205,
+            910,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            526
+          ],
+          [
+            9.90439,
+            526
+          ],
+          [
+            10.32205,
+            476,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/03b01923d1119c018b0855677355ba25c318b117f869d55a930e8b9cf35c2803.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "Black Friday is coming soon. If you're doing cross-border e-commerce...",
+          "label": "Opening Hook",
+          "visual": "A high-angle static shot overlooking a bustling, brightly lit indoor market or wholesale center with numerous rows of stalls filled with goods. The lighting is warm and artificial. People are seen moving between the stalls. The color grading is slightly saturated with a warm, yellowish cast.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "...if you're doing cross-border e-commerce...",
+          "label": "Usage Scenarios",
+          "visual": "A pair of female hands with pale skin and neutral nail polish is holding a white smartphone. The left thumb is scrolling through a mobile shopping app while the right hand holds a blue credit card. The lighting is soft and directional from the side. The background is a blurry office or home environment.",
+          "shot_type": "Close-Up",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "...the most headache-inducing thing right now should be...",
+          "label": "Problem Solving",
+          "visual": "A white background displays five different images arranged in a collage: a Black Friday tag, the market from scene 1, a close-up of hands on a laptop keyboard, a wide shot of a circular indoor mall, and the phone from scene 2. The images are static.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "...launching new products. For goods sourced from China...",
+          "label": "Product Information",
+          "visual": "A centered graphic showing a cute, yellow pumpkin-shaped night light with a small face. The image has a soft, warm glow. The background is clean and white with minimalist layout elements.",
+          "shot_type": "Close-Up",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "...the product images are all in Chinese. For every product, you have to redo the main image, detail images...",
+          "label": "Product Selling Points",
+          "visual": "A single product card showing the pumpkin light is displayed, then it slides to the left as two more cards appear, showing different angles and features of the same product. The lighting is consistently warm and soft across all product images.",
+          "shot_type": "Medium Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:06",
+          "timestamp_start": "0:04"
+        },
+        {
+          "audio": "...and you also need to prepare a video.",
+          "label": "Product Selling Points",
+          "visual": "The three product cards are replaced by another set of three images featuring the pumpkin light, showing its brightness levels. The layout remains clean with a white background and centered alignment.",
+          "shot_type": "Medium Shot",
+          "scene_number": 6,
+          "timestamp_end": "0:09",
+          "timestamp_start": "0:06"
+        },
+        {
+          "audio": "If you sell in several countries, you have to do it all over again several times.",
+          "label": "Usage Scenarios",
+          "visual": "Four product cards are displayed side-by-side on a white background. Each card shows the pumpkin light with text in a different language: English (US), German (Germany), French (France), and Japanese (Japan). The national flags are visible below each card.",
+          "shot_type": "Wide Shot",
+          "scene_number": 7,
+          "timestamp_end": "0:12",
+          "timestamp_start": "0:09"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "满屏真实照片硬切、每镜微推 → 最后一镜缩成画布上的一张卡、其余照片从四边飞入；物料按口播一叠叠累计、“卖几个国家”时整叠复制"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 11.933,
+      "action": "满屏真实照片硬切、每镜微推 → 最后一镜缩成画布上的一张卡、其余照片从四边飞入；物料按口播一叠叠累计、“卖几个国家”时整叠复制"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "实拍切镜 1",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          11.933,
+          11.933,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media2",
+      "label": "实拍切镜 2",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          11.933,
+          11.933,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media3",
+      "label": "实拍切镜 3",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          11.933,
+          11.933,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media4",
+      "label": "物料 1",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          11.933,
+          11.933,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media5",
+      "label": "物料 2",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          11.933,
+          11.933,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media6",
+      "label": "物料 3",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          11.933,
+          11.933,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media7",
+      "label": "物料 4",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          11.933,
+          11.933,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media8",
+      "label": "物料 5",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          11.933,
+          11.933,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

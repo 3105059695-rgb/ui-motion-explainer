@@ -1,0 +1,400 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-native-t09d",
+  "title": "发任务看运行：输入发出后步骤依次完成",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "request": "整理本期资料，并生成对应的结果",
+    "status0": "读取输入",
+    "status1": "执行步骤",
+    "status2": "生成文件",
+    "resultTitle": "已生成的本期结果",
+    "files": "资料索引\n结果文件\n核对记录"
+  },
+  "assets": {
+    "screen": "assets/style-film/media/connected-delivery.svg"
+  },
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/c90978041eda039ff144c04e71bd59b6c54994fe018470101a947bf89da67574.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A rhythmic, fast-paced mechanical keyboard typing sound effect, followed by a soft digital 'whoosh' as the text is submitted.",
+          "label": "Opening Hook",
+          "visual": "A static, high-angle screen capture of a desktop application interface. The background is intentionally blurred, showing a white and light grey UI. In the center, a prominent white search or command bar is active. A cursor is visible, and text is being typed into the bar in Chinese characters. The lighting is perfectly even, mimicking a digital display, with a clean and minimalist aesthetic.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Three distinct, high-pitched 'ding' sound effects occurring in rapid succession, corresponding to the completion of each processing task. A light, upbeat lo-fi background track begins to play at a low volume.",
+          "label": "Product Information",
+          "visual": "The same screen capture remains static. Below the main input bar, a black status module appears. It displays a progress bar that shifts from a 'processing' state to a 'completed' state. Three distinct lines of text appear sequentially, each accompanied by a small circular progress indicator. The UI remains clean with high contrast between the white background and the black notification elements.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The lo-fi music continues with a steady tempo. A final, satisfying 'click' sound effect is heard as the cursor interacts with a button off-center.",
+          "label": "Usage Scenarios",
+          "visual": "The screen interface updates as the black processing module disappears, revealing the results of the command. The layout shifts slightly to show a organized list or document structure that has been generated. The cursor moves smoothly across the screen toward the bottom right corner. The color palette remains consistent with white, light grey, and dark grey accents.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.5,
+      "action": "Task types and sends from input"
+    },
+    {
+      "start": 1.5,
+      "end": 3.5,
+      "action": "Three sequential run states appear"
+    },
+    {
+      "start": 3.5,
+      "end": 4.4,
+      "action": "Completed states yield to actual current result structure"
+    },
+    {
+      "start": 4.4,
+      "end": 5,
+      "action": "Results remain available"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 260,
+      "y": 130,
+      "w": 1400,
+      "h": 800,
+      "asset": "screen",
+      "fit": "contain",
+      "radius": 18,
+      "blur": 12,
+      "opacity": 0.35
+    },
+    {
+      "id": "n002-card",
+      "kind": "card",
+      "x": 320,
+      "y": 120,
+      "w": 1280,
+      "h": 170,
+      "children": [],
+      "fill": "#FFFFFF"
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 365,
+      "y": 155,
+      "w": 1150,
+      "h": 110,
+      "text": "{{request}}",
+      "size": 46,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "characters": [
+          [
+            0,
+            0
+          ],
+          [
+            1.25,
+            20,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-b2-cursor",
+      "kind": "b2-cursor",
+      "x": 0,
+      "y": 0,
+      "w": 43,
+      "h": 64,
+      "tracks": {
+        "x": [
+          [
+            0,
+            1400
+          ],
+          [
+            1.25,
+            1500
+          ],
+          [
+            1.6,
+            1500
+          ],
+          [
+            4.5,
+            1590
+          ]
+        ],
+        "y": [
+          [
+            0,
+            850
+          ],
+          [
+            1.25,
+            215
+          ],
+          [
+            1.6,
+            215
+          ],
+          [
+            4.5,
+            840
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-group",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n005-pill",
+          "kind": "pill",
+          "x": 420,
+          "y": 380,
+          "w": 1080,
+          "h": 120,
+          "label": "{{status0}}",
+          "size": 46,
+          "fill": "#0B0B0F",
+          "color": "#FFFFFF",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                1.5,
+                0
+              ],
+              [
+                2.1,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                1.5,
+                415
+              ],
+              [
+                2.1,
+                380,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n006-pill",
+          "kind": "pill",
+          "x": 420,
+          "y": 545,
+          "w": 1080,
+          "h": 120,
+          "label": "{{status1}}",
+          "size": 46,
+          "fill": "#0B0B0F",
+          "color": "#FFFFFF",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                2.1,
+                0
+              ],
+              [
+                2.7,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                2.1,
+                580
+              ],
+              [
+                2.7,
+                545,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n007-pill",
+          "kind": "pill",
+          "x": 420,
+          "y": 710,
+          "w": 1080,
+          "h": 120,
+          "label": "{{status2}}",
+          "size": 46,
+          "fill": "#0B0B0F",
+          "color": "#FFFFFF",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                2.7,
+                0
+              ],
+              [
+                3.3,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                2.7,
+                745
+              ],
+              [
+                3.3,
+                710,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            3.5,
+            1
+          ],
+          [
+            4.0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011-card",
+      "kind": "card",
+      "x": 390,
+      "y": 360,
+      "w": 1140,
+      "h": 550,
+      "children": [
+        {
+          "id": "n009-text",
+          "kind": "text",
+          "x": 45,
+          "y": 40,
+          "w": 1050,
+          "h": 85,
+          "text": "{{resultTitle}}",
+          "size": 53,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n010-text",
+          "kind": "text",
+          "x": 45,
+          "y": 170,
+          "w": 1050,
+          "h": 310,
+          "text": "{{files}}",
+          "size": 51,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.9,
+            0
+          ],
+          [
+            4.6,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.9,
+            395
+          ],
+          [
+            4.6,
+            360,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

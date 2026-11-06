@@ -1,0 +1,105 @@
+{
+  "template": "monokern-ade5b6",
+  "catalog_index": 50,
+  "duration": 20.053,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "loop": false,
+  "brand": "PHOSPHENE",
+  "provenance": "independent-reimplementation",
+  "reference_slug": "monokern-ade5b6",
+  "reference_url": "https://prompt-motion.com/monokern-ade5b6",
+  "colors": {
+    "dark": "#04010b"
+  },
+  "text": {
+    "reel": "MOTION REEL — MMXXVI",
+    "creator": "CLAUDE",
+    "open": "PLEASE HOLD AND KEEP YOUR EYES OPEN",
+    "close": "( now close your eyes )",
+    "credit": "a motion study by Claude"
+  },
+  "marks": [
+    {
+      "time": 0,
+      "label": "Dark eye line"
+    },
+    {
+      "time": 1.5,
+      "label": "Opening iris"
+    },
+    {
+      "time": 3.25,
+      "label": "Pupil eye tunnel"
+    },
+    {
+      "time": 3.75,
+      "label": "Into pupil"
+    },
+    {
+      "time": 4.5,
+      "label": "Recursive eye funnel"
+    },
+    {
+      "time": 6.75,
+      "label": "Spectral rays"
+    },
+    {
+      "time": 8.75,
+      "label": "Mercury metaball"
+    },
+    {
+      "time": 10.25,
+      "label": "Chrome torus morph"
+    },
+    {
+      "time": 11.25,
+      "label": "Crown mandala"
+    },
+    {
+      "time": 12.5,
+      "label": "Logarithmic eye spiral"
+    },
+    {
+      "time": 14.5,
+      "label": "Lattice hallway"
+    },
+    {
+      "time": 15.25,
+      "label": "Camera through lattice"
+    },
+    {
+      "time": 16.75,
+      "label": "Returned eye"
+    },
+    {
+      "time": 17.75,
+      "label": "Eye closes"
+    },
+    {
+      "time": 18.5,
+      "label": "Phosphene reveal"
+    },
+    {
+      "time": 19.5,
+      "label": "Closing typography"
+    }
+  ],
+  "asset_notes": "No source images/video frames used. Independent Canvas geometry and authored WebGL SDF with real 3D depth/normals/occlusion, rendered768x432 then composed into1920x1080 for soft look. Original shader/material/camera not recovered. Original creator text retained as reference attribution, editable.",
+  "requirements": {
+    "webgl": true,
+    "shader_file": "material.glsl",
+    "shader_resolution": [
+      768,
+      432
+    ],
+    "font_candidates": "Bundled Geist OFL; system Consolas and Georgia, not identified originals"
+  },
+  "portable_demo": {
+    "source_motion_preserved": true,
+    "reference_media_distributed": false,
+    "textures": "Original replaceable schematic assets; not the original reference artwork.",
+    "approval": "Historical motion implementation; this portable demo is not user-approved."
+  }
+}

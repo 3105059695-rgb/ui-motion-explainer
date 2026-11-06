@@ -1,0 +1,164 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-native-t05d",
+  "title": "工具并排：逐项比较，胜出格翻黑",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "headers": [
+      "比较项目",
+      "工具 A",
+      "工具 B"
+    ],
+    "rows": [
+      [
+        "项目修改",
+        "直接处理",
+        "复制片段"
+      ],
+      [
+        "使用入口",
+        "客户端",
+        "浏览器"
+      ],
+      [
+        "长任务",
+        "持续执行",
+        "分段执行"
+      ],
+      [
+        "本地文件",
+        "读取目录",
+        "选择文件"
+      ]
+    ],
+    "title": "把差异放在同一张表里"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/210ebb90463bd765218bc61c7490dd2cbadba2d7921b5afcc2b2e82e45e3c0dd.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "Is this new coding tool really better than the current market leader? Let's compare the key features side-by-side.",
+          "label": "Opening Hook",
+          "visual": "A clean, white background displays two distinct columns headed by colorful circular logos. A man in his early 30s with short black hair, light complexion, wearing a dark grey hoodie over a white t-shirt, appears in a small circular inset at the top right corner. The lighting is bright and even, casting soft shadows. The layout is symmetrical with black text appearing in a list format on the left.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "When it comes to project-wide modifications, the first tool allows for direct file changes and testing, whereas the second only provides code snippets.",
+          "label": "Product Selling Points",
+          "visual": "The same layout persists. A horizontal white highlight bar with rounded corners slides down to emphasize the first comparison row. Dark blue and light grey blocks with text appear under the two logo columns. The man in the inset continues speaking with a neutral, professional expression.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "In terms of accessibility, one requires a dedicated client installation, while the other is instantly available through any web browser.",
+          "label": "Product Information",
+          "visual": "The highlight bar moves down to the second row. New text blocks appear. The overall color palette remains minimalist with white, black, and blue accents. The man's head in the inset tilts slightly as he explains the setup requirements.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "For long-duration tasks, we see a significant difference in stability. One can run continuously for an hour, while the other tends to pause mid-process.",
+          "label": "Usage Scenarios",
+          "visual": "The highlight bar shifts to the third row. The background remains static white. The man in the top right inset uses subtle hand gestures to emphasize the duration of the tasks being discussed. The text blocks update to reflect performance metrics.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "Finally, looking at local file reading, the first option can process entire folders at once, while the competitor is limited to just a few files per upload.",
+          "label": "Product Selling Points",
+          "visual": "The highlight bar reaches the final row at the bottom of the list. The man in the inset smiles slightly, nodding his head. The text blocks on the right side of the screen populate with the final comparison points regarding file handling capabilities.",
+          "shot_type": "Wide Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.0,
+      "action": "Both products and comparison dimensions establish one shared table"
+    },
+    {
+      "start": 1.0,
+      "end": 4.5,
+      "action": "Highlight visits each row with the winning eligible cell accented"
+    },
+    {
+      "start": 4.5,
+      "end": 5,
+      "action": "Final difference holds with full comparison retained"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-text",
+      "kind": "text",
+      "x": 200,
+      "y": 80,
+      "w": 1520,
+      "h": 120,
+      "text": "{{title}}",
+      "size": 72,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n002-b3-table",
+      "kind": "b3-table",
+      "x": 170,
+      "y": 260,
+      "w": 1580,
+      "h": 670,
+      "headersKey": "headers",
+      "rowsKey": "rows",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            4.5,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

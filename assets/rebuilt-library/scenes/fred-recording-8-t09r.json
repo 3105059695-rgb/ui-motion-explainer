@@ -1,0 +1,223 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-recording-8-t09r",
+  "title": "录屏变速：原速 → 快进 → 回原速看结果",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "1×",
+    "text02": "8×",
+    "text03": "1×",
+    "media1.start": 0,
+    "media1.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "image",
+      "x": 170,
+      "y": 125,
+      "w": 1580,
+      "h": 790,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0,
+        6.001
+      ],
+      "tracks": {
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            4.2,
+            1
+          ],
+          [
+            5.1,
+            1.12
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "pill",
+      "x": 1450,
+      "y": 70,
+      "w": 250,
+      "h": 85,
+      "label": "{{text01}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "visible": [
+        0,
+        1.2
+      ]
+    },
+    {
+      "id": "n003",
+      "kind": "pill",
+      "x": 1450,
+      "y": 70,
+      "w": 250,
+      "h": 85,
+      "label": "{{text02}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "visible": [
+        1.2,
+        3.6
+      ]
+    },
+    {
+      "id": "n004",
+      "kind": "pill",
+      "x": 1450,
+      "y": 70,
+      "w": 250,
+      "h": 85,
+      "label": "{{text03}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "visible": [
+        3.6,
+        6.001
+      ]
+    },
+    {
+      "id": "n005",
+      "kind": "bar",
+      "x": 260,
+      "y": 965,
+      "w": 1400,
+      "h": 30,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            1.2,
+            0.05
+          ],
+          [
+            3.6,
+            0.9
+          ],
+          [
+            4.5,
+            0.94
+          ],
+          [
+            6,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/db0f53982970749b261cce7281b3eda31cdde30bbbb038152a0ea892f7eeaa8f.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "A digital clicking sound effect mimics the sound of a scroll wheel.",
+          "label": "Opening Hook",
+          "visual": "A white digital interface is shown. A cursor scrolls past text blocks in a messaging-style window. The interface is clean and minimalist with light gray accents. The movement is a fast vertical scroll upwards.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A fast-paced, high-pitched mechanical whirring sound plays, suggesting high-speed processing.",
+          "label": "Product Information",
+          "visual": "The camera pans down quickly through a chat log where a link and Chinese text are visible. A small circular icon with a colorful logo appears, followed by a status indicator showing progress. The background is a white gridded workspace.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "Four distinct, rhythmic 'pop' sounds occur as each image thumbnail generates and snaps into place.",
+          "label": "Product Selling Points",
+          "visual": "A series of four images appear in a horizontal row within the interface. Each image features a small, yellow, pumpkin-shaped night light with a sad facial expression and tiny brown legs. The images show the product from different angles: a plain front view, a hand pressing the top, a close-up of the texture, and the light illuminated on a nightstand.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "A final, resonant 'ping' sound signals completion, followed by silence.",
+          "label": "Call to Action",
+          "visual": "The final result is shown centered on the screen. The four marketing images for the pumpkin night light are fully rendered. The lighting in the product photos is warm and soft, contrasting with the bright white digital UI. A mouse cursor hovers near the bottom of the set of images.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "真实录屏原速播放 → 角落速度读数从 1× 拉到 8×（画面真的快进、进度条飞走）→ 到结果前回 1×，结果处推近"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 6.0,
+      "action": "真实录屏原速播放 → 角落速度读数从 1× 拉到 8×（画面真的快进、进度条飞走）→ 到结果前回 1×，结果处推近"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "本期任务录屏",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          1.2,
+          1.2
+        ],
+        [
+          3.6,
+          20.4
+        ],
+        [
+          4.5,
+          21.3
+        ],
+        [
+          6,
+          22.8
+        ]
+      ]
+    }
+  ]
+}

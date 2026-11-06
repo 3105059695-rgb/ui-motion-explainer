@@ -1,0 +1,236 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t15e",
+  "title": "折线走势",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "series": [
+      [
+        [
+          0,
+          0.1
+        ],
+        [
+          0.2,
+          0.25
+        ],
+        [
+          0.45,
+          0.4
+        ],
+        [
+          0.7,
+          0.45
+        ],
+        [
+          1,
+          0.48
+        ]
+      ],
+      [
+        [
+          0,
+          0.2
+        ],
+        [
+          0.13,
+          0.48
+        ],
+        [
+          0.27,
+          0.87
+        ],
+        [
+          0.5,
+          0.72
+        ],
+        [
+          0.7,
+          0.72
+        ]
+      ]
+    ],
+    "title": "相同成本下，结果如何变化",
+    "peak": "当前关注的数据点",
+    "axis": "单次任务成本 →",
+    "source": "示意数据 · 替换为本期同口径依据"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/51c7d74e9d71db52c8b7e6df67505e440a0577ff0b9012bd9b163997842fdb2a.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "Soft, high-pitched digital chime accompanied by a rhythmic, upbeat electronic synth beat. The tempo is fast and energetic.",
+          "label": "Opening Hook",
+          "visual": "A static wide shot of a white 2D digital canvas featuring a graph. The X-axis represents cost per single task from $0 to $3, and the Y-axis represents score from 40% to 80%. A light gray line representing 'GPT-6 Sol' begins to animate, curving upwards from the bottom left corner.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A series of three 'ding' sound effects corresponding with the appearance of data points on the graph. The electronic synth continues in the background.",
+          "label": "Product Selling Points",
+          "visual": "The graph continues to populate. A darker black line representing 'GPT-6.1 Sol' appears above the gray line, showing higher performance at lower costs. Both lines advance to the right. The black line peaks sharply at approximately $0.80 and 75.4%, highlighted by a purple glowing node. The gray line remains lower and flatter as it extends toward the $3.00 mark.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The final 'ding' sound effect echoes as the background electronic music fades out with a sharp digital cut.",
+          "label": "Product Information",
+          "visual": "The animation of the lines concludes. The black line plateaus after its peak, ending at a node at approximately $1.50 with a value of 69.0%. The light gray line continues its gradual path toward the right. The background remains clean white with gray grid lines.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 0.8999999999999999,
+      "action": "Axes and measurement context appear first"
+    },
+    {
+      "start": 0.8999999999999999,
+      "end": 4.199999999999999,
+      "action": "Two independent performance curves grow along the same axes"
+    },
+    {
+      "start": 3.3000000000000003,
+      "end": 4.800000000000001,
+      "action": "Peak is emphasized without replacing the chart"
+    },
+    {
+      "start": 4.800000000000001,
+      "end": 6,
+      "action": "Full curves and conditions hold"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-text",
+      "kind": "text",
+      "x": 180,
+      "y": 80,
+      "w": 1560,
+      "h": 110,
+      "text": "{{title}}",
+      "size": 66,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n002-b2-line-chart",
+      "kind": "b2-line-chart",
+      "x": 300,
+      "y": 250,
+      "w": 1350,
+      "h": 560,
+      "seriesKey": "series",
+      "tracks": {
+        "value": [
+          [
+            0.48,
+            0
+          ],
+          [
+            4.2,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-pill",
+      "kind": "pill",
+      "x": 570,
+      "y": 240,
+      "w": 560,
+      "h": 85,
+      "label": "{{peak}}",
+      "size": 34,
+      "fill": "#D6C2FF",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.3,
+            0
+          ],
+          [
+            4.02,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.3,
+            275
+          ],
+          [
+            4.02,
+            240,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-text",
+      "kind": "text",
+      "x": 1100,
+      "y": 880,
+      "w": 600,
+      "h": 70,
+      "text": "{{axis}}",
+      "size": 34,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n005-text",
+      "kind": "text",
+      "x": 250,
+      "y": 980,
+      "w": 1400,
+      "h": 55,
+      "text": "{{source}}",
+      "size": 28,
+      "color": "#777780",
+      "align": "center"
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

@@ -1,0 +1,675 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t09k",
+  "title": "上传前过滤文件",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "upload": "可以上传",
+    "exclude": "本机保留 · 不上传",
+    "file0": "index.html",
+    "file1": ".env",
+    "file2": "style.css",
+    "file3": "app.js",
+    "file4": "secrets.json",
+    "file5": "node_modules/",
+    "file6": "README.md",
+    "excludedCount": 3,
+    "uploadCount": 4
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/7a08d476f76d310a8bbb4649d8ff266de2e54881bfb93085c350792c967f5ff4.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A digital clicking sound effect occurs as the file list updates. The background music is a light, upbeat electronic track.",
+          "label": "Opening Hook",
+          "visual": "A white UI window is shown on the left of a clean white background. Inside the window, a file list shows five files: index.html, .env, style.css, app.js, and secrets.json. A cursor hovers over the file list. The lighting is bright and even with no shadows. The background environment is a flat, minimalist digital workspace. The window has rounded corners and subtle drop shadows.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A swift whooshing sound as files are moved, followed by three distinct 'pop' sound effects as the counter increments.",
+          "label": "Product Selling Points",
+          "visual": "The cursor clicks and drags the '.env' and 'secrets.json' files along with a new 'node_modules/' folder from the main window. These items are moved into a black box on the right side of the screen labeled for non-upload. As the items enter the black box, a counter on a separate white box above it increases from 0 to 3. The movement is a smooth linear slide.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A final chime sound indicates successful sorting of files, layered over the continuing ambient electronic background music.",
+          "label": "Usage Scenarios",
+          "visual": "The remaining files in the original white window (index.html, style.css, app.js, and README.md) are selected. A green checkmark icon appears next to each of these files. The counter in the upper-right white box representing the upload destination increases to 4 as a visual representation of the 'README.md' file slides into it. The color palette remains neutral with high contrast between the white and black UI elements.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.08,
+      "action": "Original files are visible before filtering"
+    },
+    {
+      "start": 1.08,
+      "end": 3.0,
+      "action": "Sensitive and dependency files move to the explicit excluded container"
+    },
+    {
+      "start": 3.0,
+      "end": 5.4,
+      "action": "Remaining content moves to the upload destination"
+    },
+    {
+      "start": 5.4,
+      "end": 6,
+      "action": "Both sets remain auditable"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-window",
+      "kind": "window",
+      "x": 120,
+      "y": 180,
+      "w": 790,
+      "h": 740,
+      "label": "待检查的项目文件",
+      "children": []
+    },
+    {
+      "id": "n003-card",
+      "kind": "card",
+      "x": 1210,
+      "y": 170,
+      "w": 570,
+      "h": 300,
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 30,
+          "y": 25,
+          "w": 510,
+          "h": 80,
+          "text": "{{upload}}",
+          "size": 48,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF"
+    },
+    {
+      "id": "n005-card",
+      "kind": "card",
+      "x": 1210,
+      "y": 620,
+      "w": 570,
+      "h": 300,
+      "children": [
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 30,
+          "y": 25,
+          "w": 510,
+          "h": 80,
+          "text": "{{exclude}}",
+          "size": 42,
+          "color": "#FFFFFF",
+          "align": "left"
+        }
+      ],
+      "fill": "#0B0B0F"
+    },
+    {
+      "id": "n006-pill",
+      "kind": "pill",
+      "x": 165,
+      "y": 280,
+      "w": 690,
+      "h": 60,
+      "label": "{{file0}}",
+      "size": 28,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            0,
+            165
+          ],
+          [
+            3.0,
+            165
+          ],
+          [
+            3.96,
+            1240
+          ]
+        ],
+        "y": [
+          [
+            0,
+            280
+          ],
+          [
+            3.0,
+            280
+          ],
+          [
+            3.96,
+            280
+          ]
+        ],
+        "w": [
+          [
+            0,
+            690
+          ],
+          [
+            3.0,
+            690
+          ],
+          [
+            3.96,
+            500
+          ]
+        ],
+        "fill": [
+          [
+            0,
+            "#F3F3F5"
+          ],
+          [
+            3.96,
+            "#F3F3F5"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 165,
+      "y": 360,
+      "w": 690,
+      "h": 60,
+      "label": "{{file1}}",
+      "size": 28,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            0,
+            165
+          ],
+          [
+            1.08,
+            165
+          ],
+          [
+            2.04,
+            1240
+          ]
+        ],
+        "y": [
+          [
+            0,
+            360
+          ],
+          [
+            1.08,
+            360
+          ],
+          [
+            2.04,
+            730
+          ]
+        ],
+        "w": [
+          [
+            0,
+            690
+          ],
+          [
+            1.08,
+            690
+          ],
+          [
+            2.04,
+            500
+          ]
+        ],
+        "fill": [
+          [
+            0,
+            "#F3F3F5"
+          ],
+          [
+            2.04,
+            "#D6C2FF"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-pill",
+      "kind": "pill",
+      "x": 165,
+      "y": 440,
+      "w": 690,
+      "h": 60,
+      "label": "{{file2}}",
+      "size": 28,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            0,
+            165
+          ],
+          [
+            3.39,
+            165
+          ],
+          [
+            4.35,
+            1240
+          ]
+        ],
+        "y": [
+          [
+            0,
+            440
+          ],
+          [
+            3.39,
+            440
+          ],
+          [
+            4.35,
+            325
+          ]
+        ],
+        "w": [
+          [
+            0,
+            690
+          ],
+          [
+            3.39,
+            690
+          ],
+          [
+            4.35,
+            500
+          ]
+        ],
+        "fill": [
+          [
+            0,
+            "#F3F3F5"
+          ],
+          [
+            4.35,
+            "#F3F3F5"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-pill",
+      "kind": "pill",
+      "x": 165,
+      "y": 520,
+      "w": 690,
+      "h": 60,
+      "label": "{{file3}}",
+      "size": 28,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            0,
+            165
+          ],
+          [
+            3.78,
+            165
+          ],
+          [
+            4.74,
+            1240
+          ]
+        ],
+        "y": [
+          [
+            0,
+            520
+          ],
+          [
+            3.78,
+            520
+          ],
+          [
+            4.74,
+            370
+          ]
+        ],
+        "w": [
+          [
+            0,
+            690
+          ],
+          [
+            3.78,
+            690
+          ],
+          [
+            4.74,
+            500
+          ]
+        ],
+        "fill": [
+          [
+            0,
+            "#F3F3F5"
+          ],
+          [
+            4.74,
+            "#F3F3F5"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010-pill",
+      "kind": "pill",
+      "x": 165,
+      "y": 600,
+      "w": 690,
+      "h": 60,
+      "label": "{{file4}}",
+      "size": 28,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            0,
+            165
+          ],
+          [
+            1.68,
+            165
+          ],
+          [
+            2.64,
+            1240
+          ]
+        ],
+        "y": [
+          [
+            0,
+            600
+          ],
+          [
+            1.68,
+            600
+          ],
+          [
+            2.64,
+            780
+          ]
+        ],
+        "w": [
+          [
+            0,
+            690
+          ],
+          [
+            1.68,
+            690
+          ],
+          [
+            2.64,
+            500
+          ]
+        ],
+        "fill": [
+          [
+            0,
+            "#F3F3F5"
+          ],
+          [
+            2.64,
+            "#D6C2FF"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011-pill",
+      "kind": "pill",
+      "x": 165,
+      "y": 680,
+      "w": 690,
+      "h": 60,
+      "label": "{{file5}}",
+      "size": 28,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            0,
+            165
+          ],
+          [
+            2.28,
+            165
+          ],
+          [
+            3.24,
+            1240
+          ]
+        ],
+        "y": [
+          [
+            0,
+            680
+          ],
+          [
+            2.28,
+            680
+          ],
+          [
+            3.24,
+            830
+          ]
+        ],
+        "w": [
+          [
+            0,
+            690
+          ],
+          [
+            2.28,
+            690
+          ],
+          [
+            3.24,
+            500
+          ]
+        ],
+        "fill": [
+          [
+            0,
+            "#F3F3F5"
+          ],
+          [
+            3.24,
+            "#D6C2FF"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012-pill",
+      "kind": "pill",
+      "x": 165,
+      "y": 760,
+      "w": 690,
+      "h": 60,
+      "label": "{{file6}}",
+      "size": 28,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            0,
+            165
+          ],
+          [
+            4.17,
+            165
+          ],
+          [
+            5.13,
+            1240
+          ]
+        ],
+        "y": [
+          [
+            0,
+            760
+          ],
+          [
+            4.17,
+            760
+          ],
+          [
+            5.13,
+            415
+          ]
+        ],
+        "w": [
+          [
+            0,
+            690
+          ],
+          [
+            4.17,
+            690
+          ],
+          [
+            5.13,
+            500
+          ]
+        ],
+        "fill": [
+          [
+            0,
+            "#F3F3F5"
+          ],
+          [
+            5.13,
+            "#F3F3F5"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "excludedCount-counter",
+      "kind": "b2-number",
+      "x": 1600,
+      "y": 645,
+      "w": 125,
+      "h": 65,
+      "toKey": "excludedCount",
+      "integer": true,
+      "size": 52,
+      "color": "#D6C2FF",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            1.08,
+            0
+          ],
+          [
+            3.24,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "uploadCount-counter",
+      "kind": "b2-number",
+      "x": 1600,
+      "y": 195,
+      "w": 125,
+      "h": 65,
+      "toKey": "uploadCount",
+      "integer": true,
+      "size": 52,
+      "color": "#0B0B0F",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            3.0,
+            0
+          ],
+          [
+            5.34,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

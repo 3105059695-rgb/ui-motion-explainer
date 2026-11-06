@@ -1,0 +1,102 @@
+{
+  "reference_slug": "ajith-io-b5626e",
+  "evidence": "Full case JSON read; actual cached MP4 analyzed with toolkit at 0.2 second intervals; all 75 frames across 4 contact sheets visually inspected; 12 key frames viewed at 960px",
+  "source_video": "private-source-not-distributed",
+  "visual_duration": 15,
+  "container_duration": 15.061,
+  "observed_grid": "128 BPM; 8 bars; 4 beats per bar; 1.875 seconds per bar",
+  "source_geometry": {
+    "width": 1920,
+    "height": 1080,
+    "center": [
+      960,
+      540
+    ],
+    "corner_marks": [
+      56,
+      56
+    ],
+    "point_grid_spacing_approx": 58
+  },
+  "shots": [
+    {
+      "start": 0,
+      "end": 1.875,
+      "background": "near-black",
+      "content": "Red dot pops at center; divides into 2 diagonal dots, then 4, then 8 dots in an orbit",
+      "geometry": "Single radius around 28px; orbit radius around 140-170px; all content centered",
+      "motion": "Spring birth; orbit and division on 0.46875s beats; final ring contracts slightly",
+      "camera": "Locked"
+    },
+    {
+      "start": 1.875,
+      "end": 3.75,
+      "background": "red",
+      "content": "EVERY; FRAME flies in with motion trails and corner brackets; camera jumps forward into ON before settling at EVERY FRAME / ON PURPOSE.",
+      "geometry": "Bold uppercase; EVERY alone approx 1100px wide; final two-line block approx 1500px wide, left around 145px",
+      "motion": "Text enters from above with rotation; second-line mask reveal; forward/back scale and translation",
+      "camera": "Kinetic zoom and pan"
+    },
+    {
+      "start": 3.75,
+      "end": 5.625,
+      "background": "near-black",
+      "content": "Red circle, blue rounded square, yellow rounded triangle; thin transform bounding box, 8 handles, center cross and rotation readout; ends in red flower-shaped points",
+      "geometry": "Main shape diameter roughly 420-500px; edit box roughly 580px square; rotation text at x1260/y230",
+      "motion": "Radial path interpolation and rotation; previous-pose trails; point flower contracts",
+      "camera": "Locked center"
+    },
+    {
+      "start": 5.625,
+      "end": 7.5,
+      "background": "cream",
+      "content": "Flower opens into full-screen dot grid; red traveling waves displace and enlarge dots; grid tilts into perspective at end",
+      "geometry": "Approximately 34 columns and 19 rows; black radius about 5px, red up to 10px",
+      "motion": "Expanding ordered geometry; traveling ripple; simulated 3D plane rotation",
+      "camera": "Pullback/tilt near end"
+    },
+    {
+      "start": 7.5,
+      "end": 9.375,
+      "background": "blue",
+      "content": "White dot plane gathers into sphere, twists into torus and resolves into wire cube with dots along edges",
+      "geometry": "Sphere radius roughly 340px; torus outer radius about 350px; cube about 750-850px screen bounds",
+      "motion": "Deterministic 3D point position interpolation, spin and perspective projection; cube approaches camera at end",
+      "camera": "Perspective with mild approach"
+    },
+    {
+      "start": 9.375,
+      "end": 11.25,
+      "background": "yellow",
+      "content": "Black/red/cream/blue striped thick tube runs in from left, curls into a loop, crosses itself with black impact spokes and exits right",
+      "geometry": "Tube total width roughly 85-100px; observed loop around 580px wide",
+      "motion": "Fixed Bezier flight path with moving arc-length window; rounded head and previous-position cap trails",
+      "camera": "Locked"
+    },
+    {
+      "start": 11.25,
+      "end": 13.125,
+      "background": "near-black",
+      "content": "Four horizontal type ribbons bend into concentric rotating type rings; outer and third are solid cream, second and inner are outlined; red bullets and center dot",
+      "geometry": "Outer radius roughly 460px; inner radii around 370/280/205px; center dot radius 42px",
+      "motion": "Each glyph morphs from linear ribbon coordinates to circular path; opposing rotation; rapid spin trails before exit",
+      "camera": "Large arc closeup then centered circles"
+    },
+    {
+      "start": 13.125,
+      "end": 15,
+      "background": "cream",
+      "content": "Cream flood from center, red dot hops into Claude period; serif brand rises from a mask; MOTION DESIGNER and small source footer settle",
+      "geometry": "Wordmark width about 700px centered around y520; role around y690; footer around y755",
+      "motion": "Circle flood; parabolic period trajectory; staggered masked glyph springs; held closing lockup",
+      "camera": "Locked"
+    }
+  ],
+  "acceptance": {
+    "repeat_seek": true,
+    "decode": true,
+    "comparison": true,
+    "full_subjective_audio_visual_review": false,
+    "user_approved": false
+  }
+}

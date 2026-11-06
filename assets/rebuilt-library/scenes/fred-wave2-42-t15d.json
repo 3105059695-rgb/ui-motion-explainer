@@ -1,0 +1,132 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t15d",
+  "title": "成本账单逐行累计",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "values": [
+      2.4,
+      0.6,
+      1.8
+    ],
+    "labels": [
+      "输入处理",
+      "缓存读取",
+      "结果输出"
+    ],
+    "currency": "¥"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/eedf718532ba76bac197d62c633807760f7fb9098e1d28e62bc14c2e5809b0d7.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A sharp, high-pitched digital 'ding' sound effect accompanied by a subtle electronic swoosh.",
+          "label": "Opening Hook",
+          "visual": "A static, centered wide shot of a clean, minimalist white digital card interface. The card features a header in a gray sans-serif font. At the bottom, a dark gray horizontal bar contains a bold white label and a currency counter displaying '$0.00'. The lighting is perfectly even across the frame, simulating a bright studio white background. The color palette is strictly monochromatic (white, light gray, dark gray).",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Two rapid, percussive 'click' sounds mimicking a mechanical keyboard, followed by a soft synth pulse.",
+          "label": "Product Information",
+          "visual": "The camera remains static. Two lines of text and numerical data appear instantly in the white section of the card. The top line shows a specific currency value of $2.40, and the second line shows $0.60. The dark gray bar at the bottom updates its total to '$2.39' with a rapid digital rolling number animation. The lighting and color grading remain consistent with the previous scene.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A single, resonant 'pop' sound effect as the third line appears, followed by a short upward-gliding melodic chime.",
+          "label": "Product Selling Points",
+          "visual": "A third line of data appears in the center of the white card, showing a value of $1.80. The bottom dark gray bar immediately updates to show a new total of '$3.00'. The movement is purely digital text rendering. The environment is a sterile, flat white digital space with no shadows or depth.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A bright, triumphant high-pitched bell chime signifies the final calculation, fading out into a low-frequency hum.",
+          "label": "Call to Action",
+          "visual": "The final state of the digital interface. The central white section remains populated with the three previous lines of data. The bottom dark gray bar performs a final calculation animation, settling on the figure '$4.80'. A small yellow and purple logo is visible in the top right corner of the frame throughout the entire duration. The shot is static until the end of the clip.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 4.0,
+      "action": "Three invoice entries are added sequentially and total derives from the visible monetary rows"
+    },
+    {
+      "start": 4.0,
+      "end": 5,
+      "action": "Complete bill and computed total hold"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-card",
+      "kind": "card",
+      "x": 480,
+      "y": 110,
+      "w": 960,
+      "h": 860,
+      "children": [],
+      "fill": "#FFFFFF"
+    },
+    {
+      "id": "n002-b3-bill",
+      "kind": "b3-bill",
+      "x": 540,
+      "y": 170,
+      "w": 840,
+      "h": 740,
+      "valuesKey": "values",
+      "labelsKey": "labels",
+      "currencyKey": "currency",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            4.15,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

@@ -1,0 +1,645 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-fix5-t09e",
+  "title": "产物浏览：生成结果逐个打开",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {},
+  "assets": {
+    "work0": "assets/approved-girl-sample/assets/handoff.png",
+    "work1": "assets/style-film/media/premise-to-report.svg",
+    "work2": "assets/style-film/media/module-assembly.svg",
+    "work3": "assets/style-film/media/cross-device-continuity.svg"
+  },
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/339240357566c96fe67dac9c8bb76ba93cbac48469f3cc7135b9331711e3bfcc.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single digital 'click' sound effect followed by a short, upbeat transition chime.",
+          "label": "Opening Hook",
+          "visual": "A white digital interface screen displays four rectangular image cards. The first card shows an orange phoenix illustration, the second a floating palace in the clouds, the third a gold and white abstract sculpture, and the fourth a traditional Chinese water town. A black mouse cursor hovers over the phoenix card. The lighting is bright and even, simulating a computer monitor glow.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A rapid digital 'whoosh' sound effect.",
+          "label": "Product Information",
+          "visual": "The interface zooms into the first card. The screen now shows a detailed illustration of a mythical phoenix with golden and orange plumage against a grey background. Smaller detail shots of the phoenix's head and feathers are visible on the right side of the frame. A cursor clicks a small navigation thumbnail at the bottom.",
+          "shot_type": "Close-Up",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A digital 'click' sound effect.",
+          "label": "Product Selling Points",
+          "visual": "The screen transitions to the second image: a wide, cinematic landscape of a marble palace platform floating above a sea of clouds with jagged mountain peaks in the background. The color palette is cool blues and bright whites. The cursor moves to the next thumbnail at the bottom.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A digital 'click' sound effect.",
+          "label": "Usage Scenarios",
+          "visual": "The screen transitions to the third image: an abstract, modern sculpture made of white organic shapes with gold-lined edges, sitting on a dark reflective pedestal. The lighting features soft highlights on the sculpture's curves. The cursor moves toward the center of the screen.",
+          "shot_type": "Close-Up",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "A final high-pitched digital chime that fades out quickly.",
+          "label": "Call to Action",
+          "visual": "The view zooms back out to the original wide shot of the four cards on the white background. The cursor remains static in the center. The layout is clean and symmetrical.",
+          "shot_type": "Wide Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.1,
+      "action": "Four works form gallery"
+    },
+    {
+      "start": 1.1,
+      "end": 4.5,
+      "action": "First, second and third selected works each open with two crops from the identical asset and retained thumbnail navigation"
+    },
+    {
+      "start": 4.5,
+      "end": 5,
+      "action": "Return to full gallery"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 120,
+      "y": 130,
+      "w": 800,
+      "h": 380,
+      "asset": "work0",
+      "fit": "cover",
+      "radius": 18,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            0.9,
+            1
+          ],
+          [
+            1.25,
+            0
+          ],
+          [
+            4.5,
+            0
+          ],
+          [
+            5,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-image",
+      "kind": "image",
+      "x": 970,
+      "y": 130,
+      "w": 800,
+      "h": 380,
+      "asset": "work1",
+      "fit": "cover",
+      "radius": 18,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            0.9,
+            1
+          ],
+          [
+            1.25,
+            0
+          ],
+          [
+            4.5,
+            0
+          ],
+          [
+            5,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-image",
+      "kind": "image",
+      "x": 120,
+      "y": 550,
+      "w": 800,
+      "h": 380,
+      "asset": "work2",
+      "fit": "cover",
+      "radius": 18,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            0.9,
+            1
+          ],
+          [
+            1.25,
+            0
+          ],
+          [
+            4.5,
+            0
+          ],
+          [
+            5,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-image",
+      "kind": "image",
+      "x": 970,
+      "y": 550,
+      "w": 800,
+      "h": 380,
+      "asset": "work3",
+      "fit": "cover",
+      "radius": 18,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            0.9,
+            1
+          ],
+          [
+            1.25,
+            0
+          ],
+          [
+            4.5,
+            0
+          ],
+          [
+            5,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012-group",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n005-image",
+          "kind": "image",
+          "x": 140,
+          "y": 110,
+          "w": 1120,
+          "h": 780,
+          "asset": "work0",
+          "fit": "cover",
+          "radius": 20
+        },
+        {
+          "id": "n006-b3-crop-media",
+          "kind": "b3-crop-media",
+          "x": 1320,
+          "y": 110,
+          "w": 440,
+          "h": 370,
+          "asset": "work0",
+          "cropX": 0.05,
+          "cropY": 0.1,
+          "cropW": 0.5,
+          "cropH": 0.4
+        },
+        {
+          "id": "n007-b3-crop-media",
+          "kind": "b3-crop-media",
+          "x": 1320,
+          "y": 520,
+          "w": 440,
+          "h": 370,
+          "asset": "work0",
+          "cropX": 0.4,
+          "cropY": 0.45,
+          "cropW": 0.5,
+          "cropH": 0.4
+        },
+        {
+          "id": "n008-image",
+          "kind": "image",
+          "x": 600,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work0",
+          "fit": "cover",
+          "radius": 6
+        },
+        {
+          "id": "n009-image",
+          "kind": "image",
+          "x": 785,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work1",
+          "fit": "cover",
+          "radius": 6
+        },
+        {
+          "id": "n010-image",
+          "kind": "image",
+          "x": 970,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work2",
+          "fit": "cover",
+          "radius": 6
+        },
+        {
+          "id": "n011-image",
+          "kind": "image",
+          "x": 1155,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work3",
+          "fit": "cover",
+          "radius": 6
+        }
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.1,
+            0
+          ],
+          [
+            1.35,
+            1
+          ],
+          [
+            1.95,
+            1
+          ],
+          [
+            2.2,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n020-group",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n013-image",
+          "kind": "image",
+          "x": 140,
+          "y": 110,
+          "w": 1120,
+          "h": 780,
+          "asset": "work1",
+          "fit": "cover",
+          "radius": 20
+        },
+        {
+          "id": "n014-b3-crop-media",
+          "kind": "b3-crop-media",
+          "x": 1320,
+          "y": 110,
+          "w": 440,
+          "h": 370,
+          "asset": "work1",
+          "cropX": 0.05,
+          "cropY": 0.1,
+          "cropW": 0.5,
+          "cropH": 0.4
+        },
+        {
+          "id": "n015-b3-crop-media",
+          "kind": "b3-crop-media",
+          "x": 1320,
+          "y": 520,
+          "w": 440,
+          "h": 370,
+          "asset": "work1",
+          "cropX": 0.4,
+          "cropY": 0.45,
+          "cropW": 0.5,
+          "cropH": 0.4
+        },
+        {
+          "id": "n016-image",
+          "kind": "image",
+          "x": 600,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work0",
+          "fit": "cover",
+          "radius": 6
+        },
+        {
+          "id": "n017-image",
+          "kind": "image",
+          "x": 785,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work1",
+          "fit": "cover",
+          "radius": 6
+        },
+        {
+          "id": "n018-image",
+          "kind": "image",
+          "x": 970,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work2",
+          "fit": "cover",
+          "radius": 6
+        },
+        {
+          "id": "n019-image",
+          "kind": "image",
+          "x": 1155,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work3",
+          "fit": "cover",
+          "radius": 6
+        }
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.3,
+            0
+          ],
+          [
+            2.55,
+            1
+          ],
+          [
+            3.15,
+            1
+          ],
+          [
+            3.4,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n028-group",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n021-image",
+          "kind": "image",
+          "x": 140,
+          "y": 110,
+          "w": 1120,
+          "h": 780,
+          "asset": "work2",
+          "fit": "cover",
+          "radius": 20
+        },
+        {
+          "id": "n022-b3-crop-media",
+          "kind": "b3-crop-media",
+          "x": 1320,
+          "y": 110,
+          "w": 440,
+          "h": 370,
+          "asset": "work2",
+          "cropX": 0.05,
+          "cropY": 0.1,
+          "cropW": 0.5,
+          "cropH": 0.4
+        },
+        {
+          "id": "n023-b3-crop-media",
+          "kind": "b3-crop-media",
+          "x": 1320,
+          "y": 520,
+          "w": 440,
+          "h": 370,
+          "asset": "work2",
+          "cropX": 0.4,
+          "cropY": 0.45,
+          "cropW": 0.5,
+          "cropH": 0.4
+        },
+        {
+          "id": "n024-image",
+          "kind": "image",
+          "x": 600,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work0",
+          "fit": "cover",
+          "radius": 6
+        },
+        {
+          "id": "n025-image",
+          "kind": "image",
+          "x": 785,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work1",
+          "fit": "cover",
+          "radius": 6
+        },
+        {
+          "id": "n026-image",
+          "kind": "image",
+          "x": 970,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work2",
+          "fit": "cover",
+          "radius": 6
+        },
+        {
+          "id": "n027-image",
+          "kind": "image",
+          "x": 1155,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work3",
+          "fit": "cover",
+          "radius": 6
+        }
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.45,
+            0
+          ],
+          [
+            3.7,
+            1
+          ],
+          [
+            4.3,
+            1
+          ],
+          [
+            4.55,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n029-b2-cursor",
+      "kind": "b2-cursor",
+      "x": 0,
+      "y": 0,
+      "w": 43,
+      "h": 64,
+      "tracks": {
+        "x": [
+          [
+            0,
+            900
+          ],
+          [
+            0.85,
+            450
+          ],
+          [
+            2.15,
+            860
+          ],
+          [
+            3.3,
+            1050
+          ],
+          [
+            4.55,
+            1670
+          ]
+        ],
+        "y": [
+          [
+            0,
+            1000
+          ],
+          [
+            0.85,
+            300
+          ],
+          [
+            2.15,
+            980
+          ],
+          [
+            3.3,
+            980
+          ],
+          [
+            4.55,
+            960
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 7,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

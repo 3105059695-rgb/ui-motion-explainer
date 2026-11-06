@@ -1,0 +1,172 @@
+{
+  "passed": true,
+  "count": 9,
+  "method": "Actual production-mode materialization, real Chromium canvas text and decoded media clock assertions; no user/aesthetic approval claimed.",
+  "rows": [
+    {
+      "case": "race",
+      "id": "fredtalk:fred-wave2-42-t14a2",
+      "passed": true,
+      "expected_canvas_text": "4.00 ×",
+      "drawn_text": [
+        "新方式",
+        "10.0 s",
+        "旧方式",
+        "40.0 s",
+        "4.00 ×"
+      ],
+      "frame_sha256": "8f0e70208a7a12003f463c8f900329ad130ec5fba10bb839dc1253258b20ca4b",
+      "runtime_sha256": "8b8f62a73cb1711365b09d6a3eb423018bbf462be51957128f3c840eebdb30a2",
+      "scene_js_sha256": "159d0052f521bd730be16a423ec99a19bd90e54070fb1d8fa5293f763b774511",
+      "extensions_sha256": {
+        "member-batch2.js": "33f260296c8d697b40b6836ee7160e9126619552271e76dab5ef0b01c515164c",
+        "member-batch3.js": "338d7dde7917e55773e9d5acefd8c7e1d6d10df2b328d204cdc8ab73aac89440"
+      }
+    },
+    {
+      "case": "bill",
+      "id": "fredtalk:fred-wave2-42-t15d",
+      "passed": true,
+      "expected_canvas_text": "¥6.50",
+      "drawn_text": [
+        "准备",
+        "¥1.25",
+        "执行",
+        "¥2.50",
+        "核对",
+        "¥2.75",
+        "合计",
+        "¥6.50"
+      ],
+      "frame_sha256": "1af4df6328da91d5369429b39430da633080ed2ea2a5b8bb58a3147fd37f89f1",
+      "runtime_sha256": "8b8f62a73cb1711365b09d6a3eb423018bbf462be51957128f3c840eebdb30a2",
+      "scene_js_sha256": "971f7b3f7bf36cfe94f74a7dae7a5f2a952077291bc6329bd7d5fdf78e3db745",
+      "extensions_sha256": {
+        "member-batch2.js": "33f260296c8d697b40b6836ee7160e9126619552271e76dab5ef0b01c515164c",
+        "member-batch3.js": "338d7dde7917e55773e9d5acefd8c7e1d6d10df2b328d204cdc8ab73aac89440"
+      }
+    },
+    {
+      "case": "price",
+      "id": "fredtalk:fred-native-t14c",
+      "passed": true,
+      "expected_canvas_text": "节省 ¥15.00 · 75%",
+      "drawn_text": [
+        "¥5.00",
+        "¥20.00",
+        "节省 ¥15.00 · 75%"
+      ],
+      "frame_sha256": "579755abdaa4b0562d8b18ef208253730b47f756f5463ba4148eb6d1a37721aa",
+      "runtime_sha256": "8b8f62a73cb1711365b09d6a3eb423018bbf462be51957128f3c840eebdb30a2",
+      "scene_js_sha256": "53128eb86570f7e6ce49b2bc7e5c9ddabbf9511528d509588064a56f4256a97a",
+      "extensions_sha256": {
+        "member-batch2.js": "33f260296c8d697b40b6836ee7160e9126619552271e76dab5ef0b01c515164c",
+        "member-batch3.js": "338d7dde7917e55773e9d5acefd8c7e1d6d10df2b328d204cdc8ab73aac89440"
+      }
+    },
+    {
+      "case": "queue",
+      "id": "fredtalk:fred-wave2-42-t09f",
+      "passed": true,
+      "expected_canvas_text": "5 / 5",
+      "drawn_text": [
+        "甲",
+        "乙",
+        "丙",
+        "丁",
+        "戊",
+        "5 / 5"
+      ],
+      "frame_sha256": "b79cee528a3391f127704775115adf93cfb6bf06713a1e773874e64872dcbb8e",
+      "runtime_sha256": "8b8f62a73cb1711365b09d6a3eb423018bbf462be51957128f3c840eebdb30a2",
+      "scene_js_sha256": "2e706ee0d31826cb55266040442c5602bb14faacd46ef283116e9001ae62f2eb",
+      "extensions_sha256": {
+        "member-batch2.js": "33f260296c8d697b40b6836ee7160e9126619552271e76dab5ef0b01c515164c",
+        "member-batch3.js": "338d7dde7917e55773e9d5acefd8c7e1d6d10df2b328d204cdc8ab73aac89440"
+      }
+    },
+    {
+      "case": "four-current-clips",
+      "passed": true,
+      "current_media_sha256": "bb29427a4fe35149cfdd04bce0636e5c1d3a4cb469dc1aa1d5a3a2ebd5418c16",
+      "actual_video_decodes": {
+        "clip3": {
+          "time": 6.4,
+          "rate": 1,
+          "ready": 4
+        },
+        "clip2": {
+          "time": 6.3,
+          "rate": 1,
+          "ready": 4
+        },
+        "clip0": {
+          "time": 6.1,
+          "rate": 1,
+          "ready": 4
+        },
+        "clip1": {
+          "time": 6.2,
+          "rate": 1,
+          "ready": 4
+        }
+      },
+      "drawn_text": [],
+      "frame_sha256": "8861485d986bdc65fed5c03aa4bb063fee979e2de83af40cf55874d454a5b73a",
+      "runtime_sha256": "8b8f62a73cb1711365b09d6a3eb423018bbf462be51957128f3c840eebdb30a2",
+      "scene_js_sha256": "56e329f55ebfe7a08868614df28b823b26e717df1837c0418f6637233eb84987",
+      "extensions_sha256": {
+        "member-batch2.js": "33f260296c8d697b40b6836ee7160e9126619552271e76dab5ef0b01c515164c",
+        "member-batch3.js": "338d7dde7917e55773e9d5acefd8c7e1d6d10df2b328d204cdc8ab73aac89440"
+      }
+    },
+    {
+      "case": "production-default-clock",
+      "passed": true,
+      "actual_video_decodes": {
+        "clip3": 3,
+        "clip1": 3,
+        "clip0": 3,
+        "clip2": 3
+      },
+      "drawn_text": [
+        "随时记录"
+      ],
+      "frame_sha256": "c005841e5878a21a7f1d6ff1f99ebe21914beb882d15bfad4fcc8556d965a4c9",
+      "runtime_sha256": "8b8f62a73cb1711365b09d6a3eb423018bbf462be51957128f3c840eebdb30a2",
+      "scene_js_sha256": "4f3fd248181fac14d0fdf3f57f635d7b916fad9e10bfced9df5e63aeb429cd6e",
+      "extensions_sha256": {
+        "member-batch2.js": "33f260296c8d697b40b6836ee7160e9126619552271e76dab5ef0b01c515164c",
+        "member-batch3.js": "338d7dde7917e55773e9d5acefd8c7e1d6d10df2b328d204cdc8ab73aac89440"
+      }
+    },
+    {
+      "case": "short-current-source",
+      "passed": true,
+      "rejected_reason": "Page.evaluate: Error: Video clip0 is too short: needs 6.000 s, has 4.458 s; supply a longer clip or shorten its use"
+    },
+    {
+      "case": "explicit-source-end",
+      "passed": true,
+      "actual_video_decodes": {
+        "clip2": 3.5,
+        "clip1": 3.5,
+        "clip0": 3.5,
+        "clip3": 3.5
+      },
+      "drawn_text": [],
+      "frame_sha256": "3b67f01ae27745cc7115b390db22e82ddf979253352c94045c916e3ed7c78550",
+      "runtime_sha256": "8b8f62a73cb1711365b09d6a3eb423018bbf462be51957128f3c840eebdb30a2",
+      "scene_js_sha256": "e3b7b8f37a8bb5975bade9eec6fd93a1c00e88f87daddb2934acefb4b31edfed",
+      "extensions_sha256": {
+        "member-batch2.js": "33f260296c8d697b40b6836ee7160e9126619552271e76dab5ef0b01c515164c",
+        "member-batch3.js": "338d7dde7917e55773e9d5acefd8c7e1d6d10df2b328d204cdc8ab73aac89440"
+      }
+    },
+    {
+      "case": "missing-production-media",
+      "passed": true,
+      "rejected_reason": "Bind current production media; demonstration assets are not a fallback: clip0, clip1, clip2, clip3"
+    }
+  ]
+}

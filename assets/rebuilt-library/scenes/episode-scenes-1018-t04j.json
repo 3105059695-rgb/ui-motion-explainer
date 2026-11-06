@@ -1,0 +1,589 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t04j",
+  "title": "两行“如果…就…”：条件胶囊 → 对应选择卡",
+  "duration": 13.6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "想快速体验",
+    "text02": "在线服务",
+    "text03": "打开即可用",
+    "text04": "需要自己掌控",
+    "text05": "独立部署",
+    "text06": "连接自己的机器",
+    "text07": "按实际需求选"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "pill",
+      "x": 170,
+      "y": 250,
+      "w": 560,
+      "h": 100,
+      "label": "{{text01}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.68,
+            0
+          ],
+          [
+            1.156,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            170
+          ],
+          [
+            0.68,
+            170
+          ],
+          [
+            1.156,
+            170,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            300
+          ],
+          [
+            0.68,
+            300
+          ],
+          [
+            1.156,
+            250,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "arrow",
+      "x": 775,
+      "y": 300,
+      "w": 180,
+      "h": 0,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.768,
+            0
+          ],
+          [
+            2.244,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            775
+          ],
+          [
+            1.768,
+            775
+          ],
+          [
+            2.244,
+            775,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            300
+          ],
+          [
+            1.768,
+            300
+          ],
+          [
+            2.244,
+            300,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "window",
+      "x": 1030,
+      "y": 190,
+      "w": 650,
+      "h": 250,
+      "label": "{{text02}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            2.448,
+            0
+          ],
+          [
+            2.924,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1030
+          ],
+          [
+            2.448,
+            1030
+          ],
+          [
+            2.924,
+            1030,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            240
+          ],
+          [
+            2.448,
+            240
+          ],
+          [
+            2.924,
+            190,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "text",
+      "x": 1070,
+      "y": 295,
+      "w": 560,
+      "h": 62.400000000000006,
+      "text": "{{text03}}",
+      "size": 39,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            2.992,
+            0
+          ],
+          [
+            3.468,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1070
+          ],
+          [
+            2.992,
+            1070
+          ],
+          [
+            3.468,
+            1070,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            345
+          ],
+          [
+            2.992,
+            345
+          ],
+          [
+            3.468,
+            295,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "pill",
+      "x": 170,
+      "y": 580,
+      "w": 560,
+      "h": 100,
+      "label": "{{text04}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.848,
+            0
+          ],
+          [
+            6.324,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            170
+          ],
+          [
+            5.848,
+            170
+          ],
+          [
+            6.324,
+            170,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            630
+          ],
+          [
+            5.848,
+            630
+          ],
+          [
+            6.324,
+            580,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "arrow",
+      "x": 775,
+      "y": 630,
+      "w": 180,
+      "h": 0,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            6.936,
+            0
+          ],
+          [
+            7.412,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            775
+          ],
+          [
+            6.936,
+            775
+          ],
+          [
+            7.412,
+            775,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            630
+          ],
+          [
+            6.936,
+            630
+          ],
+          [
+            7.412,
+            630,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "window",
+      "x": 1030,
+      "y": 520,
+      "w": 650,
+      "h": 250,
+      "label": "{{text05}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            7.616,
+            0
+          ],
+          [
+            8.092,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1030
+          ],
+          [
+            7.616,
+            1030
+          ],
+          [
+            8.092,
+            1030,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            570
+          ],
+          [
+            7.616,
+            570
+          ],
+          [
+            8.092,
+            520,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "text",
+      "x": 1070,
+      "y": 625,
+      "w": 560,
+      "h": 62.400000000000006,
+      "text": "{{text06}}",
+      "size": 39,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.16,
+            0
+          ],
+          [
+            8.636,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1070
+          ],
+          [
+            8.16,
+            1070
+          ],
+          [
+            8.636,
+            1070,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            675
+          ],
+          [
+            8.16,
+            675
+          ],
+          [
+            8.636,
+            625,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "pill",
+      "x": 650,
+      "y": 930,
+      "w": 620,
+      "h": 75,
+      "label": "{{text07}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            11.152,
+            0
+          ],
+          [
+            11.628,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            650
+          ],
+          [
+            11.152,
+            650
+          ],
+          [
+            11.628,
+            650,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            980
+          ],
+          [
+            11.152,
+            980
+          ],
+          [
+            11.628,
+            930,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/f2f33a84e38296c21d469e49b8e8434b74ca433973620e6483179c0c8925b682.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "So I suggest, if you're only using it occasionally, then calling the official interface directly is of course the most trouble-free way.",
+          "label": "Product Information",
+          "visual": "A clean, minimalist white background. Centered is a rounded rectangular box appearing with a smooth fade-in animation. Above it, a smaller text bubble is positioned at the top-center. The scene is brightly lit with even, soft light. No characters are present.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "If you want to have the model in your own hands, or if you want to compare the difference between open-source and official yourself...",
+          "label": "Usage Scenarios",
+          "visual": "A second rounded rectangular box appears to the right of the first one from the previous scene. It features three stacked server icons. The background remains white and the lighting is consistent. The new box slides in from the right side of the frame.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:09",
+          "timestamp_start": "0:04"
+        },
+        {
+          "audio": "...then you can go rent a machine and deploy an open-source version yourself.",
+          "label": "Call to Action",
+          "visual": "A final text bubble appears beneath the second box. Both main rectangular containers remain centered in the frame against the static white background. The motion is subtle as the new element enters with a quick pop-up animation.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:13",
+          "timestamp_start": "0:09"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "两行“条件 → 选择”：条件胶囊在左，按口播画出箭头、右侧弹出选择卡（图标+标题+一句说明），第二行同构接上，最后推荐行放大"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 13.6,
+      "action": "两行“条件 → 选择”：条件胶囊在左，按口播画出箭头、右侧弹出选择卡（图标+标题+一句说明），第二行同构接上，最后推荐行放大"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

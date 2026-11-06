@@ -1,0 +1,315 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t09g",
+  "title": "录屏 + 侧栏讲解",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "sideTitle": "边运行，边看结果",
+    "note0": "接收输入",
+    "note1": "观察桌面",
+    "note2": "完成后接管"
+  },
+  "assets": {
+    "recording": "assets/style-film/current-style-full.mp4"
+  },
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/9892668cb65e3f0f8b29a301e6ecaea22df6e5333fc56a5dde0152921b16fef5.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "Upbeat, light digital pop music starts playing with a fast tempo. There is a subtle 'ding' sound effect as the interface loads.",
+          "label": "Opening Hook",
+          "visual": "A static screenshot of a dual-pane software interface on a white background. The left pane shows a chat window with a light blue and white theme, while the right pane displays a light blue gradient background with a minimalist loading icon in the center. The lighting is bright and even, mimicking a digital display. The overall color palette is clean, with soft blues and whites.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The music continues at the same tempo. A high-pitched, melodic voiceover in Mandarin says: 'Chat with Dot as usual on the left.'",
+          "label": "Product Information",
+          "visual": "The right pane of the interface transitions to a desktop environment. A clock widget in the center shows '7:19' with a small avatar icon above it. Below the clock, a grid of colorful app icons (including 3D Slicer, Blender, and GIMP) appears. The mouse cursor moves slightly toward the bottom of the screen. The background is a light blue landscape illustration.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The music maintains a rhythmic beat. The voiceover continues: 'It works on its own cloud computer.'",
+          "label": "Product Selling Points",
+          "visual": "The view zooms in on the right pane, focusing on the grid of application icons. The cursor hovers over the 'Blender' icon. A small notification banner appears at the top of this sub-window. The animation is smooth, and the colors are vibrant and saturated against the white background of the surrounding interface.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "The music begins to swell slightly in volume. The voiceover says: 'You can take over management at any time...'",
+          "label": "Usage Scenarios",
+          "visual": "The camera pans slightly down to show a black status bar at the bottom of the desktop pane. The cursor moves toward a specific button on the right side of this bar. The lighting remains bright, and the interface elements are crisp and well-defined.",
+          "shot_type": "Medium Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:06",
+          "timestamp_start": "0:05"
+        },
+        {
+          "audio": "The music ends with a final, bright note. The voiceover finishes: '...with one click.'",
+          "label": "Call to Action",
+          "visual": "A close-up of the cursor clicking a 'Take Over' button on the taskbar. A small ripple effect emanates from the click point. The focus is tight on the interaction between the cursor and the button, with the rest of the interface slightly blurred in the background.",
+          "shot_type": "Close-Up",
+          "scene_number": 5,
+          "timestamp_end": "0:07",
+          "timestamp_start": "0:06"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.7999999999999998,
+      "action": "Real recording and explanation occupy separate columns"
+    },
+    {
+      "start": 1.7999999999999998,
+      "end": 4.5,
+      "action": "Side cues follow a continuously decoded recording"
+    },
+    {
+      "start": 4.5,
+      "end": 6,
+      "action": "Cursor focuses takeover area while narration context remains"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-window",
+      "kind": "window",
+      "x": 80,
+      "y": 100,
+      "w": 1760,
+      "h": 880,
+      "label": "实际运行与解释"
+    },
+    {
+      "id": "n002-card",
+      "kind": "card",
+      "x": 110,
+      "y": 180,
+      "w": 500,
+      "h": 750,
+      "children": [],
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 145,
+      "y": 220,
+      "w": 430,
+      "h": 110,
+      "text": "{{sideTitle}}",
+      "size": 42,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n004-image",
+      "kind": "image",
+      "x": 660,
+      "y": 180,
+      "w": 1130,
+      "h": 750,
+      "asset": "recording",
+      "fit": "contain",
+      "radius": 12
+    },
+    {
+      "id": "n005-pill",
+      "kind": "pill",
+      "x": 145,
+      "y": 410,
+      "w": 430,
+      "h": 100,
+      "label": "{{note0}}",
+      "size": 36,
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.72,
+            0
+          ],
+          [
+            1.44,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.72,
+            445
+          ],
+          [
+            1.44,
+            410,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-pill",
+      "kind": "pill",
+      "x": 145,
+      "y": 570,
+      "w": 430,
+      "h": 100,
+      "label": "{{note1}}",
+      "size": 36,
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.1,
+            0
+          ],
+          [
+            2.82,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.1,
+            605
+          ],
+          [
+            2.82,
+            570,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 145,
+      "y": 730,
+      "w": 430,
+      "h": 100,
+      "label": "{{note2}}",
+      "size": 36,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.48,
+            0
+          ],
+          [
+            4.2,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.48,
+            765
+          ],
+          [
+            4.2,
+            730,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-b2-cursor",
+      "kind": "b2-cursor",
+      "x": 0,
+      "y": 0,
+      "w": 43,
+      "h": 64,
+      "tracks": {
+        "x": [
+          [
+            0,
+            450
+          ],
+          [
+            3.0,
+            1330
+          ],
+          [
+            4.8,
+            1580
+          ]
+        ],
+        "y": [
+          [
+            0,
+            800
+          ],
+          [
+            3.0,
+            430
+          ],
+          [
+            4.8,
+            850
+          ]
+        ]
+      }
+    }
+  ],
+  "media_tracks": {
+    "recording": {
+      "source_in": 120,
+      "start": 0,
+      "rate": 1
+    }
+  },
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

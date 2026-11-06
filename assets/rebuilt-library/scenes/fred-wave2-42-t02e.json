@@ -1,0 +1,436 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t02e",
+  "title": "三项汇聚长胶囊",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "row10": "目录",
+    "row21": "协作成员",
+    "row32": "已上传资料",
+    "row50": "计划与任务",
+    "row61": "版本记录",
+    "row72": "交付入口",
+    "row90": "项目密钥：••••",
+    "row101": "调用状态",
+    "row112": "使用记录",
+    "merged": "统一工作入口"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/5267b30861c2028a0da6a82091031469de97dad9bb066c8816d2a526ecae193a.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A digital popping sound effect plays.",
+          "label": "Product Information",
+          "visual": "A white digital interface window with rounded corners is centered on a stark white background. Inside the window, a mobile-style app layout shows a 'Cloud' section with project folders labeled 'Landing page' and 'Sales dashboard'. A small blue mascot character is visible at the bottom right of the UI. The lighting is digital and flat with soft drop shadows. The color palette is primarily white, purple, and blue.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A second, identical digital popping sound effect plays.",
+          "label": "Product Selling Points",
+          "visual": "The first window slides to the left. A second dark-themed interface window appears in the center. It displays a 'Q4 launch plan' with task lists and progress indicators. The layout suggests a project management or team collaboration tool. The background remains white.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A third digital popping sound effect plays.",
+          "label": "Product Selling Points",
+          "visual": "The previous two windows shift left to accommodate a third window. This third window is black with white text that reads 'Decisions API' and smaller text below. The three windows are now aligned horizontally across the frame.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A fast, mechanical typing sound effect mimics a keyboard being used rapidly, followed by a final 'click' sound.",
+          "label": "Call to Action",
+          "visual": "The scene cuts to a clean white background. A large black pill-shaped button with a white border is centered in the frame. Inside the button, the word 'ChatGPT' is written in a bold, purple sans-serif font. The button has a subtle drop shadow to create depth.",
+          "shot_type": "Medium Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 3.0,
+      "action": "Three distinct real working surfaces appear in sequence"
+    },
+    {
+      "start": 3.5999999999999996,
+      "end": 5.04,
+      "action": "Actual windows converge into central unified entry"
+    },
+    {
+      "start": 5.04,
+      "end": 6,
+      "action": "Unified entry holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-window",
+      "kind": "window",
+      "x": 100,
+      "y": 220,
+      "w": 550,
+      "h": 600,
+      "label": "项目云端",
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 35,
+          "y": 100,
+          "w": 480,
+          "h": 55,
+          "text": "{{row10}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 35,
+          "y": 165,
+          "w": 480,
+          "h": 55,
+          "text": "{{row21}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 35,
+          "y": 230,
+          "w": 480,
+          "h": 55,
+          "text": "{{row32}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            100
+          ],
+          [
+            3.6,
+            100
+          ],
+          [
+            4.98,
+            685
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            3.6,
+            1
+          ],
+          [
+            4.98,
+            0.15
+          ]
+        ],
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.08,
+            1
+          ],
+          [
+            3.6,
+            1
+          ],
+          [
+            4.98,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-window",
+      "kind": "window",
+      "x": 700,
+      "y": 220,
+      "w": 550,
+      "h": 600,
+      "label": "协作空间",
+      "children": [
+        {
+          "id": "n006-text",
+          "kind": "text",
+          "x": 35,
+          "y": 100,
+          "w": 480,
+          "h": 55,
+          "text": "{{row50}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n007-text",
+          "kind": "text",
+          "x": 35,
+          "y": 165,
+          "w": 480,
+          "h": 55,
+          "text": "{{row61}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n008-text",
+          "kind": "text",
+          "x": 35,
+          "y": 230,
+          "w": 480,
+          "h": 55,
+          "text": "{{row72}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            700
+          ],
+          [
+            3.6,
+            700
+          ],
+          [
+            4.98,
+            685
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            3.6,
+            1
+          ],
+          [
+            4.98,
+            0.15
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.78,
+            0
+          ],
+          [
+            1.86,
+            1
+          ],
+          [
+            3.6,
+            1
+          ],
+          [
+            4.98,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-window",
+      "kind": "window",
+      "x": 1300,
+      "y": 220,
+      "w": 550,
+      "h": 600,
+      "label": "接口控制台",
+      "children": [
+        {
+          "id": "n010-text",
+          "kind": "text",
+          "x": 35,
+          "y": 100,
+          "w": 480,
+          "h": 55,
+          "text": "{{row90}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n011-text",
+          "kind": "text",
+          "x": 35,
+          "y": 165,
+          "w": 480,
+          "h": 55,
+          "text": "{{row101}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n012-text",
+          "kind": "text",
+          "x": 35,
+          "y": 230,
+          "w": 480,
+          "h": 55,
+          "text": "{{row112}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            1300
+          ],
+          [
+            3.6,
+            1300
+          ],
+          [
+            4.98,
+            685
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            3.6,
+            1
+          ],
+          [
+            4.98,
+            0.15
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.56,
+            0
+          ],
+          [
+            2.64,
+            1
+          ],
+          [
+            3.6,
+            1
+          ],
+          [
+            4.98,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013-pill",
+      "kind": "pill",
+      "x": 440,
+      "y": 430,
+      "w": 1040,
+      "h": 180,
+      "label": "{{merged}}",
+      "size": 75,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.5,
+            0
+          ],
+          [
+            5.4,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            4.5,
+            430
+          ],
+          [
+            5.4,
+            430,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

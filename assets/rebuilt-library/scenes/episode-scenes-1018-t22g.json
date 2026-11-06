@@ -1,0 +1,503 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t22g",
+  "title": "竖屏信息流刷过 → 定在一条 → 查证卡弹出官方视频",
+  "duration": 9,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "查证来源",
+    "text02": "经官方来源核对",
+    "media1.start": 0,
+    "media1.speed": 1,
+    "media2.start": 0,
+    "media2.speed": 1,
+    "media3.start": 0,
+    "media3.speed": 1,
+    "media4.start": 0,
+    "media4.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media2": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media3": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media4": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "rect",
+      "x": 300,
+      "y": 90,
+      "w": 600,
+      "h": 900,
+      "fill": "#0B0B0F",
+      "radius": 38,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.09,
+            0
+          ],
+          [
+            0.405,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            300
+          ],
+          [
+            0.09,
+            300
+          ],
+          [
+            0.405,
+            300,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            140
+          ],
+          [
+            0.09,
+            140
+          ],
+          [
+            0.405,
+            90,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "image",
+      "x": 325,
+      "y": 120,
+      "w": 550,
+      "h": 830,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        1.53
+      ],
+      "tracks": {
+        "y": [
+          [
+            0.0,
+            120
+          ],
+          [
+            0.27,
+            120
+          ],
+          [
+            1.26,
+            120
+          ],
+          [
+            1.53,
+            -750
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "image",
+      "x": 325,
+      "y": 120,
+      "w": 550,
+      "h": 830,
+      "asset": "media2",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        1.35,
+        2.88
+      ],
+      "tracks": {
+        "y": [
+          [
+            1.35,
+            980
+          ],
+          [
+            1.62,
+            120
+          ],
+          [
+            2.61,
+            120
+          ],
+          [
+            2.88,
+            -750
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "image",
+      "x": 325,
+      "y": 120,
+      "w": 550,
+      "h": 830,
+      "asset": "media3",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        2.7,
+        9.001
+      ],
+      "tracks": {
+        "y": [
+          [
+            2.7,
+            980
+          ],
+          [
+            2.97,
+            120
+          ],
+          [
+            3.96,
+            120
+          ],
+          [
+            4.23,
+            120
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "window",
+      "x": 1060,
+      "y": 235,
+      "w": 700,
+      "h": 625,
+      "label": "{{text01}}",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.68,
+            0
+          ],
+          [
+            4.995,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1460
+          ],
+          [
+            4.68,
+            1460
+          ],
+          [
+            4.995,
+            1060,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            285
+          ],
+          [
+            4.68,
+            285
+          ],
+          [
+            4.995,
+            235,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "image",
+      "x": 1100,
+      "y": 335,
+      "w": 620,
+      "h": 360,
+      "asset": "media4",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        5.04,
+        9.001
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            5.04,
+            0
+          ],
+          [
+            5.355,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1100
+          ],
+          [
+            5.04,
+            1100
+          ],
+          [
+            5.355,
+            1100,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            385
+          ],
+          [
+            5.04,
+            385
+          ],
+          [
+            5.355,
+            335,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "pill",
+      "x": 1120,
+      "y": 755,
+      "w": 580,
+      "h": 80,
+      "label": "{{text02}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            6.93,
+            0
+          ],
+          [
+            7.245,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1120
+          ],
+          [
+            6.93,
+            1120
+          ],
+          [
+            7.245,
+            1120,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            805
+          ],
+          [
+            6.93,
+            805
+          ],
+          [
+            7.245,
+            755,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/a886d600693689f55b4cef41ccbd53681d44769363497bf7b474542515a7824c.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "A fast-paced, digital upbeat electronic background track begins. The narrator says in a surprised tone: 'I see 10 of these videos a day.'",
+          "label": "Opening Hook",
+          "visual": "A vertical video frame is centered over a dark, blurred background. The frame shows a low-angle shot of a white futuristic sports car with its front wheels off the ground, appearing to hover or fly against a night sky background with metal structures visible. The lighting is harsh and synthetic with high contrast. The car is angled diagonally across the frame.",
+          "shot_type": "Close-Up",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The narrator continues: 'I thought it was AI again, but it turns out it's actually real.'",
+          "label": "Product Information",
+          "visual": "The central frame shifts to a wide shot of a large, dark event stage. Three male figures are visible on a brightly lit platform. The audience is in the foreground, silhouetted against the bright stage. The lighting is cinematic with red and white spotlights. The environment is a professional live event hall with dark walls.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The narrator says: 'Even the speaker on stage himself said...'",
+          "label": "Usage Scenarios",
+          "visual": "Static camera shot of the stage from a higher angle behind the crowd. Three men stand on stage: one on the left in a white t-shirt and black pants, one in the center in a black t-shirt and dark pants, and one on the right in a grey t-shirt. The man in the center is a middle-aged male with short light-brown hair, fair skin, and a solid build, wearing a black t-shirt with 'ROADSTER' printed on it. The stage has red trim and a large screen behind it.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "The man on stage speaks into the microphone: '...we need an audience...'",
+          "label": "Real Experience",
+          "visual": "Static shot of the middle-aged male character from the center of the stage against a pure black background. He is holding a black microphone in his right hand. He gestures with his left hand, palm open, as he speaks. His expression is serious and focused. The lighting is hard, coming from the front and slightly above, creating a clear rim light on his shoulders.",
+          "shot_type": "Medium Close-Up",
+          "scene_number": 4,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        },
+        {
+          "audio": "The narrator translates: 'He specifically invited a live audience today, just to prove that this is not AI and not special effects.'",
+          "label": "Product Selling Points",
+          "visual": "A wide shot from the back of the auditorium showing a massive crowd of people with their backs to the camera. Two large screens flanking the main stage show a side profile of a sleek red sports car labeled 'ROADSTER'. The three men are small figures on the central stage. The lighting is dark in the crowd area and bright on stage with white spotlights pointing toward the ceiling.",
+          "shot_type": "Wide Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:08",
+          "timestamp_start": "0:05"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "竖屏信息流卡（9:16）一条条刷过 → 定在一条，旁边查证小卡里的官方视频框弹出，“这不是 AI”"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 9.0,
+      "action": "竖屏信息流卡（9:16）一条条刷过 → 定在一条，旁边查证小卡里的官方视频框弹出，“这不是 AI”"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "信息流 1",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          9,
+          9,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media2",
+      "label": "信息流 2",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          9,
+          9,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media3",
+      "label": "信息流 3",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          9,
+          9,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media4",
+      "label": "官方完整视频",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          9,
+          9,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

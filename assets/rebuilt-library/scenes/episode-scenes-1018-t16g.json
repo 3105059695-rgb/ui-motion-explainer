@@ -1,0 +1,757 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t16g",
+  "title": "时间轴往回擦：承诺被划掉，“一拖 N 年 / 交付 0”落定",
+  "duration": 9.067,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "2017",
+    "text02": "2020",
+    "text03": "2026",
+    "text04": "量产",
+    "text05": "一拖 9 年",
+    "text06": "交付 0 辆",
+    "media1.start": 0,
+    "media1.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "image",
+      "x": 100,
+      "y": 80,
+      "w": 1720,
+      "h": 930,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        9.068
+      ],
+      "tracks": {
+        "x": [
+          [
+            0.0,
+            100
+          ],
+          [
+            1.63206,
+            100
+          ],
+          [
+            2.90144,
+            1420
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            80
+          ],
+          [
+            1.63206,
+            80
+          ],
+          [
+            2.90144,
+            260
+          ]
+        ],
+        "w": [
+          [
+            0.0,
+            1720
+          ],
+          [
+            1.63206,
+            1720
+          ],
+          [
+            2.90144,
+            350
+          ]
+        ],
+        "h": [
+          [
+            0.0,
+            930
+          ],
+          [
+            1.63206,
+            930
+          ],
+          [
+            2.90144,
+            240
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "path",
+      "x": 1660,
+      "y": 610,
+      "w": 1350,
+      "h": 1,
+      "path": "M0 0 H-1350",
+      "fill": "#0B0B0F",
+      "strokeWidth": 9,
+      "length": 1350,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            2.53876,
+            0
+          ],
+          [
+            4.35216,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "circle",
+      "x": 260,
+      "y": 590,
+      "w": 40,
+      "h": 40,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            2.90144,
+            0
+          ],
+          [
+            3.21879,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            260
+          ],
+          [
+            2.90144,
+            260
+          ],
+          [
+            3.21879,
+            260,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            590
+          ],
+          [
+            2.90144,
+            590
+          ],
+          [
+            3.21879,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "text",
+      "x": 185,
+      "y": 670,
+      "w": 200,
+      "h": 86.4,
+      "text": "{{text01}}",
+      "size": 54,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.08278,
+            0
+          ],
+          [
+            3.40013,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            185
+          ],
+          [
+            3.08278,
+            185
+          ],
+          [
+            3.40013,
+            185,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            720
+          ],
+          [
+            3.08278,
+            720
+          ],
+          [
+            3.40013,
+            670,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "circle",
+      "x": 730,
+      "y": 590,
+      "w": 40,
+      "h": 40,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.53613,
+            0
+          ],
+          [
+            3.85348,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            730
+          ],
+          [
+            3.53613,
+            730
+          ],
+          [
+            3.85348,
+            730,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            590
+          ],
+          [
+            3.53613,
+            590
+          ],
+          [
+            3.85348,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "text",
+      "x": 655,
+      "y": 670,
+      "w": 200,
+      "h": 86.4,
+      "text": "{{text02}}",
+      "size": 54,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.71747,
+            0
+          ],
+          [
+            4.03482,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            655
+          ],
+          [
+            3.71747,
+            655
+          ],
+          [
+            4.03482,
+            655,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            720
+          ],
+          [
+            3.71747,
+            720
+          ],
+          [
+            4.03482,
+            670,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "circle",
+      "x": 1510,
+      "y": 590,
+      "w": 40,
+      "h": 40,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.17082,
+            0
+          ],
+          [
+            4.48817,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1510
+          ],
+          [
+            4.17082,
+            1510
+          ],
+          [
+            4.48817,
+            1510,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            590
+          ],
+          [
+            4.17082,
+            590
+          ],
+          [
+            4.48817,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "text",
+      "x": 1435,
+      "y": 670,
+      "w": 200,
+      "h": 86.4,
+      "text": "{{text03}}",
+      "size": 54,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.35216,
+            0
+          ],
+          [
+            4.66951,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1435
+          ],
+          [
+            4.35216,
+            1435
+          ],
+          [
+            4.66951,
+            1435,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            720
+          ],
+          [
+            4.35216,
+            720
+          ],
+          [
+            4.66951,
+            670,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "text",
+      "x": 710,
+      "y": 470,
+      "w": 220,
+      "h": 73.60000000000001,
+      "text": "{{text04}}",
+      "size": 46,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.5335,
+            0
+          ],
+          [
+            4.85085,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            710
+          ],
+          [
+            4.5335,
+            710
+          ],
+          [
+            4.85085,
+            710,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            520
+          ],
+          [
+            4.5335,
+            520
+          ],
+          [
+            4.85085,
+            470,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010",
+      "kind": "path",
+      "x": 690,
+      "y": 510,
+      "w": 230,
+      "h": 1,
+      "path": "M0 0 H230",
+      "fill": "#D6C2FF",
+      "strokeWidth": 9,
+      "length": 230,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.16819,
+            0
+          ],
+          [
+            5.89355,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011",
+      "kind": "text",
+      "x": 300,
+      "y": 830,
+      "w": 700,
+      "h": 139.20000000000002,
+      "text": "{{text05}}",
+      "size": 87,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            6.89092,
+            0
+          ],
+          [
+            7.20827,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            300
+          ],
+          [
+            6.89092,
+            300
+          ],
+          [
+            7.20827,
+            300,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            880
+          ],
+          [
+            6.89092,
+            880
+          ],
+          [
+            7.20827,
+            830,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012",
+      "kind": "text",
+      "x": 1060,
+      "y": 830,
+      "w": 700,
+      "h": 139.20000000000002,
+      "text": "{{text06}}",
+      "size": 87,
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            7.43494,
+            0
+          ],
+          [
+            7.75228,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1060
+          ],
+          [
+            7.43494,
+            1060
+          ],
+          [
+            7.75228,
+            1060,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            880
+          ],
+          [
+            7.43494,
+            880
+          ],
+          [
+            7.75228,
+            830,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/b23df1d184c4e1111301e1914fd6d63a9701411b9d29654a04850b6889619967.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "A new generation of the Roadster has been released.",
+          "label": "Opening Hook",
+          "visual": "A silver-grey sleek electric sports car is positioned centrally in a dark, atmospheric environment. The camera angle is a high-angle static shot looking down at the front of the vehicle. Bright, horizontal LED headlights are illuminated, casting a cold white light into the surrounding fog and shadows. The car's roof is partially transparent, revealing a minimalist dark interior. The background is a vast, dark, textured terrain resembling a desert at night, with cool blue and purple ambient lighting.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The history of this car is quite extraordinary.",
+          "label": "Product Information",
+          "visual": "Transition to a clean, minimalist graphic interface with a white background. A black horizontal timeline occupies the center. A small thumbnail of the sports car from the previous scene appears on the right side of the timeline. The camera is static. The lighting is bright and even, simulating a digital canvas.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "First appearance in 2017.",
+          "label": "Product Information",
+          "visual": "The digital timeline graphic expands. A marker appears on the left side of the timeline. The visual style remains consistent with a clean white background and sharp black lines. The animation is smooth as elements populate the horizontal axis.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        },
+        {
+          "audio": "It was said that mass production would happen in 2020, but the result was a delay of nine years.",
+          "label": "Problem Solving",
+          "visual": "The timeline adds a middle marker. Graphic elements representing years and milestones appear in a dark grey and purple color palette. The layout remains symmetrical and minimalist on the white background. The motion is a simple digital reveal of data points along the horizontal line.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:08",
+          "timestamp_start": "0:05"
+        },
+        {
+          "audio": "Not a single car has been delivered.",
+          "label": "Problem Solving",
+          "visual": "The final stage of the digital graphic shows a large numerical value appearing beneath the timeline. The colors are high-contrast black and purple against the white void. The camera remains static, focusing on the finished data visualization.",
+          "shot_type": "Wide Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:09",
+          "timestamp_start": "0:08"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "视频窗缩成 2026 节点卡 → 时间轴从右往左擦出到 2017，再落 2020（“量产”被划掉）→ “一拖 9 年 / 交付 0 辆”大字数字落定"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 9.067,
+      "action": "视频窗缩成 2026 节点卡 → 时间轴从右往左擦出到 2017，再落 2020（“量产”被划掉）→ “一拖 9 年 / 交付 0 辆”大字数字落定"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "本期产品视频",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          9.067,
+          9.067,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

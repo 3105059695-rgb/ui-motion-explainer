@@ -1,0 +1,419 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t15g",
+  "title": "排行揭晓",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "score0": 75.4,
+    "rank0": "1",
+    "name0": "方案甲",
+    "score1": 74.3,
+    "rank1": "2",
+    "name1": "方案乙",
+    "score2": 69,
+    "rank2": "3",
+    "name2": "方案丙",
+    "caption": "从后向前揭晓 · 同口径示意成绩"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/cf5d9b110aa78482865fd63bda218be21b095e8522dc060697c086a75eced0ab.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A sharp, high-pitched mechanical clicking sound, similar to a mouse click or a digital toggle switch, punctuates the appearance of the graphics.",
+          "label": "Opening Hook",
+          "visual": "A clean, minimalist digital interface against a solid white background. Two grey rounded-rectangle placeholders are positioned at the top. The third slot is active, showing a white bar with a slight shadow. The bar contains a numbered ranking '3' and text, with a percentage of '32.0%' on the right. Lighting is flat and digital, with a neutral color palette. No human subjects or products are present.",
+          "shot_type": "Medium Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A second identical sharp digital click occurs as the second bar populates and the third bar's value updates.",
+          "label": "Product Information",
+          "visual": "The second placeholder bar transitions into an active white bar. It displays ranking '2' and its associated text. Simultaneously, the data in the third bar updates: the percentage changes from '32.0%' to '69.0%'. The composition remains centered and static. The background remains white and the lighting remains neutral and flat.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A third sharp digital click sound accompanies the appearance of the top ranking bar.",
+          "label": "Product Selling Points",
+          "visual": "The top bar transitions from a placeholder to a prominent black bar with white and purple text. It displays ranking '1' and a percentage of '63.5%'. The second bar's percentage also updates to '74.3%'. The visual style maintains consistent sharp edges, soft shadows behind the bars, and a clean white digital environment.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A final, slightly louder 'ding' or chime sound plays, signifying a successful result or the completion of the data update, followed by silence.",
+          "label": "Call to Action",
+          "visual": "The percentage in the top black bar quickly increments from '63.5%' to '75.4%'. All three bars are now fully populated on the white screen. The camera remains static. The color palette is dominated by white, grey, and the high-contrast black bar at the top.",
+          "shot_type": "Medium Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.6800000000000002,
+      "action": "Third rank appears while upper slots retain context"
+    },
+    {
+      "start": 1.6800000000000002,
+      "end": 2.88,
+      "action": "Second rank and score appear"
+    },
+    {
+      "start": 2.88,
+      "end": 4.5,
+      "action": "First rank resolves last in a black row"
+    },
+    {
+      "start": 4.5,
+      "end": 6,
+      "action": "Final results hold"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-card",
+      "kind": "card",
+      "x": 230,
+      "y": 190,
+      "w": 1460,
+      "h": 180,
+      "children": [],
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n005-card",
+      "kind": "card",
+      "x": 230,
+      "y": 190,
+      "w": 1460,
+      "h": 180,
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 45,
+          "y": 40,
+          "w": 150,
+          "h": 100,
+          "text": "{{rank0}}",
+          "size": 84,
+          "color": "#D6C2FF",
+          "align": "center"
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 240,
+          "y": 45,
+          "w": 670,
+          "h": 90,
+          "text": "{{name0}}",
+          "size": 58,
+          "color": "#FFFFFF",
+          "align": "left"
+        },
+        {
+          "id": "n004-b2-number",
+          "kind": "b2-number",
+          "x": 1050,
+          "y": 40,
+          "w": 340,
+          "h": 100,
+          "toKey": "score0",
+          "suffix": "%",
+          "size": 70,
+          "color": "#D6C2FF",
+          "align": "center",
+          "decimals": 1,
+          "tracks": {
+            "value": [
+              [
+                2.88,
+                0
+              ],
+              [
+                4.08,
+                1,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.88,
+            0
+          ],
+          [
+            3.84,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.88,
+            235
+          ],
+          [
+            3.84,
+            190,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-card",
+      "kind": "card",
+      "x": 230,
+      "y": 420,
+      "w": 1460,
+      "h": 180,
+      "children": [],
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n010-card",
+      "kind": "card",
+      "x": 230,
+      "y": 420,
+      "w": 1460,
+      "h": 180,
+      "children": [
+        {
+          "id": "n007-text",
+          "kind": "text",
+          "x": 45,
+          "y": 40,
+          "w": 150,
+          "h": 100,
+          "text": "{{rank1}}",
+          "size": 84,
+          "color": "#0B0B0F",
+          "align": "center"
+        },
+        {
+          "id": "n008-text",
+          "kind": "text",
+          "x": 240,
+          "y": 45,
+          "w": 670,
+          "h": 90,
+          "text": "{{name1}}",
+          "size": 58,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n009-b2-number",
+          "kind": "b2-number",
+          "x": 1050,
+          "y": 40,
+          "w": 340,
+          "h": 100,
+          "toKey": "score1",
+          "suffix": "%",
+          "size": 70,
+          "color": "#0B0B0F",
+          "align": "center",
+          "decimals": 1,
+          "tracks": {
+            "value": [
+              [
+                1.68,
+                0
+              ],
+              [
+                2.88,
+                1,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.68,
+            0
+          ],
+          [
+            2.64,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.68,
+            465
+          ],
+          [
+            2.64,
+            420,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011-card",
+      "kind": "card",
+      "x": 230,
+      "y": 650,
+      "w": 1460,
+      "h": 180,
+      "children": [],
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n015-card",
+      "kind": "card",
+      "x": 230,
+      "y": 650,
+      "w": 1460,
+      "h": 180,
+      "children": [
+        {
+          "id": "n012-text",
+          "kind": "text",
+          "x": 45,
+          "y": 40,
+          "w": 150,
+          "h": 100,
+          "text": "{{rank2}}",
+          "size": 84,
+          "color": "#0B0B0F",
+          "align": "center"
+        },
+        {
+          "id": "n013-text",
+          "kind": "text",
+          "x": 240,
+          "y": 45,
+          "w": 670,
+          "h": 90,
+          "text": "{{name2}}",
+          "size": 58,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n014-b2-number",
+          "kind": "b2-number",
+          "x": 1050,
+          "y": 40,
+          "w": 340,
+          "h": 100,
+          "toKey": "score2",
+          "suffix": "%",
+          "size": 70,
+          "color": "#0B0B0F",
+          "align": "center",
+          "decimals": 1,
+          "tracks": {
+            "value": [
+              [
+                0.48,
+                0
+              ],
+              [
+                1.68,
+                1,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.48,
+            0
+          ],
+          [
+            1.44,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.48,
+            695
+          ],
+          [
+            1.44,
+            650,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n016-text",
+      "kind": "text",
+      "x": 300,
+      "y": 950,
+      "w": 1320,
+      "h": 70,
+      "text": "{{caption}}",
+      "size": 34,
+      "color": "#777780",
+      "align": "center"
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

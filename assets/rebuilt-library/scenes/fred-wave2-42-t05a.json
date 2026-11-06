@@ -1,0 +1,121 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t05a",
+  "title": "滑杆前后对比",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {},
+  "assets": {
+    "before": "assets/approved-girl-sample/assets/handoff.png",
+    "after": "assets/approved-girl-sample/assets/handoff.png"
+  },
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/2c1482c33581b7df357800c06d0f20ad62c2a3535e233c9f91bf7583febbda18.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single, sharp metallic 'click' sound effect, similar to a camera shutter or a mechanical switch.",
+          "label": "Opening Hook",
+          "visual": "A static camera capture showing a woman with fair skin and dark hair styled in an elegant updo, wearing a long, flowing beige and teal traditional-style gown. She is seated inside a large, glowing, translucent golden shell-shaped boat floating on a dark, calm body of water. The lighting is warm and golden, simulating a sunset with soft orange reflections on the water and a misty background of reeds and soft light. The image on the left side is slightly more blurred compared to the right.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A second sharp metallic 'click' sound effect, synchronized with the movement of the visual divider.",
+          "label": "Product Selling Points",
+          "visual": "A vertical white divider line slides from the center to the left, revealing a sharper, higher-contrast version of the previous scene. The woman is seated in the same shell boat, but the textures of the shell, the fabric of her dress, and the ripples in the water are more defined. The lighting remains warm and golden, with enhanced clarity in the background trees and water reflections.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A rapid succession of three sharp metallic 'click' sound effects occurring in quick intervals as the divider moves.",
+          "label": "Usage Scenarios",
+          "visual": "The vertical white divider line slides back from the left to the right, crossing over the woman in the shell boat. The transition alternates between a softer, slightly more dream-like version of the image and the high-definition version. The background remains a misty, sunset-lit lake with calm water and distant silhouettes of vegetation. The woman remains static in her seated pose throughout the slide.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points.",
+    "demo_note": "Packaged comparison binds same source to both sides; production requires independently supplied before/after assets. No fake image improvement is claimed."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.0,
+      "action": "Two aligned versions share one real frame"
+    },
+    {
+      "start": 1.0,
+      "end": 4.0,
+      "action": "A continuous divider sweeps across identical coordinates revealing actual before/after pixels"
+    },
+    {
+      "start": 4.0,
+      "end": 5,
+      "action": "Divider holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-b3-slider",
+      "kind": "b3-slider",
+      "x": 160,
+      "y": 100,
+      "w": 1600,
+      "h": 880,
+      "before": "before",
+      "after": "after",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0.85
+          ],
+          [
+            1.0,
+            0.85
+          ],
+          [
+            2.75,
+            0.15
+          ],
+          [
+            4.0,
+            0.65
+          ],
+          [
+            5,
+            0.65
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

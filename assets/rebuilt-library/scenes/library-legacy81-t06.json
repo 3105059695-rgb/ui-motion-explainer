@@ -1,0 +1,21 @@
+{
+ "schema":"ui-motion-fusion/independent-scene@1",
+ "id":"fredtalk:library-legacy81-t06",
+ "title":"真实页面局部放大、横移与回到全貌",
+ "duration":8.9,
+ "background":"#FFFFFF",
+ "inputs":{"sourceIn":0},
+ "assets":{"screen":"assets/rebuilt-library/materials/roi-current-example.svg"},
+ "extensions":["extensions/roi-source-clock.js"],
+ "provenance":{"independent_reconstruction":true,"not_original_source":true,"user_approved":false,"original_preview_url":"https://www.fred-fu.com/visual-library-app/objects/fc5999f40c5830bd98abf7d1ea1e705e29d6c6af6daf61a62bbbd61e806ea444.mp4","upstream_problem":"The public catalog points to FredMotion80 source with no T06 registration. No unrelated table scene has been substituted.","complete_video_analysis":{"method":"native-complete-video-scene-analysis plus 3fps full-duration visual contact verification","complete_input":true,"human_full_realtime_viewing":false,"observed_sequence":"Whole page quickly moves into a cropped enlarged view; viewport moves horizontally while the dark frame stays fixed; end pulls back to the whole document. No new content panels replace the source."}},
+ "events":[{"start":0,"end":0.65,"action":"保留黑色窗口，放大页面重点"},{"start":0.65,"end":3.1,"action":"局部稳定阅读"},{"start":3.1,"end":6.8,"action":"同一页面连续横移，追踪后半信息"},{"start":6.8,"end":7.9,"action":"缩回原页面全貌"},{"start":7.9,"end":8.9,"action":"全貌留稳"}],
+ "nodes":[
+  {"id":"window","kind":"rect","x":40,"y":30,"w":1840,"h":1020,"radius":24,"fill":"#0B0B0F"},
+  {"id":"dot1","kind":"circle","x":65,"y":48,"w":11,"h":11,"fill":"#DBDBE0"},
+  {"id":"dot2","kind":"circle","x":88,"y":48,"w":11,"h":11,"fill":"#DBDBE0"},
+  {"id":"dot3","kind":"circle","x":111,"y":48,"w":11,"h":11,"fill":"#DBDBE0"},
+  {"id":"viewport","kind":"group","x":60,"y":120,"w":1800,"h":820,"clip":{"w":1800,"h":820},"children":[
+   {"id":"current-screen","kind":"image","asset":"screen","x":0,"y":0,"w":1800,"h":820,"fit":"contain","tracks":{"scale":[[0,1],[0.65,1.65,"out"],[6.8,1.65],[7.9,1,"out"]],"x":[[0,0],[0.65,-120,"out"],[3.1,-120],[6.8,-290,"linear"],[7.9,0,"out"]],"y":[[0,0],[0.65,100,"out"],[6.8,100],[7.9,0,"out"]]}}
+  ]}
+ ]
+}

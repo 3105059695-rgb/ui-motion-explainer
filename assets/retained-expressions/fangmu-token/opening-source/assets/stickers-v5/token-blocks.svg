@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <title>Reusable language blocks sticker</title>
+  <defs>
+    <filter id="shadow" x="0" y="0" width="256" height="256" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#282333" flood-opacity=".18"/>
+    </filter>
+    <linearGradient id="lilac" x1="101" y1="92" x2="200" y2="187" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E2D6FF"/><stop offset="1" stop-color="#B8A2EA"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="42" y1="122" x2="130" y2="203" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDFE"/><stop offset="1" stop-color="#E6E2EE"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#shadow)">
+    <g transform="rotate(8 123 79)">
+      <rect x="77" y="28" width="91" height="100" rx="17" fill="white" stroke="white" stroke-width="14"/>
+      <rect x="77" y="36" width="91" height="92" rx="16" fill="#6A6177" stroke="#342D40" stroke-width="3.5"/>
+      <rect x="77" y="28" width="91" height="91" rx="16" fill="#40394C" stroke="#342D40" stroke-width="3.5"/>
+      <path d="M88 41H151" stroke="#6F657F" stroke-width="3" stroke-linecap="round"/>
+      <path d="M108 63L96 73L108 83M138 63L150 73L138 83M129 55L118 90" stroke="#E8DDFB" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g transform="rotate(-10 81 159)">
+      <rect x="31" y="111" width="98" height="108" rx="17" fill="white" stroke="white" stroke-width="14"/>
+      <rect x="31" y="120" width="98" height="99" rx="16" fill="#BAB1C9" stroke="#342D40" stroke-width="3.5"/>
+      <rect x="31" y="111" width="98" height="98" rx="16" fill="url(#paper)" stroke="#342D40" stroke-width="3.5"/>
+      <path d="M45 123H112" stroke="white" stroke-width="3" stroke-linecap="round"/>
+      <path d="M55 180L72 139H80L97 180M62 166H90" stroke="#4B415D" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M50 197H107" stroke="#D8D1E1" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <g transform="rotate(10 171 149)">
+      <rect x="122" y="102" width="98" height="108" rx="17" fill="white" stroke="white" stroke-width="14"/>
+      <rect x="122" y="111" width="98" height="99" rx="16" fill="#8A70B2" stroke="#342D40" stroke-width="3.5"/>
+      <rect x="122" y="102" width="98" height="98" rx="16" fill="url(#lilac)" stroke="#342D40" stroke-width="3.5"/>
+      <path d="M136 114H202" stroke="#F4EDFF" stroke-width="3" stroke-linecap="round"/>
+      <path d="M154 141C158 135 174 134 181 141C184 144 184 148 184 153V176M183 154C173 149 154 152 154 164C154 176 174 181 183 167M184 170C184 175 187 178 191 178" stroke="#4A375F" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M137 188H202" stroke="#AA92CA" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

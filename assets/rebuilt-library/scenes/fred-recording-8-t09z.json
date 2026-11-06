@@ -1,0 +1,400 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-recording-8-t09z",
+  "title": "@ 引用：输入 @，联想列表弹出，选中后变成框内标签",
+  "duration": 4,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "本期任务",
+    "text02": "@",
+    "text03": "引用文件或技能",
+    "text04": "DESIGN.md",
+    "text05": "motion-craft.md",
+    "text06": "当前工作流",
+    "text07": "@DESIGN.md",
+    "text08": "按这里的规则，完成本期内容"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "window",
+      "x": 220,
+      "y": 140,
+      "w": 1480,
+      "h": 810,
+      "label": "{{text01}}"
+    },
+    {
+      "id": "n002",
+      "kind": "rect",
+      "x": 330,
+      "y": 700,
+      "w": 1260,
+      "h": 150,
+      "fill": "#F1F1F5",
+      "radius": 24
+    },
+    {
+      "id": "n003",
+      "kind": "text",
+      "x": 380,
+      "y": 735,
+      "w": 150,
+      "h": 104.0,
+      "text": "{{text02}}",
+      "size": 65,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.2,
+            0
+          ],
+          [
+            0.34,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            380
+          ],
+          [
+            0.2,
+            380
+          ],
+          [
+            0.34,
+            380,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            735
+          ],
+          [
+            0.2,
+            735
+          ],
+          [
+            0.34,
+            735,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "window",
+      "x": 370,
+      "y": 260,
+      "w": 770,
+      "h": 420,
+      "label": "{{text03}}",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.6,
+            0
+          ],
+          [
+            0.74,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            370
+          ],
+          [
+            0.6,
+            370
+          ],
+          [
+            0.74,
+            370,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            310
+          ],
+          [
+            0.6,
+            310
+          ],
+          [
+            0.74,
+            260,
+            "out"
+          ]
+        ]
+      },
+      "visible": [
+        0.6,
+        2.4
+      ]
+    },
+    {
+      "id": "n005",
+      "kind": "text",
+      "x": 430,
+      "y": 370,
+      "w": 650,
+      "h": 59.2,
+      "text": "{{text04}}",
+      "size": 37,
+      "visible": [
+        0.72,
+        2.4
+      ]
+    },
+    {
+      "id": "n006",
+      "kind": "text",
+      "x": 430,
+      "y": 462,
+      "w": 650,
+      "h": 59.2,
+      "text": "{{text05}}",
+      "size": 37,
+      "visible": [
+        0.72,
+        2.4
+      ]
+    },
+    {
+      "id": "n007",
+      "kind": "text",
+      "x": 430,
+      "y": 554,
+      "w": 650,
+      "h": 59.2,
+      "text": "{{text06}}",
+      "size": 37,
+      "visible": [
+        0.72,
+        2.4
+      ]
+    },
+    {
+      "id": "n008",
+      "kind": "rect",
+      "x": 410,
+      "y": 350,
+      "w": 690,
+      "h": 75,
+      "fill": "#D6C2FF",
+      "opacity": 0.4,
+      "visible": [
+        1.44,
+        2.32
+      ]
+    },
+    {
+      "id": "n009",
+      "kind": "pill",
+      "x": 390,
+      "y": 735,
+      "w": 430,
+      "h": 75,
+      "label": "{{text07}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.4,
+            0
+          ],
+          [
+            2.54,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            390
+          ],
+          [
+            2.4,
+            390
+          ],
+          [
+            2.54,
+            390,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            575
+          ],
+          [
+            2.4,
+            575
+          ],
+          [
+            2.54,
+            735,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010",
+      "kind": "typeLine",
+      "x": 860,
+      "y": 748,
+      "w": 690,
+      "h": 60.800000000000004,
+      "text": "{{text08}}",
+      "size": 38,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.72,
+            0
+          ],
+          [
+            2.86,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            860
+          ],
+          [
+            2.72,
+            860
+          ],
+          [
+            2.86,
+            860,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            748
+          ],
+          [
+            2.72,
+            748
+          ],
+          [
+            2.86,
+            748,
+            "out"
+          ]
+        ],
+        "value": [
+          [
+            0,
+            0.0
+          ],
+          [
+            2.72,
+            0.0
+          ],
+          [
+            3.68,
+            1.0,
+            "linear"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/9a83c31975c14e22a367e92b41ec854a7f2a2988f40173da68fe83f833a791ff.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "Upbeat, digital-synth melody with a steady tempo. High-pitched notification sound effect as a menu pops up.",
+          "label": "Opening Hook",
+          "visual": "A computer screen displaying a productivity application interface with a dark sidebar on the left and a white main content area. The interface includes a list of items and a chat-like input area. The cursor hovers over a file attachment in the middle of the screen. Lighting is clean and digital; the color palette is dominated by whites, grays, and soft blues.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Tactile clicking sound effect as the cursor highlights the file name. The background music continues at a consistent volume.",
+          "label": "Product Information",
+          "visual": "Digital zoom-in on the input field of the application. A small dropdown menu appears showing a list of markdown files including 'DESIGN.md', 'motion-craft.md', and 'new-component-workflow.md'. The cursor moves to select 'DESIGN.md'. The lighting is bright and even across the digital interface.",
+          "shot_type": "Close-Up",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "Rapid, mechanical keyboard typing sound effects synchronized with the appearance of the characters on screen. The music reaches a slight crescendo and then stops abruptly as the typing finishes.",
+          "label": "Usage Scenarios",
+          "visual": "A close-up view of the text input bar. Characters are typed out rapidly following the '@DESIGN.md' tag. The typed text reads '的规则, 做一个新组件' in Chinese. The background is a clean white with a subtle gray border around the input box. A '+' icon is visible below the text line.",
+          "shot_type": "Extreme Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "输入框里打出 @ → 联想列表弹出（技能/文件），选中一项后它缩成框内的一枚标签，后面继续打字"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 4.0,
+      "action": "输入框里打出 @ → 联想列表弹出（技能/文件），选中一项后它缩成框内的一枚标签，后面继续打字"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

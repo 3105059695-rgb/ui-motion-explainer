@@ -2,18 +2,18 @@
 
 本页维护查询、候选状态及引用落点。导演判断读[口播选材](script-visual-planning.md)，当前 UI 基准与参考范围读[审美偏好](aesthetic-preferences.md)，制作阶段读[主流程](workflow.md)。`direct -- prepare` 将整篇研究和按段候选写入 `director-context.json.selection`。
 
-每次新制作先运行 `ui.py overviews --brief`，实际查看[全片分格总览](../assets/reference-atlas/index.html)中所有可用视频总览，包括阿闰与秋芝/AIGC。`context.production.reference_overviews` 给出总览、细读页、时段与各自参考范围；先扫描全片的布局和材料变化，再按本稿选择细读页及连续动态区间。不能只打开四张旧 UI 校准图，或只看 UI 类目而跳过剪辑/AIGC 目录。四图保留为次级细节对照；抽帧覆盖全时段也不等于完整看过视频，缺件明确列出。
+普通制作首次用 `ui.py style-film inspect` 建立[完整连续 UI 基准](../assets/style-film/index.html)，再查询 `capabilities` 的整个实际执行库。按本稿需要查看所选能力的完整动态，直接绑定已实现程序；不让每个新窗口重新研究全部原片。[全片图集](../assets/reference-atlas/index.html)、阿闰与秋芝/AIGC 研究仍完整保留，用于显式学习、复刻或差异定位。四张图不能代替动态风格理解；无法输入整段视频时如实说明读取范围。
 
 ## 从候选到实际选用
 
-1. 在上述全片总览扫描之后，`selection.segments` 的原句与字符位置仅用于定位。带着[口播选材](script-visual-planning.md)已确定的材料、事件与承载方式查询，查看 `narration_study` 的来源原句、上下文与画面证据，以及候选的实际展示、接口和定制部分；候选排名不决定分镜。需要模仿动作时继续看事件的铺垫、变化、停稳和衔接，不从一格静帧推断运动。
-2. FredTalk 的 `software-preset/fredtalk:<ID>` 用 `inspect` 核对真实源码、依赖和缺件；`ui.py fredtalk materialize --id <ID> --project <工程>` 取得本期 `vendor/fredtalk/` 后还需实际接入。复制完成不等于运行完成。整库动作保持可查询，设计、配色与动作的反馈边界按审美偏好执行。
+1. 通读整篇口播，带着具体材料、事件与承载方式查询。候选的原句与字符位置仅用于定位，排名不决定分镜；实际使用包含铺垫、变化、停稳与衔接，不能从一格静帧推断运动。
+2. FredTalk、F 和保留参考用 `ui.py library inspect/scaffold/build/render`；O/R/X 用 `semantic`；研究方法和 S 配方用 `programs`。绑定本期真实材料、文字和时间后执行已有代码。整库动作均可查，设计、配色和动作的反馈边界按审美偏好执行。
 3. 在同一计划记录本段采用、改编、原创或保留人物的理由和实现位置。所选聚焦、对比、接力等能力要绑定本期实际材料、关键区域与有效时间；“选中效果”不等于已剪进片子。`library_refs.source_binding` 指向该项真实来源，`application` 指向本期实现；`design` 与 `motion` 的区别及字段见[引用格式](director-plan-contract.md#效果库设计引用)。`source_study_refs` 记录来源方法，`recipe_ids` 记录配方，不凑引用数量。
 4. 预检和实际输出按主流程完成；计划变化后同步实现，禁止事后给所有段批量填同一句原创理由。检查账本记录的是声明与落点，不能代替观看画面。
 
 参考人物、示例数字和旧稿件不自动成为本期内容；素材用途与身份边界见[参考使用](style-profiles.md)。
 
-参考扫描保持完整，实际选用保持按需：阿闰的连续剪辑、AIGC 的画风与解释手法都参与比较，不要求每条视频使用 AIGC，也不要求每段引用所有来源。UI 及 A 配色仍沿当前认可范围，参考中的颜色、身份或旧主题不自动覆盖它。
+候选范围保持完整，实际选用保持按需：阿闰的连续剪辑、AIGC 的画风与解释手法都可选，不要求每条视频使用 AIGC，也不要求每段引用所有来源。UI 及 A 配色沿当前认可范围，参考中的颜色、身份或旧主题不自动覆盖它。
 
 以后加入新的参考视频时，由维护 Agent 继续生成全片总览与细读页，登记到同一图集入口；用户无需另外维护一套参考清单。
 

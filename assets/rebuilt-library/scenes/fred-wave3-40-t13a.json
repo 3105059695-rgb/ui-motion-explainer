@@ -1,0 +1,328 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t13a",
+  "title": "分层结构",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "layer0": "应用界面",
+    "layer1": "工作引擎",
+    "layer2": "底层资源",
+    "details": "输入 → 处理规则 → 可核对的输出"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/07f192c5d3d2df45087a517c80cb37e298c612a3a7574d02148c5e5ca1814d9d.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single, sharp metallic 'click' sound effect, similar to a mechanical keyboard keypress.",
+          "label": "Opening Hook",
+          "visual": "A clean, minimalist white environment. A single horizontal rectangular white button appears in the center-bottom of the frame. The button has sharp corners and a slight drop shadow, giving it a subtle 3D appearance. The background is a solid, bright white with no visible textures or gradients.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Two consecutive sharp 'click' sound effects, mirroring the speed of the buttons appearing on screen.",
+          "label": "Product Information",
+          "visual": "Two additional horizontal white buttons slide into the frame from the top, stacking vertically above the first button. The buttons are spaced evenly with uniform dimensions. A small blue and purple circular icon appears on the top button. The lighting is perfectly flat and even across the entire frame, maintaining the high-key, minimalist aesthetic.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A soft, electronic 'whoosh' sound effect accompanies the color transition, followed by a muffled 'tap' sound when the cursor interacts with the button.",
+          "label": "Product Selling Points",
+          "visual": "The middle button in the stack transitions from white to a solid black color with a smooth fade. A small white cursor icon enters the frame and moves toward the middle button. The background remains a sterile, solid white throughout the animation. No characters or subjects are present.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A digital 'ding' sound effect, indicating completion or success. High-pitched and brief.",
+          "label": "Call to Action",
+          "visual": "A final horizontal white bar expands from the bottom of the middle black button. The animation is a vertical downward expansion, revealing a new section. The composition remains centered and symmetrical on the white background. The final frame holds the static graphic of the stacked UI elements.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 2.4000000000000004,
+      "action": "Structural levels build upward"
+    },
+    {
+      "start": 2.7,
+      "end": 3.9000000000000004,
+      "action": "Middle level becomes the focus"
+    },
+    {
+      "start": 4.199999999999999,
+      "end": 6,
+      "action": "Inner structure expands while system context remains"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n002-card",
+      "kind": "card",
+      "x": 420,
+      "y": 230,
+      "w": 1080,
+      "h": 150,
+      "children": [
+        {
+          "id": "n001-text",
+          "kind": "text",
+          "x": 40,
+          "y": 40,
+          "w": 1000,
+          "h": 85,
+          "text": "{{layer0}}",
+          "size": 54,
+          "color": "#0B0B0F",
+          "align": "center"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.44,
+            0
+          ],
+          [
+            2.4,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.44,
+            130
+          ],
+          [
+            2.4,
+            230,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-card",
+      "kind": "card",
+      "x": 420,
+      "y": 460,
+      "w": 1080,
+      "h": 150,
+      "children": [
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 40,
+          "y": 40,
+          "w": 1000,
+          "h": 85,
+          "text": "{{layer1}}",
+          "size": 54,
+          "color": "#0B0B0F",
+          "align": "center",
+          "tracks": {
+            "color": [
+              [
+                0,
+                "#0B0B0F"
+              ],
+              [
+                2.7,
+                "#0B0B0F"
+              ],
+              [
+                3.48,
+                "#FFFFFF",
+                "step"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.72,
+            0
+          ],
+          [
+            1.68,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.72,
+            360
+          ],
+          [
+            1.68,
+            460,
+            "out"
+          ]
+        ],
+        "fill": [
+          [
+            0,
+            "#FFFFFF"
+          ],
+          [
+            2.7,
+            "#FFFFFF"
+          ],
+          [
+            3.48,
+            "#0B0B0F",
+            "step"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-card",
+      "kind": "card",
+      "x": 420,
+      "y": 690,
+      "w": 1080,
+      "h": 150,
+      "children": [
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 40,
+          "y": 40,
+          "w": 1000,
+          "h": 85,
+          "text": "{{layer2}}",
+          "size": 54,
+          "color": "#0B0B0F",
+          "align": "center"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.96,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            590
+          ],
+          [
+            0.96,
+            690,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-card",
+      "kind": "card",
+      "x": 450,
+      "y": 620,
+      "w": 1020,
+      "h": 210,
+      "children": [
+        {
+          "id": "n007-text",
+          "kind": "text",
+          "x": 50,
+          "y": 55,
+          "w": 920,
+          "h": 110,
+          "text": "{{details}}",
+          "size": 40,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#F3F3F5",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.2,
+            0
+          ],
+          [
+            5.28,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            4.2,
+            655
+          ],
+          [
+            5.28,
+            620,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

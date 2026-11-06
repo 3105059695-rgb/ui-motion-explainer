@@ -1,0 +1,424 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t22b",
+  "title": "新闻叠放",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "newsTitle0": "资料整合",
+    "newsTitle1": "执行方式",
+    "newsTitle2": "协作流程",
+    "newsTitle3": "模块组合"
+  },
+  "assets": {
+    "news0": "assets/style-film/media/connected-delivery.svg",
+    "news1": "assets/style-film/media/parallel-workflow.svg",
+    "news2": "assets/style-film/media/remote-execution-chain.svg",
+    "news3": "assets/style-film/media/module-assembly.svg"
+  },
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/14c44a5ae32d73a070efe573b299ab59d9ea3cee86ff367f7f2d24819b8f2c5c.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "Fast-paced, high-frequency digital clicking sounds resembling a rapid-fire mechanical shutter or a card shuffling effect. No speech.",
+          "label": "Opening Hook",
+          "visual": "A white digital environment where four rectangular cards with rounded corners are floating in 3D space. The cards are fanned out and rotating slightly. One card shows a photo of three men in a modern office: the leftmost man is middle-aged with dark hair in a suit, the middle man is younger with dark hair and a casual jacket, and the rightmost man is seated with grey hair and a blue sweater. The cards feature high-contrast color blocks in black, dark blue, and emerald green. The lighting is uniform and bright across the entire frame, creating a clean tech aesthetic.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Two distinct, resonant digital 'thud' or 'pop' sounds that sync with the cards disappearing and the final card locking into center frame. No speech.",
+          "label": "Product Information",
+          "visual": "The camera quickly zooms in on a single emerald green and grey card as the other cards fall away. The card features a black and white portrait of an elderly man with a very long white beard, wearing a formal 19th-century dark suit and bowtie, seated in an ornate wooden chair. The background of the card is a solid emerald green. The lighting is flat and digital, with the card centered perfectly in the white void.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "Silence follows the initial sound effects. No music or dialogue.",
+          "label": "Product Information",
+          "visual": "A static shot of the emerald green card. The portrait of the elderly man with the white beard is on the left side of the card, while the right side is dominated by a solid green block containing white sans-serif text. The layout is clean and minimalist, utilizing a grid-based design. The overall color palette is restricted to emerald green, dark grey, white, and the sepia-toned black and white photo.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.25,
+      "action": "Different stories occupy a rotating spatial fan"
+    },
+    {
+      "start": 1.25,
+      "end": 2.75,
+      "action": "Other stories leave while one comes to the front"
+    },
+    {
+      "start": 2.75,
+      "end": 5,
+      "action": "Selected source and headline hold"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n003-card",
+      "kind": "card",
+      "x": 240,
+      "y": 210,
+      "w": 1040,
+      "h": 620,
+      "children": [
+        {
+          "id": "n001-image",
+          "kind": "image",
+          "x": 25,
+          "y": 25,
+          "w": 600,
+          "h": 570,
+          "asset": "news0",
+          "fit": "contain"
+        },
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 660,
+          "y": 100,
+          "w": 350,
+          "h": 300,
+          "text": "{{newsTitle0}}",
+          "size": 65,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "rotation": [
+          [
+            0,
+            -12.0
+          ],
+          [
+            1.25,
+            -12.0
+          ],
+          [
+            2.6,
+            0
+          ]
+        ],
+        "x": [
+          [
+            0,
+            240
+          ],
+          [
+            1.25,
+            240
+          ],
+          [
+            2.6,
+            -1200
+          ]
+        ],
+        "y": [
+          [
+            0,
+            210
+          ],
+          [
+            2.6,
+            225
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            0.88
+          ],
+          [
+            2.6,
+            0.8
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-card",
+      "kind": "card",
+      "x": 450,
+      "y": 280,
+      "w": 1040,
+      "h": 620,
+      "children": [
+        {
+          "id": "n004-image",
+          "kind": "image",
+          "x": 25,
+          "y": 25,
+          "w": 600,
+          "h": 570,
+          "asset": "news1",
+          "fit": "contain"
+        },
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 660,
+          "y": 100,
+          "w": 350,
+          "h": 300,
+          "text": "{{newsTitle1}}",
+          "size": 65,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "rotation": [
+          [
+            0,
+            -4.0
+          ],
+          [
+            1.25,
+            -4.0
+          ],
+          [
+            2.6,
+            0
+          ]
+        ],
+        "x": [
+          [
+            0,
+            450
+          ],
+          [
+            1.25,
+            450
+          ],
+          [
+            2.6,
+            -1200
+          ]
+        ],
+        "y": [
+          [
+            0,
+            280
+          ],
+          [
+            2.6,
+            225
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            0.88
+          ],
+          [
+            2.6,
+            0.8
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-card",
+      "kind": "card",
+      "x": 660,
+      "y": 350,
+      "w": 1040,
+      "h": 620,
+      "children": [
+        {
+          "id": "n007-image",
+          "kind": "image",
+          "x": 25,
+          "y": 25,
+          "w": 600,
+          "h": 570,
+          "asset": "news2",
+          "fit": "contain"
+        },
+        {
+          "id": "n008-text",
+          "kind": "text",
+          "x": 660,
+          "y": 100,
+          "w": 350,
+          "h": 300,
+          "text": "{{newsTitle2}}",
+          "size": 65,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#D6C2FF",
+      "tracks": {
+        "rotation": [
+          [
+            0,
+            4.0
+          ],
+          [
+            1.25,
+            4.0
+          ],
+          [
+            2.6,
+            0
+          ]
+        ],
+        "x": [
+          [
+            0,
+            660
+          ],
+          [
+            1.25,
+            660
+          ],
+          [
+            2.6,
+            440
+          ]
+        ],
+        "y": [
+          [
+            0,
+            350
+          ],
+          [
+            2.6,
+            225
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            0.88
+          ],
+          [
+            2.6,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012-card",
+      "kind": "card",
+      "x": 870,
+      "y": 420,
+      "w": 1040,
+      "h": 620,
+      "children": [
+        {
+          "id": "n010-image",
+          "kind": "image",
+          "x": 25,
+          "y": 25,
+          "w": 600,
+          "h": 570,
+          "asset": "news3",
+          "fit": "contain"
+        },
+        {
+          "id": "n011-text",
+          "kind": "text",
+          "x": 660,
+          "y": 100,
+          "w": 350,
+          "h": 300,
+          "text": "{{newsTitle3}}",
+          "size": 65,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "rotation": [
+          [
+            0,
+            12.0
+          ],
+          [
+            1.25,
+            12.0
+          ],
+          [
+            2.6,
+            0
+          ]
+        ],
+        "x": [
+          [
+            0,
+            870
+          ],
+          [
+            1.25,
+            870
+          ],
+          [
+            2.6,
+            2100
+          ]
+        ],
+        "y": [
+          [
+            0,
+            420
+          ],
+          [
+            2.6,
+            225
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            0.88
+          ],
+          [
+            2.6,
+            0.8
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

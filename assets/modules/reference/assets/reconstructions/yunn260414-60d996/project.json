@@ -1,0 +1,920 @@
+{
+  "template": "yunn260414-60d996",
+  "catalog_index": 62,
+  "duration": 408.49,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "loop": false,
+  "brand": "Git",
+  "reference_slug": "yunn260414-60d996",
+  "reference_url": "https://prompt-motion.com/yunn260414-60d996",
+  "provenance": "independent-reimplementation",
+  "colors": {
+    "bg": "#0b1220",
+    "white": "#e5e8f1",
+    "muted": "#8b94ae",
+    "orange": "#f45132",
+    "blue": "#32b9ed",
+    "yellow": "#f6ce19",
+    "green": "#43d87c",
+    "purple": "#ad8bea",
+    "red": "#f47178",
+    "border": "#293550",
+    "card": "#111a2c",
+    "terminal": "#0a0f19",
+    "titlebar": "#1c2941"
+  },
+  "chapters": [
+    "开场",
+    "版本控制 = 游戏存档",
+    "什么是 Git",
+    "核心概念：三个区域",
+    "常用命令（一）：存档",
+    "常用命令（二）：分支",
+    "常用命令（三）：远程协作",
+    "总结"
+  ],
+  "text": {
+    "questionPrefix": "什么是 ",
+    "tagline": "零基础也能听懂的 Git 入门",
+    "documents": "我的文档",
+    "files": [
+      "论文.docx",
+      "论文_修改版.docx",
+      "论文_最终版.docx",
+      "论文_最终版2.docx",
+      "论文_最终版_这次真的不改了.docx"
+    ],
+    "whichVersion": "😵 三天前那一段……到底在哪个文件里？",
+    "conflictLeft": "小红改了第 2 章",
+    "conflictRight": "小明也改了第 2 章",
+    "conflict": "冲突！",
+    "solution": "专门解决这个问题的工具",
+    "versionControl": "版本控制",
+    "gameSave": "游戏存档",
+    "save": "存档",
+    "gameLevels": [
+      "第一关",
+      "第二关",
+      "Boss 前"
+    ],
+    "reload": "↩️ 读档：回到“存档 3”，重新再来",
+    "fileSave": "文件存档",
+    "versionNames": [
+      "写了开头",
+      "加了第二章",
+      "修改了结论"
+    ],
+    "versionMeta": [
+      [
+        "👤 谁：小明",
+        "🕒 何时：3月1日 10:20",
+        "✏️ 改了：写了开头"
+      ],
+      [
+        "👤 谁：小红",
+        "🕒 何时：3月2日 15:05",
+        "✏️ 改了：加了第二章"
+      ],
+      [
+        "👤 谁：小明",
+        "🕒 何时：3月3日 21:40",
+        "✏️ 改了：修改了结论"
+      ]
+    ],
+    "revert": "↩️ 随时回到任何一个版本",
+    "gitDescriptor": "最流行的版本控制工具",
+    "historyFacts": [
+      {
+        "icon": "📅",
+        "title": "诞生于 2005 年",
+        "detail": "至今已有 20 多年历史"
+      },
+      {
+        "icon": "🐧",
+        "title": "作者：林纳斯·托瓦兹",
+        "detail": "Linus Torvalds，Linux 系统的创造者"
+      },
+      {
+        "icon": "⚡",
+        "title": "几天写出雏形",
+        "detail": "为了管理成千上万人参与的 Linux 项目"
+      },
+      {
+        "icon": "🌐",
+        "title": "程序员每天都在用",
+        "detail": "几乎所有软件项目都在使用 Git"
+      }
+    ],
+    "distributed": "分布式",
+    "completeCopy": "人人都有完整的一份",
+    "team": [
+      "小明",
+      "小红",
+      "小刚",
+      "你"
+    ],
+    "fullHistory": "完整历史",
+    "offline": "📴 断网也能存档、查历史",
+    "github": "GitHub",
+    "localSoftware": "装在你的电脑上",
+    "onlineProjects": "在网上存放 Git 项目",
+    "camera": "相机",
+    "album": "网上相册",
+    "threeAreas": "三个区域",
+    "collectivePhoto": "拍一张集体照",
+    "areas": [
+      [
+        "工作区",
+        "Working Directory"
+      ],
+      [
+        "暂存区",
+        "Staging Area"
+      ],
+      [
+        "仓库",
+        "Repository"
+      ]
+    ],
+    "regionAnalogies": [
+      "✂️ 舞台：随意修改",
+      "🧍 镜头前：挑选要拍的",
+      "📸 相册：永久保存"
+    ],
+    "flowFiles": [
+      "a.txt",
+      "b.txt",
+      "c.txt"
+    ],
+    "selectiveCommit": "✅ 只挑 a、b 两个改动来存档，c 以后再说",
+    "terminal": "终端 Terminal",
+    "terminalIntro": "终端",
+    "terminalInfo": "用文字和电脑下命令的窗口",
+    "commandIntro": "命令的格式",
+    "commandPurpose": "要做的事",
+    "supplement": "补充",
+    "branch": "分支",
+    "parallelWorld": "Branch · 平行宇宙",
+    "archive": "存档",
+    "mainStable": "▣ 主线：运行正常",
+    "feature": "feature",
+    "featureNames": [
+      "新功能1",
+      "新功能2"
+    ],
+    "branchNote": "🧪 平行宇宙：随便折腾，不影响主线",
+    "youHere": "你在这里",
+    "merge": "合并",
+    "experiment": "🧪 实验失败？丢掉分支就好，主线毫发无伤",
+    "mainName": "主分支通常叫 main，老项目里叫 master",
+    "computer": "你的电脑",
+    "localRepo": "本地仓库",
+    "empty": "（空）",
+    "remoteRepo": "远程仓库",
+    "hosts": "GitHub / Gitee",
+    "archiveHistory": "存档历史",
+    "collaborate": "怎么和别人协作？",
+    "clone": [
+      "git clone <网址>",
+      "克隆：完整下载项目"
+    ],
+    "push": [
+      "git push",
+      "⬆ 推送：上传你的新存档"
+    ],
+    "pull": [
+      "git pull",
+      "⬇ 拉取：下载别人的新存档"
+    ],
+    "colleague": "👩‍💻 同事刚上传的存档",
+    "collaborationDaily": "多人协作的日常",
+    "daily": [
+      [
+        "pull",
+        "拿最新"
+      ],
+      [
+        "修改",
+        "写代码"
+      ],
+      [
+        "add",
+        "放暂存区"
+      ],
+      [
+        "commit",
+        "存档"
+      ],
+      [
+        "push",
+        "上传"
+      ]
+    ],
+    "cheatSheet": "速查表",
+    "summaryPurpose": "给文件存档 · 随时回到过去 · 多人协作",
+    "finalCall": "给你的第一个项目存个档吧！",
+    "download": "下载地址：git-scm.com",
+    "goodbye": "下期再见",
+    "cheatCommands": [
+      {
+        "term": "init",
+        "detail": "建仓库",
+        "start": 379
+      },
+      {
+        "term": "status",
+        "detail": "看状态",
+        "start": 379.6
+      },
+      {
+        "term": "add",
+        "detail": "放进暂存区",
+        "start": 380.2
+      },
+      {
+        "term": "commit",
+        "detail": "存档",
+        "start": 380.8
+      },
+      {
+        "term": "log",
+        "detail": "看历史",
+        "start": 381.4
+      },
+      {
+        "term": "diff",
+        "detail": "看差异",
+        "start": 384.8
+      },
+      {
+        "term": "restore",
+        "detail": "后悔药",
+        "start": 385.4
+      },
+      {
+        "term": "branch",
+        "detail": "建分支",
+        "start": 388.5
+      },
+      {
+        "term": "switch",
+        "detail": "切换分支",
+        "start": 390
+      },
+      {
+        "term": "merge",
+        "detail": "合并分支",
+        "start": 390.5
+      },
+      {
+        "term": "clone",
+        "detail": "下载项目",
+        "start": 391.7
+      },
+      {
+        "term": "pull",
+        "detail": "拉取更新",
+        "start": 392.2
+      },
+      {
+        "term": "push",
+        "detail": "推送上传",
+        "start": 392.7
+      }
+    ]
+  },
+  "commands": [
+    {
+      "start": 187.5,
+      "number": "第 1 条",
+      "term": "init",
+      "meaning": "初始化",
+      "description": "把文件夹变成 Git 仓库",
+      "note": "每个项目只做一次",
+      "icon": "🏗️"
+    },
+    {
+      "start": 197.1,
+      "number": "第 2 条",
+      "term": "status",
+      "meaning": "状态",
+      "description": "查看哪些文件改了、哪些已暂存",
+      "note": "不知道干嘛时，先敲它",
+      "icon": "🔍"
+    },
+    {
+      "start": 209.2,
+      "number": "第 3 条",
+      "term": "add",
+      "meaning": "添加",
+      "description": "把改动放进暂存区",
+      "note": " . 表示所有改动",
+      "icon": "🎯"
+    },
+    {
+      "start": 221.0,
+      "number": "第 4 条",
+      "term": "commit",
+      "meaning": "提交",
+      "description": "按下快门，正式存档",
+      "note": "-m 后面写这次改了什么",
+      "icon": "📸"
+    },
+    {
+      "start": 232.4,
+      "number": "第 5 条",
+      "term": "log",
+      "meaning": "日志",
+      "description": "查看所有存档记录",
+      "note": "每条都有独一无二的编号",
+      "icon": "📜"
+    },
+    {
+      "start": 243.0,
+      "number": "补充",
+      "term": "diff",
+      "meaning": "差异",
+      "description": "看看具体改了哪些内容",
+      "note": "红色是删掉的，绿色是新增的",
+      "icon": "🔎"
+    },
+    {
+      "start": 249.0,
+      "number": "补充",
+      "term": "restore",
+      "meaning": "恢复",
+      "description": "撤销还没存档的修改",
+      "note": "Git 给你的“后悔药”",
+      "icon": "💊"
+    }
+  ],
+  "terminalEvents": [
+    {
+      "time": 187.55,
+      "text": "git init",
+      "color": "muted",
+      "command": true
+    },
+    {
+      "time": 188.3,
+      "text": "Initialized empty Git repository in ~/my-project/.git/",
+      "color": "muted",
+      "command": false
+    },
+    {
+      "time": 197.15,
+      "text": "git status",
+      "color": "muted",
+      "command": true
+    },
+    {
+      "time": 197.95,
+      "text": "On branch main",
+      "color": "muted",
+      "command": false
+    },
+    {
+      "time": 198.1,
+      "text": "Untracked files:",
+      "color": "muted",
+      "command": false
+    },
+    {
+      "time": 198.25,
+      "text": "        notes.txt",
+      "color": "red",
+      "command": false
+    },
+    {
+      "time": 208.0,
+      "text": "",
+      "color": "muted",
+      "command": false
+    },
+    {
+      "time": 209.25,
+      "text": "git add .",
+      "color": "muted",
+      "command": true
+    },
+    {
+      "time": 210.1,
+      "text": "# 没有输出 = 成功，改动已放进暂存区",
+      "color": "green",
+      "command": false
+    },
+    {
+      "time": 220.0,
+      "text": "",
+      "color": "muted",
+      "command": false
+    },
+    {
+      "time": 221.05,
+      "text": "git commit -m \"第一次存档\"",
+      "color": "muted",
+      "command": true
+    },
+    {
+      "time": 222.4,
+      "text": "[main a1b2c3d] 第一次存档",
+      "color": "white",
+      "command": false
+    },
+    {
+      "time": 222.55,
+      "text": " 1 file changed, 3 insertions(+)",
+      "color": "muted",
+      "command": false
+    },
+    {
+      "time": 232.0,
+      "text": "",
+      "color": "muted",
+      "command": false
+    },
+    {
+      "time": 232.45,
+      "text": "git log",
+      "color": "muted",
+      "command": true
+    },
+    {
+      "time": 233.2,
+      "text": "commit a1b2c3d4e5f6...",
+      "color": "yellow",
+      "command": false
+    },
+    {
+      "time": 233.35,
+      "text": "Author: 小明",
+      "color": "white",
+      "command": false
+    },
+    {
+      "time": 233.5,
+      "text": "Date:  Sat Sep 27 10:30 2026",
+      "color": "white",
+      "command": false
+    },
+    {
+      "time": 233.65,
+      "text": "    第一次存档",
+      "color": "white",
+      "command": false
+    },
+    {
+      "time": 242.7,
+      "text": "",
+      "color": "muted",
+      "command": false
+    },
+    {
+      "time": 243.05,
+      "text": "git diff",
+      "color": "muted",
+      "command": true
+    },
+    {
+      "time": 243.9,
+      "text": "--- a/notes.txt",
+      "color": "muted",
+      "command": false
+    },
+    {
+      "time": 244.1,
+      "text": "+++ b/notes.txt",
+      "color": "muted",
+      "command": false
+    },
+    {
+      "time": 244.3,
+      "text": "- 今天天气不错",
+      "color": "red",
+      "command": false
+    },
+    {
+      "time": 244.5,
+      "text": "+ 今天天气很好，适合学 Git",
+      "color": "green",
+      "command": false
+    },
+    {
+      "time": 248.8,
+      "text": "",
+      "color": "muted",
+      "command": false
+    },
+    {
+      "time": 249.05,
+      "text": "git restore notes.txt",
+      "color": "muted",
+      "command": true
+    },
+    {
+      "time": 250.2,
+      "text": "# 文件已恢复成上次存档的样子",
+      "color": "green",
+      "command": false
+    }
+  ],
+  "subtitles": [
+    {
+      "start": 1.4,
+      "end": 4.7,
+      "text": "你有没有过这样的经历？"
+    },
+    {
+      "start": 5.1,
+      "end": 8.7,
+      "text": "写一份文档，改了一遍又一遍，最后电脑里变成了这样："
+    },
+    {
+      "start": 8.7,
+      "end": 17.2,
+      "text": "论文.docx、论文_修改版.docx、论文_最终版.docx，还有“论文_最终版_这次真的不改了”。"
+    },
+    {
+      "start": 17.2,
+      "end": 22.7,
+      "text": "过了几天，你想找回三天前删掉的一段话，却已经分不清哪个文件是哪个版本了。"
+    },
+    {
+      "start": 23,
+      "end": 30.9,
+      "text": "如果是一群人一起写，情况会更糟：你改你的，我改我的，最后谁也合不到一起。"
+    },
+    {
+      "start": 31,
+      "end": 35.4,
+      "text": "今天要介绍的 Git，就能专门解决这个问题的工具。"
+    },
+    {
+      "start": 36.6,
+      "end": 40.6,
+      "text": "在讲 Git 之前，先说一个概念，叫做“版本控制”。"
+    },
+    {
+      "start": 41.2,
+      "end": 46.3,
+      "text": "你玩过游戏吗？打 Boss 之前，我们都会先存个档。"
+    },
+    {
+      "start": 46.3,
+      "end": 52.4,
+      "text": "打输了也不怕，读档回到存档的那一刻，重新再来。"
+    },
+    {
+      "start": 52.6,
+      "end": 55.6,
+      "text": "版本控制，就是给你的文件做存档。"
+    },
+    {
+      "start": 55.6,
+      "end": 61.9,
+      "text": "每存一次档，就记下文件在那一刻的样子，还记下是谁、在什么时候、改了什么。"
+    },
+    {
+      "start": 61.9,
+      "end": 67.6,
+      "text": "想回到过去的任何一个版本，随时都可以。"
+    },
+    {
+      "start": 68.4,
+      "end": 73.5,
+      "text": "Git，就是目前世界上最流行的版本控制工具。"
+    },
+    {
+      "start": 73.5,
+      "end": 79.8,
+      "text": "它诞生于 2005 年，作者是林纳斯·托瓦兹，也就是 Linux 系统的创造者。"
+    },
+    {
+      "start": 79.8,
+      "end": 88.3,
+      "text": "为了管理 Linux 这个成千上万人参与的超大项目，他只花了短短几天，就写出了 Git 的雏形。"
+    },
+    {
+      "start": 88.3,
+      "end": 94.2,
+      "text": "如今，全世界绝大多数程序员，每天都在用它。"
+    },
+    {
+      "start": 94.7,
+      "end": 98.3,
+      "text": "Git 有一个特点，叫做“分布式”。"
+    },
+    {
+      "start": 98.3,
+      "end": 106.2,
+      "text": "意思是：每个人的电脑上，都有一份完整的项目和完整的历史记录。就算断了网，也照样能存档、查历史。"
+    },
+    {
+      "start": 106.6,
+      "end": 116.1,
+      "text": "还要分清楚：Git 是装在电脑上的软件，而 GitHub 是一个网站，是在网上存放 Git 项目的地方。"
+    },
+    {
+      "start": 116.1,
+      "end": 121.3,
+      "text": "打个比方：Git 像是相机，GitHub 像是网上的相册。"
+    },
+    {
+      "start": 122.2,
+      "end": 128.3,
+      "text": "要用好 Git，最重要的是理解三个区域。"
+    },
+    {
+      "start": 128.3,
+      "end": 130.5,
+      "text": "我们用“拍集体照”来打个比方。"
+    },
+    {
+      "start": 130.5,
+      "end": 140.6,
+      "text": "第一个区域叫“工作区”，就是你平时编辑文件的文件夹。像一个舞台，大家在上面随意走动、换衣服。"
+    },
+    {
+      "start": 140.6,
+      "end": 148.4,
+      "text": "第二个区域叫“暂存区”。你从舞台上挑出一些人，让他们站到镜头前，准备拍进这张照片。"
+    },
+    {
+      "start": 148.4,
+      "end": 155.3,
+      "text": "第三个区域叫“仓库”。按下快门，照片就被永久存进相册。这就叫一次“提交”。"
+    },
+    {
+      "start": 155.3,
+      "end": 165.2,
+      "text": "所以用 Git 的基本节奏就是：在工作区修改文件，把想保存的改动放进暂存区，再提交到仓库。"
+    },
+    {
+      "start": 165.2,
+      "end": 173.9,
+      "text": "为什么要多一个暂存区呢？因为它让你可以只挑一部分改动来存档，每一次存档都干净清楚。"
+    },
+    {
+      "start": 175,
+      "end": 182,
+      "text": "说了这么多，来看真正的命令。Git 的命令，是在一个叫“终端”的窗口里输入的。"
+    },
+    {
+      "start": 182,
+      "end": 187.1,
+      "text": "每条命令都以 git 开头，后面跟着你想做的事情。"
+    },
+    {
+      "start": 187.5,
+      "end": 197.1,
+      "text": "第一条：git init。init 是“初始化”，它把当前文件夹变成一个 Git 仓库。每个项目只需要做一次。"
+    },
+    {
+      "start": 197.1,
+      "end": 209.2,
+      "text": "第二条：git status。status 是“状态”，它告诉你哪些文件被改过、哪些已经放进了暂存区。不知道该干嘛时，就先敲它。"
+    },
+    {
+      "start": 209.2,
+      "end": 221,
+      "text": "第三条：git add。add 是“添加”，把改动放进暂存区。相当于让人站到镜头前。git add 后面加一个点，表示添加所有改动。"
+    },
+    {
+      "start": 221,
+      "end": 232.4,
+      "text": "第四条：git commit。commit 是“提交”，也就是按下快门、正式存档。后面的 -m 用来写一句说明，记录这次改了什么。"
+    },
+    {
+      "start": 232.4,
+      "end": 243,
+      "text": "第五条：git log。log 是“日志”，它列出所有的存档记录：每条都有一个独一无二的编号，还有作者、时间和说明。"
+    },
+    {
+      "start": 243,
+      "end": 249,
+      "text": "想看看具体改了哪些内容？用 git diff，diff 就是“差异”。"
+    },
+    {
+      "start": 249,
+      "end": 258,
+      "text": "如果把文件改乱了，想恢复成上次存档的样子，可以用 git restore 加文件名，这就是 Git 给你的后悔药。"
+    },
+    {
+      "start": 258.6,
+      "end": 263.3,
+      "text": "接下来，是 Git 最强大的功能之一：分支。"
+    },
+    {
+      "start": 263.3,
+      "end": 269.9,
+      "text": "想象一下：主线上面的项目运行得好好的，你想试一个新功能，又怕把它搞坏。"
+    },
+    {
+      "start": 269.9,
+      "end": 277.6,
+      "text": "这时就可以开一个分支，就像分出一个平行宇宙，在里面随便折腾，完全不影响主线。"
+    },
+    {
+      "start": 277.6,
+      "end": 281.2,
+      "text": "git branch 加名字，就能创建一个新分支。"
+    },
+    {
+      "start": 281.2,
+      "end": 290.7,
+      "text": "git switch 加名字，就能切换到这个分支上工作。老教程里常见的 git checkout，作用也类似。"
+    },
+    {
+      "start": 290.7,
+      "end": 295.9,
+      "text": "在分支上，你照样可以不断地 add 和 commit。"
+    },
+    {
+      "start": 295.9,
+      "end": 302,
+      "text": "等新功能做好了，切回主分支，用 git merge 把它合并进来，两条线就汇合到了一起。"
+    },
+    {
+      "start": 302,
+      "end": 308,
+      "text": "要是实验失败了，把这个分支丢掉就好，主线毫发无伤。"
+    },
+    {
+      "start": 308,
+      "end": 316.6,
+      "text": "顺便一提：Git 的主分支通常叫 main，一些老项目里则叫 master。"
+    },
+    {
+      "start": 317,
+      "end": 325.9,
+      "text": "到目前为止，所有操作都发生在你自己的电脑上。那么怎么和别人协作呢？答案是：远程仓库。"
+    },
+    {
+      "start": 325.9,
+      "end": 334.2,
+      "text": "远程仓库，就是放在网上的一份项目副本。最常见的平台是 GitHub，国内也常用 Gitee。"
+    },
+    {
+      "start": 334.2,
+      "end": 340.9,
+      "text": "git clone 加上网址，可以把网上的项目完整地下载到你的电脑，连同全部历史记录。"
+    },
+    {
+      "start": 340.9,
+      "end": 349.6,
+      "text": "git push 是“推送”：把你本地的新提交上传到远程仓库，让别人也能看到。"
+    },
+    {
+      "start": 349.6,
+      "end": 356.4,
+      "text": "git pull 是“拉取”：把别人上传的新提交下载下来，合并到你的本地。"
+    },
+    {
+      "start": 356.4,
+      "end": 365.2,
+      "text": "所以多人协作的日常就是：先 pull 拿到最新代码，改完之后 add、commit，最后 push 上传。"
+    },
+    {
+      "start": 366,
+      "end": 368.4,
+      "text": "最后，我们把今天的内容串起来。"
+    },
+    {
+      "start": 368.4,
+      "end": 375.2,
+      "text": "Git 是一个给文件存档的工具：记录每一次修改，随时回到过去，还能让很多人一起协作。"
+    },
+    {
+      "start": 375.2,
+      "end": 380,
+      "text": "记住三个区域：工作区、暂存区、仓库。"
+    },
+    {
+      "start": 380,
+      "end": 388.6,
+      "text": "记住最常用的命令：init 建仓库，status 看状态，add 放进暂存区，commit 存档，log 看历史。"
+    },
+    {
+      "start": 388.6,
+      "end": 397.2,
+      "text": "branch 和 switch 开分支，merge 合并；clone、pull、push 和远程仓库打交道。"
+    },
+    {
+      "start": 397.2,
+      "end": 406.1,
+      "text": "刚开始记不住也没关系，用多了自然就熟了。现在就去装一个 Git，给你的第一个项目存个档吧！"
+    },
+    {
+      "start": 406.1,
+      "end": 408.49,
+      "text": "我们下期再见！"
+    }
+  ],
+  "assets_notes": "Independent Canvas geometry, layout, Git diamond path and locally installed system emoji/fonts. No source pixel assets/video frames loaded. System emoji appearance can differ from original 3D emoji. Chinese subtitle timing observed from source samples, not a new ASR pass. Source audio attached separately for comparison.",
+  "marks": [
+    {
+      "time": 3,
+      "label": "标题"
+    },
+    {
+      "time": 15,
+      "label": "五个文件"
+    },
+    {
+      "time": 25,
+      "label": "协作冲突"
+    },
+    {
+      "time": 48,
+      "label": "游戏存档"
+    },
+    {
+      "time": 57,
+      "label": "三个文件版本"
+    },
+    {
+      "time": 77,
+      "label": "Git 历史"
+    },
+    {
+      "time": 100,
+      "label": "分布式"
+    },
+    {
+      "time": 115,
+      "label": "Git 与 GitHub"
+    },
+    {
+      "time": 135,
+      "label": "工作区"
+    },
+    {
+      "time": 150,
+      "label": "相片入库"
+    },
+    {
+      "time": 166,
+      "label": "暂存文件"
+    },
+    {
+      "time": 190,
+      "label": "init"
+    },
+    {
+      "time": 202,
+      "label": "status"
+    },
+    {
+      "time": 222,
+      "label": "commit"
+    },
+    {
+      "time": 246,
+      "label": "diff"
+    },
+    {
+      "time": 285,
+      "label": "切换分支"
+    },
+    {
+      "time": 297,
+      "label": "合并曲线"
+    },
+    {
+      "time": 337,
+      "label": "clone"
+    },
+    {
+      "time": 347,
+      "label": "push"
+    },
+    {
+      "time": 353,
+      "label": "pull"
+    },
+    {
+      "time": 361,
+      "label": "日常"
+    },
+    {
+      "time": 383,
+      "label": "命令汇总"
+    },
+    {
+      "time": 394,
+      "label": "速查表"
+    },
+    {
+      "time": 408,
+      "label": "再见"
+    }
+  ],
+  "portable_demo": {
+    "source_motion_preserved": true,
+    "reference_media_distributed": false,
+    "textures": "Original replaceable schematic assets; not the original reference artwork.",
+    "approval": "Historical motion implementation; this portable demo is not user-approved."
+  }
+}

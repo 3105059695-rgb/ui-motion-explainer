@@ -1,0 +1,163 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-native-t14a",
+  "title": "A/B 耗时：两条轨道计时赛跑，倍数落定",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "timeA": 38,
+    "timeB": 122,
+    "labels": [
+      "方案 A",
+      "方案 B"
+    ],
+    "comparison": "在同一任务下比较实际耗时"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/46dbe80573f849c63a66801cd1c1d6af4f18f83d4a1047803f8b8abfd6d41a3d.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A rhythmic, fast-paced electronic synth beat starts, maintaining a steady tempo to simulate progress or a race.",
+          "label": "Opening Hook",
+          "visual": "A clean, white background featuring two horizontal list items. Each item includes text on the left and a timer set to '0.0s' on the right. The lighting is perfectly flat and artificial, creating a professional digital interface aesthetic. No subjects are present.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Continuous fast-paced synth music. A soft 'ding' or digital chime sounds when the first timer stops at 38.0 seconds.",
+          "label": "Product Selling Points",
+          "visual": "Static camera angle. Black progress bars begin extending from the center toward the right for both list items. The top timer rapidly climbs to '38.0s' and stops, while the bottom timer continues to count upward past '43.1s'. The color palette remains strictly white, black, and light purple.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The music continues with a slight increase in intensity. A final, deeper digital tone sounds as the second timer hits 2:02, followed by the music fading into a brief silence.",
+          "label": "Product Selling Points",
+          "visual": "Static camera angle. The top bar remains stationary at '38.0s'. The bottom progress bar continues to stretch significantly longer than the top one, with its timer accelerating through '1:31' and finally stopping at '2:02'. The contrast between the short top bar and the long bottom bar is the visual focus.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A short, upbeat final musical flourish or 'whoosh' sound effect to signify the conclusion of the comparison.",
+          "label": "Call to Action",
+          "visual": "Static camera angle. The completed comparison remains on screen. A small light-blue highlight box appears at the bottom center of the frame. The overall lighting remains consistent and bright.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 3.75,
+      "action": "Two same-scale elapsed clocks advance; first finishes while second keeps running"
+    },
+    {
+      "start": 3.75,
+      "end": 5,
+      "action": "Measured ratio and task qualification hold"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-b3-race",
+      "kind": "b3-race",
+      "x": 300,
+      "y": 240,
+      "w": 1320,
+      "h": 600,
+      "aKey": "timeA",
+      "bKey": "timeB",
+      "labelsKey": "labels",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            0.6,
+            0
+          ],
+          [
+            3.75,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-pill",
+      "kind": "pill",
+      "x": 480,
+      "y": 900,
+      "w": 960,
+      "h": 85,
+      "label": "{{comparison}}",
+      "size": 37,
+      "fill": "#D6C2FF",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.1,
+            0
+          ],
+          [
+            4.7,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            4.1,
+            935
+          ],
+          [
+            4.7,
+            900,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

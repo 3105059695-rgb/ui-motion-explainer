@@ -1,0 +1,187 @@
+{
+  "reference_slug": "shneural-2abdfa",
+  "reference_duration": 31.893,
+  "reference_video_absolute": "private-source-not-distributed",
+  "input_assets": [
+    "local OFL Geist",
+    "local OFL Anton",
+    "reference soundtrack extracted for preview only"
+  ],
+  "palette": [
+    "#090a05",
+    "#eceee1",
+    "#ccff23",
+    "#e74922",
+    "#3238ee"
+  ],
+  "fonts": [
+    "PMGeist (OFL candidate)",
+    "PMAnton (OFL candidate)"
+  ],
+  "audio": {
+    "source": "analysis/reference/reference-audio.wav",
+    "provenance": "attributed reference soundtrack, not recreated",
+    "bpm_first": 128,
+    "bpm_second": 144,
+    "offset": 0,
+    "subjective_listen_checked": false
+  },
+  "shots": [
+    {
+      "phase": "intro-opus",
+      "start": 0.0,
+      "end": 0.88,
+      "implementation": "Canvas2D"
+    },
+    {
+      "phase": "physics",
+      "start": 0.88,
+      "end": 2.78,
+      "implementation": "Canvas2D"
+    },
+    {
+      "phase": "every",
+      "start": 2.78,
+      "end": 3.28,
+      "implementation": "Canvas2D"
+    },
+    {
+      "phase": "frame",
+      "start": 3.28,
+      "end": 3.84,
+      "implementation": "Canvas2D"
+    },
+    {
+      "phase": "is",
+      "start": 3.84,
+      "end": 4.34,
+      "implementation": "Canvas2D"
+    },
+    {
+      "phase": "code",
+      "start": 4.34,
+      "end": 4.91,
+      "implementation": "Canvas2D"
+    },
+    {
+      "phase": "pattern",
+      "start": 4.91,
+      "end": 6.88,
+      "implementation": "Canvas2D"
+    },
+    {
+      "phase": "voxels",
+      "start": 6.88,
+      "end": 8.45,
+      "implementation": "Canvas2D + procedural 3D"
+    },
+    {
+      "phase": "ribbons",
+      "start": 8.45,
+      "end": 10.38,
+      "implementation": "Canvas2D"
+    },
+    {
+      "phase": "particles",
+      "start": 10.38,
+      "end": 12.35,
+      "implementation": "Canvas2D + procedural 3D"
+    },
+    {
+      "phase": "montage",
+      "start": 12.35,
+      "end": 13.83,
+      "implementation": "Canvas2D"
+    },
+    {
+      "phase": "wave",
+      "start": 13.83,
+      "end": 14.38,
+      "implementation": "Canvas2D + procedural 3D"
+    },
+    {
+      "phase": "claude",
+      "start": 14.38,
+      "end": 15.87,
+      "implementation": "Canvas2D"
+    },
+    {
+      "phase": "intro-astra",
+      "start": 15.87,
+      "end": 16.85,
+      "implementation": "Canvas2D"
+    },
+    {
+      "phase": "hero",
+      "start": 16.85,
+      "end": 19.42,
+      "implementation": "native WebGL meshes + Canvas2D"
+    },
+    {
+      "phase": "type-ring",
+      "start": 19.42,
+      "end": 21.96,
+      "implementation": "native WebGL meshes + Canvas2D"
+    },
+    {
+      "phase": "form",
+      "start": 21.96,
+      "end": 24.45,
+      "implementation": "native WebGL meshes + Canvas2D"
+    },
+    {
+      "phase": "beat",
+      "start": 24.45,
+      "end": 26.87,
+      "implementation": "native WebGL meshes + Canvas2D"
+    },
+    {
+      "phase": "bold",
+      "start": 26.87,
+      "end": 27.81,
+      "implementation": "Canvas2D"
+    },
+    {
+      "phase": "precise",
+      "start": 27.81,
+      "end": 28.46,
+      "implementation": "Canvas2D"
+    },
+    {
+      "phase": "alive",
+      "start": 28.46,
+      "end": 29.39,
+      "implementation": "Canvas2D"
+    },
+    {
+      "phase": "attention",
+      "start": 29.39,
+      "end": 31.893,
+      "implementation": "native WebGL meshes + Canvas2D"
+    }
+  ],
+  "acceptance": {
+    "complete_timeline_sampled": true,
+    "timing_checked": true,
+    "visual_comparison_done": true,
+    "full_decode_checked": true,
+    "repeat_seek_checked": true,
+    "continuous_human_audiovisual_playback": false,
+    "user_approved": false,
+    "repeat_seek_points": 12,
+    "paired_exact_times": [
+      1.5,
+      3.0,
+      4.5,
+      7.5,
+      9.0,
+      11.5,
+      13.0,
+      17.5,
+      20.25,
+      23.0,
+      25.5,
+      30.5
+    ]
+  }
+}

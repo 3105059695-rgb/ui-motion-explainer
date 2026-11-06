@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "slug": "shinskinakamoto-20190b",
+  "source_project": "assets/reconstructions/shinskinakamoto-20190b/versions/v3",
+  "project": "assets/reconstructions/shinskinakamoto-20190b",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "index.html",
+    "motion.js",
+    "project.json",
+    "style.css",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/0e094a7d3c7c4c25cf13.ttf",
+    "../../reference-shared/fonts/48715a42ec242c21e9f0.ttf"
+  ],
+  "replaceable_assets": [],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "../../assets/fonts/Display.ttf": "../../reference-shared/fonts/0e094a7d3c7c4c25cf13.ttf",
+    "../../assets/fonts/Mono.ttf": "../../reference-shared/fonts/48715a42ec242c21e9f0.ttf",
+    "assets/fonts/Display.ttf": "../../reference-shared/fonts/0e094a7d3c7c4c25cf13.ttf",
+    "assets/fonts/Mono.ttf": "../../reference-shared/fonts/48715a42ec242c21e9f0.ttf",
+    "index.html": "index.html",
+    "motion.js": "motion.js",
+    "project.json": "project.json",
+    "style.css": "style.css",
+    "Display.ttf": "../../reference-shared/fonts/0e094a7d3c7c4c25cf13.ttf",
+    "Mono.ttf": "../../reference-shared/fonts/48715a42ec242c21e9f0.ttf"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

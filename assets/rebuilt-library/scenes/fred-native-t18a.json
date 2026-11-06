@@ -1,0 +1,320 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-native-t18a",
+  "title": "工具名片：Logo 展开成名片，能力依次落下",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "product": "本期工具",
+    "capability0": "资料整理",
+    "capability1": "自动执行",
+    "capability2": "结果交付"
+  },
+  "assets": {
+    "screen": "assets/style-film/media/connected-delivery.svg",
+    "logo": "assets/style-film/media/module-assembly.svg"
+  },
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/6e983e5f77182cc1cbe850fa05235830611f26e95c0b3bb4085df879b4f3420b.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A bright, upbeat electronic chime sounds, followed by a fast-paced, cheerful instrumental synth melody.",
+          "label": "Opening Hook",
+          "visual": "A static shot centered on a white, rounded-corner card floating over a blurred background of a website interface. The card features a blue and cyan gradient circular logo with a white abstract ribbon shape in the center. The background is a light blue/grey digital workspace. Lighting is bright, soft, and even across the digital interface.",
+          "shot_type": "Medium Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The upbeat synth music continues with a consistent, energetic tempo.",
+          "label": "Product Information",
+          "visual": "The camera remains static. On the white floating card, black Chinese characters appear next to the logo. The background remains the same blurred digital workspace. The color palette is professional, dominated by white, blue, and light grey.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "Three distinct 'pop' or 'click' sound effects occur in rapid succession, synchronized with the appearance of the buttons, over the ongoing background music.",
+          "label": "Product Selling Points",
+          "visual": "The camera remains static. Below the main logo and title, three small grey pill-shaped buttons pop into view one by one along the bottom of the white card. The buttons contain dark grey text. The overall scene maintains a clean, minimalist UI design aesthetic with soft shadows beneath the UI elements.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.25,
+      "action": "Actual product logo is the sole focus over its defocused page"
+    },
+    {
+      "start": 1.25,
+      "end": 2.25,
+      "action": "Same card expands to fit the product identity"
+    },
+    {
+      "start": 2.5,
+      "end": 4.5,
+      "action": "Three distinct capability badges arrive under the identity"
+    },
+    {
+      "start": 4.5,
+      "end": 5,
+      "action": "Complete identity card holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 260,
+      "y": 130,
+      "w": 1400,
+      "h": 800,
+      "asset": "screen",
+      "fit": "contain",
+      "radius": 18,
+      "blur": 15,
+      "opacity": 0.35
+    },
+    {
+      "id": "n003-card",
+      "kind": "card",
+      "x": 650,
+      "y": 250,
+      "w": 620,
+      "h": 500,
+      "children": [
+        {
+          "id": "n002-image",
+          "kind": "image",
+          "x": 130,
+          "y": 90,
+          "w": 360,
+          "h": 260,
+          "asset": "logo",
+          "fit": "contain"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "x": [
+          [
+            0,
+            650
+          ],
+          [
+            1.0,
+            650
+          ],
+          [
+            2.1,
+            330
+          ]
+        ],
+        "w": [
+          [
+            0,
+            620
+          ],
+          [
+            1.0,
+            620
+          ],
+          [
+            2.1,
+            1260
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-text",
+      "kind": "text",
+      "x": 870,
+      "y": 335,
+      "w": 620,
+      "h": 130,
+      "text": "{{product}}",
+      "size": 86,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.5,
+            0
+          ],
+          [
+            2.1,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.5,
+            370
+          ],
+          [
+            2.1,
+            335,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-pill",
+      "kind": "pill",
+      "x": 420,
+      "y": 630,
+      "w": 330,
+      "h": 95,
+      "label": "{{capability0}}",
+      "size": 39,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.5,
+            0
+          ],
+          [
+            3.1,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.5,
+            665
+          ],
+          [
+            3.1,
+            630,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-pill",
+      "kind": "pill",
+      "x": 795,
+      "y": 630,
+      "w": 330,
+      "h": 95,
+      "label": "{{capability1}}",
+      "size": 39,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.1,
+            0
+          ],
+          [
+            3.7,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.1,
+            665
+          ],
+          [
+            3.7,
+            630,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 1170,
+      "y": 630,
+      "w": 330,
+      "h": 95,
+      "label": "{{capability2}}",
+      "size": 39,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.7,
+            0
+          ],
+          [
+            4.3,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.7,
+            665
+          ],
+          [
+            4.3,
+            630,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

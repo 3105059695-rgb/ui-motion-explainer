@@ -1,0 +1,229 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-native-t05c",
+  "title": "原句改写：旧写法划掉、新写法替换",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "row10": "先写清任务的输入。",
+    "row21": "完成后核对实际结果。",
+    "old": "处理完成后直接覆盖原文件。",
+    "new": "先保留原文件，再输出可核对的结果。",
+    "badge": "已更新规则"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/1ffe70db06d7eab998f565f1975861d337bdfe8e7a03e79b80d051834c86a829.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A rhythmic, upbeat electronic synth beat starts playing at a moderate volume. A digital typing sound effect is audible for one second.",
+          "label": "Opening Hook",
+          "visual": "A digital document interface titled AGENTS.md is displayed on a light gray background. The interface has three colored window buttons (red, yellow, green) at the top left. The main content area shows a markdown header and three bullet points. The background is a clean, off-white color with soft, diffused lighting. No characters are present.",
+          "shot_type": "Medium Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A fast-paced, high-pitched mechanical keyboard clicking sound effect occurs. The background electronic music continues at a consistent tempo.",
+          "label": "Product Information",
+          "visual": "The camera remains static on the digital document interface. The first bullet point on the screen is dynamically updated with new text appearing as if being typed in real-time. The color palette is neutral with blue and purple accents in the UI and text. The layout is centered and minimalist.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A short, satisfying 'pop' sound effect plays as the badge appears. The background music maintains its upbeat, technological mood. No dialogue or voiceover is present.",
+          "label": "Product Selling Points",
+          "visual": "A dark gray rectangular badge with rounded corners appears on the right side of the first bullet point. The interface is static while the badge remains on screen. The lighting is uniform across the frame, highlighting the contrast between the dark badge and the light document background.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.0,
+      "action": "Existing instruction appears in complete document"
+    },
+    {
+      "start": 1.0,
+      "end": 1.75,
+      "action": "The exact old instruction is struck through"
+    },
+    {
+      "start": 1.75,
+      "end": 3.5,
+      "action": "Replacement types beneath while unchanged neighboring rules remain"
+    },
+    {
+      "start": 3.75,
+      "end": 5,
+      "action": "Update badge confirms the localized edit"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-window",
+      "kind": "window",
+      "x": 240,
+      "y": 160,
+      "w": 1440,
+      "h": 760,
+      "label": "AGENTS.md",
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 35,
+          "y": 100,
+          "w": 1370,
+          "h": 55,
+          "text": "{{row10}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 35,
+          "y": 165,
+          "w": 1370,
+          "h": 55,
+          "text": "{{row21}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 45,
+          "y": 320,
+          "w": 1300,
+          "h": 100,
+          "text": "{{old}}",
+          "size": 51,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "n005-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 285,
+      "y": 535,
+      "w": 1300,
+      "h": 0,
+      "arrow": false,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            0.9,
+            0
+          ],
+          [
+            1.75,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-text",
+      "kind": "text",
+      "x": 285,
+      "y": 630,
+      "w": 1300,
+      "h": 120,
+      "text": "{{new}}",
+      "size": 53,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "characters": [
+          [
+            1.75,
+            0
+          ],
+          [
+            3.45,
+            20,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 1130,
+      "y": 785,
+      "w": 470,
+      "h": 90,
+      "label": "{{badge}}",
+      "size": 38,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.75,
+            0
+          ],
+          [
+            4.35,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.75,
+            820
+          ],
+          [
+            4.35,
+            785,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

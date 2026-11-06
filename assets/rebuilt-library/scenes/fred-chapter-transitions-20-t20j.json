@@ -1,0 +1,264 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t20j",
+  "title": "黑底快切：三个词连续砸出，合成一句",
+  "duration": 3.6,
+  "background": "#0B0B0F",
+  "inputs": {
+    "accent0": "谁说",
+    "accent1": "免费",
+    "accent2": "就不够好",
+    "result": "五个值得了解的工具"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/c6276b9b84d23c47d0a30c69faf3f607e16052146581d8b1dd92f137f8ed4816.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "Upbeat, fast-paced electronic synth music begins immediately. A male voice with an enthusiastic, clear tone speaks: 'Who said free is no good?'",
+          "label": "Opening Hook",
+          "visual": "A minimalist, dark gray background serves as the canvas. Large, bold white characters appear in the center of the frame with a quick pop-up animation effect. The lighting is uniform and artificial, creating a clean digital aesthetic. The camera remains static throughout the shot.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The music continues its high-tempo rhythm. The narrator continues: 'These tools aren't any worse than paid ones!'",
+          "label": "Opening Hook",
+          "visual": "The background remains a solid dark gray. The central characters change to a lavender-purple color with a slight shadow effect. The characters appear with a quick vertical slide-up transition. The composition is centered and symmetrical.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The synth music reaches a steady groove. The narrator announces: 'Five hidden treasure tools on GitHub!'",
+          "label": "Product Information",
+          "visual": "A rounded rectangular white button-like shape appears in the center of the dark gray frame. Inside the button, there is a small black icon resembling a cat silhouette next to bold black characters. The button enters from the bottom with a slight bounce effect. The lighting is flat and digital.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 2.232,
+      "action": "Three meaning-bearing words strike in separate continuous beats"
+    },
+    {
+      "start": 2.232,
+      "end": 2.8800000000000003,
+      "action": "Words resolve into the final hook capsule"
+    },
+    {
+      "start": 2.8800000000000003,
+      "end": 3.6,
+      "action": "Final promise is held for reading"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-text",
+      "kind": "text",
+      "x": 200,
+      "y": 350,
+      "w": 1520,
+      "h": 250,
+      "text": "{{accent0}}",
+      "size": 170,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.144,
+            1
+          ],
+          [
+            0.612,
+            1
+          ],
+          [
+            0.684,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0.0,
+            1.35
+          ],
+          [
+            0.324,
+            1,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 200,
+      "y": 350,
+      "w": 1520,
+      "h": 250,
+      "text": "{{accent1}}",
+      "size": 170,
+      "color": "#D6C2FF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.684,
+            0
+          ],
+          [
+            0.828,
+            1
+          ],
+          [
+            1.296,
+            1
+          ],
+          [
+            1.368,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0.684,
+            1.35
+          ],
+          [
+            1.008,
+            1,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 200,
+      "y": 350,
+      "w": 1520,
+      "h": 250,
+      "text": "{{accent2}}",
+      "size": 170,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.368,
+            0
+          ],
+          [
+            1.512,
+            1
+          ],
+          [
+            1.98,
+            1
+          ],
+          [
+            2.052,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            1.368,
+            1.35
+          ],
+          [
+            1.692,
+            1,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-pill",
+      "kind": "pill",
+      "x": 390,
+      "y": 400,
+      "w": 1140,
+      "h": 200,
+      "label": "{{result}}",
+      "size": 68,
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            2.232,
+            0
+          ],
+          [
+            2.664,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.232,
+            435
+          ],
+          [
+            2.664,
+            400,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

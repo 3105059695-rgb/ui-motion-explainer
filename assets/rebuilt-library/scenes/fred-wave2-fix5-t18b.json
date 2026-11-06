@@ -1,0 +1,549 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-fix5-t18b",
+  "title": "多工具组合成一条工作流",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "logo0": "A",
+    "name0": "接收信息",
+    "logo1": "B",
+    "name1": "执行任务",
+    "logo2": "C",
+    "name2": "交付结果",
+    "conclusion": "工具各自分工，串成一条工作流"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/ff75a3f594e3bd2aa2d13cee2cb27bdc9519d2fa5bb48b57f0dd53e934a21a50.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A series of high-pitched, digital clicking sounds rapidly firing in sequence, followed by a soft, percussive chime.",
+          "label": "Opening Hook",
+          "visual": "A white background features three floating 3D icons. One is a black and white circular geometric logo, another is a blue cloud-like shape with a white underscore and angle bracket, and the third is a blue-to-teal gradient infinity loop. The icons are spinning and converging toward the center with a slight bouncing motion. The lighting is uniform and bright across the entire frame, casting no significant shadows.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A brief, rhythmic electronic pulsing sound that coincides with the icons snapping into place.",
+          "label": "Product Information",
+          "visual": "The three icons snap into a horizontal line formation. The circular geometric icon is on the left, the cloud-like shape is in the middle, and the blue infinity loop is on the right. Below each icon, names appear in a clean, black sans-serif font. The color palette remains minimal with high contrast against the white background. The movement is a fast, smooth transition from the initial cluster to the organized row.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A 'whoosh' sound effect as the grey element moves, followed by a subtle synth swell.",
+          "label": "Product Selling Points",
+          "visual": "A dark grey pill-shaped graphic slides out from the left icon toward the middle icon. The blue infinity loop on the right slightly scales up and pulses with a soft blue glow. The background remains a stark white, maintaining a corporate and professional aesthetic. The animation is sharp and fluid.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A soft 'ping' sound followed by a low-frequency hum that builds and then stops abruptly.",
+          "label": "Problem Solving",
+          "visual": "A semi-transparent blue circular pulse emanates from the right-most blue infinity logo, expanding slightly outward and then retracting. Another dark grey pill-shaped graphic slides down from the top center towards the logos. The lighting remains flat and bright, focusing entirely on the graphical elements.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "A bright, resonant 'ding' sound similar to a notification bell, followed by silence.",
+          "label": "Call to Action",
+          "visual": "A large, dark purple pill-shaped button appears at the bottom center of the screen. A yellow spark icon flashes briefly in the top right corner. The three primary icons remain static in their row. The screen remains white, and the composition is balanced and centered.",
+          "shot_type": "Wide Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.7000000000000002,
+      "action": "Three distinct tools rotate and converge into ordered line"
+    },
+    {
+      "start": 1.7000000000000002,
+      "end": 3.7,
+      "action": "Packet passes input through execution to output"
+    },
+    {
+      "start": 3.8,
+      "end": 5,
+      "action": "Conclusion holds with all tools"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n003-group",
+      "kind": "group",
+      "x": 250,
+      "y": 160,
+      "w": 230,
+      "h": 230,
+      "children": [
+        {
+          "id": "n001-card",
+          "kind": "card",
+          "x": 0,
+          "y": 0,
+          "w": 230,
+          "h": 230,
+          "children": [],
+          "fill": "#0B0B0F"
+        },
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 0,
+          "y": 30,
+          "w": 230,
+          "h": 160,
+          "text": "{{logo0}}",
+          "size": 130,
+          "color": "#FFFFFF",
+          "align": "center"
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            250
+          ],
+          [
+            1.6,
+            300
+          ]
+        ],
+        "y": [
+          [
+            0,
+            160
+          ],
+          [
+            1.6,
+            320
+          ]
+        ],
+        "rotation": [
+          [
+            0,
+            80
+          ],
+          [
+            1.6,
+            0,
+            "back"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-text",
+      "kind": "text",
+      "x": 250,
+      "y": 590,
+      "w": 330,
+      "h": 90,
+      "text": "{{name0}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.5,
+            0
+          ],
+          [
+            2.1,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.5,
+            625
+          ],
+          [
+            2.1,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-group",
+      "kind": "group",
+      "x": 1270,
+      "y": 80,
+      "w": 230,
+      "h": 230,
+      "children": [
+        {
+          "id": "n005-card",
+          "kind": "card",
+          "x": 0,
+          "y": 0,
+          "w": 230,
+          "h": 230,
+          "children": [],
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "n006-text",
+          "kind": "text",
+          "x": 0,
+          "y": 30,
+          "w": 230,
+          "h": 160,
+          "text": "{{logo1}}",
+          "size": 130,
+          "color": "#0B0B0F",
+          "align": "center"
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            1270
+          ],
+          [
+            1.6,
+            850
+          ]
+        ],
+        "y": [
+          [
+            0,
+            80
+          ],
+          [
+            1.6,
+            320
+          ]
+        ],
+        "rotation": [
+          [
+            0,
+            -80
+          ],
+          [
+            1.6,
+            0,
+            "back"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-text",
+      "kind": "text",
+      "x": 800,
+      "y": 590,
+      "w": 330,
+      "h": 90,
+      "text": "{{name1}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.7,
+            0
+          ],
+          [
+            2.3,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.7,
+            625
+          ],
+          [
+            2.3,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011-group",
+      "kind": "group",
+      "x": 700,
+      "y": 800,
+      "w": 230,
+      "h": 230,
+      "children": [
+        {
+          "id": "n009-card",
+          "kind": "card",
+          "x": 0,
+          "y": 0,
+          "w": 230,
+          "h": 230,
+          "children": [],
+          "fill": "#D6C2FF"
+        },
+        {
+          "id": "n010-text",
+          "kind": "text",
+          "x": 0,
+          "y": 30,
+          "w": 230,
+          "h": 160,
+          "text": "{{logo2}}",
+          "size": 130,
+          "color": "#0B0B0F",
+          "align": "center"
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            700
+          ],
+          [
+            1.6,
+            1400
+          ]
+        ],
+        "y": [
+          [
+            0,
+            800
+          ],
+          [
+            1.6,
+            320
+          ]
+        ],
+        "rotation": [
+          [
+            0,
+            80
+          ],
+          [
+            1.6,
+            0,
+            "back"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012-text",
+      "kind": "text",
+      "x": 1350,
+      "y": 590,
+      "w": 330,
+      "h": 90,
+      "text": "{{name2}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.9,
+            0
+          ],
+          [
+            2.5,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.9,
+            625
+          ],
+          [
+            2.5,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 555,
+      "y": 435,
+      "w": 230,
+      "h": 0,
+      "arrow": true,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            1.8,
+            0
+          ],
+          [
+            2.4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 1105,
+      "y": 435,
+      "w": 230,
+      "h": 0,
+      "arrow": true,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            2.8,
+            0
+          ],
+          [
+            3.45,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n015-circle",
+      "kind": "circle",
+      "x": 550,
+      "y": 416,
+      "w": 35,
+      "h": 35,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "x": [
+          [
+            2.1,
+            550
+          ],
+          [
+            2.75,
+            1020
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.1,
+            1
+          ],
+          [
+            2.75,
+            1
+          ],
+          [
+            2.85,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n016-pill",
+      "kind": "pill",
+      "x": 390,
+      "y": 840,
+      "w": 1140,
+      "h": 120,
+      "label": "{{conclusion}}",
+      "size": 49,
+      "fill": "#D6C2FF",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.8,
+            0
+          ],
+          [
+            4.4,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.8,
+            875
+          ],
+          [
+            4.4,
+            840,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

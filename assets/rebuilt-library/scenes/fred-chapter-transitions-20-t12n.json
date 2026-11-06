@@ -1,0 +1,149 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t12n",
+  "title": "卡叠抽走：顶卡飞走露出本章",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "title": "02  实际演示",
+    "previous": "01  先说明白"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/9f5ebc750e622e18dbe0e733877bcfa709250e401da597abeae0bca64b9fcd8b.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single, sharp 'click' sound effect, resembling a mechanical keyboard press or a mouse click, occurs at the start of the scene.",
+          "label": "Opening Hook",
+          "visual": "A white background features a central black rounded rectangle with white text. Multiple black rectangles are stacked slightly offset behind the main one, creating a layered deck effect. The lighting is uniform and flat across the entire frame. The color palette is strictly monochrome (white, black, and shades of grey). The camera is static and centered.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A second sharp 'click' sound effect, identical in tone and volume to the first, coincides with the change in the visual content.",
+          "label": "Opening Hook",
+          "visual": "The scene maintains the same white background and stacked black rectangle layout. The top rectangle has updated its text to a new number and description. The camera remains static and centered. The lighting and color grading are identical to the previous scene, maintaining a clean, minimalist aesthetic.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 0.81,
+      "action": "Two chapters visibly belong to one card deck"
+    },
+    {
+      "start": 0.81,
+      "end": 1.6500000000000001,
+      "action": "Top chapter is pulled away to reveal the next same stack"
+    },
+    {
+      "start": 1.6500000000000001,
+      "end": 3,
+      "action": "Next chapter stays in place"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-card",
+      "kind": "card",
+      "x": 480,
+      "y": 415,
+      "w": 960,
+      "h": 220,
+      "children": [],
+      "fill": "#0B0B0F",
+      "rotation": -5
+    },
+    {
+      "id": "n002-card",
+      "kind": "card",
+      "x": 480,
+      "y": 405,
+      "w": 960,
+      "h": 220,
+      "children": [],
+      "fill": "#0B0B0F",
+      "rotation": 3
+    },
+    {
+      "id": "n003-pill",
+      "kind": "pill",
+      "x": 480,
+      "y": 390,
+      "w": 960,
+      "h": 220,
+      "label": "{{title}}",
+      "size": 72,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "n004-pill",
+      "kind": "pill",
+      "x": 480,
+      "y": 390,
+      "w": 960,
+      "h": 220,
+      "label": "{{previous}}",
+      "size": 72,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "x": [
+          [
+            0,
+            480
+          ],
+          [
+            0.81,
+            480
+          ],
+          [
+            1.65,
+            -1400,
+            "in"
+          ]
+        ],
+        "rotation": [
+          [
+            0.81,
+            0
+          ],
+          [
+            1.65,
+            -23
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 3,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

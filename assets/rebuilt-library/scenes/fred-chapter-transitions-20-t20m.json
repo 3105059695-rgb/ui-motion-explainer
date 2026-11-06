@@ -1,0 +1,228 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t20m",
+  "title": "胶囊变窗：钩子胶囊撑开成播放窗口",
+  "duration": 4,
+  "background": "#FFFFFF",
+  "inputs": {
+    "hook": "一眼看懂如何完成"
+  },
+  "assets": {
+    "screen": "assets/style-film/media/connected-delivery.svg"
+  },
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/b8e2351111b2dc48be1a10885359dfe8c4ef1de944fb4015c5eea4430c3a0a87.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A sharp, synthetic 'ding' sound effect, high-pitched and resonant.",
+          "label": "Opening Hook",
+          "visual": "A static shot centered on a rectangular dark gray interface element on a white background. The element contains stylized script. The lighting is uniform and digital, with a soft drop shadow beneath the center element.",
+          "shot_type": "Close-Up",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A digital 'click' sound followed by a low-frequency whoosh.",
+          "label": "Product Information",
+          "visual": "A digital screen recording showing a software interface titled 'Upscayl'. The window is dark-themed with orange accents. A central image depicts a stylized illustration of a deity with blue skin, wearing a yellow headpiece and gold jewelry. A green '+' icon is visible in the center of the image. The camera is static and the lighting is flat digital output.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A soft mechanical keyboard click sound.",
+          "label": "Product Selling Points",
+          "visual": "A screen recording showing a cursor clicking a dropdown menu labeled 'Step 2'. The menu expands to reveal several options including 'General Photo', 'Digital Art', and 'Real-ESRGAN'. The cursor moves down to select 'Digital Art', which highlights in a purple hue. The background remains the same dark software interface.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.12,
+      "action": "Hook lives inside a black capsule"
+    },
+    {
+      "start": 1.12,
+      "end": 2.6,
+      "action": "The exact capsule grows into the media container"
+    },
+    {
+      "start": 2.6,
+      "end": 4,
+      "action": "Current media plays in the expanded window"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-card",
+      "kind": "card",
+      "x": 610,
+      "y": 425,
+      "w": 700,
+      "h": 150,
+      "children": [],
+      "fill": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            0,
+            610
+          ],
+          [
+            1.08,
+            610
+          ],
+          [
+            2.48,
+            200
+          ]
+        ],
+        "y": [
+          [
+            0,
+            425
+          ],
+          [
+            1.08,
+            425
+          ],
+          [
+            2.48,
+            130
+          ]
+        ],
+        "w": [
+          [
+            0,
+            700
+          ],
+          [
+            1.08,
+            700
+          ],
+          [
+            2.48,
+            1520
+          ]
+        ],
+        "h": [
+          [
+            0,
+            150
+          ],
+          [
+            1.08,
+            150
+          ],
+          [
+            2.48,
+            820
+          ]
+        ],
+        "radius": [
+          [
+            0,
+            75
+          ],
+          [
+            2.48,
+            22
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 645,
+      "y": 453,
+      "w": 630,
+      "h": 100,
+      "text": "{{hook}}",
+      "size": 48,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.12,
+            1
+          ],
+          [
+            1.6,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-image",
+      "kind": "image",
+      "x": 225,
+      "y": 155,
+      "w": 1470,
+      "h": 770,
+      "asset": "screen",
+      "fit": "contain",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.0,
+            0
+          ],
+          [
+            2.56,
+            1
+          ]
+        ],
+        "revealX": [
+          [
+            2.0,
+            0
+          ],
+          [
+            2.6,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

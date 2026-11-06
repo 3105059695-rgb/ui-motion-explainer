@@ -1,0 +1,664 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t17c",
+  "title": "文件夹结构",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "root": "project/",
+    "file0": "apps/",
+    "file1": "docs/",
+    "file2": "scripts/",
+    "file3": "skills/",
+    "file4": ".gitignore",
+    "file5": "README.md",
+    "note0": "执行脚本",
+    "note1": "可调用的能力",
+    "note2": "项目入口说明",
+    "nested": "└  render/\n└  organize/\n└  publish/"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/255961422fe9c5da3ed61969df6b330699dc447d0b9596432ae67a45ff406f13.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single, sharp 'click' sound effect, followed by silence.",
+          "label": "Opening Hook",
+          "visual": "Static wide shot on a plain white background. A folder icon labeled 'FredTalk/' is positioned centrally. In the top-right corner, a small logo with yellow rays and blue/red text is visible. The lighting is perfectly even across the white canvas with no shadows. The color palette is strictly monochrome except for the small logo.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Silence.",
+          "label": "Product Information",
+          "visual": "The 'FredTalk/' folder expands vertically to reveal a directory tree structure. Four sub-folders ('apps/', 'docs/', 'scripts/', 'skills/') and two files ('.gitignore', 'README.md') appear instantly. The tree layout uses simple black lines to show hierarchy against the white background. Movement is a rapid, animated expansion of the list downward.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "Two rapid, high-pitched 'pop' sound effects in quick succession.",
+          "label": "Product Information",
+          "visual": "A black rounded rectangle appears to the right of the 'scripts/' folder. Simultaneously, the 'skills/' folder expands to show three sub-folders: 'fred-remotion-output/', 'fred-remake/', and 'cloud-render/'. The lighting remains flat and white. No camera movement; the interface elements animate within a fixed frame.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "Two more 'pop' sound effects, slightly lower in pitch than the previous ones.",
+          "label": "Usage Scenarios",
+          "visual": "Two additional black rounded rectangles appear sequentially. One is positioned to the right of the 'skills/' folder, and another appears next to the 'README.md' file. All elements are now displayed on the screen in a clean, organized hierarchy. The background remains a sterile white throughout.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 0.75,
+      "action": "Root directory appears"
+    },
+    {
+      "start": 0.75,
+      "end": 2.4,
+      "action": "A real hierarchy unfolds with folder and file identities"
+    },
+    {
+      "start": 2.4,
+      "end": 4.5,
+      "action": "Nested skill content and three distinct roles are annotated"
+    },
+    {
+      "start": 4.5,
+      "end": 5,
+      "action": "Directory stays readable"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-pill",
+      "kind": "pill",
+      "x": 210,
+      "y": 130,
+      "w": 530,
+      "h": 110,
+      "label": "{{root}}",
+      "size": 60,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "n002-path",
+      "kind": "path",
+      "x": 280,
+      "y": 240,
+      "w": 1,
+      "h": 1,
+      "path": "M0 0 L0 80 L90 80",
+      "length": 170,
+      "fill": "#DBDBE0",
+      "strokeWidth": 4,
+      "tracks": {
+        "draw": [
+          [
+            0.25,
+            0
+          ],
+          [
+            1.0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 400,
+      "y": 290,
+      "w": 650,
+      "h": 80,
+      "text": "{{file0}}",
+      "size": 42,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.6,
+            0
+          ],
+          [
+            1.2,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.6,
+            325
+          ],
+          [
+            1.2,
+            290,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-path",
+      "kind": "path",
+      "x": 280,
+      "y": 240,
+      "w": 1,
+      "h": 1,
+      "path": "M0 0 L0 180 L90 180",
+      "length": 270,
+      "fill": "#DBDBE0",
+      "strokeWidth": 4,
+      "tracks": {
+        "draw": [
+          [
+            0.45,
+            0
+          ],
+          [
+            1.2,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-text",
+      "kind": "text",
+      "x": 400,
+      "y": 390,
+      "w": 650,
+      "h": 80,
+      "text": "{{file1}}",
+      "size": 42,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.8,
+            0
+          ],
+          [
+            1.4,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.8,
+            425
+          ],
+          [
+            1.4,
+            390,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-path",
+      "kind": "path",
+      "x": 280,
+      "y": 240,
+      "w": 1,
+      "h": 1,
+      "path": "M0 0 L0 280 L90 280",
+      "length": 370,
+      "fill": "#DBDBE0",
+      "strokeWidth": 4,
+      "tracks": {
+        "draw": [
+          [
+            0.65,
+            0
+          ],
+          [
+            1.4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-text",
+      "kind": "text",
+      "x": 400,
+      "y": 490,
+      "w": 650,
+      "h": 80,
+      "text": "{{file2}}",
+      "size": 42,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.0,
+            0
+          ],
+          [
+            1.6,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.0,
+            525
+          ],
+          [
+            1.6,
+            490,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-path",
+      "kind": "path",
+      "x": 280,
+      "y": 240,
+      "w": 1,
+      "h": 1,
+      "path": "M0 0 L0 380 L90 380",
+      "length": 470,
+      "fill": "#DBDBE0",
+      "strokeWidth": 4,
+      "tracks": {
+        "draw": [
+          [
+            0.85,
+            0
+          ],
+          [
+            1.6,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-text",
+      "kind": "text",
+      "x": 400,
+      "y": 590,
+      "w": 650,
+      "h": 80,
+      "text": "{{file3}}",
+      "size": 42,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.2,
+            0
+          ],
+          [
+            1.8,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.2,
+            625
+          ],
+          [
+            1.8,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010-path",
+      "kind": "path",
+      "x": 280,
+      "y": 240,
+      "w": 1,
+      "h": 1,
+      "path": "M0 0 L0 480 L90 480",
+      "length": 570,
+      "fill": "#DBDBE0",
+      "strokeWidth": 4,
+      "tracks": {
+        "draw": [
+          [
+            1.05,
+            0
+          ],
+          [
+            1.8,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011-text",
+      "kind": "text",
+      "x": 400,
+      "y": 690,
+      "w": 650,
+      "h": 80,
+      "text": "{{file4}}",
+      "size": 42,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.4,
+            0
+          ],
+          [
+            2.0,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.4,
+            725
+          ],
+          [
+            2.0,
+            690,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012-path",
+      "kind": "path",
+      "x": 280,
+      "y": 240,
+      "w": 1,
+      "h": 1,
+      "path": "M0 0 L0 580 L90 580",
+      "length": 670,
+      "fill": "#DBDBE0",
+      "strokeWidth": 4,
+      "tracks": {
+        "draw": [
+          [
+            1.25,
+            0
+          ],
+          [
+            2.0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013-text",
+      "kind": "text",
+      "x": 400,
+      "y": 790,
+      "w": 650,
+      "h": 80,
+      "text": "{{file5}}",
+      "size": 42,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.6,
+            0
+          ],
+          [
+            2.2,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.6,
+            825
+          ],
+          [
+            2.2,
+            790,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014-pill",
+      "kind": "pill",
+      "x": 1150,
+      "y": 475,
+      "w": 550,
+      "h": 85,
+      "label": "{{note0}}",
+      "size": 38,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.4,
+            0
+          ],
+          [
+            3.0,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.4,
+            510
+          ],
+          [
+            3.0,
+            475,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n015-pill",
+      "kind": "pill",
+      "x": 1150,
+      "y": 575,
+      "w": 550,
+      "h": 85,
+      "label": "{{note1}}",
+      "size": 38,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.1,
+            0
+          ],
+          [
+            3.7,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.1,
+            610
+          ],
+          [
+            3.7,
+            575,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n016-pill",
+      "kind": "pill",
+      "x": 1150,
+      "y": 775,
+      "w": 550,
+      "h": 85,
+      "label": "{{note2}}",
+      "size": 38,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.8,
+            0
+          ],
+          [
+            4.4,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.8,
+            810
+          ],
+          [
+            4.4,
+            775,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n017-text",
+      "kind": "text",
+      "x": 720,
+      "y": 585,
+      "w": 380,
+      "h": 190,
+      "text": "{{nested}}",
+      "size": 30,
+      "color": "#777780",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.4,
+            0
+          ],
+          [
+            3.0,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.4,
+            620
+          ],
+          [
+            3.0,
+            585,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

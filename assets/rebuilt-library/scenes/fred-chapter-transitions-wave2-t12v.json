@@ -1,0 +1,470 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-wave2-t12v",
+  "title": "按下数字键：一颗键帽按下进入本章",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "1",
+    "text02": "2",
+    "text03": "3",
+    "text04": "4",
+    "text05": "5",
+    "text06": "进入第三章"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "pill",
+      "x": 410,
+      "y": 340,
+      "w": 180,
+      "h": 180,
+      "label": "{{text01}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "fill": [
+          [
+            0,
+            "#FFFFFF"
+          ],
+          [
+            1.05,
+            "#FFFFFF"
+          ],
+          [
+            1.26,
+            "#FFFFFF"
+          ]
+        ],
+        "color": [
+          [
+            0,
+            "#0B0B0F"
+          ],
+          [
+            1.26,
+            "#0B0B0F"
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            0.96,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            1.5,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.05,
+            1
+          ],
+          [
+            1.44,
+            0.25
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "pill",
+      "x": 635,
+      "y": 340,
+      "w": 180,
+      "h": 180,
+      "label": "{{text02}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "fill": [
+          [
+            0,
+            "#FFFFFF"
+          ],
+          [
+            1.05,
+            "#FFFFFF"
+          ],
+          [
+            1.26,
+            "#FFFFFF"
+          ]
+        ],
+        "color": [
+          [
+            0,
+            "#0B0B0F"
+          ],
+          [
+            1.26,
+            "#0B0B0F"
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            0.96,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            1.5,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.05,
+            1
+          ],
+          [
+            1.44,
+            0.25
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "pill",
+      "x": 860,
+      "y": 340,
+      "w": 180,
+      "h": 180,
+      "label": "{{text03}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "fill": [
+          [
+            0,
+            "#FFFFFF"
+          ],
+          [
+            1.05,
+            "#FFFFFF"
+          ],
+          [
+            1.26,
+            "#D6C2FF"
+          ]
+        ],
+        "color": [
+          [
+            0,
+            "#0B0B0F"
+          ],
+          [
+            1.26,
+            "#0B0B0F"
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            0.96,
+            1
+          ],
+          [
+            1.2,
+            0.88
+          ],
+          [
+            1.5,
+            1.06
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.05,
+            1
+          ],
+          [
+            1.44,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "pill",
+      "x": 1085,
+      "y": 340,
+      "w": 180,
+      "h": 180,
+      "label": "{{text04}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "fill": [
+          [
+            0,
+            "#FFFFFF"
+          ],
+          [
+            1.05,
+            "#FFFFFF"
+          ],
+          [
+            1.26,
+            "#FFFFFF"
+          ]
+        ],
+        "color": [
+          [
+            0,
+            "#0B0B0F"
+          ],
+          [
+            1.26,
+            "#0B0B0F"
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            0.96,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            1.5,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.05,
+            1
+          ],
+          [
+            1.44,
+            0.25
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "pill",
+      "x": 1310,
+      "y": 340,
+      "w": 180,
+      "h": 180,
+      "label": "{{text05}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "fill": [
+          [
+            0,
+            "#FFFFFF"
+          ],
+          [
+            1.05,
+            "#FFFFFF"
+          ],
+          [
+            1.26,
+            "#FFFFFF"
+          ]
+        ],
+        "color": [
+          [
+            0,
+            "#0B0B0F"
+          ],
+          [
+            1.26,
+            "#0B0B0F"
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            0.96,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            1.5,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.05,
+            1
+          ],
+          [
+            1.44,
+            0.25
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "text",
+      "x": 530,
+      "y": 650,
+      "w": 860,
+      "h": 124.80000000000001,
+      "text": "{{text06}}",
+      "size": 78,
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.5,
+            0
+          ],
+          [
+            1.605,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            530
+          ],
+          [
+            1.5,
+            530
+          ],
+          [
+            1.605,
+            530,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            550
+          ],
+          [
+            1.5,
+            550
+          ],
+          [
+            1.605,
+            650,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/c09cd1b2e2930904865e75085e067503180fb5db868cfcc293fc7f5655b78179.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "A single, sharp electronic 'pop' sound effect as the third tile highlights.",
+          "label": "Opening Hook",
+          "visual": "Static wide shot on a clean white background. Five white, rounded-edge square tiles are centered horizontally. Each tile contains a black digit from 1 to 5. The lighting is perfectly flat with no shadows, creating a minimalist digital aesthetic. No characters are present.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A quick, high-pitched digital chime sound follows the initial pop.",
+          "label": "Product Information",
+          "visual": "The same white background continues. The tile with the number '3' scales up slightly and the digit changes from black to purple. The other tiles (1, 2, 4, 5) fade to a 30% transparency. Dark grey and purple graphic shapes appear below the third tile. The camera remains static.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "一颗写着序号的键帽 → 被按下 → 章节名从键下推出"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 3.0,
+      "action": "一颗写着序号的键帽 → 被按下 → 章节名从键下推出"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

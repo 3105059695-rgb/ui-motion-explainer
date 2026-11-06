@@ -1,0 +1,355 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t08o",
+  "title": "仓库截图推近 Star 数 → 本周涨星黑胶囊滚动落定",
+  "duration": 6.867,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "本周涨星",
+    "text02": "8,600",
+    "text03": "1000",
+    "text04": "2480",
+    "text05": "3960",
+    "text06": "5440",
+    "text07": "6920",
+    "media1.start": 0,
+    "media1.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "image",
+      "x": 150,
+      "y": 115,
+      "w": 1620,
+      "h": 860,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        6.868
+      ],
+      "tracks": {
+        "scale": [
+          [
+            0.0,
+            1
+          ],
+          [
+            1.3734,
+            1
+          ],
+          [
+            2.7468,
+            1.7
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            150
+          ],
+          [
+            2.7468,
+            -480
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            115
+          ],
+          [
+            2.7468,
+            -190
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "pill",
+      "x": 580,
+      "y": 700,
+      "w": 760,
+      "h": 110,
+      "label": "{{text01}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.91419,
+            0
+          ],
+          [
+            4.15454,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            580
+          ],
+          [
+            3.91419,
+            580
+          ],
+          [
+            4.15454,
+            580,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            750
+          ],
+          [
+            3.91419,
+            750
+          ],
+          [
+            4.15454,
+            700,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "text",
+      "x": 660,
+      "y": 825,
+      "w": 600,
+      "h": 168.0,
+      "text": "{{text02}}",
+      "size": 105,
+      "color": "#D6C2FF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.25754,
+            0
+          ],
+          [
+            4.49789,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            660
+          ],
+          [
+            4.25754,
+            660
+          ],
+          [
+            4.49789,
+            660,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            875
+          ],
+          [
+            4.25754,
+            875
+          ],
+          [
+            4.49789,
+            825,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "text",
+      "x": 660,
+      "y": 825,
+      "w": 600,
+      "h": 168.0,
+      "text": "{{text03}}",
+      "size": 105,
+      "color": "#D6C2FF",
+      "align": "center",
+      "visible": [
+        3.09015,
+        3.30989
+      ]
+    },
+    {
+      "id": "n005",
+      "kind": "text",
+      "x": 660,
+      "y": 825,
+      "w": 600,
+      "h": 168.0,
+      "text": "{{text04}}",
+      "size": 105,
+      "color": "#D6C2FF",
+      "align": "center",
+      "visible": [
+        3.30989,
+        3.52964
+      ]
+    },
+    {
+      "id": "n006",
+      "kind": "text",
+      "x": 660,
+      "y": 825,
+      "w": 600,
+      "h": 168.0,
+      "text": "{{text05}}",
+      "size": 105,
+      "color": "#D6C2FF",
+      "align": "center",
+      "visible": [
+        3.52964,
+        3.74938
+      ]
+    },
+    {
+      "id": "n007",
+      "kind": "text",
+      "x": 660,
+      "y": 825,
+      "w": 600,
+      "h": 168.0,
+      "text": "{{text06}}",
+      "size": 105,
+      "color": "#D6C2FF",
+      "align": "center",
+      "visible": [
+        3.74938,
+        3.96913
+      ]
+    },
+    {
+      "id": "n008",
+      "kind": "text",
+      "x": 660,
+      "y": 825,
+      "w": 600,
+      "h": 168.0,
+      "text": "{{text07}}",
+      "size": 105,
+      "color": "#D6C2FF",
+      "align": "center",
+      "visible": [
+        3.96913,
+        4.18887
+      ]
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/b752511bef7ef43f0abcceb3985c21bcf3884261eaa6d90fb00d9f50915d7151.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "The second one is ArtCraft.",
+          "label": "Opening Hook",
+          "visual": "A clean, minimalist white background features a central horizontal black pill-shaped graphic. Inside this graphic, there is a blue geometric 'A' logo to the left of the word 'ArtCraft' in a bold, white sans-serif font. The lighting is bright and even with soft drop shadows beneath the central graphic to provide depth.",
+          "shot_type": "Medium Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "It gained 21,000 stars in one week.",
+          "label": "Product Information",
+          "visual": "The camera displays a digital interface of a software repository page. The background is white with gray and blue UI elements representing file directories and project metadata. A star icon is highlighted in the center. The lighting is digital and flat, simulating a computer screen environment.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "What it solves is the problem of AI images not following instructions.",
+          "label": "Problem Solving",
+          "visual": "A white interface displays a text input box with a cursor blinking. The overall palette is muted with soft grays and whites. The frame is static and centered on the input field which mimics a typical AI prompt interface.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "Before, you could only describe desperately in the input box.",
+          "label": "Usage Scenarios",
+          "visual": "The same white interface from the previous scene now shows Chinese characters being typed into the input box. The movement is a rhythmic digital typing animation. The lighting remains bright and artificial, focusing entirely on the interaction within the software box.",
+          "shot_type": "Medium Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:07",
+          "timestamp_start": "0:06"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "GitHub 仓库首屏截图升起 → 相机按源像素推近 About 区的 Star 数 → 局部蒙版压暗其余 → “本周涨星”黑胶囊数字滚动落定"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 6.867,
+      "action": "GitHub 仓库首屏截图升起 → 相机按源像素推近 About 区的 Star 数 → 局部蒙版压暗其余 → “本周涨星”黑胶囊数字滚动落定"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "本期仓库与 Star 数据",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          6.867,
+          6.867,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t12m",
+  "title": "方块翻转：上一章翻面成本章",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "previous": "先看问题",
+    "title": "再看解决方法"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/e97dbbc11d0c914df198c72670dc676e7f3ab0bdfde19dbcf1eaf9745747b39b.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A digital 'pop' sound effect occurs simultaneously with the visual transition.",
+          "label": "Opening Hook",
+          "visual": "A static shot featuring a clean white background. A centered, rounded rectangular black button displays Chinese characters in white. Above the button, a small logo with yellow and purple accents is positioned in the top right corner. The lighting is uniform and bright with no visible shadows.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A second digital 'pop' sound effect, identical to the first, marks the change in content.",
+          "label": "Product Information",
+          "visual": "The scene maintains the same white background and top-right logo. The central black button remains, but the Chinese characters inside have changed to a new phrase. The transition is instantaneous. Lighting and color palette remain consistent with the previous scene.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 0.8400000000000001,
+      "action": "Previous chapter occupies the long black block"
+    },
+    {
+      "start": 0.8400000000000001,
+      "end": 1.6500000000000001,
+      "action": "Block rotates upward to reveal its next face"
+    },
+    {
+      "start": 1.6500000000000001,
+      "end": 3,
+      "action": "New title holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-b2-flip",
+      "kind": "b2-flip",
+      "x": 420,
+      "y": 390,
+      "w": 1080,
+      "h": 220,
+      "frontText": "{{previous}}",
+      "backText": "{{title}}",
+      "size": 70,
+      "axis": "x",
+      "backFill": "#0B0B0F",
+      "backColor": "#FFFFFF",
+      "tracks": {
+        "angle": [
+          [
+            0,
+            0
+          ],
+          [
+            0.84,
+            0
+          ],
+          [
+            1.65,
+            180,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 3,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

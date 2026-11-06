@@ -1,0 +1,119 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t13c",
+  "title": "装不装得下",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "payloadGB": 52,
+    "capacitiesGB": [
+      8,
+      24,
+      80
+    ],
+    "unit": "GB"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/140ee8ea8c4ede512f464112917fc66519427386cf1805a8947aca7171dca92f.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single, sharp 'pop' sound effect as the card appears.",
+          "label": "Opening Hook",
+          "visual": "A minimalist 2D animation on a solid white background. Three black outline 'containers' of varying heights are positioned at the bottom, labeled with memory sizes (8GB, 24GB, 80GB). A black rectangular card with a white label representing a 52GB file floats at the top center. The lighting is flat and digital with no shadows except for a slight drop shadow beneath the floating card.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A rhythmic, three-beat mechanical sliding sound effect.",
+          "label": "Product Selling Points",
+          "visual": "The 52GB card duplicates into three identical cards. The animation shows the cards dropping simultaneously into the three containers. The first two cards (above the 8GB and 24GB containers) stop halfway, unable to fit, while the third card begins to slide into the 80GB container. The cards over the smaller containers change color to a purple and black striped pattern to indicate overflow.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A bright, high-pitched 'ding' sound effect signifying a successful match for the largest container.",
+          "label": "Problem Solving",
+          "visual": "The animation concludes with the cards fully settled. The first two cards remain partially outside their containers with numerical indicators appearing above them showing the amount of overflow. The third card is fully submerged inside the 80GB container. A small checkmark icon appears next to the successful fit. The color palette remains strictly white, black, and purple.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.08,
+      "action": "One labeled payload compares against three measured capacities"
+    },
+    {
+      "start": 1.08,
+      "end": 3.5999999999999996,
+      "action": "Equivalent copies descend to the same baseline"
+    },
+    {
+      "start": 3.5999999999999996,
+      "end": 4.800000000000001,
+      "action": "Stripes show the exact portions that cannot fit"
+    },
+    {
+      "start": 4.800000000000001,
+      "end": 6,
+      "action": "Two overflows and a fit remain visible"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "measured-capacity-comparison",
+      "kind": "b2-capacity-set",
+      "x": 160,
+      "y": 100,
+      "w": 1600,
+      "h": 900,
+      "payloadKey": "payloadGB",
+      "capacitiesKey": "capacitiesGB",
+      "unitKey": "unit",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            6,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

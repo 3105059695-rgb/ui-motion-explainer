@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "slug": "aistocksavvy-3fb9f5",
+  "source_project": "assets/reconstructions/aistocksavvy-3fb9f5",
+  "project": "assets/reconstructions/aistocksavvy-3fb9f5",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "asset-manifest.json",
+    "composition.js",
+    "index.html",
+    "project.json",
+    "textures/robot-photo.jpg",
+    "portable-paths.js"
+  ],
+  "shared_assets": [],
+  "replaceable_assets": [
+    {
+      "path": "textures/robot-photo.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "65f3354455938cd714fb0bdedb9845e8599cd30aa604bed7bcb67b42246b3816"
+    }
+  ],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "asset-manifest.json": "asset-manifest.json",
+    "composition.js": "composition.js",
+    "index.html": "index.html",
+    "project.json": "project.json",
+    "textures/robot-photo.jpg": "textures/robot-photo.jpg",
+    "robot-photo.jpg": "textures/robot-photo.jpg"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

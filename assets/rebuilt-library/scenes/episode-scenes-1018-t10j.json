@@ -1,0 +1,645 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t10j",
+  "title": "输入框里的提示词逐句跟读：压暗其余、毛刷刷亮当前句",
+  "duration": 19.267,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "描述本期任务",
+    "text02": "粘贴本期产品链接",
+    "text03": "提取真实信息与图片",
+    "text04": "生成四种适合上架的图片",
+    "text05": "主图  /  卖点  /  细节  /  使用场景",
+    "text06": "发送 ↑"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "window",
+      "x": 230,
+      "y": 160,
+      "w": 1460,
+      "h": 750,
+      "label": "{{text01}}"
+    },
+    {
+      "id": "n002",
+      "kind": "text",
+      "x": 320,
+      "y": 310,
+      "w": 1280,
+      "h": 68.8,
+      "text": "{{text02}}",
+      "size": 43,
+      "color": "#797982",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.38534,
+            0
+          ],
+          [
+            1.05969,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            320
+          ],
+          [
+            0.38534,
+            320
+          ],
+          [
+            1.05969,
+            320,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            310
+          ],
+          [
+            0.38534,
+            310
+          ],
+          [
+            1.05969,
+            310,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "rect",
+      "x": 305,
+      "y": 305,
+      "w": 1280,
+      "h": 68,
+      "fill": "#D6C2FF",
+      "opacity": 0.4,
+      "visible": [
+        1.54136,
+        3.8534
+      ]
+    },
+    {
+      "id": "n004",
+      "kind": "text",
+      "x": 320,
+      "y": 435,
+      "w": 1280,
+      "h": 68.8,
+      "text": "{{text03}}",
+      "size": 43,
+      "color": "#797982",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            2.89005,
+            0
+          ],
+          [
+            3.56439,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            320
+          ],
+          [
+            2.89005,
+            320
+          ],
+          [
+            3.56439,
+            320,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            435
+          ],
+          [
+            2.89005,
+            435
+          ],
+          [
+            3.56439,
+            435,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "rect",
+      "x": 305,
+      "y": 430,
+      "w": 1280,
+      "h": 68,
+      "fill": "#D6C2FF",
+      "opacity": 0.4,
+      "visible": [
+        4.43141,
+        6.74345
+      ]
+    },
+    {
+      "id": "n006",
+      "kind": "text",
+      "x": 320,
+      "y": 560,
+      "w": 1280,
+      "h": 68.8,
+      "text": "{{text04}}",
+      "size": 43,
+      "color": "#797982",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.39476,
+            0
+          ],
+          [
+            6.06911,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            320
+          ],
+          [
+            5.39476,
+            320
+          ],
+          [
+            6.06911,
+            320,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            560
+          ],
+          [
+            5.39476,
+            560
+          ],
+          [
+            6.06911,
+            560,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "rect",
+      "x": 305,
+      "y": 555,
+      "w": 1280,
+      "h": 68,
+      "fill": "#D6C2FF",
+      "opacity": 0.4,
+      "visible": [
+        7.32146,
+        9.6335
+      ]
+    },
+    {
+      "id": "n008",
+      "kind": "text",
+      "x": 320,
+      "y": 685,
+      "w": 1280,
+      "h": 68.8,
+      "text": "{{text05}}",
+      "size": 43,
+      "color": "#797982",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            7.89947,
+            0
+          ],
+          [
+            8.57382,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            320
+          ],
+          [
+            7.89947,
+            320
+          ],
+          [
+            8.57382,
+            320,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            685
+          ],
+          [
+            7.89947,
+            685
+          ],
+          [
+            8.57382,
+            685,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "rect",
+      "x": 305,
+      "y": 680,
+      "w": 1280,
+      "h": 68,
+      "fill": "#D6C2FF",
+      "opacity": 0.4,
+      "visible": [
+        10.21151,
+        12.52355
+      ]
+    },
+    {
+      "id": "n010",
+      "kind": "path",
+      "x": 320,
+      "y": 775,
+      "w": 240,
+      "h": 2,
+      "path": "M0 0 H240",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 1600,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.86282,
+            0
+          ],
+          [
+            9.6335,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011",
+      "kind": "path",
+      "x": 630,
+      "y": 775,
+      "w": 240,
+      "h": 2,
+      "path": "M0 0 H240",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 1600,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            9.9225,
+            0
+          ],
+          [
+            10.69319,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012",
+      "kind": "path",
+      "x": 940,
+      "y": 775,
+      "w": 240,
+      "h": 2,
+      "path": "M0 0 H240",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 1600,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            10.98219,
+            0
+          ],
+          [
+            11.75287,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013",
+      "kind": "path",
+      "x": 1250,
+      "y": 775,
+      "w": 240,
+      "h": 2,
+      "path": "M0 0 H240",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 1600,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            12.04187,
+            0
+          ],
+          [
+            12.81255,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014",
+      "kind": "pill",
+      "x": 1380,
+      "y": 810,
+      "w": 200,
+      "h": 70,
+      "label": "{{text06}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            13.29423,
+            0
+          ],
+          [
+            13.96857,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1380
+          ],
+          [
+            13.29423,
+            1380
+          ],
+          [
+            13.96857,
+            1380,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            860
+          ],
+          [
+            13.29423,
+            860
+          ],
+          [
+            13.96857,
+            810,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n015",
+      "kind": "path",
+      "x": 0,
+      "y": 0,
+      "w": 45,
+      "h": 55,
+      "path": "M0 0 L0 42 L12 30 L24 51 L33 46 L22 26 L40 24 Z",
+      "fill": "#0B0B0F",
+      "strokeWidth": 7,
+      "tracks": {
+        "x": [
+          [
+            0.0,
+            1700
+          ],
+          [
+            13.10156,
+            1480
+          ],
+          [
+            14.45025,
+            1480
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            920
+          ],
+          [
+            13.10156,
+            845
+          ],
+          [
+            14.45025,
+            845
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n016",
+      "kind": "circle",
+      "x": 1420,
+      "y": 788,
+      "w": 140,
+      "h": 140,
+      "fill": "#D6C2FF",
+      "opacity": 0.3,
+      "tracks": {
+        "scale": [
+          [
+            0.0,
+            0
+          ],
+          [
+            14.06491,
+            0
+          ],
+          [
+            15.02826,
+            1.4
+          ],
+          [
+            15.99161,
+            0
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/8859b9724bb9f34c2e675a62d77bfe5b2e95df6a890f9590b701ecc302f3ded5.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "When we open this platform, the homepage is just a dialogue box.",
+          "label": "Opening Hook",
+          "visual": "A screen recording shows a website interface with a clean, light-colored design. In the center, there is a prominent dialogue box. A mouse cursor moves into the dialogue box. The interface includes several icons for different design functions like 'E-commerce Design' and 'Poster Design'. The background is a soft, neutral grey.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "No need to upload product images. I'll just paste the link for this pumpkin night light.",
+          "label": "Product Information",
+          "visual": "The cursor clicks inside the dialogue box. A URL for a pumpkin night light product is pasted into the box. The lighting is even and bright across the entire screen, giving a clear, professional look.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "Then I'll tell it: extract the product information and images from this link, and help me make a set of Amazon product images in English.",
+          "label": "Product Selling Points",
+          "visual": "The camera zooms in on the dialogue box where text is being typed. The text instructions specify extracting product info and images to create a set of four Amazon listing images in English. The background details of the website become slightly blurred as the focus intensifies on the typed commands.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:06",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "Make four images: a main image on a white background, a selling point image, a detail image, and a lifestyle image.",
+          "label": "Usage Scenarios",
+          "visual": "The typing continues, specifying the four types of images: main image with a white background, selling point image, detail image, and lifestyle image. The movement is steady and purposeful, highlighting each specific requirement as it appears on screen.",
+          "shot_type": "Close-Up",
+          "scene_number": 4,
+          "timestamp_end": "0:09",
+          "timestamp_start": "0:06"
+        },
+        {
+          "audio": "Keep the product's appearance, color, and expression consistent with the original images.",
+          "label": "Real Experience",
+          "visual": "The camera zooms out to show the full dialogue box again. The cursor moves to the 'Send' button on the right side of the box. The color palette remains consistent, with soft greens and blues accenting the clean white interface.",
+          "shot_type": "Medium Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:12",
+          "timestamp_start": "0:09"
+        },
+        {
+          "audio": "Keep the product's appearance, color, and expression consistent with the original images.",
+          "label": "Call to Action",
+          "visual": "The 'Send' button is clicked, and the screen remains on the homepage interface showing the various design tools at the bottom. The overall tone is calm and efficient, suggesting a seamless user experience.",
+          "shot_type": "Wide Shot",
+          "scene_number": 6,
+          "timestamp_end": "0:18",
+          "timestamp_start": "0:12"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "真实输入框里贴入链接后，指令按口播逐句：其余句压暗、当前句毛刷刷亮；“四种图”时四个名词逐个刷亮，最后点发送"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 19.267,
+      "action": "真实输入框里贴入链接后，指令按口播逐句：其余句压暗、当前句毛刷刷亮；“四种图”时四个名词逐个刷亮，最后点发送"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

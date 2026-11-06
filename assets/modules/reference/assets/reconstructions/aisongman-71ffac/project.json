@@ -1,0 +1,212 @@
+{
+  "schema_version": "1.0.0",
+  "title": "177 · Pixel card duel",
+  "template": "aisongman-71ffac-specific-reconstruction",
+  "reference_slug": "aisongman-71ffac",
+  "reference_url": "https://prompt-motion.com/aisongman-71ffac",
+  "source_post": "https://x.com/aisongman/status/2103763192971461057",
+  "reference_author": "@aisongman",
+  "width": 1280,
+  "height": 720,
+  "design_width": 1280,
+  "design_height": 720,
+  "duration": 15,
+  "fps": 30,
+  "loop": false,
+  "seed": 177177,
+  "quantize_reference_steps": true,
+  "marks": [
+    0,
+    0.3,
+    0.875,
+    1.5,
+    2.35,
+    3.125,
+    3.875,
+    6.5,
+    8.875,
+    10.5,
+    13.5,
+    14.875
+  ],
+  "scenes": [
+    {
+      "start": 0,
+      "end": 0.2,
+      "name": "Initial duel board, hero tooltip and five-card hand"
+    },
+    {
+      "start": 0.2,
+      "end": 0.5,
+      "name": "Fireball hover enlarged card and6damage text"
+    },
+    {
+      "start": 0.5,
+      "end": 0.733,
+      "name": "Fireball returns to hand"
+    },
+    {
+      "start": 0.733,
+      "end": 1.067,
+      "name": "Fireball drag and golden dotted target ribbon"
+    },
+    {
+      "start": 1.067,
+      "end": 1.2,
+      "name": "Fireball paid:10to6mana, hand5to4, history added"
+    },
+    {
+      "start": 1.2,
+      "end": 1.967,
+      "name": "Frost Yeti targeted enlarged card"
+    },
+    {
+      "start": 1.967,
+      "end": 2.333,
+      "name": "Yeti white damage flash,6damage and pixel disintegration"
+    },
+    {
+      "start": 2.333,
+      "end": 2.8,
+      "name": "Two surviving enemies recenter"
+    },
+    {
+      "start": 2.8,
+      "end": 3.267,
+      "name": "Tide Spirit enlarged preview and Freeze tooltip"
+    },
+    {
+      "start": 3.267,
+      "end": 3.4,
+      "name": "Spirit returns to hand"
+    },
+    {
+      "start": 3.4,
+      "end": 3.733,
+      "name": "Spirit card dragged into lower-right board slot"
+    },
+    {
+      "start": 3.733,
+      "end": 3.967,
+      "name": "New Spirit summons, sleep/frost, hand4to3 and6to2mana"
+    },
+    {
+      "start": 3.967,
+      "end": 5.333,
+      "name": "Three friendly minions hold with selectable first pair"
+    },
+    {
+      "start": 5.333,
+      "end": 5.467,
+      "name": "Brief friendly Frost Yeti hover"
+    },
+    {
+      "start": 5.467,
+      "end": 5.733,
+      "name": "Friendly Tide Spirit hover and Freeze tooltip"
+    },
+    {
+      "start": 5.733,
+      "end": 6.333,
+      "name": "Friendly Spirit aims red dotted attack at Wolf Rider"
+    },
+    {
+      "start": 6.333,
+      "end": 6.6,
+      "name": "Wolf Rider enlarged card, Charge tooltip and reciprocal lunges"
+    },
+    {
+      "start": 6.6,
+      "end": 6.867,
+      "name": "3damage each, Wolf health becomes negative and frozen"
+    },
+    {
+      "start": 6.867,
+      "end": 7.267,
+      "name": "Wolf Rider death flash and pixel dissolve"
+    },
+    {
+      "start": 7.267,
+      "end": 7.8,
+      "name": "Night Blade recenters after Wolf death"
+    },
+    {
+      "start": 7.8,
+      "end": 8.267,
+      "name": "Friendly Frost Yeti enlarged preview"
+    },
+    {
+      "start": 8.267,
+      "end": 8.733,
+      "name": "Yeti selects Night Blade with red targeting ribbon"
+    },
+    {
+      "start": 8.733,
+      "end": 9.133,
+      "name": "Night Blade card and Battlecry tooltip, mutual4damage"
+    },
+    {
+      "start": 9.133,
+      "end": 9.767,
+      "name": "Night Blade flashes and dissolves; Yeti remains at1health"
+    },
+    {
+      "start": 9.767,
+      "end": 10.267,
+      "name": "Enemy board cleared; end turn button selected"
+    },
+    {
+      "start": 10.267,
+      "end": 10.767,
+      "name": "ENEMY TURN stripe and enemy card draw10mana"
+    },
+    {
+      "start": 10.767,
+      "end": 11.133,
+      "name": "Enemy hand grows to6cards, turn stripe exits"
+    },
+    {
+      "start": 11.133,
+      "end": 12.267,
+      "name": "Arena Champion card enters from left, Taunt text,6mana paid"
+    },
+    {
+      "start": 12.267,
+      "end": 12.867,
+      "name": "Champion summons at enemy center behind Taunt shield and sleep"
+    },
+    {
+      "start": 12.867,
+      "end": 14.2,
+      "name": "Execute red card slides from left and damaged-minion text"
+    },
+    {
+      "start": 14.2,
+      "end": 14.733,
+      "name": "Damaged Spirit flashes, executes and disappears; survivors recenter"
+    },
+    {
+      "start": 14.733,
+      "end": 15,
+      "name": "Whirlwind red-card edge starts entering; enemy mana2 and history updated"
+    }
+  ],
+  "visual_status": "independent-reconstruction-with-differences",
+  "provenance": "Dedicated observed duel: native Canvas independently draws seeded masonry, green framed board, dashed midline, heroes/counters/mana/deck/hand,11card definitions and enlarged previews, charge/freeze/battlecry tooltips, causal spell/Spirit drag, red/golden target ribbons, reciprocal attacks, exact observed health/mana/hand milestones, pixel death effects, enemy draw and turn banner, Champion taunt/sleep, Execute removal and final partial Whirlwind. Eleven isolated static reference pixel-art character/spell sprites retain source attribution. No complete reference frame or source video is loaded.",
+  "editable": "project.json chronology/seed/reference15fpsquantization;composition.js all board geometry, card text, combat state and seekable event times",
+  "differences": [
+    "Tiny5 is an OFL local visual substitute; original pixel-font contours and exact metrics were not recovered.",
+    "Masonry color distribution, microchecker felt and bevel highlights are independently drawn; fine original map/layout texture differs.",
+    "Eleven static isolated pixel sprites are cropped and manually alpha-masked from attributed reference; occasional crop boundaries or source UI-adjacent pixels may remain, rather than original sprite source files.",
+    "Independent oval/taunt geometry, card proportions and tooltip spacing can differ from original.",
+    "Drag paths, dotted targeting, attack easing, hit/white flashes, death particles and between-source-frame timings are authored; exact source combat easing and particle distribution are not recovered.",
+    "All225sourceframes/15s chronology is reconstructed, including partial Whirlwind entry at end.30fpsoutput duplicates15fpsquantized visual state. Source and export are silent.",
+    "This video reconstructs the observed single duel; it is not a full playable game/rules engine."
+  ],
+  "portable_demo": {
+    "source_motion_preserved": true,
+    "reference_media_distributed": false,
+    "textures": "Original replaceable schematic assets; not the original reference artwork.",
+    "approval": "Historical motion implementation; this portable demo is not user-approved."
+  }
+}

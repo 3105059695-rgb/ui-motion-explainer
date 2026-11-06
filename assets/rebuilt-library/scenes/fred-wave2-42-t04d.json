@@ -1,0 +1,412 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t04d",
+  "title": "展开分支后聚焦一类",
+  "duration": 4.5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "root": "选择工作方式",
+    "branch0": "自己完成",
+    "branch1": "与人协作",
+    "branch2": "交给工具"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/fe9317c8f849fb261f247a8370446afe9dcc3859e41e135ab645fd70dd6a4e55.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single, sharp 'pop' sound effect occurs simultaneously with the appearance of the central icon.",
+          "label": "Opening Hook",
+          "visual": "A white minimalist background features a central black rounded rectangle icon with white stylized characters. The lighting is uniform and flat with no visible shadows or textures. The color palette is high-contrast monochromatic black and white.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Two rapid 'whoosh' sounds accompany the appearance of the new icons in quick succession.",
+          "label": "Product Information",
+          "visual": "From the bottom of the initial icon, a vertical black line extends downward, and two horizontal branches emerge. Two additional grey rounded rectangles with black characters appear sequentially at the ends of these branches. The layout is structured like an organizational chart or mind map on the same white background.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A final 'click' sound effect triggers as the third item snaps into place.",
+          "label": "Product Selling Points",
+          "visual": "A third horizontal branch extends from the vertical line, revealing another grey rounded rectangle with black characters at the bottom of the list. The background remains clean white, and the arrangement is perfectly aligned vertically.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "The audio transitions into a short, upbeat three-note melodic jingle that signals completion.",
+          "label": "Call to Action",
+          "visual": "The screen quickly transitions to zoom in on a single lavender-colored rounded rectangle with black characters, centered on the white background. The transition is a sharp cut, and the purple icon is slightly larger and more vibrant than the previous grey ones.",
+          "shot_type": "Medium Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 2.025,
+      "action": "Three alternatives branch from one question"
+    },
+    {
+      "start": 2.6999999999999997,
+      "end": 3.8249999999999997,
+      "action": "Selected middle alternative rises into focus"
+    },
+    {
+      "start": 3.8249999999999997,
+      "end": 4.5,
+      "action": "Chosen branch holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-pill",
+      "kind": "pill",
+      "x": 600,
+      "y": 130,
+      "w": 720,
+      "h": 150,
+      "label": "{{root}}",
+      "size": 64,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "n003-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 960,
+      "y": 300,
+      "w": -575,
+      "h": 280,
+      "arrow": true,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            0.72,
+            0
+          ],
+          [
+            1.71,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-pill",
+      "kind": "pill",
+      "x": 170,
+      "y": 610,
+      "w": 430,
+      "h": 140,
+      "label": "{{branch0}}",
+      "size": 50,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            0.0,
+            170
+          ],
+          [
+            2.7,
+            170
+          ],
+          [
+            3.825,
+            170
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            610
+          ],
+          [
+            2.7,
+            610
+          ],
+          [
+            3.825,
+            610
+          ]
+        ],
+        "scale": [
+          [
+            0.0,
+            1
+          ],
+          [
+            2.7,
+            1
+          ],
+          [
+            3.825,
+            0.9
+          ]
+        ],
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.72,
+            0
+          ],
+          [
+            1.35,
+            1
+          ],
+          [
+            2.7,
+            1
+          ],
+          [
+            3.825,
+            0.15
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 960,
+      "y": 300,
+      "w": 5,
+      "h": 280,
+      "arrow": true,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            0.72,
+            0
+          ],
+          [
+            1.71,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-pill",
+      "kind": "pill",
+      "x": 750,
+      "y": 610,
+      "w": 430,
+      "h": 140,
+      "label": "{{branch1}}",
+      "size": 50,
+      "fill": "#D6C2FF",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            0.0,
+            750
+          ],
+          [
+            2.7,
+            750
+          ],
+          [
+            3.825,
+            745
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            610
+          ],
+          [
+            2.7,
+            610
+          ],
+          [
+            3.825,
+            440
+          ]
+        ],
+        "scale": [
+          [
+            0.0,
+            1
+          ],
+          [
+            2.7,
+            1
+          ],
+          [
+            3.825,
+            1.5
+          ]
+        ],
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.08,
+            0
+          ],
+          [
+            1.71,
+            1
+          ],
+          [
+            2.7,
+            1
+          ],
+          [
+            3.825,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 960,
+      "y": 300,
+      "w": 585,
+      "h": 280,
+      "arrow": true,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            0.72,
+            0
+          ],
+          [
+            1.71,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-pill",
+      "kind": "pill",
+      "x": 1330,
+      "y": 610,
+      "w": 430,
+      "h": 140,
+      "label": "{{branch2}}",
+      "size": 50,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            0.0,
+            1330
+          ],
+          [
+            2.7,
+            1330
+          ],
+          [
+            3.825,
+            1330
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            610
+          ],
+          [
+            2.7,
+            610
+          ],
+          [
+            3.825,
+            610
+          ]
+        ],
+        "scale": [
+          [
+            0.0,
+            1
+          ],
+          [
+            2.7,
+            1
+          ],
+          [
+            3.825,
+            0.9
+          ]
+        ],
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.44,
+            0
+          ],
+          [
+            2.07,
+            1
+          ],
+          [
+            2.7,
+            1
+          ],
+          [
+            3.825,
+            0.15
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

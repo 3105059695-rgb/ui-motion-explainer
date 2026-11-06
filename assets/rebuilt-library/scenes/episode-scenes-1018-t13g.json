@@ -1,0 +1,599 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t13g",
+  "title": "比喻场景解锁：上锁的菜谱弹开、文件落到自己的机器",
+  "duration": 17.867,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "餐厅后厨",
+    "text02": "按菜单点餐",
+    "text03": "菜谱",
+    "text04": "本期模型文件",
+    "text05": "自己的机器",
+    "text06": "公开方法，自己运行"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "window",
+      "x": 170,
+      "y": 230,
+      "w": 650,
+      "h": 550,
+      "label": "{{text01}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.89335,
+            0
+          ],
+          [
+            1.5187,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            170
+          ],
+          [
+            0.89335,
+            170
+          ],
+          [
+            1.5187,
+            170,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            280
+          ],
+          [
+            0.89335,
+            280
+          ],
+          [
+            1.5187,
+            230,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "pill",
+      "x": 260,
+      "y": 630,
+      "w": 460,
+      "h": 85,
+      "label": "{{text02}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            2.68005,
+            0
+          ],
+          [
+            3.3054,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            260
+          ],
+          [
+            2.68005,
+            260
+          ],
+          [
+            3.3054,
+            260,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            680
+          ],
+          [
+            2.68005,
+            680
+          ],
+          [
+            3.3054,
+            630,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "file",
+      "x": 1100,
+      "y": 270,
+      "w": 400,
+      "h": 460,
+      "label": "{{text03}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.5734,
+            0
+          ],
+          [
+            4.19875,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1100
+          ],
+          [
+            3.5734,
+            1100
+          ],
+          [
+            4.19875,
+            1100,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            320
+          ],
+          [
+            3.5734,
+            320
+          ],
+          [
+            4.19875,
+            270,
+            "out"
+          ]
+        ],
+        "scaleX": [
+          [
+            0.0,
+            1
+          ],
+          [
+            9.64818,
+            1
+          ],
+          [
+            10.7202,
+            0.1
+          ],
+          [
+            11.79222,
+            1.25
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "path",
+      "x": 1220,
+      "y": 420,
+      "w": 150,
+      "h": 170,
+      "path": "M15 80 L15 155 L135 155 L135 80 Z M40 80 L40 35 Q75 -10 110 35 L110 80",
+      "fill": "#0B0B0F",
+      "strokeWidth": 14,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.46675,
+            0
+          ],
+          [
+            5.0921,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1220
+          ],
+          [
+            4.46675,
+            1220
+          ],
+          [
+            5.0921,
+            1220,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            420
+          ],
+          [
+            8.9335,
+            420
+          ],
+          [
+            10.36286,
+            390
+          ],
+          [
+            11.79222,
+            1160
+          ]
+        ],
+        "rotation": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.9335,
+            0
+          ],
+          [
+            10.00552,
+            -20
+          ],
+          [
+            11.25621,
+            -90
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "file",
+      "x": 1090,
+      "y": 280,
+      "w": 340,
+      "h": 340,
+      "label": "{{text04}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            11.97089,
+            0
+          ],
+          [
+            12.59624,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1090
+          ],
+          [
+            12.5069,
+            1090
+          ],
+          [
+            15.00828,
+            515
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            280
+          ],
+          [
+            12.5069,
+            280
+          ],
+          [
+            15.00828,
+            535
+          ]
+        ],
+        "scale": [
+          [
+            0.0,
+            1
+          ],
+          [
+            12.5069,
+            1
+          ],
+          [
+            15.00828,
+            0.4
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "window",
+      "x": 230,
+      "y": 510,
+      "w": 620,
+      "h": 325,
+      "label": "{{text05}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            12.5069,
+            0
+          ],
+          [
+            13.13225,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            230
+          ],
+          [
+            12.5069,
+            230
+          ],
+          [
+            13.13225,
+            230,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            560
+          ],
+          [
+            12.5069,
+            560
+          ],
+          [
+            13.13225,
+            510,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "circle",
+      "x": 765,
+      "y": 750,
+      "w": 30,
+      "h": 30,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            15.54429,
+            0
+          ],
+          [
+            16.16963,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            765
+          ],
+          [
+            15.54429,
+            765
+          ],
+          [
+            16.16963,
+            765,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            800
+          ],
+          [
+            15.54429,
+            800
+          ],
+          [
+            16.16963,
+            750,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "pill",
+      "x": 610,
+      "y": 915,
+      "w": 720,
+      "h": 75,
+      "label": "{{text06}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            15.90163,
+            0
+          ],
+          [
+            16.52698,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            610
+          ],
+          [
+            15.90163,
+            610
+          ],
+          [
+            16.52698,
+            610,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            965
+          ],
+          [
+            15.90163,
+            965
+          ],
+          [
+            16.52698,
+            915,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/586fc0bcd9fba4b28a1559034b84f107d2ce8cf6e010eadd849357d4bd57d660.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "Let's first talk about the difference between open source and closed source.",
+          "label": "Opening Hook",
+          "visual": "A white retro flip clock against a solid black background. The numbers '00' are displayed in a bold sans-serif font. The clock flip animation is fast and smooth. The lighting is uniform across the graphic elements.",
+          "shot_type": "Medium Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Part one: Open source and closed source.",
+          "label": "Product Information",
+          "visual": "The flip clock changes to '01'. Below the clock, stylized text elements appear in white, grey, and bold pink accents. The background remains solid black.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "Closed source is a bit like going to a restaurant to eat. The food is delicious, right?",
+          "label": "Usage Scenarios",
+          "visual": "The background switches to solid white. A series of flat icons appear: a silver cloche with steam rising, a rounded rectangle containing the cloche icon with a checkmark. Soft, subtle drop shadows are used under the white cards. The color palette is primarily black, white, and light grey.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "But the kitchen is with someone else. You can only order food and pay by the portion. You can't get the recipe.",
+          "label": "Problem Solving",
+          "visual": "New icons slide into view: a chef's hat representing the kitchen and a notepad representing a menu. A lock icon appears on the menu. A cursor moves across the screen to click on menu items, which highlights them in purple. An 'X' icon appears over the recipe card.",
+          "shot_type": "Medium Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:10",
+          "timestamp_start": "0:05"
+        },
+        {
+          "audio": "Open source means someone just made the recipe public. You can download the model file and run it on your own machine. Use it however you want.",
+          "label": "Product Selling Points",
+          "visual": "The screen transitions to show an open lock icon next to a document. Icons of a file named 'JEV-27B' and a computer server appear. An arrow shows a download process moving a file to the server. The server icon then shows a green status dot with a pulsating ring to indicate it is running. The design is clean, using a high-contrast black and white theme with purple accents.",
+          "shot_type": "Medium Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:17",
+          "timestamp_start": "0:10"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "后厨窗+菜单卡讲“闭源=餐厅”，推近到上锁的菜谱；“开源=菜谱公开”时锁弹开掉下、菜谱翻开，模型文件落到自己的机器"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 17.867,
+      "action": "后厨窗+菜单卡讲“闭源=餐厅”，推近到上锁的菜谱；“开源=菜谱公开”时锁弹开掉下、菜谱翻开，模型文件落到自己的机器"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

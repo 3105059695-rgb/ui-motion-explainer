@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "title": "Pelican on a Bicycle",
+  "template": "axtonliu-0b861d-specific-reconstruction",
+  "reference_slug": "axtonliu-0b861d",
+  "reference_url": "https://prompt-motion.com/axtonliu-0b861d",
+  "source_post": "https://x.com/AxtonLiu/status/2103119648271290566",
+  "reference_author": "@AxtonLiu",
+  "provenance": "Independent WebGL sunset ocean/pier, bicycle frame/wheels/rotating spokes/crank/chain/basket, articulated pedaling pelican with separate feather geometry and moving camera shots. Original 3D mesh, textures, renderer and sky lighting are not recovered. No original video/image/full-frame sequence is loaded.",
+  "width": 1920,
+  "height": 1080,
+  "duration": 37.96666666666667,
+  "fps": 30,
+  "loop": false,
+  "seed": 4141,
+  "speed": 0.85,
+  "pedal_hz": 1.2,
+  "subtitle": "鹈鹕骑自行车",
+  "footer": "EVERY FEATHER, SPOKE AND WAVE COMPUTED FROM PURE MATHEMATICS",
+  "marks": [
+    1,
+    5,
+    9,
+    12,
+    14,
+    18,
+    21,
+    24,
+    26,
+    29,
+    32,
+    36
+  ],
+  "editable": "Title/subtitle/footer, speed, pedaling frequency, seed and marks in project.json; independent model and camera geometry in composition.js.",
+  "fidelity": "Full source shot sequence is reconstructed with dedicated independent WebGL geometry. Refined model addresses broken feather patches, bill/pouch shape, pedaling anatomy and sunset shading. Original sculpted anatomy, camera, microtexture and cinematic rendering remain visibly different; fidelity still needs work.",
+  "model_revision": "refined-v2: smooth feather surfaces, elongated body, articulated IK legs/web feet, tapered mandible/gular pouch, rounded primary feather fan, soft contact shadows, multiscale water/cloud shading and revised shot framing; v3-textfix corrected subtitle/footer Unicode and authored character spacing",
+  "portable_demo": {
+    "source_motion_preserved": true,
+    "reference_media_distributed": false,
+    "textures": "Original replaceable schematic assets; not the original reference artwork.",
+    "approval": "Historical motion implementation; this portable demo is not user-approved."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "slug": "ajith-io-4c248f",
+  "source_project": "assets/reconstructions/ajith-io-4c248f",
+  "project": "assets/reconstructions/ajith-io-4c248f",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "asset-manifest.json",
+    "composition.js",
+    "index.html",
+    "project.json",
+    "textures/ada-lovelace.png",
+    "textures/payment-workflow.png",
+    "textures/photosynthesis.png",
+    "textures/water-cycle.png",
+    "portable-paths.js"
+  ],
+  "shared_assets": [],
+  "replaceable_assets": [
+    {
+      "path": "textures/ada-lovelace.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "fb812e10d4b5302b37c02bd930dce1263007c7f241494a1112ba23f8a526d979"
+    },
+    {
+      "path": "textures/payment-workflow.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "e0f9a93686ed4f0b967f43fb3f89158b0721db31eb65fdf3a9a1ce59a2fe2f5f"
+    },
+    {
+      "path": "textures/photosynthesis.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "96ffd1b7366687e00c9f61c002a10f2e95ace2c296218e4916831c9e2a498082"
+    },
+    {
+      "path": "textures/water-cycle.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "b905e80b3b0ef1da9fd9313a5daa901a657e9838217d097617f1a86debdd6d2e"
+    }
+  ],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "asset-manifest.json": "asset-manifest.json",
+    "composition.js": "composition.js",
+    "index.html": "index.html",
+    "project.json": "project.json",
+    "textures/ada-lovelace.png": "textures/ada-lovelace.png",
+    "textures/payment-workflow.png": "textures/payment-workflow.png",
+    "textures/photosynthesis.png": "textures/photosynthesis.png",
+    "textures/water-cycle.png": "textures/water-cycle.png",
+    "ada-lovelace.png": "textures/ada-lovelace.png",
+    "payment-workflow.png": "textures/payment-workflow.png",
+    "photosynthesis.png": "textures/photosynthesis.png",
+    "water-cycle.png": "textures/water-cycle.png"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

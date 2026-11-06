@@ -12,7 +12,7 @@ from urllib.parse import unquote
 
 MANIFEST = 'release-manifest.json'
 STATE = '.install-state.json'
-VERSION = '2026.11.06.2'
+VERSION = '2026.11.06.3'
 EXCLUDED_DIRS = {'.git', 'node_modules', '__pycache__', '.cache', 'cache', 'caches',
                  '.venv', 'venv', '.pytest_cache', '.mypy_cache', '.ruff_cache',
                  'runtime', 'runtimes', 'browser-cache'}
@@ -158,6 +158,16 @@ def validate_resources(root: Path) -> dict:
                 'assets/fredtalk-library/index.html', 'assets/fredtalk-library/LICENSE',
                 'assets/fredtalk-library/THIRD_PARTY_NOTICES.md',
                 'assets/fredtalk-library/README.md', 'assets/fredtalk-library/upstream-license-scope.md']
+    required += ['assets/style-film/current-style-full.mp4','assets/style-film/manifest.json',
+                 'assets/style-film/index.html','assets/rebuilt-library/index.html',
+                 'assets/rebuilt-library/gallery-data.js','assets/rebuilt-library/execution.json',
+                 'assets/rebuilt-library/scene-runtime.js','assets/library-runtime/implementations.json',
+                 'assets/library-runtime/core-dependencies/package.json',
+                 'assets/library-runtime/core-dependencies/package-lock.json',
+                 'assets/semantic-motion/manifest.json','assets/semantic-motion/semantic-motion.js',
+                 'assets/method-runtime/programs.json','assets/method-runtime/method-runtime.js',
+                 'scripts/library_runner.py','scripts/library_html_runner.py','scripts/rebuilt_library.py',
+                 'scripts/semantic_effects.py','scripts/method_programs.py','scripts/style_film.py']
     for name in required:
         if not checked_path(root, name).is_file():
             raise ValueError(f'Missing required release file: {name}')
@@ -211,7 +221,7 @@ def validate_resources(root: Path) -> dict:
         if not path.is_file() or not path.stat().st_size:
             raise ValueError(f'Missing approved girl image: {name}')
     import fredtalk_library
-    fredtalk_rows = [row for row in fredtalk_library.records(root, include_unavailable=True)
+    fredtalk_rows = [row for row in fredtalk_library.records(root, include_archived=True, include_unavailable=True)
                      if row.get('source_access') == 'public']
     if not fredtalk_rows:
         raise ValueError('FredTalk active public source catalog is empty')

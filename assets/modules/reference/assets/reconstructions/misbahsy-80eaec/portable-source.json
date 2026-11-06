@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "slug": "misbahsy-80eaec",
+  "source_project": "assets/reconstructions/misbahsy-80eaec/versions/v3",
+  "project": "assets/reconstructions/misbahsy-80eaec",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "_dependencies/41002baf6787-reference-train.png",
+    "assets/reference-train.png",
+    "composition.js",
+    "index.html",
+    "project.json",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/73894e0448cae90a92b6.ttf"
+  ],
+  "replaceable_assets": [
+    {
+      "path": "_dependencies/41002baf6787-reference-train.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "41002baf6787bf41369b9252a56b7fdd10e2445ef73c3dc948e0aa5031634b0a"
+    },
+    {
+      "path": "assets/reference-train.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "f8a7b0438dfe75fff18aa23f7b2b6e297cff9da5ff73cd6aaf071d9daa3ab66b"
+    }
+  ],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "../../assets/fonts/Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "../../assets/reference-train.png": "_dependencies/41002baf6787-reference-train.png",
+    "assets/fonts/Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "assets/reference-train.png": "assets/reference-train.png",
+    "composition.js": "composition.js",
+    "index.html": "index.html",
+    "project.json": "project.json",
+    "Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

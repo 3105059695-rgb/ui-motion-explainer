@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "slug": "blushpetal795-0c85c2",
+  "source_project": "assets/reconstructions/blushpetal795-0c85c2/versions/v3",
+  "project": "assets/reconstructions/blushpetal795-0c85c2",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "_dependencies/158fa86d2a2d-portrait.png",
+    "asset-provenance.json",
+    "assets/portrait.png",
+    "composition.js",
+    "index.html",
+    "project.json",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/08939b8bdf534afec24a.ttf",
+    "../../reference-shared/fonts/73894e0448cae90a92b6.ttf"
+  ],
+  "replaceable_assets": [
+    {
+      "path": "_dependencies/158fa86d2a2d-portrait.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "158fa86d2a2d809c662d52dc6f59ccf455978f889c216a91d2b4641bbf3cfa95"
+    },
+    {
+      "path": "assets/portrait.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "158fa86d2a2d809c662d52dc6f59ccf455978f889c216a91d2b4641bbf3cfa95"
+    }
+  ],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "../../assets/fonts/Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "../../assets/fonts/Serif.ttf": "../../reference-shared/fonts/08939b8bdf534afec24a.ttf",
+    "../../assets/portrait.png": "_dependencies/158fa86d2a2d-portrait.png",
+    "asset-provenance.json": "asset-provenance.json",
+    "assets/fonts/Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "assets/fonts/Serif.ttf": "../../reference-shared/fonts/08939b8bdf534afec24a.ttf",
+    "assets/portrait.png": "assets/portrait.png",
+    "composition.js": "composition.js",
+    "index.html": "index.html",
+    "project.json": "project.json",
+    "Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "Serif.ttf": "../../reference-shared/fonts/08939b8bdf534afec24a.ttf"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

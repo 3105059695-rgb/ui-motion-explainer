@@ -1,0 +1,621 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t03h",
+  "title": "总览步骤轨收到顶部常驻，下方录屏逐步点亮",
+  "duration": 11.567,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "选择模型",
+    "text02": "1",
+    "text03": "选择机器",
+    "text04": "2",
+    "text05": "一键部署",
+    "text06": "3",
+    "text07": "连接使用",
+    "text08": "4",
+    "media1.start": 0,
+    "media1.speed": 1,
+    "media2.start": 0,
+    "media2.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media2": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "image",
+      "x": 150,
+      "y": 90,
+      "w": 1620,
+      "h": 900,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        3.93278
+      ],
+      "tracks": {
+        "scale": [
+          [
+            0.0,
+            1
+          ],
+          [
+            1.1567,
+            1.15
+          ],
+          [
+            2.89175,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "pill",
+      "x": 180,
+      "y": 440,
+      "w": 360,
+      "h": 86,
+      "label": "{{text01}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.93278,
+            0
+          ],
+          [
+            4.33763,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            180
+          ],
+          [
+            3.93278,
+            180
+          ],
+          [
+            4.33763,
+            180,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            440
+          ],
+          [
+            5.7835,
+            440
+          ],
+          [
+            6.82453,
+            95
+          ]
+        ],
+        "scale": [
+          [
+            0.0,
+            1
+          ],
+          [
+            5.7835,
+            1
+          ],
+          [
+            6.82453,
+            0.8
+          ]
+        ],
+        "fill": [
+          [
+            0.0,
+            "#0B0B0F"
+          ],
+          [
+            7.17154,
+            "#0B0B0F"
+          ],
+          [
+            7.51855,
+            "#D6C2FF"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "text",
+      "x": 208,
+      "y": 445,
+      "w": 55,
+      "h": 51.2,
+      "text": "{{text02}}",
+      "size": 32,
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "n004",
+      "kind": "pill",
+      "x": 595,
+      "y": 440,
+      "w": 360,
+      "h": 86,
+      "label": "{{text03}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.22196,
+            0
+          ],
+          [
+            4.6268,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            595
+          ],
+          [
+            4.22196,
+            595
+          ],
+          [
+            4.6268,
+            595,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            440
+          ],
+          [
+            5.7835,
+            440
+          ],
+          [
+            6.82453,
+            95
+          ]
+        ],
+        "scale": [
+          [
+            0.0,
+            1
+          ],
+          [
+            5.7835,
+            1
+          ],
+          [
+            6.82453,
+            0.8
+          ]
+        ],
+        "fill": [
+          [
+            0.0,
+            "#0B0B0F"
+          ],
+          [
+            8.21257,
+            "#0B0B0F"
+          ],
+          [
+            8.55958,
+            "#D6C2FF"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "text",
+      "x": 623,
+      "y": 445,
+      "w": 55,
+      "h": 51.2,
+      "text": "{{text04}}",
+      "size": 32,
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "n006",
+      "kind": "pill",
+      "x": 1010,
+      "y": 440,
+      "w": 360,
+      "h": 86,
+      "label": "{{text05}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.51113,
+            0
+          ],
+          [
+            4.91598,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1010
+          ],
+          [
+            4.51113,
+            1010
+          ],
+          [
+            4.91598,
+            1010,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            440
+          ],
+          [
+            5.7835,
+            440
+          ],
+          [
+            6.82453,
+            95
+          ]
+        ],
+        "scale": [
+          [
+            0.0,
+            1
+          ],
+          [
+            5.7835,
+            1
+          ],
+          [
+            6.82453,
+            0.8
+          ]
+        ],
+        "fill": [
+          [
+            0.0,
+            "#0B0B0F"
+          ],
+          [
+            9.2536,
+            "#0B0B0F"
+          ],
+          [
+            9.60061,
+            "#D6C2FF"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "text",
+      "x": 1038,
+      "y": 445,
+      "w": 55,
+      "h": 51.2,
+      "text": "{{text06}}",
+      "size": 32,
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "n008",
+      "kind": "pill",
+      "x": 1425,
+      "y": 440,
+      "w": 360,
+      "h": 86,
+      "label": "{{text07}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.80031,
+            0
+          ],
+          [
+            5.20515,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1425
+          ],
+          [
+            4.80031,
+            1425
+          ],
+          [
+            5.20515,
+            1425,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            440
+          ],
+          [
+            5.7835,
+            440
+          ],
+          [
+            6.82453,
+            95
+          ]
+        ],
+        "scale": [
+          [
+            0.0,
+            1
+          ],
+          [
+            5.7835,
+            1
+          ],
+          [
+            6.82453,
+            0.8
+          ]
+        ],
+        "fill": [
+          [
+            0.0,
+            "#0B0B0F"
+          ],
+          [
+            10.29463,
+            "#0B0B0F"
+          ],
+          [
+            10.64164,
+            "#D6C2FF"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "text",
+      "x": 1453,
+      "y": 445,
+      "w": 55,
+      "h": 51.2,
+      "text": "{{text08}}",
+      "size": 32,
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "n010",
+      "kind": "image",
+      "x": 240,
+      "y": 245,
+      "w": 1440,
+      "h": 720,
+      "asset": "media2",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        6.82453,
+        11.568
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            6.82453,
+            0
+          ],
+          [
+            7.22938,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            240
+          ],
+          [
+            6.82453,
+            240
+          ],
+          [
+            7.22938,
+            240,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            345
+          ],
+          [
+            6.82453,
+            345
+          ],
+          [
+            7.22938,
+            245,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/6a299db76d5f658825b3253748470061097dd3a0fa0821fe81df6943b7df6bb4.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "And the platform I'm using this time is called Soulmate.",
+          "label": "Opening Hook",
+          "visual": "A screen recording of a website interface. The interface is primarily white and gray with a sidebar on the left and various cards displaying technical data and titles. A cursor moves across the screen. The lighting is digital and even with neutral color grading.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Soulmate.",
+          "label": "Product Information",
+          "visual": "The camera zooms in on the center of the website header where the logo 'Soulmate' is displayed. The surrounding background is blurred slightly to emphasize the branding. The color palette is clean, white, and professional.",
+          "shot_type": "Close-Up",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A platform specifically for computing power and model deployment.",
+          "label": "Product Selling Points",
+          "visual": "The camera pans across a grid of interactive cards on the platform, each containing technical text and buttons. A blue highlighted tab labeled for AI matching is visible. The motion is a smooth horizontal drift across the UI.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "The whole process is very simple, just four steps.",
+          "label": "Usage Scenarios",
+          "visual": "A clean white background appears with four numbered circular icons labeled 1 through 4. They appear sequentially from left to right. The icons represent a workflow: selecting models, choosing machines, deployment, and connection. The lighting is bright and flat.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:06",
+          "timestamp_start": "0:04"
+        },
+        {
+          "audio": "Step one is to select the model.",
+          "label": "Product Information",
+          "visual": "The interface returns, focusing on the top workflow bar. The first icon for selecting a model is highlighted with a dark circular background, while the others remain greyed out. The camera is static.",
+          "shot_type": "Medium Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:07",
+          "timestamp_start": "0:06"
+        },
+        {
+          "audio": "Search for JEV in the selection and you will be able to find it.",
+          "label": "Usage Scenarios",
+          "visual": "A screen recording shows a cursor clicking on a navigation menu and then typing 'JEV' into a search bar. The camera zooms in slightly as search results appear below, showing specific AI models like 'JEV-27B-VL'. The lighting is consistent with the web interface.",
+          "shot_type": "Close-Up",
+          "scene_number": 6,
+          "timestamp_end": "0:11",
+          "timestamp_start": "0:07"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "四步胶囊在中央一次排开 → 整排缩到顶部常驻成进度轨，下方录屏窗长出；进入每一步时轨上点亮对应胶囊"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 11.567,
+      "action": "四步胶囊在中央一次排开 → 整排缩到顶部常驻成进度轨，下方录屏窗长出；进入每一步时轨上点亮对应胶囊"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "本期部署平台",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          11.567,
+          11.567,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media2",
+      "label": "本期分步操作",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          11.567,
+          11.567,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

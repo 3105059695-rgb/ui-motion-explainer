@@ -1,0 +1,117 @@
+{
+  "index": 174,
+  "slug": "tolgayhickiran-e90799",
+  "status": "independent-rendered-with-differences",
+  "runtime_frozen": true,
+  "version": "v1",
+  "provenance": "independent-reimplementation",
+  "reference_video": "private-source-not-distributed",
+  "render": "render/full-720p-v1/preview.mp4",
+  "runtime_loads_reference_video": false,
+  "runtime_loads_reference_fullscreen_images": false,
+  "runtime_uses_original_frame_sequence": false,
+  "runtime_asset_types": [
+    "local OFL Anton font",
+    "procedurally generated seeded grain"
+  ],
+  "dimensions": [
+    1280,
+    720
+  ],
+  "fps": 30,
+  "project_duration": 15.046009,
+  "encoded_duration": "15.066667",
+  "frames": 452,
+  "bytes": 7935265,
+  "full_decode": "passed",
+  "checks": {
+    "seek_repeat_pixels_equal": true,
+    "seek_repeat_state_equal": true,
+    "source_files_unchanged_during_render": true
+  },
+  "own_repeat_24_points": true,
+  "own_repeat_times": [
+    0.45,
+    1.2,
+    2.6,
+    3,
+    4.2,
+    5.8,
+    6.8,
+    8.4,
+    9.7,
+    10.7,
+    12.3,
+    14.1,
+    0,
+    0.9,
+    2.2,
+    4.8,
+    5.4,
+    6.3,
+    7.2,
+    7.8,
+    10.2,
+    11.1,
+    11.7,
+    14.9
+  ],
+  "runtime_source_files": [
+    {
+      "path": "../../reference-shared/fonts/a4ba3a92350ebb031da0.ttf",
+      "bytes": 170812,
+      "sha256": "a4ba3a92350ebb031da0cb47630ac49eb265082ca1bc0450442f4a83ab947cab"
+    },
+    {
+      "path": "index.html",
+      "bytes": 310,
+      "sha256": "902ff14efb6df388b357a372c8f5120ad6092e474b9ed000b1d863a595caf27c"
+    },
+    {
+      "path": "motion.js",
+      "bytes": 21330,
+      "sha256": "bdf09bc63aba75779d5fb1b8954abe4ab62238828ebd9c5de28f26add038176b"
+    },
+    {
+      "path": "project.json",
+      "bytes": 1945,
+      "sha256": "e04e87a0f2f45eb575fcce1c111976e30b02fde137a5056a2b0d20621798042e"
+    },
+    {
+      "path": "style.css",
+      "bytes": 184,
+      "sha256": "1f09dc3b7a580b988d3bd8e391bd172210319a17663c14cec09400bb03ae6b15"
+    }
+  ],
+  "original_audio_retained": true,
+  "reference_observation": {
+    "timecoded_overview": 100,
+    "native_detail": 28,
+    "targeted_geometry_measurements": true,
+    "full_range": true,
+    "uninterrupted_subjective_playback": false
+  },
+  "actual_export_paired_frames": 24,
+  "paired_comparison_paths": [
+    "verification/paired-comparison-01.jpg",
+    "verification/paired-comparison-02.jpg",
+    "verification/supplementary/paired-comparison-01.jpg",
+    "verification/supplementary/paired-comparison-02.jpg"
+  ],
+  "paired_sheets_personally_viewed": 4,
+  "browser_errors": [],
+  "request_errors": [],
+  "user_approved": false,
+  "visual_residuals": [
+    "font contours, monospace weight/tracking, tiny HUD typography and generated grain",
+    "genesis spoke count, pulse expansion and exact ring layering",
+    "per-glyph spring/trail phase and scan-strip glitch/color/block pattern",
+    "radial grid wave size/color/rotation phase; late orange band heavier/larger than source",
+    "morph outline lag, handle placement and outline geometry",
+    "galaxy arm winding/seed/blur/glow/tilt: authored swirl is crisper and less irregular",
+    "principle ruler marker position and curve/waveform/asterisk phase",
+    "torus minor radius/mesh density/opacity, orbit-plane angle and marker/starfield layout",
+    "signature confetti/letter spacing/orbit phase and end dot size",
+    "original sound design not independently recreated"
+  ]
+}

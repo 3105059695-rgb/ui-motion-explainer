@@ -1,0 +1,344 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t18j",
+  "title": "产品图尺寸标注线 → 尺寸胶囊，再逐个亮起认出的人",
+  "duration": 10,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "7 英寸",
+    "text02": "识别对象 1",
+    "text03": "识别对象 2",
+    "text04": "识别对象 3",
+    "media1.start": 0,
+    "media1.speed": 1,
+    "media2.start": 0,
+    "media2.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media2": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "image",
+      "x": 560,
+      "y": 170,
+      "w": 800,
+      "h": 650,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0,
+        10.001
+      ]
+    },
+    {
+      "id": "n002",
+      "kind": "path",
+      "x": 560,
+      "y": 145,
+      "w": 800,
+      "h": 40,
+      "path": "M0 30 V0 H800 V30",
+      "fill": "#0B0B0F",
+      "strokeWidth": 4,
+      "length": 860,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            2.2,
+            0
+          ],
+          [
+            3.4,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "pill",
+      "x": 780,
+      "y": 30,
+      "w": 360,
+      "h": 88,
+      "label": "{{text01}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.5,
+            0
+          ],
+          [
+            3.85,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            780
+          ],
+          [
+            3.5,
+            780
+          ],
+          [
+            3.85,
+            780,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            80
+          ],
+          [
+            3.5,
+            80
+          ],
+          [
+            3.85,
+            30,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "circle",
+      "x": 660,
+      "y": 270,
+      "w": 110,
+      "h": 110,
+      "fill": "#D6C2FF",
+      "opacity": 0.38,
+      "visible": [
+        4.8,
+        5.9
+      ]
+    },
+    {
+      "id": "n005",
+      "kind": "pill",
+      "x": 690,
+      "y": 875,
+      "w": 540,
+      "h": 80,
+      "label": "{{text02}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "visible": [
+        4.8,
+        5.9
+      ]
+    },
+    {
+      "id": "n006",
+      "kind": "circle",
+      "x": 895,
+      "y": 270,
+      "w": 110,
+      "h": 110,
+      "fill": "#D6C2FF",
+      "opacity": 0.38,
+      "visible": [
+        6.1,
+        7.2
+      ]
+    },
+    {
+      "id": "n007",
+      "kind": "pill",
+      "x": 690,
+      "y": 875,
+      "w": 540,
+      "h": 80,
+      "label": "{{text03}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "visible": [
+        6.1,
+        7.2
+      ]
+    },
+    {
+      "id": "n008",
+      "kind": "circle",
+      "x": 1130,
+      "y": 270,
+      "w": 110,
+      "h": 110,
+      "fill": "#D6C2FF",
+      "opacity": 0.38,
+      "visible": [
+        7.4,
+        8.5
+      ]
+    },
+    {
+      "id": "n009",
+      "kind": "pill",
+      "x": 690,
+      "y": 875,
+      "w": 540,
+      "h": 80,
+      "label": "{{text04}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "visible": [
+        7.4,
+        8.5
+      ]
+    },
+    {
+      "id": "n010",
+      "kind": "image",
+      "x": 240,
+      "y": 160,
+      "w": 1440,
+      "h": 760,
+      "asset": "media2",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        8.4,
+        10.001
+      ]
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/a41944b0d5d2071e84e29fdab6ab4c013619714b23d3dc60673fde7cb4b4547e.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "Let's look at two more things that are closest to our lives.",
+          "label": "Opening Hook",
+          "visual": "A clean white background. Large purple and black graphics occupy the center of the frame. The camera is static with no movement. The lighting is perfectly flat and artificial, creating a studio-graphic feel with high saturation and contrast between the white void and the bold colors.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Apple has released HomeView.",
+          "label": "Product Information",
+          "visual": "A square smart home display device is centered against a pure white background. The device has a thick black bezel and a stand. The screen displays a blue artistic image with a white text box overlay. The camera remains static. The lighting is soft and even, highlighting the sleek industrial design of the hardware.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A seven-inch smart home screen.",
+          "label": "Product Selling Points",
+          "visual": "The same square smart home display is shown, slightly closer. The focus is on the screen's dimensions. The background remains white. A thin blue line appears on the screen momentarily to highlight the display area. The lighting remains consistent and bright.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        },
+        {
+          "audio": "It can recognize different people in the family.",
+          "label": "Product Selling Points",
+          "visual": "A tight zoom on the upper corner of the interface. Small circular profile icons representing different users appear at the top. The interface shows application icons for FaceTime, Home, Music, Messages, and Photos. The colors are vibrant and the screen is extremely sharp.",
+          "shot_type": "Extreme Close-Up",
+          "scene_number": 4,
+          "timestamp_end": "0:07",
+          "timestamp_start": "0:06"
+        },
+        {
+          "audio": "It can recognize different people in the family.",
+          "label": "Usage Scenarios",
+          "visual": "The device is now shown in a real-world setting, placed on a wooden kitchen counter. In the background, there is a blurred kitchen environment with warm interior lighting. The device screen is active, showing the device's hardware design in a lifestyle context.",
+          "shot_type": "Medium Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:08",
+          "timestamp_start": "0:07"
+        },
+        {
+          "audio": "Use Siri to chat with you and help you control your home appliances.",
+          "label": "Problem Solving",
+          "visual": "A close-up view of the screen showing a recipe for French Toast with a high-resolution image of the food. A hand enters from the right side, with the index finger tapping on the screen to interact with the interface. The hand belongs to a person with light skin tone; the rest of the body is out of frame.",
+          "shot_type": "POV Shot",
+          "scene_number": 6,
+          "timestamp_end": "0:09",
+          "timestamp_start": "0:08"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "透明底产品图落定 → 尺寸标注线先画出、“7 英寸”胶囊后落；再用 Spotlight 逐个亮起画面里认出的人"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 10.0,
+      "action": "透明底产品图落定 → 尺寸标注线先画出、“7 英寸”胶囊后落；再用 Spotlight 逐个亮起画面里认出的人"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "本期硬件透明图",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          10,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media2",
+      "label": "本期使用场景",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          10,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

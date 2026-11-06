@@ -1,0 +1,351 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-recording-8-t09v",
+  "title": "下拉切换：选择器展开，选中一项，标签改写",
+  "duration": 4,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "本期对话",
+    "text02": "当前模式",
+    "text03": "选择模式",
+    "text04": "快速",
+    "text05": "平衡",
+    "text06": "深入",
+    "text07": "自定义",
+    "text08": "自定义模式"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "window",
+      "x": 220,
+      "y": 160,
+      "w": 1480,
+      "h": 730,
+      "label": "{{text01}}"
+    },
+    {
+      "id": "n002",
+      "kind": "pill",
+      "x": 380,
+      "y": 740,
+      "w": 570,
+      "h": 90,
+      "label": "{{text02}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            2.56,
+            1
+          ],
+          [
+            2.6,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "window",
+      "x": 380,
+      "y": 270,
+      "w": 690,
+      "h": 440,
+      "label": "{{text03}}",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.72,
+            0
+          ],
+          [
+            0.86,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            380
+          ],
+          [
+            0.72,
+            380
+          ],
+          [
+            0.86,
+            380,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            290
+          ],
+          [
+            0.72,
+            290
+          ],
+          [
+            0.86,
+            270,
+            "out"
+          ]
+        ]
+      },
+      "visible": [
+        0.72,
+        2.56
+      ]
+    },
+    {
+      "id": "n004",
+      "kind": "text",
+      "x": 450,
+      "y": 370,
+      "w": 560,
+      "h": 60.800000000000004,
+      "text": "{{text04}}",
+      "size": 38,
+      "visible": [
+        0.8,
+        2.56
+      ]
+    },
+    {
+      "id": "n005",
+      "kind": "text",
+      "x": 450,
+      "y": 455,
+      "w": 560,
+      "h": 60.800000000000004,
+      "text": "{{text05}}",
+      "size": 38,
+      "visible": [
+        0.8,
+        2.56
+      ]
+    },
+    {
+      "id": "n006",
+      "kind": "text",
+      "x": 450,
+      "y": 540,
+      "w": 560,
+      "h": 60.800000000000004,
+      "text": "{{text06}}",
+      "size": 38,
+      "visible": [
+        0.8,
+        2.56
+      ]
+    },
+    {
+      "id": "n007",
+      "kind": "text",
+      "x": 450,
+      "y": 625,
+      "w": 560,
+      "h": 60.800000000000004,
+      "text": "{{text07}}",
+      "size": 38,
+      "visible": [
+        0.8,
+        2.56
+      ]
+    },
+    {
+      "id": "n008",
+      "kind": "rect",
+      "x": 410,
+      "y": 610,
+      "w": 620,
+      "h": 66,
+      "fill": "#D6C2FF",
+      "opacity": 0.4,
+      "visible": [
+        1.84,
+        2.56
+      ]
+    },
+    {
+      "id": "n009",
+      "kind": "path",
+      "x": 0,
+      "y": 0,
+      "w": 45,
+      "h": 55,
+      "path": "M0 0 L0 42 L12 30 L24 51 L33 46 L22 26 L40 24 Z",
+      "fill": "#0B0B0F",
+      "strokeWidth": 7,
+      "tracks": {
+        "x": [
+          [
+            0,
+            1700
+          ],
+          [
+            0.68,
+            680
+          ],
+          [
+            1.8,
+            720
+          ],
+          [
+            2.48,
+            720
+          ]
+        ],
+        "y": [
+          [
+            0,
+            950
+          ],
+          [
+            0.68,
+            780
+          ],
+          [
+            1.8,
+            645
+          ],
+          [
+            2.48,
+            645
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010",
+      "kind": "pill",
+      "x": 380,
+      "y": 740,
+      "w": 570,
+      "h": 90,
+      "label": "{{text08}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.6,
+            0
+          ],
+          [
+            2.74,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            380
+          ],
+          [
+            2.6,
+            380
+          ],
+          [
+            2.74,
+            380,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            740
+          ],
+          [
+            2.6,
+            740
+          ],
+          [
+            2.74,
+            740,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/7019c109593de6be75fa963a66c3dbdf708dca7d9d2dc78045413d16cb9bf19e.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "A low-pitched, synth-based ambient track plays in the background. A soft, high-frequency digital 'click' sound effect occurs as the cursor moves.",
+          "label": "Opening Hook",
+          "visual": "A screen recording of a clean, minimalist software interface with a light gray background and purple accents. The left sidebar contains menu items in Chinese characters. The main content area shows a chat history with blocks of text and a file attachment. A black circular cursor with a white outline moves from the top right towards the bottom of the frame. Lighting is flat and digital; the color palette is primarily white, gray, and dark purple.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The ambient music continues. A distinct, sharp mechanical clicking sound accompanies the selection of the menu item.",
+          "label": "Product Information",
+          "visual": "A digital zoom focuses on the bottom input bar of the interface. A dropdown menu appears above a text label. The cursor clicks on the bottom option in a list of four items. The selected text is highlighted in dark gray. The lighting remains consistent with the previous scene, focusing on the sharp white and gray interface elements.",
+          "shot_type": "Close-Up",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A final digital 'pop' sound effect signals the completion of the action, while the ambient music fades slightly.",
+          "label": "Usage Scenarios",
+          "visual": "The camera zooms in further on the input field. The text label in the dropdown button updates to reflect the previous selection. A small circular loading animation rotates next to a lightning bolt icon. The background remains a soft, neutral gray. The cursor remains hovered over the selection area.",
+          "shot_type": "Extreme Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "输入框/面板上的选择器（模型、模式）→ 展开成选项列表，光标落到目标项，列表收起，原位标签逐字改写成新选项"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 4.0,
+      "action": "输入框/面板上的选择器（模型、模式）→ 展开成选项列表，光标落到目标项，列表收起，原位标签逐字改写成新选项"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

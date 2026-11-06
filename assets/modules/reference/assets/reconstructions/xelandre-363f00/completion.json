@@ -1,0 +1,114 @@
+{
+  "index": 158,
+  "slug": "xelandre-363f00",
+  "status": "independent-rendered-with-differences",
+  "runtime_frozen": true,
+  "version": "v1",
+  "provenance": "independent-reimplementation",
+  "reference_video": "private-source-not-distributed",
+  "render": "render/full-720p-v1/preview.mp4",
+  "runtime_loads_reference_video": false,
+  "runtime_loads_reference_fullscreen_images": false,
+  "runtime_asset_types": [
+    "local OFL Geist font"
+  ],
+  "dimensions": [
+    1280,
+    720
+  ],
+  "fps": 30,
+  "project_duration": 30.058,
+  "encoded_duration": "30.066667",
+  "frames": 902,
+  "bytes": 2422736,
+  "full_decode": "passed",
+  "checks": {
+    "seek_repeat_pixels_equal": true,
+    "seek_repeat_state_equal": true,
+    "source_files_unchanged_during_render": true
+  },
+  "own_repeat_24_points": true,
+  "own_repeat_times": [
+    1.5,
+    3.3,
+    4.2,
+    6.6,
+    8.7,
+    11.4,
+    12.6,
+    16.5,
+    19.5,
+    21.6,
+    23.7,
+    28.5,
+    0,
+    0.6,
+    5.7,
+    7.8,
+    10.5,
+    11.7,
+    14.4,
+    17.4,
+    18.6,
+    20.4,
+    24.6,
+    25.8
+  ],
+  "runtime_source_files": [
+    {
+      "path": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+      "bytes": 169056,
+      "sha256": "73894e0448cae90a92b6c2f8732b7bb9acb7b94c418bff559dad4a18e1de9659"
+    },
+    {
+      "path": "index.html",
+      "bytes": 298,
+      "sha256": "5e0ba816bab47553fcf1a1ee7edbfe34522b60596a8c3dd3ad50eb2340ddfc1b"
+    },
+    {
+      "path": "motion.js",
+      "bytes": 18199,
+      "sha256": "7db869aac1ea023baef832b340e5c4a1aa582438f99f6a84bfd50a4d69d0ef6c"
+    },
+    {
+      "path": "project.json",
+      "bytes": 3617,
+      "sha256": "ac2357fbc45d5db9893c3c02e4c8471448bce499c2091efac79d8835151d0240"
+    },
+    {
+      "path": "style.css",
+      "bytes": 187,
+      "sha256": "bcc496c28d3717694f1d2b981f1f31793d2e6b2787cf8643596a3b7bd1b2b39d"
+    }
+  ],
+  "original_audio_retained": true,
+  "reference_observation": {
+    "timecoded_overview": 100,
+    "native_detail": 26,
+    "native_calibration": 8,
+    "full_range": true,
+    "uninterrupted_subjective_playback": false
+  },
+  "actual_export_paired_frames": 24,
+  "paired_comparison_paths": [
+    "verification/paired-comparison-01.jpg",
+    "verification/paired-comparison-02.jpg",
+    "verification/supplementary/paired-comparison-01.jpg",
+    "verification/supplementary/paired-comparison-02.jpg"
+  ],
+  "paired_sheets_personally_viewed": 4,
+  "browser_errors": [],
+  "request_errors": [],
+  "user_approved": false,
+  "differences": "DIFFERENCES.md",
+  "residuals": [
+    "Georgia substitution and typing phases",
+    "planar camera/skew and approximate large arcs",
+    "manual scrolling/tab/counter acceleration",
+    "seeded particles and radar signal pulse/label timing",
+    "qualification fields and rolling score",
+    "cursor/send time",
+    "Bezier logo assembly and 25.8s partial lettering",
+    "original soundtrack retained; independent audio synthesis absent"
+  ]
+}

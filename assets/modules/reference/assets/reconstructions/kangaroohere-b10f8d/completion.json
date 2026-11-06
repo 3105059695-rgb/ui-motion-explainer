@@ -1,0 +1,142 @@
+{
+  "index": 170,
+  "slug": "kangaroohere-b10f8d",
+  "status": "independent-rendered-with-differences",
+  "runtime_frozen": true,
+  "version": "v1",
+  "provenance": "independent-reimplementation",
+  "reference_video": "private-source-not-distributed",
+  "render": "render/full-720p-v1/preview.mp4",
+  "runtime_loads_reference_video": false,
+  "runtime_loads_reference_fullscreen_images": false,
+  "runtime_uses_original_frame_sequence": false,
+  "runtime_asset_types": [
+    "local OFL Archivo, Geist, Playfair Display fonts",
+    "editable vector kangaroo silhouette traced from one localized static source crop"
+  ],
+  "localized_reference_asset": {
+    "path": "assets/kangaroo-path.json",
+    "source_time": 18.6,
+    "source_frame": 1116,
+    "source_rectangle": [
+      345,
+      281,
+      332,
+      281
+    ],
+    "motion": "independent squash/rotation/hop trajectory; no source pose sequence"
+  },
+  "dimensions": [
+    1280,
+    720
+  ],
+  "fps": 30,
+  "project_duration": 20.053,
+  "encoded_duration": "20.066667",
+  "frames": 602,
+  "bytes": 4043611,
+  "full_decode": "passed",
+  "checks": {
+    "seek_repeat_pixels_equal": true,
+    "seek_repeat_state_equal": true,
+    "source_files_unchanged_during_render": true
+  },
+  "own_repeat_24_points": true,
+  "own_repeat_times": [
+    0.6,
+    1.2,
+    3,
+    4.5,
+    6.4,
+    7.3,
+    8.3,
+    9.4,
+    10.8,
+    13.5,
+    16.6,
+    19.5,
+    0,
+    2,
+    3.6,
+    5.4,
+    6.8,
+    7.8,
+    8.8,
+    9.8,
+    11.4,
+    12.6,
+    14.8,
+    18.6
+  ],
+  "runtime_source_files": [
+    {
+      "path": "../../reference-shared/fonts/0e094a7d3c7c4c25cf13.ttf",
+      "bytes": 658596,
+      "sha256": "0e094a7d3c7c4c25cf1310c4b30014f1dae9332220b1c2c88f4fa996f0b05053"
+    },
+    {
+      "path": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+      "bytes": 169056,
+      "sha256": "73894e0448cae90a92b6c2f8732b7bb9acb7b94c418bff559dad4a18e1de9659"
+    },
+    {
+      "path": "../../reference-shared/fonts/c40f2293766a503bc70c.ttf",
+      "bytes": 300724,
+      "sha256": "c40f2293766a503bc70cce9e512ef844a4ccb7cbcde792fe2ea31d191917d8d6"
+    },
+    {
+      "path": "assets/kangaroo-path.json",
+      "bytes": 1507,
+      "sha256": "753af869554a727862e85db1947ddfbd62ae9aa07be1a270ce4303d94e41ddad"
+    },
+    {
+      "path": "index.html",
+      "bytes": 308,
+      "sha256": "1f93168209f90d70fcc54d13e6349007d281c54094a76a1975f21a87ea5ad0fb"
+    },
+    {
+      "path": "motion.js",
+      "bytes": 18667,
+      "sha256": "903fca28222cae49c1fdae8e35414ba3d116d3d60e74ff3fcd7f6217f108da06"
+    },
+    {
+      "path": "project.json",
+      "bytes": 3274,
+      "sha256": "00164aa12e82e319b34d2c2589f68ef5a50cf7a77b20c8eab42932580c3c5d76"
+    },
+    {
+      "path": "style.css",
+      "bytes": 409,
+      "sha256": "5fd7209a878ff4bb529607e5bec04569662107ef5465b48029f1de4a2ee17418"
+    }
+  ],
+  "original_audio_retained": true,
+  "reference_observation": {
+    "timecoded_overview": 100,
+    "native_detail": 24,
+    "targeted_geometry_measurements": true,
+    "full_range": true,
+    "uninterrupted_subjective_playback": false
+  },
+  "actual_export_paired_frames": 24,
+  "paired_comparison_paths": [
+    "verification/paired-comparison-01.jpg",
+    "verification/paired-comparison-02.jpg",
+    "verification/supplementary/paired-comparison-01.jpg",
+    "verification/supplementary/paired-comparison-02.jpg"
+  ],
+  "paired_sheets_personally_viewed": 4,
+  "browser_errors": [],
+  "request_errors": [],
+  "user_approved": false,
+  "visual_residuals": [
+    "kangaroo uses a single editable silhouette and transformed hops; source articulated pose, landing and hop phase differ",
+    "Playfair Display is an OFL substitute; glyph width, apostrophe and numeral/percent baseline differ",
+    "tagline typing completion, editorial icon details and article typography differ",
+    "moving lens text widths and orbit phase differ",
+    "inbox reveal is later/faded at 12.6 seconds; small article contents simplified",
+    "number grid seed, article conveyor runner phase and ending lockup baseline differ",
+    "confetti/ripple timing and small policy/URL typography differ",
+    "original sound design not independently recreated"
+  ]
+}

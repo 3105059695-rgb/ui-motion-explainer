@@ -1,0 +1,314 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t14e",
+  "title": "三个关键数字",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "metric0": 10,
+    "label0": "方案甲",
+    "metric1": 2,
+    "label1": "方案乙",
+    "metric2": 0.1,
+    "label2": "方案丙",
+    "source": "三项指标 · 示意数值，制作时替换"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/38980c72d42e740fd4fe854a72b54052c54d24553b1f04740d614225ab862181.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A fast-paced, high-pitched digital clicking or 'slot machine' scrolling sound effect starts, simulating the sound of rapidly changing numbers.",
+          "label": "Opening Hook",
+          "visual": "A static shot on a solid white background featuring three vertically aligned white rectangular cards with rounded corners. Each card casts a soft, subtle drop shadow. The cards contain black numerical text and currency symbols set to zero. The lighting is uniform and flat across the entire frame, creating a clean, minimalist digital interface aesthetic. No people or physical products are present.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The digital scrolling sound effect continues at a high tempo, then abruptly stops with a final clicking noise as the numbers lock into place.",
+          "label": "Product Selling Points",
+          "visual": "The camera remains static on the three cards. The numbers inside the cards rapidly cycle through various digits, settling on three specific price points. The color palette remains monochromatic with high contrast between the black text and white cards. The background is pure white and featureless.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A single, sharp 'ding' or chime sound effect rings out, followed by silence for the remainder of the clip.",
+          "label": "Call to Action",
+          "visual": "A static view of the finalized numbers on the cards. The card on the far right briefly pulses or changes in shadow depth to draw attention to it. The overall lighting remains bright and artificial. The scene maintains a stark, minimalist look until the end of the clip.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 0.6,
+      "action": "Three labeled quantities establish units"
+    },
+    {
+      "start": 0.6,
+      "end": 2.5,
+      "action": "Each bound number counts to its target"
+    },
+    {
+      "start": 3.1,
+      "end": 4.3,
+      "action": "One result receives material emphasis"
+    },
+    {
+      "start": 4.3,
+      "end": 5,
+      "action": "Exact values remain readable"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n003-card",
+      "kind": "card",
+      "x": 200,
+      "y": 260,
+      "w": 490,
+      "h": 500,
+      "children": [
+        {
+          "id": "n001-text",
+          "kind": "text",
+          "x": 35,
+          "y": 50,
+          "w": 420,
+          "h": 80,
+          "text": "{{label0}}",
+          "size": 48,
+          "color": "#0B0B0F",
+          "align": "center"
+        },
+        {
+          "id": "n002-b2-number",
+          "kind": "b2-number",
+          "x": 20,
+          "y": 205,
+          "w": 450,
+          "h": 150,
+          "toKey": "metric0",
+          "prefix": "$",
+          "size": 105,
+          "align": "center",
+          "decimals": 0,
+          "tracks": {
+            "value": [
+              [
+                0.6,
+                0
+              ],
+              [
+                2.5,
+                1,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            3.1,
+            1
+          ],
+          [
+            3.6,
+            1
+          ],
+          [
+            4.3,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-card",
+      "kind": "card",
+      "x": 750,
+      "y": 260,
+      "w": 490,
+      "h": 500,
+      "children": [
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 35,
+          "y": 50,
+          "w": 420,
+          "h": 80,
+          "text": "{{label1}}",
+          "size": 48,
+          "color": "#0B0B0F",
+          "align": "center"
+        },
+        {
+          "id": "n005-b2-number",
+          "kind": "b2-number",
+          "x": 20,
+          "y": 205,
+          "w": 450,
+          "h": 150,
+          "toKey": "metric1",
+          "prefix": "$",
+          "size": 105,
+          "align": "center",
+          "decimals": 0,
+          "tracks": {
+            "value": [
+              [
+                0.6,
+                0
+              ],
+              [
+                2.5,
+                1,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            3.1,
+            1
+          ],
+          [
+            3.6,
+            1
+          ],
+          [
+            4.3,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-card",
+      "kind": "card",
+      "x": 1300,
+      "y": 260,
+      "w": 490,
+      "h": 500,
+      "children": [
+        {
+          "id": "n007-text",
+          "kind": "text",
+          "x": 35,
+          "y": 50,
+          "w": 420,
+          "h": 80,
+          "text": "{{label2}}",
+          "size": 48,
+          "color": "#0B0B0F",
+          "align": "center"
+        },
+        {
+          "id": "n008-b2-number",
+          "kind": "b2-number",
+          "x": 20,
+          "y": 205,
+          "w": 450,
+          "h": 150,
+          "toKey": "metric2",
+          "prefix": "$",
+          "size": 105,
+          "align": "center",
+          "decimals": 2,
+          "tracks": {
+            "value": [
+              [
+                0.6,
+                0
+              ],
+              [
+                2.5,
+                1,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            3.1,
+            1
+          ],
+          [
+            3.6,
+            1.06
+          ],
+          [
+            4.3,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010-text",
+      "kind": "text",
+      "x": 350,
+      "y": 900,
+      "w": 1220,
+      "h": 70,
+      "text": "{{source}}",
+      "size": 32,
+      "color": "#777780",
+      "align": "center"
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-wave2-t23b",
+  "title": "新开标签页：标签栏里开出本章",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "章节通知",
+    "text02": "新的章节，从这里开始"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "window",
+      "x": 510,
+      "y": -240,
+      "w": 900,
+      "h": 260,
+      "label": "{{text01}}",
+      "tracks": {
+        "y": [
+          [
+            0,
+            -240
+          ],
+          [
+            0.6,
+            160,
+            "out"
+          ],
+          [
+            1.2,
+            160
+          ],
+          [
+            2.04,
+            120
+          ]
+        ],
+        "x": [
+          [
+            0,
+            510
+          ],
+          [
+            1.2,
+            510
+          ],
+          [
+            2.04,
+            200
+          ]
+        ],
+        "w": [
+          [
+            0,
+            900
+          ],
+          [
+            1.2,
+            900
+          ],
+          [
+            2.04,
+            1520
+          ]
+        ],
+        "h": [
+          [
+            0,
+            260
+          ],
+          [
+            1.2,
+            260
+          ],
+          [
+            2.04,
+            820
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "text",
+      "x": 585,
+      "y": 270,
+      "w": 760,
+      "h": 92.80000000000001,
+      "text": "{{text02}}",
+      "size": 58,
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.6,
+            0
+          ],
+          [
+            0.705,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            585
+          ],
+          [
+            1.2,
+            585
+          ],
+          [
+            2.04,
+            360
+          ]
+        ],
+        "y": [
+          [
+            0,
+            270
+          ],
+          [
+            1.2,
+            270
+          ],
+          [
+            2.04,
+            460
+          ]
+        ],
+        "w": [
+          [
+            0,
+            760
+          ],
+          [
+            1.2,
+            760
+          ],
+          [
+            2.04,
+            1200
+          ]
+        ],
+        "size": [
+          [
+            0,
+            58
+          ],
+          [
+            1.2,
+            58
+          ],
+          [
+            2.04,
+            92
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/3f8fa6506b65acf464d9fd7edd42d2b86134ff0dfaa923d5836cf47773336922.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "Upbeat, fast-paced electronic background music with a light synthesizer melody and a steady 4/4 drum machine beat.",
+          "label": "Product Information",
+          "visual": "A stylized digital window frame floats in the center of a white studio-lit space. The window has a dark charcoal gray background. A navigation bar at the top displays three distinct menu items. The middle item is highlighted in bold white. The camera is static with a flat, graphic perspective. Lighting is even and shadowless across the interface.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Continuous upbeat electronic music. A subtle 'whoosh' or 'click' sound effect syncs with the movement of the text.",
+          "label": "Product Information",
+          "visual": "The same digital window remains centered. The highlight shifts from the second menu item to the third item on the right. Below the navigation bar, large bold text transitions into the center of the frame. The background remains a solid dark charcoal gray. The overall color palette is minimalist, featuring white, purple, and gray tones.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "标签栏 → 新开一个本章标签 → 标签页撑开成本章标题"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 3.0,
+      "action": "标签栏 → 新开一个本章标签 → 标签页撑开成本章标题"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

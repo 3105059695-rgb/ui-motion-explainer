@@ -1,0 +1,17 @@
+(function(){'use strict';
+const spec=window.SemanticHostSpec||{effect:new URLSearchParams(location.search).get('effect')||'O01',duration:6,demo:true};
+const stage=document.querySelector('#stage');let fixture,controller,local=0,playing=false,last=0,busy=false;
+if(spec.demo){fixture=SemanticDemoFixtures.build(spec.effect,stage);controller=SemanticMotion.create({effect:spec.effect,duration:spec.duration||fixture.duration,options:fixture.options},stage);}
+else controller=SemanticMotion.create({effect:spec.effect,duration:spec.duration,options:spec.options},stage);
+const tracks=[...(fixture?.media||[]),...(spec.mediaTracks||[]).map(x=>({...x,node:document.querySelector(x.selector)}))];
+for(const [selector,value] of Object.entries(spec.text||{})){const n=document.querySelector(selector);if(!n||n.children.length)throw Error('Text binding must target an existing leaf '+selector);n.textContent=String(value);}
+for(const [selector,asset] of Object.entries(spec.media||{})){const n=document.querySelector(selector);if(!n||!['VIDEO','IMG'].includes(n.tagName))throw Error('Media binding must target IMG/VIDEO '+selector);n.src=asset.src;if(n.tagName==='VIDEO'){n.muted=true;n.pause();n.playbackRate=1;n.preload='auto';}}
+window.semanticDuration=controller.duration;window.semanticEntry=spec;
+window.ready=async()=>{await document.fonts.ready;await Promise.all([...stage.querySelectorAll('video')].map(n=>n.readyState>=1?Promise.resolve():new Promise((ok,bad)=>{n.addEventListener('loadedmetadata',ok,{once:true});n.addEventListener('error',()=>bad(Error('Cannot decode '+n.src)),{once:true});})));};
+async function mediaSeek(n,t){n.pause();n.playbackRate=1;t=Math.max(0,Math.min(n.duration-.001,t));if(Math.abs(n.currentTime-t)<.001)return;await new Promise(ok=>{n.addEventListener('seeked',ok,{once:true});n.currentTime=t;});}
+window.render=async seconds=>{await window.ready();local=Math.max(0,Math.min(controller.duration,seconds));const state=controller.seek(local);const jobs=[];if(spec.effect==='R06')for(const m of state.media){const clip=controller.options.clips.find(c=>c.id===m.id),video=clip.node.tagName==='VIDEO'?clip.node:clip.node.querySelector('video');if(video&&m.active)jobs.push(mediaSeek(video,m.sourceTime));}else for(const t of tracks)if(local>=(t.offset||0)&&local<=(t.end??controller.duration))jobs.push(mediaSeek(t.node,(t.start||0)+local-(t.offset||0)));await Promise.all(jobs);window.semanticTrace=state;return state;};
+window.semanticController=controller;window.semanticFixture=fixture;
+const slider=document.querySelector('#time'),button=document.querySelector('#play'),label=document.querySelector('#time-label');if(slider){slider.max=controller.duration;slider.oninput=()=>{playing=false;window.render(Number(slider.value));};}if(button)button.onclick=()=>{if(local>=controller.duration)local=0;playing=!playing;last=performance.now();button.textContent=playing?'暂停':'播放';};
+async function tick(now){if(playing&&!busy){busy=true;try{await window.render(local+Math.min(.1,(now-last)/1000));if(slider)slider.value=local;if(label)label.textContent=local.toFixed(2)+' / '+controller.duration.toFixed(2)+' s';if(local>=controller.duration){playing=false;if(button)button.textContent='播放';}}finally{busy=false;}}last=now;requestAnimationFrame(tick);}requestAnimationFrame(tick);
+window.ready().then(()=>window.render(0)).catch(e=>{window.semanticError=String(e);console.error(e);});
+})();

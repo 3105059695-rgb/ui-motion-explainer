@@ -1,0 +1,140 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-wave2-t12x",
+  "title": "翻书页：上一章整页翻过去",
+  "duration": 3,
+  "background": "#0B0B0F",
+  "inputs": {
+    "text01": "02",
+    "text02": "进入本章内容",
+    "media1.start": 0,
+    "media1.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "text",
+      "x": 700,
+      "y": 210,
+      "w": 520,
+      "h": 304.0,
+      "text": "{{text01}}",
+      "size": 190,
+      "color": "#FFFFFF",
+      "align": "center"
+    },
+    {
+      "id": "n002",
+      "kind": "text",
+      "x": 470,
+      "y": 510,
+      "w": 980,
+      "h": 140.8,
+      "text": "{{text02}}",
+      "size": 88,
+      "color": "#FFFFFF",
+      "align": "center"
+    },
+    {
+      "id": "n003",
+      "kind": "pageFlip",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0,
+        2.07
+      ],
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            0.45,
+            0
+          ],
+          [
+            2.04,
+            1,
+            "in"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/b8b1843808363d0b5cf447b9c0b0c44355ffd0b027480a36b4b953e8fa79e914.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "A mid-tempo, upbeat synth-pop track begins with a rhythmic, pulsing bassline and electronic percussion.",
+          "label": "Opening Hook",
+          "visual": "A computer screen displaying a GitHub repository for 'PDFMathTranslate'. The interface shows file directories, commit history, and a green 'Code' button. The lighting is the flat, even glow of a monitor. The color palette is dominated by dark mode grays, blues, and whites.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The synth-pop music continues, maintaining a consistent tempo and energetic mood.",
+          "label": "Product Information",
+          "visual": "Transition to a flat black screen with centered white text elements. The number '02' is prominently displayed in a large bold font above smaller Chinese characters and the words 'PDF' followed by a dash and more Chinese characters. The composition is clean and minimalist with high contrast.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "上一章那一页 → 像书页一样翻过去 → 背后就是本章"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 3.0,
+      "action": "上一章那一页 → 像书页一样翻过去 → 背后就是本章"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "上一章页面",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          3,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

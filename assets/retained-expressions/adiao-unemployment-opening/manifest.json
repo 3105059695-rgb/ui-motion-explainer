@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "source_family": "retained-adiao-opening",
+  "entries": [
+    {
+      "id": "sample:adiao/unemployment-v3-opening",
+      "file": "index.html",
+      "start_offset": 0,
+      "duration": 7.4,
+      "required_media": [
+        "source/current-presenter.mp4",
+        "assets/current-product.svg"
+      ]
+    }
+  ],
+  "original_ui_source_preserved": true,
+  "private_media_included": false,
+  "default_mode": "production",
+  "demo_mode": "props.mode=demo",
+  "runtime_tested_this_run": true,
+  "limits": [
+    "Opening source is retained; historical subject text is replaceable through text bindings.",
+    "Demo actor and product picture are explicit original schematics, not current project assets."
+  ],
+  "verification_scope": "Three offline seeks per entry, no missing request or browser error; unbound production rejected. Demo validation is not private-media delivery or new aesthetic approval.",
+  "verification_cases": [
+    {
+      "id": "sample:adiao/unemployment-v3-opening",
+      "ok": true,
+      "frames_differ": true,
+      "browser_errors": [],
+      "missing_requests": []
+    }
+  ]
+}

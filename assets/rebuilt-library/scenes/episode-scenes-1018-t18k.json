@@ -1,0 +1,228 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t18k",
+  "title": "实拍画面上叠随镜头移动的示意箭头，窗下一句大字",
+  "duration": 11,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "观察这个位置",
+    "text02": "让变化发生在真实材料上",
+    "text03": "示意标注",
+    "media1.start": 0,
+    "media1.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n004",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n001",
+          "kind": "image",
+          "x": 180,
+          "y": 100,
+          "w": 1560,
+          "h": 780,
+          "asset": "media1",
+          "fit": "cover",
+          "radius": 18,
+          "visible": [
+            0,
+            11.001
+          ]
+        },
+        {
+          "id": "n002",
+          "kind": "path",
+          "x": 730,
+          "y": 520,
+          "w": 700,
+          "h": 200,
+          "path": "M0 0 L250 -170 L610 -170",
+          "fill": "#D6C2FF",
+          "strokeWidth": 7,
+          "length": 1600,
+          "tracks": {
+            "draw": [
+              [
+                0,
+                0
+              ],
+              [
+                1.54,
+                0
+              ],
+              [
+                2.53,
+                1,
+                "linear"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n003",
+          "kind": "text",
+          "x": 1040,
+          "y": 260,
+          "w": 520,
+          "h": 80.0,
+          "text": "{{text01}}",
+          "size": 50,
+          "color": "#FFFFFF",
+          "visible": [
+            2.53,
+            8.58
+          ]
+        }
+      ],
+      "tracks": {
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            1.98,
+            1
+          ],
+          [
+            5.5,
+            1.15
+          ],
+          [
+            8.25,
+            1.03
+          ]
+        ],
+        "x": [
+          [
+            0,
+            0
+          ],
+          [
+            5.5,
+            -65
+          ],
+          [
+            8.25,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "text",
+      "x": 260,
+      "y": 930,
+      "w": 1400,
+      "h": 108.80000000000001,
+      "text": "{{text02}}",
+      "size": 68,
+      "align": "center"
+    },
+    {
+      "id": "n006",
+      "kind": "text",
+      "x": 1590,
+      "y": 815,
+      "w": 200,
+      "h": 38.400000000000006,
+      "text": "{{text03}}",
+      "size": 24,
+      "color": "#797982"
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/93139b90319ac67b6b5bdf9edf736e6be11fe936799949775ed43f8c022a36ad.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "When the car moves forward, the tires are actually pushing backward against the ground.",
+          "label": "Opening Hook",
+          "visual": "A futuristic wedge-shaped electric sports car, primarily white with black lower trim, sits stationary on a dark asphalt surface at night. The camera is static at a low profile side-view. Harsh artificial lighting from the front-left creates sharp highlights on the car's angular body and deep shadows on the ground. The background is a pitch-black outdoor environment with distant, out-of-focus street or event lights.",
+          "shot_type": "Medium Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The tires push back, and the ground pushes the car forward. Just like when you run, the harder you push, the faster you sprint.",
+          "label": "Product Information",
+          "visual": "The camera pans slowly to the right, following the length of the car. The rear wheel is prominently displayed, featuring a solid disc-style aero cover. The lighting remains high-contrast, emphasizing the matte finish of the black trim. The car remains stationary during this camera movement.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:07",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "But if you push too hard, you will slip.",
+          "label": "Product Selling Points",
+          "visual": "A tight shot on the rear wheel as it begins to spin rapidly. Smoke or tire vapor is visible at the contact patch where the rubber meets the dark pavement. The camera is low and static, focusing on the mechanical action of the tire interacting with the ground.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:09",
+          "timestamp_start": "0:07"
+        },
+        {
+          "audio": "The engineer on site gave a number.",
+          "label": "Real Experience",
+          "visual": "A three-quarter rear view of the car on a brightly lit indoor stage. A man appears on the left side of the frame; he has short dark hair, light skin, and is wearing a dark t-shirt and dark trousers. He stands near the car with a relaxed posture. The stage background features a large dark structure and bright overhead studio lighting creating a clean, professional aesthetic.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:10",
+          "timestamp_start": "0:09"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "大播放窗里放真实实拍，示意箭头和标注画在源像素坐标上、随相机一起推拉；窗下一行大字说明，必要时整句划掉；右下角“示意”小字"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 11.0,
+      "action": "大播放窗里放真实实拍，示意箭头和标注画在源像素坐标上、随相机一起推拉；窗下一行大字说明，必要时整句划掉；右下角“示意”小字"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "本期实拍视频",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          11,
+          11,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "project": "private-source-not-distributed",
+  "template": "dedicated-sotto-reading-explainer",
+  "provenance": "independent-reimplementation",
+  "reference_slug": "1stnoel-c20a89",
+  "rendered": true,
+  "dimensions": [
+    1280,
+    720
+  ],
+  "fps": 30,
+  "interval": [
+    0,
+    59.96666666666667
+  ],
+  "temporal_samples": 1,
+  "checks": {
+    "seek_repeat_pixels_equal": true,
+    "seek_repeat_state_equal": true,
+    "source_files_unchanged_during_render": true
+  },
+  "browser_errors": [],
+  "request_errors": [],
+  "sampled_frames": 12,
+  "audio": true,
+  "fidelity_status": "not certified; compare against original reference",
+  "human_full_playback": false,
+  "user_approved": false,
+  "audio_source": {
+    "path": "private-source-not-distributed",
+    "offset_seconds": 0,
+    "ownership": "not inferred; preserve source attribution separately"
+  },
+  "elapsed_seconds": 69.765,
+  "runtime_source_files": [
+    {
+      "path": "assets/cendrillon-cover.png",
+      "bytes": 21759,
+      "sha256": "3fe03e44d0a116b813e09eabe9e8aa4cfa6b7951b055c984318fe09acc27f915"
+    },
+    {
+      "path": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+      "bytes": 169056,
+      "sha256": "73894e0448cae90a92b6c2f8732b7bb9acb7b94c418bff559dad4a18e1de9659"
+    },
+    {
+      "path": "../../reference-shared/fonts/d00e590b8eb3a59acc32.ttf",
+      "bytes": 171948,
+      "sha256": "d00e590b8eb3a59acc329b2d044fd143ae935090b7da33199ebee27cc7de8196"
+    },
+    {
+      "path": "../../reference-shared/fonts/796668611f80b64d5adf.ttf",
+      "bytes": 495684,
+      "sha256": "796668611f80b64d5adf182fde3b6f29ed83b4e7cbec7b96937e84ac01364792"
+    },
+    {
+      "path": "../../reference-shared/fonts/8a08d13f8a6c0d51be37.ttf",
+      "bytes": 451664,
+      "sha256": "8a08d13f8a6c0d51be379a60af84f945f65369a67e509ee3c3bdcc421254d7c1"
+    },
+    {
+      "path": "index.html",
+      "bytes": 344,
+      "sha256": "536df0044a8e5587666f538efdfb90247721f4ba3637757744ab428a5c7a8a5e"
+    },
+    {
+      "path": "motion.js",
+      "bytes": 21468,
+      "sha256": "e744dd51aaf54a92cac019db29e5ccd3bfb8d002653fe91319c907352c70dca8"
+    },
+    {
+      "path": "project.json",
+      "bytes": 1563,
+      "sha256": "9679597dc6fc3f1f34623e09e31b1e6b3518e65de0dc26020be2fe9c7bccc5da"
+    },
+    {
+      "path": "style.css",
+      "bytes": 182,
+      "sha256": "195f6ad8af31cd62376f6012a9e63344c1c49dd890bca4e8831081af13bbb7e5"
+    }
+  ],
+  "repeat_comparison": {
+    "png_sha256_equal": true,
+    "rgb_pixels_equal": true,
+    "different_pixels": 0,
+    "total_pixels": 921600,
+    "different_fraction": 0.0,
+    "maximum_channel_delta": 0,
+    "mean_absolute_channel_delta": 0.0,
+    "tolerance_requested": false,
+    "tolerance_limits": {
+      "different_fraction": 0,
+      "maximum_channel_delta": 0
+    }
+  },
+  "frames": 1799,
+  "full_decode": "passed",
+  "encoded_metadata": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.64001f",
+        "width": 1280,
+        "height": 720,
+        "coded_width": 1280,
+        "coded_height": 720,
+        "has_b_frames": 2,
+        "pix_fmt": "yuv420p",
+        "level": 31,
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 921088,
+        "duration": "59.966667",
+        "bit_rate": "276446",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "1799",
+        "extradata_size": 46,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc62.28.101 libx264"
+        }
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "AAC (Advanced Audio Coding)",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "mime_codec_string": "mp4a.40.2",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bits_per_sample": 0,
+        "initial_padding": 0,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/48000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 2878368,
+        "duration": "59.966000",
+        "bit_rate": "196135",
+        "nb_frames": "2810",
+        "extradata_size": 5,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "Twitter-vork muxer"
+        }
+      }
+    ],
+    "format": {
+      "filename": "private-source-not-distributed",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "59.966667",
+      "size": "3609687",
+      "bit_rate": "481559",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf62.12.101"
+      }
+    }
+  }
+}

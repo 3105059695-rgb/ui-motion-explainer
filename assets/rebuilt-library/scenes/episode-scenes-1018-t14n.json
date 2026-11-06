@@ -1,0 +1,640 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t14n",
+  "title": "视频旁一排计数点逐个点亮，最后一个变紫",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "连续七次",
+    "text02": "最后一次，仍然成功",
+    "media1.start": 0,
+    "media1.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "image",
+      "x": 120,
+      "y": 150,
+      "w": 1320,
+      "h": 760,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0,
+        6.001
+      ]
+    },
+    {
+      "id": "n002",
+      "kind": "text",
+      "x": 1480,
+      "y": 170,
+      "w": 320,
+      "h": 92.80000000000001,
+      "text": "{{text01}}",
+      "size": 58
+    },
+    {
+      "id": "n003",
+      "kind": "circle",
+      "x": 1540,
+      "y": 300,
+      "w": 52,
+      "h": 52,
+      "fill": "#E2E2E7"
+    },
+    {
+      "id": "n004",
+      "kind": "circle",
+      "x": 1540,
+      "y": 300,
+      "w": 52,
+      "h": 52,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.48,
+            0
+          ],
+          [
+            0.69,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1540
+          ],
+          [
+            0.48,
+            1540
+          ],
+          [
+            0.69,
+            1540,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            300
+          ],
+          [
+            0.48,
+            300
+          ],
+          [
+            0.69,
+            300,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "circle",
+      "x": 1540,
+      "y": 385,
+      "w": 52,
+      "h": 52,
+      "fill": "#E2E2E7"
+    },
+    {
+      "id": "n006",
+      "kind": "circle",
+      "x": 1540,
+      "y": 385,
+      "w": 52,
+      "h": 52,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.2,
+            0
+          ],
+          [
+            1.41,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1540
+          ],
+          [
+            1.2,
+            1540
+          ],
+          [
+            1.41,
+            1540,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            385
+          ],
+          [
+            1.2,
+            385
+          ],
+          [
+            1.41,
+            385,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "circle",
+      "x": 1540,
+      "y": 470,
+      "w": 52,
+      "h": 52,
+      "fill": "#E2E2E7"
+    },
+    {
+      "id": "n008",
+      "kind": "circle",
+      "x": 1540,
+      "y": 470,
+      "w": 52,
+      "h": 52,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.92,
+            0
+          ],
+          [
+            2.13,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1540
+          ],
+          [
+            1.92,
+            1540
+          ],
+          [
+            2.13,
+            1540,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            470
+          ],
+          [
+            1.92,
+            470
+          ],
+          [
+            2.13,
+            470,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "circle",
+      "x": 1540,
+      "y": 555,
+      "w": 52,
+      "h": 52,
+      "fill": "#E2E2E7"
+    },
+    {
+      "id": "n010",
+      "kind": "circle",
+      "x": 1540,
+      "y": 555,
+      "w": 52,
+      "h": 52,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.64,
+            0
+          ],
+          [
+            2.85,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1540
+          ],
+          [
+            2.64,
+            1540
+          ],
+          [
+            2.85,
+            1540,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            555
+          ],
+          [
+            2.64,
+            555
+          ],
+          [
+            2.85,
+            555,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011",
+      "kind": "circle",
+      "x": 1540,
+      "y": 640,
+      "w": 52,
+      "h": 52,
+      "fill": "#E2E2E7"
+    },
+    {
+      "id": "n012",
+      "kind": "circle",
+      "x": 1540,
+      "y": 640,
+      "w": 52,
+      "h": 52,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.36,
+            0
+          ],
+          [
+            3.57,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1540
+          ],
+          [
+            3.36,
+            1540
+          ],
+          [
+            3.57,
+            1540,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            640
+          ],
+          [
+            3.36,
+            640
+          ],
+          [
+            3.57,
+            640,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013",
+      "kind": "circle",
+      "x": 1540,
+      "y": 725,
+      "w": 52,
+      "h": 52,
+      "fill": "#E2E2E7"
+    },
+    {
+      "id": "n014",
+      "kind": "circle",
+      "x": 1540,
+      "y": 725,
+      "w": 52,
+      "h": 52,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.08,
+            0
+          ],
+          [
+            4.29,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1540
+          ],
+          [
+            4.08,
+            1540
+          ],
+          [
+            4.29,
+            1540,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            725
+          ],
+          [
+            4.08,
+            725
+          ],
+          [
+            4.29,
+            725,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n015",
+      "kind": "circle",
+      "x": 1540,
+      "y": 810,
+      "w": 52,
+      "h": 52,
+      "fill": "#E2E2E7"
+    },
+    {
+      "id": "n016",
+      "kind": "circle",
+      "x": 1540,
+      "y": 810,
+      "w": 52,
+      "h": 52,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.8,
+            0
+          ],
+          [
+            5.01,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1540
+          ],
+          [
+            4.8,
+            1540
+          ],
+          [
+            5.01,
+            1540,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            810
+          ],
+          [
+            4.8,
+            810
+          ],
+          [
+            5.01,
+            810,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n017",
+      "kind": "pill",
+      "x": 420,
+      "y": 930,
+      "w": 1080,
+      "h": 85,
+      "label": "{{text02}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            5.16,
+            0
+          ],
+          [
+            5.37,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            420
+          ],
+          [
+            5.16,
+            420
+          ],
+          [
+            5.37,
+            420,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            980
+          ],
+          [
+            5.16,
+            980
+          ],
+          [
+            5.37,
+            930,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/005b3d6a5d59ed65ccd7fd5c8d4db060f1c1fec27a3a3febf9b02b76810ad59d.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "One by one, testing and adjusting for a more realistic landing point.",
+          "label": "Product Selling Points",
+          "visual": "A split-screen interface displaying digital simulations of a humanoid robot throwing a beanbag. The main panel shows a 3D wireframe environment with a teal trajectory line leading to a wooden target board. A smaller inset video at the bottom left shows a physical humanoid robot—white with black joints, approximately 5'10\" tall—standing in a laboratory setting. The background is a clean, white-walled room with computer monitors and technical equipment. Lighting is bright, even, and artificial white.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "You can see that in the end, it consecutively scored seven times.",
+          "label": "Usage Scenarios",
+          "visual": "Static camera angle. The humanoid robot, seen in full profile, is positioned in a large garage-style lab with a dark grey segmented door in the background. The robot holds a yellow beanbag in its right robotic hand, winds back, and tosses it toward a small wooden 'cornhole' board on the floor. To the left, shelves are filled with colorful plastic bins and storage containers. The floor is a polished grey concrete.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "You can see that in the end, it consecutively scored seven times.",
+          "label": "Usage Scenarios",
+          "visual": "A low-angle tracking shot from behind the target board looking toward the robot. The robot stands in its follow-through pose with its right arm extended upward. A man with short dark hair, wearing a dark t-shirt and jeans, is sitting in the background on the left, observing the robot. The environment features industrial overhead lighting and white partitions.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        },
+        {
+          "audio": "You can see that in the end, it consecutively scored seven times.",
+          "label": "Usage Scenarios",
+          "visual": "A high-angle shot looking down at the wooden target board. A green and yellow beanbag is already resting in the center hole of the board. The humanoid robot's white arm and black jointed hand are visible in the right foreground, finishing a throwing motion. The lighting creates soft shadows on the floor.",
+          "shot_type": "Close-Up",
+          "scene_number": 4,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:05"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "视频窗旁一排计数点按真实节奏逐个点亮（黑），最后一个点亮成紫色，配“连续七个”"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 6.0,
+      "action": "视频窗旁一排计数点按真实节奏逐个点亮（黑），最后一个点亮成紫色，配“连续七个”"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "连续动作的真实视频",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          6,
+          6,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

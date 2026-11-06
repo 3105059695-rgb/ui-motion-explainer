@@ -1,0 +1,207 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t01e",
+  "title": "条件黑胶囊：圆点展开，逐字打出条件再补一段",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "condition": "如果任务需要多次执行",
+    "detail": "先保存上下文，再明确每一次的输入与结果。",
+    "extra": "下一次从已有进度继续。"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/963ce696ad3c91e8a7a2369ac858d99dc55000acc772f139715ea405f1b8581e.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "Soft, digital clicking sound resembling a rapid typewriter or mechanical keyboard, mid-pitched and rhythmic.",
+          "label": "Opening Hook",
+          "visual": "A static camera shot centered on a solid white background. A black pill-shaped capsule with rounded ends and a soft drop shadow appears in the center. The lighting is perfectly even across the white surface, with no visible external light sources or gradients beyond the shadow under the object.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The rhythmic mechanical typing sound continues with a consistent tempo and volume.",
+          "label": "Product Information",
+          "visual": "The camera remains static. The black pill-shaped capsule expands horizontally to become a long, rounded rectangle. There are no characters or physical products present; the frame remains a minimalist motion graphic on a stark white background.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The mechanical keyboard typing sound abruptly stops, followed by a brief silence.",
+          "label": "Product Selling Points",
+          "visual": "Static camera angle. The long, black rounded rectangle stays centered on the white background. The soft drop shadow remains consistent. No changes in lighting or environment occur.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 2.7,
+      "action": "Condition capsule expands and types the full condition"
+    },
+    {
+      "start": 2.88,
+      "end": 4.5,
+      "action": "Supplemental paragraph opens beneath retained condition"
+    },
+    {
+      "start": 4.5,
+      "end": 6,
+      "action": "Condition and consequence hold"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-card",
+      "kind": "card",
+      "x": 805,
+      "y": 190,
+      "w": 310,
+      "h": 150,
+      "children": [],
+      "fill": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            0,
+            805
+          ],
+          [
+            1.38,
+            250
+          ]
+        ],
+        "w": [
+          [
+            0,
+            310
+          ],
+          [
+            1.38,
+            1420
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 310,
+      "y": 220,
+      "w": 1300,
+      "h": 100,
+      "text": "{{condition}}",
+      "size": 64,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "characters": [
+          [
+            1.2,
+            0
+          ],
+          [
+            2.58,
+            11,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-card",
+      "kind": "card",
+      "x": 250,
+      "y": 400,
+      "w": 1420,
+      "h": 420,
+      "children": [
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 60,
+          "y": 75,
+          "w": 1300,
+          "h": 160,
+          "text": "{{detail}}",
+          "size": 56,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 60,
+          "y": 280,
+          "w": 1300,
+          "h": 70,
+          "text": "{{extra}}",
+          "size": 42,
+          "color": "#777780",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.88,
+            0
+          ],
+          [
+            4.08,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.88,
+            435
+          ],
+          [
+            4.08,
+            400,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

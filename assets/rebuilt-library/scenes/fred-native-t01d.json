@@ -1,0 +1,368 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-native-t01d",
+  "title": "测评结论：实测作品退后，评分卡与结论落定",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "scores": [
+      9,
+      7.5,
+      6
+    ],
+    "dimensions": [
+      "准确性",
+      "可读性",
+      "完整性"
+    ],
+    "maximum": 10,
+    "rating": "实际成果评分",
+    "conclusion": "分数对应本期材料与标准"
+  },
+  "assets": {
+    "media0": "assets/approved-girl-sample/assets/handoff.png",
+    "media1": "assets/style-film/media/premise-to-report.svg",
+    "media2": "assets/style-film/media/module-assembly.svg"
+  },
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/53f817ca538de0d44dcd7d4f8be896164d47a5dd0c0fc48fa019c92ca3468f9f.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A medium-paced, upbeat synth-pop track plays with rhythmic percussion and electronic melodies.",
+          "label": "Opening Hook",
+          "visual": "A white digital workspace displays three distinct AI-generated images in horizontal frames. On the left is an orange-gold phoenix illustration. In the middle is an isometric diorama of an ancient Chinese water town with canals and traditional buildings. On the right is an abstract golden fluid-like sculpture. The camera is static. Lighting is bright, even, and artificial across the white background. Color palette is dominated by gold and earthy tones within the featured images.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The background music continues at a consistent volume. Digital 'clicking' or 'tallying' sound effects sync with the movement of the rating bars.",
+          "label": "Product Selling Points",
+          "visual": "A white UI pop-up card appears in the center of the frame. Three progress bars with corresponding Chinese text labels animate horizontally from left to right. The first bar fills almost to the end, the second fills about three-quarters, and the third fills slightly more than halfway. Small black circles appear as sliders at the end of each bar. The lighting remains bright and flat with soft drop shadows behind the UI element.",
+          "shot_type": "Close-Up",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The music maintains its tempo. Additional rapid 'typing' sound effects are added as the final line of text appears.",
+          "label": "Product Selling Points",
+          "visual": "Numerical values appear to the right of the progress bars: 9.0/10 for the first, 7.5/10 for the second, and 6.0/10 for the third. A final line of text is typed out at the bottom of the card in a purple-to-pink gradient. The background behind the pop-up remains a blurred version of the initial three images.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.25,
+      "action": "Three current works establish what is being rated"
+    },
+    {
+      "start": 1.25,
+      "end": 4.1,
+      "action": "Works recede behind score panel whose sliders and numerals derive from the same data"
+    },
+    {
+      "start": 4.1,
+      "end": 5,
+      "action": "Conclusion holds with rating dimensions"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 120,
+      "y": 230,
+      "w": 540,
+      "h": 620,
+      "asset": "media0",
+      "fit": "cover",
+      "radius": 16,
+      "tracks": {
+        "blur": [
+          [
+            0,
+            0
+          ],
+          [
+            1.0,
+            0
+          ],
+          [
+            2.0,
+            13
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.0,
+            1
+          ],
+          [
+            2.0,
+            0.35
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            2.0,
+            0.92
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-image",
+      "kind": "image",
+      "x": 700,
+      "y": 230,
+      "w": 540,
+      "h": 620,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 16,
+      "tracks": {
+        "blur": [
+          [
+            0,
+            0
+          ],
+          [
+            1.0,
+            0
+          ],
+          [
+            2.0,
+            13
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.0,
+            1
+          ],
+          [
+            2.0,
+            0.35
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            2.0,
+            0.92
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-image",
+      "kind": "image",
+      "x": 1280,
+      "y": 230,
+      "w": 540,
+      "h": 620,
+      "asset": "media2",
+      "fit": "cover",
+      "radius": 16,
+      "tracks": {
+        "blur": [
+          [
+            0,
+            0
+          ],
+          [
+            1.0,
+            0
+          ],
+          [
+            2.0,
+            13
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.0,
+            1
+          ],
+          [
+            2.0,
+            0.35
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            2.0,
+            0.92
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-card",
+      "kind": "card",
+      "x": 370,
+      "y": 210,
+      "w": 1180,
+      "h": 690,
+      "children": [
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 55,
+          "y": 40,
+          "w": 1070,
+          "h": 90,
+          "text": "{{rating}}",
+          "size": 60,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n005-b3-rating",
+          "kind": "b3-rating",
+          "x": 55,
+          "y": 210,
+          "w": 1070,
+          "h": 330,
+          "valuesKey": "scores",
+          "labelsKey": "dimensions",
+          "maxKey": "maximum",
+          "tracks": {
+            "value": [
+              [
+                1.5,
+                0
+              ],
+              [
+                4.1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n006-text",
+          "kind": "text",
+          "x": 55,
+          "y": 570,
+          "w": 1070,
+          "h": 75,
+          "text": "{{conclusion}}",
+          "size": 42,
+          "color": "#0B0B0F",
+          "align": "center",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                4.1,
+                0
+              ],
+              [
+                4.7,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                4.1,
+                605
+              ],
+              [
+                4.7,
+                570,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.25,
+            0
+          ],
+          [
+            2.15,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.25,
+            245
+          ],
+          [
+            2.15,
+            210,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

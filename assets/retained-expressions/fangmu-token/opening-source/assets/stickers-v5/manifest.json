@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "collection": "token-opening-v5-original-stickers",
+  "authorship": "The four SVG files in assets are original programmatic artwork created for this project. The separate officialBrandAsset entry records the externally sourced DeepSeek mark.",
+  "canvas": {
+    "width": 256,
+    "height": 256,
+    "viewBox": "0 0 256 256",
+    "background": "transparent"
+  },
+  "recommendedDisplaySizePx": [
+    140,
+    180
+  ],
+  "palette": {
+    "ink": "#40344E",
+    "lilac": "#C4AFE8",
+    "paper": "#FFFDFE",
+    "accentYellow": "#FFE09B"
+  },
+  "assets": [
+    {
+      "file": "open-book.svg",
+      "meaning": "An open tutorial book with a lilac bookmark and visible page thickness."
+    },
+    {
+      "file": "token-blocks.svg",
+      "meaning": "Three reusable language blocks: code brackets, A, and a. No token counts or currency."
+    },
+    {
+      "file": "dizzy.svg",
+      "meaning": "A puzzled lilac character with spiral eyes, a question mark, and a small yellow star.",
+      "pair": "dizzy-blink.svg"
+    },
+    {
+      "file": "dizzy-blink.svg",
+      "meaning": "The same character with closed blinking eyes. Outer silhouette, accessories, and coordinates match dizzy.svg.",
+      "pair": "dizzy.svg"
+    }
+  ],
+  "integration": "Load through browser Image or img. All graphics are self-contained paths and shapes with no fonts, scripts, external URLs, or embedded raster images. Character states share the same frame for direct replacement.",
+  "officialBrandAsset": {
+    "name": "DeepSeek",
+    "sourcePage": "https://www.deepseek.com/",
+    "sourceAsset": "https://www.deepseek.com/favicon.ico",
+    "retrieved": "2026-10-13",
+    "sourceFile": "deepseek-official.ico",
+    "displayFile": "deepseek-official.png",
+    "conversion": "ICO decoded to RGBA PNG, same colors and proportions",
+    "sourceSha256": "30a4420e6e4dcb17fd7de560c5004346c2bc8cd971d2d5f5ee15326603e51321",
+    "purpose": "Editorial identity icon accompanying the phrase 学 AI / 用 AI; no sponsorship claim"
+  }
+}

@@ -1,0 +1,432 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-wave2-t23c",
+  "title": "通知弹出：本章像一条通知滑进来再展开",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "",
+    "text02": "准备",
+    "text03": "上一章",
+    "text04": "本章",
+    "text05": "这一章的核心内容",
+    "text06": "沿着同一个窗口继续"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "window",
+      "x": 220,
+      "y": 170,
+      "w": 1480,
+      "h": 740,
+      "label": "{{text01}}",
+      "fill": "#0B0B0F"
+    },
+    {
+      "id": "n002",
+      "kind": "pill",
+      "x": 280,
+      "y": 215,
+      "w": 400,
+      "h": 85,
+      "label": "{{text02}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "fill": [
+          [
+            0,
+            "#0B0B0F"
+          ],
+          [
+            0.96,
+            "#0B0B0F"
+          ],
+          [
+            1.26,
+            "#0B0B0F"
+          ]
+        ],
+        "color": [
+          [
+            0,
+            "#FFFFFF"
+          ],
+          [
+            1.26,
+            "#FFFFFF"
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.09,
+            0
+          ],
+          [
+            0.195,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            280
+          ],
+          [
+            0.09,
+            280
+          ],
+          [
+            0.195,
+            280,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            155
+          ],
+          [
+            0.09,
+            155
+          ],
+          [
+            0.195,
+            215,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "pill",
+      "x": 720,
+      "y": 215,
+      "w": 400,
+      "h": 85,
+      "label": "{{text03}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "fill": [
+          [
+            0,
+            "#D6C2FF"
+          ],
+          [
+            0.96,
+            "#D6C2FF"
+          ],
+          [
+            1.26,
+            "#0B0B0F"
+          ]
+        ],
+        "color": [
+          [
+            0,
+            "#0B0B0F"
+          ],
+          [
+            1.26,
+            "#FFFFFF"
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.195,
+            0
+          ],
+          [
+            0.3,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            720
+          ],
+          [
+            0.195,
+            720
+          ],
+          [
+            0.3,
+            720,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            155
+          ],
+          [
+            0.195,
+            155
+          ],
+          [
+            0.3,
+            215,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "pill",
+      "x": 1160,
+      "y": 215,
+      "w": 400,
+      "h": 85,
+      "label": "{{text04}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "fill": [
+          [
+            0,
+            "#0B0B0F"
+          ],
+          [
+            0.96,
+            "#0B0B0F"
+          ],
+          [
+            1.26,
+            "#D6C2FF"
+          ]
+        ],
+        "color": [
+          [
+            0,
+            "#FFFFFF"
+          ],
+          [
+            1.26,
+            "#0B0B0F"
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.3,
+            0
+          ],
+          [
+            0.405,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1160
+          ],
+          [
+            0.3,
+            1160
+          ],
+          [
+            0.405,
+            1160,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            155
+          ],
+          [
+            0.3,
+            155
+          ],
+          [
+            0.405,
+            215,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "text",
+      "x": 360,
+      "y": 455,
+      "w": 1200,
+      "h": 163.20000000000002,
+      "text": "{{text05}}",
+      "size": 102,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.44,
+            0
+          ],
+          [
+            1.545,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            360
+          ],
+          [
+            1.44,
+            360
+          ],
+          [
+            1.545,
+            360,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            505
+          ],
+          [
+            1.44,
+            505
+          ],
+          [
+            1.545,
+            455,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "text",
+      "x": 510,
+      "y": 650,
+      "w": 900,
+      "h": 72.0,
+      "text": "{{text06}}",
+      "size": 45,
+      "color": "#D6C2FF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.98,
+            0
+          ],
+          [
+            2.085,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            510
+          ],
+          [
+            1.98,
+            510
+          ],
+          [
+            2.085,
+            510,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            700
+          ],
+          [
+            1.98,
+            700
+          ],
+          [
+            2.085,
+            650,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/a9f4192a089965afd3148f5d70a36dfc698d946c160c40c5a3e97ce522a06655.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "A bright, digital 'pop' sound effect as the center card appears, followed by upbeat, mid-tempo electronic background music featuring light synth chords.",
+          "label": "Opening Hook",
+          "visual": "A clean, minimalist white background. In the upper center, a white rounded rectangle card with a soft drop shadow fades in. The card contains two lines of text: the top line is small and purple, the bottom line is large and black with a purple highlight. In the top right corner, a colorful brand logo with a yellow sun icon and stylized text is present throughout the frame. The lighting is uniform and bright with no visible shadows or texture.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "一条通知从顶部落下 → 展开成整屏本章标题"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 3.0,
+      "action": "一条通知从顶部落下 → 展开成整屏本章标题"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

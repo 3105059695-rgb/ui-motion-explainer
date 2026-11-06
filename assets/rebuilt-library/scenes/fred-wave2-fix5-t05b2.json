@@ -1,0 +1,416 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-fix5-t05b2",
+  "title": "以前 vs 现在（返修）：旧步骤收成一叠时仍可读",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "step0": "下载素材",
+    "step1": "检查版本",
+    "step2": "调整文件",
+    "step3": "逐个运行",
+    "step4": "核对结果",
+    "replacement": "明确目标，一次完成"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/3d1a67b609ba3aed1cdf70fb0a70348565288f750659d7c1e0dc68fe03de5c4b.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A rhythmic, fast-paced electronic beat starts, featuring high-pitched synthesized clicks and a driving bassline.",
+          "label": "Opening Hook",
+          "visual": "A static wide shot of a minimalist white background. On the left side, three bullet points appear sequentially in a vertical list. The graphics are flat and clean, using a dark gray and light gray color palette. The lighting is perfectly uniform with no shadows, creating a high-key digital environment.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The electronic beat continues at the same tempo, with a slight swell in the synthesizer volume to match the appearance of the central box.",
+          "label": "Problem Solving",
+          "visual": "The camera remains static. Two additional bullet points are added to the list on the left. Simultaneously, a dark rounded rectangular box slides into the center-right of the frame. The background remains a consistent sterile white. The motion is smooth with eased transitions.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The music reaches its peak volume for two bars before ending on a sharp, resonant digital chime.",
+          "label": "Product Selling Points",
+          "visual": "The final scene shows the completed graphic interface. The left list is now static. A stylized phrase appears inside the central dark box, featuring a bold blue accent color on specific characters. The overall composition is balanced and symmetrical. The color grading is sharp with high contrast between the dark gray elements and the white background.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 2.75,
+      "action": "Five old steps populate at readable scale"
+    },
+    {
+      "start": 2.75,
+      "end": 5,
+      "action": "Old steps shift slightly while one new method takes the empty right half; both remain readable"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n011-group",
+      "kind": "group",
+      "x": 130,
+      "y": 150,
+      "w": 700,
+      "h": 760,
+      "children": [
+        {
+          "id": "n002-card",
+          "kind": "card",
+          "x": 0,
+          "y": 0,
+          "w": 700,
+          "h": 115,
+          "children": [
+            {
+              "id": "n001-text",
+              "kind": "text",
+              "x": 30,
+              "y": 25,
+              "w": 640,
+              "h": 65,
+              "text": "{{step0}}",
+              "size": 39,
+              "color": "#0B0B0F",
+              "align": "left"
+            }
+          ],
+          "fill": "#FFFFFF",
+          "tracks": {
+            "opacity": [
+              [
+                0.0,
+                0
+              ],
+              [
+                0.6,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                0.0,
+                35
+              ],
+              [
+                0.6,
+                0,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n004-card",
+          "kind": "card",
+          "x": 0,
+          "y": 145,
+          "w": 700,
+          "h": 115,
+          "children": [
+            {
+              "id": "n003-text",
+              "kind": "text",
+              "x": 30,
+              "y": 25,
+              "w": 640,
+              "h": 65,
+              "text": "{{step1}}",
+              "size": 39,
+              "color": "#0B0B0F",
+              "align": "left"
+            }
+          ],
+          "fill": "#FFFFFF",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                0.45,
+                0
+              ],
+              [
+                1.05,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                0.45,
+                180
+              ],
+              [
+                1.05,
+                145,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n006-card",
+          "kind": "card",
+          "x": 0,
+          "y": 290,
+          "w": 700,
+          "h": 115,
+          "children": [
+            {
+              "id": "n005-text",
+              "kind": "text",
+              "x": 30,
+              "y": 25,
+              "w": 640,
+              "h": 65,
+              "text": "{{step2}}",
+              "size": 39,
+              "color": "#0B0B0F",
+              "align": "left"
+            }
+          ],
+          "fill": "#FFFFFF",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                0.9,
+                0
+              ],
+              [
+                1.5,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                0.9,
+                325
+              ],
+              [
+                1.5,
+                290,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n008-card",
+          "kind": "card",
+          "x": 0,
+          "y": 435,
+          "w": 700,
+          "h": 115,
+          "children": [
+            {
+              "id": "n007-text",
+              "kind": "text",
+              "x": 30,
+              "y": 25,
+              "w": 640,
+              "h": 65,
+              "text": "{{step3}}",
+              "size": 39,
+              "color": "#0B0B0F",
+              "align": "left"
+            }
+          ],
+          "fill": "#FFFFFF",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                1.35,
+                0
+              ],
+              [
+                1.95,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                1.35,
+                470
+              ],
+              [
+                1.95,
+                435,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n010-card",
+          "kind": "card",
+          "x": 0,
+          "y": 580,
+          "w": 700,
+          "h": 115,
+          "children": [
+            {
+              "id": "n009-text",
+              "kind": "text",
+              "x": 30,
+              "y": 25,
+              "w": 640,
+              "h": 65,
+              "text": "{{step4}}",
+              "size": 39,
+              "color": "#0B0B0F",
+              "align": "left"
+            }
+          ],
+          "fill": "#FFFFFF",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                1.8,
+                0
+              ],
+              [
+                2.4,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                1.8,
+                615
+              ],
+              [
+                2.4,
+                580,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            130
+          ],
+          [
+            3.0,
+            130
+          ],
+          [
+            4.0,
+            70
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            3.0,
+            1
+          ],
+          [
+            4.0,
+            0.9
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012-pill",
+      "kind": "pill",
+      "x": 970,
+      "y": 430,
+      "w": 800,
+      "h": 170,
+      "label": "{{replacement}}",
+      "size": 55,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.85,
+            0
+          ],
+          [
+            3.95,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.85,
+            430
+          ],
+          [
+            3.95,
+            430,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

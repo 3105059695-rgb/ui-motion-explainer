@@ -1,0 +1,763 @@
+{
+  "width": 1920,
+  "height": 1080,
+  "fps": 60,
+  "durationInFrames": 18000,
+  "pages": [],
+  "parts": [],
+  "cues": [],
+  "characters": [],
+  "cityPromptText": "本期图片中的主体、构图和细节。",
+  "cityPrompt": {
+    "enter": 40,
+    "exit": 48,
+    "gone": 49,
+    "highlights": [],
+    "camera": []
+  },
+  "assets": {},
+  "cases": [
+    {
+      "id": "current-comparison-1",
+      "index": 1,
+      "prompt": {
+        "fullText": "本期画面对照：保留同一素材，核对主体、材质、动作与背景的细节。"
+      },
+      "fullPromptHighlights": [],
+      "promptWindow": [
+        160,
+        163.3
+      ],
+      "promptStyle": "workbench",
+      "assets": {
+        "left": {
+          "src": "current-material-left.svg",
+          "model": "本期素材 A",
+          "size": [
+            3844,
+            2160
+          ],
+          "revealAt": 163.65
+        },
+        "right": {
+          "src": "current-material-right.svg",
+          "model": "本期素材 B",
+          "size": [
+            3844,
+            2160
+          ],
+          "revealAt": 163.85
+        }
+      },
+      "shots": [
+        {
+          "at": 164,
+          "end": 167.65,
+          "side": "both",
+          "layoutShape": "rect",
+          "items": [
+            {
+              "center": [
+                0.35,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 1"
+            },
+            {
+              "center": [
+                0.6,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 2"
+            }
+          ]
+        },
+        {
+          "at": 167.65,
+          "end": 171.3,
+          "side": "left",
+          "layoutShape": "rect",
+          "items": [
+            {
+              "center": [
+                0.35,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 1"
+            },
+            {
+              "center": [
+                0.6,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 2"
+            }
+          ]
+        },
+        {
+          "at": 171.3,
+          "end": 174.95,
+          "side": "right",
+          "layoutShape": "rect",
+          "items": [
+            {
+              "center": [
+                0.35,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 1"
+            },
+            {
+              "center": [
+                0.6,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 2"
+            }
+          ]
+        },
+        {
+          "at": 174.95,
+          "end": 178.6,
+          "side": "left",
+          "layoutShape": "rect",
+          "items": [
+            {
+              "center": [
+                0.35,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 1"
+            },
+            {
+              "center": [
+                0.6,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 2"
+            }
+          ]
+        },
+        {
+          "at": 178.6,
+          "end": 182.25,
+          "side": "right",
+          "layoutShape": "rect",
+          "items": [
+            {
+              "center": [
+                0.35,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "current-comparison-2",
+      "index": 2,
+      "prompt": {
+        "fullText": "本期画面对照：保留同一素材，核对主体、材质、动作与背景的细节。"
+      },
+      "fullPromptHighlights": [],
+      "promptWindow": [
+        160,
+        163.3
+      ],
+      "promptStyle": "workbench",
+      "assets": {
+        "left": {
+          "src": "current-material-left.svg",
+          "model": "本期素材 A",
+          "size": [
+            3844,
+            2160
+          ],
+          "revealAt": 163.65
+        },
+        "right": {
+          "src": "current-material-right.svg",
+          "model": "本期素材 B",
+          "size": [
+            3844,
+            2160
+          ],
+          "revealAt": 163.85
+        }
+      },
+      "shots": [
+        {
+          "at": 164,
+          "end": 167.65,
+          "side": "both",
+          "layoutShape": "rect",
+          "items": [
+            {
+              "center": [
+                0.35,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 1"
+            },
+            {
+              "center": [
+                0.6,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 2"
+            }
+          ]
+        },
+        {
+          "at": 167.65,
+          "end": 171.3,
+          "side": "left",
+          "layoutShape": "rect",
+          "items": [
+            {
+              "center": [
+                0.35,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 1"
+            },
+            {
+              "center": [
+                0.6,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 2"
+            }
+          ]
+        },
+        {
+          "at": 171.3,
+          "end": 174.95,
+          "side": "right",
+          "layoutShape": "rect",
+          "items": [
+            {
+              "center": [
+                0.35,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 1"
+            },
+            {
+              "center": [
+                0.6,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 2"
+            }
+          ]
+        },
+        {
+          "at": 174.95,
+          "end": 178.6,
+          "side": "left",
+          "layoutShape": "rect",
+          "items": [
+            {
+              "center": [
+                0.35,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 1"
+            },
+            {
+              "center": [
+                0.6,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 2"
+            }
+          ]
+        },
+        {
+          "at": 178.6,
+          "end": 182.25,
+          "side": "right",
+          "layoutShape": "rect",
+          "items": [
+            {
+              "center": [
+                0.35,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "current-comparison-3",
+      "index": 3,
+      "prompt": {
+        "fullText": "本期画面对照：保留同一素材，核对主体、材质、动作与背景的细节。"
+      },
+      "fullPromptHighlights": [],
+      "promptWindow": [
+        160,
+        163.3
+      ],
+      "promptStyle": "workbench",
+      "assets": {
+        "left": {
+          "src": "current-material-left.svg",
+          "model": "本期素材 A",
+          "size": [
+            3844,
+            2160
+          ],
+          "revealAt": 163.65
+        },
+        "right": {
+          "src": "current-material-right.svg",
+          "model": "本期素材 B",
+          "size": [
+            3844,
+            2160
+          ],
+          "revealAt": 163.85
+        }
+      },
+      "shots": [
+        {
+          "at": 164,
+          "end": 167.65,
+          "side": "both",
+          "layoutShape": "rect",
+          "items": [
+            {
+              "center": [
+                0.35,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 1"
+            },
+            {
+              "center": [
+                0.6,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 2"
+            }
+          ]
+        },
+        {
+          "at": 167.65,
+          "end": 171.3,
+          "side": "left",
+          "layoutShape": "rect",
+          "items": [
+            {
+              "center": [
+                0.35,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 1"
+            },
+            {
+              "center": [
+                0.6,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 2"
+            }
+          ]
+        },
+        {
+          "at": 171.3,
+          "end": 174.95,
+          "side": "right",
+          "layoutShape": "rect",
+          "items": [
+            {
+              "center": [
+                0.35,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 1"
+            },
+            {
+              "center": [
+                0.6,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 2"
+            }
+          ]
+        },
+        {
+          "at": 174.95,
+          "end": 178.6,
+          "side": "left",
+          "layoutShape": "rect",
+          "items": [
+            {
+              "center": [
+                0.35,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 1"
+            },
+            {
+              "center": [
+                0.6,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 2"
+            }
+          ]
+        },
+        {
+          "at": 178.6,
+          "end": 182.25,
+          "side": "right",
+          "layoutShape": "rect",
+          "items": [
+            {
+              "center": [
+                0.35,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "current-comparison-4",
+      "index": 4,
+      "prompt": {
+        "fullText": "本期画面对照：保留同一素材，核对主体、材质、动作与背景的细节。"
+      },
+      "fullPromptHighlights": [],
+      "promptWindow": [
+        160,
+        163.3
+      ],
+      "promptStyle": "workbench",
+      "assets": {
+        "left": {
+          "src": "current-material-left.svg",
+          "model": "本期素材 A",
+          "size": [
+            3844,
+            2160
+          ],
+          "revealAt": 163.65
+        },
+        "right": {
+          "src": "current-material-right.svg",
+          "model": "本期素材 B",
+          "size": [
+            3844,
+            2160
+          ],
+          "revealAt": 163.85
+        }
+      },
+      "shots": [
+        {
+          "at": 164,
+          "end": 167.65,
+          "side": "both",
+          "layoutShape": "rect",
+          "items": [
+            {
+              "center": [
+                0.35,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 1"
+            },
+            {
+              "center": [
+                0.6,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 2"
+            }
+          ]
+        },
+        {
+          "at": 167.65,
+          "end": 171.3,
+          "side": "left",
+          "layoutShape": "rect",
+          "items": [
+            {
+              "center": [
+                0.35,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 1"
+            },
+            {
+              "center": [
+                0.6,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 2"
+            }
+          ]
+        },
+        {
+          "at": 171.3,
+          "end": 174.95,
+          "side": "right",
+          "layoutShape": "rect",
+          "items": [
+            {
+              "center": [
+                0.35,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 1"
+            },
+            {
+              "center": [
+                0.6,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 2"
+            }
+          ]
+        },
+        {
+          "at": 174.95,
+          "end": 178.6,
+          "side": "left",
+          "layoutShape": "rect",
+          "items": [
+            {
+              "center": [
+                0.35,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 1"
+            },
+            {
+              "center": [
+                0.6,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 2"
+            }
+          ]
+        },
+        {
+          "at": 178.6,
+          "end": 182.25,
+          "side": "right",
+          "layoutShape": "rect",
+          "items": [
+            {
+              "center": [
+                0.35,
+                0.5
+              ],
+              "span": [
+                0.3,
+                0.3
+              ],
+              "shape": "rect",
+              "label": "当前细节 1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "_data_provenance": {
+    "origin": "new-editable-demo-data",
+    "original_author_manifest": false,
+    "scope": "Schema supplied for library-material-entry c=M.cases[3]. Existing original crop, connected focus, continuity, masks and camera functions retained. Newly authored timing/content/media slots; not original private comparison assets.",
+    "current_project_binding_required": true,
+    "media_slots": [
+      "current-material-left.svg",
+      "current-material-right.svg"
+    ]
+  }
+}

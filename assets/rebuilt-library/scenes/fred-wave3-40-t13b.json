@@ -1,0 +1,233 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t13b",
+  "title": "比喻变形",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "source": "访问权限",
+    "analogy": "像一份服务",
+    "relation": "↔"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/ba472c194f7193ee6467406798251f4a81900d10eb5e1a18b74535a19dd0ac9f.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "The audio features a fast-paced, digital synthesized melody. It has a high-energy, technological feel with a consistent electronic beat.",
+          "label": "Opening Hook",
+          "visual": "A white card sits in the center of a clean white background. It contains a black padlock icon. The lighting is flat and even. A vertical black line slides across the screen from left to right, transitioning the frame to a split-screen view.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A digital 'click' sound effect coincides with the appearance of the central icon. The electronic background music continues at the same tempo.",
+          "label": "Usage Scenarios",
+          "visual": "The screen is split into two halves. On the left is the original white card with the padlock. On the right is a new black card with a white food platter/serving tray icon. In between the two cards, a small black circular icon with a hand-drawn style arrow appears, suggesting a comparison. The color palette is strictly monochromatic (black and white).",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.7999999999999998,
+      "action": "Lock establishes the source concept"
+    },
+    {
+      "start": 1.7999999999999998,
+      "end": 3.7199999999999998,
+      "action": "Moving divider opens a second side and the serving metaphor"
+    },
+    {
+      "start": 3.7199999999999998,
+      "end": 6,
+      "action": "Both identities remain linked"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n003-card",
+      "kind": "card",
+      "x": 610,
+      "y": 270,
+      "w": 700,
+      "h": 530,
+      "children": [
+        {
+          "id": "n001-b2-lock",
+          "kind": "b2-lock",
+          "x": 260,
+          "y": 100,
+          "w": 180,
+          "h": 220
+        },
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 40,
+          "y": 380,
+          "w": 620,
+          "h": 90,
+          "text": "{{source}}",
+          "size": 56,
+          "color": "#0B0B0F",
+          "align": "center"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "x": [
+          [
+            0,
+            610
+          ],
+          [
+            1.8,
+            610
+          ],
+          [
+            3.6,
+            180
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-card",
+      "kind": "card",
+      "x": 1090,
+      "y": 270,
+      "w": 650,
+      "h": 530,
+      "children": [
+        {
+          "id": "n004-path",
+          "kind": "path",
+          "x": 155,
+          "y": 130,
+          "w": 1,
+          "h": 1,
+          "path": "M0 180 L340 180 M35 155 A135 135 0 0 1 305 155 M170 0 L170 22",
+          "length": 900,
+          "fill": "#FFFFFF",
+          "strokeWidth": 14
+        },
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 40,
+          "y": 380,
+          "w": 570,
+          "h": 90,
+          "text": "{{analogy}}",
+          "size": 54,
+          "color": "#FFFFFF",
+          "align": "center"
+        }
+      ],
+      "fill": "#0B0B0F",
+      "tracks": {
+        "revealX": [
+          [
+            1.68,
+            0
+          ],
+          [
+            3.72,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-line",
+      "kind": "line",
+      "x": 990,
+      "y": 150,
+      "w": 0,
+      "h": 780,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "x": [
+          [
+            1.2,
+            2000
+          ],
+          [
+            3.3,
+            990
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-pill",
+      "kind": "pill",
+      "x": 825,
+      "y": 470,
+      "w": 270,
+      "h": 140,
+      "label": "{{relation}}",
+      "size": 70,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.72,
+            0
+          ],
+          [
+            4.44,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.72,
+            505
+          ],
+          [
+            4.44,
+            470,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

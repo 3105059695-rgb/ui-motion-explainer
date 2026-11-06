@@ -1,0 +1,540 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t17i",
+  "title": "Mac 聚焦搜索打开 App：键帽按下 → 搜索 → 回车开窗",
+  "duration": 7.233,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "访达",
+    "text02": "终端",
+    "text03": "设置",
+    "text04": "代码",
+    "text05": "⌘",
+    "text06": "空格",
+    "text07": "聚焦搜索",
+    "text08": "终端"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "pill",
+      "x": 620,
+      "y": 870,
+      "w": 140,
+      "h": 100,
+      "label": "{{text01}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.14466,
+            0
+          ],
+          [
+            0.39782,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            620
+          ],
+          [
+            0.14466,
+            620
+          ],
+          [
+            0.39782,
+            620,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            920
+          ],
+          [
+            0.14466,
+            920
+          ],
+          [
+            0.39782,
+            870,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "pill",
+      "x": 800,
+      "y": 870,
+      "w": 140,
+      "h": 100,
+      "label": "{{text02}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.21699,
+            0
+          ],
+          [
+            0.47014,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            800
+          ],
+          [
+            0.21699,
+            800
+          ],
+          [
+            0.47014,
+            800,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            920
+          ],
+          [
+            0.21699,
+            920
+          ],
+          [
+            0.47014,
+            870,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "pill",
+      "x": 980,
+      "y": 870,
+      "w": 140,
+      "h": 100,
+      "label": "{{text03}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.28932,
+            0
+          ],
+          [
+            0.54248,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            980
+          ],
+          [
+            0.28932,
+            980
+          ],
+          [
+            0.54248,
+            980,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            920
+          ],
+          [
+            0.28932,
+            920
+          ],
+          [
+            0.54248,
+            870,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "pill",
+      "x": 1160,
+      "y": 870,
+      "w": 140,
+      "h": 100,
+      "label": "{{text04}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.36165,
+            0
+          ],
+          [
+            0.61481,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1160
+          ],
+          [
+            0.36165,
+            1160
+          ],
+          [
+            0.61481,
+            1160,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            920
+          ],
+          [
+            0.36165,
+            920
+          ],
+          [
+            0.61481,
+            870,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "pill",
+      "x": 650,
+      "y": 390,
+      "w": 280,
+      "h": 150,
+      "label": "{{text05}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "visible": [
+        0.86796,
+        2.53155
+      ],
+      "tracks": {
+        "scale": [
+          [
+            0.86796,
+            1
+          ],
+          [
+            1.4466,
+            1
+          ],
+          [
+            1.59126,
+            0.88
+          ],
+          [
+            1.80825,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "pill",
+      "x": 980,
+      "y": 390,
+      "w": 280,
+      "h": 150,
+      "label": "{{text06}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "visible": [
+        0.86796,
+        2.53155
+      ],
+      "tracks": {
+        "scale": [
+          [
+            0.86796,
+            1
+          ],
+          [
+            1.62742,
+            1
+          ],
+          [
+            1.77208,
+            0.88
+          ],
+          [
+            1.98908,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "window",
+      "x": 390,
+      "y": 280,
+      "w": 1140,
+      "h": 380,
+      "label": "{{text07}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            2.45922,
+            0
+          ],
+          [
+            2.71237,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            390
+          ],
+          [
+            2.45922,
+            390
+          ],
+          [
+            2.71237,
+            390,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            330
+          ],
+          [
+            2.45922,
+            330
+          ],
+          [
+            2.71237,
+            280,
+            "out"
+          ]
+        ]
+      },
+      "visible": [
+        2.45922,
+        4.70145
+      ]
+    },
+    {
+      "id": "n008",
+      "kind": "typeLine",
+      "x": 500,
+      "y": 410,
+      "w": 800,
+      "h": 104.0,
+      "text": "{{text08}}",
+      "size": 65,
+      "visible": [
+        2.74854,
+        4.70145
+      ],
+      "tracks": {
+        "value": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            2.74854,
+            0.0
+          ],
+          [
+            3.47184,
+            1.0,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "code",
+      "x": 280,
+      "y": 210,
+      "w": 1360,
+      "h": 650,
+      "lines": [
+        "$ current-project",
+        "> ready"
+      ],
+      "size": 42,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.62912,
+            0
+          ],
+          [
+            4.88227,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            280
+          ],
+          [
+            4.62912,
+            280
+          ],
+          [
+            4.88227,
+            280,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            260
+          ],
+          [
+            4.62912,
+            260
+          ],
+          [
+            4.88227,
+            210,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/39789cf94c93998c12be3e22c444fb3d56de774d70ddeadfc988daf1068b824b.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "On a Mac, it's built into the system; there's no need for external installation.",
+          "label": "Opening Hook",
+          "visual": "A computer interface recording of a macOS desktop. The cursor moves over a clean white window with file folders. At the bottom, a dock floats containing various colorful application icons including a blue face, a command terminal, an activity monitor, a gear, and a code editor. The lighting is digital and flat with a soft drop shadow on the interface elements. The background is a plain white void.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Press Command plus Space...",
+          "label": "Product Information",
+          "visual": "Transition to a simplified graphic representation. Two keyboard key icons, one labeled 'command' with the cloverleaf symbol and one labeled 'space', appear side-by-side with a plus sign between them. The icons are white with subtle grey borders on a clean white background. Motion is minimal with icons appearing via a soft fade-in.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "...search for 'Terminal' and hit Enter.",
+          "label": "Usage Scenarios",
+          "visual": "A search bar appears in the center of the frame. The cursor clicks inside it, and the word for 'Terminal' is typed in Mandarin characters. The camera zooms slightly into the search bar as the text appears. The lighting remains bright and clinical.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "This black window will then appear.",
+          "label": "Problem Solving",
+          "visual": "A black terminal window with a white border pops up into the center of the frame against the white background. The window contains white text on a black background showing a command prompt. The window scales up slightly as it initializes. The overall color palette is high contrast monochrome.",
+          "shot_type": "Medium Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:06",
+          "timestamp_start": "0:04"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "Mac 桌面全屏 → 程序坞里应用图标抬起 + “系统自带”胶囊 → ⌘、空格两颗键帽依次按下 → 聚焦搜索条弹出、打出“终端”、结果行选中回车，窗口弹出"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 7.233,
+      "action": "Mac 桌面全屏 → 程序坞里应用图标抬起 + “系统自带”胶囊 → ⌘、空格两颗键帽依次按下 → 聚焦搜索条弹出、打出“终端”、结果行选中回车，窗口弹出"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

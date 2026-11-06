@@ -1,0 +1,113 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t14a2",
+  "title": "A/B 耗时赛跑（返修）：轨道加长",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "timeA": 38,
+    "timeB": 122,
+    "labels": [
+      "方案 A",
+      "方案 B"
+    ]
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/4db66b40ef13023c3991d1282b2dafaef85c8afe7ce2c974cb0d2301fea97957.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single, sharp notification chime or 'ding' sound to indicate the start of the comparison.",
+          "label": "Opening Hook",
+          "visual": "A static screen with two horizontal progress bars on a clean white background. Both bars are at 0.0s. The top bar is associated with one method and the bottom with another. The lighting is flat and digital, with a neutral white and light gray color palette.",
+          "shot_type": "Medium Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Fast-paced, upbeat electronic background music with a steady rhythmic pulse.",
+          "label": "Product Selling Points",
+          "visual": "The top bar starts filling with a purple color, quickly reaching 38.0s and stopping. The bottom bar is also filling but at a significantly slower pace, reaching 43.1s. The camera remains static.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The background music continues at the same tempo, emphasizing the duration difference between the two processes.",
+          "label": "Product Selling Points",
+          "visual": "The top bar remains static at 38.0s while the bottom bar continues to fill, showing a dramatic difference in speed. The bottom bar reaches 1:31 and then 2:02. A small indicator appears at the bottom of the screen showing a speed multiplier.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 3.95,
+      "action": "Two long equal-scale elapsed tracks advance together; first stops while second continues"
+    },
+    {
+      "start": 3.95,
+      "end": 5,
+      "action": "Calculated ratio and final values hold"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-b3-race",
+      "kind": "b3-race",
+      "x": 180,
+      "y": 220,
+      "w": 1560,
+      "h": 650,
+      "aKey": "timeA",
+      "bKey": "timeB",
+      "labelsKey": "labels",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            0.75,
+            0
+          ],
+          [
+            3.95,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

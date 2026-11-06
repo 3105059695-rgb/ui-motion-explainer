@@ -1,0 +1,546 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t05e",
+  "title": "适用 / 不适用",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "yes": "适合",
+    "no": "不适合",
+    "item0": "明确的目标",
+    "item1": "缺失的材料",
+    "item2": "可重复步骤",
+    "item3": "无法验证结果",
+    "item4": "完整上下文",
+    "item5": "需要实时确认",
+    "item6": "未授权操作"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/f1bd4e3dea7d5c03a99ed40970b4d3e15c01425477f9a47eaf8f1387a4cdf805.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A short, high-pitched digital 'ping' sound effect, similar to a user interface notification, occurs at the start.",
+          "label": "Opening Hook",
+          "visual": "A static digital screen with a split layout. The background is a clean, off-white flat surface. In the top left, there is a pill-shaped button in orange with text. In the top right, a matching pill-shaped button in light gray. Below these, there is a central list of seven light-gray horizontal bars containing text. The lighting is uniform and artificial, with no shadows or depth. The color palette is minimalist: orange, gray, and white.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A single, crisp 'click' sound effect, mimicking a mechanical mouse click or a toggle switch being flipped.",
+          "label": "Product Information",
+          "visual": "The camera remains static. Two specific bars from the central list—the first and the third—instantly transition from light gray to dark charcoal gray. This visual change highlights these items as being categorised under the orange button on the left. The rest of the layout remains unchanged.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A second 'click' sound effect, identical to the previous one, synced with the movement of the bars.",
+          "label": "Product Information",
+          "visual": "The camera remains static. The fifth bar in the list transitions from light gray to dark charcoal gray, joining the first and third bars in the left-hand category. Simultaneously, the second and fourth bars shift slightly to the right of the screen, aligning under the gray button on the right. The transition is an instant jump-cut animation.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A final 'click' sound effect followed by silence. The overall audio is minimalist and functional.",
+          "label": "Product Selling Points",
+          "visual": "The final two bars at the bottom of the list (sixth and seventh) shift to the right-hand column, aligning under the gray button. The layout is now fully divided into two columns: three dark gray bars on the left and four light gray bars on the right. The screen remains static after this final movement.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.9,
+      "action": "Seven neutral cases are initially together"
+    },
+    {
+      "start": 1.9,
+      "end": 3.75,
+      "action": "Specific three versus four cases separate into their actual applicability columns"
+    },
+    {
+      "start": 3.75,
+      "end": 5,
+      "action": "Both categories retain every original item"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-text",
+      "kind": "text",
+      "x": 190,
+      "y": 130,
+      "w": 600,
+      "h": 110,
+      "text": "{{yes}}",
+      "size": 72,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.5,
+            0
+          ],
+          [
+            3.1,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.5,
+            165
+          ],
+          [
+            3.1,
+            130,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 1130,
+      "y": 130,
+      "w": 600,
+      "h": 110,
+      "text": "{{no}}",
+      "size": 72,
+      "color": "#777780",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.5,
+            0
+          ],
+          [
+            3.1,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.5,
+            165
+          ],
+          [
+            3.1,
+            130,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-pill",
+      "kind": "pill",
+      "x": 560,
+      "y": 120,
+      "w": 800,
+      "h": 100,
+      "label": "{{item0}}",
+      "size": 42,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            0,
+            560
+          ],
+          [
+            1.9,
+            560
+          ],
+          [
+            3.65,
+            130
+          ]
+        ],
+        "y": [
+          [
+            0,
+            120
+          ],
+          [
+            1.9,
+            120
+          ],
+          [
+            3.65,
+            320
+          ]
+        ],
+        "w": [
+          [
+            0,
+            800
+          ],
+          [
+            3.65,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-pill",
+      "kind": "pill",
+      "x": 560,
+      "y": 245,
+      "w": 800,
+      "h": 100,
+      "label": "{{item1}}",
+      "size": 42,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            0,
+            560
+          ],
+          [
+            1.9,
+            560
+          ],
+          [
+            3.65,
+            1050
+          ]
+        ],
+        "y": [
+          [
+            0,
+            245
+          ],
+          [
+            1.9,
+            245
+          ],
+          [
+            3.65,
+            320
+          ]
+        ],
+        "w": [
+          [
+            0,
+            800
+          ],
+          [
+            3.65,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-pill",
+      "kind": "pill",
+      "x": 560,
+      "y": 370,
+      "w": 800,
+      "h": 100,
+      "label": "{{item2}}",
+      "size": 42,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            0,
+            560
+          ],
+          [
+            1.9,
+            560
+          ],
+          [
+            3.65,
+            130
+          ]
+        ],
+        "y": [
+          [
+            0,
+            370
+          ],
+          [
+            1.9,
+            370
+          ],
+          [
+            3.65,
+            485
+          ]
+        ],
+        "w": [
+          [
+            0,
+            800
+          ],
+          [
+            3.65,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-pill",
+      "kind": "pill",
+      "x": 560,
+      "y": 495,
+      "w": 800,
+      "h": 100,
+      "label": "{{item3}}",
+      "size": 42,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            0,
+            560
+          ],
+          [
+            1.9,
+            560
+          ],
+          [
+            3.65,
+            1050
+          ]
+        ],
+        "y": [
+          [
+            0,
+            495
+          ],
+          [
+            1.9,
+            495
+          ],
+          [
+            3.65,
+            485
+          ]
+        ],
+        "w": [
+          [
+            0,
+            800
+          ],
+          [
+            3.65,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 560,
+      "y": 620,
+      "w": 800,
+      "h": 100,
+      "label": "{{item4}}",
+      "size": 42,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            0,
+            560
+          ],
+          [
+            1.9,
+            560
+          ],
+          [
+            3.65,
+            130
+          ]
+        ],
+        "y": [
+          [
+            0,
+            620
+          ],
+          [
+            1.9,
+            620
+          ],
+          [
+            3.65,
+            650
+          ]
+        ],
+        "w": [
+          [
+            0,
+            800
+          ],
+          [
+            3.65,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-pill",
+      "kind": "pill",
+      "x": 560,
+      "y": 745,
+      "w": 800,
+      "h": 100,
+      "label": "{{item5}}",
+      "size": 42,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            0,
+            560
+          ],
+          [
+            1.9,
+            560
+          ],
+          [
+            3.65,
+            1050
+          ]
+        ],
+        "y": [
+          [
+            0,
+            745
+          ],
+          [
+            1.9,
+            745
+          ],
+          [
+            3.65,
+            650
+          ]
+        ],
+        "w": [
+          [
+            0,
+            800
+          ],
+          [
+            3.65,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-pill",
+      "kind": "pill",
+      "x": 560,
+      "y": 870,
+      "w": 800,
+      "h": 100,
+      "label": "{{item6}}",
+      "size": 42,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            0,
+            560
+          ],
+          [
+            1.9,
+            560
+          ],
+          [
+            3.65,
+            1050
+          ]
+        ],
+        "y": [
+          [
+            0,
+            870
+          ],
+          [
+            1.9,
+            870
+          ],
+          [
+            3.65,
+            815
+          ]
+        ],
+        "w": [
+          [
+            0,
+            800
+          ],
+          [
+            3.65,
+            740
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

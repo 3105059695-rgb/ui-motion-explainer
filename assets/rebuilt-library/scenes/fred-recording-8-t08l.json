@@ -1,0 +1,511 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-recording-8-t08l",
+  "title": "长页小地图：侧边缩略条标位置，一跳到下一处",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "长页中的关键位置",
+    "text02": "项目 1  /  对应说明与关键数据",
+    "text03": "项目 2  /  对应说明与关键数据",
+    "text04": "项目 3  /  对应说明与关键数据",
+    "text05": "项目 4  /  对应说明与关键数据",
+    "text06": "项目 5  /  对应说明与关键数据",
+    "text07": "项目 6  /  对应说明与关键数据",
+    "text08": "项目 7  /  对应说明与关键数据",
+    "text09": "项目 8  /  对应说明与关键数据",
+    "text10": "项目 9  /  对应说明与关键数据",
+    "text11": "项目 10  /  对应说明与关键数据",
+    "text12": "项目 11  /  对应说明与关键数据",
+    "text13": "项目 12  /  对应说明与关键数据",
+    "text14": "项目 13  /  对应说明与关键数据",
+    "text15": "项目 14  /  对应说明与关键数据",
+    "text16": "项目 15  /  对应说明与关键数据",
+    "text17": "项目 16  /  对应说明与关键数据"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "window",
+      "x": 170,
+      "y": 100,
+      "w": 1310,
+      "h": 865,
+      "label": "{{text01}}"
+    },
+    {
+      "id": "n002",
+      "kind": "rect",
+      "x": 1570,
+      "y": 100,
+      "w": 210,
+      "h": 865,
+      "fill": "#EDEDF2",
+      "radius": 12
+    },
+    {
+      "id": "n020",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n019",
+          "kind": "group",
+          "x": 0,
+          "y": 0,
+          "w": 1920,
+          "h": 1080,
+          "children": [
+            {
+              "id": "n003",
+              "kind": "text",
+              "x": 260,
+              "y": 250,
+              "w": 1100,
+              "h": 59.2,
+              "text": "{{text02}}",
+              "size": 37
+            },
+            {
+              "id": "n004",
+              "kind": "text",
+              "x": 260,
+              "y": 380,
+              "w": 1100,
+              "h": 59.2,
+              "text": "{{text03}}",
+              "size": 37
+            },
+            {
+              "id": "n005",
+              "kind": "text",
+              "x": 260,
+              "y": 510,
+              "w": 1100,
+              "h": 59.2,
+              "text": "{{text04}}",
+              "size": 37
+            },
+            {
+              "id": "n006",
+              "kind": "text",
+              "x": 260,
+              "y": 640,
+              "w": 1100,
+              "h": 59.2,
+              "text": "{{text05}}",
+              "size": 37
+            },
+            {
+              "id": "n007",
+              "kind": "text",
+              "x": 260,
+              "y": 770,
+              "w": 1100,
+              "h": 59.2,
+              "text": "{{text06}}",
+              "size": 37
+            },
+            {
+              "id": "n008",
+              "kind": "text",
+              "x": 260,
+              "y": 900,
+              "w": 1100,
+              "h": 59.2,
+              "text": "{{text07}}",
+              "size": 37
+            },
+            {
+              "id": "n009",
+              "kind": "text",
+              "x": 260,
+              "y": 1030,
+              "w": 1100,
+              "h": 59.2,
+              "text": "{{text08}}",
+              "size": 37
+            },
+            {
+              "id": "n010",
+              "kind": "text",
+              "x": 260,
+              "y": 1160,
+              "w": 1100,
+              "h": 59.2,
+              "text": "{{text09}}",
+              "size": 37
+            },
+            {
+              "id": "n011",
+              "kind": "text",
+              "x": 260,
+              "y": 1290,
+              "w": 1100,
+              "h": 59.2,
+              "text": "{{text10}}",
+              "size": 37
+            },
+            {
+              "id": "n012",
+              "kind": "text",
+              "x": 260,
+              "y": 1420,
+              "w": 1100,
+              "h": 59.2,
+              "text": "{{text11}}",
+              "size": 37
+            },
+            {
+              "id": "n013",
+              "kind": "text",
+              "x": 260,
+              "y": 1550,
+              "w": 1100,
+              "h": 59.2,
+              "text": "{{text12}}",
+              "size": 37
+            },
+            {
+              "id": "n014",
+              "kind": "text",
+              "x": 260,
+              "y": 1680,
+              "w": 1100,
+              "h": 59.2,
+              "text": "{{text13}}",
+              "size": 37
+            },
+            {
+              "id": "n015",
+              "kind": "text",
+              "x": 260,
+              "y": 1810,
+              "w": 1100,
+              "h": 59.2,
+              "text": "{{text14}}",
+              "size": 37
+            },
+            {
+              "id": "n016",
+              "kind": "text",
+              "x": 260,
+              "y": 1940,
+              "w": 1100,
+              "h": 59.2,
+              "text": "{{text15}}",
+              "size": 37
+            },
+            {
+              "id": "n017",
+              "kind": "text",
+              "x": 260,
+              "y": 2070,
+              "w": 1100,
+              "h": 59.2,
+              "text": "{{text16}}",
+              "size": 37
+            },
+            {
+              "id": "n018",
+              "kind": "text",
+              "x": 260,
+              "y": 2200,
+              "w": 1100,
+              "h": 59.2,
+              "text": "{{text17}}",
+              "size": 37
+            }
+          ],
+          "tracks": {
+            "y": [
+              [
+                0,
+                0
+              ],
+              [
+                1.2,
+                0
+              ],
+              [
+                1.8,
+                -520
+              ],
+              [
+                2.88,
+                -520
+              ],
+              [
+                3.48,
+                -1040
+              ],
+              [
+                4.8,
+                -1040
+              ]
+            ]
+          }
+        }
+      ],
+      "clip": {
+        "x": 220,
+        "y": 200,
+        "w": 1180,
+        "h": 700
+      }
+    },
+    {
+      "id": "n021",
+      "kind": "rect",
+      "x": 1600,
+      "y": 150,
+      "w": 150,
+      "h": 14,
+      "fill": "#797982"
+    },
+    {
+      "id": "n022",
+      "kind": "rect",
+      "x": 1600,
+      "y": 195,
+      "w": 150,
+      "h": 14,
+      "fill": "#797982"
+    },
+    {
+      "id": "n023",
+      "kind": "rect",
+      "x": 1600,
+      "y": 240,
+      "w": 150,
+      "h": 14,
+      "fill": "#797982"
+    },
+    {
+      "id": "n024",
+      "kind": "rect",
+      "x": 1600,
+      "y": 285,
+      "w": 150,
+      "h": 14,
+      "fill": "#797982"
+    },
+    {
+      "id": "n025",
+      "kind": "rect",
+      "x": 1600,
+      "y": 330,
+      "w": 150,
+      "h": 14,
+      "fill": "#797982"
+    },
+    {
+      "id": "n026",
+      "kind": "rect",
+      "x": 1600,
+      "y": 375,
+      "w": 150,
+      "h": 14,
+      "fill": "#797982"
+    },
+    {
+      "id": "n027",
+      "kind": "rect",
+      "x": 1600,
+      "y": 420,
+      "w": 150,
+      "h": 14,
+      "fill": "#797982"
+    },
+    {
+      "id": "n028",
+      "kind": "rect",
+      "x": 1600,
+      "y": 465,
+      "w": 150,
+      "h": 14,
+      "fill": "#797982"
+    },
+    {
+      "id": "n029",
+      "kind": "rect",
+      "x": 1600,
+      "y": 510,
+      "w": 150,
+      "h": 14,
+      "fill": "#797982"
+    },
+    {
+      "id": "n030",
+      "kind": "rect",
+      "x": 1600,
+      "y": 555,
+      "w": 150,
+      "h": 14,
+      "fill": "#797982"
+    },
+    {
+      "id": "n031",
+      "kind": "rect",
+      "x": 1600,
+      "y": 600,
+      "w": 150,
+      "h": 14,
+      "fill": "#797982"
+    },
+    {
+      "id": "n032",
+      "kind": "rect",
+      "x": 1600,
+      "y": 645,
+      "w": 150,
+      "h": 14,
+      "fill": "#797982"
+    },
+    {
+      "id": "n033",
+      "kind": "rect",
+      "x": 1600,
+      "y": 690,
+      "w": 150,
+      "h": 14,
+      "fill": "#797982"
+    },
+    {
+      "id": "n034",
+      "kind": "rect",
+      "x": 1600,
+      "y": 735,
+      "w": 150,
+      "h": 14,
+      "fill": "#797982"
+    },
+    {
+      "id": "n035",
+      "kind": "rect",
+      "x": 1600,
+      "y": 780,
+      "w": 150,
+      "h": 14,
+      "fill": "#797982"
+    },
+    {
+      "id": "n036",
+      "kind": "rect",
+      "x": 1600,
+      "y": 825,
+      "w": 150,
+      "h": 14,
+      "fill": "#797982"
+    },
+    {
+      "id": "n037",
+      "kind": "rect",
+      "x": 1585,
+      "y": 150,
+      "w": 180,
+      "h": 220,
+      "fill": "#D6C2FF",
+      "opacity": 0.5,
+      "tracks": {
+        "y": [
+          [
+            0,
+            150
+          ],
+          [
+            1.2,
+            150
+          ],
+          [
+            1.8,
+            330
+          ],
+          [
+            2.88,
+            330
+          ],
+          [
+            3.48,
+            510
+          ],
+          [
+            4.8,
+            510
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/b45284d8f5631ef950c8251cb79e43b5cb0e70edf9d5016f17f34f60d9d8b5ad.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "A bright, upbeat electronic pop track starts with a fast tempo, featuring rhythmic synthesizer pulses and a light, energetic beat.",
+          "label": "Opening Hook",
+          "visual": "A full-screen capture of a web page titled 'Trending' on a code repository hosting platform. The background is a clean, neutral white. The page lists various software projects with titles, descriptions, and user metrics. The camera is static, providing a clear view of the entire interface layout with soft, even digital lighting and a minimalist, modern aesthetic.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The music continues at a steady, high-energy pace with layered synth chords and a driving drum machine rhythm.",
+          "label": "Product Information",
+          "visual": "The camera quickly zooms into the top section of the list, focusing on the first three repository entries. The 'Repositories' and 'Developers' tabs are visible at the top. The top entry is highlighted with a slight blue tint. The screen is split with a smaller version of the full page on the right side.",
+          "shot_type": "Close-Up",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The upbeat electronic track maintains its intensity, featuring a catchy, repetitive melody played on a high-pitched synthesizer.",
+          "label": "Product Selling Points",
+          "visual": "A scrolling movement downward reveals more entries in the middle of the trending list. The focus shifts to entries 4 through 6. The layout remains clean with distinct project icons, titles, and programming language tags. The movement is a smooth, vertical digital pan.",
+          "shot_type": "Medium Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "The music reaches a peak with more complex percussion layers and a fuller sound before fading slightly toward the end.",
+          "label": "Product Selling Points",
+          "visual": "The digital pan continues downward to show the bottom half of the trending list, focusing on entries 7 through 10. Various project names and technical descriptions are visible. The lighting remains consistent and bright across the digital interface. The split-screen preview on the right tracks the scroll progress.",
+          "shot_type": "Medium Close-Up",
+          "scene_number": 4,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "一张很长的页面 → 右侧出现整页缩略条和当前视窗框，口播讲到哪一处，视窗框在缩略条上跳过去、主画面同步跳到并停读"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 6.0,
+      "action": "一张很长的页面 → 右侧出现整页缩略条和当前视窗框，口播讲到哪一处，视窗框在缩略条上跳过去、主画面同步跳到并停读"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

@@ -1,0 +1,475 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t11o",
+  "title": "四宫格同时播放，逐格点亮放大，最后黑胶囊总结",
+  "duration": 11,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "不同形态，同样能执行任务",
+    "media1.start": 0,
+    "media1.speed": 1,
+    "media2.start": 0,
+    "media2.speed": 1,
+    "media3.start": 0,
+    "media3.speed": 1,
+    "media4.start": 0,
+    "media4.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media2": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media3": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media4": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "image",
+      "x": 180,
+      "y": 160,
+      "w": 760,
+      "h": 350,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0,
+        11.001
+      ],
+      "tracks": {
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            1.1,
+            1
+          ],
+          [
+            1.485,
+            1.055
+          ],
+          [
+            2.53,
+            1.055
+          ],
+          [
+            2.97,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0.6
+          ],
+          [
+            1.1,
+            0.6
+          ],
+          [
+            1.485,
+            1
+          ],
+          [
+            2.53,
+            1
+          ],
+          [
+            2.97,
+            0.6
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "image",
+      "x": 980,
+      "y": 160,
+      "w": 760,
+      "h": 350,
+      "asset": "media2",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0,
+        11.001
+      ],
+      "tracks": {
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            2.97,
+            1
+          ],
+          [
+            3.355,
+            1.055
+          ],
+          [
+            4.4,
+            1.055
+          ],
+          [
+            4.84,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0.6
+          ],
+          [
+            2.97,
+            0.6
+          ],
+          [
+            3.355,
+            1
+          ],
+          [
+            4.4,
+            1
+          ],
+          [
+            4.84,
+            0.6
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "image",
+      "x": 180,
+      "y": 550,
+      "w": 760,
+      "h": 350,
+      "asset": "media3",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0,
+        11.001
+      ],
+      "tracks": {
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            4.84,
+            1
+          ],
+          [
+            5.225,
+            1.055
+          ],
+          [
+            6.27,
+            1.055
+          ],
+          [
+            6.71,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0.6
+          ],
+          [
+            4.84,
+            0.6
+          ],
+          [
+            5.225,
+            1
+          ],
+          [
+            6.27,
+            1
+          ],
+          [
+            6.71,
+            0.6
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "image",
+      "x": 980,
+      "y": 550,
+      "w": 760,
+      "h": 350,
+      "asset": "media4",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0,
+        11.001
+      ],
+      "tracks": {
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            6.71,
+            1
+          ],
+          [
+            7.095,
+            1.055
+          ],
+          [
+            8.14,
+            1.055
+          ],
+          [
+            8.58,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0.6
+          ],
+          [
+            6.71,
+            0.6
+          ],
+          [
+            7.095,
+            1
+          ],
+          [
+            8.14,
+            1
+          ],
+          [
+            8.58,
+            0.6
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "pill",
+      "x": 410,
+      "y": 450,
+      "w": 1100,
+      "h": 120,
+      "label": "{{text01}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            9.02,
+            0
+          ],
+          [
+            9.405,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            410
+          ],
+          [
+            9.02,
+            410
+          ],
+          [
+            9.405,
+            410,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            500
+          ],
+          [
+            9.02,
+            500
+          ],
+          [
+            9.405,
+            450,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/cb28afbf815798e9c158f2f74186bfcfffa2e06ab659c439fce52cc391c2a808.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "Look at the demo they released.",
+          "label": "Opening Hook",
+          "visual": "A digital graphic layout on a white background. At the top center, a small video window shows a yellow industrial loader filling a dump truck in a desert quarry under bright natural daylight. Below the video, an arrow points to an API icon, which then points to a cloud icon, which finally points to a button being clicked by a cursor. The color palette is clean with high contrast blacks and whites.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Look at the demo they released.",
+          "label": "Product Information",
+          "visual": "A 2x2 grid layout displaying four different robotic applications simultaneously. Top-left: Yellow loader in a quarry. Top-right: A black robotic arm over a gray table with metal rings. Bottom-left: Dual robotic arms in a kitchen setting over white plates. Bottom-right: A white humanoid-style robot standing over a table with a blue t-shirt. Static camera angles for all four panes, bright indoor artificial lighting for the laboratory scenes.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The loader mines and loads the truck itself, and the mechanical arm processes parts itself.",
+          "label": "Usage Scenarios",
+          "visual": "The 2x2 grid continues. In the top-left, the loader lifts a heavy bucket of dirt and dumps it into the truck. In the top-right, a black robotic arm precisely picks up a metal ring from a scattered pile on a gray surface and moves it toward a designated area. The lighting in the lab is cool-toned and even.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "The back kitchen helps with plating, and it even folds clothes.",
+          "label": "Usage Scenarios",
+          "visual": "The 2x2 grid continues. Bottom-left: Perspective from above showing two black robotic arms in a kitchen area with a stainless steel counter; one arm reaches for a white bowl. Bottom-right: A white robot with multi-fingered hands stands at a wooden table, beginning to touch a blue t-shirt. The background shows a typical office or lab environment with windows and backpacks.",
+          "shot_type": "POV Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:06",
+          "timestamp_start": "0:04"
+        },
+        {
+          "audio": "The same set of capabilities can do different jobs just by changing the body.",
+          "label": "Product Selling Points",
+          "visual": "The 2x2 grid remains active. All four robots are shown performing their distinct tasks (mining, sorting, plating, folding) simultaneously. Central focus is on how varied the physical bodies are while performing complex tasks. The movement is fluid and appears automated.",
+          "shot_type": "Wide Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:09",
+          "timestamp_start": "0:06"
+        },
+        {
+          "audio": "And even the robot's training ground.",
+          "label": "Call to Action",
+          "visual": "A clean transition to a white screen with bold black text in the center. In the top right corner, a small colorful logo featuring the name 'FredTalk AI' is visible. The composition is minimalist and centered.",
+          "shot_type": "Wide Shot",
+          "scene_number": 6,
+          "timestamp_end": "0:10",
+          "timestamp_start": "0:09"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "四宫格同时播放四段演示，按口播逐格点亮：当前格放大抬起、其余压暗 0.6，最后黑胶囊压上总结"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 11.0,
+      "action": "四宫格同时播放四段演示，按口播逐格点亮：当前格放大抬起、其余压暗 0.6，最后黑胶囊压上总结"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "演示 1",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          11,
+          11,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media2",
+      "label": "演示 2",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          11,
+          11,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media3",
+      "label": "演示 3",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          11,
+          11,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media4",
+      "label": "演示 4",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          11,
+          11,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,589 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t13h",
+  "title": "骨架屏 → 需要时自上而下擦出真实画面",
+  "duration": 13.133,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "结构先行",
+    "text02": "按需截图，保留真实信息",
+    "media1.start": 0,
+    "media1.speed": 1,
+    "media2.start": 0,
+    "media2.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media2": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "code",
+      "x": 130,
+      "y": 230,
+      "w": 710,
+      "h": 610,
+      "lines": [
+        "<header>Current product</header>",
+        "<main>",
+        "  <section>Useful content</section>",
+        "</main>"
+      ],
+      "size": 31,
+      "visible": [
+        0.0,
+        4.59655
+      ]
+    },
+    {
+      "id": "n002",
+      "kind": "image",
+      "x": 1020,
+      "y": 230,
+      "w": 740,
+      "h": 610,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        4.59655
+      ]
+    },
+    {
+      "id": "n003",
+      "kind": "arrow",
+      "x": 860,
+      "y": 510,
+      "w": 110,
+      "h": 0,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.78798,
+            0
+          ],
+          [
+            1.24763,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            860
+          ],
+          [
+            0.78798,
+            860
+          ],
+          [
+            1.24763,
+            860,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            510
+          ],
+          [
+            0.78798,
+            510
+          ],
+          [
+            1.24763,
+            510,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "window",
+      "x": 250,
+      "y": 190,
+      "w": 1420,
+      "h": 730,
+      "label": "{{text01}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.59655,
+            0
+          ],
+          [
+            5.0562,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            250
+          ],
+          [
+            4.59655,
+            250
+          ],
+          [
+            5.0562,
+            250,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            240
+          ],
+          [
+            4.59655,
+            240
+          ],
+          [
+            5.0562,
+            190,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "rect",
+      "x": 330,
+      "y": 330,
+      "w": 1200,
+      "h": 75,
+      "fill": "#E2E2E7",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.85921,
+            0
+          ],
+          [
+            5.31886,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            330
+          ],
+          [
+            4.85921,
+            330
+          ],
+          [
+            5.31886,
+            330,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            380
+          ],
+          [
+            4.85921,
+            380
+          ],
+          [
+            5.31886,
+            330,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "rect",
+      "x": 330,
+      "y": 455,
+      "w": 1100,
+      "h": 75,
+      "fill": "#E2E2E7",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.18753,
+            0
+          ],
+          [
+            5.64719,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            330
+          ],
+          [
+            5.18753,
+            330
+          ],
+          [
+            5.64719,
+            330,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            505
+          ],
+          [
+            5.18753,
+            505
+          ],
+          [
+            5.64719,
+            455,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "rect",
+      "x": 330,
+      "y": 580,
+      "w": 1000,
+      "h": 75,
+      "fill": "#E2E2E7",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.51586,
+            0
+          ],
+          [
+            5.97551,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            330
+          ],
+          [
+            5.51586,
+            330
+          ],
+          [
+            5.97551,
+            330,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            630
+          ],
+          [
+            5.51586,
+            630
+          ],
+          [
+            5.97551,
+            580,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "rect",
+      "x": 330,
+      "y": 705,
+      "w": 900,
+      "h": 75,
+      "fill": "#E2E2E7",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.84418,
+            0
+          ],
+          [
+            6.30384,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            330
+          ],
+          [
+            5.84418,
+            330
+          ],
+          [
+            6.30384,
+            330,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            755
+          ],
+          [
+            5.84418,
+            755
+          ],
+          [
+            6.30384,
+            705,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "image",
+      "x": 280,
+      "y": 280,
+      "w": 1360,
+      "h": 600,
+      "asset": "media2",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        7.61714,
+        11.55704
+      ],
+      "tracks": {
+        "revealY": [
+          [
+            0.0,
+            0
+          ],
+          [
+            7.61714,
+            0
+          ],
+          [
+            9.06177,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010",
+      "kind": "pill",
+      "x": 430,
+      "y": 930,
+      "w": 1060,
+      "h": 75,
+      "label": "{{text02}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            10.5064,
+            0
+          ],
+          [
+            10.96606,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            430
+          ],
+          [
+            10.5064,
+            430
+          ],
+          [
+            10.96606,
+            430,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            980
+          ],
+          [
+            10.5064,
+            980
+          ],
+          [
+            10.96606,
+            930,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/8a64e1baca4c01ef32def26d81c1a28000746052e0ec111b1eee2a611c4db167.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "But most of the time AI only needs text and structure.",
+          "label": "Opening Hook",
+          "visual": "A split screen layout with a white background. On the left, a digital interface shows a website layout with text about software. On the right, a dark window displays complex HTML source code. The camera is static. The lighting is digital and even with high contrast between the dark code window and light website window. The color palette is dominated by dark blue, white, and yellow accents.",
+          "shot_type": "Medium Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "So Moli first reads the content to the AI.",
+          "label": "Product Information",
+          "visual": "The screen transitions to a workflow diagram. A window on the left displays source code. An arrow points to a central black rounded square with a white star icon labeled 'AI'. Below the arrow, another smaller label appears with a logo. Small blocks of text and a 'GET STARTED' button move from the code window toward the AI icon. The background is white and the animation is smooth and linear.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "When a screenshot is really needed or a certain position needs to be clicked,",
+          "label": "Product Selling Points",
+          "visual": "A simplified grey and white wireframe of a webpage is shown. A purple crosshair target icon appears and moves to a specific grey rectangular block. The background is a clean white. The lighting is flat, mimicking a digital UI design environment.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:07",
+          "timestamp_start": "0:05"
+        },
+        {
+          "audio": "then the screen is drawn.",
+          "label": "Usage Scenarios",
+          "visual": "The wireframe from the previous scene instantly fills with high-fidelity graphics, text, and colors, revealing a professional website for a programming language. A yellow 'GET STARTED' button is prominent on the right. The color palette includes teal, yellow, and grey. The transition is a sharp cut representing the 'rendering' of the page.",
+          "shot_type": "Medium Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:08",
+          "timestamp_start": "0:07"
+        },
+        {
+          "audio": "You ask Codex to help you check information online, and this is the type of browser used.",
+          "label": "Call to Action",
+          "visual": "A white digital interface with a chat bubble icon. Text is being typed into a search bar. Above it, a diagram appears showing a laptop icon connected to a 'AI Browser' icon via a dashed line. The 'AI Browser' icon contains three bullet points. The background remains a clean, minimalist white with soft purple and blue accents in the UI elements.",
+          "shot_type": "Medium Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:13",
+          "timestamp_start": "0:08"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "浏览器卡里先只有文字和结构（骨架块），“需要截图的时候”画面区域自上而下擦出真实画面"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 13.133,
+      "action": "浏览器卡里先只有文字和结构（骨架块），“需要截图的时候”画面区域自上而下擦出真实画面"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "当前网页效果",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          13.133,
+          13.133,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media2",
+      "label": "需要时获取真实画面",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          13.133,
+          13.133,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

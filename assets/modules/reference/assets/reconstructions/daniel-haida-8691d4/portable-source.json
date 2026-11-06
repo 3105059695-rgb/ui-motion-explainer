@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "slug": "daniel-haida-8691d4",
+  "source_project": "assets/reconstructions/daniel-haida-8691d4",
+  "project": "assets/reconstructions/daniel-haida-8691d4",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "asset-manifest.json",
+    "assets/brand-icon.png",
+    "assets/wordmark.png",
+    "composition.js",
+    "index.html",
+    "project.json",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/48715a42ec242c21e9f0.ttf",
+    "../../reference-shared/fonts/89b3fb38aa0d275d7a73.ttf"
+  ],
+  "replaceable_assets": [
+    {
+      "path": "assets/brand-icon.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "55f8a9011c7f7d0f5dbeff532d0c35ddbd207395d50b6f8f0dbbed0c9b2ce3cf"
+    },
+    {
+      "path": "assets/wordmark.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "9fda856eb600dce7fcd8e08db0314d4aa82bb2b9f9faadf51b1d18c303f13668"
+    }
+  ],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "asset-manifest.json": "asset-manifest.json",
+    "assets/brand-icon.png": "assets/brand-icon.png",
+    "assets/wordmark.png": "assets/wordmark.png",
+    "composition.js": "composition.js",
+    "fonts/JetBrainsMono.ttf": "../../reference-shared/fonts/48715a42ec242c21e9f0.ttf",
+    "fonts/PlusJakartaSans.ttf": "../../reference-shared/fonts/89b3fb38aa0d275d7a73.ttf",
+    "index.html": "index.html",
+    "project.json": "project.json",
+    "brand-icon.png": "assets/brand-icon.png",
+    "wordmark.png": "assets/wordmark.png",
+    "JetBrainsMono.ttf": "../../reference-shared/fonts/48715a42ec242c21e9f0.ttf",
+    "PlusJakartaSans.ttf": "../../reference-shared/fonts/89b3fb38aa0d275d7a73.ttf"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

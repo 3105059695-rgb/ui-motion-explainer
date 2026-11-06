@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "slug": "notdwd-c2037d",
+  "source_project": "assets/reconstructions/notdwd-c2037d",
+  "project": "assets/reconstructions/notdwd-c2037d",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "asset-manifest.json",
+    "composition.js",
+    "index.html",
+    "project.json",
+    "textures/khafre.png",
+    "textures/khufu.png",
+    "portable-paths.js"
+  ],
+  "shared_assets": [],
+  "replaceable_assets": [
+    {
+      "path": "textures/khafre.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "86a166f96b9625a792f9e66e0551a9745e1f798adaabcd63ba0517a5bd82eacb"
+    },
+    {
+      "path": "textures/khufu.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "ce61fbdd3015b97d32b3f2d9812ac993f28b34b71ba057c24a59533bd645b8ae"
+    }
+  ],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "asset-manifest.json": "asset-manifest.json",
+    "composition.js": "composition.js",
+    "index.html": "index.html",
+    "project.json": "project.json",
+    "textures/khafre.png": "textures/khafre.png",
+    "textures/khufu.png": "textures/khufu.png",
+    "khafre.png": "textures/khafre.png",
+    "khufu.png": "textures/khufu.png"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

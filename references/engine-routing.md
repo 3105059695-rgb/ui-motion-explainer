@@ -30,7 +30,7 @@
 | [UI morph](../assets/modules/reference/assets/templates/ui-morph/motion.js) / [launch film](../assets/modules/reference/assets/templates/launch-film/motion.js) | 有可运行的形变、裁切与相机示例，但依赖各自 DOM 和时间轴；按其结构接入或抽取适用逻辑，不只复制函数名。 |
 | [Fusion 场景](../assets/fusion-studio/studio.js) | 完整历史演示，可借用对象与时间轴实现；原皮肤、示例对象、固定时长不自动用于本期。 |
 
-Fred 来源方法的 `implementation.customization_required` 说明上述组件没有承担的工作。逐项按本期事件补齐，或选择更合适的实现；方法名字与文件存在不意味着整段已经重建。当前方法库中的 14 条 Fred 方法仍没有完整重建，不得把历史演示称为现成的 Fred 正文引擎。
+Fred 及秋芝正向方法已经编为 `ui.py programs` 的实际阶段组合。`inspect` 返回真实动作序列；绑定当前 DOM、文字、媒体及口播时间后，`build` 生成可渲染工程。它保留方法的表达顺序，不声称提供原作者整片源码。新的整体构图仍由本段内容决定。
 
 ## 统一命令入口
 
@@ -38,6 +38,14 @@ Fred 来源方法的 `implementation.customization_required` 说明上述组件�
 
 ```powershell
 python -X utf8 scripts/ui.py status
+python -X utf8 scripts/ui.py style-film inspect
+python -X utf8 scripts/ui.py capabilities plan --script <原稿.txt>
+python -X utf8 scripts/ui.py library inspect --id <候选ID>
+python -X utf8 scripts/ui.py library scaffold --id <候选ID> --out <bindings.json>
+python -X utf8 scripts/ui.py library build --spec <bindings.json> --out <当前片段工程>
+python -X utf8 scripts/ui.py library render --project <当前片段工程> --out <片段.mp4>
+python -X utf8 scripts/ui.py semantic inspect O02
+python -X utf8 scripts/ui.py programs inspect --id Q-C05
 python -X utf8 scripts/ui.py direct -- prepare --script <原稿.txt> --presenter <原声视频.mp4> --project <当前工程>
 python -X utf8 scripts/ui.py direct -- recipes --id S08
 python -X utf8 scripts/ui.py direct -- check --plan <当前工程/director-plan.json> --production
@@ -62,7 +70,7 @@ python -X utf8 scripts/metaso_video.py status
 - 普通制作先选择适用的完整源码。`new --engine fusion` 不再默默返回空画布；明确 `--custom-layout` 才创建自定义环境。明确 `--scene F01` 至 `F08` 或 `all` 仍创建历史演示，不能当作本期成片。
 - `new/render --engine base|fusion` 默认使用包内基础，不扫描或自动切换兄弟旧包；明确 `--base <目录>` 才固定外部版本。已有工程使用原创建版本与后端。
 - `editorial` 只统一创建入口，渲染在生成的 Remotion 工程内按 [模块命令](editorial-motion.md) 运行。
-- 软件预设和编辑式模板已在包内。参考案例默认只有文本、海报和2个起点；配置 `references/resources.local.json` 的 `modules.reference` 后，原统一reference命令自动使用该本机历史库。显式 `--module-root` 优先；失效映射报错，不偷换成起点。该本机映射只覆盖reference，不改变风格档案或生产渲染引擎。
+- 软件预设、参考案例执行工程、原有起点和独立实现均在包内，通过 `library` 绑定与渲染。`references/resources.local.json` 只为本机私人原片和另行指定工程服务，公开执行不依赖它；失效映射报错，不偷换成另一模板。实际状态用 `capabilities inspect` 读取。
 - `direct` 是准备与检查入口，不是 `new --engine director` 的旧渲染后端；字段由[计划合同](director-plan-contract.md)维护。
 - `direct prepare` 携带 Fred Talk 默认与独立的 `context.aigc`；`--profile` 不让新稿切换账号皮肤。生成素材仍按[AIGC 接口](anime-video-generation.md)实际处理，不由准备命令自动产生。
 - `metaso_video.py` 是素材生成入口，不替换渲染器；规划、只读连接检查、计费授权和密钥管理见 [动漫视频生成](anime-video-generation.md)。密钥从本机环境或当前 Windows 用户加密存储读取，不进入 Skill、源码或工程包。

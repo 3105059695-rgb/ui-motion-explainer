@@ -75,7 +75,20 @@
         "kind": "editing-kit",
         "path": "assets/editing-kit/editing-kit.js",
         "effect": "result-pullback",
-        "status": "shared-component-implemented"
+        "status": "executable-bound-program",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id S01",
+          "scaffold": "ui.py programs scaffold --id S01 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "source_evidence": [
         {
@@ -119,7 +132,27 @@
           "scope": "先亮租机、部署、比较的实际材料，再将本期承诺逐项建立；承诺与后文教学对应，不能只喊收益。",
           "implementation_note": "复用S01/S02结构及本稿真实证据，承诺列队和当前项状态由宿主布局实现；不复制原题材、价格或固定三分钟。"
         }
-      ]
+      ],
+      "historical_implementation": {
+        "kind": "editing-kit",
+        "path": "assets/editing-kit/editing-kit.js",
+        "effect": "result-pullback",
+        "status": "shared-component-implemented"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id S01",
+          "scaffold": "ui.py programs scaffold --id S01 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
+      }
     },
     {
       "id": "S02",
@@ -172,7 +205,20 @@
         "kind": "editing-kit",
         "path": "assets/editing-kit/editing-kit.js",
         "effect": "focus-mask",
-        "status": "shared-component-implemented"
+        "status": "executable-bound-program",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id S02",
+          "scaffold": "ui.py programs scaffold --id S02 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "source_evidence": [
         {
@@ -210,7 +256,27 @@
           "scope": "先亮租机、部署、比较的实际材料，再将本期承诺逐项建立；承诺与后文教学对应，不能只喊收益。",
           "implementation_note": "复用S01/S02结构及本稿真实证据，承诺列队和当前项状态由宿主布局实现；不复制原题材、价格或固定三分钟。"
         }
-      ]
+      ],
+      "historical_implementation": {
+        "kind": "editing-kit",
+        "path": "assets/editing-kit/editing-kit.js",
+        "effect": "focus-mask",
+        "status": "shared-component-implemented"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id S02",
+          "scaffold": "ui.py programs scaffold --id S02 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
+      }
     },
     {
       "id": "S03",
@@ -263,7 +329,20 @@
         "kind": "editing-kit",
         "path": "assets/editing-kit/editing-kit.js",
         "effect": "focus-mask",
-        "status": "shared-component-implemented"
+        "status": "executable-bound-program",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id S03",
+          "scaffold": "ui.py programs scaffold --id S03 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "source_evidence": [
         {
@@ -408,7 +487,27 @@
           "scope": "四步进度持续存在，真实界面分别展示找到入口、选中、发出请求、服务运行、复制完成和连通证据；同一地址跨应用承接。",
           "implementation_note": "复用focus-mask、match-handoff和宿主状态；原片没有显示地址独立飞行，不把推测记成已观察动作。"
         }
-      ]
+      ],
+      "historical_implementation": {
+        "kind": "editing-kit",
+        "path": "assets/editing-kit/editing-kit.js",
+        "effect": "focus-mask",
+        "status": "shared-component-implemented"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id S03",
+          "scaffold": "ui.py programs scaffold --id S03 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
+      }
     },
     {
       "id": "S04",
@@ -461,7 +560,20 @@
         "kind": "editing-kit",
         "path": "assets/editing-kit/editing-kit.js",
         "effect": "causal-chain",
-        "status": "shared-component-implemented"
+        "status": "executable-bound-program",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id S04",
+          "scaffold": "ui.py programs scaffold --id S04 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "source_evidence": [
         {
@@ -715,7 +827,27 @@
           "scope": "四步进度持续存在，真实界面分别展示找到入口、选中、发出请求、服务运行、复制完成和连通证据；同一地址跨应用承接。",
           "implementation_note": "复用focus-mask、match-handoff和宿主状态；原片没有显示地址独立飞行，不把推测记成已观察动作。"
         }
-      ]
+      ],
+      "historical_implementation": {
+        "kind": "editing-kit",
+        "path": "assets/editing-kit/editing-kit.js",
+        "effect": "causal-chain",
+        "status": "shared-component-implemented"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id S04",
+          "scaffold": "ui.py programs scaffold --id S04 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
+      }
     },
     {
       "id": "S05",
@@ -768,7 +900,20 @@
         "kind": "editing-kit",
         "path": "assets/editing-kit/editing-kit.js",
         "effect": "compare",
-        "status": "shared-component-implemented"
+        "status": "executable-bound-program",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id S05",
+          "scaffold": "ui.py programs scaffold --id S05 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "source_evidence": [
         {
@@ -1021,7 +1166,27 @@
           "scope": "由开头受众分流扩展到结尾条件推荐：先出现条件再给方案，旧方案保留降权，多条动机可汇到同一方案。",
           "implementation_note": "已有compare/causal-chain承载分流；价格/选择属于来源语境，未来按本稿条件设计，不强制双卡或租机建议。"
         }
-      ]
+      ],
+      "historical_implementation": {
+        "kind": "editing-kit",
+        "path": "assets/editing-kit/editing-kit.js",
+        "effect": "compare",
+        "status": "shared-component-implemented"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id S05",
+          "scaffold": "ui.py programs scaffold --id S05 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
+      }
     },
     {
       "id": "S06",
@@ -1074,7 +1239,20 @@
         "kind": "editing-kit",
         "path": "assets/editing-kit/editing-kit.js",
         "effect": "match-handoff",
-        "status": "shared-component-implemented"
+        "status": "executable-bound-program",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id S06",
+          "scaffold": "ui.py programs scaffold --id S06 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "source_evidence": [
         {
@@ -1424,7 +1602,27 @@
           "scope": "由开头受众分流扩展到结尾条件推荐：先出现条件再给方案，旧方案保留降权，多条动机可汇到同一方案。",
           "implementation_note": "已有compare/causal-chain承载分流；价格/选择属于来源语境，未来按本稿条件设计，不强制双卡或租机建议。"
         }
-      ]
+      ],
+      "historical_implementation": {
+        "kind": "editing-kit",
+        "path": "assets/editing-kit/editing-kit.js",
+        "effect": "match-handoff",
+        "status": "shared-component-implemented"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id S06",
+          "scaffold": "ui.py programs scaffold --id S06 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
+      }
     },
     {
       "id": "S07",
@@ -1477,7 +1675,20 @@
         "kind": "editing-kit",
         "path": "assets/editing-kit/editing-kit.js",
         "effect": "occlusion-reveal",
-        "status": "shared-component-implemented"
+        "status": "executable-bound-program",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id S07",
+          "scaffold": "ui.py programs scaffold --id S07 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "source_evidence": [
         {
@@ -1537,7 +1748,27 @@
           "scope": "章节标题或步骤总览读清后，同一组缩到导航位；后续内容只改变当前项状态，持续交代位置。",
           "implementation_note": "match-handoff可承接位移；翻牌/大字/全屏遮挡/步骤高亮由宿主实现，文字与人物字幕安全区按本稿测量。"
         }
-      ]
+      ],
+      "historical_implementation": {
+        "kind": "editing-kit",
+        "path": "assets/editing-kit/editing-kit.js",
+        "effect": "occlusion-reveal",
+        "status": "shared-component-implemented"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id S07",
+          "scaffold": "ui.py programs scaffold --id S07 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
+      }
     },
     {
       "id": "S08",
@@ -1599,7 +1830,20 @@
       "implementation": {
         "kind": "generation-recipe",
         "path": "scripts/metaso_video.py",
-        "status": "prompt-template-ready-not-generated"
+        "status": "executable-bound-program",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id S08",
+          "scaffold": "ui.py programs scaffold --id S08 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "source_evidence": [
         {
@@ -1657,7 +1901,26 @@
           "record": "references/evidence/semantic-transfer-sample-20261014.json",
           "scope": "New-narration silent structure preview; AIGC request prepared but not generated. No aesthetic approval."
         }
-      ]
+      ],
+      "historical_implementation": {
+        "kind": "generation-recipe",
+        "path": "scripts/metaso_video.py",
+        "status": "prompt-template-ready-not-generated"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id S08",
+          "scaffold": "ui.py programs scaffold --id S08 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
+      }
     },
     {
       "id": "S09",
@@ -1710,7 +1973,20 @@
       "implementation": {
         "kind": "generation-recipe",
         "path": "scripts/metaso_video.py",
-        "status": "prompt-template-ready-not-generated"
+        "status": "executable-bound-program",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id S09",
+          "scaffold": "ui.py programs scaffold --id S09 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "source_evidence": [
         {
@@ -1767,6 +2043,25 @@
             "损失语义不被误读为产品故障",
             "真实/示意明确"
           ]
+        }
+      },
+      "historical_implementation": {
+        "kind": "generation-recipe",
+        "path": "scripts/metaso_video.py",
+        "status": "prompt-template-ready-not-generated"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id S09",
+          "scaffold": "ui.py programs scaffold --id S09 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
         }
       }
     },
@@ -1829,7 +2124,20 @@
       "implementation": {
         "kind": "generation-recipe",
         "path": "scripts/metaso_video.py",
-        "status": "prompt-template-ready-not-generated"
+        "status": "executable-bound-program",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id S10",
+          "scaffold": "ui.py programs scaffold --id S10 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "source_evidence": [
         {
@@ -1886,6 +2194,25 @@
             "角色情绪没有偏离原句",
             "入口和退出不突兀"
           ]
+        }
+      },
+      "historical_implementation": {
+        "kind": "generation-recipe",
+        "path": "scripts/metaso_video.py",
+        "status": "prompt-template-ready-not-generated"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id S10",
+          "scaffold": "ui.py programs scaffold --id S10 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
         }
       }
     }

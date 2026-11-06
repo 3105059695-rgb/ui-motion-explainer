@@ -1,0 +1,377 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-native-t19a",
+  "title": "痛点小人：Fred 发愁，烦恼气泡收成一个问题",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "pain0": "每次都要重新解释",
+    "pain1": "改了这里又忘了那里",
+    "pain2": "前面的约定又不见了",
+    "problem": "关键问题：没有接住上下文"
+  },
+  "assets": {
+    "character": "assets/approved-girl-sample/assets/manual-v2.mp4"
+  },
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/50b1c0333c6978036013938fb4ac5f6c1127cacc74286ee7402637a18c934027.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "Every time I have to re-explain the background.",
+          "label": "Opening Hook",
+          "visual": "A 3D animated male character, approximately 10-12 years old, with fair skin, short black hair, and round glasses, is positioned on the left side of the frame. He wears a plain black long-sleeved shirt. He is set against a clean white background. He begins with a neutral, slightly smiling expression, looking towards the right side of the frame. Lighting is soft and even across his face, with subtle shadows under the chin. The color palette is minimalist with high contrast between the black clothing and white background.",
+          "shot_type": "Medium Close-Up",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Fix one part and another breaks. After chatting for a while, it forgets the beginning. I have to remember all the project rules myself.",
+          "label": "Problem Solving",
+          "visual": "The same character shifts his expression to one of frustration and fatigue. He raises his right hand to his forehead, furrowing his brow and closing his eyes slightly as if experiencing a headache or stress. The camera remains static. The lighting and environment are consistent with the previous scene.",
+          "shot_type": "Medium Close-Up",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The problem: AI can't remember your project.",
+          "label": "Problem Solving",
+          "visual": "The character maintains the stressed pose with his hand on his forehead. A gray rectangular search-style bar appears to the right of him, followed by a sudden visual shift where the text changes. His expression remains weary. The background remains white and the lighting is unchanged.",
+          "shot_type": "Medium Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 2.9,
+      "action": "True reaction video continues while three actual pain points accumulate beside subject"
+    },
+    {
+      "start": 2.9,
+      "end": 4.1499999999999995,
+      "action": "Pain points merge into a single well-defined problem"
+    },
+    {
+      "start": 4.1499999999999995,
+      "end": 5,
+      "action": "Problem holds without obscuring subject"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 110,
+      "y": 180,
+      "w": 700,
+      "h": 790,
+      "asset": "character",
+      "fit": "contain"
+    },
+    {
+      "id": "n002-pill",
+      "kind": "pill",
+      "x": 850,
+      "y": 150,
+      "w": 900,
+      "h": 140,
+      "label": "{{pain0}}",
+      "size": 51,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.8,
+            1
+          ],
+          [
+            2.9,
+            1
+          ],
+          [
+            4.0,
+            0
+          ]
+        ],
+        "y": [
+          [
+            0,
+            150
+          ],
+          [
+            2.9,
+            150
+          ],
+          [
+            4.0,
+            450
+          ]
+        ],
+        "x": [
+          [
+            0,
+            850
+          ],
+          [
+            2.9,
+            850
+          ],
+          [
+            4.0,
+            960
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            2.9,
+            1
+          ],
+          [
+            4.0,
+            0.6
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-pill",
+      "kind": "pill",
+      "x": 850,
+      "y": 375,
+      "w": 900,
+      "h": 140,
+      "label": "{{pain1}}",
+      "size": 51,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.7,
+            0
+          ],
+          [
+            1.5,
+            1
+          ],
+          [
+            2.9,
+            1
+          ],
+          [
+            4.0,
+            0
+          ]
+        ],
+        "y": [
+          [
+            0,
+            375
+          ],
+          [
+            2.9,
+            375
+          ],
+          [
+            4.0,
+            450
+          ]
+        ],
+        "x": [
+          [
+            0,
+            850
+          ],
+          [
+            2.9,
+            850
+          ],
+          [
+            4.0,
+            960
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            2.9,
+            1
+          ],
+          [
+            4.0,
+            0.6
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-pill",
+      "kind": "pill",
+      "x": 850,
+      "y": 600,
+      "w": 900,
+      "h": 140,
+      "label": "{{pain2}}",
+      "size": 51,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.4,
+            0
+          ],
+          [
+            2.2,
+            1
+          ],
+          [
+            2.9,
+            1
+          ],
+          [
+            4.0,
+            0
+          ]
+        ],
+        "y": [
+          [
+            0,
+            600
+          ],
+          [
+            2.9,
+            600
+          ],
+          [
+            4.0,
+            450
+          ]
+        ],
+        "x": [
+          [
+            0,
+            850
+          ],
+          [
+            2.9,
+            850
+          ],
+          [
+            4.0,
+            960
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            2.9,
+            1
+          ],
+          [
+            4.0,
+            0.6
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-pill",
+      "kind": "pill",
+      "x": 850,
+      "y": 430,
+      "w": 900,
+      "h": 230,
+      "label": "{{problem}}",
+      "size": 58,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.75,
+            0
+          ],
+          [
+            4.65,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.75,
+            430
+          ],
+          [
+            4.65,
+            430,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "media_tracks": {
+    "character": {
+      "source_in": 0,
+      "start": 0,
+      "rate": 1
+    }
+  },
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 7,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

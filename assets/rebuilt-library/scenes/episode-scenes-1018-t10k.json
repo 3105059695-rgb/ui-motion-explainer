@@ -1,0 +1,417 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t10k",
+  "title": "手机长图跟读：按真实滚动取景、推近、毛刷刷亮要读的句子",
+  "duration": 18,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "当前问题",
+    "text02": "第一条解释",
+    "text03": "价格与计划",
+    "text04": "时间安排",
+    "text05": "通知设置",
+    "text06": "无需打扰",
+    "text07": "继续询问",
+    "text08": "新的答复"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "rect",
+      "x": 650,
+      "y": 55,
+      "w": 620,
+      "h": 970,
+      "fill": "#0B0B0F",
+      "radius": 65
+    },
+    {
+      "id": "n002",
+      "kind": "rect",
+      "x": 674,
+      "y": 85,
+      "w": 572,
+      "h": 910,
+      "fill": "#FFFFFF",
+      "radius": 47
+    },
+    {
+      "id": "n020",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n019",
+          "kind": "group",
+          "x": 0,
+          "y": 0,
+          "w": 1920,
+          "h": 1080,
+          "children": [
+            {
+              "id": "n003",
+              "kind": "rect",
+              "x": 700,
+              "y": 230,
+              "w": 520,
+              "h": 145,
+              "fill": "#F1F1F5",
+              "radius": 18
+            },
+            {
+              "id": "n004",
+              "kind": "text",
+              "x": 730,
+              "y": 260,
+              "w": 455,
+              "h": 68.8,
+              "text": "{{text01}}",
+              "size": 43
+            },
+            {
+              "id": "n005",
+              "kind": "rect",
+              "x": 700,
+              "y": 420,
+              "w": 520,
+              "h": 145,
+              "fill": "#F1F1F5",
+              "radius": 18
+            },
+            {
+              "id": "n006",
+              "kind": "text",
+              "x": 730,
+              "y": 450,
+              "w": 455,
+              "h": 68.8,
+              "text": "{{text02}}",
+              "size": 43
+            },
+            {
+              "id": "n007",
+              "kind": "rect",
+              "x": 700,
+              "y": 610,
+              "w": 520,
+              "h": 145,
+              "fill": "#F1F1F5",
+              "radius": 18
+            },
+            {
+              "id": "n008",
+              "kind": "text",
+              "x": 730,
+              "y": 640,
+              "w": 455,
+              "h": 68.8,
+              "text": "{{text03}}",
+              "size": 43
+            },
+            {
+              "id": "n009",
+              "kind": "rect",
+              "x": 700,
+              "y": 800,
+              "w": 520,
+              "h": 145,
+              "fill": "#F1F1F5",
+              "radius": 18
+            },
+            {
+              "id": "n010",
+              "kind": "text",
+              "x": 730,
+              "y": 830,
+              "w": 455,
+              "h": 68.8,
+              "text": "{{text04}}",
+              "size": 43
+            },
+            {
+              "id": "n011",
+              "kind": "rect",
+              "x": 700,
+              "y": 990,
+              "w": 520,
+              "h": 145,
+              "fill": "#F1F1F5",
+              "radius": 18
+            },
+            {
+              "id": "n012",
+              "kind": "text",
+              "x": 730,
+              "y": 1020,
+              "w": 455,
+              "h": 68.8,
+              "text": "{{text05}}",
+              "size": 43
+            },
+            {
+              "id": "n013",
+              "kind": "rect",
+              "x": 700,
+              "y": 1180,
+              "w": 520,
+              "h": 145,
+              "fill": "#F1F1F5",
+              "radius": 18
+            },
+            {
+              "id": "n014",
+              "kind": "text",
+              "x": 730,
+              "y": 1210,
+              "w": 455,
+              "h": 68.8,
+              "text": "{{text06}}",
+              "size": 43
+            },
+            {
+              "id": "n015",
+              "kind": "rect",
+              "x": 700,
+              "y": 1370,
+              "w": 520,
+              "h": 145,
+              "fill": "#F1F1F5",
+              "radius": 18
+            },
+            {
+              "id": "n016",
+              "kind": "text",
+              "x": 730,
+              "y": 1400,
+              "w": 455,
+              "h": 68.8,
+              "text": "{{text07}}",
+              "size": 43
+            },
+            {
+              "id": "n017",
+              "kind": "rect",
+              "x": 700,
+              "y": 1560,
+              "w": 520,
+              "h": 145,
+              "fill": "#F1F1F5",
+              "radius": 18
+            },
+            {
+              "id": "n018",
+              "kind": "text",
+              "x": 730,
+              "y": 1590,
+              "w": 455,
+              "h": 68.8,
+              "text": "{{text08}}",
+              "size": 43
+            }
+          ],
+          "tracks": {
+            "y": [
+              [
+                0,
+                100
+              ],
+              [
+                2.34,
+                0
+              ],
+              [
+                5.4,
+                -200
+              ],
+              [
+                9.0,
+                -430
+              ],
+              [
+                12.6,
+                -710
+              ],
+              [
+                16.2,
+                -950
+              ]
+            ]
+          }
+        }
+      ],
+      "clip": {
+        "x": 690,
+        "y": 190,
+        "w": 540,
+        "h": 700
+      }
+    },
+    {
+      "id": "n021",
+      "kind": "rect",
+      "x": 713,
+      "y": 460,
+      "w": 495,
+      "h": 65,
+      "fill": "#D6C2FF",
+      "opacity": 0.25,
+      "visible": [
+        3.6,
+        5.76
+      ]
+    },
+    {
+      "id": "n022",
+      "kind": "rect",
+      "x": 713,
+      "y": 460,
+      "w": 495,
+      "h": 65,
+      "fill": "#D6C2FF",
+      "opacity": 0.25,
+      "visible": [
+        6.66,
+        8.82
+      ]
+    },
+    {
+      "id": "n023",
+      "kind": "rect",
+      "x": 713,
+      "y": 460,
+      "w": 495,
+      "h": 65,
+      "fill": "#D6C2FF",
+      "opacity": 0.25,
+      "visible": [
+        9.72,
+        11.88
+      ]
+    },
+    {
+      "id": "n024",
+      "kind": "rect",
+      "x": 713,
+      "y": 460,
+      "w": 495,
+      "h": 65,
+      "fill": "#D6C2FF",
+      "opacity": 0.25,
+      "visible": [
+        12.78,
+        14.94
+      ]
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/8a02c01f3fc840631e59e7e91c058f8c5fce7c6e6fdf15af90d6c46a6ab88b7f.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "Give me a shout when there is a good price.",
+          "label": "Opening Hook",
+          "visual": "A static, high-angle shot focusing on the bottom half of a smartphone screen held against a clean, white, minimalist background. The phone has a black bezel and rounded corners. An input field is visible at the bottom where Chinese text is being entered. The lighting is bright and even, casting virtually no shadows, creating a high-key, tech-focused aesthetic. The color palette is dominated by white and shades of soft grey.",
+          "shot_type": "Close-Up",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Then you can see it go and check the market for itself.",
+          "label": "Product Information",
+          "visual": "The camera pulls back to show the full smartphone interface in a centered, vertical orientation. The screen displays a messaging app interface with blue and grey chat bubbles. The camera then smoothly pans and zooms into the text body on the screen, revealing a detailed list of product information including pricing tiers and specific model numbers. The background remains a sterile, pure white void.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "It then comes back to me to confirm the standard version, the price is lower than 3899, check it every morning.",
+          "label": "Product Selling Points",
+          "visual": "The camera transitions to a tight crop of the text interface, performing a slow vertical scroll. Highlights appear over specific parts of the text, specifically focusing on price points and scheduling settings. The font is clean and sans-serif. The motion is fluid, simulating a user scrolling through an automated report. Lighting remains consistent and cool-toned.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:11",
+          "timestamp_start": "0:05"
+        },
+        {
+          "audio": "After the rule is set, it will go and check by itself every morning.",
+          "label": "Usage Scenarios",
+          "visual": "The view shifts to a settings panel with toggle switches and selection menus. A dark grey overlay appears over the white background as a specific menu item is selected. The camera is static, focusing on the UI interaction. The saturation is low, emphasizing the professional, utility-driven nature of the software interface.",
+          "shot_type": "Medium Close-Up",
+          "scene_number": 4,
+          "timestamp_end": "0:13",
+          "timestamp_start": "0:11"
+        },
+        {
+          "audio": "Don't bother me if the price isn't reached.",
+          "label": "Problem Solving",
+          "visual": "The camera zooms in further on a specific paragraph of text that outlines the 'quiet mode' or 'no disturbance' logic of the application. The text is black against a slightly off-white digital paper background. The framing is tight, removing all peripheral UI elements to focus purely on the text-based logic of the app's notification system.",
+          "shot_type": "Close-Up",
+          "scene_number": 5,
+          "timestamp_end": "0:15",
+          "timestamp_start": "0:13"
+        },
+        {
+          "audio": "After setting it up, it will run first, look at the results.",
+          "label": "Call to Action",
+          "visual": "The final scene shows the bottom of the chat interface again. A blue bubble appears on the right side of the screen, followed by a longer response in a grey bubble on the left. The camera remains static as the text populates, simulating a real-time conversation. The screen then begins a final slow scroll downward as the video ends.",
+          "shot_type": "Close-Up",
+          "scene_number": 6,
+          "timestamp_end": "0:17",
+          "timestamp_start": "0:15"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "手机外壳里是真实手机录屏拼成的整段对话长图，按真实滚动位置取景；整台手机推近到能读，毛刷刷亮要读的那句，局部压暗其余"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 18.0,
+      "action": "手机外壳里是真实手机录屏拼成的整段对话长图，按真实滚动位置取景；整台手机推近到能读，毛刷刷亮要读的那句，局部压暗其余"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "camera": {
+    "tracks": {
+      "scale": [
+        [
+          0,
+          1
+        ],
+        [
+          3.6,
+          1.16
+        ],
+        [
+          14.22,
+          1.16
+        ],
+        [
+          16.2,
+          1
+        ]
+      ]
+    }
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

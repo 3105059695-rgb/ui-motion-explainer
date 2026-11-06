@@ -1,0 +1,1730 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t03j",
+  "title": "下压力与吸附：气流变化→压力→吸尘器类比",
+  "duration": 12,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "车底空气减少，上方压力把车压住",
+    "text02": "像吸尘器，紧贴地面",
+    "media1.start": 0,
+    "media1.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "path",
+      "x": 460,
+      "y": 470,
+      "w": 1020,
+      "h": 250,
+      "path": "M0 170 L85 170 L170 70 L410 20 L700 30 L830 100 L980 125 L1020 205 L0 205 Z",
+      "fill": "#0B0B0F",
+      "strokeWidth": 17,
+      "visible": [
+        0,
+        7.92
+      ]
+    },
+    {
+      "id": "n002",
+      "kind": "circle",
+      "x": 650,
+      "y": 645,
+      "w": 110,
+      "h": 110,
+      "fill": "#0B0B0F",
+      "visible": [
+        0,
+        7.92
+      ]
+    },
+    {
+      "id": "n003",
+      "kind": "circle",
+      "x": 1210,
+      "y": 645,
+      "w": 110,
+      "h": 110,
+      "fill": "#0B0B0F",
+      "visible": [
+        0,
+        7.92
+      ]
+    },
+    {
+      "id": "n004",
+      "kind": "rect",
+      "x": 280,
+      "y": 770,
+      "w": 1360,
+      "h": 9,
+      "fill": "#797982"
+    },
+    {
+      "id": "n005",
+      "kind": "text",
+      "x": 440,
+      "y": 155,
+      "w": 1120,
+      "h": 89.60000000000001,
+      "text": "{{text01}}",
+      "size": 56,
+      "align": "center",
+      "visible": [
+        0,
+        7.92
+      ]
+    },
+    {
+      "id": "n006",
+      "kind": "circle",
+      "x": 440,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "circle",
+      "x": 483,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            0.13
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "circle",
+      "x": 526,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            0.13
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "circle",
+      "x": 569,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010",
+      "kind": "circle",
+      "x": 612,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            0.13
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011",
+      "kind": "circle",
+      "x": 655,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            0.13
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012",
+      "kind": "circle",
+      "x": 698,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013",
+      "kind": "circle",
+      "x": 741,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            0.13
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014",
+      "kind": "circle",
+      "x": 784,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            0.13
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n015",
+      "kind": "circle",
+      "x": 827,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n016",
+      "kind": "circle",
+      "x": 870,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            0.13
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n017",
+      "kind": "circle",
+      "x": 913,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            0.13
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n018",
+      "kind": "circle",
+      "x": 956,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n019",
+      "kind": "circle",
+      "x": 999,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            0.13
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n020",
+      "kind": "circle",
+      "x": 1042,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            0.13
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n021",
+      "kind": "circle",
+      "x": 1085,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n022",
+      "kind": "circle",
+      "x": 1128,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            0.13
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n023",
+      "kind": "circle",
+      "x": 1171,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            0.13
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n024",
+      "kind": "circle",
+      "x": 1214,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n025",
+      "kind": "circle",
+      "x": 1257,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            0.13
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n026",
+      "kind": "circle",
+      "x": 1300,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            0.13
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n027",
+      "kind": "circle",
+      "x": 1343,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n028",
+      "kind": "circle",
+      "x": 1386,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            0.13
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n029",
+      "kind": "circle",
+      "x": 1429,
+      "y": 735,
+      "w": 8,
+      "h": 8,
+      "fill": "#797982",
+      "visible": [
+        0,
+        7.92
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.2,
+            1
+          ],
+          [
+            3.6,
+            0.13
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n030",
+      "kind": "arrow",
+      "x": 620,
+      "y": 320,
+      "w": 0,
+      "h": 130,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.32,
+            0
+          ],
+          [
+            4.74,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            620
+          ],
+          [
+            4.32,
+            620
+          ],
+          [
+            4.74,
+            620,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            320
+          ],
+          [
+            4.32,
+            320
+          ],
+          [
+            4.74,
+            320,
+            "out"
+          ]
+        ]
+      },
+      "visible": [
+        4.08,
+        7.92
+      ]
+    },
+    {
+      "id": "n031",
+      "kind": "arrow",
+      "x": 770,
+      "y": 320,
+      "w": 0,
+      "h": 130,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.62,
+            0
+          ],
+          [
+            5.04,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            770
+          ],
+          [
+            4.62,
+            770
+          ],
+          [
+            5.04,
+            770,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            320
+          ],
+          [
+            4.62,
+            320
+          ],
+          [
+            5.04,
+            320,
+            "out"
+          ]
+        ]
+      },
+      "visible": [
+        4.08,
+        7.92
+      ]
+    },
+    {
+      "id": "n032",
+      "kind": "arrow",
+      "x": 920,
+      "y": 320,
+      "w": 0,
+      "h": 130,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.92,
+            0
+          ],
+          [
+            5.34,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            920
+          ],
+          [
+            4.92,
+            920
+          ],
+          [
+            5.34,
+            920,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            320
+          ],
+          [
+            4.92,
+            320
+          ],
+          [
+            5.34,
+            320,
+            "out"
+          ]
+        ]
+      },
+      "visible": [
+        4.08,
+        7.92
+      ]
+    },
+    {
+      "id": "n033",
+      "kind": "arrow",
+      "x": 1070,
+      "y": 320,
+      "w": 0,
+      "h": 130,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            5.22,
+            0
+          ],
+          [
+            5.64,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1070
+          ],
+          [
+            5.22,
+            1070
+          ],
+          [
+            5.64,
+            1070,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            320
+          ],
+          [
+            5.22,
+            320
+          ],
+          [
+            5.64,
+            320,
+            "out"
+          ]
+        ]
+      },
+      "visible": [
+        4.08,
+        7.92
+      ]
+    },
+    {
+      "id": "n034",
+      "kind": "arrow",
+      "x": 1220,
+      "y": 320,
+      "w": 0,
+      "h": 130,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            5.52,
+            0
+          ],
+          [
+            5.94,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1220
+          ],
+          [
+            5.52,
+            1220
+          ],
+          [
+            5.94,
+            1220,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            320
+          ],
+          [
+            5.52,
+            320
+          ],
+          [
+            5.94,
+            320,
+            "out"
+          ]
+        ]
+      },
+      "visible": [
+        4.08,
+        7.92
+      ]
+    },
+    {
+      "id": "n035",
+      "kind": "image",
+      "x": 400,
+      "y": 190,
+      "w": 1120,
+      "h": 640,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        1.2,
+        3.84
+      ]
+    },
+    {
+      "id": "n036",
+      "kind": "path",
+      "x": 520,
+      "y": 480,
+      "w": 840,
+      "h": 280,
+      "path": "M0 210 L90 150 L480 150 L530 210 L510 260 L0 260 Z M260 150 L480 0",
+      "fill": "#0B0B0F",
+      "strokeWidth": 30,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            8.16,
+            0
+          ],
+          [
+            8.58,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            920
+          ],
+          [
+            8.16,
+            920
+          ],
+          [
+            8.58,
+            520,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            530
+          ],
+          [
+            8.16,
+            530
+          ],
+          [
+            8.58,
+            480,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n037",
+      "kind": "text",
+      "x": 540,
+      "y": 170,
+      "w": 1000,
+      "h": 102.4,
+      "text": "{{text02}}",
+      "size": 64,
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            8.4,
+            0
+          ],
+          [
+            8.82,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            540
+          ],
+          [
+            8.4,
+            540
+          ],
+          [
+            8.82,
+            540,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            220
+          ],
+          [
+            8.4,
+            220
+          ],
+          [
+            8.82,
+            170,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n038",
+      "kind": "circle",
+      "x": 580,
+      "y": 720,
+      "w": 9,
+      "h": 9,
+      "fill": "#D6C2FF",
+      "visible": [
+        8.76,
+        12.001
+      ],
+      "tracks": {
+        "y": [
+          [
+            8.76,
+            770
+          ],
+          [
+            10.32,
+            715
+          ],
+          [
+            11.28,
+            715
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n039",
+      "kind": "circle",
+      "x": 609,
+      "y": 720,
+      "w": 9,
+      "h": 9,
+      "fill": "#D6C2FF",
+      "visible": [
+        8.76,
+        12.001
+      ],
+      "tracks": {
+        "y": [
+          [
+            8.76,
+            770
+          ],
+          [
+            10.32,
+            715
+          ],
+          [
+            11.28,
+            715
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n040",
+      "kind": "circle",
+      "x": 638,
+      "y": 720,
+      "w": 9,
+      "h": 9,
+      "fill": "#D6C2FF",
+      "visible": [
+        8.76,
+        12.001
+      ],
+      "tracks": {
+        "y": [
+          [
+            8.76,
+            770
+          ],
+          [
+            10.32,
+            715
+          ],
+          [
+            11.28,
+            715
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n041",
+      "kind": "circle",
+      "x": 667,
+      "y": 720,
+      "w": 9,
+      "h": 9,
+      "fill": "#D6C2FF",
+      "visible": [
+        8.76,
+        12.001
+      ],
+      "tracks": {
+        "y": [
+          [
+            8.76,
+            770
+          ],
+          [
+            10.32,
+            715
+          ],
+          [
+            11.28,
+            715
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n042",
+      "kind": "circle",
+      "x": 696,
+      "y": 720,
+      "w": 9,
+      "h": 9,
+      "fill": "#D6C2FF",
+      "visible": [
+        8.76,
+        12.001
+      ],
+      "tracks": {
+        "y": [
+          [
+            8.76,
+            770
+          ],
+          [
+            10.32,
+            715
+          ],
+          [
+            11.28,
+            715
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n043",
+      "kind": "circle",
+      "x": 725,
+      "y": 720,
+      "w": 9,
+      "h": 9,
+      "fill": "#D6C2FF",
+      "visible": [
+        8.76,
+        12.001
+      ],
+      "tracks": {
+        "y": [
+          [
+            8.76,
+            770
+          ],
+          [
+            10.32,
+            715
+          ],
+          [
+            11.28,
+            715
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n044",
+      "kind": "circle",
+      "x": 754,
+      "y": 720,
+      "w": 9,
+      "h": 9,
+      "fill": "#D6C2FF",
+      "visible": [
+        8.76,
+        12.001
+      ],
+      "tracks": {
+        "y": [
+          [
+            8.76,
+            770
+          ],
+          [
+            10.32,
+            715
+          ],
+          [
+            11.28,
+            715
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n045",
+      "kind": "circle",
+      "x": 783,
+      "y": 720,
+      "w": 9,
+      "h": 9,
+      "fill": "#D6C2FF",
+      "visible": [
+        8.76,
+        12.001
+      ],
+      "tracks": {
+        "y": [
+          [
+            8.76,
+            770
+          ],
+          [
+            10.32,
+            715
+          ],
+          [
+            11.28,
+            715
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n046",
+      "kind": "circle",
+      "x": 812,
+      "y": 720,
+      "w": 9,
+      "h": 9,
+      "fill": "#D6C2FF",
+      "visible": [
+        8.76,
+        12.001
+      ],
+      "tracks": {
+        "y": [
+          [
+            8.76,
+            770
+          ],
+          [
+            10.32,
+            715
+          ],
+          [
+            11.28,
+            715
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n047",
+      "kind": "circle",
+      "x": 841,
+      "y": 720,
+      "w": 9,
+      "h": 9,
+      "fill": "#D6C2FF",
+      "visible": [
+        8.76,
+        12.001
+      ],
+      "tracks": {
+        "y": [
+          [
+            8.76,
+            770
+          ],
+          [
+            10.32,
+            715
+          ],
+          [
+            11.28,
+            715
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n048",
+      "kind": "circle",
+      "x": 870,
+      "y": 720,
+      "w": 9,
+      "h": 9,
+      "fill": "#D6C2FF",
+      "visible": [
+        8.76,
+        12.001
+      ],
+      "tracks": {
+        "y": [
+          [
+            8.76,
+            770
+          ],
+          [
+            10.32,
+            715
+          ],
+          [
+            11.28,
+            715
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n049",
+      "kind": "circle",
+      "x": 899,
+      "y": 720,
+      "w": 9,
+      "h": 9,
+      "fill": "#D6C2FF",
+      "visible": [
+        8.76,
+        12.001
+      ],
+      "tracks": {
+        "y": [
+          [
+            8.76,
+            770
+          ],
+          [
+            10.32,
+            715
+          ],
+          [
+            11.28,
+            715
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n050",
+      "kind": "circle",
+      "x": 928,
+      "y": 720,
+      "w": 9,
+      "h": 9,
+      "fill": "#D6C2FF",
+      "visible": [
+        8.76,
+        12.001
+      ],
+      "tracks": {
+        "y": [
+          [
+            8.76,
+            770
+          ],
+          [
+            10.32,
+            715
+          ],
+          [
+            11.28,
+            715
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n051",
+      "kind": "circle",
+      "x": 957,
+      "y": 720,
+      "w": 9,
+      "h": 9,
+      "fill": "#D6C2FF",
+      "visible": [
+        8.76,
+        12.001
+      ],
+      "tracks": {
+        "y": [
+          [
+            8.76,
+            770
+          ],
+          [
+            10.32,
+            715
+          ],
+          [
+            11.28,
+            715
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/e4d385ea56ac7bef9a02db1077e927c1a1b52534af95a5daaf86680e5b8d2ce3.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "Then I just press the car down toward the ground with force.",
+          "label": "Product Selling Points",
+          "visual": "A black 2D stylized profile silhouette of a sports car is centered against a clean white background. A large black arrow points downward toward the car's roof, suggesting downward force. Small white dots represent air particles underneath the chassis. The lighting is flat, graphic, and artificial. The color palette is strictly monochrome (black, white, and gray).",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "It has fans installed at the bottom of the car to suck the air from under the chassis outward.",
+          "label": "Product Information",
+          "visual": "A black-and-white grainy technical video shows a large industrial fan mounted horizontally within a metal frame. The fan blades are spinning rapidly. The lighting is harsh and high-contrast, characteristic of archival or engineering footage. The shot is static and framed tightly on the mechanical component.",
+          "shot_type": "Close-Up",
+          "scene_number": 2,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The air pressure under the car becomes low.",
+          "label": "Product Selling Points",
+          "visual": "Return to the 2D car silhouette on a white background. The air particles (white dots) underneath the car are now sparser than in the first scene, indicating lower density. The car remains static in the center of the frame.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        },
+        {
+          "audio": "The atmospheric pressure from outside will press the entire car firmly onto the ground.",
+          "label": "Product Selling Points",
+          "visual": "The same 2D car silhouette illustration. A dense field of white dots appears above the car, and multiple black downward-pointing arrows appear across the length of the vehicle. The arrows animate to show the atmospheric pressure pushing the car down against the flat gray ground line.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:08",
+          "timestamp_start": "0:05"
+        },
+        {
+          "audio": "You can imagine a vacuum cleaner.",
+          "label": "Usage Scenarios",
+          "visual": "The 2D car silhouette slides out of frame to the right, and a 2D graphic of a vacuum cleaner head with a handle enters the frame. The vacuum head is positioned flat against a horizontal gray line representing a floor or carpet.",
+          "shot_type": "Wide Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:09",
+          "timestamp_start": "0:08"
+        },
+        {
+          "audio": "When the suction nozzle is stuck to the carpet...",
+          "label": "Usage Scenarios",
+          "visual": "Static 2D graphic of the dark gray vacuum cleaner head. It is pressed flat against the carpet surface. Small white dots are clustered around the suction area to illustrate the air being drawn in. The background remains stark white with no shadows.",
+          "shot_type": "Medium Shot",
+          "scene_number": 6,
+          "timestamp_end": "0:11",
+          "timestamp_start": "0:09"
+        },
+        {
+          "audio": "...isn't it very difficult for you to lift it up?",
+          "label": "Usage Scenarios",
+          "visual": "The 2D vacuum cleaner graphic remains in the same position. The handle is angled upward to the right. The image is static, emphasizing the 'stuck' nature of the object against the surface.",
+          "shot_type": "Medium Shot",
+          "scene_number": 7,
+          "timestamp_end": "0:12",
+          "timestamp_start": "0:11"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "画布上一排 MiSans Heavy 大字流程 A → B → C 逐个加入、每步整排居中，可带勾/叉；配播放窗示意"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification.",
+    "original_catalog_title": "一排大字流程 A → B → C 逐个加入、整排居中",
+    "conflict": "Catalog attached a type-flow title to this preview. Verified complete preview and media SHA256 show pressure physics; authored car/fan/atmospheric-pressure/vacuum sequence follows the video."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 12.0,
+      "action": "画布上一排 MiSans Heavy 大字流程 A → B → C 逐个加入、每步整排居中，可带勾/叉；配播放窗示意"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "风扇的真实演示",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          12,
+          12,
+          "linear"
+        ]
+      ]
+    }
+  ],
+  "semantic_use": "解释压差、气流、下压力与吸附：车底气流减少→风扇实拍→大气压力箭头→吸尘器贴地类比"
+}

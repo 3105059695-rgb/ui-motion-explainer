@@ -1,0 +1,173 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t15f",
+  "title": "占比环",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "shares": [
+      87,
+      8,
+      5
+    ],
+    "labels": [
+      "主要部分",
+      "次要部分",
+      "其余部分"
+    ],
+    "source": "示意比例 · 以本期真实数据替换"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/9081c2ebab360753bfb088c2733f5a6e53dd21806d0613d0d3582cbd79b86ede.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A rhythmic, fast-paced electronic pulse with a subtle synth hum. No spoken dialogue.",
+          "label": "Opening Hook",
+          "visual": "A white donut chart sits in the center of a plain white background. A dark gray segment begins to grow clockwise from the 12 o'clock position. The lighting is uniform and bright across the entire frame. The overall color palette is minimalist, featuring shades of white and light gray.",
+          "shot_type": "Medium Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The electronic pulse continues with an added high-frequency 'ping' sound as the final segments snap into place.",
+          "label": "Product Information",
+          "visual": "The dark gray segment completes its rotation to fill 87% of the donut chart. Two smaller segments in medium gray and light gray appear to complete the remaining 13%. Three data points appear to the right of the chart, each marked with a small colored dot corresponding to the chart segments. The camera remains static and centered.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A rapid clicking sound resembling a spinning wheel or a digital counter increases in pitch and speed, concluding with a satisfying 'ding' when 87% is reached.",
+          "label": "Product Selling Points",
+          "visual": "The 87% segment of the chart shifts color from dark gray to a vibrant purple. The number inside the chart rapidly counts up from 67% to 87%. The first data point on the right also changes its indicator dot to purple. The lighting remains flat and professional, and the transition is smooth with no camera movement.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 2.5,
+      "action": "Segments sweep to supplied shares from one circular baseline"
+    },
+    {
+      "start": 1.5,
+      "end": 3.25,
+      "action": "Legend entries align to segment identities"
+    },
+    {
+      "start": 2.75,
+      "end": 4.0,
+      "action": "Dominant segment and center value are emphasized"
+    },
+    {
+      "start": 4.0,
+      "end": 5,
+      "action": "Distribution holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-b2-donut",
+      "kind": "b2-donut",
+      "x": 230,
+      "y": 190,
+      "w": 750,
+      "h": 750,
+      "valuesKey": "shares",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            2.5,
+            1
+          ]
+        ],
+        "highlight": [
+          [
+            0,
+            false
+          ],
+          [
+            2.75,
+            false
+          ],
+          [
+            3.5,
+            true,
+            "step"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "derived-share-legend",
+      "kind": "b2-share-legend",
+      "x": 1140,
+      "y": 305,
+      "w": 650,
+      "h": 520,
+      "valuesKey": "shares",
+      "labelsKey": "labels",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            1.3,
+            0
+          ],
+          [
+            3.4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-text",
+      "kind": "text",
+      "x": 350,
+      "y": 990,
+      "w": 1220,
+      "h": 50,
+      "text": "{{source}}",
+      "size": 27,
+      "color": "#777780",
+      "align": "center"
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t20p",
+  "title": "方块翻出：黑色方阵逐块翻成一张画面",
+  "duration": 4,
+  "background": "#FFFFFF",
+  "inputs": {},
+  "assets": {
+    "art": "assets/approved-girl-sample/assets/handoff.png"
+  },
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/188c237101eba2260d2374a8e75f1bb99d1d5842c2abdae747f04d99ce298d80.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single, sharp, synthesized 'click' sound effects occurs as the image transitions.",
+          "label": "Opening Hook",
+          "visual": "A grid of 40 black squares with rounded corners is arranged on a plain white background. The grid is 8 columns wide by 5 rows deep. The lighting is flat and artificial with no shadows. The camera is static and centered.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A quick, airy 'whoosh' sound effect accompanies the reveal, followed by a light, upbeat instrumental track featuring synthesized pluck sounds and a steady electronic beat at approximately 120 BPM.",
+          "label": "Product Information",
+          "visual": "The black squares instantly reveal a composite digital illustration of a mythical phoenix. The large central image shows the bird with white and gold feathers, a long flowing tail, and spread wings. To the right, smaller detail shots show the phoenix's profile and feather textures. The background is a light gray. The color palette is dominated by warm oranges, bright golds, and crisp whites. The camera remains static.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:01"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 0.8,
+      "action": "A forty-cell black grid establishes the composition"
+    },
+    {
+      "start": 0.8,
+      "end": 3.0,
+      "action": "Cells individually turn to corresponding parts of the same full image"
+    },
+    {
+      "start": 3.0,
+      "end": 4,
+      "action": "Reassembled image holds without tile seams"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-b2-tile-media",
+      "kind": "b2-tile-media",
+      "x": 180,
+      "y": 100,
+      "w": 1560,
+      "h": 880,
+      "asset": "art",
+      "cols": 8,
+      "rows": 5,
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            0.8,
+            0
+          ],
+          [
+            3.0,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

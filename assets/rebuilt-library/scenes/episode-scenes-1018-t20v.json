@@ -1,0 +1,992 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t20v",
+  "title": "周报快闪开场：实拍快切 + 大字黑胶囊换字 + 三张结果卡",
+  "duration": 17.5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "本周 AI",
+    "text02": "会运动",
+    "text03": "能操作",
+    "text04": "更会协作",
+    "text05": "这一周，变化真的发生了",
+    "media1.start": 0,
+    "media1.speed": 1,
+    "media2.start": 0,
+    "media2.speed": 1,
+    "media3.start": 0,
+    "media3.speed": 1,
+    "media4.start": 0,
+    "media4.speed": 1,
+    "media5.start": 0,
+    "media5.speed": 1,
+    "media6.start": 0,
+    "media6.speed": 1,
+    "media7.start": 0,
+    "media7.speed": 1,
+    "media8.start": 0,
+    "media8.speed": 1,
+    "media9.start": 0,
+    "media9.speed": 1,
+    "media10.start": 0,
+    "media10.speed": 1,
+    "media11.start": 0,
+    "media11.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media2": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media3": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media4": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media5": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media6": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media7": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media8": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media9": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media10": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media11": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "image",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        0.9625
+      ],
+      "tracks": {
+        "scale": [
+          [
+            0.0,
+            1
+          ],
+          [
+            0.9625,
+            1.05
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "image",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "asset": "media2",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.9625,
+        1.925
+      ],
+      "tracks": {
+        "scale": [
+          [
+            0.9625,
+            1
+          ],
+          [
+            1.925,
+            1.05
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "image",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "asset": "media3",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        1.925,
+        2.8875
+      ],
+      "tracks": {
+        "scale": [
+          [
+            1.925,
+            1
+          ],
+          [
+            2.8875,
+            1.05
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "image",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "asset": "media4",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        2.8875,
+        3.85
+      ],
+      "tracks": {
+        "scale": [
+          [
+            2.8875,
+            1
+          ],
+          [
+            3.85,
+            1.05
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "image",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "asset": "media5",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        3.85,
+        4.8125
+      ],
+      "tracks": {
+        "scale": [
+          [
+            3.85,
+            1
+          ],
+          [
+            4.8125,
+            1.05
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "image",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "asset": "media6",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        4.8125,
+        5.775
+      ],
+      "tracks": {
+        "scale": [
+          [
+            4.8125,
+            1
+          ],
+          [
+            5.775,
+            1.05
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "image",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "asset": "media7",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        5.775,
+        6.7375
+      ],
+      "tracks": {
+        "scale": [
+          [
+            5.775,
+            1
+          ],
+          [
+            6.7375,
+            1.05
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "pill",
+      "x": 80,
+      "y": 75,
+      "w": 340,
+      "h": 80,
+      "label": "{{text01}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "n009",
+      "kind": "pill",
+      "x": 510,
+      "y": 415,
+      "w": 900,
+      "h": 145,
+      "label": "{{text02}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.7,
+            0
+          ],
+          [
+            1.3125,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            510
+          ],
+          [
+            0.7,
+            510
+          ],
+          [
+            1.3125,
+            510,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            165
+          ],
+          [
+            0.7,
+            165
+          ],
+          [
+            1.3125,
+            415,
+            "out"
+          ]
+        ]
+      },
+      "visible": [
+        0.7,
+        2.3625
+      ]
+    },
+    {
+      "id": "n010",
+      "kind": "pill",
+      "x": 510,
+      "y": 415,
+      "w": 900,
+      "h": 145,
+      "label": "{{text03}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            2.45,
+            0
+          ],
+          [
+            3.0625,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            510
+          ],
+          [
+            2.45,
+            510
+          ],
+          [
+            3.0625,
+            510,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            165
+          ],
+          [
+            2.45,
+            165
+          ],
+          [
+            3.0625,
+            415,
+            "out"
+          ]
+        ]
+      },
+      "visible": [
+        2.45,
+        4.1125
+      ]
+    },
+    {
+      "id": "n011",
+      "kind": "pill",
+      "x": 510,
+      "y": 415,
+      "w": 900,
+      "h": 145,
+      "label": "{{text04}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.2,
+            0
+          ],
+          [
+            4.8125,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            510
+          ],
+          [
+            4.2,
+            510
+          ],
+          [
+            4.8125,
+            510,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            165
+          ],
+          [
+            4.2,
+            165
+          ],
+          [
+            4.8125,
+            415,
+            "out"
+          ]
+        ]
+      },
+      "visible": [
+        4.2,
+        5.8625
+      ]
+    },
+    {
+      "id": "n012",
+      "kind": "image",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "asset": "media8",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        6.7375,
+        13.3
+      ]
+    },
+    {
+      "id": "n013",
+      "kind": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "fill": "#0B0B0F",
+      "opacity": 0.5,
+      "visible": [
+        6.825,
+        8.575
+      ]
+    },
+    {
+      "id": "n014",
+      "kind": "text",
+      "x": 260,
+      "y": 430,
+      "w": 1400,
+      "h": 131.20000000000002,
+      "text": "{{text05}}",
+      "size": 82,
+      "color": "#FFFFFF",
+      "align": "center",
+      "visible": [
+        6.825,
+        8.575
+      ]
+    },
+    {
+      "id": "n015",
+      "kind": "image",
+      "x": 160,
+      "y": 300,
+      "w": 500,
+      "h": 460,
+      "asset": "media9",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        13.3,
+        17.501
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            13.3,
+            0
+          ],
+          [
+            13.9125,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            160
+          ],
+          [
+            13.3,
+            160
+          ],
+          [
+            13.9125,
+            160,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            500
+          ],
+          [
+            13.3,
+            500
+          ],
+          [
+            13.9125,
+            300,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n016",
+      "kind": "image",
+      "x": 710,
+      "y": 300,
+      "w": 500,
+      "h": 460,
+      "asset": "media10",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        13.3,
+        17.501
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            13.9125,
+            0
+          ],
+          [
+            14.525,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            710
+          ],
+          [
+            13.9125,
+            710
+          ],
+          [
+            14.525,
+            710,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            500
+          ],
+          [
+            13.9125,
+            500
+          ],
+          [
+            14.525,
+            300,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n017",
+      "kind": "image",
+      "x": 1260,
+      "y": 300,
+      "w": 500,
+      "h": 460,
+      "asset": "media11",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        13.3,
+        17.501
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            14.525,
+            0
+          ],
+          [
+            15.1375,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1260
+          ],
+          [
+            14.525,
+            1260
+          ],
+          [
+            15.1375,
+            1260,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            500
+          ],
+          [
+            14.525,
+            500
+          ],
+          [
+            15.1375,
+            300,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/2427cabd4d378cc5ca04c8d7f392f29f9409dbfed4079e6b5a6944a725af76a3.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "A few minutes to take you through this week's major AI events.",
+          "label": "Opening Hook",
+          "visual": "A bipedal humanoid robot with a white torso and black legs stands in a cluttered office/lab environment. The robot performs a dynamic twisting motion, mimicking a dance or athletic movement. The lighting is cool-toned fluorescent, and the background includes computer desks, chairs, and scattered cardboard boxes on a beige carpet.",
+          "shot_type": "Medium Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A few minutes to take you through this week's major AI events.",
+          "label": "Product Information",
+          "visual": "A white bipedal robot with a blue glowing visor is shown from a side-view angle in a lab. It is standing next to a cornhole game board on the floor. The robot is holding a small blue beanbag in its mechanical gripper hand. The lighting is bright and industrial.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A few minutes to take you through this week's major AI events.",
+          "label": "Product Selling Points",
+          "visual": "A 3D rendered scene of a dark purple sports car with bright yellow rims. The car is drifting through a stylized blue and yellow environment. Blue flames are visible from the exhaust. The camera follows the car in a low-angle tracking shot. The lighting is vibrant and high-contrast.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "The biggest feeling I have this week is just one sentence:",
+          "label": "Problem Solving",
+          "visual": "A yellow and black quadruped robot dog is positioned on a grey carpet. Its mechanical leg moves downward to carefully touch a crushed aluminum soda can on the floor. The setting is an indoor office or home. The lighting is natural and soft.",
+          "shot_type": "Close-Up",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "The biggest feeling I have this week is just one sentence:",
+          "label": "Usage Scenarios",
+          "visual": "A high-angle view looking down at a white table. Two mechanical robotic arms are active; the left arm is folding a dark blue t-shirt while the right arm moves toward a pile of laundry including red, white, and striped clothing items. The background shows a wooden floor and a sunlit window.",
+          "shot_type": "POV Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        },
+        {
+          "audio": "AI is starting to do it itself.",
+          "label": "Usage Scenarios",
+          "visual": "The scene is heavily blurred with a dark vignette. A robotic arm is partially visible in the center, appearing to manipulate small metallic objects on a dark surface. The color palette is dark grey and muted.",
+          "shot_type": "Medium Close-Up",
+          "scene_number": 6,
+          "timestamp_end": "0:06",
+          "timestamp_start": "0:05"
+        },
+        {
+          "audio": "AI is starting to do it itself.",
+          "label": "Usage Scenarios",
+          "visual": "A blurred, fish-eye perspective shot from what appears to be a camera mounted on a robot. Internal components and a glimpse of a room are visible through a circular aperture. The movement is slightly shaky.",
+          "shot_type": "Close-Up",
+          "scene_number": 7,
+          "timestamp_end": "0:07",
+          "timestamp_start": "0:06"
+        },
+        {
+          "audio": "Can you believe a robot can catch a flying box?",
+          "label": "Real Experience",
+          "visual": "The humanoid robot from Scene 1 is in the same office environment. A cardboard box is thrown at it from off-screen. The robot catches the box with both hands and maintains its balance. The camera is static.",
+          "shot_type": "Medium Shot",
+          "scene_number": 8,
+          "timestamp_end": "0:08",
+          "timestamp_start": "0:07"
+        },
+        {
+          "audio": "Can you believe a robot can catch a flying box?",
+          "label": "Real Experience",
+          "visual": "A split-screen view showing the same robot catching three different sized boxes: a small box, a regular box, and a large box. The robot adjusts its posture dynamically to absorb the impact in each panel.",
+          "shot_type": "Wide Shot",
+          "scene_number": 9,
+          "timestamp_end": "0:09",
+          "timestamp_start": "0:08"
+        },
+        {
+          "audio": "Can you believe a robot can catch a flying box?",
+          "label": "Real Experience",
+          "visual": "Return to the single-frame view of the robot catching a medium-sized box in the office lab. The robot holds the box securely against its chest. Background items include computer monitors and yellow industrial equipment.",
+          "shot_type": "Medium Shot",
+          "scene_number": 10,
+          "timestamp_end": "0:10",
+          "timestamp_start": "0:09"
+        },
+        {
+          "audio": "The robotic arm can screw nuts by itself.",
+          "label": "Product Selling Points",
+          "visual": "A mechanical gripper with two black fingers is shown in a tight shot. It is precisely holding a white plastic gear and placing it onto a blue surface. The movements are slow and deliberate.",
+          "shot_type": "Extreme Close-Up",
+          "scene_number": 11,
+          "timestamp_end": "0:11",
+          "timestamp_start": "0:10"
+        },
+        {
+          "audio": "There is also a member of parliament who cannot speak...",
+          "label": "Real Experience",
+          "visual": "A middle-aged man with short grey hair and a blue suit is sitting in a formal legislative chamber with red leather seats. He is leaning toward an older woman with blonde hair who is wearing a blue cardigan and has a medical breathing apparatus over her nose and mouth. The man is looking down, appearing to listen or assist.",
+          "shot_type": "Medium Shot",
+          "scene_number": 12,
+          "timestamp_end": "0:13",
+          "timestamp_start": "0:11"
+        },
+        {
+          "audio": "...who used AI to regain her voice and speak in Parliament.",
+          "label": "Real Experience",
+          "visual": "The same setting as Scene 12. The woman in the blue cardigan remains seated while the man in the suit looks at her. She appears to be participating in a session. The lighting is bright and even, typical of a televised government proceeding.",
+          "shot_type": "Medium Shot",
+          "scene_number": 13,
+          "timestamp_end": "0:15",
+          "timestamp_start": "0:13"
+        },
+        {
+          "audio": "All of this happened this week.",
+          "label": "Call to Action",
+          "visual": "A white graphic screen with three circular inset videos: the robot catching the box, the robotic gripper with the gear, and the scene from Parliament. A date range is displayed at the top. The background is clean and minimalist.",
+          "shot_type": "Wide Shot",
+          "scene_number": 14,
+          "timestamp_end": "0:17",
+          "timestamp_start": "0:15"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "0 帧就是全屏实拍，0.5–0.9 秒一切本周高光素材；左上节目台标；中央大字黑胶囊砸下并换字；中段黑毛玻璃一句话；结尾三张结果卡一排"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 17.5,
+      "action": "0 帧就是全屏实拍，0.5–0.9 秒一切本周高光素材；左上节目台标；中央大字黑胶囊砸下并换字；中段黑毛玻璃一句话；结尾三张结果卡一排"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "本周高光 1",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          17.5,
+          17.5,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media2",
+      "label": "本周高光 2",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          17.5,
+          17.5,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media3",
+      "label": "本周高光 3",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          17.5,
+          17.5,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media4",
+      "label": "本周高光 4",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          17.5,
+          17.5,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media5",
+      "label": "本周高光 5",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          17.5,
+          17.5,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media6",
+      "label": "本周高光 6",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          17.5,
+          17.5,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media7",
+      "label": "本周高光 7",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          17.5,
+          17.5,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media8",
+      "label": "重点变化",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          17.5,
+          17.5,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media9",
+      "label": "结果 1",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          17.5,
+          17.5,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media10",
+      "label": "结果 2",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          17.5,
+          17.5,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media11",
+      "label": "结果 3",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          17.5,
+          17.5,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "case": 159,
+  "reference": "https://prompt-motion.com/justincooperman-e7bbc4",
+  "source_visual_duration": 29.966667,
+  "source_container_duration": 30.058,
+  "analysis": {
+    "samples": 120,
+    "interval": 0.25,
+    "contact_sheets_actually_viewed": 5,
+    "enlarged_frames_actually_viewed": 14
+  },
+  "implementation": "dedicated native Canvas + attributed isolated product-image ROI; deterministic mask/camera/pointer; cached shadows",
+  "phases": [
+    {
+      "start": 0,
+      "end": 1.6,
+      "phase": "opening-question",
+      "objects_and_action": "暖米色背景、on-brand绿色重点、两行问题"
+    },
+    {
+      "start": 1.6,
+      "end": 3.23,
+      "phase": "chat-email-enter",
+      "objects_and_action": "左聊天/右邮件卡进入、品牌与无图邮件"
+    },
+    {
+      "start": 3.23,
+      "end": 7.05,
+      "phase": "type-image-request",
+      "objects_and_action": "镜头靠近输入区，完整图片请求逐字输入与光标"
+    },
+    {
+      "start": 7.05,
+      "end": 8.84,
+      "phase": "send-request",
+      "objects_and_action": "鼠标接近发送按钮、按下、请求成为聊天气泡"
+    },
+    {
+      "start": 8.84,
+      "end": 10.13,
+      "phase": "agent-working",
+      "objects_and_action": "代理创建回复、Working on it、空暖色图片"
+    },
+    {
+      "start": 10.13,
+      "end": 12.05,
+      "phase": "focus-generation",
+      "objects_and_action": "镜头继续靠近左侧生成图片"
+    },
+    {
+      "start": 12.05,
+      "end": 14.18,
+      "phase": "image-mask-reveal",
+      "objects_and_action": "112个确定性有机形状clip逐渐显示独立咖啡图片ROI"
+    },
+    {
+      "start": 14.18,
+      "end": 17.76,
+      "phase": "brand-in-scene",
+      "objects_and_action": "完成回复及图片，品牌已在咖啡包装里"
+    },
+    {
+      "start": 17.76,
+      "end": 19.32,
+      "phase": "photo-transfer",
+      "objects_and_action": "左侧图片保持，浮动同一图片复制从聊天移到邮件顶端，正文下移"
+    },
+    {
+      "start": 19.32,
+      "end": 20.34,
+      "phase": "sparkle-confirm",
+      "objects_and_action": "四角星闪光，镜头靠近已加入的邮件图片"
+    },
+    {
+      "start": 20.34,
+      "end": 25.5,
+      "phase": "email-camera-rail",
+      "objects_and_action": "Added automatically字幕，镜头沿邮件图片/标题/正文向下移动"
+    },
+    {
+      "start": 25.5,
+      "end": 26.7,
+      "phase": "overview-caption",
+      "objects_and_action": "镜头返回两栏，Your brand. In any image. Just ask."
+    },
+    {
+      "start": 26.7,
+      "end": 30,
+      "phase": "brand-cta",
+      "objects_and_action": "品牌符号与tented字标、Agentic marketing与试用网址"
+    }
+  ]
+}

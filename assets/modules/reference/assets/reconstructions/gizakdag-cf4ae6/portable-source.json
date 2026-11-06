@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "slug": "gizakdag-cf4ae6",
+  "source_project": "assets/reconstructions/gizakdag-cf4ae6",
+  "project": "assets/reconstructions/gizakdag-cf4ae6",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "assets/bust.png",
+    "assets/cloud.png",
+    "assets/flower.png",
+    "assets/palace.png",
+    "assets/sofa.png",
+    "index.html",
+    "motion-core.js",
+    "motion.js",
+    "project.json",
+    "shot-plan.json",
+    "style.css",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "../../reference-shared/fonts/a4ba3a92350ebb031da0.ttf"
+  ],
+  "replaceable_assets": [
+    {
+      "path": "assets/bust.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "bad9da84e8a824fc41d2fa8442f2d45bd65f25a5403045726aa796ef0b9f06c6"
+    },
+    {
+      "path": "assets/cloud.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "c1d21164dcb8f39512eb71b8b5a617e400659034010ccad9ecac18b5d29d255d"
+    },
+    {
+      "path": "assets/flower.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "400e96ba70b27914378d7183743d24b0d401c6c7aa2b035ffe928e3b21a8cfdc"
+    },
+    {
+      "path": "assets/palace.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "7bf03034360cf765bfdf7e96abc0e80f6804943f5de56ab9accc89b9975ffa02"
+    },
+    {
+      "path": "assets/sofa.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "3577209cd0a638e6fe32870fa536c93ab4d88ca7bbb74bc3580b262075ca69a0"
+    }
+  ],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "assets/bust.png": "assets/bust.png",
+    "assets/cloud.png": "assets/cloud.png",
+    "assets/flower.png": "assets/flower.png",
+    "assets/fonts/Anton.ttf": "../../reference-shared/fonts/a4ba3a92350ebb031da0.ttf",
+    "assets/fonts/Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "assets/palace.png": "assets/palace.png",
+    "assets/sofa.png": "assets/sofa.png",
+    "index.html": "index.html",
+    "motion-core.js": "motion-core.js",
+    "motion.js": "motion.js",
+    "project.json": "project.json",
+    "shot-plan.json": "shot-plan.json",
+    "style.css": "style.css",
+    "bust.png": "assets/bust.png",
+    "cloud.png": "assets/cloud.png",
+    "flower.png": "assets/flower.png",
+    "Anton.ttf": "../../reference-shared/fonts/a4ba3a92350ebb031da0.ttf",
+    "Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "palace.png": "assets/palace.png",
+    "sofa.png": "assets/sofa.png"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

@@ -1,0 +1,369 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t09m",
+  "title": "快捷键",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "key0": "⌘",
+    "plus0": "+",
+    "key1": "⇧",
+    "plus1": "+",
+    "key2": "5",
+    "result": "打开录制工具"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/8e16d083be99e1b722590369945173f7bb6ad1ad37d4b83776888ff8f6108bb3.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single, digital 'click' sound effect coincides with the visual appearance of the keys. No music or dialogue.",
+          "label": "Opening Hook",
+          "visual": "A clean, minimalist white background. In the center, three keyboard key icons (Command, Shift, and 5) are displayed horizontally with plus signs between them. The keys are white with black symbols and labels. The lighting is flat and even with soft, subtle drop shadows beneath the keys. No camera movement.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A series of three rapid, sharp digital 'pop' sound effects play in quick succession as the keys change color and the new button appears.",
+          "label": "Product Information",
+          "visual": "The same white background and keyboard icons as scene 1. The colors of the Command, Shift, and 5 keys invert from white to solid black with white symbols/labels. A black rounded rectangular button with white text and a white icon appears to the right of the keyboard keys. The lighting remains consistent.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 0.6000000000000001,
+      "action": "Keys appear as physical controls"
+    },
+    {
+      "start": 0.6000000000000001,
+      "end": 1.7999999999999998,
+      "action": "Each key depresses and inverts in sequence"
+    },
+    {
+      "start": 1.7999999999999998,
+      "end": 3,
+      "action": "Result of the combination appears at the right"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n002-card",
+      "kind": "card",
+      "x": 270,
+      "y": 400,
+      "w": 240,
+      "h": 220,
+      "children": [
+        {
+          "id": "n001-text",
+          "kind": "text",
+          "x": 15,
+          "y": 40,
+          "w": 210,
+          "h": 130,
+          "text": "{{key0}}",
+          "size": 100,
+          "color": "#0B0B0F",
+          "align": "center",
+          "tracks": {
+            "color": [
+              [
+                0,
+                "#0B0B0F"
+              ],
+              [
+                0.72,
+                "#0B0B0F"
+              ],
+              [
+                0.84,
+                "#FFFFFF",
+                "step"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "fill": [
+          [
+            0,
+            "#FFFFFF"
+          ],
+          [
+            0.72,
+            "#FFFFFF"
+          ],
+          [
+            0.84,
+            "#0B0B0F",
+            "step"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            400
+          ],
+          [
+            0.72,
+            400
+          ],
+          [
+            0.84,
+            412
+          ],
+          [
+            1.08,
+            400
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 545,
+      "y": 470,
+      "w": 60,
+      "h": 70,
+      "text": "{{plus0}}",
+      "size": 54,
+      "color": "#777780",
+      "align": "center"
+    },
+    {
+      "id": "n005-card",
+      "kind": "card",
+      "x": 620,
+      "y": 400,
+      "w": 240,
+      "h": 220,
+      "children": [
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 15,
+          "y": 40,
+          "w": 210,
+          "h": 130,
+          "text": "{{key1}}",
+          "size": 100,
+          "color": "#0B0B0F",
+          "align": "center",
+          "tracks": {
+            "color": [
+              [
+                0,
+                "#0B0B0F"
+              ],
+              [
+                1.02,
+                "#0B0B0F"
+              ],
+              [
+                1.14,
+                "#FFFFFF",
+                "step"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "fill": [
+          [
+            0,
+            "#FFFFFF"
+          ],
+          [
+            1.02,
+            "#FFFFFF"
+          ],
+          [
+            1.14,
+            "#0B0B0F",
+            "step"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            400
+          ],
+          [
+            1.02,
+            400
+          ],
+          [
+            1.14,
+            412
+          ],
+          [
+            1.38,
+            400
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-text",
+      "kind": "text",
+      "x": 895,
+      "y": 470,
+      "w": 60,
+      "h": 70,
+      "text": "{{plus1}}",
+      "size": 54,
+      "color": "#777780",
+      "align": "center"
+    },
+    {
+      "id": "n008-card",
+      "kind": "card",
+      "x": 970,
+      "y": 400,
+      "w": 240,
+      "h": 220,
+      "children": [
+        {
+          "id": "n007-text",
+          "kind": "text",
+          "x": 15,
+          "y": 40,
+          "w": 210,
+          "h": 130,
+          "text": "{{key2}}",
+          "size": 100,
+          "color": "#0B0B0F",
+          "align": "center",
+          "tracks": {
+            "color": [
+              [
+                0,
+                "#0B0B0F"
+              ],
+              [
+                1.32,
+                "#0B0B0F"
+              ],
+              [
+                1.44,
+                "#FFFFFF",
+                "step"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "fill": [
+          [
+            0,
+            "#FFFFFF"
+          ],
+          [
+            1.32,
+            "#FFFFFF"
+          ],
+          [
+            1.44,
+            "#0B0B0F",
+            "step"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            400
+          ],
+          [
+            1.32,
+            400
+          ],
+          [
+            1.44,
+            412
+          ],
+          [
+            1.68,
+            400
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-pill",
+      "kind": "pill",
+      "x": 1360,
+      "y": 440,
+      "w": 440,
+      "h": 140,
+      "label": "{{result}}",
+      "size": 43,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.8,
+            0
+          ],
+          [
+            2.16,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.8,
+            475
+          ],
+          [
+            2.16,
+            440,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

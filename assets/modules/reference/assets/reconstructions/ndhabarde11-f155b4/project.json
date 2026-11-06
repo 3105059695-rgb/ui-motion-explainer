@@ -1,0 +1,70 @@
+{
+  "id": "case-104-portrait-showreel",
+  "reference_slug": "ndhabarde11-f155b4",
+  "duration": 15,
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "provenance": "independent-case-specific-reimplementation",
+  "marks": [
+    0,
+    0.25,
+    0.75,
+    1.1,
+    1.6,
+    1.85,
+    2.25,
+    2.75,
+    3.1,
+    3.4,
+    3.75,
+    4.25,
+    5.25,
+    5.75,
+    6.25,
+    7.5,
+    8.5,
+    9.1,
+    9.75,
+    10.75,
+    12.75,
+    13.25,
+    14.25,
+    14.75
+  ],
+  "cuts": [
+    0,
+    1.5,
+    2,
+    2.5,
+    3,
+    3.25,
+    3.5,
+    4,
+    6,
+    8,
+    9.5,
+    10,
+    11.75,
+    13.5,
+    15
+  ],
+  "brand": "CLAUDE",
+  "particle_count": 6000,
+  "attribution": {
+    "reference": "https://prompt-motion.com/ndhabarde11-f155b4",
+    "creator": "ndhabarde11",
+    "audio": "Original reference audio for comparison, not newly authored"
+  },
+  "limitations": [
+    "All graphics, glyph masks, 60 morphing shapes, 6000 particle objects, point sphere and trefoil, signed-distance shader blobs and UI are independently editable code. No source frame, screenshot texture or video is used in the visual runtime.",
+    "Point trajectories, sphere mesh and trefoil topology, shader reflections/refraction and deformations, fonts, grain/glitch and exact subframe cuts remain reconstructed approximations. The shader uses a real 96-step SDF march but does not recover the original author algorithm.",
+    "HUD preserves the 1080x1920 60fps original reference framing; export is 720x1280 at 30fps."
+  ],
+  "portable_demo": {
+    "source_motion_preserved": true,
+    "reference_media_distributed": false,
+    "textures": "Original replaceable schematic assets; not the original reference artwork.",
+    "approval": "Historical motion implementation; this portable demo is not user-approved."
+  }
+}

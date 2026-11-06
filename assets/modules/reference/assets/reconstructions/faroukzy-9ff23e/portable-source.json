@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "slug": "faroukzy-9ff23e",
+  "source_project": "assets/reconstructions/faroukzy-9ff23e/versions/v5",
+  "project": "assets/reconstructions/faroukzy-9ff23e",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "assets/data/attribution.json",
+    "assets/data/ne_110m_land.geojson",
+    "assets/earth-atlas.png",
+    "composition.js",
+    "engine.js",
+    "index.html",
+    "project.json",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/177ff6c0f14e5550a3c6.ttf",
+    "../../reference-shared/fonts/73894e0448cae90a92b6.ttf"
+  ],
+  "replaceable_assets": [
+    {
+      "path": "assets/earth-atlas.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "e814b3b6d9dfb12273091a155760c5ed92f7e82dcc6abb151a6a55a314c05888"
+    }
+  ],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "../../assets/fonts/Fraunces.ttf": "../../reference-shared/fonts/177ff6c0f14e5550a3c6.ttf",
+    "../../assets/fonts/Sans.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "assets/data/attribution.json": "assets/data/attribution.json",
+    "assets/data/ne_110m_land.geojson": "assets/data/ne_110m_land.geojson",
+    "assets/earth-atlas.png": "assets/earth-atlas.png",
+    "assets/fonts/Fraunces.ttf": "../../reference-shared/fonts/177ff6c0f14e5550a3c6.ttf",
+    "assets/fonts/Sans.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "composition.js": "composition.js",
+    "engine.js": "engine.js",
+    "index.html": "index.html",
+    "project.json": "project.json",
+    "Fraunces.ttf": "../../reference-shared/fonts/177ff6c0f14e5550a3c6.ttf",
+    "Sans.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "attribution.json": "assets/data/attribution.json",
+    "ne_110m_land.geojson": "assets/data/ne_110m_land.geojson",
+    "earth-atlas.png": "assets/earth-atlas.png"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

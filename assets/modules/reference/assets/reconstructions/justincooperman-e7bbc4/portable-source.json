@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "slug": "justincooperman-e7bbc4",
+  "source_project": "assets/reconstructions/justincooperman-e7bbc4",
+  "project": "assets/reconstructions/justincooperman-e7bbc4",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "assets/reference-coffee-hero.jpg",
+    "index.html",
+    "motion.js",
+    "preferred.json",
+    "project.json",
+    "render-720p-v1/verification.json",
+    "scene-plan.json",
+    "style.css",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/29160a80ff49ddcab2c9.ttf",
+    "../../reference-shared/fonts/8a08d13f8a6c0d51be37.ttf"
+  ],
+  "replaceable_assets": [
+    {
+      "path": "assets/reference-coffee-hero.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "4b6c55d60c745746970cadd083a05ecd5f4e239d077ff3c3fa1ba20f35f06374"
+    }
+  ],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "assets/fonts/Inter.ttf": "../../reference-shared/fonts/29160a80ff49ddcab2c9.ttf",
+    "assets/fonts/Newsreader.ttf": "../../reference-shared/fonts/8a08d13f8a6c0d51be37.ttf",
+    "assets/reference-coffee-hero.jpg": "assets/reference-coffee-hero.jpg",
+    "index.html": "index.html",
+    "motion.js": "motion.js",
+    "preferred.json": "preferred.json",
+    "project.json": "project.json",
+    "render-720p-v1/verification.json": "render-720p-v1/verification.json",
+    "scene-plan.json": "scene-plan.json",
+    "style.css": "style.css",
+    "Inter.ttf": "../../reference-shared/fonts/29160a80ff49ddcab2c9.ttf",
+    "Newsreader.ttf": "../../reference-shared/fonts/8a08d13f8a6c0d51be37.ttf",
+    "reference-coffee-hero.jpg": "assets/reference-coffee-hero.jpg",
+    "verification.json": "render-720p-v1/verification.json"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

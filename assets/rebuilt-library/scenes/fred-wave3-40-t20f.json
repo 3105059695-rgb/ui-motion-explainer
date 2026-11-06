@@ -1,0 +1,192 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t20f",
+  "title": "先看结果再倒回来",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "question": "这是\n怎么做的？"
+  },
+  "assets": {
+    "result": "assets/style-film/current-style-full.mp4"
+  },
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/34c2de726a156a143b00528ecb4303e65d0079857a2f51da87c6d58b3458c69e.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "Upbeat, modern electronic background music starts playing at a moderate volume. There is a digital 'ping' sound effect synchronized with the transition.",
+          "label": "Opening Hook",
+          "visual": "A white digital interface with purple and gray accents scrolls horizontally. The screen displays various video thumbnails and grid-like containers. The lighting is even and digital, with a clean, minimalist aesthetic. The motion is a smooth right-to-left glide.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A male voiceover says in Mandarin Chinese: 'Zhè shì zěnme zuò de?' which translates to 'How is this done?' The background music continues with a steady, rhythmic pulse.",
+          "label": "Product Information",
+          "visual": "The screen zooms out to reveal multiple layered interface panels appearing to float in 3D space. One panel features a middle-aged man with a long dark beard and a brown traditional robe, while another shows a cartoon character of a young boy with short black hair and large eyes. The background is a stark, clean white. The camera performs a slight pull-back and tilt movement.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.75,
+      "action": "Supplied moving result fills the screen"
+    },
+    {
+      "start": 1.75,
+      "end": 3.5,
+      "action": "The same playing result scales right while the question appears"
+    },
+    {
+      "start": 3.5,
+      "end": 5,
+      "action": "Result remains present for explanation"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "asset": "result",
+      "fit": "contain",
+      "tracks": {
+        "x": [
+          [
+            0,
+            0
+          ],
+          [
+            1.75,
+            0
+          ],
+          [
+            3.5,
+            1060
+          ]
+        ],
+        "y": [
+          [
+            0,
+            0
+          ],
+          [
+            1.75,
+            0
+          ],
+          [
+            3.5,
+            200
+          ]
+        ],
+        "w": [
+          [
+            0,
+            1920
+          ],
+          [
+            1.75,
+            1920
+          ],
+          [
+            3.5,
+            760
+          ]
+        ],
+        "h": [
+          [
+            0,
+            1080
+          ],
+          [
+            1.75,
+            1080
+          ],
+          [
+            3.5,
+            600
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 140,
+      "y": 290,
+      "w": 820,
+      "h": 370,
+      "text": "{{question}}",
+      "size": 110,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.8,
+            0
+          ],
+          [
+            3.4,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.8,
+            325
+          ],
+          [
+            3.4,
+            290,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "media_tracks": {
+    "result": {
+      "source_in": 14,
+      "start": 0,
+      "rate": 1
+    }
+  },
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

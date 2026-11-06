@@ -1,0 +1,197 @@
+{
+  "template": "custom-datacentre-3d-tour",
+  "index": 114,
+  "reference_slug": "mdaman010-e7226a",
+  "reference_url": "https://prompt-motion.com/mdaman010-e7226a",
+  "provenance": "independent-reimplementation",
+  "duration": 97.962,
+  "width": 1920,
+  "height": 982,
+  "fps": 60,
+  "loop": false,
+  "brand": "Inside an AI data centre",
+  "colors": {
+    "power": "#eaaa32",
+    "data": "#487edb",
+    "heat": "#db7680",
+    "coolant": "#65c9c1"
+  },
+  "chapters": [
+    {
+      "start": 0,
+      "end": 7.3,
+      "id": "site",
+      "title": "Inside an AI data centre",
+      "description": "Follow a single prompt through the building that answers it. Three things move through here: power in, data through, heat out.",
+      "legend": [
+        "Grid feed",
+        "",
+        "Rejected to air",
+        ""
+      ],
+      "color": "#2854ef"
+    },
+    {
+      "start": 7.3,
+      "end": 22.8,
+      "id": "power",
+      "title": "Power arrives first",
+      "description": "Grid power lands at 220 kV. An on-site substation and transformers step it down to 415 V. Batteries and diesel generators make sure it never blinks.",
+      "legend": [
+        "220 kV to 415 V",
+        "",
+        "",
+        ""
+      ],
+      "color": "#eaaa32"
+    },
+    {
+      "start": 22.8,
+      "end": 29.3,
+      "id": "hall",
+      "title": "The data hall",
+      "description": "Racks stand in rows between sealed aisles. Busways carry power overhead, yellow trays carry fibre, and pipes carry coolant straight to every rack.",
+      "legend": [
+        "415 V busway",
+        "Fibre trays",
+        "",
+        "Supply and return"
+      ],
+      "color": "#eaaa32"
+    },
+    {
+      "start": 29.3,
+      "end": 43.1,
+      "id": "rack",
+      "title": "One rack, 72 GPUs",
+      "description": "An NVIDIA GB200 NVL72 rack packs 72 Blackwell GPUs and 36 Grace CPUs into 18 liquid-cooled trays. It draws about 120 kW, roughly ten times a typical server rack.",
+      "legend": [
+        "About 120 kW per rack",
+        "",
+        "",
+        "Direct to every tray"
+      ],
+      "color": "#eaaa32"
+    },
+    {
+      "start": 43.1,
+      "end": 50.6,
+      "id": "tray",
+      "title": "The compute tray",
+      "description": "Each tray holds two GB200 superchips. On each, one Grace CPU feeds two Blackwell GPUs over NVLink-C2C at 900 GB/s, so CPU and GPU memory behave as one.",
+      "legend": [
+        "",
+        "NVLink-C2C 900 GB/s",
+        "Picked up at each chip",
+        "Through the cold plates"
+      ],
+      "color": "#2854ef"
+    },
+    {
+      "start": 50.6,
+      "end": 59.2,
+      "id": "chip",
+      "title": "Blackwell, taken apart",
+      "description": "Two reticle-sized dies, built on TSMC 4NP, act as one GPU across a 10 TB/s link. 208 billion transistors, with 192 GB of HBM3e stacked right beside them.",
+      "legend": [
+        "",
+        "10 TB/s die to die",
+        "",
+        ""
+      ],
+      "color": "#2854ef"
+    },
+    {
+      "start": 59.2,
+      "end": 65.8,
+      "id": "math",
+      "title": "Where the maths happens",
+      "description": "Model weights stream out of HBM into cache and on to the streaming multiprocessors. Their tensor cores multiply huge matrices, in precisions as low as FP4.",
+      "legend": [
+        "",
+        "8 TB/s from HBM3e",
+        "",
+        ""
+      ],
+      "color": "#2854ef"
+    },
+    {
+      "start": 65.8,
+      "end": 72.4,
+      "id": "brain",
+      "title": "72 GPUs, one brain",
+      "description": "NVLink switch trays wire every GPU to every other GPU at 1.8 TB/s each. The whole rack behaves like one giant accelerator with 130 TB/s of fabric.",
+      "legend": [
+        "",
+        "1.8 TB/s per GPU",
+        "",
+        ""
+      ],
+      "color": "#2854ef"
+    },
+    {
+      "start": 72.4,
+      "end": 80.3,
+      "id": "cluster",
+      "title": "Racks become a cluster",
+      "description": "Beyond the rack, every GPU gets its own 400 to 800 Gb/s network port. Leaf and spine switches link thousands of GPUs so they can train or serve one model.",
+      "legend": [
+        "",
+        "400 to 800 Gb/s per GPU",
+        "",
+        ""
+      ],
+      "color": "#2854ef"
+    },
+    {
+      "start": 80.3,
+      "end": 95.6,
+      "id": "cooling",
+      "title": "Getting the heat out",
+      "description": "Nearly every watt ends up as heat. Coolant enters the trays at about 45 °C and leaves near 65 °C. A CDU hands that heat to facility water, and fans on the roof shed it to outside air.",
+      "legend": [
+        "",
+        "",
+        "Out at about 65 °C",
+        "In at about 45 °C"
+      ],
+      "color": "#d62c45"
+    },
+    {
+      "start": 95.6,
+      "end": 97.962,
+      "id": "end",
+      "title": "Power in. Tokens out. Heat away.",
+      "description": "A prompt from a phone in Bengaluru crosses fibre, lands on a GPU and streams back as tokens. This whole building exists to keep that loop fast, fed and cool.",
+      "legend": [
+        "In from the grid",
+        "Prompts in, tokens out",
+        "Out through the roof",
+        ""
+      ],
+      "color": "#2854ef"
+    }
+  ],
+  "marks": [
+    3,
+    10,
+    19,
+    27.8,
+    37.5,
+    45.5,
+    54.5,
+    62,
+    67.5,
+    74.5,
+    90.5,
+    97
+  ],
+  "font_provenance": "OFL Anton and Geist are reconstruction substitutes, not an identification of source fonts",
+  "implementation": "Raw WebGL triangles, depth testing, projected annotation anchors and Canvas HUD; no original frames or video at runtime",
+  "portable_demo": {
+    "source_motion_preserved": true,
+    "reference_media_distributed": false,
+    "textures": "Original replaceable schematic assets; not the original reference artwork.",
+    "approval": "Historical motion implementation; this portable demo is not user-approved."
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t14d",
+  "title": "前后数值变化",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "before": 69,
+    "after": 75.4
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/6e19d004f8e58efde5ffaa0013724fb95160d9561d5bef3b874b5350cef92a11.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A high-pitched, digital 'ding' sound effect followed by a continuous mechanical clicking sound, similar to a ticking clock or a counting machine.",
+          "label": "Opening Hook",
+          "visual": "A static wide shot with a clean white background. A horizontal progress bar is centered. A black pill-shaped graphic sits at the 69.0% mark on the slider. The lighting is uniform, bright, and artificial, creating a flat 2D graphic aesthetic. The color palette is minimal, consisting of white, black, and light gray.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The mechanical clicking sound continues at a rapid pace, increasing in frequency as the graphic slides.",
+          "label": "Product Selling Points",
+          "visual": "The camera remains static. An animation begins where a second black pill-shaped graphic slides rapidly to the right along the horizontal bar. A purple line grows behind the moving graphic, filling the space between the 69.0% mark and the new position. The movement is smooth with a slight speed ramp at the start.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A final, sharp 'ding' sound effect plays as the movement stops and the final number appears. The clicking sound ceases instantly, leaving a brief moment of silence.",
+          "label": "Call to Action",
+          "visual": "The animation stops as the second graphic reaches the 75.4% mark. A purple numerical value with a plus sign appears below the bar. The background remains a solid, sterile white. The lighting is consistent with previous scenes, showing no shadows or depth.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.5,
+      "action": "Original value holds on shared scale"
+    },
+    {
+      "start": 1.5,
+      "end": 3.5,
+      "action": "New value travels outward with its continuous connector"
+    },
+    {
+      "start": 3.5,
+      "end": 5,
+      "action": "Difference is calculated from the actual two inputs and held"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-b3-delta",
+      "kind": "b3-delta",
+      "x": 250,
+      "y": 270,
+      "w": 1420,
+      "h": 640,
+      "beforeKey": "before",
+      "afterKey": "after",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            4.15,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 3,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

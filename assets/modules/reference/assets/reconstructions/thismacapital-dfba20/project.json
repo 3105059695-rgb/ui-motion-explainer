@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "title": "011 · BlueVisa travel visa service promo · case-specific reconstruction",
+  "template": "thismacapital-dfba20-specific-reconstruction",
+  "reference_slug": "thismacapital-dfba20",
+  "reference_url": "https://prompt-motion.com/thismacapital-dfba20",
+  "source_post": "https://x.com/thismacapital/status/2103773635714375808",
+  "reference_author": "@thismacapital",
+  "provenance": "Independent Canvas boarding pass, plane path, suitcase, service-card queue, photo transitions, and BlueVisa lockup. Three destination photograph crops are credited static textures; no source video or complete-frame sequence is used.",
+  "duration": 15,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "loop": false,
+  "coordinate_space": [
+    960,
+    540
+  ],
+  "font": "Arial, Helvetica, sans-serif",
+  "seed": 1111,
+  "palette": {
+    "paper": "#f5f8ff",
+    "ink": "#101827",
+    "blue": "#079fe7",
+    "cyan": "#42b8eb",
+    "muted": "#667583",
+    "navy": "#111a2b"
+  },
+  "timings": {
+    "airplane": 1.83,
+    "services": 4.2,
+    "destinations": 8.96,
+    "three_cards": 11.47,
+    "logo_flood": 12.43,
+    "final": 12.84
+  },
+  "services": [
+    {
+      "label": "Titre de séjour",
+      "status": "Approuvé",
+      "icon": "document",
+      "resolved": true
+    },
+    {
+      "label": "Société",
+      "status": "En cours",
+      "icon": "building",
+      "resolved": false
+    },
+    {
+      "label": "Compte bancaire",
+      "status": "Ouvert",
+      "icon": "bank",
+      "resolved": true
+    },
+    {
+      "label": "Assurance santé",
+      "status": "En cours",
+      "icon": "shield",
+      "resolved": false
+    },
+    {
+      "label": "Logement",
+      "status": "Clés prêtes",
+      "icon": "house",
+      "resolved": true
+    },
+    {
+      "label": "Visas famille",
+      "status": "En cours",
+      "icon": "family",
+      "resolved": false
+    }
+  ],
+  "destinations": [
+    {
+      "id": "maurice",
+      "label": "Maurice",
+      "coordinate": "001 / MRU · 20.16° S"
+    },
+    {
+      "id": "dubai",
+      "label": "Dubaï",
+      "coordinate": "002 / DXB · 25.20° N"
+    },
+    {
+      "id": "paraguay",
+      "label": "Paraguay",
+      "coordinate": "003 / ASU · 25.26° S"
+    }
+  ],
+  "marks": [
+    0.8,
+    1.4,
+    2.6,
+    3.6,
+    4.8,
+    5.6,
+    7.2,
+    8.2,
+    9.6,
+    10.4,
+    12.0,
+    14.4
+  ],
+  "editable": "Palette, font, primary scene timing, service labels/statuses, destination labels and coordinate captions.",
+  "fidelity": "Complete observed shot sequence; independent geometry and font substitution, no pixel identity claim.",
+  "portable_demo": {
+    "source_motion_preserved": true,
+    "reference_media_distributed": false,
+    "textures": "Original replaceable schematic assets; not the original reference artwork.",
+    "approval": "Historical motion implementation; this portable demo is not user-approved."
+  }
+}

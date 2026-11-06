@@ -1,0 +1,143 @@
+{
+  "index": 162,
+  "slug": "gautam-mer1-2ae354",
+  "status": "independent-rendered-with-differences",
+  "runtime_frozen": true,
+  "version": "v1",
+  "provenance": "independent-reimplementation",
+  "reference_video": "private-source-not-distributed",
+  "render": "render/full-720p-v1/preview.mp4",
+  "runtime_loads_reference_video": false,
+  "runtime_loads_reference_fullscreen_images": false,
+  "runtime_uses_original_frame_sequence": false,
+  "runtime_asset_types": [
+    "three static localized creator material crops, explicitly recorded bounding boxes",
+    "local OFL Geist font",
+    "local OFL Noto Sans Gujarati font"
+  ],
+  "static_texture_provenance": "assets/texture-provenance.json",
+  "dimensions": [
+    720,
+    1280
+  ],
+  "fps": 30,
+  "project_duration": 30.07,
+  "encoded_duration": "30.100000",
+  "frames": 903,
+  "bytes": 3150214,
+  "full_decode": "passed",
+  "checks": {
+    "seek_repeat_pixels_equal": true,
+    "seek_repeat_state_equal": true,
+    "source_files_unchanged_during_render": true
+  },
+  "own_repeat_24_points": true,
+  "own_repeat_times": [
+    0.9,
+    2.4,
+    4.8,
+    7.5,
+    8.9,
+    11.4,
+    13.8,
+    18.6,
+    22.5,
+    25.2,
+    26.4,
+    28.8,
+    0,
+    1.8,
+    3.6,
+    6.3,
+    8.4,
+    9.9,
+    12.6,
+    15.3,
+    17.4,
+    21.3,
+    24.6,
+    25.8
+  ],
+  "runtime_source_files": [
+    {
+      "path": "assets/creator-hand.jpg",
+      "bytes": 13526,
+      "sha256": "15b3bf561cbc5fdb6c7696977a8de9a3afec30d0075e581868ed93aa662a429a"
+    },
+    {
+      "path": "assets/creator-head.jpg",
+      "bytes": 37256,
+      "sha256": "acbd6399119cf736b7a83ab9d8d203e377fb6966c1787fbd88aa9e6f1820390d"
+    },
+    {
+      "path": "assets/creator-shirt.jpg",
+      "bytes": 16154,
+      "sha256": "f6b5260e556977ec1a207424a14b53ada66746260a1d18e1a53f0fa1c70c11b9"
+    },
+    {
+      "path": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+      "bytes": 169056,
+      "sha256": "73894e0448cae90a92b6c2f8732b7bb9acb7b94c418bff559dad4a18e1de9659"
+    },
+    {
+      "path": "../../reference-shared/fonts/9901d8552f1dd5d2c50d.ttf",
+      "bytes": 672904,
+      "sha256": "9901d8552f1dd5d2c50dbd4caa6f6e174e74e8264f06594ab259ae6e7b1ac428"
+    },
+    {
+      "path": "index.html",
+      "bytes": 294,
+      "sha256": "ca5f8bb9189c7d7c17cdd743984422babcd6ba5ee1a6113470ad3662f2f5e752"
+    },
+    {
+      "path": "motion.js",
+      "bytes": 19585,
+      "sha256": "f0a4bc8688d8a7ab37f40f9f7c45f07931ba63a7a8f892ca70171abbb82473af"
+    },
+    {
+      "path": "project.json",
+      "bytes": 2898,
+      "sha256": "7cdf0027d24cb9d62c3ccd29dffa84318bcdd1e43a5715a0f585a2e750c9afcb"
+    },
+    {
+      "path": "style.css",
+      "bytes": 294,
+      "sha256": "5a750f1abb5f68f814fe477f6c62debc895399d12f2623d494c381b8efd89241"
+    }
+  ],
+  "original_audio_retained": true,
+  "reference_observation": {
+    "timecoded_overview": 101,
+    "native_detail": 24,
+    "targeted_full_size_inspection": true,
+    "full_range": true,
+    "uninterrupted_subjective_playback": false
+  },
+  "actual_export_paired_frames": 24,
+  "paired_comparison_paths": [
+    "verification/paired-comparison-01.jpg",
+    "verification/paired-comparison-02.jpg",
+    "verification/paired-comparison-03.jpg",
+    "verification/paired-comparison-04.jpg",
+    "verification/supplementary/paired-comparison-01.jpg",
+    "verification/supplementary/paired-comparison-02.jpg",
+    "verification/supplementary/paired-comparison-03.jpg",
+    "verification/supplementary/paired-comparison-04.jpg"
+  ],
+  "paired_sheets_personally_viewed": 8,
+  "browser_errors": [],
+  "request_errors": [],
+  "user_approved": false,
+  "differences": "DIFFERENCES.md",
+  "residuals": [
+    "largest: static photographic creator rig does not reproduce live-action speech or fingers; reflected cloth and static face expression visibly differ",
+    "native flat kitchen geometric illustration differs strongly in lighting/material",
+    "phone and tiny editor icons approximate",
+    "font substitutions/custom Gujarati icon glyph",
+    "missing motion blur; 3.6s incoming phone timing late",
+    "seeded waveform and caption word timing approximate",
+    "six demonstrated caption tiles, not implemented 32-style ASR engine",
+    "native vector mascot differs from source 3D asset",
+    "original soundtrack retained, no ASR/export backend or recreated audio"
+  ]
+}

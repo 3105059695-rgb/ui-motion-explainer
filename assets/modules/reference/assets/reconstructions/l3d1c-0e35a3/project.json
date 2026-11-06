@@ -1,0 +1,172 @@
+{
+  "template": "custom-pictwin-selfies-upload-train-generate-edit-animate",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "duration": 30,
+  "loop": false,
+  "reference_slug": "l3d1c-0e35a3",
+  "reference_url": "https://prompt-motion.com/l3d1c-0e35a3",
+  "provenance": "independent-reimplementation",
+  "implementation_status": "authored-reconstruction",
+  "brand": {
+    "name": "PicTwin",
+    "suffix": "AI",
+    "url": "pictwinai.com",
+    "model": "Marcus"
+  },
+  "palette": {
+    "background": "#090909",
+    "panel": "#111114",
+    "border": "#29282c",
+    "text": "#f5f3ec",
+    "muted": "#918f88",
+    "accent": "#ffab05",
+    "green": "#09b87d"
+  },
+  "copy": {
+    "opening": [
+      "YOUR",
+      "SELFIES."
+    ],
+    "openingSub": "THE ONES ALREADY ON YOUR PHONE",
+    "trainTitle": "Train Your AI Model First",
+    "trainSub": [
+      "Before generating photos, you need to train an AI model with your photos.",
+      "This teaches the AI to recognize you."
+    ],
+    "createButton": "Create Your AI Model",
+    "modalTitle": "Create New AI Model",
+    "modalSub": "Upload 5–20 clear photos of yourself to train a personalized AI model.",
+    "uploadCaption": "Upload 10–20 selfies",
+    "trainCaption": [
+      "PicTwin trains an AI model on your",
+      "face"
+    ],
+    "faceCaption": [
+      "YOUR AI TWIN",
+      "LEARNS YOUR",
+      "FACE."
+    ],
+    "generateCaption": [
+      "Describe the shot. Get photos of",
+      "you."
+    ],
+    "editCaption": "Change anything in plain words",
+    "animateCaption": "Bring any photo to life",
+    "prompts": [
+      "as a CEO in a sleek glass-walled office",
+      "in a cozy coffee shop, denim shirt",
+      "on a trip to the Taj Mahal"
+    ],
+    "editPrompt": "put me in a navy blazer and white shirt",
+    "tagline": [
+      "Selfies in.",
+      "Studio photos out."
+    ],
+    "cta": "Get started",
+    "terms": [
+      "30-DAY MONEY-BACK GUARANTEE",
+      "COMMERCIAL LICENSE"
+    ],
+    "rapidPrompts": [
+      "in a tailored suit on a city street",
+      "hiking a mountain trail at sunrise",
+      "outdoors at golden hour, denim shirt",
+      "at a gallery opening, cocktail in hand",
+      "in a cozy coffee shop, denim shirt"
+    ]
+  },
+  "photos": {
+    "selfies": [
+      "selfie-00",
+      "selfie-01",
+      "selfie-02",
+      "selfie-03",
+      "selfie-04",
+      "selfie-05",
+      "selfie-06",
+      "selfie-07",
+      "selfie-08",
+      "selfie-09",
+      "selfie-10",
+      "selfie-11",
+      "selfie-12",
+      "selfie-13",
+      "selfie-14"
+    ],
+    "model": "model",
+    "ceo": [
+      "ceo-0",
+      "ceo-1",
+      "ceo-2",
+      "ceo-3"
+    ],
+    "scenes": [
+      "travel",
+      "scene-0",
+      "scene-1",
+      "scene-2",
+      "scene-3",
+      "scene-4"
+    ],
+    "before": "edit-before",
+    "after": "edit-after",
+    "travel": "travel",
+    "mixed": [
+      "street-suit",
+      "hiking",
+      "outdoor-shirt"
+    ]
+  },
+  "photo_provenance": "assets/photo-provenance.json",
+  "fonts": "local Geist OFL substitute; original font not identified",
+  "marks": [
+    {
+      "t": 0,
+      "phase": "selfies"
+    },
+    {
+      "t": 3.12,
+      "phase": "train-entry"
+    },
+    {
+      "t": 4.12,
+      "phase": "upload-model"
+    },
+    {
+      "t": 9.18,
+      "phase": "training"
+    },
+    {
+      "t": 13.82,
+      "phase": "ai-twin"
+    },
+    {
+      "t": 15.13,
+      "phase": "generate"
+    },
+    {
+      "t": 21.86,
+      "phase": "photo-wall"
+    },
+    {
+      "t": 22.98,
+      "phase": "edit"
+    },
+    {
+      "t": 24.5,
+      "phase": "animate"
+    },
+    {
+      "t": 26.08,
+      "phase": "final"
+    }
+  ],
+  "portable_demo": {
+    "source_motion_preserved": true,
+    "reference_media_distributed": false,
+    "textures": "Original replaceable schematic assets; not the original reference artwork.",
+    "approval": "Historical motion implementation; this portable demo is not user-approved."
+  }
+}

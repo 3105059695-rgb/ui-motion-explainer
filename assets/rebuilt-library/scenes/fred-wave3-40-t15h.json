@@ -1,0 +1,1104 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t15h",
+  "title": "多方测评表",
+  "duration": 7,
+  "background": "#FFFFFF",
+  "inputs": {
+    "column0": "方案甲",
+    "column1": "方案乙",
+    "column2": "方案丙",
+    "rowName0": "事实完整",
+    "cell00": "✓",
+    "cell01": "✓",
+    "cell02": "×",
+    "rowName1": "来源清晰",
+    "cell10": "×",
+    "cell11": "✓",
+    "cell12": "✓",
+    "rowName2": "可编辑",
+    "cell20": "✓",
+    "cell21": "×",
+    "cell22": "×",
+    "rowName3": "可复现",
+    "cell30": "×",
+    "cell31": "✓",
+    "cell32": "✓",
+    "rowName4": "速度",
+    "cell40": "4.2 s",
+    "cell41": "2.8 s",
+    "cell42": "3.6 s",
+    "rowName5": "总分",
+    "cell50": "72",
+    "cell51": "86",
+    "cell52": "78",
+    "source": "示意对照表 · 每格需绑定本期依据"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/3270759110ae92eb84da3b62f0ba1d0f9334b7d0c2de06b9dc21a43195e1d3e1.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A high-pitched digital chime sound effect occurs as the scene begins.",
+          "label": "Opening Hook",
+          "visual": "A static wide shot of a clean, minimalist digital interface. A white background contains a comparative table with three columns and six rows. The lighting is perfectly flat and digital. A yellow and blue graphic logo is positioned in the top right corner. The columns are currently empty of data markers.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A sequence of four rapid 'pop' or 'click' sound effects, synced to the appearance of each data point.",
+          "label": "Product Information",
+          "visual": "Data points populate the first column. Checkmarks appear in the first and third rows, while 'X' marks appear in the second and fourth. Numerical data appears in the bottom two rows. The camera remains static. The color palette is strictly monochrome (black, white, grey).",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A second sequence of rapid 'pop' sound effects, mirroring the speed of the data filling the second column.",
+          "label": "Product Selling Points",
+          "visual": "Data points populate the second column. Checkmarks appear in the first, second, and fourth rows, with an 'X' in the third. The bottom rows fill with numbers. The lighting and background remain consistent and static.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A third sequence of rapid 'pop' sound effects accompanying the visual data entry.",
+          "label": "Product Selling Points",
+          "visual": "Data points populate the third and final column. 'X' marks appear in the first and third rows, while checkmarks fill the second and fourth. The final numerical totals appear at the bottom. The visual style is uniform across all columns.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "A sharp 'ding' sound effect, like a bell or notification, sounds as the highlights appear, followed by silence.",
+          "label": "Call to Action",
+          "visual": "The camera performs a sharp digital zoom into the second column. A dark grey circular highlight appears around the header of the middle column, and a pinkish-red square highlight appears around a specific data point in the fifth row of that same column. The rest of the table is slightly dimmed to emphasize the selection.",
+          "shot_type": "Medium Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:07",
+          "timestamp_start": "0:04"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.05,
+      "action": "Empty comparison geometry preserves labels and units"
+    },
+    {
+      "start": 1.05,
+      "end": 4.55,
+      "action": "Each column receives true/false and measured cells"
+    },
+    {
+      "start": 4.55,
+      "end": 5.95,
+      "action": "Camera focuses the winning column"
+    },
+    {
+      "start": 5.95,
+      "end": 7,
+      "action": "Selected evidence holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-card",
+      "kind": "card",
+      "x": 140,
+      "y": 130,
+      "w": 1640,
+      "h": 790,
+      "children": [],
+      "fill": "#FFFFFF"
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 650,
+      "y": 175,
+      "w": 320,
+      "h": 70,
+      "text": "{{column0}}",
+      "size": 45,
+      "color": "#0B0B0F",
+      "align": "center"
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 1000,
+      "y": 175,
+      "w": 320,
+      "h": 70,
+      "text": "{{column1}}",
+      "size": 45,
+      "color": "#0B0B0F",
+      "align": "center"
+    },
+    {
+      "id": "n004-text",
+      "kind": "text",
+      "x": 1350,
+      "y": 175,
+      "w": 320,
+      "h": 70,
+      "text": "{{column2}}",
+      "size": 45,
+      "color": "#0B0B0F",
+      "align": "center"
+    },
+    {
+      "id": "n005-text",
+      "kind": "text",
+      "x": 200,
+      "y": 290,
+      "w": 390,
+      "h": 70,
+      "text": "{{rowName0}}",
+      "size": 37,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n006-line",
+      "kind": "line",
+      "x": 180,
+      "y": 360,
+      "w": 1560,
+      "h": 0,
+      "fill": "#DBDBE0",
+      "strokeWidth": 2
+    },
+    {
+      "id": "n007-text",
+      "kind": "text",
+      "x": 650,
+      "y": 290,
+      "w": 320,
+      "h": 70,
+      "text": "{{cell00}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.05,
+            0
+          ],
+          [
+            1.47,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.05,
+            302
+          ],
+          [
+            1.47,
+            290,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-text",
+      "kind": "text",
+      "x": 1000,
+      "y": 290,
+      "w": 320,
+      "h": 70,
+      "text": "{{cell01}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.24,
+            0
+          ],
+          [
+            2.66,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.24,
+            302
+          ],
+          [
+            2.66,
+            290,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-text",
+      "kind": "text",
+      "x": 1350,
+      "y": 290,
+      "w": 320,
+      "h": 70,
+      "text": "{{cell02}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.43,
+            0
+          ],
+          [
+            3.85,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.43,
+            302
+          ],
+          [
+            3.85,
+            290,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010-text",
+      "kind": "text",
+      "x": 200,
+      "y": 386,
+      "w": 390,
+      "h": 70,
+      "text": "{{rowName1}}",
+      "size": 37,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n011-line",
+      "kind": "line",
+      "x": 180,
+      "y": 456,
+      "w": 1560,
+      "h": 0,
+      "fill": "#DBDBE0",
+      "strokeWidth": 2
+    },
+    {
+      "id": "n012-text",
+      "kind": "text",
+      "x": 650,
+      "y": 386,
+      "w": 320,
+      "h": 70,
+      "text": "{{cell10}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.176,
+            0
+          ],
+          [
+            1.596,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.176,
+            398
+          ],
+          [
+            1.596,
+            386,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013-text",
+      "kind": "text",
+      "x": 1000,
+      "y": 386,
+      "w": 320,
+      "h": 70,
+      "text": "{{cell11}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.366,
+            0
+          ],
+          [
+            2.786,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.366,
+            398
+          ],
+          [
+            2.786,
+            386,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014-text",
+      "kind": "text",
+      "x": 1350,
+      "y": 386,
+      "w": 320,
+      "h": 70,
+      "text": "{{cell12}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.556,
+            0
+          ],
+          [
+            3.976,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.556,
+            398
+          ],
+          [
+            3.976,
+            386,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n015-text",
+      "kind": "text",
+      "x": 200,
+      "y": 482,
+      "w": 390,
+      "h": 70,
+      "text": "{{rowName2}}",
+      "size": 37,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n016-line",
+      "kind": "line",
+      "x": 180,
+      "y": 552,
+      "w": 1560,
+      "h": 0,
+      "fill": "#DBDBE0",
+      "strokeWidth": 2
+    },
+    {
+      "id": "n017-text",
+      "kind": "text",
+      "x": 650,
+      "y": 482,
+      "w": 320,
+      "h": 70,
+      "text": "{{cell20}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.302,
+            0
+          ],
+          [
+            1.722,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.302,
+            494
+          ],
+          [
+            1.722,
+            482,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n018-text",
+      "kind": "text",
+      "x": 1000,
+      "y": 482,
+      "w": 320,
+      "h": 70,
+      "text": "{{cell21}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.492,
+            0
+          ],
+          [
+            2.912,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.492,
+            494
+          ],
+          [
+            2.912,
+            482,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n019-text",
+      "kind": "text",
+      "x": 1350,
+      "y": 482,
+      "w": 320,
+      "h": 70,
+      "text": "{{cell22}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.682,
+            0
+          ],
+          [
+            4.102,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.682,
+            494
+          ],
+          [
+            4.102,
+            482,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n020-text",
+      "kind": "text",
+      "x": 200,
+      "y": 578,
+      "w": 390,
+      "h": 70,
+      "text": "{{rowName3}}",
+      "size": 37,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n021-line",
+      "kind": "line",
+      "x": 180,
+      "y": 648,
+      "w": 1560,
+      "h": 0,
+      "fill": "#DBDBE0",
+      "strokeWidth": 2
+    },
+    {
+      "id": "n022-text",
+      "kind": "text",
+      "x": 650,
+      "y": 578,
+      "w": 320,
+      "h": 70,
+      "text": "{{cell30}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.428,
+            0
+          ],
+          [
+            1.848,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.428,
+            590
+          ],
+          [
+            1.848,
+            578,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n023-text",
+      "kind": "text",
+      "x": 1000,
+      "y": 578,
+      "w": 320,
+      "h": 70,
+      "text": "{{cell31}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.618,
+            0
+          ],
+          [
+            3.038,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.618,
+            590
+          ],
+          [
+            3.038,
+            578,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n024-text",
+      "kind": "text",
+      "x": 1350,
+      "y": 578,
+      "w": 320,
+      "h": 70,
+      "text": "{{cell32}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.808,
+            0
+          ],
+          [
+            4.228,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.808,
+            590
+          ],
+          [
+            4.228,
+            578,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n025-text",
+      "kind": "text",
+      "x": 200,
+      "y": 674,
+      "w": 390,
+      "h": 70,
+      "text": "{{rowName4}}",
+      "size": 37,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n026-line",
+      "kind": "line",
+      "x": 180,
+      "y": 744,
+      "w": 1560,
+      "h": 0,
+      "fill": "#DBDBE0",
+      "strokeWidth": 2
+    },
+    {
+      "id": "n027-text",
+      "kind": "text",
+      "x": 650,
+      "y": 674,
+      "w": 320,
+      "h": 70,
+      "text": "{{cell40}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.554,
+            0
+          ],
+          [
+            1.974,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.554,
+            686
+          ],
+          [
+            1.974,
+            674,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n028-text",
+      "kind": "text",
+      "x": 1000,
+      "y": 674,
+      "w": 320,
+      "h": 70,
+      "text": "{{cell41}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.744,
+            0
+          ],
+          [
+            3.164,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.744,
+            686
+          ],
+          [
+            3.164,
+            674,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n029-text",
+      "kind": "text",
+      "x": 1350,
+      "y": 674,
+      "w": 320,
+      "h": 70,
+      "text": "{{cell42}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.934,
+            0
+          ],
+          [
+            4.354,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.934,
+            686
+          ],
+          [
+            4.354,
+            674,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n030-text",
+      "kind": "text",
+      "x": 200,
+      "y": 770,
+      "w": 390,
+      "h": 70,
+      "text": "{{rowName5}}",
+      "size": 37,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n031-line",
+      "kind": "line",
+      "x": 180,
+      "y": 840,
+      "w": 1560,
+      "h": 0,
+      "fill": "#DBDBE0",
+      "strokeWidth": 2
+    },
+    {
+      "id": "n032-text",
+      "kind": "text",
+      "x": 650,
+      "y": 770,
+      "w": 320,
+      "h": 70,
+      "text": "{{cell50}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.68,
+            0
+          ],
+          [
+            2.1,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.68,
+            782
+          ],
+          [
+            2.1,
+            770,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n033-text",
+      "kind": "text",
+      "x": 1000,
+      "y": 770,
+      "w": 320,
+      "h": 70,
+      "text": "{{cell51}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.87,
+            0
+          ],
+          [
+            3.29,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.87,
+            782
+          ],
+          [
+            3.29,
+            770,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n034-text",
+      "kind": "text",
+      "x": 1350,
+      "y": 770,
+      "w": 320,
+      "h": 70,
+      "text": "{{cell52}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.06,
+            0
+          ],
+          [
+            4.48,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            4.06,
+            782
+          ],
+          [
+            4.48,
+            770,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n035-rect",
+      "kind": "rect",
+      "x": 995,
+      "y": 160,
+      "w": 320,
+      "h": 725,
+      "fill": "rgba(214,194,255,.22)",
+      "stroke": "#D6C2FF",
+      "strokeWidth": 4,
+      "radius": 18,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.34,
+            0
+          ],
+          [
+            5.04,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n036-text",
+      "kind": "text",
+      "x": 300,
+      "y": 970,
+      "w": 1320,
+      "h": 65,
+      "text": "{{source}}",
+      "size": 30,
+      "color": "#777780",
+      "align": "center"
+    }
+  ],
+  "camera": {
+    "tracks": {
+      "scale": [
+        [
+          0,
+          1
+        ],
+        [
+          4.48,
+          1
+        ],
+        [
+          5.81,
+          1.18
+        ]
+      ],
+      "x": [
+        [
+          0,
+          0
+        ],
+        [
+          4.48,
+          0
+        ],
+        [
+          5.81,
+          -100
+        ]
+      ]
+    }
+  },
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

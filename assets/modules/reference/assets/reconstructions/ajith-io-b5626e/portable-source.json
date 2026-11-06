@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "slug": "ajith-io-b5626e",
+  "source_project": "assets/reconstructions/ajith-io-b5626e",
+  "project": "assets/reconstructions/ajith-io-b5626e",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "check-v1/sampled-states.json",
+    "index.html",
+    "motion.js",
+    "project.json",
+    "scene-plan.json",
+    "style.css",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/73894e0448cae90a92b6.ttf"
+  ],
+  "replaceable_assets": [],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "assets/fonts/Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "check-v1/sampled-states.json": "check-v1/sampled-states.json",
+    "index.html": "index.html",
+    "motion.js": "motion.js",
+    "project.json": "project.json",
+    "scene-plan.json": "scene-plan.json",
+    "style.css": "style.css",
+    "Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "sampled-states.json": "check-v1/sampled-states.json"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

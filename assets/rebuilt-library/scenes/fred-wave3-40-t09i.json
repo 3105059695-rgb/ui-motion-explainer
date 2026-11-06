@@ -1,0 +1,333 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t09i",
+  "title": "按条件选中一行",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "row10": "package-linux-x64.tar.gz",
+    "row21": "package-mac-arm64.dmg",
+    "row32": "package-mac-x64.dmg",
+    "row43": "package-win-x64.7z",
+    "condition0": "Apple 芯片",
+    "condition1": "Windows"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/aa1fe38a331b8e4e59f31f9dc2cc2f56fb0c48dd67e8dab849bc913abc064b65.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single, high-pitched digital 'pop' sound effect.",
+          "label": "Opening Hook",
+          "visual": "A white interface list of software files is centered on a plain white background. The camera is static. The list contains various 'LosslessCut' installation files for Linux, Mac, and Windows. A small animated icon of a person's head with a blue cap and a 'Talk AI' speech bubble is in the top right corner. The lighting is bright and even, casting a very soft shadow beneath the file list box.",
+          "shot_type": "Medium Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A short, sharp 'click' or 'snapping' sound effect.",
+          "label": "Product Information",
+          "visual": "The camera zooms in slightly as a white horizontal bar highlights the second item in the list: 'LosslessCut-mac-arm64.dmg'. A black rounded rectangle appears to the left with white text inside. A thin black line connects this rectangle to the highlighted file. The background remains white and the top-right logo remains visible.",
+          "shot_type": "Close-Up",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A second 'click' sound effect, followed by silence.",
+          "label": "Product Information",
+          "visual": "The camera remains static. A second white horizontal bar highlights the bottom item in the list: 'LosslessCut-win-x64.7z'. A second black rounded rectangle appears to the left with white text inside. A thin black line connects this new rectangle to the highlighted Windows file. Both highlighted sections and their corresponding labels remain on screen simultaneously until the video ends.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.2000000000000002,
+      "action": "Full release list establishes the available files"
+    },
+    {
+      "start": 1.2000000000000002,
+      "end": 3.0,
+      "action": "First real condition locates its corresponding row"
+    },
+    {
+      "start": 3.0,
+      "end": 4.92,
+      "action": "Second condition locates another row without erasing the first"
+    },
+    {
+      "start": 4.92,
+      "end": 6,
+      "action": "Both matched rows remain comparable"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-window",
+      "kind": "window",
+      "x": 740,
+      "y": 220,
+      "w": 1000,
+      "h": 610,
+      "label": "选择与你系统相符的版本",
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 35,
+          "y": 100,
+          "w": 930,
+          "h": 55,
+          "text": "{{row10}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 35,
+          "y": 165,
+          "w": 930,
+          "h": 55,
+          "text": "{{row21}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 35,
+          "y": 230,
+          "w": 930,
+          "h": 55,
+          "text": "{{row32}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 35,
+          "y": 295,
+          "w": 930,
+          "h": 55,
+          "text": "{{row43}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "n006-rect",
+      "kind": "rect",
+      "x": 765,
+      "y": 372,
+      "w": 940,
+      "h": 61,
+      "fill": "#D6C2FF",
+      "radius": 8,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.38,
+            0
+          ],
+          [
+            2.16,
+            0.55
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 155,
+      "y": 375,
+      "w": 410,
+      "h": 70,
+      "label": "{{condition0}}",
+      "size": 34,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.38,
+            0
+          ],
+          [
+            2.1,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.38,
+            410
+          ],
+          [
+            2.1,
+            375,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-path",
+      "kind": "path",
+      "x": 565,
+      "y": 405,
+      "w": 1,
+      "h": 1,
+      "path": "M0 0 L170 0",
+      "length": 170,
+      "fill": "#0B0B0F",
+      "strokeWidth": 4,
+      "tracks": {
+        "draw": [
+          [
+            1.38,
+            0
+          ],
+          [
+            2.22,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-rect",
+      "kind": "rect",
+      "x": 765,
+      "y": 502,
+      "w": 940,
+      "h": 61,
+      "fill": "#D6C2FF",
+      "radius": 8,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.06,
+            0
+          ],
+          [
+            3.84,
+            0.55
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010-pill",
+      "kind": "pill",
+      "x": 155,
+      "y": 505,
+      "w": 410,
+      "h": 70,
+      "label": "{{condition1}}",
+      "size": 34,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.06,
+            0
+          ],
+          [
+            3.78,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.06,
+            540
+          ],
+          [
+            3.78,
+            505,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011-path",
+      "kind": "path",
+      "x": 565,
+      "y": 535,
+      "w": 1,
+      "h": 1,
+      "path": "M0 0 L170 0",
+      "length": 170,
+      "fill": "#0B0B0F",
+      "strokeWidth": 4,
+      "tracks": {
+        "draw": [
+          [
+            3.06,
+            0
+          ],
+          [
+            3.9,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t13d",
+  "title": "请求往返",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "client": "客户端",
+    "server": "服务端",
+    "request": "请求",
+    "seconds": 0.86,
+    "condition": "请求往返过程 · 示意耗时"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/34aa6188226bb43c3d1e0a5597d16fa6d347db48b2f806c224d05b883e1bc1cf.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A digital 'click' sound effect followed by a short, rhythmic mechanical whirring, suggesting a process starting.",
+          "label": "Opening Hook",
+          "visual": "A white digital interface with two main icons. On the left is a blue stylized icon representing a code editor. On the right is a black rectangular box with a logo. A grey arrow points from the left icon to the right icon. A cursor enters and clicks near the arrow. The lighting is flat, even digital brightness with a clean minimalist aesthetic and blue-toned accents.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A high-pitched digital 'ping' sound followed by a fast-paced electronic pulse, representing data transmission.",
+          "label": "Product Information",
+          "visual": "A grey bar appears above the arrow between the two icons. A second grey arrow appears below the first one, pointing from the right icon back to the left icon. A digital counter begins rapidly increasing below the icons. The background remains a stark, clean white with flat colors.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A bright, successful 'ding' chime similar to a completed task notification, ending with silence.",
+          "label": "Product Selling Points",
+          "visual": "A purple circular bubble appears next to the left-hand icon, containing text. The digital counter at the bottom stops, and a final checkmark icon pops up at the very end of the animation sequence. The overall color palette remains limited to white, blue, and black with a high-contrast finish.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.08,
+      "action": "Client and service establish direction"
+    },
+    {
+      "start": 1.08,
+      "end": 2.7,
+      "action": "Request travels to service"
+    },
+    {
+      "start": 2.7,
+      "end": 4.62,
+      "action": "Result returns on a distinct return path"
+    },
+    {
+      "start": 4.62,
+      "end": 6,
+      "action": "Completion and elapsed measure hold"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n002-card",
+      "kind": "card",
+      "x": 130,
+      "y": 330,
+      "w": 420,
+      "h": 330,
+      "children": [
+        {
+          "id": "n001-text",
+          "kind": "text",
+          "x": 30,
+          "y": 115,
+          "w": 360,
+          "h": 110,
+          "text": "{{client}}",
+          "size": 70,
+          "color": "#0B0B0F",
+          "align": "center"
+        }
+      ],
+      "fill": "#FFFFFF"
+    },
+    {
+      "id": "n004-card",
+      "kind": "card",
+      "x": 1380,
+      "y": 330,
+      "w": 420,
+      "h": 330,
+      "children": [
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 30,
+          "y": 115,
+          "w": 360,
+          "h": 110,
+          "text": "{{server}}",
+          "size": 70,
+          "color": "#FFFFFF",
+          "align": "center"
+        }
+      ],
+      "fill": "#0B0B0F"
+    },
+    {
+      "id": "n005-arrow",
+      "kind": "b2-growing-line",
+      "x": 550,
+      "y": 410,
+      "w": 830,
+      "h": 0,
+      "fill": "#777780",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            0.3,
+            0
+          ],
+          [
+            1.2,
+            1
+          ]
+        ]
+      },
+      "arrow": true
+    },
+    {
+      "id": "n006-arrow",
+      "kind": "arrow",
+      "x": 1380,
+      "y": 590,
+      "w": -830,
+      "h": 0,
+      "fill": "#777780",
+      "strokeWidth": 5,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.4,
+            0
+          ],
+          [
+            3.6,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 590,
+      "y": 330,
+      "w": 270,
+      "h": 90,
+      "label": "{{request}}",
+      "size": 41,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            1.08,
+            570
+          ],
+          [
+            2.4,
+            1110
+          ],
+          [
+            3.3,
+            1110
+          ],
+          [
+            4.5,
+            570
+          ]
+        ],
+        "y": [
+          [
+            1.08,
+            330
+          ],
+          [
+            2.4,
+            330
+          ],
+          [
+            3.3,
+            640
+          ],
+          [
+            4.5,
+            640
+          ]
+        ],
+        "label": [
+          [
+            0,
+            "请求"
+          ],
+          [
+            2.7,
+            "请求"
+          ],
+          [
+            2.76,
+            "结果",
+            "step"
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.02,
+            0
+          ],
+          [
+            1.08,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-check",
+      "kind": "check",
+      "x": 315,
+      "y": 720,
+      "w": 100,
+      "h": 95,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.62,
+            0
+          ],
+          [
+            5.34,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            4.62,
+            755
+          ],
+          [
+            5.34,
+            720,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-b2-number",
+      "kind": "b2-number",
+      "x": 680,
+      "y": 850,
+      "w": 560,
+      "h": 100,
+      "toKey": "seconds",
+      "suffix": " s",
+      "size": 65,
+      "decimals": 2,
+      "align": "center",
+      "tracks": {
+        "value": [
+          [
+            1.08,
+            0
+          ],
+          [
+            4.5,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010-text",
+      "kind": "text",
+      "x": 480,
+      "y": 970,
+      "w": 960,
+      "h": 60,
+      "text": "{{condition}}",
+      "size": 30,
+      "color": "#777780",
+      "align": "center"
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

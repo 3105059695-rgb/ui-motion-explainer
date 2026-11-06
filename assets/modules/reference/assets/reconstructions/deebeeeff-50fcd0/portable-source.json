@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "slug": "deebeeeff-50fcd0",
+  "source_project": "assets/reconstructions/deebeeeff-50fcd0/versions/v2",
+  "project": "assets/reconstructions/deebeeeff-50fcd0",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "_dependencies/b26dc3b8f336-food-brand-illustration.png",
+    "asset-provenance.json",
+    "assets/food-brand-illustration.png",
+    "composition.js",
+    "index.html",
+    "project.json",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/5b6c0d5334a7bf77dea5.ttf",
+    "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "../../reference-shared/fonts/dd9a89a019b4849f66ab.ttf"
+  ],
+  "replaceable_assets": [
+    {
+      "path": "_dependencies/b26dc3b8f336-food-brand-illustration.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "b26dc3b8f3364916afbd74b56dcd6620b7328691d4274df479ae17ca7c18b827"
+    },
+    {
+      "path": "assets/food-brand-illustration.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "b26dc3b8f3364916afbd74b56dcd6620b7328691d4274df479ae17ca7c18b827"
+    }
+  ],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "../../assets/fonts/ArchivoBlack-Regular.ttf": "../../reference-shared/fonts/dd9a89a019b4849f66ab.ttf",
+    "../../assets/fonts/Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "../../assets/fonts/Pacifico.ttf": "../../reference-shared/fonts/5b6c0d5334a7bf77dea5.ttf",
+    "../../assets/food-brand-illustration.png": "_dependencies/b26dc3b8f336-food-brand-illustration.png",
+    "asset-provenance.json": "asset-provenance.json",
+    "assets/fonts/ArchivoBlack-Regular.ttf": "../../reference-shared/fonts/dd9a89a019b4849f66ab.ttf",
+    "assets/fonts/Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "assets/fonts/Pacifico.ttf": "../../reference-shared/fonts/5b6c0d5334a7bf77dea5.ttf",
+    "assets/food-brand-illustration.png": "assets/food-brand-illustration.png",
+    "composition.js": "composition.js",
+    "index.html": "index.html",
+    "project.json": "project.json",
+    "ArchivoBlack-Regular.ttf": "../../reference-shared/fonts/dd9a89a019b4849f66ab.ttf",
+    "Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "Pacifico.ttf": "../../reference-shared/fonts/5b6c0d5334a7bf77dea5.ttf"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

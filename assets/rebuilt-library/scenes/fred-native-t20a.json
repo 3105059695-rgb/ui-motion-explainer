@@ -1,0 +1,551 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-native-t20a",
+  "title": "成果先行开场：作品墙推向主图，钩子落定",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "hook": "这样的结果，能不能更简单地做出来？"
+  },
+  "assets": {
+    "work0": "assets/approved-girl-sample/assets/handoff.png",
+    "work1": "assets/style-film/media/premise-to-report.svg",
+    "work2": "assets/style-film/media/module-assembly.svg",
+    "work3": "assets/style-film/media/cross-device-continuity.svg",
+    "work4": "assets/style-film/media/editable-change-undo.svg",
+    "work5": "assets/style-film/media/connected-delivery.svg",
+    "work6": "assets/approved-girl-sample/assets/handoff.png",
+    "work7": "assets/style-film/media/premise-to-report.svg",
+    "work8": "assets/style-film/media/module-assembly.svg"
+  },
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/e6b7961b3249b24e47dcb6702071a135dc3c4768a128d0270e09f16e611cd3a5.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A medium-tempo, upbeat synth-pop track begins with a bright, energetic rhythm.",
+          "label": "Opening Hook",
+          "visual": "A white canvas displays a grid-like collage of animated and illustrated images. The collage features a young boy at a desk, a woman and child interaction, character concept art of men in traditional robes, a golden phoenix illustration, a fantasy landscape, and hands interacting with colorful physical buttons and a tablet. The camera is static. Lighting is bright and even. The color palette is vibrant and varied across the different images.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The upbeat music continues. A male voice says in Chinese: 'These pictures...'",
+          "label": "Product Selling Points",
+          "visual": "A rapid zoom-in transition occurs into the collage, filling the screen with more instances of the same image types. A young boy (approximately 6-8 years old, light complexion, short black hair, wearing a dark blue shirt) is seen looking at a computer screen. To the right, a woman (approx. 30s, light complexion, brown hair tied back, wearing a green apron over a white shirt) leans over the same boy. The background is a blurry domestic interior with warm, soft lighting.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The music maintains its tempo. The male voice continues in Chinese: '...can they be made with just one sentence?'",
+          "label": "Product Information",
+          "visual": "The screen transitions to a detailed digital illustration of a phoenix. The phoenix has white and golden-orange feathers, a long flowing tail, and a regal crest. It is centered against a soft, neutral-colored background. To the right of the main image are two smaller crops focusing on the head and tail detail. The lighting is bright and directional, highlighting the texture of the feathers. The color palette is dominated by gold, orange, and white.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.5,
+      "action": "Works wall establishes varied current output"
+    },
+    {
+      "start": 1.5,
+      "end": 2.75,
+      "action": "Push into selected work and reveal its two detail crops"
+    },
+    {
+      "start": 2.75,
+      "end": 5,
+      "action": "Question holds under actual complete work and crops"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 85,
+      "y": 45,
+      "w": 570,
+      "h": 310,
+      "asset": "work0",
+      "fit": "cover",
+      "radius": 10,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.25,
+            1
+          ],
+          [
+            2.0,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            1.25,
+            1.04
+          ],
+          [
+            2.0,
+            1.2
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-image",
+      "kind": "image",
+      "x": 675,
+      "y": 45,
+      "w": 570,
+      "h": 310,
+      "asset": "work1",
+      "fit": "cover",
+      "radius": 10,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.25,
+            1
+          ],
+          [
+            2.0,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            1.25,
+            1.04
+          ],
+          [
+            2.0,
+            1.2
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-image",
+      "kind": "image",
+      "x": 1265,
+      "y": 45,
+      "w": 570,
+      "h": 310,
+      "asset": "work2",
+      "fit": "cover",
+      "radius": 10,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.25,
+            1
+          ],
+          [
+            2.0,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            1.25,
+            1.04
+          ],
+          [
+            2.0,
+            1.2
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-image",
+      "kind": "image",
+      "x": 85,
+      "y": 375,
+      "w": 570,
+      "h": 310,
+      "asset": "work3",
+      "fit": "cover",
+      "radius": 10,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.25,
+            1
+          ],
+          [
+            2.0,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            1.25,
+            1.04
+          ],
+          [
+            2.0,
+            1.2
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-image",
+      "kind": "image",
+      "x": 675,
+      "y": 375,
+      "w": 570,
+      "h": 310,
+      "asset": "work4",
+      "fit": "cover",
+      "radius": 10,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.25,
+            1
+          ],
+          [
+            2.0,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            1.25,
+            1.04
+          ],
+          [
+            2.0,
+            1.2
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-image",
+      "kind": "image",
+      "x": 1265,
+      "y": 375,
+      "w": 570,
+      "h": 310,
+      "asset": "work5",
+      "fit": "cover",
+      "radius": 10,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.25,
+            1
+          ],
+          [
+            2.0,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            1.25,
+            1.04
+          ],
+          [
+            2.0,
+            1.2
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-image",
+      "kind": "image",
+      "x": 85,
+      "y": 705,
+      "w": 570,
+      "h": 310,
+      "asset": "work6",
+      "fit": "cover",
+      "radius": 10,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.25,
+            1
+          ],
+          [
+            2.0,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            1.25,
+            1.04
+          ],
+          [
+            2.0,
+            1.2
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-image",
+      "kind": "image",
+      "x": 675,
+      "y": 705,
+      "w": 570,
+      "h": 310,
+      "asset": "work7",
+      "fit": "cover",
+      "radius": 10,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.25,
+            1
+          ],
+          [
+            2.0,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            1.25,
+            1.04
+          ],
+          [
+            2.0,
+            1.2
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-image",
+      "kind": "image",
+      "x": 1265,
+      "y": 705,
+      "w": 570,
+      "h": 310,
+      "asset": "work8",
+      "fit": "cover",
+      "radius": 10,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.25,
+            1
+          ],
+          [
+            2.0,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            1.25,
+            1.04
+          ],
+          [
+            2.0,
+            1.2
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014-group",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n010-image",
+          "kind": "image",
+          "x": 120,
+          "y": 100,
+          "w": 1140,
+          "h": 790,
+          "asset": "work3",
+          "fit": "cover",
+          "radius": 18
+        },
+        {
+          "id": "n011-b3-crop-media",
+          "kind": "b3-crop-media",
+          "x": 1320,
+          "y": 100,
+          "w": 480,
+          "h": 370,
+          "asset": "work3",
+          "cropX": 0.1,
+          "cropY": 0.05,
+          "cropW": 0.45,
+          "cropH": 0.4
+        },
+        {
+          "id": "n012-b3-crop-media",
+          "kind": "b3-crop-media",
+          "x": 1320,
+          "y": 520,
+          "w": 480,
+          "h": 370,
+          "asset": "work3",
+          "cropX": 0.5,
+          "cropY": 0.5,
+          "cropW": 0.45,
+          "cropH": 0.45
+        },
+        {
+          "id": "n013-text",
+          "kind": "text",
+          "x": 200,
+          "y": 940,
+          "w": 1520,
+          "h": 100,
+          "text": "{{hook}}",
+          "size": 54,
+          "color": "#0B0B0F",
+          "align": "center"
+        }
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.7,
+            0
+          ],
+          [
+            2.7,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.7,
+            0
+          ],
+          [
+            2.7,
+            0,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

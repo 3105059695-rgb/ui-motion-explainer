@@ -1,0 +1,390 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t05h",
+  "title": "一次性拷贝 vs 持续同步",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "source": "源项目",
+    "version": "v1",
+    "target0": "一次性拷贝",
+    "destination0": "v1",
+    "target1": "持续同步",
+    "destination1": "v1",
+    "update": "v2"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/aa06dbff54fd44ac6ab13d047bc0f526299baee5689de5509038bef3f7748072.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A digital pop sound effect occurs as the box appears.",
+          "label": "Opening Hook",
+          "visual": "A black rounded rectangle box with a white 'v1' is centered on a clean white background. The lighting is flat and even. A shadow appears beneath the box to give it depth.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Two rapid digital clicking sounds accompany the appearance of the lines and the new boxes.",
+          "label": "Product Information",
+          "visual": "Two black lines extend downward from the center 'v1' box to two identical boxes below. One box is placed on the left and one on the right, creating a tree-like hierarchy.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A high-pitched chime sound effect as the label changes and the icon moves.",
+          "label": "Product Selling Points",
+          "visual": "The top central box changes its label to 'v2' with a slight purple glow. A small circular icon with 'v2' moves down the right-hand line connecting to the right box.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A final celebratory bell ding sound effect.",
+          "label": "Call to Action",
+          "visual": "The right-side box updates to 'v2' while the left-side box remains as 'v1'. The connection line to the right box remains solid black while the left side remains static. The overall lighting remains bright white.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.7999999999999998,
+      "action": "Source branches into copy and synchronized destinations"
+    },
+    {
+      "start": 2.52,
+      "end": 4.32,
+      "action": "One v2 update physically travels only on the synchronization link"
+    },
+    {
+      "start": 4.32,
+      "end": 6,
+      "action": "Different resulting versions remain visible"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-pill",
+      "kind": "pill",
+      "x": 740,
+      "y": 120,
+      "w": 440,
+      "h": 130,
+      "label": "{{source}}",
+      "size": 48,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 860,
+      "y": 270,
+      "w": 200,
+      "h": 80,
+      "text": "{{version}}",
+      "size": 58,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "text": [
+          [
+            0,
+            "v1"
+          ],
+          [
+            2.52,
+            "v1"
+          ],
+          [
+            2.58,
+            "v2",
+            "step"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-path",
+      "kind": "path",
+      "x": 500,
+      "y": 350,
+      "w": 1,
+      "h": 1,
+      "path": "M460 0 L0 0 L0 160",
+      "length": 700,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "draw": [
+          [
+            0.6,
+            0
+          ],
+          [
+            1.68,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-pill",
+      "kind": "pill",
+      "x": 300,
+      "y": 580,
+      "w": 520,
+      "h": 120,
+      "label": "{{target0}}",
+      "size": 47,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.2,
+            0
+          ],
+          [
+            1.92,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.2,
+            615
+          ],
+          [
+            1.92,
+            580,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-text",
+      "kind": "text",
+      "x": 300,
+      "y": 735,
+      "w": 520,
+      "h": 100,
+      "text": "{{destination0}}",
+      "size": 70,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "text": [
+          [
+            0,
+            "v1"
+          ],
+          [
+            4.08,
+            "v1"
+          ],
+          [
+            4.14,
+            "v1",
+            "step"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-path",
+      "kind": "path",
+      "x": 1500,
+      "y": 350,
+      "w": 1,
+      "h": 1,
+      "path": "M-540 0 L0 0 L0 160",
+      "length": 700,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "draw": [
+          [
+            0.6,
+            0
+          ],
+          [
+            1.68,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 1300,
+      "y": 580,
+      "w": 520,
+      "h": 120,
+      "label": "{{target1}}",
+      "size": 47,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.2,
+            0
+          ],
+          [
+            1.92,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.2,
+            615
+          ],
+          [
+            1.92,
+            580,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-text",
+      "kind": "text",
+      "x": 1300,
+      "y": 735,
+      "w": 520,
+      "h": 100,
+      "text": "{{destination1}}",
+      "size": 70,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "text": [
+          [
+            0,
+            "v1"
+          ],
+          [
+            4.08,
+            "v1"
+          ],
+          [
+            4.14,
+            "v2",
+            "step"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-pill",
+      "kind": "pill",
+      "x": 900,
+      "y": 325,
+      "w": 120,
+      "h": 75,
+      "label": "{{update}}",
+      "size": 34,
+      "fill": "#D6C2FF",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            2.64,
+            900
+          ],
+          [
+            3.3,
+            1500
+          ],
+          [
+            4.14,
+            1500
+          ]
+        ],
+        "y": [
+          [
+            2.64,
+            325
+          ],
+          [
+            3.3,
+            325
+          ],
+          [
+            4.14,
+            535
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.58,
+            0
+          ],
+          [
+            2.64,
+            1
+          ],
+          [
+            4.14,
+            1
+          ],
+          [
+            4.26,
+            0
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

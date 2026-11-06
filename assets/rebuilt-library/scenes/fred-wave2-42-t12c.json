@@ -1,0 +1,160 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t12c",
+  "title": "案例转折：章节让位，案例卡翻入",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "chapter": "下面看实际案例"
+  },
+  "assets": {
+    "case": "assets/approved-girl-sample/assets/handoff.png"
+  },
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/168ed5f9bb845b6366e40cac20d2cad4958947c35f69b2cb48aa06c7161a8e45.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single, short, high-pitched digital chime sound effect.",
+          "label": "Opening Hook",
+          "visual": "Static graphic on a plain white background. A horizontal black rounded rectangle is centered in the frame. The lighting is flat and digital. No subjects or products are present.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Silence.",
+          "label": "Product Information",
+          "visual": "A 3D isometric diorama of a traditional Chinese water town is centered on a white background. The miniature scene includes several wooden tiered buildings with green and red tiled roofs, stone bridges over turquoise water, and small boats with figures. The lighting is soft and global, simulating daylight with gentle shadows. The color palette features earthy tones, dark wood, and vibrant greens.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 0.8999999999999999,
+      "action": "Chapter first occupies the center"
+    },
+    {
+      "start": 0.8999999999999999,
+      "end": 2.0999999999999996,
+      "action": "Chapter yields upward while actual case plane flips into its place"
+    },
+    {
+      "start": 2.0999999999999996,
+      "end": 3,
+      "action": "Case holds beneath retained chapter"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-pill",
+      "kind": "pill",
+      "x": 390,
+      "y": 430,
+      "w": 1140,
+      "h": 160,
+      "label": "{{chapter}}",
+      "size": 72,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "y": [
+          [
+            0,
+            430
+          ],
+          [
+            0.9,
+            430
+          ],
+          [
+            1.74,
+            75
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            0.9,
+            1
+          ],
+          [
+            1.74,
+            0.65
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-b2-perspective-media",
+      "kind": "b2-perspective-media",
+      "x": 330,
+      "y": 290,
+      "w": 1260,
+      "h": 670,
+      "asset": "case",
+      "tracks": {
+        "angle": [
+          [
+            0,
+            88
+          ],
+          [
+            0.9,
+            88
+          ],
+          [
+            2.1,
+            0,
+            "back"
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.9,
+            0
+          ],
+          [
+            1.2,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

@@ -1,0 +1,1020 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t14k",
+  "title": "终端流程逐行完成，旁边 Token 计量卡始终为 0",
+  "duration": 11.433,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "读取资料",
+    "text02": "整理素材",
+    "text03": "执行构建",
+    "text04": "完成检查",
+    "text05": "导出结果",
+    "text06": "0",
+    "text07": "Token"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "code",
+      "x": 400,
+      "y": 210,
+      "w": 1120,
+      "h": 640,
+      "lines": [
+        "$ build current-task"
+      ],
+      "size": 36,
+      "tracks": {
+        "x": [
+          [
+            0.0,
+            400
+          ],
+          [
+            3.08691,
+            400
+          ],
+          [
+            4.34454,
+            140
+          ]
+        ],
+        "w": [
+          [
+            0.0,
+            1120
+          ],
+          [
+            4.34454,
+            1000
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "text",
+      "x": 470,
+      "y": 350,
+      "w": 570,
+      "h": 52.800000000000004,
+      "text": "{{text01}}",
+      "size": 33,
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.91464,
+            0
+          ],
+          [
+            1.31479,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            470
+          ],
+          [
+            0.91464,
+            470
+          ],
+          [
+            1.31479,
+            470,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            350
+          ],
+          [
+            0.91464,
+            350
+          ],
+          [
+            1.31479,
+            350,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "bar",
+      "x": 730,
+      "y": 360,
+      "w": 380,
+      "h": 17,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "value": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.91464,
+            0
+          ],
+          [
+            1.60062,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "check",
+      "x": 1120,
+      "y": 345,
+      "w": 36,
+      "h": 36,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.60062,
+            0
+          ],
+          [
+            2.00077,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1120
+          ],
+          [
+            1.60062,
+            1120
+          ],
+          [
+            2.00077,
+            1120,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            345
+          ],
+          [
+            1.60062,
+            345
+          ],
+          [
+            2.00077,
+            345,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "text",
+      "x": 470,
+      "y": 432,
+      "w": 570,
+      "h": 52.800000000000004,
+      "text": "{{text02}}",
+      "size": 33,
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.88645,
+            0
+          ],
+          [
+            2.2866,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            470
+          ],
+          [
+            1.88645,
+            470
+          ],
+          [
+            2.2866,
+            470,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            432
+          ],
+          [
+            1.88645,
+            432
+          ],
+          [
+            2.2866,
+            432,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "bar",
+      "x": 730,
+      "y": 442,
+      "w": 380,
+      "h": 17,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "value": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.88645,
+            0
+          ],
+          [
+            2.57242,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "check",
+      "x": 1120,
+      "y": 427,
+      "w": 36,
+      "h": 36,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            2.57242,
+            0
+          ],
+          [
+            2.97258,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1120
+          ],
+          [
+            2.57242,
+            1120
+          ],
+          [
+            2.97258,
+            1120,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            427
+          ],
+          [
+            2.57242,
+            427
+          ],
+          [
+            2.97258,
+            427,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "text",
+      "x": 470,
+      "y": 514,
+      "w": 570,
+      "h": 52.800000000000004,
+      "text": "{{text03}}",
+      "size": 33,
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            2.85825,
+            0
+          ],
+          [
+            3.25841,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            470
+          ],
+          [
+            2.85825,
+            470
+          ],
+          [
+            3.25841,
+            470,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            514
+          ],
+          [
+            2.85825,
+            514
+          ],
+          [
+            3.25841,
+            514,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "bar",
+      "x": 730,
+      "y": 524,
+      "w": 380,
+      "h": 17,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "value": [
+          [
+            0.0,
+            0
+          ],
+          [
+            2.85825,
+            0
+          ],
+          [
+            3.54423,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010",
+      "kind": "check",
+      "x": 1120,
+      "y": 509,
+      "w": 36,
+      "h": 36,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.54423,
+            0
+          ],
+          [
+            3.94438,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1120
+          ],
+          [
+            3.54423,
+            1120
+          ],
+          [
+            3.94438,
+            1120,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            509
+          ],
+          [
+            3.54423,
+            509
+          ],
+          [
+            3.94438,
+            509,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011",
+      "kind": "text",
+      "x": 470,
+      "y": 596,
+      "w": 570,
+      "h": 52.800000000000004,
+      "text": "{{text04}}",
+      "size": 33,
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.83006,
+            0
+          ],
+          [
+            4.23021,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            470
+          ],
+          [
+            3.83006,
+            470
+          ],
+          [
+            4.23021,
+            470,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            596
+          ],
+          [
+            3.83006,
+            596
+          ],
+          [
+            4.23021,
+            596,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012",
+      "kind": "bar",
+      "x": 730,
+      "y": 606,
+      "w": 380,
+      "h": 17,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "value": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.83006,
+            0
+          ],
+          [
+            4.51604,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013",
+      "kind": "check",
+      "x": 1120,
+      "y": 591,
+      "w": 36,
+      "h": 36,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.51604,
+            0
+          ],
+          [
+            4.91619,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1120
+          ],
+          [
+            4.51604,
+            1120
+          ],
+          [
+            4.91619,
+            1120,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            591
+          ],
+          [
+            4.51604,
+            591
+          ],
+          [
+            4.91619,
+            591,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014",
+      "kind": "text",
+      "x": 470,
+      "y": 678,
+      "w": 570,
+      "h": 52.800000000000004,
+      "text": "{{text05}}",
+      "size": 33,
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.80186,
+            0
+          ],
+          [
+            5.20202,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            470
+          ],
+          [
+            4.80186,
+            470
+          ],
+          [
+            5.20202,
+            470,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            678
+          ],
+          [
+            4.80186,
+            678
+          ],
+          [
+            5.20202,
+            678,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n015",
+      "kind": "bar",
+      "x": 730,
+      "y": 688,
+      "w": 380,
+      "h": 17,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "value": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.80186,
+            0
+          ],
+          [
+            5.48784,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n016",
+      "kind": "check",
+      "x": 1120,
+      "y": 673,
+      "w": 36,
+      "h": 36,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.48784,
+            0
+          ],
+          [
+            5.888,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1120
+          ],
+          [
+            5.48784,
+            1120
+          ],
+          [
+            5.888,
+            1120,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            673
+          ],
+          [
+            5.48784,
+            673
+          ],
+          [
+            5.888,
+            673,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n017",
+      "kind": "circle",
+      "x": 1340,
+      "y": 360,
+      "w": 250,
+      "h": 250,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.23021,
+            0
+          ],
+          [
+            4.63037,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1340
+          ],
+          [
+            4.23021,
+            1340
+          ],
+          [
+            4.63037,
+            1340,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            410
+          ],
+          [
+            4.23021,
+            410
+          ],
+          [
+            4.63037,
+            360,
+            "out"
+          ]
+        ],
+        "scale": [
+          [
+            0.0,
+            1
+          ],
+          [
+            4.5732,
+            1
+          ],
+          [
+            5.14485,
+            1.06
+          ],
+          [
+            5.7165,
+            1
+          ],
+          [
+            6.63114,
+            1.06
+          ],
+          [
+            7.20279,
+            1
+          ],
+          [
+            8.0031,
+            1.06
+          ],
+          [
+            8.57475,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n018",
+      "kind": "text",
+      "x": 1370,
+      "y": 390,
+      "w": 190,
+      "h": 232.0,
+      "text": "{{text06}}",
+      "size": 145,
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.45887,
+            0
+          ],
+          [
+            4.85903,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1370
+          ],
+          [
+            4.45887,
+            1370
+          ],
+          [
+            4.85903,
+            1370,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            440
+          ],
+          [
+            4.45887,
+            440
+          ],
+          [
+            4.85903,
+            390,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n019",
+      "kind": "text",
+      "x": 1325,
+      "y": 650,
+      "w": 300,
+      "h": 80.0,
+      "text": "{{text07}}",
+      "size": 50,
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.5732,
+            0
+          ],
+          [
+            4.97336,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1325
+          ],
+          [
+            4.5732,
+            1325
+          ],
+          [
+            4.97336,
+            1325,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            700
+          ],
+          [
+            4.5732,
+            700
+          ],
+          [
+            4.97336,
+            650,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/84a57ac724fcc92d28d1e74f31ff921f1a09ab2c646281009f6c9fcdbcb7e820.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "Like the heaviest steps of my current video production, they all run within this window.",
+          "label": "Opening Hook",
+          "visual": "A static shot centered on a digital terminal window on a clean, solid white background. A cursor blinks after a typed command. Progressive loading bars appear row by row, filling up with gray blocks until a checkmark icon appears at the end of each line. The lighting is perfectly uniform, flat, and shadowless as if in a studio graphic environment. The color palette is high-contrast with a black terminal box against a bright white void.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "And when it runs, it doesn't even cost a single cent of token usage.",
+          "label": "Product Selling Points",
+          "visual": "A secondary graphic element, a rounded white rectangle, slides in from the right side of the screen. Inside it, a large purple circle contains the number zero, which pulses slightly. A blue progress bar sits beneath it. The terminal window remains on the left, now fully populated with five lines of completed tasks. The overall aesthetic is minimalist and digital.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:06",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "Give me a few minutes today. I won't teach you how to memorize a single command.",
+          "label": "Opening Hook",
+          "visual": "The terminal window and token graphic shrink and disappear into the center of the screen as a new layout appears. A grid of text labels organized into columns and rows fills the lower two-thirds of the frame. The background remains a stark, bright white. The composition is symmetrical and mimics a digital cheat sheet or infographic.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:08",
+          "timestamp_start": "0:06"
+        },
+        {
+          "audio": "In language that even a grandfather could understand, I'll explain the terminal clearly to you.",
+          "label": "Opening Hook",
+          "visual": "A horizontal, rounded black capsule shape appears in the center of the screen. Inside it, stylized white text is displayed. The background is clean white. The camera is static, focusing entirely on the graphical text box which serves as a transition element.",
+          "shot_type": "Medium Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:10",
+          "timestamp_start": "0:08"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "终端里真实流程逐行完成（进度条→✓）；“一分 Token 都不花”时终端让到左边，右侧 Token 计量卡数字始终是 0，每完成一步轻跳一下"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 11.433,
+      "action": "终端里真实流程逐行完成（进度条→✓）；“一分 Token 都不花”时终端让到左边，右侧 Token 计量卡数字始终是 0，每完成一步轻跳一下"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

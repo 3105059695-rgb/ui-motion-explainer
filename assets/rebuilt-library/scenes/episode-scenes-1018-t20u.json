@@ -1,0 +1,1814 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t20u",
+  "title": "一排付费价签同时划掉 → 盖“免费·开源”章 → 效果图压上",
+  "duration": 13.4,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "付费会员",
+    "text02": "免费 · 开源",
+    "text03": "付费会员",
+    "text04": "免费 · 开源",
+    "text05": "付费会员",
+    "text06": "免费 · 开源",
+    "text07": "付费会员",
+    "text08": "免费 · 开源",
+    "text09": "付费会员",
+    "text10": "免费 · 开源",
+    "text11": "Codex",
+    "text12": "把这些工具装好，并连接到我的工作流",
+    "media1.start": 0,
+    "media1.speed": 1,
+    "media2.start": 0,
+    "media2.speed": 1,
+    "media3.start": 0,
+    "media3.speed": 1,
+    "media4.start": 0,
+    "media4.speed": 1,
+    "media5.start": 0,
+    "media5.speed": 1,
+    "media6.start": 0,
+    "media6.speed": 1,
+    "media7.start": 0,
+    "media7.speed": 1,
+    "media8.start": 0,
+    "media8.speed": 1,
+    "media9.start": 0,
+    "media9.speed": 1,
+    "media10.start": 0,
+    "media10.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media2": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media3": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media4": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media5": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media6": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media7": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media8": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media9": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media10": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "image",
+      "x": 80,
+      "y": 140,
+      "w": 330,
+      "h": 430,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        9.112
+      ]
+    },
+    {
+      "id": "n002",
+      "kind": "pill",
+      "x": 105,
+      "y": 600,
+      "w": 280,
+      "h": 65,
+      "label": "{{text01}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.072,
+            0
+          ],
+          [
+            1.541,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            105
+          ],
+          [
+            1.072,
+            105
+          ],
+          [
+            1.541,
+            105,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            650
+          ],
+          [
+            1.072,
+            650
+          ],
+          [
+            1.541,
+            600,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "path",
+      "x": 104,
+      "y": 631,
+      "w": 285,
+      "h": 1,
+      "path": "M0 0 H285",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 285,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.216,
+            0
+          ],
+          [
+            3.886,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "pill",
+      "x": 100,
+      "y": 715,
+      "w": 290,
+      "h": 70,
+      "label": "{{text02}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.288,
+            0
+          ],
+          [
+            4.757,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            100
+          ],
+          [
+            4.288,
+            100
+          ],
+          [
+            4.757,
+            100,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            765
+          ],
+          [
+            4.288,
+            765
+          ],
+          [
+            4.757,
+            715,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "image",
+      "x": 100,
+      "y": 270,
+      "w": 325,
+      "h": 420,
+      "asset": "media2",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        5.628,
+        9.112
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.628,
+            0
+          ],
+          [
+            6.097,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            100
+          ],
+          [
+            5.628,
+            100
+          ],
+          [
+            6.097,
+            100,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            470
+          ],
+          [
+            5.628,
+            470
+          ],
+          [
+            6.097,
+            270,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "image",
+      "x": 440,
+      "y": 140,
+      "w": 330,
+      "h": 430,
+      "asset": "media3",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        9.112
+      ]
+    },
+    {
+      "id": "n007",
+      "kind": "pill",
+      "x": 465,
+      "y": 600,
+      "w": 280,
+      "h": 65,
+      "label": "{{text03}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.273,
+            0
+          ],
+          [
+            1.742,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            465
+          ],
+          [
+            1.273,
+            465
+          ],
+          [
+            1.742,
+            465,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            650
+          ],
+          [
+            1.273,
+            650
+          ],
+          [
+            1.742,
+            600,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "path",
+      "x": 464,
+      "y": 631,
+      "w": 285,
+      "h": 1,
+      "path": "M0 0 H285",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 285,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.216,
+            0
+          ],
+          [
+            3.886,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "pill",
+      "x": 460,
+      "y": 715,
+      "w": 290,
+      "h": 70,
+      "label": "{{text04}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.556,
+            0
+          ],
+          [
+            5.025,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            460
+          ],
+          [
+            4.556,
+            460
+          ],
+          [
+            5.025,
+            460,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            765
+          ],
+          [
+            4.556,
+            765
+          ],
+          [
+            5.025,
+            715,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010",
+      "kind": "image",
+      "x": 460,
+      "y": 270,
+      "w": 325,
+      "h": 420,
+      "asset": "media4",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        6.097,
+        9.112
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            6.097,
+            0
+          ],
+          [
+            6.566,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            460
+          ],
+          [
+            6.097,
+            460
+          ],
+          [
+            6.566,
+            460,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            470
+          ],
+          [
+            6.097,
+            470
+          ],
+          [
+            6.566,
+            270,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011",
+      "kind": "image",
+      "x": 800,
+      "y": 140,
+      "w": 330,
+      "h": 430,
+      "asset": "media5",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        9.112
+      ]
+    },
+    {
+      "id": "n012",
+      "kind": "pill",
+      "x": 825,
+      "y": 600,
+      "w": 280,
+      "h": 65,
+      "label": "{{text05}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.474,
+            0
+          ],
+          [
+            1.943,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            825
+          ],
+          [
+            1.474,
+            825
+          ],
+          [
+            1.943,
+            825,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            650
+          ],
+          [
+            1.474,
+            650
+          ],
+          [
+            1.943,
+            600,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013",
+      "kind": "path",
+      "x": 824,
+      "y": 631,
+      "w": 285,
+      "h": 1,
+      "path": "M0 0 H285",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 285,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.216,
+            0
+          ],
+          [
+            3.886,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014",
+      "kind": "pill",
+      "x": 820,
+      "y": 715,
+      "w": 290,
+      "h": 70,
+      "label": "{{text06}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.824,
+            0
+          ],
+          [
+            5.293,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            820
+          ],
+          [
+            4.824,
+            820
+          ],
+          [
+            5.293,
+            820,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            765
+          ],
+          [
+            4.824,
+            765
+          ],
+          [
+            5.293,
+            715,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n015",
+      "kind": "image",
+      "x": 820,
+      "y": 270,
+      "w": 325,
+      "h": 420,
+      "asset": "media6",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        6.566,
+        9.112
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            6.566,
+            0
+          ],
+          [
+            7.035,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            820
+          ],
+          [
+            6.566,
+            820
+          ],
+          [
+            7.035,
+            820,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            470
+          ],
+          [
+            6.566,
+            470
+          ],
+          [
+            7.035,
+            270,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n016",
+      "kind": "image",
+      "x": 1160,
+      "y": 140,
+      "w": 330,
+      "h": 430,
+      "asset": "media7",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        9.112
+      ]
+    },
+    {
+      "id": "n017",
+      "kind": "pill",
+      "x": 1185,
+      "y": 600,
+      "w": 280,
+      "h": 65,
+      "label": "{{text07}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.675,
+            0
+          ],
+          [
+            2.144,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1185
+          ],
+          [
+            1.675,
+            1185
+          ],
+          [
+            2.144,
+            1185,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            650
+          ],
+          [
+            1.675,
+            650
+          ],
+          [
+            2.144,
+            600,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n018",
+      "kind": "path",
+      "x": 1184,
+      "y": 631,
+      "w": 285,
+      "h": 1,
+      "path": "M0 0 H285",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 285,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.216,
+            0
+          ],
+          [
+            3.886,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n019",
+      "kind": "pill",
+      "x": 1180,
+      "y": 715,
+      "w": 290,
+      "h": 70,
+      "label": "{{text08}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.092,
+            0
+          ],
+          [
+            5.561,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1180
+          ],
+          [
+            5.092,
+            1180
+          ],
+          [
+            5.561,
+            1180,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            765
+          ],
+          [
+            5.092,
+            765
+          ],
+          [
+            5.561,
+            715,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n020",
+      "kind": "image",
+      "x": 1180,
+      "y": 270,
+      "w": 325,
+      "h": 420,
+      "asset": "media8",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        7.035,
+        9.112
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            7.035,
+            0
+          ],
+          [
+            7.504,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1180
+          ],
+          [
+            7.035,
+            1180
+          ],
+          [
+            7.504,
+            1180,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            470
+          ],
+          [
+            7.035,
+            470
+          ],
+          [
+            7.504,
+            270,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n021",
+      "kind": "image",
+      "x": 1520,
+      "y": 140,
+      "w": 330,
+      "h": 430,
+      "asset": "media9",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        9.112
+      ]
+    },
+    {
+      "id": "n022",
+      "kind": "pill",
+      "x": 1545,
+      "y": 600,
+      "w": 280,
+      "h": 65,
+      "label": "{{text09}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.876,
+            0
+          ],
+          [
+            2.345,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1545
+          ],
+          [
+            1.876,
+            1545
+          ],
+          [
+            2.345,
+            1545,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            650
+          ],
+          [
+            1.876,
+            650
+          ],
+          [
+            2.345,
+            600,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n023",
+      "kind": "path",
+      "x": 1544,
+      "y": 631,
+      "w": 285,
+      "h": 1,
+      "path": "M0 0 H285",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 285,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.216,
+            0
+          ],
+          [
+            3.886,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n024",
+      "kind": "pill",
+      "x": 1540,
+      "y": 715,
+      "w": 290,
+      "h": 70,
+      "label": "{{text10}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.36,
+            0
+          ],
+          [
+            5.829,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1540
+          ],
+          [
+            5.36,
+            1540
+          ],
+          [
+            5.829,
+            1540,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            765
+          ],
+          [
+            5.36,
+            765
+          ],
+          [
+            5.829,
+            715,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n025",
+      "kind": "image",
+      "x": 1540,
+      "y": 270,
+      "w": 325,
+      "h": 420,
+      "asset": "media10",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        7.504,
+        9.112
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            7.504,
+            0
+          ],
+          [
+            7.973,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1540
+          ],
+          [
+            7.504,
+            1540
+          ],
+          [
+            7.973,
+            1540,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            470
+          ],
+          [
+            7.504,
+            470
+          ],
+          [
+            7.973,
+            270,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n026",
+      "kind": "window",
+      "x": 310,
+      "y": 250,
+      "w": 1300,
+      "h": 520,
+      "label": "{{text11}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            9.38,
+            0
+          ],
+          [
+            9.849,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            310
+          ],
+          [
+            9.38,
+            310
+          ],
+          [
+            9.849,
+            310,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            300
+          ],
+          [
+            9.38,
+            300
+          ],
+          [
+            9.849,
+            250,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n027",
+      "kind": "typeLine",
+      "x": 400,
+      "y": 415,
+      "w": 1120,
+      "h": 72.0,
+      "text": "{{text12}}",
+      "size": 45,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            9.648,
+            0
+          ],
+          [
+            10.117,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            400
+          ],
+          [
+            9.648,
+            400
+          ],
+          [
+            10.117,
+            400,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            465
+          ],
+          [
+            9.648,
+            465
+          ],
+          [
+            10.117,
+            415,
+            "out"
+          ]
+        ],
+        "value": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            9.648,
+            0.0
+          ],
+          [
+            11.524,
+            1.0,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n028",
+      "kind": "check",
+      "x": 420,
+      "y": 650,
+      "w": 60,
+      "h": 60,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            11.524,
+            0
+          ],
+          [
+            11.993,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            420
+          ],
+          [
+            11.524,
+            420
+          ],
+          [
+            11.993,
+            420,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            700
+          ],
+          [
+            11.524,
+            700
+          ],
+          [
+            11.993,
+            650,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n029",
+      "kind": "check",
+      "x": 660,
+      "y": 650,
+      "w": 60,
+      "h": 60,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            11.8456,
+            0
+          ],
+          [
+            12.3146,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            660
+          ],
+          [
+            11.8456,
+            660
+          ],
+          [
+            12.3146,
+            660,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            700
+          ],
+          [
+            11.8456,
+            700
+          ],
+          [
+            12.3146,
+            650,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n030",
+      "kind": "check",
+      "x": 900,
+      "y": 650,
+      "w": 60,
+      "h": 60,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            12.1672,
+            0
+          ],
+          [
+            12.6362,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            900
+          ],
+          [
+            12.1672,
+            900
+          ],
+          [
+            12.6362,
+            900,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            700
+          ],
+          [
+            12.1672,
+            700
+          ],
+          [
+            12.6362,
+            650,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n031",
+      "kind": "check",
+      "x": 1140,
+      "y": 650,
+      "w": 60,
+      "h": 60,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            12.4888,
+            0
+          ],
+          [
+            12.9578,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1140
+          ],
+          [
+            12.4888,
+            1140
+          ],
+          [
+            12.9578,
+            1140,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            700
+          ],
+          [
+            12.4888,
+            700
+          ],
+          [
+            12.9578,
+            650,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n032",
+      "kind": "check",
+      "x": 1380,
+      "y": 650,
+      "w": 60,
+      "h": 60,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            12.8104,
+            0
+          ],
+          [
+            13.2794,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1380
+          ],
+          [
+            12.8104,
+            1380
+          ],
+          [
+            13.2794,
+            1380,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            700
+          ],
+          [
+            12.8104,
+            700
+          ],
+          [
+            13.2794,
+            650,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/71cdf5936c8748addf560e17abb3f37dfdec90b2b981b9988f10ad495c0893ee.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "Today I must recommend these five god-tier GitHub projects to you.",
+          "label": "Opening Hook",
+          "visual": "A white digital interface background with five overlapping GitHub project page screenshots spread horizontally. The screenshots show various repositories like 'upscayl' and 'handy'. The background is plain white with minimal shadowing beneath the windows. Soft, even digital lighting across the frame.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Each one can directly replace a paid membership, and they are completely free.",
+          "label": "Product Selling Points",
+          "visual": "The same layout of five GitHub screenshots remains. The background transitions slightly with soft shadows and a very clean, high-key lighting aesthetic. No physical subjects are present.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "Photo editing,",
+          "label": "Product Information",
+          "visual": "A split-screen comparison showing a river landscape with mountains. The left side is slightly blurred/lower resolution, and the right side is sharp with enhanced clarity. Natural outdoor lighting, earthy tones of browns and blues. Static shot with a vertical divider line.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:06",
+          "timestamp_start": "0:05"
+        },
+        {
+          "audio": "Translating papers,",
+          "label": "Product Information",
+          "visual": "A software interface for 'PDF Translation' showing a document list on the left and a preview of an academic paper with mathematical formulas on the right. Cold, white UI lighting with blue accents.",
+          "shot_type": "Medium Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:07",
+          "timestamp_start": "0:06"
+        },
+        {
+          "audio": "Voice input, translating videos,",
+          "label": "Product Information",
+          "visual": "A GitHub repository page for 'VideoLingo'. The screen shows a file directory list with folders like 'core', 'docs', and 'tests'. A white background with blue link text and green 'Code' button.",
+          "shot_type": "Medium Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:08",
+          "timestamp_start": "0:07"
+        },
+        {
+          "audio": "Screen recording. I'll give them all to you in this episode.",
+          "label": "Product Information",
+          "visual": "Five distinct app icons arranged in a grid against a white background: a blue square with a mountain, an 'A' icon, a cartoon hand, a play button, and a grey camera icon. High-key lighting, centered composition.",
+          "shot_type": "Medium Shot",
+          "scene_number": 6,
+          "timestamp_end": "0:10",
+          "timestamp_start": "0:08"
+        },
+        {
+          "audio": "Don't worry if you can't install it. Just send the name to Codex, and it can help you install it.",
+          "label": "Problem Solving",
+          "visual": "A minimalist chat interface labeled 'Codex'. A cursor types text into a search bar at the bottom. The background is white with light grey accents. A small robot icon is visible on the right. Smooth, digital motion.",
+          "shot_type": "Medium Shot",
+          "scene_number": 7,
+          "timestamp_end": "0:13",
+          "timestamp_start": "0:10"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "五张真实仓库卡第 0 帧落位 → 每张下面挂出付费会员价签并被划掉 → 盖“免费·开源”章 → 五张效果图按口播压上来 → 收成工具卡、Codex 输入框发送后逐张打勾"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 13.4,
+      "action": "五张真实仓库卡第 0 帧落位 → 每张下面挂出付费会员价签并被划掉 → 盖“免费·开源”章 → 五张效果图按口播压上来 → 收成工具卡、Codex 输入框发送后逐张打勾"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "仓库 1",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          13.4,
+          13.4,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media2",
+      "label": "真实效果 1",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          13.4,
+          13.4,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media3",
+      "label": "仓库 2",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          13.4,
+          13.4,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media4",
+      "label": "真实效果 2",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          13.4,
+          13.4,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media5",
+      "label": "仓库 3",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          13.4,
+          13.4,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media6",
+      "label": "真实效果 3",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          13.4,
+          13.4,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media7",
+      "label": "仓库 4",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          13.4,
+          13.4,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media8",
+      "label": "真实效果 4",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          13.4,
+          13.4,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media9",
+      "label": "仓库 5",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          13.4,
+          13.4,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media10",
+      "label": "真实效果 5",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          13.4,
+          13.4,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

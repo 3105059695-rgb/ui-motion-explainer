@@ -1,0 +1,321 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t05f",
+  "title": "一部手机展开成三屏对照",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {},
+  "assets": {
+    "phone0": "assets/approved-girl-sample/assets/manual-v2.mp4",
+    "phone1": "assets/approved-girl-sample/assets/takeover.mp4",
+    "phone2": "assets/approved-girl-sample/assets/handoff.mp4"
+  },
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/cd4f5bb16c3f1397561bb0c788cdece95e967df4d39322dbd2c03b1d7879b0cb.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "Upbeat, rhythmic electronic music with a moderate tempo and light percussion.",
+          "label": "Opening Hook",
+          "visual": "A vertical smartphone frame centered on a white background displays a 3D animated scene. Inside, a woman with fair skin, long dark hair, wearing a grey blazer, and a man with short dark hair, glasses, and a black sweater are sitting at a wooden table in a bright, modern office with plants in the background. The man is writing on a piece of paper while the woman watches. The lighting is bright and even with soft shadows. The overall color palette is warm and natural.",
+          "shot_type": "Medium Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Continuous upbeat electronic music with rhythmic synth pulses.",
+          "label": "Usage Scenarios",
+          "visual": "The original smartphone frame shifts to the left, and a second vertical frame appears in the center. This new frame shows two 3D animated men, one in a blue blazer and one in a black sweater and glasses, standing and talking on a city street in front of a storefront with yellow lighting. The environment is urban with a blurred street background. Lighting is warm, suggesting an evening or sunset setting.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "The upbeat electronic music concludes with a final rhythmic beat.",
+          "label": "Usage Scenarios",
+          "visual": "A third vertical smartphone frame appears on the right side of the screen. Inside this frame, a 3D animated man with black hair and glasses, wearing a black sweatshirt and black pants with white sneakers, is walking along a sunlit park path lined with green trees. He is gesturing with one hand as if talking or thinking. The lighting is bright, natural daylight with soft shadows on the ground.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:06",
+          "timestamp_start": "0:04"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points.",
+    "demo_note": "Three packaged hand-drawn sample clips demonstrate independently timed actual videos. They are replaceable style/motion demonstration media, not the original reference characters or current production assets."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.5,
+      "action": "One live phone video occupies the center"
+    },
+    {
+      "start": 1.5,
+      "end": 3.9000000000000004,
+      "action": "First phone yields space to second and third distinct live phone sources"
+    },
+    {
+      "start": 3.9000000000000004,
+      "end": 6,
+      "action": "Three sources play side by side at original speed"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n004-group",
+      "kind": "group",
+      "x": 765,
+      "y": 140,
+      "w": 390,
+      "h": 800,
+      "children": [
+        {
+          "id": "n001-card",
+          "kind": "card",
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 800,
+          "children": [],
+          "fill": "#0B0B0F",
+          "radius": 46
+        },
+        {
+          "id": "n002-image",
+          "kind": "image",
+          "x": 15,
+          "y": 25,
+          "w": 360,
+          "h": 750,
+          "asset": "phone0",
+          "fit": "cover",
+          "radius": 32
+        },
+        {
+          "id": "n003-rect",
+          "kind": "rect",
+          "x": 140,
+          "y": 10,
+          "w": 110,
+          "h": 20,
+          "fill": "#0B0B0F",
+          "radius": 10
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            765
+          ],
+          [
+            1.38,
+            765
+          ],
+          [
+            2.58,
+            275
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            0.9,
+            1
+          ],
+          [
+            1.92,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-group",
+      "kind": "group",
+      "x": 765,
+      "y": 140,
+      "w": 390,
+      "h": 800,
+      "children": [
+        {
+          "id": "n005-card",
+          "kind": "card",
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 800,
+          "children": [],
+          "fill": "#0B0B0F",
+          "radius": 46
+        },
+        {
+          "id": "n006-image",
+          "kind": "image",
+          "x": 15,
+          "y": 25,
+          "w": 360,
+          "h": 750,
+          "asset": "phone1",
+          "fit": "cover",
+          "radius": 32
+        },
+        {
+          "id": "n007-rect",
+          "kind": "rect",
+          "x": 140,
+          "y": 10,
+          "w": 110,
+          "h": 20,
+          "fill": "#0B0B0F",
+          "radius": 10
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            765
+          ],
+          [
+            1.38,
+            765
+          ],
+          [
+            2.58,
+            765
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.86,
+            0
+          ],
+          [
+            2.88,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012-group",
+      "kind": "group",
+      "x": 765,
+      "y": 140,
+      "w": 390,
+      "h": 800,
+      "children": [
+        {
+          "id": "n009-card",
+          "kind": "card",
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 800,
+          "children": [],
+          "fill": "#0B0B0F",
+          "radius": 46
+        },
+        {
+          "id": "n010-image",
+          "kind": "image",
+          "x": 15,
+          "y": 25,
+          "w": 360,
+          "h": 750,
+          "asset": "phone2",
+          "fit": "cover",
+          "radius": 32
+        },
+        {
+          "id": "n011-rect",
+          "kind": "rect",
+          "x": 140,
+          "y": 10,
+          "w": 110,
+          "h": 20,
+          "fill": "#0B0B0F",
+          "radius": 10
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            765
+          ],
+          [
+            1.38,
+            765
+          ],
+          [
+            2.58,
+            1255
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.82,
+            0
+          ],
+          [
+            3.84,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "media_tracks": {
+    "phone0": {
+      "source_in": 0,
+      "start": 0,
+      "rate": 1
+    },
+    "phone1": {
+      "source_in": 0,
+      "start": 1.8,
+      "rate": 1
+    },
+    "phone2": {
+      "source_in": 0,
+      "start": 2.8,
+      "rate": 1
+    }
+  },
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 7,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

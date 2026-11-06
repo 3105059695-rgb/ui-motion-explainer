@@ -1,0 +1,628 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t14m",
+  "title": "长时间条压成短条，再拆成片段块、光标替换其中一块",
+  "duration": 10.5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "本期剪辑工程",
+    "text02": "1 小时 30 分",
+    "text03": "10 分钟",
+    "media1.start": 0,
+    "media1.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "window",
+      "x": 160,
+      "y": 130,
+      "w": 1600,
+      "h": 810,
+      "label": "{{text01}}",
+      "fill": "#17171C"
+    },
+    {
+      "id": "n002",
+      "kind": "image",
+      "x": 480,
+      "y": 250,
+      "w": 960,
+      "h": 420,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        10.501
+      ]
+    },
+    {
+      "id": "n003",
+      "kind": "rect",
+      "x": 260,
+      "y": 780,
+      "w": 1400,
+      "h": 75,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "w": [
+          [
+            0.0,
+            1400
+          ],
+          [
+            2.31,
+            1400
+          ],
+          [
+            3.99,
+            360
+          ],
+          [
+            5.46,
+            360
+          ],
+          [
+            6.51,
+            1400
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "text",
+      "x": 270,
+      "y": 865,
+      "w": 650,
+      "h": 88.0,
+      "text": "{{text02}}",
+      "size": 55,
+      "visible": [
+        0.0,
+        3.15
+      ]
+    },
+    {
+      "id": "n005",
+      "kind": "text",
+      "x": 270,
+      "y": 865,
+      "w": 650,
+      "h": 88.0,
+      "text": "{{text03}}",
+      "size": 55,
+      "visible": [
+        3.36,
+        6.3
+      ]
+    },
+    {
+      "id": "n006",
+      "kind": "rect",
+      "x": 260,
+      "y": 780,
+      "w": 265,
+      "h": 75,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            6.405,
+            0
+          ],
+          [
+            6.7725,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            260
+          ],
+          [
+            6.405,
+            260
+          ],
+          [
+            6.7725,
+            260,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            780
+          ],
+          [
+            6.405,
+            780
+          ],
+          [
+            6.7725,
+            780,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "rect",
+      "x": 545,
+      "y": 780,
+      "w": 265,
+      "h": 75,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            6.615,
+            0
+          ],
+          [
+            6.9825,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            545
+          ],
+          [
+            6.615,
+            545
+          ],
+          [
+            6.9825,
+            545,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            780
+          ],
+          [
+            6.615,
+            780
+          ],
+          [
+            6.9825,
+            780,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "rect",
+      "x": 830,
+      "y": 780,
+      "w": 265,
+      "h": 75,
+      "fill": "#797982",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            6.825,
+            0
+          ],
+          [
+            7.1925,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            830
+          ],
+          [
+            6.825,
+            830
+          ],
+          [
+            7.1925,
+            830,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            780
+          ],
+          [
+            6.825,
+            780
+          ],
+          [
+            7.1925,
+            780,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "rect",
+      "x": 1115,
+      "y": 780,
+      "w": 265,
+      "h": 75,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            7.035,
+            0
+          ],
+          [
+            7.4025,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1115
+          ],
+          [
+            7.035,
+            1115
+          ],
+          [
+            7.4025,
+            1115,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            780
+          ],
+          [
+            7.035,
+            780
+          ],
+          [
+            7.4025,
+            780,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010",
+      "kind": "rect",
+      "x": 1400,
+      "y": 780,
+      "w": 265,
+      "h": 75,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            7.245,
+            0
+          ],
+          [
+            7.6125,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1400
+          ],
+          [
+            7.245,
+            1400
+          ],
+          [
+            7.6125,
+            1400,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            780
+          ],
+          [
+            7.245,
+            780
+          ],
+          [
+            7.6125,
+            780,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011",
+      "kind": "rect",
+      "x": 850,
+      "y": 480,
+      "w": 265,
+      "h": 75,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            7.455,
+            0
+          ],
+          [
+            7.8225,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            850
+          ],
+          [
+            7.455,
+            850
+          ],
+          [
+            7.8225,
+            850,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            480
+          ],
+          [
+            7.875,
+            480
+          ],
+          [
+            9.03,
+            780
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012",
+      "kind": "path",
+      "x": 0,
+      "y": 0,
+      "w": 45,
+      "h": 55,
+      "path": "M0 0 L0 42 L12 30 L24 51 L33 46 L22 26 L40 24 Z",
+      "fill": "#0B0B0F",
+      "strokeWidth": 7,
+      "tracks": {
+        "x": [
+          [
+            0.0,
+            1750
+          ],
+          [
+            6.93,
+            960
+          ],
+          [
+            7.665,
+            965
+          ],
+          [
+            9.03,
+            965
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            970
+          ],
+          [
+            6.93,
+            815
+          ],
+          [
+            7.665,
+            515
+          ],
+          [
+            9.03,
+            815
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013",
+      "kind": "check",
+      "x": 1480,
+      "y": 860,
+      "w": 70,
+      "h": 70,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            9.555,
+            0
+          ],
+          [
+            9.9225,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1480
+          ],
+          [
+            9.555,
+            1480
+          ],
+          [
+            9.9225,
+            1480,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            910
+          ],
+          [
+            9.555,
+            910
+          ],
+          [
+            9.9225,
+            860,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/febbdbe54ab59fdd21ed19d4d14b01620682d6ac695cd6404f12bf212ad59089.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "Now, things have improved quite a lot. By taking that hour and a half long interview...",
+          "label": "Opening Hook",
+          "visual": "A stylized digital animation of a dark software interface centered on a clean white background. A progress bar at the bottom is nearly empty. The lighting is perfectly even and flat with no shadows. The color palette is dominated by dark charcoal gray and stark white. A cursor is not yet visible.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "...and using two prompts, it can be rough-cut into ten minutes.",
+          "label": "Product Information",
+          "visual": "The interface updates with a motion graphics transition. Small text blocks appear on the top left of the window. The progress bar at the bottom rapidly fills from left to right, changing the indicated duration value. The background remains white and static.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "But in the end, you still need to go through it once yourself to adjust the positions and switch the shots.",
+          "label": "Usage Scenarios",
+          "visual": "A white cursor enters the frame from the bottom right and hovers over the progress bar area. A new button appears on the top right. The cursor clicks on one of the segments in the progress bar, simulating a user interacting with video editing software. The overall camera position is static.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:09",
+          "timestamp_start": "0:05"
+        },
+        {
+          "audio": "So for tasks like copywriting, organizing materials, and doing research...",
+          "label": "Product Selling Points",
+          "visual": "The dark software window zooms out and exits the top of the frame. Two circular icons with checkmarks inside them appear in the center of the white screen. The icons are minimalist, using black outlines and gray fills. The scene is bright and high-key.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:10",
+          "timestamp_start": "0:09"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "达芬奇窗口底部一条时间条“1 小时 30 分”压缩成“10 分钟”，再放大成 5 个片段块，光标拖动、替换其中一块"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 10.5,
+      "action": "达芬奇窗口底部一条时间条“1 小时 30 分”压缩成“10 分钟”，再放大成 5 个片段块，光标拖动、替换其中一块"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "本期工程预览",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          10.5,
+          10.5,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

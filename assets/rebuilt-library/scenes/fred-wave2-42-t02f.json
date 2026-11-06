@@ -1,0 +1,236 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t02f",
+  "title": "虚化界面上点出几种方式",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "method0": "1  从已有文件开始",
+    "method1": "2  从一个问题开始",
+    "method2": "3  从真实任务开始"
+  },
+  "assets": {
+    "screen": "assets/style-film/media/connected-delivery.svg"
+  },
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/9a86d217cf6add425693834f3937cb89ad8ca10f0e37f3a34be5857c3d9f52cf.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A digital 'click' sound effect followed by a fast-paced, upbeat synth-pop background track.",
+          "label": "Opening Hook",
+          "visual": "A static shot of a dark, blurred software interface with multiple column-based layouts. The background is dimly lit with deep charcoal and black tones. A subtle purple and white logo is visible in the top right corner. The lighting is soft and ambient, emanating from the virtual screen elements.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A sharp 'pop' sound effect as the first list item appears. The background music continues at a consistent tempo.",
+          "label": "Product Information",
+          "visual": "A list begins to appear over the blurred background. The background remains dark. The overall color palette is monochromatic black and white, with high contrast. The camera is static.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A second 'pop' sound effect. The upbeat electronic music maintains its energetic mood.",
+          "label": "Product Information",
+          "visual": "The second item appears in the list directly below the first. The lighting remains consistent with the previous scene, focusing on the center-aligned elements. The background interface is still out of focus, maintaining depth of field.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A third 'pop' sound effect. The music swells slightly in volume as the list completes.",
+          "label": "Product Information",
+          "visual": "The third and final item is added to the list. The camera remains perfectly still. The dark environment provides a clean, professional aesthetic. The framing is centered and balanced.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 3.9000000000000004,
+      "action": "Three entry methods populate stable lines over defocused actual interface"
+    },
+    {
+      "start": 3.9000000000000004,
+      "end": 5,
+      "action": "Full method list holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 80,
+      "y": 70,
+      "w": 1760,
+      "h": 940,
+      "asset": "screen",
+      "fit": "contain",
+      "radius": 18,
+      "blur": 15,
+      "opacity": 0.45
+    },
+    {
+      "id": "n002-rect",
+      "kind": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "fill": "rgba(11,11,15,.64)",
+      "radius": 0
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 350,
+      "y": 220,
+      "w": 1250,
+      "h": 130,
+      "text": "{{method0}}",
+      "size": 76,
+      "color": "#FFFFFF",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.4,
+            0
+          ],
+          [
+            1.15,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.4,
+            255
+          ],
+          [
+            1.15,
+            220,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-text",
+      "kind": "text",
+      "x": 350,
+      "y": 450,
+      "w": 1250,
+      "h": 130,
+      "text": "{{method1}}",
+      "size": 76,
+      "color": "#FFFFFF",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.6,
+            0
+          ],
+          [
+            2.35,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.6,
+            485
+          ],
+          [
+            2.35,
+            450,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-text",
+      "kind": "text",
+      "x": 350,
+      "y": 680,
+      "w": 1250,
+      "h": 130,
+      "text": "{{method2}}",
+      "size": 76,
+      "color": "#FFFFFF",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.8,
+            0
+          ],
+          [
+            3.55,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.8,
+            715
+          ],
+          [
+            3.55,
+            680,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

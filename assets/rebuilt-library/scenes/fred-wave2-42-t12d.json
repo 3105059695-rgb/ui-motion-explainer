@@ -1,0 +1,306 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t12d",
+  "title": "阶段胶囊：三枚胶囊建立，聚焦当前阶段",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "stage0": "准备素材",
+    "stage1": "执行过程",
+    "stage2": "检查结果"
+  },
+  "assets": {
+    "screen": "assets/style-film/media/connected-delivery.svg"
+  },
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/fc9d61cc69fffb132b0fb2d2ed60cfea0584b7ab21b1d214d0a57c78ce69f97a.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A rhythmic electronic drum beat starts at a moderate tempo, featuring a soft synth pad in the background to create a tech-focused, professional atmosphere.",
+          "label": "Opening Hook",
+          "visual": "Static center-aligned shot of a dark rounded-rectangle button containing a single icon on a blurred white background. The lighting is soft and even, simulating a clean UI/UX environment. The color palette is neutral with soft whites and grays, emphasizing the dark floating element in the foreground.",
+          "shot_type": "Close-Up",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A series of three high-pitched 'pop' or 'blip' digital sound effects synchronized with the appearance of each button over the continuing background beat.",
+          "label": "Product Information",
+          "visual": "A vertical stack of three dark rounded-rectangle buttons appears sequentially from top to bottom. Each button features a different icon. The background remains a blurred website interface. The transition is sharp and snappy, simulating a digital menu or state change.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The background music continues with a slight increase in bass frequency, maintaining a sense of momentum and flow.",
+          "label": "Usage Scenarios",
+          "visual": "The camera focuses back on a single dark button in the center. The background blur shifts slightly, suggesting a focus on the specific 'before' state of a workflow. The lighting remains soft and artificial, mimicking a digital screen glow.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 2.4000000000000004,
+      "action": "One stage opens into three vertical stages"
+    },
+    {
+      "start": 3.9000000000000004,
+      "end": 5.28,
+      "action": "Selected stage moves into same center while others recede"
+    },
+    {
+      "start": 5.28,
+      "end": 6,
+      "action": "Selected stage holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 260,
+      "y": 130,
+      "w": 1400,
+      "h": 800,
+      "asset": "screen",
+      "fit": "contain",
+      "radius": 18,
+      "blur": 15,
+      "opacity": 0.35
+    },
+    {
+      "id": "n002-pill",
+      "kind": "pill",
+      "x": 540,
+      "y": 430,
+      "w": 840,
+      "h": 150,
+      "label": "{{stage0}}",
+      "size": 65,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "y": [
+          [
+            0,
+            430
+          ],
+          [
+            1.02,
+            430
+          ],
+          [
+            2.22,
+            210
+          ],
+          [
+            3.9,
+            210
+          ],
+          [
+            5.22,
+            210
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.02,
+            1
+          ],
+          [
+            2.1,
+            1
+          ],
+          [
+            3.9,
+            1
+          ],
+          [
+            5.22,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            3.9,
+            1
+          ],
+          [
+            5.22,
+            0.92
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-pill",
+      "kind": "pill",
+      "x": 540,
+      "y": 430,
+      "w": 840,
+      "h": 150,
+      "label": "{{stage1}}",
+      "size": 65,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "y": [
+          [
+            0,
+            430
+          ],
+          [
+            1.02,
+            430
+          ],
+          [
+            2.22,
+            445
+          ],
+          [
+            3.9,
+            445
+          ],
+          [
+            5.22,
+            430
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.02,
+            0
+          ],
+          [
+            2.1,
+            1
+          ],
+          [
+            3.9,
+            1
+          ],
+          [
+            5.22,
+            1
+          ]
+        ],
+        "scale": [
+          [
+            3.9,
+            1
+          ],
+          [
+            5.22,
+            1.12
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-pill",
+      "kind": "pill",
+      "x": 540,
+      "y": 430,
+      "w": 840,
+      "h": 150,
+      "label": "{{stage2}}",
+      "size": 65,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "y": [
+          [
+            0,
+            430
+          ],
+          [
+            1.02,
+            430
+          ],
+          [
+            2.22,
+            680
+          ],
+          [
+            3.9,
+            680
+          ],
+          [
+            5.22,
+            680
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.02,
+            0
+          ],
+          [
+            2.1,
+            1
+          ],
+          [
+            3.9,
+            1
+          ],
+          [
+            5.22,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            3.9,
+            1
+          ],
+          [
+            5.22,
+            0.92
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

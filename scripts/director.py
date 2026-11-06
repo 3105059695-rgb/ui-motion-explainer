@@ -461,10 +461,19 @@ def production_context(resolution, root=ROOT):
     def resource(relative):
         path = (root / relative).resolve()
         return {'path': str(path), 'exists': path.is_file()}
+    continuous_style = {'available': False, 'viewing_status': 'not-observed'}
+    if (root / 'assets/style-film/manifest.json').is_file():
+        import style_film
+        movie = style_film.inspect(root)
+        continuous_style = {key: movie[key] for key in (
+            'movie_path', 'player_path', 'duration_seconds', 'chapters',
+            'portable_movie_ready', 'reading_instruction', 'viewing_status',
+            'approval_scope', 'aigc_movie_path') if key in movie}
     return {
         'mode': 'production',
         'primary_design_source': resolution.get('guidance'),
         'approved_examples': [],
+        'continuous_style': continuous_style,
         'unified_production': resolution.get('unified_production', {}).get('enabled') is True,
         'current_project_style': resolution.get('current_project_style', {}),
         'current_project_inputs': resolution.get('current_project_inputs', {}),
@@ -483,6 +492,10 @@ def production_context(resolution, root=ROOT):
                            'inspect_command': 'ui.py designs inspect --id <设计>',
                            'build_command': 'ui.py designs build --spec <绑定.json> --out <工程>',
                            'usage': 'Original design adapters retain their declared structural limits; do not change labels to fake a different quantity or operation.'},
+        'retained_library': {'inspect': 'ui.py library inspect --id <能力ID>',
+                             'scaffold': 'ui.py library scaffold --id <能力ID> --out <参数.json>',
+                             'build': 'ui.py library build --spec <参数.json> --out <工程>',
+                             'scope': 'Run the actual retained source or explicitly labeled independent reconstruction. No generic replacement on failure.'},
         'plan_format': resource('references/director-plan-contract.md'),
         'on_demand': {name: resource(path) for name, path in {
             'aigc': 'references/aigc-directing.md',
@@ -495,7 +508,7 @@ def production_context(resolution, root=ROOT):
         'research': {'command': 'ui.py direct -- prepare --mode research --script <稿> --project <研究工程>',
                      'original_media_required_for_production': False,
                      'when': 'Only for new capability extraction, explicit whole-film replication, or tracing an observed mismatch.'},
-        'instruction': '继承当前审美和原声约束，按口播选择已实现能力并填写本期参数。查看所选能力的接口与短动态预览，运行已有代码；只有改编或排错才展开源码与原片研究。整库保持开放，非直用条目标明需要适配，不能把参考当成已执行。最终检查本期实际画面和声音。'}
+        'instruction': '继承当前审美和原声约束；首次用continuous_style完整连续风格片及全部原设计状态建立基准，不以四帧代替整段，也不伪称完整观看。随后按口播选整库中的实际实现并填写参数，用统一library或semantic入口运行；只在改编或排错时深入原片。分类不是额外效果，独立实现不是会员原源码，运行验证不是审美认可。检查本期实际画面和声音。'}
 
 
 def production_requirements_context(root=ROOT):

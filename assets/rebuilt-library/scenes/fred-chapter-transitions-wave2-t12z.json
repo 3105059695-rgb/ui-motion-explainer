@@ -1,0 +1,157 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-wave2-t12z",
+  "title": "电梯到站：楼层跳到本章，门打开",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "本章，正式开始",
+    "text02": "▲ 03",
+    "text03": "▲ 04"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "text",
+      "x": 400,
+      "y": 470,
+      "w": 1120,
+      "h": 144.0,
+      "text": "{{text01}}",
+      "size": 90,
+      "align": "center"
+    },
+    {
+      "id": "n002",
+      "kind": "pill",
+      "x": 795,
+      "y": 130,
+      "w": 330,
+      "h": 80,
+      "label": "{{text02}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "visible": [
+        0,
+        0.96
+      ]
+    },
+    {
+      "id": "n003",
+      "kind": "pill",
+      "x": 795,
+      "y": 130,
+      "w": 330,
+      "h": 80,
+      "label": "{{text03}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "visible": [
+        0.96,
+        3.001
+      ]
+    },
+    {
+      "id": "n004",
+      "kind": "rect",
+      "x": 330,
+      "y": 285,
+      "w": 630,
+      "h": 550,
+      "fill": "#0B0B0F",
+      "radius": 8,
+      "tracks": {
+        "x": [
+          [
+            0,
+            330
+          ],
+          [
+            1.2,
+            330
+          ],
+          [
+            2.31,
+            -320
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "rect",
+      "x": 960,
+      "y": 285,
+      "w": 630,
+      "h": 550,
+      "fill": "#0B0B0F",
+      "radius": 8,
+      "tracks": {
+        "x": [
+          [
+            0,
+            960
+          ],
+          [
+            1.2,
+            960
+          ],
+          [
+            2.31,
+            1610
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/a2aa3815a18ca3f2747d84a7b6a4392ad1224457fe3dac4d0a6e977d2d7cc136.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "A digital 'click' sound effect followed by a short, high-pitched synthetic chime.",
+          "label": "Opening Hook",
+          "visual": "A static, minimalist graphic animation featuring a white background. At the top center, a small dark grey pill-shaped element containing a white triangle and the number '03' is visible. Below, two large black rectangles sit side-by-side with a thin white vertical line separating them. The lighting is perfectly even and artificial, with a subtle drop shadow beneath the black rectangles. No characters are present.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A mechanical 'slide' sound effect followed by a low-frequency pulse.",
+          "label": "Product Information",
+          "visual": "The graphic transitions with a sliding animation. The number '03' in the top pill element changes to '04'. The two black rectangles are replaced by a single horizontal white rectangular field framed by two black vertical bars on the left and right. The background remains white and the lighting remains even and flat. No characters are present.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "电梯门关着、楼层从上一章跳到本章 → 门向两边打开 → 章节名"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 3.0,
+      "action": "电梯门关着、楼层从上一章跳到本章 → 门向两边打开 → 章节名"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

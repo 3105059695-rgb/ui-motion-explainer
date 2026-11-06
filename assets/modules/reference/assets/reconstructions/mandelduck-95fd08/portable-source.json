@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "slug": "mandelduck-95fd08",
+  "source_project": "assets/reconstructions/mandelduck-95fd08",
+  "project": "assets/reconstructions/mandelduck-95fd08",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "assets/manifest.json",
+    "assets/painted-atlas.jpg",
+    "assets/sky-artwork-crop.jpg",
+    "assets/starry-debug-flipped.jpg",
+    "assets/starry-night-public-domain.jpg",
+    "check-v1/sampled-states.json",
+    "check-v2/sampled-states.json",
+    "check-v3/sampled-states.json",
+    "index.html",
+    "motion.js",
+    "project.json",
+    "scene-plan.json",
+    "style.css",
+    "world.frag",
+    "world.vert",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/0bdb6b660482d31531b3.ttf",
+    "../../reference-shared/fonts/73894e0448cae90a92b6.ttf"
+  ],
+  "replaceable_assets": [
+    {
+      "path": "assets/painted-atlas.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "50bd4122c3162e62b8d2db43f87cd9a779ca4ea5b14239e3068104cf702502ec"
+    },
+    {
+      "path": "assets/sky-artwork-crop.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "13d71cc7813f83236e996a0033096d6ad6c507704fb6afb67a148975481382d7"
+    },
+    {
+      "path": "assets/starry-debug-flipped.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "4a998a604c1cf0ca147f2f2a97e0d22ce877e4b215d07651aa56b0e433a79082"
+    },
+    {
+      "path": "assets/starry-night-public-domain.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "a2759458dbc9cf1150ddc8b5d16453aba4790ed6fe826c29f4cf59471d07e629"
+    }
+  ],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "assets/fonts/Caveat.ttf": "../../reference-shared/fonts/0bdb6b660482d31531b3.ttf",
+    "assets/fonts/Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "assets/manifest.json": "assets/manifest.json",
+    "assets/painted-atlas.jpg": "assets/painted-atlas.jpg",
+    "assets/sky-artwork-crop.jpg": "assets/sky-artwork-crop.jpg",
+    "assets/starry-debug-flipped.jpg": "assets/starry-debug-flipped.jpg",
+    "assets/starry-night-public-domain.jpg": "assets/starry-night-public-domain.jpg",
+    "check-v1/sampled-states.json": "check-v1/sampled-states.json",
+    "check-v2/sampled-states.json": "check-v2/sampled-states.json",
+    "check-v3/sampled-states.json": "check-v3/sampled-states.json",
+    "index.html": "index.html",
+    "motion.js": "motion.js",
+    "project.json": "project.json",
+    "scene-plan.json": "scene-plan.json",
+    "style.css": "style.css",
+    "world.frag": "world.frag",
+    "world.vert": "world.vert",
+    "Caveat.ttf": "../../reference-shared/fonts/0bdb6b660482d31531b3.ttf",
+    "Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "manifest.json": "assets/manifest.json",
+    "painted-atlas.jpg": "assets/painted-atlas.jpg",
+    "sky-artwork-crop.jpg": "assets/sky-artwork-crop.jpg",
+    "starry-debug-flipped.jpg": "assets/starry-debug-flipped.jpg",
+    "starry-night-public-domain.jpg": "assets/starry-night-public-domain.jpg"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

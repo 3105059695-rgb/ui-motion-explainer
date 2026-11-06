@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "source_family": "retained-fangmu-token",
+  "entries": [
+    {
+      "id": "sample:fangmu/opening-v5",
+      "file": "opening.html",
+      "source": "opening-source/index-v5.html",
+      "start_offset": 0,
+      "duration": 12.52,
+      "title": "人物原构图与文字贴纸",
+      "required_media": [
+        "assets/presenter.mp4",
+        "assets/matte.mp4"
+      ]
+    },
+    {
+      "id": "sample:fangmu/body-car-v2",
+      "file": "car.html",
+      "source": "token/reset.html",
+      "start_offset": 25.64,
+      "duration": 16.96,
+      "title": "汽车拆解到文字与编号",
+      "required_media": [
+        "assets/presenter-full.mp4"
+      ]
+    },
+    {
+      "id": "sample:fangmu/material-captions-v3",
+      "file": "material.html",
+      "source": "token/real-desk-v3.html",
+      "start_offset": 196.56,
+      "duration": 17.64,
+      "title": "实体工作桌与UI字幕",
+      "required_media": [
+        "assets/presenter-full.mp4"
+      ]
+    },
+    {
+      "id": "sample:fangmu/full-v3",
+      "file": "full.html",
+      "source": "token/full-v3.html",
+      "start_offset": 0,
+      "duration": 336.52,
+      "title": "连续正文与人物时钟",
+      "required_media": [
+        "assets/presenter-full.mp4",
+        "assets/approved-opening-v5.mp4",
+        "assets/material-sample-v3.mp4"
+      ]
+    }
+  ],
+  "private_media_included": false,
+  "default_mode": "production",
+  "demo_mode": "props.mode=demo",
+  "scope": "Original authored scene implementations, portable without private face or voice. Demo placeholders are labeled. Current media and narration remain project inputs.",
+  "runtime_tested_this_run": true,
+  "verification_scope": "Three offline seeks per entry, no missing request or browser error; unbound production rejected. Demo validation is not private-media delivery or new aesthetic approval.",
+  "shared_assets": [
+    "assets/modules/director/assets/studio/fonts/NotoSansSC.ttf",
+    "assets/modules/director/assets/studio/fonts/Outfit-Bold.ttf",
+    "assets/modules/director/assets/studio/fonts/NotoSansSC-OFL.txt",
+    "assets/modules/director/assets/studio/fonts/Outfit-OFL.txt"
+  ],
+  "verification_cases": [
+    {
+      "id": "sample:fangmu/opening-v5",
+      "ok": true,
+      "frames_differ": true,
+      "browser_errors": [],
+      "missing_requests": []
+    },
+    {
+      "id": "sample:fangmu/body-car-v2",
+      "ok": true,
+      "frames_differ": true,
+      "browser_errors": [],
+      "missing_requests": []
+    },
+    {
+      "id": "sample:fangmu/material-captions-v3",
+      "ok": true,
+      "frames_differ": true,
+      "browser_errors": [],
+      "missing_requests": []
+    },
+    {
+      "id": "sample:fangmu/full-v3",
+      "ok": true,
+      "frames_differ": true,
+      "browser_errors": [],
+      "missing_requests": []
+    }
+  ]
+}

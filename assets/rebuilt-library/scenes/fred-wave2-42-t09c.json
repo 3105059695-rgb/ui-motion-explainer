@@ -1,0 +1,415 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t09c",
+  "title": "参数填写：表单逐项填入，关键值点亮",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "title": "定制你的工作助手",
+    "colors": "外观颜色",
+    "roles": "助手形象",
+    "name": "本期助手",
+    "character0": "●",
+    "character1": "◆",
+    "character2": "★",
+    "character3": "■"
+  },
+  "assets": {
+    "avatar": "assets/approved-girl-sample/assets/handoff.png"
+  },
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/3ce9fccdacdcf2845d9d514743829a97a6299f230ebbde186e65148da5eff9fd.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single, sharp digital 'click' sound effect, followed by a short, high-pitched mechanical whirring sound.",
+          "label": "Product Information",
+          "visual": "A digital interface on a clean white background displays a customization menu. The menu is a rounded white window with gray headings. To the right, a circular avatar preview shows a soft gray ring. A cursor hovers over the 'Characters' selection area, where several circular icons are loading. The lighting is perfectly even and digital, with a neutral color palette focused on grays and whites.",
+          "shot_type": "Medium Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A series of three rapid, percussive digital pops as the menu elements appear, followed by a soft 'whoosh' effect.",
+          "label": "Product Information",
+          "visual": "The interface updates as the 'Colors' section expands to show a row of colorful circles including light blue, yellow, pink, and green. A name field appears on the right, populated with the name 'Fred'. The cursor moves to select the pink circle. The lighting remains consistent and soft across the digital workspace.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A bright, resonant 'ding' sound indicating a successful selection, followed by a low-frequency ambient synth hum.",
+          "label": "Product Selling Points",
+          "visual": "The camera zooms in on the color selection row. A purple selection box highlights the pink circle. The background is a slightly blurred version of the main interface. The colors are highly saturated and vibrant against the white UI. The movement is a smooth digital zoom-in.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.75,
+      "action": "Whole customization surface shows options and live preview context"
+    },
+    {
+      "start": 1.75,
+      "end": 2.75,
+      "action": "Cursor selects a specific current color"
+    },
+    {
+      "start": 2.75,
+      "end": 4.0,
+      "action": "Camera focuses selected option retaining its neighbors"
+    },
+    {
+      "start": 4.0,
+      "end": 5,
+      "action": "Selection holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-card",
+      "kind": "card",
+      "x": 150,
+      "y": 110,
+      "w": 1620,
+      "h": 860,
+      "children": [],
+      "fill": "#FFFFFF"
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 230,
+      "y": 165,
+      "w": 1400,
+      "h": 100,
+      "text": "{{title}}",
+      "size": 65,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 240,
+      "y": 335,
+      "w": 600,
+      "h": 75,
+      "text": "{{colors}}",
+      "size": 42,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n004-text",
+      "kind": "text",
+      "x": 240,
+      "y": 585,
+      "w": 600,
+      "h": 75,
+      "text": "{{roles}}",
+      "size": 42,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n005-card",
+      "kind": "card",
+      "x": 1160,
+      "y": 310,
+      "w": 480,
+      "h": 560,
+      "children": [],
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n006-text",
+      "kind": "text",
+      "x": 1200,
+      "y": 350,
+      "w": 400,
+      "h": 80,
+      "text": "{{name}}",
+      "size": 45,
+      "color": "#0B0B0F",
+      "align": "center"
+    },
+    {
+      "id": "n007-image",
+      "kind": "image",
+      "x": 1220,
+      "y": 465,
+      "w": 360,
+      "h": 300,
+      "asset": "avatar",
+      "fit": "cover",
+      "radius": 140
+    },
+    {
+      "id": "n008-circle",
+      "kind": "circle",
+      "x": 240,
+      "y": 450,
+      "w": 95,
+      "h": 95,
+      "fill": "#0B0B0F"
+    },
+    {
+      "id": "n009-circle",
+      "kind": "circle",
+      "x": 395,
+      "y": 450,
+      "w": 95,
+      "h": 95,
+      "fill": "#82B5FF"
+    },
+    {
+      "id": "n010-circle",
+      "kind": "circle",
+      "x": 550,
+      "y": 450,
+      "w": 95,
+      "h": 95,
+      "fill": "#D6C2FF"
+    },
+    {
+      "id": "n011-circle",
+      "kind": "circle",
+      "x": 705,
+      "y": 450,
+      "w": 95,
+      "h": 95,
+      "fill": "#E5B957"
+    },
+    {
+      "id": "n013-card",
+      "kind": "card",
+      "x": 235,
+      "y": 690,
+      "w": 120,
+      "h": 120,
+      "children": [
+        {
+          "id": "n012-text",
+          "kind": "text",
+          "x": 15,
+          "y": 20,
+          "w": 90,
+          "h": 80,
+          "text": "{{character0}}",
+          "size": 58,
+          "color": "#0B0B0F",
+          "align": "center"
+        }
+      ],
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n015-card",
+      "kind": "card",
+      "x": 395,
+      "y": 690,
+      "w": 120,
+      "h": 120,
+      "children": [
+        {
+          "id": "n014-text",
+          "kind": "text",
+          "x": 15,
+          "y": 20,
+          "w": 90,
+          "h": 80,
+          "text": "{{character1}}",
+          "size": 58,
+          "color": "#0B0B0F",
+          "align": "center"
+        }
+      ],
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n017-card",
+      "kind": "card",
+      "x": 555,
+      "y": 690,
+      "w": 120,
+      "h": 120,
+      "children": [
+        {
+          "id": "n016-text",
+          "kind": "text",
+          "x": 15,
+          "y": 20,
+          "w": 90,
+          "h": 80,
+          "text": "{{character2}}",
+          "size": 58,
+          "color": "#0B0B0F",
+          "align": "center"
+        }
+      ],
+      "fill": "#D6C2FF"
+    },
+    {
+      "id": "n019-card",
+      "kind": "card",
+      "x": 715,
+      "y": 690,
+      "w": 120,
+      "h": 120,
+      "children": [
+        {
+          "id": "n018-text",
+          "kind": "text",
+          "x": 15,
+          "y": 20,
+          "w": 90,
+          "h": 80,
+          "text": "{{character3}}",
+          "size": 58,
+          "color": "#0B0B0F",
+          "align": "center"
+        }
+      ],
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n020-circle",
+      "kind": "circle",
+      "x": 530,
+      "y": 437,
+      "w": 122,
+      "h": 122,
+      "fill": "rgba(11,11,15,.1)",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.9,
+            0
+          ],
+          [
+            2.15,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n021-b2-cursor",
+      "kind": "b2-cursor",
+      "x": 0,
+      "y": 0,
+      "w": 43,
+      "h": 64,
+      "tracks": {
+        "x": [
+          [
+            0,
+            900
+          ],
+          [
+            1.75,
+            590
+          ],
+          [
+            2.4,
+            590
+          ]
+        ],
+        "y": [
+          [
+            0,
+            900
+          ],
+          [
+            1.75,
+            490
+          ],
+          [
+            2.4,
+            490
+          ]
+        ]
+      }
+    }
+  ],
+  "camera": {
+    "tracks": {
+      "scale": [
+        [
+          0,
+          1
+        ],
+        [
+          2.25,
+          1
+        ],
+        [
+          3.6,
+          1.45
+        ]
+      ],
+      "x": [
+        [
+          0,
+          0
+        ],
+        [
+          2.25,
+          0
+        ],
+        [
+          3.6,
+          260
+        ]
+      ],
+      "y": [
+        [
+          0,
+          0
+        ],
+        [
+          2.25,
+          0
+        ],
+        [
+          3.6,
+          -160
+        ]
+      ]
+    }
+  },
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

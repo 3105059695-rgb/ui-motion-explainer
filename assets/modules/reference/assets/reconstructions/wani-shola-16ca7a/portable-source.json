@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "slug": "wani-shola-16ca7a",
+  "source_project": "assets/reconstructions/wani-shola-16ca7a/versions/v2",
+  "project": "assets/reconstructions/wani-shola-16ca7a",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "_dependencies/c2625a1bf8f9-reference-portrait.png",
+    "assets/reference-portrait.png",
+    "composition.js",
+    "index.html",
+    "project.json",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "../../reference-shared/fonts/8cc3643535edf039aa5d.ttf",
+    "../../reference-shared/fonts/df74c0ac387baeaeb0fe.ttf"
+  ],
+  "replaceable_assets": [
+    {
+      "path": "_dependencies/c2625a1bf8f9-reference-portrait.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "c2625a1bf8f9eba12fd390984872b8b09bf6d25841340550fe0a871c6d7a708e"
+    },
+    {
+      "path": "assets/reference-portrait.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "c2625a1bf8f9eba12fd390984872b8b09bf6d25841340550fe0a871c6d7a708e"
+    }
+  ],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "../../assets/fonts/DMSerifDisplay-Italic.ttf": "../../reference-shared/fonts/df74c0ac387baeaeb0fe.ttf",
+    "../../assets/fonts/DMSerifDisplay-Regular.ttf": "../../reference-shared/fonts/8cc3643535edf039aa5d.ttf",
+    "../../assets/fonts/Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "../../assets/reference-portrait.png": "_dependencies/c2625a1bf8f9-reference-portrait.png",
+    "assets/fonts/DMSerifDisplay-Italic.ttf": "../../reference-shared/fonts/df74c0ac387baeaeb0fe.ttf",
+    "assets/fonts/DMSerifDisplay-Regular.ttf": "../../reference-shared/fonts/8cc3643535edf039aa5d.ttf",
+    "assets/fonts/Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "assets/reference-portrait.png": "assets/reference-portrait.png",
+    "composition.js": "composition.js",
+    "index.html": "index.html",
+    "project.json": "project.json",
+    "DMSerifDisplay-Italic.ttf": "../../reference-shared/fonts/df74c0ac387baeaeb0fe.ttf",
+    "DMSerifDisplay-Regular.ttf": "../../reference-shared/fonts/8cc3643535edf039aa5d.ttf",
+    "Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

@@ -119,7 +119,7 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S02",
           "S05"
@@ -127,7 +127,20 @@
         "entrypoints": [
           "assets/editing-kit/README.md"
         ],
-        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-W01",
+          "scaffold": "ui.py programs scaffold --id Q-W01 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "0–26秒可见人物、工作台、受众与双列流程，不从抽帧推断节拍。",
@@ -153,7 +166,32 @@
           "implementation_note": "已有compare/causal-chain承载分流；价格/选择属于来源语境，未来按本稿条件设计，不强制双卡或租机建议。",
           "new_render_verified": false
         }
-      ]
+      ],
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S02",
+          "S05"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md"
+        ],
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-W01",
+          "scaffold": "ui.py programs scaffold --id Q-W01 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
+      }
     },
     {
       "id": "Q-W02",
@@ -196,7 +234,7 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S04",
           "S06"
@@ -204,7 +242,20 @@
         "entrypoints": [
           "assets/editing-kit/README.md"
         ],
-        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-W02",
+          "scaffold": "ui.py programs scaffold --id Q-W02 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "四张媒体类型卡由2×2转为同侧输入，连到时间线。",
@@ -216,6 +267,31 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S04",
+          "S06"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md"
+        ],
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-W02",
+          "scaffold": "ui.py programs scaffold --id Q-W02 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -288,7 +364,7 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S10",
           "S06"
@@ -296,7 +372,20 @@
         "entrypoints": [
           "assets/editing-kit/README.md"
         ],
-        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-W03",
+          "scaffold": "ui.py programs scaffold --id Q-W03 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "209–222秒人物动作链，随后实际操作补足成本与解法。",
@@ -308,6 +397,31 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S10",
+          "S06"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md"
+        ],
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-W03",
+          "scaffold": "ui.py programs scaffold --id Q-W03 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -354,14 +468,27 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S07"
         ],
         "entrypoints": [
           "assets/editing-kit/README.md"
         ],
-        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-W04",
+          "scaffold": "ui.py programs scaffold --id Q-W04 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "已补看约402秒的0.1秒连续画面；可见卷页外观，源码未知。",
@@ -373,6 +500,30 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S07"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md"
+        ],
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-W04",
+          "scaffold": "ui.py programs scaffold --id Q-W04 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -418,14 +569,27 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S03"
         ],
         "entrypoints": [
           "assets/editing-kit/README.md"
         ],
-        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-W05",
+          "scaffold": "ui.py programs scaffold --id Q-W05 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "491秒切UI，491.4左右推近，491.6附近框选压暗，494.2–494.4标题建立；为密集视觉采样近似时点。",
@@ -437,6 +601,30 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S03"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md"
+        ],
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-W05",
+          "scaffold": "ui.py programs scaffold --id Q-W05 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -491,7 +679,7 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S04",
           "S10"
@@ -499,7 +687,20 @@
         "entrypoints": [
           "assets/editing-kit/README.md"
         ],
-        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-W06",
+          "scaffold": "ui.py programs scaffold --id Q-W06 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "原片故事生成示意中可见船、命令、箭雨、躲避、转船的状态链。",
@@ -511,6 +712,31 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S04",
+          "S10"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md"
+        ],
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-W06",
+          "scaffold": "ui.py programs scaffold --id Q-W06 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -553,7 +779,7 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S06",
           "S03"
@@ -561,7 +787,20 @@
         "entrypoints": [
           "assets/editing-kit/README.md"
         ],
-        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-W07",
+          "scaffold": "ui.py programs scaffold --id Q-W07 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "523–527秒有0.2秒连续补帧；人物由中央移回左下。",
@@ -573,6 +812,31 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S06",
+          "S03"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md"
+        ],
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-W07",
+          "scaffold": "ui.py programs scaffold --id Q-W07 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -687,7 +951,7 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S04",
           "S06"
@@ -695,7 +959,20 @@
         "entrypoints": [
           "assets/editing-kit/README.md"
         ],
-        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-C01",
+          "scaffold": "ui.py programs scaffold --id Q-C01 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "密集采样确认小怪破碎、旗帜变绿、强敌攻击、角色碎裂和回旗重建；不是只展示游戏截图。",
@@ -707,6 +984,31 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S04",
+          "S06"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md"
+        ],
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-C01",
+          "scaffold": "ui.py programs scaffold --id Q-C01 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -764,7 +1066,7 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S10",
           "S04"
@@ -772,7 +1074,20 @@
         "entrypoints": [
           "assets/editing-kit/README.md"
         ],
-        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-C02",
+          "scaffold": "ui.py programs scaffold --id Q-C02 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "人物写、翻、停、抱头和五条灰对话合为绿色条可见；已补压缩图形连续采样。",
@@ -784,6 +1099,31 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S10",
+          "S04"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md"
+        ],
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-C02",
+          "scaffold": "ui.py programs scaffold --id Q-C02 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -862,7 +1202,7 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S07",
           "S05"
@@ -870,7 +1210,20 @@
         "entrypoints": [
           "assets/editing-kit/README.md"
         ],
-        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-C03",
+          "scaffold": "ui.py programs scaffold --id Q-C03 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "1841–1847密集帧可见新卡由下方覆盖、旧内容淡出和标题留存。",
@@ -882,6 +1235,31 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S07",
+          "S05"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md"
+        ],
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-C03",
+          "scaffold": "ui.py programs scaffold --id Q-C03 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -932,7 +1310,7 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S05",
           "S03"
@@ -940,7 +1318,20 @@
         "entrypoints": [
           "assets/editing-kit/README.md"
         ],
-        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-C04",
+          "scaffold": "ui.py programs scaffold --id Q-C04 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "原片保持代码/终端关系，修改后出错并在恢复命令后消除。",
@@ -952,6 +1343,31 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S05",
+          "S03"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md"
+        ],
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-C04",
+          "scaffold": "ui.py programs scaffold --id Q-C04 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -1002,7 +1418,7 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S04",
           "S06"
@@ -1010,7 +1426,20 @@
         "entrypoints": [
           "assets/editing-kit/README.md"
         ],
-        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-C05",
+          "scaffold": "ui.py programs scaffold --id Q-C05 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "卡片、对话、后台Agent与提取箭头实际可见；后段存在写入与文件查看。",
@@ -1022,6 +1451,31 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S04",
+          "S06"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md"
+        ],
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-C05",
+          "scaffold": "ui.py programs scaffold --id Q-C05 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -1071,7 +1525,7 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S03",
           "S04"
@@ -1079,7 +1533,20 @@
         "entrypoints": [
           "assets/editing-kit/README.md"
         ],
-        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-C06",
+          "scaffold": "ui.py programs scaffold --id Q-C06 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "终端聚焦、三分支code quality/run efficiency/reusability和代码差异均在顺序帧中可见。",
@@ -1091,6 +1558,31 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S03",
+          "S04"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md"
+        ],
+        "scope": "配方可借用已有原语；该原片整段未重建、未生成、未获用户认可。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-C06",
+          "scaffold": "ui.py programs scaffold --id Q-C06 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -1211,12 +1703,25 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S04"
         ],
         "entrypoints": [],
-        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N01",
+          "scaffold": "ui.py programs scaffold --id Q-N01 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "画面可确认是持续图解；236–250秒已有0.5秒相邻状态。",
@@ -1240,7 +1745,29 @@
           "implementation_note": "causal-chain、match-handoff可承担路径和交接；移动标签、计数、阻断叉号和锁状态需按宿主定制，不把参考的开源权利主张视为已核验。",
           "new_render_verified": false
         }
-      ]
+      ],
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S04"
+        ],
+        "entrypoints": [],
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N01",
+          "scaffold": "ui.py programs scaffold --id Q-N01 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
+      }
     },
     {
       "id": "Q-N02",
@@ -1289,13 +1816,26 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S10",
           "S06"
         ],
         "entrypoints": [],
-        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N02",
+          "scaffold": "ui.py programs scaffold --id Q-N02 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "原片有连续卡通人物、障碍物、机器人和服务结果；此段按2秒顺序帧查看。",
@@ -1306,6 +1846,29 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S10",
+          "S06"
+        ],
+        "entrypoints": [],
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N02",
+          "scaffold": "ui.py programs scaffold --id Q-N02 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -1363,13 +1926,26 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S10",
           "S06"
         ],
         "entrypoints": [],
-        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N03",
+          "scaffold": "ui.py programs scaffold --id Q-N03 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "可见卡通损失/搬家叙事后接软件管理页面。",
@@ -1380,6 +1956,29 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S10",
+          "S06"
+        ],
+        "entrypoints": [],
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N03",
+          "scaffold": "ui.py programs scaffold --id Q-N03 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -1431,13 +2030,26 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S03",
           "S06"
         ],
         "entrypoints": [],
-        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N04",
+          "scaffold": "ui.py programs scaffold --id Q-N04 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "可见历史照片/建筑、人物剪贴、提案页面、旧电脑演示和WWW字样。",
@@ -1448,6 +2060,29 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S03",
+          "S06"
+        ],
+        "entrypoints": [],
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N04",
+          "scaffold": "ui.py programs scaffold --id Q-N04 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -1500,12 +2135,25 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S03"
         ],
         "entrypoints": [],
-        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N05",
+          "scaffold": "ui.py programs scaffold --id Q-N05 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "原片显示软件详情、示例提问、网页效果和评论区域。",
@@ -1516,6 +2164,28 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S03"
+        ],
+        "entrypoints": [],
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N05",
+          "scaffold": "ui.py programs scaffold --id Q-N05 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -1566,12 +2236,25 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S05"
         ],
         "entrypoints": [],
-        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N06",
+          "scaffold": "ui.py programs scaffold --id Q-N06 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "可见两列同题实测结果与评价控件；原片称其为真实实测。",
@@ -1582,6 +2265,28 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S05"
+        ],
+        "entrypoints": [],
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N06",
+          "scaffold": "ui.py programs scaffold --id Q-N06 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -1631,12 +2336,25 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S03"
         ],
         "entrypoints": [],
-        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N07",
+          "scaffold": "ui.py programs scaffold --id Q-N07 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "可见背景压暗、侧栏前置放大、局部虚线框和方向箭头。",
@@ -1647,6 +2365,28 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S03"
+        ],
+        "entrypoints": [],
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N07",
+          "scaffold": "ui.py programs scaffold --id Q-N07 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -1723,12 +2463,25 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S04"
         ],
         "entrypoints": [],
-        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N08",
+          "scaffold": "ui.py programs scaffold --id Q-N08 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "326–332秒0.5秒相邻帧确认聚集、包围、标签退去、节点增加、连线形成。",
@@ -1739,6 +2492,28 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S04"
+        ],
+        "entrypoints": [],
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N08",
+          "scaffold": "ui.py programs scaffold --id Q-N08 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -1785,13 +2560,26 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S06",
           "S07"
         ],
         "entrypoints": [],
-        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N09",
+          "scaffold": "ui.py programs scaffold --id Q-N09 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "1230–1238秒0.5秒相邻帧确认合影、照片、角色转身与开门连续状态。",
@@ -1802,6 +2590,29 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S06",
+          "S07"
+        ],
+        "entrypoints": [],
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N09",
+          "scaffold": "ui.py programs scaffold --id Q-N09 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -1851,12 +2662,25 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S08"
         ],
         "entrypoints": [],
-        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N10",
+          "scaffold": "ui.py programs scaffold --id Q-N10 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "262–273秒0.5秒帧确认多人持锤到单人持锤、师傅指点后离开。",
@@ -1867,6 +2691,28 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S08"
+        ],
+        "entrypoints": [],
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N10",
+          "scaffold": "ui.py programs scaffold --id Q-N10 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -1927,12 +2773,25 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S08"
         ],
         "entrypoints": [],
-        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N11",
+          "scaffold": "ui.py programs scaffold --id Q-N11 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "295–308秒已补0.5秒帧：持文档、打字、屏幕变化、勾、起身、扇子身份、第二台电脑任务结果。",
@@ -1943,6 +2802,28 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S08"
+        ],
+        "entrypoints": [],
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N11",
+          "scaffold": "ui.py programs scaffold --id Q-N11 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -1988,12 +2869,25 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S08"
         ],
         "entrypoints": [],
-        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N12",
+          "scaffold": "ui.py programs scaffold --id Q-N12 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "1041–1047秒0.5秒相邻帧确认取盒、交盒、靠拢、星形结果。",
@@ -2004,6 +2898,28 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S08"
+        ],
+        "entrypoints": [],
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N12",
+          "scaffold": "ui.py programs scaffold --id Q-N12 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -2062,13 +2978,26 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S02",
           "S05"
         ],
         "entrypoints": [],
-        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N13",
+          "scaffold": "ui.py programs scaffold --id Q-N13 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "0–60秒0.5秒索引已核实报道叠放、斜分屏、问题回人物、杠杆状态变化。",
@@ -2079,6 +3008,29 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S02",
+          "S05"
+        ],
+        "entrypoints": [],
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N13",
+          "scaffold": "ui.py programs scaffold --id Q-N13 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -2135,13 +3087,26 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [
           "S02",
           "S01"
         ],
         "entrypoints": [],
-        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N14",
+          "scaffold": "ui.py programs scaffold --id Q-N14 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": "可见工作现场、品牌牌和软件窗口大小/层级变化；没有把现场时间变化推断为确切延时速率。",
@@ -2152,6 +3117,29 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [
+          "S02",
+          "S01"
+        ],
+        "entrypoints": [],
+        "scope": "完整事件的来源分析；原语/提示词需按本期实现，未重建原段。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-N14",
+          "scaffold": "ui.py programs scaffold --id Q-N14 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -2249,9 +3237,22 @@
         }
       ],
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [],
-        "entrypoints": []
+        "entrypoints": [],
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-A01",
+          "scaffold": "ui.py programs scaffold --id Q-A01 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": [
@@ -2282,7 +3283,26 @@
           "implementation_note": "复用S01/S02结构及本稿真实证据，承诺列队和当前项状态由宿主布局实现；不复制原题材、价格或固定三分钟。",
           "new_render_verified": false
         }
-      ]
+      ],
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [],
+        "entrypoints": []
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-A01",
+          "scaffold": "ui.py programs scaffold --id Q-A01 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
+      }
     },
     {
       "id": "Q-A02",
@@ -2360,9 +3380,22 @@
         }
       ],
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [],
-        "entrypoints": []
+        "entrypoints": [],
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-A02",
+          "scaffold": "ui.py programs scaffold --id Q-A02 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": [
@@ -2384,6 +3417,25 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [],
+        "entrypoints": []
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-A02",
+          "scaffold": "ui.py programs scaffold --id Q-A02 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -2522,9 +3574,22 @@
         }
       ],
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [],
-        "entrypoints": []
+        "entrypoints": [],
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-A03",
+          "scaffold": "ui.py programs scaffold --id Q-A03 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": [
@@ -2555,7 +3620,26 @@
           "implementation_note": "复用focus-mask、match-handoff和宿主状态；原片没有显示地址独立飞行，不把推测记成已观察动作。",
           "new_render_verified": false
         }
-      ]
+      ],
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [],
+        "entrypoints": []
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-A03",
+          "scaffold": "ui.py programs scaffold --id Q-A03 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
+      }
     },
     {
       "id": "Q-A04",
@@ -2648,9 +3732,22 @@
         }
       ],
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [],
-        "entrypoints": []
+        "entrypoints": [],
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-A04",
+          "scaffold": "ui.py programs scaffold --id Q-A04 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": [
@@ -2671,6 +3768,25 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [],
+        "entrypoints": []
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-A04",
+          "scaffold": "ui.py programs scaffold --id Q-A04 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -2781,9 +3897,22 @@
         }
       ],
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [],
-        "entrypoints": []
+        "entrypoints": [],
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-A05",
+          "scaffold": "ui.py programs scaffold --id Q-A05 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": [
@@ -2807,6 +3936,25 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [],
+        "entrypoints": []
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-A05",
+          "scaffold": "ui.py programs scaffold --id Q-A05 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -2851,9 +3999,22 @@
         }
       ],
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [],
-        "entrypoints": []
+        "entrypoints": [],
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-A06",
+          "scaffold": "ui.py programs scaffold --id Q-A06 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": [
@@ -2874,6 +4035,25 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [],
+        "entrypoints": []
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-A06",
+          "scaffold": "ui.py programs scaffold --id Q-A06 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -2930,9 +4110,22 @@
         }
       ],
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [],
-        "entrypoints": []
+        "entrypoints": [],
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-A07",
+          "scaffold": "ui.py programs scaffold --id Q-A07 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": [
@@ -2955,6 +4148,25 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [],
+        "entrypoints": []
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-A07",
+          "scaffold": "ui.py programs scaffold --id Q-A07 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -3007,9 +4219,22 @@
         }
       ],
       "implementation": {
-        "status": "source_observed_recipe",
+        "status": "executable-bound-program",
         "recipe_ids": [],
-        "entrypoints": []
+        "entrypoints": [],
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-A08",
+          "scaffold": "ui.py programs scaffold --id Q-A08 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "production": {
         "known": [
@@ -3030,6 +4255,25 @@
         "full_realtime_av_review": false,
         "new_render_verified": false,
         "user_approved": false
+      },
+      "historical_implementation": {
+        "status": "source_observed_recipe",
+        "recipe_ids": [],
+        "entrypoints": []
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id Q-A08",
+          "scaffold": "ui.py programs scaffold --id Q-A08 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -3116,6 +4360,49 @@
       ],
       "polarity": "positive",
       "implementation": {
+        "status": "executable-bound-program",
+        "recipe_ids": [
+          "S06"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md",
+          "assets/editing-kit/editing-kit.js"
+        ],
+        "primitives": [
+          {
+            "name": "match-handoff",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "existing_shared_primitive"
+          }
+        ],
+        "customization_required": [
+          "宿主按实际素材建立输入输出连线、选中状态和图像裁切",
+          "match-handoff只搬运同一节点，不生成分支与选中逻辑"
+        ],
+        "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M01",
+          "scaffold": "ui.py programs scaffold --id F-M01 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
+      },
+      "validation": {
+        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
+        "full_realtime_av_review": false,
+        "new_render_verified": false,
+        "user_approved": false,
+        "reference_direction_user_approved": true,
+        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
+      },
+      "historical_implementation": {
         "status": "observed_method_with_reusable_primitives_and_project_customization",
         "recipe_ids": [
           "S06"
@@ -3137,13 +4424,19 @@
         ],
         "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。"
       },
-      "validation": {
-        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
-        "full_realtime_av_review": false,
-        "new_render_verified": false,
-        "user_approved": false,
-        "reference_direction_user_approved": true,
-        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M01",
+          "scaffold": "ui.py programs scaffold --id F-M01 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -3375,6 +4668,87 @@
       ],
       "polarity": "positive",
       "implementation": {
+        "status": "executable-bound-program",
+        "recipe_ids": [
+          "S05",
+          "S06"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md",
+          "assets/editing-kit/editing-kit.js"
+        ],
+        "primitives": [
+          {
+            "name": "comparison-reflow",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "shared-component-implemented"
+          },
+          {
+            "name": "match-handoff",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "existing_shared_primitive"
+          },
+          {
+            "name": "compare",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "existing_shared_primitive"
+          }
+        ],
+        "customization_required": [
+          "本期素材与比较依据由宿主提供，布局矩形、层次和动作时窗按口播与安全区确定；返回主位时继续使用原节点设置下一段几何",
+          "输入图片或界面须保持可读，完成本期真实素材渲染及连续播放视觉验收；不把技术测试当用户认可"
+        ],
+        "scope": "Fred整段未重建；comparison-reflow已实现两个原DOM节点的旧对象让位、新对象进入和独立时窗。可复用该连续组合；本期素材、构图、节奏与实际输出仍需接入验收。",
+        "effect": "comparison-reflow",
+        "api": "UIEditingKit.apply('comparison-reflow', options, progress)",
+        "required_options": [
+          "previous",
+          "next",
+          "previousFrom",
+          "previousTo",
+          "nextFrom",
+          "nextTo",
+          "timing.previous",
+          "timing.next"
+        ],
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M02",
+          "scaffold": "ui.py programs scaffold --id F-M02 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
+      },
+      "validation": {
+        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
+        "full_realtime_av_review": false,
+        "new_render_verified": false,
+        "user_approved": false,
+        "reference_direction_user_approved": true,
+        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。",
+        "component_check": {
+          "command": "node assets/editing-kit/smoke-test.cjs",
+          "passed": true,
+          "scope": "初中末几何、同节点保持、乱序seek与无效参数检查；不是浏览器视觉验收、整段音画审阅或用户认可"
+        }
+      },
+      "refinements": [
+        {
+          "date": "2026-10-16",
+          "source": "fred-jev",
+          "reason": "现有对象让位以加入新参照或条件；重点移动时旧项保留，最终回到整体再突出选择。",
+          "previous_fields": {},
+          "implementation_note": "compare、match-handoff可承担排列与位移；材料进出、前后层次及降权要定制，新增一项比较不误写成替换全部结果。",
+          "new_render_verified": false
+        }
+      ],
+      "historical_implementation": {
         "status": "shared-component-implemented",
         "recipe_ids": [
           "S05",
@@ -3419,29 +4793,20 @@
           "timing.next"
         ]
       },
-      "validation": {
-        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
-        "full_realtime_av_review": false,
-        "new_render_verified": false,
-        "user_approved": false,
-        "reference_direction_user_approved": true,
-        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。",
-        "component_check": {
-          "command": "node assets/editing-kit/smoke-test.cjs",
-          "passed": true,
-          "scope": "初中末几何、同节点保持、乱序seek与无效参数检查；不是浏览器视觉验收、整段音画审阅或用户认可"
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M02",
+          "scaffold": "ui.py programs scaffold --id F-M02 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
         }
-      },
-      "refinements": [
-        {
-          "date": "2026-10-16",
-          "source": "fred-jev",
-          "reason": "现有对象让位以加入新参照或条件；重点移动时旧项保留，最终回到整体再突出选择。",
-          "previous_fields": {},
-          "implementation_note": "compare、match-handoff可承担排列与位移；材料进出、前后层次及降权要定制，新增一项比较不误写成替换全部结果。",
-          "new_render_verified": false
-        }
-      ]
+      }
     },
     {
       "title": "外框稳定、内部聚焦：分别控制身份与细节",
@@ -3628,6 +4993,80 @@
       ],
       "polarity": "positive",
       "implementation": {
+        "status": "executable-bound-program",
+        "recipe_ids": [
+          "S03"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md",
+          "assets/editing-kit/editing-kit.js"
+        ],
+        "primitives": [
+          {
+            "name": "viewport-focus",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "shared-component-implemented"
+          },
+          {
+            "name": "focus-mask",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "existing_shared_primitive"
+          }
+        ],
+        "customization_required": [
+          "为本期原内容提供裁切容器与同一内容节点、原尺寸和全景/细节取景区；按口播设置聚焦及可选返回时窗，不沿用原作者固定坐标",
+          "媒体载入、滚动状态与媒体时钟仍由宿主管理；完成本期真实素材可读性及连续播放视觉验收"
+        ],
+        "scope": "Fred整段未重建；viewport-focus已实现稳定外框裁切、同一内部内容的等比聚焦/平移和可选返回。无需另写内部相机几何；本期素材、取景、节奏与实际输出仍需接入验收。",
+        "effect": "viewport-focus",
+        "api": "UIEditingKit.apply('viewport-focus', options, progress)",
+        "required_options": [
+          "frame",
+          "content",
+          "frameRect",
+          "contentSize",
+          "from",
+          "to",
+          "timing.focus"
+        ],
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M03",
+          "scaffold": "ui.py programs scaffold --id F-M03 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
+      },
+      "validation": {
+        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
+        "full_realtime_av_review": false,
+        "new_render_verified": false,
+        "user_approved": false,
+        "reference_direction_user_approved": true,
+        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。",
+        "component_check": {
+          "command": "node assets/editing-kit/smoke-test.cjs",
+          "passed": true,
+          "scope": "初中末几何、同节点保持、乱序seek与无效参数检查；不是浏览器视觉验收、整段音画审阅或用户认可"
+        }
+      },
+      "refinements": [
+        {
+          "date": "2026-10-16",
+          "source": "fred-jev",
+          "reason": "先交代页面身份，再在框内聚焦菜单、型号、价格或按钮；不适合缩放全页时可裁出相关栏目继续读。",
+          "previous_fields": {},
+          "implementation_note": "focus-mask与稳定裁切视窗复用；焦点位置从本期截图测量，不能固定原作者坐标或以重绘界面冒充实录。",
+          "new_render_verified": false
+        }
+      ],
+      "historical_implementation": {
         "status": "shared-component-implemented",
         "recipe_ids": [
           "S03"
@@ -3665,29 +5104,20 @@
           "timing.focus"
         ]
       },
-      "validation": {
-        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
-        "full_realtime_av_review": false,
-        "new_render_verified": false,
-        "user_approved": false,
-        "reference_direction_user_approved": true,
-        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。",
-        "component_check": {
-          "command": "node assets/editing-kit/smoke-test.cjs",
-          "passed": true,
-          "scope": "初中末几何、同节点保持、乱序seek与无效参数检查；不是浏览器视觉验收、整段音画审阅或用户认可"
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M03",
+          "scaffold": "ui.py programs scaffold --id F-M03 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
         }
-      },
-      "refinements": [
-        {
-          "date": "2026-10-16",
-          "source": "fred-jev",
-          "reason": "先交代页面身份，再在框内聚焦菜单、型号、价格或按钮；不适合缩放全页时可裁出相关栏目继续读。",
-          "previous_fields": {},
-          "implementation_note": "focus-mask与稳定裁切视窗复用；焦点位置从本期截图测量，不能固定原作者坐标或以重绘界面冒充实录。",
-          "new_render_verified": false
-        }
-      ]
+      }
     },
     {
       "title": "蒙版保亮一条关系：不仅让某块更大",
@@ -3731,6 +5161,55 @@
       ],
       "polarity": "positive",
       "implementation": {
+        "status": "executable-bound-program",
+        "recipe_ids": [
+          "S03",
+          "S04"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md",
+          "assets/editing-kit/editing-kit.js"
+        ],
+        "primitives": [
+          {
+            "name": "focus-mask",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "existing_shared_primitive"
+          },
+          {
+            "name": "causal-chain",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "existing_shared_primitive"
+          }
+        ],
+        "customization_required": [
+          "现有focus-mask仅四片蒙版围一个矩形洞口；多区域联合遮罩需要SVG mask或等效定制",
+          "连接线的事实关系和端点由本稿证据决定"
+        ],
+        "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M04",
+          "scaffold": "ui.py programs scaffold --id F-M04 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
+      },
+      "validation": {
+        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
+        "full_realtime_av_review": false,
+        "new_render_verified": false,
+        "user_approved": false,
+        "reference_direction_user_approved": true,
+        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
+      },
+      "historical_implementation": {
         "status": "observed_method_with_reusable_primitives_and_project_customization",
         "recipe_ids": [
           "S03",
@@ -3758,13 +5237,19 @@
         ],
         "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。"
       },
-      "validation": {
-        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
-        "full_realtime_av_review": false,
-        "new_render_verified": false,
-        "user_approved": false,
-        "reference_direction_user_approved": true,
-        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M04",
+          "scaffold": "ui.py programs scaffold --id F-M04 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -3865,6 +5350,49 @@
       ],
       "polarity": "positive",
       "implementation": {
+        "status": "executable-bound-program",
+        "recipe_ids": [
+          "S05"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md",
+          "assets/editing-kit/editing-kit.js"
+        ],
+        "primitives": [
+          {
+            "name": "compare",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "existing_shared_primitive"
+          }
+        ],
+        "customization_required": [
+          "输入内容增长、容器高度与结果延迟需宿主时间线定制",
+          "compare只提供同坐标差异揭示，不能自动生成沟通成本叙事"
+        ],
+        "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M05",
+          "scaffold": "ui.py programs scaffold --id F-M05 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
+      },
+      "validation": {
+        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
+        "full_realtime_av_review": false,
+        "new_render_verified": false,
+        "user_approved": false,
+        "reference_direction_user_approved": true,
+        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
+      },
+      "historical_implementation": {
         "status": "observed_method_with_reusable_primitives_and_project_customization",
         "recipe_ids": [
           "S05"
@@ -3886,13 +5414,19 @@
         ],
         "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。"
       },
-      "validation": {
-        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
-        "full_realtime_av_review": false,
-        "new_render_verified": false,
-        "user_approved": false,
-        "reference_direction_user_approved": true,
-        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M05",
+          "scaffold": "ui.py programs scaffold --id F-M05 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -4151,6 +5685,65 @@
       ],
       "polarity": "positive",
       "implementation": {
+        "status": "executable-bound-program",
+        "recipe_ids": [
+          "S04",
+          "S05"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md",
+          "assets/editing-kit/editing-kit.js"
+        ],
+        "primitives": [
+          {
+            "name": "causal-chain",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "existing_shared_primitive"
+          },
+          {
+            "name": "compare",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "existing_shared_primitive"
+          }
+        ],
+        "customization_required": [
+          "错误与成功内容、状态转换和时间标签需要本项目定义",
+          "原语不联网执行，不证明终端任务成功"
+        ],
+        "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M06",
+          "scaffold": "ui.py programs scaffold --id F-M06 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
+      },
+      "validation": {
+        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
+        "full_realtime_av_review": false,
+        "new_render_verified": false,
+        "user_approved": false,
+        "reference_direction_user_approved": true,
+        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
+      },
+      "refinements": [
+        {
+          "date": "2026-10-16",
+          "source": "fred-jev",
+          "reason": "同一载体从加载到失败、请求到回复、复制到已复制、调用到连通；状态要留给观众核对。",
+          "previous_fields": {},
+          "implementation_note": "复用原DOM/SVG对象与状态切换，不把只显示按钮、提交请求或演示卡当已完成真实操作。",
+          "new_render_verified": false
+        }
+      ],
+      "historical_implementation": {
         "status": "observed_method_with_reusable_primitives_and_project_customization",
         "recipe_ids": [
           "S04",
@@ -4178,24 +5771,20 @@
         ],
         "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。"
       },
-      "validation": {
-        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
-        "full_realtime_av_review": false,
-        "new_render_verified": false,
-        "user_approved": false,
-        "reference_direction_user_approved": true,
-        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
-      },
-      "refinements": [
-        {
-          "date": "2026-10-16",
-          "source": "fred-jev",
-          "reason": "同一载体从加载到失败、请求到回复、复制到已复制、调用到连通；状态要留给观众核对。",
-          "previous_fields": {},
-          "implementation_note": "复用原DOM/SVG对象与状态切换，不把只显示按钮、提交请求或演示卡当已完成真实操作。",
-          "new_render_verified": false
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M06",
+          "scaffold": "ui.py programs scaffold --id F-M06 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
         }
-      ]
+      }
     },
     {
       "title": "代码接机制图：证据负责可信，图解负责看懂",
@@ -4245,6 +5834,55 @@
       ],
       "polarity": "positive",
       "implementation": {
+        "status": "executable-bound-program",
+        "recipe_ids": [
+          "S04",
+          "S06"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md",
+          "assets/editing-kit/editing-kit.js"
+        ],
+        "primitives": [
+          {
+            "name": "causal-chain",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "existing_shared_primitive"
+          },
+          {
+            "name": "match-handoff",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "existing_shared_primitive"
+          }
+        ],
+        "customization_required": [
+          "代码高亮、摆臂或其他机制的几何与运动需按本稿实现",
+          "causal-chain只提供输入至结果原语，不自带物理模型"
+        ],
+        "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M07",
+          "scaffold": "ui.py programs scaffold --id F-M07 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
+      },
+      "validation": {
+        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
+        "full_realtime_av_review": false,
+        "new_render_verified": false,
+        "user_approved": false,
+        "reference_direction_user_approved": true,
+        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
+      },
+      "historical_implementation": {
         "status": "observed_method_with_reusable_primitives_and_project_customization",
         "recipe_ids": [
           "S04",
@@ -4272,13 +5910,19 @@
         ],
         "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。"
       },
-      "validation": {
-        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
-        "full_realtime_av_review": false,
-        "new_render_verified": false,
-        "user_approved": false,
-        "reference_direction_user_approved": true,
-        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M07",
+          "scaffold": "ui.py programs scaffold --id F-M07 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -4476,6 +6120,55 @@
       ],
       "polarity": "positive",
       "implementation": {
+        "status": "executable-bound-program",
+        "recipe_ids": [
+          "S05",
+          "S06"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md",
+          "assets/editing-kit/editing-kit.js"
+        ],
+        "primitives": [
+          {
+            "name": "compare",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "existing_shared_primitive"
+          },
+          {
+            "name": "match-handoff",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "existing_shared_primitive"
+          }
+        ],
+        "customization_required": [
+          "基准内容替换、逐项扫描与当前项权重需宿主调度",
+          "compare原语可用于局部差异显示，不能判断孰优"
+        ],
+        "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M08",
+          "scaffold": "ui.py programs scaffold --id F-M08 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
+      },
+      "validation": {
+        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
+        "full_realtime_av_review": false,
+        "new_render_verified": false,
+        "user_approved": false,
+        "reference_direction_user_approved": true,
+        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
+      },
+      "historical_implementation": {
         "status": "observed_method_with_reusable_primitives_and_project_customization",
         "recipe_ids": [
           "S05",
@@ -4503,13 +6196,19 @@
         ],
         "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。"
       },
-      "validation": {
-        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
-        "full_realtime_av_review": false,
-        "new_render_verified": false,
-        "user_approved": false,
-        "reference_direction_user_approved": true,
-        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M08",
+          "scaffold": "ui.py programs scaffold --id F-M08 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
       }
     },
     {
@@ -4600,7 +6299,7 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "observed_method_with_reusable_primitives_and_project_customization",
+        "status": "executable-bound-program",
         "recipe_ids": [],
         "entrypoints": [],
         "primitives": [],
@@ -4608,7 +6307,20 @@
           "按宿主DOM/SVG实现线条数量、间距和文档高度状态",
           "没有现成对应S配方；不把抽象语义硬塞进其他配方"
         ],
-        "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。"
+        "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M09",
+          "scaffold": "ui.py programs scaffold --id F-M09 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "validation": {
         "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
@@ -4630,7 +6342,32 @@
           "implementation_note": "compare可组织对齐，数值驱动条长、阈线、占用/溢出分段需用DOM/SVG定制；桌面隐喻不是精确运行原理，显存数字只是该来源示意。",
           "new_render_verified": false
         }
-      ]
+      ],
+      "historical_implementation": {
+        "status": "observed_method_with_reusable_primitives_and_project_customization",
+        "recipe_ids": [],
+        "entrypoints": [],
+        "primitives": [],
+        "customization_required": [
+          "按宿主DOM/SVG实现线条数量、间距和文档高度状态",
+          "没有现成对应S配方；不把抽象语义硬塞进其他配方"
+        ],
+        "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M09",
+          "scaffold": "ui.py programs scaffold --id F-M09 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
+      }
     },
     {
       "title": "不同动词必须产生不同结果",
@@ -4819,6 +6556,65 @@
       ],
       "polarity": "positive",
       "implementation": {
+        "status": "executable-bound-program",
+        "recipe_ids": [
+          "S04",
+          "S06"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md",
+          "assets/editing-kit/editing-kit.js"
+        ],
+        "primitives": [
+          {
+            "name": "causal-chain",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "existing_shared_primitive"
+          },
+          {
+            "name": "match-handoff",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "existing_shared_primitive"
+          }
+        ],
+        "customization_required": [
+          "按当前软件或示意时间线建立对象和时间数据",
+          "同节点几何可用match-handoff；替换内容及粗剪时长变化须独立实现"
+        ],
+        "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M10",
+          "scaffold": "ui.py programs scaffold --id F-M10 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
+      },
+      "validation": {
+        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
+        "full_realtime_av_review": false,
+        "new_render_verified": false,
+        "user_approved": false,
+        "reference_direction_user_approved": true,
+        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
+      },
+      "refinements": [
+        {
+          "date": "2026-10-16",
+          "source": "fred-jev",
+          "reason": "请求必须穿过路径并触发计次，限流阻断同一路径；公开、下载、装入、运行各有不同可见结果；结尾行动按依赖依次接上。",
+          "previous_fields": {},
+          "implementation_note": "已有causal-chain、match-handoff提供节点/交接；下载进度、计数、红叉、开锁、运行灯、删线需在宿主实现。视频中的演示进度不当实际耗时。",
+          "new_render_verified": false
+        }
+      ],
+      "historical_implementation": {
         "status": "observed_method_with_reusable_primitives_and_project_customization",
         "recipe_ids": [
           "S04",
@@ -4846,24 +6642,20 @@
         ],
         "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。"
       },
-      "validation": {
-        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
-        "full_realtime_av_review": false,
-        "new_render_verified": false,
-        "user_approved": false,
-        "reference_direction_user_approved": true,
-        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
-      },
-      "refinements": [
-        {
-          "date": "2026-10-16",
-          "source": "fred-jev",
-          "reason": "请求必须穿过路径并触发计次，限流阻断同一路径；公开、下载、装入、运行各有不同可见结果；结尾行动按依赖依次接上。",
-          "previous_fields": {},
-          "implementation_note": "已有causal-chain、match-handoff提供节点/交接；下载进度、计数、红叉、开锁、运行灯、删线需在宿主实现。视频中的演示进度不当实际耗时。",
-          "new_render_verified": false
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M10",
+          "scaffold": "ui.py programs scaffold --id F-M10 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
         }
-      ]
+      }
     },
     {
       "title": "先建立总结骨架，再跟口播填答案",
@@ -5016,7 +6808,7 @@
       ],
       "polarity": "positive",
       "implementation": {
-        "status": "observed_method_with_reusable_primitives_and_project_customization",
+        "status": "executable-bound-program",
         "recipe_ids": [],
         "entrypoints": [],
         "primitives": [],
@@ -5024,7 +6816,20 @@
           "宿主DOM/SVG表格与数据驱动时间线；当前行由口播锚点指定",
           "没有现成专属S配方；保留此方法作为独立导演任务"
         ],
-        "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。"
+        "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M11",
+          "scaffold": "ui.py programs scaffold --id F-M11 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
       },
       "validation": {
         "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
@@ -5045,7 +6850,32 @@
           "implementation_note": "使用宿主布局与状态填入；同尺度比较复用compare，当前项换位复用match-handoff；没有预置骨架的行动链应选F-M10。",
           "new_render_verified": false
         }
-      ]
+      ],
+      "historical_implementation": {
+        "status": "observed_method_with_reusable_primitives_and_project_customization",
+        "recipe_ids": [],
+        "entrypoints": [],
+        "primitives": [],
+        "customization_required": [
+          "宿主DOM/SVG表格与数据驱动时间线；当前行由口播锚点指定",
+          "没有现成专属S配方；保留此方法作为独立导演任务"
+        ],
+        "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。"
+      },
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M11",
+          "scaffold": "ui.py programs scaffold --id F-M11 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        }
+      }
     },
     {
       "title": "多指标先附着证据，再合成结论",
@@ -5343,6 +7173,68 @@
       ],
       "polarity": "positive",
       "implementation": {
+        "status": "executable-bound-program",
+        "recipe_ids": [
+          "S04",
+          "S06"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md",
+          "assets/editing-kit/editing-kit.js"
+        ],
+        "primitives": [
+          {
+            "name": "causal-chain",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "existing_shared_primitive"
+          },
+          {
+            "name": "match-handoff",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "existing_shared_primitive"
+          }
+        ],
+        "customization_required": [
+          "指标字段、单位、来源、重排目标与结论需本项目给定",
+          "causal-chain或match-handoff只复用对象转移机制"
+        ],
+        "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M12",
+          "scaffold": "ui.py programs scaffold --id F-M12 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
+      },
+      "validation": {
+        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
+        "full_realtime_av_review": false,
+        "new_render_verified": false,
+        "user_approved": false,
+        "reference_direction_user_approved": true,
+        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
+      },
+      "refinements": [
+        {
+          "date": "2026-10-16",
+          "source": "fred-jev",
+          "reason": "数字先落在来源材料上，再提炼成可读标签和比较；单位、样本量、执行条件和评价依据随数字一起保留。",
+          "previous_fields": {
+            "semantic_use": "同一项目包含多个数字或维度，需要从材料证明逐步进入总判断。",
+            "viewer_gap": "脱离来源的数字很难说明它们测量了什么。"
+          },
+          "implementation_note": "复用证据聚焦、compare及结果收拢。原片200/100条、执行方式不同和历史AI评审参考限制必须带入，不能把它们标成同条件人工准确率。",
+          "new_render_verified": false
+        }
+      ],
+      "historical_implementation": {
         "status": "observed_method_with_reusable_primitives_and_project_customization",
         "recipe_ids": [
           "S04",
@@ -5370,27 +7262,20 @@
         ],
         "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。"
       },
-      "validation": {
-        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
-        "full_realtime_av_review": false,
-        "new_render_verified": false,
-        "user_approved": false,
-        "reference_direction_user_approved": true,
-        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
-      },
-      "refinements": [
-        {
-          "date": "2026-10-16",
-          "source": "fred-jev",
-          "reason": "数字先落在来源材料上，再提炼成可读标签和比较；单位、样本量、执行条件和评价依据随数字一起保留。",
-          "previous_fields": {
-            "semantic_use": "同一项目包含多个数字或维度，需要从材料证明逐步进入总判断。",
-            "viewer_gap": "脱离来源的数字很难说明它们测量了什么。"
-          },
-          "implementation_note": "复用证据聚焦、compare及结果收拢。原片200/100条、执行方式不同和历史AI评审参考限制必须带入，不能把它们标成同条件人工准确率。",
-          "new_render_verified": false
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M12",
+          "scaffold": "ui.py programs scaffold --id F-M12 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
         }
-      ]
+      }
     },
     {
       "title": "章节或步骤总览归位导航：转场的结果有用",
@@ -5621,6 +7506,96 @@
       ],
       "polarity": "positive",
       "implementation": {
+        "status": "executable-bound-program",
+        "recipe_ids": [
+          "S07",
+          "S06"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md",
+          "assets/editing-kit/editing-kit.js"
+        ],
+        "primitives": [
+          {
+            "name": "chapter-dock",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "shared-component-implemented"
+          },
+          {
+            "name": "occlusion-reveal",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "existing_shared_primitive"
+          },
+          {
+            "name": "match-handoff",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "existing_shared_primitive"
+          }
+        ],
+        "customization_required": [
+          "本期章节标题、导航位置、正文内容与动作时窗按口播和账号安全区设计，后续当前步骤高亮由宿主状态驱动",
+          "翻面、穿字孔洞和特殊章节字形遮罩仍需按需定制；chapter-dock只提供同标题归位以及正文淡入/直线裁切揭示",
+          "完成本期真实内容渲染及连续播放视觉验收；通用组合与技术测试不等于原片整段重建或用户认可"
+        ],
+        "scope": "Fred整段未重建；chapter-dock已实现同一标题从主舞台等比缩放到导航位，并按独立时窗显现正文。没有第二份标题假交接；翻面、穿字孔洞和特殊字形遮罩未实现，本期素材、构图、节奏与实际输出仍需接入验收。",
+        "effect": "chapter-dock",
+        "api": "UIEditingKit.apply('chapter-dock', options, progress)",
+        "required_options": [
+          "title",
+          "content",
+          "from",
+          "to",
+          "timing.title",
+          "timing.content"
+        ],
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M13",
+          "scaffold": "ui.py programs scaffold --id F-M13 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
+      },
+      "validation": {
+        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
+        "full_realtime_av_review": false,
+        "new_render_verified": false,
+        "user_approved": false,
+        "reference_direction_user_approved": true,
+        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。",
+        "component_check": {
+          "command": "node assets/editing-kit/smoke-test.cjs",
+          "passed": true,
+          "scope": "初中末几何、同节点保持、乱序seek与无效参数检查；不是浏览器视觉验收、整段音画审阅或用户认可"
+        }
+      },
+      "refinements": [
+        {
+          "date": "2026-10-16",
+          "source": "fred-jev",
+          "reason": "章节标题或步骤总览读清后，同一组缩到导航位；后续内容只改变当前项状态，持续交代位置。",
+          "previous_fields": {
+            "title": "章节标题变成导航：转场的结果有用",
+            "semantic_use": "进入一个新的章节或明确更换论点层级。",
+            "viewer_gap": "需要辨认新章，同时保持正文观看方向。",
+            "state_chain": [
+              "旧章结束",
+              "新章节标题在主位可读",
+              "章节标题移至导航位置",
+              "新章内容进入主画布"
+            ]
+          },
+          "implementation_note": "match-handoff可承接位移；翻牌/大字/全屏遮挡/步骤高亮由宿主实现，文字与人物字幕安全区按本稿测量。",
+          "new_render_verified": false
+        }
+      ],
+      "historical_implementation": {
         "status": "shared-component-implemented",
         "recipe_ids": [
           "S07",
@@ -5664,39 +7639,20 @@
           "timing.content"
         ]
       },
-      "validation": {
-        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
-        "full_realtime_av_review": false,
-        "new_render_verified": false,
-        "user_approved": false,
-        "reference_direction_user_approved": true,
-        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。",
-        "component_check": {
-          "command": "node assets/editing-kit/smoke-test.cjs",
-          "passed": true,
-          "scope": "初中末几何、同节点保持、乱序seek与无效参数检查；不是浏览器视觉验收、整段音画审阅或用户认可"
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M13",
+          "scaffold": "ui.py programs scaffold --id F-M13 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
         }
-      },
-      "refinements": [
-        {
-          "date": "2026-10-16",
-          "source": "fred-jev",
-          "reason": "章节标题或步骤总览读清后，同一组缩到导航位；后续内容只改变当前项状态，持续交代位置。",
-          "previous_fields": {
-            "title": "章节标题变成导航：转场的结果有用",
-            "semantic_use": "进入一个新的章节或明确更换论点层级。",
-            "viewer_gap": "需要辨认新章，同时保持正文观看方向。",
-            "state_chain": [
-              "旧章结束",
-              "新章节标题在主位可读",
-              "章节标题移至导航位置",
-              "新章内容进入主画布"
-            ]
-          },
-          "implementation_note": "match-handoff可承接位移；翻牌/大字/全屏遮挡/步骤高亮由宿主实现，文字与人物字幕安全区按本稿测量。",
-          "new_render_verified": false
-        }
-      ]
+      }
     },
     {
       "title": "解释层浮到前面，材料留作背景",
@@ -5840,6 +7796,59 @@
       ],
       "polarity": "positive",
       "implementation": {
+        "status": "executable-bound-program",
+        "recipe_ids": [
+          "S03"
+        ],
+        "entrypoints": [
+          "assets/editing-kit/README.md",
+          "assets/editing-kit/editing-kit.js"
+        ],
+        "primitives": [
+          {
+            "name": "focus-mask",
+            "path": "assets/editing-kit/editing-kit.js",
+            "status": "existing_shared_primitive"
+          }
+        ],
+        "customization_required": [
+          "背景blur、前景卡、划线与文字时序由宿主实现",
+          "focus-mask仅可帮助聚焦区域，不直接提供景深/解释卡模板"
+        ],
+        "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。",
+        "sources": [
+          "assets/method-runtime/programs.json",
+          "assets/method-runtime/method-runtime.js",
+          "scripts/method_programs.py"
+        ],
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M14",
+          "scaffold": "ui.py programs scaffold --id F-M14 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
+        },
+        "note": "Current executable implementation. Bind this narration and current content; technical readiness does not grant aesthetic approval."
+      },
+      "validation": {
+        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
+        "full_realtime_av_review": false,
+        "new_render_verified": false,
+        "user_approved": false,
+        "reference_direction_user_approved": true,
+        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
+      },
+      "refinements": [
+        {
+          "date": "2026-10-16",
+          "source": "fred-jev",
+          "reason": "已有证据退后，解释到前景；手动负担逐项出现并划除后，立即接实际接管入口；前景结论有来处。",
+          "previous_fields": {},
+          "implementation_note": "焦点原语可复用；背景模糊、解释标题、负担标签和删线时序由宿主实现。",
+          "new_render_verified": false
+        }
+      ],
+      "historical_implementation": {
         "status": "observed_method_with_reusable_primitives_and_project_customization",
         "recipe_ids": [
           "S03"
@@ -5861,24 +7870,20 @@
         ],
         "scope": "Fred整段未重建；方法为已研究的导演配方。现有原语能力不等于已完成此方法的完整渲染。"
       },
-      "validation": {
-        "source_visual_review": "sequential_samples_with_targeted_dense_sequences",
-        "full_realtime_av_review": false,
-        "new_render_verified": false,
-        "user_approved": false,
-        "reference_direction_user_approved": true,
-        "approval_scope": "用户喜欢此参考片并要求升级Skill；各个重建输出尚未制作或认可。"
-      },
-      "refinements": [
-        {
-          "date": "2026-10-16",
-          "source": "fred-jev",
-          "reason": "已有证据退后，解释到前景；手动负担逐项出现并划除后，立即接实际接管入口；前景结论有来处。",
-          "previous_fields": {},
-          "implementation_note": "焦点原语可复用；背景模糊、解释标题、负担标签和删线时序由宿主实现。",
-          "new_render_verified": false
+      "current_execution": {
+        "adapter_kind": "compiled-motion-composition",
+        "runtime_verification": {
+          "status": "passed",
+          "record": "assets/method-runtime/verification.json"
+        },
+        "call": {
+          "inspect": "ui.py programs inspect --id F-M14",
+          "scaffold": "ui.py programs scaffold --id F-M14 --out <phases.json>",
+          "build": "ui.py programs build --spec <phases.json> --stage <current-objects.html> --out <project>",
+          "render": "ui.py library render --project <project> --out <output.mp4>",
+          "scope": "Execute the retained method as bound motion phases. This is an explicit composition of real effects, not the original creator full scene or generated AIGC."
         }
-      ]
+      }
     }
   ],
   "legacy_collection_id": "qiuzhi2046-20261014",

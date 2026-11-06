@@ -1,0 +1,622 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t17k",
+  "title": "项目目录里出现 .env，打开成编辑器亮出 API_KEY 一行",
+  "duration": 10,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "Project",
+    "text02": "src/",
+    "text03": "README.md",
+    "text04": "package.json",
+    "text05": ".env",
+    "text06": "Key 放在哪里？",
+    "text07": ".env",
+    "text08": "API_KEY=your_key_here",
+    "text09": "本期服务配置"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "window",
+      "x": 150,
+      "y": 170,
+      "w": 720,
+      "h": 730,
+      "label": "{{text01}}"
+    },
+    {
+      "id": "n002",
+      "kind": "text",
+      "x": 230,
+      "y": 320,
+      "w": 500,
+      "h": 51.2,
+      "text": "{{text02}}",
+      "size": 32,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.3,
+            0
+          ],
+          [
+            0.65,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            230
+          ],
+          [
+            0.3,
+            230
+          ],
+          [
+            0.65,
+            230,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            332
+          ],
+          [
+            0.3,
+            332
+          ],
+          [
+            0.65,
+            320,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "text",
+      "x": 230,
+      "y": 406,
+      "w": 500,
+      "h": 51.2,
+      "text": "{{text03}}",
+      "size": 32,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.65,
+            0
+          ],
+          [
+            1.0,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            230
+          ],
+          [
+            0.65,
+            230
+          ],
+          [
+            1.0,
+            230,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            418
+          ],
+          [
+            0.65,
+            418
+          ],
+          [
+            1.0,
+            406,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "text",
+      "x": 230,
+      "y": 492,
+      "w": 500,
+      "h": 51.2,
+      "text": "{{text04}}",
+      "size": 32,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.0,
+            0
+          ],
+          [
+            1.35,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            230
+          ],
+          [
+            1.0,
+            230
+          ],
+          [
+            1.35,
+            230,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            504
+          ],
+          [
+            1.0,
+            504
+          ],
+          [
+            1.35,
+            492,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "file",
+      "x": 330,
+      "y": 570,
+      "w": 260,
+      "h": 210,
+      "label": "{{text05}}",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.2,
+            0
+          ],
+          [
+            2.55,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            330
+          ],
+          [
+            2.2,
+            330
+          ],
+          [
+            2.55,
+            330,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            620
+          ],
+          [
+            2.2,
+            620
+          ],
+          [
+            2.55,
+            570,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "pill",
+      "x": 1080,
+      "y": 160,
+      "w": 650,
+      "h": 90,
+      "label": "{{text06}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.5,
+            0
+          ],
+          [
+            0.85,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1080
+          ],
+          [
+            0.5,
+            1080
+          ],
+          [
+            0.85,
+            1080,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            210
+          ],
+          [
+            0.5,
+            210
+          ],
+          [
+            0.85,
+            160,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "window",
+      "x": 1050,
+      "y": 325,
+      "w": 720,
+      "h": 500,
+      "label": "{{text07}}",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.5,
+            0
+          ],
+          [
+            4.85,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1270
+          ],
+          [
+            4.5,
+            1270
+          ],
+          [
+            4.85,
+            1050,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            375
+          ],
+          [
+            4.5,
+            375
+          ],
+          [
+            4.85,
+            325,
+            "out"
+          ]
+        ],
+        "fill": [
+          [
+            0,
+            "#FFFFFF"
+          ],
+          [
+            7.2,
+            "#FFFFFF"
+          ],
+          [
+            8.0,
+            "#0B0B0F"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "text",
+      "x": 1100,
+      "y": 490,
+      "w": 620,
+      "h": 65.60000000000001,
+      "text": "{{text08}}",
+      "size": 41,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.9,
+            0
+          ],
+          [
+            5.25,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1100
+          ],
+          [
+            4.9,
+            1100
+          ],
+          [
+            5.25,
+            1100,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            540
+          ],
+          [
+            4.9,
+            540
+          ],
+          [
+            5.25,
+            490,
+            "out"
+          ]
+        ],
+        "color": [
+          [
+            0,
+            "#0B0B0F"
+          ],
+          [
+            7.2,
+            "#0B0B0F"
+          ],
+          [
+            8.0,
+            "#D6C2FF"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "path",
+      "x": 0,
+      "y": 0,
+      "w": 45,
+      "h": 55,
+      "path": "M0 0 L0 42 L12 30 L24 51 L33 46 L22 26 L40 24 Z",
+      "fill": "#0B0B0F",
+      "strokeWidth": 7,
+      "tracks": {
+        "x": [
+          [
+            0,
+            950
+          ],
+          [
+            2.5,
+            450
+          ],
+          [
+            3.6,
+            450
+          ]
+        ],
+        "y": [
+          [
+            0,
+            920
+          ],
+          [
+            2.5,
+            710
+          ],
+          [
+            3.6,
+            710
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010",
+      "kind": "text",
+      "x": 1110,
+      "y": 620,
+      "w": 600,
+      "h": 51.2,
+      "text": "{{text09}}",
+      "size": 32,
+      "color": "#797982",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            6.7,
+            0
+          ],
+          [
+            7.05,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1110
+          ],
+          [
+            6.7,
+            1110
+          ],
+          [
+            7.05,
+            1110,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            670
+          ],
+          [
+            6.7,
+            670
+          ],
+          [
+            7.05,
+            620,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/4f4af73d53e8911ab045fb0cf3bd9cbcd4eeb861c55d9a9cb960bff33813d51d.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "The second part is about where the Key is generally placed.",
+          "label": "Opening Hook",
+          "visual": "A clean 2D motion graphic environment with a white background. A stylized software window titled 'Project' is on the left, containing an 'src/' folder icon and a 'README.md' file. A purple speech bubble on the right side of the frame floats above a small code snippet box. The lighting is flat and even; colors are vibrant with a minimalist aesthetic.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "We usually put it into a configuration file called .env.",
+          "label": "Product Information",
+          "visual": "Static camera angle. A new file icon labeled '.env' fades into the file list inside the 'Project' window on the left. The cursor (black arrow) moves from the center of the frame toward the '.env' file. The color palette remains consistent with white, purple, and gray tones.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "It is actually just a common plain text file.",
+          "label": "Product Selling Points",
+          "visual": "A transition occurs where a second window, titled '.env', slides in from the right to the center-right of the frame. This window displays the contents of the file: a line of code 'API_KEY=your_key_here' and a descriptive line below it. The first window remains on the left. Soft drop shadows give the windows depth.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:08",
+          "timestamp_start": "0:05"
+        },
+        {
+          "audio": "You can open it with a code editor.",
+          "label": "Usage Scenarios",
+          "visual": "The '.env' window on the right transitions from a light theme (white background) to a dark theme (dark gray/black background), simulating a code editor interface. The text inside changes to white/purple highlighting. The movement is a smooth color-fill transition.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:09",
+          "timestamp_start": "0:08"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "项目目录（README.md…）→ “Key 放在哪里？”胶囊 → 目录里出现 .env，打开成深色编辑器，API_KEY=your_key_here 一行亮出"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 10.0,
+      "action": "项目目录（README.md…）→ “Key 放在哪里？”胶囊 → 目录里出现 .env，打开成深色编辑器，API_KEY=your_key_here 一行亮出"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

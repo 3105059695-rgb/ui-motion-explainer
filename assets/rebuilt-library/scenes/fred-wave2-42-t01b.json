@@ -1,0 +1,164 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t01b",
+  "title": "概念定义：术语到白话定义",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "term": "上下文",
+    "definition": "让下一步知道：你是谁、要做什么、已经做到哪里。"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/21297fcbad43aafb42e1f175e4083887e7ff3ea4ce49e6adea7241ed05da238a.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single, synthesized 'swoosh' sound effect accompanies the sliding motion of the white card, transitioning into a soft, upbeat digital background track.",
+          "label": "Opening Hook",
+          "visual": "A black rectangular card with white text is centered on a clean white background. Below the black card, a second white rectangular card slides out downward, creating a two-tiered stacked effect. The lighting is flat and even, characteristic of 2D motion graphics. The composition is minimalist and centered.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A calm, professional male voiceover says: 'API is, according to agreed rules, the ability to call upon functions created by others.'",
+          "label": "Product Information",
+          "visual": "The camera remains static on the two cards. The white card now contains black text. There is no change in color grading or lighting. The scene remains static with a slight drop shadow effect visible beneath the cards against the white background.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.1,
+      "action": "Named concept lands alone"
+    },
+    {
+      "start": 1.25,
+      "end": 2.75,
+      "action": "Plain-language definition slides out beneath while concept remains"
+    },
+    {
+      "start": 2.75,
+      "end": 5,
+      "action": "Read term and definition together"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-pill",
+      "kind": "pill",
+      "x": 550,
+      "y": 230,
+      "w": 820,
+      "h": 170,
+      "label": "{{term}}",
+      "size": 90,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.0,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            265
+          ],
+          [
+            1.0,
+            230,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-card",
+      "kind": "card",
+      "x": 280,
+      "y": 480,
+      "w": 1360,
+      "h": 330,
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 60,
+          "y": 70,
+          "w": 1240,
+          "h": 210,
+          "text": "{{definition}}",
+          "size": 64,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.25,
+            0
+          ],
+          [
+            2.5,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.25,
+            620
+          ],
+          [
+            2.5,
+            480,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

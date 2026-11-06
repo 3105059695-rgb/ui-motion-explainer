@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "slug": "levabashidze-2d713a",
+  "source_project": "assets/reconstructions/levabashidze-2d713a",
+  "project": "assets/reconstructions/levabashidze-2d713a",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "assets/ball-track.json",
+    "ball-motion-data.json",
+    "index.html",
+    "motion.js",
+    "preferred.json",
+    "project.json",
+    "render-720p-v1/verification.json",
+    "scene-plan.json",
+    "style.css",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/08939b8bdf534afec24a.ttf",
+    "../../reference-shared/fonts/29160a80ff49ddcab2c9.ttf",
+    "../../reference-shared/fonts/d00e590b8eb3a59acc32.ttf"
+  ],
+  "replaceable_assets": [],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "assets/ball-track.json": "assets/ball-track.json",
+    "assets/fonts/GeistMono.ttf": "../../reference-shared/fonts/d00e590b8eb3a59acc32.ttf",
+    "assets/fonts/InstrumentSerif-Italic.ttf": "../../reference-shared/fonts/08939b8bdf534afec24a.ttf",
+    "assets/fonts/Inter.ttf": "../../reference-shared/fonts/29160a80ff49ddcab2c9.ttf",
+    "ball-motion-data.json": "ball-motion-data.json",
+    "index.html": "index.html",
+    "motion.js": "motion.js",
+    "preferred.json": "preferred.json",
+    "project.json": "project.json",
+    "render-720p-v1/verification.json": "render-720p-v1/verification.json",
+    "scene-plan.json": "scene-plan.json",
+    "style.css": "style.css",
+    "ball-track.json": "assets/ball-track.json",
+    "GeistMono.ttf": "../../reference-shared/fonts/d00e590b8eb3a59acc32.ttf",
+    "InstrumentSerif-Italic.ttf": "../../reference-shared/fonts/08939b8bdf534afec24a.ttf",
+    "Inter.ttf": "../../reference-shared/fonts/29160a80ff49ddcab2c9.ttf",
+    "verification.json": "render-720p-v1/verification.json"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

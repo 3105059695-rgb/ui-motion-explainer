@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "slug": "lexnlin-038035",
+  "source_project": "assets/reconstructions/lexnlin-038035",
+  "project": "assets/reconstructions/lexnlin-038035",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "asset-manifest.json",
+    "composition.js",
+    "index.html",
+    "project.json",
+    "textures/anatomy.png",
+    "textures/archer.png",
+    "textures/bust1.png",
+    "textures/bust2.png",
+    "textures/bust3.png",
+    "textures/dandelion.png",
+    "textures/flatpalm.png",
+    "textures/floral.png",
+    "textures/glass.png",
+    "textures/globe.png",
+    "textures/handcandle.png",
+    "textures/handfist.png",
+    "textures/handopen.png",
+    "textures/handpalm.png",
+    "textures/handreach.png",
+    "textures/handring.png",
+    "textures/horse.png",
+    "textures/horseprint.png",
+    "textures/profile.png",
+    "textures/scribe.png",
+    "textures/shell.png",
+    "textures/snowflake.png",
+    "textures/triple.png",
+    "textures/vase.png",
+    "textures/wheel.png",
+    "textures/workshop.png",
+    "portable-paths.js"
+  ],
+  "shared_assets": [],
+  "replaceable_assets": [
+    {
+      "path": "textures/anatomy.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "d6393bb06dd18cb317eadd477982d949b2eaf3f0a39b87d30564491ddf2e513f"
+    },
+    {
+      "path": "textures/archer.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "7214250ff02c842ebee341bdc568b1f90bb1580ad90012437937a22f342ae6ef"
+    },
+    {
+      "path": "textures/bust1.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "17984b335a1c5bf98e372df342ae9c655362b0547471041150a7c359ba9042c7"
+    },
+    {
+      "path": "textures/bust2.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "86c09578d5fcaf4ca04979f6d70259e95d61243d9204eadeabd97ed2766346db"
+    },
+    {
+      "path": "textures/bust3.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "0fbb092db0824d5170ede677af6502abb3106acfbab15f2fd3b4bad146069352"
+    },
+    {
+      "path": "textures/dandelion.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "ca1cd3df71b2f6db2b2ad767b8df62db5efb1d11ecff37da8b73d6d194e94e31"
+    },
+    {
+      "path": "textures/flatpalm.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "7f8941c4d5879499491f79bbb697503c356726448a82d1d363fa38422aa0f43f"
+    },
+    {
+      "path": "textures/floral.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "00ac186d87028b79e3d3a1956ff34ef49038995a073da887fdf63c1f3b3520cb"
+    },
+    {
+      "path": "textures/glass.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "1c9a7a0bd4794781959303757ebb58a6f4a2c646c4ddd6cc0adb40fd6c525212"
+    },
+    {
+      "path": "textures/globe.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "be7f7efe1281084cca319210bc6d36738a626ba85c63dcee1754b3fa90c41316"
+    },
+    {
+      "path": "textures/handcandle.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "add4055c64947dc472751da7ea5d9c17a6c82e1ae95f95255c0d166a20ecdbcc"
+    },
+    {
+      "path": "textures/handfist.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "79acaf16ee7b700d0f81e82b5f8b7897b0e271fcab454e6bc36f68b99ecc90f3"
+    },
+    {
+      "path": "textures/handopen.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "67d41699c652b68750b799cc56938d64f7d03b77585eec09e9bcec4f5c14cd28"
+    },
+    {
+      "path": "textures/handpalm.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "447bdf171c569da0b17632d0a96237f13cb1661ba1624f5ad05403cc5494e758"
+    },
+    {
+      "path": "textures/handreach.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "70990b3d77fd45a1f11808efa0ec112a7a8ff064d4f63d01f3c071094d693c1f"
+    },
+    {
+      "path": "textures/handring.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "c602ea83454224ac6327e41c0e37093807c50969efc51ff137b1bd2c48e37d1f"
+    },
+    {
+      "path": "textures/horse.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "e39d06a107b4e19b2718796d981fdd6499f5f78fee412be8d196da2a29f50fa2"
+    },
+    {
+      "path": "textures/horseprint.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "f38a43780a2c1e4faebbc17ebb11be8461c6b63bda672092842d656210b52af3"
+    },
+    {
+      "path": "textures/profile.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "7ca830ec58bf5787b970850bc10ef4dad318919953e24e3bbbfac225039de1aa"
+    },
+    {
+      "path": "textures/scribe.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "4b95f8fcb08f5348c625a3aa53084cdb3490bb25ba8873c4c77ef760f445f932"
+    },
+    {
+      "path": "textures/shell.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "f3e781053e233ad2c2bdfc91ef05181b293dd95981e321a0aac1caaf411bbc63"
+    },
+    {
+      "path": "textures/snowflake.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "7bca02ace7219c03342168966a279e5bfce9463aa3e86cb4b5eda835840729c1"
+    },
+    {
+      "path": "textures/triple.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "26de789ccc14a83089de33ab28136ade70fb22378b757c3de9b821aa40576a2f"
+    },
+    {
+      "path": "textures/vase.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "29dc4d546254f4d91fb399e81d87e92678c933472dca737f82d5598a2a98e293"
+    },
+    {
+      "path": "textures/wheel.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "4bbeb6037e10d324d7cd5866c4332a17c9b2291f4282849426a66bcdc08d2d21"
+    },
+    {
+      "path": "textures/workshop.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "1ccb29d55e580fb3638b77a2a8cf5ee3752e4980c26ccfcacea7cb1cafe19bf3"
+    }
+  ],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "asset-manifest.json": "asset-manifest.json",
+    "composition.js": "composition.js",
+    "index.html": "index.html",
+    "project.json": "project.json",
+    "textures/anatomy.png": "textures/anatomy.png",
+    "textures/archer.png": "textures/archer.png",
+    "textures/bust1.png": "textures/bust1.png",
+    "textures/bust2.png": "textures/bust2.png",
+    "textures/bust3.png": "textures/bust3.png",
+    "textures/dandelion.png": "textures/dandelion.png",
+    "textures/flatpalm.png": "textures/flatpalm.png",
+    "textures/floral.png": "textures/floral.png",
+    "textures/glass.png": "textures/glass.png",
+    "textures/globe.png": "textures/globe.png",
+    "textures/handcandle.png": "textures/handcandle.png",
+    "textures/handfist.png": "textures/handfist.png",
+    "textures/handopen.png": "textures/handopen.png",
+    "textures/handpalm.png": "textures/handpalm.png",
+    "textures/handreach.png": "textures/handreach.png",
+    "textures/handring.png": "textures/handring.png",
+    "textures/horse.png": "textures/horse.png",
+    "textures/horseprint.png": "textures/horseprint.png",
+    "textures/profile.png": "textures/profile.png",
+    "textures/scribe.png": "textures/scribe.png",
+    "textures/shell.png": "textures/shell.png",
+    "textures/snowflake.png": "textures/snowflake.png",
+    "textures/triple.png": "textures/triple.png",
+    "textures/vase.png": "textures/vase.png",
+    "textures/wheel.png": "textures/wheel.png",
+    "textures/workshop.png": "textures/workshop.png",
+    "anatomy.png": "textures/anatomy.png",
+    "archer.png": "textures/archer.png",
+    "bust1.png": "textures/bust1.png",
+    "bust2.png": "textures/bust2.png",
+    "bust3.png": "textures/bust3.png",
+    "dandelion.png": "textures/dandelion.png",
+    "flatpalm.png": "textures/flatpalm.png",
+    "floral.png": "textures/floral.png",
+    "glass.png": "textures/glass.png",
+    "globe.png": "textures/globe.png",
+    "handcandle.png": "textures/handcandle.png",
+    "handfist.png": "textures/handfist.png",
+    "handopen.png": "textures/handopen.png",
+    "handpalm.png": "textures/handpalm.png",
+    "handreach.png": "textures/handreach.png",
+    "handring.png": "textures/handring.png",
+    "horse.png": "textures/horse.png",
+    "horseprint.png": "textures/horseprint.png",
+    "profile.png": "textures/profile.png",
+    "scribe.png": "textures/scribe.png",
+    "shell.png": "textures/shell.png",
+    "snowflake.png": "textures/snowflake.png",
+    "triple.png": "textures/triple.png",
+    "vase.png": "textures/vase.png",
+    "wheel.png": "textures/wheel.png",
+    "workshop.png": "textures/workshop.png"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

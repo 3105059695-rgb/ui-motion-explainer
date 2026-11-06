@@ -1,0 +1,365 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-recording-8-t09q",
+  "title": "长录屏跳读：时间条标出几处，播放头逐处跳过去",
+  "duration": 7,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "0:06",
+    "text02": "0:13",
+    "text03": "0:15",
+    "text04": "0:22",
+    "text05": "0:27",
+    "media1.start": 0,
+    "media1.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "image",
+      "x": 180,
+      "y": 100,
+      "w": 1560,
+      "h": 800,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0,
+        7.001
+      ]
+    },
+    {
+      "id": "n002",
+      "kind": "rect",
+      "x": 220,
+      "y": 955,
+      "w": 1480,
+      "h": 8,
+      "fill": "#E2E2E7"
+    },
+    {
+      "id": "n003",
+      "kind": "circle",
+      "x": 442.0,
+      "y": 934,
+      "w": 24,
+      "h": 24,
+      "fill": "#0B0B0F"
+    },
+    {
+      "id": "n004",
+      "kind": "text",
+      "x": 382.0,
+      "y": 985,
+      "w": 150,
+      "h": 44.800000000000004,
+      "text": "{{text01}}",
+      "size": 28,
+      "align": "center"
+    },
+    {
+      "id": "n005",
+      "kind": "circle",
+      "x": 812.0,
+      "y": 934,
+      "w": 24,
+      "h": 24,
+      "fill": "#0B0B0F"
+    },
+    {
+      "id": "n006",
+      "kind": "text",
+      "x": 752.0,
+      "y": 985,
+      "w": 150,
+      "h": 44.800000000000004,
+      "text": "{{text02}}",
+      "size": 28,
+      "align": "center"
+    },
+    {
+      "id": "n007",
+      "kind": "circle",
+      "x": 960.0,
+      "y": 934,
+      "w": 24,
+      "h": 24,
+      "fill": "#0B0B0F"
+    },
+    {
+      "id": "n008",
+      "kind": "text",
+      "x": 900.0,
+      "y": 985,
+      "w": 150,
+      "h": 44.800000000000004,
+      "text": "{{text03}}",
+      "size": 28,
+      "align": "center"
+    },
+    {
+      "id": "n009",
+      "kind": "circle",
+      "x": 1300.3999999999999,
+      "y": 934,
+      "w": 24,
+      "h": 24,
+      "fill": "#0B0B0F"
+    },
+    {
+      "id": "n010",
+      "kind": "text",
+      "x": 1240.3999999999999,
+      "y": 985,
+      "w": 150,
+      "h": 44.800000000000004,
+      "text": "{{text04}}",
+      "size": 28,
+      "align": "center"
+    },
+    {
+      "id": "n011",
+      "kind": "circle",
+      "x": 1552.0,
+      "y": 934,
+      "w": 24,
+      "h": 24,
+      "fill": "#0B0B0F"
+    },
+    {
+      "id": "n012",
+      "kind": "text",
+      "x": 1492.0,
+      "y": 985,
+      "w": 150,
+      "h": 44.800000000000004,
+      "text": "{{text05}}",
+      "size": 28,
+      "align": "center"
+    },
+    {
+      "id": "n013",
+      "kind": "rect",
+      "x": 220,
+      "y": 920,
+      "w": 8,
+      "h": 68,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "x": [
+          [
+            0,
+            220
+          ],
+          [
+            0.98,
+            442
+          ],
+          [
+            1.26,
+            442
+          ],
+          [
+            1.54,
+            812
+          ],
+          [
+            2.66,
+            812
+          ],
+          [
+            3.01,
+            960
+          ],
+          [
+            3.92,
+            960
+          ],
+          [
+            4.2,
+            1300
+          ],
+          [
+            5.32,
+            1300
+          ],
+          [
+            5.6,
+            1552
+          ],
+          [
+            7,
+            1580
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/e2762fa48866a0f0e092de0101018020f202ac4bd57f7fab1a4a8018c2282364.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "Fast-paced, high-energy 8-bit chiptune music with driving percussion and synthesized melodic arpeggios.",
+          "label": "Opening Hook",
+          "visual": "A static, centered screen capture of a retro-style video game menu. The background is dark grey. Cyan and magenta accents highlight various boxes containing instructions. At the center bottom, two rectangular buttons, one cyan and one magenta, appear. The overall lighting is flat and digital with high contrast between the neon text and dark background.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:06",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "8-bit chiptune music continues. Layered sound effects of laser fire (short, high-pitched pulses) and mechanical engine hums.",
+          "label": "Product Information",
+          "visual": "POV of a spaceship flying forward through a 3D low-poly volcanic canyon. The canyon walls are dark brown with glowing orange and yellow lava segments. The spaceship is silver with glowing blue engines, positioned at the bottom center. The camera moves forward rapidly with a slight handheld-style camera shake. Bright neon projectiles fly across the screen.",
+          "shot_type": "POV Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:11",
+          "timestamp_start": "0:06"
+        },
+        {
+          "audio": "Continuous chiptune track. Sound effect of a 'power-up' chime (ascending scale) followed by explosion sounds (static-heavy bursts).",
+          "label": "Product Selling Points",
+          "visual": "A split-path fork in the canyon appears. The camera tracks the spaceship as it banks sharply to the right. Glowing teal and orange crystals line the path. The lighting shifts to a warmer tone as more orange lava elements become visible on the right path. Several small enemy units appear and explode into pixelated sparks upon contact.",
+          "shot_type": "POV Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:15",
+          "timestamp_start": "0:11"
+        },
+        {
+          "audio": "Intense, low-frequency buzzing sound representing a heavy laser cannon, drowning out the background music temporarily.",
+          "label": "Usage Scenarios",
+          "visual": "The spaceship enters a wider cavern area. A large, bright orange beam of light is emitted from the ship's front, sweeping across the screen from left to right. Numerous enemy targets are highlighted with red circular reticles and destroyed. The camera zooms in slightly during the beam attack, creating a sense of increased power.",
+          "shot_type": "POV Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:22",
+          "timestamp_start": "0:15"
+        },
+        {
+          "audio": "The chiptune music reaches a crescendo with a high-pitched celebratory jingle. Sound of a distant thunder-like explosion.",
+          "label": "Call to Action",
+          "visual": "The spaceship continues forward as the environment brightens with more cyan crystal structures. A large explosion occurs in the center of the frame, filling the screen with white and orange light. The camera does a quick 'speed ramp' zoom into the light before the video ends. Saturated purple and cyan tones dominate the palette.",
+          "shot_type": "POV Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:27",
+          "timestamp_start": "0:22"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "一段很长的真实录屏 → 下沿时间条上落出 3–4 个关键时刻标记，播放头按口播逐个跳过去，每处窗内推近读清再跳下一处"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification.",
+    "conflict": "Analysis timestamps 0:06..0:27 describe source recording clock, not 7.062-second library clip duration. The authored clock jumps between these moments within the scene duration."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 7.0,
+      "action": "一段很长的真实录屏 → 下沿时间条上落出 3–4 个关键时刻标记，播放头按口播逐个跳过去，每处窗内推近读清再跳下一处"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "camera": {
+    "tracks": {
+      "scale": [
+        [
+          0,
+          1
+        ],
+        [
+          1.75,
+          1.05
+        ],
+        [
+          2.45,
+          1.05
+        ],
+        [
+          2.8,
+          1
+        ],
+        [
+          4.34,
+          1.05
+        ],
+        [
+          5.11,
+          1.05
+        ],
+        [
+          5.53,
+          1
+        ]
+      ]
+    }
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "长录屏关键时刻",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          0.98,
+          6
+        ],
+        [
+          1.26,
+          6
+        ],
+        [
+          1.54,
+          13
+        ],
+        [
+          2.66,
+          13.5
+        ],
+        [
+          3.01,
+          15
+        ],
+        [
+          3.92,
+          15.5
+        ],
+        [
+          4.2,
+          22
+        ],
+        [
+          5.32,
+          22.5
+        ],
+        [
+          5.6,
+          27
+        ],
+        [
+          7,
+          27.8
+        ]
+      ]
+    }
+  ]
+}

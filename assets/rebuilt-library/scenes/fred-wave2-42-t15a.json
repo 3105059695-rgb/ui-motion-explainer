@@ -1,0 +1,115 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t15a",
+  "title": "跑分条形图：条依次长出，主角高亮",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "values": [
+      75.4,
+      74.3,
+      69
+    ],
+    "labels": [
+      "方案 A",
+      "方案 B",
+      "方案 C"
+    ],
+    "main": 0
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/b29e353ae048405de4d9f47e23bc36e9dda3fb60fa731df9ddff68604e74476a.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A fast-paced, high-pitched mechanical ticking sound, similar to a slot machine or a rapidly spinning dial, starts and continues throughout the sequence.",
+          "label": "Opening Hook",
+          "visual": "The camera is static on a minimalist white background. Three horizontal black bars are aligned vertically. To the left of the top bar, text reads GPT-6.1 Sol. To the left of the middle bar, text reads GPT-6 Astra. To the left of the bottom bar, text reads GPT-6 Sol. The top bar begins to fill with a purple progress animation, moving from left to right, reaching 49.7%. Lighting is flat and even across the entire frame. The color palette is restricted to white, black, and purple.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The rapid mechanical ticking sound continues, increasing slightly in intensity as the bars reach their final values.",
+          "label": "Product Selling Points",
+          "visual": "The camera remains static. The top bar rapidly fills to 75.4% and turns solid purple. Simultaneously, the middle bar fills to 74.3% in a dark grey color, and the bottom bar fills to 66.9% in dark grey. All bars have rounded ends. The percentages are displayed to the right of each bar.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A final, bright chime sound effect triggers as the bottom percentage updates, followed by silence.",
+          "label": "Product Information",
+          "visual": "Static camera angle. The bottom bar's percentage updates from 66.9% to 69.0%. The top bar remains highlighted in purple while the others are dark grey. The composition remains balanced and centered on the white void. The lighting remains flat with no shadows.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 4.0,
+      "action": "Three data bars grow independently from the same scale as their numerals"
+    },
+    {
+      "start": 4.0,
+      "end": 5,
+      "action": "Selected main bar remains accent while comparisons remain dark"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-b3-bars",
+      "kind": "b3-bars",
+      "x": 260,
+      "y": 180,
+      "w": 1320,
+      "h": 720,
+      "valuesKey": "values",
+      "labelsKey": "labels",
+      "activeKey": "main",
+      "suffix": "%",
+      "decimals": 1,
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            4.5,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

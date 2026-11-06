@@ -1,0 +1,308 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t03d",
+  "title": "因果链推进",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "cause0": "输入变得完整",
+    "cause1": "上下文更加明确",
+    "cause2": "执行减少来回",
+    "cause3": "结果才更稳定"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/d5c65d1e03c4f5bf5f2275af9b0a6ca08643b123f4fa3ac10beb6f75f1906c6d.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single percussive 'pop' sound effect as the first bubble appears, accompanied by a upbeat, digital synth-pop melody starting at a low volume.",
+          "label": "Opening Hook",
+          "visual": "A static wide shot with a clean, flat white background. A single 2D rectangular chat bubble with rounded corners and a soft drop shadow appears in the center, containing gray text. The lighting is uniform and bright across the entire frame. The overall color palette is minimalist white and gray.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Two rapid 'pop' or 'click' sound effects in synchronization with each new bubble appearing. The background synth music maintains a steady, moderate tempo.",
+          "label": "Product Information",
+          "visual": "A second chat bubble pops into view below the first one, offset slightly to the right. A third bubble then appears below the second one, centered. The background remains a static, bright white. The bubbles are white with gray text. The composition creates a cascading layout in the center of the frame.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A deeper, more resonant 'thud' or 'ding' sound effect for the final bubble. The music swells slightly in volume before fading out abruptly as the video ends.",
+          "label": "Problem Solving",
+          "visual": "A final fourth chat bubble appears at the bottom of the stack. This bubble is distinct, featuring a dark gray background with bright white text, creating a high-contrast visual focus. The frame remains static and the lighting is consistent. The camera angle does not change, keeping all four bubbles in the center of the wide frame.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 4.0,
+      "action": "Four causes and consequences cascade down connected with consistent direction"
+    },
+    {
+      "start": 4.0,
+      "end": 5,
+      "action": "Final black consequence holds with its preceding reasons"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-pill",
+      "kind": "pill",
+      "x": 220,
+      "y": 100,
+      "w": 980,
+      "h": 140,
+      "label": "{{cause0}}",
+      "size": 62,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.8,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            135
+          ],
+          [
+            0.8,
+            100,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 720,
+      "y": 250,
+      "w": 170,
+      "h": 75,
+      "arrow": true,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            0.5,
+            0
+          ],
+          [
+            1.15,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-pill",
+      "kind": "pill",
+      "x": 390,
+      "y": 330,
+      "w": 980,
+      "h": 140,
+      "label": "{{cause1}}",
+      "size": 62,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.0,
+            0
+          ],
+          [
+            1.8,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.0,
+            365
+          ],
+          [
+            1.8,
+            330,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 890,
+      "y": 480,
+      "w": 170,
+      "h": 75,
+      "arrow": true,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            1.5,
+            0
+          ],
+          [
+            2.15,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-pill",
+      "kind": "pill",
+      "x": 560,
+      "y": 560,
+      "w": 980,
+      "h": 140,
+      "label": "{{cause2}}",
+      "size": 62,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.0,
+            0
+          ],
+          [
+            2.8,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.0,
+            595
+          ],
+          [
+            2.8,
+            560,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 1060,
+      "y": 710,
+      "w": 170,
+      "h": 75,
+      "arrow": true,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            2.5,
+            0
+          ],
+          [
+            3.15,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 730,
+      "y": 790,
+      "w": 980,
+      "h": 140,
+      "label": "{{cause3}}",
+      "size": 62,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.0,
+            0
+          ],
+          [
+            3.8,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.0,
+            825
+          ],
+          [
+            3.8,
+            790,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

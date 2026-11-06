@@ -1,0 +1,1574 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t20t",
+  "title": "只剩一条链接 → 成品浮起 → 计时圆盘画出 N 分钟",
+  "duration": 10.733,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "原物料 1",
+    "text02": "原物料 2",
+    "text03": "原物料 3",
+    "text04": "原物料 4",
+    "text05": "本期产品链接",
+    "text06": "3:00",
+    "media1.start": 0,
+    "media1.speed": 1,
+    "media2.start": 0,
+    "media2.speed": 1,
+    "media3.start": 0,
+    "media3.speed": 1,
+    "media4.start": 0,
+    "media4.speed": 1,
+    "media5.start": 0,
+    "media5.speed": 1,
+    "media6.start": 0,
+    "media6.speed": 1,
+    "media7.start": 0,
+    "media7.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media2": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media3": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media4": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media5": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media6": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media7": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "file",
+      "x": 300,
+      "y": 230,
+      "w": 300,
+      "h": 420,
+      "label": "{{text01}}",
+      "tracks": {
+        "x": [
+          [
+            0.0,
+            300
+          ],
+          [
+            1.0733,
+            300
+          ],
+          [
+            1.93194,
+            -900
+          ]
+        ],
+        "opacity": [
+          [
+            0.0,
+            1
+          ],
+          [
+            1.50262,
+            1
+          ],
+          [
+            1.93194,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "file",
+      "x": 650,
+      "y": 230,
+      "w": 300,
+      "h": 420,
+      "label": "{{text02}}",
+      "tracks": {
+        "x": [
+          [
+            0.0,
+            650
+          ],
+          [
+            1.0733,
+            650
+          ],
+          [
+            1.93194,
+            -900
+          ]
+        ],
+        "opacity": [
+          [
+            0.0,
+            1
+          ],
+          [
+            1.50262,
+            1
+          ],
+          [
+            1.93194,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "file",
+      "x": 1000,
+      "y": 230,
+      "w": 300,
+      "h": 420,
+      "label": "{{text03}}",
+      "tracks": {
+        "x": [
+          [
+            0.0,
+            1000
+          ],
+          [
+            1.0733,
+            1000
+          ],
+          [
+            1.93194,
+            -900
+          ]
+        ],
+        "opacity": [
+          [
+            0.0,
+            1
+          ],
+          [
+            1.50262,
+            1
+          ],
+          [
+            1.93194,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "file",
+      "x": 1350,
+      "y": 230,
+      "w": 300,
+      "h": 420,
+      "label": "{{text04}}",
+      "tracks": {
+        "x": [
+          [
+            0.0,
+            1350
+          ],
+          [
+            1.0733,
+            1350
+          ],
+          [
+            1.93194,
+            -900
+          ]
+        ],
+        "opacity": [
+          [
+            0.0,
+            1
+          ],
+          [
+            1.50262,
+            1
+          ],
+          [
+            1.93194,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "pill",
+      "x": 370,
+      "y": 100,
+      "w": 1180,
+      "h": 85,
+      "label": "{{text05}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.93194,
+            0
+          ],
+          [
+            2.3076,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            370
+          ],
+          [
+            1.93194,
+            370
+          ],
+          [
+            2.3076,
+            370,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            150
+          ],
+          [
+            1.93194,
+            150
+          ],
+          [
+            2.3076,
+            100,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "image",
+      "x": 160,
+      "y": 270,
+      "w": 335,
+      "h": 250,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        2.68325,
+        10.734
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            2.68325,
+            0
+          ],
+          [
+            3.05891,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            160
+          ],
+          [
+            2.68325,
+            160
+          ],
+          [
+            3.05891,
+            160,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            430
+          ],
+          [
+            2.68325,
+            430
+          ],
+          [
+            3.05891,
+            270,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "image",
+      "x": 540,
+      "y": 270,
+      "w": 335,
+      "h": 250,
+      "asset": "media2",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        2.68325,
+        10.734
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.05891,
+            0
+          ],
+          [
+            3.43456,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            540
+          ],
+          [
+            3.05891,
+            540
+          ],
+          [
+            3.43456,
+            540,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            430
+          ],
+          [
+            3.05891,
+            430
+          ],
+          [
+            3.43456,
+            270,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "image",
+      "x": 920,
+      "y": 270,
+      "w": 335,
+      "h": 250,
+      "asset": "media3",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        2.68325,
+        10.734
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.43456,
+            0
+          ],
+          [
+            3.81021,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            920
+          ],
+          [
+            3.43456,
+            920
+          ],
+          [
+            3.81021,
+            920,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            430
+          ],
+          [
+            3.43456,
+            430
+          ],
+          [
+            3.81021,
+            270,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "image",
+      "x": 160,
+      "y": 565,
+      "w": 335,
+      "h": 250,
+      "asset": "media4",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        2.68325,
+        10.734
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.81021,
+            0
+          ],
+          [
+            4.18587,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            160
+          ],
+          [
+            3.81021,
+            160
+          ],
+          [
+            4.18587,
+            160,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            725
+          ],
+          [
+            3.81021,
+            725
+          ],
+          [
+            4.18587,
+            565,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010",
+      "kind": "image",
+      "x": 540,
+      "y": 565,
+      "w": 335,
+      "h": 250,
+      "asset": "media5",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        2.68325,
+        10.734
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.18587,
+            0
+          ],
+          [
+            4.56153,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            540
+          ],
+          [
+            4.18587,
+            540
+          ],
+          [
+            4.56153,
+            540,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            725
+          ],
+          [
+            4.18587,
+            725
+          ],
+          [
+            4.56153,
+            565,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011",
+      "kind": "image",
+      "x": 920,
+      "y": 565,
+      "w": 335,
+      "h": 250,
+      "asset": "media6",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        2.68325,
+        10.734
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.56153,
+            0
+          ],
+          [
+            4.93718,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            920
+          ],
+          [
+            4.56153,
+            920
+          ],
+          [
+            4.93718,
+            920,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            725
+          ],
+          [
+            4.56153,
+            725
+          ],
+          [
+            4.93718,
+            565,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012",
+      "kind": "image",
+      "x": 1360,
+      "y": 220,
+      "w": 380,
+      "h": 650,
+      "asset": "media7",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        4.61519,
+        10.734
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.61519,
+            0
+          ],
+          [
+            4.99085,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1360
+          ],
+          [
+            4.61519,
+            1360
+          ],
+          [
+            4.99085,
+            1360,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            400
+          ],
+          [
+            4.61519,
+            400
+          ],
+          [
+            4.99085,
+            220,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013",
+      "kind": "circle",
+      "x": 715,
+      "y": 285,
+      "w": 490,
+      "h": 490,
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            6.97645,
+            0
+          ],
+          [
+            7.35211,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            715
+          ],
+          [
+            6.97645,
+            715
+          ],
+          [
+            7.35211,
+            715,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            335
+          ],
+          [
+            6.97645,
+            335
+          ],
+          [
+            7.35211,
+            285,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014",
+      "kind": "path",
+      "x": 750,
+      "y": 320,
+      "w": 420,
+      "h": 420,
+      "path": "M210.00,0.00 A210,210 0 0 1 260.31,6.11",
+      "fill": "#0B0B0F",
+      "strokeWidth": 12,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            7.29844,
+            0
+          ],
+          [
+            7.38967,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n015",
+      "kind": "path",
+      "x": 750,
+      "y": 320,
+      "w": 420,
+      "h": 420,
+      "path": "M274.89,10.28 A210,210 0 0 1 320.85,31.64",
+      "fill": "#0B0B0F",
+      "strokeWidth": 12,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            7.38967,
+            0
+          ],
+          [
+            7.4809,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n016",
+      "kind": "path",
+      "x": 750,
+      "y": 320,
+      "w": 420,
+      "h": 420,
+      "path": "M333.43,40.11 A210,210 0 0 1 370.54,74.62",
+      "fill": "#0B0B0F",
+      "strokeWidth": 12,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            7.4809,
+            0
+          ],
+          [
+            7.57213,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n017",
+      "kind": "path",
+      "x": 750,
+      "y": 320,
+      "w": 420,
+      "h": 420,
+      "path": "M379.89,86.57 A210,210 0 0 1 404.52,130.86",
+      "fill": "#0B0B0F",
+      "strokeWidth": 12,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            7.57213,
+            0
+          ],
+          [
+            7.66336,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n018",
+      "kind": "path",
+      "x": 750,
+      "y": 320,
+      "w": 420,
+      "h": 420,
+      "path": "M409.72,145.11 A210,210 0 0 1 419.45,194.84",
+      "fill": "#0B0B0F",
+      "strokeWidth": 12,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            7.66336,
+            0
+          ],
+          [
+            7.75459,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n019",
+      "kind": "path",
+      "x": 750,
+      "y": 320,
+      "w": 420,
+      "h": 420,
+      "path": "M420.00,210.00 A210,210 0 0 1 413.89,260.31",
+      "fill": "#0B0B0F",
+      "strokeWidth": 12,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            7.75459,
+            0
+          ],
+          [
+            7.84582,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n020",
+      "kind": "path",
+      "x": 750,
+      "y": 320,
+      "w": 420,
+      "h": 420,
+      "path": "M409.72,274.89 A210,210 0 0 1 388.36,320.85",
+      "fill": "#0B0B0F",
+      "strokeWidth": 12,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            7.84582,
+            0
+          ],
+          [
+            7.93705,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n021",
+      "kind": "path",
+      "x": 750,
+      "y": 320,
+      "w": 420,
+      "h": 420,
+      "path": "M379.89,333.43 A210,210 0 0 1 345.38,370.54",
+      "fill": "#0B0B0F",
+      "strokeWidth": 12,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            7.93705,
+            0
+          ],
+          [
+            8.02828,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n022",
+      "kind": "path",
+      "x": 750,
+      "y": 320,
+      "w": 420,
+      "h": 420,
+      "path": "M333.43,379.89 A210,210 0 0 1 289.14,404.52",
+      "fill": "#0B0B0F",
+      "strokeWidth": 12,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.02828,
+            0
+          ],
+          [
+            8.11951,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n023",
+      "kind": "path",
+      "x": 750,
+      "y": 320,
+      "w": 420,
+      "h": 420,
+      "path": "M274.89,409.72 A210,210 0 0 1 225.16,419.45",
+      "fill": "#0B0B0F",
+      "strokeWidth": 12,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.11951,
+            0
+          ],
+          [
+            8.21075,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n024",
+      "kind": "path",
+      "x": 750,
+      "y": 320,
+      "w": 420,
+      "h": 420,
+      "path": "M210.00,420.00 A210,210 0 0 1 159.69,413.89",
+      "fill": "#0B0B0F",
+      "strokeWidth": 12,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.21075,
+            0
+          ],
+          [
+            8.30198,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n025",
+      "kind": "path",
+      "x": 750,
+      "y": 320,
+      "w": 420,
+      "h": 420,
+      "path": "M145.11,409.72 A210,210 0 0 1 99.15,388.36",
+      "fill": "#0B0B0F",
+      "strokeWidth": 12,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.30198,
+            0
+          ],
+          [
+            8.39321,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n026",
+      "kind": "path",
+      "x": 750,
+      "y": 320,
+      "w": 420,
+      "h": 420,
+      "path": "M86.57,379.89 A210,210 0 0 1 49.46,345.38",
+      "fill": "#0B0B0F",
+      "strokeWidth": 12,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.39321,
+            0
+          ],
+          [
+            8.48444,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n027",
+      "kind": "path",
+      "x": 750,
+      "y": 320,
+      "w": 420,
+      "h": 420,
+      "path": "M40.11,333.43 A210,210 0 0 1 15.48,289.14",
+      "fill": "#0B0B0F",
+      "strokeWidth": 12,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.48444,
+            0
+          ],
+          [
+            8.57567,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n028",
+      "kind": "path",
+      "x": 750,
+      "y": 320,
+      "w": 420,
+      "h": 420,
+      "path": "M10.28,274.89 A210,210 0 0 1 0.55,225.16",
+      "fill": "#0B0B0F",
+      "strokeWidth": 12,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.57567,
+            0
+          ],
+          [
+            8.6669,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n029",
+      "kind": "path",
+      "x": 750,
+      "y": 320,
+      "w": 420,
+      "h": 420,
+      "path": "M0.00,210.00 A210,210 0 0 1 6.11,159.69",
+      "fill": "#0B0B0F",
+      "strokeWidth": 12,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.6669,
+            0
+          ],
+          [
+            8.75813,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n030",
+      "kind": "path",
+      "x": 750,
+      "y": 320,
+      "w": 420,
+      "h": 420,
+      "path": "M10.28,145.11 A210,210 0 0 1 31.64,99.15",
+      "fill": "#0B0B0F",
+      "strokeWidth": 12,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.75813,
+            0
+          ],
+          [
+            8.84936,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n031",
+      "kind": "path",
+      "x": 750,
+      "y": 320,
+      "w": 420,
+      "h": 420,
+      "path": "M40.11,86.57 A210,210 0 0 1 74.62,49.46",
+      "fill": "#0B0B0F",
+      "strokeWidth": 12,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.84936,
+            0
+          ],
+          [
+            8.94059,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n032",
+      "kind": "path",
+      "x": 750,
+      "y": 320,
+      "w": 420,
+      "h": 420,
+      "path": "M86.57,40.11 A210,210 0 0 1 130.86,15.48",
+      "fill": "#0B0B0F",
+      "strokeWidth": 12,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.94059,
+            0
+          ],
+          [
+            9.03182,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n033",
+      "kind": "path",
+      "x": 750,
+      "y": 320,
+      "w": 420,
+      "h": 420,
+      "path": "M145.11,10.28 A210,210 0 0 1 194.84,0.55",
+      "fill": "#0B0B0F",
+      "strokeWidth": 12,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            9.03182,
+            0
+          ],
+          [
+            9.12305,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n034",
+      "kind": "text",
+      "x": 785,
+      "y": 460,
+      "w": 350,
+      "h": 168.0,
+      "text": "{{text06}}",
+      "size": 105,
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            7.5131,
+            0
+          ],
+          [
+            7.88876,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            785
+          ],
+          [
+            7.5131,
+            785
+          ],
+          [
+            7.88876,
+            785,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            510
+          ],
+          [
+            7.5131,
+            510
+          ],
+          [
+            7.88876,
+            460,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/5285c67bc7699f827b7cdb9c9f8f74888a235a98fef59f431782d79ae46a7392.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "But today, I only give the AI one product link,",
+          "label": "Opening Hook",
+          "visual": "A white background features four dynamic, overlapping product cards for a pumpkin-shaped night light. The cards fan out from left to right, showcasing different languages: English, German, French, and Japanese. Below them, four flags representing the USA, Germany, France, and Japan are displayed horizontally. The lighting is even and flat with no visible shadows. A right hand (male, fair skin) enters from the top-right to adjust one of the cards.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "plus a few sentences in plain language,",
+          "label": "Product Information",
+          "visual": "A minimalist white interface shows a text box with a product URL link. Below the link, a pill-shaped button appears with a plus icon and text in Chinese characters. The overall color palette is very clean, dominated by white, light purple, and black text. The movement is static with elements appearing through simple pop-up transitions.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "and I get a set like this in English,",
+          "label": "Product Selling Points",
+          "visual": "A grid of three images appears against the white background. The images show a small silicone pumpkin lamp with legs, a hand tapping the lamp to demonstrate control, and the lamp glowing on a bedside table in a warm-lit room. The lighting in the product photos is soft and warm, contrasting with the stark white UI background.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "a set like this in German,",
+          "label": "Product Selling Points",
+          "visual": "A second grid of three images identical to the previous one appears below the first set, but the text labels are now in German. The pumpkin lamp is centered in the frames, held by a hand in the second image to show its soft texture. The color grading for the product shots is high-saturation orange and warm yellow.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        },
+        {
+          "audio": "and also a product video like this.",
+          "label": "Usage Scenarios",
+          "visual": "A vertical video frame appears on the right side of the screen. It shows the glowing pumpkin lamp sitting on a wooden surface in a dark room. The lamp has a sad facial expression. The lighting is low-key, with the only light source being the internal warm yellow glow of the silicone product.",
+          "shot_type": "Close-Up",
+          "scene_number": 5,
+          "timestamp_end": "0:06",
+          "timestamp_start": "0:05"
+        },
+        {
+          "audio": "Give me three minutes, and I'll use this tool to take you through it from the beginning.",
+          "label": "Call to Action",
+          "visual": "The background blurs out, and a large circular countdown timer appears in the center of the screen displaying 3:00. The timer is white with a thin grey border. The overall UI is clean with high contrast. The camera remains static as the timer stands prominently in the middle of the frame.",
+          "shot_type": "Wide Shot",
+          "scene_number": 6,
+          "timestamp_end": "0:10",
+          "timestamp_start": "0:06"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "旧物料被一刀切走只剩一条链接 → 成品套图/视频依次浮起 → “给我三分钟”时计时圆盘画出 3 分钟扇区并落定"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 10.733,
+      "action": "旧物料被一刀切走只剩一条链接 → 成品套图/视频依次浮起 → “给我三分钟”时计时圆盘画出 3 分钟扇区并落定"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "成品图片 1",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          10.733,
+          10.733,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media2",
+      "label": "成品图片 2",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          10.733,
+          10.733,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media3",
+      "label": "成品图片 3",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          10.733,
+          10.733,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media4",
+      "label": "成品图片 4",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          10.733,
+          10.733,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media5",
+      "label": "成品图片 5",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          10.733,
+          10.733,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media6",
+      "label": "成品图片 6",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          10.733,
+          10.733,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media7",
+      "label": "成品视频",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          10.733,
+          10.733,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "slug": "jacksonfall-54b2ac",
+  "source_project": "assets/reconstructions/jacksonfall-54b2ac",
+  "project": "assets/reconstructions/jacksonfall-54b2ac",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "assets/fonts/manifest.json",
+    "assets/footage-manifest.json",
+    "assets/photos/athlete-bottom.jpg",
+    "assets/photos/athlete-left.jpg",
+    "assets/photos/athlete-top.jpg",
+    "assets/photos/cap-cloth.jpg",
+    "assets/photos/club-interior.jpg",
+    "assets/photos/insurance-aerial.jpg",
+    "assets/photos/jacket-cloth.jpg",
+    "assets/photos/pager-face.jpg",
+    "assets/photos/pager-hand.jpg",
+    "assets/photos/pager-portrait.jpg",
+    "assets/photos/pager-sky.jpg",
+    "assets/photos/stay-0.jpg",
+    "assets/photos/stay-1.jpg",
+    "assets/photos/stay-2.jpg",
+    "assets/photos/stay-3.jpg",
+    "assets/photos/stay-4.jpg",
+    "assets/photos/stay-5.jpg",
+    "assets/photos/stay-6.jpg",
+    "assets/photos/stay-7.jpg",
+    "assets/photos/stay-8.jpg",
+    "assets/photos/stay-9.jpg",
+    "check-v1/sampled-states.json",
+    "index.html",
+    "motion.js",
+    "project.json",
+    "scene-plan.json",
+    "style.css",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/0e094a7d3c7c4c25cf13.ttf",
+    "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "../../reference-shared/fonts/a4ba3a92350ebb031da0.ttf",
+    "../../reference-shared/fonts/cfbdd68a039f92df51cf.ttf"
+  ],
+  "replaceable_assets": [
+    {
+      "path": "assets/photos/athlete-bottom.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "64bc362b4d26017eed32faa94958d8d9c926f2a8d3631641b0aefb7a58d8abbd"
+    },
+    {
+      "path": "assets/photos/athlete-left.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "6b1a565a580016c4933b09b748b6003cfe3df4fe89d67b35c8ce7ab6ee002354"
+    },
+    {
+      "path": "assets/photos/athlete-top.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "f5610ee9015e2ace44ab344e3101cf6c95107780a82054a6c6e30cec5d2be18b"
+    },
+    {
+      "path": "assets/photos/cap-cloth.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "a348d22a65803521f3fc1836c6a4b6b763de2ab70ab0b31206dce44dc1f83082"
+    },
+    {
+      "path": "assets/photos/club-interior.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "b9cc8a9dde750a1cc9169cefaea5154fd99f5a755690147cdb8a4a3bad1583e7"
+    },
+    {
+      "path": "assets/photos/insurance-aerial.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "a07fb90faada0657b716feacda259ce7897c5eb1190c36e1eca95339af530471"
+    },
+    {
+      "path": "assets/photos/jacket-cloth.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "fb96c74f955662da6977f2f0d204b74ac4b1cc142ddc0090e25a5d47bdd8f172"
+    },
+    {
+      "path": "assets/photos/pager-face.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "8d11c1aea64e2c4afa7fe6dca23fc473add4e5ec4f7c3f41c592e4af80a31135"
+    },
+    {
+      "path": "assets/photos/pager-hand.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "5ba051529b8d06fbb03a308f4a929436880af742284aa6e62691cc28604583e2"
+    },
+    {
+      "path": "assets/photos/pager-portrait.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "1918801ee5cf7ad8b7d7df7cf0ffa05497a73ffb9a71d1c3b8c5d7b6982c76e1"
+    },
+    {
+      "path": "assets/photos/pager-sky.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "4acbd6762ba9cff1480c0004a05c3c280bb85b3bf970cae02ecf174c13903dde"
+    },
+    {
+      "path": "assets/photos/stay-0.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "1529216988543779ee12b46779ff4161d8d9b1ee7b8b62cd1947046c16a9e03e"
+    },
+    {
+      "path": "assets/photos/stay-1.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "1cb95f714d2655ebecbb8dfadaa02b84a1429d4dea262c00a4f31a225718a1bb"
+    },
+    {
+      "path": "assets/photos/stay-2.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "c047159576e96bca86800372bcca04b2be37b5ba7d3b84691699b7e509e25206"
+    },
+    {
+      "path": "assets/photos/stay-3.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "cff72a20355d511e67cb9b57ce802bbbe0a5ba68c02edf9088cc23c8ca935b0b"
+    },
+    {
+      "path": "assets/photos/stay-4.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "0ad61c8ac0e396327ee343e332f3303e7ce5f01045e37e8e788c3f56093598aa"
+    },
+    {
+      "path": "assets/photos/stay-5.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "0803e74f1be17cd37a61267f920c893833c64b50b3f56f89ed2331bc08f7545e"
+    },
+    {
+      "path": "assets/photos/stay-6.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "391ecd1951e3386be04c1781fa6d64c61e93dcba6c539949956881c6122447c6"
+    },
+    {
+      "path": "assets/photos/stay-7.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "69e43b53a77bce64221061263e73f13830a0f8ff4a840c2875902745c9e2e091"
+    },
+    {
+      "path": "assets/photos/stay-8.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "a85078516ed7afdaec285a85d6b21289c5cb79c470fc4a451bb2d4bad53fc5d4"
+    },
+    {
+      "path": "assets/photos/stay-9.jpg",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "2b1096b22eb39c7c91f6bdf2db9bc95ec929b6a3d364f47f937b4f37d31f60db"
+    }
+  ],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "assets/fonts/Anton.ttf": "../../reference-shared/fonts/a4ba3a92350ebb031da0.ttf",
+    "assets/fonts/Archivo.ttf": "../../reference-shared/fonts/0e094a7d3c7c4c25cf13.ttf",
+    "assets/fonts/Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "assets/fonts/LuckiestGuy.ttf": "../../reference-shared/fonts/cfbdd68a039f92df51cf.ttf",
+    "assets/fonts/manifest.json": "assets/fonts/manifest.json",
+    "assets/footage-manifest.json": "assets/footage-manifest.json",
+    "assets/photos/athlete-bottom.jpg": "assets/photos/athlete-bottom.jpg",
+    "assets/photos/athlete-left.jpg": "assets/photos/athlete-left.jpg",
+    "assets/photos/athlete-top.jpg": "assets/photos/athlete-top.jpg",
+    "assets/photos/cap-cloth.jpg": "assets/photos/cap-cloth.jpg",
+    "assets/photos/club-interior.jpg": "assets/photos/club-interior.jpg",
+    "assets/photos/insurance-aerial.jpg": "assets/photos/insurance-aerial.jpg",
+    "assets/photos/jacket-cloth.jpg": "assets/photos/jacket-cloth.jpg",
+    "assets/photos/pager-face.jpg": "assets/photos/pager-face.jpg",
+    "assets/photos/pager-hand.jpg": "assets/photos/pager-hand.jpg",
+    "assets/photos/pager-portrait.jpg": "assets/photos/pager-portrait.jpg",
+    "assets/photos/pager-sky.jpg": "assets/photos/pager-sky.jpg",
+    "assets/photos/stay-0.jpg": "assets/photos/stay-0.jpg",
+    "assets/photos/stay-1.jpg": "assets/photos/stay-1.jpg",
+    "assets/photos/stay-2.jpg": "assets/photos/stay-2.jpg",
+    "assets/photos/stay-3.jpg": "assets/photos/stay-3.jpg",
+    "assets/photos/stay-4.jpg": "assets/photos/stay-4.jpg",
+    "assets/photos/stay-5.jpg": "assets/photos/stay-5.jpg",
+    "assets/photos/stay-6.jpg": "assets/photos/stay-6.jpg",
+    "assets/photos/stay-7.jpg": "assets/photos/stay-7.jpg",
+    "assets/photos/stay-8.jpg": "assets/photos/stay-8.jpg",
+    "assets/photos/stay-9.jpg": "assets/photos/stay-9.jpg",
+    "check-v1/sampled-states.json": "check-v1/sampled-states.json",
+    "index.html": "index.html",
+    "motion.js": "motion.js",
+    "project.json": "project.json",
+    "scene-plan.json": "scene-plan.json",
+    "style.css": "style.css",
+    "Anton.ttf": "../../reference-shared/fonts/a4ba3a92350ebb031da0.ttf",
+    "Archivo.ttf": "../../reference-shared/fonts/0e094a7d3c7c4c25cf13.ttf",
+    "Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "LuckiestGuy.ttf": "../../reference-shared/fonts/cfbdd68a039f92df51cf.ttf",
+    "manifest.json": "assets/fonts/manifest.json",
+    "footage-manifest.json": "assets/footage-manifest.json",
+    "athlete-bottom.jpg": "assets/photos/athlete-bottom.jpg",
+    "athlete-left.jpg": "assets/photos/athlete-left.jpg",
+    "athlete-top.jpg": "assets/photos/athlete-top.jpg",
+    "cap-cloth.jpg": "assets/photos/cap-cloth.jpg",
+    "club-interior.jpg": "assets/photos/club-interior.jpg",
+    "insurance-aerial.jpg": "assets/photos/insurance-aerial.jpg",
+    "jacket-cloth.jpg": "assets/photos/jacket-cloth.jpg",
+    "pager-face.jpg": "assets/photos/pager-face.jpg",
+    "pager-hand.jpg": "assets/photos/pager-hand.jpg",
+    "pager-portrait.jpg": "assets/photos/pager-portrait.jpg",
+    "pager-sky.jpg": "assets/photos/pager-sky.jpg",
+    "stay-0.jpg": "assets/photos/stay-0.jpg",
+    "stay-1.jpg": "assets/photos/stay-1.jpg",
+    "stay-2.jpg": "assets/photos/stay-2.jpg",
+    "stay-3.jpg": "assets/photos/stay-3.jpg",
+    "stay-4.jpg": "assets/photos/stay-4.jpg",
+    "stay-5.jpg": "assets/photos/stay-5.jpg",
+    "stay-6.jpg": "assets/photos/stay-6.jpg",
+    "stay-7.jpg": "assets/photos/stay-7.jpg",
+    "stay-8.jpg": "assets/photos/stay-8.jpg",
+    "stay-9.jpg": "assets/photos/stay-9.jpg",
+    "sampled-states.json": "check-v1/sampled-states.json"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

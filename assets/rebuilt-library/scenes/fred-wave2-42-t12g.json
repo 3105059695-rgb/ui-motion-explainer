@@ -1,0 +1,205 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t12g",
+  "title": "章节进度回顾",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "step0": "01  先准备好资料",
+    "step1": "02  再执行关键操作",
+    "step2": "03  最后检查结果"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/38a1b4f6b76e23eecc3410785d956f462961e2b8cc019f1fc2bc63595b962b98.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "In this video, I will tell you what an API is, when you will use it, and how to use it.",
+          "label": "Opening Hook",
+          "visual": "A clean, white background centered with three lines of bold black text. The first line is initially active and clear, while the lower two are faded. A small, colorful logo is positioned in the top right corner. The scene is static with flat, even studio lighting and no visible characters.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 2.7,
+      "action": "Three chapter lines remain while active contrast and side marker progress together"
+    },
+    {
+      "start": 2.7,
+      "end": 3,
+      "action": "Current final stage holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-text",
+      "kind": "text",
+      "x": 410,
+      "y": 210,
+      "w": 1150,
+      "h": 150,
+      "text": "{{step0}}",
+      "size": 88,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.05,
+            1
+          ],
+          [
+            1.5,
+            0.2
+          ],
+          [
+            2.25,
+            0.2
+          ],
+          [
+            2.7,
+            0.2
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 410,
+      "y": 460,
+      "w": 1150,
+      "h": 150,
+      "text": "{{step1}}",
+      "size": 88,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0.2
+          ],
+          [
+            1.05,
+            0.2
+          ],
+          [
+            1.5,
+            1
+          ],
+          [
+            2.25,
+            1
+          ],
+          [
+            2.7,
+            0.2
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 410,
+      "y": 710,
+      "w": 1150,
+      "h": 150,
+      "text": "{{step2}}",
+      "size": 88,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0.2
+          ],
+          [
+            1.05,
+            0.2
+          ],
+          [
+            1.5,
+            0.2
+          ],
+          [
+            2.25,
+            0.2
+          ],
+          [
+            2.7,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-rect",
+      "kind": "rect",
+      "x": 310,
+      "y": 235,
+      "w": 12,
+      "h": 100,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "y": [
+          [
+            0,
+            235
+          ],
+          [
+            1.05,
+            235
+          ],
+          [
+            1.5,
+            485
+          ],
+          [
+            2.25,
+            485
+          ],
+          [
+            2.7,
+            735
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 3,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

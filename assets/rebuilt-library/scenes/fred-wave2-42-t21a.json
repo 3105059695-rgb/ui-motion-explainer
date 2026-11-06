@@ -1,0 +1,413 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t21a",
+  "title": "方法总结收尾",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "method0": "先明确输入与目标",
+    "method1": "再执行关键过程",
+    "method2": "最后核对实际结果",
+    "takeaway": "把流程用到你的下一次任务"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/94333eb074e48575d190d29ee68fd43d81c9ebda21752b7edce8185077eb0ed1.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single, sharp 'click' sound effect, similar to a computer mouse press, occurs precisely as the first UI element appears.",
+          "label": "Opening Hook",
+          "visual": "A static wide shot with a clean, flat white background. In the center, there are two horizontal text bars with black borders and soft drop shadows, stacked vertically. The composition is minimalist and clinical, with high-key, even lighting that eliminates all shadows except for the subtle ones under the UI elements. The color palette is strictly monochrome (white, black, and gray).",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A second 'click' sound effect, identical in pitch and volume to the first, accompanies the appearance of the third bar.",
+          "label": "Product Information",
+          "visual": "A third horizontal text bar with a black border and drop shadow appears below the existing two. The camera remains static. The background stays pure white with no visible texture or depth. The layout is centered and symmetrical.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A rapid 'whipping' or 'whoosh' sound effect plays during the zoom transition, followed by three quick, high-pitched mechanical clicks as the blocks appear.",
+          "label": "Product Selling Points",
+          "visual": "The screen quickly zooms in toward the center. Three small, rectangular blocks with rounded corners and dark gray backgrounds appear in the center of the frame, stacked vertically. The lighting remains flat and white. The camera movement is a fast, linear zoom-in.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A final, loud and resonant 'click' sound effect, followed by a short, upbeat 2-second musical sting featuring a bright synthesizer tone.",
+          "label": "Call to Action",
+          "visual": "The camera zooms back out to a wide perspective. A single, long horizontal bar with a thick black border and a prominent shadow appears in the center of the white background. The movement is a smooth, fast zoom-out. The lighting and color temperature remain consistent with the previous scenes.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 2.4,
+      "action": "Three complete method lines appear sequentially"
+    },
+    {
+      "start": 2.4,
+      "end": 4.0,
+      "action": "Methods converge into a compact central stack"
+    },
+    {
+      "start": 4.0,
+      "end": 5,
+      "action": "Stack yields to a single actionable takeaway"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-pill",
+      "kind": "pill",
+      "x": 360,
+      "y": 170,
+      "w": 1200,
+      "h": 150,
+      "label": "{{method0}}",
+      "size": 60,
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "stroke": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.65,
+            1
+          ],
+          [
+            3.4,
+            1
+          ],
+          [
+            4.05,
+            0
+          ]
+        ],
+        "y": [
+          [
+            0,
+            170
+          ],
+          [
+            2.4,
+            170
+          ],
+          [
+            3.25,
+            370
+          ]
+        ],
+        "x": [
+          [
+            0,
+            360
+          ],
+          [
+            2.4,
+            360
+          ],
+          [
+            3.25,
+            790
+          ]
+        ],
+        "w": [
+          [
+            0,
+            1200
+          ],
+          [
+            2.4,
+            1200
+          ],
+          [
+            3.25,
+            340
+          ]
+        ],
+        "h": [
+          [
+            0,
+            150
+          ],
+          [
+            2.4,
+            150
+          ],
+          [
+            3.25,
+            70
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-pill",
+      "kind": "pill",
+      "x": 360,
+      "y": 420,
+      "w": 1200,
+      "h": 150,
+      "label": "{{method1}}",
+      "size": 60,
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "stroke": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.8,
+            0
+          ],
+          [
+            1.45,
+            1
+          ],
+          [
+            3.4,
+            1
+          ],
+          [
+            4.05,
+            0
+          ]
+        ],
+        "y": [
+          [
+            0,
+            420
+          ],
+          [
+            2.4,
+            420
+          ],
+          [
+            3.25,
+            470
+          ]
+        ],
+        "x": [
+          [
+            0,
+            360
+          ],
+          [
+            2.4,
+            360
+          ],
+          [
+            3.25,
+            790
+          ]
+        ],
+        "w": [
+          [
+            0,
+            1200
+          ],
+          [
+            2.4,
+            1200
+          ],
+          [
+            3.25,
+            340
+          ]
+        ],
+        "h": [
+          [
+            0,
+            150
+          ],
+          [
+            2.4,
+            150
+          ],
+          [
+            3.25,
+            70
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-pill",
+      "kind": "pill",
+      "x": 360,
+      "y": 670,
+      "w": 1200,
+      "h": 150,
+      "label": "{{method2}}",
+      "size": 60,
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "stroke": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.6,
+            0
+          ],
+          [
+            2.25,
+            1
+          ],
+          [
+            3.4,
+            1
+          ],
+          [
+            4.05,
+            0
+          ]
+        ],
+        "y": [
+          [
+            0,
+            670
+          ],
+          [
+            2.4,
+            670
+          ],
+          [
+            3.25,
+            570
+          ]
+        ],
+        "x": [
+          [
+            0,
+            360
+          ],
+          [
+            2.4,
+            360
+          ],
+          [
+            3.25,
+            790
+          ]
+        ],
+        "w": [
+          [
+            0,
+            1200
+          ],
+          [
+            2.4,
+            1200
+          ],
+          [
+            3.25,
+            340
+          ]
+        ],
+        "h": [
+          [
+            0,
+            150
+          ],
+          [
+            2.4,
+            150
+          ],
+          [
+            3.25,
+            70
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-pill",
+      "kind": "pill",
+      "x": 300,
+      "y": 420,
+      "w": 1320,
+      "h": 200,
+      "label": "{{takeaway}}",
+      "size": 68,
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "stroke": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.9,
+            0
+          ],
+          [
+            4.8,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.9,
+            420
+          ],
+          [
+            4.8,
+            420,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

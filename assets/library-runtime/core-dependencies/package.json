@@ -1,0 +1,24 @@
+{
+  "name": "ui-motion-fusion-shared-library-runtime",
+  "version": "1.0.0",
+  "private": true,
+  "description": "One reusable React/Remotion source host; browser is reused separately and never packaged.",
+  "dependencies": {
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.534",
+    "@remotion/player": "4.0.534",
+    "@remotion/bundler": "4.0.534",
+    "@remotion/renderer": "4.0.534",
+    "@remotion/media": "4.0.534",
+    "typescript": "5.9.3",
+    "esbuild": "0.28.1",
+    "@react-three/fiber": "9.3.0",
+    "@remotion/three": "4.0.534",
+    "three": "0.180.0",
+    "culori": "4.0.1",
+    "clsx": "2.1.1",
+    "class-variance-authority": "0.7.1",
+    "tailwind-merge": "3.5.0"
+  }
+}

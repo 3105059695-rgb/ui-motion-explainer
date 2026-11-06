@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "title": "033 · Frame by Frame standalone square launch film",
+  "template": "notdwd-7de38a-specific-reconstruction",
+  "reference_slug": "notdwd-7de38a",
+  "reference_url": "https://prompt-motion.com/notdwd-7de38a",
+  "source_post": "https://x.com/notdwd/status/2104229441211969685",
+  "reference_author": "@notdwd",
+  "provenance": "The standalone reference contains the same eight-shot Frame by Frame film shown on the right in case 010. Its already independently authored scene functions are reused in a dedicated 1080-square project, with separate reference evidence/export. All UI/wallpaper/marks/cards/glass/wordmark are Canvas geometry; no source video or texture asset is loaded.",
+  "duration": 11.995316666666668,
+  "width": 1080,
+  "height": 1080,
+  "fps": 30,
+  "loop": false,
+  "coordinate_space": [
+    1080,
+    1080
+  ],
+  "stage": [
+    1080,
+    1080
+  ],
+  "source_frame_rate": 29.97002997002997,
+  "font": "Arial, Helvetica, sans-serif",
+  "seed": 1010,
+  "cuts": [
+    0,
+    72,
+    101,
+    159,
+    187,
+    215,
+    245,
+    301,
+    360
+  ],
+  "palette": {
+    "page": "#fdfdfb",
+    "haze": "#b7cfeb",
+    "ice": "#e6f0fa",
+    "navy": "#1e2f52",
+    "sky_top": "#294376",
+    "sky_bottom": "#769cc2"
+  },
+  "panels": [
+    {
+      "product": "Frame by Frame",
+      "pill": "on Whop",
+      "end_wordmark": "Frame by Frame",
+      "logo": "viewfinder",
+      "prompt": "Make a launch video for my app",
+      "feature_titles": [
+        "Launch",
+        "Sound"
+      ],
+      "orbit_colors": [
+        "#ffffff",
+        "#2f6bff",
+        "#3cc8f0",
+        "#4ed6a0"
+      ],
+      "wallpaper": "blue"
+    }
+  ],
+  "marks": [
+    0.5,
+    1.5,
+    2.3,
+    2.5,
+    3.5,
+    4.5,
+    5.5,
+    6.5,
+    7.5,
+    8.8,
+    9.8,
+    10.5
+  ],
+  "editable": "Product/pill/wordmark, prompt, feature names, orbit colors, typography/palette and scene cut frames.",
+  "fidelity": "Complete observed standalone eight-shot film. Independent typography, orbit shape/color, blur and glass approximations; not pixel identical.",
+  "portable_demo": {
+    "source_motion_preserved": true,
+    "reference_media_distributed": false,
+    "textures": "Original replaceable schematic assets; not the original reference artwork.",
+    "approval": "Historical motion implementation; this portable demo is not user-approved."
+  }
+}

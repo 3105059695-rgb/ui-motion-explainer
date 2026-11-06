@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "slug": "x4b47x-9cc84f",
+  "source_project": "assets/reconstructions/x4b47x-9cc84f/versions/v3",
+  "project": "assets/reconstructions/x4b47x-9cc84f",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "assets/sky-palette.json",
+    "composition.js",
+    "index.html",
+    "project.json",
+    "scene-plan.json",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/df74c0ac387baeaeb0fe.ttf"
+  ],
+  "replaceable_assets": [],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "../../assets/fonts/SerifItalic.ttf": "../../reference-shared/fonts/df74c0ac387baeaeb0fe.ttf",
+    "assets/fonts/SerifItalic.ttf": "../../reference-shared/fonts/df74c0ac387baeaeb0fe.ttf",
+    "assets/sky-palette.json": "assets/sky-palette.json",
+    "composition.js": "composition.js",
+    "index.html": "index.html",
+    "project.json": "project.json",
+    "scene-plan.json": "scene-plan.json",
+    "SerifItalic.ttf": "../../reference-shared/fonts/df74c0ac387baeaeb0fe.ttf",
+    "sky-palette.json": "assets/sky-palette.json"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

@@ -1,0 +1,88 @@
+{
+  "case": 163,
+  "reference": "https://prompt-motion.com/levabashidze-2d713a",
+  "source_visual_duration": 15,
+  "source_container_duration": 15.061,
+  "analysis": {
+    "samples": 120,
+    "interval": 0.125,
+    "contact_sheets_actually_viewed": 5,
+    "enlarged_frames_viewed": 12,
+    "first_ball_numeric_positions": 96
+  },
+  "implementation": "dedicated native Canvas; deterministic point morph/orthographic voxel field/truchet/type; cached paper and own-scene thumbnails; fixed-time seek",
+  "phases": [
+    {
+      "start": 0,
+      "end": 1.9,
+      "phase": "timing-spacing",
+      "objects_and_action": "红球三次压缩拉伸/回弹，60fps测得数值轨迹、残影/虚线路径、时间尺/标记与动作注释；最后同球扩大铺满"
+    },
+    {
+      "start": 1.9,
+      "end": 3.6,
+      "phase": "easing-graph",
+      "objects_and_action": "橙底EASE IN/OUT，图表由ease-in→ease-out→阻尼spring；never斜体与LINEAR.入场"
+    },
+    {
+      "start": 3.6,
+      "end": 4.25,
+      "phase": "circle-morph",
+      "objects_and_action": "纸色点阵、黑圆和同心回声描边"
+    },
+    {
+      "start": 4.25,
+      "end": 4.82,
+      "phase": "superellipse",
+      "objects_and_action": "同对象变蓝色n4.2圆角菱形，回声线持续扩散"
+    },
+    {
+      "start": 4.82,
+      "end": 5.18,
+      "phase": "eight-point-star",
+      "objects_and_action": "同对象变八角星与橙色"
+    },
+    {
+      "start": 5.18,
+      "end": 5.65,
+      "phase": "hexagon-cube",
+      "objects_and_action": "六角轮廓分成三色立方体面"
+    },
+    {
+      "start": 5.65,
+      "end": 7.32,
+      "phase": "voxel-space",
+      "objects_and_action": "立方体扩展为19×19原生投影方块阵，中心/外围橙色径向高度波，相机yaw旋转并钻入"
+    },
+    {
+      "start": 7.32,
+      "end": 7.64,
+      "phase": "flatten-tile-grid",
+      "objects_and_action": "相机由斜方块表面过渡为全屏平面方格"
+    },
+    {
+      "start": 7.64,
+      "end": 9.32,
+      "phase": "truchet-systems",
+      "objects_and_action": "方格逐列形成随机Truchet双圆弧，旋转/橙红错位补丁，阶梯式黑遮罩转出"
+    },
+    {
+      "start": 9.32,
+      "end": 11.25,
+      "phase": "kinetic-type",
+      "objects_and_action": "七行不同方向/字重/字宽滚动DESIGN THAT MOVES，中央橙字蓝色O圆膨胀铺屏"
+    },
+    {
+      "start": 11.25,
+      "end": 13.2,
+      "phase": "render-hud",
+      "objects_and_action": "蓝底三位计数/末位滚轮、6张本项目原生scene缩略图进度、帧数和规格字幕、100完成"
+    },
+    {
+      "start": 13.2,
+      "end": 15,
+      "phase": "brand-close",
+      "objects_and_action": "波形纸色擦除、Claude蒙版入场、橙点阻尼落地、横线与身份、斜体标语"
+    }
+  ]
+}

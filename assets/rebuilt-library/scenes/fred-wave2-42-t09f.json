@@ -1,0 +1,124 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t09f",
+  "title": "批量入队：逐项选中，计数跳动",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "tasks": [
+      "整理本期资料",
+      "筛选演示案例",
+      "核对数据出处",
+      "生成最终交付"
+    ]
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/5a0f2597a5ebfae9e8659739287d6f06cd2a4f15276a36aba226b65a2c417a7e.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "The audio consists of a light, upbeat digital background track with a rhythmic tempo. A subtle clicking sound effect plays as the cursor moves.",
+          "label": "Opening Hook",
+          "visual": "A static, top-down screen capture of a digital task management interface. The interface features a clean, minimalist design with a light gray and white color palette. A list of tasks written in black text is displayed on the left side. The background is a flat, neutral white. Lighting is uniform digital brightness with no shadows. A dark gray mouse cursor is positioned at the top left of the list.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A distinct, sharp 'pop' sound effect occurs at the moment the checkmark appears, synchronized with a percussive beat in the background music.",
+          "label": "Usage Scenarios",
+          "visual": "The camera remains static as the cursor moves downward to select a specific task. A purple checkmark icon appears inside a circular radio button to the left of the task. Simultaneously, a floating pill-shaped UI element appears on the right side of the screen, displaying a counter that updates from 0 to 1. The movement is smooth and instantaneous.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "Three rapid, high-pitched 'ding' sound effects trigger in sequence with each selection, layered over the continuous upbeat digital background track.",
+          "label": "Product Selling Points",
+          "visual": "The cursor continues to move rapidly down the list, clicking on three subsequent task items. For each click, a purple circular checkmark appears. The floating counter on the right dynamically updates from 1 to 2, then 2 to 3, and finally 3 to 4. The interaction demonstrates high responsiveness and a fluid user interface animation.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A final, resonant chime sound effect plays as the star animation appears. The background music reaches a concluding chord and fades out quickly.",
+          "label": "Call to Action",
+          "visual": "The scene holds on the final state of the interface with four tasks selected. The purple checkmarks are vibrant against the white background. A bright yellow star-shaped flash animation briefly appears near the top right corner logo area to draw attention before the frame freezes. The color contrast between the purple accents and yellow flash is high.",
+          "shot_type": "Medium Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 0.75,
+      "action": "Task queue begins with all items unchecked"
+    },
+    {
+      "start": 0.75,
+      "end": 4.3,
+      "action": "Each checkbox changes once; exact completed count derives from the same task state"
+    },
+    {
+      "start": 4.3,
+      "end": 5,
+      "action": "All checked items and count hold"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-b3-checklist",
+      "kind": "b3-checklist",
+      "x": 230,
+      "y": 150,
+      "w": 1460,
+      "h": 800,
+      "labelsKey": "tasks",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            0.75,
+            0
+          ],
+          [
+            4.3,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

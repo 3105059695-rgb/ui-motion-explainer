@@ -1,0 +1,614 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t03e",
+  "title": "步骤折行串起",
+  "duration": 7,
+  "background": "#FFFFFF",
+  "inputs": {
+    "step0": "1  明确目标",
+    "step1": "2  准备资料",
+    "step2": "3  启动任务",
+    "step3": "4  读取上下文",
+    "step4": "5  执行操作",
+    "step5": "6  检查结果",
+    "step6": "7  修改细节",
+    "step7": "8  最终交付"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/26fd8f6dbc80436055bdbb3d6592f6487e5edebd198f90e47962e6a7dcb62b5b.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A rhythmic, high-pitched electronic 'pop' sound effect occurs as elements appear. Background music is an upbeat, mid-tempo electronic track featuring synthesizers and a steady digital beat.",
+          "label": "Product Information",
+          "visual": "A static wide shot of a stylized dark gray browser-style window against a solid white background. At the top right of the white frame is a small purple and yellow logo. Inside the dark gray window, a single line of white Chinese characters is displayed in the center. The lighting is perfectly flat and digital. The color palette is minimal: dark gray, white, and purple.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Two consecutive electronic 'pop' sound effects. The upbeat electronic music continues.",
+          "label": "Product Information",
+          "visual": "Static wide shot. Within the dark gray window, a white arrow icon appears to the right of the first text block, followed by a second block of white Chinese characters. The background and lighting remain identical to the previous scene.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "One electronic 'pop' sound effect. The electronic music continues.",
+          "label": "Product Information",
+          "visual": "Static wide shot. A third set of white Chinese characters appears to the right of the second set, connected by another white arrow. The layout remains centered within the dark gray window.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A series of three 'pop' and 'whoosh' electronic sound effects in quick succession. The background music maintains its steady tempo.",
+          "label": "Product Information",
+          "visual": "Static wide shot. A curved white arrow path animates from the end of the first row down to the start of a second row. A fourth block of white Chinese characters appears at the start of this second row. Below the first row, a fifth block of text and an arrow appear sequentially to the right.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "One electronic 'pop' sound effect. The electronic music continues.",
+          "label": "Product Information",
+          "visual": "Static wide shot. A sixth block of white Chinese characters appears on the far right of the second row, connected by a white arrow. The overall flowchart structure is now clearly visible within the interface.",
+          "shot_type": "Wide Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        },
+        {
+          "audio": "A combination of a 'whoosh' and a 'pop' sound effect. The background music continues.",
+          "label": "Product Information",
+          "visual": "Static wide shot. Another curved white arrow animates from the end of the second row down to the start of a third row. A seventh block of white Chinese characters appears at the start of this new row.",
+          "shot_type": "Wide Shot",
+          "scene_number": 6,
+          "timestamp_end": "0:06",
+          "timestamp_start": "0:05"
+        },
+        {
+          "audio": "A final sharp electronic 'pop' sound effect. The electronic music continues for a brief moment before the video ends.",
+          "label": "Product Information",
+          "visual": "Static wide shot. The final (eighth) block of white Chinese characters appears to the right of the seventh block, connected by a final white arrow, completing the three-row flowchart on the dark gray screen.",
+          "shot_type": "Wide Shot",
+          "scene_number": 7,
+          "timestamp_end": "0:07",
+          "timestamp_start": "0:06"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 5.6000000000000005,
+      "action": "Eight distinct operations fill three rows with visible curved wrap connectors between rows"
+    },
+    {
+      "start": 5.6000000000000005,
+      "end": 7,
+      "action": "Complete eight-operation path holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-window",
+      "kind": "window",
+      "x": 130,
+      "y": 90,
+      "w": 1660,
+      "h": 900,
+      "fill": "#0B0B0F",
+      "label": "完整操作链",
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 80,
+          "y": 150,
+          "w": 430,
+          "h": 110,
+          "text": "{{step0}}",
+          "size": 52,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0.0,
+                0
+              ],
+              [
+                0.91,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                0.0,
+                185
+              ],
+              [
+                0.91,
+                150,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n003-b2-growing-line",
+          "kind": "b2-growing-line",
+          "x": 500,
+          "y": 205,
+          "w": 85,
+          "h": 0,
+          "arrow": true,
+          "fill": "#FFFFFF",
+          "strokeWidth": 5,
+          "tracks": {
+            "value": [
+              [
+                0.49,
+                0
+              ],
+              [
+                0.98,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 620,
+          "y": 150,
+          "w": 430,
+          "h": 110,
+          "text": "{{step1}}",
+          "size": 52,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                0.595,
+                0
+              ],
+              [
+                1.505,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                0.595,
+                185
+              ],
+              [
+                1.505,
+                150,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n005-b2-growing-line",
+          "kind": "b2-growing-line",
+          "x": 1040,
+          "y": 205,
+          "w": 85,
+          "h": 0,
+          "arrow": true,
+          "fill": "#FFFFFF",
+          "strokeWidth": 5,
+          "tracks": {
+            "value": [
+              [
+                1.085,
+                0
+              ],
+              [
+                1.575,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n006-text",
+          "kind": "text",
+          "x": 1160,
+          "y": 150,
+          "w": 430,
+          "h": 110,
+          "text": "{{step2}}",
+          "size": 52,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                1.19,
+                0
+              ],
+              [
+                2.1,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                1.19,
+                185
+              ],
+              [
+                2.1,
+                150,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n007-path",
+          "kind": "path",
+          "x": 30,
+          "y": 275,
+          "w": 1570,
+          "h": 160,
+          "path": "M1500 0 C1600 0 1600 125 1450 125 L90 125 C0 125 0 170 0 175",
+          "length": 2100,
+          "fill": "#FFFFFF",
+          "strokeWidth": 4,
+          "tracks": {
+            "draw": [
+              [
+                1.75,
+                0
+              ],
+              [
+                2.45,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n008-text",
+          "kind": "text",
+          "x": 80,
+          "y": 410,
+          "w": 430,
+          "h": 110,
+          "text": "{{step3}}",
+          "size": 52,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                1.785,
+                0
+              ],
+              [
+                2.695,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                1.785,
+                445
+              ],
+              [
+                2.695,
+                410,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n009-b2-growing-line",
+          "kind": "b2-growing-line",
+          "x": 500,
+          "y": 465,
+          "w": 85,
+          "h": 0,
+          "arrow": true,
+          "fill": "#FFFFFF",
+          "strokeWidth": 5,
+          "tracks": {
+            "value": [
+              [
+                2.275,
+                0
+              ],
+              [
+                2.765,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n010-text",
+          "kind": "text",
+          "x": 620,
+          "y": 410,
+          "w": 430,
+          "h": 110,
+          "text": "{{step4}}",
+          "size": 52,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                2.38,
+                0
+              ],
+              [
+                3.29,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                2.38,
+                445
+              ],
+              [
+                3.29,
+                410,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n011-b2-growing-line",
+          "kind": "b2-growing-line",
+          "x": 1040,
+          "y": 465,
+          "w": 85,
+          "h": 0,
+          "arrow": true,
+          "fill": "#FFFFFF",
+          "strokeWidth": 5,
+          "tracks": {
+            "value": [
+              [
+                2.87,
+                0
+              ],
+              [
+                3.36,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n012-text",
+          "kind": "text",
+          "x": 1160,
+          "y": 410,
+          "w": 430,
+          "h": 110,
+          "text": "{{step5}}",
+          "size": 52,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                2.975,
+                0
+              ],
+              [
+                3.885,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                2.975,
+                445
+              ],
+              [
+                3.885,
+                410,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n013-path",
+          "kind": "path",
+          "x": 30,
+          "y": 535,
+          "w": 1570,
+          "h": 160,
+          "path": "M1500 0 C1600 0 1600 125 1450 125 L90 125 C0 125 0 170 0 175",
+          "length": 2100,
+          "fill": "#FFFFFF",
+          "strokeWidth": 4,
+          "tracks": {
+            "draw": [
+              [
+                3.535,
+                0
+              ],
+              [
+                4.235,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n014-text",
+          "kind": "text",
+          "x": 80,
+          "y": 670,
+          "w": 430,
+          "h": 110,
+          "text": "{{step6}}",
+          "size": 52,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                3.57,
+                0
+              ],
+              [
+                4.48,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                3.57,
+                705
+              ],
+              [
+                4.48,
+                670,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n015-b2-growing-line",
+          "kind": "b2-growing-line",
+          "x": 500,
+          "y": 725,
+          "w": 85,
+          "h": 0,
+          "arrow": true,
+          "fill": "#FFFFFF",
+          "strokeWidth": 5,
+          "tracks": {
+            "value": [
+              [
+                4.06,
+                0
+              ],
+              [
+                4.55,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n016-text",
+          "kind": "text",
+          "x": 620,
+          "y": 670,
+          "w": 430,
+          "h": 110,
+          "text": "{{step7}}",
+          "size": 52,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                4.165,
+                0
+              ],
+              [
+                5.075,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                4.165,
+                705
+              ],
+              [
+                5.075,
+                670,
+                "out"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

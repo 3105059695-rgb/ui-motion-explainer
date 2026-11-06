@@ -1,0 +1,149 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t14f",
+  "title": "仪表读数",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "target": 84.07,
+    "title": "把结果放到同一量尺上",
+    "source": "0–100 标尺 · 示意读数"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/3c425993bf6ec376e150f240e6d0f8b53d3f6db3a13f9a387beeb92503cd8582.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A digital ticking sound, reminiscent of a mechanical clock or a counting meter.",
+          "label": "Opening Hook",
+          "visual": "A static wide shot features a minimalist light-gray semicircle gauge on a clean, solid white background. The gauge is split into three segments and marked with '0' on the left and '100' on the right. The lighting is uniform and bright across the entire frame. The overall color palette is monochromatic and high-contrast.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A sharp, high-pitched mechanical clicking sound accompanies the needle movement.",
+          "label": "Product Information",
+          "visual": "Static camera angle. A black needle quickly rotates from the '0' position to the middle of the second segment. Numbers rapidly cycle at the bottom center of the gauge, stopping at 4.18. The background and gauge structure remain unchanged from the previous scene.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A metallic snapping sound, similar to a toggle switch being flipped.",
+          "label": "Product Selling Points",
+          "visual": "Static camera angle. The needle flicks further right into the third segment of the gauge. The numbers at the bottom cycle and stop at 82.05. The scene maintains the same high-key lighting and minimalist white environment.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A bright, resonant chime sound, signaling completion or success.",
+          "label": "Call to Action",
+          "visual": "Static camera angle. The needle moves slightly further to the right. The third segment of the gauge highlights in a vibrant purple color. The final number at the bottom updates to 84.07. The lighting and background remain consistent with the previous scenes.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.0,
+      "action": "Gauge baseline and initial reading appear"
+    },
+    {
+      "start": 1.0,
+      "end": 3.4000000000000004,
+      "action": "Needle and numeric result share one model through two updates"
+    },
+    {
+      "start": 3.4000000000000004,
+      "end": 5,
+      "action": "Final range and exact reading hold"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-text",
+      "kind": "text",
+      "x": 250,
+      "y": 90,
+      "w": 1420,
+      "h": 110,
+      "text": "{{title}}",
+      "size": 67,
+      "color": "#0B0B0F",
+      "align": "center"
+    },
+    {
+      "id": "n002-b2-gauge",
+      "kind": "b2-gauge",
+      "x": 450,
+      "y": 250,
+      "w": 1020,
+      "h": 620,
+      "toKey": "target",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            1.0,
+            0.0497
+          ],
+          [
+            2.1,
+            0.9759
+          ],
+          [
+            3.4,
+            1,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 400,
+      "y": 985,
+      "w": 1120,
+      "h": 55,
+      "text": "{{source}}",
+      "size": 30,
+      "color": "#777780",
+      "align": "center"
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

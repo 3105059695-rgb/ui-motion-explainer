@@ -1,0 +1,443 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t04e",
+  "title": "拆开看里面装了什么",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "part0": "代码目录",
+    "detail0": "组成与结构",
+    "part1": "项目说明",
+    "detail1": "理解使用方法",
+    "part2": "发布版本",
+    "detail2": "直接下载使用",
+    "question": "一个项目里，分别装着什么？",
+    "spark": "✦"
+  },
+  "assets": {
+    "screen": "assets/style-film/media/connected-delivery.svg"
+  },
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/e9b458e022ac06fddabc852ac4abe5a8b95b62a9e875db6ccf428cfbe8b62d93.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A digital 'pop' sound effect as the screen appears, followed by a light, upbeat synth melody that remains consistent throughout the sequence.",
+          "label": "Opening Hook",
+          "visual": "A white digital interface resembling a code repository page (GitHub) is centered on the screen. The layout features a navigation bar at the top, a file list on the left, and project details on the right. The background is a clean, neutral white. The camera is static with no movement. The color palette is minimal, primarily white, gray, and blue accents.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A quick succession of three rhythmic mechanical clicking sounds, synchronized with each element sliding into place.",
+          "label": "Product Information",
+          "visual": "The interface blurs as three distinct graphical elements slide into the foreground from the center. A blue folder icon appears on the left, a central card with the text 'FredTalk 1.5' appears in the middle, and a 'Releases' card appears on the right. Soft, diffused lighting creates a clean, digital aesthetic with no visible shadows.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A bright 'ding' notification sound followed by a short, high-pitched chime as the top bubble appears.",
+          "label": "Product Selling Points",
+          "visual": "The camera remains static as a black rounded rectangular speech bubble appears at the top center of the frame. The background elements from the previous scene stay in place. The overall color grading is high-key and bright, emphasizing a modern tech-software feel.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A subtle 'sparkle' sound effect, similar to a soft bell, plays as the star appears.",
+          "label": "Product Selling Points",
+          "visual": "A small yellow star-shaped graphic pops in at the top left corner of the black speech bubble and rotates slightly. The three main product component cards at the bottom remain static. The lighting is uniform and artificial, providing a flat 2D graphic design appearance.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.2000000000000002,
+      "action": "Show full repository context"
+    },
+    {
+      "start": 1.2000000000000002,
+      "end": 3.0,
+      "action": "Three different project components detach while source defocuses"
+    },
+    {
+      "start": 3.0,
+      "end": 4.800000000000001,
+      "action": "A common explanation unifies those components"
+    },
+    {
+      "start": 4.800000000000001,
+      "end": 6,
+      "action": "Keep components and their roles readable"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 260,
+      "y": 130,
+      "w": 1400,
+      "h": 800,
+      "asset": "screen",
+      "fit": "contain",
+      "radius": 18,
+      "tracks": {
+        "blur": [
+          [
+            0,
+            0
+          ],
+          [
+            1.2,
+            0
+          ],
+          [
+            2.28,
+            10
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            2.28,
+            0.5
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-card",
+      "kind": "card",
+      "x": 210,
+      "y": 390,
+      "w": 480,
+      "h": 340,
+      "children": [
+        {
+          "id": "n002-rect",
+          "kind": "rect",
+          "x": 175,
+          "y": 45,
+          "w": 130,
+          "h": 100,
+          "fill": "#D6C2FF",
+          "radius": 14
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 30,
+          "y": 180,
+          "w": 420,
+          "h": 60,
+          "text": "{{part0}}",
+          "size": 48,
+          "color": "#0B0B0F",
+          "align": "center"
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 30,
+          "y": 260,
+          "w": 420,
+          "h": 55,
+          "text": "{{detail0}}",
+          "size": 31,
+          "color": "#777780",
+          "align": "center"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.38,
+            0
+          ],
+          [
+            2.1,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.38,
+            425
+          ],
+          [
+            2.1,
+            390,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-card",
+      "kind": "card",
+      "x": 750,
+      "y": 390,
+      "w": 480,
+      "h": 340,
+      "children": [
+        {
+          "id": "n006-rect",
+          "kind": "rect",
+          "x": 175,
+          "y": 45,
+          "w": 130,
+          "h": 100,
+          "fill": "#D6C2FF",
+          "radius": 14
+        },
+        {
+          "id": "n007-text",
+          "kind": "text",
+          "x": 30,
+          "y": 180,
+          "w": 420,
+          "h": 60,
+          "text": "{{part1}}",
+          "size": 48,
+          "color": "#0B0B0F",
+          "align": "center"
+        },
+        {
+          "id": "n008-text",
+          "kind": "text",
+          "x": 30,
+          "y": 260,
+          "w": 420,
+          "h": 55,
+          "text": "{{detail1}}",
+          "size": 31,
+          "color": "#777780",
+          "align": "center"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.8,
+            0
+          ],
+          [
+            2.52,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.8,
+            425
+          ],
+          [
+            2.52,
+            390,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013-card",
+      "kind": "card",
+      "x": 1290,
+      "y": 390,
+      "w": 480,
+      "h": 340,
+      "children": [
+        {
+          "id": "n010-rect",
+          "kind": "rect",
+          "x": 175,
+          "y": 45,
+          "w": 130,
+          "h": 100,
+          "fill": "#D6C2FF",
+          "radius": 14
+        },
+        {
+          "id": "n011-text",
+          "kind": "text",
+          "x": 30,
+          "y": 180,
+          "w": 420,
+          "h": 60,
+          "text": "{{part2}}",
+          "size": 48,
+          "color": "#0B0B0F",
+          "align": "center"
+        },
+        {
+          "id": "n012-text",
+          "kind": "text",
+          "x": 30,
+          "y": 260,
+          "w": 420,
+          "h": 55,
+          "text": "{{detail2}}",
+          "size": 31,
+          "color": "#777780",
+          "align": "center"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.22,
+            0
+          ],
+          [
+            2.94,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.22,
+            425
+          ],
+          [
+            2.94,
+            390,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014-pill",
+      "kind": "pill",
+      "x": 380,
+      "y": 160,
+      "w": 1160,
+      "h": 150,
+      "label": "{{question}}",
+      "size": 60,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.0,
+            0
+          ],
+          [
+            3.72,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.0,
+            195
+          ],
+          [
+            3.72,
+            160,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n015-text",
+      "kind": "text",
+      "x": 310,
+      "y": 130,
+      "w": 130,
+      "h": 130,
+      "text": "{{spark}}",
+      "size": 100,
+      "color": "#D6C2FF",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.5,
+            0
+          ],
+          [
+            5.22,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            4.5,
+            165
+          ],
+          [
+            5.22,
+            130,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

@@ -1,0 +1,917 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t04k",
+  "title": "应用功能 ← API 卡逐张接入，对应功能点亮",
+  "duration": 17,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "我的应用",
+    "text02": "地图",
+    "text03": "天气",
+    "text04": "支付",
+    "text05": "地图 API",
+    "text06": "路线 API",
+    "text07": "天气 API",
+    "text08": "支付 API A",
+    "text09": "支付 API B",
+    "text10": "今天 24°",
+    "text11": "明天 26°",
+    "text12": "后天 23°",
+    "text13": "支付成功"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "window",
+      "x": 120,
+      "y": 185,
+      "w": 1090,
+      "h": 700,
+      "label": "{{text01}}"
+    },
+    {
+      "id": "n002",
+      "kind": "text",
+      "x": 180,
+      "y": 310,
+      "w": 300,
+      "h": 64.0,
+      "text": "{{text02}}",
+      "size": 40,
+      "align": "center"
+    },
+    {
+      "id": "n003",
+      "kind": "rect",
+      "x": 180,
+      "y": 385,
+      "w": 295,
+      "h": 370,
+      "fill": "#F1F1F5"
+    },
+    {
+      "id": "n004",
+      "kind": "text",
+      "x": 515,
+      "y": 310,
+      "w": 300,
+      "h": 64.0,
+      "text": "{{text03}}",
+      "size": 40,
+      "align": "center"
+    },
+    {
+      "id": "n005",
+      "kind": "rect",
+      "x": 515,
+      "y": 385,
+      "w": 295,
+      "h": 370,
+      "fill": "#F1F1F5"
+    },
+    {
+      "id": "n006",
+      "kind": "text",
+      "x": 850,
+      "y": 310,
+      "w": 300,
+      "h": 64.0,
+      "text": "{{text04}}",
+      "size": 40,
+      "align": "center"
+    },
+    {
+      "id": "n007",
+      "kind": "rect",
+      "x": 850,
+      "y": 385,
+      "w": 295,
+      "h": 370,
+      "fill": "#F1F1F5"
+    },
+    {
+      "id": "n008",
+      "kind": "pill",
+      "x": 1420,
+      "y": 180,
+      "w": 360,
+      "h": 84,
+      "label": "{{text05}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.02,
+            0
+          ],
+          [
+            1.615,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1600
+          ],
+          [
+            1.02,
+            1600
+          ],
+          [
+            1.615,
+            1420,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            230
+          ],
+          [
+            1.02,
+            230
+          ],
+          [
+            1.615,
+            180,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "path",
+      "x": 1400,
+      "y": 222,
+      "w": 0,
+      "h": 0,
+      "path": "M0 0 H-95 V200 H-1150",
+      "fill": "#D6C2FF",
+      "strokeWidth": 5,
+      "length": 1600,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            1.36,
+            0
+          ],
+          [
+            2.72,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010",
+      "kind": "pill",
+      "x": 1420,
+      "y": 320,
+      "w": 360,
+      "h": 84,
+      "label": "{{text06}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.74,
+            0
+          ],
+          [
+            4.335,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1600
+          ],
+          [
+            3.74,
+            1600
+          ],
+          [
+            4.335,
+            1420,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            370
+          ],
+          [
+            3.74,
+            370
+          ],
+          [
+            4.335,
+            320,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011",
+      "kind": "path",
+      "x": 1400,
+      "y": 362,
+      "w": 0,
+      "h": 0,
+      "path": "M0 0 H-95 V60 H-1150",
+      "fill": "#D6C2FF",
+      "strokeWidth": 5,
+      "length": 1600,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            4.08,
+            0
+          ],
+          [
+            5.44,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012",
+      "kind": "pill",
+      "x": 1420,
+      "y": 460,
+      "w": 360,
+      "h": 84,
+      "label": "{{text07}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            6.46,
+            0
+          ],
+          [
+            7.055,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1600
+          ],
+          [
+            6.46,
+            1600
+          ],
+          [
+            7.055,
+            1420,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            510
+          ],
+          [
+            6.46,
+            510
+          ],
+          [
+            7.055,
+            460,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013",
+      "kind": "path",
+      "x": 1400,
+      "y": 502,
+      "w": 0,
+      "h": 0,
+      "path": "M0 0 H-95 V-80 H-815",
+      "fill": "#D6C2FF",
+      "strokeWidth": 5,
+      "length": 1600,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            6.8,
+            0
+          ],
+          [
+            8.16,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014",
+      "kind": "pill",
+      "x": 1420,
+      "y": 600,
+      "w": 360,
+      "h": 84,
+      "label": "{{text08}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            9.35,
+            0
+          ],
+          [
+            9.945,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1600
+          ],
+          [
+            9.35,
+            1600
+          ],
+          [
+            9.945,
+            1420,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            650
+          ],
+          [
+            9.35,
+            650
+          ],
+          [
+            9.945,
+            600,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n015",
+      "kind": "path",
+      "x": 1400,
+      "y": 642,
+      "w": 0,
+      "h": 0,
+      "path": "M0 0 H-95 V-220 H-480",
+      "fill": "#D6C2FF",
+      "strokeWidth": 5,
+      "length": 1600,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            9.69,
+            0
+          ],
+          [
+            11.05,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n016",
+      "kind": "pill",
+      "x": 1420,
+      "y": 740,
+      "w": 360,
+      "h": 84,
+      "label": "{{text09}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            11.73,
+            0
+          ],
+          [
+            12.325,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1600
+          ],
+          [
+            11.73,
+            1600
+          ],
+          [
+            12.325,
+            1420,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            790
+          ],
+          [
+            11.73,
+            790
+          ],
+          [
+            12.325,
+            740,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n017",
+      "kind": "path",
+      "x": 1400,
+      "y": 782,
+      "w": 0,
+      "h": 0,
+      "path": "M0 0 H-95 V-360 H-480",
+      "fill": "#D6C2FF",
+      "strokeWidth": 5,
+      "length": 1600,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            12.07,
+            0
+          ],
+          [
+            13.43,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n018",
+      "kind": "path",
+      "x": 210,
+      "y": 440,
+      "w": 250,
+      "h": 240,
+      "path": "M20 150 L85 55 L145 215 L240 110",
+      "fill": "#D6C2FF",
+      "strokeWidth": 15,
+      "length": 1600,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            2.55,
+            0
+          ],
+          [
+            5.1,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n019",
+      "kind": "text",
+      "x": 535,
+      "y": 430,
+      "w": 270,
+      "h": 49.6,
+      "text": "{{text10}}",
+      "size": 31,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            7.14,
+            0
+          ],
+          [
+            7.735,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            535
+          ],
+          [
+            7.14,
+            535
+          ],
+          [
+            7.735,
+            535,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            480
+          ],
+          [
+            7.14,
+            480
+          ],
+          [
+            7.735,
+            430,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n020",
+      "kind": "text",
+      "x": 535,
+      "y": 520,
+      "w": 270,
+      "h": 49.6,
+      "text": "{{text11}}",
+      "size": 31,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            7.735,
+            0
+          ],
+          [
+            8.33,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            535
+          ],
+          [
+            7.735,
+            535
+          ],
+          [
+            8.33,
+            535,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            570
+          ],
+          [
+            7.735,
+            570
+          ],
+          [
+            8.33,
+            520,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n021",
+      "kind": "text",
+      "x": 535,
+      "y": 610,
+      "w": 270,
+      "h": 49.6,
+      "text": "{{text12}}",
+      "size": 31,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            8.33,
+            0
+          ],
+          [
+            8.925,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            535
+          ],
+          [
+            8.33,
+            535
+          ],
+          [
+            8.925,
+            535,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            660
+          ],
+          [
+            8.33,
+            660
+          ],
+          [
+            8.925,
+            610,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n022",
+      "kind": "check",
+      "x": 920,
+      "y": 460,
+      "w": 120,
+      "h": 120,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            10.88,
+            0
+          ],
+          [
+            11.475,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            920
+          ],
+          [
+            10.88,
+            920
+          ],
+          [
+            11.475,
+            920,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            510
+          ],
+          [
+            10.88,
+            510
+          ],
+          [
+            11.475,
+            460,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n023",
+      "kind": "text",
+      "x": 875,
+      "y": 625,
+      "w": 270,
+      "h": 57.6,
+      "text": "{{text13}}",
+      "size": 36,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            12.58,
+            0
+          ],
+          [
+            13.175,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            875
+          ],
+          [
+            12.58,
+            875
+          ],
+          [
+            13.175,
+            875,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            675
+          ],
+          [
+            12.58,
+            675
+          ],
+          [
+            13.175,
+            625,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/72c173d8deb531fcca3a4ccc4699537573181aea00d919de8ee2180dfc093c7c.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "Other functions are the same.",
+          "label": "Opening Hook",
+          "visual": "A clean, white background features a central 2D graphic representing a software dashboard. The dashboard has three vertical columns with icons for map, weather, and payment. The lighting is uniform and bright, suggesting a digital interface environment. The color palette is minimal with white, light grey, and subtle purple accents.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "For example, if you need a map, you can call the interface of AutoNavi or Baidu Maps.",
+          "label": "Product Information",
+          "visual": "Static camera focusing on the graphic. On the right side, two rounded rectangular buttons appear sequentially representing map service interfaces. Arrows point from these external buttons toward the first column of the central dashboard. Inside the first column, a stylized map pattern with a location pin populates the empty space. The colors of the new elements include blue, red, and light grey.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "If you need weather, you can go and call some weather APIs.",
+          "label": "Product Selling Points",
+          "visual": "A third button representing a weather interface appears on the right side with a purple icon. An arrow connects it to the second column of the dashboard. The dashboard's second column fills with weather data including sun icons and temperature ranges for 'today', 'tomorrow', and 'the day after'. The animation is smooth and linear.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:08",
+          "timestamp_start": "0:05"
+        },
+        {
+          "audio": "If you need payment, you can follow the platform's requirements to call APIs like WeChat Pay or Alipay.",
+          "label": "Usage Scenarios",
+          "visual": "Two more buttons appear on the right side representing mobile payment interfaces in green and blue. Arrows point to the third column of the dashboard. A checkmark icon and confirmation text appear in the third column of the dashboard to indicate a successful payment process. The background remains a stark, professional white.",
+          "shot_type": "Medium Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:13",
+          "timestamp_start": "0:08"
+        },
+        {
+          "audio": "These capabilities have already been built by others, so you don't need to develop them from scratch yourself.",
+          "label": "Call to Action",
+          "visual": "The final composition is static. The dashboard is now fully populated with map, weather, and payment information, all connected via arrows to the five external service buttons on the right. A new descriptive header appears above the dashboard. The overall layout is symmetrical and balanced.",
+          "shot_type": "Medium Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:16",
+          "timestamp_start": "0:13"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "“我的应用”卡里有地图/天气/支付几个功能，右侧 API 卡（高德地图、天气、微信支付、支付宝…）按口播逐张接上，对应功能点亮"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 17.0,
+      "action": "“我的应用”卡里有地图/天气/支付几个功能，右侧 API 卡（高德地图、天气、微信支付、支付宝…）按口播逐张接上，对应功能点亮"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

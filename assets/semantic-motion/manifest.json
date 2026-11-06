@@ -1,0 +1,1791 @@
+{
+  "schema_version": 1,
+  "counts": {
+    "O": 33,
+    "R": 16,
+    "X": 23,
+    "total": 72
+  },
+  "current_palette": {
+    "base": "#FFFFFF",
+    "secondary": "#F3F3F5",
+    "ink": "#0B0B0F",
+    "accent": "#D6C2FF"
+  },
+  "ownership": "Motion behavior only; bind this episode content/objects/evidence. Demonstration content is not a fixed template.",
+  "effects": [
+    {
+      "id": "O01",
+      "title": "分批建立",
+      "semantic_use": "随口播逐项建立有内容的对象，不均匀撒空卡",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "items",
+        "stagger",
+        "enter",
+        "rise"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O02",
+      "title": "当前对象放大",
+      "semantic_use": "从总览聚焦同一对象，保留邻居或来源线索；可接F01",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "focus",
+        "from",
+        "to",
+        "neighbors",
+        "at",
+        "focusEnd",
+        "returnAt",
+        "returnEnd"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O03",
+      "title": "景深堆叠",
+      "semantic_use": "表达文件／步骤层次，限制层数，停稳后可读",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "items[node,from,to,at,angle,depth,blur]"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O04",
+      "title": "多卡归并",
+      "semantic_use": "原对象收为同一结果，不能先清场再替换新卡",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "items",
+        "destination",
+        "result",
+        "resultFrom",
+        "resultTo"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O05",
+      "title": "结果脱离容器",
+      "semantic_use": "个人产物移出旧窗口进入后续工作区",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "container",
+        "containerFrom",
+        "containerTo",
+        "result",
+        "resultFrom",
+        "resultTo"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O06",
+      "title": "同一窗口换内容",
+      "semantic_use": "外壳保留，内容按状态更新；可接F05",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "states",
+        "times",
+        "transition",
+        "title",
+        "titles"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O07",
+      "title": "网格积累",
+      "semantic_use": "按语义建立集合，不借网格密度遮住重要内容",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "items[node,from,to,at]",
+        "step"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O08",
+      "title": "连续扩列",
+      "semantic_use": "旧列让位，新环节加入，链条仍可追溯",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "columns[node,from,to,existing,at]"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O09",
+      "title": "分支生长",
+      "semantic_use": "主节点与子节点按实际关系连接；可接F04",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "branches[path,length,node,label,at]"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O10",
+      "title": "分支焦点交接",
+      "semantic_use": "新分支展开时收旧说明，但保留已讲标题",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "items[node,details,collapsed,expanded]",
+        "times"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O11",
+      "title": "字段贯穿链条",
+      "semantic_use": "名称、数值与身份跨系统保持一致",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "fields[node,at]",
+        "value",
+        "accent",
+        "ink"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O12",
+      "title": "文档外加新容器",
+      "semantic_use": "保留同一文档，在其后展开下一窗口",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "document",
+        "container",
+        "at",
+        "end",
+        "radius"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O13",
+      "title": "并置比较",
+      "semantic_use": "同口径两栏，字段基线对齐；可接F06",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "left",
+        "right",
+        "single",
+        "leftRect",
+        "rightRect",
+        "divider"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O14",
+      "title": "数量级对比",
+      "semantic_use": "有依据的旧值／新值与单位；示例数据明确标注",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "old",
+        "current",
+        "oldValue",
+        "newValue",
+        "underline"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O15",
+      "title": "开关和进度",
+      "semantic_use": "控件、说明与受影响状态同步；可接F07",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "knob",
+        "travel",
+        "fill",
+        "label",
+        "from",
+        "to",
+        "start",
+        "end",
+        "threshold",
+        "onLabel",
+        "offLabel"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O16",
+      "title": "完成勾选",
+      "semantic_use": "只表达真实完成或已标示为示意的核对状态",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "path",
+        "length",
+        "at",
+        "draw",
+        "label"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O17",
+      "title": "背景退焦",
+      "semantic_use": "上下文留下、结论清楚；不持续模糊可读操作",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "background",
+        "foreground",
+        "blur",
+        "backgroundScale",
+        "backgroundOpacity"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O18",
+      "title": "关键词提取",
+      "semantic_use": "提取重点后避免两份可读长文重复争焦点",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "rest",
+        "words[node,from,to,fromSize,toSize]"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O19",
+      "title": "协作接入",
+      "semantic_use": "人物节点／光标对应具体操作区域与结果",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "people[node,cursor,cursorFrom,cursorTo,path,length,at]"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O20",
+      "title": "窗口内缩放滚动",
+      "semantic_use": "固定外壳、独立正文视口，讲完回总览",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "viewport",
+        "content",
+        "scale",
+        "x",
+        "y",
+        "focusAt",
+        "focusEnd",
+        "returnAt",
+        "returnEnd"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O21",
+      "title": "累积荧光笔",
+      "semantic_use": "文字不动，底色引导，已讲约束保留",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "marks[node,at]"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O22",
+      "title": "搜索逐字输入",
+      "semantic_use": "查询词、光标、过滤之间有因果",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "node",
+        "text",
+        "cursor",
+        "at",
+        "span"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O23",
+      "title": "过滤并上移",
+      "semantic_use": "同一匹配行移动，非匹配项退下，输入栏固定",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "items[node,from,to,match]"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O24",
+      "title": "原文重排强调",
+      "semantic_use": "原卡内保留出处，重点重排；不伪造来源",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "excerpt",
+        "source",
+        "from",
+        "to",
+        "fromSize",
+        "toSize",
+        "underline"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O25",
+      "title": "消失或灰化",
+      "semantic_use": "被取消／丢失／降级的对应状态明确",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "items",
+        "remove",
+        "opacity",
+        "at",
+        "end"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O26",
+      "title": "状态标签切词",
+      "semantic_use": "原对象位置与身份保留，文字在固定遮罩内更新",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "mask",
+        "labels",
+        "height",
+        "at",
+        "end"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O27",
+      "title": "选中文字再替换",
+      "semantic_use": "先选中，再修改，再停稳阅读",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "node",
+        "before",
+        "after",
+        "replaceAt",
+        "selection",
+        "ink"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O28",
+      "title": "条目升格为主结论",
+      "semantic_use": "从原条目连续提取，内容不偷换",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "node",
+        "from",
+        "to",
+        "fromSize",
+        "toSize",
+        "fromRadius",
+        "toRadius",
+        "fill",
+        "color",
+        "finalScale"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O29",
+      "title": "标志让位",
+      "semantic_use": "产品识别后为内容让位，保留官方品牌识别",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "logo",
+        "from",
+        "to",
+        "content",
+        "at",
+        "end"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O30",
+      "title": "真实录屏聚焦",
+      "semantic_use": "点击前定位、操作后停留；源片1×",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "viewport",
+        "media",
+        "scale",
+        "x",
+        "y",
+        "focusAt",
+        "focusEnd",
+        "returnAt",
+        "returnEnd",
+        "sourcePlaybackRate=1"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O31",
+      "title": "黑色章节页",
+      "semantic_use": "只在语义层级变化时调节，不整片换黑色风格",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "stage",
+        "title",
+        "next"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O32",
+      "title": "场景水平接力",
+      "semantic_use": "新段接入有方向与连续衔接，字幕仍清楚",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "previous",
+        "next",
+        "width",
+        "at",
+        "end"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "O33",
+      "title": "人物引导与回收",
+      "semantic_use": "根据账号与本期素材选人物；不默认Q版或复制作者身份",
+      "kind": "parameterized-action",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "presenter",
+        "presenterFrom",
+        "presenterTo",
+        "openingHold",
+        "safeRects",
+        "protectedRects",
+        "items[node,from,to]"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "R01",
+      "title": "口播重音逐次落位",
+      "semantic_use": "原话本来就有重复、递进、强判断；不要为做效果重写或复制声音。",
+      "kind": "event-recipe",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "establish",
+        "emphasis",
+        "group",
+        "conclusion"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "source_state_chain": "第一重音 → 第二／第三重音按原声出现 → 三者成组退让 → 完整结论出现 → 阅读。",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "R02",
+      "title": "标题留作章节锚点",
+      "semantic_use": "从提问／章节名进入论证，需要保留“正在回答什么”。",
+      "kind": "event-recipe",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "anchor",
+        "workspace"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "source_state_chain": "标题主导 → 容器与文字共同缩移 → 标题成为章节标签 → 正文由标签下方展开。",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "R03",
+      "title": "先排除两个原因，再把真正原因放到中间",
+      "semantic_use": "不是 A，也不是 B，而是 C；输入准备充分，但中间环节有瓶颈。",
+      "kind": "event-recipe",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "compare",
+        "reject",
+        "cause",
+        "depart",
+        "attributes"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "source_state_chain": "A/B 建立 → 两者确认 → 两侧移开 → C 接管中心 → 问题属性依次落位。",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "R04",
+      "title": "失败结果与返工回路",
+      "semantic_use": "要求没有被正确理解、反复修改、流程摩擦。",
+      "kind": "event-recipe",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "results",
+        "feedback",
+        "status",
+        "complete",
+        "counter",
+        "counterPrefix"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "source_state_chain": "任务进入 → 得到不符合要求的结果 → 显示具体差异／失败 → 返回同一对象修订 → 次数或成本增加。",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "R05",
+      "title": "胶囊扩为幕布，再从幕布打开下一场",
+      "semantic_use": "从理性说明进入情绪比喻或实例，且前场已存在适合扩展的形状。",
+      "kind": "event-recipe",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "capsule",
+        "from",
+        "full",
+        "previous",
+        "next",
+        "radius"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "source_state_chain": "原形状 → 内容退场 → 形状扩为覆盖层 → 下一场已在遮罩内播放 → 遮罩展开 → 完整下一场。",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "R06",
+      "title": "同角色、同任务的连续比喻与对照",
+      "semantic_use": "抽象的理解能力、需要盯着、从被动执行到主动判断；情绪需要通过后果被看见。",
+      "kind": "event-recipe",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "identity",
+        "duration",
+        "clips[id,node,identity,start,end,sourceIn]",
+        "comparison"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "source_state_chain": "明确共同任务 → 主角发出要求 → 执行者做出动作 → 出错或卡住 → 主角被迫回来；对照段改变执行方式，任务与结果仍可比较。",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "R07",
+      "title": "把“哪里用什么画面”画成时间结构",
+      "semantic_use": "流程、阶段、媒介选择或剪辑节奏的解释。",
+      "kind": "event-recipe",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "blocks",
+        "cursor",
+        "labels"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "source_state_chain": "第一阶段与真实例子 → 进度延伸 → 第二阶段 → 第三阶段／暂停 → 全貌。",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "R08",
+      "title": "目录中的文件抽出，成为下一段的操作对象",
+      "semantic_use": "解释一个文件、配置或素材实际承担什么作用。",
+      "kind": "event-recipe",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "locate",
+        "extract"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "source_state_chain": "目录上下文 → 选中目标 → 目标行离开目录 → 路径身份保持 → 容器展开为相应场景 → 行为／结果。",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "R09",
+      "title": "同一操作窗里完成问题、修复、结果",
+      "semantic_use": "故障修复、检索、设置产生效果。",
+      "kind": "event-recipe",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "query",
+        "filter",
+        "fix",
+        "complete",
+        "result"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "source_state_chain": "可理解的输入 → 错误定位 → 说明改变了什么 → 再次输入／执行 → 有内容的结果 → 结果成为下一段素材。",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "R10",
+      "title": "卡片变排序行，候选变理由表",
+      "semantic_use": "从展示集合进入排序、筛选、推荐理由或决策。",
+      "kind": "event-recipe",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "items[node,card,row,reason]"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "source_state_chain": "看清候选身份 → 对象移至新行位 → 卡片收成缩略图／标签 → 排名或原因出现 → 结论。",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "R11",
+      "title": "从杂乱集合到分类，再把缺口变得可见",
+      "semantic_use": "素材盘点、能力覆盖、知识分类、发现缺失并补齐。",
+      "kind": "event-recipe",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "collection",
+        "classify",
+        "gap",
+        "fill"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "source_state_chain": "已有集合 → 给出分类依据 → 对象归列 → 空位显露 → 新增对象填补 → 新旧结构一眼可辨。",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "R12",
+      "title": "分类标签保持，全貌与重点之间往返",
+      "semantic_use": "组件库、产品特性、多个案例；或具体截图中的小目标需要看清。",
+      "kind": "event-recipe",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "catalog",
+        "focus"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "source_state_chain": "类别总览 → 激活当前类别 → 展开 2–4 项 → 聚焦一项／局部 → 回到总览 → 下一类别。",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "R13",
+      "title": "把异常处理画成状态机",
+      "semantic_use": "断点续传、失败重试、队列、分段任务等原本看不见的后台过程。",
+      "kind": "event-recipe",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "states[id,label,from,to,error]",
+        "label",
+        "fill",
+        "branches"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "source_state_chain": "正常推进 → 出现具体异常 → 维持已完成部分 → 从异常点恢复 → 完成；每一阶段都有对应对象状态。",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "R14",
+      "title": "返工版本栈只用于讲修改成本",
+      "semantic_use": "确实需要说明“经历了多少轮”和累积工作量。",
+      "kind": "event-recipe",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "versions",
+        "counter",
+        "prefix"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "source_state_chain": "当前结果 → 修改一轮 → 旧版留作记录 → 新版成为当前结果 → 次数收束。",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "R15",
+      "title": "数值与图形共享一个进度",
+      "semantic_use": "有来源的前后变化、比例、进度或明确标注的主观评价。",
+      "kind": "event-recipe",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "progress",
+        "number",
+        "minimum",
+        "maximum",
+        "unit",
+        "decimals"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "source_state_chain": "量纲与基准 → 初值 → 数值和几何同步改变 → 终值 → 来源／条件。",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "R16",
+      "title": "共享底座收束成结论，再回扣开头",
+      "semantic_use": "解释多个工具共享同一基础、方法适用范围、升级成果与全文收束。",
+      "kind": "event-recipe",
+      "implementation": "assets/semantic-motion/semantic-motion.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "parameters": [
+        "converge",
+        "conclusion",
+        "callback",
+        "branches"
+      ],
+      "binding_syntax": {
+        "selector": "#existing-node"
+      },
+      "time_api": "create({effect,duration,options}).seek(localSeconds)",
+      "demo_duration": 6,
+      "source_state_chain": "基础层 → 不同使用者接入 → 共性被看见 → 移除分支内容 → 原底座成为一句总结 → 开头对象带着新信息回归。",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "07fe53cde9492e0dd1aa9b534c4570001daffad8a8c7a7a487e80e39c408ab48"
+    },
+    {
+      "id": "X01",
+      "title": "遮罩揭字",
+      "semantic_use": "行／短句按语义显露，完整后静止；可接F05",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "extension-demos",
+      "source_path": "assets/base-skill/assets/extension-demos/index.html",
+      "source_range": [
+        0,
+        4
+      ],
+      "width": 1280,
+      "height": 720,
+      "scene_selector": "#x01",
+      "preserves_original_animation": true,
+      "original_sha256": "1a98a272a3d02c645dbeabfe7c852f698841f57c9cfe6b377e835e2c98ed5dce",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X02",
+      "title": "保位排序",
+      "semantic_use": "行ID与内容一起换位，不能只换文字假排序",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "extension-demos",
+      "source_path": "assets/base-skill/assets/extension-demos/index.html",
+      "source_range": [
+        4,
+        8
+      ],
+      "width": 1280,
+      "height": 720,
+      "scene_selector": "#x02",
+      "preserves_original_animation": true,
+      "original_sha256": "1a98a272a3d02c645dbeabfe7c852f698841f57c9cfe6b377e835e2c98ed5dce",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X03",
+      "title": "局部放大镜",
+      "semantic_use": "一个细节框对应同一原图区域",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "extension-demos",
+      "source_path": "assets/base-skill/assets/extension-demos/index.html",
+      "source_range": [
+        8,
+        12
+      ],
+      "width": 1280,
+      "height": 720,
+      "scene_selector": "#x03",
+      "preserves_original_animation": true,
+      "original_sha256": "1a98a272a3d02c645dbeabfe7c852f698841f57c9cfe6b377e835e2c98ed5dce",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X04",
+      "title": "图解匹配到实录",
+      "semantic_use": "匹配边界进入真实依据，明确示意与实录区别",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "extension-demos",
+      "source_path": "assets/base-skill/assets/extension-demos/index.html",
+      "source_range": [
+        12,
+        16
+      ],
+      "width": 1280,
+      "height": 720,
+      "scene_selector": "#x04",
+      "preserves_original_animation": true,
+      "original_sha256": "1a98a272a3d02c645dbeabfe7c852f698841f57c9cfe6b377e835e2c98ed5dce",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X05",
+      "title": "分段步骤条",
+      "semantic_use": "有明确顺序才推进，不伪造百分比",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "extension-demos",
+      "source_path": "assets/base-skill/assets/extension-demos/index.html",
+      "source_range": [
+        16,
+        20
+      ],
+      "width": 1280,
+      "height": 720,
+      "scene_selector": "#x05",
+      "preserves_original_animation": true,
+      "original_sha256": "1a98a272a3d02c645dbeabfe7c852f698841f57c9cfe6b377e835e2c98ed5dce",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X06",
+      "title": "差异层切换",
+      "semantic_use": "原区域局部揭示修改，避免强闪屏",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "extension-demos",
+      "source_path": "assets/base-skill/assets/extension-demos/index.html",
+      "source_range": [
+        20,
+        24
+      ],
+      "width": 1280,
+      "height": 720,
+      "scene_selector": "#x06",
+      "preserves_original_animation": true,
+      "original_sha256": "1a98a272a3d02c645dbeabfe7c852f698841f57c9cfe6b377e835e2c98ed5dce",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X07",
+      "title": "局部跟随聚焦",
+      "semantic_use": "跟随实际移动目标，回稳后读文字",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "extension-demos",
+      "source_path": "assets/base-skill/assets/extension-demos/index.html",
+      "source_range": [
+        24,
+        28
+      ],
+      "width": 1280,
+      "height": 720,
+      "scene_selector": "#x07",
+      "preserves_original_animation": true,
+      "original_sha256": "1a98a272a3d02c645dbeabfe7c852f698841f57c9cfe6b377e835e2c98ed5dce",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X08",
+      "title": "轻微纵深翻面",
+      "semantic_use": "正反面有意义才翻，限制装饰性转动",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "extension-demos",
+      "source_path": "assets/base-skill/assets/extension-demos/index.html",
+      "source_range": [
+        28,
+        32
+      ],
+      "width": 1280,
+      "height": 720,
+      "scene_selector": "#x08",
+      "preserves_original_animation": true,
+      "original_sha256": "1a98a272a3d02c645dbeabfe7c852f698841f57c9cfe6b377e835e2c98ed5dce",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X09",
+      "title": "重音接力",
+      "semantic_use": "完整句保留，短关键词接力强调",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "narration-demos",
+      "source_path": "assets/base-skill/assets/narration-demos/index.html",
+      "source_range": [
+        0,
+        6
+      ],
+      "width": 1920,
+      "height": 1080,
+      "scene_selector": "#s09",
+      "preserves_original_animation": true,
+      "original_sha256": "7e51f20c29a07e75377d4fb484e9f56369ad83659dc4677ae49ce7c79c221f65",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X10",
+      "title": "追问递进",
+      "semantic_use": "层次必须有逻辑，已知条件保留",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "narration-demos",
+      "source_path": "assets/base-skill/assets/narration-demos/index.html",
+      "source_range": [
+        6,
+        12
+      ],
+      "width": 1920,
+      "height": 1080,
+      "scene_selector": "#s10",
+      "preserves_original_animation": true,
+      "original_sha256": "7e51f20c29a07e75377d4fb484e9f56369ad83659dc4677ae49ce7c79c221f65",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X11",
+      "title": "因果传导",
+      "semantic_use": "有依据才画因果，否则改并列",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "narration-demos",
+      "source_path": "assets/base-skill/assets/narration-demos/index.html",
+      "source_range": [
+        12,
+        18
+      ],
+      "width": 1920,
+      "height": 1080,
+      "scene_selector": "#s11",
+      "preserves_original_animation": true,
+      "original_sha256": "7e51f20c29a07e75377d4fb484e9f56369ad83659dc4677ae49ce7c79c221f65",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X12",
+      "title": "误区纠正",
+      "semantic_use": "在原位建立准确替代，不编造误区",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "narration-demos",
+      "source_path": "assets/base-skill/assets/narration-demos/index.html",
+      "source_range": [
+        18,
+        24
+      ],
+      "width": 1920,
+      "height": 1080,
+      "scene_selector": "#s12",
+      "preserves_original_animation": true,
+      "original_sha256": "7e51f20c29a07e75377d4fb484e9f56369ad83659dc4677ae49ce7c79c221f65",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X13",
+      "title": "句子拆步骤",
+      "semantic_use": "原短语移进步骤槽，身份连续",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "narration-demos",
+      "source_path": "assets/base-skill/assets/narration-demos/index.html",
+      "source_range": [
+        24,
+        30
+      ],
+      "width": 1920,
+      "height": 1080,
+      "scene_selector": "#s13",
+      "preserves_original_animation": true,
+      "original_sha256": "7e51f20c29a07e75377d4fb484e9f56369ad83659dc4677ae49ce7c79c221f65",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X14",
+      "title": "层层剖开",
+      "semantic_use": "层表示真实结构组成，先后过程另选时间线",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "narration-demos",
+      "source_path": "assets/base-skill/assets/narration-demos/index.html",
+      "source_range": [
+        30,
+        36
+      ],
+      "width": 1920,
+      "height": 1080,
+      "scene_selector": "#s14",
+      "preserves_original_animation": true,
+      "original_sha256": "7e51f20c29a07e75377d4fb484e9f56369ad83659dc4677ae49ce7c79c221f65",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X15",
+      "title": "类比变形",
+      "semantic_use": "只表达类比属性，不当事实证明",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "narration-demos",
+      "source_path": "assets/base-skill/assets/narration-demos/index.html",
+      "source_range": [
+        36,
+        42
+      ],
+      "width": 1920,
+      "height": 1080,
+      "scene_selector": "#s15",
+      "preserves_original_animation": true,
+      "original_sha256": "7e51f20c29a07e75377d4fb484e9f56369ad83659dc4677ae49ce7c79c221f65",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X16",
+      "title": "数值尺量",
+      "semantic_use": "可数单位、括尺、标签和真实口径一致",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "narration-demos",
+      "source_path": "assets/base-skill/assets/narration-demos/index.html",
+      "source_range": [
+        42,
+        48
+      ],
+      "width": 1920,
+      "height": 1080,
+      "scene_selector": "#s16",
+      "preserves_original_animation": true,
+      "original_sha256": "7e51f20c29a07e75377d4fb484e9f56369ad83659dc4677ae49ce7c79c221f65",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X17",
+      "title": "时间折叠",
+      "semantic_use": "后续按需分组，不能表示未做工作已完成",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "narration-demos",
+      "source_path": "assets/base-skill/assets/narration-demos/index.html",
+      "source_range": [
+        48,
+        54
+      ],
+      "width": 1920,
+      "height": 1080,
+      "scene_selector": "#s17",
+      "preserves_original_animation": true,
+      "original_sha256": "7e51f20c29a07e75377d4fb484e9f56369ad83659dc4677ae49ce7c79c221f65",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X18",
+      "title": "证据落点",
+      "semantic_use": "结论对应真实原文，只高亮支持的句子",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "narration-demos",
+      "source_path": "assets/base-skill/assets/narration-demos/index.html",
+      "source_range": [
+        54,
+        60
+      ],
+      "width": 1920,
+      "height": 1080,
+      "scene_selector": "#s18",
+      "preserves_original_animation": true,
+      "original_sha256": "7e51f20c29a07e75377d4fb484e9f56369ad83659dc4677ae49ce7c79c221f65",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X19",
+      "title": "首尾回扣",
+      "semantic_use": "同一问题书签贯穿，不偷换结尾问题",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "narration-demos",
+      "source_path": "assets/base-skill/assets/narration-demos/index.html",
+      "source_range": [
+        60,
+        66
+      ],
+      "width": 1920,
+      "height": 1080,
+      "scene_selector": "#s19",
+      "preserves_original_animation": true,
+      "original_sha256": "7e51f20c29a07e75377d4fb484e9f56369ad83659dc4677ae49ce7c79c221f65",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X20",
+      "title": "结论拼句",
+      "semantic_use": "原关键词组成忠实概括，留出阅读",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "narration-demos",
+      "source_path": "assets/base-skill/assets/narration-demos/index.html",
+      "source_range": [
+        66,
+        72
+      ],
+      "width": 1920,
+      "height": 1080,
+      "scene_selector": "#s20",
+      "preserves_original_animation": true,
+      "original_sha256": "7e51f20c29a07e75377d4fb484e9f56369ad83659dc4677ae49ce7c79c221f65",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X21",
+      "title": "资料纵深归并",
+      "semantic_use": "来源收为同一文件中的引用，有名称与去处",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "motion-lab",
+      "source_path": "assets/base-skill/assets/motion-lab/index.html",
+      "source_range": [
+        0,
+        9
+      ],
+      "width": 1920,
+      "height": 1080,
+      "scene_selector": "#mount-depth",
+      "preserves_original_animation": true,
+      "original_sha256": "a214b805a4946de9dc7eaa02bf069aaca9f94126ba9f60fb44169974290a9634",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X22",
+      "title": "仓库窗口连续推镜",
+      "semantic_use": "同一DOM总览→细节→总览，不靠不相关截图替换",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "motion-lab",
+      "source_path": "assets/base-skill/assets/motion-lab/index.html",
+      "source_range": [
+        9,
+        18
+      ],
+      "width": 1920,
+      "height": 1080,
+      "scene_selector": "#mount-zoom",
+      "preserves_original_animation": true,
+      "original_sha256": "a214b805a4946de9dc7eaa02bf069aaca9f94126ba9f60fb44169974290a9634",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    },
+    {
+      "id": "X23",
+      "title": "数据文件曲线交接",
+      "semantic_use": "同一文件落稳后展开，前后字段与数值一致；可接F03",
+      "kind": "source-timeline",
+      "implementation": "assets/semantic-motion/source-bridge.js",
+      "user_approval": "not-inferred",
+      "technical_status": "browser-seek-verified",
+      "source_group": "motion-lab",
+      "source_path": "assets/base-skill/assets/motion-lab/index.html",
+      "source_range": [
+        18,
+        27
+      ],
+      "width": 1920,
+      "height": 1080,
+      "scene_selector": "#mount-handoff",
+      "preserves_original_animation": true,
+      "original_sha256": "a214b805a4946de9dc7eaa02bf069aaca9f94126ba9f60fb44169974290a9634",
+      "validation": "assets/semantic-motion/verification.json",
+      "implementation_sha256": "f4fd916badcb96e23e9bcba474c50411c6a19c75095b3040904dba8757bf1789",
+      "binding_schema": {
+        "text": "leaf CSS selector -> current content",
+        "media": "CSS selector -> local src, kind, fit, sourceIn; video remains 1x",
+        "states": "selector -> original dynamic state text -> new state text"
+      },
+      "binding_slots": "assets/semantic-motion/source-slots.json"
+    }
+  ],
+  "portable_binding_tests": {
+    "passed": 3,
+    "script": "tests/test_semantic_effects.py",
+    "includes": [
+      "new current text",
+      "independent output directory",
+      "each of three original source bundles",
+      "real X04 video at 1x",
+      "refuse silent demo and overwrite"
+    ]
+  }
+}

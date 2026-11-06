@@ -1,0 +1,222 @@
+{
+  "project": "private-source-not-distributed",
+  "template": "dedicated-tented-branded-image-to-email",
+  "provenance": "independent-reimplementation",
+  "reference_slug": "justincooperman-e7bbc4",
+  "rendered": true,
+  "dimensions": [
+    1280,
+    720
+  ],
+  "fps": 30,
+  "interval": [
+    0,
+    30.0
+  ],
+  "temporal_samples": 1,
+  "checks": {
+    "seek_repeat_pixels_equal": true,
+    "seek_repeat_state_equal": true,
+    "source_files_unchanged_during_render": true
+  },
+  "browser_errors": [],
+  "request_errors": [],
+  "sampled_frames": 12,
+  "audio": true,
+  "fidelity_status": "not certified; compare against original reference",
+  "human_full_playback": false,
+  "user_approved": false,
+  "audio_source": {
+    "path": "private-source-not-distributed",
+    "offset_seconds": 0,
+    "ownership": "not inferred; preserve source attribution separately"
+  },
+  "elapsed_seconds": 68.937,
+  "runtime_source_files": [
+    {
+      "path": "../../reference-shared/fonts/29160a80ff49ddcab2c9.ttf",
+      "bytes": 876576,
+      "sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031"
+    },
+    {
+      "path": "../../reference-shared/fonts/8a08d13f8a6c0d51be37.ttf",
+      "bytes": 451664,
+      "sha256": "8a08d13f8a6c0d51be379a60af84f945f65369a67e509ee3c3bdcc421254d7c1"
+    },
+    {
+      "path": "assets/reference-coffee-hero.jpg",
+      "bytes": 81266,
+      "sha256": "4b6c55d60c745746970cadd083a05ecd5f4e239d077ff3c3fa1ba20f35f06374"
+    },
+    {
+      "path": "index.html",
+      "bytes": 283,
+      "sha256": "74f097b4b32f180e2982d89defb1bbb6e6ab34e23fdaf48b5a041e47656579d0"
+    },
+    {
+      "path": "motion.js",
+      "bytes": 14438,
+      "sha256": "fb29fa416ecbd321e3db2de40afb4baad3acd4f76e552e5c8c04570e2df0c421"
+    },
+    {
+      "path": "project.json",
+      "bytes": 3550,
+      "sha256": "30ed081a9fecfea2048fca87854a6500d47a4a8d23c38dacadfe323a9986d8a2"
+    },
+    {
+      "path": "style.css",
+      "bytes": 242,
+      "sha256": "d5fb264ddeb3a087552525886a977ae151fcedf55100934a18e539f1b2eb79da"
+    }
+  ],
+  "repeat_comparison": {
+    "png_sha256_equal": true,
+    "rgb_pixels_equal": true,
+    "different_pixels": 0,
+    "total_pixels": 921600,
+    "different_fraction": 0.0,
+    "maximum_channel_delta": 0,
+    "mean_absolute_channel_delta": 0.0,
+    "tolerance_requested": false,
+    "tolerance_limits": {
+      "different_fraction": 0,
+      "maximum_channel_delta": 0
+    }
+  },
+  "frames": 900,
+  "full_decode": "passed",
+  "encoded_metadata": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.64001f",
+        "width": 1280,
+        "height": 720,
+        "coded_width": 1280,
+        "coded_height": 720,
+        "has_b_frames": 2,
+        "pix_fmt": "yuv420p",
+        "level": 31,
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 460800,
+        "duration": "30.000000",
+        "bit_rate": "1700558",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "900",
+        "extradata_size": 46,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc62.28.101 libx264"
+        }
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "AAC (Advanced Audio Coding)",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "mime_codec_string": "mp4a.40.2",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bits_per_sample": 0,
+        "initial_padding": 0,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/48000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 1440000,
+        "duration": "30.000000",
+        "bit_rate": "192471",
+        "nb_frames": "1406",
+        "extradata_size": 5,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "Twitter-vork muxer"
+        }
+      }
+    ],
+    "format": {
+      "filename": "private-source-not-distributed",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "30.000000",
+      "size": "7132966",
+      "bit_rate": "1902124",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf62.12.101"
+      }
+    }
+  }
+}

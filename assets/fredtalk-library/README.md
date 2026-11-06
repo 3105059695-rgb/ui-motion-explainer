@@ -8,11 +8,11 @@ Fred Talk 是本 Skill 跨窗口的默认整体视觉与剪辑方向，见[用�
 
 1. **读整段含义，再选场景。** 写清当前对象、发生的变化、观众需要看懂的结果和前后衔接。已有 `direct prepare` / `select` 的候选可同时检索本库和原有效果库；命中只是待判断候选，不是自动分镜或强制换页。
 2. **实际看对应预览与源码。** 核对同一对象怎样进场、让位、聚焦、退出；读取 `matching`、`reusability`、原生时长与具体 composition。快照常含固定文案/坐标/媒体，不能当任意 props API。预览可见不等于源码公开。
-3. **把选中的代码取进本期工程。** `python -B -X utf8 scripts/fredtalk_library.py materialize --id fredtalk:<referenceId> --project <本期工程>`。命令核验源码后写入 `vendor/fredtalk/<referenceId>/upstream/`，附许可证与复用记录。它不安装运行环境、不下载私人媒体、不渲染；原工程同名文件不同内容时停止覆盖。
-4. **在本期入口真实调用并适配。** 按源码实际导出接入，替换为本期内容、素材与口播 cue，沿用所选场景成立的层次、构图及动作关系。记录 `referenceId → source path/hash/symbol → 本期适配文件 → 被渲染入口实际调用位置`；只写参考 ID、import 或注释不算接入。不同框架须移植场景逻辑或渲染为素材，不把 TSX 直接塞入 HTML。
+3. **绑定并调用实际场景。** `ui.py library inspect --id fredtalk:<referenceId>` 返回真实接口、注册组合与媒体槽，接着 `scaffold --id ... --out <bindings.json>`、`build --spec <bindings.json> --out <工程>`、`render --project <工程> --out <片段.mp4>`。统一入口运行原源码或明确标注的独立实现，不要求新窗口重新适配导出注册。旧 `fredtalk materialize` 仍可仅提取原代码。
+4. **换本期内容与时间。** 实际文字、图片/视频、数据和 cue 由绑定提供；原源码结构不适合时选其他条目或基于源码作明确布局修改。生产缺素材会报错，示意媒体不自动顶替当前素材。记录实际被渲染的场景与时间，适配不同后端时可导出片段合成。
 5. **检查连续输出。** 检查阅读停留、对象衔接、蒙版边缘、最长文字、素材时钟、缺失媒体/字体与运行依赖。技术渲染通过与观看、用户认可分别记录；新内容不能继承旧片认可。
 
-`inspect --id …` 返回入口、闭包、缺失 import、外部包和 `staticFile` 媒体线索。静态扫描不覆盖所有动态媒体路径，仍须检查所选源码。归档项只供显式追溯；会员源码不尝试获取。原库继续参与检索，不按来源设置配额。
+当前 432 条均纳入候选：242 条公开原源码，189 条会员预览的独立实现及 1 条上游错挂后的独立实现。会员源码未取得。实际运行证据见 [implementations](../library-runtime/implementations.json) 与 [独立程序证据](../rebuilt-library/execution.json)；新电脑 `ui.py library setup --core` 只安装一份共享依赖，之后复用。原库继续参与检索，不按来源设置配额。
 
 ## 学到并用于适配的五个具体做法
 
@@ -26,4 +26,4 @@ Fred Talk 是本 Skill 跨窗口的默认整体视觉与剪辑方向，见[用�
 
 ## 保存范围
 
-`catalog.json` 保存可用性与语义字段；`blobs/` 保存公开未归档条目直接源码及静态相对 import 所需文件，不复制整套项目或 node_modules。原始第一方许可、第三方说明和许可边界随库保留。字体、音效、照片、视频等使用各自许可；这次没有把预览媒体或字体作为可复用素材打包。
+`catalog.json` 保留原目录与源码溯源，`blobs/` 保存公开源码及必要依赖，独立实现位于 `assets/rebuilt-library/`。原始第一方许可、第三方说明和许可边界保留；不打包 node_modules、私人原声、人物或原片。当前生产素材由调用者提供，预览不是素材授权或已获审美认可的证明。

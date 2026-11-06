@@ -1,0 +1,11 @@
+/* Portable URL adapter. Original animation code remains intact. */
+(()=>{'use strict';const source={"assets/fonts/Kalam-Bold.ttf": "../../reference-shared/fonts/2f6576601db015d4f6c0.ttf", "assets/fonts/Kalam-Regular.ttf": "../../reference-shared/fonts/57cecb63d46080193719.ttf", "assets/fonts/METADATA.pb": "assets/fonts/METADATA.pb", "assets/manifest.json": "assets/manifest.json", "check-v1/sampled-states.json": "check-v1/sampled-states.json", "check-v2/sampled-states.json": "check-v2/sampled-states.json", "index.html": "index.html", "motion.js": "motion.js", "project.json": "project.json", "scene-plan.json": "scene-plan.json", "style.css": "style.css", "Kalam-Bold.ttf": "../../reference-shared/fonts/2f6576601db015d4f6c0.ttf", "Kalam-Regular.ttf": "../../reference-shared/fonts/57cecb63d46080193719.ttf", "METADATA.pb": "assets/fonts/METADATA.pb", "manifest.json": "assets/manifest.json"},base=document.baseURI,byURL=new Map();
+for(const [key,value] of Object.entries(source)){try{byURL.set(new URL(key,base).href,new URL(value,base).href);}catch{}}
+const resolve=value=>{if(typeof value!=='string')return value;try{return byURL.get(new URL(value,base).href)||value;}catch{return value;}};
+const css=value=>value.replace(/url\(\s*(['"]?)(.*?)\1\s*\)/g,(all,q,url)=>'url("'+resolve(url)+'")');
+const fetchOriginal=window.fetch.bind(window);window.fetch=(input,init)=>fetchOriginal(typeof input==='string'?resolve(input):input,init);
+for(const Klass of [HTMLImageElement,HTMLVideoElement,HTMLAudioElement]){const desc=Object.getOwnPropertyDescriptor(Klass.prototype,'src');if(desc?.set)Object.defineProperty(Klass.prototype,'src',{...desc,set(value){desc.set.call(this,resolve(value));}});}
+if(window.FontFace){const FontFaceOriginal=window.FontFace;window.FontFace=class extends FontFaceOriginal{constructor(family,source,descriptors){super(family,typeof source==='string'?css(source):source,descriptors);}};}
+const insert=CSSStyleSheet.prototype.insertRule;CSSStyleSheet.prototype.insertRule=function(rule,index){return insert.call(this,css(rule),index);};
+window.__portableAssets={originalReferenceMedia:false,sourceMotionPreserved:true,replaceableSchematicTextures:true,urlMappings:Object.keys(source).length};
+})();

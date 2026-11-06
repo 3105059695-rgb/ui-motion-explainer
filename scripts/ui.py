@@ -123,6 +123,18 @@ def main(argv=None):
     if actual_argv[:1] == ['events']:
         import capability_runtime
         return capability_runtime.main(actual_argv[1:])
+    if actual_argv[:1] == ['library']:
+        import library_runner
+        return library_runner.main(actual_argv[1:])
+    if actual_argv[:1] == ['style-film']:
+        import style_film
+        return style_film.main(actual_argv[1:])
+    if actual_argv[:1] == ['semantic']:
+        import semantic_effects
+        return semantic_effects.main(actual_argv[1:])
+    if actual_argv[:1] == ['programs']:
+        import method_programs
+        return method_programs.main(actual_argv[1:])
     if actual_argv[:2] == ['references', 'check']:
         import reference_readiness
         return reference_readiness.main(actual_argv[2:])
@@ -154,6 +166,10 @@ def main(argv=None):
     sub = parser.add_subparsers(dest='action', required=True)
     sub.add_parser('capabilities', help='Browse the entire capability catalog or retrieve narration candidates without studying source films.')
     sub.add_parser('events', help='Bind and compose parameterized UI events using the retained approved runtime.')
+    sub.add_parser('library', help='Bind, compile, test and render the retained complete source library.')
+    sub.add_parser('style-film', help='Locate the complete continuous approved-source style film and player.')
+    sub.add_parser('semantic', help='Apply parameterized O/R actions and retained complete X timelines.')
+    sub.add_parser('programs', help='Bind and execute retained study and editing-recipe compositions.')
     sub.add_parser('select', help='Retrieve per-narration method/recipe/implementation candidates, pending Agent judgment.')
     sub.add_parser('inspect', help='Read an exact method, recipe, capability, family or reference and available source paths.')
     sub.add_parser('fredtalk', help='Search, inspect, or copy verified public FredTalk source into the current project.')

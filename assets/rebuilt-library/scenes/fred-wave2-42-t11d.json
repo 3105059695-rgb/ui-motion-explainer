@@ -1,0 +1,470 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t11d",
+  "title": "素材与代码窗口交替聚焦",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "focus0": "随时记录",
+    "focus1": "留下真实经验"
+  },
+  "assets": {
+    "clip0": "assets/style-film/current-style-full.mp4",
+    "clip1": "assets/style-film/current-style-full.mp4",
+    "clip2": "assets/style-film/current-style-full.mp4",
+    "clip3": "assets/style-film/current-style-full.mp4"
+  },
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/9b8eeb718df8e57db80eaf9437b731ea3a937fead889b4d25f3310c03fba54b8.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "Upbeat, rhythmic electronic background music begins with a moderate tempo.",
+          "label": "Opening Hook",
+          "visual": "A young 3D-animated male character with fair skin, black hair, and round glasses, wearing a black sweatshirt, sits on a grey couch. He is holding an open children's book with a colorful cover. Next to him, a younger girl character with dark hair in a ponytail and a white shirt looks at the book with a happy expression. The lighting is soft and warm, suggesting an indoor living room setting with blurred greenery in the background.",
+          "shot_type": "Medium Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Continuous upbeat electronic music.",
+          "label": "Usage Scenarios",
+          "visual": "The same male character from scene 1 is standing in a brightly lit indoor space. He is handing a dark book or folder to another person whose back is partially visible on the right. He maintains a friendly, slight smile. The environment appears to be a modern office or study area with clean, white walls and a potted plant in the background.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "Continuous upbeat electronic music.",
+          "label": "Usage Scenarios",
+          "visual": "The male character is now seated at a wooden conference table in a meeting. He is looking at two colleagues: a woman with black hair in a professional suit and a man in a blue suit. They are in a well-lit office with a window in the background showing a city view. The character has a small blue circular device clipped to his black sweatshirt near the collar.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A soft mechanical 'click' sound effect layered over the music.",
+          "label": "Product Information",
+          "visual": "A close-up of the male character's chest area. A hand with fair skin reaches up to press a button on a small, circular blue and black device clipped to the black fabric of his sweatshirt. The device has a small light and text on it. The lighting is bright and focused on the product interaction.",
+          "shot_type": "Extreme Close-Up",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "The music swells slightly and then fades out with a final electronic beat.",
+          "label": "Call to Action",
+          "visual": "The camera zooms in closer to the blue circular device clipped to the black sweatshirt. The device is centered in the frame. The lighting creates a slight sheen on the metallic/plastic surface of the product. The background remains the blurry texture of the black clothing.",
+          "shot_type": "Close-Up",
+          "scene_number": 5,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points.",
+    "catalog_conflict": "Catalog says material/code alternating; actual preview is four live videos, defocus with two foreground phrases, return to sharp grid. Reconstruct actual preview."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.5,
+      "action": "Four video contexts play sharply"
+    },
+    {
+      "start": 1.5,
+      "end": 4.92,
+      "action": "Same grid defocuses behind two sequential phrases while all clips continue"
+    },
+    {
+      "start": 4.92,
+      "end": 6,
+      "action": "Sharp live grid returns"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 100,
+      "y": 110,
+      "w": 850,
+      "h": 420,
+      "asset": "clip0",
+      "fit": "cover",
+      "radius": 18,
+      "tracks": {
+        "blur": [
+          [
+            0,
+            0
+          ],
+          [
+            1.32,
+            0
+          ],
+          [
+            1.98,
+            12
+          ],
+          [
+            4.5,
+            12
+          ],
+          [
+            5.4,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            1.98,
+            1.04
+          ],
+          [
+            4.5,
+            1.04
+          ],
+          [
+            5.4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-image",
+      "kind": "image",
+      "x": 980,
+      "y": 110,
+      "w": 850,
+      "h": 420,
+      "asset": "clip1",
+      "fit": "cover",
+      "radius": 18,
+      "tracks": {
+        "blur": [
+          [
+            0,
+            0
+          ],
+          [
+            1.32,
+            0
+          ],
+          [
+            1.98,
+            12
+          ],
+          [
+            4.5,
+            12
+          ],
+          [
+            5.4,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            1.98,
+            1.04
+          ],
+          [
+            4.5,
+            1.04
+          ],
+          [
+            5.4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-image",
+      "kind": "image",
+      "x": 100,
+      "y": 560,
+      "w": 850,
+      "h": 420,
+      "asset": "clip2",
+      "fit": "cover",
+      "radius": 18,
+      "tracks": {
+        "blur": [
+          [
+            0,
+            0
+          ],
+          [
+            1.32,
+            0
+          ],
+          [
+            1.98,
+            12
+          ],
+          [
+            4.5,
+            12
+          ],
+          [
+            5.4,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            1.98,
+            1.04
+          ],
+          [
+            4.5,
+            1.04
+          ],
+          [
+            5.4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-image",
+      "kind": "image",
+      "x": 980,
+      "y": 560,
+      "w": 850,
+      "h": 420,
+      "asset": "clip3",
+      "fit": "cover",
+      "radius": 18,
+      "tracks": {
+        "blur": [
+          [
+            0,
+            0
+          ],
+          [
+            1.32,
+            0
+          ],
+          [
+            1.98,
+            12
+          ],
+          [
+            4.5,
+            12
+          ],
+          [
+            5.4,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            1.98,
+            1.04
+          ],
+          [
+            4.5,
+            1.04
+          ],
+          [
+            5.4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-rect",
+      "kind": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "fill": "#0B0B0F",
+      "radius": 0,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.32,
+            0
+          ],
+          [
+            1.98,
+            0.38
+          ],
+          [
+            4.5,
+            0.38
+          ],
+          [
+            5.4,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-text",
+      "kind": "text",
+      "x": 200,
+      "y": 420,
+      "w": 1520,
+      "h": 200,
+      "text": "{{focus0}}",
+      "size": 124,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.68,
+            0
+          ],
+          [
+            2.04,
+            1
+          ],
+          [
+            2.88,
+            1
+          ],
+          [
+            3.24,
+            0
+          ]
+        ],
+        "y": [
+          [
+            1.68,
+            450
+          ],
+          [
+            2.16,
+            420
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-text",
+      "kind": "text",
+      "x": 200,
+      "y": 420,
+      "w": 1520,
+      "h": 200,
+      "text": "{{focus1}}",
+      "size": 124,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.3,
+            0
+          ],
+          [
+            3.66,
+            1
+          ],
+          [
+            4.5,
+            1
+          ],
+          [
+            4.86,
+            0
+          ]
+        ],
+        "y": [
+          [
+            3.3,
+            450
+          ],
+          [
+            3.78,
+            420
+          ]
+        ]
+      }
+    }
+  ],
+  "media_tracks": {
+    "clip0": {
+      "source_in": 40,
+      "start": 0,
+      "rate": 1
+    },
+    "clip1": {
+      "source_in": 80,
+      "start": 0,
+      "rate": 1
+    },
+    "clip2": {
+      "source_in": 120,
+      "start": 0,
+      "rate": 1
+    },
+    "clip3": {
+      "source_in": 160,
+      "start": 0,
+      "rate": 1
+    }
+  },
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 7,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

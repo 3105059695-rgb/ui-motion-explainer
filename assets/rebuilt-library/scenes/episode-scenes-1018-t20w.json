@@ -1,0 +1,819 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t20w",
+  "title": "1 秒 Logo 弹入，交给大播放窗里的真实录屏",
+  "duration": 4,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "品牌",
+    "media1.start": 0,
+    "media1.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "circle",
+      "x": 820,
+      "y": 385,
+      "w": 280,
+      "h": 280,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.04,
+            0
+          ],
+          [
+            0.32,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            820
+          ],
+          [
+            0.04,
+            820
+          ],
+          [
+            0.32,
+            820,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            385
+          ],
+          [
+            0.04,
+            385
+          ],
+          [
+            0.32,
+            385,
+            "out"
+          ]
+        ]
+      },
+      "visible": [
+        0,
+        1.08
+      ]
+    },
+    {
+      "id": "n002",
+      "kind": "path",
+      "x": 770,
+      "y": 335,
+      "w": 380,
+      "h": 380,
+      "path": "M190.00,0.00 A190,190 0 0 1 235.51,5.53",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            0.06,
+            0
+          ],
+          [
+            0.093,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "path",
+      "x": 770,
+      "y": 335,
+      "w": 380,
+      "h": 380,
+      "path": "M248.71,9.30 A190,190 0 0 1 290.29,28.63",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            0.093,
+            0
+          ],
+          [
+            0.126,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "path",
+      "x": 770,
+      "y": 335,
+      "w": 380,
+      "h": 380,
+      "path": "M301.68,36.29 A190,190 0 0 1 335.25,67.52",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            0.126,
+            0
+          ],
+          [
+            0.159,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "path",
+      "x": 770,
+      "y": 335,
+      "w": 380,
+      "h": 380,
+      "path": "M343.71,78.32 A190,190 0 0 1 365.99,118.39",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            0.159,
+            0
+          ],
+          [
+            0.192,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "path",
+      "x": 770,
+      "y": 335,
+      "w": 380,
+      "h": 380,
+      "path": "M370.70,131.29 A190,190 0 0 1 379.50,176.28",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            0.192,
+            0
+          ],
+          [
+            0.225,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "path",
+      "x": 770,
+      "y": 335,
+      "w": 380,
+      "h": 380,
+      "path": "M380.00,190.00 A190,190 0 0 1 374.47,235.51",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            0.225,
+            0
+          ],
+          [
+            0.258,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "path",
+      "x": 770,
+      "y": 335,
+      "w": 380,
+      "h": 380,
+      "path": "M370.70,248.71 A190,190 0 0 1 351.37,290.29",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            0.258,
+            0
+          ],
+          [
+            0.291,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "path",
+      "x": 770,
+      "y": 335,
+      "w": 380,
+      "h": 380,
+      "path": "M343.71,301.68 A190,190 0 0 1 312.48,335.25",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            0.291,
+            0
+          ],
+          [
+            0.324,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010",
+      "kind": "path",
+      "x": 770,
+      "y": 335,
+      "w": 380,
+      "h": 380,
+      "path": "M301.68,343.71 A190,190 0 0 1 261.61,365.99",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            0.324,
+            0
+          ],
+          [
+            0.357,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011",
+      "kind": "path",
+      "x": 770,
+      "y": 335,
+      "w": 380,
+      "h": 380,
+      "path": "M248.71,370.70 A190,190 0 0 1 203.72,379.50",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            0.357,
+            0
+          ],
+          [
+            0.39,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012",
+      "kind": "path",
+      "x": 770,
+      "y": 335,
+      "w": 380,
+      "h": 380,
+      "path": "M190.00,380.00 A190,190 0 0 1 144.49,374.47",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            0.39,
+            0
+          ],
+          [
+            0.423,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013",
+      "kind": "path",
+      "x": 770,
+      "y": 335,
+      "w": 380,
+      "h": 380,
+      "path": "M131.29,370.70 A190,190 0 0 1 89.71,351.37",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            0.423,
+            0
+          ],
+          [
+            0.456,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014",
+      "kind": "path",
+      "x": 770,
+      "y": 335,
+      "w": 380,
+      "h": 380,
+      "path": "M78.32,343.71 A190,190 0 0 1 44.75,312.48",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            0.456,
+            0
+          ],
+          [
+            0.489,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n015",
+      "kind": "path",
+      "x": 770,
+      "y": 335,
+      "w": 380,
+      "h": 380,
+      "path": "M36.29,301.68 A190,190 0 0 1 14.01,261.61",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            0.489,
+            0
+          ],
+          [
+            0.522,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n016",
+      "kind": "path",
+      "x": 770,
+      "y": 335,
+      "w": 380,
+      "h": 380,
+      "path": "M9.30,248.71 A190,190 0 0 1 0.50,203.72",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            0.522,
+            0
+          ],
+          [
+            0.555,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n017",
+      "kind": "path",
+      "x": 770,
+      "y": 335,
+      "w": 380,
+      "h": 380,
+      "path": "M0.00,190.00 A190,190 0 0 1 5.53,144.49",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            0.555,
+            0
+          ],
+          [
+            0.588,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n018",
+      "kind": "path",
+      "x": 770,
+      "y": 335,
+      "w": 380,
+      "h": 380,
+      "path": "M9.30,131.29 A190,190 0 0 1 28.63,89.71",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            0.588,
+            0
+          ],
+          [
+            0.621,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n019",
+      "kind": "path",
+      "x": 770,
+      "y": 335,
+      "w": 380,
+      "h": 380,
+      "path": "M36.29,78.32 A190,190 0 0 1 67.52,44.75",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            0.621,
+            0
+          ],
+          [
+            0.654,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n020",
+      "kind": "path",
+      "x": 770,
+      "y": 335,
+      "w": 380,
+      "h": 380,
+      "path": "M78.32,36.29 A190,190 0 0 1 118.39,14.01",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            0.654,
+            0
+          ],
+          [
+            0.687,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n021",
+      "kind": "path",
+      "x": 770,
+      "y": 335,
+      "w": 380,
+      "h": 380,
+      "path": "M131.29,9.30 A190,190 0 0 1 176.28,0.50",
+      "fill": "#D6C2FF",
+      "strokeWidth": 8,
+      "length": 60,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            0.687,
+            0
+          ],
+          [
+            0.72,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n022",
+      "kind": "text",
+      "x": 845,
+      "y": 450,
+      "w": 230,
+      "h": 108.80000000000001,
+      "text": "{{text01}}",
+      "size": 68,
+      "color": "#FFFFFF",
+      "align": "center",
+      "visible": [
+        0.32,
+        1.08
+      ]
+    },
+    {
+      "id": "n023",
+      "kind": "image",
+      "x": 108,
+      "y": 108,
+      "w": 1704,
+      "h": 864,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        1.04,
+        4.001
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.04,
+            0
+          ],
+          [
+            1.28,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            108
+          ],
+          [
+            1.04,
+            108
+          ],
+          [
+            1.28,
+            108,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            288
+          ],
+          [
+            1.04,
+            288
+          ],
+          [
+            1.28,
+            108,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/d65f7302073922a2ae4a30893fdcf27f6c23b0bf00982f323672e81db3e1bcdf.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "Now Doubao has been upgraded to a full-blooded AI agent.",
+          "label": "Opening Hook",
+          "visual": "A 3D stylized female character avatar is centered on a white background. She has short, straight brown hair tucked behind her right ear, large dark brown eyes, and fair skin. She wears a black top. The avatar is contained within a soft-edged white rounded square frame. The lighting is flat and bright, casting no shadows.",
+          "shot_type": "Close-Up",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "I have completed these tasks: first collected information about scenic spots and geographical locations.",
+          "label": "Product Information",
+          "visual": "A screen recording of a messaging interface showing a chat log. The background is white. A cursor moves across the screen. The interface includes blocks of text, a list of tasks with checkmarks, and a small profile icon. The color palette is dominated by light gray, blue, and white. Static camera angle.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "Now Doubao has been upgraded to a full-blooded AI agent.",
+          "label": "Usage Scenarios",
+          "visual": "A dashboard interface for an AI workspace. On the left is a sidebar with menu icons like a clock, cloud, and gear. The main window shows a list of configuration settings with blue checkmarks. The mouse cursor hovers over the list. The lighting is digital and uniform; the color scheme is neutral grays with blue highlights.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "New users can also receive a 30-day free membership.",
+          "label": "Call to Action",
+          "visual": "A promotional modal occupies the center of the screen. It features a large blue button at the bottom. To the right of the text area is a circular graphic containing icons for Excel, a code bracket, and a globe. The background shows the blurred workspace from the previous scene. The blue button is the most saturated element in the frame.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "品牌 Logo 在口播头 1 秒内弹入亮相（水波），随即交给 108 大播放窗里的真实录屏"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 4.0,
+      "action": "品牌 Logo 在口播头 1 秒内弹入亮相（水波），随即交给 108 大播放窗里的真实录屏"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "真实产品录屏",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          4,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

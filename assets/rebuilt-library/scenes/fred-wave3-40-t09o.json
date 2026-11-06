@@ -1,0 +1,132 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t09o",
+  "title": "放大镜看细节",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "instruction": "看清同一来源的两个细节"
+  },
+  "assets": {
+    "screen": "assets/style-film/media/connected-delivery.svg"
+  },
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/b8d2bd904673963dace516b7457d037b76ef407d36d6791ce83574718d899992.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "Upbeat, light electronic background music starts. A soft, high-pitched notification ping or 'ding' sound effects occurs simultaneously with the visual highlighting of the specific file.",
+          "label": "Opening Hook",
+          "visual": "A static screenshot of a software download page on a web browser. The background is light gray with a list of downloadable file names in blue text, file hashes in gray, and file sizes. A white circular mask with a drop shadow highlights the middle section of the list, specifically targeting the 'LosslessCut-mac-arm64.dmg' file. The overall lighting is even and digital, with a cool-toned color palette dominated by blues, grays, and whites.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The upbeat electronic background music continues at the same tempo and volume. A second soft 'ding' sound effect plays to coincide with the movement and placement of the circular highlight mask.",
+          "label": "Product Information",
+          "visual": "The same static web browser interface from Scene 1 is shown. The white circular mask shifts downward to highlight a different section of the list, specifically focusing on the 'LosslessCut-mac-x64.dmg' file. The rest of the screen is slightly darkened to emphasize the highlighted circular area. The color grading remains consistent with the previous scene.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 2.0,
+      "action": "Circular lens magnifies one exact area of the source"
+    },
+    {
+      "start": 2.0,
+      "end": 3.25,
+      "action": "Lens moves to a second area while source stays fixed"
+    },
+    {
+      "start": 3.25,
+      "end": 5,
+      "action": "Second detail holds with context around it"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-b2-lens",
+      "kind": "b2-lens",
+      "x": 200,
+      "y": 120,
+      "w": 1520,
+      "h": 850,
+      "asset": "screen",
+      "radius": 170,
+      "zoom": 1.8,
+      "focusX": 810,
+      "focusY": 310,
+      "tracks": {
+        "focusY": [
+          [
+            0,
+            300
+          ],
+          [
+            2.0,
+            300
+          ],
+          [
+            3.25,
+            580
+          ]
+        ],
+        "focusX": [
+          [
+            0,
+            810
+          ],
+          [
+            2.0,
+            810
+          ],
+          [
+            3.25,
+            720
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 250,
+      "y": 985,
+      "w": 1420,
+      "h": 60,
+      "text": "{{instruction}}",
+      "size": 34,
+      "color": "#777780",
+      "align": "center"
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 3,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

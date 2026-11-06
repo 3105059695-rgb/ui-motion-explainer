@@ -1,0 +1,236 @@
+{
+  "template": "dedicated-email-verification-causal-workflows",
+  "case_number": 179,
+  "reference_slug": "kmasiff-cc72cb",
+  "reference_url": "https://prompt-motion.com/kmasiff-cc72cb",
+  "duration": 20,
+  "width": 1280,
+  "height": 720,
+  "fps": 30,
+  "brand": "QuickEmailVerify",
+  "url": "quickemailverify.com",
+  "accent": "#5927ed",
+  "hero": [
+    "Stop bounces",
+    "before you hit send."
+  ],
+  "verify_email": "anna@northwind.io",
+  "score": 85,
+  "tagline": "Email verification that shows its work.",
+  "free_caption": "5 free checks a day · no signup",
+  "billing": [
+    "Unknowns cost $0.",
+    "Credits never expire.",
+    "$79 once. 100,000 credits."
+  ],
+  "billing_foot": "Prices in USD · no subscription · 30-day refund",
+  "navigation": [
+    "Campaigns",
+    "Signup forms",
+    "Your app",
+    "AI agents",
+    "Your stack",
+    "Self-host"
+  ],
+  "outcomes": [
+    {
+      "status": "valid",
+      "email": "anna@northwind.io",
+      "action": "Send.",
+      "color": "#31cf94"
+    },
+    {
+      "status": "role",
+      "email": "sales@brightpath.co",
+      "action": "Send with care.",
+      "color": "#6189df"
+    },
+    {
+      "status": "catch_all",
+      "email": "team@bigretail.com",
+      "action": "Test a small batch.",
+      "color": "#edae31"
+    },
+    {
+      "status": "disposable",
+      "email": "k9@mailinator.com",
+      "action": "Remove.",
+      "color": "#d447a7"
+    },
+    {
+      "status": "unknown",
+      "email": "j.ong@lumen-labs.io",
+      "action": "Hold it. Costs $0.",
+      "color": "#a5a0b9"
+    },
+    {
+      "status": "invalid",
+      "email": "dana@gmial.com",
+      "action": "Remove.",
+      "color": "#d64e72"
+    }
+  ],
+  "usecases": [
+    {
+      "eyebrow": "BEFORE THE CAMPAIGN",
+      "heading": [
+        "Clean the list",
+        "before you send."
+      ],
+      "description": "Upload a CSV. Get it back split into send, review and remove."
+    },
+    {
+      "eyebrow": "ON THE FORM",
+      "heading": [
+        "Catch the typo",
+        "at the door."
+      ],
+      "description": "One script tag. Protect mode also blocks burner and dead domains."
+    },
+    {
+      "eyebrow": "INSIDE YOUR APP",
+      "heading": [
+        "One POST.",
+        "One clear answer."
+      ],
+      "description": "Plain HTTP, one header, no SDK. Most answers in about a second."
+    },
+    {
+      "eyebrow": "FOR AI AGENTS",
+      "heading": [
+        "Your agent",
+        "cleans the list."
+      ],
+      "description": "Six native MCP tools for Claude Desktop, Cursor and any MCP client."
+    },
+    {
+      "eyebrow": "WORKS WITH YOUR TOOLS",
+      "heading": [
+        "Plugs into",
+        "your stack."
+      ],
+      "description": "Zapier, n8n, Make, Sheets, HubSpot, Mailchimp. One URL, one header."
+    },
+    {
+      "eyebrow": "ON YOUR OWN SERVER",
+      "heading": [
+        "Keep the list",
+        "in the building."
+      ],
+      "description": "The same engine and the same JSON, from one Docker image. On request."
+    }
+  ],
+  "campaign": {
+    "file": "webinar-leads-sept.csv",
+    "total": 9846,
+    "counts": [
+      7214,
+      672,
+      863,
+      238,
+      317,
+      542
+    ],
+    "groups": [
+      7214,
+      1852,
+      780
+    ]
+  },
+  "signup": {
+    "name": "Dana Whitfield",
+    "typo": "dana@gmial.com",
+    "correct": "dana@gmail.com"
+  },
+  "api": {
+    "endpoint": "https://quickemailverify.com/v1/verify",
+    "emails": [
+      "maya@northwind.io",
+      "sales@brightpath.co",
+      "k9@mailinator.com",
+      "j.ong@lumen-labs.io",
+      "dana@gmial.com"
+    ],
+    "statuses": [
+      "valid",
+      "role",
+      "disposable",
+      "unknown",
+      "invalid"
+    ],
+    "scores": [
+      "85",
+      "70",
+      "20",
+      "free",
+      "5"
+    ]
+  },
+  "agent": {
+    "user": "Check these three leads before I email them.",
+    "reply": "Two are good to send. dana@gmial.com is a typo, so I left it out."
+  },
+  "integrations": [
+    [
+      "Mailchimp",
+      "CSV"
+    ],
+    [
+      "Claude Desktop",
+      "MCP"
+    ],
+    [
+      "Cursor",
+      "MCP"
+    ],
+    [
+      "Zapier",
+      "HTTP"
+    ],
+    [
+      "n8n",
+      "HTTP"
+    ],
+    [
+      "Make",
+      "HTTP"
+    ],
+    [
+      "Google Sheets",
+      "SCRIPT"
+    ],
+    [
+      "HubSpot",
+      "CSV"
+    ]
+  ],
+  "selfhost": [
+    "$ docker compose up -d --build",
+    "✓ Container quickemailverify-api-1  Started",
+    "$ curl localhost:8899/health",
+    "{\"ok\":true}"
+  ],
+  "marks": [
+    1,
+    2.75,
+    3.5,
+    4.25,
+    6.5,
+    8.75,
+    10,
+    11.5,
+    13,
+    14.25,
+    15.75,
+    19.5
+  ],
+  "provenance": "independent-reimplementation",
+  "content_note": "All product, price, integration and free-check claims are reference-video copy snapshots; this mock UI does not perform email verification and does not assert current commercial facts.",
+  "fidelity_status": "native dedicated reconstruction, aesthetic unapproved",
+  "portable_demo": {
+    "source_motion_preserved": true,
+    "reference_media_distributed": false,
+    "textures": "Original replaceable schematic assets; not the original reference artwork.",
+    "approval": "Historical motion implementation; this portable demo is not user-approved."
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t12s",
+  "title": "左右合拢：序号和标题从两侧撞成一枚胶囊",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "index": "03",
+    "title": "把结果落到实际"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/8e7d8fd8c0b26276c845d826d85a704415750a6728c1c040a0c0886fc2413953.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single, digital 'pop' sound effect occurs at the start of the scene, followed by silence.",
+          "label": "Opening Hook",
+          "visual": "A static, minimalist graphic against a solid white background. On the left, a purple circle containing a number is positioned. To its right, a long, horizontal black pill-shaped button contains white text. In the upper right corner, a small logo with blue and yellow accents is present. The lighting is perfectly flat and artificial, creating zero shadows. The color palette is restricted to white, black, purple, blue, and yellow.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.5,
+      "action": "Index and chapter travel from opposite edges"
+    },
+    {
+      "start": 1.5,
+      "end": 2.0999999999999996,
+      "action": "Shared collision resolves into one aligned capsule"
+    },
+    {
+      "start": 2.0999999999999996,
+      "end": 3,
+      "action": "Joined title holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-circle",
+      "kind": "circle",
+      "x": 440,
+      "y": 400,
+      "w": 220,
+      "h": 220,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "x": [
+          [
+            0,
+            -250
+          ],
+          [
+            1.5,
+            440,
+            "back"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 440,
+      "y": 425,
+      "w": 220,
+      "h": 170,
+      "text": "{{index}}",
+      "size": 125,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "x": [
+          [
+            0,
+            -250
+          ],
+          [
+            1.5,
+            440,
+            "back"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-pill",
+      "kind": "pill",
+      "x": 650,
+      "y": 400,
+      "w": 900,
+      "h": 220,
+      "label": "{{title}}",
+      "size": 70,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "x": [
+          [
+            0,
+            1950
+          ],
+          [
+            1.5,
+            650,
+            "back"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

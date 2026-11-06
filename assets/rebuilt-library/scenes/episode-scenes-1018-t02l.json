@@ -1,0 +1,693 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t02l",
+  "title": "仓库页推近安装命令 → 三张工具卡逐张盖“命令行”章",
+  "duration": 14.433,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "npm install current-tool",
+    "text02": "工具 A",
+    "text03": "命令行",
+    "text04": "工具 B",
+    "text05": "命令行",
+    "text06": "更多工具",
+    "text07": "命令行",
+    "media1.start": 0,
+    "media1.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "image",
+      "x": 200,
+      "y": 135,
+      "w": 1520,
+      "h": 800,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        8.08248
+      ],
+      "tracks": {
+        "scale": [
+          [
+            0.0,
+            1
+          ],
+          [
+            2.8866,
+            1
+          ],
+          [
+            5.19588,
+            1.55
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            200
+          ],
+          [
+            5.19588,
+            -210
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            135
+          ],
+          [
+            5.19588,
+            -90
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "rect",
+      "x": 450,
+      "y": 460,
+      "w": 1050,
+      "h": 90,
+      "fill": "#D6C2FF",
+      "opacity": 0.32,
+      "visible": [
+        3.17526,
+        5.19588
+      ]
+    },
+    {
+      "id": "n003",
+      "kind": "pill",
+      "x": 550,
+      "y": 540,
+      "w": 860,
+      "h": 100,
+      "label": "{{text01}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.90722,
+            0
+          ],
+          [
+            5.41237,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            550
+          ],
+          [
+            4.90722,
+            550
+          ],
+          [
+            5.41237,
+            550,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            590
+          ],
+          [
+            4.90722,
+            590
+          ],
+          [
+            5.41237,
+            540,
+            "out"
+          ]
+        ]
+      },
+      "visible": [
+        4.90722,
+        8.08248
+      ]
+    },
+    {
+      "id": "n004",
+      "kind": "window",
+      "x": 260,
+      "y": 295,
+      "w": 420,
+      "h": 400,
+      "label": "{{text02}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.08248,
+            0
+          ],
+          [
+            8.58764,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            260
+          ],
+          [
+            8.08248,
+            260
+          ],
+          [
+            8.58764,
+            260,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            115
+          ],
+          [
+            8.08248,
+            115
+          ],
+          [
+            8.58764,
+            295,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "pill",
+      "x": 300,
+      "y": 550,
+      "w": 340,
+      "h": 85,
+      "label": "{{text03}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.6598,
+            0
+          ],
+          [
+            9.16496,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            300
+          ],
+          [
+            8.6598,
+            300
+          ],
+          [
+            9.16496,
+            300,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            410
+          ],
+          [
+            8.6598,
+            410
+          ],
+          [
+            9.16496,
+            550,
+            "out"
+          ]
+        ],
+        "rotation": [
+          [
+            0.0,
+            -8
+          ],
+          [
+            8.08248,
+            -8
+          ],
+          [
+            8.58764,
+            -4
+          ],
+          [
+            9.02062,
+            -4
+          ]
+        ],
+        "scale": [
+          [
+            0.0,
+            1.4
+          ],
+          [
+            8.08248,
+            1.4
+          ],
+          [
+            8.58764,
+            0.96
+          ],
+          [
+            8.94846,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "window",
+      "x": 750,
+      "y": 295,
+      "w": 420,
+      "h": 400,
+      "label": "{{text04}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            9.45362,
+            0
+          ],
+          [
+            9.95877,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            750
+          ],
+          [
+            9.45362,
+            750
+          ],
+          [
+            9.95877,
+            750,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            115
+          ],
+          [
+            9.45362,
+            115
+          ],
+          [
+            9.95877,
+            295,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "pill",
+      "x": 790,
+      "y": 550,
+      "w": 340,
+      "h": 85,
+      "label": "{{text05}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            10.03094,
+            0
+          ],
+          [
+            10.53609,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            790
+          ],
+          [
+            10.03094,
+            790
+          ],
+          [
+            10.53609,
+            790,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            410
+          ],
+          [
+            10.03094,
+            410
+          ],
+          [
+            10.53609,
+            550,
+            "out"
+          ]
+        ],
+        "rotation": [
+          [
+            0.0,
+            -8
+          ],
+          [
+            9.45362,
+            -8
+          ],
+          [
+            9.95877,
+            -4
+          ],
+          [
+            10.39176,
+            -4
+          ]
+        ],
+        "scale": [
+          [
+            0.0,
+            1.4
+          ],
+          [
+            9.45362,
+            1.4
+          ],
+          [
+            9.95877,
+            0.96
+          ],
+          [
+            10.3196,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "window",
+      "x": 1240,
+      "y": 295,
+      "w": 420,
+      "h": 400,
+      "label": "{{text06}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            10.82475,
+            0
+          ],
+          [
+            11.32991,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1240
+          ],
+          [
+            10.82475,
+            1240
+          ],
+          [
+            11.32991,
+            1240,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            115
+          ],
+          [
+            10.82475,
+            115
+          ],
+          [
+            11.32991,
+            295,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "pill",
+      "x": 1280,
+      "y": 550,
+      "w": 340,
+      "h": 85,
+      "label": "{{text07}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            11.40207,
+            0
+          ],
+          [
+            11.90723,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1280
+          ],
+          [
+            11.40207,
+            1280
+          ],
+          [
+            11.90723,
+            1280,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            410
+          ],
+          [
+            11.40207,
+            410
+          ],
+          [
+            11.90723,
+            550,
+            "out"
+          ]
+        ],
+        "rotation": [
+          [
+            0.0,
+            -8
+          ],
+          [
+            10.82475,
+            -8
+          ],
+          [
+            11.32991,
+            -4
+          ],
+          [
+            11.76289,
+            -4
+          ]
+        ],
+        "scale": [
+          [
+            0.0,
+            1.4
+          ],
+          [
+            10.82475,
+            1.4
+          ],
+          [
+            11.32991,
+            0.96
+          ],
+          [
+            11.69073,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/b7f78389935c03d279a57b31443c324750fe7f502ae64b263c5b0c4b883f7067.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "Second, many good things are only available via the command line. You've found a great project on GitHub...",
+          "label": "Problem Solving",
+          "visual": "A screen recording shows the GitHub interface for an open-source project. The cursor scrolls down the page, highlighting project details. The interface is clean with white and grey tones. The lighting is digital and uniform, mimicking a standard monitor display.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "...but the README file says all you need to do is run this line of command.",
+          "label": "Product Information",
+          "visual": "The camera zooms into the 'About' section of the GitHub page. A specific sentence describing the project as a 'lightweight coding agent' is highlighted with a purple glow. The background becomes slightly blurred to focus on the text.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "Almost all instructions in the README are about running these commands.",
+          "label": "Usage Scenarios",
+          "visual": "The view transitions to a 'Quickstart' guide on the same webpage. The camera focuses on a specific shell command starting with 'curl'. The command is isolated in a white box with rounded corners, and a soft shadow effect is applied to make it pop from the background.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:08",
+          "timestamp_start": "0:05"
+        },
+        {
+          "audio": "Many newly released AI tools also release their command-line versions first.",
+          "label": "Product Selling Points",
+          "visual": "Three white cards appear on a grey gradient background. Each card features an AI tool logo: a brown star-like icon, a blue cloud-like icon, and a grey 'more tools' icon. As each tool is mentioned, a small tag appears below the icon indicating it's a command-line version.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:11",
+          "timestamp_start": "0:08"
+        },
+        {
+          "audio": "If you don't know how to open the terminal, you won't be able to use these things.",
+          "label": "Problem Solving",
+          "visual": "The screen clears, leaving three navigation tabs at the top. The second tab is highlighted with a checkmark. The rest of the screen is a clean white space, emphasizing the simplicity of the interface design. The transition is smooth with a slight fade effect.",
+          "shot_type": "Wide Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:14",
+          "timestamp_start": "0:11"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "真实仓库页刷出“runs in your terminal”、推近安装命令 → 三张新工具卡依次落下，每张盖一枚“命令行”章（落下压一下、轻转角、无回弹）"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 14.433,
+      "action": "真实仓库页刷出“runs in your terminal”、推近安装命令 → 三张新工具卡依次落下，每张盖一枚“命令行”章（落下压一下、轻转角、无回弹）"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "本期仓库页",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          14.433,
+          14.433,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,464 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t11p",
+  "title": "三张视频卡并排 → 收进一个大窗口 → 窗内跳切下一段",
+  "duration": 10,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "多段结果，一次看清",
+    "media1.start": 0,
+    "media1.speed": 1,
+    "media2.start": 0,
+    "media2.speed": 1,
+    "media3.start": 0,
+    "media3.speed": 1,
+    "media4.start": 0,
+    "media4.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media2": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media3": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media4": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "image",
+      "x": 110,
+      "y": 300,
+      "w": 530,
+      "h": 430,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0,
+        4.3
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            110
+          ],
+          [
+            2.5,
+            110
+          ],
+          [
+            4.0,
+            200
+          ]
+        ],
+        "y": [
+          [
+            0,
+            300
+          ],
+          [
+            2.5,
+            300
+          ],
+          [
+            4.0,
+            165
+          ]
+        ],
+        "w": [
+          [
+            0,
+            530
+          ],
+          [
+            2.5,
+            530
+          ],
+          [
+            4.0,
+            1520
+          ]
+        ],
+        "h": [
+          [
+            0,
+            430
+          ],
+          [
+            2.5,
+            430
+          ],
+          [
+            4.0,
+            750
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            2.5,
+            1
+          ],
+          [
+            4.0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "image",
+      "x": 695,
+      "y": 300,
+      "w": 530,
+      "h": 430,
+      "asset": "media2",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0,
+        5.9
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            695
+          ],
+          [
+            2.5,
+            695
+          ],
+          [
+            4.0,
+            200
+          ]
+        ],
+        "y": [
+          [
+            0,
+            300
+          ],
+          [
+            2.5,
+            300
+          ],
+          [
+            4.0,
+            165
+          ]
+        ],
+        "w": [
+          [
+            0,
+            530
+          ],
+          [
+            2.5,
+            530
+          ],
+          [
+            4.0,
+            1520
+          ]
+        ],
+        "h": [
+          [
+            0,
+            430
+          ],
+          [
+            2.5,
+            430
+          ],
+          [
+            4.0,
+            750
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            2.5,
+            1
+          ],
+          [
+            4.0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "image",
+      "x": 1280,
+      "y": 300,
+      "w": 530,
+      "h": 430,
+      "asset": "media3",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0,
+        4.3
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            1280
+          ],
+          [
+            2.5,
+            1280
+          ],
+          [
+            4.0,
+            200
+          ]
+        ],
+        "y": [
+          [
+            0,
+            300
+          ],
+          [
+            2.5,
+            300
+          ],
+          [
+            4.0,
+            165
+          ]
+        ],
+        "w": [
+          [
+            0,
+            530
+          ],
+          [
+            2.5,
+            530
+          ],
+          [
+            4.0,
+            1520
+          ]
+        ],
+        "h": [
+          [
+            0,
+            430
+          ],
+          [
+            2.5,
+            430
+          ],
+          [
+            4.0,
+            750
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            2.5,
+            1
+          ],
+          [
+            4.0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "text",
+      "x": 400,
+      "y": 820,
+      "w": 1120,
+      "h": 112.0,
+      "text": "{{text01}}",
+      "size": 70,
+      "align": "center",
+      "visible": [
+        0,
+        3.0
+      ]
+    },
+    {
+      "id": "n005",
+      "kind": "image",
+      "x": 200,
+      "y": 165,
+      "w": 1520,
+      "h": 750,
+      "asset": "media4",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        5.9,
+        10.001
+      ]
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/6cc6f5c6ac6e3b933c0351d7d7cefa2d163ce5ba81ae2fe729fd00bfe9fc6dec.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "It is not just a flying car, but a car that can jump, roll, and stay in the air for a few seconds.",
+          "label": "Opening Hook",
+          "visual": "A minimalist white background. Centered is a bold horizontal line over typography. The scene transitions via a slide animation to reveal two video thumbnails side-by-side.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "It's a car that can jump, flip, and stay in the air for a few seconds.",
+          "label": "Product Selling Points",
+          "visual": "Three video thumbnails are now visible against the white background. Left: A silver sports car jumps off a ramp at night with hard artificial lighting. Center: A car performing a rolling maneuver in a dark outdoor setting with dust clouds. Right: A sleek white car hovering slightly off the ground with vertical thrusters emitting white smoke/gas.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "So what's the point of this car?",
+          "label": "Product Selling Points",
+          "visual": "The three thumbnails zoom slightly and shift. The central video, showing a car amidst heavy dust and smoke at night, becomes the primary focus. The environment is dark with distant floodlights.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "So what's the point of it?",
+          "label": "Usage Scenarios",
+          "visual": "Static camera shot of the rear of a silver sports car with thin red LED taillights. The car is positioned at the base of a massive, vertical curved ramp outlined with red neon lights. The background is pitch black.",
+          "shot_type": "Medium Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:06",
+          "timestamp_start": "0:04"
+        },
+        {
+          "audio": "I think the point is not for you to drive it to work.",
+          "label": "Real Experience",
+          "visual": "Wide angle view of the vertical ramp. A silver car is seen accelerating vertically up the loop. The lighting is low-key, focused exclusively on the track edge and the vehicle's movement.",
+          "shot_type": "Wide Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:08",
+          "timestamp_start": "0:06"
+        },
+        {
+          "audio": "Rather, it proves one thing: tires...",
+          "label": "Product Information",
+          "visual": "The camera pans slightly following the car as it reaches the peak of the vertical loop. The car is nearly perpendicular to the ground. The lighting is cool-toned with highlights on the car's metallic body against the black sky.",
+          "shot_type": "Wide Shot",
+          "scene_number": 6,
+          "timestamp_end": "0:10",
+          "timestamp_start": "0:08"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "三张同尺寸视频卡并排 + 下方大字 → 中间卡长成大窗口、两侧卡滑入收进同一个窗口 → 窗内跳切下一段素材"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 10.0,
+      "action": "三张同尺寸视频卡并排 + 下方大字 → 中间卡长成大窗口、两侧卡滑入收进同一个窗口 → 窗内跳切下一段素材"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "片段 1",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          10,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media2",
+      "label": "片段 2",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          10,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media3",
+      "label": "片段 3",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          10,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media4",
+      "label": "下一段结果",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          10,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t18d",
+  "title": "项目名片",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "address": "example.org/your-project",
+    "badge0": "开源项目",
+    "badge1": "跨平台",
+    "badge2": "可本地使用"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/497d389918b47f6c7a34b311f46139f73b416f9ff48a38a9aa8f8a97e436aedc.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "Fast-paced, rhythmic mechanical clicking sounds resembling a high-frequency keyboard typing. No music or voiceover.",
+          "label": "Opening Hook",
+          "visual": "A white search bar with rounded corners is centered on a light gray background. A cursor moves across the bar, typing characters sequentially. The lighting is flat and artificial with minimal shadows beneath the bar. The color palette is clinical and high-contrast, dominated by whites and grays.",
+          "shot_type": "Close-Up",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Three distinct, high-pitched 'pop' sound effects occurring in rapid succession as each badge appears, layered over a light, upbeat synth melody.",
+          "label": "Product Information",
+          "visual": "The search bar remains centered. Below it, three rounded rectangular badges appear one after another in a quick sequence. The badges are dark gray with white icons and text. The background remains a uniform light gray. No camera movement; the shot is static and sharp.",
+          "shot_type": "Close-Up",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The synth melody continues with a slightly faster tempo. A subtle digital 'shimmer' sound effect occurs as the camera pans.",
+          "label": "Product Selling Points",
+          "visual": "The camera pans slightly to reveal more of the interface. The white search bar and badges are now part of a larger UI layout. A logo with yellow and blue accents sits in the top right corner. The lighting is bright and even across the digital environment.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 2.0,
+      "action": "Project address types in one search surface"
+    },
+    {
+      "start": 2.0,
+      "end": 3.9000000000000004,
+      "action": "Three meaningful project attributes appear beneath"
+    },
+    {
+      "start": 3.9000000000000004,
+      "end": 5,
+      "action": "Camera reveals the whole project identity"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-card",
+      "kind": "card",
+      "x": 350,
+      "y": 320,
+      "w": 1220,
+      "h": 170,
+      "children": [],
+      "fill": "#FFFFFF"
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 400,
+      "y": 368,
+      "w": 1080,
+      "h": 90,
+      "text": "{{address}}",
+      "size": 56,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "characters": [
+          [
+            0,
+            0
+          ],
+          [
+            2.0,
+            28,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-pill",
+      "kind": "pill",
+      "x": 350,
+      "y": 590,
+      "w": 380,
+      "h": 100,
+      "label": "{{badge0}}",
+      "size": 39,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.0,
+            0
+          ],
+          [
+            2.6,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.0,
+            625
+          ],
+          [
+            2.6,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-pill",
+      "kind": "pill",
+      "x": 770,
+      "y": 590,
+      "w": 380,
+      "h": 100,
+      "label": "{{badge1}}",
+      "size": 39,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.6,
+            0
+          ],
+          [
+            3.2,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.6,
+            625
+          ],
+          [
+            3.2,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-pill",
+      "kind": "pill",
+      "x": 1190,
+      "y": 590,
+      "w": 380,
+      "h": 100,
+      "label": "{{badge2}}",
+      "size": 39,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.2,
+            0
+          ],
+          [
+            3.8,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.2,
+            625
+          ],
+          [
+            3.8,
+            590,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "camera": {
+    "tracks": {
+      "scale": [
+        [
+          0,
+          1
+        ],
+        [
+          3.65,
+          1
+        ],
+        [
+          4.75,
+          0.9
+        ]
+      ],
+      "y": [
+        [
+          0,
+          0
+        ],
+        [
+          3.65,
+          0
+        ],
+        [
+          4.75,
+          -40
+        ]
+      ]
+    }
+  },
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

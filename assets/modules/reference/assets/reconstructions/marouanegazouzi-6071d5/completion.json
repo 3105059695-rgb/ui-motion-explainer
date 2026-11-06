@@ -1,0 +1,128 @@
+{
+  "index": 190,
+  "slug": "marouanegazouzi-6071d5",
+  "status": "independent-rendered-with-differences",
+  "version": "v1",
+  "provenance": "independent-reimplementation",
+  "runtime_frozen": true,
+  "reference_video": "private-source-not-distributed",
+  "render": "render/full-720p-v1/preview.mp4",
+  "runtime_loads_reference_video": false,
+  "runtime_loads_reference_fullscreen_images": false,
+  "runtime_uses_original_frame_sequence": false,
+  "runtime_asset_types": [
+    "local OFL Gelasio, Geist and Geist Mono font substitutes",
+    "independent Bezier curved icon and analytic pulse",
+    "seeded 500-particle histogram, authored tweet/analytics panel, ellipse radar and split-flap geometry"
+  ],
+  "localized_reference_assets": [],
+  "dimensions": [
+    1280,
+    720
+  ],
+  "fps": 30,
+  "project_duration": 15.061,
+  "encoded_duration": "15.066667",
+  "frames": 452,
+  "bytes": 2275656,
+  "full_decode": "passed",
+  "checks": {
+    "seek_repeat_pixels_equal": true,
+    "seek_repeat_state_equal": true,
+    "source_files_unchanged_during_render": true
+  },
+  "own_repeat_24_points": true,
+  "own_repeat_times": [
+    0.3,
+    0.9,
+    1.4,
+    2.0,
+    3.05,
+    3.9,
+    5.65,
+    7.6,
+    9.65,
+    10.8,
+    11.9,
+    14.3,
+    0,
+    0.55,
+    1.65,
+    2.4,
+    2.65,
+    3.45,
+    4.95,
+    6.65,
+    8.2,
+    10.2,
+    12.35,
+    13.4
+  ],
+  "runtime_source_files": [
+    {
+      "path": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+      "bytes": 169056,
+      "sha256": "73894e0448cae90a92b6c2f8732b7bb9acb7b94c418bff559dad4a18e1de9659"
+    },
+    {
+      "path": "../../reference-shared/fonts/d00e590b8eb3a59acc32.ttf",
+      "bytes": 171948,
+      "sha256": "d00e590b8eb3a59acc329b2d044fd143ae935090b7da33199ebee27cc7de8196"
+    },
+    {
+      "path": "../../reference-shared/fonts/4daecea457258c9ebeb8.ttf",
+      "bytes": 168556,
+      "sha256": "4daecea457258c9ebeb8bc99ed3fd24353618bfad3ea4b93fa0b5d0468fc04e4"
+    },
+    {
+      "path": "index.html",
+      "bytes": 307,
+      "sha256": "cb59dc0bf0646cfc7f8bbba6279c37ec0552fec94e4115273d7a48c1fd44727f"
+    },
+    {
+      "path": "motion.js",
+      "bytes": 21991,
+      "sha256": "8fc322e6435e7cd0c7eb9631922225ddec79a30d229f1c37fea244371b07afdc"
+    },
+    {
+      "path": "project.json",
+      "bytes": 3092,
+      "sha256": "ea43ddb87565f3ba5a0458306776e50ba08f28b3e5b51e2e83b1a596f1b158e9"
+    },
+    {
+      "path": "style.css",
+      "bytes": 501,
+      "sha256": "f73128914484644f50349c423a6db6bb5d7cdd20a727ba292e36618fc84eff57"
+    }
+  ],
+  "original_audio_retained": true,
+  "reference_observation": {
+    "timecoded_overview": 100,
+    "native_detail": 32,
+    "full_range": true,
+    "uninterrupted_subjective_playback": false
+  },
+  "actual_export_paired_frames": 24,
+  "paired_comparison_paths": [
+    "verification/paired-comparison-01.jpg",
+    "verification/paired-comparison-02.jpg",
+    "verification/supplementary/paired-comparison-01.jpg",
+    "verification/supplementary/paired-comparison-02.jpg"
+  ],
+  "paired_sheets_personally_viewed": 4,
+  "browser_errors": [],
+  "request_errors": [],
+  "user_approved": false,
+  "visual_residuals": [
+    "Gelasio/Geist/Geist Mono are local substitutes, not identified source fonts; serif weight/width, stop-word spacing, UI text and small HUD glyphs differ",
+    "Pulse head trajectory is calibrated at .15/.3/.45/.55s but curved lobes, line glow, blue background vignette and grid brightness differ",
+    "Seeded 500-dot histogram is genuinely simulated and counted; drift field, falling trajectories, bin heights and exact Gaussian/dot density differ from source",
+    "Kinetic text background scrolling phase/opacity, underline timing, posting ghost jitter and transition white flare are approximate",
+    "Independently authored curved icon is a Bezier stroke; exact variable-width original silhouette and border-draw path/glow differ",
+    "UI token transfers, connector curvature, active-word dimming/underline persistence, badge and gauge geometry differ; UI panel starts with a slide instead of exact source perspective tilt",
+    "Radar sweep speed/phase, elliptical-grid tilt, target pulse strength, callout arrivals and polyline details differ",
+    "Split-flap uses real per-character flip masks and deterministic alphabet cycles but intermediate letters/order, fold shading and final per-letter timing differ",
+    "Read-only/voice montage has font/outline-phase differences and distinct 3D text shading; voice caption appears sooner than source",
+    "Original audio retained solely for attributed comparison; no independent soundtrack or connected X analytics backend"
+  ]
+}

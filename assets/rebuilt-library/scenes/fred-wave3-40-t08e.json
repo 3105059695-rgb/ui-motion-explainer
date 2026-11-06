@@ -1,0 +1,418 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t08e",
+  "title": "评论里拎出问题",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "user0": "用户 1",
+    "comment0": "这个怎么在本地运行？",
+    "user1": "用户 2",
+    "comment1": "我该下载哪个版本？",
+    "user2": "用户 3",
+    "comment2": "已有文件会不会被覆盖？",
+    "issue0": "本地运行",
+    "issue1": "版本选择",
+    "issue2": "文件保留"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/7766dde92b8c62759fb875861efa2469112fe01daaf3e794a5fbe583234219af.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A series of sharp 'pop' and 'click' sound effects play in rapid succession, corresponding with the appearance of each comment bubble on the screen. There is no spoken dialogue.",
+          "label": "Opening Hook",
+          "visual": "A static wide shot of a white interface showing a series of user comments. The comments are arranged vertically in a list format. The background is a clean, minimalist white with soft gray borders around the comment bubbles. There are no people or products visible in this scene. The lighting is bright and even, mimicking a digital screen interface.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The 'pop' sound effects continue at a slightly faster tempo as the new text bubbles appear. A subtle, low-frequency digital hum begins in the background to build anticipation.",
+          "label": "Opening Hook",
+          "visual": "The same white interface from the previous scene remains as the base layer. On the right side of the frame, three large, black-outlined text bubbles with bold black characters appear one by one. The transition between the left-side comments and these new bubbles is a clean digital overlay. The overall color palette remains strictly black, white, and light gray, maintaining a high-contrast, graphic design aesthetic.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.5,
+      "action": "Several actual comments establish audience context"
+    },
+    {
+      "start": 2.0,
+      "end": 4.3,
+      "action": "Questions become separate outlined prompts while original comments persist"
+    },
+    {
+      "start": 4.3,
+      "end": 5,
+      "action": "Hold the question set"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n004-card",
+      "kind": "card",
+      "x": 180,
+      "y": 170,
+      "w": 850,
+      "h": 190,
+      "children": [
+        {
+          "id": "n001-circle",
+          "kind": "circle",
+          "x": 30,
+          "y": 30,
+          "w": 55,
+          "h": 55,
+          "fill": "#DBDBE0"
+        },
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 110,
+          "y": 32,
+          "w": 680,
+          "h": 50,
+          "text": "{{user0}}",
+          "size": 28,
+          "color": "#777780",
+          "align": "left"
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 35,
+          "y": 105,
+          "w": 770,
+          "h": 60,
+          "text": "{{comment0}}",
+          "size": 35,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.6,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            205
+          ],
+          [
+            0.6,
+            170,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-card",
+      "kind": "card",
+      "x": 180,
+      "y": 400,
+      "w": 850,
+      "h": 190,
+      "children": [
+        {
+          "id": "n005-circle",
+          "kind": "circle",
+          "x": 30,
+          "y": 30,
+          "w": 55,
+          "h": 55,
+          "fill": "#DBDBE0"
+        },
+        {
+          "id": "n006-text",
+          "kind": "text",
+          "x": 110,
+          "y": 32,
+          "w": 680,
+          "h": 50,
+          "text": "{{user1}}",
+          "size": 28,
+          "color": "#777780",
+          "align": "left"
+        },
+        {
+          "id": "n007-text",
+          "kind": "text",
+          "x": 35,
+          "y": 105,
+          "w": 770,
+          "h": 60,
+          "text": "{{comment1}}",
+          "size": 35,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.4,
+            0
+          ],
+          [
+            1.0,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.4,
+            435
+          ],
+          [
+            1.0,
+            400,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012-card",
+      "kind": "card",
+      "x": 180,
+      "y": 630,
+      "w": 850,
+      "h": 190,
+      "children": [
+        {
+          "id": "n009-circle",
+          "kind": "circle",
+          "x": 30,
+          "y": 30,
+          "w": 55,
+          "h": 55,
+          "fill": "#DBDBE0"
+        },
+        {
+          "id": "n010-text",
+          "kind": "text",
+          "x": 110,
+          "y": 32,
+          "w": 680,
+          "h": 50,
+          "text": "{{user2}}",
+          "size": 28,
+          "color": "#777780",
+          "align": "left"
+        },
+        {
+          "id": "n011-text",
+          "kind": "text",
+          "x": 35,
+          "y": 105,
+          "w": 770,
+          "h": 60,
+          "text": "{{comment2}}",
+          "size": 35,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.8,
+            0
+          ],
+          [
+            1.4,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.8,
+            665
+          ],
+          [
+            1.4,
+            630,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013-pill",
+      "kind": "pill",
+      "x": 1200,
+      "y": 235,
+      "w": 520,
+      "h": 110,
+      "label": "{{issue0}}",
+      "size": 48,
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "stroke": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.1,
+            0
+          ],
+          [
+            2.7,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.1,
+            270
+          ],
+          [
+            2.7,
+            235,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014-pill",
+      "kind": "pill",
+      "x": 1200,
+      "y": 465,
+      "w": 520,
+      "h": 110,
+      "label": "{{issue1}}",
+      "size": 48,
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "stroke": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.75,
+            0
+          ],
+          [
+            3.35,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.75,
+            500
+          ],
+          [
+            3.35,
+            465,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n015-pill",
+      "kind": "pill",
+      "x": 1200,
+      "y": 695,
+      "w": 520,
+      "h": 110,
+      "label": "{{issue2}}",
+      "size": 48,
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "stroke": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.4,
+            0
+          ],
+          [
+            4.0,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.4,
+            730
+          ],
+          [
+            4.0,
+            695,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

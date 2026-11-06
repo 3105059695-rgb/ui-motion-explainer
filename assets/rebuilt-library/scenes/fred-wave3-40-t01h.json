@@ -1,0 +1,149 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t01h",
+  "title": "注意澄清",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "subject": "这不等于什么都能自动完成",
+    "stamp": "注意"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/66ac023747717bf381b483bd5b1cdda43308556c1c95482ef04c4666e9290a3a.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A digital 'pop' sound effect occurs as the central element appears, followed by a fast-paced, upbeat electronic background track.",
+          "label": "Opening Hook",
+          "visual": "A static wide shot with a clean, solid white background. In the center of the frame, a black pill-shaped button appears with white text. The lighting is perfectly even across the frame with no visible shadows or texture on the background. A soft drop shadow is visible behind the central black element.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A sliding 'whoosh' sound effect accompanies the expansion of the UI element, while the electronic background music continues at a consistent tempo.",
+          "label": "Product Information",
+          "visual": "A sharp cut to a modified version of the previous scene. The central black button expands horizontally to the left, revealing a new white section containing Chinese characters inside a smaller black square. The original text remains on the right. The white background remains static and brightly lit with artificial studio-style evenness.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 0.8999999999999999,
+      "action": "Clarification subject appears first"
+    },
+    {
+      "start": 0.8999999999999999,
+      "end": 1.9500000000000002,
+      "action": "Attention label expands from the same sentence edge"
+    },
+    {
+      "start": 1.9500000000000002,
+      "end": 3,
+      "action": "Complete caution holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-pill",
+      "kind": "pill",
+      "x": 500,
+      "y": 400,
+      "w": 1070,
+      "h": 200,
+      "label": "{{subject}}",
+      "size": 62,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "x": [
+          [
+            0,
+            500
+          ],
+          [
+            1.05,
+            500
+          ],
+          [
+            1.86,
+            690
+          ]
+        ],
+        "w": [
+          [
+            0,
+            1070
+          ],
+          [
+            1.86,
+            1060
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-card",
+      "kind": "card",
+      "x": 195,
+      "y": 400,
+      "w": 470,
+      "h": 200,
+      "children": [
+        {
+          "id": "n002-pill",
+          "kind": "pill",
+          "x": 28,
+          "y": 40,
+          "w": 414,
+          "h": 120,
+          "label": "{{stamp}}",
+          "size": 75,
+          "fill": "#0B0B0F",
+          "color": "#FFFFFF"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "revealX": [
+          [
+            0.9,
+            0
+          ],
+          [
+            1.86,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

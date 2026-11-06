@@ -1,0 +1,133 @@
+{
+  "id": "case-072-weekday-check",
+  "reference_slug": "tankazunori0914-0fc886",
+  "duration": 30.058,
+  "width": 1920,
+  "height": 1080,
+  "fps": 60,
+  "provenance": "independent-case-specific-reimplementation",
+  "colors": {
+    "ink": "#0c0e08",
+    "paper": "#f0eee1",
+    "orange": "#f04b23"
+  },
+  "marks": [
+    0,
+    1,
+    1.5,
+    2.5,
+    3.5,
+    4.5,
+    5.5,
+    6.5,
+    8.5,
+    10,
+    12.5,
+    13.5,
+    14,
+    14.5,
+    15.5,
+    16.5,
+    17.5,
+    19.5,
+    20.5,
+    22.5,
+    23.5,
+    24.5,
+    25.5,
+    26.5,
+    27.5,
+    29.5
+  ],
+  "content": {
+    "date": "2026.10.02",
+    "week": 40,
+    "day_of_year": 275,
+    "days_in_year": 365,
+    "query": "今日は、何曜日？",
+    "answer": "金曜日。",
+    "next": "明日は、土曜日。",
+    "week_range": "2026.09.28 – 10.04",
+    "days": [
+      [
+        "MON",
+        "月",
+        "09.28"
+      ],
+      [
+        "TUE",
+        "火",
+        "09.29"
+      ],
+      [
+        "WED",
+        "水",
+        "09.30"
+      ],
+      [
+        "THU",
+        "木",
+        "10.01"
+      ],
+      [
+        "FRI",
+        "金",
+        "10.02"
+      ],
+      [
+        "SAT",
+        "土",
+        "10.03"
+      ],
+      [
+        "SUN",
+        "日",
+        "10.04"
+      ]
+    ]
+  },
+  "shots": [
+    [
+      0,
+      6.1,
+      "typed-query"
+    ],
+    [
+      6.1,
+      14,
+      "calendar-scan"
+    ],
+    [
+      14,
+      20,
+      "friday-answer"
+    ],
+    [
+      20,
+      26,
+      "calendar-statistics"
+    ],
+    [
+      26,
+      30.058,
+      "final-answer"
+    ]
+  ],
+  "attribution": {
+    "reference": "https://prompt-motion.com/tankazunori0914-0fc886",
+    "creator": "tankazunori0914",
+    "audio": "Original source audio preserved for reference comparison, ownership remains with the creator",
+    "fonts": "Noto Sans JP, Anton and Geist; accompanying SIL OFL files"
+  },
+  "limitations": [
+    "Dates intentionally match the original 2026.10.02 reference rather than today's date.",
+    "Grain, extrusion glow, glyph spacing, scan cadence and easing are reconstructed from observed frames and remain visually unapproved.",
+    "No original full-screen stills or original video frames are runtime backgrounds; the entire motion is drawn from editable geometry and text."
+  ],
+  "portable_demo": {
+    "source_motion_preserved": true,
+    "reference_media_distributed": false,
+    "textures": "Original replaceable schematic assets; not the original reference artwork.",
+    "approval": "Historical motion implementation; this portable demo is not user-approved."
+  }
+}

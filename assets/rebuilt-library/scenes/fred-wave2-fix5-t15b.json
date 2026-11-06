@@ -1,0 +1,110 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-fix5-t15b",
+  "title": "表格行聚焦",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "headers": [
+      "项目",
+      "方案 A",
+      "方案 B"
+    ],
+    "rows": [
+      [
+        "部署",
+        "本地",
+        "云端"
+      ],
+      [
+        "文件",
+        "原目录",
+        "上传副本"
+      ],
+      [
+        "协作",
+        "单人",
+        "多人"
+      ],
+      [
+        "使用",
+        "持续任务",
+        "即时问答"
+      ]
+    ]
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/150266d36cf943ccef6af5291943f53425b282ec4ab1e0fe26d75bfa97010bec.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A rhythmic, medium-tempo percussion track featuring a dry 'thud' and a bright, resonant 'pop' sound alternating at a consistent pace. There are no spoken words.",
+          "label": "Product Information",
+          "visual": "A static digital slide with a clean, white background and a structured table layout. The table features a dark navy blue header bar at the top and a light grey column on the left. The lighting is uniform and flat as it is a digital screen capture. There is no visible movement or subject in this scene.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:00"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 4.25,
+      "action": "Complete table remains while emphasis visits each measured row"
+    },
+    {
+      "start": 4.25,
+      "end": 5,
+      "action": "Last comparison holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-b3-table",
+      "kind": "b3-table",
+      "x": 180,
+      "y": 160,
+      "w": 1560,
+      "h": 760,
+      "headersKey": "headers",
+      "rowsKey": "rows",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            4.1,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

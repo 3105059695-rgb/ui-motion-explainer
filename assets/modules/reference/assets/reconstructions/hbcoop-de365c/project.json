@@ -1,0 +1,137 @@
+{
+  "id": "case-080-full-stop",
+  "reference_slug": "hbcoop-de365c",
+  "duration": 29.056,
+  "width": 1920,
+  "height": 1080,
+  "fps": 60,
+  "provenance": "independent-case-specific-reimplementation",
+  "marks": [
+    0,
+    0.5,
+    1.0,
+    1.5,
+    2.5,
+    3.5,
+    4.5,
+    5.5,
+    6.5,
+    7.5,
+    8.5,
+    9.5,
+    10.5,
+    11.5,
+    12.5,
+    13.5,
+    15.5,
+    16.5,
+    17.5,
+    18.5,
+    20.5,
+    21.5,
+    22.5,
+    23.5,
+    24.5,
+    25.5,
+    26.5,
+    28.5
+  ],
+  "colors": {
+    "paper": "#f0eddf",
+    "ink": "#171915",
+    "accent": "#c46548"
+  },
+  "content": {
+    "header": "FULL STOP",
+    "credit": "WRITTEN IN CODE BY CLAUDE OPUS 5.5",
+    "footer": "NO VIDEO MODEL. NO STOCK. PICTURE AND SOUND ARE CODE.",
+    "claim": [
+      "Claude Opus 5.5 wrote",
+      "every frame of this."
+    ],
+    "figures": [
+      "a point",
+      "a line",
+      "a circle",
+      "a sphere",
+      "a lens",
+      "a ball",
+      "a flock",
+      "a world",
+      "a full stop"
+    ]
+  },
+  "shots": [
+    [
+      0,
+      2,
+      "point"
+    ],
+    [
+      2,
+      4,
+      "line"
+    ],
+    [
+      4,
+      6,
+      "circle"
+    ],
+    [
+      6,
+      8,
+      "sphere"
+    ],
+    [
+      8,
+      12,
+      "lens"
+    ],
+    [
+      12,
+      16,
+      "ball"
+    ],
+    [
+      16,
+      21,
+      "flock"
+    ],
+    [
+      21,
+      23.78,
+      "world"
+    ],
+    [
+      23.78,
+      29.056,
+      "full-stop"
+    ]
+  ],
+  "physics": {
+    "bounce_restitution": 0.75,
+    "flock_points": 8192,
+    "globe_tilt_degrees": 23.4,
+    "lens_index_of_refraction": 1.5
+  },
+  "attribution": {
+    "reference": "https://prompt-motion.com/hbcoop-de365c",
+    "creator": "HBCoop_",
+    "audio": "Original comparison audio remains with its creator",
+    "fonts": "Times New Roman (Windows system dependency, not redistributed) with bundled Instrument Serif SIL OFL fallback; original font not independently confirmed",
+    "map": "Natural Earth 1:110m land polygons, public domain, https://www.naturalearthdata.com/about/terms-of-use/"
+  },
+  "limitations": [
+    "Dedicated code reimplementation, not recovered original code.",
+    "Bounce and flock motions are deterministic analytic reconstructions; original simulation trajectories, camera and material shader remain different.",
+    "All runtime drawings, textures, refraction code and geometry are independently generated. No full-screen original still or original video is played.",
+    "The on-screen original authorship assertion is replicated as reference text, not verified as a fact.",
+    "Main serif uses the Windows Times New Roman system font. Portable fallback Instrument Serif has visibly narrower metrics."
+  ],
+  "portable_demo": {
+    "source_motion_preserved": true,
+    "reference_media_distributed": false,
+    "textures": "Original replaceable schematic assets; not the original reference artwork.",
+    "approval": "Historical motion implementation; this portable demo is not user-approved."
+  }
+}

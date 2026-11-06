@@ -1,0 +1,759 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t02k",
+  "title": "Logo 一分为二：两张身份卡各自点亮要讲的事",
+  "duration": 17.933,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "今天给我五分钟",
+    "text02": "代码",
+    "text03": "使用者",
+    "text04": "找到项目",
+    "text05": "下载工具",
+    "text06": "让 AI 帮你运行",
+    "text07": "创作者",
+    "text08": "上传自己的作品",
+    "text09": "让其他人直接使用",
+    "text10": "收藏，留着下一次直接用"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "pill",
+      "x": 620,
+      "y": 250,
+      "w": 680,
+      "h": 110,
+      "label": "{{text01}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "w": [
+          [
+            0.0,
+            680
+          ],
+          [
+            1.7933,
+            680
+          ],
+          [
+            3.04861,
+            120
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            620
+          ],
+          [
+            3.04861,
+            900
+          ]
+        ],
+        "opacity": [
+          [
+            0.0,
+            1
+          ],
+          [
+            3.22794,
+            1
+          ],
+          [
+            3.5866,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "circle",
+      "x": 895,
+      "y": 230,
+      "w": 130,
+      "h": 130,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            2.68995,
+            0
+          ],
+          [
+            3.3176,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            895
+          ],
+          [
+            2.68995,
+            895
+          ],
+          [
+            3.3176,
+            895,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            230
+          ],
+          [
+            2.68995,
+            230
+          ],
+          [
+            3.3176,
+            230,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "text",
+      "x": 900,
+      "y": 265,
+      "w": 120,
+      "h": 56.0,
+      "text": "{{text02}}",
+      "size": 35,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            2.86928,
+            0
+          ],
+          [
+            3.49694,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            900
+          ],
+          [
+            2.86928,
+            900
+          ],
+          [
+            3.49694,
+            900,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            265
+          ],
+          [
+            2.86928,
+            265
+          ],
+          [
+            3.49694,
+            265,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "window",
+      "x": 220,
+      "y": 410,
+      "w": 700,
+      "h": 420,
+      "label": "{{text03}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.40727,
+            0
+          ],
+          [
+            4.03493,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            100
+          ],
+          [
+            3.40727,
+            100
+          ],
+          [
+            4.03493,
+            220,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            460
+          ],
+          [
+            3.40727,
+            460
+          ],
+          [
+            4.03493,
+            410,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "pill",
+      "x": 260,
+      "y": 520,
+      "w": 620,
+      "h": 66,
+      "label": "{{text04}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.66258,
+            0
+          ],
+          [
+            5.20057,
+            1
+          ],
+          [
+            10.58047,
+            1
+          ],
+          [
+            11.65645,
+            0.18
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            260
+          ],
+          [
+            4.66258,
+            260
+          ],
+          [
+            5.29024,
+            260,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            520
+          ],
+          [
+            4.66258,
+            520
+          ],
+          [
+            5.29024,
+            520,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "pill",
+      "x": 260,
+      "y": 605,
+      "w": 620,
+      "h": 66,
+      "label": "{{text05}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            6.63521,
+            0
+          ],
+          [
+            7.1732,
+            1
+          ],
+          [
+            10.58047,
+            1
+          ],
+          [
+            11.65645,
+            0.18
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            260
+          ],
+          [
+            6.63521,
+            260
+          ],
+          [
+            7.26287,
+            260,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            605
+          ],
+          [
+            6.63521,
+            605
+          ],
+          [
+            7.26287,
+            605,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "pill",
+      "x": 260,
+      "y": 690,
+      "w": 620,
+      "h": 66,
+      "label": "{{text06}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.60784,
+            0
+          ],
+          [
+            9.14583,
+            1
+          ],
+          [
+            10.58047,
+            1
+          ],
+          [
+            11.65645,
+            0.18
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            260
+          ],
+          [
+            8.60784,
+            260
+          ],
+          [
+            9.2355,
+            260,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            690
+          ],
+          [
+            8.60784,
+            690
+          ],
+          [
+            9.2355,
+            690,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "window",
+      "x": 1000,
+      "y": 410,
+      "w": 700,
+      "h": 420,
+      "label": "{{text07}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.40727,
+            0
+          ],
+          [
+            4.03493,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1120
+          ],
+          [
+            3.40727,
+            1120
+          ],
+          [
+            4.03493,
+            1000,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            460
+          ],
+          [
+            3.40727,
+            460
+          ],
+          [
+            4.03493,
+            410,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "pill",
+      "x": 1040,
+      "y": 520,
+      "w": 620,
+      "h": 66,
+      "label": "{{text08}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            10.58047,
+            0
+          ],
+          [
+            11.11846,
+            1
+          ],
+          [
+            16.1397,
+            1
+          ],
+          [
+            17.03635,
+            0.18
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1040
+          ],
+          [
+            10.58047,
+            1040
+          ],
+          [
+            11.20812,
+            1040,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            520
+          ],
+          [
+            10.58047,
+            520
+          ],
+          [
+            11.20812,
+            520,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010",
+      "kind": "pill",
+      "x": 1040,
+      "y": 605,
+      "w": 620,
+      "h": 66,
+      "label": "{{text09}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            12.37377,
+            0
+          ],
+          [
+            12.91176,
+            1
+          ],
+          [
+            16.1397,
+            1
+          ],
+          [
+            17.03635,
+            0.18
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1040
+          ],
+          [
+            12.37377,
+            1040
+          ],
+          [
+            13.00142,
+            1040,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            605
+          ],
+          [
+            12.37377,
+            605
+          ],
+          [
+            13.00142,
+            605,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011",
+      "kind": "pill",
+      "x": 590,
+      "y": 875,
+      "w": 740,
+      "h": 80,
+      "label": "{{text10}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            15.96037,
+            0
+          ],
+          [
+            16.58803,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            590
+          ],
+          [
+            15.96037,
+            590
+          ],
+          [
+            16.58803,
+            590,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            925
+          ],
+          [
+            15.96037,
+            925
+          ],
+          [
+            16.58803,
+            875,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/8d0f6a47cb63559648202a8557e80376796787b048f9329f7db5583336642023.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "Give me five minutes today.",
+          "label": "Opening Hook",
+          "visual": "A clean, minimalist white background. In the center is a black rounded rectangle with shadow. There is a small logo in the top right corner with yellow and purple accents. The overall color palette is monochromatic with a high contrast between white and black. Lighting is uniform and flat with no visible shadows on the background.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "I will divide into two identities to explain GitHub clearly to you.",
+          "label": "Product Information",
+          "visual": "The central black bar moves up slightly as two white rectangular cards slide up from the bottom of the screen. A small circular icon of an animal's silhouette appears at the top center. The scene is static with minimalist animation of the elements sliding into place. The background remains a solid, clean white.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "As a user, how to find a project, which tool to download, and how to let AI help you run it in one sentence.",
+          "label": "Product Selling Points",
+          "visual": "The camera is static on the two white cards. On the left card, three lines of grey rounded boxes appear one by one. The overall look is modern and UI-focused with soft shadows. The lighting remains even across the entire frame.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:10",
+          "timestamp_start": "0:04"
+        },
+        {
+          "audio": "As an uploader, how to upload things you made with AI yourself so that others can also use them.",
+          "label": "Product Selling Points",
+          "visual": "The grey boxes on the left card fade out as two new boxes appear on the right card. The transition is smooth. The color palette continues to be dominated by white, grey, and black with very high clarity.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:15",
+          "timestamp_start": "0:10"
+        },
+        {
+          "audio": "I suggest everyone first bookmark and like the video.",
+          "label": "Call to Action",
+          "visual": "The two cards slide down and out of frame. The original black rounded rectangle returns to the center, this time containing star and thumbs-up icons. The visual remains minimalist and high-contrast, finishing with the same aesthetic it began with.",
+          "shot_type": "Wide Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:18",
+          "timestamp_start": "0:15"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "“今天给我 5 分钟”黑胶囊收成黑圆点 → 圆点变成 GitHub 标志 → 两张身份卡从标志后向左右展开，每张卡按口播点亮要讲的几件事"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 17.933,
+      "action": "“今天给我 5 分钟”黑胶囊收成黑圆点 → 圆点变成 GitHub 标志 → 两张身份卡从标志后向左右展开，每张卡按口播点亮要讲的几件事"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

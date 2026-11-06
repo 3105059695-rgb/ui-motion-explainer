@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0.0",
+  "title": "197 · Étude for Falling Bodies collision music machine",
+  "template": "kamstudiolabs-447565-dedicated-collision-machine",
+  "reference_slug": "kamstudiolabs-447565",
+  "reference_url": "https://prompt-motion.com/kamstudiolabs-447565",
+  "source_post": "https://x.com/KamStudioLabs/status/2102899866762440893",
+  "reference_author": "@KamStudioLabs",
+  "width": 1280,
+  "height": 720,
+  "design_width": 1920,
+  "design_height": 1080,
+  "duration": 47.0,
+  "fps": 30,
+  "loop": false,
+  "seed": 197197,
+  "marks": [
+    0.8,
+    3.2,
+    6,
+    10.4,
+    16.4,
+    20,
+    26.4,
+    30.4,
+    36,
+    40.4,
+    43.6,
+    46.9
+  ],
+  "scenes": [
+    {
+      "start": 0,
+      "end": 0.3,
+      "name": "Silent stage and six segmented score bars"
+    },
+    {
+      "start": 0.3,
+      "end": 1,
+      "name": "First amber body launches toward marimba"
+    },
+    {
+      "start": 1,
+      "end": 3.5,
+      "name": "Dminor intro notes and collection buckets"
+    },
+    {
+      "start": 3.5,
+      "end": 6,
+      "name": "Intro marimba secondphrase"
+    },
+    {
+      "start": 6,
+      "end": 8.5,
+      "name": "Theme introduces cyan glockenspiel and purplebass"
+    },
+    {
+      "start": 8.5,
+      "end": 11,
+      "name": "Theme interlocking pitched bodies"
+    },
+    {
+      "start": 11,
+      "end": 13.5,
+      "name": "Yellow hat cymbal enters"
+    },
+    {
+      "start": 13.5,
+      "end": 16,
+      "name": "Theme layers accumulate and cymbal crashes"
+    },
+    {
+      "start": 16,
+      "end": 18.5,
+      "name": "Groove red drums join all three pitched tiers"
+    },
+    {
+      "start": 18.5,
+      "end": 21,
+      "name": "Groove simultaneous collisions"
+    },
+    {
+      "start": 21,
+      "end": 23.5,
+      "name": "Groove answerphrase"
+    },
+    {
+      "start": 23.5,
+      "end": 26,
+      "name": "Groove transition chord"
+    },
+    {
+      "start": 26,
+      "end": 28.5,
+      "name": "Lift Dmajor bright harmony"
+    },
+    {
+      "start": 28.5,
+      "end": 31,
+      "name": "Lift interlocking fiveinstrument families"
+    },
+    {
+      "start": 31,
+      "end": 33.5,
+      "name": "Lift repeated pulse and resonator glow"
+    },
+    {
+      "start": 33.5,
+      "end": 36,
+      "name": "Lift final counterpointphrase"
+    },
+    {
+      "start": 36,
+      "end": 38.5,
+      "name": "Fall reduces drum layers"
+    },
+    {
+      "start": 38.5,
+      "end": 41,
+      "name": "Fall marimba and glockenspiel answer"
+    },
+    {
+      "start": 41,
+      "end": 43.5,
+      "name": "Coda final simultaneous multisurface chord"
+    },
+    {
+      "start": 43.5,
+      "end": 44.8,
+      "name": "Bodies rebound and drain to collection buckets"
+    },
+    {
+      "start": 44.8,
+      "end": 46,
+      "name": "All443notes complete and devices stop"
+    },
+    {
+      "start": 46,
+      "end": 47,
+      "name": "Final static stage hold until actual source end"
+    }
+  ],
+  "gravity": 1500,
+  "bpm": 96,
+  "music_duration": 45,
+  "clock_offset": 1,
+  "colors": {
+    "background": "#090c16",
+    "marimba": "#edb35e",
+    "glock": "#91d7e7",
+    "bass": "#ae85ef",
+    "cymbals": "#e8d977",
+    "drums": "#ef8885"
+  },
+  "provenance": "Dedicated nativeCanvas reconstruction of42tuned/percussion surfaces, independentglass/resonator/drum/cymbal shapes, launchers/buckets, scalar443contact score, analytical gravity trajectories, seeded spark/ripple responses. No source images/videos are loaded at runtime. AllfontsOFL. Original soundtrack in verification is comparisonmaterial; synthesize-score.py also makes an independently synthesized collision soundtrack from the same editableevents.",
+  "visual_status": "independent-reconstruction-with-differences",
+  "differences": [
+    "Source instrument layout, pitchlabels and443-count chronology are observed; simultaneous/soft note assignments are partly inferred from nearby scalarbrightness and may differ from the originalMIDI score.",
+    "Ball flight is independently authored with closed-form gravity and target contacts; exact original launch velocities, radii, collection directions and bouncepaths are not recovered.",
+    "Instrument outlines, glass/rim/resonator shading, launchers and collection buckets are native geometry. Original bloom/photometric scattering/materials and transient deformation remain different.",
+    "OFL InstrumentSerifItalic/JetBrainsMono substitute originalfonts; titlewidth/fontdetails differ.",
+    "Complete47second source picture is included:2820original60fpsframes are represented by1410output30fpsframes.47.061audio tail is cut to47second picture duration.",
+    "Browser optional collision synth implements independent timbres. The exported original reference soundtrack is for comparison; no originalaudio ownership or exact visual/audio samplealignment is claimed.",
+    "Flight arc lift and blur are tuned after the first source comparison; exact source emission sides and all rebound paths still differ. Live Play/Pause/Reset/slider and optional synthesized audio are real local controls."
+  ],
+  "editable": "project.json full22chronological scenes, colors, gravity/BPM/clock;collision-score.json443editableinstrument/note/timecontacts;composition.js actualnative geometry and physics;synthesize-score.py independentaudio renderer",
+  "portable_demo": {
+    "source_motion_preserved": true,
+    "reference_media_distributed": false,
+    "textures": "Original replaceable schematic assets; not the original reference artwork.",
+    "approval": "Historical motion implementation; this portable demo is not user-approved."
+  }
+}

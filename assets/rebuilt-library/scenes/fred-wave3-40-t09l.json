@@ -1,0 +1,284 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t09l",
+  "title": "复制地址交给 AI",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "url": "https://example.org/project",
+    "task": "请阅读这个项目，告诉我如何使用：",
+    "send": "↑"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/030f28c4c8cade53a230900ed1c2eaf899bbf6c1b2d029b6456f2702ceab3eeb.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single crisp, high-pitched digital click sound effect as the cursor clicks the copy icon.",
+          "label": "Opening Hook",
+          "visual": "A white digital interface window is centered on a clean white background. A black cursor arrow enters from the bottom right and moves toward a copy icon next to a URL link. The lighting is perfectly even with no shadows. The UI elements are sharp and minimalist.",
+          "shot_type": "Close-Up",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A subtle keyboard 'paste' sound effect followed by silence.",
+          "label": "Product Information",
+          "visual": "The cursor moves downward to a second white input box containing Chinese text. The URL link is pasted into the text box, appearing instantly after the existing text. The cursor then hovers over a black circular arrow button on the right side of the input box.",
+          "shot_type": "Close-Up",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A final sharp digital click followed by a low-frequency hum that fades out.",
+          "label": "Usage Scenarios",
+          "visual": "The cursor clicks the black circular arrow button. A loading animation, represented by a faint grey pulsing circle, appears briefly near the bottom of the input box. The screen remains static as the interface processes the command. The background remains a consistent pure white.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.5,
+      "action": "Cursor selects the actual source address"
+    },
+    {
+      "start": 1.5,
+      "end": 2.9,
+      "action": "Same URL travels to the task input"
+    },
+    {
+      "start": 2.9,
+      "end": 3.9000000000000004,
+      "action": "Send action starts processing"
+    },
+    {
+      "start": 3.9000000000000004,
+      "end": 5,
+      "action": "Await the result without inventing an answer"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-window",
+      "kind": "window",
+      "x": 240,
+      "y": 170,
+      "w": 1440,
+      "h": 250,
+      "label": "来源地址",
+      "children": []
+    },
+    {
+      "id": "n002-window",
+      "kind": "window",
+      "x": 240,
+      "y": 580,
+      "w": 1440,
+      "h": 300,
+      "label": "交给 AI 的具体任务",
+      "children": []
+    },
+    {
+      "id": "retained-source-address",
+      "kind": "text",
+      "x": 300,
+      "y": 275,
+      "w": 1100,
+      "h": 75,
+      "text": "{{url}}",
+      "size": 45
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 300,
+      "y": 275,
+      "w": 1100,
+      "h": 75,
+      "text": "{{url}}",
+      "size": 45,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "y": [
+          [
+            0,
+            275
+          ],
+          [
+            1.6,
+            275
+          ],
+          [
+            2.75,
+            735
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-text",
+      "kind": "text",
+      "x": 300,
+      "y": 680,
+      "w": 1100,
+      "h": 65,
+      "text": "{{task}}",
+      "size": 38,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n005-pill",
+      "kind": "pill",
+      "x": 1530,
+      "y": 760,
+      "w": 95,
+      "h": 80,
+      "label": "{{send}}",
+      "size": 50,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "n006-b2-cursor",
+      "kind": "b2-cursor",
+      "x": 1610,
+      "y": 410,
+      "w": 55,
+      "h": 75,
+      "tracks": {
+        "x": [
+          [
+            0,
+            1740
+          ],
+          [
+            1.0,
+            1520
+          ],
+          [
+            2.0,
+            1520
+          ],
+          [
+            3.25,
+            1570
+          ]
+        ],
+        "y": [
+          [
+            0,
+            480
+          ],
+          [
+            1.0,
+            280
+          ],
+          [
+            2.0,
+            280
+          ],
+          [
+            3.25,
+            790
+          ]
+        ],
+        "pulse": [
+          [
+            0.95,
+            0
+          ],
+          [
+            1.1,
+            1
+          ],
+          [
+            1.5,
+            0
+          ],
+          [
+            3.2,
+            0
+          ],
+          [
+            3.35,
+            1
+          ],
+          [
+            3.75,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-circle",
+      "kind": "circle",
+      "x": 880,
+      "y": 910,
+      "w": 45,
+      "h": 45,
+      "fill": "#DBDBE0",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.5,
+            0
+          ],
+          [
+            3.9,
+            1
+          ]
+        ],
+        "scale": [
+          [
+            3.5,
+            0.8
+          ],
+          [
+            4.25,
+            1.3
+          ],
+          [
+            4.9,
+            0.9
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 7,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

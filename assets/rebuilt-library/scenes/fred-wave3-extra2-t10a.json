@@ -1,0 +1,364 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-extra2-t10a",
+  "title": "长回复拎要点",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "row10": "先明确你需要什么结果。",
+    "row21": "可以选择不同的工具：",
+    "row32": "Subtitle Edit 处理字幕，",
+    "row43": "whisper.cpp 用于本地转写，",
+    "row54": "Buzz 提供图形化操作。",
+    "summaryTitle": "提取要点",
+    "point0": "1  Subtitle Edit",
+    "point1": "2  whisper.cpp",
+    "point2": "3  Buzz"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/8a7ce4855486ec81f06b02983e82ab52092c0fb378d591e049bb8675c6bfaa3a.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A high-pitched, digital 'click' or 'ding' sound, similar to a user interface interaction or notification sound.",
+          "label": "Opening Hook",
+          "visual": "Static camera angle showing a white digital interface with several paragraphs of Chinese text and a dark circular profile icon at the top left. The lighting is uniform, simulated digital screen brightness. The background is a plain off-white color. A logo with blue text and a red AI graphic is in the upper right corner.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Repetitive, fast-paced electronic digital blips, mimicking the sound of data processing or rapid on-screen updates.",
+          "label": "Product Information",
+          "visual": "Static view of the same text interface. A cursor or selection focus is not visible, but the screen is divided: the left side contains the original block of text, while a white panel appears on the right side. The overall color palette is minimalist, featuring white, grey, and black text.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A sequence of three distinct 'pop' or 'bubble' sound effects, timed with the appearance of each numbered point on the screen.",
+          "label": "Product Selling Points",
+          "visual": "The camera remains static on the digital interface. Three numbered points appear in the right-hand panel: 1. Subtitle Edit, 2. whisper.cpp, 3. Buzz. Each point is highlighted with a black background and white text. The lighting remains bright and artificial, characteristic of a software demo environment.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A final sharp 'ding' sound, echoing the opening hook, signaling the conclusion of the list generation.",
+          "label": "Call to Action",
+          "visual": "A brief flash of the completed list on the right panel. The background is clean and clinical. The focus remains on the third point 'Buzz' which is the most recently added item. The color grading is high-contrast with saturated black against a pure white background.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.5,
+      "action": "Keep the original long answer visible"
+    },
+    {
+      "start": 1.5,
+      "end": 3.0,
+      "action": "Same answer narrows to make space for a separate extraction column"
+    },
+    {
+      "start": 2.0999999999999996,
+      "end": 5.1,
+      "action": "Three named source points are extracted one by one"
+    },
+    {
+      "start": 5.1,
+      "end": 6,
+      "action": "Both source and concise points remain"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-window",
+      "kind": "window",
+      "x": 260,
+      "y": 160,
+      "w": 1400,
+      "h": 760,
+      "label": "完整原回复",
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 35,
+          "y": 100,
+          "w": 1330,
+          "h": 55,
+          "text": "{{row10}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 35,
+          "y": 165,
+          "w": 1330,
+          "h": 55,
+          "text": "{{row21}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 35,
+          "y": 230,
+          "w": 1330,
+          "h": 55,
+          "text": "{{row32}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 35,
+          "y": 295,
+          "w": 1330,
+          "h": 55,
+          "text": "{{row43}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n006-text",
+          "kind": "text",
+          "x": 35,
+          "y": 360,
+          "w": 1330,
+          "h": 55,
+          "text": "{{row54}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "tracks": {
+        "w": [
+          [
+            0,
+            1400
+          ],
+          [
+            1.5,
+            1400
+          ],
+          [
+            3.0,
+            770
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-card",
+      "kind": "card",
+      "x": 1120,
+      "y": 160,
+      "w": 560,
+      "h": 760,
+      "children": [
+        {
+          "id": "n007-text",
+          "kind": "text",
+          "x": 35,
+          "y": 40,
+          "w": 480,
+          "h": 70,
+          "text": "{{summaryTitle}}",
+          "size": 45,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.68,
+            0
+          ],
+          [
+            2.58,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.68,
+            195
+          ],
+          [
+            2.58,
+            160,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-pill",
+      "kind": "pill",
+      "x": 1160,
+      "y": 340,
+      "w": 480,
+      "h": 115,
+      "label": "{{point0}}",
+      "size": 40,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.1,
+            0
+          ],
+          [
+            2.82,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.1,
+            375
+          ],
+          [
+            2.82,
+            340,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010-pill",
+      "kind": "pill",
+      "x": 1160,
+      "y": 510,
+      "w": 480,
+      "h": 115,
+      "label": "{{point1}}",
+      "size": 40,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.06,
+            0
+          ],
+          [
+            3.78,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.06,
+            545
+          ],
+          [
+            3.78,
+            510,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011-pill",
+      "kind": "pill",
+      "x": 1160,
+      "y": 680,
+      "w": 480,
+      "h": 115,
+      "label": "{{point2}}",
+      "size": 40,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.02,
+            0
+          ],
+          [
+            4.74,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            4.02,
+            715
+          ],
+          [
+            4.74,
+            680,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

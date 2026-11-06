@@ -1,0 +1,1211 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t14l",
+  "title": "作品能玩 → 一条进度停在左边，离“真正好用”还很远",
+  "duration": 8.367,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "能玩",
+    "text02": "真正好用的软件",
+    "text03": "还有很长一段路",
+    "media1.start": 0,
+    "media1.speed": 1,
+    "media2.start": 0,
+    "media2.speed": 1,
+    "media3.start": 0,
+    "media3.speed": 1,
+    "media4.start": 0,
+    "media4.speed": 1,
+    "media5.start": 0,
+    "media5.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media2": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media3": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media4": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media5": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "image",
+      "x": 180,
+      "y": 170,
+      "w": 760,
+      "h": 320,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        2.09175
+      ]
+    },
+    {
+      "id": "n002",
+      "kind": "check",
+      "x": 850,
+      "y": 410,
+      "w": 55,
+      "h": 55,
+      "visible": [
+        0.8367,
+        2.09175
+      ]
+    },
+    {
+      "id": "n003",
+      "kind": "image",
+      "x": 980,
+      "y": 170,
+      "w": 760,
+      "h": 320,
+      "asset": "media2",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        2.09175
+      ]
+    },
+    {
+      "id": "n004",
+      "kind": "check",
+      "x": 1650,
+      "y": 410,
+      "w": 55,
+      "h": 55,
+      "visible": [
+        1.04588,
+        2.09175
+      ]
+    },
+    {
+      "id": "n005",
+      "kind": "image",
+      "x": 180,
+      "y": 530,
+      "w": 760,
+      "h": 320,
+      "asset": "media3",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        2.09175
+      ]
+    },
+    {
+      "id": "n006",
+      "kind": "check",
+      "x": 850,
+      "y": 770,
+      "w": 55,
+      "h": 55,
+      "visible": [
+        1.25505,
+        2.09175
+      ]
+    },
+    {
+      "id": "n007",
+      "kind": "image",
+      "x": 980,
+      "y": 530,
+      "w": 760,
+      "h": 320,
+      "asset": "media4",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        2.09175
+      ]
+    },
+    {
+      "id": "n008",
+      "kind": "check",
+      "x": 1650,
+      "y": 770,
+      "w": 55,
+      "h": 55,
+      "visible": [
+        1.46423,
+        2.09175
+      ]
+    },
+    {
+      "id": "n009",
+      "kind": "image",
+      "x": 200,
+      "y": 150,
+      "w": 1520,
+      "h": 770,
+      "asset": "media5",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        2.09175,
+        8.368
+      ],
+      "tracks": {
+        "x": [
+          [
+            2.09175,
+            200
+          ],
+          [
+            4.1835,
+            200
+          ],
+          [
+            5.35488,
+            100
+          ]
+        ],
+        "y": [
+          [
+            2.09175,
+            150
+          ],
+          [
+            4.1835,
+            150
+          ],
+          [
+            5.35488,
+            315
+          ]
+        ],
+        "w": [
+          [
+            2.09175,
+            1520
+          ],
+          [
+            4.1835,
+            1520
+          ],
+          [
+            5.35488,
+            650
+          ]
+        ],
+        "h": [
+          [
+            2.09175,
+            770
+          ],
+          [
+            4.1835,
+            770
+          ],
+          [
+            5.35488,
+            430
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010",
+      "kind": "rect",
+      "x": 810,
+      "y": 550,
+      "w": 38,
+      "h": 7,
+      "fill": "#797982",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.10387,
+            0
+          ],
+          [
+            5.39672,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            810
+          ],
+          [
+            5.10387,
+            810
+          ],
+          [
+            5.39672,
+            810,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            550
+          ],
+          [
+            5.10387,
+            550
+          ],
+          [
+            5.39672,
+            550,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011",
+      "kind": "rect",
+      "x": 882,
+      "y": 550,
+      "w": 38,
+      "h": 7,
+      "fill": "#797982",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.17081,
+            0
+          ],
+          [
+            5.46365,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            882
+          ],
+          [
+            5.17081,
+            882
+          ],
+          [
+            5.46365,
+            882,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            550
+          ],
+          [
+            5.17081,
+            550
+          ],
+          [
+            5.46365,
+            550,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012",
+      "kind": "rect",
+      "x": 954,
+      "y": 550,
+      "w": 38,
+      "h": 7,
+      "fill": "#797982",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.23774,
+            0
+          ],
+          [
+            5.53059,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            954
+          ],
+          [
+            5.23774,
+            954
+          ],
+          [
+            5.53059,
+            954,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            550
+          ],
+          [
+            5.23774,
+            550
+          ],
+          [
+            5.53059,
+            550,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013",
+      "kind": "rect",
+      "x": 1026,
+      "y": 550,
+      "w": 38,
+      "h": 7,
+      "fill": "#797982",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.30468,
+            0
+          ],
+          [
+            5.59752,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1026
+          ],
+          [
+            5.30468,
+            1026
+          ],
+          [
+            5.59752,
+            1026,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            550
+          ],
+          [
+            5.30468,
+            550
+          ],
+          [
+            5.59752,
+            550,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014",
+      "kind": "rect",
+      "x": 1098,
+      "y": 550,
+      "w": 38,
+      "h": 7,
+      "fill": "#797982",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.37161,
+            0
+          ],
+          [
+            5.66446,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1098
+          ],
+          [
+            5.37161,
+            1098
+          ],
+          [
+            5.66446,
+            1098,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            550
+          ],
+          [
+            5.37161,
+            550
+          ],
+          [
+            5.66446,
+            550,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n015",
+      "kind": "rect",
+      "x": 1170,
+      "y": 550,
+      "w": 38,
+      "h": 7,
+      "fill": "#797982",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.43855,
+            0
+          ],
+          [
+            5.7314,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1170
+          ],
+          [
+            5.43855,
+            1170
+          ],
+          [
+            5.7314,
+            1170,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            550
+          ],
+          [
+            5.43855,
+            550
+          ],
+          [
+            5.7314,
+            550,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n016",
+      "kind": "rect",
+      "x": 1242,
+      "y": 550,
+      "w": 38,
+      "h": 7,
+      "fill": "#797982",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.50549,
+            0
+          ],
+          [
+            5.79833,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1242
+          ],
+          [
+            5.50549,
+            1242
+          ],
+          [
+            5.79833,
+            1242,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            550
+          ],
+          [
+            5.50549,
+            550
+          ],
+          [
+            5.79833,
+            550,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n017",
+      "kind": "rect",
+      "x": 1314,
+      "y": 550,
+      "w": 38,
+      "h": 7,
+      "fill": "#797982",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.57242,
+            0
+          ],
+          [
+            5.86527,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1314
+          ],
+          [
+            5.57242,
+            1314
+          ],
+          [
+            5.86527,
+            1314,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            550
+          ],
+          [
+            5.57242,
+            550
+          ],
+          [
+            5.86527,
+            550,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n018",
+      "kind": "rect",
+      "x": 1386,
+      "y": 550,
+      "w": 38,
+      "h": 7,
+      "fill": "#797982",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.63936,
+            0
+          ],
+          [
+            5.9322,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1386
+          ],
+          [
+            5.63936,
+            1386
+          ],
+          [
+            5.9322,
+            1386,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            550
+          ],
+          [
+            5.63936,
+            550
+          ],
+          [
+            5.9322,
+            550,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n019",
+      "kind": "rect",
+      "x": 1458,
+      "y": 550,
+      "w": 38,
+      "h": 7,
+      "fill": "#797982",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.70629,
+            0
+          ],
+          [
+            5.99914,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1458
+          ],
+          [
+            5.70629,
+            1458
+          ],
+          [
+            5.99914,
+            1458,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            550
+          ],
+          [
+            5.70629,
+            550
+          ],
+          [
+            5.99914,
+            550,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n020",
+      "kind": "rect",
+      "x": 1530,
+      "y": 550,
+      "w": 38,
+      "h": 7,
+      "fill": "#797982",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.77323,
+            0
+          ],
+          [
+            6.06608,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1530
+          ],
+          [
+            5.77323,
+            1530
+          ],
+          [
+            6.06608,
+            1530,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            550
+          ],
+          [
+            5.77323,
+            550
+          ],
+          [
+            6.06608,
+            550,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n021",
+      "kind": "rect",
+      "x": 1602,
+      "y": 550,
+      "w": 38,
+      "h": 7,
+      "fill": "#797982",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.84017,
+            0
+          ],
+          [
+            6.13301,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1602
+          ],
+          [
+            5.84017,
+            1602
+          ],
+          [
+            6.13301,
+            1602,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            550
+          ],
+          [
+            5.84017,
+            550
+          ],
+          [
+            6.13301,
+            550,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n022",
+      "kind": "pill",
+      "x": 690,
+      "y": 650,
+      "w": 250,
+      "h": 70,
+      "label": "{{text01}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.27121,
+            0
+          ],
+          [
+            5.56406,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            690
+          ],
+          [
+            5.27121,
+            690
+          ],
+          [
+            5.56406,
+            690,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            700
+          ],
+          [
+            5.27121,
+            700
+          ],
+          [
+            5.56406,
+            650,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n023",
+      "kind": "pill",
+      "x": 1270,
+      "y": 650,
+      "w": 520,
+      "h": 70,
+      "label": "{{text02}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            6.10791,
+            0
+          ],
+          [
+            6.40076,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1270
+          ],
+          [
+            6.10791,
+            1270
+          ],
+          [
+            6.40076,
+            1270,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            700
+          ],
+          [
+            6.10791,
+            700
+          ],
+          [
+            6.40076,
+            650,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n024",
+      "kind": "text",
+      "x": 840,
+      "y": 360,
+      "w": 900,
+      "h": 94.4,
+      "text": "{{text03}}",
+      "size": 59,
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            6.19158,
+            0
+          ],
+          [
+            6.48443,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            840
+          ],
+          [
+            6.19158,
+            840
+          ],
+          [
+            6.48443,
+            840,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            410
+          ],
+          [
+            6.19158,
+            410
+          ],
+          [
+            6.48443,
+            360,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/61756c44a946554816fb93c00c227722cc1c5ee33da7e3ca85b6296acce91fa3.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "For example, make a vintage music player, in one sentence.",
+          "label": "Opening Hook",
+          "visual": "Static screenshot of a digital music interface with a black background. The interface features 'RB-338' branding in the top left, a red digital tempo display showing 132.8 BPM, and various glowing buttons in red and yellow. The lighting is artificial, emanating from the software UI elements. The color palette is dominated by black, neon red, and orange highlights.",
+          "shot_type": "Close-Up",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Just like this one.",
+          "label": "Product Information",
+          "visual": "The digital interface updates to show a change in the tempo display to 135.8 BPM and the 'RUN / STOP' button shifts from red to green. The UI remains centered in a dark, flat environment with high contrast.",
+          "shot_type": "Close-Up",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "It can make sounds, it can be played.",
+          "label": "Product Selling Points",
+          "visual": "A transition to a different software module labeled 'TR-808 RHYTHM COMPOSER'. This view shows rows of orange and yellow sliders and a bottom row of 16 numbered square buttons in red and orange. The shot is static and perfectly centered.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "Both the interface and the drum machine can produce sound.",
+          "label": "Usage Scenarios",
+          "visual": "The software interface shrinks and moves to the left side of a clean white digital canvas. A dashed horizontal line appears to the right of the interface, representing a timeline or a gap between stages. The lighting is even and flat throughout the white space.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:07",
+          "timestamp_start": "0:05"
+        },
+        {
+          "audio": "But it is still a long way from a truly useful piece of software.",
+          "label": "Problem Solving",
+          "visual": "The camera remains static on the white environment. A blue and gray label appears on the dashed line, indicating a distance or gap. The software interface remains pinned to the left, and a new destination point is established on the right end of the dashed line.",
+          "shot_type": "Wide Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:08",
+          "timestamp_start": "0:07"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "四个作品小窗同时在播并打勾 → 大窗播音乐制作器 → 一条进度：标记“能玩”停在左边，后面一长段虚线才到“真正好用的软件”"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 8.367,
+      "action": "四个作品小窗同时在播并打勾 → 大窗播音乐制作器 → 一条进度：标记“能玩”停在左边，后面一长段虚线才到“真正好用的软件”"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "作品 1",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          8.367,
+          8.367,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media2",
+      "label": "作品 2",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          8.367,
+          8.367,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media3",
+      "label": "作品 3",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          8.367,
+          8.367,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media4",
+      "label": "作品 4",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          8.367,
+          8.367,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media5",
+      "label": "实际可操作作品",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          8.367,
+          8.367,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,515 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t15p",
+  "title": "两行榜单：对比条长出、分数滚动，差距一眼看清",
+  "duration": 7,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "1",
+    "text02": "第一名",
+    "score1": 1729,
+    "scoreRatio1": 0.9605555555555556,
+    "text05": "9",
+    "text06": "本期模型",
+    "score2": 1515,
+    "scoreRatio2": 0.8416666666666667,
+    "media1.start": 0,
+    "media1.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "image",
+      "x": 150,
+      "y": 130,
+      "w": 1620,
+      "h": 820,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0,
+        3.15
+      ],
+      "tracks": {
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            1.05,
+            1
+          ],
+          [
+            1.96,
+            1.6
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "rect",
+      "x": 400,
+      "y": 570,
+      "w": 1080,
+      "h": 75,
+      "fill": "#D6C2FF",
+      "opacity": 0.3,
+      "visible": [
+        1.61,
+        3.15
+      ]
+    },
+    {
+      "id": "n003",
+      "kind": "pill",
+      "x": 200,
+      "y": 330,
+      "w": 110,
+      "h": 110,
+      "label": "{{text01}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.22,
+            0
+          ],
+          [
+            3.465,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            200
+          ],
+          [
+            3.22,
+            200
+          ],
+          [
+            3.465,
+            200,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            380
+          ],
+          [
+            3.22,
+            380
+          ],
+          [
+            3.465,
+            330,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "text",
+      "x": 350,
+      "y": 325,
+      "w": 800,
+      "h": 76.80000000000001,
+      "text": "{{text02}}",
+      "size": 48,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.22,
+            0
+          ],
+          [
+            3.465,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            350
+          ],
+          [
+            3.22,
+            350
+          ],
+          [
+            3.465,
+            350,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            375
+          ],
+          [
+            3.22,
+            375
+          ],
+          [
+            3.465,
+            325,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "bar",
+      "x": 350,
+      "y": 420,
+      "w": 1120,
+      "h": 55,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            3.22,
+            0
+          ],
+          [
+            4.41,
+            "{{scoreRatio1}}"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "rollingNumber",
+      "x": 1510,
+      "y": 355,
+      "w": 270,
+      "h": 115,
+      "value": 0,
+      "size": 85,
+      "color": "#0B0B0F",
+      "digits": 4,
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            3.22,
+            0
+          ],
+          [
+            4.41,
+            "{{score1}}"
+          ]
+        ]
+      },
+      "visible": [
+        3.22,
+        7.001
+      ]
+    },
+    {
+      "id": "n007",
+      "kind": "pill",
+      "x": 200,
+      "y": 585,
+      "w": 110,
+      "h": 110,
+      "label": "{{text05}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.71,
+            0
+          ],
+          [
+            3.955,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            200
+          ],
+          [
+            3.71,
+            200
+          ],
+          [
+            3.955,
+            200,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            635
+          ],
+          [
+            3.71,
+            635
+          ],
+          [
+            3.955,
+            585,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "text",
+      "x": 350,
+      "y": 580,
+      "w": 800,
+      "h": 76.80000000000001,
+      "text": "{{text06}}",
+      "size": 48,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.71,
+            0
+          ],
+          [
+            3.955,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            350
+          ],
+          [
+            3.71,
+            350
+          ],
+          [
+            3.955,
+            350,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            630
+          ],
+          [
+            3.71,
+            630
+          ],
+          [
+            3.955,
+            580,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "bar",
+      "x": 350,
+      "y": 675,
+      "w": 1120,
+      "h": 55,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            3.71,
+            0
+          ],
+          [
+            4.9,
+            "{{scoreRatio2}}"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010",
+      "kind": "rollingNumber",
+      "x": 1510,
+      "y": 610,
+      "w": 270,
+      "h": 115,
+      "value": 0,
+      "size": 85,
+      "color": "#0B0B0F",
+      "digits": 4,
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            3.71,
+            0
+          ],
+          [
+            4.9,
+            "{{score2}}"
+          ]
+        ]
+      },
+      "visible": [
+        3.71,
+        7.001
+      ]
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/2a411ae339a7843cb26f9f41a470a4eef9dc88e5740b14039cf69dcd20253507.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "So to be honest, the front-end performance this time is not very good, or at least it hasn't become stronger.",
+          "label": "Opening Hook",
+          "visual": "Static graphic display on a grey background. In the center, a blurred UI mockup of a software interface is visible. A purple and black graphical box sits in the middle of the frame. Soft, even lighting across the digital canvas with no shadows. Colors are muted greys, purples, and blacks.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "On the front-end leaderboard, it only ranks ninth.",
+          "label": "Product Information",
+          "visual": "A digital screengrab of a technical benchmark leaderboard table titled Code Arena / WebDev. The table features columns for Rank, Model, Score, and Price. A smooth digital zoom-in begins, focusing on the middle section of the list. High-contrast white background with clean black text and small colorful logo icons next to model names.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "Ranking ninth.",
+          "label": "Product Selling Points",
+          "visual": "Continuing from the previous shot, the camera zooms in closer on the specific ranking rows 4 through 10. The row for 'gemini-1.4-argon-high' is highlighted. The background is a clean white digital interface. Lighting is perfectly uniform as it is a digital screen recording.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "Even a previous version of the competitor is still ranked ahead of it.",
+          "label": "Product Selling Points",
+          "visual": "A digital highlight box appears over the 9th position. The background image of the table becomes slightly more focused on the specific model name. The color palette is dominated by the white of the webpage and the blue/purple of the brand logos.",
+          "shot_type": "Close-Up",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "Ahead of it by a margin.",
+          "label": "Problem Solving",
+          "visual": "A simplified comparison graphic. Two horizontal bars represent scores: Rank 1 at the top with a long black bar, and Rank 9 at the bottom with a shorter purple bar. The layout is minimalist with significant white space. The motion is static with a slight fade-in of the bars.",
+          "shot_type": "Wide Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        },
+        {
+          "audio": "So, where exactly is the problem?",
+          "label": "Problem Solving",
+          "visual": "The screen transitions to a clean, white background. Large black text centered in the frame poses a question. The composition is symmetrical and minimalist. A small logo in the top right corner features purple and yellow accents. Bright, flat digital lighting.",
+          "shot_type": "Wide Shot",
+          "scene_number": 6,
+          "timestamp_end": "0:07",
+          "timestamp_start": "0:05"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "榜单两行（名次圆+Logo+模型名+分数）→ 横向对比条从 0 长出、数字滚动落定（成片为 1729 / 1515），两条长度差直观呈现“前面一截”"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 7.0,
+      "action": "榜单两行（名次圆+Logo+模型名+分数）→ 横向对比条从 0 长出、数字滚动落定（成片为 1729 / 1515），两条长度差直观呈现“前面一截”"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "本期真实榜单",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          7,
+          7,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

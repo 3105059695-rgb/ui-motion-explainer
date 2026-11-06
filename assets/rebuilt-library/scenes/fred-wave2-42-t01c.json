@@ -1,0 +1,248 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t01c",
+  "title": "原则口诀：三句依次锁定",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "principle0": "先把目标说清楚",
+    "principle1": "再把素材用明白",
+    "principle2": "最后让结果可核对",
+    "star": "✦"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/712bb12cb1ad6ee3d5ecfa007591c894cf8d2180cd479a41a184da09727a62f2.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A sharp, percussive digital 'pop' or 'blip' sound effect that emphasizes the appearance of the graphic.",
+          "label": "Opening Hook",
+          "visual": "A static wide shot with a clean, flat white background. A centered black rounded-rectangle banner pops into the top of the frame with a smooth scaling animation. The lighting is perfectly even and digital, with no shadows or gradients. The frame contains a small logo in the upper right corner featuring yellow and blue text with a megaphone icon.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A second identical digital 'pop' sound effect as the new banner appears.",
+          "label": "Product Information",
+          "visual": "The camera remains static on the white background. A second black rounded-rectangle banner pops in directly beneath the first one with a similar scaling animation. Both banners remain centered and have a subtle drop shadow against the white backdrop.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A third identical digital 'pop' sound effect accompanies the visual entry of the final banner.",
+          "label": "Product Selling Points",
+          "visual": "The camera remains static. A third black rounded-rectangle banner pops in below the previous two, completing a vertical stack of three banners. The layout is symmetrical and clean, maintaining the same digital lighting and high contrast.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A high-pitched chime sound effect occurs simultaneously with the starburst flash.",
+          "label": "Call to Action",
+          "visual": "The scene remains static with all three black banners visible on the white background. Suddenly, a bright yellow star-shaped burst icon flashes on the left side of the third banner, followed by a slight camera shake effect to create emphasis.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 3.75,
+      "action": "Three complete principles impact into stable stacked banners"
+    },
+    {
+      "start": 3.75,
+      "end": 5,
+      "action": "All principles remain, with a small accent on the final statement"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-pill",
+      "kind": "pill",
+      "x": 320,
+      "y": 160,
+      "w": 1280,
+      "h": 170,
+      "label": "{{principle0}}",
+      "size": 73,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.8,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            235
+          ],
+          [
+            0.8,
+            160,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-pill",
+      "kind": "pill",
+      "x": 320,
+      "y": 425,
+      "w": 1280,
+      "h": 170,
+      "label": "{{principle1}}",
+      "size": 73,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.15,
+            0
+          ],
+          [
+            1.95,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.15,
+            500
+          ],
+          [
+            1.95,
+            425,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-pill",
+      "kind": "pill",
+      "x": 320,
+      "y": 690,
+      "w": 1280,
+      "h": 170,
+      "label": "{{principle2}}",
+      "size": 73,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.3,
+            0
+          ],
+          [
+            3.1,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.3,
+            765
+          ],
+          [
+            3.1,
+            690,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-text",
+      "kind": "text",
+      "x": 1510,
+      "y": 675,
+      "w": 160,
+      "h": 160,
+      "text": "{{star}}",
+      "size": 130,
+      "color": "#D6C2FF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.2,
+            0
+          ],
+          [
+            4.0,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.2,
+            710
+          ],
+          [
+            4.0,
+            675,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

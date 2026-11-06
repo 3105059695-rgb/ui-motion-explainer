@@ -1,0 +1,351 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t09b",
+  "title": "开通授权：按钮到授权弹窗到已开通",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "row10": "概览",
+    "row21": "设置",
+    "row32": "权限",
+    "row43": "已连接设备",
+    "ask": "选择助手可以工作的地方",
+    "cloud": "云端空间",
+    "local": "本地电脑",
+    "allow": "允许并继续",
+    "status": "已开通 · 本地电脑"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/67775b1d3842379e3a5e533a5ace4b0b076e29b6caf55849f86a5112e82b60a1.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A digital clicking sound effect occurs as the mouse interacts with the screen. There is no background music or voiceover.",
+          "label": "Opening Hook",
+          "visual": "A screen recording of a desktop interface displaying a dark-themed application. On the left side, there is a navigation sidebar with icons. A mouse cursor enters the frame and moves toward the top-left area. The lighting is clean and digital with high-contrast UI elements. The color palette is predominantly white and gray with subtle dark accents.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A soft, high-pitched mechanical click sound is heard when the button is pressed.",
+          "label": "Usage Scenarios",
+          "visual": "The camera zooms in on a modal window titled 'Choose where your dot can work'. The mouse cursor hovers over a black button at the bottom of the modal. The focus remains sharp on the selection options representing a cloud computer and a local computer. The background is slightly dimmed to emphasize the popup.",
+          "shot_type": "Close-Up",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A celebratory 'ding' or chime sound effect plays to indicate a successful action, followed by silence.",
+          "label": "Product Information",
+          "visual": "The view shifts back to the sidebar menu on the left side of the application. A status indicator next to the 'Your dot' menu item changes state, accompanied by a small animated pop effect. The cursor moves away from the menu. The lighting is consistent with the previous scenes, maintaining a flat, modern digital aesthetic.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.0,
+      "action": "Sidebar action opens permission modal"
+    },
+    {
+      "start": 1.0,
+      "end": 3.25,
+      "action": "Two explicit destinations remain while one is selected and confirmed"
+    },
+    {
+      "start": 3.25,
+      "end": 5,
+      "action": "Modal closes and real enabled state occupies workspace"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-window",
+      "kind": "window",
+      "x": 180,
+      "y": 130,
+      "w": 1560,
+      "h": 820,
+      "label": "工作空间",
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 35,
+          "y": 100,
+          "w": 1490,
+          "h": 55,
+          "text": "{{row10}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 35,
+          "y": 165,
+          "w": 1490,
+          "h": 55,
+          "text": "{{row21}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 35,
+          "y": 230,
+          "w": 1490,
+          "h": 55,
+          "text": "{{row32}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 35,
+          "y": 295,
+          "w": 1490,
+          "h": 55,
+          "text": "{{row43}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "n012-card",
+      "kind": "card",
+      "x": 500,
+      "y": 220,
+      "w": 1000,
+      "h": 650,
+      "children": [
+        {
+          "id": "n006-text",
+          "kind": "text",
+          "x": 65,
+          "y": 55,
+          "w": 870,
+          "h": 100,
+          "text": "{{ask}}",
+          "size": 53,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n008-card",
+          "kind": "card",
+          "x": 65,
+          "y": 220,
+          "w": 395,
+          "h": 190,
+          "children": [
+            {
+              "id": "n007-text",
+              "kind": "text",
+              "x": 30,
+              "y": 55,
+              "w": 335,
+              "h": 80,
+              "text": "{{cloud}}",
+              "size": 45,
+              "color": "#0B0B0F",
+              "align": "left"
+            }
+          ],
+          "fill": "#F3F3F5"
+        },
+        {
+          "id": "n010-card",
+          "kind": "card",
+          "x": 540,
+          "y": 220,
+          "w": 395,
+          "h": 190,
+          "children": [
+            {
+              "id": "n009-text",
+              "kind": "text",
+              "x": 30,
+              "y": 55,
+              "w": 335,
+              "h": 80,
+              "text": "{{local}}",
+              "size": 45,
+              "color": "#0B0B0F",
+              "align": "left"
+            }
+          ],
+          "fill": "#D6C2FF"
+        },
+        {
+          "id": "n011-pill",
+          "kind": "pill",
+          "x": 275,
+          "y": 490,
+          "w": 450,
+          "h": 100,
+          "label": "{{allow}}",
+          "size": 38,
+          "fill": "#0B0B0F",
+          "color": "#FFFFFF"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.7,
+            0
+          ],
+          [
+            1.3,
+            1
+          ],
+          [
+            3.25,
+            1
+          ],
+          [
+            3.9,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013-b2-cursor",
+      "kind": "b2-cursor",
+      "x": 0,
+      "y": 0,
+      "w": 43,
+      "h": 64,
+      "tracks": {
+        "x": [
+          [
+            0,
+            800
+          ],
+          [
+            0.5,
+            350
+          ],
+          [
+            2.1,
+            1220
+          ],
+          [
+            3.1,
+            1050
+          ],
+          [
+            4.1,
+            430
+          ]
+        ],
+        "y": [
+          [
+            0,
+            900
+          ],
+          [
+            0.5,
+            410
+          ],
+          [
+            2.1,
+            550
+          ],
+          [
+            3.1,
+            765
+          ],
+          [
+            4.1,
+            410
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014-pill",
+      "kind": "pill",
+      "x": 390,
+      "y": 520,
+      "w": 1140,
+      "h": 170,
+      "label": "{{status}}",
+      "size": 57,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.95,
+            0
+          ],
+          [
+            4.55,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.95,
+            555
+          ],
+          [
+            4.55,
+            520,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "case_number":115,
+  "slug":"motiondsgnr-9dcfa6",
+  "source_visual_duration":15.016666666666667,
+  "source_fps":60,
+  "export_duration":15.033333333333333,
+  "analysis":{"sample_count":61,"interval":0.25,"all_three_contact_sheets_actually_viewed":true,"enlarged_frames_viewed":12},
+  "time_mapping":"internal_time = seek_seconds / project.duration * 15.016666666666667",
+  "phases":[
+    {"time":[0,0.64],"name":"opening-dot-line","reference":"Black field, orange dot, orange horizontal line, expansion into orange field.","implementation":"Exact blank opening until0.12; dot/line native geometry. Expansion is approximated by field switch at0.64."},
+    {"time":[0.64,1.5],"name":"kinetic-motion-letters","reference":"MOTION letters individually jump/rotate, showreel subtitle and frame metadata.","implementation":"Per-letter measured Geist widths, staggered easing/rotation, second lift and subtitle; timecode and original1920x1080/60fps metadata are native text."},
+    {"time":[1.5,3],"name":"every-frame-matters","reference":"Blue field, cream EVERY/MATTERS, yellow FRAME/EASE/PIXELS and orange underline; repeating outline typography.","implementation":"Independent word swaps, outline rows move laterally, letter metrics and underline animate natively."},
+    {"time":[3,4.6],"name":"sphere-to-particle-word","reference":"Dense pink-blue rotating particle sphere and elliptical orbits regroup into CLAUDE.","implementation":"2500 Fibonacci sphere particles, depth sorting/perspective, three native elliptical orbits. Every particle interpolates to uniformly sampled brand glyph mask with subtle target motion."},
+    {"time":[4.6,6],"name":"shape-morphing","reference":"Cream dotted grid, orange circle, blue square/diamond, dark triangle, yellow irregular blob and pink star; faint contour afterimages and three orbit dots.","implementation":"Corresponding96point outlines interpolate/rotate with seven translucent trailing outlines. Staggered phase anchors preserve observed5.25blue diamond."},
+    {"time":[6,7.5],"name":"liquid-flow-state","reference":"Yellow field, blue merging fluid with separate dark cores, FLOW STATE reverses color at fluid boundary.","implementation":"Four analytic metaball fields at256x180; union controls alpha and individual peak controls dark cores. Native glyph layer intersects fluid alpha for cream lettering inside/blue outside. Smooth scaled bitmap, no CSS filter chain or reference frames."},
+    {"time":[7.5,9],"name":"nested-type-tunnel","reference":"Seven dense colored circular lines of typography spin/scale in opposite directions; centre LOOP/SPIN/ZOOM/WARP.","implementation":"Per-character measured angular placement, circumference-fit repetition, independent alternating angular speeds and radial zoom."},
+    {"time":[9,10.5],"name":"numbers-that-move","reference":"Cream background and three cards: blue8bar keyframes, black yellow easing curve, orange frame-rate circle;57 observed at9.75.","implementation":"Native staggered cards,8original-style bar heights, progressive logistic path and moving dot, arc/fps57anchor then60."},
+    {"time":[10.5,12.16],"name":"signal-noise-generative-art","reference":"Black field, SIGNAL/NOISE,41thin colored wave traces with broad varying peaks; horizontal glitch bars before transition.","implementation":"Five drifting Gaussian peaks mixed with oscillatory noise for41curves; independent warm-to-blue line colors and deterministic glitch streaks."},
+    {"time":[12.16,13.45],"name":"compositing-all-of-it","reference":"Four-by-three miniature scene collection, central ALL OF IT with orange offset; grid expands/rotates away revealing centre hole.","implementation":"Twelve independently drawn native chapter thumbnails cached at readiness,4x3placement, central text offset, positional zoom and tile rotation. Thumbnails are static sampled native scenes, unlike source moving mini-scenes."},
+    {"time":[13.45,15.016666666666667],"name":"claude-final-lockup","reference":"Multicolored CLAUDE letters descend/rotate then become cream; orange underline, typing MOTION DESIGNER, work availability pill and six decorative shapes.","implementation":"Per-letter staggered pose/color changes, typed editable role, pill and native rotating geometries."}
+  ],
+  "assets":{"reference_video_loaded":false,"reference_frame_images_loaded":false,"visual_material":"Native Canvas only; own initialized grain/typography masks/chapter thumbnails","audio":"Attributed original reference audio separately muxed","fonts":"Local Geist/GeistMono with OFL; source font identity not confirmed"},
+  "status":"dedicated reconstruction, approximate needs-work, user aesthetics unapproved"
+}

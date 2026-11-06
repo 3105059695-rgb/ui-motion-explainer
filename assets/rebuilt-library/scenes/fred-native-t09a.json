@@ -1,0 +1,314 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-native-t09a",
+  "title": "点击路径聚焦：镜头跟光标找到入口并点下",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "sidebar": "项目\n素材\n对话记录\n导出文件",
+    "main": "本期材料",
+    "body": "原始资料与对应的实际结果\n\n• 查看输入\n• 打开成果\n• 核对出处",
+    "switch": "切换工作模型"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/5848b5f3a79a4d6f5d071dc3851e1ffc84fbcbcb15e2c322175862ebbca1f144.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A male voice says in a deep, composed tone: 'Then let me show you the effect of this dialogue.'",
+          "label": "Opening Hook",
+          "visual": "A static wide shot of a desktop web browser interface. The background is a clean, minimalist white workspace. On the left side, a sidebar displays a navigation menu with list items. The center area contains text blocks and bullet points in Chinese characters. A speech bubble appears at the top right. A digital cursor moves across the screen. The lighting is bright and even, simulating a backlit computer monitor. The color palette is dominated by whites and light grays with occasional accents of green.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A digital 'click' sound effect coincides with the cursor action, followed by a subtle, low-frequency ambient hum.",
+          "label": "Product Information",
+          "visual": "The camera quickly zooms in and pans to the left sidebar of the application interface. The cursor hovers over a folder icon and then clicks on a specific list item. The item highlights briefly upon the click. The focus is sharp on the text and icons, with soft artificial lighting consistent with a screen recording. The movement is smooth and precise.",
+          "shot_type": "Close-Up",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The ambient electronic hum continues at a low volume. No spoken words.",
+          "label": "Product Selling Points",
+          "visual": "The camera pans right to the main content area of the browser. A new section of text and a list of bullet points are revealed. The cursor moves down the page, highlighting the 'Direct play of WeChat dialogue MP4' section. The background remains a sterile white, and the text is crisp black and blue. The scroll movement is steady and intentional.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A distinct mechanical 'click' sound plays as the selection is made, followed by a short, rising melodic chime to signify a successful action.",
+          "label": "Call to Action",
+          "visual": "The camera zooms in tightly on the bottom center of the interface. A dropdown menu labeled 'Switch Model' is visible. The cursor moves to a model selection pill that reads 'GPT-6.1 Sol'. The cursor clicks the selection, and the button pulse-animates. The colors are high contrast, featuring white text on a dark background within the selection UI. The lighting focuses purely on the interactive elements.",
+          "shot_type": "Extreme Close-Up",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.0,
+      "action": "Full workspace establishes navigation and content"
+    },
+    {
+      "start": 1.0,
+      "end": 2.15,
+      "action": "Focus and click sidebar item"
+    },
+    {
+      "start": 2.15,
+      "end": 3.5,
+      "action": "Pan across actual content to relevant result"
+    },
+    {
+      "start": 3.5,
+      "end": 5,
+      "action": "Focus bottom model/action control and hold"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n007-group",
+      "kind": "group",
+      "x": 160,
+      "y": 100,
+      "w": 1600,
+      "h": 880,
+      "children": [
+        {
+          "id": "n001-card",
+          "kind": "card",
+          "x": 0,
+          "y": 0,
+          "w": 1600,
+          "h": 880,
+          "children": [],
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "n002-rect",
+          "kind": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 340,
+          "h": 880,
+          "fill": "#F3F3F5",
+          "radius": 20
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 35,
+          "y": 100,
+          "w": 270,
+          "h": 550,
+          "text": "{{sidebar}}",
+          "size": 46,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 420,
+          "y": 110,
+          "w": 1100,
+          "h": 110,
+          "text": "{{main}}",
+          "size": 74,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 420,
+          "y": 300,
+          "w": 1100,
+          "h": 400,
+          "text": "{{body}}",
+          "size": 48,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n006-pill",
+          "kind": "pill",
+          "x": 1030,
+          "y": 720,
+          "w": 490,
+          "h": 100,
+          "label": "{{switch}}",
+          "size": 38,
+          "fill": "#0B0B0F",
+          "color": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "id": "n008-b2-cursor",
+      "kind": "b2-cursor",
+      "x": 0,
+      "y": 0,
+      "w": 43,
+      "h": 64,
+      "tracks": {
+        "x": [
+          [
+            0,
+            1100
+          ],
+          [
+            0.9,
+            370
+          ],
+          [
+            2.15,
+            1030
+          ],
+          [
+            3.6,
+            1430
+          ]
+        ],
+        "y": [
+          [
+            0,
+            700
+          ],
+          [
+            0.9,
+            350
+          ],
+          [
+            2.15,
+            650
+          ],
+          [
+            3.6,
+            870
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-rect",
+      "kind": "rect",
+      "x": 180,
+      "y": 330,
+      "w": 300,
+      "h": 80,
+      "fill": "#D6C2FF",
+      "radius": 12,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.9,
+            0
+          ],
+          [
+            1.25,
+            0.6
+          ]
+        ]
+      }
+    }
+  ],
+  "camera": {
+    "tracks": {
+      "scale": [
+        [
+          0,
+          1
+        ],
+        [
+          1.0,
+          1.6
+        ],
+        [
+          2.0,
+          1.35
+        ],
+        [
+          3.5,
+          1.65
+        ],
+        [
+          4.5,
+          1.65
+        ]
+      ],
+      "x": [
+        [
+          0,
+          0
+        ],
+        [
+          1.0,
+          650
+        ],
+        [
+          2.0,
+          -70
+        ],
+        [
+          3.5,
+          -580
+        ]
+      ],
+      "y": [
+        [
+          0,
+          0
+        ],
+        [
+          1.0,
+          80
+        ],
+        [
+          2.0,
+          -140
+        ],
+        [
+          3.5,
+          -570
+        ]
+      ]
+    }
+  },
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

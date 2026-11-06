@@ -1,0 +1,150 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t12b",
+  "title": "第 N 点步骤号（快过渡）",
+  "duration": 2.5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "index": "02",
+    "title": "开始实际操作"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/7fc94e73c3292778a5e81f57af5efc22ff9cbf8849225ee096481cad41190f1d.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single, high-pitched digital 'ding' sound effect, similar to a system notification, followed by silence.",
+          "label": "Product Information",
+          "visual": "Static center-framed shot on a plain white background. A black rounded-square icon containing a white stylized digit '2' is centered. A horizontal bar extends from the right of the icon, displaying characters in a black sans-serif font against a white background. The lighting is perfectly flat and digital, with a soft drop shadow beneath the icon and bar. The color palette is strictly monochrome (black and white).",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 0.5,
+      "action": "Number impacts as a separate black square"
+    },
+    {
+      "start": 0.3,
+      "end": 1.2,
+      "action": "White title strip wipes right from that exact number"
+    },
+    {
+      "start": 1.2,
+      "end": 2.5,
+      "action": "Number and chapter remain joined"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n002-card",
+      "kind": "card",
+      "x": 300,
+      "y": 400,
+      "w": 240,
+      "h": 240,
+      "children": [
+        {
+          "id": "n001-text",
+          "kind": "text",
+          "x": 15,
+          "y": 35,
+          "w": 210,
+          "h": 165,
+          "text": "{{index}}",
+          "size": 130,
+          "color": "#FFFFFF",
+          "align": "center"
+        }
+      ],
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.5,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            480
+          ],
+          [
+            0.5,
+            400,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-card",
+      "kind": "card",
+      "x": 540,
+      "y": 400,
+      "w": 1090,
+      "h": 240,
+      "children": [
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 55,
+          "y": 60,
+          "w": 980,
+          "h": 140,
+          "text": "{{title}}",
+          "size": 85,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "revealX": [
+          [
+            0.3,
+            0
+          ],
+          [
+            1.2,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

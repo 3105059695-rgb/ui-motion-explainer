@@ -1,0 +1,148 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t12t",
+  "title": "黑白分屏：左黑序号右白标题",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "index": "03",
+    "title": "现在\n看最终结果"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/313b3ce8adc3be94412b969eaa4132698a706daf7ea6be958fc6bdece4e7239a.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single, sharp, percussive click sound effect occurs at the moment of transition.",
+          "label": "Opening Hook",
+          "visual": "A static, minimalist graphic split vertically. The left side is solid black, and the right side is solid white. A large, bold, sans-serif number '02' is centered on the black half. The lighting is uniform and digital, with high contrast between the black and white sections.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The same sharp, percussive click sound effect repeats once as the image changes.",
+          "label": "Opening Hook",
+          "visual": "The graphic layout remains the same as the previous scene, but the number on the black half has changed to '03'. On the white half, three lines of stylized characters appear. The camera is static, and there is no movement or change in the lighting or color grading.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 0.8999999999999999,
+      "action": "Black vertical half divides the frame"
+    },
+    {
+      "start": 0.6000000000000001,
+      "end": 1.9500000000000002,
+      "action": "Number rolls into left side while title wipes on right"
+    },
+    {
+      "start": 1.9500000000000002,
+      "end": 3,
+      "action": "Split chapter holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-rect",
+      "kind": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 860,
+      "h": 1080,
+      "fill": "#0B0B0F",
+      "radius": 0,
+      "tracks": {
+        "w": [
+          [
+            0,
+            0
+          ],
+          [
+            0.9,
+            860,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 100,
+      "y": 320,
+      "w": 660,
+      "h": 390,
+      "text": "{{index}}",
+      "size": 300,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "y": [
+          [
+            0.54,
+            1100
+          ],
+          [
+            1.5,
+            320,
+            "back"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 1020,
+      "y": 360,
+      "w": 730,
+      "h": 300,
+      "text": "{{title}}",
+      "size": 90,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "revealX": [
+          [
+            0.75,
+            0
+          ],
+          [
+            1.86,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

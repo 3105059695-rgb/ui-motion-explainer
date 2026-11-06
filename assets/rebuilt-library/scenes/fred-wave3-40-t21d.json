@@ -1,0 +1,475 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t21d",
+  "title": "可截图清单",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "title": "这一期的执行清单",
+    "item0": "先确认目标",
+    "item1": "保留原始素材",
+    "item2": "选择合适动作",
+    "item3": "核对关键结果",
+    "item4": "留下可编辑工程",
+    "save": "可以暂停保存这一页"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/00d0a27a0e064aad9c051ffe6a64018a27805681b4ba7ffb387f711360342c22.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single, sharp 'ding' sound effect, similar to a digital notification chime, at a moderate volume.",
+          "label": "Opening Hook",
+          "visual": "A static wide shot of a clean, minimalist white graphic interface. A list with five circular checkboxes is centered. The background is a flat, off-white color. Lighting is uniform and diffuse, with no visible shadows. A small logo icon is visible in the top right corner. The color palette is strictly white, black, and light gray.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Two consecutive, rapid 'ding' sound effects, matching the timing of the checkmarks appearing.",
+          "label": "Product Information",
+          "visual": "The same static frame as the previous scene, but the first two circles in the list are now filled with black checkmark icons. The camera remains perfectly still. The lighting and color grading remain consistent with the first scene.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "Two more rapid 'ding' sound effects in quick succession.",
+          "label": "Product Selling Points",
+          "visual": "The third and fourth circles in the list are filled with black checkmark icons. The camera and environment remain static. The white background maintains its flat, even texture.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A final 'ding' sound effect, followed by a brief second of silence.",
+          "label": "Usage Scenarios",
+          "visual": "The final circle in the list is filled with a black checkmark icon. The interface is now complete with all five items checked. There is no change in camera movement or lighting.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "A mechanical 'click' sound effect, resembling a camera shutter or a screen-capture button press.",
+          "label": "Call to Action",
+          "visual": "The fully checked list remains on screen. A brief white flash or screen-capture animation effect occurs at the very end. The overall minimalist aesthetic is maintained throughout.",
+          "shot_type": "Wide Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 0.72,
+      "action": "Complete list establishes scope"
+    },
+    {
+      "start": 0.72,
+      "end": 4.800000000000001,
+      "action": "Each named action receives a check"
+    },
+    {
+      "start": 4.800000000000001,
+      "end": 5.5200000000000005,
+      "action": "Whole page holds for capture"
+    },
+    {
+      "start": 5.5200000000000005,
+      "end": 6,
+      "action": "Screenshot flash returns to the same page"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-text",
+      "kind": "text",
+      "x": 300,
+      "y": 90,
+      "w": 1320,
+      "h": 110,
+      "text": "{{title}}",
+      "size": 70,
+      "color": "#0B0B0F",
+      "align": "center"
+    },
+    {
+      "id": "n002-circle",
+      "kind": "circle",
+      "x": 360,
+      "y": 270,
+      "w": 65,
+      "h": 65,
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 500,
+      "y": 263,
+      "w": 1100,
+      "h": 90,
+      "text": "{{item0}}",
+      "size": 51,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n004-check",
+      "kind": "check",
+      "x": 350,
+      "y": 265,
+      "w": 85,
+      "h": 80,
+      "color": "#0B0B0F",
+      "tracks": {
+        "value": [
+          [
+            0.72,
+            0
+          ],
+          [
+            1.32,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.72,
+            0
+          ],
+          [
+            0.78,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-circle",
+      "kind": "circle",
+      "x": 360,
+      "y": 395,
+      "w": 65,
+      "h": 65,
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n006-text",
+      "kind": "text",
+      "x": 500,
+      "y": 388,
+      "w": 1100,
+      "h": 90,
+      "text": "{{item1}}",
+      "size": 51,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n007-check",
+      "kind": "check",
+      "x": 350,
+      "y": 390,
+      "w": 85,
+      "h": 80,
+      "color": "#0B0B0F",
+      "tracks": {
+        "value": [
+          [
+            1.5,
+            0
+          ],
+          [
+            2.1,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.5,
+            0
+          ],
+          [
+            1.56,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-circle",
+      "kind": "circle",
+      "x": 360,
+      "y": 520,
+      "w": 65,
+      "h": 65,
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n009-text",
+      "kind": "text",
+      "x": 500,
+      "y": 513,
+      "w": 1100,
+      "h": 90,
+      "text": "{{item2}}",
+      "size": 51,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n010-check",
+      "kind": "check",
+      "x": 350,
+      "y": 515,
+      "w": 85,
+      "h": 80,
+      "color": "#0B0B0F",
+      "tracks": {
+        "value": [
+          [
+            2.28,
+            0
+          ],
+          [
+            2.88,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.28,
+            0
+          ],
+          [
+            2.34,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011-circle",
+      "kind": "circle",
+      "x": 360,
+      "y": 645,
+      "w": 65,
+      "h": 65,
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n012-text",
+      "kind": "text",
+      "x": 500,
+      "y": 638,
+      "w": 1100,
+      "h": 90,
+      "text": "{{item3}}",
+      "size": 51,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n013-check",
+      "kind": "check",
+      "x": 350,
+      "y": 640,
+      "w": 85,
+      "h": 80,
+      "color": "#0B0B0F",
+      "tracks": {
+        "value": [
+          [
+            3.06,
+            0
+          ],
+          [
+            3.66,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.06,
+            0
+          ],
+          [
+            3.12,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014-circle",
+      "kind": "circle",
+      "x": 360,
+      "y": 770,
+      "w": 65,
+      "h": 65,
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n015-text",
+      "kind": "text",
+      "x": 500,
+      "y": 763,
+      "w": 1100,
+      "h": 90,
+      "text": "{{item4}}",
+      "size": 51,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n016-check",
+      "kind": "check",
+      "x": 350,
+      "y": 765,
+      "w": 85,
+      "h": 80,
+      "color": "#0B0B0F",
+      "tracks": {
+        "value": [
+          [
+            3.84,
+            0
+          ],
+          [
+            4.44,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.84,
+            0
+          ],
+          [
+            3.9,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n017-text",
+      "kind": "text",
+      "x": 500,
+      "y": 970,
+      "w": 960,
+      "h": 60,
+      "text": "{{save}}",
+      "size": 32,
+      "color": "#777780",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.68,
+            0
+          ],
+          [
+            5.4,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            4.68,
+            1005
+          ],
+          [
+            5.4,
+            970,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n018-rect",
+      "kind": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "fill": "#FFFFFF",
+      "radius": 0,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            5.52,
+            0
+          ],
+          [
+            5.61,
+            0.75
+          ],
+          [
+            5.82,
+            0
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 7,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

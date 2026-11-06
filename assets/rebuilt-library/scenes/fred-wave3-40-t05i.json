@@ -1,0 +1,270 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t05i",
+  "title": "打开下载包看到什么",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "app": "应用程序",
+    "appDetail": "下载后直接打开",
+    "row50": "src/",
+    "row61": "package.json",
+    "row72": "README.md",
+    "row83": "LICENSE",
+    "conclusion": "应用程序和源码，使用方式不同"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/46bc2df37de5054e8dc4d3d33d52e706a15a4dbaa694d0eaa18518d723c82ad9.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A bright, digital 'pop' sound effect followed by upbeat, high-tempo electronic background music featuring a synth melody.",
+          "label": "Opening Hook",
+          "visual": "A minimalist white background. Two white floating cards with rounded corners appear side-by-side. The left card contains a file icon representing a media application with a film slate graphic. The right card displays a directory file list. The lighting is flat and even with soft drop shadows beneath the cards. No characters are present.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The upbeat synth music continues. A subtle clicking sound effect plays, mimicking a mouse click.",
+          "label": "Product Information",
+          "visual": "The same white background and two cards from the previous scene. A cursor-style interaction occurs where visual indicators appear below the cards to highlight the difference between a compiled application and a raw source code folder. The camera remains static and centered.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A resonant 'ding' or chime sound effect. The music reaches a slight crescendo and then maintains its tempo.",
+          "label": "Call to Action",
+          "visual": "The background blurs significantly using a Gaussian blur effect. A dark horizontal banner slides into the center of the frame. The color palette shifts to a high-contrast black and white focus. The composition is centered and symmetrical.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 2.4,
+      "action": "Compiled app and editable source are compared as different objects"
+    },
+    {
+      "start": 2.4,
+      "end": 3.5,
+      "action": "Comparison recedes to support a concise distinction"
+    },
+    {
+      "start": 3.5,
+      "end": 5,
+      "action": "Clarification holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n010-group",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n004-card",
+          "kind": "card",
+          "x": 210,
+          "y": 220,
+          "w": 650,
+          "h": 560,
+          "children": [
+            {
+              "id": "n001-rect",
+              "kind": "rect",
+              "x": 200,
+              "y": 65,
+              "w": 230,
+              "h": 190,
+              "fill": "#0B0B0F",
+              "radius": 35
+            },
+            {
+              "id": "n002-text",
+              "kind": "text",
+              "x": 55,
+              "y": 310,
+              "w": 540,
+              "h": 80,
+              "text": "{{app}}",
+              "size": 60,
+              "color": "#0B0B0F",
+              "align": "center"
+            },
+            {
+              "id": "n003-text",
+              "kind": "text",
+              "x": 55,
+              "y": 410,
+              "w": 540,
+              "h": 80,
+              "text": "{{appDetail}}",
+              "size": 38,
+              "color": "#777780",
+              "align": "center"
+            }
+          ],
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "n005-window",
+          "kind": "window",
+          "x": 1040,
+          "y": 220,
+          "w": 650,
+          "h": 560,
+          "label": "源码目录",
+          "children": [
+            {
+              "id": "n006-text",
+              "kind": "text",
+              "x": 35,
+              "y": 100,
+              "w": 580,
+              "h": 55,
+              "text": "{{row50}}",
+              "size": 30,
+              "color": "#0B0B0F",
+              "align": "left"
+            },
+            {
+              "id": "n007-text",
+              "kind": "text",
+              "x": 35,
+              "y": 165,
+              "w": 580,
+              "h": 55,
+              "text": "{{row61}}",
+              "size": 30,
+              "color": "#0B0B0F",
+              "align": "left"
+            },
+            {
+              "id": "n008-text",
+              "kind": "text",
+              "x": 35,
+              "y": 230,
+              "w": 580,
+              "h": 55,
+              "text": "{{row72}}",
+              "size": 30,
+              "color": "#0B0B0F",
+              "align": "left"
+            },
+            {
+              "id": "n009-text",
+              "kind": "text",
+              "x": 35,
+              "y": 295,
+              "w": 580,
+              "h": 55,
+              "text": "{{row83}}",
+              "size": 30,
+              "color": "#0B0B0F",
+              "align": "left"
+            }
+          ]
+        }
+      ],
+      "tracks": {
+        "blur": [
+          [
+            0,
+            0
+          ],
+          [
+            2.4,
+            0
+          ],
+          [
+            3.4,
+            12
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            3.4,
+            0.65
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011-pill",
+      "kind": "pill",
+      "x": 300,
+      "y": 435,
+      "w": 1320,
+      "h": 180,
+      "label": "{{conclusion}}",
+      "size": 68,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.75,
+            0
+          ],
+          [
+            3.35,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.75,
+            470
+          ],
+          [
+            3.35,
+            435,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

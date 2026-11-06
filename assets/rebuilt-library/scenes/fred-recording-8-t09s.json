@@ -1,0 +1,664 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-recording-8-t09s",
+  "title": "点击足迹：每次点击留下序号，最后连成一条路径回看",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "1",
+    "text02": "2",
+    "text03": "3",
+    "text04": "4",
+    "text05": "5",
+    "text06": "就点了这几下",
+    "media1.start": 0,
+    "media1.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "image",
+      "x": 120,
+      "y": 100,
+      "w": 1680,
+      "h": 875,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0,
+        6.001
+      ]
+    },
+    {
+      "id": "n002",
+      "kind": "path",
+      "x": 0,
+      "y": 0,
+      "w": 45,
+      "h": 55,
+      "path": "M0 0 L0 42 L12 30 L24 51 L33 46 L22 26 L40 24 Z",
+      "fill": "#0B0B0F",
+      "strokeWidth": 7,
+      "tracks": {
+        "x": [
+          [
+            0,
+            1850
+          ],
+          [
+            0.3,
+            230
+          ],
+          [
+            1.14,
+            660
+          ],
+          [
+            1.98,
+            910
+          ],
+          [
+            2.82,
+            1220
+          ],
+          [
+            3.66,
+            1630
+          ]
+        ],
+        "y": [
+          [
+            0,
+            990
+          ],
+          [
+            0.3,
+            330
+          ],
+          [
+            1.14,
+            450
+          ],
+          [
+            1.98,
+            740
+          ],
+          [
+            2.82,
+            820
+          ],
+          [
+            3.66,
+            820
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "pill",
+      "x": 204,
+      "y": 304,
+      "w": 65,
+      "h": 65,
+      "label": "{{text01}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "size": 32,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.48,
+            0
+          ],
+          [
+            0.69,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            204
+          ],
+          [
+            0.48,
+            204
+          ],
+          [
+            0.69,
+            204,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            304
+          ],
+          [
+            0.48,
+            304
+          ],
+          [
+            0.69,
+            304,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "path",
+      "x": 230,
+      "y": 330,
+      "w": 0,
+      "h": 0,
+      "path": "M0 0 L430 120",
+      "fill": "#0B0B0F",
+      "strokeWidth": 4,
+      "length": 1000,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            4.68,
+            0
+          ],
+          [
+            4.83,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "pill",
+      "x": 634,
+      "y": 424,
+      "w": 65,
+      "h": 65,
+      "label": "{{text02}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "size": 32,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.32,
+            0
+          ],
+          [
+            1.53,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            634
+          ],
+          [
+            1.32,
+            634
+          ],
+          [
+            1.53,
+            634,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            424
+          ],
+          [
+            1.32,
+            424
+          ],
+          [
+            1.53,
+            424,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "path",
+      "x": 660,
+      "y": 450,
+      "w": 0,
+      "h": 0,
+      "path": "M0 0 L250 290",
+      "fill": "#0B0B0F",
+      "strokeWidth": 4,
+      "length": 1000,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            4.86,
+            0
+          ],
+          [
+            5.01,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "pill",
+      "x": 884,
+      "y": 714,
+      "w": 65,
+      "h": 65,
+      "label": "{{text03}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "size": 32,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.16,
+            0
+          ],
+          [
+            2.37,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            884
+          ],
+          [
+            2.16,
+            884
+          ],
+          [
+            2.37,
+            884,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            714
+          ],
+          [
+            2.16,
+            714
+          ],
+          [
+            2.37,
+            714,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "path",
+      "x": 910,
+      "y": 740,
+      "w": 0,
+      "h": 0,
+      "path": "M0 0 L310 80",
+      "fill": "#0B0B0F",
+      "strokeWidth": 4,
+      "length": 1000,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            5.04,
+            0
+          ],
+          [
+            5.19,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "pill",
+      "x": 1194,
+      "y": 794,
+      "w": 65,
+      "h": 65,
+      "label": "{{text04}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "size": 32,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.0,
+            0
+          ],
+          [
+            3.21,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1194
+          ],
+          [
+            3.0,
+            1194
+          ],
+          [
+            3.21,
+            1194,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            794
+          ],
+          [
+            3.0,
+            794
+          ],
+          [
+            3.21,
+            794,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010",
+      "kind": "path",
+      "x": 1220,
+      "y": 820,
+      "w": 0,
+      "h": 0,
+      "path": "M0 0 L410 0",
+      "fill": "#0B0B0F",
+      "strokeWidth": 4,
+      "length": 1000,
+      "tracks": {
+        "draw": [
+          [
+            0,
+            0
+          ],
+          [
+            5.22,
+            0
+          ],
+          [
+            5.37,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011",
+      "kind": "pill",
+      "x": 1604,
+      "y": 794,
+      "w": 65,
+      "h": 65,
+      "label": "{{text05}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "size": 32,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.84,
+            0
+          ],
+          [
+            4.05,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1604
+          ],
+          [
+            3.84,
+            1604
+          ],
+          [
+            4.05,
+            1604,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            794
+          ],
+          [
+            3.84,
+            794
+          ],
+          [
+            4.05,
+            794,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012",
+      "kind": "pill",
+      "x": 590,
+      "y": 940,
+      "w": 740,
+      "h": 80,
+      "label": "{{text06}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            5.4,
+            0
+          ],
+          [
+            5.61,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            590
+          ],
+          [
+            5.4,
+            590
+          ],
+          [
+            5.61,
+            590,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            990
+          ],
+          [
+            5.4,
+            990
+          ],
+          [
+            5.61,
+            940,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/7592839a660dacbf67df00a823757ee63e54817c26cf4e78268cbee36c7b01cb.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "Soft, digital 'click' sound effect as the cursor interacts with the screen.",
+          "label": "Opening Hook",
+          "visual": "A screen recording shows a cursor hovering over a sidebar on a light-themed digital workspace interface. The cursor moves to a menu item with a square icon. The lighting is digital-flat with neutral white and gray tones. The background is a clean white interface with black text and icons.",
+          "shot_type": "Close-Up",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A light, upbeat electronic synth melody begins at a low volume.",
+          "label": "Product Information",
+          "visual": "The camera pans down the application window to reveal a main content area containing bulleted Chinese text and a blue link. The cursor moves downward toward the bottom of the window. The interface remains static and minimalist.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "Second 'click' sound effect followed by a subtle whoosh as the menu opens.",
+          "label": "Product Selling Points",
+          "visual": "The cursor clicks on an input field at the bottom of the screen. A small pop-up menu appears showing a circular icon next to a model name. The background text is slightly out of focus due to the UI depth.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A distinct chime sounds, indicating a successful selection.",
+          "label": "Usage Scenarios",
+          "visual": "Focus zooms in on the bottom toolbar. The cursor selects a model labeled 'GPT-6.1 Sol'. The interface displays a glowing indicator around the selection. The colors are muted except for a soft purple glow on the selected icon.",
+          "shot_type": "Extreme Close-Up",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "Five rapid digital pips corresponding to each numbered circle appearing, ending with a final triumphant synth chord.",
+          "label": "Call to Action",
+          "visual": "The full application window is shown. Five numbered circles appear sequentially over specific UI elements (sidebar, content, input, model selector, and submit button). A final graphic overlay appears briefly before the screen fades. The layout is symmetrical and clean.",
+          "shot_type": "Wide Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "在真实界面上的几次点击 → 每次点下的位置留下黑色序号点，全部做完后镜头拉回全貌，序号点按顺序连成一条路径，“就点了这几下”"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 6.0,
+      "action": "在真实界面上的几次点击 → 每次点下的位置留下黑色序号点，全部做完后镜头拉回全貌，序号点按顺序连成一条路径，“就点了这几下”"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "本期真实界面",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          6,
+          6,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "slug": "thismacapital-dfba20",
+  "source_project": "assets/reconstructions/thismacapital-dfba20",
+  "project": "assets/reconstructions/thismacapital-dfba20",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "asset-manifest.json",
+    "composition.js",
+    "index.html",
+    "project.json",
+    "textures/dubai.png",
+    "textures/maurice.png",
+    "textures/paraguay.png",
+    "portable-paths.js"
+  ],
+  "shared_assets": [],
+  "replaceable_assets": [
+    {
+      "path": "textures/dubai.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "868546965bf37a1386dc412282d9d6f38f6d3cbe180590e65b3ae4387ab7d89a"
+    },
+    {
+      "path": "textures/maurice.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "a5872bcc509646e2271d4626d9a802a8f316dff22fb7d95b30aaa30653351eaf"
+    },
+    {
+      "path": "textures/paraguay.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "d2c5a0055a5fb579b5af3a686ddeeff91efda69de6ac7d363ef70428ff6f09fa"
+    }
+  ],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "asset-manifest.json": "asset-manifest.json",
+    "composition.js": "composition.js",
+    "index.html": "index.html",
+    "project.json": "project.json",
+    "textures/dubai.png": "textures/dubai.png",
+    "textures/maurice.png": "textures/maurice.png",
+    "textures/paraguay.png": "textures/paraguay.png",
+    "dubai.png": "textures/dubai.png",
+    "maurice.png": "textures/maurice.png",
+    "paraguay.png": "textures/paraguay.png"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

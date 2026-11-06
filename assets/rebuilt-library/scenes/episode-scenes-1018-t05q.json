@@ -1,0 +1,615 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t05q",
+  "title": "拆层对比：桌面版一层层涨内存，终端版一层文字窗口",
+  "duration": 17.667,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "桌面版",
+    "text02": "终端版",
+    "text03": "界面",
+    "text04": "动画",
+    "text05": "各种窗口"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "text",
+      "x": 160,
+      "y": 160,
+      "w": 700,
+      "h": 86.4,
+      "text": "{{text01}}",
+      "size": 54,
+      "align": "center"
+    },
+    {
+      "id": "n002",
+      "kind": "text",
+      "x": 1060,
+      "y": 160,
+      "w": 700,
+      "h": 86.4,
+      "text": "{{text02}}",
+      "size": 54,
+      "align": "center"
+    },
+    {
+      "id": "n003",
+      "kind": "window",
+      "x": 200,
+      "y": 330,
+      "w": 540,
+      "h": 310,
+      "label": "{{text03}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.7667,
+            0
+          ],
+          [
+            2.38505,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            200
+          ],
+          [
+            1.7667,
+            200
+          ],
+          [
+            2.38505,
+            200,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            250
+          ],
+          [
+            1.7667,
+            250
+          ],
+          [
+            2.38505,
+            330,
+            "out"
+          ]
+        ],
+        "rotation": [
+          [
+            0.0,
+            -3
+          ],
+          [
+            7.0668,
+            -3
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "window",
+      "x": 235,
+      "y": 275,
+      "w": 540,
+      "h": 310,
+      "label": "{{text04}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.88674,
+            0
+          ],
+          [
+            4.50509,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            235
+          ],
+          [
+            3.88674,
+            235
+          ],
+          [
+            4.50509,
+            235,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            195
+          ],
+          [
+            3.88674,
+            195
+          ],
+          [
+            4.50509,
+            275,
+            "out"
+          ]
+        ],
+        "rotation": [
+          [
+            0.0,
+            0
+          ],
+          [
+            7.0668,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "window",
+      "x": 270,
+      "y": 220,
+      "w": 540,
+      "h": 310,
+      "label": "{{text05}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            6.00678,
+            0
+          ],
+          [
+            6.62513,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            270
+          ],
+          [
+            6.00678,
+            270
+          ],
+          [
+            6.62513,
+            270,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            140
+          ],
+          [
+            6.00678,
+            140
+          ],
+          [
+            6.62513,
+            220,
+            "out"
+          ]
+        ],
+        "rotation": [
+          [
+            0.0,
+            3
+          ],
+          [
+            7.0668,
+            3
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "bar",
+      "x": 200,
+      "y": 850,
+      "w": 600,
+      "h": 45,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "value": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.7667,
+            0.12
+          ],
+          [
+            4.06341,
+            0.46
+          ],
+          [
+            6.36012,
+            0.88
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "code",
+      "x": 1070,
+      "y": 340,
+      "w": 600,
+      "h": 310,
+      "lines": [
+        "$ run current-task",
+        "> processing..."
+      ],
+      "size": 30,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            9.18684,
+            0
+          ],
+          [
+            9.80519,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1070
+          ],
+          [
+            9.18684,
+            1070
+          ],
+          [
+            9.80519,
+            1070,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            390
+          ],
+          [
+            9.18684,
+            390
+          ],
+          [
+            9.80519,
+            340,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "bar",
+      "x": 1070,
+      "y": 850,
+      "w": 600,
+      "h": 45,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "value": [
+          [
+            0.0,
+            0
+          ],
+          [
+            9.18684,
+            0.05
+          ],
+          [
+            10.95354,
+            0.13
+          ],
+          [
+            14.48694,
+            0.9
+          ],
+          [
+            15.9003,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "code",
+      "x": 1090,
+      "y": 380,
+      "w": 500,
+      "h": 260,
+      "lines": [
+        "$ parallel-task 2",
+        "✓ working independently"
+      ],
+      "size": 25,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            12.01356,
+            0
+          ],
+          [
+            12.63191,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1090
+          ],
+          [
+            12.01356,
+            1090
+          ],
+          [
+            12.63191,
+            1090,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            430
+          ],
+          [
+            12.01356,
+            430
+          ],
+          [
+            12.63191,
+            380,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010",
+      "kind": "code",
+      "x": 1150,
+      "y": 455,
+      "w": 500,
+      "h": 260,
+      "lines": [
+        "$ parallel-task 3",
+        "✓ working independently"
+      ],
+      "size": 25,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            13.25025,
+            0
+          ],
+          [
+            13.8686,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1150
+          ],
+          [
+            13.25025,
+            1150
+          ],
+          [
+            13.8686,
+            1150,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            505
+          ],
+          [
+            13.25025,
+            505
+          ],
+          [
+            13.8686,
+            455,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011",
+      "kind": "code",
+      "x": 1210,
+      "y": 530,
+      "w": 500,
+      "h": 260,
+      "lines": [
+        "$ parallel-task 4",
+        "✓ working independently"
+      ],
+      "size": 25,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            14.48694,
+            0
+          ],
+          [
+            15.10529,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1210
+          ],
+          [
+            14.48694,
+            1210
+          ],
+          [
+            15.10529,
+            1210,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            580
+          ],
+          [
+            14.48694,
+            580
+          ],
+          [
+            15.10529,
+            530,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/608593d6a0005f46166f9c9b27f529e57bc3c494e6ee4495d5d2c2b18d1d2735.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "I think there are three main advantages.",
+          "label": "Opening Hook",
+          "visual": "Static graphic display on a white background. At the top, three dark oval pills highlight three points. Below, two separate product interfaces are shown side-by-side: a web-based chat interface on the left and a dark-themed terminal interface on the right. A progress bar-like graphic sits at the bottom.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "First, light and fast.",
+          "label": "Product Selling Points",
+          "visual": "A transition effect highlights the first point at the top. The background remains white. The two interface side-by-side views persist, with the left labeled as the desktop version and the right as the terminal version.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "The desktop version is a complete piece of software. The interface, animations, and various windows all consume memory.",
+          "label": "Product Information",
+          "visual": "The left side (desktop version) expands with three layered white boxes representing different UI components. A circle graphic displays animated dots. The bottom bar under this section fills with a dark color to represent memory usage, becoming thicker and more prominent as more components are 'loaded' visually.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:09",
+          "timestamp_start": "0:04"
+        },
+        {
+          "audio": "The terminal version is just a text window, which opens quickly.",
+          "label": "Product Selling Points",
+          "visual": "Focus shifts to the right side (terminal version). A single text box appears with a terminal prompt. The bottom progress bar for this section remains thin and mostly empty, contrasting with the heavy bar on the left side.",
+          "shot_type": "Medium Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:12",
+          "timestamp_start": "0:09"
+        },
+        {
+          "audio": "And I can open several windows at the same time to run tasks in parallel, which is easier and less likely to cause a memory explosion.",
+          "label": "Usage Scenarios",
+          "visual": "The terminal side populates with multiple overlapping dark terminal windows showing scrolling text. On the left, the desktop version shows a loading spinner. The right side appears dynamic and active while the left side remains static with a loading icon.",
+          "shot_type": "Wide Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:17",
+          "timestamp_start": "0:12"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "桌面版拆成“界面/动画/各种窗口”三层，内存条一层涨一截；终端版是一层文字窗口；终端复制成 4 个并发小窗，内存条冲顶抖一下"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 17.667,
+      "action": "桌面版拆成“界面/动画/各种窗口”三层，内存条一层涨一截；终端版是一层文字窗口；终端复制成 4 个并发小窗，内存条冲顶抖一下"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

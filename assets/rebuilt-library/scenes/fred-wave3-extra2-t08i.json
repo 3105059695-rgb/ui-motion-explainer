@@ -1,0 +1,178 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-extra2-t08i",
+  "title": "毛玻璃要点卡",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "point": "这次更新真正改变了什么",
+    "detail": "保留原始资料，只把当前重点抬到前景。"
+  },
+  "assets": {
+    "screen": "assets/style-film/media/connected-delivery.svg"
+  },
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/8b5ad5797568b80f6e082f756ac2deb37a6fc87d0c228af1f85fbc33b7286154.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "Electronic notification sound effect, followed by a mid-tempo, upbeat pop-instrumental track with a steady drum beat and synthesized keyboard melody.",
+          "label": "Opening Hook",
+          "visual": "A static, top-down screen recording of the GitHub 'releases' page for a software project version 3.69.0. The page is displayed in light mode with black text on a white background. The content shows a warning notice about ffmpeg and a list of new features and bug fixes. The lighting is the uniform brightness of a computer monitor, and the color palette is predominantly white, gray, and blue for hyperlinks.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Upbeat pop-instrumental music continues at a consistent volume.",
+          "label": "Product Information",
+          "visual": "The same screen recording of the GitHub releases page remains static, but a Gaussian blur effect has been applied to the background. Centered in the foreground is a white rounded-corner rectangle. The lighting remains digital and uniform. The background depth of field is artificial, simulated by the blur filter.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:01"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.0,
+      "action": "Readable original material is established"
+    },
+    {
+      "start": 1.0,
+      "end": 2.25,
+      "action": "Background defocuses while a translucent focal card appears"
+    },
+    {
+      "start": 2.25,
+      "end": 5,
+      "action": "Keep both contextual source and readable foreground"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 260,
+      "y": 130,
+      "w": 1400,
+      "h": 800,
+      "asset": "screen",
+      "fit": "contain",
+      "radius": 18,
+      "tracks": {
+        "blur": [
+          [
+            0,
+            0
+          ],
+          [
+            1.0,
+            0
+          ],
+          [
+            2.0,
+            12
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            2.0,
+            0.98
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-card",
+      "kind": "card",
+      "x": 510,
+      "y": 300,
+      "w": 900,
+      "h": 400,
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 50,
+          "y": 50,
+          "w": 800,
+          "h": 110,
+          "text": "{{point}}",
+          "size": 62,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 50,
+          "y": 205,
+          "w": 800,
+          "h": 100,
+          "text": "{{detail}}",
+          "size": 36,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "rgba(255,255,255,.92)",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.25,
+            0
+          ],
+          [
+            2.25,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.25,
+            335
+          ],
+          [
+            2.25,
+            300,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

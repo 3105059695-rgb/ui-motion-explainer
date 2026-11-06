@@ -1,0 +1,419 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-native-t05b",
+  "title": "以前 vs 现在：旧步骤收成一叠，新做法接管",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "step0": "找素材",
+    "step1": "改格式",
+    "step2": "逐个处理",
+    "step3": "手动核对",
+    "step4": "重新导出",
+    "newMethod": "说明目标，交付结果"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/251dfbe1a7a87221c673c6132eebcb7d1231dc0c877b83fb3b7e30303d948dc7.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A rhythmic, fast-paced electronic clicking sound, mimicking the sound of rapid computer typing or UI interactions. The tempo is high to convey a sense of a long, tedious process.",
+          "label": "Opening Hook",
+          "visual": "A static, minimalist digital canvas with a pure white background. The composition is split vertically. On the left side, a list of five distinct text blocks appears sequentially from top to bottom. Each block is contained within a white rounded rectangle featuring a soft drop shadow, creating a layered, clean interface look. The lighting is uniform and flat, typical of motion graphic environments. There are no human subjects or products present.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A sharp, resonant 'ding' or chime sound effect, signaling a shift in tone or a solution being presented. The background clicking stops abruptly.",
+          "label": "Problem Solving",
+          "visual": "A dynamic transition occurs. The previously established list on the left side slides partially off-frame and fades into the background. A large, black pill-shaped button with a thick border expands horizontally from the center-right of the screen. The background remains clean white, maintaining high contrast between the new dark element and the previous light interface.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A low-frequency, soft digital hum that fades out slowly into silence.",
+          "label": "Call to Action",
+          "visual": "The camera remains static on the final frame layout. The black pill-shaped button is now fully formed on the right side of the screen, counter-balancing the faded list on the left. The overall color palette is strictly monochromatic (black and white), emphasizing a professional and streamlined aesthetic. No movement occurs in this final scene.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 2.25,
+      "action": "Five concrete old steps accumulate vertically"
+    },
+    {
+      "start": 2.25,
+      "end": 3.75,
+      "action": "Old workflow partially slides out and recedes while new approach expands in empty right area"
+    },
+    {
+      "start": 3.75,
+      "end": 5,
+      "action": "New method holds with old route still recognizable"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n011-group",
+      "kind": "group",
+      "x": 170,
+      "y": 130,
+      "w": 730,
+      "h": 800,
+      "children": [
+        {
+          "id": "n002-card",
+          "kind": "card",
+          "x": 0,
+          "y": 0,
+          "w": 730,
+          "h": 120,
+          "children": [
+            {
+              "id": "n001-text",
+              "kind": "text",
+              "x": 35,
+              "y": 28,
+              "w": 660,
+              "h": 70,
+              "text": "{{step0}}",
+              "size": 47,
+              "color": "#0B0B0F",
+              "align": "left"
+            }
+          ],
+          "fill": "#FFFFFF",
+          "tracks": {
+            "opacity": [
+              [
+                0.0,
+                0
+              ],
+              [
+                0.6,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                0.0,
+                35
+              ],
+              [
+                0.6,
+                0,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n004-card",
+          "kind": "card",
+          "x": 0,
+          "y": 150,
+          "w": 730,
+          "h": 120,
+          "children": [
+            {
+              "id": "n003-text",
+              "kind": "text",
+              "x": 35,
+              "y": 28,
+              "w": 660,
+              "h": 70,
+              "text": "{{step1}}",
+              "size": 47,
+              "color": "#0B0B0F",
+              "align": "left"
+            }
+          ],
+          "fill": "#FFFFFF",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                0.425,
+                0
+              ],
+              [
+                1.025,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                0.425,
+                185
+              ],
+              [
+                1.025,
+                150,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n006-card",
+          "kind": "card",
+          "x": 0,
+          "y": 300,
+          "w": 730,
+          "h": 120,
+          "children": [
+            {
+              "id": "n005-text",
+              "kind": "text",
+              "x": 35,
+              "y": 28,
+              "w": 660,
+              "h": 70,
+              "text": "{{step2}}",
+              "size": 47,
+              "color": "#0B0B0F",
+              "align": "left"
+            }
+          ],
+          "fill": "#FFFFFF",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                0.85,
+                0
+              ],
+              [
+                1.45,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                0.85,
+                335
+              ],
+              [
+                1.45,
+                300,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n008-card",
+          "kind": "card",
+          "x": 0,
+          "y": 450,
+          "w": 730,
+          "h": 120,
+          "children": [
+            {
+              "id": "n007-text",
+              "kind": "text",
+              "x": 35,
+              "y": 28,
+              "w": 660,
+              "h": 70,
+              "text": "{{step3}}",
+              "size": 47,
+              "color": "#0B0B0F",
+              "align": "left"
+            }
+          ],
+          "fill": "#FFFFFF",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                1.275,
+                0
+              ],
+              [
+                1.875,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                1.275,
+                485
+              ],
+              [
+                1.875,
+                450,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n010-card",
+          "kind": "card",
+          "x": 0,
+          "y": 600,
+          "w": 730,
+          "h": 120,
+          "children": [
+            {
+              "id": "n009-text",
+              "kind": "text",
+              "x": 35,
+              "y": 28,
+              "w": 660,
+              "h": 70,
+              "text": "{{step4}}",
+              "size": 47,
+              "color": "#0B0B0F",
+              "align": "left"
+            }
+          ],
+          "fill": "#FFFFFF",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                1.7,
+                0
+              ],
+              [
+                2.3,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                1.7,
+                635
+              ],
+              [
+                2.3,
+                600,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            170
+          ],
+          [
+            2.25,
+            170
+          ],
+          [
+            3.35,
+            -130
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            2.25,
+            1
+          ],
+          [
+            3.35,
+            0.3
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            2.25,
+            1
+          ],
+          [
+            3.35,
+            0.85
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012-pill",
+      "kind": "pill",
+      "x": 920,
+      "y": 430,
+      "w": 820,
+      "h": 170,
+      "label": "{{newMethod}}",
+      "size": 56,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "revealX": [
+          [
+            2.45,
+            0
+          ],
+          [
+            3.75,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

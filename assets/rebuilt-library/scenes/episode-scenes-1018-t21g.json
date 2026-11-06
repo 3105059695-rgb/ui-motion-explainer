@@ -1,0 +1,606 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t21g",
+  "title": "成绩单：灰色条目按口播逐条打勾/半/叉，行从灰变墨",
+  "duration": 14.267,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "这次表现，怎么样？",
+    "text02": "成绩单",
+    "text03": "复杂任务",
+    "text04": "×",
+    "text05": "连续操作",
+    "text06": "−",
+    "text07": "理解要求",
+    "text08": "−",
+    "text09": "素材组织",
+    "text10": "✓",
+    "text11": "实际交付",
+    "text12": "✓"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "pill",
+      "x": 500,
+      "y": 90,
+      "w": 920,
+      "h": 95,
+      "label": "{{text01}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.28534,
+            0
+          ],
+          [
+            0.78469,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            500
+          ],
+          [
+            0.28534,
+            500
+          ],
+          [
+            0.78469,
+            500,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            140
+          ],
+          [
+            0.28534,
+            140
+          ],
+          [
+            0.78469,
+            90,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "window",
+      "x": 390,
+      "y": 235,
+      "w": 1140,
+      "h": 700,
+      "label": "{{text02}}"
+    },
+    {
+      "id": "n003",
+      "kind": "text",
+      "x": 490,
+      "y": 350,
+      "w": 800,
+      "h": 75.2,
+      "text": "{{text03}}",
+      "size": 47,
+      "color": "#797982",
+      "tracks": {
+        "color": [
+          [
+            0.0,
+            "#797982"
+          ],
+          [
+            2.42539,
+            "#797982"
+          ],
+          [
+            2.99607,
+            "#0B0B0F"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "text",
+      "x": 1320,
+      "y": 340,
+      "w": 110,
+      "h": 102.4,
+      "text": "{{text04}}",
+      "size": 64,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            2.42539,
+            0
+          ],
+          [
+            2.92474,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1320
+          ],
+          [
+            2.42539,
+            1320
+          ],
+          [
+            2.92474,
+            1320,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            300
+          ],
+          [
+            2.42539,
+            300
+          ],
+          [
+            2.92474,
+            340,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "text",
+      "x": 490,
+      "y": 455,
+      "w": 800,
+      "h": 75.2,
+      "text": "{{text05}}",
+      "size": 47,
+      "color": "#797982",
+      "tracks": {
+        "color": [
+          [
+            0.0,
+            "#797982"
+          ],
+          [
+            4.42277,
+            "#797982"
+          ],
+          [
+            4.99345,
+            "#0B0B0F"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "text",
+      "x": 1320,
+      "y": 445,
+      "w": 110,
+      "h": 102.4,
+      "text": "{{text06}}",
+      "size": 64,
+      "color": "#D6C2FF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.42277,
+            0
+          ],
+          [
+            4.92212,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1320
+          ],
+          [
+            4.42277,
+            1320
+          ],
+          [
+            4.92212,
+            1320,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            405
+          ],
+          [
+            4.42277,
+            405
+          ],
+          [
+            4.92212,
+            445,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "text",
+      "x": 490,
+      "y": 560,
+      "w": 800,
+      "h": 75.2,
+      "text": "{{text07}}",
+      "size": 47,
+      "color": "#797982",
+      "tracks": {
+        "color": [
+          [
+            0.0,
+            "#797982"
+          ],
+          [
+            6.42015,
+            "#797982"
+          ],
+          [
+            6.99083,
+            "#0B0B0F"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "text",
+      "x": 1320,
+      "y": 550,
+      "w": 110,
+      "h": 102.4,
+      "text": "{{text08}}",
+      "size": 64,
+      "color": "#D6C2FF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            6.42015,
+            0
+          ],
+          [
+            6.9195,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1320
+          ],
+          [
+            6.42015,
+            1320
+          ],
+          [
+            6.9195,
+            1320,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            510
+          ],
+          [
+            6.42015,
+            510
+          ],
+          [
+            6.9195,
+            550,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "text",
+      "x": 490,
+      "y": 665,
+      "w": 800,
+      "h": 75.2,
+      "text": "{{text09}}",
+      "size": 47,
+      "color": "#797982",
+      "tracks": {
+        "color": [
+          [
+            0.0,
+            "#797982"
+          ],
+          [
+            8.41753,
+            "#797982"
+          ],
+          [
+            8.98821,
+            "#0B0B0F"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010",
+      "kind": "text",
+      "x": 1320,
+      "y": 655,
+      "w": 110,
+      "h": 102.4,
+      "text": "{{text10}}",
+      "size": 64,
+      "color": "#D6C2FF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.41753,
+            0
+          ],
+          [
+            8.91688,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1320
+          ],
+          [
+            8.41753,
+            1320
+          ],
+          [
+            8.91688,
+            1320,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            615
+          ],
+          [
+            8.41753,
+            615
+          ],
+          [
+            8.91688,
+            655,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011",
+      "kind": "text",
+      "x": 490,
+      "y": 770,
+      "w": 800,
+      "h": 75.2,
+      "text": "{{text11}}",
+      "size": 47,
+      "color": "#797982",
+      "tracks": {
+        "color": [
+          [
+            0.0,
+            "#797982"
+          ],
+          [
+            10.41491,
+            "#797982"
+          ],
+          [
+            10.98559,
+            "#0B0B0F"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012",
+      "kind": "text",
+      "x": 1320,
+      "y": 760,
+      "w": 110,
+      "h": 102.4,
+      "text": "{{text12}}",
+      "size": 64,
+      "color": "#D6C2FF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            10.41491,
+            0
+          ],
+          [
+            10.91426,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1320
+          ],
+          [
+            10.41491,
+            1320
+          ],
+          [
+            10.91426,
+            1320,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            720
+          ],
+          [
+            10.41491,
+            720
+          ],
+          [
+            10.91426,
+            760,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/082c347136ebe60d105d180716911a3e6b3c36c6aef3651513639470e081df40.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "So has Gemini 4 regained its prestige?",
+          "label": "Opening Hook",
+          "visual": "Static camera shot centered on a minimalist white background. A multi-colored, four-pointed star icon with a blue-to-pink gradient sits above the central text. The lighting is flat and even across the frame, mimicking a digital interface. The background is a clean, sterile white with no visible texture.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "I think there is both good and bad news.",
+          "label": "Product Information",
+          "visual": "A white rectangular card with soft rounded corners fades into the center of the frame. The card contains a list structure. The lighting remains even and digital. The color palette is restricted to white, light gray, and the small multi-colored icon in the top left corner of the card.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "The front-end coding hasn't become stronger, and for game development...",
+          "label": "Product Selling Points",
+          "visual": "A vertical list of five items appears on the digital card. Circular indicators to the right of each item begin to fill with symbols: a black 'X' for the first item and a purple minus sign for the second. The animation is a clean, digital pop-in. The background remains white and static.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:07",
+          "timestamp_start": "0:04"
+        },
+        {
+          "audio": "...it's still behind Claude and GPT. However, there is progress in writing and long-context tasks.",
+          "label": "Product Selling Points",
+          "visual": "The remaining items in the list fill in. The third and fourth items receive purple indicators, while the fifth item receives a green checkmark. Additional text elements appear at the bottom of the card. The camera movement is non-existent, focusing entirely on the digital interface updates.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:12",
+          "timestamp_start": "0:07"
+        },
+        {
+          "audio": "But having said that...",
+          "label": "Problem Solving",
+          "visual": "The digital card and all list elements disappear, leaving a completely blank, solid white screen. The lighting is uniform and bright white.",
+          "shot_type": "Wide Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:13",
+          "timestamp_start": "0:12"
+        },
+        {
+          "audio": "...now Claude Code is banning accounts like crazy.",
+          "label": "Usage Scenarios",
+          "visual": "A new, smaller square white card with rounded corners appears on the left side of the screen. It features an orange sun-like or spark icon. The shot is static against the same white background. The lighting remains artificial and digital.",
+          "shot_type": "Wide Shot",
+          "scene_number": 6,
+          "timestamp_end": "0:15",
+          "timestamp_start": "0:13"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "Logo 回到中央 + 问句黑胶囊 → 整页先铺开灰色成绩单条目（各章名），按口播逐条打勾/打叉/半勾，行从灰变墨"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 14.267,
+      "action": "Logo 回到中央 + 问句黑胶囊 → 整页先铺开灰色成绩单条目（各章名），按口播逐条打勾/打叉/半勾，行从灰变墨"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

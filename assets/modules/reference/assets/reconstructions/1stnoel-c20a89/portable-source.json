@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "slug": "1stnoel-c20a89",
+  "source_project": "assets/reconstructions/1stnoel-c20a89",
+  "project": "assets/reconstructions/1stnoel-c20a89",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "assets/cendrillon-cover.png",
+    "assets/fonts/newsreader-METADATA.pb",
+    "index.html",
+    "motion.js",
+    "preferred.json",
+    "project.json",
+    "render-720p-v1/verification.json",
+    "scene-plan.json",
+    "style.css",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/08939b8bdf534afec24a.ttf",
+    "../../reference-shared/fonts/498efd461f6ddfcb7a11.ttf",
+    "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "../../reference-shared/fonts/796668611f80b64d5adf.ttf",
+    "../../reference-shared/fonts/8a08d13f8a6c0d51be37.ttf",
+    "../../reference-shared/fonts/d00e590b8eb3a59acc32.ttf"
+  ],
+  "replaceable_assets": [
+    {
+      "path": "assets/cendrillon-cover.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "3fe03e44d0a116b813e09eabe9e8aa4cfa6b7951b055c984318fe09acc27f915"
+    }
+  ],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "assets/cendrillon-cover.png": "assets/cendrillon-cover.png",
+    "assets/fonts/Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "assets/fonts/GeistMono.ttf": "../../reference-shared/fonts/d00e590b8eb3a59acc32.ttf",
+    "assets/fonts/InstrumentSerif-Italic.ttf": "../../reference-shared/fonts/08939b8bdf534afec24a.ttf",
+    "assets/fonts/InstrumentSerif-Regular.ttf": "../../reference-shared/fonts/498efd461f6ddfcb7a11.ttf",
+    "assets/fonts/Newsreader-Italic.ttf": "../../reference-shared/fonts/796668611f80b64d5adf.ttf",
+    "assets/fonts/newsreader-METADATA.pb": "assets/fonts/newsreader-METADATA.pb",
+    "assets/fonts/Newsreader.ttf": "../../reference-shared/fonts/8a08d13f8a6c0d51be37.ttf",
+    "index.html": "index.html",
+    "motion.js": "motion.js",
+    "preferred.json": "preferred.json",
+    "project.json": "project.json",
+    "render-720p-v1/verification.json": "render-720p-v1/verification.json",
+    "scene-plan.json": "scene-plan.json",
+    "style.css": "style.css",
+    "cendrillon-cover.png": "assets/cendrillon-cover.png",
+    "Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "GeistMono.ttf": "../../reference-shared/fonts/d00e590b8eb3a59acc32.ttf",
+    "InstrumentSerif-Italic.ttf": "../../reference-shared/fonts/08939b8bdf534afec24a.ttf",
+    "InstrumentSerif-Regular.ttf": "../../reference-shared/fonts/498efd461f6ddfcb7a11.ttf",
+    "Newsreader-Italic.ttf": "../../reference-shared/fonts/796668611f80b64d5adf.ttf",
+    "newsreader-METADATA.pb": "assets/fonts/newsreader-METADATA.pb",
+    "Newsreader.ttf": "../../reference-shared/fonts/8a08d13f8a6c0d51be37.ttf",
+    "verification.json": "render-720p-v1/verification.json"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

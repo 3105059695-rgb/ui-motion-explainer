@@ -1,0 +1,490 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t17j",
+  "title": "命令丢给终端 → 窗口吸进 Dock → 回来成片已在文件夹",
+  "duration": 11.367,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "Codex",
+    "text02": "复制运行命令",
+    "text03": "Final Output",
+    "text04": "本期成片.mp4"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "window",
+      "x": 120,
+      "y": 180,
+      "w": 750,
+      "h": 620,
+      "label": "{{text01}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.22734,
+            0
+          ],
+          [
+            0.62519,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            120
+          ],
+          [
+            0.22734,
+            120
+          ],
+          [
+            0.62519,
+            120,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            230
+          ],
+          [
+            0.22734,
+            230
+          ],
+          [
+            0.62519,
+            180,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "pill",
+      "x": 210,
+      "y": 500,
+      "w": 560,
+      "h": 90,
+      "label": "{{text02}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.1367,
+            0
+          ],
+          [
+            1.53455,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            210
+          ],
+          [
+            1.1367,
+            210
+          ],
+          [
+            1.53455,
+            210,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            550
+          ],
+          [
+            1.1367,
+            550
+          ],
+          [
+            1.53455,
+            500,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "code",
+      "x": 960,
+      "y": 210,
+      "w": 800,
+      "h": 580,
+      "lines": [
+        "$ render current-project",
+        "✓ source loaded",
+        "✓ assets bound",
+        "✓ rendering frames",
+        "✓ done"
+      ],
+      "size": 32,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            1
+          ],
+          [
+            7.38855,
+            1
+          ],
+          [
+            7.72956,
+            0
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            960
+          ],
+          [
+            6.02451,
+            960
+          ],
+          [
+            7.38855,
+            1430
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            210
+          ],
+          [
+            5.00148,
+            210
+          ],
+          [
+            6.02451,
+            150
+          ],
+          [
+            7.38855,
+            930
+          ]
+        ],
+        "scaleX": [
+          [
+            0.0,
+            1
+          ],
+          [
+            6.02451,
+            1
+          ],
+          [
+            7.38855,
+            0.08
+          ]
+        ],
+        "scaleY": [
+          [
+            0.0,
+            1
+          ],
+          [
+            6.02451,
+            1
+          ],
+          [
+            7.38855,
+            0.03
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "bar",
+      "x": 220,
+      "y": 870,
+      "w": 1200,
+      "h": 34,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "value": [
+          [
+            0.0,
+            0
+          ],
+          [
+            6.25185,
+            0
+          ],
+          [
+            8.29791,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "window",
+      "x": 700,
+      "y": 260,
+      "w": 1040,
+      "h": 540,
+      "label": "{{text03}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.07057,
+            0
+          ],
+          [
+            8.46842,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            700
+          ],
+          [
+            8.07057,
+            700
+          ],
+          [
+            8.46842,
+            700,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            310
+          ],
+          [
+            8.07057,
+            310
+          ],
+          [
+            8.46842,
+            260,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "file",
+      "x": 1070,
+      "y": 430,
+      "w": 270,
+      "h": 280,
+      "label": "{{text04}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            8.97993,
+            0
+          ],
+          [
+            9.37778,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1070
+          ],
+          [
+            8.97993,
+            1070
+          ],
+          [
+            9.37778,
+            1070,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            230
+          ],
+          [
+            8.97993,
+            230
+          ],
+          [
+            9.37778,
+            430,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "check",
+      "x": 1490,
+      "y": 650,
+      "w": 80,
+      "h": 80,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            10.2303,
+            0
+          ],
+          [
+            10.62815,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1490
+          ],
+          [
+            10.2303,
+            1490
+          ],
+          [
+            10.62815,
+            1490,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            700
+          ],
+          [
+            10.2303,
+            700
+          ],
+          [
+            10.62815,
+            650,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/1edda08324aba3c7fab43b4e7c89a5c77c64a1a95bac3080def42e0115289f0f.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "You see, this is exactly what I'm doing now to render this video.",
+          "label": "Opening Hook",
+          "visual": "A clean, minimalist UI layout on a white background. To the left, a purple vertical menu bar lists several icons. To the right, a chat interface is visible with a message bubble. The lighting is digital-flat with no shadows. The color palette is primarily white, light gray, and soft purple tones.",
+          "shot_type": "Medium Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Codex gives me a line of command, and I paste it in and press Enter.",
+          "label": "Product Information",
+          "visual": "A terminal window with a dark gray background pops open on the right side of the screen over the chat interface. A cursor moves across the screen, mimicking the action of a user interacting with the software. The terminal window features white and green text on a dark background.",
+          "shot_type": "Close-Up",
+          "scene_number": 2,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "The characters start scrolling up like crazy, so I can go on to edit the next segment.",
+          "label": "Product Selling Points",
+          "visual": "The terminal window expands slightly as lines of white text and checkmark emojis rapidly scroll upwards, simulating real-time code execution and rendering progress. The movement is fast and continuous.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:07",
+          "timestamp_start": "0:05"
+        },
+        {
+          "audio": "Genre: upbeat digital transition music with a rhythmic click sound effect.",
+          "label": "Usage Scenarios",
+          "visual": "The screen transitions to a simplified video editing interface. A playhead moves across a grey timeline at the bottom. A dark preview window sits in the center. The aesthetic remains consistent with white and gray backgrounds.",
+          "shot_type": "Medium Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:08",
+          "timestamp_start": "0:07"
+        },
+        {
+          "audio": "By the time I come back, the finished video is already lying in the folder.",
+          "label": "Call to Action",
+          "visual": "The scene shifts to a file explorer window titled 'Final Output'. A thumbnail of a video file appears in the center of the folder. A blue cursor hovers over the sidebar menu. The background is a clean white with soft gray borders.",
+          "shot_type": "Close-Up",
+          "scene_number": 5,
+          "timestamp_end": "0:10",
+          "timestamp_start": "0:08"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "Codex 回复给命令 → 复制 → 终端粘贴回车输出哗哗上滚 → 终端窗口按 Mac 最小化吸进 Dock，旁边剪辑时间轴快进 → 成片文件卡落进 Finder（全片唯一“叮”）"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 11.367,
+      "action": "Codex 回复给命令 → 复制 → 终端粘贴回车输出哗哗上滚 → 终端窗口按 Mac 最小化吸进 Dock，旁边剪辑时间轴快进 → 成片文件卡落进 Finder（全片唯一“叮”）"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "slug": "emollick-8661a8",
+  "source_project": "assets/reconstructions/emollick-8661a8",
+  "project": "assets/reconstructions/emollick-8661a8",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "composition.js",
+    "index.html",
+    "project.json",
+    "scene-plan.json",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "../../reference-shared/fonts/8cc3643535edf039aa5d.ttf",
+    "../../reference-shared/fonts/a4ba3a92350ebb031da0.ttf",
+    "../../reference-shared/fonts/df74c0ac387baeaeb0fe.ttf"
+  ],
+  "replaceable_assets": [],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "assets/fonts/Anton.ttf": "../../reference-shared/fonts/a4ba3a92350ebb031da0.ttf",
+    "assets/fonts/DMSerifDisplay-Italic.ttf": "../../reference-shared/fonts/df74c0ac387baeaeb0fe.ttf",
+    "assets/fonts/DMSerifDisplay-Regular.ttf": "../../reference-shared/fonts/8cc3643535edf039aa5d.ttf",
+    "assets/fonts/Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "composition.js": "composition.js",
+    "index.html": "index.html",
+    "project.json": "project.json",
+    "scene-plan.json": "scene-plan.json",
+    "Anton.ttf": "../../reference-shared/fonts/a4ba3a92350ebb031da0.ttf",
+    "DMSerifDisplay-Italic.ttf": "../../reference-shared/fonts/df74c0ac387baeaeb0fe.ttf",
+    "DMSerifDisplay-Regular.ttf": "../../reference-shared/fonts/8cc3643535edf039aa5d.ttf",
+    "Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

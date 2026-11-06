@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <title>Open tutorial book sticker</title>
+  <defs>
+    <filter id="shadow" x="0" y="0" width="256" height="256" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#282333" flood-opacity=".18"/>
+    </filter>
+    <linearGradient id="pageL" x1="38" y1="92" x2="125" y2="171" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFEFF"/><stop offset="1" stop-color="#E8E4F1"/>
+    </linearGradient>
+    <linearGradient id="pageR" x1="137" y1="126" x2="214" y2="88" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0EBFA"/><stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#shadow)" transform="rotate(-7 128 128)">
+    <path d="M32 62C68 57 100 63 127 81C151 65 181 60 216 63L220 183C184 178 155 187 127 201C100 187 68 181 34 185L30 72Z" fill="white" stroke="white" stroke-width="15" stroke-linejoin="round"/>
+    <path d="M31 84C72 80 99 88 127 103C153 88 181 81 218 84L221 183C184 179 155 188 127 201C99 188 69 182 34 186Z" fill="#655980" stroke="#332D40" stroke-width="3.5" stroke-linejoin="round"/>
+    <path d="M37 77C73 74 104 82 127 97C152 82 181 74 212 77L213 174C179 174 151 183 127 193C102 182 72 175 40 177Z" fill="#D2CBDD" stroke="#332D40" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M40 168C72 166 103 173 125 186M133 186C155 174 179 168 211 167M41 162C72 161 102 168 122 179M136 179C157 168 181 161 211 160" stroke="#9D93AE" stroke-width="2" stroke-linecap="round"/>
+    <path d="M34 66C70 61 101 68 127 85V180C100 164 71 157 38 163Z" fill="url(#pageL)" stroke="#332D40" stroke-width="3.5" stroke-linejoin="round"/>
+    <path d="M127 85C154 68 181 62 214 66L211 162C179 159 151 165 127 180Z" fill="url(#pageR)" stroke="#332D40" stroke-width="3.5" stroke-linejoin="round"/>
+    <path d="M127 87V179" stroke="#9F92B5" stroke-width="5"/>
+    <path d="M121 90C123 122 123 153 122 174M133 90C132 119 132 148 133 173" stroke="#D5CDE1" stroke-width="2"/>
+    <path d="M170 68L185 66V105L177 99L170 107Z" fill="#B8A0ED" stroke="#685381" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M54 90C70 89 85 92 99 98" stroke="#A296B2" stroke-width="5" stroke-linecap="round"/>
+    <path d="M55 106C74 105 94 112 109 120M56 118C73 117 93 124 109 132M57 131C71 130 82 133 92 138" stroke="#C0B7CF" stroke-width="3.5" stroke-linecap="round"/>
+    <rect x="147" y="114" width="40" height="30" rx="6" transform="rotate(-9 147 114)" fill="#E0D4F4" stroke="#B4A4CE" stroke-width="2"/>
+    <path d="M157 127L164 132L176 119" stroke="#80669C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M146 156C162 149 180 146 196 146" stroke="#B4A8C6" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+</svg>

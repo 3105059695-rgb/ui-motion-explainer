@@ -1,0 +1,415 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t05r",
+  "title": "播放窗翻面换素材，再一分为二左右对照",
+  "duration": 13,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "同一任务，不同执行",
+    "media1.start": 0,
+    "media1.speed": 1,
+    "media2.start": 0,
+    "media2.speed": 1,
+    "media3.start": 0,
+    "media3.speed": 1,
+    "media4.start": 0,
+    "media4.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media2": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media3": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media4": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "image",
+      "x": 200,
+      "y": 170,
+      "w": 1520,
+      "h": 740,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0,
+        3.25
+      ],
+      "tracks": {
+        "scaleX": [
+          [
+            0,
+            1
+          ],
+          [
+            2.6,
+            1
+          ],
+          [
+            3.25,
+            0,
+            "in"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "image",
+      "x": 200,
+      "y": 170,
+      "w": 1520,
+      "h": 740,
+      "asset": "media2",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        3.25,
+        7.8
+      ],
+      "tracks": {
+        "scaleX": [
+          [
+            3.25,
+            0
+          ],
+          [
+            3.9,
+            1,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "image",
+      "x": 110,
+      "y": 245,
+      "w": 820,
+      "h": 580,
+      "asset": "media3",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        7.67,
+        13.001
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            7.67,
+            0
+          ],
+          [
+            8.125,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            540
+          ],
+          [
+            7.67,
+            540
+          ],
+          [
+            8.125,
+            110,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            295
+          ],
+          [
+            7.67,
+            295
+          ],
+          [
+            8.125,
+            245,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "image",
+      "x": 990,
+      "y": 245,
+      "w": 820,
+      "h": 580,
+      "asset": "media4",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        7.67,
+        13.001
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            7.67,
+            0
+          ],
+          [
+            8.125,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            560
+          ],
+          [
+            7.67,
+            560
+          ],
+          [
+            8.125,
+            990,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            295
+          ],
+          [
+            7.67,
+            295
+          ],
+          [
+            8.125,
+            245,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "text",
+      "x": 540,
+      "y": 80,
+      "w": 900,
+      "h": 92.80000000000001,
+      "text": "{{text01}}",
+      "size": 58,
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            8.45,
+            0
+          ],
+          [
+            8.905,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            540
+          ],
+          [
+            8.45,
+            540
+          ],
+          [
+            8.905,
+            540,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            130
+          ],
+          [
+            8.45,
+            130
+          ],
+          [
+            8.905,
+            80,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/2d8c5a8ace14bb55051f387a6234776e60be11b2f4c09771ae9744b32c809db7.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "After catching it, it can even walk and hand it to a person.",
+          "label": "Opening Hook",
+          "visual": "A static camera capture of a laboratory setting with whiteboards, desks, and robotic equipment. In the center, a bipedal robot with a metallic grey frame and a white box-like head catches a brown cardboard box thrown by a person. The person is an East Asian male, approximately 20-30 years old, wearing a black long-sleeve shirt, black pants, and white sneakers. The lighting is bright, even, and artificial (cool-toned fluorescent). The background shows various cables, a rolling chair, and server racks.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The second one is even more impressive, called SGS.",
+          "label": "Product Information",
+          "visual": "Static close-up shot focusing on a three-pronged metallic robotic claw. The claw descends toward a white flat surface where a small grey cylindrical object is lying. The lighting is bright and white, creating a clinical, clean environment. The color palette is dominated by whites and metallic greys.",
+          "shot_type": "Extreme Close-Up",
+          "scene_number": 2,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "It was trained entirely in simulation.",
+          "label": "Product Selling Points",
+          "visual": "A digital simulation environment showing a white robotic arm mounted on a frame. The arm is performing precise movements over a square plate. The environment is minimalist and virtual with soft shadows. The camera is static, viewing the arm from a slightly elevated side angle.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:07",
+          "timestamp_start": "0:05"
+        },
+        {
+          "audio": "Not a single real-world demonstration was given.",
+          "label": "Product Selling Points",
+          "visual": "The same digital simulation as the previous scene, but a large graphic overlay appears in the center of the frame featuring a large zero. The robotic arm continues its motion in the background, which is slightly darkened to emphasize the central graphic.",
+          "shot_type": "Medium Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:08",
+          "timestamp_start": "0:07"
+        },
+        {
+          "audio": "And then it directly goes onto a real robotic arm to tighten nuts and assemble gears.",
+          "label": "Usage Scenarios",
+          "visual": "A split-screen comparison showing two real-world robotic arms. On the left, a silver robotic arm with black joints is shown from the side, interacting with a blue platform. On the right, a close-up of a similar robotic hand is shown assembling a white gear onto a pin. The lighting is natural lab lighting with a warmish tint. The camera for both views is static.",
+          "shot_type": "Medium Close-Up",
+          "scene_number": 5,
+          "timestamp_end": "0:10",
+          "timestamp_start": "0:08"
+        },
+        {
+          "audio": "Its training method is actually very easy to understand, just like a fitness coach leading you.",
+          "label": "Problem Solving",
+          "visual": "The split-screen continues. On the left, the robotic hand picks up a small black component and places it into a hole on the blue base. On the right, the hand successfully pushes the white plastic gear down onto its axle. The movements are smooth and robotic. The background shows blurred lab equipment and red power cables.",
+          "shot_type": "Medium Close-Up",
+          "scene_number": 6,
+          "timestamp_end": "0:12",
+          "timestamp_start": "0:10"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "播放窗绕 Y 轴翻面换成下一段素材；随后一个窗口一分为二，左右两段同时播放对照"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 13.0,
+      "action": "播放窗绕 Y 轴翻面换成下一段素材；随后一个窗口一分为二，左右两段同时播放对照"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "演示 A",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          13,
+          13,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media2",
+      "label": "演示 B",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          13,
+          13,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media3",
+      "label": "左侧对照",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          13,
+          13,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media4",
+      "label": "右侧对照",
+      "time": [
+        [
+          0,
+          0
+        ],
+        [
+          13,
+          13,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

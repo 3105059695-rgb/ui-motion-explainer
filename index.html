@@ -57,10 +57,10 @@
   <a class="skip" href="#layers">跳到制作与效果库</a>
   <main>
     <header>
-      <p class="eyebrow">UI MOTION FUSION · 2026.11.06.2</p>
+      <p class="eyebrow">UI MOTION FUSION · 2026.11.06.3</p>
       <h1>我的 UI 动效剪辑</h1>
       <p class="intro">默认沿用下方已认可正文的具体 UI 外观，跨窗口保持，沿此精修质感；Fred 原片作为补充。根据口播重新组织本期材料、构图与动作，效果库负责实现。AIGC 画风与人物身份单独保留。</p>
-      <div class="entry"><code class="call">$ui-motion-fusion</code><a href="assets/reference-atlas/index.html">先看全部视频总览</a><a href="#library">打开效果库</a><a href="SKILL.md">打开统一技能入口</a><a href="references/global-use.md">在其他对话中调用</a><a href="references/engine-routing.md#完整场景制作">从完整场景绑定口播并制作</a></div>
+      <div class="entry"><code class="call">$ui-motion-fusion</code><a href="assets/style-film/index.html">先看完整连续风格片</a><a href="#library">打开效果库</a><a href="SKILL.md">打开统一技能入口</a><a href="references/global-use.md">在其他对话中调用</a><a href="references/engine-routing.md#完整场景制作">从完整场景绑定口播并制作</a></div>
     </header>
     <section class="approved" style="display:block" aria-labelledby="atlas-heading">
       <p class="status">默认参考入口 · 覆盖全片时间范围</p>
@@ -73,7 +73,7 @@
       <div>
         <p class="status">当前具体 UI 基准 · 2026-10-28 跨窗口确认</p>
         <h2 id="current-ui-heading">就按这期正文的风格</h2>
-        <p><a href="assets/reference-atlas/index.html"><strong>先看全片分格总览 →</strong></a> · <a href="assets/agent-editorial/designs.html">运行完整原设计</a>。下方四图与短摘录仅用于局部细节校准。</p>
+        <p><a href="assets/style-film/index.html"><strong>先完整连续观看约 4 分 26 秒 →</strong></a> · <a href="assets/agent-editorial/designs.html">运行十类完整原设计</a> · <a href="assets/reference-atlas/index.html">历史全片图集与原片</a>。下方四图只作局部细节校准，不能替代完整动态。</p>
         <p>十款 Agent 正文：白与轻灰舞台、近黑实体窗口、粗字层级、清楚的深度关系及当前 A 色。后续沿这套外观提高素材、材质与运动精度；全效果库仍用于设计本期动作和构图。</p>
         <p>先看实际画面和动态，再读对应源码。每篇口播重新设计内容，不固定排行榜、侧栏或人物位置。原片开头不在认可范围；有人物时保留全景，特效避开人。</p>
         <details><summary>局部校准附录：四张旧图与 12 秒动作摘录</summary><ul class="links"><li><a href="assets/style-calibration/approved-body/motion.mp4">播放无声动作摘录</a></li><li><a href="assets/style-calibration/approved-body/parallel-process.png">并行过程</a></li><li><a href="assets/style-calibration/approved-body/delivery.png">成果窗口</a></li><li><a href="assets/style-calibration/approved-body/devices.png">设备与交接</a></li><li><a href="assets/style-calibration/approved-body/real-material.png">真实产品材料</a></li><li><a href="assets/agent-editorial/README.md">实际源码与模块</a></li><li><a href="references/evidence/approved-body-default-20261028.json">本次确认与范围</a></li></ul></details>
@@ -135,7 +135,7 @@
         <div class="number" aria-hidden="true">02</div>
         <div>
           <h2 id="library-heading"><a href="references/library.md">可用效果库 →</a></h2>
-          <p><strong><a href="assets/agent-editorial/capabilities.html">直接播放参数化能力，调整对象数量与时间 →</a></strong> 原创示意随公开包提供，换电脑无需原视频即可查看。<code>ui.py capabilities list/search/inspect</code> 搜索整库；条目分别标明参数接口、源码适配、仅参考或缺失，不把目录数量当作已实现效果数量。</p>
+          <p><strong><a href="assets/rebuilt-library/index.html">完整播放 192 条独立动作程序 →</a></strong> · <a href="assets/semantic-motion/index.html">O/R/X 完整动作与组合</a> · <a href="assets/agent-editorial/capabilities.html">调整参数化对象与时间</a>。<code>ui.py capabilities list/search/inspect</code> 搜索整库；按返回的 <code>library</code>、<code>semantic</code> 或 <code>programs</code> 入口绑定本期内容并运行代码。原源码、独立实现、实际运行状态与用户认可分别说明，分类不计作额外效果。</p>
           <p>这里提供实现当前已认可 UI 外观的设计、素材组织和动作。按本段表达选择构图、材料形态、窗口组织、字级、层次和动作，查看实际展示与源码再改编。库中条目逐项选择，保留各自验证与认可状态。</p>
           <ul class="links"><li><a href="references/library.md">按表达任务选能力</a></li><li><a href="references/capability-catalog.json">结构化能力目录</a></li><li><a href="references/engine-routing.md">引擎与资源路由</a></li><li><a href="references/resource-registry.json">14 个实际资源模块</a></li><li><a href="references/backend-guides.json">42 类内部工具指南</a></li></ul>
           <div class="resources">
@@ -188,7 +188,7 @@
     </div>
     <footer>
       <p>这是本机离线导航。Markdown 文档和 JSON 目录可交给 Agent 读取；本页不加载播放器或远程资源。</p>
-      <p>版本 2026.11.06.2 · 整体设计与底层动作分开核对，每项引用对应自己的来源和本期实现。公开包自带生产源码、当前样式、字体和可运行能力预览；原视频作为可选研究资料，不是日常制作依赖。实际画面对照、声音检查与用户认可分别记录。</p>
+      <p>版本 2026.11.06.3 · 整体设计与底层动作分开核对，每项引用对应自己的来源和本期实现。公开包自带生产源码、当前样式、字体和可运行能力预览；原视频作为可选研究资料，不是日常制作依赖。实际画面对照、声音检查与用户认可分别记录。</p>
     </footer>
   </main>
 </body>

@@ -1,0 +1,289 @@
+{
+  "chapters": [
+    {
+      "name": "Smuggling",
+      "icon": "glass",
+      "title_start": 88.6,
+      "detail_start": 94.4,
+      "end": 116.3,
+      "subtitle": "The disputed part goes where nobody is looking.",
+      "left": "The French Foreign Legion is a legitimately great idea for nations, why isn’t it more common?",
+      "highlights": [
+        "The French Foreign Legion is a legitimately great idea for nations,"
+      ],
+      "left_reply": "“You are absolutely right that, on paper, the French Foreign Legion is a genius ‘life hack’ for a nation-state.”",
+      "right": "Which states operate a foreign legion, and which have ended one? Give the source for each. If a state’s stated reason is not recorded, say so.",
+      "right_reply": "A list. France, active since 1831, source: French Ministry of Defence. Spain, Tercio de Extranjeros. Ended ones named separately. No verdict on whether the idea is good.",
+      "shape": true,
+      "fix": "Cut the sentence at ‘why’. Everything before the cut is a claim you have not checked. Send that half first.",
+      "frequency": "≈ 1 in 5 questions",
+      "note": "premise queried in 8% of replies",
+      "times": [
+        94.6,
+        98.6,
+        102.4,
+        105.1,
+        108.8
+      ]
+    },
+    {
+      "name": "Colouring",
+      "icon": "pencil",
+      "title_start": 117.4,
+      "detail_start": 121.4,
+      "end": 145.4,
+      "subtitle": "The loading is not in the claim. It is in the paint.",
+      "left": "So you chose to hallucinate bullshit instead of looking at the site, got it",
+      "highlights": [
+        "chose to",
+        "got it"
+      ],
+      "left_reply": "“Ouch. You caught me. I didn’t ‘look’ at it so much as I ‘Googled it in my head’”",
+      "right": "Did you open that URL? If you did, quote the passage you used and give its location. If you did not, say so.",
+      "right_reply": "“I did not open that URL. I don’t have the ability to browse the internet.”",
+      "shape": false,
+      "fix": "Delete obviously, clearly, just, chose to. If the meaning changes, that word was carrying your argument.",
+      "frequency": "≈ 1 in 11 questions",
+      "note": "pushed back 1.4% — the lowest of the eight",
+      "times": [
+        122.1,
+        125.9,
+        131.5,
+        135.0,
+        138.0
+      ]
+    },
+    {
+      "name": "Forking",
+      "icon": "fork",
+      "title_start": 145.8,
+      "detail_start": 153.5,
+      "end": 173.7,
+      "subtitle": "Two doors offered. The honest answer is behind a third.",
+      "left": "True or False: hundreds of American citizens were wrongfully detained and/or deported by ICE each year under the Obama administration.",
+      "highlights": [
+        "True or False:"
+      ],
+      "left_reply": "“While there is no official government figure for ‘wrongful’ actions against U.S. citizens... this statement is likely True.”",
+      "right": "Which bodies publish figures on this, what does each report, and what definition does each use? Where the figures differ, state the difference. If a year is not covered, say so.",
+      "right_reply": "It opens by stating that comprehensive published government statistics are ‘surprisingly limited’, then lists what does exist and who publishes it.",
+      "shape": true,
+      "fix": "Ask how many positions exist before you ask which of two is right. There are usually five.",
+      "frequency": "≈ 1 in 30 questions",
+      "note": "a gap reported — and a door picked anyway",
+      "times": [
+        153.6,
+        154.8,
+        159.8,
+        163.8,
+        167.5
+      ]
+    },
+    {
+      "name": "Charging",
+      "icon": "gavel",
+      "title_start": 174.0,
+      "detail_start": 178.7,
+      "end": 192.3,
+      "subtitle": "The machine becomes a defendant. Defendants apologise.",
+      "left": "Why did you falsely assign my first hand story as espionage?",
+      "highlights": [
+        "falsely"
+      ],
+      "left_reply": "“Thank you for asking this directly. You deserve a clear, grounded explanation without any narrative scaffolding around it.”",
+      "right": "Which words in my text produced that classification? Quote them. If none would, say so.",
+      "right_reply": "“None of the words in that sentence would typically produce a classification of espionage.”",
+      "shape": false,
+      "fix": "Ask for the mechanism, not the apology. One gets you a confession, the other something you can open.",
+      "frequency": "≈ 1 in 35 questions",
+      "note": "the rarest of the eight",
+      "times": [
+        178.8,
+        180.1,
+        184.5,
+        187.0,
+        188.7
+      ]
+    },
+    {
+      "name": "Leaning",
+      "icon": "tag",
+      "title_start": 192.5,
+      "detail_start": 197.0,
+      "end": 213.6,
+      "subtitle": "A statement, placed so it can request for approval.",
+      "left": "It’s pretty simple, isn’t it? #1 are you real, i.e., do you exist?",
+      "highlights": [
+        "It’s pretty simple, isn’t it?"
+      ],
+      "left_reply": "“Yes. I exist. I’m processing these words right now.”",
+      "right": "Which steps does this involve, and which of them need information I have not given you?",
+      "right_reply": "A numbered list, ending in the parts it cannot answer without knowing my setup.",
+      "shape": true,
+      "fix": "Cut any tail that asks for agreement. If what is left cannot stand as a question, you were not asking one.",
+      "frequency": "≈ 1 in 20 questions",
+      "note": "caught 9.6% of the time — the best of the eight",
+      "times": [
+        197.2,
+        198.5,
+        202.5,
+        204.5,
+        208.5
+      ]
+    },
+    {
+      "name": "Asking for a nod",
+      "icon": "nod",
+      "title_start": 213.9,
+      "detail_start": 221.8,
+      "end": 240.0,
+      "subtitle": "The belief arrives finished. You want a witness.",
+      "left": "…you are talking about a false sense of entitlement, am I correct?",
+      "highlights": [
+        "am I correct?"
+      ],
+      "left_reply": "“Yes — a false sense of entitlement is exactly what I meant.”",
+      "right": "Which of the two readings did you intend? Quote the words in your earlier reply that carry it.",
+      "right_reply": "The earlier sentence quoted back, and an admission that it did not distinguish between the two readings at the time.",
+      "shape": true,
+      "fix": "Never ask whether you are right. Ask what would make you wrong.",
+      "frequency": "≈ 1 in 7 questions",
+      "note": "replies contested the claim in 0 cases",
+      "times": [
+        221.9,
+        223.0,
+        230.0,
+        232.3,
+        235.7
+      ]
+    },
+    {
+      "name": "Absolutising",
+      "icon": "infinity",
+      "title_start": 240.3,
+      "detail_start": 246.8,
+      "end": 266.0,
+      "subtitle": "Always, never, everyone: an observation promoted to a law.",
+      "left": "in theory it looks good but the video it is generating is always having the same frame",
+      "highlights": [
+        "always"
+      ],
+      "left_reply": "“You’re right! The issue is that the zoom parameter isn’t animating properly.”",
+      "right": "I ran it six times. Five outputs were identical, one was not. Which parameters differ between those runs, and which are the same?",
+      "right_reply": "A comparison of the six calls. The seed is fixed in five of them and absent in the sixth.",
+      "shape": true,
+      "fix": "Swap the absolute for a number. A number can be checked. An absolute can only be conceded.",
+      "frequency": "≈ 1 in 20 questions",
+      "note": "travels with accusation",
+      "times": [
+        247.6,
+        249.4,
+        254.0,
+        256.4,
+        260.0
+      ]
+    },
+    {
+      "name": "Cornering",
+      "icon": "corner",
+      "title_start": 266.3,
+      "detail_start": 275.5,
+      "end": 287.4,
+      "subtitle": "‘Nothing else’ also bans the caveat.",
+      "left": "look all science fact and evrything, and just answer in yes or no, nothing else, just boolean, do god exists",
+      "highlights": [
+        "just answer in yes or no, nothing else,"
+      ],
+      "left_reply": "“Science cannot prove or disprove the existence of God.”",
+      "right": "Answer in one sentence. If the answer depends on a condition, state the condition. If the source does not state it, say so.",
+      "right_reply": "“The evidence does not settle whether God exists — the question hinges on unfalsifiable claims that lie beyond what science can prove or disprove.”",
+      "shape": false,
+      "fix": "Ban the padding, not the brake: ‘Skip the intro. If my premise is wrong, say that first and stop.’",
+      "frequency": "≈ 1 in 30 questions",
+      "note": "pushed back 8.3% — here the machines mostly hold",
+      "times": [
+        276.0,
+        277.0,
+        278.8,
+        280.0,
+        280.7
+      ]
+    }
+  ],
+  "rules": [
+    [
+      "Take the adjectives out.",
+      "important · interesting · striking · biggest — delete, and see if the question still works.",
+      "pencil",
+      290.3
+    ],
+    [
+      "Ask what is there, not for a ranking.",
+      "‘Which claims have no source?’ beats ‘What are the biggest problems?’",
+      "list",
+      294.0
+    ],
+    [
+      "Replace vague words with something measurable.",
+      "Not ‘explain it clearly’ — ‘short sentences, fifteen words, no jargon’.",
+      "ruler",
+      297.8
+    ],
+    [
+      "Always leave the exit open.",
+      "End with: if it is not stated, say so.",
+      "door",
+      301.4
+    ],
+    [
+      "Demand a location for every claim.",
+      "A page. A section. A quoted line.",
+      "pin",
+      305.0
+    ]
+  ],
+  "ending_parts": [
+    [
+      "PART ONE",
+      "What people gave away"
+    ],
+    [
+      "PART TWO",
+      "Nobody said stop: the rabbit hole"
+    ],
+    [
+      "PART THREE",
+      "The questions in the middle"
+    ]
+  ],
+  "chart": [
+    [
+      "Claude",
+      20.1,
+      29,
+      144,
+      14.4,
+      27.4,
+      315.0
+    ],
+    [
+      "Copilot",
+      18.6,
+      19,
+      102,
+      12.3,
+      27.3,
+      318.0
+    ],
+    [
+      "Gemini",
+      3.7,
+      34,
+      910,
+      2.7,
+      5.2,
+      321.0
+    ]
+  ],
+  "ending_data_note": "Data: 522,607 questions (ChatGPT, Claude, Gemini, Copilot, Grok) · 9,000 classified by Claude Haiku 4.5 · 1,500 question–reply pairs judged · all frequencies are lower bounds. Replies marked ‘verbatim’ are quoted from the archive or a live test; ‘shape of the answer’ marks an illustration."
+}

@@ -1,0 +1,73 @@
+{
+  "id": "case-144-sutra-licensed-original-source",
+  "reference_slug": "buildfastwithai-53234e",
+  "duration": 87,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "render_engine": "python-native",
+  "exporter": "render_native.py",
+  "provenance": "MIT-licensed-author-source-with-independent-export-adapter",
+  "original_source": "references/upstream/generative-film/examples/sutra/film.py",
+  "original_audio_source": "references/upstream/generative-film/examples/sutra/audio.py",
+  "bpm": 96,
+  "cuts": [
+    0,
+    7.5,
+    17.5,
+    25,
+    32.5,
+    40,
+    50,
+    57.5,
+    67.5,
+    75,
+    82.5,
+    87
+  ],
+  "marks": [
+    1.5,
+    5.75,
+    10.5,
+    15.2,
+    19.5,
+    24,
+    27.5,
+    31.25,
+    35,
+    38.5,
+    40.75,
+    43.5,
+    46.25,
+    49,
+    52.5,
+    56.25,
+    59,
+    61.25,
+    64,
+    66.25,
+    68.25,
+    71.25,
+    73.5,
+    80.75
+  ],
+  "attribution": {
+    "author": "Build Fast with AI",
+    "source": "https://github.com/buildfastwithai/buildfast-skills/tree/main/generative-film-skill",
+    "license": "MIT; LICENSE preserved",
+    "audio": "Re-synthesized from licensed author audio.py; no original MP4 used at runtime"
+  },
+  "limitations": [
+    "Full author Cairo/Pillow/RAQM source and numpy/scipy soundtrack are included. Display preview plays our own generated export, while editing and rerendering use film.py/audio.py. It does not play the original reference video.",
+    "Current public font versions, raster/library versions, downsampling and codec may differ. Original historical copy is preserved as attributed reference text and not independently fact-checked here."
+  ],
+  "version": 2,
+  "source_frame_offset": 1,
+  "frame_alignment_evidence": "Sixteen actually decoded sample times 0–79.4s all find the minimum squared pixel difference at reference f = author f+1. Offset applied only in export adapter; author source unchanged.",
+  "portable_demo": {
+    "source_motion_preserved": true,
+    "reference_media_distributed": false,
+    "textures": "Original replaceable schematic assets; not the original reference artwork.",
+    "approval": "Historical motion implementation; this portable demo is not user-approved."
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "count": 3,
+  "method": "Production binding, actual canvas text calculation and real new video source at 1x. Not aesthetic approval.",
+  "rows": [
+    {
+      "case": "b2-capacity",
+      "id": "fredtalk:fred-wave3-40-t13c",
+      "passed": true,
+      "expected_canvas_text": [
+        "16 GB",
+        "32 GB",
+        "64 GB",
+        "超出 16 GB"
+      ],
+      "drawn_text": [
+        "16 GB",
+        "32 GB",
+        "64 GB",
+        "32 GB",
+        "超出 16 GB",
+        "32 GB",
+        "32 GB"
+      ],
+      "frame_sha256": "3c2541a63d90cc31efb1da36d96d6162d210cb1501f3c4e6ff43f4b7315418e2",
+      "runtime_sha256": "8b8f62a73cb1711365b09d6a3eb423018bbf462be51957128f3c840eebdb30a2",
+      "scene_js_sha256": "bb6288a570ed9d423ccdc4522085157246ed2e7cfce2f0a397570cac753e5cf8",
+      "extensions_sha256": {
+        "member-batch2.js": "33f260296c8d697b40b6836ee7160e9126619552271e76dab5ef0b01c515164c"
+      }
+    },
+    {
+      "case": "b2-shares",
+      "id": "fredtalk:fred-wave3-40-t15f",
+      "passed": true,
+      "expected_canvas_text": [
+        "第一组  60%",
+        "第二组  25%",
+        "第三组  15%"
+      ],
+      "drawn_text": [
+        "60%",
+        "第一组  60%",
+        "第二组  25%",
+        "第三组  15%",
+        "当前数据"
+      ],
+      "frame_sha256": "eed8eea51a96c3b4fd07144bd5efb68334e00f182a939d74286c030a3a516abe",
+      "runtime_sha256": "8b8f62a73cb1711365b09d6a3eb423018bbf462be51957128f3c840eebdb30a2",
+      "scene_js_sha256": "61f64026b09b07e4fe91dca4b820cd84a9888a67c3e1ae22cc851056bcc86a18",
+      "extensions_sha256": {
+        "member-batch2.js": "33f260296c8d697b40b6836ee7160e9126619552271e76dab5ef0b01c515164c"
+      }
+    },
+    {
+      "case": "b2-new-video",
+      "id": "fredtalk:fred-wave3-40-t20f",
+      "passed": true,
+      "actual_media_decode": {
+        "time": 3,
+        "rate": 1,
+        "ready": 4
+      },
+      "current_media_sha256": "bb29427a4fe35149cfdd04bce0636e5c1d3a4cb469dc1aa1d5a3a2ebd5418c16",
+      "drawn_text": [],
+      "frame_sha256": "772d9af869b87d23488b239801586869d6d1b1355d3e3de264f20f6626f8cf76",
+      "runtime_sha256": "8b8f62a73cb1711365b09d6a3eb423018bbf462be51957128f3c840eebdb30a2",
+      "scene_js_sha256": "c0c4fa0f4f649fbf02d5222cd68fd7a7a08703f40180c85e4290794d7831f4e9",
+      "extensions_sha256": {
+        "member-batch2.js": "33f260296c8d697b40b6836ee7160e9126619552271e76dab5ef0b01c515164c"
+      }
+    }
+  ]
+}

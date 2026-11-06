@@ -1,0 +1,149 @@
+{
+  "index": 182,
+  "slug": "robvjourney-ce3e1a",
+  "status": "independent-rendered-with-differences",
+  "runtime_frozen": true,
+  "version": "v1",
+  "provenance": "independent-reimplementation",
+  "reference_video": "private-source-not-distributed",
+  "render": "render/full-720p-v1/preview.mp4",
+  "runtime_loads_reference_video": false,
+  "runtime_loads_reference_fullscreen_images": false,
+  "runtime_uses_original_frame_sequence": false,
+  "runtime_asset_types": [
+    "local OFL Geist, Geist Mono and Doto font substitutes",
+    "localized static hand logo converted into 8 editable contour polygons",
+    "programmatic sampled dotted-font LED targets and seeded particles",
+    "authored terminal, runtime and portfolio screens"
+  ],
+  "localized_reference_asset": {
+    "path": "assets/hand-path.json",
+    "source_time": 14.85,
+    "source_frame": 891,
+    "source_dimensions": [
+      1920,
+      1080
+    ],
+    "crop_rectangle": [
+      850,
+      160,
+      200,
+      285
+    ],
+    "runtime_form": "editable contour vertices; no image/pose sequence"
+  },
+  "dimensions": [
+    1280,
+    720
+  ],
+  "fps": 30,
+  "project_duration": 15.104,
+  "encoded_duration": "15.133333",
+  "frames": 454,
+  "bytes": 5823334,
+  "full_decode": "passed",
+  "checks": {
+    "seek_repeat_pixels_equal": true,
+    "seek_repeat_state_equal": true,
+    "source_files_unchanged_during_render": true
+  },
+  "own_repeat_24_points": true,
+  "own_repeat_times": [
+    0.3,
+    1.4,
+    2.6,
+    4.2,
+    5.7,
+    6.4,
+    7.15,
+    8.25,
+    9.7,
+    11.75,
+    13.7,
+    14.85,
+    0,
+    0.8,
+    1.7,
+    2.15,
+    3.2,
+    4.75,
+    5.25,
+    7.8,
+    8.65,
+    10.35,
+    12.7,
+    14.2
+  ],
+  "runtime_source_files": [
+    {
+      "path": "../../reference-shared/fonts/6f4fe7d37853b91df369.ttf",
+      "bytes": 456924,
+      "sha256": "6f4fe7d37853b91df3698daa84cde2dbe1c9695d88c986e6510134910337d426"
+    },
+    {
+      "path": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+      "bytes": 169056,
+      "sha256": "73894e0448cae90a92b6c2f8732b7bb9acb7b94c418bff559dad4a18e1de9659"
+    },
+    {
+      "path": "../../reference-shared/fonts/d00e590b8eb3a59acc32.ttf",
+      "bytes": 171948,
+      "sha256": "d00e590b8eb3a59acc329b2d044fd143ae935090b7da33199ebee27cc7de8196"
+    },
+    {
+      "path": "assets/hand-path.json",
+      "bytes": 8259,
+      "sha256": "0a0e6e17043a885510492f854583a7ee9b29c8c6ce2791ec4083405a0ec76401"
+    },
+    {
+      "path": "index.html",
+      "bytes": 308,
+      "sha256": "851f431ddaae2e4dfd694014df4ecd3054043db262acf376c537b61063b63e5c"
+    },
+    {
+      "path": "motion.js",
+      "bytes": 21565,
+      "sha256": "1d40b2efe5746cf413f2cfc9b04e17ac5292126dd2669ffc8ecf3c1749f8222f"
+    },
+    {
+      "path": "project.json",
+      "bytes": 3025,
+      "sha256": "70c9c9afa36b849bcf6bd5aed3429da32cdc6a6898883280c53259029aada3ed"
+    },
+    {
+      "path": "style.css",
+      "bytes": 534,
+      "sha256": "f2536032bf4bac4197507e0c8de0c354724557d1e246b08aaaacbee6fbbd5679"
+    }
+  ],
+  "original_audio_retained": true,
+  "reference_observation": {
+    "timecoded_overview": 101,
+    "native_detail": 28,
+    "targeted_geometry_measurements": true,
+    "full_range": true,
+    "uninterrupted_subjective_playback": false
+  },
+  "actual_export_paired_frames": 24,
+  "paired_comparison_paths": [
+    "verification/paired-comparison-01.jpg",
+    "verification/paired-comparison-02.jpg",
+    "verification/supplementary/paired-comparison-01.jpg",
+    "verification/supplementary/paired-comparison-02.jpg"
+  ],
+  "paired_sheets_personally_viewed": 4,
+  "browser_errors": [],
+  "request_errors": [],
+  "user_approved": false,
+  "visual_residuals": [
+    "font substitutions and small tracking/baseline differences",
+    "particle hand derives from one static final-logo vector; thumb width, tilt, fragment spacing and scatter trajectory differ",
+    "ratio LED glyph density/percent pattern/opacity and particle field differ",
+    "terminal/headline typing warp, blink and RGB glitch slices approximate",
+    "declaration tape phase, white/lime brightness and glow differ",
+    "runtime log content/insertion, active-row timing and task-counter easing differ",
+    "portfolio caption wrapping, card metadata and pan/reveal easing differ",
+    "signature logo brightness, green glow, font width and CTA arrival differ",
+    "original audio retained for comparison; independent soundtrack and backend not implemented"
+  ]
+}

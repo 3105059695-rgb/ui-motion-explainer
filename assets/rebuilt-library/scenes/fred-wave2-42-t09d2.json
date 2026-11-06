@@ -1,0 +1,409 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t09d2",
+  "title": "发任务看运行（返修）：步骤按口播时间点完成",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "request": "把本期资料整理成可核对的结果",
+    "state0": "读取本期输入",
+    "state1": "执行对应步骤",
+    "state2": "生成可编辑结果"
+  },
+  "assets": {
+    "screen": "assets/style-film/media/connected-delivery.svg"
+  },
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/a927253aa2011f3e5b3cc44349629937b4179fafda7b0f55908897af4367f531.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "Rapid, rhythmic mechanical keyboard typing sounds with a crisp, high-frequency click for each keystroke.",
+          "label": "Opening Hook",
+          "visual": "A static, top-down screen recording of a digital workspace. The background is a blurred, light-colored software interface. In the center, a white input field with rounded corners is prominent. A cursor clicks into the box, and Chinese text begins to appear as if typed in real-time. The lighting is bright and uniform, mimicking a backlit computer monitor. The color palette is dominated by soft whites and grays with a small dark circular button on the right side of the input field.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A single, resonant 'mouse click' sound effect, followed by a digital 'whoosh' or 'slide' sound as the new UI element appears.",
+          "label": "Product Information",
+          "visual": "Static screen recording continues. The text in the input field is now complete. A black rectangular button with rounded corners slides up from beneath the input field. A mouse cursor moves to the circular arrow button in the input field and clicks it. The background remains blurred, maintaining focus on the central UI elements. The lighting and color grading remain consistent with the previous scene.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A series of three distinct 'pop' or 'ding' notification sound effects occurring in quick succession, corresponding to the appearance and completion of the status bars.",
+          "label": "Product Selling Points",
+          "visual": "The screen recording shows a progression of automated tasks. Two additional black rectangular bars appear sequentially below the first one. To the right of the first bar, a small progress indicator changes to a completed state. The central UI elements are crisp against the out-of-focus software background. No camera movement or zoom; the focus is entirely on the appearing status bars.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A final, slightly lower-pitched 'chime' or 'success' sound effect, followed by silence.",
+          "label": "Product Selling Points",
+          "visual": "The final status bar completes its animation. The three black bars are now vertically stacked, showing completed progress. The screen remains static. The interface is clean, featuring a minimal aesthetic with high contrast between the white input area and the dark status bars.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.75,
+      "action": "Type task and explicitly send"
+    },
+    {
+      "start": 1.75,
+      "end": 4.5,
+      "action": "Three processing states complete in sequence"
+    },
+    {
+      "start": 4.5,
+      "end": 5,
+      "action": "Completion holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 100,
+      "y": 50,
+      "w": 1720,
+      "h": 960,
+      "asset": "screen",
+      "fit": "contain",
+      "radius": 18,
+      "blur": 13
+    },
+    {
+      "id": "n002-card",
+      "kind": "card",
+      "x": 300,
+      "y": 140,
+      "w": 1320,
+      "h": 160,
+      "children": [],
+      "fill": "#FFFFFF"
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 345,
+      "y": 180,
+      "w": 1160,
+      "h": 100,
+      "text": "{{request}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "characters": [
+          [
+            0,
+            0
+          ],
+          [
+            1.3,
+            20,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-b2-cursor",
+      "kind": "b2-cursor",
+      "x": 0,
+      "y": 0,
+      "w": 43,
+      "h": 64,
+      "tracks": {
+        "x": [
+          [
+            0,
+            1700
+          ],
+          [
+            1.5,
+            1530
+          ],
+          [
+            1.8,
+            1530
+          ]
+        ],
+        "y": [
+          [
+            0,
+            800
+          ],
+          [
+            1.5,
+            220
+          ],
+          [
+            1.8,
+            220
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-pill",
+      "kind": "pill",
+      "x": 410,
+      "y": 380,
+      "w": 1100,
+      "h": 130,
+      "label": "{{state0}}",
+      "size": 47,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.75,
+            0
+          ],
+          [
+            2.35,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.75,
+            415
+          ],
+          [
+            2.35,
+            380,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-check",
+      "kind": "check",
+      "x": 1390,
+      "y": 420,
+      "w": 55,
+      "h": 50,
+      "color": "#D6C2FF",
+      "tracks": {
+        "value": [
+          [
+            2.25,
+            0
+          ],
+          [
+            2.6,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.25,
+            0
+          ],
+          [
+            2.4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 410,
+      "y": 550,
+      "w": 1100,
+      "h": 130,
+      "label": "{{state1}}",
+      "size": 47,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.6,
+            0
+          ],
+          [
+            3.2,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.6,
+            585
+          ],
+          [
+            3.2,
+            550,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-check",
+      "kind": "check",
+      "x": 1390,
+      "y": 590,
+      "w": 55,
+      "h": 50,
+      "color": "#D6C2FF",
+      "tracks": {
+        "value": [
+          [
+            3.1,
+            0
+          ],
+          [
+            3.45,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.1,
+            0
+          ],
+          [
+            3.25,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-pill",
+      "kind": "pill",
+      "x": 410,
+      "y": 720,
+      "w": 1100,
+      "h": 130,
+      "label": "{{state2}}",
+      "size": 47,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.45,
+            0
+          ],
+          [
+            4.05,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.45,
+            755
+          ],
+          [
+            4.05,
+            720,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010-check",
+      "kind": "check",
+      "x": 1390,
+      "y": 760,
+      "w": 55,
+      "h": 50,
+      "color": "#D6C2FF",
+      "tracks": {
+        "value": [
+          [
+            3.95,
+            0
+          ],
+          [
+            4.3,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.95,
+            0
+          ],
+          [
+            4.1,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

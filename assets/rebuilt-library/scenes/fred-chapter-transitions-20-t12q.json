@@ -1,0 +1,103 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t12q",
+  "title": "解码定格：乱跳的字逐个锁定成章节名",
+  "duration": 3,
+  "background": "#0B0B0F",
+  "inputs": {
+    "title": "开始验证结果"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/b25ce2c5143c7712d65b633c8c42870aec7795591e430171ce58e11143fa00c5.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A digital 'swish' sound effect followed by two rhythmic percussive 'knock' sounds. No voiceover.",
+          "label": "Opening Hook",
+          "visual": "A flat, dark charcoal grey background fills the frame. The lighting is uniform and digital, creating no shadows. The overall color palette is dark and neutral with high contrast between the background and the central elements.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Ambient electronic hum, low volume. No voiceover.",
+          "label": "Opening Hook",
+          "visual": "A flat, dark charcoal grey background remains. A small graphic element appears in the top right corner: a yellow stylized chat bubble containing a blue line graph, with a stylized 'AI' text mark in blue. All elements are static.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 0.6000000000000001,
+      "action": "Scrambled glyph field is established"
+    },
+    {
+      "start": 0.6000000000000001,
+      "end": 2.16,
+      "action": "Glyph positions lock left to right into the actual chapter"
+    },
+    {
+      "start": 2.16,
+      "end": 3,
+      "action": "All letters hold without further noise"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-b2-decode",
+      "kind": "b2-decode",
+      "x": 260,
+      "y": 420,
+      "w": 1400,
+      "h": 160,
+      "text": "{{title}}",
+      "size": 108,
+      "color": "#FFFFFF",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            0.6,
+            0
+          ],
+          [
+            2.16,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

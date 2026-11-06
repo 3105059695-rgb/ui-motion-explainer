@@ -1,0 +1,109 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t12e",
+  "title": "章节白条擦出（快过渡）",
+  "duration": 2,
+  "background": "#0B0B0F",
+  "inputs": {
+    "chapter": "进入下一部分"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/6d0c06bad68c60bb25b0e56e0193bf578fec549935f18e782d31899cf41f0e73.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A sharp, digital 'click' sound effect similar to a mouse click or a toggle switch, followed by absolute silence.",
+          "label": "Opening Hook",
+          "visual": "A static, centered wide shot featuring a solid dark charcoal background. The composition is minimalist and symmetrical. A horizontal white rectangular bar spans the center width of the frame, providing high contrast against the dark background. The lighting is uniform and digital, with no shadows or depth, creating a flat 2D graphic aesthetic. The color palette is strictly monochrome (black, white, and dark grey).",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.28,
+      "action": "White strip wipes across black then reveals chapter inside its mask"
+    },
+    {
+      "start": 1.28,
+      "end": 2,
+      "action": "Short chapter hold"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-rect",
+      "kind": "rect",
+      "x": 100,
+      "y": 485,
+      "w": 1720,
+      "h": 110,
+      "fill": "#FFFFFF",
+      "radius": 0,
+      "tracks": {
+        "scaleX": [
+          [
+            0,
+            0
+          ],
+          [
+            0.68,
+            1,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 180,
+      "y": 490,
+      "w": 1560,
+      "h": 100,
+      "text": "{{chapter}}",
+      "size": 67,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "revealX": [
+          [
+            0.6,
+            0
+          ],
+          [
+            1.28,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

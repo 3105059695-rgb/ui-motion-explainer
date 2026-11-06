@@ -1,0 +1,498 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t08k",
+  "title": "两页并排、同一批位置同步标出",
+  "duration": 18.567,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "仓库名",
+    "text02": "Star",
+    "text03": "Code",
+    "text04": "README",
+    "text05": "Releases",
+    "media1.start": 0,
+    "media1.speed": 1,
+    "media2.start": 0,
+    "media2.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg",
+    "media2": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "image",
+      "x": 70,
+      "y": 160,
+      "w": 850,
+      "h": 720,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        18.568
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.74268,
+            0
+          ],
+          [
+            1.39253,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            70
+          ],
+          [
+            0.74268,
+            70
+          ],
+          [
+            1.39253,
+            70,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            210
+          ],
+          [
+            0.74268,
+            210
+          ],
+          [
+            1.39253,
+            160,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "rect",
+      "x": 100,
+      "y": 160,
+      "w": 520,
+      "h": 60,
+      "fill": "#D6C2FF",
+      "opacity": 0.35,
+      "visible": [
+        3.7134,
+        5.5701
+      ]
+    },
+    {
+      "id": "n003",
+      "kind": "rect",
+      "x": 650,
+      "y": 180,
+      "w": 170,
+      "h": 60,
+      "fill": "#D6C2FF",
+      "opacity": 0.35,
+      "visible": [
+        6.31278,
+        8.16948
+      ]
+    },
+    {
+      "id": "n004",
+      "kind": "rect",
+      "x": 650,
+      "y": 300,
+      "w": 170,
+      "h": 70,
+      "fill": "#D6C2FF",
+      "opacity": 0.35,
+      "visible": [
+        8.91216,
+        10.76886
+      ]
+    },
+    {
+      "id": "n005",
+      "kind": "rect",
+      "x": 100,
+      "y": 580,
+      "w": 650,
+      "h": 160,
+      "fill": "#D6C2FF",
+      "opacity": 0.35,
+      "visible": [
+        11.51154,
+        13.36824
+      ]
+    },
+    {
+      "id": "n006",
+      "kind": "rect",
+      "x": 680,
+      "y": 440,
+      "w": 140,
+      "h": 120,
+      "fill": "#D6C2FF",
+      "opacity": 0.35,
+      "visible": [
+        14.11092,
+        15.96762
+      ]
+    },
+    {
+      "id": "n007",
+      "kind": "image",
+      "x": 1000,
+      "y": 160,
+      "w": 850,
+      "h": 720,
+      "asset": "media2",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        18.568
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.8567,
+            0
+          ],
+          [
+            2.50655,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1600
+          ],
+          [
+            1.8567,
+            1600
+          ],
+          [
+            2.50655,
+            1000,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            210
+          ],
+          [
+            1.8567,
+            210
+          ],
+          [
+            2.50655,
+            160,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "rect",
+      "x": 1030,
+      "y": 160,
+      "w": 520,
+      "h": 60,
+      "fill": "#D6C2FF",
+      "opacity": 0.35,
+      "visible": [
+        3.7134,
+        5.5701
+      ]
+    },
+    {
+      "id": "n009",
+      "kind": "rect",
+      "x": 1580,
+      "y": 180,
+      "w": 170,
+      "h": 60,
+      "fill": "#D6C2FF",
+      "opacity": 0.35,
+      "visible": [
+        6.31278,
+        8.16948
+      ]
+    },
+    {
+      "id": "n010",
+      "kind": "rect",
+      "x": 1580,
+      "y": 300,
+      "w": 170,
+      "h": 70,
+      "fill": "#D6C2FF",
+      "opacity": 0.35,
+      "visible": [
+        8.91216,
+        10.76886
+      ]
+    },
+    {
+      "id": "n011",
+      "kind": "rect",
+      "x": 1030,
+      "y": 580,
+      "w": 650,
+      "h": 160,
+      "fill": "#D6C2FF",
+      "opacity": 0.35,
+      "visible": [
+        11.51154,
+        13.36824
+      ]
+    },
+    {
+      "id": "n012",
+      "kind": "rect",
+      "x": 1610,
+      "y": 440,
+      "w": 140,
+      "h": 120,
+      "fill": "#D6C2FF",
+      "opacity": 0.35,
+      "visible": [
+        14.11092,
+        15.96762
+      ]
+    },
+    {
+      "id": "n013",
+      "kind": "pill",
+      "x": 650,
+      "y": 925,
+      "w": 620,
+      "h": 70,
+      "label": "{{text01}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "visible": [
+        3.7134,
+        6.12711
+      ]
+    },
+    {
+      "id": "n014",
+      "kind": "pill",
+      "x": 650,
+      "y": 925,
+      "w": 620,
+      "h": 70,
+      "label": "{{text02}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "visible": [
+        6.31278,
+        8.72649
+      ]
+    },
+    {
+      "id": "n015",
+      "kind": "pill",
+      "x": 650,
+      "y": 925,
+      "w": 620,
+      "h": 70,
+      "label": "{{text03}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "visible": [
+        8.91216,
+        11.32587
+      ]
+    },
+    {
+      "id": "n016",
+      "kind": "pill",
+      "x": 650,
+      "y": 925,
+      "w": 620,
+      "h": 70,
+      "label": "{{text04}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "visible": [
+        11.51154,
+        13.92525
+      ]
+    },
+    {
+      "id": "n017",
+      "kind": "pill",
+      "x": 650,
+      "y": 925,
+      "w": 620,
+      "h": 70,
+      "label": "{{text05}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "visible": [
+        14.11092,
+        16.52463
+      ]
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/cd9f84f9a5f9fb2deb5c3f86bff74bceab7fbd4b959637f7ca4230b411ea59d6.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "All repository pages look the same.",
+          "label": "Opening Hook",
+          "visual": "A static screen capture of a GitHub repository page for \"FredTalk\". The UI is white with blue and grey text. Various file directories and commit messages are visible. The lighting is digital and flat with high saturation and neutral color temperature.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "We only need to remember these few locations.",
+          "label": "Product Information",
+          "visual": "The screen zooms out to reveal two identical GitHub repository pages side-by-side on a white background. Digital highlights (grey overlays) focus on specific regions of both pages. The movement is a smooth digital zoom-out.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "In the upper left corner, the username slash project name is the project address.",
+          "label": "Product Selling Points",
+          "visual": "A zoomed-in view of the top-left corner of the GitHub page. A spotlight effect highlights the username and repository name. The background is slightly dimmed to emphasize the highlighted area.",
+          "shot_type": "Close-Up",
+          "scene_number": 3,
+          "timestamp_end": "0:07",
+          "timestamp_start": "0:04"
+        },
+        {
+          "audio": "The 'Star' in the upper right is equivalent to a favorite.",
+          "label": "Product Selling Points",
+          "visual": "A zoomed-in view of the top-right corner of the interface, specifically the 'Star' button with a count next to it. A white rectangle highlights the button against a slightly darkened background.",
+          "shot_type": "Close-Up",
+          "scene_number": 4,
+          "timestamp_end": "0:09",
+          "timestamp_start": "0:08"
+        },
+        {
+          "audio": "The green 'Code' button is used to download the code.",
+          "label": "Product Selling Points",
+          "visual": "The view shifts to focus on a green button labeled 'Code'. A white rectangular highlight draws attention to it. The rest of the screen is dimmed.",
+          "shot_type": "Close-Up",
+          "scene_number": 5,
+          "timestamp_end": "0:12",
+          "timestamp_start": "0:10"
+        },
+        {
+          "audio": "Scroll down for README, the project's instruction manual.",
+          "label": "Product Selling Points",
+          "visual": "The view scrolls down the page to show the 'README.md' section. A large white highlight covers the README title and content. The text is clear and sharp against the white digital background.",
+          "shot_type": "Medium Shot",
+          "scene_number": 6,
+          "timestamp_end": "0:15",
+          "timestamp_start": "0:13"
+        },
+        {
+          "audio": "The 'Releases' on the right is where the author publishes official versions.",
+          "label": "Product Selling Points",
+          "visual": "The focus moves to the right sidebar, specifically the 'Releases' section. A white rectangular highlight frames the latest version information. The camera is static in this zoomed position.",
+          "shot_type": "Close-Up",
+          "scene_number": 7,
+          "timestamp_end": "0:18",
+          "timestamp_start": "0:16"
+        },
+        {
+          "audio": "Upbeat electronic transition sound with a soft rhythmic pulse.",
+          "label": "Call to Action",
+          "visual": "A clean white screen with a logo in the top right corner. A thick black horizontal progress bar fills slowly at the bottom. The overall aesthetic is minimalist and modern.",
+          "shot_type": "Wide Shot",
+          "scene_number": 8,
+          "timestamp_end": "0:20",
+          "timestamp_start": "0:19"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "Fred 的仓库页让到左边，另一仓库页从右进来并排；“记住这几个位置”时两页同一批位置一起被标出，再按口播逐个讲"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 18.567,
+      "action": "Fred 的仓库页让到左边，另一仓库页从右进来并排；“记住这几个位置”时两页同一批位置一起被标出，再按口播逐个讲"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "仓库 1",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          18.567,
+          18.567,
+          "linear"
+        ]
+      ]
+    },
+    {
+      "asset": "media2",
+      "label": "仓库 2",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          18.567,
+          18.567,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

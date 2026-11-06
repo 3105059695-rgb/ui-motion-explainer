@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "slug": "xelandre-363f00",
+  "source_project": "assets/reconstructions/xelandre-363f00",
+  "project": "assets/reconstructions/xelandre-363f00",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "completion.json",
+    "index.html",
+    "motion-core.js",
+    "motion.js",
+    "project.json",
+    "shot-plan.json",
+    "style.css",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/73894e0448cae90a92b6.ttf"
+  ],
+  "replaceable_assets": [],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "assets/fonts/Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "completion.json": "completion.json",
+    "index.html": "index.html",
+    "motion-core.js": "motion-core.js",
+    "motion.js": "motion.js",
+    "project.json": "project.json",
+    "shot-plan.json": "shot-plan.json",
+    "style.css": "style.css",
+    "Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

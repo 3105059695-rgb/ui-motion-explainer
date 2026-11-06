@@ -1,0 +1,166 @@
+{
+  "template": "dedicated-native-webgl-first-ten-stadium-explainer",
+  "case_number": 199,
+  "reference_slug": "blueoctopusai-dd17bd",
+  "reference_url": "https://prompt-motion.com/blueoctopusai-dd17bd",
+  "duration": 167.46666666666667,
+  "width": 1280,
+  "height": 720,
+  "fps": 30,
+  "brand": "BLUE OCTOPUS",
+  "title": "FIRST &",
+  "yellow_title": "TEN",
+  "opening_kicker": "SENSOR-TRACKED FIRST-DOWN LINE",
+  "opening_copy": "The line is not on the grass. The truck draws it into the picture every frame, from what the camera sensors report.",
+  "closing_kicker": "MIC LINE · SURVEY · LENS · REGISTRATION · COLOURS · RENDER · KEYER · AIR",
+  "closing_copy": "Every frame, on every play, from the same few assumptions: the field is surveyed, the cameras are registered, and nothing has moved since.",
+  "cta": "RUN THE TRUCK →",
+  "chapters": [
+    {
+      "start": 9,
+      "end": 20,
+      "kicker": "01 · LOAD-IN",
+      "title": [
+        "CABLE TO",
+        "EVERY POSITION"
+      ],
+      "copy": "The trucks park in the compound. Fiber runs to each instrumented camera deck, and every camera sends its picture and its sensor data home on that one cable."
+    },
+    {
+      "start": 20,
+      "end": 32,
+      "kicker": "02 · THE RIG",
+      "title": [
+        "EVERY MOVE",
+        "IS MEASURED"
+      ],
+      "copy": "Pan and tilt are counted inside the head; the digital lens reports zoom, focus and the 2X extender. An ebox on the side of the camera turns those numbers into audio on the camera’s MIC 2 input. The operator frames the shot; the sensors report every move."
+    },
+    {
+      "start": 32,
+      "end": 44,
+      "kicker": "03 · DOWN THE MIC LINE",
+      "title": [
+        "THE SENSOR DATA",
+        "RIDES THE AUDIO"
+      ],
+      "copy": "The ebox turns the encoder readings into tones on the camera’s MIC 2 input. They ride the fiber with the picture, leave the CCU as MIC 2 audio, and a decoder turns them back into numbers for the tracking computer. Early lenses had encoders bolted on; a 2010s digital lens reports zoom, focus and the extender itself."
+    },
+    {
+      "start": 44,
+      "end": 55,
+      "kicker": "04 · SURVEY",
+      "title": [
+        "THE FIELD ISN’T FLAT"
+      ],
+      "copy": "Fields are crowned so rain runs off, often about a foot higher down the middle. The crew surveys it and fits a curve across each measured yard line. The line is drawn on that surface, not on a flat plane."
+    },
+    {
+      "start": 55,
+      "end": 69,
+      "kicker": "05 · LENS TRAINING",
+      "title": [
+        "TEACH IT THE",
+        "LENS FIRST"
+      ],
+      "copy": "The lens first. Lock on an object at full zoom, zoom all the way out and mark it in three images: the drift of the mark is the image centre. A known pan that puts it on the frame edge gives the focal length in pixels. Straight edges, marked in every image, give the distortion. Then again with the 2X in."
+    },
+    {
+      "start": 69,
+      "end": 85,
+      "kicker": "06 · REGISTRATION",
+      "title": [
+        "TRAIN IT ON THE",
+        "HASH MARKS"
+      ],
+      "copy": ""
+    },
+    {
+      "start": 85,
+      "end": 101,
+      "kicker": "07 · COLOUR TRAINING",
+      "title": [
+        "TEACH IT",
+        "THE COLOURS"
+      ],
+      "copy": "Before kickoff the operator samples the grass the line may cover and every colour on both uniforms it must never cover. The light will not stay put: sun to shade, the banks coming on, snow. Whenever it changes, the grass is sampled again, during the game."
+    },
+    {
+      "start": 101,
+      "end": 109,
+      "kicker": "08 · EVERY FRAME",
+      "title": [
+        "COUNTS IN,",
+        "PIXELS OUT"
+      ],
+      "copy": "Each frame, the counts become angles and a focal length. Every point of the line, sitting on the surveyed crown, is projected through that camera model into the picture."
+    },
+    {
+      "start": 109,
+      "end": 121,
+      "kicker": "09 · THE KEYER",
+      "title": [
+        "THE LINE GOES UNDER"
+      ],
+      "copy": "Every pixel under the line is split into brightness and two colour-difference channels and compared with the trained colours. Grass lets the line through. Jerseys, pants and helmets stop it."
+    },
+    {
+      "start": 121,
+      "end": 133,
+      "kicker": "10 · TIME CODE",
+      "title": [
+        "FRAME-ACCURATE",
+        "OR NOTHING"
+      ],
+      "copy": "Program video is held back a few frames while the graphic renders. Time code pairs every frame with the sensor packet from the same instant, and tally tells the system which camera is on air."
+    },
+    {
+      "start": 133,
+      "end": 145,
+      "kicker": "11 · THE CATCH",
+      "title": [
+        "NOTHING IS",
+        "ALLOWED TO MOVE"
+      ],
+      "copy": "The model assumes the rig, the lens and the lighting stay exactly as they were at training. Re-balance a head, bump a tripod or swap a lens, and the line is wrong until that camera is registered again."
+    },
+    {
+      "start": 145,
+      "end": 157,
+      "kicker": "12 · SNOW",
+      "title": [
+        "WHEN THE PAINT",
+        "DISAPPEARS"
+      ],
+      "copy": "Under heavy snow the same system can draw the whole field: yard lines, sidelines and the line to gain. The keyer is retrained so the lines draw on the snow."
+    }
+  ],
+  "team_blue": "#192a85",
+  "team_red": "#b90022",
+  "line": "#ffdc33",
+  "line_of_scrimmage": "#2879ff",
+  "crown_meters": 0.3048,
+  "score": "HOME 17    AWAY 13",
+  "marks": [
+    4,
+    12,
+    24,
+    36,
+    49,
+    59,
+    78,
+    90,
+    111,
+    127,
+    151,
+    164
+  ],
+  "provenance": "independent-reimplementation",
+  "source_claim_note": "Educational displayed source claims transcribed from the historical video; this project does not operate a broadcast keyer.",
+  "portable_demo": {
+    "source_motion_preserved": true,
+    "reference_media_distributed": false,
+    "textures": "Original replaceable schematic assets; not the original reference artwork.",
+    "approval": "Historical motion implementation; this portable demo is not user-approved."
+  }
+}

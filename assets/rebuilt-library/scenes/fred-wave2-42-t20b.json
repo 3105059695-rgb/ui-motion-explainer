@@ -1,0 +1,247 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t20b",
+  "title": "痛点反差开场",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "manual": "先手动做这些",
+    "task0": "找素材，再改格式",
+    "task1": "逐个操作，再核对",
+    "task2": "重复调整，再导出"
+  },
+  "assets": {
+    "complexity": "assets/style-film/media/cross-device-continuity.svg",
+    "result": "assets/approved-girl-sample/assets/handoff.png"
+  },
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/0ec7fa62074f4a5ec0841cedde9f1dbde69ab678233cd60456ff65dfb8f40e30.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A series of high-pitched, rhythmic digital 'pop' sound effects, one for each line item that appears on the screen. The tempo is fast, approximately 120 BPM, creating a sense of a growing list of chores.",
+          "label": "Opening Hook",
+          "visual": "A static wide shot of a clean, minimalist digital canvas against a light gray background. A white rectangular card is centered on screen. Dark gray bulleted list items appear one by one in a rapid vertical sequence, simulating a list of manual tasks. The lighting is flat and digital, with a cool white color temperature. The composition is symmetrical and uncluttered.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A low-frequency digital glitch or 'whoosh' sound effect, signifying a transition or a problem state.",
+          "label": "Problem Solving",
+          "visual": "A quick transition where a dark, semi-transparent overlay sweeps over the previous list. A blurry image of a complex interface begins to emerge in the center, creating a sense of chaos or 'messiness' compared to the previous clean list. The colors are muted and dark, dominated by browns and blacks.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A crisp, satisfying 'ding' or chime sound effect, high in pitch and bright in tone, suggesting a successful or high-quality result.",
+          "label": "Product Selling Points",
+          "visual": "A sudden, sharp transition to a fully rendered, high-fidelity gaming user interface. The UI features an ornate, traditional East Asian aesthetic with gold trim and dark wood textures. Detailed icons of swords, robes, and crystals are neatly arranged in a grid on the left. On the right, a large, intricate golden floral hairpin is showcased with soft, warm artificial lighting, casting subtle shadows to give it a 3D feel. The color palette is rich with deep blues, golds, and vibrant purple accents.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.5,
+      "action": "Concrete manual pain points are legible"
+    },
+    {
+      "start": 1.5,
+      "end": 3.1,
+      "action": "Complex old interface briefly establishes friction"
+    },
+    {
+      "start": 3.1,
+      "end": 5,
+      "action": "Sharp current completed result resolves the contrast and holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n006-group",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n001-card",
+          "kind": "card",
+          "x": 180,
+          "y": 150,
+          "w": 1560,
+          "h": 780,
+          "children": [],
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 240,
+          "y": 210,
+          "w": 1400,
+          "h": 120,
+          "text": "{{manual}}",
+          "size": 72,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 270,
+          "y": 380,
+          "w": 1300,
+          "h": 80,
+          "text": "{{task0}}",
+          "size": 52,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 270,
+          "y": 510,
+          "w": 1300,
+          "h": 80,
+          "text": "{{task1}}",
+          "size": 52,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 270,
+          "y": 640,
+          "w": 1300,
+          "h": 80,
+          "text": "{{task2}}",
+          "size": 52,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.4,
+            1
+          ],
+          [
+            2.0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-image",
+      "kind": "image",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "asset": "complexity",
+      "fit": "cover",
+      "blur": 12,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.4,
+            0
+          ],
+          [
+            1.9,
+            1
+          ],
+          [
+            2.9,
+            1
+          ],
+          [
+            3.4,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-image",
+      "kind": "image",
+      "x": 140,
+      "y": 80,
+      "w": 1640,
+      "h": 920,
+      "asset": "result",
+      "fit": "contain",
+      "radius": 20,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.95,
+            0
+          ],
+          [
+            3.5,
+            1
+          ]
+        ],
+        "scale": [
+          [
+            2.95,
+            0.9
+          ],
+          [
+            3.7,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

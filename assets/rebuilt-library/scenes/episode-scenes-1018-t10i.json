@@ -1,0 +1,539 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t10i",
+  "title": "搜索框槽位换词：固定前缀 + 可换领域词",
+  "duration": 7.367,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "查找相关项目",
+    "text02": "awesome",
+    "text03": "python",
+    "text04": "design",
+    "text05": "audio",
+    "text06": "video",
+    "text07": "↵",
+    "text08": "Contents",
+    "text09": "编码与格式",
+    "text10": "媒体工具",
+    "text11": "字幕与剪辑",
+    "text12": "开发资源"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "window",
+      "x": 380,
+      "y": 265,
+      "w": 1160,
+      "h": 450,
+      "label": "{{text01}}"
+    },
+    {
+      "id": "n002",
+      "kind": "text",
+      "x": 465,
+      "y": 410,
+      "w": 500,
+      "h": 112.0,
+      "text": "{{text02}}",
+      "size": 70
+    },
+    {
+      "id": "n003",
+      "kind": "text",
+      "x": 970,
+      "y": 410,
+      "w": 460,
+      "h": 112.0,
+      "text": "{{text03}}",
+      "size": 70,
+      "color": "#0B0B0F",
+      "visible": [
+        0.88404,
+        1.69441
+      ]
+    },
+    {
+      "id": "n004",
+      "kind": "rect",
+      "x": 960,
+      "y": 490,
+      "w": 440,
+      "h": 6,
+      "fill": "#D6C2FF"
+    },
+    {
+      "id": "n005",
+      "kind": "text",
+      "x": 970,
+      "y": 410,
+      "w": 460,
+      "h": 112.0,
+      "text": "{{text04}}",
+      "size": 70,
+      "color": "#0B0B0F",
+      "visible": [
+        1.69441,
+        2.50478
+      ]
+    },
+    {
+      "id": "n006",
+      "kind": "rect",
+      "x": 960,
+      "y": 490,
+      "w": 440,
+      "h": 6,
+      "fill": "#D6C2FF"
+    },
+    {
+      "id": "n007",
+      "kind": "text",
+      "x": 970,
+      "y": 410,
+      "w": 460,
+      "h": 112.0,
+      "text": "{{text05}}",
+      "size": 70,
+      "color": "#0B0B0F",
+      "visible": [
+        2.50478,
+        3.31515
+      ]
+    },
+    {
+      "id": "n008",
+      "kind": "rect",
+      "x": 960,
+      "y": 490,
+      "w": 440,
+      "h": 6,
+      "fill": "#D6C2FF"
+    },
+    {
+      "id": "n009",
+      "kind": "text",
+      "x": 970,
+      "y": 410,
+      "w": 460,
+      "h": 112.0,
+      "text": "{{text06}}",
+      "size": 70,
+      "color": "#0B0B0F",
+      "visible": [
+        3.31515,
+        4.78855
+      ]
+    },
+    {
+      "id": "n010",
+      "kind": "rect",
+      "x": 960,
+      "y": 490,
+      "w": 440,
+      "h": 6,
+      "fill": "#D6C2FF"
+    },
+    {
+      "id": "n011",
+      "kind": "pill",
+      "x": 1390,
+      "y": 590,
+      "w": 90,
+      "h": 70,
+      "label": "{{text07}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.6835,
+            0
+          ],
+          [
+            3.94135,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1390
+          ],
+          [
+            3.6835,
+            1390
+          ],
+          [
+            3.94135,
+            1390,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            640
+          ],
+          [
+            3.6835,
+            640
+          ],
+          [
+            3.94135,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012",
+      "kind": "window",
+      "x": 300,
+      "y": 180,
+      "w": 1320,
+      "h": 720,
+      "label": "{{text08}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.78855,
+            0
+          ],
+          [
+            5.0464,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            300
+          ],
+          [
+            4.78855,
+            300
+          ],
+          [
+            5.0464,
+            300,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            230
+          ],
+          [
+            4.78855,
+            230
+          ],
+          [
+            5.0464,
+            180,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013",
+      "kind": "text",
+      "x": 400,
+      "y": 325,
+      "w": 1120,
+      "h": 51.2,
+      "text": "{{text09}}",
+      "size": 32,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.08323,
+            0
+          ],
+          [
+            5.34108,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            400
+          ],
+          [
+            5.08323,
+            400
+          ],
+          [
+            5.34108,
+            400,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            337
+          ],
+          [
+            5.08323,
+            337
+          ],
+          [
+            5.34108,
+            325,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014",
+      "kind": "text",
+      "x": 400,
+      "y": 411,
+      "w": 1120,
+      "h": 51.2,
+      "text": "{{text10}}",
+      "size": 32,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.34108,
+            0
+          ],
+          [
+            5.59892,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            400
+          ],
+          [
+            5.34108,
+            400
+          ],
+          [
+            5.59892,
+            400,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            423
+          ],
+          [
+            5.34108,
+            423
+          ],
+          [
+            5.59892,
+            411,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n015",
+      "kind": "text",
+      "x": 400,
+      "y": 497,
+      "w": 1120,
+      "h": 51.2,
+      "text": "{{text11}}",
+      "size": 32,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.59892,
+            0
+          ],
+          [
+            5.85677,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            400
+          ],
+          [
+            5.59892,
+            400
+          ],
+          [
+            5.85677,
+            400,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            509
+          ],
+          [
+            5.59892,
+            509
+          ],
+          [
+            5.85677,
+            497,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n016",
+      "kind": "text",
+      "x": 400,
+      "y": 583,
+      "w": 1120,
+      "h": 51.2,
+      "text": "{{text12}}",
+      "size": 32,
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            5.85676,
+            0
+          ],
+          [
+            6.11461,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            400
+          ],
+          [
+            5.85676,
+            400
+          ],
+          [
+            6.11461,
+            400,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            595
+          ],
+          [
+            5.85676,
+            595
+          ],
+          [
+            6.11461,
+            583,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/c1068369307565a43991338972ff1c6cfb69c7613e7251e88c6c3042dad448a1.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "The third method is to search for 'Awesome' plus a specific field.",
+          "label": "Opening Hook",
+          "visual": "A clean white background features a centered, rounded search bar with a small black brand logo on the left. A digital cursor enters from the bottom, clicking into the search bar. The lighting is flat and even across the digital interface with high-key brightness. The color palette is minimalist, primarily white and light grey.",
+          "shot_type": "Close-Up",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "For example, 'Awesome Video'.",
+          "label": "Product Information",
+          "visual": "The search bar remains centered. The word 'awesome' is typed followed by 'design', then 'image', and finally 'video'. The cursor clicks the return arrow icon on the right side of the bar. The screen transition is a smooth digital wipe to the next interface. The background remains a sterile, bright white.",
+          "shot_type": "Close-Up",
+          "scene_number": 2,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "This is a curated list that others have already organized for you.",
+          "label": "Product Selling Points",
+          "visual": "The interface shifts to a light grey webpage displaying a structured list of bullet points under the heading 'Contents'. The camera slowly scrolls down the list, highlighting sections like 'Encoding & Codecs' and 'Media Tools'. The lighting is uniform, resembling a standard computer monitor glow. The text is dark grey, providing high contrast against the light background.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:06",
+          "timestamp_start": "0:04"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "搜索框打出固定词“awesome”，后面的“领域”槽位快速换词（python / design / audio），按口播落在 video，回车出清单"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 7.367,
+      "action": "搜索框打出固定词“awesome”，后面的“领域”槽位快速换词（python / design / audio），按口播落在 video，回车出清单"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

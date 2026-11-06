@@ -1,0 +1,309 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t20x",
+  "title": "实拍开场：大胶囊砸下、相机关键帧，细线托架标出画面对象",
+  "duration": 9.6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "这个变化，是真的",
+    "text02": "看清画面里的主体与变化",
+    "media1.start": 0,
+    "media1.speed": 1
+  },
+  "assets": {
+    "media1": "assets/rebuilt-library/demo/member-batch1-media.svg"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "image",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 18,
+      "visible": [
+        0.0,
+        9.600999999999999
+      ],
+      "tracks": {
+        "scale": [
+          [
+            0.0,
+            1.1
+          ],
+          [
+            1.728,
+            1.1
+          ],
+          [
+            2.4,
+            1
+          ],
+          [
+            3.84,
+            1
+          ],
+          [
+            6.24,
+            1.25
+          ],
+          [
+            8.16,
+            1.05
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            0
+          ],
+          [
+            6.24,
+            -170
+          ],
+          [
+            8.16,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "pill",
+      "x": 460,
+      "y": 100,
+      "w": 1000,
+      "h": 130,
+      "label": "{{text01}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.144,
+            0
+          ],
+          [
+            0.624,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            460
+          ],
+          [
+            0.144,
+            460
+          ],
+          [
+            0.624,
+            460,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            -180
+          ],
+          [
+            0.144,
+            -180
+          ],
+          [
+            0.624,
+            100,
+            "out"
+          ]
+        ]
+      },
+      "visible": [
+        0.0,
+        2.88
+      ]
+    },
+    {
+      "id": "n003",
+      "kind": "path",
+      "x": 310,
+      "y": 770,
+      "w": 1300,
+      "h": 60,
+      "path": "M650 0 H0 V55 M650 0 H1300 V55",
+      "fill": "#FFFFFF",
+      "strokeWidth": 5,
+      "length": 1500,
+      "tracks": {
+        "draw": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.36,
+            0
+          ],
+          [
+            4.416,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "text",
+      "x": 280,
+      "y": 890,
+      "w": 1360,
+      "h": 118.4,
+      "text": "{{text02}}",
+      "size": 74,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.416,
+            0
+          ],
+          [
+            4.752,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            280
+          ],
+          [
+            4.416,
+            280
+          ],
+          [
+            4.752,
+            280,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            940
+          ],
+          [
+            4.416,
+            940
+          ],
+          [
+            4.752,
+            890,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/c8bc58115523bf8bd39ff10fe40982ac1e55a92df529e3b8d526791646ef5532.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "Americans really can fly! It flew straight over a row of Tesla heads.",
+          "label": "Opening Hook",
+          "visual": "A sleek, silver sports car is suspended in mid-air against a pitch-black background. Blue-tinted gas jets are firing downwards from the four corners of the undercarriage. The camera pans rapidly from left to right, tracking the vehicle's upward and forward trajectory. The lighting is high-contrast, focusing sharply on the metallic curves of the car while the surroundings remain in total shadow.",
+          "shot_type": "Close-Up",
+          "scene_number": 1,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Flew straight over a row of Tesla heads.",
+          "label": "Product Selling Points",
+          "visual": "The camera is positioned at ground level, showing a dirt testing ground at night. Five stationary vehicles, including a large white semi-truck and several sedans in silver, red, and gold, are parked in a horizontal line. The silver sports car from the previous scene enters the frame from the right, soaring high above the parked cars. Massive clouds of dust and smoke are kicked up from the ground, illuminated by the car's thrusters. The lighting is cool-toned with dark shadows and visible utility poles in the distance.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "It even did a flip in the air before landing steadily.",
+          "label": "Product Information",
+          "visual": "The airborne silver car performs a slow clockwise barrel roll while in flight. The blue thrusters continue to emit smoke. The camera tracks the car as it moves from the center-right to the left of the frame, passing over a white semi-truck. The environment is a dark outdoor lot with power lines cutting across the mid-ground. The color palette is dominated by dark grays and blacks with sharp white light reflecting off the car's body.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:07",
+          "timestamp_start": "0:04"
+        },
+        {
+          "audio": "To be honest, when I first saw this video this morning, my first thought was...",
+          "label": "Real Experience",
+          "visual": "The camera captures the aftermath of the flight. The silver car has landed off-screen to the left, leaving a thick, billowing cloud of white dust and smoke that obscures the stationary parked cars. The camera remains static as the dust slowly begins to settle in the dark environment. The scene then transitions into a vertical video frame inset on a white background, showing a repeat of the initial take-off from a slightly different perspective.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:10",
+          "timestamp_start": "0:07"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "第 0 帧就是真实画面，大胶囊砸下；跳切+相机关键帧（先盯车 → 拉开露出车队 → 推近翻身）；细线托架从中点向两边刷开，下方大字标出画面里的对象"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 9.6,
+      "action": "第 0 帧就是真实画面，大胶囊砸下；跳切+相机关键帧（先盯车 → 拉开露出车队 → 推近翻身）；细线托架从中点向两边刷开，下方大字标出画面里的对象"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ],
+  "mediaClocks": [
+    {
+      "asset": "media1",
+      "label": "本期真实高光",
+      "time": [
+        [
+          0.0,
+          0
+        ],
+        [
+          9.6,
+          9.6,
+          "linear"
+        ]
+      ]
+    }
+  ]
+}

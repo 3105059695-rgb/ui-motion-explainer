@@ -1,0 +1,159 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t12o",
+  "title": "穿过序号：镜头钻进数字进入本章",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "index": "02",
+    "title": "02  实际操作"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/8d9f7abbc5b093d49238d7792041cbf583646ff2e3b9d8be67ef6f0364e78201.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "Upbeat, energetic electronic pop music begins with a fast tempo and synthesized percussion. The volume is steady and the mood is modern and tech-focused.",
+          "label": "Opening Hook",
+          "visual": "A static wide shot with a clean white background. Centered in the frame is a large, bold '02' in a black, sans-serif font. Above the number, two purple characters are centered. In the upper-right corner, there is a small logo featuring stylized text and a yellow hand icon. The lighting is uniform and bright across the entire frame.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The energetic electronic music continues at a consistent volume. No voiceover is present.",
+          "label": "Product Information",
+          "visual": "The screen transitions to a white background with a horizontal pill-shaped black button centered in the frame. Inside the button, white and purple text is displayed. The camera remains static. The overall color palette is minimalist, dominated by white, black, and small accents of purple.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 0.8999999999999999,
+      "action": "Huge chapter number establishes the focal aperture"
+    },
+    {
+      "start": 0.8999999999999999,
+      "end": 1.8900000000000001,
+      "action": "Camera pushes through the enlarged numeral"
+    },
+    {
+      "start": 1.8900000000000001,
+      "end": 3,
+      "action": "Chapter capsule settles into view"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-text",
+      "kind": "text",
+      "x": 460,
+      "y": 130,
+      "w": 1000,
+      "h": 600,
+      "text": "{{index}}",
+      "size": 570,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            0.9,
+            1
+          ],
+          [
+            1.71,
+            16,
+            "in"
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.5,
+            1
+          ],
+          [
+            1.89,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-pill",
+      "kind": "pill",
+      "x": 430,
+      "y": 420,
+      "w": 1060,
+      "h": 180,
+      "label": "{{title}}",
+      "size": 70,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.71,
+            0
+          ],
+          [
+            2.07,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.71,
+            455
+          ],
+          [
+            2.07,
+            420,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

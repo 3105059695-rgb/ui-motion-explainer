@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "title": "001 · Claude motion designer showreel · independent Canvas reconstruction",
+  "reference_slug": "stephanlivera-df17a2",
+  "reference_url": "https://prompt-motion.com/stephanlivera-df17a2",
+  "reference_author": "@stephanlivera",
+  "source_post": "https://x.com/stephanlivera/status/2103315922098470926",
+  "provenance": "Independent Canvas geometry and typography, based on personally inspected reference frames. No source video or reference-frame sequence is used by the renderer.",
+  "template": "stephanlivera-df17a2-specific-reconstruction",
+  "duration": 15.0,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "loop": false,
+  "coordinate_space": [
+    960,
+    540
+  ],
+  "seed": 1772,
+  "palette": {
+    "ink": "#0f0f11",
+    "paper": "#f1ede4",
+    "red": "#f04939",
+    "blue": "#302bf1",
+    "lime": "#ddff41"
+  },
+  "fonts": {
+    "display": "Arial Black, Arial, sans-serif",
+    "serif": "Georgia, Times New Roman, serif",
+    "mono": "Courier New, monospace"
+  },
+  "timings": {
+    "identity_type": 1.85,
+    "easing": 3.25,
+    "easing_travel": 4.15,
+    "easing_duration": 0.94,
+    "morphing": 5.35,
+    "systems": 7.45,
+    "depth": 9.65,
+    "kinetic_type": 11.1,
+    "signature": 13.13
+  },
+  "geometry": {
+    "ray_count": 12,
+    "morph_radius": 96,
+    "morph_samples": 120,
+    "orbit_radius": 198,
+    "orbit_count": 12,
+    "truchet_tile": 88,
+    "truchet_line": 10,
+    "depth_columns": 32,
+    "depth_rows": 18,
+    "focal_length": 700
+  },
+  "marks": [
+    1.0,
+    2.75,
+    4.7,
+    6.5,
+    7.05,
+    8.5,
+    10.5,
+    11.8,
+    12.5,
+    14.5
+  ],
+  "editable": "Edit palette, fonts, seed, scene timing and geometry. Every frame is rebuilt by seek(t).",
+  "fidelity": "Scene-specific reconstruction; remaining typography, pattern layout and fine trajectory differences are documented. Not pixel-identical.",
+  "portable_demo": {
+    "source_motion_preserved": true,
+    "reference_media_distributed": false,
+    "textures": "Original replaceable schematic assets; not the original reference artwork.",
+    "approval": "Historical motion implementation; this portable demo is not user-approved."
+  }
+}

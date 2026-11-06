@@ -1,0 +1,283 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t16b",
+  "title": "版本迭代",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "version0": "v1",
+    "changes0": "基本结构\n○ 初次完成",
+    "version1": "v2",
+    "changes1": "＋ 补充来源\n＋ 修复边界\n○ 保留结构",
+    "version2": "v3",
+    "changes2": "＋ 增加复用\n＋ 清晰参数\n○ 延续旧能力"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/61a2d0890f4caa884ce84d37dd3d88a8a4ba64a008e67a673faadd4db9a62d6f.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A digital 'pop' sound effect as the card appears, followed by a fast-paced electronic synth beat that sets a high-energy, rhythmic tempo.",
+          "label": "Opening Hook",
+          "visual": "A white digital card occupies the center of a minimalist light gray background. The card features a header in a bold, dark gray sans-serif font. Below the header, two lines of text preceded by hollow circular bullets are displayed. The lighting is uniform, flat, and digital, casting no shadows. The color palette is strictly monochromatic, utilizing shades of white and gray.",
+          "shot_type": "Medium Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A sliding 'whoosh' sound effect as the second card enters the frame. The background synth music continues at a steady, upbeat pace.",
+          "label": "Product Selling Points",
+          "visual": "A second white digital card slides down and appears from beneath the first card. This new card features a different header in a bold, dark gray font. It contains three lines of text. The first two lines are preceded by dark circular bullets containing a white plus symbol, while the third line has a hollow circular bullet. The arrangement creates a vertical stack of two overlapping cards.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A metallic 'click' sound effect syncs with the appearance of the third card. The background music remains constant in volume and tempo.",
+          "label": "Product Selling Points",
+          "visual": "A third white digital card slides down to join the stack, appearing behind the previous two. It features a new bold header. This card contains three lines of text: the first two have dark circular bullets with white plus symbols, and the final line has a hollow circular bullet. The composition now shows three layered cards in a staggered vertical alignment.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A high-pitched 'ding' or bell chime sounds as the star icon flashes. The upbeat electronic music fades out quickly.",
+          "label": "Call to Action",
+          "visual": "The three-card stack remains static in the center of the frame. A bright yellow star-shaped graphic with small radiating lines briefly flashes in the upper right corner of the screen, next to a stylized dark blue text logo. The background remains a clean, light gray.",
+          "shot_type": "Medium Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.0,
+      "action": "Initial version states concrete scope"
+    },
+    {
+      "start": 1.0,
+      "end": 3.1,
+      "action": "New versions stack with retained and added capabilities"
+    },
+    {
+      "start": 3.1,
+      "end": 5,
+      "action": "Visible history makes iteration readable"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n003-card",
+      "kind": "card",
+      "x": 420,
+      "y": 180,
+      "w": 1050,
+      "h": 420,
+      "children": [
+        {
+          "id": "n001-text",
+          "kind": "text",
+          "x": 45,
+          "y": 35,
+          "w": 960,
+          "h": 80,
+          "text": "{{version0}}",
+          "size": 58,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 45,
+          "y": 155,
+          "w": 960,
+          "h": 200,
+          "text": "{{changes0}}",
+          "size": 41,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.85,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            70
+          ],
+          [
+            0.85,
+            180,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-card",
+      "kind": "card",
+      "x": 485,
+      "y": 360,
+      "w": 1050,
+      "h": 420,
+      "children": [
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 45,
+          "y": 35,
+          "w": 960,
+          "h": 80,
+          "text": "{{version1}}",
+          "size": 58,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 45,
+          "y": 155,
+          "w": 960,
+          "h": 200,
+          "text": "{{changes1}}",
+          "size": 41,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.05,
+            0
+          ],
+          [
+            1.9,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.05,
+            250
+          ],
+          [
+            1.9,
+            360,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-card",
+      "kind": "card",
+      "x": 550,
+      "y": 540,
+      "w": 1050,
+      "h": 420,
+      "children": [
+        {
+          "id": "n007-text",
+          "kind": "text",
+          "x": 45,
+          "y": 35,
+          "w": 960,
+          "h": 80,
+          "text": "{{version2}}",
+          "size": 58,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n008-text",
+          "kind": "text",
+          "x": 45,
+          "y": 155,
+          "w": 960,
+          "h": 200,
+          "text": "{{changes2}}",
+          "size": 41,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.1,
+            0
+          ],
+          [
+            2.95,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.1,
+            430
+          ],
+          [
+            2.95,
+            540,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

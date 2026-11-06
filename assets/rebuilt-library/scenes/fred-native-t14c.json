@@ -1,0 +1,110 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-native-t14c",
+  "title": "价格落定：数字逐位滚动，旧价划掉，差额亮出",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "oldPrice": 50,
+    "newPrice": 10,
+    "currency": "¥"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/b6ef45b4616f2d77db9fd623f3e017a50dbadac4f5b3859475d56eef4d9c9045.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A rhythmic, mechanical ticking sound like a high-speed slot machine or a ticking clock, creating a sense of rapid movement or calculation.",
+          "label": "Opening Hook",
+          "visual": "A clean white background with a minimalist interface. In the center, a numerical value cycles rapidly through digits, resembling a slot machine effect. The font is bold and dark grey. Lighting is even and artificial across the frame.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A digital 'ding' sound, similar to a successful transaction or notification, follows the stopping of the counter.",
+          "label": "Product Selling Points",
+          "visual": "The numbers stop cycling, settling on '10.00'. A second card-like interface appears on the right side of the frame with a higher value of '50.00'. Both elements are displayed against the white background with subtle soft shadows behind the boxes.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A quick 'swoosh' sound effect as the strike-through line appears, followed by a light 'pop' sound as the discount badge enters the frame.",
+          "label": "Product Selling Points",
+          "visual": "The higher price value of '50.00' is struck through with a horizontal line. Simultaneously, a dark badge with a percentage value pops into the bottom center of the frame. The color palette remains strictly white, grey, and black.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.75,
+      "action": "New price rapidly settles"
+    },
+    {
+      "start": 1.75,
+      "end": 3.0,
+      "action": "Old comparison price appears and is struck through"
+    },
+    {
+      "start": 3.25,
+      "end": 5,
+      "action": "Actual monetary and percentage saving are calculated and held"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-b3-price",
+      "kind": "b3-price",
+      "x": 240,
+      "y": 220,
+      "w": 1440,
+      "h": 650,
+      "oldKey": "oldPrice",
+      "newKey": "newPrice",
+      "currencyKey": "currency",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            4.25,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

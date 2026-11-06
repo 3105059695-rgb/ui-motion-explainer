@@ -1,0 +1,132 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t20n",
+  "title": "头像发问：Fred 冒出来抛出问题",
+  "duration": 4,
+  "background": "#FFFFFF",
+  "inputs": {
+    "question": "还在花时间重复操作吗？"
+  },
+  "assets": {
+    "avatar": "assets/approved-girl-sample/assets/manual-face-lock.png"
+  },
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/3396319ff5668bb145c1e7842961e023a327a38b9e12d8b27422ef6db48badc3.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "Are you still spending money on memberships? These 5 open-source tools are all you need. (Translated from Chinese: 你还在花钱买会员吗？这 5 个开源工具就够了)",
+          "label": "Opening Hook",
+          "visual": "A static shot on a minimalist white background. On the left side, a circular avatar appears featuring a male subject, approximately 25-35 years old, with fair skin, black short hair, and rectangular glasses, wearing a black shirt. Next to the avatar, a rounded black speech bubble expands horizontally. The lighting is flat and even across the frame, with no visible shadows. The color palette is strictly monochrome (black and white) with the exception of the subject's skin tones in the avatar.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:00"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.0,
+      "action": "Supplied identity appears without replacing the actual presenter"
+    },
+    {
+      "start": 1.0,
+      "end": 2.4,
+      "action": "Speech bubble extends into empty space with the complete question"
+    },
+    {
+      "start": 2.4,
+      "end": 4,
+      "action": "Question holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 290,
+      "y": 350,
+      "w": 300,
+      "h": 300,
+      "asset": "avatar",
+      "fit": "cover",
+      "radius": 150,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.24,
+            0
+          ],
+          [
+            0.96,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.24,
+            385
+          ],
+          [
+            0.96,
+            350,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-pill",
+      "kind": "pill",
+      "x": 650,
+      "y": 380,
+      "w": 970,
+      "h": 220,
+      "label": "{{question}}",
+      "size": 62,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "revealX": [
+          [
+            0.8,
+            0
+          ],
+          [
+            2.32,
+            1,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 4,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

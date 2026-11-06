@@ -1,0 +1,143 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-wave2-t12u",
+  "title": "灌满序号：空心大序号从下往上灌满",
+  "duration": 3,
+  "background": "#0B0B0F",
+  "inputs": {
+    "chapterNumber": "02",
+    "text02": "这一章，讲清楚"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "filledNumber",
+      "x": 630,
+      "y": 230,
+      "w": 660,
+      "h": 390,
+      "text": "{{chapterNumber}}",
+      "size": 340,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "value": 0,
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            0.6,
+            0
+          ],
+          [
+            1.86,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "text",
+      "x": 540,
+      "y": 700,
+      "w": 840,
+      "h": 120.0,
+      "text": "{{text02}}",
+      "size": 75,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.98,
+            0
+          ],
+          [
+            2.085,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            540
+          ],
+          [
+            1.98,
+            540
+          ],
+          [
+            2.085,
+            540,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            750
+          ],
+          [
+            1.98,
+            750
+          ],
+          [
+            2.085,
+            700,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/e011c7c767eca8218c427c01b9f2e051bb8d7b8661595dbe3e48affdfbb332b3.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "A short, sharp, synthesized 'thump' sound effect, similar to a digital drum hit, followed by total silence.",
+          "label": "Opening Hook",
+          "visual": "A static, minimalist graphic against a flat black background. The central element is a large, white-outlined number '02' with a horizontal line cutting across its lower third. The lighting is uniform and artificial, with no shadows or depth. The color palette is strictly monochromatic, consisting of high-contrast black and white.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "空心的本章序号 → 从下往上灌满变实心 → 章节名接出"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 3.0,
+      "action": "空心的本章序号 → 从下往上灌满变实心 → 章节名接出"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

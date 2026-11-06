@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "slug": "madhav-xo-f97f20",
+  "source_project": "assets/reconstructions/madhav-xo-f97f20",
+  "project": "assets/reconstructions/madhav-xo-f97f20",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "check-v1b/sampled-states.json",
+    "check-v1c/sampled-states.json",
+    "check-v1d/sampled-states.json",
+    "index.html",
+    "motion.js",
+    "project.json",
+    "scene-plan.json",
+    "style.css",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/08939b8bdf534afec24a.ttf",
+    "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "../../reference-shared/fonts/d00e590b8eb3a59acc32.ttf"
+  ],
+  "replaceable_assets": [],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "assets/fonts/Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "assets/fonts/GeistMono.ttf": "../../reference-shared/fonts/d00e590b8eb3a59acc32.ttf",
+    "assets/fonts/InstrumentSerifItalic.ttf": "../../reference-shared/fonts/08939b8bdf534afec24a.ttf",
+    "check-v1b/sampled-states.json": "check-v1b/sampled-states.json",
+    "check-v1c/sampled-states.json": "check-v1c/sampled-states.json",
+    "check-v1d/sampled-states.json": "check-v1d/sampled-states.json",
+    "index.html": "index.html",
+    "motion.js": "motion.js",
+    "project.json": "project.json",
+    "scene-plan.json": "scene-plan.json",
+    "style.css": "style.css",
+    "Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "GeistMono.ttf": "../../reference-shared/fonts/d00e590b8eb3a59acc32.ttf",
+    "InstrumentSerifItalic.ttf": "../../reference-shared/fonts/08939b8bdf534afec24a.ttf"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

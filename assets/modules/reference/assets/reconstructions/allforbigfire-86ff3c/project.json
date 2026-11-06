@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0.0",
+  "title": "145 · Three-machine cel-shaded robot combination",
+  "template": "allforbigfire-86ff3c-specific-reconstruction",
+  "reference_slug": "allforbigfire-86ff3c",
+  "reference_url": "https://prompt-motion.com/allforbigfire-86ff3c",
+  "source_post": "https://x.com/allforbigfire/status/2104193522715029657",
+  "reference_author": "@allforbigfire",
+  "width": 720,
+  "height": 1280,
+  "duration": 24.966666666666665,
+  "fps": 30,
+  "loop": false,
+  "seed": 145145,
+  "palette": {
+    "red": "#f32d36",
+    "blue": "#2464e4",
+    "yellow": "#ffce24",
+    "gray": "#949da8",
+    "dark": "#181923",
+    "cyan": "#79e3f4"
+  },
+  "marks": [
+    0.5,
+    3.5,
+    5.5,
+    7.5,
+    9.75,
+    11.5,
+    13.5,
+    15.5,
+    17.5,
+    19,
+    20,
+    23.5
+  ],
+  "scenes": [
+    {
+      "start": 0,
+      "end": 1.25,
+      "name": "Red jet arrives and flies through clouds"
+    },
+    {
+      "start": 1.25,
+      "end": 2.2,
+      "name": "Jet banks to expose articulated wings"
+    },
+    {
+      "start": 2.2,
+      "end": 4.45,
+      "name": "Blue car drives along road with turning wheels"
+    },
+    {
+      "start": 4.45,
+      "end": 6.65,
+      "name": "Yellow tracked tank drives through desert"
+    },
+    {
+      "start": 6.65,
+      "end": 7.25,
+      "name": "Three craft enter vertical formation"
+    },
+    {
+      "start": 7.25,
+      "end": 8.35,
+      "name": "Three-machine combination title"
+    },
+    {
+      "start": 8.35,
+      "end": 9.35,
+      "name": "Purple speed tunnel and transform title"
+    },
+    {
+      "start": 9.35,
+      "end": 10.2,
+      "name": "Jet nose and car hood separate"
+    },
+    {
+      "start": 10.2,
+      "end": 11.25,
+      "name": "Jet rotates to chest while car wheel arms pivot"
+    },
+    {
+      "start": 11.25,
+      "end": 12.15,
+      "name": "Tank tracks rotate into shin and foot modules"
+    },
+    {
+      "start": 12.15,
+      "end": 14.1,
+      "name": "Chest, blue arm unit and leg modules align"
+    },
+    {
+      "start": 14.1,
+      "end": 15,
+      "name": "Lower leg module rises to docking position"
+    },
+    {
+      "start": 15,
+      "end": 15.55,
+      "name": "First white flash and metallic lower lock caption"
+    },
+    {
+      "start": 15.55,
+      "end": 16.2,
+      "name": "Lower torso and leg docking settle"
+    },
+    {
+      "start": 16.2,
+      "end": 16.9,
+      "name": "Second white flash and upper lock caption"
+    },
+    {
+      "start": 16.9,
+      "end": 18.15,
+      "name": "Red tunnel close-up; wrist and hand blocks deploy"
+    },
+    {
+      "start": 18.15,
+      "end": 18.7,
+      "name": "Robot head rises from red chest"
+    },
+    {
+      "start": 18.7,
+      "end": 19.3,
+      "name": "Face close-up with cyan forehead and yellow antenna"
+    },
+    {
+      "start": 19.3,
+      "end": 20.1,
+      "name": "White flash and eye light activation"
+    },
+    {
+      "start": 20.1,
+      "end": 20.7,
+      "name": "Eyes settle into lit rectangular panels"
+    },
+    {
+      "start": 20.7,
+      "end": 21.3,
+      "name": "Orange radial finish background; camera pulls back"
+    },
+    {
+      "start": 21.3,
+      "end": 22.15,
+      "name": "Robot bends elbow and raises right-screen arm"
+    },
+    {
+      "start": 22.15,
+      "end": 24.966666666666665,
+      "name": "Combination complete Japanese and English final pose"
+    }
+  ],
+  "provenance": "Independent time-driven Canvas 3D polygon meshes: red jet, blue wheeled car, gold tracked tank, articulated transforming robot, clouds, road/desert, speed-line tunnels, radial finish, Japanese captions and camera moves. No original image, video or full-frame sequence is loaded. Original soundtrack comparison only.",
+  "visual_status": "needs-refinement-mesh-camera-and-transform-trajectories-differ",
+  "editable": "project.json scene timing and palette;composition.js dedicated mesh geometry, hinges, formation, docking and camera.",
+  "differences": [
+    "Dedicated jet/car/tank/robot geometry follows the observed parts and colors but does not recover original Python meshes. Vehicle body proportions, canopy, wheels/track detail, outline thickness and some polygon overlap differ.",
+    "Car and tank parts have actual parameterized shape/hinge changes into blue arm and gold leg units, but original individual panel pivots, nose separation, silhouette and intermediate orientations are approximate. No original frame/video is used.",
+    "Formation, camera push-in, head emergence and finale follow the actual chronology; camera angle, zoom, docking gaps and some hold durations differ.",
+    "Speed lines, cloud positions, road markings, desert props, radial finish, flash intensity, eye glow and captions are independently authored. The Japanese font/kerning and impact text trajectories differ.",
+    "Original reference audio is comparison-only. Browser project itself is silent."
+  ],
+  "runtime_static_reference_textures": 0,
+  "portable_demo": {
+    "source_motion_preserved": true,
+    "reference_media_distributed": false,
+    "textures": "Original replaceable schematic assets; not the original reference artwork.",
+    "approval": "Historical motion implementation; this portable demo is not user-approved."
+  }
+}

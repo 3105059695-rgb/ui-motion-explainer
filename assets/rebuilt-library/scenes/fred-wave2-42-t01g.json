@@ -1,0 +1,166 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t01g",
+  "title": "黑窗打字：背景失焦，黑窗里逐行打出规则",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "rule0": "1. 先理解输入与目标",
+    "rule1": "2. 保留真实内容与出处",
+    "rule2": "3. 完成以后逐项核对"
+  },
+  "assets": {
+    "screen": "assets/style-film/media/connected-delivery.svg"
+  },
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/01dd8f80d77b17e3bdd9bdfbc267760fa99cdf1e171612ed732f65dcf15c2622.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A rhythmic, fast-paced electronic typing sound effect persists throughout the scene. There is no voiceover or background music.",
+          "label": "Opening Hook",
+          "visual": "A static wide shot of a clean, minimalist software window interface centered against a plain white background. The window is dark charcoal grey with rounded corners and three small circular buttons (purple, light grey, white) in the top-left corner. The lighting is uniform and flat with no visible shadows. The color palette is strictly grayscale and purple.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:00"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 4.800000000000001,
+      "action": "Real page defocuses behind one document where three rules type line by line"
+    },
+    {
+      "start": 4.800000000000001,
+      "end": 6,
+      "action": "Full rule set holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 260,
+      "y": 130,
+      "w": 1400,
+      "h": 800,
+      "asset": "screen",
+      "fit": "contain",
+      "radius": 18,
+      "blur": 14,
+      "opacity": 0.25
+    },
+    {
+      "id": "n002-window",
+      "kind": "window",
+      "x": 260,
+      "y": 160,
+      "w": 1400,
+      "h": 750,
+      "fill": "#0B0B0F",
+      "label": "本期规则",
+      "children": [
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 70,
+          "y": 150,
+          "w": 1260,
+          "h": 100,
+          "text": "{{rule0}}",
+          "size": 58,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "characters": [
+              [
+                0.3,
+                0
+              ],
+              [
+                1.5,
+                11,
+                "linear"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 70,
+          "y": 325,
+          "w": 1260,
+          "h": 100,
+          "text": "{{rule1}}",
+          "size": 58,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "characters": [
+              [
+                1.68,
+                0
+              ],
+              [
+                2.88,
+                12,
+                "linear"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 70,
+          "y": 500,
+          "w": 1260,
+          "h": 100,
+          "text": "{{rule2}}",
+          "size": 58,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "characters": [
+              [
+                3.06,
+                0
+              ],
+              [
+                4.26,
+                11,
+                "linear"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

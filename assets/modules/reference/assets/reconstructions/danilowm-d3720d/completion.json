@@ -1,0 +1,118 @@
+{
+  "index": 178,
+  "slug": "danilowm-d3720d",
+  "status": "independent-rendered-with-differences",
+  "runtime_frozen": true,
+  "version": "v1",
+  "provenance": "independent-reimplementation",
+  "reference_video": "private-source-not-distributed",
+  "render": "render/full-720p-v1/preview.mp4",
+  "runtime_loads_reference_video": false,
+  "runtime_loads_reference_fullscreen_images": false,
+  "runtime_uses_original_frame_sequence": false,
+  "runtime_asset_types": [
+    "local OFL Geist font",
+    "native generated vector map/paw/icons",
+    "generated editable venue card textures"
+  ],
+  "dimensions": [
+    1280,
+    720
+  ],
+  "fps": 30,
+  "project_duration": 15.061,
+  "encoded_duration": "15.066667",
+  "frames": 452,
+  "bytes": 1932514,
+  "full_decode": "passed",
+  "checks": {
+    "seek_repeat_pixels_equal": true,
+    "seek_repeat_state_equal": true,
+    "source_files_unchanged_during_render": true
+  },
+  "own_repeat_24_points": true,
+  "own_repeat_times": [
+    0.75,
+    1.8,
+    2.3,
+    3.3,
+    4.4,
+    5.7,
+    6.7,
+    7.9,
+    9.3,
+    10.0,
+    11.8,
+    14.7,
+    0,
+    1.2,
+    2.7,
+    3.8,
+    4.9,
+    5.3,
+    6.3,
+    8.4,
+    10.8,
+    11.2,
+    12.3,
+    12.7
+  ],
+  "runtime_source_files": [
+    {
+      "path": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+      "bytes": 169056,
+      "sha256": "73894e0448cae90a92b6c2f8732b7bb9acb7b94c418bff559dad4a18e1de9659"
+    },
+    {
+      "path": "index.html",
+      "bytes": 314,
+      "sha256": "cf77c7274c08f68cee82614b3793cf3a8c246d8a1a3b7087100d21d82b8d65be"
+    },
+    {
+      "path": "motion.js",
+      "bytes": 21260,
+      "sha256": "db52f52ea577af5af85960483041c07069cf7f5e923627641a97c37c312f9e5f"
+    },
+    {
+      "path": "project.json",
+      "bytes": 4605,
+      "sha256": "baf0e3565fb617a780f46304b4f9fe83b2b8f904fc080ca5e20c0b8e8d1b6e49"
+    },
+    {
+      "path": "style.css",
+      "bytes": 204,
+      "sha256": "3f593ff795e6ef9c36c87d5da98a081499ddb037b8363f5beea577fde340235a"
+    }
+  ],
+  "original_audio_retained": true,
+  "reference_observation": {
+    "timecoded_overview": 100,
+    "native_detail": 28,
+    "targeted_geometry_measurements": true,
+    "full_range": true,
+    "uninterrupted_subjective_playback": false
+  },
+  "actual_export_paired_frames": 24,
+  "paired_comparison_paths": [
+    "verification/paired-comparison-01.jpg",
+    "verification/paired-comparison-02.jpg",
+    "verification/supplementary/paired-comparison-01.jpg",
+    "verification/supplementary/paired-comparison-02.jpg"
+  ],
+  "paired_sheets_personally_viewed": 4,
+  "browser_errors": [],
+  "request_errors": [],
+  "user_approved": false,
+  "visual_residuals": [
+    "Geist substitute, intro kerning/glyphs, number width, small mono typography and frame phase",
+    "paw contour/footprints and pin silhouette differ",
+    "2.7-second circle/map zoom and mask differ; road reveal is later and geometry arrangement differs",
+    "manually reconstructed street/river/pin geography, spawn phase, callout positions and pulses",
+    "intermediate counter/bar stagger and wipe phase",
+    "3D card camera at 8.4s remains more centered/right, icon paths/text/shadows and depth blur differ",
+    "favorite confetti/toggle phase and card background typography",
+    "search caret/cursor/typing/chip/ripple timing; UI animation is not a live backend",
+    "brand trajectory/paw/glow/URL capsule and tiny footer differ",
+    "original audio retained, not independently recreated sound design"
+  ]
+}

@@ -1,0 +1,481 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t21b",
+  "title": "问题逐个被回答",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "q0": "能否本地运行？",
+    "a0": "支持本地运行",
+    "q1": "怎样保留原文件？",
+    "a1": "先复制再处理",
+    "q2": "结果怎么核对？",
+    "a2": "逐项回看出处",
+    "complete": "所有问题都有对应答案"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/65740a3b47ca83ef53bd97e80aec77f857ac61da8c93fb9c6d683f9ab82d0433.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single, metallic 'ding' sound effect, high-pitched and resonant.",
+          "label": "Opening Hook",
+          "visual": "The camera is static on a clean, white minimalist background. In the center, three large, black-and-white rounded rectangular text boxes are stacked vertically. Lighting is flat and even across the frame with no visible shadows. A small logo with purple and gold elements sits in the top right corner.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A digital 'click' sound effect, followed by a short, upbeat transition chime.",
+          "label": "Product Information",
+          "visual": "A checkmark appears next to the top text box. Simultaneously, a new white speech bubble with purple text slides in from the right to sit next to the top box. The camera remains static and the lighting is consistent with the previous scene.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "A repetitive digital 'click' sound effect.",
+          "label": "Product Selling Points",
+          "visual": "A second checkmark appears next to the middle text box. A second white speech bubble with purple text slides in from the right to align with the middle box. The background remains white and static.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "A final digital 'click' sound effect.",
+          "label": "Problem Solving",
+          "visual": "The final checkmark appears next to the bottom text box. A third speech bubble with purple text slides in from the right to align with the bottom box. All elements are now fully populated on the screen.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "A bright, triumphant orchestral chord that fades out quickly.",
+          "label": "Call to Action",
+          "visual": "The screen remains static with all text boxes and bubbles visible. A final graphical icon resembling a gold seal or badge with a checkmark pops into view at the bottom center of the frame briefly before the video ends.",
+          "shot_type": "Wide Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.08,
+      "action": "Three pending questions establish the checklist"
+    },
+    {
+      "start": 1.08,
+      "end": 4.800000000000001,
+      "action": "Each check and answer appears beside its corresponding question"
+    },
+    {
+      "start": 4.800000000000001,
+      "end": 6,
+      "action": "Completion is acknowledged without replacing the answers"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-pill",
+      "kind": "pill",
+      "x": 200,
+      "y": 160,
+      "w": 740,
+      "h": 150,
+      "label": "{{q0}}",
+      "size": 46,
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.9,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            195
+          ],
+          [
+            0.9,
+            160,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-pill",
+      "kind": "pill",
+      "x": 1050,
+      "y": 160,
+      "w": 660,
+      "h": 150,
+      "label": "{{a0}}",
+      "size": 45,
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.2,
+            0
+          ],
+          [
+            1.92,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.2,
+            195
+          ],
+          [
+            1.92,
+            160,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-check",
+      "kind": "check",
+      "x": 940,
+      "y": 200,
+      "w": 80,
+      "h": 75,
+      "color": "#0B0B0F",
+      "tracks": {
+        "value": [
+          [
+            0.96,
+            0
+          ],
+          [
+            1.68,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.96,
+            0
+          ],
+          [
+            1.08,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-pill",
+      "kind": "pill",
+      "x": 200,
+      "y": 410,
+      "w": 740,
+      "h": 150,
+      "label": "{{q1}}",
+      "size": 46,
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.9,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            445
+          ],
+          [
+            0.9,
+            410,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-pill",
+      "kind": "pill",
+      "x": 1050,
+      "y": 410,
+      "w": 660,
+      "h": 150,
+      "label": "{{a1}}",
+      "size": 45,
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.34,
+            0
+          ],
+          [
+            3.06,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.34,
+            445
+          ],
+          [
+            3.06,
+            410,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-check",
+      "kind": "check",
+      "x": 940,
+      "y": 450,
+      "w": 80,
+      "h": 75,
+      "color": "#0B0B0F",
+      "tracks": {
+        "value": [
+          [
+            2.1,
+            0
+          ],
+          [
+            2.82,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.1,
+            0
+          ],
+          [
+            2.22,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 200,
+      "y": 660,
+      "w": 740,
+      "h": 150,
+      "label": "{{q2}}",
+      "size": 46,
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.9,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            695
+          ],
+          [
+            0.9,
+            660,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-pill",
+      "kind": "pill",
+      "x": 1050,
+      "y": 660,
+      "w": 660,
+      "h": 150,
+      "label": "{{a2}}",
+      "size": 45,
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.48,
+            0
+          ],
+          [
+            4.2,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.48,
+            695
+          ],
+          [
+            4.2,
+            660,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-check",
+      "kind": "check",
+      "x": 940,
+      "y": 700,
+      "w": 80,
+      "h": 75,
+      "color": "#0B0B0F",
+      "tracks": {
+        "value": [
+          [
+            3.24,
+            0
+          ],
+          [
+            3.96,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.24,
+            0
+          ],
+          [
+            3.36,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010-pill",
+      "kind": "pill",
+      "x": 650,
+      "y": 930,
+      "w": 620,
+      "h": 85,
+      "label": "{{complete}}",
+      "size": 34,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.92,
+            0
+          ],
+          [
+            5.64,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            4.92,
+            965
+          ],
+          [
+            5.64,
+            930,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

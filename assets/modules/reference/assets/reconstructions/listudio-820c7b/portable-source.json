@@ -1,0 +1,396 @@
+{
+  "schema_version": 1,
+  "slug": "listudio-820c7b",
+  "source_project": "assets/reconstructions/listudio-820c7b",
+  "project": "assets/reconstructions/listudio-820c7b",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "assets/art/anime.png",
+    "assets/art/birds.png",
+    "assets/art/brush.png",
+    "assets/art/camera-button.png",
+    "assets/art/camera-lens.png",
+    "assets/art/camera.png",
+    "assets/art/campaign1.png",
+    "assets/art/campaign2.png",
+    "assets/art/campaign3.png",
+    "assets/art/cat.png",
+    "assets/art/cyclist1.png",
+    "assets/art/cyclist2.png",
+    "assets/art/cyclist3.png",
+    "assets/art/cyclist4.png",
+    "assets/art/eye.png",
+    "assets/art/fish.png",
+    "assets/art/flowers.png",
+    "assets/art/forest.png",
+    "assets/art/hero.png",
+    "assets/art/leopard.png",
+    "assets/art/life1.png",
+    "assets/art/life2.png",
+    "assets/art/life3.png",
+    "assets/art/portrait1.png",
+    "assets/art/portrait2.png",
+    "assets/art/portrait3.png",
+    "assets/art/poster.png",
+    "assets/art/product1.png",
+    "assets/art/product2.png",
+    "assets/art/product3.png",
+    "assets/art/provenance.json",
+    "assets/art/robot.png",
+    "assets/art/sakura.png",
+    "assets/art/samurai.png",
+    "assets/art/sculpture.png",
+    "assets/art/smile.png",
+    "assets/art/tree.png",
+    "assets/art/watch.png",
+    "assets/art/waterfall.png",
+    "assets/art/winter.png",
+    "assets/fonts/sources.json",
+    "composition.js",
+    "index.html",
+    "project.json",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "../../reference-shared/fonts/c2f3b4d463500a2ddcd3.ttf",
+    "../../reference-shared/fonts/df74c0ac387baeaeb0fe.ttf"
+  ],
+  "replaceable_assets": [
+    {
+      "path": "assets/art/anime.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "e32c4c419ed2604b0d3b9522715dca949b021e52302c1d330648e845aa35e7f1"
+    },
+    {
+      "path": "assets/art/birds.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "41171e123371b4db59ecb89dc7a53dfdfc51126cb75ad71a2558525c0139d4f6"
+    },
+    {
+      "path": "assets/art/brush.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "5b2a71fd45854585c70f863aefa3a25c11c4d55c409a5af31cfadce40b813375"
+    },
+    {
+      "path": "assets/art/camera-button.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "27e41ac04c43d5960fd17ea3995e7cad633f279ffe0b8fabd405881f2cf16096"
+    },
+    {
+      "path": "assets/art/camera-lens.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "bc9b2eea575fb5205dd5079cce14361ff33619daba54354f2c1bdf7edbdf672e"
+    },
+    {
+      "path": "assets/art/camera.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "d330fe375a48cfb0a04ba8a027c2ee4446e3e8424386d37b8585c7d7f93071d1"
+    },
+    {
+      "path": "assets/art/campaign1.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "028ed29e90e698cf494c0cc8bfd2cf819957c65c07d9bd529ae31826886270df"
+    },
+    {
+      "path": "assets/art/campaign2.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "cec9dc389bd4e7062224e089ca502e15a73bfdee25766939695e9456a62d509f"
+    },
+    {
+      "path": "assets/art/campaign3.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "df8f38ae24bbe549bfe57167c6d27652e0a3120fe9fec8e79e881f545b0b3397"
+    },
+    {
+      "path": "assets/art/cat.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "c18b6b5134525e91b8ff8353b1c510b95874f0c51f6cc8ccb677eb6a25ed9ee9"
+    },
+    {
+      "path": "assets/art/cyclist1.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "3478e438dd705e1efa24a845cf6ea972c031f8a564f75ee8da7013da5f8ed474"
+    },
+    {
+      "path": "assets/art/cyclist2.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "bdf54b169607d79f72d4fceb51206817e1cc6e36012e3c406113664cc5962a1f"
+    },
+    {
+      "path": "assets/art/cyclist3.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "1fa7bf06643c29ef06187e33b2a54a8499d644d0ac63a1c80b3180bb9fecb8a8"
+    },
+    {
+      "path": "assets/art/cyclist4.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "e14e361ac5e52e19e320f70625611c1f50d5a523ecde22a0336c1879c562443a"
+    },
+    {
+      "path": "assets/art/eye.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "497a2bd1fc1c9e95fa846f7c3fc1856bc6b9caed70ce7cf928b18acd36af0655"
+    },
+    {
+      "path": "assets/art/fish.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "d60397edd8a470b225afe1a243f35285c971930038c2031ef25ca01fb930212b"
+    },
+    {
+      "path": "assets/art/flowers.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "05239a0d356712cb0808dfba7bd250fe1071caecf552adbde853e345d8883a01"
+    },
+    {
+      "path": "assets/art/forest.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "23706fab5318be26a44b62626897aa62b95383471476c6ee6b4bd9a326a385ea"
+    },
+    {
+      "path": "assets/art/hero.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "5c7c813d297c160cce755fd8533ec44bf65e0382470b3c93c8682effe646a709"
+    },
+    {
+      "path": "assets/art/leopard.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "cb3eff656c4395ddccf67b677b05e845807e067452507c8f14b193bbd814f630"
+    },
+    {
+      "path": "assets/art/life1.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "4c8b78c2a2ef41c5dfe98ec90581b72eb615ab727ee7315eeb557da59e6a3ea4"
+    },
+    {
+      "path": "assets/art/life2.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "5de1f6f74c8398c70167221f80657efa468ad8f1516ffd89a62206107d9ba4a7"
+    },
+    {
+      "path": "assets/art/life3.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "989053dbe00b7cc60cc574ca133ab792bdd661107dbe9a2b8ca6016f58f89924"
+    },
+    {
+      "path": "assets/art/portrait1.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "5e4c1bb854c028b00cac221d9a2c726c328cef283490115c88f350c3e5d78f49"
+    },
+    {
+      "path": "assets/art/portrait2.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "97a013df55017161df497a4855957419049cb8e4b5edac4c9da4768bbcf25091"
+    },
+    {
+      "path": "assets/art/portrait3.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "11287ad890c02dbb0981890340f0e215d6d1bb54c832c993703cdfbe11c11eda"
+    },
+    {
+      "path": "assets/art/poster.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "c447ffcad0871e40a94ae192700c6594fc86c856fc212865bc2683517d127423"
+    },
+    {
+      "path": "assets/art/product1.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "73c27477f257c9be7b5323cdb07940479725a7e48d0373cf9c93b4bc0dec920e"
+    },
+    {
+      "path": "assets/art/product2.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "bf5008b33412f6c38381dc85b3fd6a0cf55101932c20f776e35247462652599b"
+    },
+    {
+      "path": "assets/art/product3.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "4fb76beab993ffc74d631cf2b49ea869d154f59d28459862b23e17f79ee2f1ab"
+    },
+    {
+      "path": "assets/art/robot.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "8faf17306efb27035260aea6ddc5fd82b34efe97b4161b02f1fc2f233ecb17eb"
+    },
+    {
+      "path": "assets/art/sakura.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "902acbdef2ed732699feb0c223579f0a700906b90047165d62889afb34d7fb4f"
+    },
+    {
+      "path": "assets/art/samurai.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "d3029212fb91ec46c6afc5e8d7e4fd9a13b4d682985d6a85dbf346502564a2f3"
+    },
+    {
+      "path": "assets/art/sculpture.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "a3d0f1bb171c3c3acdae8e9eb085fcebb1ceb2695a327f6cafeee9f11a3db56c"
+    },
+    {
+      "path": "assets/art/smile.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "85f8f5e769108a17d1f1ce18cd324e287794276bc0d92cc09c74808a18c120bd"
+    },
+    {
+      "path": "assets/art/tree.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "5418e30eaa441d769ba59bdd40b38f13695ee5d8d685fdf0565aec2ac3e606b2"
+    },
+    {
+      "path": "assets/art/watch.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "9ec58a6870db04684667cac3d8c5b587917eb8872bd4c74a5680ecd596ac384c"
+    },
+    {
+      "path": "assets/art/waterfall.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "eff40463cb93a9227cdc2249e72bcdaa8c5258bfc73a2c5b0f2da4475cff7871"
+    },
+    {
+      "path": "assets/art/winter.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "eeef0ee02da991ec5bda0908c1be0a7f1cfb5458316fa3dfa234580047f1bb05"
+    }
+  ],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "assets/art/anime.png": "assets/art/anime.png",
+    "assets/art/birds.png": "assets/art/birds.png",
+    "assets/art/brush.png": "assets/art/brush.png",
+    "assets/art/camera-button.png": "assets/art/camera-button.png",
+    "assets/art/camera-lens.png": "assets/art/camera-lens.png",
+    "assets/art/camera.png": "assets/art/camera.png",
+    "assets/art/campaign1.png": "assets/art/campaign1.png",
+    "assets/art/campaign2.png": "assets/art/campaign2.png",
+    "assets/art/campaign3.png": "assets/art/campaign3.png",
+    "assets/art/cat.png": "assets/art/cat.png",
+    "assets/art/cyclist1.png": "assets/art/cyclist1.png",
+    "assets/art/cyclist2.png": "assets/art/cyclist2.png",
+    "assets/art/cyclist3.png": "assets/art/cyclist3.png",
+    "assets/art/cyclist4.png": "assets/art/cyclist4.png",
+    "assets/art/eye.png": "assets/art/eye.png",
+    "assets/art/fish.png": "assets/art/fish.png",
+    "assets/art/flowers.png": "assets/art/flowers.png",
+    "assets/art/forest.png": "assets/art/forest.png",
+    "assets/art/hero.png": "assets/art/hero.png",
+    "assets/art/leopard.png": "assets/art/leopard.png",
+    "assets/art/life1.png": "assets/art/life1.png",
+    "assets/art/life2.png": "assets/art/life2.png",
+    "assets/art/life3.png": "assets/art/life3.png",
+    "assets/art/portrait1.png": "assets/art/portrait1.png",
+    "assets/art/portrait2.png": "assets/art/portrait2.png",
+    "assets/art/portrait3.png": "assets/art/portrait3.png",
+    "assets/art/poster.png": "assets/art/poster.png",
+    "assets/art/product1.png": "assets/art/product1.png",
+    "assets/art/product2.png": "assets/art/product2.png",
+    "assets/art/product3.png": "assets/art/product3.png",
+    "assets/art/provenance.json": "assets/art/provenance.json",
+    "assets/art/robot.png": "assets/art/robot.png",
+    "assets/art/sakura.png": "assets/art/sakura.png",
+    "assets/art/samurai.png": "assets/art/samurai.png",
+    "assets/art/sculpture.png": "assets/art/sculpture.png",
+    "assets/art/smile.png": "assets/art/smile.png",
+    "assets/art/tree.png": "assets/art/tree.png",
+    "assets/art/watch.png": "assets/art/watch.png",
+    "assets/art/waterfall.png": "assets/art/waterfall.png",
+    "assets/art/winter.png": "assets/art/winter.png",
+    "assets/fonts/Italic.ttf": "../../reference-shared/fonts/df74c0ac387baeaeb0fe.ttf",
+    "assets/fonts/NotoSansJP.ttf": "../../reference-shared/fonts/c2f3b4d463500a2ddcd3.ttf",
+    "assets/fonts/Sans.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "assets/fonts/sources.json": "assets/fonts/sources.json",
+    "composition.js": "composition.js",
+    "index.html": "index.html",
+    "project.json": "project.json",
+    "anime.png": "assets/art/anime.png",
+    "birds.png": "assets/art/birds.png",
+    "brush.png": "assets/art/brush.png",
+    "camera-button.png": "assets/art/camera-button.png",
+    "camera-lens.png": "assets/art/camera-lens.png",
+    "camera.png": "assets/art/camera.png",
+    "campaign1.png": "assets/art/campaign1.png",
+    "campaign2.png": "assets/art/campaign2.png",
+    "campaign3.png": "assets/art/campaign3.png",
+    "cat.png": "assets/art/cat.png",
+    "cyclist1.png": "assets/art/cyclist1.png",
+    "cyclist2.png": "assets/art/cyclist2.png",
+    "cyclist3.png": "assets/art/cyclist3.png",
+    "cyclist4.png": "assets/art/cyclist4.png",
+    "eye.png": "assets/art/eye.png",
+    "fish.png": "assets/art/fish.png",
+    "flowers.png": "assets/art/flowers.png",
+    "forest.png": "assets/art/forest.png",
+    "hero.png": "assets/art/hero.png",
+    "leopard.png": "assets/art/leopard.png",
+    "life1.png": "assets/art/life1.png",
+    "life2.png": "assets/art/life2.png",
+    "life3.png": "assets/art/life3.png",
+    "portrait1.png": "assets/art/portrait1.png",
+    "portrait2.png": "assets/art/portrait2.png",
+    "portrait3.png": "assets/art/portrait3.png",
+    "poster.png": "assets/art/poster.png",
+    "product1.png": "assets/art/product1.png",
+    "product2.png": "assets/art/product2.png",
+    "product3.png": "assets/art/product3.png",
+    "provenance.json": "assets/art/provenance.json",
+    "robot.png": "assets/art/robot.png",
+    "sakura.png": "assets/art/sakura.png",
+    "samurai.png": "assets/art/samurai.png",
+    "sculpture.png": "assets/art/sculpture.png",
+    "smile.png": "assets/art/smile.png",
+    "tree.png": "assets/art/tree.png",
+    "watch.png": "assets/art/watch.png",
+    "waterfall.png": "assets/art/waterfall.png",
+    "winter.png": "assets/art/winter.png",
+    "Italic.ttf": "../../reference-shared/fonts/df74c0ac387baeaeb0fe.ttf",
+    "NotoSansJP.ttf": "../../reference-shared/fonts/c2f3b4d463500a2ddcd3.ttf",
+    "Sans.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "sources.json": "assets/fonts/sources.json"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

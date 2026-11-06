@@ -1,0 +1,550 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t16a",
+  "title": "时间线",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "milestone0": "起点",
+    "milestone1": "第一次验证",
+    "milestone2": "调整方法",
+    "milestone3": "形成成果",
+    "milestone4": "本期进展",
+    "current": "当前位置与下一步"
+  },
+  "assets": {},
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/8ad8b3a47a1d9fa28742105ed5ea97d63d802eaa93f704d81c9e4f9dc07f3c02.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A digital sweeping sound effect, similar to a 'whoosh', increases in pitch and volume as the indicator slides across the timeline, accompanied by soft mechanical clicks as each new marker appears.",
+          "label": "Opening Hook",
+          "visual": "A white minimalist background displays a thick black horizontal timeline centered in the frame. A purple sliding indicator moves from left to right along the line, triggering the appearance of vertical markers. Each marker is topped with a small black dot and displays light gray text below. The camera is static, and the lighting is even and flat with no shadows. The color palette is strictly white, black, gray, and purple.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A bright, high-pitched 'ding' or notification chime sounds at the exact moment the black rectangle appears, followed by silence.",
+          "label": "Product Information",
+          "visual": "The purple indicator stops at a specific point on the right side of the timeline. A black rounded rectangle pops up below this point. The background remains white and static. The animation is a sudden 'pop' effect. The overall lighting remains flat and artificial.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.2000000000000002,
+      "action": "Timeline establishes time direction"
+    },
+    {
+      "start": 0.72,
+      "end": 4.4399999999999995,
+      "action": "Indicator reaches each milestone and reveals its label"
+    },
+    {
+      "start": 4.4399999999999995,
+      "end": 6,
+      "action": "Current position receives contextual callout"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n001-line",
+      "kind": "b2-growing-line",
+      "x": 200,
+      "y": 510,
+      "w": 1520,
+      "h": 0,
+      "fill": "#0B0B0F",
+      "strokeWidth": 10,
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            1.2,
+            1
+          ]
+        ]
+      },
+      "arrow": false
+    },
+    {
+      "id": "n002-circle",
+      "kind": "circle",
+      "x": 187,
+      "y": 497,
+      "w": 26,
+      "h": 26,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.72,
+            0
+          ],
+          [
+            1.14,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.72,
+            497
+          ],
+          [
+            1.14,
+            497,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 50,
+      "y": 590,
+      "w": 300,
+      "h": 100,
+      "text": "{{milestone0}}",
+      "size": 33,
+      "color": "#777780",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.72,
+            0
+          ],
+          [
+            1.32,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.72,
+            615
+          ],
+          [
+            1.32,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-circle",
+      "kind": "circle",
+      "x": 567,
+      "y": 497,
+      "w": 26,
+      "h": 26,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.5,
+            0
+          ],
+          [
+            1.92,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.5,
+            497
+          ],
+          [
+            1.92,
+            497,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-text",
+      "kind": "text",
+      "x": 430,
+      "y": 590,
+      "w": 300,
+      "h": 100,
+      "text": "{{milestone1}}",
+      "size": 33,
+      "color": "#777780",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.5,
+            0
+          ],
+          [
+            2.1,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.5,
+            615
+          ],
+          [
+            2.1,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-circle",
+      "kind": "circle",
+      "x": 947,
+      "y": 497,
+      "w": 26,
+      "h": 26,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.28,
+            0
+          ],
+          [
+            2.7,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.28,
+            497
+          ],
+          [
+            2.7,
+            497,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-text",
+      "kind": "text",
+      "x": 810,
+      "y": 590,
+      "w": 300,
+      "h": 100,
+      "text": "{{milestone2}}",
+      "size": 33,
+      "color": "#777780",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.28,
+            0
+          ],
+          [
+            2.88,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.28,
+            615
+          ],
+          [
+            2.88,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-circle",
+      "kind": "circle",
+      "x": 1327,
+      "y": 497,
+      "w": 26,
+      "h": 26,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.06,
+            0
+          ],
+          [
+            3.48,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.06,
+            497
+          ],
+          [
+            3.48,
+            497,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-text",
+      "kind": "text",
+      "x": 1190,
+      "y": 590,
+      "w": 300,
+      "h": 100,
+      "text": "{{milestone3}}",
+      "size": 33,
+      "color": "#777780",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.06,
+            0
+          ],
+          [
+            3.66,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.06,
+            615
+          ],
+          [
+            3.66,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010-circle",
+      "kind": "circle",
+      "x": 1707,
+      "y": 497,
+      "w": 26,
+      "h": 26,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.84,
+            0
+          ],
+          [
+            4.26,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.84,
+            497
+          ],
+          [
+            4.26,
+            497,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011-text",
+      "kind": "text",
+      "x": 1570,
+      "y": 590,
+      "w": 300,
+      "h": 100,
+      "text": "{{milestone4}}",
+      "size": 33,
+      "color": "#777780",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.84,
+            0
+          ],
+          [
+            4.44,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.84,
+            615
+          ],
+          [
+            4.44,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012-circle",
+      "kind": "circle",
+      "x": 175,
+      "y": 485,
+      "w": 50,
+      "h": 50,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "x": [
+          [
+            0.48,
+            175
+          ],
+          [
+            4.32,
+            1695,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013-pill",
+      "kind": "pill",
+      "x": 1280,
+      "y": 720,
+      "w": 540,
+      "h": 100,
+      "label": "{{current}}",
+      "size": 39,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.38,
+            0
+          ],
+          [
+            5.1,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            4.38,
+            755
+          ],
+          [
+            5.1,
+            720,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 6,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

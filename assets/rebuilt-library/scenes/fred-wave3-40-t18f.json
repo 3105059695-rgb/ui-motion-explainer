@@ -1,0 +1,426 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t18f",
+  "title": "Logo 矩阵",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "groupA": "内容与组织",
+    "groupB": "执行与交付"
+  },
+  "assets": {
+    "brand0": "assets/style-film/media/parallel-workflow-mark.svg",
+    "brand1": "assets/style-film/media/module-assembly-mark.svg",
+    "brand2": "assets/style-film/media/clarify-and-gate-mark.svg",
+    "brand3": "assets/style-film/media/tool-convergence-mark.svg"
+  },
+  "extensions": [
+    "extensions/member-batch2.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/07cbc9321159ac4118675c4c5a2ffb072325e3945f1c73ee21678916e7e77600.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A single, sharp 'pop' sound effect as the green icon appears, followed by upbeat, corporate-style electronic background music featuring a light rhythmic beat.",
+          "label": "Opening Hook",
+          "visual": "A white digital workspace background displays four software icons. From left to right: a black circular logo, a blue and white gradient swoosh, a purple cloud-like icon with code brackets, and a green feline-themed icon that fades into visibility. The lighting is uniform and digital, mimicking a clean interface screen. The color palette is minimalist with bright primary brand colors against a pure white backdrop.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "A rhythmic 'woosh' sound follows the movement of the icons. The background music continues at a consistent tempo.",
+          "label": "Product Information",
+          "visual": "The icons shift horizontally to organize into two distinct pairs. The black circular logo and blue swoosh move slightly left, while the purple cloud and green feline icon move slightly right. Soft white rectangular shadows appear behind each pair, creating a grouped 'card' effect. The motion is smooth and linear.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "Two quick 'tap' sound effects coincide with the appearance of the speech bubbles. The electronic music remains light and energetic until the end.",
+          "label": "Product Selling Points",
+          "visual": "Two gray oval speech bubbles appear simultaneously above the icon pairs. The icons remain static within their grouped cards. The lighting remains flat and digital. No human subjects or physical hands are present; all movement is motion-graphic based.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.4000000000000001,
+      "action": "Four supplied identities appear separately"
+    },
+    {
+      "start": 1.4000000000000001,
+      "end": 2.75,
+      "action": "They reorganize into two groups"
+    },
+    {
+      "start": 2.75,
+      "end": 5,
+      "action": "Group labels explain the rule"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n005-card",
+      "kind": "card",
+      "x": 150,
+      "y": 330,
+      "w": 760,
+      "h": 450,
+      "children": [],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.25,
+            0
+          ],
+          [
+            2.5,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-card",
+      "kind": "card",
+      "x": 1060,
+      "y": 330,
+      "w": 760,
+      "h": 450,
+      "children": [],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.25,
+            0
+          ],
+          [
+            2.5,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 200,
+      "y": 415,
+      "w": 260,
+      "h": 260,
+      "asset": "brand0",
+      "fit": "contain",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.6,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            450
+          ],
+          [
+            0.6,
+            415,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            200
+          ],
+          [
+            1.5,
+            200
+          ],
+          [
+            2.75,
+            200
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-image",
+      "kind": "image",
+      "x": 620,
+      "y": 415,
+      "w": 260,
+      "h": 260,
+      "asset": "brand1",
+      "fit": "contain",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.25,
+            0
+          ],
+          [
+            0.85,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.25,
+            450
+          ],
+          [
+            0.85,
+            415,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            620
+          ],
+          [
+            1.5,
+            620
+          ],
+          [
+            2.75,
+            560
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-image",
+      "kind": "image",
+      "x": 1040,
+      "y": 415,
+      "w": 260,
+      "h": 260,
+      "asset": "brand2",
+      "fit": "contain",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.5,
+            0
+          ],
+          [
+            1.1,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.5,
+            450
+          ],
+          [
+            1.1,
+            415,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1040
+          ],
+          [
+            1.5,
+            1040
+          ],
+          [
+            2.75,
+            1120
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-image",
+      "kind": "image",
+      "x": 1460,
+      "y": 415,
+      "w": 260,
+      "h": 260,
+      "asset": "brand3",
+      "fit": "contain",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.75,
+            0
+          ],
+          [
+            1.35,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.75,
+            450
+          ],
+          [
+            1.35,
+            415,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            1460
+          ],
+          [
+            1.5,
+            1460
+          ],
+          [
+            2.75,
+            1480
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 300,
+      "y": 185,
+      "w": 480,
+      "h": 100,
+      "label": "{{groupA}}",
+      "size": 42,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.9,
+            0
+          ],
+          [
+            3.5,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.9,
+            220
+          ],
+          [
+            3.5,
+            185,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-pill",
+      "kind": "pill",
+      "x": 1200,
+      "y": 185,
+      "w": 480,
+      "h": 100,
+      "label": "{{groupB}}",
+      "size": 42,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.9,
+            0
+          ],
+          [
+            3.5,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.9,
+            220
+          ],
+          [
+            3.5,
+            185,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch2.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

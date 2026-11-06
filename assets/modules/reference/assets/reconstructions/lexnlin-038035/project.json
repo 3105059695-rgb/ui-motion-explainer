@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "title": "008 · Engraving-style Claude ad · case-specific reconstruction",
+  "template": "lexnlin-038035-specific-reconstruction",
+  "reference_slug": "lexnlin-038035",
+  "reference_url": "https://prompt-motion.com/lexnlin-038035",
+  "source_post": "https://x.com/LexnLin/status/2106101651010449796",
+  "reference_author": "@LexnLin",
+  "provenance": "Independent Canvas animation with individually cropped static artworks from the reference, documented in asset-manifest.json. No source video or full-frame image sequence is used by the renderer.",
+  "duration": 14.466666666666667,
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "loop": false,
+  "coordinate_space": [
+    540,
+    960
+  ],
+  "seed": 8008,
+  "palette": {
+    "background": "#ffffff",
+    "ink": "#171717",
+    "paint": "#cd715e",
+    "extrusion": "#a95240"
+  },
+  "fonts": {
+    "serif": "Georgia, Times New Roman, serif",
+    "display": "Times New Roman, Georgia, serif"
+  },
+  "geometry": {
+    "logo_rays": 12,
+    "intro_logo_width": 450,
+    "center": [
+      270,
+      480
+    ],
+    "ring_radius": 235
+  },
+  "timings": {
+    "intro_end": 0.54,
+    "ornament_end": 1.36,
+    "ask_start": 1.7,
+    "task_start": 2.19,
+    "mosaic_start": 3.13,
+    "zoetrope_start": 3.8,
+    "bust_start": 4.48,
+    "draft_start": 4.99,
+    "craft_start": 5.41,
+    "letter_a_start": 5.81,
+    "sculpture_start": 6.24,
+    "hands_start": 7.1,
+    "still_life_start": 8.19,
+    "think_start": 10.61,
+    "keep_start": 11.18,
+    "mark_return": 12.18,
+    "lockup": 13.1
+  },
+  "marks": [
+    0.12,
+    0.8,
+    1.6,
+    2.4,
+    3.6,
+    4.4,
+    5.6,
+    6.8,
+    7.6,
+    8.4,
+    10.0,
+    13.6
+  ],
+  "editable": "Timing, palette, font, seed and low-level geometry are editable; image crops have their own provenance manifest.",
+  "fidelity": "Complete scene-specific reconstruction with approximate typography, 3D extrusion and image cut timing; not pixel identical.",
+  "portable_demo": {
+    "source_motion_preserved": true,
+    "reference_media_distributed": false,
+    "textures": "Original replaceable schematic assets; not the original reference artwork.",
+    "approval": "Historical motion implementation; this portable demo is not user-approved."
+  }
+}

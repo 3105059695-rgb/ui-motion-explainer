@@ -1,0 +1,288 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t08b",
+  "title": "长网页滚动阅读，到标题停住",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "heading1": "第一步：连接与记录",
+    "heading2": "第二步：将记录放回项目",
+    "detail": "把真实记录与本期项目资料放在一起，\n再让工具依据它们完成接下来的任务。",
+    "tableTitle": "输入                       下一步操作",
+    "rowA": "实际记录                  加入本期资料",
+    "rowB": "已有文件                  对照真实出处"
+  },
+  "assets": {
+    "phone0": "assets/style-film/media/premise-to-report.svg",
+    "phone1": "assets/style-film/media/module-assembly.svg"
+  },
+  "extensions": [
+    "extensions/member-batch2.js",
+    "extensions/member-batch3.js"
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/b6ac3fd1446dcca442b4216f00008e0ffe7171e53b9456d998bb32d1e52035f4.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic timing may use embedded media clocks; check against real source duration. Catalog labels may be mismatched; prefer actual preview when verified.",
+      "scenes": [
+        {
+          "audio": "A light, fast-paced electronic background track plays with high-pitched synth notes and a consistent, upbeat tempo.",
+          "label": "Product Information",
+          "visual": "A digital screen capture of a clean, minimalist web page or document layout. The background is white with sharp, black typography. Below the headers, two smartphone interface screenshots are displayed side-by-side. The left interface shows a connection menu with a simple toggle; the right interface shows a list of recorded audio files with timestamps. The lighting is uniform and digital, mimicking a high-resolution display. No characters are present.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The electronic synth music continues at the same tempo and volume, providing a focused and modern atmosphere.",
+          "label": "Product Selling Points",
+          "visual": "The screen scrolls down or transitions to a new section of the document. The layout maintains the white background and black text hierarchy. A large heading is visible at the top, followed by a paragraph of smaller text. At the bottom, a structured table or comparison chart begins to appear, featuring columns with headers like 'Input' and 'What to do'. The camera is static, focusing on the clarity of the text layout.",
+          "shot_type": "Wide Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The upbeat synth music persists as the primary audio element, maintaining a sense of productivity and digital efficiency.",
+          "label": "Usage Scenarios",
+          "visual": "The camera zooms in slightly on the text section titled 'Step Two'. The background remains stark white. The focus is specifically on a block of text that discusses the integration of audio recordings with project documents using an 'Agent' system. A blue vertical line acts as a decorative accent on the left side of the text block. The color grading is neutral with high contrast.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:03"
+        }
+      ]
+    },
+    "user_approved": false,
+    "adaptation": "Independent per-reference object geometry and complete event program, current AgentEditorial palette. Public demonstration media are replaceable and are not original product evidence.",
+    "timing_note": "All authored event times are inside the actual media duration; native semantic boundary estimates are not treated as exact cue points."
+  },
+  "events": [
+    {
+      "start": 0,
+      "end": 1.08,
+      "action": "Long document opens with its first heading and two genuine media slots"
+    },
+    {
+      "start": 1.08,
+      "end": 3.3000000000000003,
+      "action": "Continuous scroll arrives at second heading"
+    },
+    {
+      "start": 3.7800000000000002,
+      "end": 5.1,
+      "action": "Camera tightens on that heading and its actual explanation"
+    },
+    {
+      "start": 5.1,
+      "end": 6,
+      "action": "Relevant paragraph holds"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n012-group",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n011-group",
+          "kind": "group",
+          "x": 280,
+          "y": 50,
+          "w": 1400,
+          "h": 2200,
+          "children": [
+            {
+              "id": "n001-text",
+              "kind": "text",
+              "x": 80,
+              "y": 60,
+              "w": 1240,
+              "h": 120,
+              "text": "{{heading1}}",
+              "size": 74,
+              "color": "#0B0B0F",
+              "align": "left"
+            },
+            {
+              "id": "n002-image",
+              "kind": "image",
+              "x": 100,
+              "y": 240,
+              "w": 550,
+              "h": 650,
+              "asset": "phone0",
+              "fit": "contain"
+            },
+            {
+              "id": "n003-image",
+              "kind": "image",
+              "x": 750,
+              "y": 240,
+              "w": 550,
+              "h": 650,
+              "asset": "phone1",
+              "fit": "contain"
+            },
+            {
+              "id": "n004-text",
+              "kind": "text",
+              "x": 80,
+              "y": 1030,
+              "w": 1240,
+              "h": 130,
+              "text": "{{heading2}}",
+              "size": 76,
+              "color": "#0B0B0F",
+              "align": "left"
+            },
+            {
+              "id": "n005-text",
+              "kind": "text",
+              "x": 80,
+              "y": 1260,
+              "w": 1240,
+              "h": 260,
+              "text": "{{detail}}",
+              "size": 58,
+              "color": "#0B0B0F",
+              "align": "left"
+            },
+            {
+              "id": "n006-rect",
+              "kind": "rect",
+              "x": 40,
+              "y": 1250,
+              "w": 12,
+              "h": 290,
+              "fill": "#D6C2FF"
+            },
+            {
+              "id": "n010-card",
+              "kind": "card",
+              "x": 70,
+              "y": 1660,
+              "w": 1260,
+              "h": 390,
+              "children": [
+                {
+                  "id": "n007-text",
+                  "kind": "text",
+                  "x": 35,
+                  "y": 30,
+                  "w": 1190,
+                  "h": 90,
+                  "text": "{{tableTitle}}",
+                  "size": 44,
+                  "color": "#0B0B0F",
+                  "align": "left"
+                },
+                {
+                  "id": "n008-text",
+                  "kind": "text",
+                  "x": 35,
+                  "y": 150,
+                  "w": 1190,
+                  "h": 90,
+                  "text": "{{rowA}}",
+                  "size": 44,
+                  "color": "#0B0B0F",
+                  "align": "left"
+                },
+                {
+                  "id": "n009-text",
+                  "kind": "text",
+                  "x": 35,
+                  "y": 260,
+                  "w": 1190,
+                  "h": 90,
+                  "text": "{{rowB}}",
+                  "size": 44,
+                  "color": "#0B0B0F",
+                  "align": "left"
+                }
+              ],
+              "fill": "#FFFFFF"
+            }
+          ],
+          "tracks": {
+            "y": [
+              [
+                0,
+                50
+              ],
+              [
+                1.08,
+                50
+              ],
+              [
+                3.3,
+                -950
+              ],
+              [
+                4.8,
+                -950
+              ]
+            ]
+          }
+        }
+      ],
+      "clip": {
+        "x": 210,
+        "y": 40,
+        "w": 1500,
+        "h": 1000
+      }
+    }
+  ],
+  "camera": {
+    "tracks": {
+      "scale": [
+        [
+          0,
+          1
+        ],
+        [
+          3.78,
+          1
+        ],
+        [
+          4.92,
+          1.18
+        ]
+      ],
+      "y": [
+        [
+          0,
+          0
+        ],
+        [
+          3.78,
+          0
+        ],
+        [
+          4.92,
+          -90
+        ]
+      ]
+    }
+  },
+  "verification": {
+    "status": "browser-seek-verified",
+    "evidence": "assets/rebuilt-library/verification/member-batch3.json",
+    "distinct_rendered_states": 5,
+    "deterministic_backseek": true,
+    "full_realtime_av_review": false,
+    "user_approved": false
+  }
+}

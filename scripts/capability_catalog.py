@@ -16,7 +16,8 @@ import selection
 ROOT = Path(__file__).resolve().parents[1]
 RUNTIME_MANIFEST = 'assets/agent-editorial/capability-runtime.json'
 STATE_LABELS = {'direct': '有可调用参数接口', 'source-adaptation': '有源码，需按本期适配',
-                'reference-only': '表达或画面参考，未提供执行实现', 'missing': '声明的实现当前缺失'}
+                'reference-only': '表达或画面参考，未提供执行实现', 'missing': '声明的实现当前缺失',
+                'aggregate': '能力分类，调用其实际子条目'}
 COMMANDS = {'list': 'ui.py capabilities list',
             'search': 'ui.py capabilities search --query <本段要表达的关系>',
             'inspect': 'ui.py capabilities inspect --id <能力ID>',
@@ -32,6 +33,14 @@ PRODUCTION_FILES = (
     'assets/base-skill/assets/portable-studio/fonts/NotoSansSC.ttf',
     'references/capability-catalog.json', 'references/aesthetic-preferences.md',
     'assets/fredtalk-library/catalog.json',
+    'scripts/capability_execution.py', 'scripts/library_runner.py',
+    'scripts/library_html_runner.py', 'scripts/rebuilt_library.py',
+    'scripts/semantic_effects.py', 'scripts/method_programs.py', 'scripts/style_film.py',
+    'assets/library-runtime/implementations.json',
+    'assets/rebuilt-library/scene-runtime.js', 'assets/rebuilt-library/execution.json',
+    'assets/semantic-motion/manifest.json', 'assets/semantic-motion/semantic-motion.js',
+    'assets/method-runtime/programs.json', 'assets/method-runtime/method-runtime.js',
+    'assets/style-film/current-style-full.mp4', 'assets/style-film/manifest.json',
 )
 DIRECTOR_FILES = (
     'scripts/new_project.py', 'scripts/render.py', 'references/presets.json',
@@ -290,6 +299,8 @@ def _native(root):
 def records(root=ROOT):
     root = Path(root).resolve()
     rows = _library(root) + _designs(root) + _scenes(root) + _native(root)
+    import capability_execution
+    rows = capability_execution.apply(rows, root)
     ids = [r['id'] for r in rows]
     if len(ids) != len(set(ids)):
         raise ValueError('Duplicate canonical capability IDs in source catalogs.')
@@ -299,7 +310,7 @@ def records(root=ROOT):
 def compact(row):
     keys = ('id', 'kind', 'title', 'semantic_use', 'relations', 'execution_state', 'execution_label',
             'archived', 'source_access', 'style_scope', 'adapter_kind', 'motion_available', 'design_available',
-            'call', 'preview')
+            'call', 'preview', 'runtime_verification', 'is_aggregate')
     result = {k: row[k] for k in keys if k in row}
     result['inspect_command'] = 'ui.py capabilities inspect --id ' + row['id']
     return result
@@ -385,7 +396,7 @@ def inspect(ident, root=ROOT):
 
 
 def _rank(query, rows, context='', include_archived=False, state=None):
-    selected = [r for r in rows if (include_archived or not r['archived']) and
+    selected = [r for r in rows if (include_archived or not r['archived'] or r.get('eligible_when_upstream_archived')) and
                 r['motion_available'] and (state is None or r['execution_state'] == state)]
     ranker = selection.Ranker(selected)
     cues = selection.relation_cues(query)

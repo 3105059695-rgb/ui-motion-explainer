@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "slug": "bogdandragomir-35e024",
+  "source_project": "assets/reconstructions/bogdandragomir-35e024",
+  "project": "assets/reconstructions/bogdandragomir-35e024",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "check-v1/sampled-states.json",
+    "check-v1b/sampled-states.json",
+    "index.html",
+    "motion.js",
+    "project.json",
+    "scene-plan.json",
+    "style.css",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/08939b8bdf534afec24a.ttf",
+    "../../reference-shared/fonts/498efd461f6ddfcb7a11.ttf",
+    "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "../../reference-shared/fonts/d00e590b8eb3a59acc32.ttf"
+  ],
+  "replaceable_assets": [],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "assets/fonts/Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "assets/fonts/GeistMono.ttf": "../../reference-shared/fonts/d00e590b8eb3a59acc32.ttf",
+    "assets/fonts/InstrumentSerif-Italic.ttf": "../../reference-shared/fonts/08939b8bdf534afec24a.ttf",
+    "assets/fonts/InstrumentSerif-Regular.ttf": "../../reference-shared/fonts/498efd461f6ddfcb7a11.ttf",
+    "check-v1/sampled-states.json": "check-v1/sampled-states.json",
+    "check-v1b/sampled-states.json": "check-v1b/sampled-states.json",
+    "index.html": "index.html",
+    "motion.js": "motion.js",
+    "project.json": "project.json",
+    "scene-plan.json": "scene-plan.json",
+    "style.css": "style.css",
+    "Geist.ttf": "../../reference-shared/fonts/73894e0448cae90a92b6.ttf",
+    "GeistMono.ttf": "../../reference-shared/fonts/d00e590b8eb3a59acc32.ttf",
+    "InstrumentSerif-Italic.ttf": "../../reference-shared/fonts/08939b8bdf534afec24a.ttf",
+    "InstrumentSerif-Regular.ttf": "../../reference-shared/fonts/498efd461f6ddfcb7a11.ttf"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

@@ -1,0 +1,622 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:episode-scenes-1018-t03g",
+  "title": "文件放进机器跑起来：下载 → 装上 → 运行中",
+  "duration": 5.933,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "模型文件",
+    "text02": "自己的机器",
+    "text03": "这就叫部署"
+  },
+  "assets": {},
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "file",
+      "x": 330,
+      "y": 260,
+      "w": 270,
+      "h": 330,
+      "label": "{{text01}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            1
+          ],
+          [
+            2.84784,
+            1
+          ],
+          [
+            2.9665,
+            0
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            330
+          ],
+          [
+            1.7799,
+            330
+          ],
+          [
+            2.84784,
+            955
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            260
+          ],
+          [
+            1.7799,
+            260
+          ],
+          [
+            2.84784,
+            390
+          ]
+        ],
+        "scale": [
+          [
+            0.0,
+            1
+          ],
+          [
+            1.7799,
+            1
+          ],
+          [
+            2.84784,
+            0.35
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "window",
+      "x": 780,
+      "y": 275,
+      "w": 630,
+      "h": 470,
+      "label": "{{text02}}",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.30526,
+            0
+          ],
+          [
+            1.51292,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            780
+          ],
+          [
+            1.30526,
+            780
+          ],
+          [
+            1.51292,
+            780,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            325
+          ],
+          [
+            1.30526,
+            325
+          ],
+          [
+            1.51292,
+            275,
+            "out"
+          ]
+        ],
+        "blur": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.39042,
+            0
+          ],
+          [
+            4.80573,
+            8
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003",
+      "kind": "rect",
+      "x": 825,
+      "y": 385,
+      "w": 540,
+      "h": 65,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.42392,
+            0
+          ],
+          [
+            1.63157,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            825
+          ],
+          [
+            1.42392,
+            825
+          ],
+          [
+            1.63157,
+            825,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            435
+          ],
+          [
+            1.42392,
+            435
+          ],
+          [
+            1.63157,
+            385,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004",
+      "kind": "rect",
+      "x": 825,
+      "y": 475,
+      "w": 540,
+      "h": 65,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.66124,
+            0
+          ],
+          [
+            1.86889,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            825
+          ],
+          [
+            1.66124,
+            825
+          ],
+          [
+            1.86889,
+            825,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            525
+          ],
+          [
+            1.66124,
+            525
+          ],
+          [
+            1.86889,
+            475,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "rect",
+      "x": 825,
+      "y": 565,
+      "w": 540,
+      "h": 65,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.89856,
+            0
+          ],
+          [
+            2.10621,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            825
+          ],
+          [
+            1.89856,
+            825
+          ],
+          [
+            2.10621,
+            825,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            615
+          ],
+          [
+            1.89856,
+            615
+          ],
+          [
+            2.10621,
+            565,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006",
+      "kind": "circle",
+      "x": 1310,
+      "y": 405,
+      "w": 26,
+      "h": 26,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            2.84784,
+            0
+          ],
+          [
+            3.0555,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1310
+          ],
+          [
+            2.84784,
+            1310
+          ],
+          [
+            3.0555,
+            1310,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            405
+          ],
+          [
+            2.84784,
+            405
+          ],
+          [
+            3.0555,
+            405,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007",
+      "kind": "circle",
+      "x": 1310,
+      "y": 495,
+      "w": 26,
+      "h": 26,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.32248,
+            0
+          ],
+          [
+            3.53013,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1310
+          ],
+          [
+            3.32248,
+            1310
+          ],
+          [
+            3.53013,
+            1310,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            495
+          ],
+          [
+            3.32248,
+            495
+          ],
+          [
+            3.53013,
+            495,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008",
+      "kind": "circle",
+      "x": 1310,
+      "y": 585,
+      "w": 26,
+      "h": 26,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            3.79712,
+            0
+          ],
+          [
+            4.00478,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            1310
+          ],
+          [
+            3.79712,
+            1310
+          ],
+          [
+            4.00478,
+            1310,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            585
+          ],
+          [
+            3.79712,
+            585
+          ],
+          [
+            4.00478,
+            585,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009",
+      "kind": "pill",
+      "x": 590,
+      "y": 450,
+      "w": 740,
+      "h": 125,
+      "label": "{{text03}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            4.62774,
+            0
+          ],
+          [
+            4.8354,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0.0,
+            590
+          ],
+          [
+            4.62774,
+            590
+          ],
+          [
+            4.8354,
+            590,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            500
+          ],
+          [
+            4.62774,
+            500
+          ],
+          [
+            4.8354,
+            450,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "independent_reconstruction": true,
+    "not_original_source": true,
+    "original_preview_url": "https://www.fred-fu.com/visual-library-app/objects/690f4e50c20a3ec0904cf86da5e6849fc242bca7af02029c91d58c41d638058a.mp4",
+    "complete_video_analysis": {
+      "method": "native-complete-video-scene-analysis",
+      "complete_input": true,
+      "human_aesthetic_review": false,
+      "limitations": "Automatic scene boundaries and wording may be approximate; source code and visual tests are separate.",
+      "scenes": [
+        {
+          "audio": "So how do we do it?",
+          "label": "Opening Hook",
+          "visual": "A clean white background featuring a purple circle on the left and a rounded black rectangle on the right. Both elements have soft drop shadows. The camera is static. No characters are present. The lighting is bright and even across the digital canvas with high-key flat tones.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "We download the model.",
+          "label": "Product Information",
+          "visual": "The camera remains static. A rounded white square card pops into the center of the frame featuring a document icon with a purple downward arrow. The elements from the previous scene shift to the top left. The color palette remains white, black, and purple with minimalist flat design.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "Put it on a machine...",
+          "label": "Usage Scenarios",
+          "visual": "The first card shifts to the left. A second white card appears to its right, connected by a small black arrow. This second card features a stack of three horizontal server icons. The background remains white and the camera is static.",
+          "shot_type": "Wide Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "...and get it running.",
+          "label": "Usage Scenarios",
+          "visual": "A third white card appears to the right of the second card, connected by another black arrow. This card features a single server icon with a green light indicator. All three cards are now visible in a linear horizontal row against the white background.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "This is what we call deployment.",
+          "label": "Call to Action",
+          "visual": "The background cards blur slightly as a large, rounded black rectangle zooms into the center of the frame. The design is bold with high contrast. No characters or physical movements occur; this is a purely graphic animation sequence.",
+          "shot_type": "Medium Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        }
+      ]
+    },
+    "catalog_state_chain": [
+      "黑色“模型文件”卡下载落下 → 放进机架服务器 → 指示灯依次亮起“跑起来”，收成“这就叫部署”黑胶囊"
+    ],
+    "user_approved": false,
+    "adaptation": "Independently authored object-specific motion graph; current text and media slots are replaceable. Demonstration media are explicitly schematic. Automatic source analysis is not aesthetic verification."
+  },
+  "events": [
+    {
+      "start": 0.0,
+      "end": 5.933,
+      "action": "黑色“模型文件”卡下载落下 → 放进机架服务器 → 指示灯依次亮起“跑起来”，收成“这就叫部署”黑胶囊"
+    }
+  ],
+  "verification": {
+    "status": "not-rendered"
+  },
+  "extensions": [
+    "extensions/member-batch1.js"
+  ]
+}

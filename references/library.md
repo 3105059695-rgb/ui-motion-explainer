@@ -2,13 +2,13 @@
 
 这里提供落实 **Fred Talk 整体视觉与剪辑默认** 的源码和方法，不能因方便调用某库而更换风格。先看[当前已认可正文的实际外观](../index.html#current-ui)及对应源码，以[Fred 实际参考](fred-ui-direction.md)补充，结合整篇口播和逐句证据，再从 FredTalk、EditingKit、F、O/X、阿渡等条目选择适用部分，改编为本期对象和节奏。完整审美只在[审美偏好](aesthetic-preferences.md)维护，人物与 AIGC 的用途边界见[参考使用](style-profiles.md)。
 
-详细条目、原路径、实现状态、历史检查和认可范围统一查 [capability-catalog.json](capability-catalog.json)。它是可检索目录，不是运行时预设表；`Rxx`、`Oxx` 不能直接当作创建命令的 `--scene`。
+详细条目与历史出处保留在 [capability-catalog.json](capability-catalog.json)；当前执行入口统一用 `ui.py capabilities inspect --id <ID>`，由真实源码清单与运行证据合并返回。O/R/X 使用 `ui.py semantic`，研究方法和 S 配方使用 `ui.py programs`，Fred、F 与保留参考工程使用 `ui.py library`。这些不是 `new --scene` 的混用编号。
 
 采用整体设计与采用运动函数分开记录：整体设计要落到本期的构图、材料、窗口关系、字级或层次；运动函数只证明对应动作被实现。先看所选场景的连续展示与源码，再改编布局，不先完成一套自创版式后补库名。每个选中条目按[引用格式](director-plan-contract.md#效果库设计引用)绑定自己的来源、共享文件中的定位及本期具体实现；另一项的截图或通用 EditingKit 文件不能代替这个来源。
 
 实际脚本和资源通过 [resource-registry.json](resource-registry.json)接入 `scripts/ui.py`，用 `modules check` 核对。需要底层工具时用 `guides --id <工具名>` 定位[内部指南](backend-guides.json)，无需用户另行调用旧 Skill。`direct -- prepare` 提供本段设计候选与实际实现，普通制作不再优先推送几部旧整片。
 
-[逐句来源方法目录](source-study-methods.json)统一保留秋芝及 Fred 各片例证，提供蒙版、对象交接、连续 B-roll/AIGC、开头与正文讲解的实际出处，默认按[研究接入](source-study-guide.md)选用。`Q-*` / `F-M*` 用于来源追溯，保留1条明确反例；方法记录不等于完整事件已实现。由同一 S 配方或 O/X/F/R 原语能够承担的部分继续复用，不重复造库。
+[逐句来源方法目录](source-study-methods.json)保留秋芝及 Fred 各片的原始出处。49 条正向方法和 10 条 S 配方已经编成 [59 个可绑定动作组合](../assets/method-runtime/programs.json)；`ui.py programs inspect --id <ID>` 返回阶段和实际动作参数，绑定本期对象、素材和口播时间后执行。Q-W08 继续作为反例，不变成可选正向效果。AIGC 动作组合需要本期生成素材，调用组合本身不会自动生成视频。
 
 Fred Talk 默认跨窗口继承；账号名称与目录不自动指定另一套外观。继承整体设计关系，不等于固定每条原片的色值、人物、对象、镜头顺序或时长；其他库的视觉包装需适配当前默认。
 
@@ -22,20 +22,23 @@ Fred Talk 默认跨窗口继承；账号名称与目录不自动指定另一套�
 
 [阿闰会员测评整片模式](reference-replication.md#阿闰会员测评完整参考路线)保留完整口播对应、连续章节与实际场景模块。明确指定时整体使用其叙事、构图与动作，UI 和颜色沿当前已认可正文；普通制作仍可从全库选取。它与零散方法查询并存，不成为唯一允许的参考。
 
-## FredTalk 公开源码接入
+## 全库实际调用
 
-[打开 FredTalk 库](../assets/fredtalk-library/index.html)。固定上游版本 `eec77dcfa99318f565c391bf557f5d43042ec061`：目录共 432 条，普通检索纳入 101 条未归档公开源码；142 条归档公开条目和 189 条会员条目保留元数据供显式查询，本轮未下载其源码。它提供当前 Fred Talk 方向的重要实现来源，但目录标签与检索分数不能代替实际设计适用性判断。
+[打开 FredTalk 库](../assets/fredtalk-library/index.html)。上游固定为 `eec77dcfa99318f565c391bf557f5d43042ec061`，432 条全部参与候选检索，不因上游归档标签缩小用户的动作库。242 条接通原公开源码；189 条会员预览及 1 条公开源码错挂记录采用完整预览独立实现。独立实现的代码、输入、事件和证据在 [完整动作演示](../assets/rebuilt-library/index.html)；没有获取或冒充会员源码。
 
-`direct -- prepare` / `select` 中命中的条目使用 `kind:software-preset`、`id:fredtalk:<referenceId>`。先检查完整源码及其依赖：
+按本段要表达的关系检索，选取能承载具体内容的设计，再绑定本期输入：
 
 ```text
-python -B -X utf8 scripts/ui.py inspect --kind software-preset --id fredtalk:<referenceId>
-python -B -X utf8 scripts/ui.py fredtalk materialize --id fredtalk:<referenceId> --project <本期工程>
+python -B -X utf8 scripts/ui.py capabilities search --query <本段要表达的关系>
+python -B -X utf8 scripts/ui.py library inspect --id fredtalk:<referenceId>
+python -B -X utf8 scripts/ui.py library scaffold --id fredtalk:<referenceId> --out <bindings.json>
+python -B -X utf8 scripts/ui.py library build --spec <bindings.json> --out <本期工程>
+python -B -X utf8 scripts/ui.py library render --project <本期工程> --out <片段.mp4>
 ```
 
-第二条命令会把核验过的源码及本地依赖复制到 `vendor/fredtalk/<referenceId>/`，附上原路径、版本、文件哈希和许可说明。它不安装依赖、不执行源码，也不覆盖不同内容。多数源码是完整场景快照，需要按本期口播改编；把实际调用位置写进本期实现证据后，再验证画面。缺少的媒体、外部依赖与未解析导入由检查结果明确列出，不能直接声称可运行。
+入口提供真实媒体槽、文字或结构参数、时长与执行依赖。原场景源码保留实际构图及算法；独立图保留逐场对象关系和连续动作。默认生产模式缺本期素材就报错，演示素材仅在显式 demo 模式使用。已有合适依赖就复用；新电脑通过 `ui.py library setup --help` 安装到单一共享位置，不在每个项目复制运行环境。
 
-归档、会员预览和上游 keep 标签不构成用户认可。会员源码没有被获取；预览可见、源码存在、本期运行和用户认可分别记录。`ui.py fredtalk search <关键词> --include-archived --include-unavailable` 仅在需要历史或缺件条目时显式使用。
+全库动作可选，不代表本期应全部使用。原作者 keep、浏览器运行成功和用户认可分别记录；完整程序能够直接执行，仍需按照新口播选择内容、安排节奏和组合画面，不固定套原片题材。
 
 ## 按句意找入口
 
@@ -57,16 +60,16 @@ python -B -X utf8 scripts/ui.py fredtalk materialize --id fredtalk:<referenceId>
 
 | 家族 | 保留内容 | 当前应怎样理解 |
 | --- | --- | --- |
-| O01–O33 | 33 个原片观察、时间码、GIF 与重建建议 | 观察记录；不是 33 个独立运行预设 |
-| X01–X23 | 23 个原创扩展、配方、演示源码及历史验证 | 源码存在；旧验证只对对应演示有效，不能推断已获用户认可 |
+| O01–O33 | 33 个原片观察、时间码、GIF 与动作实现 | 实际 DOM/SVG 参数接口，绑定现有对象执行 |
+| X01–X23 | 23 个原创扩展和完整时间线源码 | 保留原完整区间，支持当前文字和媒体绑定 |
 | F01–F08 | [8 个共用工作室场景](../assets/fusion-studio/scenes.json)、源码和[历史检查](verification.md) | 有运行与导出记录；F08 真人嘴型、裁切和音画同步未被该演示验证 |
-| R01–R16 | [本地参考的 16 条分析配方](local-video-design-distillation.md)与[证据](evidence/local-video-5c2f8b41.json) | 用户喜欢原参考；没有本案例专属预设实现，也未完整正常速度视听 |
+| R01–R16 | 16 条来源配方和实际动作组合 | 已接可运行组合，按本期对象和时间执行；不是原视频像素复制 |
 | 软件操作 | [103 条注册记录](../assets/modules/director/references/presets.json)、[用途目录](../assets/modules/director/references/preset-catalog.md)及包内源码 | 103 条 ID 均定位到候选源码模块；不是本轮 103 项运行通过 |
-| 参考案例 | [230 条来源目录](../assets/modules/reference/references/catalog.json)、[包内重建状态](../assets/modules/reference/references/rebuild-status.json)与[资源边界](distribution-scope.md) | 包内有230条文本/海报与2个通用起点，不含逐案例历史工程。本机可通过资源映射自动接续保留的旧源码；当前存在、历史记录和运行验证分开报告 |
+| 参考案例 | [230 条来源目录](../assets/modules/reference/references/catalog.json)和[执行状态](../assets/modules/reference/references/rebuild-status.json) | 228 条恢复保留源码或原有可执行起点，另 2 条新增独立完整动作程序；私人原媒体不随包 |
 | 字体与花字 | [34 个字体文件](../assets/qiaomu-fonts/index.json)、[12 套搭配](../assets/qiaomu-fonts/pairings.json)、CSS、预览与导出入口 | 字体资源存在不等于当前稿件无缺字，需在实际后端接入 |
 | 截图、人物、动漫、设备、动态字、adu | 各能力族保留原模块、来源与实现入口；新增人物开场模块见上表 | 查看机器目录 `families`；方法、模板、账号成片和外部生成服务不混为同一种预设 |
 
-上述数量有重叠，**不相加成“已实现／已验证／已认可的动效数”**。此前四层整理只核对原库路径与目录，没有重新渲染或播放整库。此次新组件的运行检查单列于 [editing-kit/validation.json](../assets/editing-kit/validation.json)，不扩大成原库或在线生成服务全部通过。
+上述集合有重叠，不相加为互不重复的效果数。当前实际证据随 `capabilities inspect` 返回；批量多时刻和倒放检查证明执行状态，不能冒充整片正常速度视听或用户审美认可。先从 [完整连续风格片](../assets/style-film/index.html)建立当前设计理解，再按口播选择整库能力。
 
 ## AIGC 参考与历史资料
 

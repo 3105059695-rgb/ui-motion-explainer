@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "slug": "thilina-a-891c09",
+  "source_project": "assets/reconstructions/thilina-a-891c09/versions/v3",
+  "project": "assets/reconstructions/thilina-a-891c09",
+  "render_engine": "browser",
+  "entry": "index.html",
+  "ready_api": "window.ready",
+  "seek_api": "window.seek",
+  "runtime_files": [
+    "_dependencies/6b1c20f6e56e-mascot-neutral.png",
+    "_dependencies/f97cf55acf87-mascot-bitten.png",
+    "assets/characters/mascot-bitten.png",
+    "assets/characters/mascot-neutral.png",
+    "index.html",
+    "motion.js",
+    "project.json",
+    "style.css",
+    "portable-paths.js"
+  ],
+  "shared_assets": [
+    "../../reference-shared/fonts/2ba02e68b152868aef9b.ttf",
+    "../../reference-shared/fonts/d47a6852548059b1db49.ttf",
+    "../../reference-shared/fonts/f5b641c45c69d772ee4e.ttf"
+  ],
+  "replaceable_assets": [
+    {
+      "path": "_dependencies/f97cf55acf87-mascot-bitten.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "f97cf55acf875ef5fb0dd48c3022a53f3f1b9ee4d9fab59fe30a2febd3d160fd"
+    },
+    {
+      "path": "_dependencies/6b1c20f6e56e-mascot-neutral.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "6b1c20f6e56ed619e329997c4691d1156993a047c2f0943082f2b3bfd8394d4f"
+    },
+    {
+      "path": "assets/characters/mascot-bitten.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "f97cf55acf875ef5fb0dd48c3022a53f3f1b9ee4d9fab59fe30a2febd3d160fd"
+    },
+    {
+      "path": "assets/characters/mascot-neutral.png",
+      "role": "replaceable-original-demo",
+      "source_media_distributed": false,
+      "source_file_sha256": "6b1c20f6e56ed619e329997c4691d1156993a047c2f0943082f2b3bfd8394d4f"
+    }
+  ],
+  "original_reference_media_bundled": false,
+  "resource_map": {
+    "../../assets/characters/mascot-bitten.png": "_dependencies/f97cf55acf87-mascot-bitten.png",
+    "../../assets/characters/mascot-neutral.png": "_dependencies/6b1c20f6e56e-mascot-neutral.png",
+    "../../assets/fonts/Baloo2.ttf": "../../reference-shared/fonts/d47a6852548059b1db49.ttf",
+    "../../assets/fonts/Fredoka.ttf": "../../reference-shared/fonts/2ba02e68b152868aef9b.ttf",
+    "../../assets/fonts/LilitaOne.ttf": "../../reference-shared/fonts/f5b641c45c69d772ee4e.ttf",
+    "assets/characters/mascot-bitten.png": "assets/characters/mascot-bitten.png",
+    "assets/characters/mascot-neutral.png": "assets/characters/mascot-neutral.png",
+    "assets/fonts/Baloo2.ttf": "../../reference-shared/fonts/d47a6852548059b1db49.ttf",
+    "assets/fonts/Fredoka.ttf": "../../reference-shared/fonts/2ba02e68b152868aef9b.ttf",
+    "assets/fonts/LilitaOne.ttf": "../../reference-shared/fonts/f5b641c45c69d772ee4e.ttf",
+    "index.html": "index.html",
+    "motion.js": "motion.js",
+    "project.json": "project.json",
+    "style.css": "style.css",
+    "Baloo2.ttf": "../../reference-shared/fonts/d47a6852548059b1db49.ttf",
+    "Fredoka.ttf": "../../reference-shared/fonts/2ba02e68b152868aef9b.ttf",
+    "LilitaOne.ttf": "../../reference-shared/fonts/f5b641c45c69d772ee4e.ttf"
+  },
+  "source_motion_preserved": true,
+  "runtime_tested_this_run": true,
+  "aesthetic_approval": false,
+  "verification_scope": "offline ready and three authored seeks with changing pixels"
+}

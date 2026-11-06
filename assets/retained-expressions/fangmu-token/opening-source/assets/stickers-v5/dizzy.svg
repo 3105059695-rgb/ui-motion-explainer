@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <title>Dizzy little face sticker</title>
+  <defs>
+    <filter id="shadow" x="0" y="0" width="256" height="256" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#282333" flood-opacity=".17"/>
+    </filter>
+    <radialGradient id="face" cx="0" cy="0" r="1" gradientTransform="translate(95 110) rotate(55) scale(133)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0E8FF"/><stop offset="1" stop-color="#C4AFE8"/>
+    </radialGradient>
+  </defs>
+  <g filter="url(#shadow)">
+    <path d="M58 71C46 57 56 39 72 43C88 47 82 63 73 68L72 76M71 88V89" stroke="white" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M58 71C46 57 56 39 72 43C88 47 82 63 73 68L72 76M71 88V89" stroke="#574866" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M188 51L192 62L204 66L193 71L190 83L184 73L173 70L184 63Z" fill="#FFE09B" stroke="white" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M188 51L192 62L204 66L193 71L190 83L184 73L173 70L184 63Z" fill="#FFE09B" stroke="#9E8253" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M126 83C166 83 198 111 198 151C198 190 166 217 125 217C85 217 53 189 53 151C53 112 84 83 126 83Z" fill="white" stroke="white" stroke-width="15"/>
+    <path d="M126 83C166 83 198 111 198 151C198 190 166 217 125 217C85 217 53 189 53 151C53 112 84 83 126 83Z" fill="url(#face)" stroke="#40344E" stroke-width="3.5"/>
+    <path d="M75 116C85 103 99 98 111 97" stroke="#FBF7FF" stroke-width="5" stroke-linecap="round"/>
+    <path d="M101 153C89 161 76 150 80 138C84 126 101 126 107 137C114 150 102 161 91 155C82 150 87 138 95 137C104 136 106 146 99 150C94 153 91 148 94 144" stroke="#4B3D59" stroke-width="4" stroke-linecap="round"/>
+    <path d="M162 153C150 161 137 150 141 138C145 126 162 126 168 137C175 150 163 161 152 155C143 150 148 138 156 137C165 136 167 146 160 150C155 153 152 148 155 144" stroke="#4B3D59" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="78" cy="170" rx="10" ry="5" fill="#C9A3D5" opacity=".75"/>
+    <ellipse cx="175" cy="170" rx="10" ry="5" fill="#C9A3D5" opacity=".75"/>
+    <path d="M114 181C119 175 124 187 129 181C133 176 137 180 139 182" stroke="#6F517F" stroke-width="4" stroke-linecap="round"/>
+    <path d="M209 117L217 111M215 133L225 132" stroke="white" stroke-width="13" stroke-linecap="round"/>
+    <path d="M209 117L217 111M215 133L225 132" stroke="#B6A4D3" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>
