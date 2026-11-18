@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "name": "ui-motion-fusion",
-  "version": "2026.11.18.6",
+  "version": "2026.11.18.7",
   "resources": {
     "required_modules": [
       "source-study",
@@ -72,8 +72,8 @@
     },
     {
       "path": "README.md",
-      "size": 7152,
-      "sha256": "371f36c87e629e178dd66735d1943cedec389b37f148cef19f54b8c1c4be8733"
+      "size": 7498,
+      "sha256": "9ba4b57b311a5783e0221accc4cb14fc05fda6b6e0784c9ddcea41c6017ac43c"
     },
     {
       "path": "SKILL.legacy.md",
@@ -82,8 +82,8 @@
     },
     {
       "path": "SKILL.md",
-      "size": 3026,
-      "sha256": "d7fb686a4309f58652d228e850c3afc4377dfad84d21ed2bdf2cbeed3c2561b4"
+      "size": 4204,
+      "sha256": "d0a58b78512af0ecc314de23cfc484d3fdc9551ca58f9f0c727783a765a534f8"
     },
     {
       "path": "START-HERE.md",
@@ -93,7 +93,7 @@
     {
       "path": "VERSION",
       "size": 13,
-      "sha256": "a723af4a84e87e06c2031798da2c4d9eb2fd907ca74fa7ffe249e1db5bfab68e"
+      "sha256": "69ccc68f0bcc5324b22bb87d320ac4c498ea8881db576d8cda5d8326241759d4"
     },
     {
       "path": "agents/openai.yaml",
@@ -35296,19 +35296,44 @@
       "sha256": "49681f0c9b8b415eb1ccce7913f64774707b8e8843e9b1ab8fe9e8371cd55e80"
     },
     {
+      "path": "assets/reference-edits/direction.json",
+      "size": 5922,
+      "sha256": "a187f48d24f7b3bac727792aebdcffee8ecce3bb9cf1a3f651c57a569638ed32"
+    },
+    {
+      "path": "assets/reference-edits/hyperframes.css",
+      "size": 1955,
+      "sha256": "da7d4da96332b9086f7d7d5e23bd01aec54dfac411234aae11f73c4f83c96faa"
+    },
+    {
+      "path": "assets/reference-edits/hyperframes.html",
+      "size": 1532,
+      "sha256": "5c98bccf14608ac35078112482f8a3081cd855f1f37fcbe66cf4af0dfcc16d2f"
+    },
+    {
       "path": "assets/reference-edits/index.html",
-      "size": 1335,
-      "sha256": "eb45db37dc3bd101a176aeede02171082fe16160fc1b5947d9a1142b08bde4fc"
+      "size": 1453,
+      "sha256": "bfee6aa620f143d733f4015745141c75b2e56c2ee550054874ddc38def99ddc0"
     },
     {
       "path": "assets/reference-edits/player.js",
-      "size": 10636,
-      "sha256": "01393e8e8771176d09dd9eb77d1bc89429768ebf88ee8d3d7f68814ccda1cc2b"
+      "size": 12759,
+      "sha256": "ab66b7c06673282e332f90a93fb633698866d386cc8e8f28a05c36f801aea65b"
     },
     {
       "path": "assets/reference-edits/recipes.json",
       "size": 60097,
       "sha256": "7915372b16498d0761ee1197d32f46c4a853de8e4162e987b0c23504bca4fd2d"
+    },
+    {
+      "path": "assets/reference-edits/review.html",
+      "size": 4928,
+      "sha256": "e696069c4719f57b3e2b6b753431015a7c672a2ddf845d27a7fa1b925bfd5483"
+    },
+    {
+      "path": "assets/reference-edits/shot-motion.js",
+      "size": 4034,
+      "sha256": "92bc5492650e5e106e14ccc951de554f63bc0689299d860c0f751dfa36f56c82"
     },
     {
       "path": "assets/reference-films/arun-membership/README.md",
@@ -35614,6 +35639,11 @@
       "path": "assets/semantic-motion/source-ui.css",
       "size": 5941,
       "sha256": "88d0161d488cdf862428330ffc10e88ddb977892f26a67becd34e9141f836557"
+    },
+    {
+      "path": "assets/semantic-motion/study.html",
+      "size": 5085,
+      "sha256": "64c43a7683f74b41e4bd45ae69b79c4cb522ebf02f223f9cc8aceecb880e0656"
     },
     {
       "path": "assets/semantic-motion/theme.css",
@@ -36667,8 +36697,8 @@
     },
     {
       "path": "scripts/edit_session.py",
-      "size": 21106,
-      "sha256": "440648546db8ad10063d41f4d3bb8b68b8c312484f7ff6851a3de77177039b8b"
+      "size": 21900,
+      "sha256": "f98746f294813630700a9d4e2122573168a4b9b18365d0ba55f214354b834c61"
     },
     {
       "path": "scripts/export_qiaomu_fonts.py",
@@ -36684,6 +36714,11 @@
       "path": "scripts/fredtalk_library.py",
       "size": 15028,
       "sha256": "26e62bb5a2110d225226051d4c6563a0d3e013ac107764ad7b3e58d121adfb4a"
+    },
+    {
+      "path": "scripts/hyperframes_shot.py",
+      "size": 3805,
+      "sha256": "97fd81a8e50a6ad5d2091882c8672ce660285badd570fd67d8b105a0a6f00b56"
     },
     {
       "path": "scripts/import_resources.py",
@@ -36767,8 +36802,8 @@
     },
     {
       "path": "scripts/reference_edits.py",
-      "size": 33462,
-      "sha256": "730808f559a16b112b7d927ee731853f756ff5d6b060a5a91873244a960db558"
+      "size": 35629,
+      "sha256": "942697612ff1a61faa0545cc785d529f2395852275e877ea88924f2f8e9cc7fd"
     },
     {
       "path": "scripts/reference_film.py",
@@ -36793,7 +36828,7 @@
     {
       "path": "scripts/release_manifest.py",
       "size": 15600,
-      "sha256": "8fc7c7effba528b1d6db4426ea7c3ac5da07d1b2336fda5fad2d56f7fbcdd3b5"
+      "sha256": "5a66352e9c5d01cf23142907d5a96f09babc5a833ec359a6e9fbdd968c630fe1"
     },
     {
       "path": "scripts/render.py",
@@ -36849,6 +36884,11 @@
       "path": "scripts/serve.py",
       "size": 6229,
       "sha256": "6dbfb57cad7b96ef079edfd5bd773fb6f68b9ff9daafbace831201cf8759bb39"
+    },
+    {
+      "path": "scripts/shot_direction.py",
+      "size": 16793,
+      "sha256": "e38126a79fd6df2e3c20091bf09f60a2125219ebffc6ba4d8e605130120fc57c"
     },
     {
       "path": "scripts/source_designs.py",
@@ -37021,6 +37061,11 @@
       "sha256": "40a99363716311f3083de56442d98a384c0ef5147b710a181224f630c7ee6bfd"
     },
     {
+      "path": "scripts/test_shot_direction.py",
+      "size": 4400,
+      "sha256": "793d0389588a4e3e422cbe7b8481942169891eeea84cf4762fbd41ebc6a7a0d7"
+    },
+    {
       "path": "scripts/test_source_designs.cjs",
       "size": 11662,
       "sha256": "338a77896de6adfd2bab19fa05e907e7b27a0c17b5d28713365235d2e482471e"
@@ -37067,8 +37112,8 @@
     },
     {
       "path": "scripts/video_routing.py",
-      "size": 14950,
-      "sha256": "2a1e3f71d7e936f8827a093dd4b172d2c7cc79f6e61ea8e1770dc20784bb6abf"
+      "size": 15129,
+      "sha256": "7789ae0edcef4769aa39ad399d60f90b812378cdfa01bc45d73708bdc2368f44"
     },
     {
       "path": "scripts/video_sources.py",

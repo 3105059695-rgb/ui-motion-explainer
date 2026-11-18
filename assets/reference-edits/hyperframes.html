@@ -1,0 +1,24 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>本期动效镜头</title>
+<link rel="stylesheet" href="style.css">
+<style>
+*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0}
+.fusion-stage{width:FUSION_WIDTHpx;height:FUSION_HEIGHTpx;position:relative;overflow:hidden;container-type:size}
+.fusion-layer{position:absolute;visibility:hidden;overflow:hidden}
+.fusion-mat,.fusion-mat>[data-fusion-content]{width:100%;height:100%;display:block}
+.fusion-mat.fusion-paper,.fusion-mat.fusion-window{padding:min(.9cqh,.9cqw);border-radius:min(.9cqh,.9cqw)}
+.fusion-text{display:flex;align-items:center;padding:0 1%;font-size:min(5cqh,5cqw)}
+.fusion-text.centered{justify-content:center;text-align:center}
+.fusion-text.search{justify-content:center}
+.fusion-headline,.fusion-focus{font-size:min(6.4cqh,6.4cqw)}
+</style></head><body>
+<div id="FUSION_ID" class="fusion-stage" data-composition-id="FUSION_ID" data-width="FUSION_WIDTH" data-height="FUSION_HEIGHT" data-start="0" data-duration="FUSION_DURATION" data-track-index="0">
+<!-- FUSION_LAYERS -->
+</div>
+<script src="gsap.min.js"></script><script src="motion-core.js"></script><script src="agent-editorial.js"></script>
+<script src="shot-motion.js"></script><script src="shot-data.js"></script>
+<script>
+const timeline = gsap.timeline({paused:true});
+FusionShot.attach(timeline,document.getElementById('FUSION_ID'),window.FUSION_SHOT);
+window.__timelines = window.__timelines || {};
+window.__timelines['FUSION_ID'] = timeline;
+</script></body></html>

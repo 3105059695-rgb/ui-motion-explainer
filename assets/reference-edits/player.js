@@ -10,22 +10,16 @@
   const label = nav.querySelector('output');
   canvas.width = episode.width;
   canvas.height = episode.height;
+  const editorial = window.AgentEditorial;
+  const colors = episode.palette || editorial.palette;
+  const art = editorial.create(ctx, {palette:colors, fontFamily:'Episode, sans-serif'});
   slider.max = String(episode.frames - 1);
   if (new URLSearchParams(location.search).has('render')) {
     nav.hidden = true;
     document.documentElement.classList.add('render');
   }
-  const positions = {
-    full:[0,0,1,1], paper:[.09,.13,.82,.76], center:[.28,.26,.44,.48],
-    left:[.035,.16,.45,.68], right:[.515,.16,.45,.68], top:[.1,.025,.8,.14],
-    bottom:[.1,.78,.8,.17], lower:[.16,.54,.68,.4], chip:[.42,.43,.16,.14],
-    thumb:[.04,.67,.27,.27], upperLeft:[.06,.08,.42,.39], upperRight:[.52,.08,.42,.39],
-    lowerLeft:[.06,.53,.42,.39], lowerRight:[.52,.53,.42,.39]
-  };
   const cache = new Map();
-  const mix = (a,b,t) => a + (b-a)*t;
   const clamp = (v,low=0,high=1) => Math.min(high,Math.max(low,v));
-  const ease = t => t*t*(3-2*t);
   let state = {frame:0,sources:[]};
   let ticket = 0;
   let playing = false;
@@ -63,32 +57,22 @@
       node.currentTime=target;
     });
   }
-  function geometry(k, spec) {
-    const frame = k.frame==='safe' ? spec.placement : positions[k.frame];
-    if (!frame) throw Error('画面区域缺失 '+k.frame);
-    return [...frame,k.opacity??1,k.zoom??1,k.iris??1,k.wipe??1];
-  }
-  function keyframe(keys,t,spec) {
-    if (t < keys[0].at || t > keys[keys.length-1].at) return null;
-    let j=1;
-    while(j<keys.length-1 && t>keys[j].at) j++;
-    const a=keys[j-1], b=keys[j];
-    const u=b.cut ? (t<b.at?0:1) : ease(clamp((t-a.at)/(b.at-a.at)));
-    const start=geometry(a,spec), end=geometry(b,spec);
-    return start.map((v,i)=>mix(v,end[i],u));
-  }
   function round(x,y,w,h,r) {
     ctx.beginPath();ctx.roundRect(x,y,w,h,Math.min(r,w/2,h/2));
   }
-  function typography(text,x,y,w,h) {
-    let size=Math.min(h*.49,w*.17,canvas.height*.112);
+  function textLayout(spec,x,y,w,h) {
+    const role=spec.surface, text=spec.text;
+    const bold=role==='headline' || role==='focus';
+    const unit=Math.min(canvas.width,canvas.height);
+    let size=Math.min(h*.47,w*.15,unit*(bold ? .064 : .05));
     let lines=[];
     const wrap=()=>{
       const result=[];
+      const available=role==='query' ? Math.max(w*.5,w*.88-1.55*size) : w*.88;
       for (const paragraph of text.split(/\r?\n/)) {
         let current='';
         for (const char of [...paragraph]) {
-          if (current && ctx.measureText(current+char).width>w*.88) {result.push(current);current=char;}
+          if (current && ctx.measureText(current+char).width>available) {result.push(current);current=char;}
           else current+=char;
         }
         result.push(current);
@@ -96,15 +80,52 @@
       return result;
     };
     for (let n=0;n<18;n++) {
-      ctx.font='700 '+size+'px Episode, sans-serif';lines=wrap();
+      ctx.font=(bold?'700 ':'500 ')+size+'px Episode, sans-serif';lines=wrap();
       if(lines.length*size*1.24<=h*.83 || size<5) break;
       size*=.84;
     }
-    ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#16131b';
-    const first=y+h/2-(lines.length-1)*size*.62;
-    lines.forEach((line,i)=>ctx.fillText(line,x+w/2,first+i*size*1.24,w*.9));
+    const pad=Math.min(w*.045,size*.54);
+    const icon=role==='query'?size*1.55:0;
+    const width=Math.min(w,Math.max(role==='query'?unit*.84:0,Math.max(...lines.map(line=>ctx.measureText(line).width))+2*pad+icon));
+    const height=Math.min(h,size*(1.24*lines.length+(role==='query' ? .8 : .45)));
+    const centered=role==='focus' || role==='caption' && !spec.placement;
+    const left=centered||role==='query'?x+(w-width)/2:x+Math.min(w-width,w*.035);
+    return {lines,size,pad,icon,box:[left,y+(h-height)/2,width,height],centered};
   }
-  function paint(node,spec,p,r) {
+  function paintText(spec,layout,progress) {
+    const {lines,size,pad,icon,box,centered}=layout;
+    const [x,y,w,h]=box;
+    const radius=spec.surface==='headline'?0:size*.22;
+    round(x,y,w,h,radius);ctx.fillStyle=colors.white;ctx.fill();
+    if(spec.surface!=='headline'){
+      ctx.lineWidth=Math.max(.65,size*.028);ctx.strokeStyle=colors.line;ctx.stroke();
+    }
+    if(spec.surface==='focus'){
+      ctx.fillStyle=colors.purple;
+      ctx.fillRect(x+pad,y+h-size*.14,Math.max(0,w-2*pad),size*.12);
+    }
+    if(spec.surface==='query'){
+      const cx=x+pad+size*.35, cy=y+h/2-size*.07;
+      ctx.beginPath();ctx.arc(cx,cy,size*.28,0,Math.PI*2);
+      ctx.strokeStyle=colors.muted;ctx.lineWidth=Math.max(1,size*.08);ctx.stroke();
+      ctx.beginPath();ctx.moveTo(cx+size*.19,cy+size*.19);ctx.lineTo(cx+size*.44,cy+size*.44);ctx.stroke();
+    }
+    ctx.textAlign=centered?'center':'left';ctx.textBaseline='middle';
+    ctx.fillStyle=colors.black;
+    // Reserve the final line layout while the actual search term is typed.
+    let remaining=spec.surface==='query'?Math.max(1,Math.ceil([...spec.text].length*clamp(progress/.15))):Infinity;
+    const first=y+h/2-(lines.length-1)*size*.62;
+    lines.forEach((line,i)=>{
+      const letters=[...line],display=letters.slice(0,remaining).join('');
+      remaining=Math.max(0,remaining-letters.length);
+      ctx.fillText(display,centered?x+w/2:x+pad+icon,first+i*size*1.24,Math.max(1,w-2*pad-icon));
+      if(spec.surface==='query' && display && (display.length<line.length || i===lines.length-1)){
+        ctx.fillStyle=colors.accentInk;ctx.fillRect(x+pad+icon+ctx.measureText(display).width+size*.08,
+          first+i*size*1.24-size*.45,Math.max(1,size*.075),size*.9);ctx.fillStyle=colors.black;
+      }
+    });
+  }
+  function paint(node,spec,p,r,progress=0) {
     let [x,y,w,h,a,zoom,iris,wipe]=p;
     if (a<=.001 || iris<=.001 || wipe<=.001) return false;
     x=r[0]+x*r[2];y=r[1]+y*r[3];w*=r[2];h*=r[3];
@@ -113,22 +134,36 @@
     ctx.globalAlpha=a;
     if (wipe<.999) {ctx.beginPath();ctx.rect(x,y,w*wipe,h);ctx.clip();}
     if (iris<.999) {ctx.beginPath();ctx.arc(x+w*focus[0],y+h*focus[1],iris*Math.hypot(w,h),0,2*Math.PI);ctx.clip();}
-    const surfaceFull=p[2]>.99 && p[3]>.99;
-    if (!surfaceFull) {
-      ctx.shadowColor='rgba(13,11,19,.20)';ctx.shadowBlur=r[3]*.015;ctx.shadowOffsetY=r[3]*.007;
-    }
-    round(x,y,w,h,surfaceFull?0:Math.max(2,r[3]*.018));
-    ctx.fillStyle=spec.kind==='text'?'#d6c2ff':'#f3f3f5';ctx.fill();ctx.shadowColor='transparent';ctx.clip();
-    if(spec.kind==='text') typography(spec.text,x,y,w,h);
-    else {
+    let bounds=[x,y,w,h];
+    if(spec.kind==='text'){
+      const layout=textLayout(spec,x,y,w,h);
+      paintText(spec,layout,progress);
+      bounds=layout.box;
+    }else{
       const iw=node.videoWidth||node.naturalWidth, ih=node.videoHeight||node.naturalHeight;
       if (!iw || !ih) throw Error('素材画幅无效');
-      const fit=spec.fit==='cover' ? Math.max(w/iw,h/ih) : Math.min(w/iw,h/ih);
+      const framed=spec.surface==='paper'||spec.surface==='window';
+      const unit=Math.min(r[2],r[3]);
+      const full=p[2]>.99 && p[3]>.99;
+      const edge=framed?Math.min(w*.035,h*.035,unit*.009):0;
+      if(framed){
+        const dark=spec.surface==='window';
+        art.card({x,y,w,h},{fill:dark?colors.black:colors.white,edge:dark?colors.rim:colors.line,
+          depth:full?0:unit*.002,radius:full?0:unit*.009,shadow:full?false:unit*.008,
+          shadowOffsetY:unit*.003,lineWidth:Math.max(.7,unit*.001)});
+      }
+      const ax=x+edge,ay=y+edge,aw=w-2*edge,ah=h-2*edge;
+      round(ax,ay,aw,ah,framed&&!full?unit*.004:0);ctx.clip();
+      const fit=spec.fit==='cover' ? Math.max(aw/iw,ah/ih) : Math.min(aw/iw,ah/ih);
       const dw=iw*fit*zoom, dh=ih*fit*zoom;
-      ctx.drawImage(node,x+(w-dw)*(dw>w?focus[0]:.5),y+(h-dh)*(dh>h?focus[1]:.5),dw,dh);
+      const dx=ax+(aw-dw)*(dw>aw?focus[0]:.5),dy=ay+(ah-dh)*(dh>ah?focus[1]:.5);
+      ctx.drawImage(node,dx,dy,dw,dh);
+      if(!framed) bounds=[Math.max(x,dx),Math.max(y,dy),Math.min(w,dw),Math.min(h,dh)];
     }
     ctx.restore();
-    return true;
+    const right=Math.min(bounds[0]+bounds[2],x+w*wipe);
+    if(right<=bounds[0])return false;
+    return [bounds[0]/canvas.width,bounds[1]/canvas.height,(right-bounds[0])/canvas.width,bounds[3]/canvas.height];
   }
   // Occupancy uses the same opaque shot rectangles actually drawn, including partial overlaps.
   function visible(rect,above) {
@@ -153,7 +188,7 @@
       const t=(f-s.start)/(s.end-s.start);
       const jobs=[];
       for(const layer of episode.recipes[s.id]){
-        const spec=s.inputs[layer.slot], geo=keyframe(layer.keys,t,spec);
+        const spec=s.inputs[layer.slot], geo=FusionShot.at(layer.keys,t,spec);
         if(!geo||geo[4]<=.001||geo[6]<=.001||geo[7]<=.001) continue;
         jobs.push({slot:layer.slot,spec,geo});
       }
@@ -174,20 +209,19 @@
       }));
     }
     if(current!==ticket)return state;
-    ctx.setTransform(1,0,0,1,0,0);ctx.fillStyle='#f3f3f5';ctx.fillRect(0,0,canvas.width,canvas.height);
+    ctx.setTransform(1,0,0,1,0,0);ctx.fillStyle=colors.paper;ctx.fillRect(0,0,canvas.width,canvas.height);
     if(under)paint(under,{kind:'video',fit:'contain'},[0,0,1,1,1,1,1,1],[0,0,canvas.width,canvas.height]);
     const sources=[];
     const implementations=new Set();
     for(let ix=0;ix<active.length;ix++){
-      const {s,jobs}=active[ix];
+      const {s,jobs,t}=active[ix];
       const r=s.rect.map((n,i)=>n*(i%2===0?canvas.width:canvas.height));
       ctx.save();ctx.beginPath();ctx.rect(...r);ctx.clip();
-      ctx.fillStyle='#f3f3f5';ctx.fillRect(...r);
+      ctx.fillStyle=colors.paper;ctx.fillRect(...r);
       const painted=[];
-      for(const j of jobs)if(paint(j.node,j.spec,j.geo,r)){
-        const [x,y,w,h,a,,iris,wipe]=j.geo;
-        const bounds=[s.rect[0]+x*s.rect[2],s.rect[1]+y*s.rect[3],w*s.rect[2]*wipe,h*s.rect[3]];
-        painted.push({slot:j.slot,bounds,opaque:a>=.999 && iris>=.999});
+      for(const j of jobs){
+        const bounds=paint(j.node,j.spec,j.geo,r,t);
+        if(bounds)painted.push({slot:j.slot,bounds,opaque:j.geo[4]>=.999 && j.geo[6]>=.999});
       }
       ctx.restore();
       const later=active.slice(ix+1).map(x=>x.s.rect);

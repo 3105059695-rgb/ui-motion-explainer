@@ -2,7 +2,7 @@
 name: ui-motion-fusion
 description: 按全部投稿参考各自的剪辑用途，用已认可的 UI、颜色与连续动效制作口播视频和可编辑工程。支持按原工程续剪。
 metadata:
-  version: "2026.11.18.6"
+  version: "2026.11.18.7"
 ---
 
 # 用整库参考剪口播
@@ -16,15 +16,19 @@ python -B -X utf8 scripts/ui.py direct -- prepare --script "口播.txt" --projec
 python -B -X utf8 scripts/ui.py direct -- resume --project "本期工程"
 ```
 
-准备程序在本地匹配全部来源与 UI 能力，为每条正向投稿安排职责，保留历史纠错和出处。上下文 JSON、用片表和研究资料留在磁盘。对话只取当前待剪镜头的原句、用法、材料位置、关键帧和动态依据。卡片里的 `record`、`source_seconds` 和相关 UI ID 可定位更细的依据。看不清动作时用该来源的连续预览、源码或 `videos motion --id <来源ID> --from <秒> --to <秒>`。整稿编排或核对全片分工时用 `direct -- overview --project "本期工程"`，一行对应一条参考。按稿调整顺序、并行和时长，保留原声节奏。
+准备程序在本地匹配全部来源与 UI 能力，为每条投稿安排职责。整稿分工用 `direct -- overview --project "本期工程"`。制作时只取当前镜头卡。先播放 `moving_reference` 标出的连续区间，看对象怎样开始、交接、停稳；依据类型写在 `label`。新出现的手法首次使用时看完整动作，后续同种用法沿用本期结论。有条件时直接播放该投稿原片，只有工程重演或同类对照时结合该来源自己的 `record`、`changes` 和用法。全库索引留在磁盘。
+
+选 B-roll 时，按 `watch` 用本期材料走通原句的动作。比如“交给助手处理”，要看到谁递出哪份资料、谁接住、接着做了什么。镜头含推近或圆形揭示时，把真实物件、光标或交接点的位置填入素材的 `focus`。只有结果图时可用它讲结果，操作过程用本期录屏或连贯表演；暂缺合适素材的句子可留原口播，另找有证据的位置承接该参考。用已认可正文动态校准中文字号、纸面与深窗的层次、紫色焦点和结果停顿。
 
 **保存与续剪。** Agent 将本期绑定写入工程中的小补丁，运行 `direct -- save --project "本期工程" --patch "变更.json"`。命令前缀同上。每次返回下一处待剪镜头；指定 `resume --shot 3` 回看第 3 镜，长原句按返回的 `next_quote_offset` 续读。每次改动落盘，重开直接接续。补丁格式及素材绑定例子见[镜头保存](references/video-use-guide.md#保存一个镜头)。
 
-**调用与交付。** 需要其他 UI 时用 `capabilities search --brief --query "本段用途"` 或 `inspect --brief --id <能力ID>` 查全库，并在本期工程实际调用。各镜头素材和时间就位后执行以下命令，核对真实可见帧和原音轨，再实际视听成片、修正遮挡和节奏，交付视频及工程。付费生成按当次授权。
+**调用与交付。** 需要其他 UI 时用 `capabilities search --brief --query "本段用途"` 或 `inspect --brief --id <能力ID>` 查全库并实际调用。使用 HyperFrames 时运行 `videos hyperframes --project "本期工程" --shot 3 --out "HF工程/第3镜"`。素材和时码齐全会得到原生镜头工程，已绑定本期素材、用色和该来源的动作曲线；也可按 DESIGN.md 接入已有合成。材料还缺时先用返回的设计与待补项。各镜就位后执行以下两条。付费生成按当次授权。
 
 ```sh
 python -B -X utf8 scripts/ui.py videos compose --plan "本期工程/reference-cut-plan.json" --out "本期工程/成片工程"
 python -B -X utf8 scripts/ui.py videos render --project "本期工程/成片工程" --out "本期工程/成片.mp4" --brief
 ```
+
+导出的 `review` 可直接看编码成片和视频参照。完整对照用 `videos review --project "本期工程/成片工程" --media "本期工程/成片.mp4" --serve`，打开返回的本地地址；换电脑时同一命令重新定位参考。右侧可播放来源、手法分步和已认可正文。逐段原速对照，连前后剪点检查交接，再带原声看整片。色块盖过原材料、界面读不清或 B-roll 对不上原句时，回到对应镜头调整后重看。只抽帧或解码时如实报告实际检查范围。
 
 显式学习全库时用 `read plan` 与对应的分页；指定整片复刻时在 prepare 加 `--reference <参考ID>` 并查[复刻流程](references/reference-replication.md)。普通剪片通过镜头卡接入参考，按需打开对应的[模块](references/module-map.md)。

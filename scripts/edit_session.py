@@ -7,6 +7,7 @@ from pathlib import Path
 import tempfile
 
 import reference_edits as edits
+import shot_direction
 
 ROOT = Path(__file__).resolve().parents[1]
 PLAN = 'reference-cut-plan.json'
@@ -134,9 +135,11 @@ def output_state(folder, override=None):
             except (ValueError, KeyError, OSError):
                 result['reason'] = '已有导出与当前用片表或文件不匹配，须重新核对。'
             else:
+                review_path = project / 'reference-review.html'
                 return {'stage': 'review', 'cut': str(project), 'video': str(media),
+                        'review': str(review_path) if review_path.is_file() else None,
                         'visible_sources': checked['visible_sources'], 'frames': checked['frames'],
-                        'next': '已核对成片和逐帧记录。继续本期实际视听与交付。'}
+                        'next': '用对照页按原速看当前镜、前后剪点，再开原声看整片。旧工程用 videos review 生成对照页。'}
     return result
 
 
@@ -193,6 +196,14 @@ def evidence(source, recipe, root):
     result['motion'] = timing
     result['keyframes'] = {slot: [[k['at'], k['frame']] for layer in recipe['layers'] if layer['slot'] == slot for k in layer['keys']]
                            for slot in recipe['slots']}
+    changes = []
+    for layer in recipe['layers']:
+        for key in layer['keys']:
+            detail = ','.join(f'{name}={key[name]}' for name in ('cut','zoom','wipe','iris','opacity') if name in key)
+            if detail:
+                changes.append(f"{layer['slot']}@{key['at']} {detail}")
+    if changes:
+        result['changes'] = ' | '.join(changes)
     return result
 
 
@@ -264,6 +275,9 @@ def resume(project, shot_number=None, offset=0, cut=None, root=ROOT):
             'unit': unit['id'] if unit else None, 'quote': quote[offset:offset + QUOTE_SIZE],
             'inputs': {k: v['purpose'] for k, v in recipe['slots'].items()},
             'missing': unresolved[shot_number - 1], 'evidence': evidence(source, recipe, root)}
+    direction = edits.read(root / shot_direction.DIRECTION)[key]
+    card['watch'] = direction['watch']
+    card['moving_reference'] = shot_direction.source_reference(root, source, direction)
     if offset + QUOTE_SIZE < len(quote):
         card['next_quote_offset'] = offset + QUOTE_SIZE
     if not unit:

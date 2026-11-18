@@ -1,0 +1,70 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>来源手法连续重演</title><link rel="stylesheet" href="theme.css">
+<style>
+@font-face{font-family:Noto;src:url('../qiaomu-fonts/fonts/notosans.woff2')}body{margin:0;background:var(--sm-paper);color:var(--sm-ink);font:15px/1.4 Noto,system-ui,sans-serif}
+#view{position:relative;height:calc(100vh - 64px);min-height:160px;overflow:hidden}
+#frame{position:absolute;left:50%;top:50%;width:1280px;height:720px}.sm-stage{position:absolute;inset:0}nav{display:flex;align-items:center;gap:.7em;padding:.65em 1em}button,input{font:inherit}input{min-width:30px;flex:1}output{max-width:60%;overflow-wrap:anywhere}#error{margin:0;color:#594277}
+</style>
+<main id="view"><div id="frame"></div></main><nav><button id="play">暂停</button><input id="time" aria-label="重演时间" type="range" min="0" step=".01"><output id="step"></output></nav><p id="error" role="alert"></p>
+<script src="manifest.js"></script><script src="semantic-motion.js"></script><script src="demo-fixtures.js"></script>
+<script>
+'use strict';
+const frame=document.getElementById('frame'), view=document.getElementById('view');
+const play=document.getElementById('play'), slider=document.getElementById('time'), step=document.getElementById('step');
+const ids=(new URLSearchParams(location.search).get('steps')||'').split(',');
+const known=new Map(SemanticEffectManifest.effects.map(e=>[e.id,e]));
+if(!ids.length || ids.length>12 || ids.some(id=>!known.has(id)||known.get(id).kind==='source-timeline'))
+  throw Error('缺少已登记的来源动作。');
+let duration=0;
+const phases=ids.map(id=>{
+  const stage=document.createElement('div');stage.className='sm-stage';frame.append(stage);
+  const fixture=SemanticDemoFixtures.build(id,stage), length=fixture.duration;
+  const result={id,stage,start:duration,length,fixture,controller:SemanticMotion.create({effect:id,duration:length,options:fixture.options},stage)};
+  stage.hidden=true;duration+=length;return result;
+});
+const fit=()=>{frame.style.transform='translate(-50%,-50%) scale('+Math.min(view.clientWidth/1280,view.clientHeight/720)+')';};
+fit();addEventListener('resize',fit);slider.max=String(duration);
+let time=0, running=false, clock=0, sequence=0, chain=Promise.resolve(), active=null;
+async function move(video,seconds){
+  if(video.readyState<1)await new Promise((ok,bad)=>{
+    video.addEventListener('loadedmetadata',ok,{once:true});video.addEventListener('error',bad,{once:true});
+  });
+  const target=Math.max(0,Math.min(video.duration-.001,seconds));
+  if(!video.seeking && Math.abs(video.currentTime-target)<.003)return;
+  await new Promise((ok,bad)=>{
+    const clear=()=>{clearTimeout(timer);video.removeEventListener('seeked',done);video.removeEventListener('error',fail);};
+    const done=()=>{clear();ok();},fail=()=>{clear();bad(Error('无法读取动作素材'));};
+    const timer=setTimeout(fail,8000);video.addEventListener('seeked',done);video.addEventListener('error',fail);video.currentTime=target;
+  });
+}
+async function draw(seconds){
+  time=Math.min(duration,Math.max(0,seconds));
+  const phase=phases.find(p=>time<p.start+p.length)||phases[phases.length-1], local=time-phase.start;
+  if(active!==phase){if(active)active.stage.hidden=true;phase.stage.hidden=false;active=phase;}
+  const state=phase.controller.seek(local);
+  const jobs=[];
+  if(phase.id==='R06'){
+    for(const entry of state.media.filter(m=>m.active)){
+      const clip=phase.controller.options.clips.find(c=>c.id===entry.id),node=clip.node;
+      jobs.push(move(node.tagName==='VIDEO'?node:node.querySelector('video'),entry.sourceTime));
+    }
+  }else for(const track of phase.fixture.media||[])
+    if(local>=(track.offset||0)&&local<=(track.end??phase.length))jobs.push(move(track.node,(track.start||0)+local-(track.offset||0)));
+  await Promise.all(jobs);slider.value=time;step.textContent=known.get(phase.id).title;
+  return {effect:phase.id,time};
+}
+function scheduleDraw(t){chain=chain.catch(()=>{}).then(()=>draw(t));return chain;}
+function pause(){running=false;sequence++;play.textContent='播放';}
+function fail(error){pause();document.getElementById('error').textContent=String(error);}
+async function start(){
+  if(time>=duration)await scheduleDraw(0);running=true;play.textContent='暂停';
+  const token=++sequence;clock=performance.now()-time*1000;
+  const tick=async now=>{if(!running||token!==sequence)return;await scheduleDraw((now-clock)/1000);
+    if(!running||token!==sequence)return;if(time>=duration){pause();return;}requestAnimationFrame(t=>tick(t).catch(fail));};
+  requestAnimationFrame(t=>tick(t).catch(fail));
+}
+play.onclick=()=>running?pause():start().catch(fail);slider.oninput=()=>{pause();scheduleDraw(Number(slider.value)).catch(fail);};
+const ready=document.fonts.ready.then(()=>scheduleDraw(0));window.ready=()=>ready;
+window.seek=async t=>{pause();await ready;return scheduleDraw(t);};
+if(!new URLSearchParams(location.search).has('render'))ready.then(start).catch(fail);
+</script></html>

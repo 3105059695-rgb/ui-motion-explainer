@@ -218,7 +218,7 @@ def inspect_source(catalog, ident):
 def main(argv=None):
     import sys
     argv = list(sys.argv[1:] if argv is None else argv)
-    if argv[:1] and argv[0] in ('plan','compose','render','motion'):
+    if argv[:1] and argv[0] in ('plan','compose','render','motion','review','hyperframes'):
         import reference_edits
         return reference_edits.main(argv)
     parser = argparse.ArgumentParser(description=__doc__)
@@ -226,7 +226,8 @@ def main(argv=None):
     commands.add_parser('summary')
     commands.add_parser('check')
     for cmd, desc in [('plan','为全部提交片子建立本期分工表'),('compose','用本期材料执行这些剪法'),
-                      ('render','输出实际逐帧视频与来源时段'),('motion','查询原视频连续运动测量')]:
+                      ('render','输出实际逐帧视频与来源时段'),('motion','查询原视频连续运动测量'),
+                      ('review','并排播放已编码成片与动态参考'),('hyperframes','为本期一个镜头提供 HyperFrames 设计与时间线')]:
         commands.add_parser(cmd,help=desc)
     listing = commands.add_parser('list')
     listing.add_argument('--collection', choices=('focus', 'prompt-motion', 'fredtalk', 'collect-ui', 'discovery', 'all'),

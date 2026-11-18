@@ -14,6 +14,7 @@ import tempfile
 import zlib
 
 import video_sources
+import shot_direction
 
 ROOT = video_sources.ROOT
 RECIPES = 'assets/reference-edits/recipes.json'
@@ -51,6 +52,9 @@ def number(value):
 
 def rules(catalog):
     recipes = read(catalog.root / RECIPES)['recipes']
+    directions = read(catalog.root / shot_direction.DIRECTION)
+    if directions.keys() != recipes.keys():
+        raise ValueError('Each submitted edit recipe requires its own shot direction.')
     films = catalog.rows('focus')
     required = {r['id'] for r in films if r['status'] == 'available'}
     if set(recipes) != required:
@@ -84,6 +88,7 @@ def assignments(router, units):
         evidence = _evidence(row, use)
         temporal = source_timing(row, measured.get(key))
         rows.append({'source_id': key, 'title': row['title'], 'scope': row['scope'],
+                     'source_resource_id': row.get('atlas', {}).get('source_resource_id'),
                      'contribution': recipe['action'], 'inputs': recipe['slots'],
                      'capability': recipe['capability'], 'locator': evidence, 'clip': row.get('media'),
                      'timing': temporal,
@@ -408,11 +413,13 @@ def compose(catalog, plan_path, output, *, preview=False):
            or not 0<=s['start_frame']<s['end_frame']<=dur or s.get('unit') not in units for s in plan['shots']):
         raise ValueError('Bind every source to an actual narration unit and a valid master-frame interval.')
     origin=catalog.root/CANVAS
+    directions = read(catalog.root / shot_direction.DIRECTION)
     with tempfile.TemporaryDirectory(prefix='.reference-cut-',dir=output.parent) as temp:
         staging=Path(temp)/'project'
         staging.mkdir()
         media=Media(base,staging,catalog)
         master={'schema':SCHEMA,'fps':fps,'width':w,'height':h,'frames':dur,'shots':[],
+                'palette': read(catalog.root / shot_direction.PALETTE),
                 'script_sha256':plan['script_sha256'],'source_plan_sha256':hashlib.sha256(plan_bytes).hexdigest()}
         for ident,shot in zip(ids,plan['shots']):
             recipe=recipes[ident]
@@ -426,6 +433,9 @@ def compose(catalog, plan_path, output, *, preview=False):
                 if math.ceil(lo*(b-a)-1e-9)>=min(b-a,math.ceil(hi*(b-a)-1e-9)):
                     raise ValueError('This time window loses an entire motion phase: '+ident+'/'+layer['slot'])
             bound={key:_current_slot(key,slot,inputs[key],recipe,media,(b-a)/fps,fps) for key,slot in recipe['slots'].items()}
+            surfaces = shot_direction.surfaces(directions[ident], recipe['slots'])
+            for key, value in bound.items():
+                value['surface'] = 'native' if value.get('from_project') else surfaces[key]
             master['shots'].append({'id':ident,'unit':shot['unit'],'quote':units[shot['unit']]['quote'],
                 'start':a,'end':b,'rect':box(shot.get('rect',[0,0,1,1]),ident),
                 'contribution':recipe['action'],'capability':recipe['capability'],'inputs':bound})
@@ -453,8 +463,10 @@ def compose(catalog, plan_path, output, *, preview=False):
             'scope':'internal-preview' if preview else 'all-submitted-films','rendered':False}
         write(staging/'reference-timeline.json',master)
         (staging/'episode.js').write_text(episode_data(master),encoding='utf-8')
-        for name in ('index.html','player.js'):
+        for name in ('index.html','player.js','shot-motion.js'):
             shutil.copyfile(origin/name,staging/name)
+        for name in ('agent-editorial.js','motion-core.js'):
+            shutil.copyfile(catalog.root/'assets/agent-editorial'/name,staging/name)
         shutil.copyfile(catalog.root/'assets/qiaomu-fonts/fonts/notosans.woff2',staging/'Noto.woff2')
         write(staging/'library-project.json',{'id':'submitted-reference-cut','engine':'html-seek','entry':'index.html',
             'fps':fps,'width':w,'height':h,'duration':dur/fps,'frames':dur,'reference_sources':master['coverage']['included']})
@@ -578,14 +590,34 @@ def main(argv):
     p=sub.add_parser('render');p.add_argument('--project',required=True);p.add_argument('--out',required=True);p.add_argument('--scale',type=float,default=1)
     p.add_argument('--brief', action='store_true', help='Keep per-frame evidence on disk and print output counts.')
     p=sub.add_parser('motion');p.add_argument('--id',required=True);p.add_argument('--from',dest='start',type=float);p.add_argument('--to',dest='end',type=float)
+    p=sub.add_parser('review');p.add_argument('--project',required=True);p.add_argument('--media',required=True)
+    p.add_argument('--serve',action='store_true',help='Play on one loopback origin, including nested reference projects.')
+    p.add_argument('--port',type=int,default=0)
+    p=sub.add_parser('hyperframes');p.add_argument('--project',required=True);p.add_argument('--shot',type=int,required=True);p.add_argument('--out',required=True)
     args=parser.parse_args(argv)
     try:
         if args.cmd=='render':
             result=render(args.project,args.out,args.scale)
+            try:
+                result['review'] = shot_direction.review(args.project, args.out)
+            except (OSError, ValueError) as error:
+                result.update(review=None, review_error=str(error))
             if args.brief:
-                result = {k: result[k] for k in ('file','sha256','complete_reference_coverage','frames','audio')} | {
+                result = {k: result[k] for k in ('file','sha256','complete_reference_coverage','frames','audio','review','review_error') if k in result} | {
                     'visible_sources': len(result['reference_frames']),
                     'evidence': str(Path(args.project) / 'reference-render.json')}
+        elif args.cmd=='review':
+            if args.serve:
+                with shot_direction.review_server(args.project, args.media, port=args.port) as server:
+                    print(json.dumps({'url':f'http://127.0.0.1:{server.server_port}/'}),flush=True)
+                    try:
+                        server.serve_forever()
+                    except KeyboardInterrupt:
+                        pass
+                return 0
+            result = {'review': shot_direction.review(args.project, args.media)}
+        elif args.cmd=='hyperframes':
+            result = shot_direction.hyperframes(args.project, args.shot, args.out)
         else:
             catalog=video_sources.Catalog()
             if args.cmd=='plan':

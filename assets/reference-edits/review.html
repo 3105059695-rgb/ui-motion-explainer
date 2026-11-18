@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>镜头与动态参考</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f3f5;color:#0b0b0f;font:16px/1.5 system-ui,sans-serif}main{max-width:1480px;margin:auto;padding:clamp(14px,3vw,40px)}h1{font-size:1.45rem;margin:0 0 .75rem}header,.controls{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}label{display:inline-flex;gap:.4rem;align-items:center}select,button{font:inherit;max-width:100%;padding:.35em .6em}button{cursor:pointer}section{display:grid;grid-template-columns:1fr 1fr;gap:1rem}figure{margin:.8rem 0;min-width:0}figcaption{font-weight:600;margin:0 0 .45em}video,iframe{width:100%;height:clamp(200px,32vw,56vh);object-fit:contain;background:#0b0b0f;border:0;display:block}#watch{font-weight:600}blockquote{border-left:3px solid #d6c2ff;padding-left:.8em;margin:.7em 0}p{margin:.55em 0}@media(max-width:720px){section{grid-template-columns:1fr}video,iframe{height:32vh}}
+</style>
+<main>
+<h1>镜头与动态参考</h1>
+<header><label>本期镜头 <select id="shots"></select></label><label>观看依据 <select id="comparison"><option>本镜动态参考</option><option>已认可正文的源码节选</option></select></label></header>
+<section>
+<figure><figcaption>本期实际导出</figcaption><video id="cut" controls playsinline preload="metadata"></video></figure>
+<figure><figcaption id="sourceTitle"></figcaption><div id="reference"></div></figure>
+</section>
+<div class="controls"><button id="play">从本镜开头播放</button><button id="join">连前后剪点播放</button><button id="whole">播放全片</button></div>
+<blockquote id="quote"></blockquote><p id="action"></p><p id="watch"></p><p id="fault" role="status"></p>
+</main>
+<script>
+/* EPISODE_REVIEW */
+const el = id => document.getElementById(id);
+const cut = el('cut'), selector = el('shots'), comparison = el('comparison');
+let shot, ref, refItem, limit = null;
+const description = new URLSearchParams(location.search);
+cut.src = review.media;
+review.shots.forEach((s, i) => selector.add(new Option((i+1)+' · '+s.title, i)));
+const requested = Number(description.get('shot'));
+if (Number.isInteger(requested) && requested > 0 && requested <= review.shots.length) selector.value = requested - 1;
+function showReference() {
+  if (ref && ref.tagName === 'VIDEO') ref.pause();
+  const items = [shot.reference, review.body, ...shot.steps];
+  refItem = items[comparison.selectedIndex];
+  const item = refItem, span = item.range;
+  el('sourceTitle').textContent = item.label + (span ? ' · '+span.join('–')+' 秒' : '');
+  ref = document.createElement(item.kind === 'html' ? 'iframe' : 'video');
+  if (item.kind === 'html') { ref.title = item.label; }
+  else {
+    const video = ref;
+    video.muted = true; video.controls = true; video.playsInline = true; video.preload = 'metadata';
+    video.addEventListener('loadedmetadata', () => { if (span) video.currentTime = span[0]; });
+    video.addEventListener('timeupdate', () => { if (span && video.currentTime >= span[1] && !video.paused) video.pause(); });
+  }
+  ref.src = item.url; el('reference').replaceChildren(ref);
+}
+function selectShot() {
+  cut.pause(); limit = null; shot = review.shots[Number(selector.value)];
+  comparison.length = 2;
+  for (const item of shot.steps) comparison.add(new Option(item.label));
+  comparison.selectedIndex = 0;
+  if (cut.readyState) cut.currentTime = shot.start;
+  el('quote').textContent = shot.quote; el('action').textContent = shot.action; el('watch').textContent = shot.watch;
+  el('fault').textContent = ''; showReference();
+}
+async function play(from, to, withReference) {
+  cut.pause(); limit = to; cut.currentTime = from;
+  try {
+    const playback = [cut.play()];
+    if (withReference && ref.tagName === 'VIDEO') {
+      ref.currentTime = refItem.range ? refItem.range[0] : 0; playback.push(ref.play());
+    } else if (ref.tagName === 'VIDEO') ref.pause();
+    else if (withReference) ref.src=refItem.url;
+    await Promise.all(playback);
+  } catch(e) { el('fault').textContent = '请检查本期文件和动态参考的路径或浏览器的播放权限。'; }
+}
+cut.addEventListener('timeupdate', () => {
+  if (limit !== null && cut.currentTime >= limit) {
+    cut.pause(); limit = null;
+  }
+});
+cut.addEventListener('loadedmetadata', () => { cut.currentTime = shot.start; });
+el('play').onclick = () => play(shot.start, shot.end, true);
+el('join').onclick = () => {
+  const before = review.shots.filter(s => s.start < shot.start).map(s => s.start);
+  const after = review.shots.filter(s => s.end > shot.end).map(s => s.end);
+  play(before.length ? Math.max(...before) : 0, after.length ? Math.min(...after) : cut.duration, true);
+};
+el('whole').onclick = () => play(0, null, false);
+selector.onchange = selectShot; comparison.onchange = showReference; selectShot();
+</script></html>
