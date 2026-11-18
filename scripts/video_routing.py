@@ -70,7 +70,7 @@ class Router:
         total = len(self.docs)
         self.idf = {w: math.log1p(total / len(indices)) for w, indices in self.postings.items()}
 
-    def match(self, quote, *, source=None, preferred=None, previous=None, limit=3):
+    def match(self, quote, *, source=None, preferred=None, previous=None, limit=3, allowed=None):
         query = selection.normalized(quote)
         query = re.sub(r'(?:不需要|不想|并非|不用|不要|无需|不必|不做)[^，,。；;！？!?]*?(?=而是|改为|但|，|,|。|；|;|！|!|？|\?|$)', ' ', query)
         words = _words(query)
@@ -80,6 +80,8 @@ class Router:
         for index in sorted(indices):
             row, use, cues, terms = self.docs[index]
             ident = row['id']
+            if allowed is not None and ident not in allowed:
+                continue
             if (selected and ident != selected) or (row['status'] == 'archived' and not row.get('restored') and not selected):
                 continue
             hits = selection.positive_hits(query, cues)
@@ -143,7 +145,10 @@ class Router:
             output.append({**unit, 'primary': primary, 'alternatives': picks[1:],
                            'combination': self.combination(unit, preferred) if re.search(r'[，,；;]', unit['quote']) else [],
                            'decision': 'review-fit' if primary else 'use-current-material-or-presenter'})
+        import reference_edits
+        full = reference_edits.assignments(self, units)
         return {'catalog': self.catalog.summary(), 'units': output, 'preferred_reference': preferred,
+                'all_submitted': full,
                 'sources_used_in_output': [], 'decision_status': 'proposed',
                 'inspect_source': 'ui.py videos inspect --id <来源ID>',
                 'instruction': '每句先看主建议和证据，再按需要取备选的一项优点。前后镜头用同一份本期材料或可见结果交接；'
@@ -168,6 +173,16 @@ def brief(plan):
         else:
             lines.append('- 未找到足够具体的线索。保留人物或查找能直接说明这句的实拍材料。')
         lines.append('')
+    coverage = plan.get('all_submitted', {})
+    if coverage:
+        lines.extend(['## 全部提交参考在本期的分工', '',
+                      '把每项职责落实到本期时间线。逐句匹配仅用于找适合的位置。', ''])
+        for source in coverage['required']:
+            placement = source.get('suggested_unit') or '由导演按剪法选择原声位置'
+            lines.append(f"- {source['title']} · {placement} · {source['contribution']}")
+        lines.extend(['', '历史纠错参考', ''])
+        lines.extend(f"- {row['title']} · {row['use']}" for row in coverage['diagnostic'])
+        lines.extend(['', '用 videos plan 建完整用片表，填入本期素材和原声位置后用 videos compose 与 videos render 生成时间线并核对实际入片帧。'])
     return '\n'.join(lines)
 
 
@@ -181,14 +196,27 @@ def inspect_source(catalog, ident):
         from resource_inventory import resource_fact
         entry = row['atlas']
         result['original'] = resource_fact(entry['source_resource_id'], entry.get('source_path'), root=catalog.root)
+    if 'focus' in row['collections'] and row['status']=='available':
+        import reference_edits
+        recipe = reference_edits.rules(catalog)[0][row['id']]
+        result['portable_edit'] = {'slots':recipe['slots'], 'layers':recipe['layers'],
+                                   'motion':'ui.py videos motion --id '+row['id']}
     return result
 
 
 def main(argv=None):
+    import sys
+    argv = list(sys.argv[1:] if argv is None else argv)
+    if argv[:1] and argv[0] in ('plan','compose','render','motion'):
+        import reference_edits
+        return reference_edits.main(argv)
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest='command', required=True)
     commands.add_parser('summary')
     commands.add_parser('check')
+    for cmd, desc in [('plan','为全部提交片子建立本期分工表'),('compose','用本期材料执行这些剪法'),
+                      ('render','输出实际逐帧视频与来源时段'),('motion','查询原视频连续运动测量')]:
+        commands.add_parser(cmd,help=desc)
     listing = commands.add_parser('list')
     listing.add_argument('--collection', choices=('focus', 'prompt-motion', 'fredtalk', 'collect-ui', 'discovery', 'all'),
                          default='focus')

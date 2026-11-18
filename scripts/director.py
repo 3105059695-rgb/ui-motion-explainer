@@ -662,11 +662,22 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
     context['available_reference_films'] = reference_film.available(root)
     if reference_id:
         context['reference_film'] = reference_film.load(reference_id, root, origin)
-    context['video_sources'] = (video_routing.Router(video_catalog).plan(source['text'], reference_id)
-                                if video_catalog else {'error': '本安装没有逐片用法目录。', 'units': []})
+    router = video_routing.Router(video_catalog) if video_catalog else None
+    context['video_sources'] = (router.plan(source['text'], reference_id)
+                                if router else {'error': '本安装没有逐片用法目录。', 'units': []})
+    edit_plan = folder / 'reference-cut-plan.json'
+    if router:
+        import reference_edits
+        context['video_sources']['edit_plan'] = str(edit_plan)
+        if edit_plan.is_symlink() or edit_plan.resolve() == Path(source['path']).resolve():
+            raise ValueError('The reference edit plan must be a separate project file.')
+        if edit_plan.exists():
+            existing = load_json(edit_plan)
+            if existing.get('schema') != reference_edits.SCHEMA or existing.get('script_sha256') != source['sha256']:
+                raise ValueError('Existing reference-cut-plan.json belongs to another script or project. Use a new project to keep both.')
     brief = '\n'.join([MARKER, '# 本期制作：直接调用已有能力', '',
         f"原稿：{source['path']}", f'工程：{folder}',
-        '完整原文在 director-context.json 的 source。先理解对象、变化和结果，再选择具体能力；候选不是自动分镜。', '',
+        '完整原文在 director-context.json 的 source。先理解对象、变化和结果，再选择具体能力；逐句排名用于定位，把全部提交参考的职责落实到本期。', '',
         '## 新窗口完整阅读', '',
         f"先运行：python -B -X utf8 \"{(Path(root) / 'scripts/ui.py').resolve()}\" read plan",
         '依次完整读取现行要求、全库目录全部分页，并实际打开全部认可参考总览与必要细图。完整队列见 context.repository_reading；短候选不能替代目录。',
@@ -695,11 +706,14 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
         '4. 渲染实际片段，检查素材可读性、动作连续性、声音与当前风格；修改的是本期画面，不把一次特例追加成全局禁令。', '',
         '## 现行要求来源', '',
         *[f"- {row['title']}：{row['path']}" for row in core['documents']],
-        '原片分格图已列在上方，供建立视觉理解。连续原片和逐句研究在学习新能力、指定复刻或排错时展开；普通制作不要求私人原片齐全，也不需重新实现已有动作。',
+        '原片分格图已列在上方，供建立视觉理解。连续原片和逐句研究在学习新能力、指定复刻或排错时展开；公开包包含每条正向提交参考的可执行制作配方；用 videos plan/compose/render 在本期实现完整分工。',
         '本准备步骤没有观看或认可本期画面，也没有提交生成或渲染。', ''])
     if reference_id:
         brief += '\n' + reference_film.render_brief(context['reference_film'], reference_film.available(root))
     result = _write_preparation(folder, source, context, brief, force)
+    if router and not edit_plan.exists():
+        reference_edits.scaffold(router, source['path'], edit_plan, context['video_sources']['all_submitted'], presenter_source)
+        result['created_or_updated'].append(str(edit_plan))
     if not material_plan_path.exists():
         material_sourcing.write_new(material_plan_path, context['materials']['plan'])
     return {**result, 'mode': mode, 'source_sha256': source['sha256'],

@@ -1,4 +1,4 @@
 interface:
   display_name: "我的 UI 动效剪辑"
-  short_description: "按口播从各条参考视频选剪法、绑定本期素材，沿用认可 UI"
-  default_prompt: "使用 $ui-motion-fusion，先读正式 SKILL.md，并从 scripts/ui.py requirements --part 1 连续完整读取全部页，用 direct prepare 逐句选取不同来源的剪法、证据和实现，按已认可正文 UI 完成本期任务；沿当前明确范围执行，不把摘要、目录或源码加载当作已读懂和已制作。"
+  short_description: "全部投稿参考各司其职，按真实口播时间和当前素材执行剪法"
+  default_prompt: "使用 $ui-motion-fusion，先读正式 SKILL.md，并从 scripts/ui.py requirements --part 1 连续完整读取全部页，按全部提交参考逐片安排职责，用 videos plan/compose/render 实际出片并核对每条来源的可见帧，按已认可正文 UI 完成本期任务；沿当前明确范围执行，不把摘要、目录或源码加载当作已读懂和已制作。"

@@ -4,7 +4,11 @@
 
 **公开包可以直接运行当前 UI 与已有能力，并包含 13 条认可原片的分格图（13 张总览、72 页细图）。** 新窗口完整读入口和审美，通过随包图片认识原片外观，再按口播搜集本期素材、绑定已有实现，不必重新实现原视频。图集直接打开 `assets/reference-atlas/index.html` 即可，不需要作者 E 盘或服务器。其他私人历史图集、连续原视频与原设计演示素材仍可用获授权的私用完整包补充；不携带作者电脑的 `resources.local.json` 或浏览器登录数据。
 
+新版 GitHub 包已包含所有投稿参考的编辑程序。直接调用 `$ui-motion-fusion` 即可让 Agent 完成逐片分工、素材绑定及全片制作。私人历史档案仅用于另行取回原片或原声，日常制作的参考剪法、字体、样式、证据和播放器都在公开包内。生成工程的 HTML 可在本地浏览器直接打开。命令行制作复用 Python、FFmpeg/FFprobe，输出 MP4 时复用 Playwright 和 Chromium/Edge。
+
 ## 首次安装
+
+在一台尚未安装本 Skill 的电脑上，GitHub Release 的 `ui-motion-fusion-版本.zip` 内已经是正确的 `ui-motion-fusion/` 目录。直接解压到 Codex 的 `skills` 目录并新开对话即可调用 `$ui-motion-fusion`。Windows 默认位置为 `%USERPROFILE%\.codex\skills`；自定义 `CODEX_HOME` 时使用其 `skills` 子目录。下面的安装器同样支持 GitHub 源码 ZIP。已有安装用更新方式保留自己的项目文件。
 
 获取仓库主分支或最新 Release 的完整源码包，解压后进入含 `SKILL.md`、`VERSION` 和 `install.py` 的包根目录，运行：
 

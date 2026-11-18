@@ -71,6 +71,7 @@ def run(project,action,output=None,scale=1,config_override=None):
     page.on('response',record_asset)
     page.route('**/*',lambda route:route.continue_() if route.request.url.startswith(('http://127.0.0.1:','data:','blob:')) else route.abort())
     page.goto(f'http://127.0.0.1:{server.server_port}/{config["entry"]}?render=1',wait_until='load')
+    if config.get('hide_render_controls'):page.add_style_tag(content='body > nav{display:none!important}')
     if config.get('fixed_canvas'):page.evaluate('(scale)=>{document.body.style.transformOrigin="0 0";document.body.style.transform="scale("+scale+")"}',scale)
     page.evaluate('''async()=>{await Promise.race([(async()=>{if(typeof window.ready==='function')await window.ready();else if(window.ready&&typeof window.ready.then==='function')await window.ready;await document.fonts.ready;})(),new Promise((_,reject)=>setTimeout(()=>reject(Error('Scene readiness timed out')),15000))]);}''')
     actual=page.evaluate('window.__composition||null')
@@ -98,10 +99,28 @@ def run(project,action,output=None,scale=1,config_override=None):
      if dest.exists():raise ValueError('Render output exists; choose an explicit new output')
      command=['ffmpeg','-v','error','-f','image2pipe','-vcodec','png','-r',str(fps),'-i','pipe:0','-an','-c:v','libx264','-preset','fast','-crf','18','-pix_fmt','yuv420p','-movflags','+faststart',str(dest)]
      encoder=subprocess.Popen(command,stdin=subprocess.PIPE,stderr=subprocess.PIPE)
+     coverage={} if config.get('reference_sources') else None
+     projects={}
      try:
-      for frame in range(math.ceil(duration*fps)):
+      for frame in range(config['frames'] if coverage is not None else math.ceil(duration*fps)):
        t=frame/fps
        state=page.evaluate('''async({api,t})=>{const result=await window[api](t);return window.getState?window.getState():result??null}''',{'api':api,'t':t})
+       if coverage is not None:
+        if not isinstance(state,dict) or state.get('frame')!=frame:
+         raise ValueError('The edit player did not reach the requested master frame.')
+        per_source={}
+        for visible in state.get('sources',[]):
+         per_source.setdefault(visible['id'],set()).update(visible['slots'])
+        for source,slots in per_source.items():
+         if source not in config['reference_sources']:raise ValueError('Unregistered source on master clock.')
+         row=coverage.setdefault(source,{'intervals':[],'slots':{}})
+         if not row['intervals'] or row['intervals'][-1][1]<frame:row['intervals'].append([frame,frame+1])
+         else:row['intervals'][-1][1]=frame+1
+         for slot in slots:row['slots'][slot]=row['slots'].get(slot,0)+1
+        for source in state.get('implementations',[]):
+         intervals=projects.setdefault(source,[])
+         if not intervals or intervals[-1][1]<frame:intervals.append([frame,frame+1])
+         else:intervals[-1][1]=frame+1
        if frame%max(1,round(fps))==0:calls.append({'time':t,'state':state})
        encoder.stdin.write(page.screenshot(type='png'))
       encoder.stdin.close();err=encoder.stderr.read().decode('utf-8',errors='replace');code=encoder.wait()
@@ -109,6 +128,9 @@ def run(project,action,output=None,scale=1,config_override=None):
      except BaseException:
       encoder.kill();encoder.wait();raise
      subprocess.run(['ffmpeg','-v','error','-i',str(dest),'-f','null','-'],check=True,capture_output=True)
+     if coverage is not None:
+      report['reference_frames']=coverage
+      report['reference_project_frames']=projects
      report.update(output=str(dest),full_decode='passed',audio='none; original silent motion scene')
     else:raise ValueError('Unknown action')
     if errors or failed:raise ValueError('Original scene failed: '+json.dumps({'errors':errors,'resources':failed},ensure_ascii=False)[:6000])

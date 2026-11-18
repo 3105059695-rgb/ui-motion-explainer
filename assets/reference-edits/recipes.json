@@ -1,0 +1,2577 @@
+{
+  "schema": 1,
+  "recipes": {
+    "fangmu-ten-agents-final-20261021": {
+      "capability": "design:parallel-workflow",
+      "action": "同一任务拆给多个执行者，各自的进度合成一份可检查的交付。",
+      "slots": {
+        "task": {
+          "kind": "visual",
+          "purpose": "本次要完成的任务"
+        },
+        "a": {
+          "kind": "visual",
+          "purpose": "第一个执行结果"
+        },
+        "b": {
+          "kind": "visual",
+          "purpose": "第二个执行结果"
+        },
+        "report": {
+          "kind": "visual",
+          "purpose": "两项结果形成的交付"
+        }
+      },
+      "layers": [
+        {
+          "slot": "task",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.16,
+              "frame": "top"
+            },
+            {
+              "at": 0.7,
+              "frame": "top"
+            }
+          ]
+        },
+        {
+          "slot": "a",
+          "keys": [
+            {
+              "at": 0.1,
+              "frame": "center",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.24,
+              "frame": "left"
+            },
+            {
+              "at": 0.57,
+              "frame": "left"
+            },
+            {
+              "at": 0.76,
+              "frame": "center",
+              "opacity": 0.0
+            }
+          ]
+        },
+        {
+          "slot": "b",
+          "keys": [
+            {
+              "at": 0.16,
+              "frame": "center",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.31,
+              "frame": "right"
+            },
+            {
+              "at": 0.57,
+              "frame": "right"
+            },
+            {
+              "at": 0.76,
+              "frame": "center",
+              "opacity": 0.0
+            }
+          ]
+        },
+        {
+          "slot": "report",
+          "keys": [
+            {
+              "at": 0.65,
+              "frame": "center",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.79,
+              "frame": "full"
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        }
+      ]
+    },
+    "fred-argon": {
+      "capability": "method:F-M01",
+      "action": "先出原材料，再从同一容器展开结果，推近正在讲的细节，最后回到全貌。",
+      "slots": {
+        "original": {
+          "kind": "visual",
+          "purpose": "原始材料"
+        },
+        "result": {
+          "kind": "visual",
+          "purpose": "由它得到的真实结果，focus 对准待看细节"
+        }
+      },
+      "layers": [
+        {
+          "slot": "original",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.24,
+              "frame": "full"
+            },
+            {
+              "at": 0.42,
+              "frame": "left"
+            },
+            {
+              "at": 0.83,
+              "frame": "left"
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "result",
+          "keys": [
+            {
+              "at": 0.22,
+              "frame": "right",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.42,
+              "frame": "right"
+            },
+            {
+              "at": 0.59,
+              "frame": "full",
+              "zoom": 1.0
+            },
+            {
+              "at": 0.74,
+              "frame": "full",
+              "zoom": 1.65
+            },
+            {
+              "at": 0.86,
+              "frame": "right"
+            },
+            {
+              "at": 1.0,
+              "frame": "right",
+              "opacity": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    "fred-jev": {
+      "capability": "method:Q-N01",
+      "action": "把模型文件交到实际机器，对照容量与需求，再回到能否运行的结果。",
+      "slots": {
+        "model": {
+          "kind": "visual",
+          "purpose": "模型文件与实际需求"
+        },
+        "machine": {
+          "kind": "visual",
+          "purpose": "机器的真实可用资源"
+        },
+        "run": {
+          "kind": "moving",
+          "purpose": "本期在设备上实际运行的连续画面"
+        }
+      },
+      "layers": [
+        {
+          "slot": "model",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.24,
+              "frame": "left"
+            },
+            {
+              "at": 0.5,
+              "frame": "left"
+            }
+          ]
+        },
+        {
+          "slot": "machine",
+          "keys": [
+            {
+              "at": 0.13,
+              "frame": "right",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.27,
+              "frame": "right"
+            },
+            {
+              "at": 0.54,
+              "frame": "right"
+            }
+          ]
+        },
+        {
+          "slot": "run",
+          "keys": [
+            {
+              "at": 0.49,
+              "frame": "full",
+              "wipe": 0.0
+            },
+            {
+              "at": 0.62,
+              "frame": "full",
+              "wipe": 1.0
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        }
+      ]
+    },
+    "fred-weekly": {
+      "capability": "native:material-focus",
+      "action": "一条消息先给自己的材料，把一句解释放到前层，换条目时交回下一条的材料。",
+      "slots": {
+        "first": {
+          "kind": "visual",
+          "purpose": "第一条消息的来源"
+        },
+        "caption": {
+          "kind": "text",
+          "purpose": "这条材料的核心变化"
+        },
+        "second": {
+          "kind": "visual",
+          "purpose": "下一条消息自己的材料"
+        }
+      },
+      "layers": [
+        {
+          "slot": "first",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.46,
+              "frame": "full"
+            },
+            {
+              "at": 0.59,
+              "frame": "left",
+              "opacity": 0.0
+            }
+          ]
+        },
+        {
+          "slot": "caption",
+          "keys": [
+            {
+              "at": 0.11,
+              "frame": "bottom",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.2,
+              "frame": "bottom"
+            },
+            {
+              "at": 0.44,
+              "frame": "bottom"
+            },
+            {
+              "at": 0.5,
+              "frame": "bottom",
+              "opacity": 0.0
+            }
+          ]
+        },
+        {
+          "slot": "second",
+          "keys": [
+            {
+              "at": 0.5,
+              "frame": "right",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.63,
+              "frame": "full"
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        }
+      ]
+    },
+    "arun-membership": {
+      "capability": "method:F-M08",
+      "action": "先把条件钉在画面上，各家的实测结果在同一位置依次替换，最后按使用者给建议。",
+      "slots": {
+        "condition": {
+          "kind": "text",
+          "purpose": "大家相同的题目或条件"
+        },
+        "a": {
+          "kind": "visual",
+          "purpose": "第一家的实测"
+        },
+        "b": {
+          "kind": "visual",
+          "purpose": "第二家的实测"
+        },
+        "c": {
+          "kind": "visual",
+          "purpose": "第三家的实测"
+        }
+      },
+      "layers": [
+        {
+          "slot": "a",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "paper"
+            },
+            {
+              "at": 0.32,
+              "frame": "paper"
+            }
+          ]
+        },
+        {
+          "slot": "b",
+          "keys": [
+            {
+              "at": 0.32,
+              "frame": "paper"
+            },
+            {
+              "at": 0.62,
+              "frame": "paper"
+            }
+          ]
+        },
+        {
+          "slot": "c",
+          "keys": [
+            {
+              "at": 0.62,
+              "frame": "paper"
+            },
+            {
+              "at": 1.0,
+              "frame": "paper"
+            }
+          ]
+        },
+        {
+          "slot": "condition",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "top"
+            },
+            {
+              "at": 1.0,
+              "frame": "top"
+            }
+          ]
+        }
+      ]
+    },
+    "workflow": {
+      "capability": "method:Q-W02",
+      "action": "多种输入沿不同路径落到同一制作工具，下一镜仍能看见刚送进去的材料。",
+      "slots": {
+        "first": {
+          "kind": "visual",
+          "purpose": "第一个输入"
+        },
+        "second": {
+          "kind": "visual",
+          "purpose": "第二个输入"
+        },
+        "tool": {
+          "kind": "moving",
+          "purpose": "接收这些材料的真实制作操作"
+        },
+        "track": {
+          "kind": "visual",
+          "purpose": "时间线里的对应结果"
+        }
+      },
+      "layers": [
+        {
+          "slot": "tool",
+          "keys": [
+            {
+              "at": 0.24,
+              "frame": "full",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.43,
+              "frame": "full"
+            },
+            {
+              "at": 0.84,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "first",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "left"
+            },
+            {
+              "at": 0.22,
+              "frame": "left"
+            },
+            {
+              "at": 0.43,
+              "frame": "chip",
+              "opacity": 0.0
+            }
+          ]
+        },
+        {
+          "slot": "second",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "right"
+            },
+            {
+              "at": 0.23,
+              "frame": "right"
+            },
+            {
+              "at": 0.44,
+              "frame": "chip",
+              "opacity": 0.0
+            }
+          ]
+        },
+        {
+          "slot": "track",
+          "keys": [
+            {
+              "at": 0.71,
+              "frame": "bottom",
+              "wipe": 0.0
+            },
+            {
+              "at": 0.84,
+              "frame": "bottom",
+              "wipe": 1.0
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        }
+      ]
+    },
+    "creative": {
+      "capability": "method:Q-A05",
+      "action": "先确认本期角色或草图，把已确认的资产挂入该次生成，再展示产物。",
+      "slots": {
+        "brief": {
+          "kind": "text",
+          "purpose": "本期创作约束"
+        },
+        "draft": {
+          "kind": "visual",
+          "purpose": "确认过的角色或草图"
+        },
+        "process": {
+          "kind": "moving",
+          "purpose": "这项素材进入制作工具的连续操作"
+        },
+        "result": {
+          "kind": "visual",
+          "purpose": "同一次操作得到的真实产物"
+        }
+      },
+      "layers": [
+        {
+          "slot": "draft",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "paper"
+            },
+            {
+              "at": 0.31,
+              "frame": "paper"
+            },
+            {
+              "at": 0.48,
+              "frame": "thumb"
+            },
+            {
+              "at": 0.69,
+              "frame": "thumb"
+            }
+          ]
+        },
+        {
+          "slot": "brief",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "top"
+            },
+            {
+              "at": 0.3,
+              "frame": "top"
+            }
+          ]
+        },
+        {
+          "slot": "process",
+          "keys": [
+            {
+              "at": 0.3,
+              "frame": "full",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.43,
+              "frame": "full"
+            },
+            {
+              "at": 0.7,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "result",
+          "keys": [
+            {
+              "at": 0.66,
+              "frame": "full",
+              "iris": 0.0
+            },
+            {
+              "at": 0.8,
+              "frame": "full",
+              "iris": 1.0
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        }
+      ]
+    },
+    "network": {
+      "capability": "method:Q-N03",
+      "action": "让旧环境中具体失去的东西先出现，再切到新环境的恢复入口和找回的同一件东西。",
+      "slots": {
+        "old": {
+          "kind": "visual",
+          "purpose": "旧环境中的对象"
+        },
+        "missing": {
+          "kind": "visual",
+          "purpose": "实际丢失状态"
+        },
+        "restore": {
+          "kind": "moving",
+          "purpose": "新环境找回同一对象的操作"
+        }
+      },
+      "layers": [
+        {
+          "slot": "old",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.27,
+              "frame": "left"
+            },
+            {
+              "at": 0.85,
+              "frame": "left"
+            },
+            {
+              "at": 1.0,
+              "frame": "thumb"
+            }
+          ]
+        },
+        {
+          "slot": "missing",
+          "keys": [
+            {
+              "at": 0.19,
+              "frame": "right",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.33,
+              "frame": "right"
+            },
+            {
+              "at": 0.53,
+              "frame": "right"
+            }
+          ]
+        },
+        {
+          "slot": "restore",
+          "keys": [
+            {
+              "at": 0.51,
+              "frame": "right",
+              "wipe": 0.0
+            },
+            {
+              "at": 0.64,
+              "frame": "right",
+              "wipe": 1.0
+            },
+            {
+              "at": 0.88,
+              "frame": "right"
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        }
+      ]
+    },
+    "claude": {
+      "capability": "method:Q-C04",
+      "action": "保持同一文件同一行，展示改坏后的结果，执行回退，再让观众看到恢复的内容。",
+      "slots": {
+        "before": {
+          "kind": "visual",
+          "purpose": "同一行改动前状态"
+        },
+        "broken": {
+          "kind": "visual",
+          "purpose": "同一行错误状态"
+        },
+        "undo": {
+          "kind": "moving",
+          "purpose": "执行回退的实际动作"
+        },
+        "restored": {
+          "kind": "visual",
+          "purpose": "恢复后的同一行"
+        }
+      },
+      "layers": [
+        {
+          "slot": "before",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full",
+              "zoom": 1.15
+            },
+            {
+              "at": 0.23,
+              "frame": "full",
+              "zoom": 1.15
+            }
+          ]
+        },
+        {
+          "slot": "broken",
+          "keys": [
+            {
+              "at": 0.23,
+              "frame": "full",
+              "zoom": 1.15
+            },
+            {
+              "at": 0.48,
+              "frame": "full",
+              "zoom": 1.15
+            }
+          ]
+        },
+        {
+          "slot": "undo",
+          "keys": [
+            {
+              "at": 0.48,
+              "frame": "full",
+              "zoom": 1.15
+            },
+            {
+              "at": 0.72,
+              "frame": "full",
+              "zoom": 1.15
+            }
+          ]
+        },
+        {
+          "slot": "restored",
+          "keys": [
+            {
+              "at": 0.72,
+              "frame": "full",
+              "zoom": 1.15
+            },
+            {
+              "at": 0.9,
+              "frame": "full",
+              "zoom": 1.15
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        }
+      ]
+    },
+    "local-video-5c2f8b41": {
+      "capability": "capability:R05",
+      "action": "沿用画面中已有的形状，扩成遮罩揭开下一场，上一句的动作触发转场。",
+      "slots": {
+        "prior": {
+          "kind": "visual",
+          "purpose": "本句的形状或物件"
+        },
+        "next": {
+          "kind": "moving",
+          "purpose": "从物件中揭开的下一个操作"
+        }
+      },
+      "layers": [
+        {
+          "slot": "prior",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.48,
+              "frame": "full",
+              "zoom": 1.12
+            },
+            {
+              "at": 0.76,
+              "frame": "full",
+              "zoom": 1.12
+            }
+          ]
+        },
+        {
+          "slot": "next",
+          "keys": [
+            {
+              "at": 0.41,
+              "frame": "full",
+              "iris": 0.0
+            },
+            {
+              "at": 0.7,
+              "frame": "full",
+              "iris": 1.0
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        }
+      ]
+    },
+    "girl-aigc-approved": {
+      "capability": "sample:user-ui/girl-agent-sample-20261015",
+      "action": "角色手里的对象停在明确位置，借遮挡或收拢接进 UI，同一件资料继续被处理。",
+      "slots": {
+        "action": {
+          "kind": "moving",
+          "purpose": "本期角色手持明确物件的连续动作"
+        },
+        "ui": {
+          "kind": "moving",
+          "purpose": "同一件物品在界面里继续被处理"
+        }
+      },
+      "layers": [
+        {
+          "slot": "action",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.53,
+              "frame": "full"
+            },
+            {
+              "at": 0.74,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "ui",
+          "keys": [
+            {
+              "at": 0.49,
+              "frame": "full",
+              "iris": 0.0
+            },
+            {
+              "at": 0.71,
+              "frame": "full",
+              "iris": 1.0
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        }
+      ]
+    },
+    "girl-manual": {
+      "capability": "method:Q-A02",
+      "action": "同一份资料被人反复拿起、搬到另一工具、放下，让重复劳动发生在画面里。",
+      "slots": {
+        "lift": {
+          "kind": "moving",
+          "purpose": "本期拿起资料"
+        },
+        "carry": {
+          "kind": "moving",
+          "purpose": "资料从一个工具搬向另一个工具"
+        },
+        "place": {
+          "kind": "moving",
+          "purpose": "放到目的位置的结果"
+        }
+      },
+      "layers": [
+        {
+          "slot": "lift",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.26,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "carry",
+          "keys": [
+            {
+              "at": 0.26,
+              "frame": "full"
+            },
+            {
+              "at": 0.68,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "place",
+          "keys": [
+            {
+              "at": 0.68,
+              "frame": "full"
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        }
+      ]
+    },
+    "girl-takeover": {
+      "capability": "method:Q-A02",
+      "action": "先停住人的重复动作，再让接手者拿起同一任务并开始工作。",
+      "slots": {
+        "human": {
+          "kind": "moving",
+          "purpose": "人的重复动作与停手"
+        },
+        "agent": {
+          "kind": "moving",
+          "purpose": "助手从同一任务上接手"
+        },
+        "work": {
+          "kind": "visual",
+          "purpose": "接手后的第一项结果"
+        }
+      },
+      "layers": [
+        {
+          "slot": "human",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.39,
+              "frame": "full"
+            },
+            {
+              "at": 0.5,
+              "frame": "left"
+            }
+          ]
+        },
+        {
+          "slot": "agent",
+          "keys": [
+            {
+              "at": 0.34,
+              "frame": "right",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.47,
+              "frame": "right"
+            },
+            {
+              "at": 0.64,
+              "frame": "full"
+            },
+            {
+              "at": 0.8,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "work",
+          "keys": [
+            {
+              "at": 0.76,
+              "frame": "paper",
+              "wipe": 0.0
+            },
+            {
+              "at": 0.89,
+              "frame": "paper",
+              "wipe": 1.0
+            },
+            {
+              "at": 1.0,
+              "frame": "paper"
+            }
+          ]
+        }
+      ]
+    },
+    "girl-handoff": {
+      "capability": "recipe:S08",
+      "action": "上一位递出具体资料，下一位接住后立即用它做下一步。",
+      "slots": {
+        "pass": {
+          "kind": "moving",
+          "purpose": "上一位将资料递出"
+        },
+        "receive": {
+          "kind": "moving",
+          "purpose": "下一位接住同一对象"
+        },
+        "used": {
+          "kind": "moving",
+          "purpose": "接收者立即使用该对象"
+        }
+      },
+      "layers": [
+        {
+          "slot": "pass",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.36,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "receive",
+          "keys": [
+            {
+              "at": 0.34,
+              "frame": "full",
+              "wipe": 0.0
+            },
+            {
+              "at": 0.42,
+              "frame": "full",
+              "wipe": 1.0
+            },
+            {
+              "at": 0.68,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "used",
+          "keys": [
+            {
+              "at": 0.68,
+              "frame": "full"
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        }
+      ]
+    },
+    "photographic-transfer": {
+      "capability": "native:compare-change",
+      "action": "追着同一份资料从手里到界面，一次交接后在两处显示更新结果。",
+      "slots": {
+        "hand": {
+          "kind": "moving",
+          "purpose": "实物在手里的接触点"
+        },
+        "screen": {
+          "kind": "moving",
+          "purpose": "实物对应到界面的动作"
+        },
+        "changed": {
+          "kind": "visual",
+          "purpose": "更新后另一处的真实反馈"
+        }
+      },
+      "layers": [
+        {
+          "slot": "hand",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.42,
+              "frame": "full",
+              "zoom": 1.28
+            },
+            {
+              "at": 0.57,
+              "frame": "left"
+            }
+          ]
+        },
+        {
+          "slot": "screen",
+          "keys": [
+            {
+              "at": 0.39,
+              "frame": "right",
+              "wipe": 0.0
+            },
+            {
+              "at": 0.52,
+              "frame": "right",
+              "wipe": 1.0
+            },
+            {
+              "at": 0.73,
+              "frame": "full"
+            },
+            {
+              "at": 0.88,
+              "frame": "left"
+            }
+          ]
+        },
+        {
+          "slot": "changed",
+          "keys": [
+            {
+              "at": 0.77,
+              "frame": "right",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.9,
+              "frame": "right"
+            },
+            {
+              "at": 1.0,
+              "frame": "right"
+            }
+          ]
+        }
+      ]
+    },
+    "adiao-anime-semantic": {
+      "capability": "recipe:S09",
+      "action": "让完整想法向输入框传递，途中细节消失，最后留下不足以还原原意的几个词。",
+      "slots": {
+        "idea": {
+          "kind": "visual",
+          "purpose": "完整的原想法"
+        },
+        "detail": {
+          "kind": "visual",
+          "purpose": "即将丢失的细节"
+        },
+        "words": {
+          "kind": "text",
+          "purpose": "真正留在输入框的零散词"
+        }
+      },
+      "layers": [
+        {
+          "slot": "idea",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.32,
+              "frame": "full"
+            },
+            {
+              "at": 0.62,
+              "frame": "left",
+              "opacity": 0.45
+            },
+            {
+              "at": 0.8,
+              "frame": "thumb",
+              "opacity": 0.0
+            }
+          ]
+        },
+        {
+          "slot": "detail",
+          "keys": [
+            {
+              "at": 0.14,
+              "frame": "right"
+            },
+            {
+              "at": 0.37,
+              "frame": "right"
+            },
+            {
+              "at": 0.63,
+              "frame": "chip",
+              "opacity": 0.0
+            }
+          ]
+        },
+        {
+          "slot": "words",
+          "keys": [
+            {
+              "at": 0.48,
+              "frame": "bottom",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.68,
+              "frame": "paper"
+            },
+            {
+              "at": 1.0,
+              "frame": "paper"
+            }
+          ]
+        }
+      ]
+    },
+    "interview-i": {
+      "capability": "native:material-focus",
+      "action": "先亮出真正完成的东西，接讲述者，再回到这个成果所属的页面。",
+      "slots": {
+        "outcome": {
+          "kind": "visual",
+          "purpose": "本期首先要亮出的成果"
+        },
+        "speaker": {
+          "kind": "moving",
+          "purpose": "本期讲述者保持原构图"
+        },
+        "page": {
+          "kind": "visual",
+          "purpose": "该成果实际所属页面"
+        }
+      },
+      "layers": [
+        {
+          "slot": "outcome",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.27,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "speaker",
+          "keys": [
+            {
+              "at": 0.27,
+              "frame": "full"
+            },
+            {
+              "at": 0.64,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "page",
+          "keys": [
+            {
+              "at": 0.63,
+              "frame": "full",
+              "wipe": 0.0
+            },
+            {
+              "at": 0.76,
+              "frame": "full",
+              "wipe": 1.0
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        }
+      ]
+    },
+    "interview-j": {
+      "capability": "capability:F08",
+      "action": "先让观众看到可玩的实际结果，抓住一次明确操作，再交回人物解释它怎么做成。",
+      "slots": {
+        "play": {
+          "kind": "moving",
+          "purpose": "正在玩的实际游戏或可操作成品，含一次明确操作"
+        },
+        "speaker": {
+          "kind": "moving",
+          "purpose": "解释该操作的本期人物"
+        }
+      },
+      "layers": [
+        {
+          "slot": "play",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.34,
+              "frame": "full"
+            },
+            {
+              "at": 0.49,
+              "frame": "full",
+              "zoom": 1.25
+            },
+            {
+              "at": 0.64,
+              "frame": "thumb"
+            }
+          ]
+        },
+        {
+          "slot": "speaker",
+          "keys": [
+            {
+              "at": 0.61,
+              "frame": "full"
+            },
+            {
+              "at": 0.99,
+              "frame": "full"
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "play",
+          "keys": [
+            {
+              "at": 0.66,
+              "frame": "thumb"
+            },
+            {
+              "at": 0.88,
+              "frame": "thumb"
+            },
+            {
+              "at": 0.98,
+              "frame": "thumb",
+              "opacity": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    "interview-k": {
+      "capability": "capability:F03",
+      "action": "按讲述顺序让一件看得懂的实物交到另一方，再把这个关系对应回技术对象。",
+      "slots": {
+        "giver": {
+          "kind": "moving",
+          "purpose": "实物被交出的动作"
+        },
+        "receiver": {
+          "kind": "moving",
+          "purpose": "接收方拿到同一实物"
+        },
+        "object": {
+          "kind": "visual",
+          "purpose": "与实物关系对应的技术对象"
+        }
+      },
+      "layers": [
+        {
+          "slot": "giver",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.32,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "receiver",
+          "keys": [
+            {
+              "at": 0.32,
+              "frame": "full"
+            },
+            {
+              "at": 0.62,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "object",
+          "keys": [
+            {
+              "at": 0.56,
+              "frame": "chip",
+              "iris": 0.0
+            },
+            {
+              "at": 0.72,
+              "frame": "paper",
+              "iris": 1.0
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        }
+      ]
+    },
+    "interview-l": {
+      "capability": "sample:fangmu/body-car-v2",
+      "action": "同一辆车拆成零件，推进其中一件，零件展开成窗口，再从细节回到计量单位。",
+      "slots": {
+        "whole": {
+          "kind": "visual",
+          "purpose": "完整的可拆对象"
+        },
+        "part": {
+          "kind": "visual",
+          "purpose": "从中选出的一件零件"
+        },
+        "detail": {
+          "kind": "visual",
+          "purpose": "该零件的细节或窗口"
+        },
+        "unit": {
+          "kind": "text",
+          "purpose": "用本期数据写出对应计量单位"
+        }
+      },
+      "layers": [
+        {
+          "slot": "whole",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.23,
+              "frame": "left"
+            },
+            {
+              "at": 0.53,
+              "frame": "left"
+            }
+          ]
+        },
+        {
+          "slot": "part",
+          "keys": [
+            {
+              "at": 0.14,
+              "frame": "right",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.27,
+              "frame": "right"
+            },
+            {
+              "at": 0.49,
+              "frame": "paper"
+            },
+            {
+              "at": 0.62,
+              "frame": "thumb"
+            }
+          ]
+        },
+        {
+          "slot": "detail",
+          "keys": [
+            {
+              "at": 0.51,
+              "frame": "paper",
+              "wipe": 0.0
+            },
+            {
+              "at": 0.63,
+              "frame": "paper",
+              "wipe": 1.0
+            },
+            {
+              "at": 0.83,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "unit",
+          "keys": [
+            {
+              "at": 0.77,
+              "frame": "chip",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.89,
+              "frame": "paper"
+            },
+            {
+              "at": 1.0,
+              "frame": "paper"
+            }
+          ]
+        }
+      ]
+    },
+    "interview-m": {
+      "capability": "reference:notdwd-7de38a",
+      "action": "用识别度高的图标建立产品身份，再接实际功能页面。",
+      "slots": {
+        "identity": {
+          "kind": "visual",
+          "purpose": "本期可辨认的产品图标"
+        },
+        "screen": {
+          "kind": "moving",
+          "purpose": "产品里与它相连的实际功能操作"
+        },
+        "result": {
+          "kind": "visual",
+          "purpose": "操作之后的状态"
+        }
+      },
+      "layers": [
+        {
+          "slot": "screen",
+          "keys": [
+            {
+              "at": 0.22,
+              "frame": "full",
+              "iris": 0.0
+            },
+            {
+              "at": 0.41,
+              "frame": "full",
+              "iris": 1.0
+            },
+            {
+              "at": 0.82,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "identity",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "center"
+            },
+            {
+              "at": 0.2,
+              "frame": "center"
+            },
+            {
+              "at": 0.39,
+              "frame": "thumb"
+            },
+            {
+              "at": 0.63,
+              "frame": "thumb",
+              "opacity": 0.0
+            }
+          ]
+        },
+        {
+          "slot": "result",
+          "keys": [
+            {
+              "at": 0.73,
+              "frame": "full",
+              "wipe": 0.0
+            },
+            {
+              "at": 0.87,
+              "frame": "full",
+              "wipe": 1.0
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        }
+      ]
+    },
+    "interview-n": {
+      "capability": "reference:brainextends-e19ac3",
+      "action": "让封面成为视觉主角，再把同一作品交给播放器继续展示。",
+      "slots": {
+        "cover": {
+          "kind": "visual",
+          "purpose": "同一作品的封面"
+        },
+        "player": {
+          "kind": "moving",
+          "purpose": "播放器中同一作品的实际界面"
+        }
+      },
+      "layers": [
+        {
+          "slot": "player",
+          "keys": [
+            {
+              "at": 0.3,
+              "frame": "full",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.49,
+              "frame": "full"
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "cover",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.22,
+              "frame": "center"
+            },
+            {
+              "at": 0.49,
+              "frame": "thumb"
+            },
+            {
+              "at": 0.77,
+              "frame": "thumb"
+            },
+            {
+              "at": 0.91,
+              "frame": "thumb",
+              "opacity": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    "interview-o": {
+      "capability": "reference:aschapmann-131210",
+      "action": "把多个信息面放在有前后的空间里，镜头只推进到当前要讲的一项。",
+      "slots": {
+        "back": {
+          "kind": "visual",
+          "purpose": "远层上下文信息"
+        },
+        "middle": {
+          "kind": "visual",
+          "purpose": "中层证据"
+        },
+        "front": {
+          "kind": "visual",
+          "purpose": "当前讲到的重点信息面"
+        }
+      },
+      "layers": [
+        {
+          "slot": "back",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "paper"
+            },
+            {
+              "at": 0.28,
+              "frame": "left"
+            },
+            {
+              "at": 0.78,
+              "frame": "upperLeft",
+              "opacity": 0.68
+            },
+            {
+              "at": 1.0,
+              "frame": "upperLeft",
+              "opacity": 0.68
+            }
+          ]
+        },
+        {
+          "slot": "middle",
+          "keys": [
+            {
+              "at": 0.09,
+              "frame": "right",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.25,
+              "frame": "right"
+            },
+            {
+              "at": 0.6,
+              "frame": "upperRight"
+            },
+            {
+              "at": 0.95,
+              "frame": "upperRight"
+            }
+          ]
+        },
+        {
+          "slot": "front",
+          "keys": [
+            {
+              "at": 0.28,
+              "frame": "bottom",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.47,
+              "frame": "lower"
+            },
+            {
+              "at": 0.69,
+              "frame": "paper"
+            },
+            {
+              "at": 0.86,
+              "frame": "full",
+              "zoom": 1.12
+            },
+            {
+              "at": 1.0,
+              "frame": "full",
+              "zoom": 1.12
+            }
+          ]
+        }
+      ]
+    },
+    "base-doubao": {
+      "capability": "capability:O04",
+      "action": "四份材料保持可辨，收拢成一项任务，完成后的结果脱离旧容器进入协作。",
+      "slots": {
+        "a": {
+          "kind": "visual",
+          "purpose": "第一份资料"
+        },
+        "b": {
+          "kind": "visual",
+          "purpose": "第二份资料"
+        },
+        "c": {
+          "kind": "visual",
+          "purpose": "第三份资料"
+        },
+        "d": {
+          "kind": "visual",
+          "purpose": "第四份资料"
+        },
+        "task": {
+          "kind": "visual",
+          "purpose": "汇合后的实际任务"
+        },
+        "handoff": {
+          "kind": "visual",
+          "purpose": "接收者看到的交付"
+        }
+      },
+      "layers": [
+        {
+          "slot": "a",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "upperLeft"
+            },
+            {
+              "at": 0.23,
+              "frame": "upperLeft"
+            },
+            {
+              "at": 0.44,
+              "frame": "center",
+              "opacity": 0.0
+            }
+          ]
+        },
+        {
+          "slot": "b",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "upperRight"
+            },
+            {
+              "at": 0.25,
+              "frame": "upperRight"
+            },
+            {
+              "at": 0.45,
+              "frame": "center",
+              "opacity": 0.0
+            }
+          ]
+        },
+        {
+          "slot": "c",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "lowerLeft"
+            },
+            {
+              "at": 0.22,
+              "frame": "lowerLeft"
+            },
+            {
+              "at": 0.43,
+              "frame": "center",
+              "opacity": 0.0
+            }
+          ]
+        },
+        {
+          "slot": "d",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "lowerRight"
+            },
+            {
+              "at": 0.24,
+              "frame": "lowerRight"
+            },
+            {
+              "at": 0.44,
+              "frame": "center",
+              "opacity": 0.0
+            }
+          ]
+        },
+        {
+          "slot": "task",
+          "keys": [
+            {
+              "at": 0.35,
+              "frame": "center",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.48,
+              "frame": "paper"
+            },
+            {
+              "at": 0.73,
+              "frame": "paper"
+            },
+            {
+              "at": 0.88,
+              "frame": "thumb"
+            }
+          ]
+        },
+        {
+          "slot": "handoff",
+          "keys": [
+            {
+              "at": 0.71,
+              "frame": "full",
+              "wipe": 0.0
+            },
+            {
+              "at": 0.89,
+              "frame": "full",
+              "wipe": 1.0
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        }
+      ]
+    },
+    "base-codex": {
+      "capability": "capability:O21",
+      "action": "逐字输入查询，在原文中点亮命中的行，保留这份文档并让新窗口接走它。",
+      "slots": {
+        "query": {
+          "kind": "text",
+          "purpose": "本期的实际检索词"
+        },
+        "doc": {
+          "kind": "visual",
+          "purpose": "命中原文并提供真实 focus 坐标"
+        },
+        "window": {
+          "kind": "visual",
+          "purpose": "接收这份文档的新会话"
+        }
+      },
+      "layers": [
+        {
+          "slot": "doc",
+          "keys": [
+            {
+              "at": 0.14,
+              "frame": "full",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.27,
+              "frame": "full"
+            },
+            {
+              "at": 0.48,
+              "frame": "full",
+              "zoom": 1.56
+            },
+            {
+              "at": 0.69,
+              "frame": "full",
+              "zoom": 1.56
+            },
+            {
+              "at": 0.87,
+              "frame": "thumb"
+            }
+          ]
+        },
+        {
+          "slot": "query",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "paper"
+            },
+            {
+              "at": 0.15,
+              "frame": "top"
+            },
+            {
+              "at": 0.35,
+              "frame": "top",
+              "opacity": 0.0
+            }
+          ]
+        },
+        {
+          "slot": "window",
+          "keys": [
+            {
+              "at": 0.72,
+              "frame": "full",
+              "wipe": 0.0
+            },
+            {
+              "at": 0.88,
+              "frame": "full",
+              "wipe": 1.0
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "doc",
+          "keys": [
+            {
+              "at": 0.88,
+              "frame": "thumb"
+            },
+            {
+              "at": 1.0,
+              "frame": "thumb"
+            }
+          ]
+        }
+      ]
+    },
+    "base-token": {
+      "capability": "capability:O25",
+      "action": "让已完成的步骤逐项退后，保持当前项可读，最后把关键信息提出来。",
+      "slots": {
+        "done": {
+          "kind": "visual",
+          "purpose": "已完成的步骤"
+        },
+        "active": {
+          "kind": "visual",
+          "purpose": "当前待做步骤"
+        },
+        "key": {
+          "kind": "text",
+          "purpose": "从本期素材提取出的关键词"
+        }
+      },
+      "layers": [
+        {
+          "slot": "done",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "paper"
+            },
+            {
+              "at": 0.25,
+              "frame": "left"
+            },
+            {
+              "at": 0.53,
+              "frame": "upperLeft",
+              "opacity": 0.35
+            },
+            {
+              "at": 0.78,
+              "frame": "upperLeft",
+              "opacity": 0.18
+            }
+          ]
+        },
+        {
+          "slot": "active",
+          "keys": [
+            {
+              "at": 0.19,
+              "frame": "right",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.36,
+              "frame": "right"
+            },
+            {
+              "at": 0.63,
+              "frame": "paper"
+            },
+            {
+              "at": 0.78,
+              "frame": "paper"
+            }
+          ]
+        },
+        {
+          "slot": "key",
+          "keys": [
+            {
+              "at": 0.66,
+              "frame": "chip",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.82,
+              "frame": "paper"
+            },
+            {
+              "at": 1.0,
+              "frame": "paper"
+            }
+          ]
+        }
+      ]
+    },
+    "editorial-b8a8d304": {
+      "capability": "method:F-M03",
+      "action": "从整张海报或网页取出清晰局部，保持原排版可辨，再拉回它在整组材料的位置。",
+      "slots": {
+        "group": {
+          "kind": "visual",
+          "purpose": "整组海报或网页"
+        },
+        "poster": {
+          "kind": "visual",
+          "purpose": "组内一张清晰的材料，请标出 focus"
+        }
+      },
+      "layers": [
+        {
+          "slot": "group",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.27,
+              "frame": "full"
+            },
+            {
+              "at": 0.43,
+              "frame": "left"
+            },
+            {
+              "at": 0.82,
+              "frame": "left"
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "poster",
+          "keys": [
+            {
+              "at": 0.22,
+              "frame": "center",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.4,
+              "frame": "paper"
+            },
+            {
+              "at": 0.61,
+              "frame": "full",
+              "zoom": 1.6
+            },
+            {
+              "at": 0.77,
+              "frame": "full",
+              "zoom": 1.6
+            },
+            {
+              "at": 0.9,
+              "frame": "center"
+            },
+            {
+              "at": 1.0,
+              "frame": "center",
+              "opacity": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    "sample:A01": {
+      "capability": "sample:A01",
+      "action": "多张材料归并为任务，完成后把成果展开，交给协作者。",
+      "slots": {
+        "a": {
+          "kind": "visual",
+          "purpose": "第一张材料"
+        },
+        "b": {
+          "kind": "visual",
+          "purpose": "第二张材料"
+        },
+        "task": {
+          "kind": "visual",
+          "purpose": "材料形成的任务"
+        },
+        "share": {
+          "kind": "visual",
+          "purpose": "给协作者的交付状态"
+        }
+      },
+      "layers": [
+        {
+          "slot": "a",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "left"
+            },
+            {
+              "at": 0.2,
+              "frame": "left"
+            },
+            {
+              "at": 0.4,
+              "frame": "chip",
+              "opacity": 0.0
+            }
+          ]
+        },
+        {
+          "slot": "b",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "right"
+            },
+            {
+              "at": 0.24,
+              "frame": "right"
+            },
+            {
+              "at": 0.42,
+              "frame": "chip",
+              "opacity": 0.0
+            }
+          ]
+        },
+        {
+          "slot": "task",
+          "keys": [
+            {
+              "at": 0.3,
+              "frame": "chip",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.46,
+              "frame": "paper"
+            },
+            {
+              "at": 0.67,
+              "frame": "paper"
+            },
+            {
+              "at": 0.82,
+              "frame": "left"
+            }
+          ]
+        },
+        {
+          "slot": "share",
+          "keys": [
+            {
+              "at": 0.62,
+              "frame": "right",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.78,
+              "frame": "right"
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        }
+      ]
+    },
+    "sample:fangmu/opening-v5": {
+      "capability": "sample:fangmu/opening-v5",
+      "action": "在原拍摄背景上沿动作留白加入少量语义物件，人物和手势保持完整。",
+      "slots": {
+        "presenter": {
+          "kind": "moving",
+          "purpose": "本期完整原拍摄背景与人物"
+        },
+        "object": {
+          "kind": "visual",
+          "purpose": "与开头原句相符的物件，用 placement 填实测空白区"
+        }
+      },
+      "layers": [
+        {
+          "slot": "presenter",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "object",
+          "keys": [
+            {
+              "at": 0.19,
+              "frame": "safe",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.34,
+              "frame": "safe"
+            },
+            {
+              "at": 0.75,
+              "frame": "safe"
+            },
+            {
+              "at": 0.9,
+              "frame": "safe",
+              "opacity": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    "sample:fangmu/material-captions-v3": {
+      "capability": "sample:fangmu/material-captions-v3",
+      "action": "在真实物件旁标出本句提到的属性，再回到完整物件。",
+      "slots": {
+        "object": {
+          "kind": "moving",
+          "purpose": "真实物件保持其原构图和运动"
+        },
+        "attribute": {
+          "kind": "text",
+          "purpose": "物件在本句中的具体属性，placement 填物件旁空白"
+        }
+      },
+      "layers": [
+        {
+          "slot": "object",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.29,
+              "frame": "full"
+            },
+            {
+              "at": 0.45,
+              "frame": "full",
+              "zoom": 1.2
+            },
+            {
+              "at": 0.75,
+              "frame": "full",
+              "zoom": 1.2
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "attribute",
+          "keys": [
+            {
+              "at": 0.3,
+              "frame": "safe",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.41,
+              "frame": "safe"
+            },
+            {
+              "at": 0.74,
+              "frame": "safe"
+            },
+            {
+              "at": 0.86,
+              "frame": "safe",
+              "opacity": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    "sample:fangmu/full-v3": {
+      "capability": "sample:fangmu/full-v3",
+      "action": "串起人物开头、拆件解释和后段实例，检查从局部返回整片后是否仍能跟上。",
+      "slots": {
+        "presenter": {
+          "kind": "moving",
+          "purpose": "本期人物"
+        },
+        "whole": {
+          "kind": "visual",
+          "purpose": "中段解释的完整对象"
+        },
+        "part": {
+          "kind": "visual",
+          "purpose": "这个对象的局部"
+        },
+        "example": {
+          "kind": "moving",
+          "purpose": "后段的真实实例"
+        }
+      },
+      "layers": [
+        {
+          "slot": "presenter",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.21,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "whole",
+          "keys": [
+            {
+              "at": 0.21,
+              "frame": "full"
+            },
+            {
+              "at": 0.37,
+              "frame": "full"
+            },
+            {
+              "at": 0.52,
+              "frame": "left"
+            }
+          ]
+        },
+        {
+          "slot": "part",
+          "keys": [
+            {
+              "at": 0.34,
+              "frame": "right",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.49,
+              "frame": "right"
+            },
+            {
+              "at": 0.63,
+              "frame": "paper"
+            }
+          ]
+        },
+        {
+          "slot": "example",
+          "keys": [
+            {
+              "at": 0.6,
+              "frame": "full",
+              "iris": 0.0
+            },
+            {
+              "at": 0.73,
+              "frame": "full",
+              "iris": 1.0
+            },
+            {
+              "at": 0.91,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "whole",
+          "keys": [
+            {
+              "at": 0.89,
+              "frame": "thumb"
+            },
+            {
+              "at": 1.0,
+              "frame": "thumb"
+            }
+          ]
+        }
+      ]
+    },
+    "sample:adiao/unemployment-v3-opening": {
+      "capability": "sample:adiao/unemployment-v3-opening",
+      "action": "让小浮层避开脸、手和前臂，再由同一件物品连接到正文。",
+      "slots": {
+        "presenter": {
+          "kind": "moving",
+          "purpose": "本期原亮背景、脸与手势"
+        },
+        "note": {
+          "kind": "text",
+          "purpose": "局部浮层文案，placement 采用实测空白"
+        },
+        "item": {
+          "kind": "visual",
+          "purpose": "交给正文的同一实物"
+        }
+      },
+      "layers": [
+        {
+          "slot": "presenter",
+          "keys": [
+            {
+              "at": 0.0,
+              "frame": "full"
+            },
+            {
+              "at": 0.75,
+              "frame": "full"
+            }
+          ]
+        },
+        {
+          "slot": "note",
+          "keys": [
+            {
+              "at": 0.13,
+              "frame": "safe",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.24,
+              "frame": "safe"
+            },
+            {
+              "at": 0.48,
+              "frame": "safe"
+            },
+            {
+              "at": 0.58,
+              "frame": "safe",
+              "opacity": 0.0
+            }
+          ]
+        },
+        {
+          "slot": "item",
+          "keys": [
+            {
+              "at": 0.5,
+              "frame": "thumb",
+              "opacity": 0.0
+            },
+            {
+              "at": 0.65,
+              "frame": "thumb"
+            },
+            {
+              "at": 0.82,
+              "frame": "paper"
+            },
+            {
+              "at": 1.0,
+              "frame": "full"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

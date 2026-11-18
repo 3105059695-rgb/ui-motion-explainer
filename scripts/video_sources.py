@@ -301,4 +301,17 @@ def check(catalog, capabilities):
                 errors.append('Unknown capability for ' + row['id'] + ': ' + use['capability'])
             if not all(use[k] for k in ('role', 'cues', 'action', 'bind')):
                 errors.append('Incomplete use: ' + row['id'])
-    return {**catalog.summary(), 'ok': not errors, 'errors': errors}
+    import reference_edits
+    try:
+        recipes, diagnostic = reference_edits.rules(catalog)
+        for key, recipe in recipes.items():
+            if not recipe['layers'] or set(recipe['slots']) != {l['slot'] for l in recipe['layers']}:
+                errors.append('Incomplete portable edit: '+key)
+        measured=read(catalog.root, reference_edits.MOTION)['sources']
+        if not atlas_ids <= set(measured) or set(measured) - set(recipes):
+            errors.append('Measured motion and registered source films differ.')
+        submitted={'executable':len(recipes), 'corrections':len(diagnostic),'continuously_measured':len(measured)}
+    except (KeyError, ValueError, OSError) as error:
+        errors.append(str(error))
+        submitted={}
+    return {**catalog.summary(), 'submitted_edits':submitted, 'ok': not errors, 'errors': errors}

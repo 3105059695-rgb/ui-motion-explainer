@@ -1,1 +1,1 @@
-使用 $ui-motion-fusion，先读取当前安装的 SKILL.md，运行 scripts/ui.py requirements --part 1 并按页末命令完整读到最后一页；然后查看当前认可 UI 的真实画面和动作，用 direct prepare 逐句查看各来源的适用剪法、证据和实际调用入口，结合本期材料选用并衔接，保留本期原稿、原声和人物，完成当前授权范围。只检查或整理 Skill 时不制作视频。
+使用 $ui-motion-fusion，先读取当前安装的 SKILL.md，运行 scripts/ui.py requirements --part 1 并按页末命令完整读到最后一页；然后查看当前认可 UI 的真实画面和动作，用 direct prepare 和 videos plan 给全部投稿参考逐条安排职责，绑定本期材料和原声帧窗，用 videos compose 和 videos render 执行并核对所有正向参考在成片的可见帧，保留本期原稿、原声和人物，完成当前授权范围。只检查或整理 Skill 时不制作视频。

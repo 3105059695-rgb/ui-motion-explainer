@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "name": "ui-motion-fusion",
-  "version": "2026.11.18.2",
+  "version": "2026.11.18.3",
   "resources": {
     "required_modules": [
       "source-study",
@@ -17,7 +17,7 @@
       "apple-kinetic-promo",
       "fredtalk-library"
     ],
-    "active_document_links": 349,
+    "active_document_links": 351,
     "fredtalk_active_public_sources_verified": 243,
     "historical_fred_visual_anchors": 3,
     "default_ui_direction": "approved-body-default-20261028",
@@ -62,13 +62,13 @@
     },
     {
       "path": "PROMPT.md",
-      "size": 444,
-      "sha256": "62f0cfcc5d89f20771a0e782f21ec418a8488ff5ce40775851a30c804343871a"
+      "size": 527,
+      "sha256": "f1cea521cff8dab9decbe85fa83650f0fb043655d4c3f64430e62a834bc78ac8"
     },
     {
       "path": "README.md",
-      "size": 8227,
-      "sha256": "b8fffe6c097f30fd2f3dd1bea8d5b45bdb712b026fb9c98b2397a100f0270c29"
+      "size": 8283,
+      "sha256": "d07e374d7b40f0b15aff85edb0144b20012eca687216e3e14b1ecaa6f2b263bb"
     },
     {
       "path": "SKILL.legacy.md",
@@ -77,23 +77,23 @@
     },
     {
       "path": "SKILL.md",
-      "size": 10099,
-      "sha256": "27a0ff5c564e86684507cbe44c315b49eec719468aa387285478d26457953d59"
+      "size": 11531,
+      "sha256": "f1c7f68bef45f6a1a85443a2221bb639c9c6d92ac6430eb0fae66f5d92f4024c"
     },
     {
       "path": "START-HERE.md",
-      "size": 572,
-      "sha256": "8d8f4e22b7bd6de4e0c7a8087338b15776c17cc856b621dcfd07d17f1da2c3fe"
+      "size": 837,
+      "sha256": "80209c86a281025d626ac117cdcdc0c337a2c64da1633bcd4531046d0c3c4a1d"
     },
     {
       "path": "VERSION",
       "size": 13,
-      "sha256": "6dd9d9e411e4dc1529be465b0d2b599715608d3abca75a08aa84f8cab6b8b1ef"
+      "sha256": "acef04afb2bf210f3b90c6f23fe6d3b0670a4d142f97f1315245c0ae4755d089"
     },
     {
       "path": "agents/openai.yaml",
-      "size": 515,
-      "sha256": "50e478e4266a42f70ca51b04485d9bf28a072ed20c1157b03ad226dcf46b5b53"
+      "size": 566,
+      "sha256": "97777b2d19068efc6878f507175aac21a9eb6758cf1d9bee8b30e8ce3f6bc76d"
     },
     {
       "path": "assets/adu-reference/all-visual-contact-sheet.jpg",
@@ -35286,6 +35286,21 @@
       "sha256": "49681f0c9b8b415eb1ccce7913f64774707b8e8843e9b1ab8fe9e8371cd55e80"
     },
     {
+      "path": "assets/reference-edits/index.html",
+      "size": 1335,
+      "sha256": "eb45db37dc3bd101a176aeede02171082fe16160fc1b5947d9a1142b08bde4fc"
+    },
+    {
+      "path": "assets/reference-edits/player.js",
+      "size": 10584,
+      "sha256": "a96b2ac68852149ab22b1af4d6f1785f254b5a4a023d7b55b553a8913c361c9c"
+    },
+    {
+      "path": "assets/reference-edits/recipes.json",
+      "size": 60097,
+      "sha256": "7915372b16498d0761ee1197d32f46c4a853de8e4162e987b0c23504bca4fd2d"
+    },
+    {
       "path": "assets/reference-films/arun-membership/README.md",
       "size": 3875,
       "sha256": "346464b0517cd7dce8c917a101eb22cdda795d362ed56bd20919a8a068737ef4"
@@ -35842,8 +35857,8 @@
     },
     {
       "path": "docs/install.md",
-      "size": 7944,
-      "sha256": "eba0ed3e89b22959c04d539b5b87d002b842765d7c7a74452a7d99aec27a374a"
+      "size": 8869,
+      "sha256": "bc90db5089f2e16adc275413d4e87eaedccc0d43bc10f3a5c6881ec3409c7f9a"
     },
     {
       "path": "docs/reference-library.md",
@@ -35907,8 +35922,8 @@
     },
     {
       "path": "index.html",
-      "size": 24566,
-      "sha256": "4838c7277110b60bb9b3a3353547c9a3af8a277d83c27ec9a70a28ff6d50c3e9"
+      "size": 24605,
+      "sha256": "09a54005cf612b31fd8b8e4acd8bd6517ed7c86ac2d851ea8d572e095fc04eda"
     },
     {
       "path": "install.py",
@@ -35917,8 +35932,8 @@
     },
     {
       "path": "references/aesthetic-preferences.md",
-      "size": 17568,
-      "sha256": "5062437bf438601917501f0c75c441cff7699fb839fb0a33d5d2b331217d694b"
+      "size": 18005,
+      "sha256": "9c213c0defa48111f6eba0a6a6ee2ff1f5d662858bdb53a9e787c1c4dbd31df2"
     },
     {
       "path": "references/aigc-assets.json",
@@ -36556,9 +36571,14 @@
       "sha256": "4074a67939d2d04b7088f933bc26a1ec06624b91a74c973e86bc6ffcaac01fa1"
     },
     {
+      "path": "references/video-motion.json",
+      "size": 111632,
+      "sha256": "a3f5ceec6cc1e3c50715dbe80031f925762308ab6f47447210e688077bff5ba8"
+    },
+    {
       "path": "references/video-use-guide.md",
-      "size": 5957,
-      "sha256": "16ae56d1842de1c744cd0673b659ac6045ebfb5cd2acf1a478df0fd65faee6f0"
+      "size": 8889,
+      "sha256": "e3999cb1ce6af5746ee4406040554874936d13b9975be7d1f3f78626d819b996"
     },
     {
       "path": "references/video-uses.json",
@@ -36622,8 +36642,8 @@
     },
     {
       "path": "scripts/director.py",
-      "size": 88598,
-      "sha256": "fe82f7bba54f141babca4f1ff997eb759325ea81010c2eda6afb15f5ec3632cb"
+      "size": 89639,
+      "sha256": "19b9fd3b5b517f64d80d359f2045e513294c05bb6576d8bca6499aea9fc4c655"
     },
     {
       "path": "scripts/export_qiaomu_fonts.py",
@@ -36652,8 +36672,8 @@
     },
     {
       "path": "scripts/library_html_runner.py",
-      "size": 8249,
-      "sha256": "e4a9011b115d69b920b28020a3f7b1d8fb560d043b1f6339b9f0a1284173ac08"
+      "size": 9643,
+      "sha256": "db7f8e02b1239e0e930d00568646ac1cd30f6bc3eeefae80cee772ceeb9ebde2"
     },
     {
       "path": "scripts/library_runner.py",
@@ -36697,8 +36717,8 @@
     },
     {
       "path": "scripts/production_entry.py",
-      "size": 18174,
-      "sha256": "7c7d31b05c838e88a819ac5026dc2fecc48366d25e30dba704cb78775fa6047c"
+      "size": 18666,
+      "sha256": "236b9350a1967d42afc9b2b5df8c012b18dc63c71367d29ebaf6f0a17b922ce7"
     },
     {
       "path": "scripts/rebuilt_library.py",
@@ -36721,6 +36741,11 @@
       "sha256": "1910d27f307e5adf0ba2fccdf1ea5a20df95941d622fc9a0be6df342d9e5f985"
     },
     {
+      "path": "scripts/reference_edits.py",
+      "size": 28622,
+      "sha256": "e911aa5d90ce34659048dc72261da0ffc6d533fee0e326ac900c001976b01ca5"
+    },
+    {
       "path": "scripts/reference_film.py",
       "size": 9909,
       "sha256": "499ef50d332b64b4ab133510543cea46139c24232b670a89de74427f2565b3c5"
@@ -36731,6 +36756,11 @@
       "sha256": "7ea8bce8d297c2d82c4c03c69bd519cdd2177b76e7590dd7c60762605541a8a3"
     },
     {
+      "path": "scripts/reference_project_input.py",
+      "size": 3724,
+      "sha256": "6cb4a41305621bfaa116f7bad16d2bd5d985796166850f20753fe44570fea927"
+    },
+    {
       "path": "scripts/reference_readiness.py",
       "size": 6790,
       "sha256": "d8554d90d479b77c02c19b55bd4232d24e407ee8e0eb004216d8937563405377"
@@ -36738,7 +36768,7 @@
     {
       "path": "scripts/release_manifest.py",
       "size": 15499,
-      "sha256": "9104637109ed601361199ec77ab2364ac4ceccb3d861820579f177f6b932d699"
+      "sha256": "5219fb4271ffdd3cae673178a3c25fe45db154c588d2c6dd97505001706ca2cc"
     },
     {
       "path": "scripts/render.py",
@@ -36891,6 +36921,11 @@
       "sha256": "5914bf51ac5ff2eaf4abb862c7233788360552f68a22859caf6e1c71bdf94290"
     },
     {
+      "path": "scripts/test_reference_edits.py",
+      "size": 5168,
+      "sha256": "613b5318839f06a14f0f27c56080a7106c3c832057f0d2884aa498be26eb7e0a"
+    },
+    {
       "path": "scripts/test_reference_film.py",
       "size": 7177,
       "sha256": "d24b9a7290beb8cdaca50054cb2891d9c2e2c0fab7dc7780d2100d49718f8e6e"
@@ -36982,8 +37017,8 @@
     },
     {
       "path": "scripts/ui.py",
-      "size": 21399,
-      "sha256": "be6f79a97fe810a818b9dc76f9d615ffc07bded282140e461c1119424a2d4fd7"
+      "size": 21612,
+      "sha256": "bc554ac045ca4d46f3e5a047f89bf01a75e82ec637988fb0bc2d67e07c5ff692"
     },
     {
       "path": "scripts/ui_adaptation.py",
@@ -37002,13 +37037,13 @@
     },
     {
       "path": "scripts/video_routing.py",
-      "size": 12301,
-      "sha256": "8ac4ae58e81be76ae2fb6b86fe1c5be66d1c66c65956a2e7199c03d489d4985f"
+      "size": 14169,
+      "sha256": "c7a32ad74e2f98bdd6c009df62cb57677d7239db1835cf965f2494e8f9b51c1f"
     },
     {
       "path": "scripts/video_sources.py",
-      "size": 16842,
-      "sha256": "2125e658c5d686a2d9c40e0ac474628616fcc2369aba2b1fb9cb38f16a75ec13"
+      "size": 17628,
+      "sha256": "b6e43d4fc99a879b6942a322cc4f9c3e2ae77d982f2294ce6be42f409bd396f7"
     },
     {
       "path": "tests/capability_runtime.test.js",

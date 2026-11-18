@@ -96,6 +96,13 @@ def prepared_creation_context(project, additional_files=()):
             if saved.get('source', {}).get('sha256') != source['sha256']:
                 raise ValueError('Prepared material plan belongs to a different narration.')
             allowed.add(material_plan)
+        edit_plan = folder / 'reference-cut-plan.json'
+        if context.get('video_sources', {}).get('edit_plan') == str(edit_plan) and edit_plan.is_file():
+            import reference_edits
+            saved = reference_edits.read(edit_plan)
+            if saved.get('schema') != reference_edits.SCHEMA or saved.get('script_sha256') != source['sha256']:
+                raise ValueError('Prepared reference edit plan belongs to a different narration.')
+            allowed.add(edit_plan)
         allowed.update(Path(item).resolve() for item in additional_files
                        if Path(item).resolve().is_relative_to(folder))
         if source_path.is_relative_to(folder):

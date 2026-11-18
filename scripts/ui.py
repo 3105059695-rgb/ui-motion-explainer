@@ -258,7 +258,11 @@ def main(argv=None):
             print(json.dumps(status(), ensure_ascii=False, indent=2))
             return 0
         if args.action == 'verify-output':
-            report = production_entry.verify_output(args.project, args.media, args.plan, root=ROOT)
+            if (args.project/'reference-timeline.json').is_file():
+                import reference_edits
+                report = reference_edits.verify(args.project, args.media, args.plan)
+            else:
+                report = production_entry.verify_output(args.project, args.media, args.plan, root=ROOT)
             print(json.dumps(report, ensure_ascii=False, indent=2))
             return 0 if report.get('technical_passed') else 1
         if args.action == 'guides':
