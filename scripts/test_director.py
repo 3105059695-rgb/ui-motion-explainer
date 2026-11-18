@@ -749,7 +749,9 @@ class PackagedVisualBaseline(unittest.TestCase):
         self.assertEqual(report['mode'], 'production')
         reading = {Path(row['path']).resolve() for row in context['required_reading']}
         current = director.requirements.load(root)
-        self.assertEqual(reading, {Path(row['path']).resolve() for row in current['documents']})
+        self.assertEqual(reading, {root / 'SKILL.md', root / 'references/aesthetic-preferences.md'})
+        self.assertEqual({row['relative_path'] for row in context['requirements']['documents']},
+                         {row['relative_path'] for row in current['documents']})
         self.assertEqual(context['repository_reading']['catalog']['entry_count'], expected_library['entry_count'])
         self.assertFalse(context['repository_reading']['catalog']['truncated'])
         self.assertEqual(context['repository_reading']['assessment']['reading'], 'not-assessed')

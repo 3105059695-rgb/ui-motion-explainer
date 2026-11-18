@@ -137,8 +137,15 @@ class Router:
     def plan(self, text, preferred=None):
         units = selection.source_segments(text)
         output, previous = [], None
+        best = {}
         for unit in units:
-            picks = self.match(unit['quote'], preferred=preferred, previous=previous)
+            matches = self.match(unit['quote'], preferred=preferred, previous=previous, limit=None)
+            for match in matches:
+                key = match['source_id']
+                weight = (match['match_basis'] == 'phrase', len(match['matched']), sum(map(len, match['matched'])))
+                if key not in best or weight > best[key][0]:
+                    best[key] = (weight, {'unit': unit['id'], 'capability': match['capability']})
+            picks = matches[:3]
             primary = picks[0] if picks else None
             if primary:
                 previous = primary['source_id']
@@ -147,7 +154,11 @@ class Router:
                            'decision': 'review-fit' if primary else 'use-current-material-or-presenter'})
         import reference_edits
         full = reference_edits.assignments(self, units)
-        return {'catalog': self.catalog.summary(), 'units': output, 'preferred_reference': preferred,
+        inventory = {row['id']: {'status': row['status'], 'collections': row['collections'],
+                                 'capabilities': [use['capability'] for use in row['uses']],
+                                 'evidence': row['evidence'], 'match': best.get(row['id'], (None, None))[1]}
+                     for row in self.catalog.by_id.values()}
+        return {'catalog': self.catalog.summary(), 'inventory': inventory, 'units': output, 'preferred_reference': preferred,
                 'all_submitted': full,
                 'sources_used_in_output': [], 'decision_status': 'proposed',
                 'inspect_source': 'ui.py videos inspect --id <来源ID>',

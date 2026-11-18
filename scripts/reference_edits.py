@@ -65,6 +65,7 @@ def rules(catalog):
 
 def assignments(router, units):
     """Match the entire script to each submitted source. A top-N list never defines coverage."""
+    from video_routing import _evidence
     recipes, diagnostics = rules(router.catalog)
     ranking = {}
     for unit in units:
@@ -79,8 +80,13 @@ def assignments(router, units):
     for key, recipe in recipes.items():
         row = router.catalog.lookup(key)
         choice = ranking.get(key)
+        use = next(u for u in row['uses'] if u['capability'] == recipe['capability'])
+        evidence = _evidence(row, use)
+        temporal = source_timing(row, measured.get(key))
         rows.append({'source_id': key, 'title': row['title'], 'scope': row['scope'],
                      'contribution': recipe['action'], 'inputs': recipe['slots'],
+                     'capability': recipe['capability'], 'locator': evidence, 'clip': row.get('media'),
+                     'timing': temporal,
                      'suggested_unit': choice[1]['id'] if choice else None,
                      'matched_words': choice[2]['matched'] if choice else [],
                      'assignment': 'candidate' if choice else 'choose-by-editing-function',
@@ -92,6 +98,43 @@ def assignments(router, units):
     return {'scope': 'all-submitted-films', 'required': rows,
             'diagnostic': [{'source_id': r['id'], 'title': r['title'], 'use': r['scope']} for r in diagnostics],
             'applied': [], 'complete': False}
+
+
+def source_timing(row, record):
+    """Summarize change across every measured approved interval, keeping its origin."""
+    if not record:
+        return {'basis': 'retained-source-and-approval', 'samples': 0}
+    fps, total = record['fps'], record['frames']
+    values = zlib.decompress(base64.b64decode(record['motion']))
+    if len(values) != 4 * total:
+        raise ValueError('Invalid source motion length: ' + row['id'])
+    atlas = row.get('atlas', {})
+    permitted = atlas.get('approved_ranges') or [(0, total / fps)]
+    excluded = atlas.get('excluded_ranges') or []
+    mask = bytearray(total)
+    for ranges, flag in ((permitted, 1), (excluded, 0)):
+        for start, end in ranges:
+            first = max(0, min(total, math.ceil(start * fps)))
+            last = max(first, min(total, math.ceil(end * fps)))
+            mask[first:last] = bytes([flag]) * (last - first)
+    windows = []
+    cursor = 0
+    while cursor < total:
+        start = mask.find(b'\x01', cursor)
+        if start == -1:
+            break
+        stop = mask.find(b'\x00', start)
+        stop = total if stop == -1 else stop
+        for a in range(start, stop, fps):
+            b = min(a + fps, stop)
+            change = sum(values[a*4:b*4]) / (4*(b-a))
+            windows.append((change, a/fps, b/fps))
+        cursor = stop
+    if not windows:
+        raise ValueError('No approved motion samples: ' + row['id'])
+    return {'basis': record['kind'], 'samples': sum(mask),
+            'active': list(max(windows, key=lambda v: v[0])[1:]),
+            'quiet': list(min(windows, key=lambda v: v[0])[1:])}
 
 
 def motion(catalog, ident, start=None, end=None):
@@ -126,6 +169,13 @@ def motion(catalog, ident, start=None, end=None):
             'meaning':'各区域连续帧的平均亮度变化量。结合原有镜头记录理解停顿和变化，不从数值推断物体或原声。'}
 
 
+def unbound_shot(source):
+    inputs = {key: {'text': None} if slot['kind'] == 'text' else {'path': None}
+              for key, slot in source['inputs'].items()}
+    return {'source_id': source['source_id'], 'unit': source['suggested_unit'],
+            'contribution': source['contribution'], 'start_frame': None, 'end_frame': None, 'inputs': inputs}
+
+
 def scaffold(router, script, output, coverage=None, presenter=None):
     import selection
     script, output = Path(script).resolve(), Path(output).resolve()
@@ -146,12 +196,7 @@ def scaffold(router, script, output, coverage=None, presenter=None):
         local=os.path.relpath(path,output.parent) if output.drive==path.drive else str(path)
         plan.update(narration=local, base_video=local, duration_frames=round(presenter['duration_seconds']*plan['fps']),
                     narration_stream_index=presenter['audio_master']['stream_index'])
-    for source in coverage['required']:
-        slot_inputs = {}
-        for key, slot in source['inputs'].items():
-            slot_inputs[key] = {'text':None} if slot['kind']=='text' else {'path':None}
-        plan['shots'].append({'source_id':source['source_id'], 'unit':source['suggested_unit'],
-            'contribution':source['contribution'],'start_frame':None,'end_frame':None,'inputs':slot_inputs})
+    plan['shots'] = [unbound_shot(source) for source in coverage['required']]
     with output.open('x',encoding='utf-8') as f:
         json.dump(plan,f,ensure_ascii=False,indent=2)
     return {'plan':str(output),'required_sources':len(plan['shots']),
@@ -337,7 +382,8 @@ def compose(catalog, plan_path, output, *, preview=False):
     plan_path,output=Path(plan_path).resolve(),Path(output).resolve()
     if output.exists() or not output.parent.is_dir():
         raise ValueError('Choose a new output project in an existing directory.')
-    plan=read(plan_path)
+    plan_bytes = plan_path.read_bytes()
+    plan = json.loads(plan_bytes.decode('utf-8-sig'))
     if plan.get('schema')!=SCHEMA:
         raise ValueError('Expected '+SCHEMA)
     base=plan_path.parent
@@ -367,7 +413,7 @@ def compose(catalog, plan_path, output, *, preview=False):
         staging.mkdir()
         media=Media(base,staging,catalog)
         master={'schema':SCHEMA,'fps':fps,'width':w,'height':h,'frames':dur,'shots':[],
-                'script_sha256':plan['script_sha256'],'source_plan_sha256':digest(plan_path)}
+                'script_sha256':plan['script_sha256'],'source_plan_sha256':hashlib.sha256(plan_bytes).hexdigest()}
         for ident,shot in zip(ids,plan['shots']):
             recipe=recipes[ident]
             inputs=shot.get('inputs')
@@ -415,6 +461,9 @@ def compose(catalog, plan_path, output, *, preview=False):
         if output.exists():
             raise ValueError('Output appeared during build.')
         staging.rename(output)
+    if not preview:
+        from edit_session import note_build
+        note_build(plan_path, output, master['source_plan_sha256'])
     return {'project':str(output),'entry':str(output/'index.html'),'included':len(set(ids)),
             'required':len(recipes),'missing':missing,'frames':dur,'rendered':False}
 
@@ -527,11 +576,16 @@ def main(argv):
     p=sub.add_parser('plan');p.add_argument('--script',required=True);p.add_argument('--out',required=True)
     p=sub.add_parser('compose');p.add_argument('--plan',required=True);p.add_argument('--out',required=True);p.add_argument('--preview',action='store_true')
     p=sub.add_parser('render');p.add_argument('--project',required=True);p.add_argument('--out',required=True);p.add_argument('--scale',type=float,default=1)
+    p.add_argument('--brief', action='store_true', help='Keep per-frame evidence on disk and print output counts.')
     p=sub.add_parser('motion');p.add_argument('--id',required=True);p.add_argument('--from',dest='start',type=float);p.add_argument('--to',dest='end',type=float)
     args=parser.parse_args(argv)
     try:
         if args.cmd=='render':
             result=render(args.project,args.out,args.scale)
+            if args.brief:
+                result = {k: result[k] for k in ('file','sha256','complete_reference_coverage','frames','audio')} | {
+                    'visible_sources': len(result['reference_frames']),
+                    'evidence': str(Path(args.project) / 'reference-render.json')}
         else:
             catalog=video_sources.Catalog()
             if args.cmd=='plan':

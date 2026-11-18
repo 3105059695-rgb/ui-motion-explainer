@@ -103,6 +103,9 @@ def prepared_creation_context(project, additional_files=()):
             if saved.get('schema') != reference_edits.SCHEMA or saved.get('script_sha256') != source['sha256']:
                 raise ValueError('Prepared reference edit plan belongs to a different narration.')
             allowed.add(edit_plan)
+            lock = folder / '.reference-plan.lock'
+            if lock.is_file() and not lock.is_symlink() and lock.stat().st_size == 0:
+                allowed.add(lock)
         allowed.update(Path(item).resolve() for item in additional_files
                        if Path(item).resolve().is_relative_to(folder))
         if source_path.is_relative_to(folder):

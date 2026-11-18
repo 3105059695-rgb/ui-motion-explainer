@@ -4,7 +4,7 @@
 
 > 用 https://github.com/3105059695-rgb/ui-motion-explainer 里的 Skill 剪这段口播，沿用库里的审美和 UI。
 
-**收到这句话的 Agent** 获取仓库，在本对话读取根目录的 [SKILL.md](SKILL.md) 和[完整审美偏好](references/aesthetic-preferences.md)，依照[仓库接入步骤](AI-START.md)直接使用。用户只用发仓库地址和本期内容。以后也要通过名称调用时，用仓库自带的安装器登记同一个 Skill。
+**收到这句话的 Agent** 获取仓库，在本对话读取根目录的 [SKILL.md](SKILL.md) 和[当前审美](references/aesthetic-preferences.md)，依照[仓库接入步骤](AI-START.md)直接使用。用户只用发仓库地址和本期内容。以后也要通过名称调用时，用仓库自带的安装器登记同一个 Skill。
 
 [查看每条参考视频的用法与剪辑示例](references/video-use-guide.md) · [浏览全片图集](assets/reference-atlas/index.html) · [查看固定配色与材质](references/aesthetic-preferences.md)
 
@@ -14,18 +14,11 @@
 
 ## 整个库怎样参与本期
 
-正常准备工程直接给出全库逐条用途、当前外观和适用原句。投稿片分配到具体镜头，A 配色、中文字级、纸面和深色窗口贯穿全片。PromptMotion、FredTalk、Collect UI、正文场景及独立动效分别提供可选的分镜、动作、交互和构图；每个目录 ID 都能单独查。独立实现可以按自己的 ID 直接进入本期素材槽，导出后能查到它出现在哪些帧。[逐片分工与绑定示例](references/video-use-guide.md)
+新片的准备程序遍历来源目录与 UI 能力，在工程中保存每个来源的适用范围、候选段落和出处。32 条正向投稿各有可执行的动作和本期材料位，6 条历史反例用于纠错。镜头卡给出当前原句、所用参考、材料职责和关键帧。不同来源可以共同作用于同一段原声。技术核对以导出的实际可见帧为准。
 
-当前仓库包含完整 Skill 实现与随包资源；GitHub `Download ZIP` 或 [最新源码包](https://github.com/3105059695-rgb/ui-motion-explainer/archive/refs/heads/main.zip) 都可安装，最新 Release 页面的 `Source code (zip)` 提供固定版本。私人原片和未随包历史媒体的范围见下文。解压后进入含 `SKILL.md` 和 `install.py` 的目录，不再依赖作者 E 盘或七个额外入口。复用已有 Python、Node、FFmpeg 与浏览器，不为每个项目另装运行时。
+## 换窗口继续剪
 
-## 本版修正
-
-- 默认 `direct prepare` 输出当前审美、全文原稿、认可原片图集、整库摘要、逐段候选和可编辑的 `materials-plan.json`。Agent 通过 ego 主动去 X、B站、抖音及产品原站取得本期视频/截图；`materials record/check/export` 将来源、原句和可用本地文件接到剪辑参数。
-- [可直接打开的原视频分格图集](assets/reference-atlas/index.html)随包带 13 张总览和 72 页细图，覆盖当前正文 UI、Fred、阿闰、秋芝与女孩 AIGC。它们帮助 AI 建立视觉理解；四张局部图和代码重演中的示意素材不能替代这些原片参考。
-- `capabilities list/search/inspect` 统一发现整库，说明直接调用、需要源码适配、仅参考与缺失状态；短候选不是白名单。
-- `events scaffold/validate/build` 把对象、数量、材料、布局与动作时窗传入实际保留代码，组合蒙版、聚焦、交接、拆分、状态变化与转场；每稿重新设计，不固定套排行榜。
-- 公开包检查生产源码与必需资源；历史私人原片另报完整性，已安装代码不再被历史媒体缺失阻断。
-- 新窗口用 `ui.py read plan` 完整读全部现行要求、全库能力目录与全部认可参考；选定效果后逐文件读完整实现与本地依赖。全部图集、逐句蒸馏、源码和旧能力保留；历史日志不作为每期前置。
+在新对话里给同一个工程目录，运行 `scripts/ui.py direct -- resume --project "本期工程"`。它恢复已保存的镜头，从下一处缺材料或时间的位置继续。全库索引、动作信号和逐帧证据存放在工程及 Skill 中。专门研究原片时才翻阅全文和图集。
 
 ## 已有制作能力
 

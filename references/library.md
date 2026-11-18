@@ -4,7 +4,7 @@
 
 `ui.py ui-status` 汇总全库逐条适配；`capabilities inspect --id <能力ID>` 同时列出原源码、生产适配器及验证范围。纸张、窗口、面板、胶囊、字体与对比沿认可正文源码；原动作与时间轴保留，品牌和真实媒体像素按表达需要保留。纯动作继承本期对象的样式。接线不等于每项获得新审美认可；当前效果的实际材质由生产构建执行，历史外观只用于显式对照。
 
-[查看本轮实际运行片段](../assets/ui-adaptation/index.html)。新窗口完整读目录；选定后读完对应实现及依赖，不重新研究全部原片。
+[查看实际运行片段](../assets/ui-adaptation/index.html)。制作时按用途查询全库，选定的 ID 指向相应实现与预览。
 
 这里提供落实 **Fred Talk 整体视觉与剪辑默认** 的源码和方法，不能因方便调用某库而更换风格。先看[当前已认可正文的实际外观](../index.html#current-ui)及对应源码，以[Fred 实际参考](fred-ui-direction.md)补充，结合整篇口播和逐句证据，再从 FredTalk、EditingKit、F、O/X、阿渡等条目选择适用部分，改编为本期对象和节奏。完整审美只在[审美偏好](aesthetic-preferences.md)维护，人物与 AIGC 的用途边界见[参考使用](style-profiles.md)。
 

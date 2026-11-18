@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "scope": "新窗口必须完整读取的现行要求清单，包括条件性制作合同；条件规则是否执行仍按本期任务判断。全库能力目录和全部认可参考由 ui.py read 分页接入，选定后再读完整源码。",
+  "scope": "准备程序在工程保存的现行制作规则和出处。剪辑窗口按当前镜头取用，研究时可以按页查阅全文。",
   "documents": [
     {
       "id": "entry",
-      "title": "统一入口与完整读取顺序",
+      "title": "新片准备与换窗续剪",
       "path": "SKILL.md"
     },
     {
@@ -16,6 +16,11 @@
       "id": "aesthetics",
       "title": "已确认 UI、质感、开头、声音与 AIGC 画风",
       "path": "references/aesthetic-preferences.md"
+    },
+    {
+      "id": "aesthetic-evidence",
+      "title": "审美原话、认可范围及详例",
+      "path": "references/aesthetic-details.md"
     },
     {
       "id": "workflow",
@@ -99,8 +104,8 @@
     }
   ],
   "resource_policy": {
-    "current_requirements": "上表所有现行正文在每个新窗口完整读取，正文只在原权威文件维护；已完整读过且版本未变的当前窗口可复用，不重新读全部历史日志。",
-    "selected_resources": "先完整读全库能力目录并打开全部认可参考总览与必要细图；选定能力后完整读取其实现、本地依赖与生产UI适配器，观察完整动作预览，绑定本期参数。不能用候选摘要替代全库，不每次重新研究全部原视频。",
+    "current_requirements": "准备时本地程序登记全部现行正文。剪辑窗口读主入口、当前审美和适用镜头的规则，续剪直接取回已有工程的进度。",
+    "selected_resources": "全库匹配保存在工程。窗口查看该镜头的真实动作和来源；按需查询细节、连续预览和本期调用的实现。全文分页供专题研究。",
     "historical_material": "evidence、历史账号、旧 Skill 原文、旧工程和案例说明保留为来源资料。它们不能追加或覆盖当前全局要求；只有本期明确续作范围才接续相应历史设置。",
     "status": "输出全文、文件哈希和版本只证明本次提供了哪些要求，不证明 Agent 已读懂、已执行、已观看或成片已获认可。"
   }

@@ -14,7 +14,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
-from release_manifest import MANIFEST, build_manifest, validate_resources, verify_release
+from release_manifest import MANIFEST, RUNTIME_FILES, build_manifest, validate_resources, verify_release
 from package import package
 
 spec = importlib.util.spec_from_file_location('fusion_installer', ROOT / 'install.py')
@@ -92,6 +92,10 @@ def fixture(root):
     write(root, 'references/aigc-assets.json', {'style_sets': [{
         'id': 'qiuzhi-girl-painterly', 'character_references': characters,
         'approval': {'approved_asset_ids': [str(i) for i in range(8)]}, 'assets': scenes}]})
+    # Resource validation checks presence here. Rendering uses the real distribution in the end-to-end test.
+    for relative in RUNTIME_FILES:
+        if not (root / relative).exists():
+            write(root, relative, '{}' if relative.endswith('.json') else 'fixture')
     build_manifest(root, '1')
     return root
 
@@ -166,9 +170,12 @@ class InstallReleaseTests(unittest.TestCase):
     def test_new_install_with_spaces_and_chinese_path_and_cli(self):
         target = self.base / '中文 profile' / 'skills' / 'ui-motion-fusion'
         completed = subprocess.run([sys.executable, '-B', '-X', 'utf8', str(self.source / 'install.py'),
-                                    '--target', str(target)], capture_output=True, text=True, encoding='utf-8')
+                                    '--target', str(target), '--brief'], capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(0, completed.returncode, completed.stderr)
-        self.assertEqual('installed', json.loads(completed.stdout)['action'])
+        receipt = json.loads(completed.stdout)
+        self.assertEqual('installed', receipt['action'])
+        self.assertIn('ready', receipt['production_readiness'])
+        self.assertLess(len(completed.stdout), 1000)
         self.assertTrue(verify_release(target, exact=False)['ok'])
         self.assertEqual(['ui-motion-fusion'], [p.name for p in target.parent.iterdir()])
 

@@ -52,8 +52,8 @@ def _catalog_text(rows):
     return '\n'.join(lines)
 
 
-def catalog(root=ROOT):
-    rows = capability_catalog.records(root)
+def catalog(root=ROOT, rows=None):
+    rows = capability_catalog.records(root) if rows is None else rows
     text = _catalog_text(rows)
     return {'entry_count': len(rows), 'ids': [r['id'] for r in rows],
             'parts': _pages(text), 'sha256': hashlib.sha256(text.encode('utf-8')).hexdigest()}
@@ -104,9 +104,8 @@ def plan(root=ROOT, *, catalog_bundle=None, requirements_bundle=None, video_cata
                            'warnings': refs['warnings'], 'viewing_status': 'not-observed'},
             'selected_source': {'inspect_command': f'{prefix} selected --id <能力ID>',
                                 'read_command': f'{prefix} source --path <Skill内源码路径> --part 1'},
-            'instruction': '每个新窗口完整读现行要求全部分页、全库目录全部分页，并实际打开全部认可参考总览与必要细图；'
-                           '选中能力后检查参数及源码清单，逐文件完整读取实际实现与本地依赖，再按本稿调用。'
-                           '不是每次研究全部历史源码，也不是只读几个检索候选。上下文不足时保存真实完成位置继续，不能略读后宣称完成。',
+            'instruction': '日常剪辑用 direct -- prepare 或 direct -- resume。程序在本地读取全库并保留每条投稿的剪法。'
+                           '本页提供专题研究和按需查证所用的全文页码。',
             'assessment': {'reading': 'not-assessed', 'understanding': 'not-assessed',
                            'viewing': 'not-observed', 'aesthetic_approval': 'not-assessed'}}
 

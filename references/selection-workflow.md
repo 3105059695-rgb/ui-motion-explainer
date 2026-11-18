@@ -2,7 +2,7 @@
 
 本页维护查询、候选状态及引用落点。导演判断读[口播选材](script-visual-planning.md)，当前 UI 基准与参考范围读[审美偏好](aesthetic-preferences.md)，制作阶段读[主流程](workflow.md)。`direct -- prepare` 将整篇研究和按段候选写入 `director-context.json.selection`。
 
-普通制作首次用 `ui.py style-film inspect` 建立[完整连续 UI 基准](../assets/style-film/index.html)，再查询 `capabilities` 的整个实际执行库。按本稿需要查看所选能力的完整动态，直接绑定已实现程序；不让每个新窗口重新研究全部原片。[全片图集](../assets/reference-atlas/index.html)、阿闰与秋芝/AIGC 研究仍完整保留，用于显式学习、复刻或差异定位。四张图不能代替动态风格理解；无法输入整段视频时如实说明读取范围。
+普通制作沿[当前审美](aesthetic-preferences.md)从待剪镜头开始。需要核对整体连续动作时用 `ui.py style-film inspect`，详细图集与原片研究按本期使用的来源打开。
 
 ## 从候选到实际选用
 

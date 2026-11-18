@@ -215,13 +215,17 @@ def main():
     parser.add_argument('--update', action='store_true', help='Explicitly update an existing installation')
     parser.add_argument('--replace-modified', action='store_true',
                         help='Explicitly back up and replace listed local changes/collisions')
+    parser.add_argument('--brief', action='store_true', help='Print a short installation receipt.')
     parser.add_argument('--backup-root', type=Path, help='Backup folder outside the skills menu; optional')
     args = parser.parse_args()
     try:
         result = install(ROOT, args.target, update=args.update,
                          replace_modified=args.replace_modified, backup_root=args.backup_root)
-        print(json.dumps(result, ensure_ascii=False, indent=2))
         readiness = result['production_readiness']
+        if args.brief:
+            result = {key: result[key] for key in ('action','target','version','managed_files','backup') if key in result}
+            result['production_readiness'] = {'ready': readiness['ready']}
+        print(json.dumps(result, ensure_ascii=False, indent=2))
         if readiness['required'] and not readiness['ready']:
             parser.exit(2, readiness['message'] + '\n')
     except (OSError, ValueError, RuntimeError) as error:

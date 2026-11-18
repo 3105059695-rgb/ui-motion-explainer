@@ -12,7 +12,7 @@ from urllib.parse import unquote
 
 MANIFEST = 'release-manifest.json'
 STATE = '.install-state.json'
-VERSION = '2026.11.18.4'
+VERSION = '2026.11.18.5'
 EXCLUDED_DIRS = {'.git', 'node_modules', '__pycache__', '.cache', 'cache', 'caches',
                  '.venv', 'venv', '.pytest_cache', '.mypy_cache', '.ruff_cache',
                  'runtime', 'runtimes', 'browser-cache'}
@@ -28,7 +28,7 @@ ENTRY_DOCUMENTS = ('SKILL.md', 'references/workflow.md', 'references/style-profi
                    'references/engine-routing.md', 'references/distribution-scope.md',
                    'references/selection-workflow.md', 'references/aesthetic-preferences.md',
                    'references/visual-quality.md', 'references/broll-calibration-cases.md',
-                   'references/editing-lessons.md', 'references/video-use-guide.md')
+                   'references/editing-lessons.md', 'references/video-use-guide.md', 'references/aesthetic-details.md')
 
 
 def sha256(path: Path) -> str:
@@ -142,6 +142,20 @@ def validate_entry_links(root: Path) -> int:
     return count
 
 
+RUNTIME_FILES = ['assets/style-film/current-style-full.mp4','assets/style-film/manifest.json',
+    'assets/style-film/index.html','assets/rebuilt-library/index.html',
+    'assets/rebuilt-library/gallery-data.js','assets/rebuilt-library/execution.json',
+    'assets/rebuilt-library/scene-runtime.js','assets/library-runtime/implementations.json',
+    'assets/library-runtime/core-dependencies/package.json',
+    'assets/library-runtime/core-dependencies/package-lock.json',
+    'assets/semantic-motion/manifest.json','assets/semantic-motion/semantic-motion.js',
+    'assets/method-runtime/programs.json','assets/method-runtime/method-runtime.js',
+    'scripts/library_runner.py','scripts/library_html_runner.py','scripts/rebuilt_library.py',
+    'scripts/semantic_effects.py','scripts/method_programs.py','scripts/style_film.py',
+    'scripts/director.py', 'scripts/edit_session.py', 'scripts/reference_edits.py',
+    'scripts/video_routing.py', 'references/aesthetic-details.md']
+
+
 def validate_resources(root: Path) -> dict:
     """Validate mandatory module resources and portable approved visual inputs."""
     required = ['SKILL.md', 'install.py', 'agents/openai.yaml',
@@ -158,16 +172,7 @@ def validate_resources(root: Path) -> dict:
                 'assets/fredtalk-library/index.html', 'assets/fredtalk-library/LICENSE',
                 'assets/fredtalk-library/THIRD_PARTY_NOTICES.md',
                 'assets/fredtalk-library/README.md', 'assets/fredtalk-library/upstream-license-scope.md']
-    required += ['assets/style-film/current-style-full.mp4','assets/style-film/manifest.json',
-                 'assets/style-film/index.html','assets/rebuilt-library/index.html',
-                 'assets/rebuilt-library/gallery-data.js','assets/rebuilt-library/execution.json',
-                 'assets/rebuilt-library/scene-runtime.js','assets/library-runtime/implementations.json',
-                 'assets/library-runtime/core-dependencies/package.json',
-                 'assets/library-runtime/core-dependencies/package-lock.json',
-                 'assets/semantic-motion/manifest.json','assets/semantic-motion/semantic-motion.js',
-                 'assets/method-runtime/programs.json','assets/method-runtime/method-runtime.js',
-                 'scripts/library_runner.py','scripts/library_html_runner.py','scripts/rebuilt_library.py',
-                 'scripts/semantic_effects.py','scripts/method_programs.py','scripts/style_film.py']
+    required += RUNTIME_FILES
     for name in required:
         if not checked_path(root, name).is_file():
             raise ValueError(f'Missing required release file: {name}')

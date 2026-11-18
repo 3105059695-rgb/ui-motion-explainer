@@ -26,7 +26,7 @@ COMMANDS = {'list': 'ui.py capabilities list',
 PRODUCTION_FILES = (
     'scripts/capability_catalog.py', 'scripts/capability_runtime.py', 'scripts/component_project.py',
     'assets/editing-kit/project.js', 'assets/editing-kit/editing-kit.js', 'assets/editing-kit/editing-kit.css',
-    'scripts/repository_reading.py', 'scripts/requirements.py', 'references/requirements.json',
+    'scripts/repository_reading.py', 'scripts/edit_session.py', 'scripts/requirements.py', 'references/requirements.json',
     'scripts/ui_adaptation.py', 'scripts/library_ui_style.py',
     'assets/library-runtime/current-ui/roles.js', 'assets/library-runtime/current-ui/transform.cjs',
     'assets/library-runtime/current-ui/scene-overrides.json', 'assets/library-runtime/current-ui/coverage.json',
@@ -463,13 +463,13 @@ def search(query, root=ROOT, limit=None, *, context='', state=None, include_arch
             'full_search_command': 'ui.py capabilities search --query ' + json.dumps(query, ensure_ascii=False)}
 
 
-def routing_context(source, root=ROOT, limit=5):
+def routing_context(source, root=ROOT, limit=5, rows=None):
     """Compact production context; raw films, alignments and whole code stay out."""
     if not isinstance(source, str):
         source = source.get('text', '') if isinstance(source, dict) else ''
     if not source.strip():
         raise ValueError('Narration text is required.')
-    rows = records(root)
+    rows = records(root) if rows is None else rows
     units = selection.source_segments(source)
     result = []
     best_units = {}
@@ -532,10 +532,12 @@ def main(argv=None):
     search_parser = commands.add_parser('search')
     search_parser.add_argument('--query', required=True)
     search_parser.add_argument('--limit', type=int)
+    search_parser.add_argument('--brief', action='store_true', help='Show compact candidates; default to four results.')
     search_parser.add_argument('--state', choices=STATE_LABELS)
     search_parser.add_argument('--include-archived', action='store_true')
     inspect_parser = commands.add_parser('inspect')
     inspect_parser.add_argument('--id', required=True)
+    inspect_parser.add_argument('--brief', action='store_true', help='Show how to call this capability and what it expresses.')
     binder = commands.add_parser('bind', help='Bind a retained DOM component to current objects and timing.')
     binder.add_argument('--id', required=True)
     binder.add_argument('--stage', type=Path, required=True)
@@ -552,9 +554,17 @@ def main(argv=None):
         if args.command == 'list':
             result = summary(args.root) if args.summary else listing(args.root, args.state, args.kind)
         elif args.command == 'search':
-            result = search(args.query, args.root, args.limit, state=args.state, include_archived=args.include_archived)
+            limit = 4 if args.brief and args.limit is None else args.limit
+            result = search(args.query, args.root, limit, state=args.state, include_archived=args.include_archived)
+            if args.brief:
+                keys = ('id','title','semantic_use','execution_state')
+                result = {'catalog_entries': result['catalog_entry_count'], 'matches': result['match_count'],
+                          'candidates': [{k: c[k] for k in keys} for c in result['candidates']]}
         elif args.command == 'inspect':
             result = inspect(args.id, args.root)
+            if args.brief:
+                keys = ('id','title','semantic_use','execution_state','call','preview','inspect_command')
+                result = {k: result[k] for k in keys if k in result}
         elif args.command == 'bind':
             import component_project
             result = component_project.build(inspect(args.id, args.root), args.stage, args.spec, args.out, args.root)

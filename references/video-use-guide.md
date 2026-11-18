@@ -38,7 +38,7 @@
 
 ## 从来源找到实际实现
 
-新窗口可直接说「用 $ui-motion-fusion 剪这段口播，从我给过的参考里逐段选合适的剪法」。已有工程运行 `direct -- prepare` 后，打开工程的 `director-brief.md` 看逐句建议。`director-context.json` 的 `video_sources.units` 保留原句、字符位置、来源、绑定说明、证据定位和调用命令。主建议与备选都可以按材料质量调整；未命中的句子可以保留人物或实拍。
+新片用 `direct -- prepare`，已有工程用 `direct -- resume` 获取待剪镜头。原句、证据和完整分工存在本期工程内；按真实素材质量调整落点。
 
 下面的命令从安装目录执行。单独查片和写入可编辑的参数文件不需要账户、联网或原片。
 
@@ -75,3 +75,14 @@ python -B -X utf8 scripts/ui.py videos use --id claude --capability method:Q-C04
 - **14 秒印刷校样**由本 Skill 制作，需要校对紫色、纸边与字重时再看；本期的剪法从上述来源选择。
 
 公开包自带逐片用法、可公开的证据和生产实现。制作时绑定本期内容。原档案的研究入口见[安装与维护](../docs/install.md)。新增提交片时在原图集和 `references/video-uses.json` 登记来源、认可范围及方法，在 `assets/reference-edits/recipes.json` 写入该片的真实材料角色和动作阶段；对可用原片更新连续运动测量，再运行 `videos check`。新增的正向提交片若缺少了可执行剪法，检查将列出差异。
+
+
+## 保存一个镜头
+
+下例中的编号、原句 ID、素材位名和版本号都要替换为当前镜头卡返回的值。帧区间为左闭右开，时间按原声确定；路径相对本期工程。允许先存部分材料，之后继续补齐。一个补丁也可同时保存多个已核对的镜头。
+
+```json
+{"changes":[{"shot":1,"revision":"镜头卡的 revision","set":{"unit":"U001","start_frame":0,"end_frame":48,"inputs":{"材料位名":{"path":"素材/本期录屏.mp4","in":0.2},"文字位名":{"text":"本期字幕"}}}}]}
+```
+
+主时间线用同一补丁的 `master_revision` 和 `master` 更新，例如 `{"master_revision":"卡片的 master_revision","master":{"fps":30,"duration_frames":3600,"narration":"素材/原声.wav"}}`。需保护人物时，在对应材料位用 `placement:[x,y,w,h]` 绑定实测归一化区域。已有实现可用 `from_project:{"project":"子工程","capability":"component:compare"}`。保存入口为 `ui.py direct -- save --project "本期工程" --patch "变更.json"`。若另一窗口已改同一镜头，重新取该镜头的卡片后再合并。
