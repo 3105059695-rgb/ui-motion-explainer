@@ -278,7 +278,16 @@ class Catalog:
 
     def summary(self):
         rows = self.by_id.values()
-        return {'collections': dict(Counter(c for r in rows for c in r['collections'])),
+        collections = dict(Counter(c for r in rows for c in r['collections']))
+        roles = {'focus': '逐片采用投稿中的剪法，按明确反馈纠错',
+                 'prompt-motion': '为叙事、产品或说明镜头选连贯动作、镜头运动与场景设计',
+                 'fredtalk': '选软件界面的实体、排版、状态变化与交接，沿用当前正文材质',
+                 'collect-ui': '按实际观察借构图、交互反馈和已绑定的软件操作',
+                 'discovery': '按目录定位待观察作品，取得画面后再提炼其设计'}
+        return {'collections': collections,
+                'browse': [{'collection': key, 'count': count, 'role': roles[key],
+                            'command': 'ui.py videos list --collection ' + key + ' --page 1'}
+                           for key, count in collections.items()],
                 'status': dict(Counter(r['status'] for r in rows)), 'source_records': len(self.by_id),
                 'note': '全片、片段、静态观察和目录线索分别计数。跨库别名与历史样片不代表额外原片。'}
 

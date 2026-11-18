@@ -195,7 +195,7 @@
       if(slots.length)sources.push({id:s.id,slots});
       for(const slot of slots){
         const used=s.inputs[slot].from_project;
-        if(used)implementations.add(used.source_id+' / '+used.capability);
+        if(used)implementations.add(used.credit || (used.source_id ? used.source_id+' / '+used.capability : used.capability));
       }
     }
     slider.value=String(f);label.value=(f/episode.fps).toFixed(2)+' s';

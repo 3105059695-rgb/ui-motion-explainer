@@ -216,3 +216,19 @@ node smoke-test.cjs
 ```
 
 smoke test 检查九项的初中末状态、乱序重算、原节点保持、内部聚焦返回、标题等比归位、无媒体时钟改写、错误参数不产生部分样式写入、主题注入与样式复位。它不代替浏览器画面检查、真实素材音画同步或账号审美认可。[validation.json](validation.json) 是原六项演示的既有记录，不是新增组合的视觉验收。
+
+## 绑定本期对象到素材槽
+
+用 `ui.py capabilities bind --id component:compare --stage 本期对象.html --spec 对比.json --out 原稿与改稿对比` 将本期 HTML 片段里的对象交给原有组件。下例要求片段中有叠放在同一位置的 `#before`、`#after`。整片可以直接绑定生成的项目。
+
+```json
+{
+  "width": 960, "height": 540, "fps": 30, "duration": 3,
+  "options": {
+    "viewport": {"width": 960, "height": 540},
+    "before": {"selector": "#before"}, "after": {"selector": "#after"}, "axis": "x"
+  }
+}
+```
+
+每种组件沿用本文所列 API 的字段。用 `{"selector":"#对象"}` 传入实际 DOM 节点，几何尺寸直接传数字。可在 `media` 中用选择器绑定本期图片或视频，例如 `{"#screen":{"src":"实机操作.mp4","in":0.4}}`。文件路径相对参数文件，视频随组件时钟播放。工程直接使用当前正文的纸面、字体和焦点色。

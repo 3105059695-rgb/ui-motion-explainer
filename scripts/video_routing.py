@@ -151,8 +151,8 @@ class Router:
                 'all_submitted': full,
                 'sources_used_in_output': [], 'decision_status': 'proposed',
                 'inspect_source': 'ui.py videos inspect --id <来源ID>',
-                'instruction': '每句先看主建议和证据，再按需要取备选的一项优点。前后镜头用同一份本期材料或可见结果交接；'
-                               '只有实际绑定并进入时间线才算采用。没有合适参考就留真实素材或人物。'}
+                'instruction': '用全部投稿表分配剪法，按目录里的分工从整库为每段选择界面、镜头和动作。'
+                               '本句建议供定位；可以按目录 ID 直接调用独立实现。以导出的实际时段核对采用情况。'}
 
 
 def brief(plan):
@@ -219,7 +219,7 @@ def main(argv=None):
         commands.add_parser(cmd,help=desc)
     listing = commands.add_parser('list')
     listing.add_argument('--collection', choices=('focus', 'prompt-motion', 'fredtalk', 'collect-ui', 'discovery', 'all'),
-                         default='focus')
+                         default='all')
     listing.add_argument('--query', default='')
     listing.add_argument('--page', type=int, default=1)
     show = commands.add_parser('inspect')

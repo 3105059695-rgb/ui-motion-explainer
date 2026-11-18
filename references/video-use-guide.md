@@ -4,6 +4,16 @@
 
 ## GitHub 单包如何把每条参考用进本期
 
+新电脑可以直接把仓库地址交给 Codex。Agent 读取[根目录入口](../AI-START.md)，在本对话继续制作。正常准备工程时，`capabilities.library.entries` 把全库每条的用途、外观、调用状态和建议原句放进 `director-context.json`。可用完整 ID 查找任一项。库里的方法按本句需要组合，投稿片则逐片安排职责。
+
+例如阿闰的镜头用于同条件横评，比较区里想让原稿与改稿对齐并逐步揭示差异。可以直接从全库选择 `component:compare`，用本期两份稿件制作组件，再把它填进用片表中横评镜头的 `inputs.a`。
+
+```json
+{"from_project": {"capability": "component:compare", "project": "原稿与改稿对比"}}
+```
+
+创建这个组件用 `ui.py capabilities bind --id component:compare --stage 本期对象.html --spec 对比.json --out 原稿与改稿对比`。其他实现按 `capabilities inspect --id <完整ID>` 返回的入口构建。明确采用某片的某个方法时，`from_project` 同时填该片的 `source_id`。成片工程中的 `reference-render.json` 用独立能力 ID 或“来源 / 能力”记录具体可见帧。[组件对象和时钟](../assets/editing-kit/README.md#绑定本期对象到素材槽)
+
 `videos plan` 按用户提交的全片与独立样段逐条建立用片表。同一原作的多个名字合并；32 个正向来源在每个完整工程都有位置。6 个明确的历史纠错来源随表保留原反馈。公开包内的[逐片执行参数](../assets/reference-edits/recipes.json)直接描述每条参考各自的材料角色、图层、关键帧、移动、揭示或交接。素材可用本期真实媒体，也可以是原设计、方法、FredTalk 或软件预设用本期参数渲染出的动态镜头。
 
 1. 正常的 `direct prepare` 在工程内生成 `reference-cut-plan.json`，指定人物片时连同原声一起带入。也可独立运行 `videos plan --script 稿件.txt --out 用片表.json`。按实际原声填 `duration_frames` 和各镜头的 `start_frame/end_frame`（左闭右开）、原句编号及专属输入。素材路径相对用片表；`in` 是素材自身入点（秒），`focus` 是归一化材料关注位置，`placement` 是人物或实物旁的实测安全矩形。手部交接、真实操作与角色表演需绑定能播放的当前视频。

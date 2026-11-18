@@ -238,6 +238,7 @@ def materialize(effect, output, bindings_path=None, stage=None, duration=None, d
         source_hash = digest(ASSETS / 'semantic-motion.js')
         runtime = 'parameterized-existing-dom-svg'
     record = {'effect': effect, 'runtime': runtime, 'duration': length,
+              'width': entry.get('width') or 1280, 'height': entry.get('height') or 720,
               'source_sha256': source_hash, 'demo_content': demo,
               'entry': 'index.html', 'seek_api': 'await window.ready(); await window.render(localSeconds)',
               'current_palette': 'A', 'user_approval': 'not-inferred',

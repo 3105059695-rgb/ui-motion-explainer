@@ -127,6 +127,13 @@ class CapabilityCatalogTests(unittest.TestCase):
 
     def test_limit_does_not_hide_full_catalog_or_create_fallback_match(self):
         self.basic()
+        routed = catalog.routing_context('比较以前与现在的结果。', self.root, limit=1)
+        indexed = {row['id']: row for row in routed['library']['entries']}
+        self.assertEqual(set(indexed), {row['id'] for row in catalog.records(self.root)})
+        self.assertFalse(routed['library']['truncated'])
+        self.assertGreater(len(indexed), len(routed['units'][0]['candidates']))
+        self.assertEqual(indexed['native:compare-change']['suggested_unit'], routed['units'][0]['id'])
+        self.assertTrue(all('semantic_use' in row and 'style_scope' in row for row in indexed.values()))
         full = catalog.search('对比以前和现在的结果', self.root)
         bounded = catalog.search('对比以前和现在的结果', self.root, limit=1)
         self.assertEqual(full['match_count'], len(full['candidates']))

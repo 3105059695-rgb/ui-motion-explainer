@@ -1,6 +1,10 @@
 # 我的 UI 动效剪辑 · ui-motion-fusion
 
-**当前版本见 [VERSION](VERSION)**。仓库地址继续使用 `ui-motion-explainer`，安装与调用统一为 **`$ui-motion-fusion`**。此处描述当前本地源码；远端发布状态以实际发布记录为准。
+**新电脑或新对话直接把这个仓库地址交给 Codex 即可。** 仓库根目录就是 Skill，名称为 `$ui-motion-fusion`。当前版本见 [VERSION](VERSION)。
+
+> 用 https://github.com/3105059695-rgb/ui-motion-explainer 里的 Skill 剪这段口播，沿用库里的审美和 UI。
+
+**收到这句话的 Agent** 获取仓库，在本对话读取根目录的 [SKILL.md](SKILL.md) 和[完整审美偏好](references/aesthetic-preferences.md)，依照[仓库接入步骤](AI-START.md)直接使用。用户只用发仓库地址和本期内容。以后也要通过名称调用时，用仓库自带的安装器登记同一个 Skill。
 
 [查看每条参考视频的用法与剪辑示例](references/video-use-guide.md) · [浏览全片图集](assets/reference-atlas/index.html) · [查看固定配色与材质](references/aesthetic-preferences.md)
 
@@ -8,9 +12,9 @@
 
 **先理解口播，再从 `capabilities list/search/inspect` 选择已有能力并直接调用。** 当前默认 UI 仍是用户认可的「十款 Agent」正文外观及当前 A 配色；Fred、阿闰、秋芝与 AIGC 按各自认可范围参与参考，整个效果库继续开放。按口播的意思、上下文与情绪选择材料，让对象完成可看懂的动作，再用蒙版、聚焦、变形与转场接起来。人物身份和 AIGC 画风独立保存。具体偏好见[UI、AE 感、开头与禁忌](references/aesthetic-preferences.md)，流程见[唯一入口](SKILL.md)。
 
-## 给 AI 这一句就能安装
+## 整个库怎样参与本期
 
-> 请读取 https://github.com/3105059695-rgb/ui-motion-explainer/blob/main/AI-START.md ，安装或更新最新版 ui-motion-fusion，保留我的工程和自定义内容。有我提供的私用完整包时一并安装参考；分别报告生产能力就绪情况与历史参考完整性，历史原片不全不阻塞已实现能力。
+正常准备工程直接给出全库逐条用途、当前外观和适用原句。投稿片分配到具体镜头，A 配色、中文字级、纸面和深色窗口贯穿全片。PromptMotion、FredTalk、Collect UI、正文场景及独立动效分别提供可选的分镜、动作、交互和构图；每个目录 ID 都能单独查。独立实现可以按自己的 ID 直接进入本期素材槽，导出后能查到它出现在哪些帧。[逐片分工与绑定示例](references/video-use-guide.md)
 
 当前仓库包含完整 Skill 实现与随包资源；GitHub `Download ZIP` 或 [最新源码包](https://github.com/3105059695-rgb/ui-motion-explainer/archive/refs/heads/main.zip) 都可安装，最新 Release 页面的 `Source code (zip)` 提供固定版本。私人原片和未随包历史媒体的范围见下文。解压后进入含 `SKILL.md` 和 `install.py` 的目录，不再依赖作者 E 盘或七个额外入口。复用已有 Python、Node、FFmpeg 与浏览器，不为每个项目另装运行时。
 

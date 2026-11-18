@@ -186,13 +186,21 @@ class Media:
         self.moving_ranges=set()
         self.catalog=catalog
         self.projects={}
+        self.library=None
 
     def from_project(self, request):
         import reference_project_input
-        key=(request['source_id'],request['capability'],str((self.base/request['project']).resolve()))
+        if not isinstance(request, dict) or not all(isinstance(request.get(k), str) and request[k] for k in ('project', 'capability')):
+            raise ValueError('A bound project requires its path and catalog capability ID.')
+        if 'source_id' in request and not isinstance(request['source_id'], str):
+            raise ValueError('Supply a source ID or omit it to use the catalog directly.')
+        if 'source_id' not in request and self.library is None:
+            import capability_catalog
+            self.library = {r['id']: r for r in capability_catalog.records(self.catalog.root)}
+        key=(request.get('source_id'),request['capability'],str((self.base/request['project']).resolve()))
         if key not in self.projects:
             out=self.dest.parent/('bound-input-'+str(len(self.projects))+'.mp4')
-            proof=reference_project_input.render_input(self.catalog,request,self.base,out)
+            proof=reference_project_input.render_input(self.catalog,request,self.base,out,self.library)
             self.projects[key]=(str(out),proof)
         return self.projects[key]
 
@@ -290,6 +298,20 @@ def _current_slot(key, slot, value, recipe, media, length, fps):
     return result
 
 
+def _label_project_inputs(shots):
+    from reference_project_input import credit
+    variants = {}
+    for shot in shots:
+        for item in shot['inputs'].values():
+            if item.get('from_project'):
+                variants.setdefault(credit(item['from_project']), {}).setdefault(item['src'], []).append(item)
+    for label, assets in variants.items():
+        if len(assets) > 1:
+            for src, items in assets.items():
+                for item in items:
+                    item['from_project'] = {**item['from_project'], 'credit': label + ' @ ' + Path(src).stem}
+
+
 def _visibility(shots, duration, base):
     """Each counted shot must be visible. Multiple source roles may share time in separate areas."""
     cuts=sorted({0,duration,*[x[k] for x in shots for k in ('start','end')]})
@@ -376,6 +398,7 @@ def compose(catalog, plan_path, output, *, preview=False):
                                         '-c:a','pcm_s24le',str(selected)],check=True,capture_output=True)
                         current=str(selected)
                 master[field]=media.add(current,kind,max(0,(dur-1)/fps),field)['src']
+        _label_project_inputs(master['shots'])
         _visibility(master['shots'],dur,master.get('base_video'))
         master['recipes']={k:recipes[k]['layers'] for k in dict.fromkeys(ids)}
         master['assets']=media.assets
@@ -398,6 +421,7 @@ def compose(catalog, plan_path, output, *, preview=False):
 
 def render(project,output,scale=1):
     import library_html_runner
+    from reference_project_input import credit
     project,output=Path(project).resolve(),Path(output).resolve()
     data=read(project/'reference-timeline.json')
     if output.exists() or not output.parent.is_dir() or output.suffix.lower()!='.mp4':
@@ -428,7 +452,7 @@ def render(project,output,scale=1):
             for item in shot['inputs'].values():
                 info=item.get('from_project')
                 if info:
-                    code=info['source_id']+' / '+info['capability']
+                    code=credit(info)
                     intervals=report.get('reference_project_frames',{}).get(code)
                     if not intervals:
                         raise ValueError('Bound implementation never entered a visible slot: '+code)
@@ -456,6 +480,7 @@ def render(project,output,scale=1):
 
 def verify(project, media, plan=None):
     """Connect the final encoded file to its visible-source receipt and master timeline."""
+    from reference_project_input import credit
     project, media = Path(project).resolve(), Path(media).resolve(strict=True)
     timeline = project/'reference-timeline.json'
     data, receipt = read(timeline), read(project/'reference-render.json')
@@ -476,12 +501,23 @@ def verify(project, media, plan=None):
             raise ValueError('Incomplete visible material evidence: '+key)
         if not all(0<=a<b<=data['frames'] for a,b in actual['intervals']):
             raise ValueError('A source falls outside the encoded master: '+key)
+    implementations = {credit(item['from_project']): item['from_project']
+                       for shot in data['shots'] for item in shot['inputs'].values() if item.get('from_project')}
+    trace = receipt.get('source_implementations', {})
+    if set(trace) != set(implementations):
+        raise ValueError('Library implementations differ between the timeline and visible-frame evidence.')
+    for key, info in implementations.items():
+        row = trace[key]
+        if any(row.get(field) != value for field, value in info.items()) or not row.get('intervals') or not all(
+                type(a) is int and type(b) is int and 0 <= a < b <= data['frames'] for a, b in row['intervals']):
+            raise ValueError('Invalid visible implementation evidence: ' + key)
     streams=probe(media)['streams']
     video=next((s for s in streams if s['codec_type']=='video'),{})
     if int(video.get('nb_frames',0))!=data['frames'] or (data.get('narration') and not any(s['codec_type']=='audio' for s in streams)):
         raise ValueError('The encoded picture or original audio differs from the master clock.')
     return {'technical_passed':True,'complete_reference_coverage':True,'visible_sources':len(observed),
             'visible_material_roles':sum(len(r['slots']) for r in observed.values()), 'frames':data['frames'],
+            'visible_library_capabilities': sorted({i['capability'] for i in implementations.values()}),
             'audio':receipt['audio'],'aesthetic_approval':False,'sha256':receipt['sha256']}
 
 

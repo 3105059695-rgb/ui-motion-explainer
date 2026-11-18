@@ -1,6 +1,6 @@
 # 从这里开始
 
-新电脑首次使用时，将 GitHub Release ZIP 内的 `ui-motion-fusion` 文件夹放入 Codex 的 `skills` 目录，另开对话输入「用 $ui-motion-fusion 剪这段口播」。日常制作需要的全部投稿剪法都在这一包内。
+新电脑首次使用，可以直接把仓库首页发给 Codex，并附上本期任务。Agent 按[仓库接入步骤](AI-START.md)在当前对话调用根目录的 Skill。已安装时可直接说「用 $ui-motion-fusion 剪这段口播」。
 
 [每条视频的用法与新稿示例](references/video-use-guide.md)列出全部投稿参考各自的职责、时间线制作命令及逐帧入片核对。
 

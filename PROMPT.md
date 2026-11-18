@@ -1,1 +1,1 @@
-使用 $ui-motion-fusion，先读取当前安装的 SKILL.md，运行 scripts/ui.py requirements --part 1 并按页末命令完整读到最后一页；然后查看当前认可 UI 的真实画面和动作，用 direct prepare 和 videos plan 给全部投稿参考逐条安排职责，绑定本期材料和原声帧窗，用 videos compose 和 videos render 执行并核对所有正向参考在成片的可见帧，保留本期原稿、原声和人物，完成当前授权范围。只检查或整理 Skill 时不制作视频。
+用 https://github.com/3105059695-rgb/ui-motion-explainer 里的 Skill 剪这段口播，沿用库里的审美和 UI。已有安装可直接调用 $ui-motion-fusion。按 `read plan` 读取现行要求、全库和认可参考，从本期原声与素材出发给各条参考分工，按目录 ID 调用需要的界面、组件与动作，核对最终可见帧。

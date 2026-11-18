@@ -24,7 +24,8 @@ COMMANDS = {'list': 'ui.py capabilities list',
             'plan': 'ui.py capabilities plan --script <口播文件>',
             'check': 'ui.py capabilities check --require'}
 PRODUCTION_FILES = (
-    'scripts/capability_catalog.py', 'scripts/capability_runtime.py',
+    'scripts/capability_catalog.py', 'scripts/capability_runtime.py', 'scripts/component_project.py',
+    'assets/editing-kit/project.js', 'assets/editing-kit/editing-kit.js', 'assets/editing-kit/editing-kit.css',
     'scripts/repository_reading.py', 'scripts/requirements.py', 'references/requirements.json',
     'scripts/ui_adaptation.py', 'scripts/library_ui_style.py',
     'assets/library-runtime/current-ui/roles.js', 'assets/library-runtime/current-ui/transform.cjs',
@@ -136,6 +137,8 @@ def _base(kind, row, root):
         record.update(execution_state='direct', execution_label=STATE_LABELS['direct'],
                       style_scope='host-style', call={
                           'api': "UIEditingKit.apply('" + ident + "', options, progress)",
+                          'build': 'ui.py capabilities bind --id component:' + ident +
+                                   ' --stage <本期对象.html> --spec <节点与时间.json> --out <工程>',
                           'module': impl.get('path'), 'documentation': 'assets/editing-kit/README.md',
                           'scope': '现有DOM节点的动作接口；内容、节点、布局、当前UI由工程提供。'})
         record['preview'] = {'path': 'assets/editing-kit/demo.html?effect=' + ident}
@@ -469,10 +472,18 @@ def routing_context(source, root=ROOT, limit=5):
     rows = records(root)
     units = selection.source_segments(source)
     result = []
+    best_units = {}
+    restored = {r['id'] for r in rows if r.get('eligible_when_upstream_archived')}
     for index, unit in enumerate(units):
         context = ' '.join(units[i]['quote'] for i in range(max(0, index - 1), min(len(units), index + 2)) if i != index)
-        found = search(unit['quote'], root, None, context=context, rows=rows)
-        matched = found['candidates']
+        found = search(unit['quote'], root, None, context=context, rows=rows, include_archived=True)
+        matched = []
+        for row in found['candidates']:
+            score = row['match']['score']
+            if row['id'] not in best_units or score > best_units[row['id']][0]:
+                best_units[row['id']] = (score, unit['id'])
+            if not row.get('archived') or row['id'] in restored:
+                matched.append(row)
         # Relevance remains primary: a generic current-style event must not hide
         # a much better matching retained preset. Readiness only breaks close ties.
         actionable = [r for r in matched if r['execution_state'] in ('direct', 'source-adaptation')]
@@ -486,11 +497,21 @@ def routing_context(source, root=ROOT, limit=5):
         # Prepare uses a compact list, never all parameters or evidence files.
         candidates = [{k: row[k] for k in ('id', 'title', 'execution_state', 'style_scope',
                                          'call', 'inspect_command', 'match')} for row in chosen]
-        result.append({**unit, 'match_count': found['match_count'], 'truncated': len(chosen) < len(matched),
+        result.append({**unit, 'match_count': len(matched), 'truncated': len(chosen) < len(matched),
                        'production_priority': 'semantic-relevance-with-small-callable-style-bonus',
                        'reference_or_missing_match_count': sum(r['execution_state'] in ('reference-only', 'missing') for r in matched),
                        'candidates': candidates, 'full_search_command': found['full_search_command']})
+    catalog = []
+    for row in rows:
+        entry = {key: row[key] for key in ('id', 'title', 'kind', 'semantic_use', 'relations',
+                                             'execution_state', 'archived', 'style_scope')}
+        entry['suggested_unit'] = best_units[row['id']][1] if row['id'] in best_units else None
+        if row.get('source_use'):
+            entry['source_use'] = row['source_use']
+        catalog.append(entry)
     return {'schema_version': 1, 'summary': summary(root, rows=rows), 'units': result,
+            'library': {'entries': catalog, 'entry_count': len(catalog), 'truncated': False,
+                        'instruction': '按各条用途与认可范围为本稿选择。可按任一完整 ID 查参数和实现；原句建议可调整。'},
             'decision': 'candidate-retrieval-only', 'raw_reference_media_required': False,
             'instructions': '通读本期原稿后选择能力；inspect所选参数与预览，复用实际入口。'
                             '这些句段是检索锚点，不是强制切镜；整段可合并、拆解、组合不同能力。'}
@@ -515,6 +536,11 @@ def main(argv=None):
     search_parser.add_argument('--include-archived', action='store_true')
     inspect_parser = commands.add_parser('inspect')
     inspect_parser.add_argument('--id', required=True)
+    binder = commands.add_parser('bind', help='Bind a retained DOM component to current objects and timing.')
+    binder.add_argument('--id', required=True)
+    binder.add_argument('--stage', type=Path, required=True)
+    binder.add_argument('--spec', type=Path, required=True)
+    binder.add_argument('--out', type=Path, required=True)
     check_parser = commands.add_parser('check')
     check_parser.add_argument('--require', action='store_true')
     plan_parser = commands.add_parser('plan')
@@ -529,6 +555,9 @@ def main(argv=None):
             result = search(args.query, args.root, args.limit, state=args.state, include_archived=args.include_archived)
         elif args.command == 'inspect':
             result = inspect(args.id, args.root)
+        elif args.command == 'bind':
+            import component_project
+            result = component_project.build(inspect(args.id, args.root), args.stage, args.spec, args.out, args.root)
         elif args.command == 'check':
             result = readiness(args.root)
         else:

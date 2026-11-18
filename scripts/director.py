@@ -695,6 +695,9 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
         '搜索候选未自动核实；打开源页查看具体过程和结果，下载视频或截取清楚的实际画面，记录有效入出点、对应原句，再绑定素材轨和效果参数。不要等待用户逐句提供例子。',
         *context['materials']['warnings'], '',
         '## 整个效果库仍可选', '',
+        'director-context.json 的 capabilities.library.entries 逐条给出用途、外观范围、执行状态和适用原句建议。按目录 ID 可将独立实现直接放进用片表的素材槽。',
+        *[f"- {s['collection']}（{s['count']}）　{s['role']}　`{s['command']}`" for s in
+          context['video_sources'].get('catalog', {}).get('browse', [])],
         'ui.py capabilities list',
         'ui.py capabilities search --query "本段对象、关系与变化"',
         'ui.py capabilities inspect --id <能力ID>',

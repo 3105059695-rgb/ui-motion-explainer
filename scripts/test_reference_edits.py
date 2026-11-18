@@ -86,6 +86,28 @@ class SubmittedReferenceTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'registered positive use'):
                 reference_project_input.render_input(self.catalog,{**request,'source_id':'interview-g'},base,base/'output.mp4')
 
+    def test_independent_component_requires_its_actual_bound_project(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            base = Path(tmp)
+            proj = base / 'current'
+            proj.mkdir()
+            req = {'project': 'current', 'capability': 'component:compare'}
+            library = {'component:compare': {'execution_state': 'direct'}}
+            edits.write(proj / 'library-project.json', {'id': 'component:compare'})
+            with self.assertRaisesRegex(ValueError, 'current objects'):
+                reference_project_input.render_input(self.catalog, req, base, base / 'out.mp4', library)
+            with self.assertRaisesRegex(ValueError, 'executable catalog ID'):
+                reference_project_input.render_input(self.catalog, {**req, 'capability': 'missing:example'},
+                                                     base, base / 'out.mp4', library)
+
+    def test_same_library_effect_with_two_episode_inputs_tracks_each_render(self):
+        a = {'capability': 'component:compare', 'source_id': None}
+        shots = [{'inputs': {'paper': {'src': 'media/abc.mp4', 'from_project': a},
+                             'screen': {'src': 'media/xyz.mp4', 'from_project': a}}}]
+        edits._label_project_inputs(shots)
+        self.assertEqual({'component:compare @ abc', 'component:compare @ xyz'}, {
+            reference_project_input.credit(item['from_project']) for item in shots[0]['inputs'].values()})
+
     @unittest.skipUnless(shutil.which('ffmpeg'),'Needs the existing FFmpeg installation')
     def test_still_encoded_as_a_video_is_not_acting(self):
         with tempfile.TemporaryDirectory() as tmp:
