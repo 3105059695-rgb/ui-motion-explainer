@@ -87,6 +87,15 @@ def prepared_creation_context(project, additional_files=()):
         if hashlib.sha256(source_path.read_bytes()).hexdigest() != source['sha256']:
             raise ValueError('Prepared narration changed; refresh its context before creating this project.')
         allowed = {context_path, brief_path}
+        # Normal preparation also creates this project-local editable sourcing plan.
+        material_plan = folder / 'materials-plan.json'
+        if context.get('materials', {}).get('plan_path') == str(material_plan) and material_plan.is_file():
+            import material_sourcing
+            saved = material_sourcing.read(material_plan)
+            material_sourcing.validate_plan(saved)
+            if saved.get('source', {}).get('sha256') != source['sha256']:
+                raise ValueError('Prepared material plan belongs to a different narration.')
+            allowed.add(material_plan)
         allowed.update(Path(item).resolve() for item in additional_files
                        if Path(item).resolve().is_relative_to(folder))
         if source_path.is_relative_to(folder):

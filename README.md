@@ -2,7 +2,7 @@
 
 **当前版本见 [VERSION](VERSION)**。仓库地址继续使用 `ui-motion-explainer`，安装与调用统一为 **`$ui-motion-fusion`**。此处描述当前本地源码；远端发布状态以实际发布记录为准。
 
-[看 14 秒原创印刷校样](assets/style-film/fixed-style-proof.mp4) · [打开可拖动的横竖屏样张](assets/style-film/proof.html) · [查看固定配色与材质](references/aesthetic-preferences.md)
+[查看每条参考视频的用法与剪辑示例](references/video-use-guide.md) · [浏览全片图集](assets/reference-atlas/index.html) · [查看固定配色与材质](references/aesthetic-preferences.md)
 
 **公开包可直接调用当前 UI 与生产能力。** 换电脑后，读取当前入口与审美，从整个效果库按口播选择，使用既有源码和本期参数制作；不要求先搬运或重新研究作者的全部原片。私人历史参考可通过完整包补充，生产资源状态与历史档案完整性分别报告，详见[跨电脑安装](docs/install.md)。
 

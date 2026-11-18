@@ -12,7 +12,7 @@ from urllib.parse import unquote
 
 MANIFEST = 'release-manifest.json'
 STATE = '.install-state.json'
-VERSION = '2026.11.18.1'
+VERSION = '2026.11.18.2'
 EXCLUDED_DIRS = {'.git', 'node_modules', '__pycache__', '.cache', 'cache', 'caches',
                  '.venv', 'venv', '.pytest_cache', '.mypy_cache', '.ruff_cache',
                  'runtime', 'runtimes', 'browser-cache'}
@@ -28,7 +28,7 @@ ENTRY_DOCUMENTS = ('SKILL.md', 'references/workflow.md', 'references/style-profi
                    'references/engine-routing.md', 'references/distribution-scope.md',
                    'references/selection-workflow.md', 'references/aesthetic-preferences.md',
                    'references/visual-quality.md', 'references/broll-calibration-cases.md',
-                   'references/editing-lessons.md')
+                   'references/editing-lessons.md', 'references/video-use-guide.md')
 
 
 def sha256(path: Path) -> str:

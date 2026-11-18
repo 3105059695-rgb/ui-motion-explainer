@@ -1,8 +1,8 @@
 ---
 name: ui-motion-fusion
-description: "沿用已认可十款 Agent 正文 UI 与当前 A 配色，从整个效果库按口播选择、绑定和组合已有实现，制作真实材料、AIGC、人物和声音组成的视频及可编辑工程。"
+description: "按口播从用户提供的全片、局部样段与动效库选择各自适用的剪法，绑定本期真实材料、人物、手绘与动作源码，共用已认可正文 UI 和 A 配色，完成视频与可编辑工程。"
 metadata:
-  version: "2026.11.18.1"
+  version: "2026.11.18.2"
 ---
 
 # 我的 UI 动效剪辑
@@ -21,14 +21,14 @@ metadata:
 
 这是用户确认的读取范围。当前窗口已完整读过且文件未变时可复用；新窗口、内容更新或上下文缺失时补齐对应内容。输出目录、哈希或运行读取命令本身不能证明已读懂、已观看或已获认可；上下文不足时保留真实读到的位置继续，不能只读前几项便声称完成。不添加用户签字或逐镜审批。
 
-读取后准备本期：
+读完后按[逐片用法](references/video-use-guide.md)准备本期。每条参考有独立的适用句意、可借动作、认可范围与实现入口。
 
 ```powershell
 python -B -X utf8 scripts/ui.py capabilities check --require
 python -B -X utf8 scripts/ui.py direct -- prepare --script <口播文件> --presenter <原声视频> --project <工程目录>
 ```
 
-无人物视频时省略 `--presenter`。默认准备结果接入全部现行要求、完整阅读队列、当前审美、全部全片图集、逐段能力候选与本期素材检索。仅给数字人和稿件也要主动找素材；准备不是已经搜索、观看、下载、选材或成片。旧账号、示例配色和历史工程不覆盖当前要求。
+无人物视频时省略 `--presenter`。导演简报逐句列出主建议与备选。工程的 director-context.json 在 video_sources.units 中给出原句、来源视频、为何选它、实际动作、本期该填的素材、证据定位与调用命令。按整稿取舍，用同一件资料或上一步的结果接到下一段。完整阅读队列、原片图集及本期素材检索一起保留。仅给数字人和稿件也要主动找素材；准备不是已经搜索、观看、下载、选材或成片。旧账号、示例配色和历史工程不覆盖当前要求。
 
 新电脑首次需要 Remotion 依赖时运行 `ui.py library setup --core`，优先复用符合版本的现有环境，否则安装到唯一共享位置；之后渲染自动复用。不要为每片复制 Node、浏览器或 node_modules。Python、Node、FFmpeg 和浏览器仍是实际运行条件，资源检查通过不等于它们已安装。
 
@@ -43,7 +43,7 @@ python -B -X utf8 scripts/ui.py direct -- prepare --script <口播文件> --pres
 
 实际 UI 适配状态用 `ui.py ui-status` 查询，逐条细节随 `capabilities inspect` 返回；接线记录、浏览器检查、实际视听和用户认可分别报告。生产创建默认使用当前材质角色，历史外观只在明确对照模式保留。图库原动作、构图和内容槽继续参与选用，不套成同一种卡片。
 
-新稿默认使用[固定配色与材质](references/aesthetic-preferences.md)和随工程加载的当前绘制版。先对照[14 秒材料校样](assets/style-film/fixed-style-proof.mp4)看文字、纸边、紫色与镜头停留，再按口播选择材料特写、深窗操作或状态变化。
+新稿默认使用[固定配色与材质](references/aesthetic-preferences.md)和随工程加载的当前绘制版。需要核对纸面、字重和紫色时可看[14 秒材料校样](assets/style-film/fixed-style-proof.mp4)。选剪法从逐片用法与本期材料开始；确认一条后，用简报里的 videos use 命令取得对应实现，加 --out 可生成该实现自己的绑定文件。
 
 当前 UI 是用户认可的「十款 Agent」**正文**与当前 A 色，Fred 补充其质感与剪辑语言；不是黑底紫字标签，也不以四张旧图或某片榜单决定全部画面。使用既有实现保持外观，把时间花在本期具体内容、材料与事件上。
 

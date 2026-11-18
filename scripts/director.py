@@ -25,6 +25,8 @@ import selection_contract
 import requirements
 import source_designs
 import reference_overviews
+import video_routing
+import video_sources
 import reference_readiness
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -301,8 +303,8 @@ def prepare_research(script, project, profile=None, force=False, root=ROOT, pres
                        'No media generation, upload, payment, render or style approval occurs.'],
     }
     readiness = context['production']['reference_readiness']
-    if readiness['required'] and not readiness['ready']:
-        raise ValueError(readiness['message'])
+    if (Path(root) / video_sources.FOCUS).is_file():
+        context['video_sources'] = video_routing.Router(video_sources.Catalog(root)).plan(source['text'], reference_id)
     if film is not None:
         context['reference_film'] = film
     if presenter_source is not None:
@@ -392,6 +394,8 @@ def prepare_research(script, project, profile=None, force=False, root=ROOT, pres
         *[f"- {anchor['path']}；局部对照：{anchor.get('learn', '按当前范围查看')}"
           for item in reference_directions for anchor in item.get('visual_anchors', [])],
     ])
+    if 'video_sources' in context:
+        brief += '\n\n' + video_routing.brief(context['video_sources'])
     outputs = {
         folder / 'director-context.json': json.dumps(context, ensure_ascii=False, indent=2) + '\n',
         folder / 'director-brief.md': brief,
@@ -444,6 +448,8 @@ def prepare_research(script, project, profile=None, force=False, root=ROOT, pres
         warnings.append('Some required local references are missing; see director-context.json.')
     if not context['source_study']['catalog_exists'] or not context['source_study']['manifest_exists']:
         warnings.append('Source-study catalog or manifest is missing; default study context is incomplete, not silently replaced.')
+    if readiness['required'] and not readiness['ready']:
+        warnings.append(readiness['message'])
     warnings.extend(style_resolution.get('warnings', []))
     warnings.extend(context['source_study'].get('warnings', []))
     warnings.extend(film['warnings'] if film is not None else [])
@@ -616,8 +622,9 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
     if presenter_source:
         context['presenter'] = presenter_source
     import repository_reading
+    video_catalog = video_sources.Catalog(root) if (Path(root) / video_sources.FOCUS).is_file() else None
     try:
-        context['repository_reading'] = repository_reading.plan(root)
+        context['repository_reading'] = repository_reading.plan(root, video_catalog=video_catalog)
     except (OSError, ValueError, KeyError, TypeError) as exc:
         context['repository_reading'] = {'status': 'unavailable', 'error': str(exc),
                                          'instruction': '完整阅读队列生成失败；不可声称读完仓库。修复目录后运行 ui.py read plan。'}
@@ -655,6 +662,8 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
     context['available_reference_films'] = reference_film.available(root)
     if reference_id:
         context['reference_film'] = reference_film.load(reference_id, root, origin)
+    context['video_sources'] = (video_routing.Router(video_catalog).plan(source['text'], reference_id)
+                                if video_catalog else {'error': '本安装没有逐片用法目录。', 'units': []})
     brief = '\n'.join([MARKER, '# 本期制作：直接调用已有能力', '',
         f"原稿：{source['path']}", f'工程：{folder}',
         '完整原文在 director-context.json 的 source。先理解对象、变化和结果，再选择具体能力；候选不是自动分镜。', '',
@@ -664,9 +673,10 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
         '选中能力后运行 read selected --id <能力ID>，按清单逐文件读完原实现及生产适配器。内容已读且版本未变时当前窗口可复用；新窗口不能仅用旧摘要宣称完成。', '',
         '## 当前 UI 与原声', '',
         f"偏好正文：{(context['style']['preferences'] or {}).get('path', '尚未解析；不可猜测外观')}，位于 context.style.preferences.text。",
-        '正文沿用白灰纸面、近黑窗口与雾紫焦点。context.production.fixed_style 提供配色、当前绘制组件和 14 秒材料校样，按口播选取材料与构图。',
+        '正文沿用白灰纸面、近黑窗口与雾紫焦点。每段可借的来源、动作、证据与本期绑定见 context.video_sources。',
         '有开头人物素材时保留完整原构图，叠加内容避开脸、身体、手势和字幕。原稿、原声与身份保持；当前明确覆盖只作用于其范围。', '',
         'AIGC 参考图不自动成为首帧或固定主角；本期生成内容按口播重新设计。', '',
+        video_routing.brief(context['video_sources']), '',
         reference_overviews.render_brief(context['production']['reference_overviews']), '',
         '## 本期素材：主动搜索、取得文件、实际绑定', '',
         f"检索与来源计划：{context['materials']['plan_path']}。先按全文调整 query/purpose/wanted，再通过当前登录的 ego 搜索 X、B站、抖音或产品原站。",

@@ -85,6 +85,6 @@ npx remotion render src/index.ts FullReplica out/full-replica.mp4
 
 ## 来源与针对性检查
 
-[来源与近似](../../editorial-ui-motion/references/source-evidence.md)记录原片观察：字体、模型、缓动和原声音仍有不可确证部分。分别说明实际观察、代码重建、替代近似与保留素材；参考中的价格、倍数和业务结论不是已核实的新稿事实。
+[来源与近似](../assets/modules/editorial/references/source-evidence.md)记录原片观察：字体、模型、缓动和原声音仍有不可确证部分。分别说明实际观察、代码重建、替代近似与保留素材；参考中的价格、倍数和业务结论不是已核实的新稿事实。
 
 [模板合同](../../editorial-ui-motion/references/template-contract.md)提供模板检查项。新工程可运行已有 `npm run lint` 和 `npx remotion compositions src/index.ts`；重点看焦点是否落在截图内容、转场圆内是否真实出现下一场、中文字是否清晰、回拖是否一致。通用导出与验证记录按 [制作流程](workflow.md)；没有音轨时不声称声画同步已通过。

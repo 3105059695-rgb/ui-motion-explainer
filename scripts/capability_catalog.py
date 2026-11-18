@@ -317,6 +317,14 @@ def records(root=ROOT):
     rows = capability_execution.apply(rows, root)
     import ui_adaptation
     rows = ui_adaptation.apply(rows, root)
+    # A restored implementation may still be the exact presentation rejected in the interview.
+    # Keep it inspectable while preventing the automatic shortlist from endorsing it.
+    source_uses = _read(root, 'references/video-uses.json', {}).get('films', [])
+    diagnostics = {alias for film in source_uses if film.get('status') == 'diagnostic'
+                   for alias in film.get('aliases', [])}
+    for row in rows:
+        if row['original_id'] in diagnostics or row['id'] in diagnostics:
+            row['source_use'] = 'diagnostic-only'
     ids = [r['id'] for r in rows]
     if len(ids) != len(set(ids)):
         raise ValueError('Duplicate canonical capability IDs in source catalogs.')
@@ -415,7 +423,8 @@ def inspect(ident, root=ROOT):
 
 def _rank(query, rows, context='', include_archived=False, state=None):
     selected = [r for r in rows if (include_archived or not r['archived'] or r.get('eligible_when_upstream_archived')) and
-                r['motion_available'] and (state is None or r['execution_state'] == state)]
+                r['motion_available'] and r.get('source_use') != 'diagnostic-only' and
+                (state is None or r['execution_state'] == state)]
     ranker = selection.Ranker(selected)
     cues = selection.relation_cues(query)
     result = []

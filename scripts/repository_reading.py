@@ -15,6 +15,7 @@ import sys
 import capability_catalog
 import reference_overviews
 import requirements
+import video_sources
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGE_CHARACTERS = 6000
@@ -68,17 +69,28 @@ def reference_text(root=ROOT):
         for page in row['pages']:
             lines.append(f"细读 {page.get('index', '')} [{page.get('start', '?')}, {page.get('end', '?')}] "
                          + (str(page['path']) if page['available'] else '缺失，不能声称已看'))
+    if (Path(root) / video_sources.FOCUS).is_file():
+        lines.extend(['', '逐片用法和适用范围。用 videos inspect --id <ID> 查该条的证据、其余动作与绑定。'])
+        for film in video_sources.read(root, video_sources.FOCUS)['films']:
+            lines.append(f"[{film['id']}] {film['title']}　{film['scope']}")
+            lines.extend('  ' + u['action'] + ' → ' + u['capability'] for u in film['uses'])
     return '\n'.join(lines)
 
 
-def plan(root=ROOT, *, catalog_bundle=None, requirements_bundle=None):
+def plan(root=ROOT, *, catalog_bundle=None, requirements_bundle=None, video_catalog=None):
     root = Path(root).resolve()
     req = requirements_bundle or requirements.load(root)
     cap = catalog_bundle or catalog(root)
     refs = reference_overviews.load(root)
     ref_parts = _pages(reference_text(root))
     prefix = f'python -B -X utf8 "{root / "scripts/ui.py"}" read'
+    if video_catalog is None and (root / video_sources.FOCUS).is_file():
+        video_catalog = video_sources.Catalog(root)
     return {'schema_version': 1, 'scope': 'current-requirements-complete-catalog-all-approved-references-selected-full-source',
+            'video_sources': {'summary': video_catalog.summary() if video_catalog else {},
+                              'guide': 'references/video-use-guide.md',
+                              'match': 'ui.py videos match --query <本句口播>',
+                              'list': 'ui.py videos list --collection focus'},
             'requirements': {'document_count': req['document_count'], 'part_count': req['part_count'],
                              'bundle_sha256': req['bundle_sha256'],
                              'first_command': f'{prefix} requirements --part 1'},

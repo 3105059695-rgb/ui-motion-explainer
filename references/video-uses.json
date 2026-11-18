@@ -1,0 +1,917 @@
+{
+  "schema_version": 1,
+  "films": [
+    {
+      "id": "fangmu-ten-agents-final-20261021",
+      "title": "方木 · 十款 Agent 正文",
+      "scope": "15–300.04 秒的正文。纸面、深窗、字级和紫色焦点适用于新稿，开头排除。",
+      "evidence": "references/evidence/approved-body-default-20261028.json",
+      "uses": [
+        {
+          "role": "正文构图",
+          "cues": [
+            "并行交付",
+            "分头处理",
+            "拆成任务",
+            "分工",
+            "同时推进",
+            "任务分解"
+          ],
+          "action": "同一任务拆给多个执行者，各自的进度合成一份可检查的交付。",
+          "bind": "填任务、执行者、各自的结果和真实交付物。",
+          "capability": "design:parallel-workflow"
+        },
+        {
+          "role": "正文构图",
+          "cues": [
+            "跨设备",
+            "手机接着",
+            "换到手机",
+            "电脑接着"
+          ],
+          "action": "保留任务名和进度，桌面的同一个任务在手机上继续。",
+          "bind": "填同一对象和两端画面，随原声落在可辨认的同一状态。",
+          "capability": "design:cross-device-continuity"
+        }
+      ]
+    },
+    {
+      "id": "fred-argon",
+      "title": "Fred · Gemini4 Argon",
+      "scope": "借材料质感、原位聚焦与评测剪法。",
+      "evidence": "references/evidence/fred-argon-study/index.json",
+      "uses": [
+        {
+          "role": "展开证据",
+          "cues": [
+            "同一份输入",
+            "同一张原图",
+            "同源",
+            "生成了几张",
+            "生成的结果",
+            "生成结果",
+            "同一张图"
+          ],
+          "action": "先出原材料，再从同一容器展开结果，推近正在讲的细节，最后回到全貌。",
+          "bind": "填本期输入、实际结果、需要观众看清的局部。",
+          "capability": "method:F-M01"
+        },
+        {
+          "role": "看清证据",
+          "cues": ["放大原图", "放大细节", "看清细节", "原图特写", "局部放大"],
+          "action": "保持原图所在的窗口，拉近到要看的细节，再回到能辨认来源的位置。",
+          "bind": "使用本期真实原图、细节位置以及需要返回的全貌。",
+          "capability": "method:F-M03"
+        },
+        {
+          "role": "讲清机制",
+          "cues": [
+            "代码背后",
+            "代码是怎么",
+            "机制图",
+            "一行代码",
+            "实际代码"
+          ],
+          "action": "先让观众看见代码证据，再把该行对应的对象和关系画出来。",
+          "bind": "用真实片段和该行实际影响的对象。",
+          "capability": "method:F-M07"
+        }
+      ]
+    },
+    {
+      "id": "fred-jev",
+      "title": "Fred · 开源 JEV 部署",
+      "scope": "借技术比喻、资源条件和机器上的验证。",
+      "evidence": "references/evidence/fred-jev-study/index.json",
+      "uses": [
+        {
+          "role": "解释条件",
+          "cues": [
+            "显存",
+            "本地部署",
+            "硬件门槛",
+            "装得下",
+            "模型文件",
+            "机器配置",
+            "部署模型"
+          ],
+          "action": "把模型文件交到实际机器，对照容量与需求，再回到能否运行的结果。",
+          "bind": "填模型大小、可用资源与实测运行状态，分别标注。",
+          "capability": "method:Q-N01"
+        },
+        {
+          "role": "验证操作",
+          "cues": [
+            "部署成功",
+            "运行日志",
+            "启动成功",
+            "部署日志"
+          ],
+          "action": "固定操作窗口，从触发走到输出，给日志的关键行留阅读时间。",
+          "bind": "填实际操作、输出和能证明成功的那一行。",
+          "capability": "method:Q-A03"
+        }
+      ]
+    },
+    {
+      "id": "fred-weekly",
+      "title": "Fred · 一周 AI 大事",
+      "scope": "借多条消息的材料切换、聚焦与留稳。",
+      "evidence": "references/evidence/fred-reference-approved-20261015.json",
+      "uses": [
+        {
+          "role": "串联消息",
+          "cues": [
+            "本周",
+            "一周大事",
+            "第二条消息",
+            "本周更新",
+            "上一条新闻",
+            "周报"
+          ],
+          "action": "一条消息先给自己的材料，把一句解释放到前层，换条目时交回下一条的材料。",
+          "source_cue": "03:46–03:50，真实页面留在后层，记忆卡前置。",
+          "bind": "每条准备一项可查证的来源和一张对应画面。",
+          "capability": "native:material-focus"
+        },
+        {
+          "role": "显示输入输出",
+          "cues": [
+            "录音变成",
+            "录音转",
+            "输入波形",
+            "语音转写",
+            "转录结果"
+          ],
+          "action": "录音卡交给处理服务，输出卡带着新的波形或文字进入。",
+          "source_cue": "04:16–04:24，录音卡到服务名再到结果波形。",
+          "bind": "填本期输入音频与实际生成的结果。",
+          "capability": "method:F-M06"
+        }
+      ],
+      "moments": [
+        "03:46–03:50 页面退为后层，记忆卡前置。",
+        "04:16–04:24 输入波形交到服务，再揭开结果。"
+      ]
+    },
+    {
+      "id": "arun-membership",
+      "title": "阿闰 · 三家会员横评",
+      "scope": "整片的同条件对比、解释次序和回扣均可借，配色沿当前正文。",
+      "evidence": "references/reference-films.json",
+      "uses": [
+        {
+          "role": "同题比较",
+          "cues": [
+            "同一道题",
+            "同样的题",
+            "同一个题",
+            "同题",
+            "同一条件",
+            "同等条件",
+            "会员",
+            "横评",
+            "同一预算",
+            "相同预算"
+          ],
+          "action": "先把条件钉在画面上，各家的实测结果在同一位置依次替换，最后按使用者给建议。",
+          "bind": "填题目、共同约束、真实结果及建议适用的人。",
+          "capability": "method:F-M08"
+        },
+        {
+          "role": "归纳判断",
+          "cues": [
+            "多个指标",
+            "跑分",
+            "综合表现",
+            "评测指标",
+            "指标比较"
+          ],
+          "action": "把每个指标贴回对应证据，最后收拢为一个能追溯出处的判断。",
+          "bind": "给出比较口径、单位和证据，保留例外。",
+          "capability": "method:F-M12"
+        }
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "秋芝 · 一站式创作 Agent",
+      "scope": "借从制作摩擦到实际操作、再回时间线的讲法。",
+      "evidence": "references/evidence/qiuzhi2046-study/workflow.json",
+      "uses": [
+        {
+          "role": "汇合输入",
+          "cues": [
+            "多个输入",
+            "不同格式",
+            "文稿和图片",
+            "素材汇总",
+            "多种素材",
+            "多种输入"
+          ],
+          "action": "多种输入沿不同路径落到同一制作工具，下一镜仍能看见刚送进去的材料。",
+          "bind": "填真实待处理材料、工具入口和接收后的界面。",
+          "capability": "method:Q-W02"
+        },
+        {
+          "role": "定位步骤",
+          "cues": [
+            "时间线上",
+            "剪辑时间线",
+            "时间轴",
+            "定位片段"
+          ],
+          "action": "先让观众知道位于哪段，压暗旁支框出本次操作，做完回到时间线。",
+          "bind": "填本期录屏、操作位置、前后状态。",
+          "capability": "method:Q-W05"
+        }
+      ]
+    },
+    {
+      "id": "creative",
+      "title": "秋芝 · Agent 视觉创作全流程",
+      "scope": "借创作委托、阶段确认与软件实操的证据链。",
+      "evidence": "references/evidence/qiuzhi2046-study/creative.json",
+      "uses": [
+        {
+          "role": "讲创作流程",
+          "cues": [
+            "分镜",
+            "角色参考",
+            "参考图",
+            "挂到生成",
+            "确认草图",
+            "生成请求",
+            "定稿再生成"
+          ],
+          "action": "先确认本期角色或草图，把已确认的资产挂入该次生成，再展示产物。",
+          "bind": "填确认前后的两份资产与真实请求或结果。",
+          "capability": "method:Q-A05"
+        },
+        {
+          "role": "从操作到结果",
+          "cues": [
+            "点击导出",
+            "点击生成",
+            "选择素材",
+            "实际操作",
+            "点开入口",
+            "确认导出"
+          ],
+          "action": "同一界面走过入口、选择、确认，末镜交给刚生成的文件。",
+          "bind": "填真实 UI、当前选项、可打开的产物。",
+          "capability": "method:Q-A03"
+        }
+      ]
+    },
+    {
+      "id": "network",
+      "title": "秋芝 · 能力网络与迁移",
+      "scope": "借迁移、关系路径与可继续使用的产物。",
+      "evidence": "references/evidence/qiuzhi2046-study/network.json",
+      "uses": [
+        {
+          "role": "解释迁移",
+          "cues": [
+            "迁移",
+            "换了工具",
+            "换一台机器",
+            "换了电脑",
+            "找回记录",
+            "恢复入口"
+          ],
+          "action": "让旧环境中具体失去的东西先出现，再切到新环境的恢复入口和找回的同一件东西。",
+          "bind": "填旧资料、缺口、新入口及找回的资料。",
+          "capability": "method:Q-N03"
+        },
+        {
+          "role": "说明关系",
+          "cues": [
+            "两条路径",
+            "传递关系",
+            "传给谁",
+            "调用关系",
+            "两条链路"
+          ],
+          "action": "从同一起点画出两条有区别的路径，标签始终跟着各自的对象。",
+          "bind": "填发送者、接收者、传递的内容。",
+          "capability": "method:Q-N01"
+        }
+      ]
+    },
+    {
+      "id": "claude",
+      "title": "秋芝 · Claude Code 完整教程",
+      "scope": "借长教程里可对照的修改、失败与恢复过程。",
+      "evidence": "references/evidence/qiuzhi2046-study/claude.json",
+      "uses": [
+        {
+          "role": "验证回退",
+          "cues": [
+            "回滚",
+            "版本回退",
+            "撤销修改",
+            "改坏",
+            "恢复到上一个版本",
+            "回到存档",
+            "回退"
+          ],
+          "action": "保持同一文件同一行，展示改坏后的结果，执行回退，再让观众看到恢复的内容。",
+          "bind": "填同一位置的前后两版、回退操作和实测结果。",
+          "capability": "method:Q-C04"
+        },
+        {
+          "role": "解释记忆",
+          "cues": [
+            "分类记忆",
+            "提取记忆",
+            "保存到文件",
+            "自动记住",
+            "提取对话"
+          ],
+          "action": "从真实对话划出条目，按用途分类，最后落入可找到的文件。",
+          "bind": "填对话、提取的字段和目标文件。",
+          "capability": "method:Q-C05"
+        }
+      ]
+    },
+    {
+      "id": "local-video-5c2f8b41",
+      "title": "最初微信参考 · 蒙版与围绕图片执行任务",
+      "scope": "动作与衔接可学。人物换成本期角色，采用已认可的手绘画风。",
+      "evidence": "references/local-video-design-distillation.md",
+      "uses": [
+        {
+          "role": "交接镜头",
+          "cues": [
+            "蒙版",
+            "遮挡转场",
+            "画面展开",
+            "从界面进入",
+            "进入下一场"
+          ],
+          "action": "沿用画面中已有的形状，扩成遮罩揭开下一场，上一句的动作触发转场。",
+          "bind": "各填一件前景物、后场素材及二者在画面中相交的时刻。",
+          "capability": "capability:R05"
+        },
+        {
+          "role": "找真正原因",
+          "cues": [
+            "真正原因",
+            "真正的原因",
+            "真正卡住",
+            "排除了",
+            "真正的瓶颈"
+          ],
+          "action": "让已排除的两项各自让位，中心只保留真正阻碍进展的对象。",
+          "bind": "填两项已验证的条件和一项有证据的瓶颈。",
+          "capability": "capability:R03"
+        }
+      ]
+    },
+    {
+      "id": "girl-aigc-approved",
+      "title": "女孩手绘 × UI · 11.3 秒完整衔接",
+      "scope": "只借可辨识动作及柔和手绘，换成本期角色、道具与场景。",
+      "evidence": "references/evidence/girl-agent-sample-approved-20261015.json",
+      "uses": [
+        {
+          "role": "手绘接实操",
+          "cues": [
+            "手绘接",
+            "漫画接",
+            "动画接实操",
+            "收进界面",
+            "实拍接到界面"
+          ],
+          "action": "角色手里的对象停在明确位置，借遮挡或收拢接进 UI，同一件资料继续被处理。",
+          "bind": "在手绘和界面中绑定同一件本期资料。",
+          "capability": "sample:user-ui/girl-agent-sample-20261015"
+        }
+      ],
+      "aliases": [
+        "sample:user-ui/girl-agent-sample-20261015"
+      ]
+    },
+    {
+      "id": "girl-manual",
+      "title": "女孩手绘原素材 · 人工搬运",
+      "scope": "只借可辨识动作及柔和手绘，换成本期角色、道具与场景。",
+      "evidence": "references/reference-atlas.json",
+      "uses": [
+        {
+          "role": "演出摩擦",
+          "cues": [
+            "反复复制",
+            "来回搬",
+            "来回复制",
+            "手动搬运",
+            "反复粘贴",
+            "复制粘贴",
+            "来回切工具"
+          ],
+          "action": "同一份资料被人反复拿起、搬到另一工具、放下，让重复劳动发生在画面里。",
+          "bind": "填被搬运的具体对象和两端工具。",
+          "capability": "method:Q-A02"
+        }
+      ]
+    },
+    {
+      "id": "girl-takeover",
+      "title": "女孩手绘原素材 · Agent 接管",
+      "scope": "只借可辨识动作及柔和手绘，换成本期角色、道具与场景。",
+      "evidence": "references/reference-atlas.json",
+      "uses": [
+        {
+          "role": "演出接管",
+          "cues": [
+            "自动接手",
+            "接管",
+            "替我接手",
+            "交给助手",
+            "交给智能体",
+            "接手任务"
+          ],
+          "action": "先停住人的重复动作，再让接手者拿起同一任务并开始工作。",
+          "bind": "让前一镜的任务在后一镜有同样的标记。",
+          "capability": "method:Q-A02"
+        }
+      ]
+    },
+    {
+      "id": "girl-handoff",
+      "title": "女孩手绘原素材 · 资料交接",
+      "scope": "只借可辨识动作及柔和手绘，换成本期角色、道具与场景。",
+      "evidence": "references/reference-atlas.json",
+      "uses": [
+        {
+          "role": "交接资料",
+          "cues": [
+            "资料交接",
+            "递给同事",
+            "交给下一位",
+            "交付下游",
+            "递给下游",
+            "传给下一个"
+          ],
+          "action": "上一位递出具体资料，下一位接住后立即用它做下一步。",
+          "bind": "填同一件资料、发送者、接收者和接收动作。",
+          "capability": "recipe:S08"
+        }
+      ]
+    },
+    {
+      "id": "photographic-transfer",
+      "title": "实体资料搬运 · AIGC 衔接",
+      "scope": "只借接触与交接的连续性。该片的 UI 和摄影画风不作为默认。",
+      "evidence": "references/evidence/full-transfer-feedback-20261014.json",
+      "uses": [
+        {
+          "role": "从实体接到界面",
+          "cues": [
+            "一次交接",
+            "一份资料",
+            "报告和图表",
+            "多个工具里",
+            "同步更新"
+          ],
+          "action": "追着同一份资料从手里到界面，一次交接后在两处显示更新结果。",
+          "bind": "用本期资料的一致标记及两个确已更新的结果。",
+          "capability": "native:compare-change"
+        }
+      ]
+    },
+    {
+      "id": "adiao-anime-semantic",
+      "title": "阿刁 · 脑中画面变成零散词",
+      "scope": "跨账号只借信息损失的表达。阿刁角色身份限阿刁项目。",
+      "evidence": "references/evidence/anime-semantic-feedback-20261013.json",
+      "uses": [
+        {
+          "role": "演出信息损失",
+          "cues": [
+            "脑子里",
+            "脑中的画面",
+            "说不清",
+            "表达不出来",
+            "零散的词",
+            "信息损失",
+            "传达不出"
+          ],
+          "action": "让完整想法向输入框传递，途中细节消失，最后留下不足以还原原意的几个词。",
+          "bind": "填原本能看到的具体细节和传到另一端后剩下的词。",
+          "capability": "recipe:S09"
+        }
+      ]
+    },
+    {
+      "id": "interview-i",
+      "title": "Skill 开头 · 成果、人物与页面",
+      "scope": "认可 0–13.64 秒剪辑表达。",
+      "evidence": "references/evidence/aesthetic-interview-20261021.json",
+      "uses": [
+        {
+          "role": "开场兑现成果",
+          "cues": [
+            "先看做完",
+            "先看成品",
+            "先给你看成品",
+            "成品长这样",
+            "成果演示"
+          ],
+          "action": "先亮出真正完成的东西，接讲述者，再回到这个成果所属的页面。",
+          "bind": "填本期成品、人物原画面和该成果的真实页面。",
+          "capability": "native:material-focus"
+        }
+      ]
+    },
+    {
+      "id": "interview-j",
+      "title": "小王子 · 真实游戏进入讲解",
+      "scope": "认可 0–11.76 秒开头剪法。",
+      "evidence": "references/evidence/aesthetic-interview-20261021.json",
+      "uses": [
+        {
+          "role": "作品开场",
+          "cues": [
+            "做了个游戏",
+            "游戏实机",
+            "试玩",
+            "玩一局",
+            "游戏画面",
+            "做了一个游戏"
+          ],
+          "action": "先让观众看到可玩的实际结果，抓住一次明确操作，再交回人物解释它怎么做成。",
+          "bind": "填实际游戏画面、操作反馈和连续原声。",
+          "capability": "capability:F08"
+        }
+      ]
+    },
+    {
+      "id": "interview-k",
+      "title": "API 奶茶 · 材料与人物交接",
+      "scope": "认可 11.14–24.62 秒的剪辑表达。",
+      "evidence": "references/evidence/aesthetic-interview-20261021.json",
+      "uses": [
+        {
+          "role": "用实物讲接口",
+          "cues": [
+            "奶茶",
+            "下单取餐",
+            "取餐号",
+            "点单",
+            "实物类比",
+            "点一杯"
+          ],
+          "action": "按讲述顺序让一件看得懂的实物交到另一方，再把这个关系对应回技术对象。",
+          "bind": "填本期实物、参与双方及接口的对应关系。",
+          "capability": "capability:F03"
+        }
+      ]
+    },
+    {
+      "id": "interview-l",
+      "title": "Token · 汽车拆解",
+      "scope": "认可 0–17 秒的设计与连续解释，包装使用当前色。",
+      "evidence": "references/evidence/aesthetic-interview-20261021.json",
+      "uses": [
+        {
+          "role": "拆解概念",
+          "cues": [
+            "拆成零件",
+            "拆开一辆车",
+            "最小单位",
+            "拆成小块",
+            "汽车拆解",
+            "拆成词元"
+          ],
+          "action": "同一辆车拆成零件，推进其中一件，零件展开成窗口，再从细节回到计量单位。",
+          "bind": "换成本期确有组成关系的物件、零件与结论。",
+          "capability": "sample:fangmu/body-car-v2"
+        }
+      ],
+      "aliases": [
+        "sample:fangmu/body-car-v2"
+      ]
+    },
+    {
+      "id": "interview-m",
+      "title": "Frame by Frame · 页面与图标",
+      "scope": "访谈认可原作设计和动作，包装采用当前色。公开包可调用对应实现；原作链接留作溯源。",
+      "evidence": "references/evidence/aesthetic-interview-20261021.json",
+      "uses": [
+        {
+          "role": "产品呈现",
+          "cues": [
+            "产品图标",
+            "产品页面",
+            "品牌图标"
+          ],
+          "action": "用识别度高的图标建立产品身份，再接实际功能页面。",
+          "bind": "填本期图标、首个功能和实际页面。",
+          "capability": "reference:notdwd-7de38a"
+        }
+      ],
+      "aliases": [
+        "reference:notdwd-7de38a"
+      ]
+    },
+    {
+      "id": "interview-n",
+      "title": "Spotify · 封面与播放器",
+      "scope": "访谈认可原作设计和动作，包装采用当前色。公开包可调用对应实现；原作链接留作溯源。",
+      "evidence": "references/evidence/aesthetic-interview-20261021.json",
+      "uses": [
+        {
+          "role": "产品呈现",
+          "cues": [
+            "音乐封面",
+            "音乐播放",
+            "唱片封面",
+            "专辑"
+          ],
+          "action": "让封面成为视觉主角，再把同一作品交给播放器继续展示。",
+          "bind": "填本期封面、曲目与播放界面。",
+          "capability": "reference:brainextends-e19ac3"
+        }
+      ],
+      "aliases": [
+        "reference:brainextends-e19ac3"
+      ]
+    },
+    {
+      "id": "interview-o",
+      "title": "SaaS 发布 · 信息卡与空间运动",
+      "scope": "访谈认可原作设计和动作，包装采用当前色。公开包可调用对应实现；原作链接留作溯源。",
+      "evidence": "references/evidence/aesthetic-interview-20261021.json",
+      "uses": [
+        {
+          "role": "产品呈现",
+          "cues": [
+            "空间推进",
+            "空间层级",
+            "信息卡片",
+            "产品发布片"
+          ],
+          "action": "把多个信息面放在有前后的空间里，镜头只推进到当前要讲的一项。",
+          "bind": "填功能关系、真实信息面和本句焦点。",
+          "capability": "reference:aschapmann-131210"
+        }
+      ],
+      "aliases": [
+        "reference:aschapmann-131210"
+      ]
+    },
+    {
+      "id": "base-doubao",
+      "title": "豆包 · 面试流程",
+      "scope": "借多卡归并、协作选区和分支焦点交接。",
+      "evidence": "assets/base-skill/docs/sources/doubao.md",
+      "uses": [
+        {
+          "role": "组织材料",
+          "cues": [
+            "多份简历",
+            "几份材料",
+            "合成一份",
+            "归并",
+            "合并成一份",
+            "汇成一份"
+          ],
+          "action": "四份材料保持可辨，收拢成一项任务，完成后的结果脱离旧容器进入协作。",
+          "bind": "填多份原材料、完成条件和下一位接收者。",
+          "capability": "capability:O04"
+        }
+      ],
+      "media": "assets/base-skill/docs/source-videos/doubao.mp4"
+    },
+    {
+      "id": "base-codex",
+      "title": "Codex · 上下文压缩",
+      "scope": "借搜索取回原文、逐行高亮和文档交到新会话。",
+      "evidence": "assets/base-skill/docs/sources/codex.md",
+      "uses": [
+        {
+          "role": "组织材料",
+          "cues": [
+            "检索原文",
+            "找到原文",
+            "搜索原文",
+            "新会话",
+            "原文证据",
+            "高亮原句"
+          ],
+          "action": "逐字输入查询，在原文中点亮命中的行，保留这份文档并让新窗口接走它。",
+          "bind": "填查询词、真实原文、命中行及交接窗口。",
+          "capability": "capability:O21"
+        }
+      ],
+      "media": "assets/base-skill/docs/source-videos/codex.mp4"
+    },
+    {
+      "id": "base-token",
+      "title": "GPT · Token 节省技巧",
+      "scope": "借流程里已完成项退后、关键词提取与结论升格。",
+      "evidence": "assets/base-skill/docs/sources/token.md",
+      "uses": [
+        {
+          "role": "组织材料",
+          "cues": [
+            "节省token",
+            "节省 token",
+            "步骤灰化",
+            "剩下的步骤",
+            "提取关键词",
+            "已完成的步骤"
+          ],
+          "action": "让已完成的步骤逐项退后，保持当前项可读，最后把关键信息提出来。",
+          "bind": "填当前流程、完成项与需要保留的词。",
+          "capability": "capability:O25"
+        }
+      ],
+      "media": "assets/base-skill/docs/source-videos/token.mp4"
+    },
+    {
+      "id": "editorial-b8a8d304",
+      "title": "竖屏编辑参考 · 曲屏终端与海报分层",
+      "scope": "原片可借镜头与材质关系，历史近似版有明确返修记录。",
+      "evidence": "assets/modules/editorial/references/source-evidence.md",
+      "uses": [
+        {
+          "role": "截图讲解",
+          "cues": [
+            "海报墙",
+            "海报细节",
+            "曲屏终端",
+            "截图特写",
+            "网页瀑布流",
+            "海报排版"
+          ],
+          "action": "从整张海报或网页取出清晰局部，保持原排版可辨，再拉回它在整组材料的位置。",
+          "bind": "填可读的截图、聚焦区域和返回全貌的位置。",
+          "capability": "method:F-M03"
+        }
+      ],
+      "moments": [
+        "1.867–6.733 秒，三张参考卡汇向成果。",
+        "6.733–12.1 秒，曲屏后退焦，终端进入。"
+      ]
+    },
+    {
+      "id": "sample:A01",
+      "title": "获认可基础短样 · 多卡汇合",
+      "scope": "该短样的组合获得认可。",
+      "evidence": "references/capability-catalog.json",
+      "uses": [
+        {
+          "role": "样片剪法",
+          "cues": [
+            "多卡归并",
+            "多方协作",
+            "成果展开"
+          ],
+          "action": "多张材料归并为任务，完成后把成果展开，交给协作者。",
+          "bind": "填原材料、结果与协作者的实际贡献。",
+          "capability": "sample:A01"
+        }
+      ]
+    },
+    {
+      "id": "sample:fangmu/opening-v5",
+      "title": "方木 · 原拍摄背景开头",
+      "scope": "局部开头获得认可。",
+      "evidence": "references/capability-catalog.json",
+      "uses": [
+        {
+          "role": "样片剪法",
+          "cues": [
+            "原拍摄背景",
+            "人物周围",
+            "实拍开场"
+          ],
+          "action": "在原拍摄背景上沿动作留白加入少量语义物件，人物和手势保持完整。",
+          "bind": "测量空白区，绑定原声和手势时机。",
+          "capability": "sample:fangmu/opening-v5"
+        }
+      ]
+    },
+    {
+      "id": "sample:fangmu/material-captions-v3",
+      "title": "方木 · 实物与 UI 字幕",
+      "scope": "来源是历史实现，认可范围见样片记录。",
+      "evidence": "references/capability-catalog.json",
+      "uses": [
+        {
+          "role": "样片剪法",
+          "cues": [
+            "实物字幕",
+            "物品标注",
+            "实物标签"
+          ],
+          "action": "在真实物件旁标出本句提到的属性，再回到完整物件。",
+          "bind": "填物件实拍、要标注的位置和原声字幕。",
+          "capability": "sample:fangmu/material-captions-v3"
+        }
+      ]
+    },
+    {
+      "id": "sample:fangmu/full-v3",
+      "title": "方木 · Token 历史整片",
+      "scope": "按需对照已有整片做法。",
+      "evidence": "references/capability-catalog.json",
+      "uses": [
+        {
+          "role": "样片剪法",
+          "cues": [
+            "token整片",
+            "token 正文续作",
+            "续剪token"
+          ],
+          "action": "串起人物开头、拆件解释和后段实例，检查从局部返回整片后是否仍能跟上。",
+          "bind": "对照续作已有口播、场次和当前正文要求。",
+          "capability": "sample:fangmu/full-v3"
+        }
+      ]
+    },
+    {
+      "id": "sample:adiao/unemployment-v3-opening",
+      "title": "阿刁 · 失业手册开头",
+      "scope": "借原背景中的安全排字与实物接力。",
+      "evidence": "references/capability-catalog.json",
+      "uses": [
+        {
+          "role": "样片剪法",
+          "cues": [
+            "失业手册",
+            "手臂避让",
+            "原亮背景",
+            "空白区"
+          ],
+          "action": "让小浮层避开脸、手和前臂，再由同一件物品连接到正文。",
+          "bind": "填本期原始全景、实测空白区和交接物。",
+          "capability": "sample:adiao/unemployment-v3-opening"
+        }
+      ]
+    },
+    {
+      "id": "fangmu-ten-agents-opening-v2-20261021",
+      "title": "十款 Agent · 被排除的开头",
+      "scope": "正文可借用，用户后续明确排除了这段开头。",
+      "evidence": "references/evidence/fangmu-ten-agents-opening-v2-20261021/index.json",
+      "uses": [],
+      "status": "diagnostic",
+      "aliases": []
+    },
+    {
+      "id": "reading-opening-historical-probe",
+      "title": "读书开头 · 历史试样",
+      "scope": "仅作诊断，访谈记录明确低于当前要求。",
+      "evidence": "references/evidence/aesthetic-interview-20261021.json",
+      "uses": [],
+      "status": "diagnostic",
+      "aliases": []
+    },
+    {
+      "id": "interview-f",
+      "title": "访谈 F · 黑窗与关键词前景",
+      "scope": "本条试看片被整体否定，用于检查是否又让大黑窗压住材料。",
+      "evidence": "references/evidence/aesthetic-interview-20261021.json",
+      "uses": [],
+      "status": "diagnostic",
+      "aliases": [
+        "fredtalk:library-legacy81-b009"
+      ]
+    },
+    {
+      "id": "interview-g",
+      "title": "访谈 G · 卡片归位与报告展开",
+      "scope": "本条展示的整体观感不符合偏好，不能当作推荐样板。",
+      "evidence": "references/evidence/aesthetic-interview-20261021.json",
+      "uses": [],
+      "status": "diagnostic",
+      "aliases": [
+        "fredtalk:library-new10-x014"
+      ]
+    },
+    {
+      "id": "interview-h",
+      "title": "访谈 H · 多图比较与提示词",
+      "scope": "该具体试看片不获认可，避免反复拿它演示所有比较。",
+      "evidence": "references/evidence/aesthetic-interview-20261021.json",
+      "uses": [],
+      "status": "diagnostic",
+      "aliases": [
+        "fredtalk:4b5b8eb5-14b8-4fe9-86fe-e9bee5d02751"
+      ]
+    },
+    {
+      "id": "workbuddy-nine-v4",
+      "title": "WorkBuddy · 九框架 v4",
+      "scope": "作为窗口反复换字、动作没有解释差异的纠错对照。",
+      "evidence": "references/evidence/window-lessons-20261019.md",
+      "uses": [],
+      "status": "diagnostic",
+      "aliases": []
+    }
+  ]
+}
