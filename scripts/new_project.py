@@ -59,7 +59,7 @@ def create(out, scene=None, title=None, profile=None, base=None, root=ROOT, cust
             pairs += [(Path(root) / 'assets/agent-editorial' / name, Path('lib/agent-editorial') / name)
                       for name in ('agent-editorial.js', 'motion-core.js', 'palette.json',
                                    'source-designs.js', 'source-designs.json',
-                                   'source/body-a.js', 'source/body-b.js', 'source/timing.json')]
+                                   'source/body-a.js', 'source/body-b.js', 'current/body-a.js', 'current/body-b.js', 'evidence-spread.js', 'source/timing.json')]
             pairs += [(base / 'assets/portable-studio/fonts' / name, Path('fonts') / name)
                       for name in ('NotoSansSC.ttf', 'NotoSansSC-OFL.txt')]
         if reference_spec:

@@ -1,6 +1,6 @@
-/* Complete approved BodyA/BodyB designs, with new narration/material bindings.
- * Source geometry and state chains execute unchanged. This adapter does not run film.js,
- * copy its ranking/navigation, retime narration, or supply private/original media.
+/* Bind the archived BodyA/BodyB state chains to episode content.
+ * Current players load the maintained drawing editions. Original engines remain usable
+ * for source study and previously assembled projects. Neither engine owns the media clock.
  */
 (function (root, factory) {
   const node = typeof module === 'object' && module.exports;
@@ -141,17 +141,26 @@
         const value=target[key];return typeof value==='function'?value.bind(target):value;
       },set(target,key,value){target[key]=value;return true;}});
       const rr=(x,y,w,h,r,fill,stroke,lw=2)=>{if(w<=0||h<=0)return;ctx.beginPath();ctx.roundRect(x,y,w,h,Math.min(r,w/2,h/2));if(fill){ctx.fillStyle=fill;ctx.fill();}if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=lw;ctx.stroke();}};
+      const family=binding.fontFamily||'Noto, "Microsoft YaHei", sans-serif';
+      const measure=(s,size,weight)=>{raw.font=`${weight} ${size}px ${family}`;return raw.measureText(lookup(s)).width;};
       const txt=(s,x,y,size=40,color=C.black,weight=700,align='left',maxWidth)=>{
         const text=lookup(s);if(!text)return;
-        ctx.font=`${weight} ${size}px ${binding.fontFamily||'Noto, sans-serif'}`;ctx.textBaseline='alphabetic';ctx.textAlign=align;ctx.fillStyle=color;
-        if(Number.isFinite(maxWidth))ctx.fillText(text,x,y,maxWidth);else ctx.fillText(text,x,y);
+        ctx.font=`${weight} ${size}px ${family}`;ctx.textBaseline='alphabetic';ctx.textAlign=align;ctx.fillStyle=color;
+        if(Number.isFinite(maxWidth)){
+          if(maxWidth<=0)return;
+          const width=ctx.measureText(text)?.width;
+          if(width>maxWidth)ctx.font=`${weight} ${size*maxWidth/width}px ${family}`;
+        }
+        ctx.fillText(text,x,y);
       };
       const line=(x1,y1,x2,y2,color=C.black,width=3)=>{ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.strokeStyle=color;ctx.lineWidth=width;ctx.lineCap='round';ctx.stroke();};
-      const arrow=(x1,y1,x2,y2,color=C.purple,width=4)=>{line(x1,y1,x2,y2,color,width);const a=Math.atan2(y2-y1,x2-x1);line(x2,y2,x2-15*Math.cos(a-.55),y2-15*Math.sin(a-.55),color,width);line(x2,y2,x2-15*Math.cos(a+.55),y2-15*Math.sin(a+.55),color,width);};
+      const arrow=(x1,y1,x2,y2,color=C.purple,width=4)=>{if(original.drawingFile&&color===C.purple)color='#826B9A';line(x1,y1,x2,y2,color,width);const a=Math.atan2(y2-y1,x2-x1);line(x2,y2,x2-15*Math.cos(a-.55),y2-15*Math.sin(a-.55),color,width);line(x2,y2,x2-15*Math.cos(a+.55),y2-15*Math.sin(a+.55),color,width);};
       const image=(key,x,y,w,h,fit='contain',radius=0)=>{const im=typeof key==='string'?getImage(key):key;if(!im)fail('Missing source image');ctx.save();try{if(radius){ctx.beginPath();ctx.roundRect(x,y,w,h,radius);ctx.clip();}const iw=im.__sourceDesignImage?im.crop[2]:im.width,ih=im.__sourceDesignImage?im.crop[3]:im.height,k=fit==='cover'?Math.max(w/iw,h/ih):Math.min(w/iw,h/ih);ctx.drawImage(im,x+(w-iw*k)/2,y+(h-ih*k)/2,iw*k,ih*k);}finally{ctx.restore();}};
       const logo=(slug,x,y,size)=>{slug=slug==='harness'?'deepseek':slug;rr(x,y,size,size,size*.24,C.white);image(getImage(slug,true),x+size*.16,y+size*.16,size*.68,size*.68);};
-      const pill=(s,x,y,w,h,fill=C.black,color=C.white,size=30)=>{rr(x,y,w,h,h*.28,fill);txt(s,x+w/2,y+h/2+size*.35,size,fill===C.purple&&color===C.white?C.black:color,800,'center');};
-      const H={C,rr,txt,line,arrow,img:image,logo,pill,mix,clamp,
+      const pill=(s,x,y,w,h,fill=C.black,color=C.white,size=30)=>{rr(x,y,w,h,h*.28,fill);txt(s,x+w/2,y+h/2+size*.35,size,fill===C.purple&&color===C.white?C.black:color,800,'center',w-24);};
+      const native=editorial.create(raw,{palette:C,fontFamily:family});
+      const H={C,rr,txt,measure,line,arrow,img:image,logo,pill,mix,clamp,
+        surface:native.card, screen:(r,s,opts)=>native.screen(r,lookup(s),opts),
         progress:(t,s,d=.55)=>clamp((t-s)/d),spring:(t,s,delay=0)=>t<s+delay?0:motion.spring(t-s-delay,{from:0,to:1,omega:13,damping:.82}),
         images:new Proxy({}, {get:(_,key)=>typeof key==='string'?getImage(key):undefined}),
         assets:new Proxy({}, {get:(_,slug)=>({hero:'@hero/'+slug,logo:'@logo/'+slug})})};
@@ -162,7 +171,7 @@
         raw.translate(viewport.x+(w-sv.w*k)/2,viewport.y+(h-sv.h*k)/2);raw.scale(k,k);raw.translate(-sv.x,-sv.y);
         original.draw(ctx,sourceTime,clone(design.chapter),H);
       } finally { raw.restore(); }
-      Object.assign(trace,{sourceFiles:[design.source_file],sourceHashes:{[design.source_file]:design.source_sha256},sourceRange:range.slice(),sourceTime,localTime:args.localTime,mediaTime:args.mediaTime});
+      Object.assign(trace,{sourceFiles:[design.source_file],sourceHashes:{[design.source_file]:design.source_sha256},drawingFile:original.drawingFile||design.source_file,sourceRange:range.slice(),sourceTime,localTime:args.localTime,mediaTime:args.mediaTime});
       return {design:design.id,sourceTime,mediaTime:args.mediaTime};
     };
     scene.sourceDesign=trace;

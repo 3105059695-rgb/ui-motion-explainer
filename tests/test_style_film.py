@@ -9,6 +9,26 @@ sys.path.insert(0,str(ROOT/'scripts'))
 import style_film
 
 class StyleFilmTests(unittest.TestCase):
+ def test_production_prepare_exposes_the_actual_current_drawing_files(self):
+  import director
+  style=director.production_context({},ROOT)['fixed_style']
+  self.assertEqual([Path(d['path']).parent.name for d in style['drawings']],['current','current'])
+  for row in style['drawings']+[style['palette'],style['components'],style['material_shot'],style['visual_sample']]:
+   self.assertTrue(row['exists'],row['path'])
+
+ def test_illustrations_have_illustration_captions_and_current_drawings(self):
+  source=style_film.read(ROOT/'assets/agent-editorial/source-designs.json')
+  manifest=style_film.read(ROOT/'assets/style-film/manifest.json')
+  for d in source['designs']:
+   copy=style_film.demo_copy(d)
+   for slot in d['copy_slots']:
+    if '官方' in slot['source']:
+     self.assertIn(slot['source'],copy)
+     self.assertNotIn('官方',copy[slot['source']])
+  self.assertEqual(set(manifest['drawing_sha256']),set(style_film.DRAWING_FILES))
+  for name,digest in manifest['drawing_sha256'].items():
+   self.assertEqual(digest,style_film.digest(ROOT/name))
+
  def test_all_original_designs_keep_full_order_and_source_ranges(self):
   source=style_film.read(ROOT/'assets/agent-editorial/source-designs.json')
   film=style_film.read(ROOT/'assets/style-film/manifest.json')

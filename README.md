@@ -2,6 +2,8 @@
 
 **当前版本见 [VERSION](VERSION)**。仓库地址继续使用 `ui-motion-explainer`，安装与调用统一为 **`$ui-motion-fusion`**。此处描述当前本地源码；远端发布状态以实际发布记录为准。
 
+[看 14 秒原创印刷校样](assets/style-film/fixed-style-proof.mp4) · [打开可拖动的横竖屏样张](assets/style-film/proof.html) · [查看固定配色与材质](references/aesthetic-preferences.md)
+
 **公开包可直接调用当前 UI 与生产能力。** 换电脑后，读取当前入口与审美，从整个效果库按口播选择，使用既有源码和本期参数制作；不要求先搬运或重新研究作者的全部原片。私人历史参考可通过完整包补充，生产资源状态与历史档案完整性分别报告，详见[跨电脑安装](docs/install.md)。
 
 **先理解口播，再从 `capabilities list/search/inspect` 选择已有能力并直接调用。** 当前默认 UI 仍是用户认可的「十款 Agent」正文外观及当前 A 配色；Fred、阿闰、秋芝与 AIGC 按各自认可范围参与参考，整个效果库继续开放。按口播的意思、上下文与情绪选择材料，让对象完成可看懂的动作，再用蒙版、聚焦、变形与转场接起来。人物身份和 AIGC 画风独立保存。具体偏好见[UI、AE 感、开头与禁忌](references/aesthetic-preferences.md)，流程见[唯一入口](SKILL.md)。

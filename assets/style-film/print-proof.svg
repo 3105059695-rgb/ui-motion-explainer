@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900">
+  <title>叠印，原创双色印刷校样</title>
+  <defs>
+    <pattern id="screen" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-26)">
+      <rect width="7" height="7" fill="#D6C2FF"/><path d="M0 0V7" stroke="#0B0B0F" stroke-width="3"/>
+    </pattern>
+    <path id="upper" d="M238 542 L487 293 C555 225 639 211 697 261 C756 313 751 390 684 458 L577 565"/>
+    <path id="lower" d="M659 403 L420 642 C354 708 271 725 211 673 C150 620 157 544 219 482 L331 370"/>
+    <clipPath id="cross"><path d="M404 400 511 379 569 441 462 530 374 464Z"/></clipPath>
+  </defs>
+  <rect width="900" height="900" fill="#FBFAF8"/>
+  <g fill="#0B0B0F" font-family="Arial,Microsoft YaHei,sans-serif">
+    <text x="47" y="115" font-size="86" font-weight="900" letter-spacing="-8">叠印</text>
+    <text x="845" y="75" text-anchor="end" font-size="22" font-weight="700">双色印刷研究</text>
+    <text x="845" y="108" text-anchor="end" font-size="19" letter-spacing="2">INK ON PAPER</text>
+  </g>
+  <path d="M48 143H852" stroke="#0B0B0F" stroke-width="2"/>
+  <rect x="48" y="164" width="804" height="571" fill="#D6C2FF"/>
+  <g fill="none" stroke-linejoin="round" stroke-linecap="butt">
+    <use href="#upper" stroke="#0B0B0F" stroke-width="105"/>
+    <use href="#lower" stroke="#0B0B0F" stroke-width="107"/>
+    <use href="#lower" stroke="url(#screen)" stroke-width="99"/>
+    <use href="#upper" clip-path="url(#cross)" stroke="#0B0B0F" stroke-width="105"/>
+  </g>
+  <g fill="none" stroke="#0B0B0F" stroke-width="2">
+    <path d="M63 189H88 M75.5 177V201 M812 711H837 M824.5 699V723"/>
+    <path d="M48 761H852"/>
+  </g>
+  <text x="44" y="835" font-family="Arial,Helvetica,sans-serif" font-size="75" font-weight="900" letter-spacing="-5" fill="#0B0B0F">OVERPRINT</text>
+  <g transform="translate(719 794)">
+    <circle cx="20" cy="20" r="20" fill="#D6C2FF"/>
+    <circle cx="57" cy="20" r="20" fill="url(#screen)"/>
+    <circle cx="94" cy="20" r="20" fill="#0B0B0F"/>
+  </g>
+</svg>

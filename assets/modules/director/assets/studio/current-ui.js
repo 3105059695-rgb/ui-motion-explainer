@@ -2,7 +2,7 @@
    Preset source, geometry, SVG artwork, masks and complete GSAP timelines remain.
    Derived from AgentEditorial.card/screen/sheet/pill/file; not a scene template. */
 (function(){'use strict';
- const P={ink:'#0B0B0F',paper:'#F3F3F5',line:'#DBDBE0',accent:'#D6C2FF',muted:'#777780',white:'#FFFFFF'};
+ const P={ink:'#0B0B0F',paper:'#F3F3F5',line:'#DBDBE0',accent:'#D6C2FF',muted:'#62616C',white:'#FFFFFF'};
  const colorProps=new Set(['color','background-color','border-color','border-top-color','border-right-color','border-bottom-color','border-left-color','outline-color','text-decoration-color']);
  const tweenProps=new Set(['color','background','backgroundColor','borderColor','borderTopColor','borderBottomColor','fill','stroke','boxShadow','textShadow']);
  const hex=/#[0-9a-f]{8}\b|#[0-9a-f]{6}\b|#[0-9a-f]{4}\b|#[0-9a-f]{3}\b/ig;
@@ -76,11 +76,11 @@
    else if(/(?:^|[- ])(?:title|heading)(?:$| )/.test(cls)||/^H[123]$/.test(n.tagName))role='heading';
    if(!role)continue;n.dataset.uiRole=role;counts[role]++;
    if(role==='scene'){n.style.setProperty('background-color',dark?P.ink:P.white);if(c.backgroundImage!=='none')n.style.setProperty('background-image',colors(c.backgroundImage,'backdrop'));n.style.color=dark?P.white:P.ink;}
-   if(role==='window'){n.style.boxShadow='7px 9px 0 '+P.line+',0 12px 25px #00000020';n.style.borderColor=dark?P.ink:P.line;}
-   if(role==='paper'){n.style.boxShadow='8px 10px 0 '+P.line+',0 12px 25px #00000020';n.style.borderColor=P.line;}
-   if(role==='card'){n.style.boxShadow='6px 8px 0 '+P.line+',0 12px 25px #00000020';n.style.borderColor=dark?P.ink:P.line;}
+   if(role==='window'){n.style.boxShadow='1px 5px 0 #B4B1BD,0 11px 26px #17132322';n.style.borderColor=dark?'#393840':P.line;}
+   if(role==='paper'){n.style.boxShadow='1px 3px 0 '+P.line+',0 6px 15px #17132318';n.style.borderColor=P.line;}
+   if(role==='card'){n.style.boxShadow='0 2px 0 '+P.line+',0 6px 18px #17132318';n.style.borderColor=dark?'#393840':P.line;}
    if(role==='glass'){n.style.boxShadow='inset 0 1px 1px #FFFFFFB3,0 12px 25px #00000020';n.style.borderColor='#FFFFFF99';}
-   if(role==='control'){n.style.fontWeight='700';if(c.boxShadow!=='none')n.style.boxShadow='0 5px 12px #00000015';}
+   if(role==='control'){n.style.fontWeight='700';if(c.boxShadow!=='none')n.style.boxShadow='none';}
    if(role==='heading'){n.style.fontWeight='800';n.style.letterSpacing='-.02em';}
   }
   // Contrast is assigned per original object. Dark windows retain light text;

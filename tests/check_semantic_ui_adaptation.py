@@ -1,12 +1,13 @@
 """Real-browser UI-role/geometry checks; this is not aesthetic approval."""
 from functools import partial
-import argparse, hashlib, http.server, json, sys, threading
+import argparse, hashlib, http.server, json, os, sys, threading
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 import semantic_effects, method_programs
+from media_server import SingleRangeHTTPRequestHandler
 
 ROLE_SELECTORS={
  'X01':'.reveal-type','X02':'.sort-row','X03':'.source-doc,.magnifier',
@@ -18,7 +19,7 @@ ROLE_SELECTORS={
  'X19':'.bookmark,.example-item','X20':'.concept-bg','X21':'.d-shell,.d-document-shell,.d-chrome',
  'X22':'.z-window,.z-doc,.z-context','X23':'#h-source,#h-paper,#h-source-chrome'}
 
-class Quiet(http.server.SimpleHTTPRequestHandler):
+class Quiet(SingleRangeHTTPRequestHandler):
  def log_message(self,*args):pass
  def handle(self):
   try:super().handle()
@@ -31,14 +32,14 @@ def run(output):
  rows=[]
  try:
   with sync_playwright() as pw:
-   browser=pw.chromium.launch(headless=True)
+   browser=pw.chromium.launch(headless=True,executable_path=os.environ.get('UI_FUSION_BROWSER'))
    page=browser.new_page(viewport={'width':1920,'height':1080})
    errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
    for entry in semantic_effects.entries():
     eid=entry['id'];source=entry['kind']=='source-timeline';errors.clear()
     base=f'http://127.0.0.1:{server.server_port}/assets/semantic-motion/'
     page.goto(base+('source-timelines/'+entry['source_group']+'.html?effect='+eid if source else 'demo.html?effect='+eid))
-    page.evaluate('window.ready()')
+    page.evaluate("()=>Promise.race([window.ready(),new Promise((_,reject)=>setTimeout(()=>reject(Error('Effect media or font did not become ready')),20000))])")
     moments=[.15,.5,.85] if eid in ['X03','X14','X21','X22','X23'] else [.7]
     sampled=[]
     for fraction in moments:

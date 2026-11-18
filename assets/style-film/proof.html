@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>叠印 · 材料镜头</title>
+<style>
+@font-face{font-family:Noto;src:url('../base-skill/assets/portable-studio/fonts/NotoSansSC.ttf');font-weight:100 900;font-display:block}
+*{box-sizing:border-box}body{margin:0;background:#F3F3F5;color:#0B0B0F;font:16px Noto,sans-serif}main{max-width:1440px;margin:auto}
+canvas{display:block;width:100%;height:auto}nav{display:flex;align-items:center;gap:1em;padding:16px 5%}
+button,a{color:inherit;font:inherit}button{padding:7px 20px;border:1px solid #DBDBE0;border-radius:8px;background:white}input{flex:1;accent-color:#594277}
+@media(max-width:650px){nav{flex-wrap:wrap}nav a{width:100%}}
+</style></head><body><main><canvas id="art" width="1920" height="1080" aria-label="一张双色样张从全版推近到两层油墨的交界，再回到全版"></canvas>
+<nav aria-label="样片播放"><button id="play" type="button">播放</button><input id="seek" type="range" min="0" max="14" step=".01" value="0" aria-label="播放位置"><output id="clock">0 / 14 秒</output><a href="fixed-style-proof.mp4">观看 MP4</a></nav></main>
+<script src="../agent-editorial/motion-core.js"></script><script src="../agent-editorial/agent-editorial.js"></script><script src="../agent-editorial/evidence-spread.js"></script><script src="proof.js"></script></body></html>

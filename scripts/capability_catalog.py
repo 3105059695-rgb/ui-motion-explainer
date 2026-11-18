@@ -40,6 +40,7 @@ PRODUCTION_FILES = (
     'assets/agent-editorial/agent-editorial.js', 'assets/agent-editorial/motion-core.js',
     'assets/agent-editorial/source-designs.json', 'assets/agent-editorial/source-designs.js',
     'assets/agent-editorial/source/body-a.js', 'assets/agent-editorial/source/body-b.js',
+    'assets/agent-editorial/current/body-a.js', 'assets/agent-editorial/current/body-b.js', 'assets/agent-editorial/evidence-spread.js',
     'assets/base-skill/assets/portable-studio/fonts/NotoSansSC.ttf',
     'references/capability-catalog.json', 'references/aesthetic-preferences.md',
     'assets/fredtalk-library/catalog.json',
@@ -250,7 +251,9 @@ def _designs(root):
         row = _base('design', {'id': item['id'], 'title': item['label'],
                    'semantic_use': [c.get('description', c['id']) for c in item.get('cues', [])],
                    'implementation': {'sources': ['assets/agent-editorial/' + item['source_file'],
-                       'assets/agent-editorial/source-designs.js', 'scripts/source_designs.py']}}, root)
+                       'assets/agent-editorial/current/' + Path(item['source_file']).name,
+                       'assets/agent-editorial/agent-editorial.js','assets/agent-editorial/source-designs.js',
+                       'assets/agent-editorial/palette.json','scripts/source_designs.py']}}, root)
         if all(f['exists'] for f in row['source_files']):
             row.update(execution_state='direct', execution_label=STATE_LABELS['direct'])
         row.update(style_scope='approved-body-current-palette', adapter_kind='original-body-design',

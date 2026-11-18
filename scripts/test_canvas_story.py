@@ -31,8 +31,8 @@ class CanvasStoryTests(unittest.TestCase):
             self.assertTrue(selection_contract._timeline_assignment(
                 (project / 'runtime.js').read_text(encoding='utf-8'), project / 'runtime.js',
                 project / 'timeline.json', 'binding', project / 'index.html'))
-            self.assertIn((project / 'lib/agent-editorial/source/body-a.js').resolve(), graph)
-            self.assertIn((project / 'lib/agent-editorial/source/body-b.js').resolve(), graph)
+            self.assertIn((project / 'lib/agent-editorial/current/body-a.js').resolve(), graph)
+            self.assertIn((project / 'lib/agent-editorial/current/body-b.js').resolve(), graph)
             self.assertIn((project / 'lib/agent-editorial/source-designs.js').resolve(), graph)
             self.assertEqual(config['captionStyle'], 'approved-source')
             self.assertEqual((project / 'fonts/NotoSansSC.ttf').read_bytes(),

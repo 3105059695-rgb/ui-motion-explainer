@@ -150,8 +150,8 @@
   "source_manifest": "assets/agent-editorial/source-designs.json",
   "source_manifest_sha256": "46590de1075968409c8609dbd84fbe359092a71416164b1e7ce46491ef9b233a",
   "palette": "assets/agent-editorial/palette.json",
-  "palette_sha256": "f207f6694b1e626023d87fdeee57262ad76f153d1ce714376ca7499b8e9dd99a",
-  "media_policy": "Original public demonstration SVG interfaces replace private original media. Original BodyA/BodyB execute unchanged.",
+  "palette_sha256": "a6c2bb487c8b4d6372f71c2950414b525525dc8a75232d5c466d93cfd8b8b0e5",
+  "media_policy": "Original public SVG illustrations carry illustration captions. Current drawing editions retain the archived cue chains and use the fixed editorial materials.",
   "approval_scope": "Source body UI and motion are the approved baseline; this new complete source demonstration is not the approved original movie and has no new user approval.",
   "aigc": {
     "movie": "assets/approved-girl-sample/output/preview.mp4",
@@ -177,8 +177,15 @@
   ],
   "viewing_status": "not-watched-by-building-or-inspecting",
   "rendered": true,
-  "movie_sha256": "ea2c5685d09b698a4b3e0edb5579a166332b5103cd2d1a869effd80ef81e4e6f",
-  "movie_bytes": 2947348,
+  "drawing_sha256": {
+    "assets/agent-editorial/current/body-a.js": "cae2b4741233504559cf735cf60d1e5cf47800c0f06e6c32a3099fad6130e1d3",
+    "assets/agent-editorial/current/body-b.js": "c4cd3e1166a14e5c8a9e2282ee9e0e9459a602e6003162708394f32b11dcf224",
+    "assets/agent-editorial/source-designs.js": "23e7a6824470173d748b09a04a0d353ad365fa7c0057b93ccdf940b0a20d895a",
+    "assets/agent-editorial/agent-editorial.js": "28bd42a73bc121e0dfbe1dbecb2c7a45de022f80d551fdc9abee6de400599fc3",
+    "assets/style-film/player.js": "cd81a269f991c0a74135a99311a1288f61926c7795ac4f9baacbae9814fa1e6f"
+  },
+  "movie_sha256": "1c2a24faff4f6189e94d28ebf2f7606a3c7b8e1e466ee6a9fe4e6f86bd4bf890",
+  "movie_bytes": 2957146,
   "render": {
     "width": 1280,
     "height": 720,
@@ -191,6 +198,7 @@
       {
         "id": "parallel-workflow",
         "sourceFile": "source/body-a.js",
+        "drawingFile": "current/body-a.js",
         "source_sha256": "a082e4507c8eef3395048f62e9c391b6827b50f737a05b0d52b30b7d11d46d32",
         "frames": 737,
         "first_source_time": 13.86,
@@ -199,6 +207,7 @@
       {
         "id": "premise-to-report",
         "sourceFile": "source/body-a.js",
+        "drawingFile": "current/body-a.js",
         "source_sha256": "a082e4507c8eef3395048f62e9c391b6827b50f737a05b0d52b30b7d11d46d32",
         "frames": 587,
         "first_source_time": 45.486666666666665,
@@ -207,6 +216,7 @@
       {
         "id": "connected-delivery",
         "sourceFile": "source/body-a.js",
+        "drawingFile": "current/body-a.js",
         "source_sha256": "a082e4507c8eef3395048f62e9c391b6827b50f737a05b0d52b30b7d11d46d32",
         "frames": 576,
         "first_source_time": 71.20500000000001,
@@ -215,6 +225,7 @@
       {
         "id": "module-assembly",
         "sourceFile": "source/body-a.js",
+        "drawingFile": "current/body-a.js",
         "source_sha256": "a082e4507c8eef3395048f62e9c391b6827b50f737a05b0d52b30b7d11d46d32",
         "frames": 570,
         "first_source_time": 96.16499999999999,
@@ -223,6 +234,7 @@
       {
         "id": "clarify-and-gate",
         "sourceFile": "source/body-a.js",
+        "drawingFile": "current/body-a.js",
         "source_sha256": "a082e4507c8eef3395048f62e9c391b6827b50f737a05b0d52b30b7d11d46d32",
         "frames": 643,
         "first_source_time": 121.455,
@@ -231,6 +243,7 @@
       {
         "id": "cross-device-continuity",
         "sourceFile": "source/body-b.js",
+        "drawingFile": "current/body-b.js",
         "source_sha256": "d87d39e15ac6da2e409cd66a7651fb69d727edcb5ba7b0310330af403bff7fe2",
         "frames": 692,
         "first_source_time": 149.14666666666665,
@@ -239,6 +252,7 @@
       {
         "id": "remote-execution-chain",
         "sourceFile": "source/body-b.js",
+        "drawingFile": "current/body-b.js",
         "source_sha256": "d87d39e15ac6da2e409cd66a7651fb69d727edcb5ba7b0310330af403bff7fe2",
         "frames": 640,
         "first_source_time": 178.94,
@@ -247,6 +261,7 @@
       {
         "id": "capacity-and-bottleneck",
         "sourceFile": "source/body-b.js",
+        "drawingFile": "current/body-b.js",
         "source_sha256": "d87d39e15ac6da2e409cd66a7651fb69d727edcb5ba7b0310330af403bff7fe2",
         "frames": 734,
         "first_source_time": 206.94666666666666,
@@ -255,6 +270,7 @@
       {
         "id": "editable-change-undo",
         "sourceFile": "source/body-b.js",
+        "drawingFile": "current/body-b.js",
         "source_sha256": "d87d39e15ac6da2e409cd66a7651fb69d727edcb5ba7b0310330af403bff7fe2",
         "frames": 665,
         "first_source_time": 238.64999999999998,
@@ -263,6 +279,7 @@
       {
         "id": "tool-convergence",
         "sourceFile": "source/body-b.js",
+        "drawingFile": "current/body-b.js",
         "source_sha256": "d87d39e15ac6da2e409cd66a7651fb69d727edcb5ba7b0310330af403bff7fe2",
         "frames": 535,
         "first_source_time": 268.41833333333335,

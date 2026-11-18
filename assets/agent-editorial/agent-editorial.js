@@ -11,7 +11,18 @@
 })(typeof globalThis !== 'undefined' ? globalThis : this, function (motion) {
   'use strict';
   if (!motion) throw new Error('Load agent-editorial/motion-core.js before agent-editorial.js');
-  const palette = Object.freeze({black:'#0B0B0F',white:'#FFFFFF',purple:'#D6C2FF',muted:'#777780',line:'#DBDBE0',paper:'#F3F3F5'});
+  const palette = Object.freeze({black:'#0B0B0F',white:'#FFFFFF',purple:'#D6C2FF',muted:'#62616C',line:'#DBDBE0',paper:'#F3F3F5',accentInk:'#594277',onDark:'#C4C1CE',rim:'#393840'});
+  // Select ink against the actual flat surface. Media pixels never pass through this function.
+  function onSurface(fill,C=palette,secondary=false) {
+    const hex=/^#([\da-f]{6})$/i.exec(fill||'');
+    if(!hex)return secondary?C.muted:C.black;
+    const channels=[0,2,4].map(i=>parseInt(hex[1].slice(i,i+2),16)/255)
+      .map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4);
+    const lum=channels[0]*.2126+channels[1]*.7152+channels[2]*.0722;
+    if(secondary&&lum<.12)return C.onDark;
+    if(secondary&&lum>.53)return fill.toLowerCase()===C.purple.toLowerCase()?C.accentInk:C.muted;
+    return lum<.18?C.white:C.black;
+  }
   const {clamp, mix} = motion;
   const out = n => 1 - Math.pow(1 - clamp(n), 4);
   const ease = n => { n = clamp(n); return n < .5 ? 8*n*n*n*n : 1-Math.pow(-2*n+2,4)/2; };
@@ -99,7 +110,7 @@
     const width=options.width||ctx.canvas.width,height=options.height||ctx.canvas.height;
     const logicalWidth=options.logicalWidth||1920,logicalHeight=options.logicalHeight||1080;
     const C=Object.freeze({...palette,...options.palette});
-    const font=options.fontFamily||'"Microsoft YaHei", sans-serif';
+    const font=options.fontFamily||'Noto, "Microsoft YaHei", sans-serif';
     function rr(x,y,w,h,r=18,fill=C.white,stroke=null,lw=2) {
       if(!(w>0&&h>0))return;
       ctx.beginPath();ctx.roundRect(x,y,w,h,Math.max(0,Math.min(r,w/2,h/2)));
@@ -108,7 +119,12 @@
     }
     function text(s,x,y,size=40,color=C.black,weight=800,align='left',maxWidth) {
       ctx.save();ctx.font=`${weight} ${size}px ${font}`;ctx.textBaseline='alphabetic';ctx.textAlign=align;ctx.fillStyle=color;
-      if(maxWidth===undefined)ctx.fillText(String(s),x,y);else ctx.fillText(String(s),x,y,maxWidth);ctx.restore();
+      const value=String(s);
+      if(Number.isFinite(maxWidth)&&maxWidth>0&&typeof ctx.measureText==='function'){
+        const width=ctx.measureText(value)?.width;
+        if(width>maxWidth)ctx.font=`${weight} ${size*maxWidth/width}px ${font}`;
+      }
+      if(maxWidth===undefined||maxWidth>0)ctx.fillText(value,x,y);ctx.restore();
     }
     function line(x1,y1,x2,y2,color=C.black,width=3) {
       ctx.save();ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.strokeStyle=color;ctx.lineWidth=width;ctx.lineCap='round';ctx.stroke();ctx.restore();
@@ -123,11 +139,11 @@
       try{draw();}finally{ctx.restore();}
     }
     function card(value,opts={}) {
-      const r=rect(value),radius=opts.radius??18,depth=opts.depth??8,fill=opts.fill||(opts.dark?C.black:C.white);
+      const r=rect(value),radius=opts.radius??18,depth=opts.depth??3,fill=opts.fill||(opts.dark?C.black:C.white);
       ctx.save();
-      if(opts.shadow!==false)shadow(()=>rr(r.x,r.y,r.w,r.h,radius,fill),{blur:typeof opts.shadow==='number'?opts.shadow:25,offsetY:opts.shadowOffsetY??12,color:opts.shadowColor||'#00000020'});
-      if(depth>0)rr(r.x+depth*.8,r.y+depth,r.w,r.h,radius,opts.depthColor||C.line);
-      rr(r.x,r.y,r.w,r.h,radius,fill,opts.edge===false?null:opts.edge||(opts.dark?C.black:C.line),opts.lineWidth??2);
+      if(opts.shadow!==false)shadow(()=>rr(r.x,r.y,r.w,r.h,radius,fill),{blur:typeof opts.shadow==='number'?opts.shadow:18,offsetY:opts.shadowOffsetY??7,color:opts.shadowColor||'#1713231C'});
+      if(depth>0)rr(r.x+depth*.35,r.y+depth,r.w,r.h,radius,opts.depthColor||C.line);
+      rr(r.x,r.y,r.w,r.h,radius,fill,opts.edge===false?null:opts.edge||(opts.dark?C.rim:C.line),opts.lineWidth??1.5);
       ctx.restore();return r;
     }
     function image(im,value,opts={}) {
@@ -143,7 +159,7 @@
     function pill(s,value,opts={}) {
       const r=rect(value),size=opts.size??30;
       rr(r.x,r.y,r.w,r.h,opts.radius??r.h*.28,opts.fill||C.black);
-      text(s,r.x+r.w/2,r.y+r.h/2+size*.35,size,opts.color||(opts.fill===C.purple?C.black:C.white),opts.weight??800,'center',r.w-(opts.padding??24));
+      text(s,r.x+r.w/2,r.y+r.h/2+size*.35,size,opts.color||onSurface(opts.fill||C.black,C),opts.weight??800,'center',r.w-(opts.padding??24));
     }
     function check(x,y,r=22,opts={}) {
       ctx.save();ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fillStyle=opts.fill||C.purple;ctx.fill();ctx.restore();
@@ -157,21 +173,23 @@
       rr(r.x,r.y,r.w*clamp(amount),r.h,radius,opts.fill||C.purple);
     }
     function sheet(value,title,opts={}) {
-      const r=rect(value),pad=opts.padding??25,ink=opts.dark?C.white:C.black;
-      card(r,{depth:10,radius:12,...opts});rr(r.x+pad,r.y+24,48,7,3,C.purple);
+      const r=rect(value),pad=opts.padding??25,ink=onSurface(opts.fill||(opts.dark?C.black:C.white),C);
+      card(r,{depth:3,radius:8,shadow:15,...opts});rr(r.x+pad,r.y+24,48,7,3,C.purple);
       text(title,r.x+pad,r.y+80,opts.size??32,opts.color||ink,800,'left',r.w-2*pad);
       (opts.lines||[]).forEach((s,i)=>text(s,r.x+pad,r.y+135+i*(opts.lineHeight||38),opts.bodySize||25,opts.bodyColor||ink,550,'left',r.w-2*pad));
     }
     function screen(value,title,opts={}) {
-      const r=rect(value),header=opts.headerHeight??49;
-      card(r,{depth:9,radius:18,edge:C.black,lineWidth:3,...opts});line(r.x,r.y+header,r.x+r.w,r.y+header,opts.headerLine||C.black,2);
-      for(let i=0;i<2;i++){ctx.beginPath();ctx.arc(r.x+24+i*18,r.y+header/2,5,0,Math.PI*2);ctx.fillStyle=i?C.line:C.black;ctx.fill();}
-      text(title,r.x+67,r.y+header*.67,opts.titleSize||22,opts.titleColor||C.black,700,'left',r.w-90);
+      const r=rect(value),header=opts.headerHeight??49,fill=opts.fill||(opts.dark?C.black:C.white);
+      const dark=onSurface(fill,C)===C.white,edge=dark?C.rim:C.line;
+      card(r,{depth:5,radius:18,shadow:26,shadowOffsetY:11,depthColor:dark?'#85828F':C.line,edge,lineWidth:2,...opts});
+      line(r.x+2,r.y+header,r.x+r.w-2,r.y+header,opts.headerLine||edge,1.5);
+      for(let i=0;i<2;i++){ctx.beginPath();ctx.arc(r.x+24+i*18,r.y+header/2,4,0,Math.PI*2);ctx.fillStyle=i?edge:onSurface(fill,C,true);ctx.fill();}
+      text(title,r.x+67,r.y+header*.67,opts.titleSize||22,opts.titleColor||onSurface(fill,C),700,'left',r.w-90);
       return {x:r.x+12,y:r.y+header+12,w:r.w-24,h:r.h-header-24};
     }
     function file(value,title,opts={}) {
       const r=rect(value),pad=opts.padding??24;
-      card(r,{depth:8,radius:16,...opts});
+      card(r,{depth:3,radius:9,shadow:15,...opts});
       if(opts.fold!==false){ctx.save();ctx.beginPath();ctx.moveTo(r.x+r.w-43,r.y);ctx.lineTo(r.x+r.w-43,r.y+43);ctx.lineTo(r.x+r.w,r.y+43);ctx.closePath();ctx.fillStyle=C.paper;ctx.fill();ctx.restore();}
       rr(r.x+16,r.y+18,7,r.h-36,3,opts.accent||C.purple);
       text(title,r.x+pad+18,r.y+r.h*.5,opts.size||27,opts.color||C.black,800,'left',r.w-pad*2-20);
@@ -189,10 +207,10 @@
       const r=rect(value);ctx.save();ctx.globalAlpha*=clamp(opts.opacity??1);ctx.translate(r.x+r.w/2,r.y+r.h/2);ctx.rotate(opts.rotation??value.r??0);ctx.scale(opts.scale??1,opts.scale??1);ctx.translate(-r.w/2,-r.h/2);
       try{return draw(api,{x:0,y:0,w:r.w,h:r.h});}finally{ctx.restore();}
     }
-    const api={ctx,C,width,height,logicalWidth,logicalHeight,rr,text,line,arrow,shadow,card,image,pill,check,progress,sheet,screen,file,frame,withRect,place,
+    const api={ctx,C,width,height,logicalWidth,logicalHeight,fontFamily:font,rr,text,line,arrow,shadow,card,image,pill,check,progress,sheet,screen,file,frame,withRect,place,
       safeOverlay:(opts,draw)=>safeOverlay(ctx,opts,()=>draw(api)),
       opening:(opts,draw)=>opening(ctx,opts,()=>draw(api))};
     return Object.freeze(api);
   }
-  return Object.freeze({version:'1.0.1',palette,motion,clamp,mix,out,ease,rectMix,intersection,subtractRect,safeRegions,safeOverlay,opening,cue,phase,activeCue,stagger,layout,create});
+  return Object.freeze({version:'1.1.0',palette,onSurface,motion,clamp,mix,out,ease,rectMix,intersection,subtractRect,safeRegions,safeOverlay,opening,cue,phase,activeCue,stagger,layout,create});
 });

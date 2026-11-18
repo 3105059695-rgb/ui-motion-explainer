@@ -1,7 +1,7 @@
 /* Production-only material adaptation from agent-editorial.js card/screen/sheet.
  * Does not own layout, transforms, camera, duration, clip paths or media pixels. */
 (function(root){
-  const P={white:'#FFFFFF',paper:'#F3F3F5',black:'#0B0B0F',purple:'#D6C2FF',muted:'#777780',line:'#DBDBE0'};
+  const P={white:'#FFFFFF',paper:'#F3F3F5',black:'#0B0B0F',purple:'#D6C2FF',muted:'#62616C',line:'#DBDBE0',accentInk:'#594277',onDark:'#C4C1CE',rim:'#393840'};
   const FONT='"UIFusionApproved", "Noto Sans SC", "Microsoft YaHei", sans-serif';
   const color=c=>{
     if(typeof c!=='string')return null;
@@ -13,7 +13,14 @@
   };
   function tone(c){const a=color(c);if(!a||a[3]<.9)return null;const hi=Math.max(...a.slice(0,3)),lo=Math.min(...a.slice(0,3));if(hi-lo<38){if(hi<86)return 'dark';if(lo>228)return 'light';return 'neutral';}if(a[2]>a[1]+20&&a[0]>a[1]&&a[2]>a[0]-12)return 'accent';return null;}
   function surface(c){const t=tone(c);return t==='dark'?P.black:t==='light'?P.white:t==='neutral'?P.paper:t==='accent'?P.purple:c;}
-  function ink(c){const t=tone(c);return t==='dark'?P.black:t==='light'?P.white:t==='neutral'?P.muted:t==='accent'?P.purple:c;}
+  function ink(c,bg){
+    const t=tone(c),base=tone(bg);
+    if(!t)return c;
+    if(t==='accent')return base==='dark'?P.purple:base?P.accentInk:'var(--fusion-accent-ink, '+P.accentInk+')';
+    if(t==='neutral')return base==='dark'?P.onDark:base?P.muted:'var(--fusion-muted-ink, '+P.muted+')';
+    if(base)return base==='dark'?P.white:P.black;
+    return t==='light'?P.white:P.black;
+  }
   function role(hint,style={}){
     const h=String(hint||'').toLowerCase();
     if(/(?:brand|logo|avatar|photo|image|media|video|canvas|icon|sprite|texture|artwork|status|success|error|warning|danger)/.test(h))return 'content';
@@ -33,7 +40,6 @@
     const s={...input};let r=role(hint,s);if(r==='content')return s;
     if(r==='surface'&&Number(s.height)>0&&Number(s.height)<=64&&Number(s.width)>0&&Number(s.width)<=220)r='chip';
     if(s.fontFamily&&!/mono|code|symbol|icon/i.test(s.fontFamily))s.fontFamily=FONT;
-    if(tone(s.color)==='accent')s.color=P.purple;
     if(s.fontSize&&r!=='layout'){const n=Number.parseFloat(s.fontSize);s.fontWeight=Math.max(Number.parseFloat(s.fontWeight)||400,r==='heading'||n>=40?800:550);}
     const bg=s.backgroundColor||s.background,solid=color(bg);let t=tone(bg),paint=surface(bg);
     // A named UI surface is presentation chrome. Its solid legacy color can
@@ -43,19 +49,26 @@
       paint=t==='dark'?P.black:P.white;
       if(!s.color||tone(s.color))s.color=t==='dark'?P.white:P.black;
     }
-    if(!t)return s;
+    if(!t){
+      if(tone(s.color)==='accent'||tone(s.color)==='neutral')s.color=ink(s.color);
+      return s;
+    }
     if(s.backgroundColor)s.backgroundColor=paint;else s.background=paint;
-    if(s.color)s.color=ink(s.color);
+    s['--fusion-accent-ink']=t==='dark'?P.purple:P.accentInk;
+    s['--fusion-muted-ink']=t==='dark'?P.onDark:P.muted;
+    if(s.color)s.color=ink(s.color,paint);
+    else if(['window','sheet','panel','surface','chip'].includes(r))s.color=t==='dark'?P.white:P.black;
     if(!['window','sheet','panel','surface','chip'].includes(r))return s;
     const radius=String(s.borderRadius||'');
     if(radius.includes('%')||Number(s.width)>0&&Number(s.height)>0&&Math.max(Number(s.width),Number(s.height))<65)return s;
-    const edge=t==='dark'?P.black:P.line;
+    const edge=t==='dark'?P.rim:P.line;
     // Respect circular silhouettes, authored radii, and asymmetric folded sheets.
-    if(s.borderRadius===undefined)s.borderRadius=r==='sheet'?12:r==='chip'?16:18;
+    if(s.borderRadius===undefined)s.borderRadius=r==='sheet'?9:r==='chip'?14:18;
     // Inset outlines do not change source box metrics or text wrapping.
-    s.outline=(r==='window'?3:2)+'px solid '+edge;s.outlineOffset=-(r==='window'?3:2);
-    const d=r==='window'?9:r==='sheet'?10:r==='chip'?0:8;
-    s.boxShadow=d?`${Math.round(d*.8)}px ${d}px 0 ${P.line}, 0 12px 25px #00000020`:'0 4px 12px #00000016';
+    const edgeWidth=r==='window'?2:1;
+    s.outline=edgeWidth+'px solid '+edge;s.outlineOffset=-edgeWidth;
+    s.boxShadow=r==='chip'?'none':r==='window'?'1px 5px 0 #B4B1BD, 0 11px 26px #17132322':
+      r==='sheet'?'1px 3px 0 #DBDBE0, 0 6px 15px #17132318':'0 2px 0 #DBDBE0, 0 6px 18px #17132318';
     return s;
   }
   function font(original){
@@ -70,11 +83,11 @@
     const threshold=40*scale;
     // Bars, pixels, grids and flat field fills remain flat primitives.
     if(w<threshold||h<threshold||!tone(fill)||w>=(ctx.canvas?.width||1920)*.94&&h>=(ctx.canvas?.height||1080)*.88){ctx.fillStyle=surface(fill);if(radius>0){ctx.beginPath();ctx.roundRect(x,y,w,h,Math.min(radius,w/2,h/2));ctx.fill();}else ctx.fillRect(x,y,w,h);return;}
-    const rad=Math.max(0,Math.min(radius||0,w/2,h/2)),depth=options.shadow===false?0:Number.isFinite(options.depth)?options.depth:(roleName==='window'?9:roleName==='sheet'?10:8)*scale;
-    ctx.save();ctx.shadowColor='#00000020';ctx.shadowBlur=25*scale;ctx.shadowOffsetY=12*scale;
-    if(depth){ctx.fillStyle=P.line;ctx.beginPath();ctx.roundRect(x+depth*.8,y+depth,w,h,rad);ctx.fill();}
+    const rad=Math.max(0,Math.min(radius||0,w/2,h/2)),depth=options.shadow===false?0:Number.isFinite(options.depth)?options.depth:(roleName==='window'?5:roleName==='sheet'?3:roleName==='chip'?0:2)*scale;
+    ctx.save();ctx.shadowColor='#17132320';ctx.shadowBlur=(roleName==='window'?26:15)*scale;ctx.shadowOffsetY=(roleName==='window'?11:6)*scale;
+    if(depth){ctx.fillStyle=P.line;ctx.beginPath();ctx.roundRect(x+depth*.35,y+depth,w,h,rad);ctx.fill();}
     ctx.shadowColor='transparent';ctx.shadowBlur=0;ctx.shadowOffsetY=0;
-    ctx.fillStyle=surface(fill);ctx.strokeStyle=options.stroke|| (tone(fill)==='dark'?P.black:P.line);ctx.lineWidth=options.lw||(roleName==='window'?3:2)*scale;
+    ctx.fillStyle=surface(fill);ctx.strokeStyle=options.stroke|| (tone(fill)==='dark'?P.rim:P.line);ctx.lineWidth=options.lw||(roleName==='window'?2:1)*scale;
     ctx.beginPath();ctx.roundRect(x,y,w,h,rad);ctx.fill();ctx.stroke();ctx.restore();
   }
   function paintSurface(ctx,draw,w,h){
@@ -83,8 +96,8 @@
     if(Number.isFinite(w)&&Number.isFinite(h)&&(w<40*scale||h<40*scale||w>=(ctx.canvas?.width||1920)*.94&&h>=(ctx.canvas?.height||1080)*.88))return draw();
     // Stateful paths are painted exactly once: repeated face draws would change
     // the source alpha during fades. Their own path, stroke and depth survive.
-    ctx.save();ctx.fillStyle=surface(ctx.fillStyle);ctx.shadowColor='#00000020';ctx.shadowBlur=25*scale;ctx.shadowOffsetX=0;ctx.shadowOffsetY=12*scale;draw();ctx.restore();
+    ctx.save();ctx.fillStyle=surface(ctx.fillStyle);ctx.shadowColor='#1713231A';ctx.shadowBlur=16*scale;ctx.shadowOffsetX=0;ctx.shadowOffsetY=6*scale;draw();ctx.restore();
   }
-  const api={version:'agent-editorial-material-v1',palette:P,font,style,role,surface,ink,rect,paintSurface};
+  const api={version:'agent-editorial-material-v2',palette:P,font,style,role,surface,ink,rect,paintSurface};
   if(typeof module!=='undefined')module.exports=api;root.__uiFusionCurrent=api;
 })(typeof globalThis==='undefined'?window:globalThis);

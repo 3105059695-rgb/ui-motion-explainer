@@ -6,15 +6,15 @@
  */
 (function (global) {
   'use strict';
-  const ID = 'ten-agents-body-a', VERSION = 1;
+  const ID = 'ten-agents-body-a', VERSION = 2;
   const roles = Object.freeze({
-    panel: {depth: 8, radius: 18},
-    screen: {depth: 9, radius: 18, edge: '#0B0B0F', lineWidth: 3},
-    sheet: {depth: 10, radius: 12},
-    file: {depth: 8, radius: 16},
-    button: {depth: 3, radius: 12},
-    tile: {depth: 6, radius: 22},
-    table: {depth: 7, radius: 12}
+    panel: {depth: 2, radius: 18},
+    screen: {depth: 5, radius: 18, lineWidth: 2, shadow: 26, shadowOffsetY: 11},
+    sheet: {depth: 3, radius: 9, shadow: 15, shadowOffsetY: 6},
+    file: {depth: 3, radius: 9},
+    button: {depth: 0, radius: 12, shadow: false},
+    tile: {depth: 3, radius: 18},
+    table: {depth: 2, radius: 12}
   });
   const layoutCorrections = Object.freeze({
     'fredtalk:episode-scenes-1018-t02m': 'Anchor the two existing connectors to moving window edges; the old absolute connector crossed the first label.',
@@ -59,8 +59,8 @@
     function surface(role, r, opts = {}) {
       if (!roles[role]) throw Error('Unknown UI material role: ' + role);
       return raw.card(r, {
-        ...roles[role], shadow: 22, shadowOffsetY: 10, shadowColor: '#00000018',
-        depthColor: opts.dark ? '#777780' : C.line, ...opts
+        shadowColor: '#1713231C', ...roles[role],
+        depthColor: opts.dark ? '#888590' : C.line, ...opts
       });
     }
     function card(r, opts = {}) {
@@ -68,23 +68,12 @@
     }
     function screen(r, title, opts = {}) {
       if (!current) return raw.screen(r, title, opts);
-      const dark = opts.dark || opts.fill === C.black;
-      const result = raw.screen(r, '', {
-        shadow: 22, shadowOffsetY: 10, shadowColor: '#00000018',
-        headerLine: dark ? '#777780' : C.black, ...opts
-      });
-      const header = opts.headerHeight ?? 49;
-      // The title and small window controls are the actual accepted screen chrome.
-      if (dark) {
-        for (let i = 0; i < 2; i++) {ctx.beginPath();ctx.arc(r.x + 24 + i * 18, r.y + header / 2, 5, 0, Math.PI * 2);ctx.fillStyle = i ? C.line : C.purple;ctx.fill();}
-      }
-      text(title, r.x + 67, r.y + header * .67, opts.titleSize || 22, opts.titleColor || (dark ? C.white : C.black), 700, 'left', r.w - 90);
-      return result;
+      return raw.screen(r,title,opts);
     }
     function file(r, title, opts = {}) {
       if (!current) return raw.file(r, title, opts);
       // Keep the approved file body/fold/accent; fit labels without distortion.
-      raw.file(r, '', {...opts, detail: '', shadow: 22, shadowOffsetY: 10, shadowColor: '#00000018'});
+      raw.file(r, '', {...opts, detail: ''});
       const pad = opts.padding ?? 24;
       text(title, r.x + pad + 18, r.y + r.h * .5, opts.size || 27, opts.color || C.black, 800, 'left', r.w - pad * 2 - 20);
       if (opts.detail) text(opts.detail, r.x + pad + 18, r.y + r.h * .72, opts.detailSize || 20, C.muted, 550, 'left', r.w - pad * 2 - 20);

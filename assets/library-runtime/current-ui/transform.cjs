@@ -3,7 +3,7 @@ const fs=require('node:fs'),path=require('node:path'),{createRequire}=require('n
 const cfg=JSON.parse(fs.readFileSync(process.argv[2],'utf8'));
 const req=createRequire(path.join(cfg.node_modules,'__ui_ast.cjs')),ts=req('typescript');
 const reports=[];
-const UI_COLORS={paper:'#FFFFFF',page:'#FFFFFF',background:'#FFFFFF',bg:'#FFFFFF',canvas:'#FFFFFF',white:'#FFFFFF',cream:'#FFFFFF',ivory:'#FFFFFF',panel:'#F3F3F5',surface:'#F3F3F5',card:'#FFFFFF',ink:'#0B0B0F',black:'#0B0B0F',dark:'#0B0B0F',text:'#0B0B0F',foreground:'#0B0B0F',edge:'#DBDBE0',line:'#DBDBE0',border:'#DBDBE0',muted:'#777780',gray:'#777780',accent:'#D6C2FF',purple:'#D6C2FF',violet:'#D6C2FF',lavender:'#D6C2FF'};
+const UI_COLORS={paper:'#FFFFFF',page:'#FFFFFF',background:'#FFFFFF',bg:'#FFFFFF',canvas:'#FFFFFF',white:'#FFFFFF',cream:'#FFFFFF',ivory:'#FFFFFF',panel:'#F3F3F5',surface:'#F3F3F5',card:'#FFFFFF',ink:'#0B0B0F',black:'#0B0B0F',dark:'#0B0B0F',text:'#0B0B0F',foreground:'#0B0B0F',edge:'#DBDBE0',line:'#DBDBE0',border:'#DBDBE0',muted:'#62616C',gray:'#62616C',accent:'#D6C2FF',purple:'#D6C2FF',violet:'#D6C2FF',lavender:'#D6C2FF'};
 for(const file of cfg.files){
  const source=fs.readFileSync(file,'utf8'),already=source.includes('/* ui-fusion-role-adapted */');
  const kind=cfg.kinds?.[file]||file;

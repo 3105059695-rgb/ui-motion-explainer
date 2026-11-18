@@ -6,6 +6,7 @@ import hashlib
 import html
 import json
 import math
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -15,6 +16,27 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 
 ROOT=Path(__file__).resolve().parents[1]
 FOLDER=Path('assets/style-film')
+DRAWING_FILES=('assets/agent-editorial/current/body-a.js','assets/agent-editorial/current/body-b.js',
+               'assets/agent-editorial/source-designs.js','assets/agent-editorial/agent-editorial.js',
+               'assets/style-film/player.js')
+
+def demo_copy(design):
+    # This player makes all of its materials. A production binding names its own sources.
+    captions={
+        '官方 CLI 历史界面':'工作区示意 · 命令区域',
+        '官方功能宣传图 · 局部放大':'原创界面示意 · 局部放大',
+        '官方客户端 · 任务输入区放大':'原创界面示意 · 任务区',
+        '官方插件管理界面 · 列表局部放大':'原创界面示意 · 模块列表',
+        '官方历史界面 · 终端功能区放大':'原创界面示意 · 执行区域',
+        '官方未登录网页局部 · 原始静态素材':'原创工作区示意 · 静态画面',
+        '官方素材局部':'示意图局部',
+        '官方品牌宣传图 · 非软件操作界面':'原创远程任务示意',
+        'Kimi Work · 官方任务入口':'任务入口示意',
+        '官方界面素材局部 · Agent / Agent 集群入口':'原创界面示意 · 任务与队列',
+        '官网 Desktop 展示区局部 · 静态官方素材，非实操录屏':'原创编辑器示意 · 静态画面',
+        '官方界面素材局部 · 任务输入与办公能力入口':'原创界面示意 · 工具入口',
+    }
+    return {s['source']:captions[s['source']] for s in design['copy_slots'] if s['source'] in captions}
 
 def read(path):return json.loads(Path(path).read_text(encoding='utf-8-sig'))
 def write(path,value):Path(path).write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
@@ -35,26 +57,28 @@ def prepare(root=ROOT):
   b+=rect(50,128,255,716,'#F3F3F5',15)
   for k,name in enumerate(['项目概览','素材与文件','执行中的任务','成果与版本']):
    if k==i%4:b+=rect(70,171+k*76,215,57,'#0B0B0F',12)
-   b+=text(93,208+k*76,name,25,'#D6C2FF' if k==i%4 else '#777780',700)
-  b+=text(345,195,title,56,'#0B0B0F',850)+text(347,247,desc,27,'#777780',500)
+   b+=text(93,208+k*76,name,25,'#D6C2FF' if k==i%4 else '#62616C',700)
+  b+=text(345,195,title,56,'#0B0B0F',850)+text(347,247,desc,27,'#62616C',500)
   if i in (2,5,6):
    for k,item in enumerate(items):
     x=350+k*393;b+=rect(x,302,365,370,'#0B0B0F',19)+rect(x+25,333,48,8,'#D6C2FF',3)+text(x+25,403,item,30,'#FFFFFF',800)
     b+=text(x+25,458,['资料已就绪','处理可跟踪','结果可查看'][k],24,'#BBB7C7',500)+rect(x+25,597,315,10,'#494653',4)+rect(x+25,597,230-k*37,10,'#D6C2FF',4)
   else:
    for k,item in enumerate(items):
-    y=304+k*124;b+=rect(347,y,1164,99,'#0B0B0F' if k==1 else '#F3F3F5',15)+rect(369,y+28,40,40,'#D6C2FF' if k==1 else '#DBDBE0',10)+text(437,y+63,item,32,'#FFFFFF' if k==1 else '#0B0B0F',800)+text(1306,y+62,['已整理','处理中','可查看'][k],25,'#D6C2FF' if k==1 else '#777780',650)
-  b+=rect(348,747,1163,69,'#F3F3F5',12)+text(375,791,'原创界面示意 · 用于观察材质、构图和动作，不是产品截图',23,'#777780',500)
+    y=304+k*124;b+=rect(347,y,1164,99,'#0B0B0F' if k==1 else '#F3F3F5',15)+rect(369,y+28,40,40,'#D6C2FF' if k==1 else '#DBDBE0',10)+text(437,y+63,item,32,'#FFFFFF' if k==1 else '#0B0B0F',800)+text(1306,y+62,['已整理','处理中','可查看'][k],25,'#D6C2FF' if k==1 else '#62616C',650)
+  b+=rect(348,747,1163,69,'#F3F3F5',12)+text(375,791,'原创界面示意 · 用于观察材质、构图和动作，不是产品截图',23,'#62616C',500)
   svg=f'<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><g font-family="Noto Sans SC,Microsoft YaHei,sans-serif">{b}</g></svg>'
   name=d['id']+'.svg';(media/name).write_text(svg,encoding='utf-8');aid='material-'+d['id'];assets.append({'id':aid,'src':'media/'+name})
   icon=rect(0,0,300,300,'#0B0B0F',65)+rect(65,65,65,65,'#D6C2FF',15)+rect(170,65,65,65,'#FFFFFF',15)+rect(65,170,65,65,'#FFFFFF',15)+rect(170,170,65,65,'#D6C2FF',15)
   logo=d['id']+'-mark.svg';(media/logo).write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">{icon}</svg>',encoding='utf-8');lid='mark-'+d['id'];assets.append({'id':lid,'src':'media/'+logo})
   duration=round(d['source_range'][1]-d['source_range'][0],6)
-  binding={'design':d['id'],'sourceRange':d['source_range'],'duration':duration,'demo':True,'copy':{},'media':{s['key']:aid for s in d['media_slots']},'logos':{s['key']:lid for s in d['logo_slots']}}
+  binding={'design':d['id'],'sourceRange':d['source_range'],'duration':duration,'demo':True,'copy':demo_copy(d),'media':{s['key']:aid for s in d['media_slots']},'logos':{s['key']:lid for s in d['logo_slots']}}
   chapters.append({'id':d['id'],'index':i+1,'label':d['label'],'start':cursor,'end':round(cursor+duration,6),'duration':duration,'source_file':d['source_file'],'source_sha256':d['source_sha256'],'source_range':d['source_range'],'binding':binding});cursor=round(cursor+duration,6)
  data={'schema_version':1,'duration':cursor,'sourceManifest':source,'assets':assets,'chapters':chapters}
  (folder/'film-data.js').write_text('window.StyleFilmData = '+json.dumps(data,ensure_ascii=False,separators=(',',':'))+';\n',encoding='utf-8')
  manifest={'schema_version':1,'id':'approved-source-continuous-style-film','duration_seconds':cursor,'movie':'current-style-full.mp4','live_player':'index.html','continuous':True,'chapters':[{k:v for k,v in ch.items() if k!='binding'} for ch in chapters],'source_manifest':'assets/agent-editorial/source-designs.json','source_manifest_sha256':digest(root/'assets/agent-editorial/source-designs.json'),'palette':'assets/agent-editorial/palette.json','palette_sha256':digest(root/'assets/agent-editorial/palette.json'),'media_policy':'Original public demonstration SVG interfaces replace private original media. Original BodyA/BodyB execute unchanged.','approval_scope':'Source body UI and motion are the approved baseline; this new complete source demonstration is not the approved original movie and has no new user approval.','aigc':{'movie':'assets/approved-girl-sample/output/preview.mp4','scope':'Approved complete painterly AIGC action sample. Historical UI is not the current body UI; no permanent character identity requirement.'},'original_references':[{'id':'source-video:fangmu-ten-agents-final-20261021','scope':'Current approved body 15–300.04s; opening excluded.'},{'id':'source-video:fred-argon','scope':'Color/material and editing reference; no source palette replaces the latest A accent.'},{'id':'source-video:fred-jev','scope':'Color/material and continuous explanatory motion.'},{'id':'source-video:fred-weekly','scope':'Color/material across the full original video.'}],'viewing_status':'not-watched-by-building-or-inspecting','rendered':False}
+ manifest['media_policy']='Original public SVG illustrations carry illustration captions. Current drawing editions retain the archived cue chains and use the fixed editorial materials.'
+ manifest['drawing_sha256']={p:digest(root/p) for p in DRAWING_FILES}
  write(folder/'manifest.json',manifest)
  return manifest
 
@@ -64,7 +88,9 @@ def inspect(root=ROOT):
  overlay=load_overlay(root)
  current_source=digest(root/m['source_manifest'])==m['source_manifest_sha256']
  current_palette=digest(root/m['palette'])==m['palette_sha256']
- movie_valid=bool(m.get('rendered') and movie.is_file() and digest(movie)==m.get('movie_sha256'))
+ implementations=m.get('drawing_sha256',{})
+ drawings_current=all((root/p).is_file() and digest(root/p)==h for p,h in implementations.items())
+ movie_valid=bool(m.get('rendered') and movie.is_file() and digest(movie)==m.get('movie_sha256') and drawings_current)
  return {**m,'movie_path':str(movie.resolve()),'movie_exists':movie.is_file(),'movie_hash_matches':movie_valid,'source_manifest_current':current_source,'palette_current':current_palette,'portable_movie_ready':movie_valid and current_source and current_palette,'player_path':str((root/FOLDER/m['live_player']).resolve()),'aigc_movie_path':str((root/m['aigc']['movie']).resolve()),'original_references':[dict(r,resource=resource_fact(r['id'],None,root=root,overlay=overlay)) for r in m['original_references']],'reading_instruction':'First open the complete movie with a video-capable tool or continuous player. Read full chapters as events, not screenshots. Loading metadata, decoding or frame sampling is not continuous viewing. If the current model/tool cannot consume video, say so explicitly; use the executable approved code and request human playback review instead of claiming it watched.','viewing_status':'not-observed-by-this-command'}
 
 def render(root=ROOT,width=1280,fps=24):
@@ -80,11 +106,17 @@ def render(root=ROOT,width=1280,fps=24):
  errors=[];encoder=None;log=(folder/'render-encoder.log').open('wb')
  try:
   with sync_playwright() as p:
-   browser=p.chromium.launch(headless=True,args=['--disable-gpu','--no-sandbox'])
+   binary=os.environ.get('UI_FUSION_BROWSER')
+   if not binary and not Path(p.chromium.executable_path).exists():
+    binary=next((str(f) for base in ('PROGRAMFILES(X86)','PROGRAMFILES','LOCALAPPDATA') if os.environ.get(base)
+                 for sub in ('Microsoft/Edge/Application/msedge.exe','Google/Chrome/Application/chrome.exe')
+                 if (f:=Path(os.environ[base])/sub).is_file()),None)
+   browser=p.chromium.launch(headless=True,executable_path=binary,args=['--disable-gpu'])
    page=browser.new_page(viewport={'width':width,'height':height},device_scale_factor=1)
    page.on('pageerror',lambda error:errors.append(str(error)))
    page.goto(f'http://127.0.0.1:{server.server_port}/assets/style-film/index.html?render',wait_until='load')
    page.evaluate('() => StyleFilm.ready')
+   page.evaluate('([w,h])=>{StyleFilm.canvas.width=w;StyleFilm.canvas.height=h}',[width,height])
    encoder=subprocess.Popen([ffmpeg,'-y','-v','error','-f','image2pipe','-vcodec','mjpeg','-framerate',str(fps),'-i','pipe:0','-an','-vf',f'scale={width}:{height}','-c:v','libx264','-preset','fast','-crf','20','-pix_fmt','yuv420p','-movflags','+faststart',str(out)],stdin=subprocess.PIPE,stderr=log)
    for i in range(count):
     encoded=page.evaluate('t => {StyleFilm.render(t);return StyleFilm.canvas.toDataURL("image/jpeg",.93).split(",")[1];}',min(i/fps,m['duration_seconds']-1e-6))

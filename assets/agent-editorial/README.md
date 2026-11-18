@@ -14,7 +14,7 @@ python -B -X utf8 scripts/ui.py designs scaffold --design <设计> --out <绑定
 python -B -X utf8 scripts/ui.py designs build --spec <绑定.json> --out <工程>
 ```
 
-在[动态查看页](designs.html)完整查看选中的状态链与原片语境。填入新稿的 `duration/cues/copy/media/logos/layout` 后，build 直接生成调用原 `BodyA.draw/BodyB.draw` 的 `scenes.js` 和时间线。可用 `--source-range <原起点> <原终点>` 取完整事件子区间，多设计以逗号选择后自行安排，不固定原十章顺序。确需定制才用 `new --engine fusion -- --custom-layout --canvas-story --out <工程>`；这条路仍会加载全部原设计，便于按真实代码适配。
+在[动态查看页](designs.html)完整查看选中的状态链与原片语境。填入新稿的 `duration/cues/copy/media/logos/layout` 后，build 生成调用当前 `BodyA.draw/BodyB.draw` 的 `scenes.js` 和时间线。`current/` 负责当期排版和材质，`source/` 保存原动作的出处。可用 `--source-range <原起点> <原终点>` 取完整事件子区间，多设计以逗号选择后自行安排。定制工程入口是 `new --engine fusion -- --custom-layout --canvas-story --out <工程>`。
 
 素材和声音先取得本机文件，build 导入为工程内 `media/…` 相对 URL。同盘优先硬链接共享原始字节，勿直接修改链接媒体；跨盘复制需显式 `--copy-media`，导入路径与方式保存在工程 `source-media.local.json`。查看完整原片使用 `python -B -X utf8 scripts/serve.py`，再打开本机查看页；未登记的私人原片不会随公开 Skill 下载，也不会被占位图冒充。
 
@@ -27,6 +27,27 @@ python -B -X utf8 scripts/ui.py designs build --spec <绑定.json> --out <工程
 声音事件能随实际源区间与切点混入导出的 `preview.mp4`；当前浏览器预览仍只播放原口播，需导出后试听。旧工程使用已复制的运行时，更新 Skill 不会悄悄改旧片；升级当前工程时才同步所需实现并复看受影响区间。
 
 已有工程可直接引入 `motion-core.js` → `agent-editorial.js`，沿原后端时间调用。整个效果库的 DOM、Canvas、完整场景及 AIGC 能力继续开放；按真实接口组合或适配，不用这几个绘图函数代替全部效果。
+
+## 材料特写
+
+新建 Canvas 工程会加载 `EvidenceSpread`。将本期截图、文档或印刷品作为工程素材，用相对原图的坐标指出旁白提到的部位。下面的 `amount` 取值 0 至 1，实际推近、停留和返回的时机由本期事件控制。
+
+```js
+StoryScenes.inspectPaper = ({D,asset,layout,localTime}) => {
+  const t = Math.min(1, Math.max(0, (localTime - 1) / 1.2));
+  EvidenceSpread.draw(D, {
+    frame: layout.contentRect,
+    image: asset('current-proof'),
+    focus: {x: .34, y: .48, w: .27, h: .25},
+    source: '本期印刷校样',
+    title: ['靠近看，', '是细线。'],
+    caption: '沿着笔画边缘，可以看到黑线之间的底色。',
+    amount: t * t * (3 - 2 * t)
+  });
+};
+```
+
+标题可以传一行或几行，说明按可用宽度换行。窄画幅自动把材料移到标题下面。页面可直接拖动时间条查看全版、局部与返回过程。[可运行的原创校样](../style-film/proof.html)
 
 ## 绘图与动作
 

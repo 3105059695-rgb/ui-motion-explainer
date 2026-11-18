@@ -1,6 +1,6 @@
 """Exercise all 103 Director presets with the actual current-UI adapter."""
 from functools import partial
-import argparse,hashlib,http.server,json,re,threading
+import argparse,hashlib,http.server,json,os,re,threading
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[1]
@@ -21,7 +21,7 @@ def run(output):
  rows=[]
  try:
   with sync_playwright() as p:
-   b=p.chromium.launch();page=b.new_page(viewport={'width':1920,'height':1080});errors=[]
+   b=p.chromium.launch(executable_path=os.environ.get('UI_FUSION_BROWSER'));page=b.new_page(viewport={'width':1920,'height':1080});errors=[]
    page.on('pageerror',lambda e:errors.append(str(e)))
    page.set_content('<!doctype html><link rel="stylesheet" href="'+base+'base.css"><body style="margin:0;width:1920px;height:1080px;overflow:hidden"><div id="test-root"></div>' + ''.join('<script src="'+base+s+'"></script>' for s in scripts if s!='player.js'))
    page.wait_for_function('window.UIFX && UIFX.presets.length===103');page.evaluate('document.fonts.ready')

@@ -7,8 +7,8 @@ from __future__ import annotations
 import hashlib,json,os,re,shutil,subprocess
 from pathlib import Path
 
-VERSION='agent-editorial-material-v1'
-UI_COLORS={'paper':'#FFFFFF','page':'#FFFFFF','background':'#FFFFFF','bg':'#FFFFFF','canvas':'#FFFFFF','white':'#FFFFFF','cream':'#FFFFFF','ivory':'#FFFFFF','panel':'#F3F3F5','surface':'#F3F3F5','card':'#FFFFFF','ink':'#0B0B0F','black':'#0B0B0F','dark':'#0B0B0F','text':'#0B0B0F','foreground':'#0B0B0F','edge':'#DBDBE0','line':'#DBDBE0','border':'#DBDBE0','muted':'#777780','gray':'#777780','accent':'#D6C2FF','purple':'#D6C2FF','violet':'#D6C2FF','lavender':'#D6C2FF'}
+VERSION='agent-editorial-material-v2'
+UI_COLORS={'paper':'#FFFFFF','page':'#FFFFFF','background':'#FFFFFF','bg':'#FFFFFF','canvas':'#FFFFFF','white':'#FFFFFF','cream':'#FFFFFF','ivory':'#FFFFFF','panel':'#F3F3F5','surface':'#F3F3F5','card':'#FFFFFF','ink':'#0B0B0F','black':'#0B0B0F','dark':'#0B0B0F','text':'#0B0B0F','foreground':'#0B0B0F','edge':'#DBDBE0','line':'#DBDBE0','border':'#DBDBE0','muted':'#62616C','gray':'#62616C','accent':'#D6C2FF','purple':'#D6C2FF','violet':'#D6C2FF','lavender':'#D6C2FF'}
 STYLE_SCOPE={'baseline':'assets/agent-editorial/source/body-a.js + body-b.js; agent-editorial.js primitives',
  'material_adapter':VERSION,'layout_motion':'original positions, timing, transforms, masks and content pixels retained',
  'not_claimed':'Role adaptation is not aesthetic approval; exact per-file and unsupported scopes are in ui-style-report.json.'}
@@ -141,8 +141,8 @@ def adapt_project(output,record,root,spec):
    if changed:
     file.write_text(code,encoding='utf-8');report['specialized_rules'].append({'file':file.relative_to(output).as_posix(),'kind':'authored-paper-material','changes':len(changed),'scope':'only paper front/depth/edge; illustration, handwriting, stamps, Path2D outline and authored transformations retained'})
  hud_patches={
-  'reference:mdaman010-e7226a':('footer',{'#252e35':'#0B0B0F','#cbd3d9':'#FFFFFF','#d5dde2':'#FFFFFF','#dbe0e3':'#DBDBE0','#172329':'#D6C2FF','#6d7780':'#777780','#d4dce0':'#FFFFFF'}),
-  'reference:sayan-shanky-f850d8':('overlays',{'#243038':'#0B0B0F','#f2f6f8':'#FFFFFF','#d8e2e7':'#FFFFFF','#141d24':'#777780','#d3d9dd':'#DBDBE0','#46545e':'#D6C2FF'})
+  'reference:mdaman010-e7226a':('footer',{'#252e35':'#0B0B0F','#cbd3d9':'#FFFFFF','#d5dde2':'#FFFFFF','#dbe0e3':'#DBDBE0','#172329':'#D6C2FF','#6d7780':'#62616C','#d4dce0':'#FFFFFF'}),
+  'reference:sayan-shanky-f850d8':('overlays',{'#243038':'#0B0B0F','#f2f6f8':'#FFFFFF','#d8e2e7':'#FFFFFF','#141d24':'#62616C','#d3d9dd':'#DBDBE0','#46545e':'#D6C2FF'})
  }
  if report['id'] in hud_patches:
   function_name,replacements=hud_patches[report['id']]

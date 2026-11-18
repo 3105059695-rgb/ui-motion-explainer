@@ -44,7 +44,10 @@ def inspect(design_id, root=ROOT):
     if item is None:
         raise ValueError('Unknown design: ' + design_id)
     source = Path(root) / 'assets/agent-editorial' / item['source_file']
+    drawing = source.parent.parent / 'current' / source.name
     return {**item, 'source_path': str(source),
+            'drawing_path': str(drawing), 'drawing_exists': drawing.is_file(),
+            'drawing_sha256': hashlib.sha256(drawing.read_bytes()).hexdigest() if drawing.is_file() else None,
             'source_exists': source.is_file(),
             'source_hash_matches': source.is_file() and hashlib.sha256(source.read_bytes()).hexdigest() == item['source_sha256'],
             'usage': 'Use the complete dynamic source, then fill current copy, media, cue times and composition. '
