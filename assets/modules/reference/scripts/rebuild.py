@@ -86,6 +86,9 @@ def register(a):
 
 def clone(key,dest):
     row=next(e for e in read()['entries'] if e['slug']==item(key)['slug'])
+    if row.get('independent_reconstruction'):
+        raise ValueError('This case has a packaged independent scene. Bind it with ui.py library scaffold --id reference:'
+                         + row['slug'] + ' --out binding.json, then use ui.py library build with current materials.')
     if not row['project']:
         raise ValueError('Historical per-case reconstruction source is not bundled in this public package. '
                          'Use ui.py reference --module-root <your-retained-reference-library> --tool rebuild -- clone ... '

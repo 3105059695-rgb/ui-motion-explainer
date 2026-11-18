@@ -14,6 +14,14 @@ class CompleteSceneEntryTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.base = Path(self.temp.name).resolve()
         self.root = self.base / 'skill'
+        import shutil
+        runtime = Path('assets/library-runtime/current-ui')
+        (self.root / runtime).mkdir(parents=True)
+        for name in ('roles.js', 'transform.cjs'):
+            shutil.copyfile(builder.ROOT / runtime / name, self.root / runtime / name)
+        sheet = Path('assets/rebuilt-library/adu-current-ui.css')
+        (self.root / sheet.parent).mkdir(parents=True)
+        shutil.copyfile(builder.ROOT / sheet, self.root / sheet)
         for key in builder.PACKS:
             folder = self.root / builder.ADU / 'packs' / key
             folder.mkdir(parents=True)

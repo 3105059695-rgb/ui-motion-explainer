@@ -2,7 +2,7 @@
 name: ui-motion-fusion
 description: 按全部投稿参考各自的剪辑用途，用已认可的 UI、颜色与连续动效制作口播视频和可编辑工程。支持按原工程续剪。
 metadata:
-  version: "2026.11.18.5"
+  version: "2026.11.18.6"
 ---
 
 # 用整库参考剪口播

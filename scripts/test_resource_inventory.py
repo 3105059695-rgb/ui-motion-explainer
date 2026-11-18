@@ -151,7 +151,12 @@ class PublicCatalogTests(unittest.TestCase):
         from collections import Counter
         catalog = ri.read_json(ri.ROOT / 'references/capability-catalog.json')
         counts = Counter(case['implementation']['status'] for case in catalog['reference_cases'])
-        self.assertEqual(counts, {'starter-source-present': 2, 'optional-local-history': 226, 'catalog-only': 2})
+        self.assertEqual(counts, {'executable-bound-program': 230})
+        for slug in ('samaote-5e2fc2', 'anilraok-eff262'):
+            scene = ri.inspect_reference(slug)
+            self.assertTrue(scene['entrypoint_present'])
+            self.assertFalse(scene['source_directory_exists'])
+            self.assertEqual(ri.read_json(Path(scene['entrypoints'][0]))['id'], 'reference:' + slug)
 
 
 if __name__ == '__main__':

@@ -702,6 +702,7 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
     brief = '\n'.join([MARKER, '# 本期剪辑', '',
         '## 当前 UI 与原声', '',
         '材质、排版和动作实现沿用认可的字级、纸面、深色窗口和 A 紫焦点。有开头人物时保留完整原构图、原声和手势空间。',
+        'AIGC 参考图不自动成为首帧或固定主角。按本稿选择画风、角色和动作。',
         '整稿、当前审美（context.style.preferences.text）、素材计划和完整索引均在本工程。程序在本地检索；窗口用下方命令接续当前镜头。', '',
         '## 整个效果库仍可选', '',
         '运行 ui.py direct -- resume --project <本工程>。单镜头返回适用原句、来源依据、连续动作和待绑定素材。',

@@ -79,11 +79,17 @@ class PackagedReferenceFilmTests(unittest.TestCase):
                 director.prepare(script, parent, force=True)
 
     def test_cli_forwards_reference_without_a_second_style_argument(self):
-        with patch.object(director, 'prepare', return_value={'generation_submitted': False}) as prepare:
-            with redirect_stdout(io.StringIO()):
-                self.assertEqual(director.main(['prepare', '--script', 'source.txt', '--project', 'project',
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            script = root / 'source.txt'
+            script.write_text('比较三个套餐的服务差异，再看各自适合谁。', encoding='utf8')
+            stream = io.StringIO()
+            with redirect_stdout(stream):
+                self.assertEqual(director.main(['prepare', '--script', str(script), '--project', str(root / 'project'),
                                                '--reference', '阿闰整片']), 0)
-            self.assertEqual(prepare.call_args.kwargs['reference'], '阿闰整片')
+            card = json.loads(stream.getvalue())
+            self.assertEqual(card['whole_film_reference']['id'], 'arun-membership')
+            self.assertEqual(card['stage'], 'edit')
 
     def test_missing_payload_is_explicit_and_does_not_invent_a_reproduction(self):
         with tempfile.TemporaryDirectory() as folder:

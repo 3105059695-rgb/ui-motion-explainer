@@ -102,10 +102,14 @@ class ResourceRegistryTests(unittest.TestCase):
     def test_missing_historical_reconstruction_does_not_become_a_starter(self):
         import subprocess
         import sys
+        import shutil
+        module = self.registry.resolve('reference')
+        shutil.copyfile(ui.ROOT / 'assets/modules/reference/scripts/rebuild.py', module / 'scripts/rebuild.py')
+        (module / 'references/catalog.json').write_text(json.dumps({'entries':[{'slug':'missing','title':'Missing'}]}), encoding='utf8')
         output = Path(self.temp.name) / 'must-not-be-created'
         result = subprocess.run([sys.executable, '-B', '-X', 'utf8',
                                  str(ui.ROOT / 'scripts/ui.py'), 'reference', '--tool', 'rebuild',
-                                 '--module-root', str(ui.ROOT / 'assets/modules/reference'), '--',
+                                 '--module-root', str(module), '--',
                                  'clone', '1', '--out', str(output)],
                                 capture_output=True, text=True, encoding='utf-8')
         self.assertNotEqual(result.returncode, 0)

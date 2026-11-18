@@ -231,6 +231,9 @@ def resume(project, shot_number=None, offset=0, cut=None, root=ROOT):
               'submitted': len(required), 'corrections': len(coverage['diagnostic']),
               'sources_with_bindings': len(ready), 'shots_with_bindings': sum(not f for f in unresolved)}
     result = {'project': str(folder), 'coverage': counts}
+    selected = context.get('reference_film')
+    if selected:
+        result['whole_film_reference'] = {'id': selected['id'], 'guide': 'references/reference-replication.md'}
     if shot_number is None:
         built = output_state(folder, cut)
         if built:

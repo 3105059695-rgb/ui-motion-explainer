@@ -99,9 +99,18 @@ def reference_inventory(root=ROOT):
     for item in catalog:
         history = records.get(item['slug'], {})
         project = (folder / history['project']).resolve() if history.get('project') else None
-        if project is not None and not project.is_relative_to(folder.resolve()):
-            raise ValueError('Reference project escapes the explicitly selected module: ' + item['slug'])
         entries = []
+        if project is not None and not project.is_relative_to(folder.resolve()):
+            # Two registered independent scene programs live in the public sibling library.
+            packaged_module = Path(root).resolve() / 'assets/modules/reference'
+            scene_dir = Path(root).resolve() / 'assets/rebuilt-library/scenes'
+            expected = scene_dir / (item['slug'] + '.json')
+            if (folder.resolve() != packaged_module or not history.get('independent_reconstruction')
+                    or project.parent != scene_dir or project != expected or not project.is_file()):
+                raise ValueError('Reference project escapes the explicitly selected module: ' + item['slug'])
+            if read_json(project).get('id') != 'reference:' + item['slug']:
+                raise ValueError('Independent scene identity differs from its registered reference.')
+            entries.append(str(project))
         if project and project.is_dir():
             entries = [str(project / name) for name in ('index.html', 'project.json', 'package.json', 'render.py') if (project / name).is_file()]
             config = read_json(project / 'project.json') if (project / 'project.json').is_file() else {}
