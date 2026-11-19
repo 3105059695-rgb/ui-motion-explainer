@@ -14,7 +14,7 @@ PLAN = 'reference-cut-plan.json'
 CONTEXT = 'director-context.json'
 OUTPUT = 'reference-output.json'
 OWNER = 'ui-motion-fusion/edit-session'
-MASTER = ('fps', 'width', 'height', 'duration_frames', 'narration', 'base_video', 'narration_stream_index')
+MASTER = ('fps', 'width', 'height', 'duration_frames', 'narration', 'base_video', 'narration_stream_index', 'cutaways')
 QUOTE_SIZE = 220
 
 
@@ -38,6 +38,13 @@ def read_project(folder):
 
 def master_values(plan):
     return {k: plan[k] for k in MASTER if k in plan}
+
+
+def master_card(plan):
+    values=master_values(plan)
+    if 'cutaways' in values:
+        values['cutaway_count']=len(values.pop('cutaways'))
+    return values
 
 
 def relative(path, base):
@@ -120,7 +127,10 @@ def output_state(folder, override=None):
         override = pointer['project']
     project = (folder / override).resolve()
     timeline = project / 'reference-timeline.json'
-    if not timeline.is_file() or edits.read(timeline).get('source_plan_sha256') != edits.digest(folder / PLAN):
+    if not timeline.is_file():
+        return None
+    data=edits.read(timeline)
+    if data.get('source_plan_sha256') != edits.digest(folder / PLAN):
         return None
     result = {'stage': 'render', 'cut': str(project)}
     report = project / 'reference-render.json'
@@ -140,6 +150,13 @@ def output_state(folder, override=None):
                         'review': str(review_path) if review_path.is_file() else None,
                         'visible_sources': checked['visible_sources'], 'frames': checked['frames'],
                         'next': '用对照页按原速看当前镜、前后剪点，再开原声看整片。旧工程用 videos review 生成对照页。'}
+    elif data.get('editorial_review'):
+        import editorial_proofs
+        try:
+            editorial_proofs.check(project,data)
+        except (OSError,KeyError,ValueError) as error:
+            return {'stage':'proofs','cut':str(project),'reason':str(error),
+                    'next':'在当前工程用 videos proofs 做片头和转换样段，内部复查后再渲染全片。'}
     return result
 
 
@@ -234,6 +251,12 @@ def resume(project, shot_number=None, offset=0, cut=None, root=ROOT):
     units = {u['id']: u for u in data['units']}
     shots = plan['shots']
     unresolved = [missing_fields(s, recipes[s['source_id']], units, folder, plan.get('duration_frames')) for s in shots]
+    if plan.get('editorial_review'):
+        for s, fields in zip(shots, unresolved):
+            if not s.get('borrow'):
+                fields.append('borrow')
+            elif s['borrow'].get('aspect','motion')=='motion' and not shot_direction.motion_viewed(s['borrow']):
+                fields.append('borrow.continuous_motion')
     assigned = {s['source_id'] for s in shots}
     absent = sorted(set(required) - assigned)
     ready = {s['source_id'] for s, fields in zip(shots, unresolved) if not fields}
@@ -242,6 +265,10 @@ def resume(project, shot_number=None, offset=0, cut=None, root=ROOT):
               'submitted': len(required), 'corrections': len(coverage['diagnostic']),
               'sources_with_bindings': len(ready), 'shots_with_bindings': sum(not f for f in unresolved)}
     result = {'project': str(folder), 'coverage': counts}
+    from caption_edit import focused
+    last_caption = focused(folder)
+    if last_caption:
+        result['last_caption'] = last_caption
     selected = context.get('reference_film')
     if selected:
         result['whole_film_reference'] = {'id': selected['id'], 'guide': 'references/reference-replication.md'}
@@ -258,7 +285,7 @@ def resume(project, shot_number=None, offset=0, cut=None, root=ROOT):
     if shot_number is None:
         master = master_values(plan)
         return {**result, 'stage': 'compose' if plan.get('duration_frames') else 'set-master',
-                'master': master, 'master_revision': revision(master),
+                'master': master_card(plan), 'master_revision': revision(master),
                 'check': [r['use'] for r in coverage['diagnostic']],
                 'next': '按原声定总帧数后用 videos compose；已有正片工程时可用 resume --cut <工程> 核对现状。'}
     if not 1 <= shot_number <= len(shots) or offset < 0:
@@ -277,7 +304,9 @@ def resume(project, shot_number=None, offset=0, cut=None, root=ROOT):
             'missing': unresolved[shot_number - 1], 'evidence': evidence(source, recipe, root)}
     direction = edits.read(root / shot_direction.DIRECTION)[key]
     card['watch'] = direction['watch']
-    card['moving_reference'] = shot_direction.source_reference(root, source, direction)
+    card['moving_reference'] = shot_direction.annotated_reference(root, source, direction, shot.get('borrow'))
+    if shot.get('borrow'):
+        card['borrow'] = shot['borrow']
     if offset + QUOTE_SIZE < len(quote):
         card['next_quote_offset'] = offset + QUOTE_SIZE
     if not unit:
@@ -289,7 +318,7 @@ def resume(project, shot_number=None, offset=0, cut=None, root=ROOT):
     for name, value in shot.get('inputs', {}).items():
         if isinstance(value, dict) and any(v is not None for v in value.values()):
             summary = {}
-            for field in ('path','text','from_project','in','placement','focus','fit'):
+            for field in ('path','text','from_project','in','placement','focus','fit','footage'):
                 if field not in value:
                     continue
                 item = value[field]
@@ -300,7 +329,7 @@ def resume(project, shot_number=None, offset=0, cut=None, root=ROOT):
                 summary[field] = item
             card['bound'].setdefault('inputs', {})[name] = summary
     result.update(stage='edit', shot=card, revision=revision(shot),
-                  master=master_values(plan), master_revision=revision(master_values(plan)))
+                  master=master_card(plan), master_revision=revision(master_values(plan)))
     return result
 
 
@@ -338,6 +367,8 @@ def save(project, patch_path, root=ROOT):
             if 'narration_stream_index' in master and (type(master['narration_stream_index']) is not int or master['narration_stream_index'] < 0):
                 raise ValueError('Expected a nonnegative audio stream index.')
             plan.update(master)
+            if 'cutaways' in master:
+                edits.field_cuts(master['cutaways'],None,plan['fps'],plan.get('duration_frames'),plan.get('base_video'))
         for change in changes:
             if not isinstance(change, dict) or 'set' not in change:
                 raise ValueError('Supply numbered shot changes with a set object.')
@@ -348,7 +379,7 @@ def save(project, patch_path, root=ROOT):
             if change.get('revision') != revision(shot):
                 raise ValueError('This shot changed since its card was read; resume that shot again.')
             fields = change['set']
-            if not isinstance(fields, dict) or set(fields) - {'unit','start_frame','end_frame','rect','inputs'}:
+            if not isinstance(fields, dict) or set(fields) - {'unit','start_frame','end_frame','rect','inputs','borrow'}:
                 raise ValueError('Only episode timing, placement and material bindings are editable here.')
             for field, value in fields.items():
                 if field == 'inputs':
@@ -357,10 +388,12 @@ def save(project, patch_path, root=ROOT):
                     for name, binding in value.items():
                         if not isinstance(binding, dict):
                             raise ValueError('Each material binding must be an object.')
-                        if set(binding) - {'path','from_project','in','text','placement','focus','fit'}:
+                        if set(binding) - {'path','from_project','in','text','placement','focus','fit','footage'}:
                             raise ValueError('Unknown episode input field.')
                         kind = recipes[shot['source_id']]['slots'][name]['kind']
-                        if (kind == 'text' and set(binding) & {'path','from_project','in'}
+                        if 'footage' in binding:
+                            edits.footage_record(binding['footage'])
+                        if (kind == 'text' and set(binding) & {'path','from_project','in','footage'}
                                 or kind != 'text' and 'text' in binding):
                             raise ValueError('The material must match the source slot kind.')
                         for key in ('text', 'path'):
@@ -388,6 +421,13 @@ def save(project, patch_path, root=ROOT):
                         if 'from_project' in binding:
                             current.pop('path', None)
                         shot['inputs'][name] = {**current, **binding}
+                elif field == 'borrow':
+                    source = next(r for r in context['video_sources']['all_submitted']['required'] if r['source_id']==shot['source_id'])
+                    direction = edits.read(Path(root)/shot_direction.DIRECTION)[shot['source_id']]
+                    if not isinstance(value,dict) or not value:
+                        raise ValueError('Supply the actual viewing and borrowing record.')
+                    shot_direction.annotated_reference(Path(root),source,direction,value,checking=True)
+                    shot[field] = value
                 else:
                     if field == 'unit' and value is not None and (not isinstance(value, str) or value not in units):
                         raise ValueError('Unknown narration unit.')

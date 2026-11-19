@@ -1,0 +1,30 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>口播层级图</title>
+<style>
+@font-face{font-family:Episode;src:url(Noto.woff2)}*{box-sizing:border-box}body{margin:0}
+main{width:FUSION_WIDTHpx;height:FUSION_HEIGHTpx;position:relative;container-type:size;overflow:hidden;background:var(--paper);color:var(--black);font-family:Episode,sans-serif}
+ol{position:absolute;inset:8% 12%;margin:0;padding:0;display:flex;flex-direction:column-reverse;justify-content:center;gap:1.4cqh;list-style:none}
+li{position:relative;display:flex;align-items:center;gap:3cqw;min-height:0;flex:0 1 15%;padding:0 3cqw;border-radius:1.1cqh;border:1px solid var(--line);background:var(--white);font-weight:700;font-size:min(7cqh,8cqw);line-height:1}
+small{color:var(--muted);font-size:.48em;font-weight:500;line-height:1.25}
+</style>
+<main id="spoken-hierarchy" data-composition-id="spoken-hierarchy" data-width="FUSION_WIDTH" data-height="FUSION_HEIGHT" data-duration="FUSION_DURATION" data-start="0" data-track-index="0">
+<ol></ol></main>
+<script src="gsap.min.js"></script><script src="hierarchy.js"></script><script>
+const score=window.SPOKEN_HIERARCHY, stage=document.querySelector('main');
+Object.entries(score.palette).forEach(([key,color])=>stage.style.setProperty('--'+key,color));
+const tl=gsap.timeline({paused:true}), list=stage.querySelector('ol');
+const rows=score.levels.map((level,i)=>{
+  const row=document.createElement('li'), label=document.createElement('span');label.textContent=level.text;row.append(label);
+  if(level.detail){const detail=document.createElement('small');detail.textContent=level.detail;row.append(detail);}
+  row.style.marginLeft=(i*3.5)+'%';list.append(row);return row;
+});
+rows.forEach((row,i)=>{
+  const at=score.levels[i].at, next=score.levels[i+1]?.at ?? score.focus_at;
+  tl.fromTo(row,{autoAlpha:0,y:14},{autoAlpha:1,y:0,duration:Math.min(.30,next-at),ease:'power2.out',immediateRender:true},at);
+});
+const target=rows[score.focus], dur=Math.min(.35,(score.duration-score.focus_at)*.6);
+tl.to(rows.filter(node=>node!==target),{opacity:.57,duration:dur},score.focus_at);
+tl.to(target,{backgroundColor:score.palette.purple,borderColor:score.palette.purple,duration:dur},score.focus_at);
+tl.to({}, {duration:score.duration},0);
+window.__timelines={'spoken-hierarchy':tl};
+window.seek=t=>tl.time(Math.max(0,Math.min(t,score.duration)),false);
+</script></html>

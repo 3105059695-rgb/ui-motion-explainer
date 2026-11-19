@@ -52,10 +52,10 @@ def portable_reference(root, direction):
     study = direction['study']
     if study in STUDIES:
         path, label = STUDIES[study]
-        return {'path': path, 'label': label}
+        return {'path': path, 'label': label, 'basis': 'sample' if study in ('girl','lift','takeover','handoff','a01') else 'replay'}
     film = read(root, 'assets/style-film/manifest.json')
     chapter = next(c for c in film['chapters'] if c['id'] == study)
-    return {'path': 'assets/style-film/' + film['movie'], 'range': [chapter['start'], chapter['end']],
+    return {'path': 'assets/style-film/' + film['movie'], 'basis':'replay', 'range': [chapter['start'], chapter['end']],
             'label': '同类手法对照 · 正文源码重绘《' + chapter['label'] + '》'}
 
 
@@ -70,7 +70,7 @@ def source_reference(root, source, direction, overlay=None):
         path = Path(fact['path']) if fact['usable_file'] else None
         if path and path.suffix.lower() in ('.mp4', '.webm', '.mov', '.m4v'):
             item = {'path': str(path.relative_to(root)) if path.is_relative_to(root) else str(path),
-                    'label': '本来源原视频'}
+                    'label': '本来源原视频', 'basis':'original'}
             loc = source.get('locator', {})
             if 'start' in loc and 'end' in loc:
                 item['range'] = [loc['start'], loc['end']]
@@ -86,8 +86,57 @@ def source_reference(root, source, direction, overlay=None):
             steps = read(root, 'assets/method-runtime/programs.json')['programs'].get(ident)
         if steps:
             url = 'assets/semantic-motion/study.html?' + urlencode({'source':source['source_id'], 'steps':','.join(steps)})
-            return {'path':url, 'label':'本来源手法连续重演 · 示意素材与时长'}
+            return {'path':url, 'basis':'replay', 'label':'本来源手法连续重演 · 示意素材与时长'}
     return fallback
+
+
+def annotated_reference(root, source, direction, borrow, overlay=None, *, checking=False):
+    """Keep an observed interval attached to the exact reference, including after moving machines."""
+    from reference_edits import number, probe
+    current = source_reference(root, source, direction, overlay)
+    if not borrow:
+        return current
+    basis, seen = borrow.get('basis'), borrow.get('seen')
+    keys = {'basis','seen','seconds','use','aspect'}
+    if (set(borrow)-keys or basis not in ('original','sample','replay','still','notes')
+            or borrow.get('aspect','motion') not in ('motion','layout','color','material')
+            or not isinstance(borrow.get('use'),str) or not borrow['use'].strip()
+            or seen not in ('notes','frames','normal-silent','normal-sound')):
+        raise ValueError('Record the source type, actual viewing method and the action borrowed for this shot.')
+    span = borrow.get('seconds')
+    if basis in ('notes','still'):
+        if span is not None or seen not in ('notes','frames'):
+            raise ValueError('A written record or still has no playback interval.')
+        return current
+    if not isinstance(span,list) or len(span)!=2 or not all(number(t) for t in span) or not 0<=span[0]<span[1]:
+        raise ValueError('Record the start and end in the clock of the moving reference.')
+    if current['basis'] != basis and basis != 'original':
+        # The saved comparison may have used the portable study even if this machine also has the film.
+        portable = source_reference(root,{**source,'source_resource_id':None,'clip':None},direction,{'files':{}})
+        if portable['basis'] == basis:
+            current = portable
+    if current['basis'] != basis:
+        if checking:
+            raise ValueError('This installation cannot supply the recorded type of reference.')
+        return {**current,'substitution':True}
+    if checking:
+        if basis == 'original':
+            allowed = source.get('motion_evidence',{}).get('approved_ranges',[])
+            if allowed and not any(lo<=span[0] and span[1]<=hi for lo,hi in allowed):
+                raise ValueError('Borrowed interval is outside the approved source range.')
+        path = root / current['path'].partition('?')[0]
+        if path.suffix.lower() != '.html':
+            media=probe(path)
+            if float(media['format']['duration'])+.001 < span[1]:
+                raise ValueError('Borrowed interval ends beyond the comparison video.')
+            if seen=='normal-sound' and not any(s['codec_type']=='audio' for s in media['streams']):
+                raise ValueError('This comparison video has no audio track.')
+    return {**current,'range':span}
+
+
+def motion_viewed(borrow):
+    return (borrow.get('basis') in ('original','replay','sample')
+            and borrow.get('seen') in ('normal-silent','normal-sound') and bool(borrow.get('seconds')))
 
 
 def program_examples(root, capability):
@@ -122,19 +171,13 @@ def player_item(root, item, url_for):
         'kind': 'html' if path.suffix.lower() == '.html' else 'video'}
 
 
-def review_page(project, media, root, url_for):
-    from reference_edits import RECIPES, digest, read as local_read
+def comparison_rows(timeline, project, root, url_for):
+    from reference_edits import RECIPES
     from video_sources import Catalog
     from video_routing import _evidence
-    root, project, media = Path(root).resolve(), Path(project).resolve(), Path(media).resolve()
-    timeline = local_read(project / 'reference-timeline.json')
-    receipt = local_read(project / 'reference-render.json')
-    if receipt['sha256'] != digest(media) or receipt['timeline_sha256'] != digest(project / 'reference-timeline.json'):
-        raise ValueError('Choose the encoded film matching this project’s render receipt.')
     catalog = Catalog(root)
     recipes = read(root, RECIPES)['recipes']
     directions, overlay = read(root, DIRECTION), load_overlay(root)
-    anchor = player_item(root, portable_reference(root, {'study':'body'}), url_for)
     shots = []
     for shot in timeline['shots']:
         key = shot['id']
@@ -143,16 +186,66 @@ def review_page(project, media, root, url_for):
         source = {'source_id': key, 'capability': recipes[key]['capability'], 'clip': row.get('media'), 'locator': _evidence(row, use),
                   'source_resource_id': row.get('atlas', {}).get('source_resource_id'),
                   'motion_evidence': {'approved_ranges': row.get('atlas', {}).get('approved_ranges', [])}}
-        ref = source_reference(root, source, directions[key], overlay)
+        borrow = shot.get('borrow')
+        ref = annotated_reference(root, source, directions[key], borrow, overlay)
         examples = program_examples(root, recipes[key]['capability'])
         shots.append({'title': row['title'], 'start': shot['start']/timeline['fps'], 'end': shot['end']/timeline['fps'],
                       'quote': shot['quote'], 'watch': directions[key]['watch'],
-                      'action': recipes[key]['action'], 'reference': player_item(root, ref, url_for),
+                      'action': recipes[key]['action'], 'borrow':borrow,
+                      'footage':[v['footage'] for v in shot['inputs'].values() if v.get('footage')],
+                      'reference': player_item(root, ref, url_for),
                       'steps': [player_item(root, example, url_for) for example in examples]})
-    model = {'media': url_for(media), 'shots': shots, 'body': anchor}
+    shots.extend(field_review(timeline, project, url_for))
+    return shots
+
+
+def review_page(project, media, root, url_for):
+    from reference_edits import digest, read as local_read
+    root, project, media = Path(root).resolve(), Path(project).resolve(), Path(media).resolve()
+    timeline = local_read(project / 'reference-timeline.json')
+    receipt = local_read(project / 'reference-render.json')
+    if receipt['timeline_sha256'] != digest(project / 'reference-timeline.json'):
+        raise ValueError('Choose the encoded film matching this project’s render receipt.')
+    media_hash=digest(media)
+    captions=None
+    if receipt['sha256'] != media_hash:
+        sidecar=media.with_suffix(media.suffix+'.captions.json')
+        remux=local_read(sidecar) if sidecar.is_file() else {}
+        if (remux.get('kind')!='ui-motion-fusion/dialogue-remux' or remux.get('picture_sha256')!=receipt['sha256']
+                or remux.get('file_sha256')!=media_hash):
+            raise ValueError('Choose the encoded film or the matching subtitle-only revision and its receipt.')
+        captions=remux['cues']
+    shots = comparison_rows(timeline,project,root,url_for)
+    if not shots and timeline.get('base_video'):
+        duration=timeline['frames']/timeline['fps']
+        shots.append({'title':'原口播','start':0,'end':duration,'quote':'','action':'保留原构图和原声。','watch':'',
+                      'reference':{'label':'本期口播画面','range':[0,duration],'kind':'video','url':url_for(project/timeline['base_video'])},
+                      'steps':[]})
+    return review_html(root,shots,url_for(media),url_for,captions)
+
+
+def review_html(root, shots, media_url, url_for, captions=None):
+    anchor = player_item(root, portable_reference(root, {'study':'body'}), url_for)
+    model = {'media': media_url, 'shots': shots, 'body': anchor}
+    if captions:
+        model['captions']=captions
     template = (root / 'assets/reference-edits/review.html').read_text(encoding='utf-8')
     payload = json.dumps(model, ensure_ascii=False).replace('<', r'\u003c')
     return template.replace('/* EPISODE_REVIEW */', 'const review = ' + payload + ';')
+
+
+def field_review(timeline, project, url_for):
+    rows = []
+    for s in timeline.get('cutaways',[]):
+        fps = timeline['fps']
+        lo, hi = s['start']/fps, s['end']/fps
+        record = s['footage']
+        span = [s['source_in'],s['source_in']+hi-lo]
+        rows.append({'title':record['subject'],'start':lo,'end':hi,'type':'cutaway','quote':record['claim_subject'],
+                     'action':record['gain'],'watch':'对照主体的动作和字幕、小窗之间的距离。','footage':[record],
+                     'reference':{'label':'本期实景的来源视频','range':span,'kind':'video','url':url_for(project/s['src'])},
+                     'borrow':{'basis':'original','seconds':span,'use':record['gain'],'seen':s.get('seen','notes')},'steps':[]})
+    return rows
 
 
 def review(project, media, *, root=ROOT):
@@ -244,7 +337,7 @@ def hyperframes(project, number, output, root=ROOT):
     unit = next((u for u in context['video_sources']['units'] if u['id'] == shot.get('unit')), {})
     palette = read(root, PALETTE)
     roles = surfaces(direction, recipe['slots'])
-    ref = source_reference(root, source, direction)
+    ref = annotated_reference(root, source, direction, shot.get('borrow'))
     timing = {'fps': plan.get('fps'), 'start_frame': shot.get('start_frame'), 'end_frame': shot.get('end_frame')}
     slots = {}
     for slot, purpose in recipe['slots'].items():
@@ -258,7 +351,7 @@ def hyperframes(project, number, output, root=ROOT):
                     container[field] = Path(os.path.relpath(target, output)).as_posix()
                 except ValueError:
                     container[field] = str(target)
-        slots[slot] = {**purpose, 'surface': 'native' if binding.get('from_project') else roles[slot], 'binding': binding}
+        slots[slot] = {**purpose, 'surface': 'native' if binding.get('from_project') or binding.get('footage') else roles[slot], 'binding': binding}
     score = {'source': key, 'number': number, 'action': recipe['action'], 'quote': unit.get('quote'), 'watch': direction['watch'],
              'clock': timing, 'rect': shot.get('rect'), 'slots': slots, 'layers': recipe['layers'],
              'source_evidence': source.get('locator'), 'method': recipe['capability']}

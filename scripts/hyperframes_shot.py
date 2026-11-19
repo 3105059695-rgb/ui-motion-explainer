@@ -2,10 +2,43 @@
 import html
 import json
 import shutil
+from pathlib import Path
+import tempfile
 
 
 def encode(value):
     return json.dumps(value, ensure_ascii=False).replace('<', r'\u003c')
+
+
+def hierarchy(root, file, output):
+    import reference_edits as edits
+    import shot_direction as art
+    data,output=edits.read(file),Path(output).resolve()
+    levels,duration,focus_at=data['levels'],data['duration'],data['focus_at']
+    if (not isinstance(levels,list) or not 2<=len(levels)<=6 or not edits.number(duration) or duration<=0
+            or not edits.number(focus_at) or not 0<focus_at<duration or type(data['focus'])!=int
+            or not 0<=data['focus']<len(levels)):
+        raise ValueError('Bind two to six spoken levels and a later focus cue.')
+    prev=-1
+    for level in levels:
+        if (not isinstance(level,dict) or not isinstance(level.get('text'),str) or not level['text'].strip()
+                or not edits.number(level.get('at')) or not prev<level['at']<focus_at or level['at']<0):
+            raise ValueError('Keep each level in spoken order with its own measured onset.')
+        prev=level['at']
+    w,h=data.get('width',1280),data.get('height',720)
+    if any(type(x)!=int or x<32 or x%2 for x in (w,h)) or output.exists() or not output.parent.is_dir():
+        raise ValueError('Choose even dimensions and a new output directory.')
+    score={**data,'palette':edits.read(root/art.PALETTE)}
+    with tempfile.TemporaryDirectory(dir=output.parent) as tmp:
+        dest=Path(tmp)/'shot';dest.mkdir()
+        for name,src in [('gsap.min.js','assets/modules/director/assets/studio/vendor/gsap.min.js'),
+                         ('Noto.woff2','assets/qiaomu-fonts/fonts/notosans.woff2')]:
+            shutil.copyfile(root/src,dest/name)
+        entry=(root/'assets/reference-edits/hierarchy.html').read_text(encoding='utf-8')
+        (dest/'index.html').write_text(entry.replace('FUSION_WIDTH',str(w)).replace('FUSION_HEIGHT',str(h)).replace('FUSION_DURATION',str(duration)),encoding='utf-8')
+        (dest/'hierarchy.js').write_text('window.SPOKEN_HIERARCHY='+encode(score)+';\n',encoding='utf-8')
+        dest.rename(output)
+    return {'entry':str(output/'index.html'),'editable':str(output/'hierarchy.js'),'duration':duration,'audio':'use the episode master'}
 
 
 def build(root, source_folder, dest, recipe, shot, plan, score, missing):

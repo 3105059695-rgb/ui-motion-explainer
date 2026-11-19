@@ -1208,6 +1208,8 @@ def main(argv=None):
                       help='Both modes read all current requirements; production calls selected implementations, research expands original-film studies.')
     prep.add_argument('--force', action='store_true', help='Replace only this tool\'s own generated context/brief files.')
     prep.add_argument('--full', action='store_true', help='Return preparation diagnostics instead of the current shot.')
+    import caption_edit
+    caption_edit.arguments(sub.add_parser('captions', help='Locate, edit or export the saved dialogue track.'))
     view = sub.add_parser('overview', help='Show the episode duties for all submitted references.')
     view.add_argument('--project', required=True, type=Path)
     cursor = sub.add_parser('resume', help='Read the next unfinished shot from a saved episode.')
@@ -1215,6 +1217,7 @@ def main(argv=None):
     cursor.add_argument('--shot', type=int)
     cursor.add_argument('--offset', type=int, default=0)
     cursor.add_argument('--cut', type=Path)
+    cursor.add_argument('--at',help='Find the saved dialogue and every active shot at this time.')
     save = sub.add_parser('save', help='Apply a revision-checked patch and return the next shot.')
     save.add_argument('--project', required=True, type=Path)
     save.add_argument('--patch', required=True, type=Path)
@@ -1239,12 +1242,14 @@ def main(argv=None):
                                  reference=args.reference, mode=args.mode)
             if production:
                 output = edit_session.resume(args.project)
+        elif args.command == 'captions':
+            output = caption_edit.command(args)
         elif args.command == 'overview':
             import edit_session
             output = edit_session.overview(args.project)
         elif args.command == 'resume':
             import edit_session
-            output = edit_session.resume(args.project, args.shot, args.offset, args.cut)
+            output = caption_edit.edit(args.project,args.at) if args.at is not None else edit_session.resume(args.project, args.shot, args.offset, args.cut)
         elif args.command == 'save':
             import edit_session
             output = edit_session.save(args.project, args.patch)

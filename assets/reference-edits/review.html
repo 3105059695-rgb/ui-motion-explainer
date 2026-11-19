@@ -12,24 +12,31 @@
 <figure><figcaption id="sourceTitle"></figcaption><div id="reference"></div></figure>
 </section>
 <div class="controls"><button id="play">从本镜开头播放</button><button id="join">连前后剪点播放</button><button id="whole">播放全片</button></div>
-<blockquote id="quote"></blockquote><p id="action"></p><p id="watch"></p><p id="fault" role="status"></p>
+<p><a id="permalink">此镜头的链接</a>　<span id="clocks"></span></p>
+<blockquote id="quote"></blockquote><p id="action"></p><p id="watch"></p><p id="observed"></p><p id="gain"></p><p id="fault" role="status"></p>
 </main>
 <script>
 /* EPISODE_REVIEW */
 const el = id => document.getElementById(id);
 const cut = el('cut'), selector = el('shots'), comparison = el('comparison');
 let shot, ref, refItem, limit = null;
+let clockToken=0;
+const stamps = v => [Math.floor(v/60), (v%60).toFixed(2)].map((p,i)=>String(p).padStart(i?5:2,'0')).join(':');
+const interval = pair => pair.map(stamps).join('–');
+const basisNames={original:'原片',sample:'公开样片',replay:'源码或手法重演',still:'静帧',notes:'来源记录'};
+const seenNames={notes:'只读记录',frames:'查看抽帧','normal-silent':'连续原速看画面','normal-sound':'连续原速带声音看过'};
 const description = new URLSearchParams(location.search);
 cut.src = review.media;
 review.shots.forEach((s, i) => selector.add(new Option((i+1)+' · '+s.title, i)));
 const requested = Number(description.get('shot'));
 if (Number.isInteger(requested) && requested > 0 && requested <= review.shots.length) selector.value = requested - 1;
 function showReference() {
+  ++clockToken;
   if (ref && ref.tagName === 'VIDEO') ref.pause();
   const items = [shot.reference, review.body, ...shot.steps];
   refItem = items[comparison.selectedIndex];
   const item = refItem, span = item.range;
-  el('sourceTitle').textContent = item.label + (span ? ' · '+span.join('–')+' 秒' : '');
+  el('sourceTitle').textContent = item.label + (span ? ' · '+interval(span) : ' · 具体秒段未登记');
   ref = document.createElement(item.kind === 'html' ? 'iframe' : 'video');
   if (item.kind === 'html') { ref.title = item.label; }
   else {
@@ -38,7 +45,13 @@ function showReference() {
     video.addEventListener('loadedmetadata', () => { if (span) video.currentTime = span[0]; });
     video.addEventListener('timeupdate', () => { if (span && video.currentTime >= span[1] && !video.paused) video.pause(); });
   }
-  ref.src = item.url; el('reference').replaceChildren(ref);
+  let url=item.url;
+  if(item.kind==='html' && span && location.protocol!=='file:'){
+    const timed=new URL(item.url, location.href);timed.searchParams.set('render','1');url=timed.href;
+    const frame=ref;
+    frame.onload=()=>{try{frame.contentWindow.seek?.(span[0]);}catch(e){el('fault').textContent='用本地对照服务定位重演时码。';}};
+  }
+  ref.src = url; el('reference').replaceChildren(ref);
 }
 function selectShot() {
   cut.pause(); limit = null; shot = review.shots[Number(selector.value)];
@@ -46,17 +59,37 @@ function selectShot() {
   for (const item of shot.steps) comparison.add(new Option(item.label));
   comparison.selectedIndex = 0;
   if (cut.readyState) cut.currentTime = shot.start;
-  el('quote').textContent = shot.quote; el('action').textContent = shot.action; el('watch').textContent = shot.watch;
+  const link=new URL(location.href);link.searchParams.set('shot',Number(selector.value)+1);
+  el('permalink').href=link.href;
+  if(location.protocol!=='file:') history.replaceState(null,'',link);
+  const basis=shot.borrow, recorded=basis?.seconds;
+  el('clocks').textContent='成片 '+interval(shot.episode_range || [shot.start,shot.end])+
+    (recorded?'　'+basisNames[basis.basis]+' '+interval(recorded):'');
+  el('quote').textContent = shot.quote; el('action').textContent = basis ? '借用或展示：'+basis.use : shot.action;
+  el('watch').textContent = shot.watch;
+  el('observed').textContent = basis ? '制作记录：'+basisNames[basis.basis]+' · '+seenNames[basis.seen]+
+    (shot.reference.substitution?'。当前安装缺该版本，右侧播放可用对照。':'') : '此工程尚未登记实际观看方式。';
+  el('gain').textContent=(shot.footage || []).map(f=>f.subject+' · '+f.gain).join('　');
   el('fault').textContent = ''; showReference();
 }
 async function play(from, to, withReference) {
+  const token=++clockToken;
   cut.pause(); limit = to; cut.currentTime = from;
   try {
     const playback = [cut.play()];
     if (withReference && ref.tagName === 'VIDEO') {
       ref.currentTime = refItem.range ? refItem.range[0] : 0; playback.push(ref.play());
     } else if (ref.tagName === 'VIDEO') ref.pause();
-    else if (withReference) ref.src=refItem.url;
+    else if(withReference && refItem.range && location.protocol!=='file:'){
+      const frame=ref, [a,b]=refItem.range, start=performance.now();
+      const tick=async()=>{
+        if(token!==clockToken || frame!==ref)return;
+        const t=Math.min(b,a+(performance.now()-start)/1000);
+        try{if(typeof frame.contentWindow.seek!=='function')throw Error();await frame.contentWindow.seek(t);}
+        catch(e){el('fault').textContent='此工程播放器需要手动定位。';return;}
+        if(t<b)requestAnimationFrame(tick);
+      };tick();
+    }else if(withReference)ref.src=refItem.url;
     await Promise.all(playback);
   } catch(e) { el('fault').textContent = '请检查本期文件和动态参考的路径或浏览器的播放权限。'; }
 }
@@ -65,7 +98,14 @@ cut.addEventListener('timeupdate', () => {
     cut.pause(); limit = null;
   }
 });
-cut.addEventListener('loadedmetadata', () => { cut.currentTime = shot.start; });
+cut.addEventListener('loadedmetadata', () => {
+  cut.currentTime = shot.start;
+  if(review.captions && cut.textTracks.length===0){
+    const track=cut.addTextTrack('subtitles','本期对白','zh');
+    for(const c of review.captions)track.addCue(new VTTCue(c.start_ms/1000,c.end_ms/1000,c.text));
+    track.mode='showing';
+  }else if(review.captions && cut.textTracks.length)cut.textTracks[0].mode='showing';
+});
 el('play').onclick = () => play(shot.start, shot.end, true);
 el('join').onclick = () => {
   const before = review.shots.filter(s => s.start < shot.start).map(s => s.start);

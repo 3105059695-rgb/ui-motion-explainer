@@ -181,8 +181,9 @@
   async function seek(seconds) {
     const current=++ticket;
     const f=clamp(Math.floor(seconds*episode.fps+1e-7),0,episode.frames-1);
+    const field=(episode.cutaways || []).find(cut=>cut.start<=f && f<cut.end);
     const active=[];
-    for(let i=0;i<episode.shots.length;i++){
+    for(let i=0;!field && i<episode.shots.length;i++){
       const s=episode.shots[i];
       if(f<s.start||f>=s.end)continue;
       const t=(f-s.start)/(s.end-s.start);
@@ -195,7 +196,12 @@
       active.push({i,s,jobs,t});
     }
     let under=null;
-    if(episode.base_video) {under=await asset('base',{src:episode.base_video,kind:'video'});await positionVideo(under,f/episode.fps);}
+    if(episode.base_video && (!field || field.inset)) {under=await asset('base',{src:episode.base_video,kind:'video'});await positionVideo(under,f/episode.fps);}
+    let outdoors=null;
+    if(field){
+      outdoors=await asset('field/'+field.start,field);
+      await positionVideo(outdoors,field.source_in+(f-field.start)/episode.fps);
+    }
     for(const {i,s,jobs,t} of active){
       // Two layers for one role use one seek, so overlapped transitions cannot deadlock a video.
       const prepared=new Map();
@@ -210,7 +216,15 @@
     }
     if(current!==ticket)return state;
     ctx.setTransform(1,0,0,1,0,0);ctx.fillStyle=colors.paper;ctx.fillRect(0,0,canvas.width,canvas.height);
-    if(under)paint(under,{kind:'video',fit:'contain'},[0,0,1,1,1,1,1,1],[0,0,canvas.width,canvas.height]);
+    const stage=[0,0,canvas.width,canvas.height], full=[0,0,1,1,1,1,1,1];
+    if(field){
+      ctx.fillStyle='#0b0b0f';ctx.fillRect(...stage);
+      paint(outdoors,{kind:'video',fit:'contain'},full,stage);
+      if(under && field.inset){
+        const r=field.inset.map((n,i)=>n*stage[2+i%2]);
+        paint(under,{kind:'video',fit:'contain'},full,r);
+      }
+    }else if(under)paint(under,{kind:'video',fit:'contain'},full,stage);
     const sources=[];
     const implementations=new Set();
     for(let ix=0;ix<active.length;ix++){
@@ -230,6 +244,25 @@
       for(const slot of slots){
         const used=s.inputs[slot].from_project;
         if(used)implementations.add(used.credit || (used.source_id ? used.source_id+' / '+used.capability : used.capability));
+      }
+    }
+    const dialogues=window.FUSION_PROOF_CAPTIONS;
+    if(dialogues){
+      const ms=f*1000/episode.fps, cue=dialogues.find(c=>c.start_ms<=ms && ms<c.end_ms);
+      if(cue){
+        const [x,y,w,h]=field?.subtitle || [.04,.80,.92,.16];
+        const cw=canvas.width,ch=canvas.height, rows=cue.text.split('\n');
+        let size=Math.min(ch*.057,ch*h/(1.22*rows.length));
+        ctx.save();ctx.font='600 '+size+'px Episode, sans-serif';
+        const width=Math.max(...rows.map(line=>ctx.measureText(line).width));
+        if(width>cw*w){size*=cw*w/width;ctx.font='600 '+size+'px Episode, sans-serif';}
+        ctx.textAlign='center';ctx.textBaseline='middle';ctx.lineJoin='round';
+        ctx.strokeStyle='rgba(11,11,15,.93)';ctx.fillStyle='#fff';ctx.lineWidth=Math.max(2,size*.13);
+        rows.forEach((line,i)=>{
+          const cx=(x+w/2)*cw, cy=(y+h/2)*ch+(i-(rows.length-1)/2)*size*1.22;
+          ctx.strokeText(line,cx,cy);ctx.fillText(line,cx,cy);
+        });
+        ctx.restore();
       }
     }
     slider.value=String(f);label.value=(f/episode.fps).toFixed(2)+' s';

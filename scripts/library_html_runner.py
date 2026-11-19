@@ -45,7 +45,7 @@ class QuietHandler(SimpleHTTPRequestHandler):
    except (BrokenPipeError,ConnectionResetError,ConnectionAbortedError):return
    remaining-=len(chunk)
 
-def run(project,action,output=None,scale=1,config_override=None):
+def run(project,action,output=None,scale=1,config_override=None,*,frame_range=None,proof_cues=None):
  from playwright.sync_api import sync_playwright
  project=Path(project).resolve();config=config_override or json.loads((project/'library-project.json').read_text(encoding='utf-8'))
  if not 0<scale<=2:raise ValueError('Render scale must be between 0 and 2')
@@ -60,6 +60,8 @@ def run(project,action,output=None,scale=1,config_override=None):
    browser=p.chromium.launch(headless=True,executable_path=browser_path(config.get('browser'),p.chromium.executable_path))
    try:
     page=browser.new_page(viewport={'width':width,'height':height},device_scale_factor=1)
+    if proof_cues:
+     page.add_init_script('window.FUSION_PROOF_CAPTIONS='+json.dumps(proof_cues,ensure_ascii=True)+';')
     binding=project/'browser-binding.json'
     if not binding.is_file():binding=project/'library-binding.json'
     if binding.is_file():page.add_init_script('window.__UI_MOTION_BINDINGS__='+binding.read_text(encoding='utf-8')+';')
@@ -102,7 +104,10 @@ def run(project,action,output=None,scale=1,config_override=None):
      coverage={} if config.get('reference_sources') else None
      projects={}
      try:
-      for frame in range(config['frames'] if coverage is not None else math.ceil(duration*fps)):
+      count=config['frames'] if coverage is not None else math.ceil(duration*fps)
+      first,last=frame_range or (0,count)
+      if not (0<=first<last<=count):raise ValueError('Invalid render interval.')
+      for frame in range(first,last):
        t=frame/fps
        state=page.evaluate('''async({api,t})=>{const result=await window[api](t);return window.getState?window.getState():result??null}''',{'api':api,'t':t})
        if coverage is not None:
@@ -139,5 +144,5 @@ def run(project,action,output=None,scale=1,config_override=None):
  finally:
   server.shutdown();server.server_close()
   report['requested_media']=sorted(requested)
-  (project/('runtime-'+action+'.json')).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+  if frame_range is None:(project/('runtime-'+action+'.json')).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
  return report

@@ -218,7 +218,7 @@ def inspect_source(catalog, ident):
 def main(argv=None):
     import sys
     argv = list(sys.argv[1:] if argv is None else argv)
-    if argv[:1] and argv[0] in ('plan','compose','render','motion','review','hyperframes'):
+    if argv[:1] and argv[0] in ('plan','compose','render','motion','review','hyperframes','hierarchy','proofs'):
         import reference_edits
         return reference_edits.main(argv)
     parser = argparse.ArgumentParser(description=__doc__)

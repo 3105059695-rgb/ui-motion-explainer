@@ -195,7 +195,7 @@ def scaffold(router, script, output, coverage=None, presenter=None):
     plan = {'schema':SCHEMA, 'generated_by':'ui-motion-fusion/reference-edits', 'script':os.path.relpath(script,output.parent) if script.drive==output.drive else str(script),
             'script_sha256':hashlib.sha256(source).hexdigest(), 'fps':30,'width':1280,'height':720,
             'duration_frames':None, 'narration':None,'base_video':None, 'shots':[],
-            'diagnostic':coverage['diagnostic']}
+            'diagnostic':coverage['diagnostic'], 'editorial_review':1}
     if presenter:
         path=Path(presenter['path'])
         local=os.path.relpath(path,output.parent) if output.drive==path.drive else str(path)
@@ -334,6 +334,8 @@ def _current_slot(key, slot, value, recipe, media, length, fps):
             media.require_motion(path,offset,length*(high-low))
         if project_info:
             result['from_project']=project_info
+        if 'footage' in value:
+            result['footage'] = footage_record(value['footage'])
         result.update(source_in=offset,first=low)
     if any(k['frame']=='safe' for t in intervals for k in t):
         result['placement']=box(value.get('placement'),key+' measured placement')
@@ -346,6 +348,68 @@ def _current_slot(key, slot, value, recipe, media, length, fps):
         raise ValueError('Unsupported image fit')
     result['fit']=value.get('fit','contain')
     return result
+
+
+def footage_record(value):
+    fields = ('origin','subject','claim_subject','gain','use')
+    if not isinstance(value,dict) or set(value)!=set(fields) or not all(isinstance(value[k],str) and value[k].strip() for k in fields):
+        raise ValueError('Identify the source before cropping, actual subject, claimed subject, evidence type and information gained.')
+    if value['use'] not in ('direct','illustration') or (value['use']=='direct' and value['subject'].strip().casefold()!=value['claim_subject'].strip().casefold()):
+        raise ValueError('A named project needs evidence of that same subject. Use general illustration only for a general claim.')
+    return value
+
+
+def footage_count(shots, cutaways=()):
+    # Crops retain their original source identity. Renamed copies also share a content-addressed src.
+    groups = []
+    for shot in [*shots, {'inputs':dict(enumerate(cutaways))}]:
+        for item in shot['inputs'].values():
+            if 'footage' in item:
+                keys = {('origin',item['footage']['origin'].strip()),('bytes',item['src'])}
+                same = [g for g in groups if g & keys]
+                groups = [g for g in groups if not g & keys] + [keys.union(*same)]
+    return len(groups)
+
+
+def field_cuts(rows, media, fps, frames, presenter):
+    if not isinstance(rows,list):
+        raise ValueError('Cutaways must be a list.')
+    result = []
+    for row in rows:
+        if not isinstance(row,dict) or not {'path','start_frame','end_frame','footage','protect','subtitle'} <= row.keys():
+            raise ValueError('Supply a field clip, its source record, timing and protected rectangles.')
+        start,end = row['start_frame'],row['end_frame']
+        if type(frames)!=int or type(start)!=int or type(end)!=int or not 0<=start<end<=frames or any(start<s['end'] and end>s['start'] for s in result):
+            raise ValueError('A field shot needs one unambiguous interval on the master clock.')
+        source_in = row.get('in',0)
+        if not number(source_in) or source_in<0 or type(row.get('main_has_face'))!=bool:
+            raise ValueError('Inspect the field video for faces and set its original in point.')
+        footage = footage_record(row['footage'])
+        if not isinstance(row['protect'],list):
+            raise ValueError('Supply a list of rectangles covering the action.')
+        protects = [box(rect,'action or existing text') for rect in row['protect']]
+        if not protects:
+            raise ValueError('Mark the full travel of the subject in the final phone composition.')
+        subtitle = box(row['subtitle'],'subtitle area')
+        inset = row.get('inset')
+        if inset is not None:
+            x,y,w,h = box(inset,'presenter inset')
+            if not presenter or row['main_has_face'] or any(x<a+c and a<x+w and y<b+d and b<y+h for a,b,c,d in [*protects,subtitle]):
+                raise ValueError('The inset covers the moving subject, subtitles, or duplicates a visible face.')
+        if any(subtitle[0]<a+c and a<subtitle[0]+subtitle[2] and subtitle[1]<b+d and b<subtitle[1]+subtitle[3] for a,b,c,d in protects):
+            raise ValueError('The dialogue area covers the field action. Reframe or move the subtitles.')
+        asset = {'src':row['path']}
+        if not isinstance(asset['src'],str) or not asset['src'].strip():
+            raise ValueError('Supply a local footage path and a list of subject rectangles.')
+        if media is not None:
+            asset = media.add(row['path'],'moving',source_in+(end-start)/fps,'field footage')
+            media.require_motion(row['path'],source_in,(end-start)/fps)
+        seen=row.get('seen','notes')
+        if seen not in ('notes','frames','normal-silent','normal-sound'):
+            raise ValueError('Describe how the source field footage was actually inspected.')
+        result.append({**asset,'start':start,'end':end,'source_in':source_in,'footage':footage,
+                       'protect':protects,'subtitle':subtitle,'inset':inset,'main_has_face':row['main_has_face'],'seen':seen})
+    return sorted(result,key=lambda item:item['start'])
 
 
 def _label_project_inputs(shots):
@@ -397,7 +461,9 @@ def compose(catalog, plan_path, output, *, preview=False):
         raise ValueError('The narration changed. Reassign references against the current script.')
     units={u['id']:u for u in selection.source_segments(script.read_bytes().decode('utf-8-sig'))}
     recipes,diagnostic=rules(catalog)
-    if not isinstance(plan.get('shots'),list) or not plan['shots']:
+    if preview and isinstance(plan.get('shots'),list):
+        plan['shots'] = [s for s in plan['shots'] if s.get('start_frame') is not None or s.get('end_frame') is not None]
+    if not isinstance(plan.get('shots'),list) or (not plan['shots'] and not (preview and plan.get('base_video'))):
         raise ValueError('At least one timed source contribution is required.')
     ids=[catalog.lookup(s['source_id'])['id'] for s in plan['shots']]
     unknown=set(ids)-recipes.keys()
@@ -421,6 +487,8 @@ def compose(catalog, plan_path, output, *, preview=False):
         master={'schema':SCHEMA,'fps':fps,'width':w,'height':h,'frames':dur,'shots':[],
                 'palette': read(catalog.root / shot_direction.PALETTE),
                 'script_sha256':plan['script_sha256'],'source_plan_sha256':hashlib.sha256(plan_bytes).hexdigest()}
+        if plan.get('editorial_review'):
+            master['editorial_review'] = 1
         for ident,shot in zip(ids,plan['shots']):
             recipe=recipes[ident]
             inputs=shot.get('inputs')
@@ -435,9 +503,23 @@ def compose(catalog, plan_path, output, *, preview=False):
             bound={key:_current_slot(key,slot,inputs[key],recipe,media,(b-a)/fps,fps) for key,slot in recipe['slots'].items()}
             surfaces = shot_direction.surfaces(directions[ident], recipe['slots'])
             for key, value in bound.items():
-                value['surface'] = 'native' if value.get('from_project') else surfaces[key]
+                value['surface'] = 'native' if value.get('from_project') or value.get('footage') else surfaces[key]
+            if not preview and master.get('editorial_review') and not shot.get('borrow'):
+                raise ValueError('Record what was actually borrowed and viewed for '+ident+' (shot.borrow).')
+            if shot.get('borrow'):
+                if (not preview and master.get('editorial_review') and shot['borrow'].get('aspect','motion')=='motion'
+                        and not shot_direction.motion_viewed(shot['borrow'])):
+                    raise ValueError('Play the continuous action for '+ident+' or record the specific static aspect actually used.')
+                row = catalog.lookup(ident)
+                from video_routing import _evidence
+                use = next(u for u in row['uses'] if u['capability']==recipe['capability'])
+                src = {'source_id':ident,'clip':row.get('media'),'locator':_evidence(row,use),'capability':recipe['capability'],
+                       'source_resource_id':row.get('atlas',{}).get('source_resource_id'),
+                       'motion_evidence':{'approved_ranges':row.get('atlas',{}).get('approved_ranges',[])}}
+                shot_direction.annotated_reference(catalog.root,src,directions[ident],shot['borrow'],checking=True)
             master['shots'].append({'id':ident,'unit':shot['unit'],'quote':units[shot['unit']]['quote'],
                 'start':a,'end':b,'rect':box(shot.get('rect',[0,0,1,1]),ident),
+                **({'borrow':shot['borrow']} if shot.get('borrow') else {}),
                 'contribution':recipe['action'],'capability':recipe['capability'],'inputs':bound})
         for field,kind in [('narration','audio'),('base_video','moving')]:
             if plan.get(field):
@@ -454,10 +536,15 @@ def compose(catalog, plan_path, output, *, preview=False):
                                         '-c:a','pcm_s24le',str(selected)],check=True,capture_output=True)
                         current=str(selected)
                 master[field]=media.add(current,kind,max(0,(dur-1)/fps),field)['src']
+        if (not preview and master.get('editorial_review')
+                and not any(s['borrow'].get('aspect','motion')=='motion' and shot_direction.motion_viewed(s['borrow']) for s in master['shots'])):
+            raise ValueError('A motion edit requires a continuous comparison for the actual borrowed action.')
+        master['cutaways'] = field_cuts(plan.get('cutaways',[]),media,fps,dur,master.get('base_video'))
         _label_project_inputs(master['shots'])
         _visibility(master['shots'],dur,master.get('base_video'))
         master['recipes']={k:recipes[k]['layers'] for k in dict.fromkeys(ids)}
         master['assets']=media.assets
+        master['distinct_footage_origins']=footage_count(master['shots'],master['cutaways'])
         master['coverage']={'required':list(recipes),'included':list(dict.fromkeys(ids)),'missing':missing,
             'diagnostic':[{'id':r['id'],'rule':r['scope']} for r in diagnostic],
             'scope':'internal-preview' if preview else 'all-submitted-films','rendered':False}
@@ -485,6 +572,9 @@ def render(project,output,scale=1):
     from reference_project_input import credit
     project,output=Path(project).resolve(),Path(output).resolve()
     data=read(project/'reference-timeline.json')
+    if data.get('editorial_review') and data['coverage']['scope']=='all-submitted-films':
+        from editorial_proofs import check
+        check(project,data)
     if output.exists() or not output.parent.is_dir() or output.suffix.lower()!='.mp4':
         raise ValueError('Choose a new .mp4 in an existing directory.')
     if data.get('schema')!=SCHEMA:
@@ -576,7 +666,10 @@ def verify(project, media, plan=None):
     video=next((s for s in streams if s['codec_type']=='video'),{})
     if int(video.get('nb_frames',0))!=data['frames'] or (data.get('narration') and not any(s['codec_type']=='audio' for s in streams)):
         raise ValueError('The encoded picture or original audio differs from the master clock.')
+    from collections import Counter
+    comparisons=Counter((s.get('borrow') or {}).get('basis','unrecorded')+'/'+(s.get('borrow') or {}).get('seen','unrecorded') for s in data['shots'])
     return {'technical_passed':True,'complete_reference_coverage':True,'visible_sources':len(observed),
+            'recorded_comparisons':dict(comparisons),'whole_film_sound_review':'not-certified','nle_editability':'not-tested',
             'visible_material_roles':sum(len(r['slots']) for r in observed.values()), 'frames':data['frames'],
             'visible_library_capabilities': sorted({i['capability'] for i in implementations.values()}),
             'audio':receipt['audio'],'aesthetic_approval':False,'sha256':receipt['sha256']}
@@ -594,6 +687,11 @@ def main(argv):
     p.add_argument('--serve',action='store_true',help='Play on one loopback origin, including nested reference projects.')
     p.add_argument('--port',type=int,default=0)
     p=sub.add_parser('hyperframes');p.add_argument('--project',required=True);p.add_argument('--shot',type=int,required=True);p.add_argument('--out',required=True)
+    p=sub.add_parser('hierarchy');p.add_argument('--cues',required=True,type=Path);p.add_argument('--out',required=True,type=Path)
+    p=sub.add_parser('proofs');p.add_argument('--project',required=True);p.add_argument('--opening-end',type=float)
+    p.add_argument('--bridge',type=float,nargs=2);p.add_argument('--scale',type=float,default=1)
+    p.add_argument('--captions',type=Path);p.add_argument('--alternative')
+    p.add_argument('--observed',choices=['phone-frames','normal-picture','normal-sound']);p.add_argument('--note')
     args=parser.parse_args(argv)
     try:
         if args.cmd=='render':
@@ -606,6 +704,10 @@ def main(argv):
                 result = {k: result[k] for k in ('file','sha256','complete_reference_coverage','frames','audio','review','review_error') if k in result} | {
                     'visible_sources': len(result['reference_frames']),
                     'evidence': str(Path(args.project) / 'reference-render.json')}
+        elif args.cmd=='proofs':
+            import editorial_proofs
+            result=editorial_proofs.run(args.project,args.opening_end,args.bridge,args.scale,args.captions,
+                                        args.alternative,args.observed,args.note)
         elif args.cmd=='review':
             if args.serve:
                 with shot_direction.review_server(args.project, args.media, port=args.port) as server:
@@ -616,6 +718,9 @@ def main(argv):
                         pass
                 return 0
             result = {'review': shot_direction.review(args.project, args.media)}
+        elif args.cmd=='hierarchy':
+            import hyperframes_shot
+            result=hyperframes_shot.hierarchy(ROOT,args.cues,args.out)
         elif args.cmd=='hyperframes':
             result = shot_direction.hyperframes(args.project, args.shot, args.out)
         else:
