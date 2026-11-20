@@ -2,6 +2,7 @@
 from __future__ import annotations
 import argparse,hashlib,json,shutil,sys
 from pathlib import Path
+from library_ui_style import install_ui_font
 ROOT=Path(__file__).resolve().parents[1]
 def read(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
 def records(root=ROOT):
@@ -33,7 +34,7 @@ def build(spec_path,stage,out,root=ROOT):
  out.mkdir(parents=True)
  for f in ['assets/method-runtime/method-runtime.js','assets/semantic-motion/semantic-motion.js','assets/semantic-motion/theme.css']:
   shutil.copy2(root/f,out/Path(f).name)
- shutil.copy2(root/'assets/qiaomu-fonts/fonts/notosans.woff2',out/'Noto.woff2')
+ install_ui_font(root,out)
  for sel,asset in spec.get('media',{}).items():
   src=Path(asset['src']);src=(p.parent/src).resolve() if not src.is_absolute() else src
   if not src.is_file():raise ValueError('Missing current media '+str(src))
@@ -42,7 +43,7 @@ def build(spec_path,stage,out,root=ROOT):
   if not dest.exists():shutil.copy2(src,dest)
   asset['src']='media/'+filename
  encoded=json.dumps(spec,ensure_ascii=False).replace('<','\\u003c')
- page='<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="theme.css"><style>@font-face{font-family:Noto;src:url(Noto.woff2)}body{margin:0}</style><div id="stage" class="sm-stage">'+body+'</div><script src="semantic-motion.js"></script><script src="method-runtime.js"></script><script>const spec='+encoded+''';const stage=document.getElementById('stage');for(const [sel,text]of Object.entries(spec.text||{})){const n=stage.querySelector(sel);if(!n||n.children.length)throw Error('Missing leaf '+sel);n.textContent=text;}for(const [sel,asset]of Object.entries(spec.media||{})){const n=stage.querySelector(sel);if(!n||!['IMG','VIDEO'].includes(n.tagName))throw Error('Missing media '+sel);n.src=asset.src;n.muted=true;}const engine=MethodRuntime.create(spec,stage);const firstReady=(async()=>{await document.fonts.ready;await engine.seek(0)})();window.ready=()=>firstReady;window.seek=async t=>{await firstReady;window.__methodTrace=await engine.seek(t);return window.__methodTrace};window.render=window.seek;</script>'''
+ page='<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="theme.css"><style>body{margin:0}</style><div id="stage" class="sm-stage">'+body+'</div><script src="semantic-motion.js"></script><script src="method-runtime.js"></script><script>const spec='+encoded+''';const stage=document.getElementById('stage');for(const [sel,text]of Object.entries(spec.text||{})){const n=stage.querySelector(sel);if(!n||n.children.length)throw Error('Missing leaf '+sel);n.textContent=text;}for(const [sel,asset]of Object.entries(spec.media||{})){const n=stage.querySelector(sel);if(!n||!['IMG','VIDEO'].includes(n.tagName))throw Error('Missing media '+sel);n.src=asset.src;n.muted=true;}const engine=MethodRuntime.create(spec,stage);const firstReady=(async()=>{await document.fonts.ready;await engine.seek(0)})();window.ready=()=>firstReady;window.seek=async t=>{await firstReady;window.__methodTrace=await engine.seek(t);return window.__methodTrace};window.render=window.seek;</script>'''
  (out/'index.html').write_text(page,encoding='utf-8')
  (out/'method-binding.json').write_text(json.dumps(spec,ensure_ascii=False,indent=2),encoding='utf-8')
  (out/'library-project.json').write_text(json.dumps({'id':'method:'+entry['id'],'engine':'html-seek','entry':'index.html','duration':spec['duration'],'width':1280,'height':720,'fps':30,'fixed_canvas':True,'runtime_status':'not-rendered','user_approved':False,'ui_adaptation':entry['ui_adaptation'],'ui_stylesheet_sha256':hashlib.sha256((out/'theme.css').read_bytes()).hexdigest()},ensure_ascii=False),encoding='utf-8')

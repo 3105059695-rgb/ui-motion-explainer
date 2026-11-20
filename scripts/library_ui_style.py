@@ -37,6 +37,15 @@ def _modules():
   if value and (Path(value)/'typescript/package.json').is_file():return str(Path(value).resolve())
  raise ValueError('UI source adaptation needs TypeScript from the existing shared Node host; run library setup --core first.')
 
+def install_ui_font(root, output):
+ font=Path(root)/'assets/modules/director/assets/studio/fonts/NotoSansSC.ttf'
+ dest=Path(output)/font.name
+ if not dest.exists():
+  try:os.link(font,dest)
+  except OSError:shutil.copy2(font,dest)
+ license=font.with_name('NotoSansSC-OFL.txt')
+ shutil.copy2(license,Path(output)/license.name)
+
 def adapt_project(output,record,root,spec):
  output=Path(output);root=Path(root)
  mode=spec.get('ui_style',{}).get('mode','approved')
@@ -52,15 +61,8 @@ def adapt_project(output,record,root,spec):
   _write(output/'ui-style-report.json',report);return report
  runtime=output/'_current-ui';runtime.mkdir(exist_ok=True)
  for name in ['roles.js']:shutil.copy2(root/'assets/library-runtime/current-ui'/name,runtime/name)
- # One approved font is hardlinked locally; package font remains portable without an OS dependency.
- font=root/'assets/modules/director/assets/studio/fonts/NotoSansSC.ttf'
- if font.is_file():
-  dest=runtime/'NotoSansSC.ttf'
-  if not dest.exists():
-   try:os.link(font,dest)
-   except OSError:shutil.copy2(font,dest)
-  for license in font.parent.glob('*OFL*'):
-   if license.is_file():shutil.copy2(license,runtime/license.name)
+ install_ui_font(root,runtime)
+ palette=_read(root/'assets/agent-editorial/palette.json')
  css='@font-face{font-family:UIFusionApproved;src:url("NotoSansSC.ttf") format("truetype");font-weight:100 900;font-display:block;}\n'
  # Static HTML selectors are role-scoped, never * or every div.
  css_reports=[]
@@ -86,25 +88,39 @@ def adapt_project(output,record,root,spec):
     selector=selector.strip()
     if not re.fullmatch(r'[.#][\w-]+',selector):continue
     name=selector[1:].lower()
-    if re.search(r'logo|avatar|image|video|icon|sprite|texture',name):continue
-    role=next((role for role,pat in [('window',r'(?:^|[-_])(?:window|screen|panel|dialog)(?:$|[-_])'),('sheet',r'(?:^|[-_])(?:doc|sheet|paper|document|report)(?:$|[-_])'),('chip',r'(?:^|[-_])(?:pill|chip|badge|tag)(?:$|[-_])'),('heading',r'title|headline|heading'),('panel',r'(?:^|[-_])(?:card|tile)(?:$|[-_])')] if re.search(pat,name)),None)
-    if role:selectors[selector]=(role,body)
+    if re.search(r'logo|avatar|image|video|icon|sprite|texture|(?:^|[-_])(?:success|error|warning|selected|focus|code)(?:$|[-_])',name):continue
+    role=next((role for role,pat in [('window',r'(?:^|[-_])(?:window|screen|panel|dialog)(?:$|[-_])'),('sheet',r'(?:^|[-_])(?:doc|sheet|paper|document|report)(?:$|[-_])'),('chip',r'(?:^|[-_])(?:pill|chip|badge|tag)(?:$|[-_])'),('heading',r'title|headline|heading'),('panel',r'(?:^|[-_])(?:card|tile)(?:$|[-_])'),('subtitle',r'(?:^|[-_])subtitle(?:$|[-_])'),('text',r'(?:^|[-_])(?:copy|caption|detail|label|note)(?:$|[-_])')] if re.search(pat,name)),None)
+    if role:
+     prior=selectors.get(selector)
+     selectors[selector]=(role,prior[1]+';'+body if prior else body)
  for selector,(role,body) in selectors.items():
   parts=['font-family:UIFusionApproved,"Microsoft YaHei",sans-serif']
-  if role=='heading':parts+=['font-weight:800']
+  if role in ('heading','chip','subtitle','text'):
+   parts+=[f"font-weight:{ {'heading':800,'chip':700,'subtitle':600,'text':550}[role]}"]
   elif role in ('window','sheet','panel'):
    # Keep source geometry/radius. Change only existing neutral surfaces.
    resolved=re.sub(r'var\((--[\w-]+)\)',lambda m:mapped_vars.get(m[1],variables.get(m[1],m[0])),body)
-   match=re.search(r'background(?:-color)?\s*:\s*(#[\da-fA-F]{3,8}|white|black)\s*[;}]?',resolved)
-   if match:
-    c=match[1];rgba=c.lstrip('#');neutral=c in ('black','white') or len(rgba) in (3,6) and max(int(rgba[i:i+len(rgba)//3],16) for i in range(0,len(rgba),len(rgba)//3))-min(int(rgba[i:i+len(rgba)//3],16) for i in range(0,len(rgba),len(rgba)//3))<38
-    if neutral:parts+=['box-shadow:6px 8px 0 #DBDBE0,0 12px 25px #00000020','outline:2px solid #DBDBE0','outline-offset:-2px']
+   fills=re.findall(r'(?:^|;)\s*background(?:-color)?\s*:\s*(#[\da-fA-F]{6}|#[\da-fA-F]{3}|white|black)\s*(?=;|$)',resolved,re.I)
+   if fills:
+    color=fills[-1].lower().lstrip('#')
+    color={'black':'000000','white':'ffffff'}.get(color,color)
+    if len(color)==3:color=''.join(c*2 for c in color)
+    channels=[int(color[i:i+2],16) for i in (0,2,4)]
+    if max(channels)-min(channels)<38:
+     dark=max(channels)<86
+     fill=palette['black' if dark else 'white']
+     edge=palette['rim' if dark else 'line']
+     width=2 if role=='window' else 1
+     shadow=('1px 5px 0 #B4B1BD,0 11px 26px #17132322' if role=='window'
+             else '1px 3px 0 #DBDBE0,0 6px 15px #17132318')
+     parts += [f'background-color:{fill}',f'border-color:{edge}',f'box-shadow:{shadow}',
+               f'outline:{width}px solid {edge}',f'outline-offset:-{width}px']
   css+=selector+'{'+ ';'.join(parts)+'}\n';css_reports.append({'selector':selector,'role':role,'material':any('box-shadow' in x for x in parts)})
  if report['id']=='reference:twoclipping-5cba86':
   css+='#shape{outline:2px solid #DBDBE0;outline-offset:-2px;box-shadow:6px 8px 0 #DBDBE0,0 12px 25px #00000020;font-family:UIFusionApproved,sans-serif} .chart-title strong{font-weight:800} .player-copy strong{font-weight:700}\n'
   css_reports.append({'selector':'#shape','role':'continuous-morphing-surface','material':True})
  if report['id']=='sample:user-ui/girl-agent-sample-20261015':
-  css+='body{font-family:UIFusionApproved,sans-serif;color:#0B0B0F}.window{outline:2px solid #DBDBE0;outline-offset:-2px;box-shadow:6px 8px 0 #DBDBE0,0 12px 25px #00000020}.windowbar{background:#0B0B0F;color:#FFFFFF;box-shadow:none}#agent-window{background:#0B0B0F}h1,h2,h3{font-weight:800}h1 span,h2 span,.task-row em,.tick{color:#D6C2FF}.agent-icon,.task-progress i{background:#D6C2FF}#package{box-shadow:8px 10px 0 #DBDBE0,0 12px 25px #00000020}\n'
+  css+='body{font-family:UIFusionApproved,sans-serif;color:#0B0B0F}.window{outline:2px solid #DBDBE0;outline-offset:-2px;box-shadow:6px 8px 0 #DBDBE0,0 12px 25px #00000020}.windowbar{background:#0B0B0F;color:#FFFFFF;box-shadow:none}#agent-window{background:#0B0B0F;border-color:#393840;outline-color:#393840}h1,h2,h3{font-weight:800}h1 span,h2 span,.task-row em,.tick{color:#D6C2FF}.agent-icon,.task-progress i{background:#D6C2FF}#package{box-shadow:8px 10px 0 #DBDBE0,0 12px 25px #00000020}\n'
   css_reports.append({'selector':'.window / #package / .windowbar','role':'media-window+agent-window+result+file','material':True})
  (runtime/'roles.css').write_text(css,encoding='utf-8')
  files=[p for p in output.rglob('*') if p.is_file() and p.suffix in ('.js','.jsx','.tsx','.ts','.mjs') and '_current-ui' not in p.parts and 'node_modules' not in p.parts and not p.name.endswith('.min.js')]

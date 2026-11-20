@@ -60,7 +60,7 @@ class MethodProgramsProductionTests(unittest.TestCase):
         shutil.copytree(generated, portable)
         # Only the independent copy will be opened; all required relative assets
         # must be present here and remote requests are blocked below.
-        self.assertTrue((portable / 'Noto.woff2').is_file())
+        self.assertTrue((portable / 'NotoSansSC.ttf').is_file())
         self.assertNotIn(str(ROOT), (portable / 'index.html').read_text(encoding='utf-8'))
         return portable
 

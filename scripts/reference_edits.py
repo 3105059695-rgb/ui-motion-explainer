@@ -15,6 +15,7 @@ import zlib
 
 import video_sources
 import shot_direction
+from library_ui_style import install_ui_font
 
 ROOT = video_sources.ROOT
 RECIPES = 'assets/reference-edits/recipes.json'
@@ -560,7 +561,7 @@ def compose(catalog, plan_path, output, *, preview=False):
             shutil.copyfile(origin/name,staging/name)
         for name in ('agent-editorial.js','motion-core.js'):
             shutil.copyfile(catalog.root/'assets/agent-editorial'/name,staging/name)
-        shutil.copyfile(catalog.root/'assets/qiaomu-fonts/fonts/notosans.woff2',staging/'Noto.woff2')
+        install_ui_font(catalog.root,staging)
         write(staging/'library-project.json',{'id':'submitted-reference-cut','engine':'html-seek','entry':'index.html',
             'fps':fps,'width':w,'height':h,'duration':dur/fps,'frames':dur,'reference_sources':master['coverage']['included']})
         if output.exists():

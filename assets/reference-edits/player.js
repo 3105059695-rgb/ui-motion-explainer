@@ -80,7 +80,7 @@
       return result;
     };
     for (let n=0;n<18;n++) {
-      ctx.font=(bold?'700 ':'500 ')+size+'px Episode, sans-serif';lines=wrap();
+      ctx.font=(bold?'800 ':'550 ')+size+'px Episode, sans-serif';lines=wrap();
       if(lines.length*size*1.24<=h*.83 || size<5) break;
       size*=.84;
     }
@@ -278,7 +278,7 @@
     if(playing)requestAnimationFrame(()=>tick().catch(fault));
   }
   function fault(error){pause();document.getElementById('fault').textContent=error.message;}
-  const ready=document.fonts.load('700 20px Episode').then(()=>seek(0));
+  const ready=Promise.all([550, 600, 800].map(weight=>document.fonts.load(`${weight} 20px Episode`))).then(()=>seek(0));
   window.ready=()=>ready;
   window.seek=async t=>{await ready;return seek(t);};
   window.getState=()=>state;

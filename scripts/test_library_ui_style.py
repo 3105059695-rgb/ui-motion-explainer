@@ -16,6 +16,8 @@ assert.deepEqual(ui.style(s,'img photograph'),s);
 assert.equal(ui.style({background:'#07C160',borderRadius:12},'button').background,'#07C160');
 assert.equal(ui.style({background:'#ddd',width:31,height:31,borderRadius:'50%'},'div').boxShadow,undefined);
 assert.equal(ui.role('stage'),'layout');
+assert.equal(ui.style({background:'#1c1c1c',border:'1px solid #fafafa'},'div window').border,'1px solid #393840');
+assert.equal(ui.style({background:'#fafafa',border:'1px solid #1c1c1c'},'div sheet').border,'1px solid #DBDBE0');
 assert.equal(ui.style({background:'#2462EA',color:'white'},'div window').background,'#0B0B0F');
 assert.equal(ui.style({background:'#2462EA',color:'white'},'div brand window').background,'#2462EA');
 assert.equal(ui.style({background:'#07C160'},'div status panel').background,'#07C160');

@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Fusion Noto';
-  src: url('Noto.woff2') format('woff2');
+  src: url('NotoSansSC.ttf') format('truetype');
+  font-weight: 100 900;
   font-display: block;
 }
 :root {
@@ -22,10 +23,10 @@
   box-sizing: border-box; max-width: 100%; width: fit-content;
   font-family: 'Fusion Noto', sans-serif; color: var(--fusion-black); line-height: 1.23; overflow-wrap: anywhere;
 }
-.fusion-headline { font-weight: 700; background: var(--fusion-white); padding: .15em .35em; }
+.fusion-headline { font-weight: 800; background: var(--fusion-white); padding: .15em .35em; }
 .fusion-caption, .fusion-query, .fusion-focus { background: var(--fusion-white); border: 1px solid var(--fusion-line); border-radius: .22em; padding: .2em .5em; }
-.fusion-caption { font-weight: 500; }
-.fusion-query { position:relative; width:min(84cqmin,100%); font-weight:500; padding:.36em .6em .36em 2.05em; }
+.fusion-caption { font-weight: 550; }
+.fusion-query { position:relative; width:min(84cqmin,100%); font-weight:550; padding:.36em .6em .36em 2.05em; }
 .fusion-query::before {
   content:""; position:absolute; left:.55em; top:50%; width:.68em; height:.68em;
   transform:translateY(-58%); border:.075em solid var(--fusion-muted); border-radius:50%;
@@ -35,4 +36,4 @@
   transform:rotate(45deg); transform-origin:left center; background:var(--fusion-muted);
 }
 .fusion-query::after { content:""; display:inline-block; vertical-align:-.07em; width:.075em; height:1em; margin-left:.08em; background:var(--fusion-accentInk); }
-.fusion-focus { font-weight: 700; border-bottom: .12em solid var(--fusion-purple); }
+.fusion-focus { font-weight: 800; border-bottom: .12em solid var(--fusion-purple); }

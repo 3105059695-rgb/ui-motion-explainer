@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>共用 UI 样张</title>
+  <style>
+    @font-face {
+      font-family: "Fusion Noto";
+      src: url("../modules/director/assets/studio/fonts/NotoSansSC.ttf") format("truetype");
+      font-weight: 100 900;
+      font-display: block;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #F3F3F5; color: #0B0B0F; font: 550 15px/1.6 "Fusion Noto", sans-serif; }
+    main { width: min(1280px, calc(100% - 56px)); margin: 44px auto 36px; }
+    h1 { margin: 0; font-size: clamp(29px, 4vw, 50px); line-height: 1.15; letter-spacing: -.04em; font-weight: 800; }
+    header p { margin: 10px 0 24px; color: #62616C; }
+    canvas { display: block; width: 100%; height: auto; border: 1px solid #DBDBE0; border-radius: 18px; }
+    dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; margin: 24px 0 0; }
+    .swatch { min-width: 0; padding: 12px; background: #FFFFFF; border: 1px solid #DBDBE0; border-radius: 10px; }
+    .patch { display: block; min-height: 30px; border: 1px solid #DBDBE0; border-radius: 5px; margin-bottom: 8px; }
+    dt { font-weight: 700; }
+    dd { margin: 2px 0 0; color: #62616C; font-size: 13px; font-variant-numeric: tabular-nums; }
+    @media (max-width: 600px) { main { width: calc(100% - 28px); margin-top: 24px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>共用 UI 样张</h1>
+      <p>Noto Sans SC　标题 800 · 说明 550 · 字幕 600</p>
+    </header>
+    <canvas id="specimen" width="1440" height="450" aria-label="白纸、亮色窗口、深色窗口、状态标签和字幕的绘制示范"></canvas>
+    <dl id="palette" aria-label="正式配色"></dl>
+  </main>
+  <script src="motion-core.js"></script>
+  <script src="agent-editorial.js"></script>
+  <script>
+    const canvas = document.querySelector('#specimen');
+    const { palette } = AgentEditorial;
+    const colors = [
+      ['white', '白纸'], ['paper', '亮舞台'], ['line', '浅边框'],
+      ['black', '深窗口'], ['rim', '深边框'], ['onDark', '深底次字'],
+      ['purple', 'A 紫焦点'], ['accentInk', '浅底重点字'], ['muted', '浅底次字'],
+    ];
+    for (const [key, label] of colors) {
+      const swatch = document.createElement('div');
+      swatch.className = 'swatch';
+      const patch = document.createElement('span');
+      patch.className = 'patch';
+      patch.style.background = palette[key];
+      const term = document.createElement('dt');
+      term.textContent = label;
+      const value = document.createElement('dd');
+      value.textContent = palette[key];
+      swatch.append(patch, term, value);
+      document.querySelector('#palette').append(swatch);
+    }
+
+    function draw() {
+      const narrow = matchMedia('(max-width: 650px)').matches;
+      canvas.width = narrow ? 460 : 1440;
+      canvas.height = narrow ? 930 : 450;
+      const D = AgentEditorial.create(canvas.getContext('2d'), { fontFamily: '"Fusion Noto", sans-serif' });
+      const { C } = D;
+      D.rr(0, 0, canvas.width, canvas.height, 0, C.paper);
+      const paper = { x: 28, y: 40, w: 404, h: 230 };
+      const light = { x: narrow ? 28 : 518, y: narrow ? 324 : 40, w: 404, h: 230 };
+      const dark = { x: narrow ? 28 : 1008, y: narrow ? 608 : 40, w: 404, h: 230 };
+      D.sheet(paper, '资料摘要', { lines: ['同一份文档，定位到重点。', '浅边框与短接触影区分纸面。'], bodyColor: C.muted, bodySize: 21 });
+      D.screen(light, '亮色窗口');
+      D.text('校对记录', light.x + 24, light.y + 106, 30, C.black, 800);
+      D.text('读到这一步时，定位对应段落。', light.x + 24, light.y + 145, 21, C.muted, 550);
+      D.pill('当前项', { x: light.x + 24, y: light.y + 166, w: 112, h: 39 }, { fill: C.purple, size: 21, weight: 700 });
+      D.screen(dark, '深色窗口', { dark: true });
+      D.text('处理进度', dark.x + 24, dark.y + 106, 30, C.white, 800);
+      D.text('任务材料已就位', dark.x + 24, dark.y + 145, 21, C.onDark, 550);
+      D.progress({ x: dark.x + 24, y: dark.y + 169, w: 270, h: 13 }, .73, { track: C.rim });
+      D.text('73%', dark.x + 366, dark.y + 183, 22, C.purple, 800, 'right');
+      const y = narrow ? 862 : 328;
+      D.pill('已核对', { x: 28, y, w: 106, h: 37 }, { size: 19, weight: 700 });
+      D.pill('看清细节之后再继续', { x: narrow ? 156 : 558, y, w: narrow ? 275 : 324, h: 50 }, { size: 24, weight: 600 });
+    }
+    window.uiProofReady = Promise.all([550, 600, 700, 800].map(weight =>
+      document.fonts.load(`${weight} 32px "Fusion Noto"`, '资料窗口处理进度字幕')
+    )).then(faces => {
+      if (faces.some(list => list.length !== 1 || list[0].status !== 'loaded')) throw new Error('共用字体未加载');
+      draw();
+      addEventListener('resize', draw);
+    });
+  </script>
+</body>
+</html>

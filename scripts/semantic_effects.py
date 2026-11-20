@@ -215,7 +215,9 @@ def materialize(effect, output, bindings_path=None, stage=None, duration=None, d
             raise ValueError('duration must be positive')
         for name in ('semantic-motion.js', 'theme.css', 'host.js'):
             copy_file(ASSETS / name, out / name)
-        copy_file(ROOT / 'assets/qiaomu-fonts/fonts/notosans.woff2', out / 'Noto.woff2')
+        fonts = ROOT / 'assets/modules/director/assets/studio/fonts'
+        for name in ('NotoSansSC.ttf', 'NotoSansSC-OFL.txt'):
+            copy_file(fonts / name, out / name)
         spec = {'effect': effect, 'duration': length, 'demo': demo, **bindings}
         spec.update(effect=effect, duration=length, demo=demo)
         if demo:
@@ -233,7 +235,7 @@ def materialize(effect, output, bindings_path=None, stage=None, duration=None, d
         page = '<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>' + html.escape(effect) + ' bound motion</title><link rel="stylesheet" href="theme.css"><style>body{margin:0}nav{position:fixed;bottom:0;padding:8px;background:#eee;z-index:100000}#stage{transform-origin:0 0}</style><div id="stage" class="sm-stage">' + body + '</div><nav><button id="play">播放</button><input id="time" type="range" min="0" step=".01" value="0"><span id="time-label"></span></nav><script>window.SemanticHostSpec=' + encoded + ';window.SemanticMediaBase="sources";</script><script src="semantic-motion.js"></script>'
         if demo:
             page += '<script src="demo-fixtures.js"></script>'
-        page += '<style>@font-face{font-family:Noto;src:url(Noto.woff2);font-weight:100 900;font-display:block}</style><script src="host.js"></script></html>'
+        page += '<script src="host.js"></script></html>'
         (out / 'index.html').write_text(page, encoding='utf-8')
         source_hash = digest(ASSETS / 'semantic-motion.js')
         runtime = 'parameterized-existing-dom-svg'

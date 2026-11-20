@@ -7,6 +7,7 @@ import tempfile
 from urllib.parse import quote, urlencode
 
 from resource_inventory import load_overlay, resource_fact
+from library_ui_style import install_ui_font
 from video_sources import ROOT, read
 
 
@@ -363,7 +364,7 @@ def hyperframes(project, number, output, root=ROOT):
         missing.extend(name for name in ('width','height','fps') if type(plan.get(name)) is not int or plan[name] < 1)
         native = hyperframes_shot.build(root, folder, directory, recipe, shot, plan, score, missing)
         (directory / 'shot.json').write_text(json.dumps(score, ensure_ascii=False, indent=2), encoding='utf-8')
-        shutil.copyfile(root / 'assets/qiaomu-fonts/fonts/notosans.woff2', directory / 'Noto.woff2')
+        install_ui_font(root,directory)
         css = (root / 'assets/reference-edits/hyperframes.css').read_text(encoding='utf-8')
         tokens = '\n'.join(f'  --fusion-{k}: {v};' for k, v in palette.items())
         (directory / 'style.css').write_text(css.replace('/* PALETTE */', tokens), encoding='utf-8')

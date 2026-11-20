@@ -2,7 +2,7 @@
 name: ui-motion-fusion
 description: 用整库的剪辑经验为本期口播选材、试剪并交付可编辑工程。适用于口播、实拍 B-roll、UI 动效、HyperFrames 与已有工程的单镜续修。
 metadata:
-  version: "2026.11.20.4"
+  version: "2026.11.20.5"
 ---
 
 # 用整库参考剪口播
@@ -15,6 +15,8 @@ python -B -X utf8 scripts/ui.py direct -- resume --project "本期工程"
 ```
 
 **第一次剪。** 有原视频时给 prepare 加 `--presenter "原视频.mp4"`。第一次使用先读[可运行的选材、试剪与返修示范](references/edit-an-episode.md)。新稿跑 prepare，已有本期工程跑 resume。长稿按 next_offset 和 next_quote_offset 续读到末页。先确认本窗口实际支持的音频输入。能听时听原声；文字或图像窗口用已有原声、SRT 和播放页继续剪，登记听审受限，不向仅支持图文的模型发送音轨。按[口播理解与视觉选材](references/script-visual-planning.md)通读全稿，保留原文意思，写清整稿的问题和答案。逐段记下观众需要认出、看见、理解或感受到什么，以及不能遗漏的关键信息与限定。再逐句决定留真人，还是需要画面讲清比较、交接、因果、操作、细节或层级。把判断写进本期工程的 `decide`。第一次先做这个判断，再打开镜头卡。
+
+**统一 UI。** 理解完口播后，剪辑窗口按[当前审美](references/aesthetic-preferences.md#1-统一视觉与用色)完整对照当前认可范围内的 UI 参考，再打开[共用 UI 样张](assets/agent-editorial/ui-preview.html)。全片共用同一套字体、配色、边框与组件画法。借动作时把本期内容换入这些样式。自定义合成同样按这套样式落地，并查看实际渲染的浅边、深边、说明文字和状态标签。
 
 **按问题选材。** `options` 按本句的剪辑用途查询全部投稿，能翻页或点名任意可用条目。看候选的动作、所需真实材料和连续区间。关键处比较两种真正不同的安排，用 `choose` 留一句决定性理由。命令同时给出本期试剪 JSON 的路径，填入原声与材料即可调用选中的实现。真人已经讲清就留真人；实拍必须让观众多看懂一件具体的事。遇到没有身份或出处证据的通用画面，回到原素材。其他实现可从 `capabilities search/inspect` 检索。
 

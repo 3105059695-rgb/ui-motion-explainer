@@ -66,7 +66,14 @@
     if(s.borderRadius===undefined)s.borderRadius=r==='sheet'?9:r==='chip'?14:18;
     // Inset outlines do not change source box metrics or text wrapping.
     const edgeWidth=r==='window'?2:1;
-    s.outline=edgeWidth+'px solid '+edge;s.outlineOffset=-edgeWidth;
+    const border = typeof s.border === 'string' && /^(\S+\s+(?:solid|dashed|dotted|double)\s+)(.+)$/i.exec(s.border);
+    const neutralEdge = value => ['dark', 'light', 'neutral'].includes(tone(value));
+    if (border && neutralEdge(border[2])) s.border = border[1] + edge;
+    if (neutralEdge(s.borderColor)) s.borderColor = edge;
+    if (!border && !s.borderStyle && s.outline === undefined) {
+      s.outline = edgeWidth + 'px solid ' + edge;
+      s.outlineOffset = -edgeWidth;
+    }
     s.boxShadow=r==='chip'?'none':r==='window'?'1px 5px 0 #B4B1BD, 0 11px 26px #17132322':
       r==='sheet'?'1px 3px 0 #DBDBE0, 0 6px 15px #17132318':'0 2px 0 #DBDBE0, 0 6px 18px #17132318';
     return s;
