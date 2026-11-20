@@ -1224,6 +1224,7 @@ def main(argv=None):
     cursor.add_argument('--project', required=True, type=Path)
     cursor.add_argument('--shot', help='Shot number or saved episode unit ID.')
     cursor.add_argument('--offset', type=int, default=0)
+    cursor.add_argument('--quote-offset',type=int,default=0,help='Continue within an unusually long source sentence.')
     cursor.add_argument('--cut', type=Path)
     cursor.add_argument('--at',help='Find the saved dialogue and every active shot at this time.')
     save = sub.add_parser('save', help='Apply a revision-checked patch and return the next shot.')
@@ -1273,6 +1274,8 @@ def main(argv=None):
             else:output = edit_session.overview(args.project)
         elif args.command == 'resume':
             import edit_session
+            if (args.project/episode_edit.STATE).is_file():
+                with edit_session.plan_lock(args.project):episode_edit.ensure_project_entry(args.project)
             if args.at is not None and (args.project/caption_edit.STATE).is_file():
                 output = caption_edit.edit(args.project,args.at)
                 if (args.project/episode_edit.STATE).is_file():
@@ -1281,7 +1284,7 @@ def main(argv=None):
                     except ValueError as exc:
                         output['episode_shot_gap']=str(exc)
             elif (args.project/episode_edit.STATE).is_file():
-                output = episode_edit.status(args.project.resolve(),load_json(args.project/episode_edit.STATE),args.shot,args.at,args.offset)
+                output = episode_edit.status(args.project.resolve(),load_json(args.project/episode_edit.STATE),args.shot,args.at,args.offset,args.quote_offset)
             else:
                 output = caption_edit.edit(args.project,args.at) if args.at is not None else edit_session.resume(args.project,int(args.shot) if args.shot else None,args.offset,args.cut)
         elif args.command == 'save':

@@ -48,6 +48,7 @@ def initialise(folder, script, presenter=None):
     folder, script = Path(folder).resolve(), Path(script).resolve(strict=True)
     folder.mkdir(exist_ok=True,parents=True)
     with plan_lock(folder):
+        ensure_project_entry(folder)
         if (folder/STATE).exists():
             existing = read(folder/STATE)
             if existing['script_sha256'] != digest(script):
@@ -60,6 +61,31 @@ def initialise(folder, script, presenter=None):
                  'synopsis':None,'units':[{**u,'revision':0} for u in units], 'outputs':[], 'references':{},
                  'source_media':relative(folder,presenter) if presenter else None}
         write_atomic(folder/STATE,board)
+
+
+def ensure_project_entry(folder):
+    """Leave the continuation command where an editor opening only the project will look."""
+    folder=Path(folder).resolve()
+    guide=folder/'AGENTS.md'
+    body=('# 续剪本期口播\n\n本目录的 episode-edit.json 是本期剪辑记录。修改现有镜头先在本目录运行 '
+          '`python -B -X utf8 continue_edit.py resume --at 00:09.00`（换成本期时码），或使用 --shot 2。'
+          '保留旧母版，将本次源码、变更的镜头和新母版写回此工程。\n\n'
+          '内置剪法只改该镜 inputs，按返回的 revision 运行 trial，再 deliver 到新文件。'
+          '外部工具只渲染目标镜头；取得修订母版后，将改过的源码存回这里，运行 '
+          '`python -B -X utf8 continue_edit.py revise --unit U002 --media 修订母版.mp4 --implementation 实际改过的源码`。'
+          '该命令核对其余画面与原声，更新这一镜及其观看缺口。最后重新 resume 核对新版本。'
+          '需要给用户一份单独的 MP4 时，可另复制已登记的母版。\n')
+    if guide.exists() and guide.read_text(encoding='utf-8-sig',errors='replace')!=body:
+        guide=folder/'继续剪辑.md'
+    if not guide.exists():
+        with guide.open('x',encoding='utf8') as f:f.write(body)
+    runner=folder/'continue_edit.py'
+    if not runner.exists():
+        with runner.open('xb') as f:f.write((lib.ROOT/'assets/reference-edits/continue_edit.py').read_bytes())
+    hint=folder/'editorial'/'skill-location.json'
+    if not hint.exists():
+        hint.parent.mkdir(exist_ok=True,parents=True)
+        write_atomic(hint,{'skill':relative(folder,lib.ROOT)})
 
 
 def unit_for(board, key):
@@ -124,7 +150,7 @@ def choices(board, u, ident=None, offset=0):
         raise ValueError('该条目没有可调用的投稿剪法。')
     result = [lib.card(k) for k in keys]
     u['candidates'] = sorted(set(u.get('candidates',[]))|set(keys))
-    return {'unit':u['id'],'quote':u['quote'],'decision':u['decision'],'cards':result,
+    return {'unit':u['id'],'quote':u['quote'][:720],'quote_length':len(u['quote']),'decision':u['decision'],'cards':result,
             'next_offset':offset+3 if not ident and offset+3<len(ids) else None,
             'choose':'比较具体剪法后 direct -- choose；原画面足够就选 original。'}
 
@@ -197,7 +223,22 @@ def gaps(folder, board, u):
     return missing
 
 
-def status(folder, board, shot=None, at=None, offset=0):
+def reading_page(units, offset, quote_offset):
+    if quote_offset<0 or (offset<len(units) and quote_offset>=len(units[offset]['quote'])):
+        raise ValueError('原句续读位置超出范围。')
+    rows=[];budget=2300
+    for i in range(offset,min(offset+12,len(units))):
+        u=units[i];start=quote_offset if i==offset else 0
+        snippet=u['quote'][start:start+budget]
+        rows.append({'id':u['id'],'quote':snippet,**({'decision':u['decision']} if u.get('decision') else {})})
+        if start+len(snippet)<len(u['quote']):return rows,i,start+len(snippet)
+        budget-=len(snippet)
+        if not budget:break
+    next_unit=offset+len(rows)
+    return rows,next_unit if next_unit<len(units) else None,0
+
+
+def status(folder, board, shot=None, at=None, offset=0, quote_offset=0):
     import episode_media as media
     if offset<0:
         raise ValueError('offset 不能为负数。')
@@ -218,15 +259,17 @@ def status(folder, board, shot=None, at=None, offset=0):
             else:u=unit_for(board,shot)
         src=(u.get('choice') or {}).get('id')
         shot={k:v for k,v in u.items() if k not in ('auditions','review_history','prior_trials')}
+        parts,_,continuation=reading_page([u],0,quote_offset)
+        shot['quote']=parts[0]['quote'];shot['next_quote_offset']=continuation or None
         return {**out,'shot':shot,'reference':reference_for(board,src,u),'remaining':gaps(folder,board,u)}
     if not whole_read(board):
-        rows=board['units'][offset:offset+12]
+        rows,following,continuation=reading_page(board['units'],offset,quote_offset)
         last=board['outputs'][-1] if board['outputs'] else None
         exported=bool(last and media.matches(folder,[last['media']]))
         return {**out,'stage':'exported' if exported else 'read-script','total_units':len(board['units']),
                 'exported':exported,'completed':False,'pending':['read-script','select','current-material-trial'],
-                'units':[{k:u[k] for k in ('id','quote','decision') if k in u} for u in rows],
-                'next_offset':offset+len(rows) if offset+len(rows)<len(board['units']) else None,
+                'original_voice':'有可用的听审工具时实际听原声。只支持文字或图像的窗口使用原始音轨、已对齐字幕与播放器继续剪，交付登记听审受限。直接把音频送入不支持音频的模型会中断该窗口。',
+                'units':rows,'next_offset':following,'next_quote_offset':continuation,
                 'next':'读完本页原句及后续页。direct -- decide --project P --file 判断.json。格式见 references/edit-an-episode.md。'}
     issues={u['id']:gaps(folder,board,u) for u in board['units']}
     pending={k:v for k,v in issues.items() if v}

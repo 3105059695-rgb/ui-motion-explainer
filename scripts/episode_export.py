@@ -11,28 +11,29 @@ import episode_media as media
 import reference_edits as edits
 
 
-def timeline(folder, board):
+def timeline(folder, board, replacing=None):
     shots=[u.get('trial') for u in board['units']]
     if not shots or not all(shots):
         raise ValueError('有镜头尚无带原声试剪。')
     first=shots[0]; end=0
-    for t in shots:
+    for unit,t in zip(board['units'],shots):
         a,b=t['seconds']
         if abs(a-end)>1/first['fps'] or t['fps']!=first['fps'] or t['size']!=first['size'] or t['audio']!=first['audio']:
             raise ValueError('镜头需要在同一条原声上按序接续，画幅与帧率一致。')
-        if not media.trial_intact(folder,t):raise ValueError('本期试剪或它绑定的输入已变化。')
+        if unit['id']!=replacing and not media.trial_intact(folder,t):raise ValueError('本期试剪或它绑定的输入已变化。')
         end=b
     return shots
 
 
-def conform(folder, board, path):
-    shots=timeline(folder,board)
+def conform(folder, board, path, replacing=None):
+    shots=timeline(folder,board,replacing)
     duration, streams=media.movie(path)
     fps=shots[0]['fps']
     if not {'video','audio'}<=streams or abs(duration-shots[-1]['seconds'][1])>max(.12,2/fps):
         raise ValueError('成片流或总时长与真实镜头时间不符。')
     report=[]
-    for t in shots:
+    for unit,t in zip(board['units'],shots):
+        if unit['id']==replacing:continue
         a,b=t['seconds']
         def pixels(p,start):
             return media.ff('-ss',start,'-i',p,'-t',b-a,'-an','-vf','fps=5,scale=48:27:flags=area,format=gray','-f','rawvideo','pipe:1')

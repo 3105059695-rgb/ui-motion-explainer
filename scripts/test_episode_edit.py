@@ -87,3 +87,32 @@ class ScriptLedEdits(unittest.TestCase):
         status=edit.status(self.folder,self.board)
         self.assertTrue(status['exported']);self.assertFalse(status['completed'])
         self.assertIn('read-script',status['pending'])
+
+    def test_long_sentence_is_read_exactly_once_across_pages(self):
+        units=[{'id':'U001','quote':'甲'*4200},{'id':'U002','quote':'乙'*800}]
+        i=at=0;seen=''
+        while i is not None:
+            rows,i,at=edit.reading_page(units,i,at)
+            text=''.join(r['quote'] for r in rows)
+            self.assertLessEqual(len(text),2300);seen+=text
+        self.assertEqual(seen,''.join(u['quote'] for u in units))
+
+    def test_portable_continuation_preserves_existing_project_instructions(self):
+        p=self.folder/'older';p.mkdir()
+        original='Use the existing project conventions.'
+        (p/'AGENTS.md').write_text(original,encoding='utf8')
+        edit.ensure_project_entry(p);edit.ensure_project_entry(p)
+        self.assertEqual((p/'AGENTS.md').read_text(encoding='utf8'),original)
+        self.assertIn('revise --unit',(p/'继续剪辑.md').read_text(encoding='utf8'))
+        self.assertTrue((p/'continue_edit.py').is_file())
+
+    def test_external_revision_checks_unchanged_shots_before_writing(self):
+        import episode_revision
+        self.second['trial']={'sha256':'unchanged'}
+        p=self.folder/'external.mp4';p.write_bytes(b'test')
+        with patch('episode_export.conform',side_effect=ValueError('another shot changed')) as check:
+            with self.assertRaisesRegex(ValueError,'another shot'):
+                episode_revision.adopt(self.folder,self.board,self.second,p)
+        check.assert_called_once_with(self.folder,self.board,p.resolve(),replacing='U002')
+        self.assertEqual(self.second['trial'],{'sha256':'unchanged'})
+        self.assertEqual(self.board['outputs'],[])

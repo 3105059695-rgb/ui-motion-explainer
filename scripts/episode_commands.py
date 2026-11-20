@@ -7,7 +7,7 @@ import episode_export as export
 import reference_edits as edits
 from edit_session import plan_lock, write_atomic
 
-ACTIONS=('decide','options','choose','watch','observe','trial','review','proofs','compare','deliver','register','finish-review','example')
+ACTIONS=('decide','options','choose','watch','observe','trial','review','proofs','compare','deliver','register','revise','finish-review','example')
 
 
 def parsers(sub):
@@ -17,9 +17,10 @@ def parsers(sub):
             'trial':'Render one shot with current inputs and source voice.','review':'Check or revise the current trial.',
             'compare':'Open a shot beside its reference.','deliver':'Assemble saved shot media.','register':'Conform an external export.',
             'proofs':'Inspect the opening and difficult transition on the actual voice track.',
+            'revise':'Conform other shots and adopt only the changed shot and its editable source.',
             'finish-review':'Record whole-film viewing.','example':'Run a small worked example.'}[action])
         p.add_argument('--project',required=True,type=Path)
-        if action in ('options','choose','watch','observe','trial','review','compare'):
+        if action in ('options','choose','watch','observe','trial','review','compare','revise'):
             p.add_argument('--unit',required=True)
         if action in ('decide','observe','review','finish-review'):p.add_argument('--file',required=True,type=Path)
         if action=='trial':p.add_argument('--spec',required=True,type=Path)
@@ -38,6 +39,8 @@ def parsers(sub):
             p.add_argument('--out',required=True);p.add_argument('--draft',action='store_true')
         if action=='register':
             p.add_argument('--media',required=True);p.add_argument('--route',required=True)
+        if action=='revise':
+            p.add_argument('--media',required=True);p.add_argument('--implementation');p.add_argument('--revision',type=int)
 
 
 def command(args):
@@ -48,6 +51,7 @@ def command(args):
     if not (folder/ed.STATE).is_file():
         raise ValueError('先对本期口播运行 direct -- prepare。')
     with plan_lock(folder):
+        ed.ensure_project_entry(folder)
         board=edits.read(folder/ed.STATE)
         u=ed.unit_for(board,args.unit) if hasattr(args,'unit') else None
         action=args.command
@@ -55,7 +59,9 @@ def command(args):
             ed.decide(board,edits.read(args.file.resolve(strict=True)))
             result=ed.status(folder,board)
         elif action=='options':result=ed.choices(board,u,args.id,args.offset)
-        elif action=='choose':result=ed.choose(board,u,args.id,args.against,args.why,args.revision,args.aspect)
+        elif action=='choose':
+            choice=ed.choose(board,u,args.id,args.against,args.why,args.revision,args.aspect)
+            result={**choice,**trial_form(folder,board,u)}
         elif action=='watch':result=media.watch(folder,board,u,args.id,args.seconds,args.stills,args.restore)
         elif action=='observe':result=media.observe(folder,board,u,args.id,edits.read(args.file))
         elif action=='trial':result=media.make_trial(folder,board,u,edits.read(args.spec))
@@ -71,9 +77,34 @@ def command(args):
             result=media.compare(folder,board,u,actual)
         elif action=='deliver':result=export.assemble(folder,board,args.out,args.draft)
         elif action=='register':result=export.register(folder,board,args.media,args.route)
+        elif action=='revise':
+            from episode_revision import adopt
+            result=adopt(folder,board,u,args.media,args.implementation,args.revision)
         elif action=='finish-review':result=export.final_review(folder,board,edits.read(args.file))
         write_atomic(folder/ed.STATE,board)
     return result
+
+
+def trial_form(folder,board,unit):
+    """Give a new editor the selected implementation's current input contract."""
+    import editing_library as lib
+    choice=unit['choice']
+    seed={'seconds':unit['decision'].get('seconds',[None,None]),'audio':board.get('source_media'),'revision':unit['revision']}
+    if choice['id']=='original':
+        seed['picture']=board.get('source_media')
+    else:
+        card=lib.card(choice['id'])
+        slots=card['inputs']
+        if choice['id']=='arun-membership' and any(k in unit['quote']+choice['why'] for k in ('两个','两张','两项','两件','两份','两种','两家')):
+            seed['variant']='pair'
+            slots={k:v for k,v in slots.items() if k!='c'}
+        seed['inputs']={k:{'text':None} if v['kind']=='text' else {'path':None} for k,v in slots.items()}
+    path=folder/'editorial'/unit['id']/('trial-form-r'+str(unit['revision'])+'.json')
+    if not path.exists():
+        path.parent.mkdir(exist_ok=True,parents=True)
+        write_atomic(path,seed)
+    unit['trial_form']=ed.relative(folder,path)
+    return {'file_to_fill':str(path),'fields':seed,'next':'填本期真实素材、原声与剪点，直接运行 direct -- trial --project 本期工程 --unit '+unit['id']+' --spec "'+str(path)+'"。使用自定义合成时说明保留了哪个动作、改变了什么。'}
 
 
 def verify_and_register(folder, path, route='verify-output'):
