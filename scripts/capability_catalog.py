@@ -421,6 +421,20 @@ def inspect(ident, root=ROOT):
     else:
         detail['declaration'] = item
         detail['legacy_inspect_command'] = 'ui.py inspect --kind ' + kind + ' --id ' + row['original_id']
+    bindings=_read(root,'assets/reference-edits/recipes.json',{}).get('recipes',{})
+    sources=[key for key,r in bindings.items() if r['capability']==row['id']]
+    previews=[]
+    if sources:
+        from editing_library import card
+        previews=[{'source':key,'view':card(key,root)['continuous_example']} for key in sources]
+    detail['editing']={
+        'explains':item.get('viewer_gap') or item.get('understanding_gap') or row['semantic_use'],
+        'change':item.get('state_chain') or item.get('event_chain') or item.get('cues') or item.get('reuse_contribution') or row['semantic_use'],
+        'inputs':item.get('required_inputs') or detail.get('parameters') or
+                 ([bindings[k]['slots'] for k in sources] if sources else detail.get('parameter_documentation') or item.get('slots') or '见实现入口的参数声明'),
+        'continuous_examples':previews,'preview':row.get('preview') or None,
+        'evidence_scope':'有精确对照入口' if previews else '仅列现有实现或预览，未登记连续观看时段',
+        'implementation':row.get('call')}
     return detail
 
 
@@ -563,7 +577,7 @@ def main(argv=None):
         elif args.command == 'inspect':
             result = inspect(args.id, args.root)
             if args.brief:
-                keys = ('id','title','semantic_use','execution_state','call','preview','inspect_command')
+                keys = ('id','title','semantic_use','execution_state','call','preview','inspect_command','editing')
                 result = {k: result[k] for k in keys if k in result}
         elif args.command == 'bind':
             import component_project

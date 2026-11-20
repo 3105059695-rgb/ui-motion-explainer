@@ -305,4 +305,7 @@ def verify_output(project, media, plan=None, root=ROOT, ffprobe=None, expected_p
     except (OSError, ValueError, TypeError, subprocess.TimeoutExpired) as exc:
         errors.append(str(exc))
     report['technical_passed'] = not errors
+    if report['technical_passed']:
+        from episode_commands import attach_export
+        attach_export(report, project, media)
     return report

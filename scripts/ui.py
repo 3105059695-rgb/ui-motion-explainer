@@ -258,7 +258,11 @@ def main(argv=None):
             print(json.dumps(status(), ensure_ascii=False, indent=2))
             return 0
         if args.action == 'verify-output':
-            if (args.project/'reference-timeline.json').is_file():
+            import episode_edit
+            if (args.project/episode_edit.STATE).is_file():
+                from episode_commands import verify_and_register
+                report = verify_and_register(args.project,args.media)
+            elif (args.project/'reference-timeline.json').is_file():
                 import reference_edits
                 report = reference_edits.verify(args.project, args.media, args.plan)
             else:

@@ -461,6 +461,12 @@ def compose(catalog, plan_path, output, *, preview=False):
         raise ValueError('The narration changed. Reassign references against the current script.')
     units={u['id']:u for u in selection.source_segments(script.read_bytes().decode('utf-8-sig'))}
     recipes,diagnostic=rules(catalog)
+    if plan.get('shot_timing'):
+        if not preview or len(plan['shots'])!=1:
+            raise ValueError('Local beat bindings belong to one editable shot.')
+        from episode_media import timed_recipe
+        ident=plan['shots'][0]['source_id']
+        recipes[ident]=timed_recipe(recipes[ident],ident,plan['shot_timing'],plan['duration_frames']/plan['fps'])
     if preview and isinstance(plan.get('shots'),list):
         plan['shots'] = [s for s in plan['shots'] if s.get('start_frame') is not None or s.get('end_frame') is not None]
     if not isinstance(plan.get('shots'),list) or (not plan['shots'] and not (preview and plan.get('base_video'))):
@@ -668,11 +674,14 @@ def verify(project, media, plan=None):
         raise ValueError('The encoded picture or original audio differs from the master clock.')
     from collections import Counter
     comparisons=Counter((s.get('borrow') or {}).get('basis','unrecorded')+'/'+(s.get('borrow') or {}).get('seen','unrecorded') for s in data['shots'])
-    return {'technical_passed':True,'complete_reference_coverage':True,'visible_sources':len(observed),
+    result = {'technical_passed':True,'complete_reference_coverage':True,'visible_sources':len(observed),
             'recorded_comparisons':dict(comparisons),'whole_film_sound_review':'not-certified','nle_editability':'not-tested',
             'visible_material_roles':sum(len(r['slots']) for r in observed.values()), 'frames':data['frames'],
             'visible_library_capabilities': sorted({i['capability'] for i in implementations.values()}),
             'audio':receipt['audio'],'aesthetic_approval':False,'sha256':receipt['sha256']}
+    from episode_commands import attach_export
+    attach_export(result,project,media)
+    return result
 
 
 def main(argv):

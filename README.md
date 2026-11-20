@@ -6,11 +6,13 @@
 
 **收到这句话的 Agent** 获取仓库，在本对话读取根目录的 [SKILL.md](SKILL.md) 和[当前审美](references/aesthetic-preferences.md)，依照[仓库接入步骤](AI-START.md)直接使用。用户只用发仓库地址和本期内容。以后也要通过名称调用时，用仓库自带的安装器登记同一个 Skill。
 
+新窗口从整稿判断起步。选材、原声试剪、对照、带缺口的导出和单镜续修都记在同一份工程。[可运行的初剪与返修例子](references/edit-an-episode.md)
+
 [查看每条参考视频的用法与剪辑示例](references/video-use-guide.md) · [浏览全片图集](assets/reference-atlas/index.html) · [查看固定配色与材质](references/aesthetic-preferences.md)
 
 剪每个镜头时，Agent 可按原速播放该来源的原视频、保留工程或明确标注的手法重演，核对本句的动作与结果。使用 HyperFrames 时，已绑素材的镜头可以直接生成原生动效工程。导出后可把本期 MP4、对应动态参考和已认可正文并排回看。入口见 [SKILL.md](SKILL.md)。
 
-**从 GitHub 只下载这一份即可调用。** 解压后安装 `ui-motion-fusion`，新对话输入「用 $ui-motion-fusion 剪这段口播」。32 条正向投稿参考各有独立的素材角色、构图、连续动作和可执行关键帧。正常制作按原声为每条安排职责，渲染逐帧核对实际入片范围。6 条历史试样按反馈做纠错。下载、安装与渲染环境见[跨电脑安装](docs/install.md)。
+**从 GitHub 只下载这一份即可调用。** 解压后安装 `ui-motion-fusion`，新对话输入「用 $ui-motion-fusion 剪这段口播」。32 条正向投稿参考各有独立的素材角色、构图、连续动作和可执行关键帧。普通制作先判断原句，再按用途检索所有条目，采用的每一镜都有取舍理由、观看依据与成片时码。6 条历史试样按反馈做纠错。下载、安装与渲染环境见[跨电脑安装](docs/install.md)。
 
 **先理解口播，再从 `capabilities list/search/inspect` 选择已有能力并直接调用。** 当前默认 UI 仍是用户认可的「十款 Agent」正文外观及当前 A 配色；Fred、阿闰、秋芝与 AIGC 按各自认可范围参与参考，整个效果库继续开放。按口播的意思、上下文与情绪选择材料，让对象完成可看懂的动作，再用蒙版、聚焦、变形与转场接起来。人物身份和 AIGC 画风独立保存。具体偏好见[UI、AE 感、开头与禁忌](references/aesthetic-preferences.md)，流程见[唯一入口](SKILL.md)。
 

@@ -600,7 +600,7 @@ def session_inputs(script, project, profile, presenter, reference, root):
             'version': version.read_text(encoding='utf8').strip() if version.is_file() else None}
 
 
-def prepare(script, project, profile=None, force=False, root=ROOT, presenter=None, reference=None, mode='production'):
+def prepare(script, project, profile=None, force=False, root=ROOT, presenter=None, reference=None, mode='production', script_led=False):
     """Default to executable capabilities; full source study is explicitly requested."""
     if mode == 'research':
         return prepare_research(script, project, profile, force, root, presenter, reference)
@@ -708,8 +708,13 @@ def prepare(script, project, profile=None, force=False, root=ROOT, presenter=Non
         '运行 ui.py direct -- resume --project <本工程>。单镜头返回适用原句、来源依据、连续动作和待绑定素材。',
         '短候选不是白名单。按具体需要可查 ui.py capabilities list 或 inspect；研究原片时再使用 read 的全文分页。',
         '以用片表保存编辑，以导出的可见帧核对实际采用情况。指定的参考复刻由工程 reference_film 保存。', ''])
+    if script_led:
+        context['video_sources']['edit_plan']=str(folder/'episode-edit.json')
+        brief='\n'.join([MARKER,'# 本期剪辑','','运行 direct -- resume 读本期原句、已作的判断和待解决的问题。',
+            '按本句的比较、因果或交接检索全部材料。先试本期片头与最难的动作，记录实际查看的依据和返修。',
+            '每个镜头的选择、真实实现、时码与观看记录统一保存在 episode-edit.json。',''])
     result = _write_preparation(folder, source, context, brief, force)
-    if router and not edit_plan.exists():
+    if router and not script_led and not edit_plan.exists():
         reference_edits.scaffold(router, source['path'], edit_plan, context['video_sources']['all_submitted'], presenter_source)
         result['created_or_updated'].append(str(edit_plan))
     if not material_plan_path.exists():
@@ -1209,12 +1214,15 @@ def main(argv=None):
     prep.add_argument('--force', action='store_true', help='Replace only this tool\'s own generated context/brief files.')
     prep.add_argument('--full', action='store_true', help='Return preparation diagnostics instead of the current shot.')
     import caption_edit
+    import episode_commands
+    import episode_edit
+    episode_commands.parsers(sub)
     caption_edit.arguments(sub.add_parser('captions', help='Locate, edit or export the saved dialogue track.'))
     view = sub.add_parser('overview', help='Show the episode duties for all submitted references.')
     view.add_argument('--project', required=True, type=Path)
     cursor = sub.add_parser('resume', help='Read the next unfinished shot from a saved episode.')
     cursor.add_argument('--project', required=True, type=Path)
-    cursor.add_argument('--shot', type=int)
+    cursor.add_argument('--shot', help='Shot number or saved episode unit ID.')
     cursor.add_argument('--offset', type=int, default=0)
     cursor.add_argument('--cut', type=Path)
     cursor.add_argument('--at',help='Find the saved dialogue and every active shot at this time.')
@@ -1227,37 +1235,65 @@ def main(argv=None):
                            help='Exit nonzero unless production_ready is true. Default mode only diagnoses plan structure.')
     args = parser.parse_args(argv)
     try:
-        if args.command == 'recipes':
+        if args.command in episode_commands.ACTIONS:
+            output = episode_commands.command(args)
+        elif args.command == 'recipes':
             output = recipes(args.id)
         elif args.command == 'prepare':
             import edit_session
             production = args.mode == 'production' and not args.full
             context_file = args.project / edit_session.CONTEXT
+            board_file = args.project / episode_edit.STATE
+            new_episode = not (args.project / edit_session.PLAN).exists()
             cached = (production and not args.force and context_file.is_file()
-                      and (args.project / edit_session.PLAN).is_file()
+                      and ((args.project / edit_session.PLAN).is_file() or board_file.is_file())
                       and load_json(context_file).get('session_inputs')
                       == session_inputs(args.script, args.project, args.profile, args.presenter, args.reference, ROOT))
             if not cached:
                 output = prepare(args.script, args.project, args.profile, args.force, presenter=args.presenter,
-                                 reference=args.reference, mode=args.mode)
-            if production:
+                                 reference=args.reference, mode=args.mode,
+                                 script_led=(new_episode or board_file.exists()) and not args.reference)
+            if args.mode == 'production' and (new_episode or board_file.exists()):
+                episode_edit.initialise(args.project, args.script, args.presenter)
+                if production:
+                    output = episode_edit.status(args.project.resolve(),load_json(board_file))
+                    if args.reference and (args.project/edit_session.PLAN).is_file():
+                        # The user explicitly chose a whole film to reproduce.
+                        reproduction=edit_session.resume(args.project)
+                        reproduction['episode']=output
+                        output=reproduction
+            elif production:
                 output = edit_session.resume(args.project)
         elif args.command == 'captions':
             output = caption_edit.command(args)
         elif args.command == 'overview':
             import edit_session
-            output = edit_session.overview(args.project)
+            if (args.project/episode_edit.STATE).is_file():
+                output=episode_edit.status(args.project.resolve(),load_json(args.project/episode_edit.STATE))
+            else:output = edit_session.overview(args.project)
         elif args.command == 'resume':
             import edit_session
-            output = caption_edit.edit(args.project,args.at) if args.at is not None else edit_session.resume(args.project, args.shot, args.offset, args.cut)
+            if args.at is not None and (args.project/caption_edit.STATE).is_file():
+                output = caption_edit.edit(args.project,args.at)
+                if (args.project/episode_edit.STATE).is_file():
+                    try:
+                        output['episode_shot'] = episode_edit.status(args.project.resolve(),load_json(args.project/episode_edit.STATE),at=args.at)
+                    except ValueError as exc:
+                        output['episode_shot_gap']=str(exc)
+            elif (args.project/episode_edit.STATE).is_file():
+                output = episode_edit.status(args.project.resolve(),load_json(args.project/episode_edit.STATE),args.shot,args.at,args.offset)
+            else:
+                output = caption_edit.edit(args.project,args.at) if args.at is not None else edit_session.resume(args.project,int(args.shot) if args.shot else None,args.offset,args.cut)
         elif args.command == 'save':
             import edit_session
+            if (args.project/episode_edit.STATE).is_file() and not (args.project/edit_session.PLAN).is_file():
+                raise ValueError('本工程按原句保存。用 choose、trial、review 更新目标镜头，resume 返回其 revision。')
             output = edit_session.save(args.project, args.patch)
         else:
             output = check(args.plan)
             output['check_mode'] = 'production-preflight' if args.production else 'structure-diagnostic'
             output['check_passed'] = output['production_ready'] if args.production else output['plan_valid']
-    except (OSError, ValueError, UnicodeError) as exc:
+    except (OSError, ValueError, UnicodeError, KeyError, TypeError) as exc:
         print(json.dumps({'errors': [str(exc)], 'generation_submitted': False}, ensure_ascii=False, indent=2))
         return 1
     small = args.command in ('resume','save','overview') or (

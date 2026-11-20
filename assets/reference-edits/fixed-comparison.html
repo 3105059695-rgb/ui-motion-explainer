@@ -1,0 +1,15 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>同题比较 · 来源剪法重演</title>
+<style>@font-face{font-family:cn;src:url(../qiaomu-fonts/fonts/notosans.woff2)}*{box-sizing:border-box}body{margin:0;background:#eeece9;color:#242328;font:500 3.5vmin cn,system-ui,sans-serif}main{height:100vh;display:grid;place-content:center;text-align:center;gap:4vmin}h1{margin:0;font-size:4.6vmin;font-weight:580}article{width:67vw;height:44vh;background:#faf9f6;border:1px solid #d5d2cf;border-radius:2vmin;display:grid;align-content:center;gap:1vmin}article p{margin:0;color:#625d64}strong{font-size:13vmin;line-height:1.2;font-weight:550;font-variant-numeric:tabular-nums}i{height:.7vmin;width:34%;background:#bcafd5;justify-self:center}</style>
+<main><h1>同一份资料 · 完成用时</h1><article><p id="subject"></p><strong id="result"></strong><i></i></article></main>
+<script>
+const duration=6, samples=[['纸质索引','12 分钟'],['关键词检索','7 分钟'],['带页码的结果','3 分钟']];
+window.duration=duration;
+window.ready=fetch('recipes.json').then(r=>r.json()).then(data=>{
+ const clips=data.recipes['arun-membership'].layers.filter(l=>l.slot!=='condition');
+ window.seek=t=>{const progress=Math.min(.9999,Math.max(0,t/duration)),i=clips.findIndex(l=>l.keys[0].at<=progress&&progress<l.keys.at(-1).at);
+ const item=samples[Math.max(0,i)];document.getElementById('subject').textContent=item[0];document.getElementById('result').textContent=item[1];};
+ window.seek(0);
+ if(!new URLSearchParams(location.search).has('render')){const start=performance.now();function frame(now){window.seek(((now-start)/1000)%duration);requestAnimationFrame(frame);}requestAnimationFrame(frame);}
+});
+</script></html>

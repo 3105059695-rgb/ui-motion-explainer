@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>原句与剪辑对照</title>
+<style>*{box-sizing:border-box}body{margin:auto;max-width:1100px;padding:24px;font:16px/1.6 system-ui,sans-serif;background:#f5f4f1;color:#212124}h1{font-size:1.5rem}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:16px}figure{margin:0}video,img{width:100%;max-height:58vh;background:#171719;display:block;object-fit:contain}figcaption{padding:8px 0}button{font:inherit;padding:7px 16px;background:#e8e1f2;border:1px solid #a298af;border-radius:6px;cursor:pointer}button:disabled{opacity:.5}#message{min-height:1.5em}small{color:#53505b}</style>
+<h1 id="title"></h1><p id="quote"></p><main id="panels"></main><p id="why"></p>
+<button id="play">从入点连续播放</button> <button id="save" disabled>保存本次播放记录</button>
+<p id="message" role="status"></p><small>记录只说明这些时段连续呈现过。观察者另记看到的动作、停顿和交接。</small>
+<script id="payload" type="application/json">__EPISODE_PAYLOAD__</script>
+<script>
+const data=JSON.parse(document.getElementById('payload').textContent);
+const $=id=>document.getElementById(id);
+$('title').textContent=data.title;$('quote').textContent=data.quote;$('why').textContent=data.why||'';
+const tracks=[];
+for(const item of data.items){
+ const fig=document.createElement('figure'),label=document.createElement('figcaption');
+ label.textContent=item.label+(item.clock?' · '+item.clock.join(' – ')+' 秒':'');
+ if(item.kind==='stills'){
+  for(const url of item.urls){const im=document.createElement('img');im.src=url;im.alt=item.label;fig.append(im);}
+ }else{
+  const v=document.createElement('video');v.src=item.url;v.playsInline=true;v.preload='auto';v.controls=true;v.muted=!item.audio;fig.append(v);tracks.push({v,item});
+ }
+ fig.append(label);$('panels').append(fig);
+}
+let run=0,receipt=null;
+async function playOne(track,token){
+ const {v,item}=track;v.pause();
+ if(v.readyState<1)await new Promise((ok,bad)=>{v.addEventListener('loadedmetadata',ok,{once:true});v.addEventListener('error',bad,{once:true});});
+ const [a,b]=item.range;
+ if(Math.abs(v.currentTime-a)>.015)await new Promise(ok=>{v.addEventListener('seeked',ok,{once:true});v.currentTime=a;});
+ v.playbackRate=1;
+ return new Promise((ok,bad)=>{
+  let last=a,first=null,frames=0,maxGap=0,closed=false,start=performance.now();
+  const stop=(message)=>{if(closed)return;closed=true;v.pause();message?bad(Error(message)):ok({key:item.key,start:first,end:last,frames,max_gap:maxGap,wall:(performance.now()-start)/1000});};
+  function tick(now,meta){
+   if(closed)return;
+   const t=meta.mediaTime;
+   if(token!==run||v.seeking||v.playbackRate!==1||document.hidden)return stop('播放中断、切到后台或跳时。请重新播放。');
+   if(first===null)first=t;
+   maxGap=Math.max(maxGap,t-last);last=t;frames++;
+   if(t>=b-.09||v.ended)return stop();
+   v.requestVideoFrameCallback(tick);
+  }
+  if(!v.requestVideoFrameCallback)return stop('此播放器不能记录连续呈现；可观看并登记环境限制。');
+  v.requestVideoFrameCallback(tick);v.addEventListener('ended',()=>stop(),{once:true});
+  v.play().catch(e=>stop(String(e)));
+ });
+}
+$('play').onclick=async()=>{
+ const token=++run;receipt=null;$('save').disabled=true;$('play').disabled=true;
+ try{
+  if(!tracks.length)throw Error('这里只提供静帧，可以观察构图和配色。');
+  // Both clocks start at their own in-point and stop independently at their out-point.
+  $('message').textContent='播放中';const samples=await Promise.all(tracks.map(t=>playOne(t,token)));
+  receipt={kind:'presented-intervals@1',binding:data.binding,samples};$('save').disabled=false;$('message').textContent='播放结束。可保存实际呈现记录。';
+ }catch(e){$('message').textContent=String(e);}finally{$('play').disabled=false;}
+};
+$('save').onclick=()=>{if(!receipt)return;const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(receipt)],{type:'application/json'}));a.download=data.receipt+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
+</script></html>

@@ -72,7 +72,9 @@ def run(project,action,output=None,scale=1,config_override=None,*,frame_range=No
      if resource.startswith('/public/'):requested.add(resource[len('/public/'):])
     page.on('response',record_asset)
     page.route('**/*',lambda route:route.continue_() if route.request.url.startswith(('http://127.0.0.1:','data:','blob:')) else route.abort())
-    page.goto(f'http://127.0.0.1:{server.server_port}/{config["entry"]}?render=1',wait_until='load')
+    entry=config['entry']
+    suffix='&render=1' if '?' in entry else '?render=1'
+    page.goto(f'http://127.0.0.1:{server.server_port}/{entry}{suffix}',wait_until='load')
     if config.get('hide_render_controls'):page.add_style_tag(content='body > nav{display:none!important}')
     if config.get('fixed_canvas'):page.evaluate('(scale)=>{document.body.style.transformOrigin="0 0";document.body.style.transform="scale("+scale+")"}',scale)
     page.evaluate('''async()=>{await Promise.race([(async()=>{if(typeof window.ready==='function')await window.ready();else if(window.ready&&typeof window.ready.then==='function')await window.ready;await document.fonts.ready;})(),new Promise((_,reject)=>setTimeout(()=>reject(Error('Scene readiness timed out')),15000))]);}''')
