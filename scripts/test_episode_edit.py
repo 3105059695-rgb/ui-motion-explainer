@@ -106,6 +106,16 @@ class ScriptLedEdits(unittest.TestCase):
         self.assertIn('revise --unit',(p/'继续剪辑.md').read_text(encoding='utf8'))
         self.assertTrue((p/'continue_edit.py').is_file())
 
+    def test_interrupted_runner_is_repaired_and_missing_template_leaves_no_empty_entry(self):
+        p=self.folder/'interrupted';p.mkdir()
+        with patch.object(library,'ROOT',self.folder/'incomplete-install'):
+            with self.assertRaises(FileNotFoundError):edit.ensure_project_entry(p)
+        runner=p/'continue_edit.py'
+        self.assertFalse(runner.exists())
+        runner.touch()
+        edit.ensure_project_entry(p)
+        self.assertEqual(runner.read_bytes(),(library.ROOT/'assets/reference-edits/continue_edit.py').read_bytes())
+
     def test_external_revision_checks_unchanged_shots_before_writing(self):
         import episode_revision
         self.second['trial']={'sha256':'unchanged'}

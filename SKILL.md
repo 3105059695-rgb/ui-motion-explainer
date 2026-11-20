@@ -2,7 +2,7 @@
 name: ui-motion-fusion
 description: 用整库的剪辑经验为本期口播选材、试剪并交付可编辑工程。适用于口播、实拍 B-roll、UI 动效、HyperFrames 与已有工程的单镜续修。
 metadata:
-  version: "2026.11.20.2"
+  version: "2026.11.20.3"
 ---
 
 # 用整库参考剪口播

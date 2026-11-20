@@ -4,6 +4,7 @@ import json
 import math
 import os
 from pathlib import Path
+import tempfile
 
 import editing_library as lib
 from edit_session import plan_lock, write_atomic
@@ -80,8 +81,20 @@ def ensure_project_entry(folder):
     if not guide.exists():
         with guide.open('x',encoding='utf8') as f:f.write(body)
     runner=folder/'continue_edit.py'
-    if not runner.exists():
-        with runner.open('xb') as f:f.write((lib.ROOT/'assets/reference-edits/continue_edit.py').read_bytes())
+    if runner.is_symlink():
+        raise ValueError('续剪入口是外部链接，请保留它并检查本工程的来源。')
+    if not runner.exists() or runner.stat().st_size==0:
+        # Read the complete release resource before creating an entry at its final path.
+        content=(lib.ROOT/'assets/reference-edits/continue_edit.py').read_bytes()
+        if not content:raise ValueError('Skill 中的续剪模板为空。请修复安装后重试。')
+        tmp=None
+        try:
+            with tempfile.NamedTemporaryFile(dir=folder,prefix='.continue-',suffix='.tmp',delete=False) as f:
+                tmp=Path(f.name)
+                f.write(content)
+            os.replace(tmp,runner)
+        finally:
+            if tmp is not None:tmp.unlink(missing_ok=True)
     hint=folder/'editorial'/'skill-location.json'
     if not hint.exists():
         hint.parent.mkdir(exist_ok=True,parents=True)
