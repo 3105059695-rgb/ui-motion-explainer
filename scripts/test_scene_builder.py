@@ -6,6 +6,7 @@ import unittest
 from unittest.mock import patch
 
 import scene_builder as builder
+from library_ui_style import install_ui_font
 
 
 class CompleteSceneEntryTests(unittest.TestCase):
@@ -19,9 +20,14 @@ class CompleteSceneEntryTests(unittest.TestCase):
         (self.root / runtime).mkdir(parents=True)
         for name in ('roles.js', 'transform.cjs'):
             shutil.copyfile(builder.ROOT / runtime / name, self.root / runtime / name)
-        sheet = Path('assets/rebuilt-library/adu-current-ui.css')
-        (self.root / sheet.parent).mkdir(parents=True)
-        shutil.copyfile(builder.ROOT / sheet, self.root / sheet)
+        for asset in (Path('assets/rebuilt-library/adu-current-ui.css'),
+                      Path('assets/agent-editorial/palette.json')):
+            destination = self.root / asset
+            destination.parent.mkdir(parents=True)
+            shutil.copyfile(builder.ROOT / asset, destination)
+        fonts = self.root / 'assets/modules/director/assets/studio/fonts'
+        fonts.mkdir(parents=True)
+        install_ui_font(builder.ROOT, fonts)
         for key in builder.PACKS:
             folder = self.root / builder.ADU / 'packs' / key
             folder.mkdir(parents=True)

@@ -2,7 +2,7 @@
 name: ui-motion-fusion
 description: 为口播选择或生成配图，按原声、定稿 UI 和编号动作库剪出可编辑视频，也可在已有工程续剪或只改一镜。
 metadata:
-  version: "2026.11.24.3"
+  version: "2026.11.24.4"
 ---
 
 # 按口播选材与剪辑
