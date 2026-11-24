@@ -1,0 +1,88 @@
+{
+  "id": "M197",
+  "layout": "native",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-field",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-weekly",
+      "start": 153,
+      "end": 159
+    }
+  ],
+  "chain": [
+    "原始测试画面先给出两个耗时，右边的读数接着提取同一组数字。"
+  ],
+  "binding": {
+    "headline": "NASA 的原始记录",
+    "captions": [
+      "这张照片有原始记录。",
+      "这里是摄影署名。",
+      "拍摄日期也在同一页。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "image": "fr-record.webp",
+        "title": "NASA 图片记录",
+        "items": [
+          "摄影署名",
+          "记录日期",
+          "页面语言"
+        ],
+        "values": [
+          "NASA/Bill Anders",
+          "December 24, 1968",
+          "English"
+        ],
+        "active": 0
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "原件字段摘读 · fr-record"
+    }
+  ]
+}

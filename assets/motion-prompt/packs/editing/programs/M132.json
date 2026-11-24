@@ -1,0 +1,636 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t15i",
+  "title": "套餐对比",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "price0": 10,
+    "plan0": "进阶方案",
+    "benefit00": "✓ 核心能力",
+    "benefit01": "✓ 适用范围",
+    "benefit02": "✓ 使用限制",
+    "price1": 2,
+    "plan1": "常用方案",
+    "benefit10": "✓ 核心能力",
+    "benefit11": "✓ 适用范围",
+    "benefit12": "✓ 使用限制",
+    "price2": 0.1,
+    "plan2": "轻量方案",
+    "benefit20": "✓ 核心能力",
+    "benefit21": "✓ 适用范围",
+    "benefit22": "✓ 使用限制",
+    "recommend": "按本期需求推荐",
+    "source": "示意套餐 · 价格与权益以实际材料为准"
+  },
+  "nodes": [
+    {
+      "id": "n006-card",
+      "kind": "card",
+      "x": 180,
+      "y": 180,
+      "w": 480,
+      "h": 690,
+      "children": [
+        {
+          "id": "n001-text",
+          "kind": "text",
+          "x": 30,
+          "y": 50,
+          "w": 420,
+          "h": 85,
+          "text": "{{plan0}}",
+          "size": 49,
+          "color": "#0B0B0F",
+          "align": "center"
+        },
+        {
+          "id": "n002-b2-number",
+          "kind": "b2-number",
+          "x": 30,
+          "y": 160,
+          "w": 420,
+          "h": 140,
+          "toKey": "price0",
+          "prefix": "$",
+          "size": 110,
+          "align": "center",
+          "decimals": 0,
+          "tracks": {
+            "value": [
+              [
+                0.6,
+                0
+              ],
+              [
+                2.04,
+                1,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 45,
+          "y": 350,
+          "w": 400,
+          "h": 70,
+          "text": "{{benefit00}}",
+          "size": 32,
+          "color": "#0B0B0F",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                2.1,
+                0
+              ],
+              [
+                2.82,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                2.1,
+                385
+              ],
+              [
+                2.82,
+                350,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 45,
+          "y": 440,
+          "w": 400,
+          "h": 70,
+          "text": "{{benefit01}}",
+          "size": 32,
+          "color": "#0B0B0F",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                2.88,
+                0
+              ],
+              [
+                3.6,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                2.88,
+                475
+              ],
+              [
+                3.6,
+                440,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 45,
+          "y": 530,
+          "w": 400,
+          "h": 70,
+          "text": "{{benefit02}}",
+          "size": 32,
+          "color": "#0B0B0F",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                3.66,
+                0
+              ],
+              [
+                4.38,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                3.66,
+                565
+              ],
+              [
+                4.38,
+                530,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "y": [
+          [
+            0,
+            180
+          ],
+          [
+            4.2,
+            180
+          ],
+          [
+            5.1,
+            180
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012-card",
+      "kind": "card",
+      "x": 740,
+      "y": 180,
+      "w": 480,
+      "h": 690,
+      "children": [
+        {
+          "id": "n007-text",
+          "kind": "text",
+          "x": 30,
+          "y": 50,
+          "w": 420,
+          "h": 85,
+          "text": "{{plan1}}",
+          "size": 49,
+          "color": "#0B0B0F",
+          "align": "center"
+        },
+        {
+          "id": "n008-b2-number",
+          "kind": "b2-number",
+          "x": 30,
+          "y": 160,
+          "w": 420,
+          "h": 140,
+          "toKey": "price1",
+          "prefix": "$",
+          "size": 110,
+          "align": "center",
+          "decimals": 0,
+          "tracks": {
+            "value": [
+              [
+                0.6,
+                0
+              ],
+              [
+                2.04,
+                1,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n009-text",
+          "kind": "text",
+          "x": 45,
+          "y": 350,
+          "w": 400,
+          "h": 70,
+          "text": "{{benefit10}}",
+          "size": 32,
+          "color": "#0B0B0F",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                2.1,
+                0
+              ],
+              [
+                2.82,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                2.1,
+                385
+              ],
+              [
+                2.82,
+                350,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n010-text",
+          "kind": "text",
+          "x": 45,
+          "y": 440,
+          "w": 400,
+          "h": 70,
+          "text": "{{benefit11}}",
+          "size": 32,
+          "color": "#0B0B0F",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                2.88,
+                0
+              ],
+              [
+                3.6,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                2.88,
+                475
+              ],
+              [
+                3.6,
+                440,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n011-text",
+          "kind": "text",
+          "x": 45,
+          "y": 530,
+          "w": 400,
+          "h": 70,
+          "text": "{{benefit12}}",
+          "size": 32,
+          "color": "#0B0B0F",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                3.66,
+                0
+              ],
+              [
+                4.38,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                3.66,
+                565
+              ],
+              [
+                4.38,
+                530,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "y": [
+          [
+            0,
+            180
+          ],
+          [
+            4.2,
+            180
+          ],
+          [
+            5.1,
+            135
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n018-card",
+      "kind": "card",
+      "x": 1300,
+      "y": 180,
+      "w": 480,
+      "h": 690,
+      "children": [
+        {
+          "id": "n013-text",
+          "kind": "text",
+          "x": 30,
+          "y": 50,
+          "w": 420,
+          "h": 85,
+          "text": "{{plan2}}",
+          "size": 49,
+          "color": "#0B0B0F",
+          "align": "center"
+        },
+        {
+          "id": "n014-b2-number",
+          "kind": "b2-number",
+          "x": 30,
+          "y": 160,
+          "w": 420,
+          "h": 140,
+          "toKey": "price2",
+          "prefix": "$",
+          "size": 110,
+          "align": "center",
+          "decimals": 2,
+          "tracks": {
+            "value": [
+              [
+                0.6,
+                0
+              ],
+              [
+                2.04,
+                1,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n015-text",
+          "kind": "text",
+          "x": 45,
+          "y": 350,
+          "w": 400,
+          "h": 70,
+          "text": "{{benefit20}}",
+          "size": 32,
+          "color": "#0B0B0F",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                2.1,
+                0
+              ],
+              [
+                2.82,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                2.1,
+                385
+              ],
+              [
+                2.82,
+                350,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n016-text",
+          "kind": "text",
+          "x": 45,
+          "y": 440,
+          "w": 400,
+          "h": 70,
+          "text": "{{benefit21}}",
+          "size": 32,
+          "color": "#0B0B0F",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                2.88,
+                0
+              ],
+              [
+                3.6,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                2.88,
+                475
+              ],
+              [
+                3.6,
+                440,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n017-text",
+          "kind": "text",
+          "x": 45,
+          "y": 530,
+          "w": 400,
+          "h": 70,
+          "text": "{{benefit22}}",
+          "size": 32,
+          "color": "#0B0B0F",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                3.66,
+                0
+              ],
+              [
+                4.38,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                3.66,
+                565
+              ],
+              [
+                4.38,
+                530,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "y": [
+          [
+            0,
+            180
+          ],
+          [
+            4.2,
+            180
+          ],
+          [
+            5.1,
+            180
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n019-pill",
+      "kind": "pill",
+      "x": 775,
+      "y": 70,
+      "w": 370,
+      "h": 75,
+      "label": "{{recommend}}",
+      "size": 30,
+      "fill": "#D6C2FF",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.5,
+            0
+          ],
+          [
+            5.22,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            4.5,
+            105
+          ],
+          [
+            5.22,
+            70,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n020-text",
+      "kind": "text",
+      "x": 300,
+      "y": 975,
+      "w": 1320,
+      "h": 60,
+      "text": "{{source}}",
+      "size": 30,
+      "color": "#62616C",
+      "align": "center"
+    }
+  ],
+  "assets": {}
+}

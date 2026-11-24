@@ -1,0 +1,73 @@
+{
+  "id": "M212",
+  "layout": "native",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-dates",
+      "states": [
+        {
+          "stage": 0
+        },
+        {
+          "stage": 1
+        },
+        {
+          "stage": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-weekly",
+      "start": 200,
+      "end": 205
+    }
+  ],
+  "chain": [
+    "可预订与发货在一根线上分别标起止日期，观众可以看出两件事发生的间隔。"
+  ],
+  "binding": {
+    "headline": "两次交付之间",
+    "captions": [
+      "先定初剪交付日。",
+      "再把定稿交付日放上来。",
+      "两个日期都有了，才能读出间隔。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "交付排期示例",
+        "items": [
+          "初剪交付",
+          "定稿交付"
+        ],
+        "dates": [
+          "2026-11-12",
+          "2026-11-16"
+        ],
+        "stage": 2
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "stage": 0
+        },
+        {
+          "stage": 1
+        },
+        {
+          "stage": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

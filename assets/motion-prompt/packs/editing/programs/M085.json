@@ -1,0 +1,96 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t12b",
+  "title": "第 N 点步骤号（快过渡）",
+  "duration": 2.5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "index": "02",
+    "title": "开始实际操作"
+  },
+  "nodes": [
+    {
+      "id": "n002-card",
+      "kind": "card",
+      "x": 300,
+      "y": 400,
+      "w": 240,
+      "h": 240,
+      "children": [
+        {
+          "id": "n001-text",
+          "kind": "text",
+          "x": 15,
+          "y": 35,
+          "w": 210,
+          "h": 165,
+          "text": "{{index}}",
+          "size": 130,
+          "color": "#FFFFFF",
+          "align": "center"
+        }
+      ],
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.5,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            480
+          ],
+          [
+            0.5,
+            400,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-card",
+      "kind": "card",
+      "x": 540,
+      "y": 400,
+      "w": 1090,
+      "h": 240,
+      "children": [
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 55,
+          "y": 60,
+          "w": 980,
+          "h": 140,
+          "text": "{{title}}",
+          "size": 85,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "revealX": [
+          [
+            0.3,
+            0
+          ],
+          [
+            1.2,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

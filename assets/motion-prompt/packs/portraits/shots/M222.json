@@ -1,0 +1,180 @@
+{
+  "id": "M222",
+  "layout": "stack",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "tree",
+      "states": [
+        {},
+        {
+          "open": false
+        },
+        {
+          "active": 1
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "app-window",
+      "states": [
+        {},
+        {
+          "active": 2
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "layer-panel",
+      "states": [
+        {},
+        {
+          "hidden": [
+            1
+          ]
+        },
+        {
+          "active": 1
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "claude",
+      "start": 1810,
+      "end": 1878,
+      "shotIds": [
+        "CR080",
+        "CR081",
+        "CR082",
+        "CR083",
+        "CR084"
+      ],
+      "rowIds": [
+        "CR-L0718",
+        "CR-L0719",
+        "CR-L0720",
+        "CR-L0721",
+        "CR-L0722",
+        "CR-L0723",
+        "CR-L0724",
+        "CR-L0725",
+        "CR-L0726",
+        "CR-L0727",
+        "CR-L0728",
+        "CR-L0729",
+        "CR-L0730",
+        "CR-L0731",
+        "CR-L0732",
+        "CR-L0733",
+        "CR-L0734",
+        "CR-L0735",
+        "CR-L0736",
+        "CR-L0737",
+        "CR-L0738",
+        "CR-L0739",
+        "CR-L0740",
+        "CR-L0741",
+        "CR-L0742",
+        "CR-L0743",
+        "CR-L0744",
+        "CR-L0745",
+        "CR-L0746",
+        "CR-L0747",
+        "CR-L0748"
+      ]
+    }
+  ],
+  "chain": [
+    "三层总览",
+    "总览缩在左侧",
+    "全局卡展开路径和例子",
+    "项目卡从下覆盖内容，旧标题仍在",
+    "子目录再覆盖，保留两层标题"
+  ],
+  "binding": {
+    "headline": "层层打开时保留旧标签",
+    "captions": [
+      "先认识最外层",
+      "展开第二层，前一层还在",
+      "从保留下来的标题找回路径"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "root": "本期素材",
+        "folder": "现场录音",
+        "children": [
+          "开场.wav",
+          "访谈.wav"
+        ],
+        "other": "剪辑笔记.md",
+        "open": true,
+        "active": 0
+      },
+      {
+        "title": "素材管理",
+        "items": [
+          "文件名",
+          "采访原声.wav",
+          "采访提纲.md"
+        ],
+        "active": 1
+      },
+      {
+        "items": [
+          "口播字幕",
+          "软件截图",
+          "底板"
+        ],
+        "hidden": [],
+        "active": 0
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "open": false
+        },
+        {
+          "active": 1
+        }
+      ],
+      [
+        {},
+        {
+          "active": 2
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {},
+        {
+          "hidden": [
+            1
+          ]
+        },
+        {
+          "active": 1
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

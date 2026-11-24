@@ -1,0 +1,241 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t03d",
+  "title": "因果链推进",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "cause0": "输入变得完整",
+    "cause1": "上下文更加明确",
+    "cause2": "执行减少来回",
+    "cause3": "结果才更稳定"
+  },
+  "nodes": [
+    {
+      "id": "n001-pill",
+      "kind": "pill",
+      "x": 220,
+      "y": 100,
+      "w": 980,
+      "h": 140,
+      "label": "{{cause0}}",
+      "size": 62,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.8,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            135
+          ],
+          [
+            0.8,
+            100,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 720,
+      "y": 250,
+      "w": 170,
+      "h": 75,
+      "arrow": true,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            0.5,
+            0
+          ],
+          [
+            1.15,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-pill",
+      "kind": "pill",
+      "x": 390,
+      "y": 330,
+      "w": 980,
+      "h": 140,
+      "label": "{{cause1}}",
+      "size": 62,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.0,
+            0
+          ],
+          [
+            1.8,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.0,
+            365
+          ],
+          [
+            1.8,
+            330,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 890,
+      "y": 480,
+      "w": 170,
+      "h": 75,
+      "arrow": true,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            1.5,
+            0
+          ],
+          [
+            2.15,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-pill",
+      "kind": "pill",
+      "x": 560,
+      "y": 560,
+      "w": 980,
+      "h": 140,
+      "label": "{{cause2}}",
+      "size": 62,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.0,
+            0
+          ],
+          [
+            2.8,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.0,
+            595
+          ],
+          [
+            2.8,
+            560,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 1060,
+      "y": 710,
+      "w": 170,
+      "h": 75,
+      "arrow": true,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            2.5,
+            0
+          ],
+          [
+            3.15,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 730,
+      "y": 790,
+      "w": 980,
+      "h": 140,
+      "label": "{{cause3}}",
+      "size": 62,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.0,
+            0
+          ],
+          [
+            3.8,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.0,
+            825
+          ],
+          [
+            3.8,
+            790,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

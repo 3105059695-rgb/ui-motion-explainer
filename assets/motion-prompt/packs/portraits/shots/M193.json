@@ -1,0 +1,97 @@
+{
+  "id": "M193",
+  "layout": "native",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-pins",
+      "states": [
+        {
+          "showPin": false
+        },
+        {
+          "showPin": true,
+          "active": 0
+        },
+        {
+          "showPin": true,
+          "active": 1
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-weekly",
+      "start": 33,
+      "end": 39
+    }
+  ],
+  "chain": [
+    "接箱子的实拍保持连续，腿、腰、双手的标签随讲到的部位出现。"
+  ],
+  "binding": {
+    "headline": "地球和月面",
+    "captions": [
+      "同一张照片里有地球和月面。",
+      "地球在这里。",
+      "再往下，是月面。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "image": "fr-lunar.webp",
+        "credit": "《地出》 · NASA / Bill Anders",
+        "items": [
+          "地球",
+          "月面"
+        ],
+        "points": [
+          [
+            57,
+            48
+          ],
+          [
+            25,
+            90
+          ]
+        ],
+        "active": 0,
+        "showPin": true
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "showPin": false
+        },
+        {
+          "showPin": true,
+          "active": 0
+        },
+        {
+          "showPin": true,
+          "active": 1
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "实物点位签 · fr-lunar"
+    }
+  ]
+}

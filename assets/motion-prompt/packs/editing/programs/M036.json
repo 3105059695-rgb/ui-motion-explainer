@@ -1,0 +1,195 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t20l",
+  "title": "卡片快扫：作品卡横扫后停在主卡",
+  "duration": 4,
+  "background": "#FFFFFF",
+  "inputs": {},
+  "nodes": [
+    {
+      "id": "n003-group",
+      "kind": "group",
+      "x": 250,
+      "y": 190,
+      "w": 1160,
+      "h": 700,
+      "children": [
+        {
+          "id": "n001-card",
+          "kind": "card",
+          "x": 0,
+          "y": 0,
+          "w": 1160,
+          "h": 700,
+          "children": [],
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "n002-image",
+          "kind": "image",
+          "x": 15,
+          "y": 15,
+          "w": 1130,
+          "h": 670,
+          "asset": "work1",
+          "fit": "contain"
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            250
+          ],
+          [
+            0.8,
+            -350
+          ],
+          [
+            2.4,
+            -1070
+          ],
+          [
+            3.2,
+            -1070
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            0.85
+          ],
+          [
+            2.4,
+            0.85
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-group",
+      "kind": "group",
+      "x": 1550,
+      "y": 190,
+      "w": 1160,
+      "h": 700,
+      "children": [
+        {
+          "id": "n004-card",
+          "kind": "card",
+          "x": 0,
+          "y": 0,
+          "w": 1160,
+          "h": 700,
+          "children": [],
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "n005-image",
+          "kind": "image",
+          "x": 15,
+          "y": 15,
+          "w": 1130,
+          "h": 670,
+          "asset": "work2",
+          "fit": "contain"
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            1550
+          ],
+          [
+            0.8,
+            950
+          ],
+          [
+            2.4,
+            230
+          ],
+          [
+            3.2,
+            230
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            0.85
+          ],
+          [
+            2.4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-group",
+      "kind": "group",
+      "x": 2850,
+      "y": 190,
+      "w": 1160,
+      "h": 700,
+      "children": [
+        {
+          "id": "n007-card",
+          "kind": "card",
+          "x": 0,
+          "y": 0,
+          "w": 1160,
+          "h": 700,
+          "children": [],
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "n008-image",
+          "kind": "image",
+          "x": 15,
+          "y": 15,
+          "w": 1130,
+          "h": 670,
+          "asset": "work3",
+          "fit": "contain"
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            2850
+          ],
+          [
+            0.8,
+            2250
+          ],
+          [
+            2.4,
+            1530
+          ],
+          [
+            3.2,
+            1530
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            0.85
+          ],
+          [
+            2.4,
+            0.85
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {
+    "work1": "f0cad559eda3318fff",
+    "work2": "4b1484e9bb55652e30",
+    "work3": "ebe9e9e5de709240bf"
+  }
+}

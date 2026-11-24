@@ -1,0 +1,222 @@
+{
+  "id": "M233",
+  "layout": "network",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "file-tiles",
+      "states": [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            1
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "images",
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "attachment",
+      "states": [
+        {},
+        {
+          "attached": false
+        },
+        {
+          "attached": false
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "node-map",
+      "states": [
+        {},
+        {
+          "active": 3
+        },
+        {
+          "active": 3
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "network",
+      "start": 326.2,
+      "end": 332.1,
+      "shotIds": [
+        "N088",
+        "N089"
+      ],
+      "rowIds": [
+        "N-L137",
+        "N-L138",
+        "N-L139"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 28.6,
+      "end": 32.3,
+      "shotIds": [
+        "A-S010"
+      ],
+      "rowIds": [
+        "A-L012",
+        "A-L013",
+        "A-L014"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 49.7,
+      "end": 52.7,
+      "shotIds": [
+        "A-S016"
+      ],
+      "rowIds": [
+        "A-L023",
+        "A-L024",
+        "A-L025"
+      ]
+    }
+  ],
+  "chain": [
+    "模型、MCP、A2A、Skill条目分散。",
+    "口播说可被打包，条目向中心聚集并绘出白色圆。",
+    "条目退去，圆内能力文字变清晰。",
+    "一个圆扩展为多个圆节点，随后连线显现。"
+  ],
+  "binding": {
+    "headline": "零件收为一个单位再连成网",
+    "captions": [
+      "分开看组成它的几份材料",
+      "收拢成一个可交接的单位",
+      "这个单位再接入关系图"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "地出.jpg",
+          "压缩界面.png",
+          "安德斯.jpg"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp",
+          "portrait.webp"
+        ],
+        "active": 0
+      },
+      {
+        "name": "地出.jpg",
+        "meta": "JPEG · 494.4 kB",
+        "attached": true
+      },
+      {
+        "label": "素材交接",
+        "items": [
+          "口播",
+          "逐字稿",
+          "字幕",
+          "初剪"
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      [
+        {},
+        {
+          "attached": false
+        },
+        {
+          "attached": false
+        }
+      ],
+      [
+        {},
+        {
+          "active": 3
+        },
+        {
+          "active": 3
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "文件缩略图 · earth"
+    },
+    {
+      "key": "media2",
+      "name": "文件缩略图 · interface"
+    },
+    {
+      "key": "media3",
+      "name": "文件缩略图 · portrait"
+    }
+  ]
+}

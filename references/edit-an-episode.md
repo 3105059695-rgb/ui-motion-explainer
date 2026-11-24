@@ -2,13 +2,13 @@
 
 以下命令用 `D` 简写 `python -B -X utf8 scripts/ui.py direct --`，在 Skill 根目录运行。P 是本期工程。JSON 文件用 UTF-8，JSON 内素材路径相对 P，命令行上的 JSON 文件名相对当前目录。
 
-## 先学一次，再用本期稿走一遍
+## 用本期原声剪镜头
 
-`D example --project "练习工程"` 会用包内的站名录音和两张示意票，实际调用资料聚焦剪法，生成初剪、一次修订和可连续播放的对照。练习的口播、观察和试剪归在练习工程里。本期从自己的原句开始。
+下列步骤用于视频工程。只交付口播配图走[图片用法](material-choice-and-photo-direction.md#写实配图怎样算合格)。想单独试命令时，可用 `D example --project "练习工程"` 在示例工程查看站名录音的初剪与返修。
 
 1. `D prepare --script "稿.txt" --project P` 返回本期原文。长稿按 `D resume --project P --offset 12` 的 next_offset 继续。单句过长时同时传 --quote-offset 和返回的 next_quote_offset，不重复读取前半句。通读后用一句话写整段的问题和答案，为每句写观众需要知道什么。用途有 keep（保留原画面）、compare（比较）、handoff（交接）、cause（因果）、operate（操作）、focus（辨认细节）、hierarchy（层级）。
 2. `D decide --project P --file 判断.json`。例如 `{"synopsis":"要去哪个车站取决于票上写的站名。","units":[{"id":"U001","job":"focus","why":"需要看清一个容易错认的站名。"}]}`。用本期实际原句编号。可以分批保存。已有原声时码就给该句加 seconds 和入出点，最难的一句可加 proof 为 true。若一句内有两处独立借用，可在 decide 的 split 字段用原句 ID 对应逐字连续的片段列表，随后给 U002.1、U002.2 各填一次判断。
-3. `D options --project P --unit U001` 会从全部投稿中按本句用途查询。卡片有具体动作、所需输入、参考类型和实现入口。用 `--offset 3` 翻页或 `--id fred-argon` 查看指定项。把“取原票上同一个位置推进看字”和“把多张票放在同一位置轮换”放在一起比较。前者能解释一个小字，后者适合多张票同条件比较。输入不支持某种操作时保留原画面。全库其他能力仍可用 `capabilities search/inspect` 检索；用于自定义镜头时登记其真实实现。
+3. `D options --project P --unit U001` 会用本句口播和已登记的画面意图搜索整个编号动作库，返回候选编号和可保留的原画面。例如用 `--query "同一窗口换内容"` 查到 `M151`，就打开它的预览，比对窗口里究竟是哪层换了内容。其他投稿用 `--recipes` 查看，下文的站名练习使用其中的 `fred-argon`。看 `motion_lookup` 里的库来源、条目数、命中线索；能解释这句的原编号直接选用。多个动作相近时，可用 `--query "同一行同时亮出价格和租用按钮"` 细化，或用 `--folder paired` 在分类内找。卡片有具体动作、所需输入、参考类型和实现入口。用 `--offset 3` 翻页或 `--id fred-argon` 查看指定项。把“取原票上同一个位置推进看字”和“把多张票放在同一位置轮换”放在一起比较。前者能解释一个小字，后者适合多张票同条件比较。输入不支持某种操作时保留原画面。全库其他能力仍可用 `capabilities search/inspect` 检索；用于自定义镜头时登记其真实实现。
 4. 先用 `D watch --project P --unit U001 --id fred-argon` 得到带入出点的可播放页面。需要另一个完整动作时加 `--seconds 12 17`，填写**该参考版本**的时钟。首次借用时实际观察动作从哪里开始、谁变化、什么位置停稳、下一镜接走什么。原片、保留样段和源码重演各有自己的标签与时钟。
 5. `D choose --project P --unit U001 --id fred-argon --against original --why "这里只需认出站名，原尺寸下字太小；推到票面仍保留站名的位置关系。"`。有真正不同的库内候选时先比较它们；候选都不适用就选 original。单纯留真人的句子可直接 choose original。只借配色或构图时用 --aspect color 或 layout，并在 custom 里绑定本期实际实现。取舍必须用本期材料和叙述作依据。choose 返回 file_to_fill，该文件已填镜号、当前 revision、已知时码与所选实现的素材位，补齐原声和本期对象即可直接用于 trial。
 6. `D observe --project P --unit U001 --id fred-argon --file 观察.json`。连续看过的记录需要对照页连续播放后保存的记录，以及四个不同的实际观察，例如 `{"mode":"continuous-observed","receipt":"播放记录.json","before":"…","change":"…","settle":"…","handoff":"…","note":"这一动作在本句解决…"}`。用户无需代看。Agent 具备连续视觉能力时自行观看与保存；模拟点击、解码或播放统计只证明技术呈现。只能看抽帧就填 `{"mode":"frames","note":"看到票面的字级与留白。"}`；设备不能观察连续画面就填 `{"mode":"limited","note":"此环境只能读取静态图像。"}`。若来源换为图，运行 `watch … --stills 图1.png 图2.png`，恢复实际动态源用 `--restore`。两图只提供构图、材质和配色。
@@ -22,9 +22,15 @@
 
 给片头和难点做完单镜试剪后，运行 `D proofs --project P`。它只用这几个已剪区间，生成带原声的片头和包含前后剪点的难点视频；可用 --opening-end 10 --bridge 8 15 指定本期时码。打开返回的页面在手机尺寸内部检查；用 `D proofs --project P --file 样段检查.json` 保存 `{"scope":"normal-sound","note":"实际听看到的观察","receipts":{"opening":"片头播放.json","transition":"交接播放.json"}}`。短片两个区间相同时只需 opening。环境受限记 limited，不给买家增加审批。
 
+### 核对动作与原片
+
+`options` 的 `partial` 表示候选只支持部分所需变化，`order_conflict` 指出和口播顺序相反的步骤。模型结合前后句及材料能展示的过程做取舍。需要换候选时，用 `--query` 描述缺的那一下或用 `--folder` 查同类。保留原画面时可比较 `original`。采用时保留完整编号及变体后缀。
+
+本机 `confirmed_workflow.motion_library` 的 `directory_markdown` 可直接按类查，`sample_review` 和 `sample_index` 有值时可找到已登记的带声样片与分镜。从“参考片竖屏模板”打开原片对应区间，核对动作起态、变化、停稳与交接。新增的可复用实现放入本期 `motion-additions/<动作名>/`，随剪辑入库。[动作库用法](../assets/motion-prompt/使用说明.md)
+
 ## 自定义合成、成片与改一镜
 
-- HyperFrames、Remotion、剪辑软件或手写合成均沿用同一 P。把对应镜头的真实片段接入 trial：`{"seconds":[4,9],"audio":"原声.wav","custom":{"clip":"HF/镜头.mp4","in":0,"implementation":"HF/scene.html","adaptation":"原版在同一位置轮换结果，本镜保留固定视点，按第二个数字的原声换到第二张标签。","assets":["本期原图.png"]}}`。秒数是成片时钟。库内借用照常 choose、watch、observe；原创编排选 original 并记实际作者选择。源文件、素材和试剪都按文件内容核对。
+- HyperFrames、Remotion、剪辑软件或手写合成均沿用同一 P。把对应镜头的真实片段接入 trial：`{"seconds":[4,9],"audio":"原声.wav","custom":{"clip":"HF/镜头.mp4","in":0,"implementation":"HF/scene.html","adaptation":"原版在同一位置轮换结果，本镜保留固定视点，按第二个数字的原声换到第二张标签。","assets":["本期原图.png"]}}`。秒数是成片时钟。库内借用照常 choose、watch、observe；选中的编号动作通过试剪表的 motion 绑定本期素材。试剪记录 motion_use 包含实际调用的编号、代码指纹和工程源码。随包预览中的“本期素材”标示需要绑定的素材槽。解释段的原创编排选 original，并在 custom.motion_gap 写明现有候选缺哪一步。源文件、素材和试剪都按文件内容核对。
 - `D deliver --project P --out 成片-v1.mp4` 复用已渲染的各镜、拼接画面并封装原声。已有成片用 `D register --project P --media 外部成片.mp4 --route HyperFrames`；只交了 MP4 也能登记已导出，以及具体缺失的镜头、素材和检查。正式验收 `scripts/ui.py verify-output --project P --media 成片.mp4` 走同一账本，逐镜比较采样画面及原声音频，视频转场、调色或混音不相符时保留差异待核。换路线后要用实际合成版本更新对应试剪。仅需供内部回看的可播放稿且检查有缺口时用 deliver 的 --draft。
 - `D compare --project P --unit U001 --final` 直接并排播放该来源和成片时段。全片原速带声检查通过对应 whole.html 的播放记录加 `D finish-review --project P --file 整片检查.json` 登记，格式为 `{"mode":"normal-sound","receipt":"整片播放.json","note":"实际听看到的情况"}`。无法完成则记 limited 或 frames。交付时写实际证据、缺口、工程内能编辑的层与真实测过的 NLE 能力。
 - 换窗口用 `D resume --project P --at 00:39.40` 或 `--shot 2`。当前镜保存原句、选择理由、素材、实现、已看动作、试剪版本和剩余问题。画面变更只提交该镜 revision，再合成新版本。已有对白轨用 `D captions` 改一个字幕。迁移电脑时一起带走工程及其引用的本期素材，在新安装运行 compare 即可重建页面。

@@ -1,0 +1,119 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t05g",
+  "title": "不等号拆开两个概念",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "left": "记录",
+    "symbol": "≠",
+    "right": "记忆"
+  },
+  "nodes": [
+    {
+      "id": "n001-window",
+      "kind": "window",
+      "x": 240,
+      "y": 270,
+      "w": 1440,
+      "h": 520,
+      "fill": "#0B0B0F",
+      "label": "理解差异",
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 120,
+          "y": 165,
+          "w": 480,
+          "h": 150,
+          "text": "{{left}}",
+          "size": 110,
+          "color": "#FFFFFF",
+          "align": "center"
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 630,
+          "y": 145,
+          "w": 180,
+          "h": 180,
+          "text": "{{symbol}}",
+          "size": 150,
+          "color": "#D6C2FF",
+          "align": "center",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                0.72,
+                0
+              ],
+              [
+                1.08,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                0.72,
+                180
+              ],
+              [
+                1.08,
+                145,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 860,
+          "y": 165,
+          "w": 460,
+          "h": 150,
+          "text": "{{right}}",
+          "size": 110,
+          "color": "#FFFFFF",
+          "align": "center",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                1.2,
+                0
+              ],
+              [
+                1.56,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                1.2,
+                200
+              ],
+              [
+                1.56,
+                165,
+                "out"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "assets": {}
+}

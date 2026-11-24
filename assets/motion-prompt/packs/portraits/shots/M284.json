@@ -1,0 +1,135 @@
+{
+  "id": "M284",
+  "layout": "relay",
+  "layers": [
+    {
+      "kind": "live",
+      "strip": "girl-aigc-approved-0-5400",
+      "slot": "media1",
+      "label": "主体动作视频"
+    },
+    {
+      "kind": "ui",
+      "component": "transfer",
+      "states": [
+        {},
+        {
+          "assigned": [
+            1,
+            3
+          ]
+        },
+        {
+          "assigned": [
+            1,
+            3
+          ]
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "tool-call",
+      "states": [
+        {
+          "phase": "running",
+          "open": false
+        },
+        {
+          "phase": "running",
+          "open": true
+        },
+        {
+          "phase": "done",
+          "open": true
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "girl-aigc-approved",
+      "start": 0.0,
+      "end": 11.3
+    }
+  ],
+  "chain": [
+    "先看角色手里的材料",
+    "让同一份材料进入处理窗口",
+    "操作的结果最后回到画面"
+  ],
+  "binding": {
+    "headline": "这摞资料交给谁？",
+    "captions": [
+      "她先搬起桌上的资料。",
+      "文件交进处理窗口。",
+      "收到回执，这次交接才完成。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "items": [
+          "待交资料",
+          "交接说明",
+          "接收记录",
+          "处理结果"
+        ],
+        "assigned": [],
+        "marked": []
+      },
+      {
+        "tool": "登记接收",
+        "arg": "交接材料",
+        "output": "已收到本次材料",
+        "error": "尚未接收",
+        "phase": "done",
+        "open": true
+      }
+    ],
+    "keyframes": [
+      [],
+      [
+        {},
+        {
+          "assigned": [
+            1,
+            3
+          ]
+        },
+        {
+          "assigned": [
+            1,
+            3
+          ]
+        }
+      ],
+      [
+        {
+          "phase": "running",
+          "open": false
+        },
+        {
+          "phase": "running",
+          "open": true
+        },
+        {
+          "phase": "done",
+          "open": true
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "主体动作视频"
+    }
+  ]
+}

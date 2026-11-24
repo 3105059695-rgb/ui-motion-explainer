@@ -1,0 +1,334 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t15g",
+  "title": "排行揭晓",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "score0": 75.4,
+    "rank0": "1",
+    "name0": "方案甲",
+    "score1": 74.3,
+    "rank1": "2",
+    "name1": "方案乙",
+    "score2": 69,
+    "rank2": "3",
+    "name2": "方案丙",
+    "caption": "从后向前揭晓 · 同口径示意成绩"
+  },
+  "nodes": [
+    {
+      "id": "n001-card",
+      "kind": "card",
+      "x": 230,
+      "y": 190,
+      "w": 1460,
+      "h": 180,
+      "children": [],
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n005-card",
+      "kind": "card",
+      "x": 230,
+      "y": 190,
+      "w": 1460,
+      "h": 180,
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 45,
+          "y": 40,
+          "w": 150,
+          "h": 100,
+          "text": "{{rank0}}",
+          "size": 84,
+          "color": "#D6C2FF",
+          "align": "center"
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 240,
+          "y": 45,
+          "w": 670,
+          "h": 90,
+          "text": "{{name0}}",
+          "size": 58,
+          "color": "#FFFFFF",
+          "align": "left"
+        },
+        {
+          "id": "n004-b2-number",
+          "kind": "b2-number",
+          "x": 1050,
+          "y": 40,
+          "w": 340,
+          "h": 100,
+          "toKey": "score0",
+          "suffix": "%",
+          "size": 70,
+          "color": "#D6C2FF",
+          "align": "center",
+          "decimals": 1,
+          "tracks": {
+            "value": [
+              [
+                2.88,
+                0
+              ],
+              [
+                4.08,
+                1,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.88,
+            0
+          ],
+          [
+            3.84,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.88,
+            235
+          ],
+          [
+            3.84,
+            190,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-card",
+      "kind": "card",
+      "x": 230,
+      "y": 420,
+      "w": 1460,
+      "h": 180,
+      "children": [],
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n010-card",
+      "kind": "card",
+      "x": 230,
+      "y": 420,
+      "w": 1460,
+      "h": 180,
+      "children": [
+        {
+          "id": "n007-text",
+          "kind": "text",
+          "x": 45,
+          "y": 40,
+          "w": 150,
+          "h": 100,
+          "text": "{{rank1}}",
+          "size": 84,
+          "color": "#0B0B0F",
+          "align": "center"
+        },
+        {
+          "id": "n008-text",
+          "kind": "text",
+          "x": 240,
+          "y": 45,
+          "w": 670,
+          "h": 90,
+          "text": "{{name1}}",
+          "size": 58,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n009-b2-number",
+          "kind": "b2-number",
+          "x": 1050,
+          "y": 40,
+          "w": 340,
+          "h": 100,
+          "toKey": "score1",
+          "suffix": "%",
+          "size": 70,
+          "color": "#0B0B0F",
+          "align": "center",
+          "decimals": 1,
+          "tracks": {
+            "value": [
+              [
+                1.68,
+                0
+              ],
+              [
+                2.88,
+                1,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.68,
+            0
+          ],
+          [
+            2.64,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.68,
+            465
+          ],
+          [
+            2.64,
+            420,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011-card",
+      "kind": "card",
+      "x": 230,
+      "y": 650,
+      "w": 1460,
+      "h": 180,
+      "children": [],
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n015-card",
+      "kind": "card",
+      "x": 230,
+      "y": 650,
+      "w": 1460,
+      "h": 180,
+      "children": [
+        {
+          "id": "n012-text",
+          "kind": "text",
+          "x": 45,
+          "y": 40,
+          "w": 150,
+          "h": 100,
+          "text": "{{rank2}}",
+          "size": 84,
+          "color": "#0B0B0F",
+          "align": "center"
+        },
+        {
+          "id": "n013-text",
+          "kind": "text",
+          "x": 240,
+          "y": 45,
+          "w": 670,
+          "h": 90,
+          "text": "{{name2}}",
+          "size": 58,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n014-b2-number",
+          "kind": "b2-number",
+          "x": 1050,
+          "y": 40,
+          "w": 340,
+          "h": 100,
+          "toKey": "score2",
+          "suffix": "%",
+          "size": 70,
+          "color": "#0B0B0F",
+          "align": "center",
+          "decimals": 1,
+          "tracks": {
+            "value": [
+              [
+                0.48,
+                0
+              ],
+              [
+                1.68,
+                1,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.48,
+            0
+          ],
+          [
+            1.44,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.48,
+            695
+          ],
+          [
+            1.44,
+            650,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n016-text",
+      "kind": "text",
+      "x": 300,
+      "y": 950,
+      "w": 1320,
+      "h": 70,
+      "text": "{{caption}}",
+      "size": 34,
+      "color": "#62616C",
+      "align": "center"
+    }
+  ],
+  "assets": {}
+}

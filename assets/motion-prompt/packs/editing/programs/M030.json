@@ -1,0 +1,86 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t12s",
+  "title": "左右合拢：序号和标题从两侧撞成一枚胶囊",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "index": "03",
+    "title": "把结果落到实际"
+  },
+  "nodes": [
+    {
+      "id": "n001-circle",
+      "kind": "circle",
+      "x": 440,
+      "y": 400,
+      "w": 220,
+      "h": 220,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "x": [
+          [
+            0,
+            -250
+          ],
+          [
+            1.5,
+            440,
+            "back"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 440,
+      "y": 425,
+      "w": 220,
+      "h": 170,
+      "text": "{{index}}",
+      "size": 125,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "x": [
+          [
+            0,
+            -250
+          ],
+          [
+            1.5,
+            440,
+            "back"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-pill",
+      "kind": "pill",
+      "x": 650,
+      "y": 400,
+      "w": 900,
+      "h": 220,
+      "label": "{{title}}",
+      "size": 70,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "x": [
+          [
+            0,
+            1950
+          ],
+          [
+            1.5,
+            650,
+            "back"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

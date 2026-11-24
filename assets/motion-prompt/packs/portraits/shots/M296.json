@@ -1,0 +1,179 @@
+{
+  "id": "M296",
+  "layout": "stack",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "app-window",
+      "states": [
+        {},
+        {
+          "active": 2
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "inspector",
+      "states": [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-spotlight",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "interview-o",
+      "start": 0.0,
+      "end": 30.0
+    }
+  ],
+  "chain": [
+    "先建立面板的前后关系",
+    "推进到当前讲的那一层",
+    "其余面板退后但保留方位"
+  ],
+  "binding": {
+    "headline": "哪一层正在操作",
+    "captions": [
+      "先看这几层面板。",
+      "手上正在操作的这一层走到前面。",
+      "旁边的面板还在原来的位置。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "素材管理",
+        "items": [
+          "文件名",
+          "采访原声.wav",
+          "采访提纲.md"
+        ],
+        "active": 1
+      },
+      {
+        "items": [
+          "字幕层",
+          "图片层"
+        ],
+        "active": 0,
+        "settings": [
+          [
+            24,
+            38,
+            100
+          ],
+          [
+            12,
+            15,
+            80
+          ]
+        ]
+      },
+      {
+        "image": "fr-screen.webp",
+        "title": "Squoosh",
+        "items": [
+          "编码格式",
+          "导出质量",
+          "文件体积"
+        ],
+        "rects": [
+          [
+            79,
+            73.5,
+            20,
+            6.2
+          ],
+          [
+            79,
+            79.8,
+            20,
+            7
+          ],
+          [
+            81,
+            91.5,
+            13,
+            6.7
+          ]
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "active": 2
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "原界面聚光框 · fr-screen"
+    }
+  ]
+}

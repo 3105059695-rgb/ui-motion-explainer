@@ -1,0 +1,103 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-wave2-t12u",
+  "title": "灌满序号：空心大序号从下往上灌满",
+  "duration": 3,
+  "background": "#0B0B0F",
+  "inputs": {
+    "chapterNumber": "02",
+    "text02": "这一章，讲清楚"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "filledNumber",
+      "x": 630,
+      "y": 230,
+      "w": 660,
+      "h": 390,
+      "text": "{{chapterNumber}}",
+      "size": 340,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "value": 0,
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            0.6,
+            0
+          ],
+          [
+            1.86,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002",
+      "kind": "text",
+      "x": 540,
+      "y": 700,
+      "w": 840,
+      "h": 120.0,
+      "text": "{{text02}}",
+      "size": 75,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.98,
+            0
+          ],
+          [
+            2.085,
+            1,
+            "out"
+          ]
+        ],
+        "x": [
+          [
+            0,
+            540
+          ],
+          [
+            1.98,
+            540
+          ],
+          [
+            2.085,
+            540,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            750
+          ],
+          [
+            1.98,
+            750
+          ],
+          [
+            2.085,
+            700,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

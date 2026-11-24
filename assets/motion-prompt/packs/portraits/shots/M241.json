@@ -1,0 +1,171 @@
+{
+  "id": "M241",
+  "layout": "relay",
+  "layers": [
+    {
+      "kind": "live",
+      "strip": "creative-50000-5400",
+      "slot": "media1",
+      "label": "主体动作视频"
+    },
+    {
+      "kind": "ui",
+      "component": "composer",
+      "states": [
+        {
+          "attached": false,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": true
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "tool-call",
+      "states": [
+        {
+          "phase": "running",
+          "open": false
+        },
+        {
+          "phase": "running",
+          "open": true
+        },
+        {
+          "phase": "done",
+          "open": true
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "creative",
+      "start": 50,
+      "end": 84,
+      "shotIds": [
+        "C014",
+        "C015",
+        "C016",
+        "C017",
+        "C018",
+        "C019",
+        "C020",
+        "C021",
+        "C022",
+        "C023"
+      ],
+      "rowIds": [
+        "C-L018",
+        "C-L019",
+        "C-L020",
+        "C-L021",
+        "C-L022",
+        "C-L023",
+        "C-L024",
+        "C-L025",
+        "C-L026",
+        "C-L027",
+        "C-L028"
+      ]
+    },
+    {
+      "video": "creative",
+      "start": 946,
+      "end": 955,
+      "shotIds": [
+        "C212",
+        "C213",
+        "C214"
+      ],
+      "rowIds": [
+        "C-L191",
+        "C-L192",
+        "C-L193"
+      ]
+    }
+  ],
+  "chain": [
+    "同一女孩接长纸条、取参考图、把纸和参考送入生图机，再把成图送向视频机。",
+    "拉到高位全景，女孩在四工位之间持续往返，距离和重复搬运成为摩擦本身。",
+    "切到Agent化状态；女孩把一张任务纸交给机器人，双方共同握纸后完成移交。",
+    "女孩坐下，机器人接续取图、送图、查看结果并回身交付平板，成果中的火箭身份保持。",
+    "结尾另一组森林比喻将上下文做成书箱、工具做成工具箱、方向做成图纸与旗；机器人施工后，女孩持图查看城堡结果。"
+  ],
+  "binding": {
+    "headline": "手上任务移交给制作工具",
+    "captions": [
+      "先看到人正在做的事",
+      "同一份任务进入工具",
+      "由工具接手的步骤出现回执"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "text": "请对照这份资料列出变化。",
+        "file": "交付记录.md",
+        "attached": true,
+        "sent": false
+      },
+      {
+        "tool": "读取文件信息",
+        "arg": "地出.jpg",
+        "output": "494,374 字节 · JPEG",
+        "error": "未找到指定文件",
+        "phase": "done",
+        "open": true
+      }
+    ],
+    "keyframes": [
+      [],
+      [
+        {
+          "attached": false,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": true
+        }
+      ],
+      [
+        {
+          "phase": "running",
+          "open": false
+        },
+        {
+          "phase": "running",
+          "open": true
+        },
+        {
+          "phase": "done",
+          "open": true
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "主体动作视频"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "M202",
+  "layout": "native",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-scorecard",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-argon",
+      "start": 272,
+      "end": 279
+    }
+  ],
+  "chain": [
+    "前端、游戏、写作等维度在同一成绩单中逐项出现，保留各自判断。"
+  ],
+  "binding": {
+    "headline": "网页副本实测",
+    "captions": [
+      "这份副本要核对几件事。",
+      "体积和尺寸各有记录。",
+      "没有实测的项目还空着。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "质量 50 副本",
+        "items": [
+          "文件体积",
+          "像素尺寸",
+          "网页加载耗时"
+        ],
+        "values": [
+          "95.9 kB",
+          "3000 × 3000",
+          "未测"
+        ],
+        "bodies": [
+          "本例上限 100 kB",
+          "与输入原图相同",
+          "需要实际网页计时"
+        ],
+        "active": 2
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

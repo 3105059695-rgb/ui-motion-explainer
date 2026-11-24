@@ -1,0 +1,112 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t12h",
+  "title": "身份切换（快过渡）",
+  "duration": 2,
+  "background": "#FFFFFF",
+  "inputs": {
+    "old": "使用者",
+    "new": "开发者"
+  },
+  "nodes": [
+    {
+      "id": "n003-card",
+      "kind": "card",
+      "x": 540,
+      "y": 400,
+      "w": 840,
+      "h": 220,
+      "children": [
+        {
+          "id": "n001-text",
+          "kind": "text",
+          "x": 40,
+          "y": 40,
+          "w": 760,
+          "h": 140,
+          "text": "{{old}}",
+          "size": 90,
+          "color": "#FFFFFF",
+          "align": "center",
+          "tracks": {
+            "y": [
+              [
+                0,
+                40
+              ],
+              [
+                0.8,
+                40
+              ],
+              [
+                1.3,
+                -170
+              ]
+            ],
+            "opacity": [
+              [
+                0,
+                1
+              ],
+              [
+                0.96,
+                1
+              ],
+              [
+                1.3,
+                0
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 40,
+          "y": 40,
+          "w": 760,
+          "h": 140,
+          "text": "{{new}}",
+          "size": 90,
+          "color": "#D6C2FF",
+          "align": "center",
+          "tracks": {
+            "y": [
+              [
+                0.76,
+                230
+              ],
+              [
+                1.3,
+                40,
+                "out"
+              ]
+            ],
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                0.8,
+                0
+              ],
+              [
+                1.2,
+                1
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#0B0B0F",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "w": 840,
+        "h": 220
+      }
+    }
+  ],
+  "assets": {}
+}

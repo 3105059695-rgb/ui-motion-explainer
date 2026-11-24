@@ -1,0 +1,195 @@
+{
+  "id": "M239",
+  "layout": "unveil",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "timeline",
+      "states": [
+        {},
+        {
+          "active": 2
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "file-tiles",
+      "states": [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            1
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "images",
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "app-window",
+      "states": [
+        {},
+        {
+          "active": 2
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "network",
+      "start": 25.5,
+      "end": 46.4,
+      "shotIds": [
+        "N011",
+        "N012",
+        "N013",
+        "N014",
+        "N015",
+        "N016"
+      ],
+      "rowIds": [
+        "N-L009",
+        "N-L010",
+        "N-L011",
+        "N-L012",
+        "N-L013",
+        "N-L014",
+        "N-L015",
+        "N-L016",
+        "N-L017"
+      ]
+    }
+  ],
+  "chain": [
+    "作者解释近况，保持人物场。",
+    "起早贪黑对应落地窗前多屏真实工作环境。",
+    "回人物说做成产品，再显示炉子品牌牌；软件窗口出现并扩大，品牌牌变为上方小标签。",
+    "产品定位文字出现后回人物，明确先解释推导再看实测。"
+  ],
+  "binding": {
+    "headline": "先给投入证据再揭示产品形态",
+    "captions": [
+      "先看做过的工作",
+      "材料收拢到一个名字",
+      "最后揭开它能操作的界面"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "导入素材",
+          "完成初剪",
+          "提交复核"
+        ],
+        "times": [
+          "09:10",
+          "11:30",
+          "14:05"
+        ],
+        "active": 1
+      },
+      {
+        "items": [
+          "地出.jpg",
+          "压缩界面.png",
+          "安德斯.jpg"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp",
+          "portrait.webp"
+        ],
+        "active": 0
+      },
+      {
+        "title": "素材管理",
+        "items": [
+          "文件名",
+          "采访原声.wav",
+          "采访提纲.md"
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "active": 2
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      [
+        {},
+        {
+          "active": 2
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "文件缩略图 · earth"
+    },
+    {
+      "key": "media2",
+      "name": "文件缩略图 · interface"
+    },
+    {
+      "key": "media3",
+      "name": "文件缩略图 · portrait"
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "id": "M215",
+  "layout": "unblock",
+  "layers": [
+    {
+      "kind": "live",
+      "strip": "workflow-209000-5400",
+      "slot": "media1",
+      "label": "主体动作视频"
+    },
+    {
+      "kind": "ui",
+      "component": "alert",
+      "states": [
+        {},
+        {
+          "open": false
+        },
+        {
+          "open": false
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-spotlight",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": [
+        {
+          "slot": "media2",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "workflow",
+      "start": 209,
+      "end": 242,
+      "shotIds": [
+        "W042",
+        "W043",
+        "W044"
+      ],
+      "rowIds": [
+        "W-L069",
+        "W-L070",
+        "W-L071",
+        "W-L072",
+        "W-L073",
+        "W-L074",
+        "W-L075",
+        "W-L076",
+        "W-L077",
+        "W-L078",
+        "W-L079",
+        "W-L080",
+        "W-L081"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 88,
+      "end": 94,
+      "shotIds": [
+        "A-S023"
+      ],
+      "rowIds": [
+        "A-L047",
+        "A-L048",
+        "A-L049"
+      ]
+    }
+  ],
+  "chain": [
+    "同一创作者平静工作",
+    "看到问题后惊讶、皱眉托腮",
+    "拿起分镜纸检查",
+    "转椅去另一台电脑",
+    "实际额外步骤与解决界面"
+  ],
+  "binding": {
+    "headline": "制作受阻后落到真实操作",
+    "captions": [
+      "做到这里遇到了阻碍",
+      "提示指出缺少的条件",
+      "在实际界面里找到下一步"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "title": "还缺一份输入",
+        "body": "补上材料，才能继续这项操作。",
+        "open": true
+      },
+      {
+        "image": "fr-screen.webp",
+        "title": "Squoosh",
+        "items": [
+          "编码格式",
+          "导出质量",
+          "文件体积"
+        ],
+        "rects": [
+          [
+            79,
+            73.5,
+            20,
+            6.2
+          ],
+          [
+            79,
+            79.8,
+            20,
+            7
+          ],
+          [
+            81,
+            91.5,
+            13,
+            6.7
+          ]
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [],
+      [
+        {},
+        {
+          "open": false
+        },
+        {
+          "open": false
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "主体动作视频"
+    },
+    {
+      "key": "media2",
+      "name": "原界面聚光框 · fr-screen"
+    }
+  ]
+}

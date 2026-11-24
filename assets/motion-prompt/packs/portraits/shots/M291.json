@@ -1,0 +1,99 @@
+{
+  "id": "M291",
+  "layout": "inset",
+  "layers": [
+    {
+      "kind": "live",
+      "strip": "interview-j-0-5400",
+      "slot": "media1",
+      "label": "主体动作视频"
+    },
+    {
+      "kind": "live",
+      "strip": "interview-j-6960-4800",
+      "slot": "media2",
+      "label": "结果视频",
+      "followSlot": "media1"
+    },
+    {
+      "kind": "ui",
+      "component": "file-preview",
+      "states": [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "zoom": 170
+        }
+      ],
+      "media": [],
+      "sampleClip": "media1"
+    }
+  ],
+  "refs": [
+    {
+      "video": "interview-j",
+      "start": 0.0,
+      "end": 11.76
+    }
+  ],
+  "chain": [
+    "先看作品实际怎样动",
+    "原画面缩成仍可辨认的小窗",
+    "让出位置给接下来的解释"
+  ],
+  "binding": {
+    "headline": "从游戏回到讲解",
+    "captions": [
+      "先看游戏怎样动起来。",
+      "把这个画面收在一边。",
+      "听解说时，还能回头找到刚才那一幕。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {},
+      {
+        "title": "游戏画面",
+        "items": [
+          "开场画面",
+          "后续画面"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp"
+        ],
+        "active": 0,
+        "zoom": 100
+      }
+    ],
+    "keyframes": [
+      [],
+      [],
+      [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "zoom": 170
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "主体动作视频"
+    },
+    {
+      "key": "media2",
+      "name": "结果视频"
+    }
+  ]
+}

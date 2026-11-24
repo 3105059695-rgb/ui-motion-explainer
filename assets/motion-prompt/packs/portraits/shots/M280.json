@@ -1,0 +1,182 @@
+{
+  "id": "M280",
+  "layout": "fill",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-choice",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "plan-checklist",
+      "states": [
+        {
+          "completed": 0
+        },
+        {
+          "completed": 1
+        },
+        {
+          "completed": 3
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "result",
+      "states": [
+        {
+          "success": false,
+          "title": "等待确认"
+        },
+        {
+          "success": true,
+          "title": "已完成"
+        },
+        {
+          "success": true,
+          "title": "已完成"
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "arun-membership",
+      "start": 171,
+      "end": 191.7,
+      "shotIds": [
+        "A-S031"
+      ],
+      "rowIds": [
+        "A-L092",
+        "A-L093",
+        "A-L094",
+        "A-L095",
+        "A-L096",
+        "A-L097",
+        "A-L098",
+        "A-L099",
+        "A-L100",
+        "A-L101",
+        "A-L102",
+        "A-L103",
+        "A-L104",
+        "A-L105"
+      ]
+    }
+  ],
+  "chain": [
+    "候选间的不等关系逐项出现，说明不可完全替代",
+    "第一条需求先进入，再生长出箭头和对应答案",
+    "后续需求行按口播累积，旧行保留供比较",
+    "完整选择映射停稳",
+    "回熟悉的总览",
+    "问号与互动气泡进入，保留最终画面至结束"
+  ],
+  "binding": {
+    "headline": "需求先入列，选择随说明累积",
+    "captions": [
+      "先从实际需求开始",
+      "每一行需求接住一个答案",
+      "最后同时看清各自适合谁"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "长期留档",
+          "网页发布",
+          "复查质量"
+        ],
+        "options": [
+          "输入原图",
+          "网页副本"
+        ],
+        "preferred": [
+          0,
+          1,
+          0
+        ],
+        "reasons": [
+          "留下完整的输入材料",
+          "质量 50 副本为 95.9 kB",
+          "用原图对照同一位置的细节"
+        ],
+        "active": 0
+      },
+      {
+        "items": [
+          "读取输入资料",
+          "提取关键信息",
+          "生成核对清单"
+        ],
+        "completed": 1
+      },
+      {
+        "success": true,
+        "title": "导出完成",
+        "body": "字幕和视频已生成。",
+        "action": "查看交付清单",
+        "open": false
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {
+          "completed": 0
+        },
+        {
+          "completed": 1
+        },
+        {
+          "completed": 3
+        }
+      ],
+      [
+        {
+          "success": false,
+          "title": "等待确认"
+        },
+        {
+          "success": true,
+          "title": "已完成"
+        },
+        {
+          "success": true,
+          "title": "已完成"
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

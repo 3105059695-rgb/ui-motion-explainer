@@ -1,0 +1,252 @@
+{
+  "id": "M258",
+  "layout": "fill",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "plan-checklist",
+      "states": [
+        {
+          "completed": 0
+        },
+        {
+          "completed": 1
+        },
+        {
+          "completed": 3
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-scorecard",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "status-label",
+      "states": [
+        {},
+        {
+          "state": "已通过",
+          "emphasis": false
+        },
+        {
+          "state": "已通过",
+          "emphasis": false
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-argon",
+      "start": 270.3,
+      "end": 279.68,
+      "shotIds": [
+        "F3-28",
+        "F3-29",
+        "F3-30",
+        "F3-31"
+      ],
+      "rowIds": [
+        "F-L167",
+        "F-L168",
+        "F-L169",
+        "F-L170",
+        "F-L171"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 31.6,
+      "end": 40.2,
+      "shotIds": [
+        "J-S020",
+        "J-S021",
+        "J-S022",
+        "J-S023"
+      ],
+      "rowIds": [
+        "J-L021",
+        "J-L022",
+        "J-L023",
+        "J-L024",
+        "J-L025"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 105.5,
+      "end": 126.625,
+      "shotIds": [
+        "J-S119",
+        "J-S120",
+        "J-S121",
+        "J-S122",
+        "J-S123",
+        "J-S124",
+        "J-S125"
+      ],
+      "rowIds": [
+        "J-L060",
+        "J-L061",
+        "J-L062",
+        "J-L063",
+        "J-L064",
+        "J-L065",
+        "J-L066",
+        "J-L067",
+        "J-L068",
+        "J-L069",
+        "J-L070",
+        "J-L071",
+        "J-L072",
+        "J-L073",
+        "J-L074",
+        "J-L075",
+        "J-L076",
+        "J-L077",
+        "J-L078"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 131.125,
+      "end": 132.625,
+      "shotIds": [
+        "J-S128"
+      ],
+      "rowIds": [
+        "J-L082",
+        "J-L083"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 171,
+      "end": 191.7,
+      "shotIds": [
+        "A-S031"
+      ],
+      "rowIds": [
+        "A-L092",
+        "A-L093",
+        "A-L094",
+        "A-L095",
+        "A-L096",
+        "A-L097",
+        "A-L098",
+        "A-L099",
+        "A-L100",
+        "A-L101",
+        "A-L102",
+        "A-L103",
+        "A-L104",
+        "A-L105"
+      ]
+    }
+  ],
+  "chain": [
+    "类别骨架先建立",
+    "当前口播类别被激活",
+    "答案逐项填入",
+    "之前结果继续保留，完整表收束"
+  ],
+  "binding": {
+    "headline": "总结先搭框再逐格填入",
+    "captions": [
+      "先看到有哪些判断项",
+      "讲到哪项就把结果填进去",
+      "最后留出整表阅读时间"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "读取输入资料",
+          "提取关键信息",
+          "生成核对清单"
+        ],
+        "completed": 1
+      },
+      {
+        "title": "质量 50 副本",
+        "items": [
+          "文件体积",
+          "像素尺寸",
+          "网页加载耗时"
+        ],
+        "values": [
+          "95.9 kB",
+          "3000 × 3000",
+          "未测"
+        ],
+        "bodies": [
+          "本例上限 100 kB",
+          "与输入原图相同",
+          "需要实际网页计时"
+        ],
+        "active": 2
+      },
+      {
+        "label": "剪辑稿",
+        "state": "待复核",
+        "emphasis": true
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "completed": 0
+        },
+        {
+          "completed": 1
+        },
+        {
+          "completed": 3
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {},
+        {
+          "state": "已通过",
+          "emphasis": false
+        },
+        {
+          "state": "已通过",
+          "emphasis": false
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

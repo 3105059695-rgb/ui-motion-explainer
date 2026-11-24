@@ -1,0 +1,402 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t02g",
+  "title": "两个身份路线图",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "roleA": "使用者",
+    "roleB": "开发者",
+    "stepA0": "1\n找到版本",
+    "stepA1": "2\n下载安装",
+    "stepA2": "3\n打开软件",
+    "stepA3": "4\n开始使用",
+    "stepB0": "1\n获取源码",
+    "stepB1": "2\n修改与构建"
+  },
+  "nodes": [
+    {
+      "id": "n001-pill",
+      "kind": "pill",
+      "x": 120,
+      "y": 270,
+      "w": 270,
+      "h": 140,
+      "label": "{{roleA}}",
+      "size": 50,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.6,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            305
+          ],
+          [
+            0.6,
+            270,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-pill",
+      "kind": "pill",
+      "x": 120,
+      "y": 660,
+      "w": 270,
+      "h": 140,
+      "label": "{{roleB}}",
+      "size": 50,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.0,
+            0
+          ],
+          [
+            2.6,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.0,
+            695
+          ],
+          [
+            2.6,
+            660,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-card",
+      "kind": "card",
+      "x": 480,
+      "y": 250,
+      "w": 300,
+      "h": 190,
+      "children": [
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 25,
+          "y": 25,
+          "w": 250,
+          "h": 140,
+          "text": "{{stepA0}}",
+          "size": 40,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.5,
+            0
+          ],
+          [
+            1.1,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.5,
+            285
+          ],
+          [
+            1.1,
+            250,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-card",
+      "kind": "card",
+      "x": 820,
+      "y": 250,
+      "w": 300,
+      "h": 190,
+      "children": [
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 25,
+          "y": 25,
+          "w": 250,
+          "h": 140,
+          "text": "{{stepA1}}",
+          "size": 40,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.85,
+            0
+          ],
+          [
+            1.45,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.85,
+            285
+          ],
+          [
+            1.45,
+            250,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-card",
+      "kind": "card",
+      "x": 1160,
+      "y": 250,
+      "w": 300,
+      "h": 190,
+      "children": [
+        {
+          "id": "n007-text",
+          "kind": "text",
+          "x": 25,
+          "y": 25,
+          "w": 250,
+          "h": 140,
+          "text": "{{stepA2}}",
+          "size": 40,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.2,
+            0
+          ],
+          [
+            1.8,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.2,
+            285
+          ],
+          [
+            1.8,
+            250,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010-card",
+      "kind": "card",
+      "x": 1500,
+      "y": 250,
+      "w": 300,
+      "h": 190,
+      "children": [
+        {
+          "id": "n009-text",
+          "kind": "text",
+          "x": 25,
+          "y": 25,
+          "w": 250,
+          "h": 140,
+          "text": "{{stepA3}}",
+          "size": 40,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.55,
+            0
+          ],
+          [
+            2.15,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.55,
+            285
+          ],
+          [
+            2.15,
+            250,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012-card",
+      "kind": "card",
+      "x": 480,
+      "y": 640,
+      "w": 500,
+      "h": 190,
+      "children": [
+        {
+          "id": "n011-text",
+          "kind": "text",
+          "x": 30,
+          "y": 25,
+          "w": 440,
+          "h": 140,
+          "text": "{{stepB0}}",
+          "size": 43,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.6,
+            0
+          ],
+          [
+            3.2,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.6,
+            675
+          ],
+          [
+            3.2,
+            640,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014-card",
+      "kind": "card",
+      "x": 1040,
+      "y": 640,
+      "w": 500,
+      "h": 190,
+      "children": [
+        {
+          "id": "n013-text",
+          "kind": "text",
+          "x": 30,
+          "y": 25,
+          "w": 440,
+          "h": 140,
+          "text": "{{stepB1}}",
+          "size": 43,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.1,
+            0
+          ],
+          [
+            3.7,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.1,
+            675
+          ],
+          [
+            3.7,
+            640,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

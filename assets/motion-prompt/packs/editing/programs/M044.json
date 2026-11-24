@@ -1,0 +1,108 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-wave2-t12z",
+  "title": "电梯到站：楼层跳到本章，门打开",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "text01": "本章，正式开始",
+    "text02": "▲ 03",
+    "text03": "▲ 04"
+  },
+  "nodes": [
+    {
+      "id": "n001",
+      "kind": "text",
+      "x": 400,
+      "y": 470,
+      "w": 1120,
+      "h": 144.0,
+      "text": "{{text01}}",
+      "size": 90,
+      "align": "center"
+    },
+    {
+      "id": "n002",
+      "kind": "pill",
+      "x": 795,
+      "y": 130,
+      "w": 330,
+      "h": 80,
+      "label": "{{text02}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "visible": [
+        0,
+        0.96
+      ]
+    },
+    {
+      "id": "n003",
+      "kind": "pill",
+      "x": 795,
+      "y": 130,
+      "w": 330,
+      "h": 80,
+      "label": "{{text03}}",
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "visible": [
+        0.96,
+        3.001
+      ]
+    },
+    {
+      "id": "n004",
+      "kind": "rect",
+      "x": 330,
+      "y": 285,
+      "w": 630,
+      "h": 550,
+      "fill": "#0B0B0F",
+      "radius": 8,
+      "tracks": {
+        "x": [
+          [
+            0,
+            330
+          ],
+          [
+            1.2,
+            330
+          ],
+          [
+            2.31,
+            -320
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005",
+      "kind": "rect",
+      "x": 960,
+      "y": 285,
+      "w": 630,
+      "h": 550,
+      "fill": "#0B0B0F",
+      "radius": 8,
+      "tracks": {
+        "x": [
+          [
+            0,
+            960
+          ],
+          [
+            1.2,
+            960
+          ],
+          [
+            2.31,
+            1610
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

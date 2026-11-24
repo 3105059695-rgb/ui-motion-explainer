@@ -1,0 +1,94 @@
+{
+  "id": "M290",
+  "layout": "inset",
+  "layers": [
+    {
+      "kind": "live",
+      "strip": "interview-i-0-5400",
+      "slot": "media1",
+      "label": "主体动作视频"
+    },
+    {
+      "kind": "live",
+      "strip": "interview-i-8840-4800",
+      "slot": "media2",
+      "label": "结果视频",
+      "followSlot": "media1"
+    },
+    {
+      "kind": "ui",
+      "component": "app-window",
+      "states": [
+        {},
+        {
+          "active": 2
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "interview-i",
+      "start": 0.0,
+      "end": 13.64
+    }
+  ],
+  "chain": [
+    "先把成果亮出来",
+    "讲述人接住这一句",
+    "回到能看见细节的页面"
+  ],
+  "binding": {
+    "headline": "这个作品是怎样做的",
+    "captions": [
+      "先看已经做出的结果。",
+      "镜头接回讲述的人。",
+      "再回到页面，看刚才说的细节。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {},
+      {
+        "title": "这个作品",
+        "items": [
+          "作品页面",
+          "原始材料",
+          "成品细节"
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [],
+      [],
+      [
+        {},
+        {
+          "active": 2
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "主体动作视频"
+    },
+    {
+      "key": "media2",
+      "name": "结果视频"
+    }
+  ]
+}

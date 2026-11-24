@@ -1,0 +1,160 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t02f",
+  "title": "虚化界面上点出几种方式",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "method0": "1  从已有文件开始",
+    "method1": "2  从一个问题开始",
+    "method2": "3  从真实任务开始"
+  },
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 80,
+      "y": 70,
+      "w": 1760,
+      "h": 940,
+      "asset": "screen",
+      "fit": "contain",
+      "radius": 18,
+      "blur": 15,
+      "opacity": 0.45
+    },
+    {
+      "id": "n002-rect",
+      "kind": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "fill": "rgba(11,11,15,.64)",
+      "radius": 0
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 350,
+      "y": 220,
+      "w": 1250,
+      "h": 130,
+      "text": "{{method0}}",
+      "size": 76,
+      "color": "#FFFFFF",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.4,
+            0
+          ],
+          [
+            1.15,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.4,
+            255
+          ],
+          [
+            1.15,
+            220,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-text",
+      "kind": "text",
+      "x": 350,
+      "y": 450,
+      "w": 1250,
+      "h": 130,
+      "text": "{{method1}}",
+      "size": 76,
+      "color": "#FFFFFF",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.6,
+            0
+          ],
+          [
+            2.35,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.6,
+            485
+          ],
+          [
+            2.35,
+            450,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-text",
+      "kind": "text",
+      "x": 350,
+      "y": 680,
+      "w": 1250,
+      "h": 130,
+      "text": "{{method2}}",
+      "size": 76,
+      "color": "#FFFFFF",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.8,
+            0
+          ],
+          [
+            3.55,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.8,
+            715
+          ],
+          [
+            3.55,
+            680,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {
+    "screen": "aba20e6c2937800563"
+  }
+}

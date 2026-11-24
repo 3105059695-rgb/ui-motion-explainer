@@ -1,0 +1,104 @@
+{
+  "id": "M204",
+  "layout": "native",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-paperedit",
+      "states": [
+        {
+          "active": 0,
+          "kept": [
+            0,
+            1
+          ]
+        },
+        {
+          "active": 1,
+          "kept": [
+            0,
+            1
+          ]
+        },
+        {
+          "active": 1,
+          "kept": [
+            1
+          ]
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-argon",
+      "start": 254,
+      "end": 263
+    }
+  ],
+  "chain": [
+    "长访谈先以整条出现，粗剪后成为较短的分段时间线，仍留出人工复看。"
+  ],
+  "binding": {
+    "headline": "原声要留哪句",
+    "captions": [
+      "这是一段完整的原声。",
+      "我只想留下后一句。",
+      "保留下来的片段仍按原顺序排列。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "原声节选",
+        "duration": 5.44,
+        "items": [
+          "以及对于你来说",
+          "有什么用处"
+        ],
+        "starts": [
+          3.02,
+          4.08
+        ],
+        "ends": [
+          4.08,
+          5.42
+        ],
+        "active": 0,
+        "kept": [
+          0,
+          1
+        ]
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0,
+          "kept": [
+            0,
+            1
+          ]
+        },
+        {
+          "active": 1,
+          "kept": [
+            0,
+            1
+          ]
+        },
+        {
+          "active": 1,
+          "kept": [
+            1
+          ]
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

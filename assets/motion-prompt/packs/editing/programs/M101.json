@@ -1,0 +1,90 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-fix5-t14b",
+  "title": "单项参数落定",
+  "duration": 4,
+  "background": "#F3F3F5",
+  "inputs": {
+    "value": 256,
+    "label": "本次上下文容量"
+  },
+  "nodes": [
+    {
+      "id": "n001-card",
+      "kind": "card",
+      "x": 530,
+      "y": 220,
+      "w": 860,
+      "h": 640,
+      "children": [],
+      "fill": "#0B0B0F"
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 610,
+      "y": 330,
+      "w": 700,
+      "h": 90,
+      "text": "{{label}}",
+      "size": 48,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.2,
+            0
+          ],
+          [
+            0.68,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.2,
+            365
+          ],
+          [
+            0.68,
+            330,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-b2-number",
+      "kind": "b2-number",
+      "x": 610,
+      "y": 470,
+      "w": 700,
+      "h": 230,
+      "toKey": "value",
+      "integer": true,
+      "size": 175,
+      "color": "#FFFFFF",
+      "align": "center",
+      "suffix": " K",
+      "tracks": {
+        "value": [
+          [
+            0.8,
+            0
+          ],
+          [
+            2.4,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

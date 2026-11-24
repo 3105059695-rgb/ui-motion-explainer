@@ -1,0 +1,120 @@
+{
+  "id": "M201",
+  "layout": "native",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-proofs",
+      "states": [
+        {
+          "active": 0,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": true
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "referenceImage"
+          ]
+        },
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "images",
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-argon",
+      "start": 161,
+      "end": 173
+    }
+  ],
+  "chain": [
+    "长网页作为参照，连续展示多轮修订及轮次，最后再对照目标画面。"
+  ],
+  "binding": {
+    "headline": "同一张图的校样",
+    "captions": [
+      "原图留在这一边。",
+      "换到下一轮校样。",
+      "对着同一处云层看差异。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "云层校样",
+        "referenceImage": "fr-input-earth.webp",
+        "items": [
+          "质量 75",
+          "质量 50"
+        ],
+        "images": [
+          "fr-75-earth.webp",
+          "fr-50-earth.webp"
+        ],
+        "values": [
+          163502,
+          95873
+        ],
+        "inputBytes": 494374,
+        "active": 1,
+        "showDelta": true
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": true
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "固定原件的多轮校样 · fr-input-earth"
+    },
+    {
+      "key": "media2",
+      "name": "固定原件的多轮校样 · fr-75-earth"
+    },
+    {
+      "key": "media3",
+      "name": "固定原件的多轮校样 · fr-50-earth"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "M289",
+  "layout": "extract",
+  "layers": [
+    {
+      "kind": "live",
+      "strip": "adiao-anime-semantic-0-4950",
+      "slot": "media1",
+      "label": "主体动作视频"
+    },
+    {
+      "kind": "ui",
+      "component": "tags",
+      "states": [
+        {},
+        {
+          "items": [
+            "竖屏"
+          ]
+        },
+        {
+          "items": [
+            "竖屏"
+          ]
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "source-quote",
+      "states": [
+        {
+          "active": 0,
+          "located": false
+        },
+        {
+          "active": 1,
+          "located": true
+        },
+        {
+          "active": 2,
+          "located": true
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "adiao-anime-semantic",
+      "start": 0.0,
+      "end": 4.95
+    }
+  ],
+  "chain": [
+    "先看完整的画面",
+    "表达时只留得下几个词",
+    "再对照哪些细节丢了"
+  ],
+  "binding": {
+    "headline": "从画面到几个词",
+    "captions": [
+      "脑子里原本是一幅完整的画面。",
+      "说出口，只剩下几个词。",
+      "词留下了，许多细节却丢了。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "label": "说得出口的片段",
+        "items": [
+          "人物",
+          "动作",
+          "地点"
+        ]
+      },
+      {
+        "title": "画面留下了什么",
+        "paragraphs": [
+          "我能说出是谁。",
+          "我能说出做了什么。",
+          "可画面里的细节，很难一一说完。"
+        ],
+        "active": 1,
+        "located": false
+      }
+    ],
+    "keyframes": [
+      [],
+      [
+        {},
+        {
+          "items": [
+            "竖屏"
+          ]
+        },
+        {
+          "items": [
+            "竖屏"
+          ]
+        }
+      ],
+      [
+        {
+          "active": 0,
+          "located": false
+        },
+        {
+          "active": 1,
+          "located": true
+        },
+        {
+          "active": 2,
+          "located": true
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "主体动作视频"
+    }
+  ]
+}

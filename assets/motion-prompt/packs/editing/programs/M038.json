@@ -1,0 +1,132 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t20o",
+  "title": "数字狂跳：一个大数字跳到目标再让位",
+  "duration": 3.6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "startValue": 44286,
+    "targetValue": 50500,
+    "caption": "越来越多的人选择它"
+  },
+  "nodes": [
+    {
+      "id": "n001-b2-number",
+      "kind": "b2-number",
+      "x": 250,
+      "y": 260,
+      "w": 1420,
+      "h": 240,
+      "fromKey": "startValue",
+      "toKey": "targetValue",
+      "integer": true,
+      "size": 210,
+      "align": "center",
+      "tracks": {
+        "value": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.44,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            350
+          ],
+          [
+            1.62,
+            350
+          ],
+          [
+            2.34,
+            230
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 400,
+      "y": 625,
+      "w": 1120,
+      "h": 110,
+      "text": "{{caption}}",
+      "size": 65,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.98,
+            0
+          ],
+          [
+            2.412,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.98,
+            660
+          ],
+          [
+            2.412,
+            625,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-arrow",
+      "kind": "arrow",
+      "x": 950,
+      "y": 600,
+      "w": 0,
+      "h": -85,
+      "fill": "#62616C",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.8,
+            0
+          ],
+          [
+            2.232,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.8,
+            635
+          ],
+          [
+            2.232,
+            600,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

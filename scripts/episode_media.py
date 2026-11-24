@@ -101,6 +101,9 @@ def watch(folder, board, unit, ident, span=None, stills=None, reset=False):
         ref={'kind':'stills','files':[file_fact(folder,p) for p in paths]}
     elif reset or not ref or span:
         item=lib.card(ident)['continuous_example']
+        if item.get('motion_id'):
+            from numbered_motions import reference
+            item={**item,'path':str(reference(folder,ident))}
         name,_,query=item['path'].partition('?')
         source=Path(ROOT)/name
         source=source.resolve(strict=True)
@@ -188,10 +191,18 @@ def observe(folder, board, unit, ident, notes):
     return {'source':ident,'viewing':ed.current_reference(folder,board,ident,unit),'observation':record}
 
 
-def make_trial(folder, board, u, spec):
+def make_trial(folder, board, u, spec, *, external_revision=False):
     c=u.get('choice')
     if not c:
         raise ValueError('先选择实际剪法或 original。')
+    numbered=bool(lib.numbered_motions.number(c['id']))
+    custom=spec.get('custom')
+    if numbered and c.get('aspect','motion')=='motion' and custom and not external_revision:
+        raise ValueError('这镜选用了编号动作 '+c['id']+'。用 motion 绑定素材并渲染库内实现。原创动作按 original 登记缺口，明确的外部返修用 revise 留痕。')
+    if numbered and not custom and c.get('aspect','motion')=='motion':
+        ed.check_motion_order(u,lib.card(c['id']))
+    if custom and c['id']=='original' and u['decision']['job']!='keep' and not external_revision:
+        ed.words(custom.get('motion_gap'),'现有候选缺少的可见动作（custom.motion_gap）')
     proofs=ed.proof_units(board)
     if u['id'] not in proofs and not u.get('trial'):
         for key in proofs:
@@ -223,8 +234,17 @@ def make_trial(folder, board, u, spec):
     with tempfile.TemporaryDirectory(dir=dest) as temp:
         temp=Path(temp)
         w,h=size
-        custom=spec.get('custom')
-        if custom or c['id']=='original':
+        if numbered and not custom:
+            from numbered_motions import picture
+            silent,entry,used=picture(folder,dest,temp,c['id'],spec.get('motion',{}),fps,w,h,n/fps)
+            impl=ed.relative(folder,entry)
+            sources.extend(file_fact(folder,p) for p in used)
+            origin=entry.parent/'动作来源.json'
+            metadata=edits.read(origin)
+            fields['motion_use']={'mode':'library','id':metadata['id'],'implementation':metadata['implementation'],
+                                  'implementation_sha256':metadata['implementation_sha256'],'program_sha256':metadata['program_sha256'],
+                                  'origin':ed.relative(folder,origin),'entry':impl}
+        elif custom or c['id']=='original':
             if custom:
                 entry=ed.local(folder,custom['implementation'])
                 materials=[ed.local(folder,p) for p in custom['assets']]
@@ -287,6 +307,10 @@ def make_trial(folder, board, u, spec):
     if custom:
         trial['adaptation']=custom.get('adaptation','')
         trial['implementation_evidence']='给定源码与实际片段已绑定，动作等价性由连续对照核验'
+        trial['motion_use']={'mode':'external-revision' if external_revision else 'custom','reference_id':c['id'],
+                             'reason':custom.get('motion_gap') or custom.get('adaptation') or c['why']}
+    elif fields.get('motion_use'):
+        trial['motion_use']=fields['motion_use']
     if u.get('trial'):
         u.setdefault('prior_trials',[]).append({k:u['trial'][k] for k in ('clip','sha256','seconds','inputs')})
     u['trial']=trial;u.pop('review',None);u['revision']+=1

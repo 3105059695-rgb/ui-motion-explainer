@@ -481,7 +481,12 @@ def production_context(resolution, root=ROOT):
         'primary_design_source': resolution.get('guidance'),
         'approved_examples': [],
         'continuous_style': continuous_style,
+        'confirmed_workflow': style_registry.confirmed_workflow(root),
         'fixed_style': {
+            'approved_tokens': resource('assets/approved-ui/style.json'),
+            'component_catalog': resource('assets/approved-ui/catalog.json'),
+            'component_gallery': resource('assets/approved-ui/index.html'),
+            'usage': '可见 UI 采用定稿组件和样式。下列历史绘图实现用于动作与材料编排。',
             'palette': resource('assets/agent-editorial/palette.json'),
             'components': resource('assets/agent-editorial/agent-editorial.js'),
             'drawings': [resource('assets/agent-editorial/current/body-a.js'),
@@ -1299,6 +1304,10 @@ def main(argv=None):
     except (OSError, ValueError, UnicodeError, KeyError, TypeError) as exc:
         print(json.dumps({'errors': [str(exc)], 'generation_submitted': False}, ensure_ascii=False, indent=2))
         return 1
+    if args.command in ('prepare','resume','save','trial','review','revise','deliver','register','finish-review'):
+        intake = style_registry.collect_project_motions(args.project,output.get('confirmed_workflow'))
+        if intake is not None:
+            output['motion_library_update'] = intake
     small = args.command in ('resume','save','overview') or (
         args.command == 'prepare' and args.mode == 'production' and not args.full)
     if small:

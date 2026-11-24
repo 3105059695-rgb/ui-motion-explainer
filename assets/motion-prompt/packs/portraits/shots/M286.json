@@ -1,0 +1,132 @@
+{
+  "id": "M286",
+  "layout": "relay",
+  "layers": [
+    {
+      "kind": "live",
+      "strip": "girl-takeover-0-5100",
+      "slot": "media1",
+      "label": "主体动作视频"
+    },
+    {
+      "kind": "ui",
+      "component": "fred-handoff",
+      "states": [
+        {
+          "delivered": []
+        },
+        {
+          "delivered": [
+            0
+          ]
+        },
+        {
+          "delivered": [
+            0,
+            1
+          ]
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "plan-checklist",
+      "states": [
+        {
+          "completed": 0
+        },
+        {
+          "completed": 1
+        },
+        {
+          "completed": 3
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "girl-takeover",
+      "start": 0.0,
+      "end": 5.1
+    }
+  ],
+  "chain": [
+    "先把正在做的事看清",
+    "接手的一方出现",
+    "任务状态随后更新"
+  ],
+  "binding": {
+    "headline": "接手的那一刻",
+    "captions": [
+      "材料还在第一位角色手里。",
+      "接手的一方到了。",
+      "交接结束，下一步才开始。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "sender": "交付方",
+        "recipient": "接收方",
+        "items": [
+          "材料",
+          "交接记录"
+        ],
+        "delivered": [
+          0
+        ]
+      },
+      {
+        "items": [
+          "找到资料",
+          "交给接收方",
+          "核对回执"
+        ],
+        "completed": 1
+      }
+    ],
+    "keyframes": [
+      [],
+      [
+        {
+          "delivered": []
+        },
+        {
+          "delivered": [
+            0
+          ]
+        },
+        {
+          "delivered": [
+            0,
+            1
+          ]
+        }
+      ],
+      [
+        {
+          "completed": 0
+        },
+        {
+          "completed": 1
+        },
+        {
+          "completed": 3
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "主体动作视频"
+    }
+  ]
+}

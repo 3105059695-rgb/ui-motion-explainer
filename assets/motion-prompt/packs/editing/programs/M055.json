@@ -1,0 +1,86 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-native-t12a",
+  "title": "第 X 部分：点长成黑胶囊，章节名落定（快过渡）",
+  "duration": 2,
+  "background": "#FFFFFF",
+  "inputs": {
+    "chapter": "进入实际操作"
+  },
+  "nodes": [
+    {
+      "id": "n001-card",
+      "kind": "card",
+      "x": 905,
+      "y": 430,
+      "w": 110,
+      "h": 180,
+      "children": [],
+      "fill": "#0B0B0F",
+      "radius": 90,
+      "tracks": {
+        "x": [
+          [
+            0,
+            905
+          ],
+          [
+            0.8,
+            380
+          ]
+        ],
+        "w": [
+          [
+            0,
+            110
+          ],
+          [
+            0.8,
+            1160
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 430,
+      "y": 455,
+      "w": 1060,
+      "h": 140,
+      "text": "{{chapter}}",
+      "size": 85,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.8,
+            0
+          ],
+          [
+            1.12,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.8,
+            455
+          ],
+          [
+            1.12,
+            455,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

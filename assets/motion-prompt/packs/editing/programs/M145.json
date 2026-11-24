@@ -1,0 +1,143 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:library-legacy81-t06",
+  "title": "真实页面局部放大、横移与回到全貌",
+  "duration": 8.9,
+  "background": "#FFFFFF",
+  "inputs": {
+    "sourceIn": 0
+  },
+  "nodes": [
+    {
+      "id": "window",
+      "kind": "rect",
+      "x": 40,
+      "y": 30,
+      "w": 1840,
+      "h": 1020,
+      "radius": 24,
+      "fill": "#0B0B0F"
+    },
+    {
+      "id": "dot1",
+      "kind": "circle",
+      "x": 65,
+      "y": 48,
+      "w": 11,
+      "h": 11,
+      "fill": "#DBDBE0"
+    },
+    {
+      "id": "dot2",
+      "kind": "circle",
+      "x": 88,
+      "y": 48,
+      "w": 11,
+      "h": 11,
+      "fill": "#DBDBE0"
+    },
+    {
+      "id": "dot3",
+      "kind": "circle",
+      "x": 111,
+      "y": 48,
+      "w": 11,
+      "h": 11,
+      "fill": "#DBDBE0"
+    },
+    {
+      "id": "viewport",
+      "kind": "group",
+      "x": 60,
+      "y": 120,
+      "w": 1800,
+      "h": 820,
+      "clip": {
+        "w": 1800,
+        "h": 820
+      },
+      "children": [
+        {
+          "id": "current-screen",
+          "kind": "image",
+          "asset": "screen",
+          "x": 0,
+          "y": 0,
+          "w": 1800,
+          "h": 820,
+          "fit": "contain",
+          "tracks": {
+            "scale": [
+              [
+                0,
+                1
+              ],
+              [
+                0.65,
+                1.65,
+                "out"
+              ],
+              [
+                6.8,
+                1.65
+              ],
+              [
+                7.9,
+                1,
+                "out"
+              ]
+            ],
+            "x": [
+              [
+                0,
+                0
+              ],
+              [
+                0.65,
+                -120,
+                "out"
+              ],
+              [
+                3.1,
+                -120
+              ],
+              [
+                6.8,
+                -290,
+                "linear"
+              ],
+              [
+                7.9,
+                0,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                0,
+                0
+              ],
+              [
+                0.65,
+                100,
+                "out"
+              ],
+              [
+                6.8,
+                100
+              ],
+              [
+                7.9,
+                0,
+                "out"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "screen": "2c4940bbfa01bc9750"
+  }
+}

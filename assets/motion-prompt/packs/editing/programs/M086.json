@@ -1,0 +1,97 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t12c",
+  "title": "案例转折：章节让位，案例卡翻入",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "chapter": "下面看实际案例"
+  },
+  "nodes": [
+    {
+      "id": "n001-pill",
+      "kind": "pill",
+      "x": 390,
+      "y": 430,
+      "w": 1140,
+      "h": 160,
+      "label": "{{chapter}}",
+      "size": 72,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "y": [
+          [
+            0,
+            430
+          ],
+          [
+            0.9,
+            430
+          ],
+          [
+            1.74,
+            75
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            0.9,
+            1
+          ],
+          [
+            1.74,
+            0.65
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-b2-perspective-media",
+      "kind": "b2-perspective-media",
+      "x": 330,
+      "y": 290,
+      "w": 1260,
+      "h": 670,
+      "asset": "case",
+      "tracks": {
+        "angle": [
+          [
+            0,
+            88
+          ],
+          [
+            0.9,
+            88
+          ],
+          [
+            2.1,
+            0,
+            "back"
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.9,
+            0
+          ],
+          [
+            1.2,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {
+    "case": "ad60e0240ce8a36a8f"
+  }
+}

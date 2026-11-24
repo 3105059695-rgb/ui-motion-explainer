@@ -1,0 +1,183 @@
+{
+  "id": "M252",
+  "layout": "quota",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-capacity",
+      "states": [
+        {
+          "limitKB": 100
+        },
+        {
+          "limitKB": 200
+        },
+        {
+          "limitKB": 500
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "progress",
+      "states": [
+        {
+          "value": 8
+        },
+        {
+          "value": 55
+        },
+        {
+          "value": 100
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "statistic",
+      "states": [
+        {},
+        {},
+        {}
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-argon",
+      "start": 118,
+      "end": 127,
+      "shotIds": [
+        "P2-09",
+        "P2-10",
+        "P2-11",
+        "P2-12"
+      ],
+      "rowIds": [
+        "F-L073",
+        "F-L074",
+        "F-L075",
+        "F-L076"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 74,
+      "end": 82,
+      "shotIds": [
+        "A-S021"
+      ],
+      "rowIds": [
+        "A-L037",
+        "A-L038",
+        "A-L039",
+        "A-L040",
+        "A-L041"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 88,
+      "end": 94,
+      "shotIds": [
+        "A-S023"
+      ],
+      "rowIds": [
+        "A-L047",
+        "A-L048",
+        "A-L049"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 105,
+      "end": 109,
+      "shotIds": [
+        "A-S025"
+      ],
+      "rowIds": [
+        "A-L055",
+        "A-L056",
+        "A-L057"
+      ]
+    }
+  ],
+  "chain": [
+    "两边同样请求",
+    "一边先有结果并保留",
+    "另一边要求逐条增加，容器长高",
+    "补足条件后才出现结果"
+  ],
+  "binding": {
+    "headline": "用大小和等待表现成本",
+    "captions": [
+      "先认清输入有多大",
+      "等待和处理占用留在画面里",
+      "结果的读数最后出现"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "网页图片上限",
+        "items": [
+          "输入原图",
+          "质量 75",
+          "质量 50"
+        ],
+        "values": [
+          494374,
+          163502,
+          95873
+        ],
+        "limitKB": 100
+      },
+      {
+        "label": "导出进度",
+        "value": 64
+      },
+      {
+        "label": "网页副本",
+        "value": "95.9",
+        "unit": "kB",
+        "note": "同一张输入原图"
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "limitKB": 100
+        },
+        {
+          "limitKB": 200
+        },
+        {
+          "limitKB": 500
+        }
+      ],
+      [
+        {
+          "value": 8
+        },
+        {
+          "value": 55
+        },
+        {
+          "value": 100
+        }
+      ],
+      [
+        {},
+        {},
+        {}
+      ]
+    ]
+  },
+  "mediaFields": []
+}

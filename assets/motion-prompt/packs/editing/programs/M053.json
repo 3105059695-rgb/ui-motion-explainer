@@ -1,0 +1,74 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-native-t05d",
+  "title": "工具并排：逐项比较，胜出格翻黑",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "headers": [
+      "比较项目",
+      "工具 A",
+      "工具 B"
+    ],
+    "rows": [
+      [
+        "项目修改",
+        "直接处理",
+        "复制片段"
+      ],
+      [
+        "使用入口",
+        "客户端",
+        "浏览器"
+      ],
+      [
+        "长任务",
+        "持续执行",
+        "分段执行"
+      ],
+      [
+        "本地文件",
+        "读取目录",
+        "选择文件"
+      ]
+    ],
+    "title": "把差异放在同一张表里"
+  },
+  "nodes": [
+    {
+      "id": "n001-text",
+      "kind": "text",
+      "x": 200,
+      "y": 80,
+      "w": 1520,
+      "h": 120,
+      "text": "{{title}}",
+      "size": 72,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n002-b3-table",
+      "kind": "b3-table",
+      "x": 170,
+      "y": 260,
+      "w": 1580,
+      "h": 670,
+      "headersKey": "headers",
+      "rowsKey": "rows",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            4.5,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

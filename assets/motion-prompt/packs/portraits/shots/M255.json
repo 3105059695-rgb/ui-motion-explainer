@@ -1,0 +1,341 @@
+{
+  "id": "M255",
+  "layout": "compare",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-proofs",
+      "states": [
+        {
+          "active": 0,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": true
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "referenceImage"
+          ]
+        },
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "images",
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "pair-compare",
+      "states": [
+        {},
+        {
+          "active": 0
+        },
+        {
+          "active": 0
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-criteria",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-argon",
+      "start": 242,
+      "end": 250,
+      "shotIds": [
+        "F3-16",
+        "F3-17",
+        "F3-18",
+        "F3-19"
+      ],
+      "rowIds": [
+        "F-L147",
+        "F-L148",
+        "F-L149",
+        "F-L150",
+        "F-L151",
+        "F-L152"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 0,
+      "end": 5.9,
+      "shotIds": [
+        "A-S001"
+      ],
+      "rowIds": [
+        "A-L001",
+        "A-L002"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 12.6,
+      "end": 16.9,
+      "shotIds": [
+        "A-S005"
+      ],
+      "rowIds": [
+        "A-L005",
+        "A-L006"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 52.7,
+      "end": 56.5,
+      "shotIds": [
+        "A-S017"
+      ],
+      "rowIds": [
+        "A-L025",
+        "A-L026",
+        "A-L027"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 60,
+      "end": 69,
+      "shotIds": [
+        "A-S019"
+      ],
+      "rowIds": [
+        "A-L029",
+        "A-L030",
+        "A-L031",
+        "A-L032",
+        "A-L033",
+        "A-L034"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 95,
+      "end": 105,
+      "shotIds": [
+        "A-S024"
+      ],
+      "rowIds": [
+        "A-L050",
+        "A-L051",
+        "A-L052",
+        "A-L053",
+        "A-L054",
+        "A-L055"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 134,
+      "end": 145,
+      "shotIds": [
+        "A-S028"
+      ],
+      "rowIds": [
+        "A-L072",
+        "A-L073",
+        "A-L074",
+        "A-L075",
+        "A-L076",
+        "A-L077",
+        "A-L078",
+        "A-L079"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 145,
+      "end": 160,
+      "shotIds": [
+        "A-S029"
+      ],
+      "rowIds": [
+        "A-L079",
+        "A-L080",
+        "A-L081",
+        "A-L082",
+        "A-L083",
+        "A-L084",
+        "A-L085",
+        "A-L086"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 161,
+      "end": 170,
+      "shotIds": [
+        "A-S030"
+      ],
+      "rowIds": [
+        "A-L086",
+        "A-L087",
+        "A-L088",
+        "A-L089",
+        "A-L090",
+        "A-L091"
+      ]
+    }
+  ],
+  "chain": [
+    "输入连接多个输出",
+    "原输入退出",
+    "真实基准接到原坐标，输出保留",
+    "逐项对照，当前结果突出"
+  ],
+  "binding": {
+    "headline": "更换比较口径后重读同一组结果",
+    "captions": [
+      "先留住同一组结果",
+      "把比较条件换到另一维",
+      "原来的对象逐项重读"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "云层校样",
+        "referenceImage": "fr-input-earth.webp",
+        "items": [
+          "质量 75",
+          "质量 50"
+        ],
+        "images": [
+          "fr-75-earth.webp",
+          "fr-50-earth.webp"
+        ],
+        "values": [
+          163502,
+          95873
+        ],
+        "inputBytes": 494374,
+        "active": 1,
+        "showDelta": true
+      },
+      {
+        "label": "同一张照片",
+        "items": [
+          "原图",
+          "网页副本"
+        ],
+        "values": [
+          "494.4",
+          "95.9"
+        ],
+        "unit": "kB",
+        "active": 1
+      },
+      {
+        "items": [
+          "输入原图",
+          "质量 75",
+          "质量 50"
+        ],
+        "values": [
+          494374,
+          163502,
+          95873
+        ],
+        "pixels": [
+          3000,
+          3000,
+          3000
+        ],
+        "minPixel": 3000,
+        "limitKB": 100,
+        "active": 0
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": true
+        }
+      ],
+      [
+        {},
+        {
+          "active": 0
+        },
+        {
+          "active": 0
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "固定原件的多轮校样 · fr-input-earth"
+    },
+    {
+      "key": "media2",
+      "name": "固定原件的多轮校样 · fr-75-earth"
+    },
+    {
+      "key": "media3",
+      "name": "固定原件的多轮校样 · fr-50-earth"
+    }
+  ]
+}

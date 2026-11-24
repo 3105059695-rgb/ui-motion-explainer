@@ -1,0 +1,162 @@
+{
+  "id": "M235",
+  "layout": "process",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "steps",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "plan-checklist",
+      "states": [
+        {
+          "completed": 0
+        },
+        {
+          "completed": 1
+        },
+        {
+          "completed": 3
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "tool-call",
+      "states": [
+        {
+          "phase": "running",
+          "open": false
+        },
+        {
+          "phase": "running",
+          "open": true
+        },
+        {
+          "phase": "done",
+          "open": true
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "network",
+      "start": 262.4,
+      "end": 272.7,
+      "shotIds": [
+        "N074",
+        "N075"
+      ],
+      "rowIds": [
+        "N-L102",
+        "N-L103",
+        "N-L104",
+        "N-L105",
+        "N-L106",
+        "N-L107",
+        "N-L108",
+        "N-L109"
+      ]
+    }
+  ],
+  "chain": [
+    "师徒站同一铁砧前，烧红铁料和锤子持续存在。",
+    "老师把锤子交到学生手里，短时两人共同握持。",
+    "学生独立举锤敲击，老师指点后抱臂。",
+    "老师转身离开，学生继续执行。"
+  ],
+  "binding": {
+    "headline": "同一工具从示范到独立执行",
+    "captions": [
+      "先演示给你看",
+      "再按清单自己试一遍",
+      "最后让同一个工具执行"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "选素材",
+          "剪片段",
+          "导出"
+        ],
+        "active": 1
+      },
+      {
+        "items": [
+          "读取输入资料",
+          "提取关键信息",
+          "生成核对清单"
+        ],
+        "completed": 1
+      },
+      {
+        "tool": "读取文件信息",
+        "arg": "地出.jpg",
+        "output": "494,374 字节 · JPEG",
+        "error": "未找到指定文件",
+        "phase": "done",
+        "open": true
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {
+          "completed": 0
+        },
+        {
+          "completed": 1
+        },
+        {
+          "completed": 3
+        }
+      ],
+      [
+        {
+          "phase": "running",
+          "open": false
+        },
+        {
+          "phase": "running",
+          "open": true
+        },
+        {
+          "phase": "done",
+          "open": true
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

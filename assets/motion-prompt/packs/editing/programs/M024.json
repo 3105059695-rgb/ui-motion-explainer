@@ -1,0 +1,45 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t12m",
+  "title": "方块翻转：上一章翻面成本章",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "previous": "先看问题",
+    "title": "再看解决方法"
+  },
+  "nodes": [
+    {
+      "id": "n001-b2-flip",
+      "kind": "b2-flip",
+      "x": 420,
+      "y": 390,
+      "w": 1080,
+      "h": 220,
+      "frontText": "{{previous}}",
+      "backText": "{{title}}",
+      "size": 70,
+      "axis": "x",
+      "backFill": "#0B0B0F",
+      "backColor": "#FFFFFF",
+      "tracks": {
+        "angle": [
+          [
+            0,
+            0
+          ],
+          [
+            0.84,
+            0
+          ],
+          [
+            1.65,
+            180,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

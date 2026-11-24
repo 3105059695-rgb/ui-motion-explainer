@@ -1,0 +1,310 @@
+{
+  "id": "M260",
+  "layout": "dock",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "contents",
+      "states": [
+        {},
+        {
+          "active": 0
+        },
+        {
+          "active": 0
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-chapter",
+      "states": [
+        {
+          "active": 0,
+          "showTitle": false
+        },
+        {
+          "active": 0,
+          "showTitle": true
+        },
+        {
+          "active": 1,
+          "showTitle": true
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "steps",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-argon",
+      "start": 100.625,
+      "end": 102.875,
+      "shotIds": [
+        "P2-02",
+        "P2-03"
+      ],
+      "rowIds": [
+        "F-L064",
+        "F-L065"
+      ]
+    },
+    {
+      "video": "fred-argon",
+      "start": 153.875,
+      "end": 155.875,
+      "shotIds": [
+        "P2-22"
+      ],
+      "rowIds": [
+        "F-L095",
+        "F-L096"
+      ]
+    },
+    {
+      "video": "fred-argon",
+      "start": 178.125,
+      "end": 180.25,
+      "shotIds": [
+        "P2-30"
+      ],
+      "rowIds": [
+        "F-R001"
+      ]
+    },
+    {
+      "video": "fred-argon",
+      "start": 237.25,
+      "end": 239.25,
+      "shotIds": [
+        "F3-15",
+        "F3-16"
+      ],
+      "rowIds": [
+        "F-L146",
+        "F-R002"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 46.3,
+      "end": 49.2,
+      "shotIds": [
+        "J-S027",
+        "J-S028"
+      ],
+      "rowIds": [
+        "J-L028",
+        "J-L029"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 72.625,
+      "end": 74.625,
+      "shotIds": [
+        "J-S102"
+      ],
+      "rowIds": [
+        "J-L043",
+        "J-L044"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 103.25,
+      "end": 105.5,
+      "shotIds": [
+        "J-S118"
+      ],
+      "rowIds": [
+        "J-L059",
+        "J-L060"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 131.125,
+      "end": 133.5,
+      "shotIds": [
+        "J-S128",
+        "J-S129"
+      ],
+      "rowIds": [
+        "J-L082",
+        "J-L083",
+        "J-L084"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 160.18,
+      "end": 162.35,
+      "shotIds": [
+        "J-S215"
+      ],
+      "rowIds": [
+        "J-L099"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 8.8,
+      "end": 9.45,
+      "shotIds": [
+        "A-S003"
+      ],
+      "rowIds": [
+        "A-L004"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 16.9,
+      "end": 19.5,
+      "shotIds": [
+        "A-S006"
+      ],
+      "rowIds": [
+        "A-L007",
+        "A-L008"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 69,
+      "end": 74,
+      "shotIds": [
+        "A-S020"
+      ],
+      "rowIds": [
+        "A-L034",
+        "A-L035",
+        "A-L036",
+        "A-L037"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 161,
+      "end": 170,
+      "shotIds": [
+        "A-S030"
+      ],
+      "rowIds": [
+        "A-L086",
+        "A-L087",
+        "A-L088",
+        "A-L089",
+        "A-L090",
+        "A-L091"
+      ]
+    }
+  ],
+  "chain": [
+    "章节标题或完整步骤组占主位并读清",
+    "同一组缩小移到导航位",
+    "正文或真实操作进入主画布",
+    "随本句更新当前章节或步骤状态"
+  ],
+  "binding": {
+    "headline": "章节总览缩回固定导航位",
+    "captions": [
+      "先看完整章节",
+      "当前章号接到主位",
+      "总览收回角落继续导航"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "素材来源",
+          "处理方法",
+          "导出结果"
+        ],
+        "bodies": [
+          "素材来自本期现场录制。",
+          "从原文件制作网页副本。",
+          "副本与原件分别保存。"
+        ],
+        "active": 1
+      },
+      {
+        "items": [
+          "认原图",
+          "调质量",
+          "验交付"
+        ],
+        "first": 1,
+        "active": 1,
+        "showTitle": true
+      },
+      {
+        "items": [
+          "选素材",
+          "剪片段",
+          "导出"
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "active": 0
+        },
+        {
+          "active": 0
+        }
+      ],
+      [
+        {
+          "active": 0,
+          "showTitle": false
+        },
+        {
+          "active": 0,
+          "showTitle": true
+        },
+        {
+          "active": 1,
+          "showTitle": true
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

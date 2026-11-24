@@ -1,0 +1,277 @@
+{
+  "id": "M243",
+  "layout": "compare",
+  "layers": [
+    {
+      "kind": "photo",
+      "file": "fr-lunar.webp",
+      "slot": "media1",
+      "label": "输入原图"
+    },
+    {
+      "kind": "ui",
+      "component": "fred-loupes",
+      "states": [
+        {
+          "active": 0,
+          "showLocator": false
+        },
+        {
+          "active": 0,
+          "showLocator": true
+        },
+        {
+          "active": 1,
+          "showLocator": true
+        }
+      ],
+      "media": [
+        {
+          "slot": "media2",
+          "path": [
+            "left",
+            0
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "left",
+            1
+          ]
+        },
+        {
+          "slot": "media4",
+          "path": [
+            "right",
+            0
+          ]
+        },
+        {
+          "slot": "media5",
+          "path": [
+            "right",
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "fred-proofs",
+      "states": [
+        {
+          "active": 0,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": true
+        }
+      ],
+      "media": [
+        {
+          "slot": "media2",
+          "path": [
+            "referenceImage"
+          ]
+        },
+        {
+          "slot": "media6",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media4",
+          "path": [
+            "images",
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "creative",
+      "start": 318,
+      "end": 323,
+      "shotIds": [
+        "C072"
+      ],
+      "rowIds": [
+        "C-L097",
+        "C-L098"
+      ]
+    },
+    {
+      "video": "creative",
+      "start": 588,
+      "end": 606,
+      "shotIds": [
+        "C120",
+        "C121",
+        "C122",
+        "C123"
+      ],
+      "rowIds": [
+        "C-L136",
+        "C-L137",
+        "C-L138"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 38.4,
+      "end": 43,
+      "shotIds": [
+        "A-S013"
+      ],
+      "rowIds": [
+        "A-L017",
+        "A-L018",
+        "A-L019"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 45.7,
+      "end": 49.7,
+      "shotIds": [
+        "A-S015"
+      ],
+      "rowIds": [
+        "A-L020",
+        "A-L021",
+        "A-L022",
+        "A-L023"
+      ]
+    }
+  ],
+  "chain": [
+    "先在软件画布中给成套成果全貌，确认它们来自同一项目。",
+    "空间案例并列线下效果图、可转动3D模型、平面布局；对象相同，表达层级不同。",
+    "商品案例先放大商品展示，再加入功能介绍和人物佩戴社媒图，前项留在原位。",
+    "换下一组时仍按官网横图、电商主图、详情页的渠道标签依次加入，使比例与版式差异可直接比较。",
+    "读完局部差异后退回完整画布，进入修订或下一任务。"
+  ],
+  "binding": {
+    "headline": "同一作品拆成两种呈现",
+    "captions": [
+      "先确认是同一份输入",
+      "两种呈现摆到一起",
+      "盯住同一个局部比较"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "title": "同位置取样",
+        "items": [
+          "地球云层",
+          "月面纹理"
+        ],
+        "left": [
+          "fr-input-earth.webp",
+          "fr-input-soil.webp"
+        ],
+        "right": [
+          "fr-50-earth.webp",
+          "fr-50-soil.webp"
+        ],
+        "names": [
+          "输入原图",
+          "网页副本 Q50"
+        ],
+        "active": 0,
+        "showLocator": true
+      },
+      {
+        "title": "云层校样",
+        "referenceImage": "fr-input-earth.webp",
+        "items": [
+          "质量 75",
+          "质量 50"
+        ],
+        "images": [
+          "fr-75-earth.webp",
+          "fr-50-earth.webp"
+        ],
+        "values": [
+          163502,
+          95873
+        ],
+        "inputBytes": 494374,
+        "active": 1,
+        "showDelta": true
+      }
+    ],
+    "keyframes": [
+      [],
+      [
+        {
+          "active": 0,
+          "showLocator": false
+        },
+        {
+          "active": 0,
+          "showLocator": true
+        },
+        {
+          "active": 1,
+          "showLocator": true
+        }
+      ],
+      [
+        {
+          "active": 0,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": true
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "输入原图"
+    },
+    {
+      "key": "media2",
+      "name": "同位置双图细节镜 · fr-input-earth"
+    },
+    {
+      "key": "media3",
+      "name": "同位置双图细节镜 · fr-input-soil"
+    },
+    {
+      "key": "media4",
+      "name": "同位置双图细节镜 · fr-50-earth"
+    },
+    {
+      "key": "media5",
+      "name": "同位置双图细节镜 · fr-50-soil"
+    },
+    {
+      "key": "media6",
+      "name": "固定原件的多轮校样 · fr-75-earth"
+    }
+  ]
+}

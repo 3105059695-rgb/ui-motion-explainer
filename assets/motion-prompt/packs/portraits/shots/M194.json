@@ -1,0 +1,103 @@
+{
+  "id": "M194",
+  "layout": "native",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-spotlight",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-jev",
+      "start": 127,
+      "end": 141
+    }
+  ],
+  "chain": [
+    "实录保留平台页面，页面其余位置压暗后依次突出页签、模型与机器。"
+  ],
+  "binding": {
+    "headline": "Squoosh 的导出设置",
+    "captions": [
+      "这是 Squoosh 的导出界面。",
+      "质量设置在这里。",
+      "导出的文件体积在右下角。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "image": "fr-screen.webp",
+        "title": "Squoosh",
+        "items": [
+          "编码格式",
+          "导出质量",
+          "文件体积"
+        ],
+        "rects": [
+          [
+            79,
+            73.5,
+            20,
+            6.2
+          ],
+          [
+            79,
+            79.8,
+            20,
+            7
+          ],
+          [
+            81,
+            91.5,
+            13,
+            6.7
+          ]
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "原界面聚光框 · fr-screen"
+    }
+  ]
+}

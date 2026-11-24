@@ -1,0 +1,97 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t15f",
+  "title": "占比环",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "shares": [
+      87,
+      8,
+      5
+    ],
+    "labels": [
+      "主要部分",
+      "次要部分",
+      "其余部分"
+    ],
+    "source": "示意比例 · 以本期真实数据替换"
+  },
+  "nodes": [
+    {
+      "id": "n001-b2-donut",
+      "kind": "b2-donut",
+      "x": 230,
+      "y": 190,
+      "w": 750,
+      "h": 750,
+      "valuesKey": "shares",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            2.5,
+            1
+          ]
+        ],
+        "highlight": [
+          [
+            0,
+            false
+          ],
+          [
+            2.75,
+            false
+          ],
+          [
+            3.5,
+            true,
+            "step"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "derived-share-legend",
+      "kind": "b2-share-legend",
+      "x": 1140,
+      "y": 305,
+      "w": 650,
+      "h": 520,
+      "valuesKey": "shares",
+      "labelsKey": "labels",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            1.3,
+            0
+          ],
+          [
+            3.4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-text",
+      "kind": "text",
+      "x": 350,
+      "y": 990,
+      "w": 1220,
+      "h": 50,
+      "text": "{{source}}",
+      "size": 27,
+      "color": "#62616C",
+      "align": "center"
+    }
+  ],
+  "assets": {}
+}

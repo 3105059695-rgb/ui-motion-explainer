@@ -1,0 +1,243 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-native-t18a",
+  "title": "工具名片：Logo 展开成名片，能力依次落下",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "product": "本期工具",
+    "capability0": "资料整理",
+    "capability1": "自动执行",
+    "capability2": "结果交付"
+  },
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 260,
+      "y": 130,
+      "w": 1400,
+      "h": 800,
+      "asset": "screen",
+      "fit": "contain",
+      "radius": 18,
+      "blur": 15,
+      "opacity": 0.35
+    },
+    {
+      "id": "n003-card",
+      "kind": "card",
+      "x": 650,
+      "y": 250,
+      "w": 620,
+      "h": 500,
+      "children": [
+        {
+          "id": "n002-image",
+          "kind": "image",
+          "x": 130,
+          "y": 90,
+          "w": 360,
+          "h": 260,
+          "asset": "logo",
+          "fit": "contain"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "x": [
+          [
+            0,
+            650
+          ],
+          [
+            1.0,
+            650
+          ],
+          [
+            2.1,
+            330
+          ]
+        ],
+        "w": [
+          [
+            0,
+            620
+          ],
+          [
+            1.0,
+            620
+          ],
+          [
+            2.1,
+            1260
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-text",
+      "kind": "text",
+      "x": 870,
+      "y": 335,
+      "w": 620,
+      "h": 130,
+      "text": "{{product}}",
+      "size": 86,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.5,
+            0
+          ],
+          [
+            2.1,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.5,
+            370
+          ],
+          [
+            2.1,
+            335,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-pill",
+      "kind": "pill",
+      "x": 420,
+      "y": 630,
+      "w": 330,
+      "h": 95,
+      "label": "{{capability0}}",
+      "size": 39,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.5,
+            0
+          ],
+          [
+            3.1,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.5,
+            665
+          ],
+          [
+            3.1,
+            630,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-pill",
+      "kind": "pill",
+      "x": 795,
+      "y": 630,
+      "w": 330,
+      "h": 95,
+      "label": "{{capability1}}",
+      "size": 39,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.1,
+            0
+          ],
+          [
+            3.7,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.1,
+            665
+          ],
+          [
+            3.7,
+            630,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 1170,
+      "y": 630,
+      "w": 330,
+      "h": 95,
+      "label": "{{capability2}}",
+      "size": 39,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.7,
+            0
+          ],
+          [
+            4.3,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.7,
+            665
+          ],
+          [
+            4.3,
+            630,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {
+    "screen": "aba20e6c2937800563",
+    "logo": "f0cad559eda3318fff"
+  }
+}

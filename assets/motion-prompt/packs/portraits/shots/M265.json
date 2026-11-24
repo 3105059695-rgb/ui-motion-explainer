@@ -1,0 +1,179 @@
+{
+  "id": "M265",
+  "layout": "dock",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "grid",
+      "states": [
+        {},
+        {
+          "cols": 1
+        },
+        {
+          "cols": 1
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-chapter",
+      "states": [
+        {
+          "active": 0,
+          "showTitle": false
+        },
+        {
+          "active": 0,
+          "showTitle": true
+        },
+        {
+          "active": 1,
+          "showTitle": true
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "file-preview",
+      "states": [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "zoom": 170
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "arun-membership",
+      "start": 16.9,
+      "end": 19.5,
+      "shotIds": [
+        "A-S006"
+      ],
+      "rowIds": [
+        "A-L007",
+        "A-L008"
+      ]
+    }
+  ],
+  "chain": [
+    "旧强调与弧线先退",
+    "章节定位到位",
+    "大总览缩向边角并保留状态",
+    "当前产品卡由侧方接入中心，轻微转角后落稳"
+  ],
+  "binding": {
+    "headline": "总览缩角，当前对象转正",
+    "captions": [
+      "先收好整张总览",
+      "当前对象从边上转入主位",
+      "角落仍然知道讲到哪一个"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "开场",
+          "访谈",
+          "录屏",
+          "封面"
+        ],
+        "cols": 2
+      },
+      {
+        "items": [
+          "认原图",
+          "调质量",
+          "验交付"
+        ],
+        "first": 1,
+        "active": 1,
+        "showTitle": true
+      },
+      {
+        "title": "素材校对图册",
+        "items": [
+          "输入照片",
+          "处理界面"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp"
+        ],
+        "active": 0,
+        "zoom": 100
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "cols": 1
+        },
+        {
+          "cols": 1
+        }
+      ],
+      [
+        {
+          "active": 0,
+          "showTitle": false
+        },
+        {
+          "active": 0,
+          "showTitle": true
+        },
+        {
+          "active": 1,
+          "showTitle": true
+        }
+      ],
+      [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "zoom": 170
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "分页文件预览器 · earth"
+    },
+    {
+      "key": "media2",
+      "name": "分页文件预览器 · interface"
+    }
+  ]
+}

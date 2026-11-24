@@ -1,0 +1,133 @@
+{
+  "id": "M219",
+  "layout": "inset",
+  "layers": [
+    {
+      "kind": "live",
+      "strip": "workflow-523000-4000",
+      "slot": "media1",
+      "label": "主体动作视频"
+    },
+    {
+      "kind": "photo",
+      "file": "fr-screen.webp",
+      "slot": "media2",
+      "label": "实际界面"
+    },
+    {
+      "kind": "ui",
+      "component": "fred-spotlight",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": [
+        {
+          "slot": "media2",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "workflow",
+      "start": 523,
+      "end": 527,
+      "shotIds": [
+        "W093"
+      ],
+      "rowIds": [
+        "W-L176",
+        "W-L177"
+      ]
+    }
+  ],
+  "chain": [
+    "结果样片作为背景",
+    "背景压暗，人物圆窗居中",
+    "人物圆窗移向左下",
+    "教程UI恢复，人物继续讲"
+  ],
+  "binding": {
+    "headline": "讲述人接回操作界面",
+    "captions": [
+      "先在素材里看发生了什么",
+      "讲述人回位，把视线交给界面",
+      "接着看刚才提到的操作"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {},
+      {
+        "image": "fr-screen.webp",
+        "title": "Squoosh",
+        "items": [
+          "编码格式",
+          "导出质量",
+          "文件体积"
+        ],
+        "rects": [
+          [
+            79,
+            73.5,
+            20,
+            6.2
+          ],
+          [
+            79,
+            79.8,
+            20,
+            7
+          ],
+          [
+            81,
+            91.5,
+            13,
+            6.7
+          ]
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [],
+      [],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "主体动作视频"
+    },
+    {
+      "key": "media2",
+      "name": "实际界面"
+    }
+  ]
+}

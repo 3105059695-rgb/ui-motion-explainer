@@ -1,0 +1,168 @@
+{
+  "id": "M275",
+  "layout": "isolate",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "bar-chart",
+      "states": [
+        {
+          "active": 0,
+          "values": [
+            2,
+            1
+          ]
+        },
+        {
+          "active": 1,
+          "values": [
+            2,
+            0
+          ]
+        },
+        {
+          "active": 0,
+          "values": [
+            2,
+            0
+          ]
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "statistic",
+      "states": [
+        {},
+        {},
+        {}
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "status-label",
+      "states": [
+        {
+          "emphasis": false
+        },
+        {
+          "emphasis": false
+        },
+        {
+          "emphasis": true
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "arun-membership",
+      "start": 109,
+      "end": 122,
+      "shotIds": [
+        "A-S026"
+      ],
+      "rowIds": [
+        "A-L057",
+        "A-L058",
+        "A-L059",
+        "A-L060",
+        "A-L061",
+        "A-L062",
+        "A-L063"
+      ]
+    }
+  ],
+  "chain": [
+    "临时低评价与叉先否定全盘负面推断",
+    "多个独立容器按口播逐项出现并标明身份",
+    "分隔建立独立关系",
+    "只让当前讨论的一项耗尽，其余保持不变",
+    "仍可用的项增加确认标记",
+    "容器退场，准备实际产出证据"
+  ],
+  "binding": {
+    "headline": "用完一项，其余还能用吗？",
+    "captions": [
+      "图片和视频各有额度",
+      "视频的额度用完了",
+      "图片还有两次，可以继续用"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "label": "独立额度示例",
+        "unit": "次",
+        "items": [
+          "图片",
+          "视频"
+        ],
+        "values": [
+          2,
+          1
+        ],
+        "active": 0
+      },
+      {
+        "label": "图片剩余",
+        "value": "2",
+        "unit": "次",
+        "note": "与视频额度分开计算"
+      },
+      {
+        "label": "图片任务",
+        "state": "可以继续",
+        "emphasis": true
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0,
+          "values": [
+            2,
+            1
+          ]
+        },
+        {
+          "active": 1,
+          "values": [
+            2,
+            0
+          ]
+        },
+        {
+          "active": 0,
+          "values": [
+            2,
+            0
+          ]
+        }
+      ],
+      [
+        {},
+        {},
+        {}
+      ],
+      [
+        {
+          "emphasis": false
+        },
+        {
+          "emphasis": false
+        },
+        {
+          "emphasis": true
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

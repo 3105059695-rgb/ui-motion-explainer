@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>口播动作库 · Motion Prompt</title><link rel="stylesheet" href="gallery.css">
+</head>
+<body><main>
+<header class="mast"><div><p class="edition">Motion Prompt</p><h1>口播动作库</h1>
+<p class="intro">按口播用途选镜头。点开可以对照原片、拖动时间，把画面和字幕换成本期内容。</p></div>
+<button id="picks" class="primary" type="button">查看已选 <span id="pickCount">0</span></button></header>
+<nav class="views" aria-label="浏览范围"><a class="directory-entry" id="directoryHome" href="动作目录.html">动作分类目录</a><button id="referenceOnly">参考片竖屏模板</button><button id="showAll">全部动作</button><button id="coverage">原片对照表</button><a id="fredReel" href="动作目录.html?collection=fred-jev-41">Fred JEV · 41 段动作</a></nav>
+<p id="directoryContext" hidden>当前目录　<a id="backToDirectory" href="动作目录.html"></a></p>
+<section class="filters" aria-label="筛选动作">
+<label>搜索动作<input type="search" id="search" placeholder="名称、编号或用途，如 087、跟拍"></label>
+<label>按口播用途<select id="use"><option value="">全部用途</option></select></label>
+<label>按动作分组<select id="pack"><option value="">全部分组</option></select></label>
+<label>按参考片<select id="film"><option value="">全部参考片</option></select></label>
+<button id="playAll" aria-pressed="true" type="button">暂停预览</button>
+</section>
+<div class="countline"><p id="count" aria-live="polite"></p><button type="button" id="recent">看最近入库</button><button id="reset" type="button" hidden>清除筛选</button></div>
+<section class="grid" id="grid" aria-label="动作预览"></section><button class="more" id="more" type="button" hidden>再看 24 项</button>
+<footer><span>Motion Prompt 原库 · Shohei Ohtaki</span><a href="使用说明.md">取用与入库</a><a href="catalog.json">剪辑用索引</a><a href="packs/editing/出处与素材.md">本地动作来源</a><a href="https://github.com/showheyohtaki/motion-prompt/tree/683ecca0548a1754ada141d10dc3a009d4c59bef">上游版本</a><a href="LICENSE">上游代码许可</a></footer>
+</main>
+<dialog id="detail"><div class="dialogbody"><div class="dialogtop"><span id="dPack"></span><button id="closeDetail" type="button" aria-label="关闭详情">关闭</button></div>
+<h2 id="dTitle"></h2><p id="dEn" class="muted"></p><canvas id="big" width="1078" height="416" aria-label="所选动作的可播放预览"></canvas>
+<div class="transport"><button id="detailPlay" type="button">暂停</button><label for="scrub" class="sr">动作时间</label><input id="scrub" type="range" min="0" step=".01" value="0"><output id="clock"></output></div>
+<p id="dMeaning"></p><p id="dBinding"></p><p id="dSample" class="sample"></p>
+<p id="dDirectory" hidden>目录　<a id="dFolder"></a></p>
+<p id="variantLinks" hidden></p>
+<section id="originalPanel" hidden><label>对照原片与时间段<select id="originalChoice"></select></label><p id="sourceDetails"></p><button id="sourcePlay" type="button">播放原片这一段</button><input id="sourceFile" type="file" accept="video/*" aria-label="选择本地原片" hidden><p id="sourceNotice" aria-live="polite"></p><video id="originalVideo" preload="none" controls playsinline hidden></video></section>
+<details id="try"><summary>换成本期内容试播</summary><div id="plainInputs"></div><div id="mediaInputs"></div><details><summary id="paramsLabel">编辑全部参数</summary><textarea id="params" aria-label="完整参数 JSON" rows="5" spellcheck="false"></textarea></details><div class="actions"><button id="applyInputs" type="button">应用到预览</button><button id="restoreInputs" type="button">还原示例</button><output id="bindingFeedback" aria-live="polite"></output></div></details>
+<details><summary>查看用法与时间参数</summary><p id="dPrompt"></p><ul id="spec"></ul></details>
+<div class="actions"><button class="primary" id="choose" type="button">加入已选</button><a id="dCode">查看本地代码</a><a id="dOrigin" target="_blank" rel="noreferrer">原作示范 ↗</a></div>
+</div></dialog>
+<dialog id="selection"><div class="dialogbody"><div class="dialogtop"><h2>已选动作</h2><button id="closePicks" type="button">关闭</button></div><ol id="pickList"></ol><textarea id="pickText" aria-label="已选动作清单" readonly rows="5"></textarea><div class="actions"><button class="primary" id="copy" type="button">复制清单</button><output id="copied" aria-live="polite"></output></div></div></dialog>
+<dialog id="coverageDialog"><div class="dialogbody"><div class="dialogtop"><h2>参考片对照表</h2><button id="closeCoverage">关闭</button></div><p>同一个镜头可以参考多部原片。点片名查看对应的竖屏模板。</p><div id="coverageRows"></div></div></dialog>
+<script src="runtime.js"></script><script src="packs/motion/pack.js"></script><script src="packs/camera/pack.js"></script><script src="packs/ui/pack.js"></script><script src="packs/lp/pack.js"></script><script src="packs/photo/pack.js"></script><script src="packs/motion2/pack.js"></script><script src="packs/lp2/pack.js"></script><script src="packs/camera2/pack.js"></script><script src="packs/artstyle/pack.js"></script><script src="packs/diagram/pack.js"></script><script src="catalog.js"></script><script src="directory-model.js"></script><script src="player.js"></script><script src="gallery.js"></script>
+</body></html>

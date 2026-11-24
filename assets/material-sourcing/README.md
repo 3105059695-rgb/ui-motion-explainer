@@ -1,6 +1,14 @@
 # 从口播找本期素材
 
-这条入口负责本期真实截图和视频。认可原片图集负责审美；效果库负责动效实现，三者分别使用。没有让用户逐镜供图的前提，也不把演示占位图当成本期素材。
+这条入口登记本期可用文件，包括网上取得的原始材料、本地原片、实录和生成的情境图。选动作时同步取材；共用原句、原声时码及要看见的细节。[来源判断、拍摄指令和出图检查](../../references/material-choice-and-photo-direction.md)
+
+## 多种来源共用一本索引
+
+旧的网络记录继续使用 `source.page_url`。新记录在 `source.method` 填 `ego`、`local`、`recording` 或 `generated`。本地来源填 `origin`，记录原片或可编辑源文件。实录填 `application` 或 `device` 和 `action`。生成源填 `tool`、实际完整 `prompt`、`rendering`（写实照片填 `photo`，图解填 `illustration`），用途为 `role: "illustration"`。生成照片选用时，在 `review.realism` 写下 `status: "pass"` 和实际观察 `notes`；待修图可先作为候选登记。
+
+一次取材可绑定多次，`uses` 中每项写 `timeline: [原声入点秒, 原声出点秒]`、`trigger`、`slot`，沿用编号动作时加 `motion_id`。跨段复用加对应素材计划的 `unit_id`；同一原句后来拆成数镜时，每次使用还可记工程中的 `shot_id`。录屏等视频自身的入出点仍用 `source_in`、`source_out`。图片留空。素材原文件放进工程，导出索引保留相对路径，便于随工程移交。
+
+将 `materials export` 的输出存为工程下的 `materials-bindings.json`。在编号动作的试剪表单填 `"motion":{"assets":{"槽名":{"material_id":"GEN-001"}}}`。程序按素材 ID 核对文件内容并取已审范围；其他位置的索引可用 `motion.material_index` 指定。自定义镜头同样从导出索引取文件，并在工程保留实际图层与时码。
 
 `direct prepare` 带入全文和逐句检索计划。首次生成的 `materials-plan.json` 可直接编辑；已有计划和采集记录不会被重新准备覆盖。分句和初始查询只是词法辅助，不是自动理解、自动搜索或固定分镜。
 

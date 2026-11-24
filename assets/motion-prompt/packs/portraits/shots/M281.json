@@ -1,0 +1,151 @@
+{
+  "id": "M281",
+  "layout": "collect",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "composer",
+      "states": [
+        {
+          "attached": false,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": true
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "plan-checklist",
+      "states": [
+        {
+          "completed": 0
+        },
+        {
+          "completed": 1
+        },
+        {
+          "completed": 3
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-deliveries",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fangmu-ten-agents-final-20261021",
+      "start": 15.0,
+      "end": 44.52
+    }
+  ],
+  "chain": [
+    "先认清同一个任务",
+    "分给不同步骤分别处理",
+    "两边交回一份可以检查的结果"
+  ],
+  "binding": {
+    "headline": "同一个任务，分头完成",
+    "captions": [
+      "两个人接的是同一个任务。",
+      "一个整理材料，另一个核对结果。",
+      "最后交回一份能检查的清单。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "text": "请对照这份资料列出变化。",
+        "file": "交付记录.md",
+        "attached": true,
+        "sent": false
+      },
+      {
+        "items": [
+          "读取输入资料",
+          "提取关键信息",
+          "生成核对清单"
+        ],
+        "completed": 1
+      },
+      {
+        "source": "以及对于你来说，有什么用处",
+        "items": [
+          "口播字幕",
+          "提词提示",
+          "剪辑备注"
+        ],
+        "bodies": [
+          "以及对于你来说／有什么用处",
+          "问观众：这对你有什么用？",
+          "说到「你」时留住人物视线"
+        ],
+        "active": 0
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "attached": false,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": true
+        }
+      ],
+      [
+        {
+          "completed": 0
+        },
+        {
+          "completed": 1
+        },
+        {
+          "completed": 3
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

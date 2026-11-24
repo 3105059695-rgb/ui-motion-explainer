@@ -14,6 +14,7 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
 from urllib.parse import quote, urlparse
 from urllib.request import Request, urlopen
 
@@ -73,6 +74,7 @@ def build_plan(source, project=None, brief=None):
                       'query_status': 'agent-authored' if override.get('query') else 'lexical-draft-needs-context',
                       'purpose': override.get('purpose', ''),
                       'wanted': override.get('wanted', []), 'search': search_links(query),
+                      'route': override.get('route'), 'must_see': override.get('must_see', []),
                       'material_ids': [], 'status': 'unsearched'})
     if overrides:
         raise ValueError('Unknown unit IDs in brief: ' + ', '.join(overrides))
@@ -81,6 +83,9 @@ def build_plan(source, project=None, brief=None):
             'units': units, 'materials': [],
             'selection_complete': False, 'searched': False,
             'instructions': [
+                '通读后按同一原句同步选编号动作和找本期材料。先查原片或本地库，按用途选择 Ego 原始出处、实录操作、生成情境或保留真人。',
+                '解释身份、真实操作、发布结果或数字时核对原始证据。生成生活图时由剪辑模型写拍摄指令。单独交图看原图，真实自然、符合原句即可。',
+                '视频素材登记自身的 source_in / source_out。实际接镜时再按原声记触发词和 timeline，核对裁切、字幕与时机。同图可复用。',
                 '通读原稿，将 query 改为准确产品/对象 + 动作/结果/版本；必要时补英文别名。句子分段不是镜头切分。',
                 '通过当前登录的 ego 浏览 X、B站、抖音，优先原作者或官方演示；结果列表不等于已看原片。',
                 '打开来源页，核对具体过程/结果、日期和画质；保存截图或可访问视频，记录对应原句与有效入出点。',
@@ -93,6 +98,7 @@ def context(source, project, root=ROOT):
     return {'plan': build_plan(source, project),
             'plan_path': str((Path(project) / 'materials-plan.json').resolve()),
             'guide': str((Path(root) / 'assets/material-sourcing/README.md').resolve()),
+            'shooting_guide': str((Path(root) / 'references/material-choice-and-photo-direction.md').resolve()),
             'commands': ['ui.py materials plan --script <原稿> --project <工程>',
                          'ui.py materials ego-script --request <本轮采集.json> --out <本轮.mjs>',
                          'ui.py materials record --plan <计划.json> --record <素材记录.json>',
@@ -206,8 +212,56 @@ def download(url, out, source_page, max_mb=200):
         raise
 
 
+def source_issue(source):
+    if not isinstance(source, dict):
+        return 'A material source is required.'
+    method = source.get('method', 'ego')
+    if method == 'ego':
+        if not http_url(source.get('page_url', '')):
+            return 'A real source page_url is required (http/https, no credentials).'
+    elif method == 'local':
+        if not source.get('origin'):
+            return 'Describe the local original or the editable source in source.origin.'
+    elif method == 'recording':
+        if not (source.get('application') or source.get('device')) or not source.get('action'):
+            return 'Record the application or device and the actual recorded action.'
+    elif method == 'generated':
+        if not source.get('tool') or not str(source.get('prompt') or '').strip():
+            return 'Generated media requires the tool and the actual prompt.'
+        if source.get('role', 'illustration') != 'illustration' or source.get('rendering') not in ('photo', 'illustration'):
+            return 'Generated media needs rendering photo or illustration and can only be used as an illustration.'
+    else:
+        return 'Unknown source method: ' + str(method)
+    return None
+
+
+def time_range(value):
+    return (isinstance(value, list) and len(value) == 2 and
+            all(isinstance(t, (int, float)) and not isinstance(t, bool) and math.isfinite(t) for t in value)
+            and 0 <= value[0] < value[1])
+
+
+def use_issue(uses, units, default_unit):
+    if not isinstance(uses, list):
+        return 'uses must be a list of shot bindings.'
+    for use in uses:
+        if not isinstance(use, dict) or not time_range(use.get('timeline')):
+            return 'Each use needs a valid narration timeline [in, out] in seconds.'
+        if use.get('unit_id', default_unit) not in units:
+            return 'Unknown narration unit in uses.'
+        if not use.get('trigger') or not use.get('slot'):
+            return 'Each use needs the spoken trigger and the actual shot slot.'
+    return None
+
+
 def record(plan_path, incoming):
+    from edit_session import plan_lock
     path = Path(plan_path).resolve()
+    with plan_lock(path.parent):
+        return _record(path, incoming)
+
+
+def _record(path, incoming):
     plan = read(path)
     validate_plan(plan)
     row = dict(incoming)
@@ -219,8 +273,11 @@ def record(plan_path, incoming):
     if not unit or row.get('quote') != unit['quote']:
         raise ValueError('unit_id and exact original quote must match the plan.')
     source = row.get('source', {})
-    if not http_url(source.get('page_url', '')):
-        raise ValueError('A real source page_url is required (http/https, no credentials).')
+    issue = source_issue(source) or use_issue(row.get('uses', []), {u['id'] for u in plan['units']}, unit['id'])
+    if issue:
+        raise ValueError(issue)
+    if source.get('method') == 'generated':
+        row['source'] = {**source, 'role': 'illustration'}
     if row.get('kind') not in ('image', 'video'):
         raise ValueError('kind must be image or video.')
     if not row.get('purpose'):
@@ -229,7 +286,7 @@ def record(plan_path, incoming):
         raise ValueError('selection must be candidate, selected, or rejected.')
     row.setdefault('selection', 'candidate')
     row.setdefault('review', {'semantic_match': False, 'viewed_range': None, 'notes': ''})
-    row.setdefault('source_in', 0)
+    row.setdefault('source_in', 0 if row['kind'] == 'video' else None)
     row.setdefault('source_out', None)
     row['registered_at'] = datetime.now(timezone.utc).isoformat()
     row.pop('file_check', None)
@@ -237,25 +294,25 @@ def record(plan_path, incoming):
         local = (path.parent / row['local_path']).resolve()
         if not local.is_file() or not local.stat().st_size:
             raise ValueError('Local material is missing or empty: ' + str(local))
-        row['local_path'] = str(local)
+        row['local_path'] = local.relative_to(path.parent).as_posix() if local.is_relative_to(path.parent) else str(local)
         row['file_check'] = {'bytes': local.stat().st_size,
                              'sha256': digest(local), **probe(local)}
     plan['materials'].append(row)
-    unit['material_ids'].append(row['id'])
-    # Atomic replacement of this owned plan only; source and media are untouched.
-    temp = path.with_suffix(path.suffix + '.tmp')
-    with temp.open('x', encoding='utf-8') as stream:
-        json.dump(plan, stream, ensure_ascii=False, indent=2)
-        stream.write('\n')
-    temp.replace(path)
+    touched = {unit['id']} | {use.get('unit_id', unit['id']) for use in row.get('uses', [])}
+    for target in plan['units']:
+        if target['id'] in touched:
+            target['material_ids'].append(row['id'])
+    from edit_session import write_atomic
+    write_atomic(path, plan)
     return {'id': row['id'], 'selection': row['selection'],
             'file_check': row.get('file_check'), 'ready_for_export': False,
             'note': 'Run check/export; registration does not assert semantic or aesthetic approval.'}
 
 
-def inspect(plan_path):
+def inspect(plan_path, plan=None):
     path = Path(plan_path).resolve()
-    plan = read(path)
+    if plan is None:
+        plan = read(path)
     validate_plan(plan)
     materials, ready, issues = [], [], []
     for item in plan['materials']:
@@ -263,8 +320,10 @@ def inspect(plan_path):
         unit = next((u for u in plan['units'] if u['id'] == item.get('unit_id')), None)
         if not unit or item.get('quote') != unit['quote']:
             errors.append('original quote/unit mismatch')
-        if not http_url(item.get('source', {}).get('page_url', '')):
-            errors.append('invalid source page')
+        source = item.get('source', {})
+        issue = source_issue(source) or use_issue(item.get('uses', []), {u['id'] for u in plan['units']}, item.get('unit_id'))
+        if issue:
+            errors.append(issue)
         if item.get('kind') not in ('image', 'video'):
             errors.append('invalid media kind')
         local = (path.parent / item['local_path']).resolve() if item.get('local_path') else None
@@ -284,6 +343,10 @@ def inspect(plan_path):
         review = item.get('review', {})
         if review.get('semantic_match') is not True or not review.get('notes'):
             errors.append('semantic match and visible evidence notes not recorded')
+        if isinstance(source, dict) and source.get('method') == 'generated' and source.get('rendering') == 'photo':
+            realism = review.get('realism', {})
+            if not isinstance(realism, dict) or realism.get('status') != 'pass' or not str(realism.get('notes') or '').strip():
+                errors.append('generated photo needs visible realism observations and a passing asset review')
         if item['kind'] == 'video':
             start, end = item.get('source_in'), item.get('source_out')
             if (not isinstance(start, (int, float)) or isinstance(start, bool) or not math.isfinite(start) or start < 0
@@ -297,11 +360,12 @@ def inspect(plan_path):
                 errors.append('reviewed video range not recorded')
             elif isinstance(start, (int, float)) and isinstance(end, (int, float)) and (viewed[0] > start or viewed[1] < end):
                 errors.append('selected clip exceeds reviewed range')
-        if not item.get('source', {}).get('author'):
+        web_source = isinstance(source, dict) and source.get('method', 'ego') == 'ego'
+        if web_source and not source.get('author'):
             warnings.append('source author not recorded')
-        if not item.get('source', {}).get('published_at'):
+        if web_source and not source.get('published_at'):
             warnings.append('source publication time not recorded; do not infer freshness')
-        if not item.get('source', {}).get('reuse_note'):
+        if web_source and not source.get('reuse_note'):
             warnings.append('reuse context not recorded; download does not establish reuse permission')
         row = {'id': item['id'], 'unit_id': item['unit_id'], 'ready': not errors,
                'errors': errors, 'warnings': warnings, 'media': checked}
@@ -311,6 +375,7 @@ def inspect(plan_path):
         elif item.get('selection') == 'selected':
             issues.append(row)
     bound_units = {r['unit_id'] for r in ready}
+    bound_units.update(use.get('unit_id', r['unit_id']) for r in ready for use in r.get('uses', []))
     return {'plan': str(path), 'ready_count': len(ready), 'selected_errors': len(issues),
             'materials': materials, 'unfilled_units': [u['id'] for u in plan['units'] if u['id'] not in bound_units],
             'unfilled_is_not_failure': 'A narration unit may use presenter, authored UI, or AIGC instead; Agent records the decision.',
@@ -318,25 +383,66 @@ def inspect(plan_path):
 
 
 def export(plan_path, out):
+    plan_folder = Path(plan_path).resolve().parent
+    export_folder = Path(out).resolve().parent
     plan = read(plan_path)
-    report = inspect(plan_path)
+    report = inspect(plan_path, plan)
     if report['selected_errors']:
         raise ValueError('Selected materials are not ready: ' + json.dumps([r for r in report['materials'] if not r['ready']], ensure_ascii=False))
     allowed = {r['id'] for r in report['materials'] if r['ready']}
     rows = []
     for row in plan['materials']:
         if row['id'] in allowed:
-            rows.append({key: row.get(key) for key in ('id', 'unit_id', 'quote', 'purpose', 'kind', 'local_path',
-                         'source_in', 'source_out', 'source', 'review', 'focus_region', 'file_check')})
+            entry = {key: row.get(key) for key in ('id', 'unit_id', 'quote', 'purpose', 'kind',
+                     'source_in', 'source_out', 'source', 'review', 'focus_region', 'file_check')}
+            file = (plan_folder / row['local_path']).resolve()
+            entry['local_path'] = str(file)
+            if file.is_relative_to(export_folder):
+                entry['relative_path'] = file.relative_to(export_folder).as_posix()
+            entry['uses'] = row.get('uses', [])
+            rows.append(entry)
     if not rows:
         raise ValueError('No selected, reviewed local materials. Search results alone cannot be exported as production media.')
     result = {'schema_version': 1, 'generated_by': OWNER, 'source_sha256': plan['source'].get('sha256'),
               'materials': rows, 'media_by_id': {r['id']: {'path': r['local_path'], 'kind': r['kind'],
                     'sourceIn': r['source_in'], 'sourceOut': r['source_out']} for r in rows},
-              'binding_instruction': 'Map material IDs to the chosen effect interface asset slots; crop/focus and timeline durations are authored for this narration.',
+              'binding_instruction': 'For a numbered motion set motion.assets[slot] to {"material_id":"ID"}; motion.material_index defaults to materials-bindings.json. Source range is separate from narration timeline.',
               'aesthetic_approval': False}
     write_new(out, result)
     return {'output': str(Path(out).resolve()), 'count': len(rows), 'ready_material_ids': list(allowed)}
+
+
+def bound_file(index, ident, project):
+    """Return verified local media for a slot; cut only the reviewed range of a video."""
+    index = Path(index).resolve()
+    data = read(index)
+    if data.get('generated_by') != OWNER:
+        raise ValueError('Expected an index from materials export.')
+    row = next((m for m in data['materials'] if m['id'] == ident), None)
+    if row is None:
+        raise ValueError('Unknown reviewed material ID: ' + str(ident))
+    path = (index.parent / (row.get('relative_path') or row['local_path'])).resolve(strict=True)
+    checksum = row['file_check']['sha256']
+    if digest(path) != checksum:
+        raise ValueError('Indexed material changed since review: ' + str(ident))
+    if row['kind'] == 'image':
+        return path
+    start, end = row['source_in'], row['source_out']
+    if not time_range([start, end]):
+        raise ValueError('Invalid indexed source range: ' + str(ident))
+    folder = Path(project) / 'editorial' / 'material-clips'
+    folder.mkdir(parents=True, exist_ok=True)
+    key = hashlib.sha256(json.dumps([checksum, start, end]).encode()).hexdigest()
+    target = folder / (key + '.mp4')
+    if not target.exists():
+        with tempfile.TemporaryDirectory(dir=folder) as work:
+            clip = Path(work) / 'clip.mp4'
+            subprocess.run(['ffmpeg', '-nostdin', '-loglevel', 'error', '-ss', str(start),
+                            '-i', str(path), '-t', str(end-start), '-map', '0:v:0', '-an',
+                            '-vf', 'pad=ceil(iw/2)*2:ceil(ih/2)*2', '-c:v', 'libx264',
+                            '-crf', '17', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', str(clip)], check=True)
+            clip.replace(target)
+    return target
 
 
 def ego_script(request, out, root=ROOT):

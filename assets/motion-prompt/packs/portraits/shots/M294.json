@@ -1,0 +1,145 @@
+{
+  "id": "M294",
+  "layout": "dock",
+  "layers": [
+    {
+      "kind": "photo",
+      "file": "fr-screen.webp",
+      "slot": "media1",
+      "label": "实际界面"
+    },
+    {
+      "kind": "ui",
+      "component": "app-window",
+      "states": [
+        {},
+        {
+          "active": 2
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-spotlight",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "interview-m",
+      "start": 0.0,
+      "end": 11.9
+    }
+  ],
+  "chain": [
+    "先认出整个页面",
+    "标识收缩后仍留在视线里",
+    "从同一位置展开功能"
+  ],
+  "binding": {
+    "headline": "从页面到产品入口",
+    "captions": [
+      "这是刚才看到的页面。",
+      "页面收进一个入口图标。",
+      "从那个位置，再展开它的功能。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "title": "素材管理",
+        "items": [
+          "文件名",
+          "采访原声.wav",
+          "采访提纲.md"
+        ],
+        "active": 1
+      },
+      {
+        "image": "fr-screen.webp",
+        "title": "Squoosh",
+        "items": [
+          "编码格式",
+          "导出质量",
+          "文件体积"
+        ],
+        "rects": [
+          [
+            79,
+            73.5,
+            20,
+            6.2
+          ],
+          [
+            79,
+            79.8,
+            20,
+            7
+          ],
+          [
+            81,
+            91.5,
+            13,
+            6.7
+          ]
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [],
+      [
+        {},
+        {
+          "active": 2
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "实际界面"
+    }
+  ]
+}

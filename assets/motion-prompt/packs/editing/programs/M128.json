@@ -1,0 +1,160 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t15e",
+  "title": "折线走势",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "series": [
+      [
+        [
+          0,
+          0.1
+        ],
+        [
+          0.2,
+          0.25
+        ],
+        [
+          0.45,
+          0.4
+        ],
+        [
+          0.7,
+          0.45
+        ],
+        [
+          1,
+          0.48
+        ]
+      ],
+      [
+        [
+          0,
+          0.2
+        ],
+        [
+          0.13,
+          0.48
+        ],
+        [
+          0.27,
+          0.87
+        ],
+        [
+          0.5,
+          0.72
+        ],
+        [
+          0.7,
+          0.72
+        ]
+      ]
+    ],
+    "title": "相同成本下，结果如何变化",
+    "peak": "当前关注的数据点",
+    "axis": "单次任务成本 →",
+    "source": "示意数据 · 替换为本期同口径依据"
+  },
+  "nodes": [
+    {
+      "id": "n001-text",
+      "kind": "text",
+      "x": 180,
+      "y": 80,
+      "w": 1560,
+      "h": 110,
+      "text": "{{title}}",
+      "size": 66,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n002-b2-line-chart",
+      "kind": "b2-line-chart",
+      "x": 300,
+      "y": 250,
+      "w": 1350,
+      "h": 560,
+      "seriesKey": "series",
+      "tracks": {
+        "value": [
+          [
+            0.48,
+            0
+          ],
+          [
+            4.2,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-pill",
+      "kind": "pill",
+      "x": 570,
+      "y": 240,
+      "w": 560,
+      "h": 85,
+      "label": "{{peak}}",
+      "size": 34,
+      "fill": "#D6C2FF",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.3,
+            0
+          ],
+          [
+            4.02,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.3,
+            275
+          ],
+          [
+            4.02,
+            240,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-text",
+      "kind": "text",
+      "x": 1100,
+      "y": 880,
+      "w": 600,
+      "h": 70,
+      "text": "{{axis}}",
+      "size": 34,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n005-text",
+      "kind": "text",
+      "x": 250,
+      "y": 980,
+      "w": 1400,
+      "h": 55,
+      "text": "{{source}}",
+      "size": 28,
+      "color": "#62616C",
+      "align": "center"
+    }
+  ],
+  "assets": {}
+}

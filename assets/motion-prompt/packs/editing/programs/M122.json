@@ -1,0 +1,248 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t13a",
+  "title": "分层结构",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "layer0": "应用界面",
+    "layer1": "工作引擎",
+    "layer2": "底层资源",
+    "details": "输入 → 处理规则 → 可核对的输出"
+  },
+  "nodes": [
+    {
+      "id": "n002-card",
+      "kind": "card",
+      "x": 420,
+      "y": 230,
+      "w": 1080,
+      "h": 150,
+      "children": [
+        {
+          "id": "n001-text",
+          "kind": "text",
+          "x": 40,
+          "y": 40,
+          "w": 1000,
+          "h": 85,
+          "text": "{{layer0}}",
+          "size": 54,
+          "color": "#0B0B0F",
+          "align": "center"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.44,
+            0
+          ],
+          [
+            2.4,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.44,
+            130
+          ],
+          [
+            2.4,
+            230,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-card",
+      "kind": "card",
+      "x": 420,
+      "y": 460,
+      "w": 1080,
+      "h": 150,
+      "children": [
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 40,
+          "y": 40,
+          "w": 1000,
+          "h": 85,
+          "text": "{{layer1}}",
+          "size": 54,
+          "color": "#0B0B0F",
+          "align": "center",
+          "tracks": {
+            "color": [
+              [
+                0,
+                "#0B0B0F"
+              ],
+              [
+                2.7,
+                "#0B0B0F"
+              ],
+              [
+                3.48,
+                "#FFFFFF",
+                "step"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.72,
+            0
+          ],
+          [
+            1.68,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.72,
+            360
+          ],
+          [
+            1.68,
+            460,
+            "out"
+          ]
+        ],
+        "fill": [
+          [
+            0,
+            "#FFFFFF"
+          ],
+          [
+            2.7,
+            "#FFFFFF"
+          ],
+          [
+            3.48,
+            "#0B0B0F",
+            "step"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-card",
+      "kind": "card",
+      "x": 420,
+      "y": 690,
+      "w": 1080,
+      "h": 150,
+      "children": [
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 40,
+          "y": 40,
+          "w": 1000,
+          "h": 85,
+          "text": "{{layer2}}",
+          "size": 54,
+          "color": "#0B0B0F",
+          "align": "center"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.96,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            590
+          ],
+          [
+            0.96,
+            690,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-card",
+      "kind": "card",
+      "x": 450,
+      "y": 620,
+      "w": 1020,
+      "h": 210,
+      "children": [
+        {
+          "id": "n007-text",
+          "kind": "text",
+          "x": 50,
+          "y": 55,
+          "w": 920,
+          "h": 110,
+          "text": "{{details}}",
+          "size": 40,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#F3F3F5",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.2,
+            0
+          ],
+          [
+            5.28,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            4.2,
+            655
+          ],
+          [
+            5.28,
+            620,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

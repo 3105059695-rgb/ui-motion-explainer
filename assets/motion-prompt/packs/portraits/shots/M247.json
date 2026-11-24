@@ -1,0 +1,106 @@
+{
+  "id": "M247",
+  "layout": "fork",
+  "layers": [
+    {
+      "kind": "live",
+      "strip": "creative-850000-5400",
+      "slot": "media1",
+      "label": "主体动作视频"
+    },
+    {
+      "kind": "ui",
+      "component": "chat-bubbles",
+      "states": [
+        {},
+        {
+          "showAnswer": false
+        },
+        {
+          "showAnswer": false
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "live",
+      "strip": "creative-857200-4800",
+      "slot": "media2",
+      "label": "结果视频",
+      "followSlot": "media1"
+    }
+  ],
+  "refs": [
+    {
+      "video": "creative",
+      "start": 850,
+      "end": 862,
+      "shotIds": [
+        "C184",
+        "C185",
+        "C186",
+        "C187",
+        "C188"
+      ],
+      "rowIds": [
+        "C-R001",
+        "C-R002",
+        "C-L181",
+        "C-R003",
+        "C-R004"
+      ]
+    }
+  ],
+  "chain": [
+    "先看短发女主喝咖啡，EN→CN浮窗逐步出现对方关于靠窗座位的英文与译文。",
+    "反打到浅发女性，她面对图纸指出自然光不足；浮窗从旧句逐渐更新到本句。",
+    "反打短发女主提出天井，方向切为CN→EN；随后切手指图纸，把建议落在空间位置。",
+    "切眼镜轮廓内的对方正面，她认可建议并谈采光改善；浮窗恢复EN→CN。",
+    "对话结论形成后才离开咖啡馆情境，功能证明由双方达成理解完成。"
+  ],
+  "binding": {
+    "headline": "反打跟着说话人与译文移动",
+    "captions": [
+      "先看是谁说话",
+      "译文跟在当前说话人旁边",
+      "换人后把视线交回另一边"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "question": "这张图能再小一点吗？",
+        "answer": "可以。先留好原图，再导出一份网页副本。",
+        "showAnswer": true
+      },
+      {}
+    ],
+    "keyframes": [
+      [],
+      [
+        {},
+        {
+          "showAnswer": false
+        },
+        {
+          "showAnswer": false
+        }
+      ],
+      []
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "主体动作视频"
+    },
+    {
+      "key": "media2",
+      "name": "结果视频"
+    }
+  ]
+}

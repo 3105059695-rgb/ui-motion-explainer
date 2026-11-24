@@ -1,0 +1,81 @@
+{
+  "id": "M199",
+  "layout": "native",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-criteria",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-argon",
+      "start": 95,
+      "end": 101
+    }
+  ],
+  "chain": [
+    "功能与审美用两行分别给出判断，满足其中一项并未抹去另一项的问题。"
+  ],
+  "binding": {
+    "headline": "尺寸和体积",
+    "captions": [
+      "体积和像素是两项条件。",
+      "先看文件体积。",
+      "尺寸也要单独核对。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "输入原图",
+          "质量 75",
+          "质量 50"
+        ],
+        "values": [
+          494374,
+          163502,
+          95873
+        ],
+        "pixels": [
+          3000,
+          3000,
+          3000
+        ],
+        "minPixel": 3000,
+        "limitKB": 100,
+        "active": 0
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

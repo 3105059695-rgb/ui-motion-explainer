@@ -1,0 +1,218 @@
+{
+  "id": "M248",
+  "layout": "carry",
+  "layers": [
+    {
+      "kind": "photo",
+      "file": "fr-lunar.webp",
+      "slot": "media1",
+      "label": "输入原图"
+    },
+    {
+      "kind": "ui",
+      "component": "source-link",
+      "states": [
+        {},
+        {
+          "expanded": true
+        },
+        {
+          "expanded": true
+        }
+      ],
+      "media": [
+        {
+          "slot": "media2",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "fred-proofs",
+      "states": [
+        {
+          "active": 0,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": true
+        }
+      ],
+      "media": [
+        {
+          "slot": "media3",
+          "path": [
+            "referenceImage"
+          ]
+        },
+        {
+          "slot": "media4",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media5",
+          "path": [
+            "images",
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-argon",
+      "start": 40,
+      "end": 44,
+      "shotIds": [
+        "F1-12",
+        "F1-13",
+        "F1-14"
+      ],
+      "rowIds": [
+        "F-L020",
+        "F-L021",
+        "F-L022",
+        "F-L023"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 5.9,
+      "end": 8.8,
+      "shotIds": [
+        "A-S002"
+      ],
+      "rowIds": [
+        "A-L002",
+        "A-L003"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 122,
+      "end": 133,
+      "shotIds": [
+        "A-S027"
+      ],
+      "rowIds": [
+        "A-L063",
+        "A-L064",
+        "A-L065",
+        "A-L066",
+        "A-L067",
+        "A-L068",
+        "A-L069",
+        "A-L070",
+        "A-L071"
+      ]
+    }
+  ],
+  "chain": [
+    "输入与结果分支同场",
+    "目标结果被选中",
+    "同一结果从原坐标展开",
+    "来源标识保留，其他分支降权"
+  ],
+  "binding": {
+    "headline": "原件腾位，结果从原件边上展开",
+    "captions": [
+      "先认识这张原图",
+      "它退到一旁，处理结果展开",
+      "两者的对应关系还在"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "title": "Apollo 8 拍摄的地出",
+        "publisher": "NASA Science",
+        "url": "https://science.nasa.gov/resource/apollo-8s-iconic-earthrise/",
+        "image": "earth.webp",
+        "expanded": false
+      },
+      {
+        "title": "云层校样",
+        "referenceImage": "fr-input-earth.webp",
+        "items": [
+          "质量 75",
+          "质量 50"
+        ],
+        "images": [
+          "fr-75-earth.webp",
+          "fr-50-earth.webp"
+        ],
+        "values": [
+          163502,
+          95873
+        ],
+        "inputBytes": 494374,
+        "active": 1,
+        "showDelta": true
+      }
+    ],
+    "keyframes": [
+      [],
+      [
+        {},
+        {
+          "expanded": true
+        },
+        {
+          "expanded": true
+        }
+      ],
+      [
+        {
+          "active": 0,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": true
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "输入原图"
+    },
+    {
+      "key": "media2",
+      "name": "带出处的链接卡 · earth"
+    },
+    {
+      "key": "media3",
+      "name": "固定原件的多轮校样 · fr-input-earth"
+    },
+    {
+      "key": "media4",
+      "name": "固定原件的多轮校样 · fr-75-earth"
+    },
+    {
+      "key": "media5",
+      "name": "固定原件的多轮校样 · fr-50-earth"
+    }
+  ]
+}

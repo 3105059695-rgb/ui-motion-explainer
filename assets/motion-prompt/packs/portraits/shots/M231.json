@@ -1,0 +1,276 @@
+{
+  "id": "M231",
+  "layout": "compare",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-proofs",
+      "states": [
+        {
+          "active": 0,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": true
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "referenceImage"
+          ]
+        },
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "images",
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "fred-loupes",
+      "states": [
+        {
+          "active": 0,
+          "showLocator": false
+        },
+        {
+          "active": 0,
+          "showLocator": true
+        },
+        {
+          "active": 1,
+          "showLocator": true
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "left",
+            0
+          ]
+        },
+        {
+          "slot": "media4",
+          "path": [
+            "left",
+            1
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "right",
+            0
+          ]
+        },
+        {
+          "slot": "media5",
+          "path": [
+            "right",
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "fred-criteria",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "network",
+      "start": 917.9,
+      "end": 937.9,
+      "shotIds": [
+        "N209",
+        "N210",
+        "N211"
+      ],
+      "rowIds": [
+        "N-L397",
+        "N-L398",
+        "N-L399",
+        "N-L400",
+        "N-L401",
+        "N-L402",
+        "N-L403",
+        "N-L404"
+      ]
+    }
+  ],
+  "chain": [
+    "题目列表显示多个同题结果缩略图。",
+    "进入同一火星车辆题目。",
+    "两张结果卡并排，模型标签和红色地貌、车辆差异可见。",
+    "下方惊艳/还不错/拉了控件进入焦点，结果仍可回看。"
+  ],
+  "binding": {
+    "headline": "同题多结果并列供判断",
+    "captions": [
+      "先把题目固定",
+      "两个结果对准同一处细节",
+      "按同一条件分别判断"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "云层校样",
+        "referenceImage": "fr-input-earth.webp",
+        "items": [
+          "质量 75",
+          "质量 50"
+        ],
+        "images": [
+          "fr-75-earth.webp",
+          "fr-50-earth.webp"
+        ],
+        "values": [
+          163502,
+          95873
+        ],
+        "inputBytes": 494374,
+        "active": 1,
+        "showDelta": true
+      },
+      {
+        "title": "同位置取样",
+        "items": [
+          "地球云层",
+          "月面纹理"
+        ],
+        "left": [
+          "fr-input-earth.webp",
+          "fr-input-soil.webp"
+        ],
+        "right": [
+          "fr-50-earth.webp",
+          "fr-50-soil.webp"
+        ],
+        "names": [
+          "输入原图",
+          "网页副本 Q50"
+        ],
+        "active": 0,
+        "showLocator": true
+      },
+      {
+        "items": [
+          "输入原图",
+          "质量 75",
+          "质量 50"
+        ],
+        "values": [
+          494374,
+          163502,
+          95873
+        ],
+        "pixels": [
+          3000,
+          3000,
+          3000
+        ],
+        "minPixel": 3000,
+        "limitKB": 100,
+        "active": 0
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": true
+        }
+      ],
+      [
+        {
+          "active": 0,
+          "showLocator": false
+        },
+        {
+          "active": 0,
+          "showLocator": true
+        },
+        {
+          "active": 1,
+          "showLocator": true
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "固定原件的多轮校样 · fr-input-earth"
+    },
+    {
+      "key": "media2",
+      "name": "固定原件的多轮校样 · fr-75-earth"
+    },
+    {
+      "key": "media3",
+      "name": "固定原件的多轮校样 · fr-50-earth"
+    },
+    {
+      "key": "media4",
+      "name": "同位置双图细节镜 · fr-input-soil"
+    },
+    {
+      "key": "media5",
+      "name": "同位置双图细节镜 · fr-50-soil"
+    }
+  ]
+}

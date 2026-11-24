@@ -1,0 +1,293 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t03c",
+  "title": "三者循环互通",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "cycle0": "目标",
+    "cycle1": "行动",
+    "cycle2": "反馈",
+    "summary": "不断迭代\n才会更好"
+  },
+  "nodes": [
+    {
+      "id": "n001-window",
+      "kind": "window",
+      "x": 210,
+      "y": 120,
+      "w": 1500,
+      "h": 840,
+      "fill": "#0B0B0F",
+      "label": "共同循环",
+      "children": [
+        {
+          "id": "n008-group",
+          "kind": "group",
+          "x": 0,
+          "y": 0,
+          "w": 1500,
+          "h": 840,
+          "children": [
+            {
+              "id": "n002-text",
+              "kind": "text",
+              "x": 530,
+              "y": 130,
+              "w": 440,
+              "h": 110,
+              "text": "{{cycle0}}",
+              "size": 75,
+              "color": "#FFFFFF",
+              "align": "center",
+              "tracks": {
+                "opacity": [
+                  [
+                    0.0,
+                    0
+                  ],
+                  [
+                    0.72,
+                    1,
+                    "out"
+                  ]
+                ],
+                "y": [
+                  [
+                    0.0,
+                    165
+                  ],
+                  [
+                    0.72,
+                    130,
+                    "out"
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "n003-text",
+              "kind": "text",
+              "x": 100,
+              "y": 550,
+              "w": 440,
+              "h": 110,
+              "text": "{{cycle1}}",
+              "size": 75,
+              "color": "#FFFFFF",
+              "align": "center",
+              "tracks": {
+                "opacity": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    0.78,
+                    0
+                  ],
+                  [
+                    1.5,
+                    1,
+                    "out"
+                  ]
+                ],
+                "y": [
+                  [
+                    0.78,
+                    585
+                  ],
+                  [
+                    1.5,
+                    550,
+                    "out"
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "n004-text",
+              "kind": "text",
+              "x": 970,
+              "y": 550,
+              "w": 440,
+              "h": 110,
+              "text": "{{cycle2}}",
+              "size": 75,
+              "color": "#FFFFFF",
+              "align": "center",
+              "tracks": {
+                "opacity": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1.56,
+                    0
+                  ],
+                  [
+                    2.28,
+                    1,
+                    "out"
+                  ]
+                ],
+                "y": [
+                  [
+                    1.56,
+                    585
+                  ],
+                  [
+                    2.28,
+                    550,
+                    "out"
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "n005-b2-growing-line",
+              "kind": "b2-growing-line",
+              "x": 540,
+              "y": 260,
+              "w": -160,
+              "h": 280,
+              "arrow": true,
+              "fill": "#FFFFFF",
+              "strokeWidth": 5,
+              "tracks": {
+                "value": [
+                  [
+                    1.2,
+                    0
+                  ],
+                  [
+                    2.22,
+                    1
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "n006-b2-growing-line",
+              "kind": "b2-growing-line",
+              "x": 1000,
+              "y": 610,
+              "w": -430,
+              "h": 0,
+              "arrow": true,
+              "fill": "#FFFFFF",
+              "strokeWidth": 5,
+              "tracks": {
+                "value": [
+                  [
+                    2.4,
+                    0
+                  ],
+                  [
+                    3.36,
+                    1
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "n007-b2-growing-line",
+              "kind": "b2-growing-line",
+              "x": 1130,
+              "y": 520,
+              "w": -260,
+              "h": -270,
+              "arrow": true,
+              "fill": "#FFFFFF",
+              "strokeWidth": 5,
+              "tracks": {
+                "value": [
+                  [
+                    3.48,
+                    0
+                  ],
+                  [
+                    4.38,
+                    1
+                  ]
+                ]
+              }
+            }
+          ],
+          "tracks": {
+            "blur": [
+              [
+                0,
+                0
+              ],
+              [
+                4.56,
+                0
+              ],
+              [
+                5.22,
+                12
+              ]
+            ],
+            "opacity": [
+              [
+                0,
+                1
+              ],
+              [
+                4.56,
+                1
+              ],
+              [
+                5.22,
+                0.35
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n009-text",
+          "kind": "text",
+          "x": 230,
+          "y": 300,
+          "w": 1040,
+          "h": 300,
+          "text": "{{summary}}",
+          "size": 105,
+          "color": "#D6C2FF",
+          "align": "center",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                4.8,
+                0
+              ],
+              [
+                5.52,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                4.8,
+                335
+              ],
+              [
+                5.52,
+                300,
+                "out"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "assets": {}
+}

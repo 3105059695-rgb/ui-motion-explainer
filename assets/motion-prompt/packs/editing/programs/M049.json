@@ -1,0 +1,296 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-native-t01d",
+  "title": "测评结论：实测作品退后，评分卡与结论落定",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "scores": [
+      9,
+      7.5,
+      6
+    ],
+    "dimensions": [
+      "准确性",
+      "可读性",
+      "完整性"
+    ],
+    "maximum": 10,
+    "rating": "实际成果评分",
+    "conclusion": "分数对应本期材料与标准"
+  },
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 120,
+      "y": 230,
+      "w": 540,
+      "h": 620,
+      "asset": "media0",
+      "fit": "cover",
+      "radius": 16,
+      "tracks": {
+        "blur": [
+          [
+            0,
+            0
+          ],
+          [
+            1.0,
+            0
+          ],
+          [
+            2.0,
+            13
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.0,
+            1
+          ],
+          [
+            2.0,
+            0.35
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            2.0,
+            0.92
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-image",
+      "kind": "image",
+      "x": 700,
+      "y": 230,
+      "w": 540,
+      "h": 620,
+      "asset": "media1",
+      "fit": "cover",
+      "radius": 16,
+      "tracks": {
+        "blur": [
+          [
+            0,
+            0
+          ],
+          [
+            1.0,
+            0
+          ],
+          [
+            2.0,
+            13
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.0,
+            1
+          ],
+          [
+            2.0,
+            0.35
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            2.0,
+            0.92
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-image",
+      "kind": "image",
+      "x": 1280,
+      "y": 230,
+      "w": 540,
+      "h": 620,
+      "asset": "media2",
+      "fit": "cover",
+      "radius": 16,
+      "tracks": {
+        "blur": [
+          [
+            0,
+            0
+          ],
+          [
+            1.0,
+            0
+          ],
+          [
+            2.0,
+            13
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.0,
+            1
+          ],
+          [
+            2.0,
+            0.35
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            2.0,
+            0.92
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-card",
+      "kind": "card",
+      "x": 370,
+      "y": 210,
+      "w": 1180,
+      "h": 690,
+      "children": [
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 55,
+          "y": 40,
+          "w": 1070,
+          "h": 90,
+          "text": "{{rating}}",
+          "size": 60,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n005-b3-rating",
+          "kind": "b3-rating",
+          "x": 55,
+          "y": 210,
+          "w": 1070,
+          "h": 330,
+          "valuesKey": "scores",
+          "labelsKey": "dimensions",
+          "maxKey": "maximum",
+          "tracks": {
+            "value": [
+              [
+                1.5,
+                0
+              ],
+              [
+                4.1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n006-text",
+          "kind": "text",
+          "x": 55,
+          "y": 570,
+          "w": 1070,
+          "h": 75,
+          "text": "{{conclusion}}",
+          "size": 42,
+          "color": "#0B0B0F",
+          "align": "center",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                4.1,
+                0
+              ],
+              [
+                4.7,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                4.1,
+                605
+              ],
+              [
+                4.7,
+                570,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.25,
+            0
+          ],
+          [
+            2.15,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.25,
+            245
+          ],
+          [
+            2.15,
+            210,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {
+    "media0": "50bc3e314bdb7f0f4d",
+    "media1": "ebe9e9e5de709240bf",
+    "media2": "f0cad559eda3318fff"
+  }
+}

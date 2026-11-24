@@ -1,0 +1,41 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t12q",
+  "title": "解码定格：乱跳的字逐个锁定成章节名",
+  "duration": 3,
+  "background": "#0B0B0F",
+  "inputs": {
+    "title": "开始验证结果"
+  },
+  "nodes": [
+    {
+      "id": "n001-b2-decode",
+      "kind": "b2-decode",
+      "x": 260,
+      "y": 420,
+      "w": 1400,
+      "h": 160,
+      "text": "{{title}}",
+      "size": 108,
+      "color": "#FFFFFF",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            0.6,
+            0
+          ],
+          [
+            2.16,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

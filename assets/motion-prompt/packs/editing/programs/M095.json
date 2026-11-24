@@ -1,0 +1,175 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t20b",
+  "title": "痛点反差开场",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "manual": "先手动做这些",
+    "task0": "找素材，再改格式",
+    "task1": "逐个操作，再核对",
+    "task2": "重复调整，再导出"
+  },
+  "nodes": [
+    {
+      "id": "n006-group",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n001-card",
+          "kind": "card",
+          "x": 180,
+          "y": 150,
+          "w": 1560,
+          "h": 780,
+          "children": [],
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 240,
+          "y": 210,
+          "w": 1400,
+          "h": 120,
+          "text": "{{manual}}",
+          "size": 72,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 270,
+          "y": 380,
+          "w": 1300,
+          "h": 80,
+          "text": "{{task0}}",
+          "size": 52,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 270,
+          "y": 510,
+          "w": 1300,
+          "h": 80,
+          "text": "{{task1}}",
+          "size": 52,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 270,
+          "y": 640,
+          "w": 1300,
+          "h": 80,
+          "text": "{{task2}}",
+          "size": 52,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.4,
+            1
+          ],
+          [
+            2.0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-image",
+      "kind": "image",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "asset": "complexity",
+      "fit": "cover",
+      "blur": 12,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.4,
+            0
+          ],
+          [
+            1.9,
+            1
+          ],
+          [
+            2.9,
+            1
+          ],
+          [
+            3.4,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-image",
+      "kind": "image",
+      "x": 140,
+      "y": 80,
+      "w": 1640,
+      "h": 920,
+      "asset": "result",
+      "fit": "contain",
+      "radius": 20,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.95,
+            0
+          ],
+          [
+            3.5,
+            1
+          ]
+        ],
+        "scale": [
+          [
+            2.95,
+            0.9
+          ],
+          [
+            3.7,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {
+    "complexity": "76bb7f7f3f36a255cd",
+    "result": "83dddca67fc8d29975"
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "id": "M267",
+  "layout": "network",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "source-link",
+      "states": [
+        {},
+        {
+          "expanded": true
+        },
+        {
+          "expanded": true
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "node-map",
+      "states": [
+        {},
+        {
+          "active": 3
+        },
+        {
+          "active": 3
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-field",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": [
+        {
+          "slot": "media2",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "arun-membership",
+      "start": 28.6,
+      "end": 38.4,
+      "shotIds": [
+        "A-S010",
+        "A-S011",
+        "A-S012"
+      ],
+      "rowIds": [
+        "A-L012",
+        "A-L013",
+        "A-L014",
+        "A-L015",
+        "A-L016",
+        "A-L017"
+      ]
+    }
+  ],
+  "chain": [
+    "中心标识接替单一产品卡",
+    "附属节点错峰展开，连线显示包含关系",
+    "生态降低权重，会员或归属对象重新回到主位",
+    "归属对象缩角，真实权益页面从附近展开",
+    "关键数字贴在证据前景并保留来源关系"
+  ],
+  "binding": {
+    "headline": "中心对象向外展开关联权益",
+    "captions": [
+      "先确认归属对象",
+      "与它相关的权益逐个展开",
+      "最后回到原页面核对"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "Apollo 8 拍摄的地出",
+        "publisher": "NASA Science",
+        "url": "https://science.nasa.gov/resource/apollo-8s-iconic-earthrise/",
+        "image": "earth.webp",
+        "expanded": false
+      },
+      {
+        "label": "素材交接",
+        "items": [
+          "口播",
+          "逐字稿",
+          "字幕",
+          "初剪"
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "active": 1
+      },
+      {
+        "image": "fr-record.webp",
+        "title": "NASA 图片记录",
+        "items": [
+          "摄影署名",
+          "记录日期",
+          "页面语言"
+        ],
+        "values": [
+          "NASA/Bill Anders",
+          "December 24, 1968",
+          "English"
+        ],
+        "active": 0
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "expanded": true
+        },
+        {
+          "expanded": true
+        }
+      ],
+      [
+        {},
+        {
+          "active": 3
+        },
+        {
+          "active": 3
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "带出处的链接卡 · earth"
+    },
+    {
+      "key": "media2",
+      "name": "原件字段摘读 · fr-record"
+    }
+  ]
+}

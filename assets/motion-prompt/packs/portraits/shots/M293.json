@@ -1,0 +1,132 @@
+{
+  "id": "M293",
+  "layout": "extract",
+  "layers": [
+    {
+      "kind": "live",
+      "strip": "interview-l-0-5400",
+      "slot": "media1",
+      "label": "主体动作视频"
+    },
+    {
+      "kind": "ui",
+      "component": "layer-panel",
+      "states": [
+        {},
+        {
+          "hidden": [
+            1
+          ]
+        },
+        {
+          "active": 1
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "node-map",
+      "states": [
+        {},
+        {
+          "active": 3
+        },
+        {
+          "active": 3
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "interview-l",
+      "start": 0.0,
+      "end": 17.0
+    }
+  ],
+  "chain": [
+    "先看整个对象",
+    "拆开以后聚焦一个部件",
+    "还能指出它在整体里的位置"
+  ],
+  "binding": {
+    "headline": "把整车拆开看",
+    "captions": [
+      "先认出这辆车。",
+      "现在只看其中一个部件。",
+      "放回原位，就知道它属于哪里。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "items": [
+          "车身",
+          "部件",
+          "细节"
+        ],
+        "hidden": [],
+        "active": 0
+      },
+      {
+        "label": "整体与局部",
+        "items": [
+          "整车",
+          "车身",
+          "部件",
+          "细节"
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [],
+      [
+        {},
+        {
+          "hidden": [
+            1
+          ]
+        },
+        {
+          "active": 1
+        }
+      ],
+      [
+        {},
+        {
+          "active": 3
+        },
+        {
+          "active": 3
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "主体动作视频"
+    }
+  ]
+}

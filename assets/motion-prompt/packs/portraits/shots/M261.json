@@ -1,0 +1,245 @@
+{
+  "id": "M261",
+  "layout": "stack",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "source-link",
+      "states": [
+        {},
+        {
+          "expanded": true
+        },
+        {
+          "expanded": true
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "source-quote",
+      "states": [
+        {
+          "active": 0,
+          "located": false
+        },
+        {
+          "active": 1,
+          "located": true
+        },
+        {
+          "active": 2,
+          "located": true
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "inline-citation",
+      "states": [
+        {},
+        {
+          "active": 0
+        },
+        {
+          "open": false
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-argon",
+      "start": 218.75,
+      "end": 220.5,
+      "shotIds": [
+        "F3-09"
+      ],
+      "rowIds": [
+        "F-L136",
+        "F-L137"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 16,
+      "end": 16.9,
+      "shotIds": [
+        "J-S011"
+      ],
+      "rowIds": [
+        "J-L012",
+        "J-L013"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 77.875,
+      "end": 78.75,
+      "shotIds": [
+        "J-S106"
+      ],
+      "rowIds": [
+        "J-L046",
+        "J-L047"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 142.4,
+      "end": 148.15,
+      "shotIds": [
+        "J-S203",
+        "J-S204",
+        "J-S205",
+        "J-S206"
+      ],
+      "rowIds": [
+        "J-L090",
+        "J-L091",
+        "J-L092",
+        "J-L093"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 169.2,
+      "end": 170.85,
+      "shotIds": [
+        "J-S220"
+      ],
+      "rowIds": [
+        "J-L103",
+        "J-L104"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 45.7,
+      "end": 49.7,
+      "shotIds": [
+        "A-S015"
+      ],
+      "rowIds": [
+        "A-L020",
+        "A-L021",
+        "A-L022",
+        "A-L023"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 56.5,
+      "end": 60,
+      "shotIds": [
+        "A-S018"
+      ],
+      "rowIds": [
+        "A-L027",
+        "A-L028",
+        "A-L029"
+      ]
+    }
+  ],
+  "chain": [
+    "具体证据仍在",
+    "材料后退并降清晰度",
+    "解释层浮到前景",
+    "旧理解被划掉，新解释与判断依次出现"
+  ],
+  "binding": {
+    "headline": "原材料退后，让解释层浮到前面",
+    "captions": [
+      "先确认材料来自哪里",
+      "说明浮到前面，原件仍可辨认",
+      "读完依据后回到材料"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "Apollo 8 拍摄的地出",
+        "publisher": "NASA Science",
+        "url": "https://science.nasa.gov/resource/apollo-8s-iconic-earthrise/",
+        "image": "earth.webp",
+        "expanded": false
+      },
+      {
+        "title": "本期交付约定",
+        "paragraphs": [
+          "素材归档后再做网页副本。",
+          "原图与副本应分别保留。",
+          "导出后核对文件名和体积。"
+        ],
+        "active": 1,
+        "located": false
+      },
+      {
+        "answer": "原图和网页副本都已归档。",
+        "items": [
+          "原图记录",
+          "导出日志"
+        ],
+        "bodies": [
+          "输入记录 · 地出-输入.jpg",
+          "交付记录 · 网页副本-Q50.jpg"
+        ],
+        "active": 1,
+        "open": true
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "expanded": true
+        },
+        {
+          "expanded": true
+        }
+      ],
+      [
+        {
+          "active": 0,
+          "located": false
+        },
+        {
+          "active": 1,
+          "located": true
+        },
+        {
+          "active": 2,
+          "located": true
+        }
+      ],
+      [
+        {},
+        {
+          "active": 0
+        },
+        {
+          "open": false
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "带出处的链接卡 · earth"
+    }
+  ]
+}

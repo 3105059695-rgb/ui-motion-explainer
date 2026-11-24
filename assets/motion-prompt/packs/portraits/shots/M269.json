@@ -1,0 +1,229 @@
+{
+  "id": "M269",
+  "layout": "stack",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-proofs",
+      "states": [
+        {
+          "active": 0,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": true
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "referenceImage"
+          ]
+        },
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "images",
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "fred-criteria",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "source-quote",
+      "states": [
+        {
+          "active": 0,
+          "located": false
+        },
+        {
+          "active": 1,
+          "located": true
+        },
+        {
+          "active": 2,
+          "located": true
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "arun-membership",
+      "start": 49.7,
+      "end": 60,
+      "shotIds": [
+        "A-S016",
+        "A-S017",
+        "A-S018"
+      ],
+      "rowIds": [
+        "A-L023",
+        "A-L024",
+        "A-L025",
+        "A-L026",
+        "A-L027",
+        "A-L028",
+        "A-L029"
+      ]
+    }
+  ],
+  "chain": [
+    "多工具重新围绕同一会员或总对象建立连线",
+    "同题产出并置，来源标在对应内容上方",
+    "选中项保持清晰，其余项降低权重",
+    "结论章在对应项附近出现",
+    "新活动或条件原页面从后景前移",
+    "划线强调关键期限，旧对照退后"
+  ],
+  "binding": {
+    "headline": "同题对照保留，条件原件覆盖上来",
+    "captions": [
+      "先比同一道题的结果",
+      "焦点停在当前方案",
+      "活动条件从后层展开"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "云层校样",
+        "referenceImage": "fr-input-earth.webp",
+        "items": [
+          "质量 75",
+          "质量 50"
+        ],
+        "images": [
+          "fr-75-earth.webp",
+          "fr-50-earth.webp"
+        ],
+        "values": [
+          163502,
+          95873
+        ],
+        "inputBytes": 494374,
+        "active": 1,
+        "showDelta": true
+      },
+      {
+        "items": [
+          "输入原图",
+          "质量 75",
+          "质量 50"
+        ],
+        "values": [
+          494374,
+          163502,
+          95873
+        ],
+        "pixels": [
+          3000,
+          3000,
+          3000
+        ],
+        "minPixel": 3000,
+        "limitKB": 100,
+        "active": 0
+      },
+      {
+        "title": "本期交付约定",
+        "paragraphs": [
+          "素材归档后再做网页副本。",
+          "原图与副本应分别保留。",
+          "导出后核对文件名和体积。"
+        ],
+        "active": 1,
+        "located": false
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": true
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {
+          "active": 0,
+          "located": false
+        },
+        {
+          "active": 1,
+          "located": true
+        },
+        {
+          "active": 2,
+          "located": true
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "固定原件的多轮校样 · fr-input-earth"
+    },
+    {
+      "key": "media2",
+      "name": "固定原件的多轮校样 · fr-75-earth"
+    },
+    {
+      "key": "media3",
+      "name": "固定原件的多轮校样 · fr-50-earth"
+    }
+  ]
+}

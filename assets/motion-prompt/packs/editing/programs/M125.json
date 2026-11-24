@@ -1,0 +1,264 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t13d",
+  "title": "请求往返",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "client": "客户端",
+    "server": "服务端",
+    "request": "请求",
+    "seconds": 0.86,
+    "condition": "请求往返过程 · 示意耗时"
+  },
+  "nodes": [
+    {
+      "id": "n002-card",
+      "kind": "card",
+      "x": 130,
+      "y": 330,
+      "w": 420,
+      "h": 330,
+      "children": [
+        {
+          "id": "n001-text",
+          "kind": "text",
+          "x": 30,
+          "y": 115,
+          "w": 360,
+          "h": 110,
+          "text": "{{client}}",
+          "size": 70,
+          "color": "#0B0B0F",
+          "align": "center"
+        }
+      ],
+      "fill": "#FFFFFF"
+    },
+    {
+      "id": "n004-card",
+      "kind": "card",
+      "x": 1380,
+      "y": 330,
+      "w": 420,
+      "h": 330,
+      "children": [
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 30,
+          "y": 115,
+          "w": 360,
+          "h": 110,
+          "text": "{{server}}",
+          "size": 70,
+          "color": "#FFFFFF",
+          "align": "center"
+        }
+      ],
+      "fill": "#0B0B0F"
+    },
+    {
+      "id": "n005-arrow",
+      "kind": "b2-growing-line",
+      "x": 550,
+      "y": 410,
+      "w": 830,
+      "h": 0,
+      "fill": "#62616C",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            0.3,
+            0
+          ],
+          [
+            1.2,
+            1
+          ]
+        ]
+      },
+      "arrow": true
+    },
+    {
+      "id": "n006-arrow",
+      "kind": "arrow",
+      "x": 1380,
+      "y": 590,
+      "w": -830,
+      "h": 0,
+      "fill": "#62616C",
+      "strokeWidth": 5,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.4,
+            0
+          ],
+          [
+            3.6,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 590,
+      "y": 330,
+      "w": 270,
+      "h": 90,
+      "label": "{{request}}",
+      "size": 41,
+      "fill": "#F3F3F5",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            1.08,
+            570
+          ],
+          [
+            2.4,
+            1110
+          ],
+          [
+            3.3,
+            1110
+          ],
+          [
+            4.5,
+            570
+          ]
+        ],
+        "y": [
+          [
+            1.08,
+            330
+          ],
+          [
+            2.4,
+            330
+          ],
+          [
+            3.3,
+            640
+          ],
+          [
+            4.5,
+            640
+          ]
+        ],
+        "label": [
+          [
+            0,
+            "请求"
+          ],
+          [
+            2.7,
+            "请求"
+          ],
+          [
+            2.76,
+            "结果",
+            "step"
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.02,
+            0
+          ],
+          [
+            1.08,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-check",
+      "kind": "check",
+      "x": 315,
+      "y": 720,
+      "w": 100,
+      "h": 95,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.62,
+            0
+          ],
+          [
+            5.34,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            4.62,
+            755
+          ],
+          [
+            5.34,
+            720,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-b2-number",
+      "kind": "b2-number",
+      "x": 680,
+      "y": 850,
+      "w": 560,
+      "h": 100,
+      "toKey": "seconds",
+      "suffix": " s",
+      "size": 65,
+      "decimals": 2,
+      "align": "center",
+      "tracks": {
+        "value": [
+          [
+            1.08,
+            0
+          ],
+          [
+            4.5,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010-text",
+      "kind": "text",
+      "x": 480,
+      "y": 970,
+      "w": 960,
+      "h": 60,
+      "text": "{{condition}}",
+      "size": 30,
+      "color": "#62616C",
+      "align": "center"
+    }
+  ],
+  "assets": {}
+}

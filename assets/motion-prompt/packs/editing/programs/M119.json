@@ -1,0 +1,70 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t09o",
+  "title": "放大镜看细节",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "instruction": "看清同一来源的两个细节"
+  },
+  "nodes": [
+    {
+      "id": "n001-b2-lens",
+      "kind": "b2-lens",
+      "x": 200,
+      "y": 120,
+      "w": 1520,
+      "h": 850,
+      "asset": "screen",
+      "radius": 170,
+      "zoom": 1.8,
+      "focusX": 810,
+      "focusY": 310,
+      "tracks": {
+        "focusY": [
+          [
+            0,
+            300
+          ],
+          [
+            2.0,
+            300
+          ],
+          [
+            3.25,
+            580
+          ]
+        ],
+        "focusX": [
+          [
+            0,
+            810
+          ],
+          [
+            2.0,
+            810
+          ],
+          [
+            3.25,
+            720
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 250,
+      "y": 985,
+      "w": 1420,
+      "h": 60,
+      "text": "{{instruction}}",
+      "size": 34,
+      "color": "#62616C",
+      "align": "center"
+    }
+  ],
+  "assets": {
+    "screen": "aba20e6c2937800563"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "id": "M300",
+  "layout": "focus",
+  "layers": [
+    {
+      "kind": "photo",
+      "file": "hokusai.webp",
+      "slot": "media1",
+      "label": "作品图"
+    },
+    {
+      "kind": "ui",
+      "component": "file-tiles",
+      "states": [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      "media": [
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "images",
+            1
+          ]
+        },
+        {
+          "slot": "media4",
+          "path": [
+            "images",
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "zoom-fit",
+      "states": [
+        {},
+        {
+          "zoom": 160
+        },
+        {
+          "zoom": 160
+        }
+      ],
+      "media": [
+        {
+          "slot": "media2",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "editorial-b8a8d304",
+      "start": 0.0,
+      "end": 7.0
+    }
+  ],
+  "chain": [
+    "先看作品在整组里的位置",
+    "沿原画面推进到细节",
+    "回拉时还能认出同一件作品"
+  ],
+  "binding": {
+    "headline": "从整组海报看进一张",
+    "captions": [
+      "先记住它在这一组里的位置。",
+      "靠近一点，看画面的局部。",
+      "退回来，还是原来的那张。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "items": [
+          "地出.jpg",
+          "压缩界面.png",
+          "安德斯.jpg"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp",
+          "portrait.webp"
+        ],
+        "active": 0
+      },
+      {
+        "label": "画布预览",
+        "image": "earth.webp",
+        "zoom": 100
+      }
+    ],
+    "keyframes": [
+      [],
+      [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      [
+        {},
+        {
+          "zoom": 160
+        },
+        {
+          "zoom": 160
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "作品图"
+    },
+    {
+      "key": "media2",
+      "name": "文件缩略图 · earth"
+    },
+    {
+      "key": "media3",
+      "name": "文件缩略图 · interface"
+    },
+    {
+      "key": "media4",
+      "name": "文件缩略图 · portrait"
+    }
+  ]
+}

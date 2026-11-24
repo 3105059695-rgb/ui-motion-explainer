@@ -1,0 +1,152 @@
+{
+  "id": "M298",
+  "layout": "locate",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "search",
+      "states": [
+        {
+          "value": ""
+        },
+        {
+          "value": "访"
+        },
+        {
+          "value": "访谈"
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "source-quote",
+      "states": [
+        {
+          "active": 0,
+          "located": false
+        },
+        {
+          "active": 1,
+          "located": true
+        },
+        {
+          "active": 2,
+          "located": true
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "app-window",
+      "states": [
+        {},
+        {
+          "active": 2
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "base-codex",
+      "start": 111.8,
+      "end": 114.5
+    }
+  ],
+  "chain": [
+    "输入要找的那句话",
+    "回到原文点亮命中行",
+    "保留文档再接到新窗口"
+  ],
+  "binding": {
+    "headline": "找到上下文中的那一行",
+    "captions": [
+      "我要找刚才提到的那句话。",
+      "点进结果，就回到原文这一行。",
+      "下一步操作接着用这段原文。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "label": "搜索素材",
+        "value": "访谈",
+        "items": [
+          "访谈原声",
+          "访谈提纲",
+          "字幕定稿",
+          "产品截图"
+        ],
+        "recent": [
+          "访谈",
+          "截图"
+        ]
+      },
+      {
+        "title": "本期交付约定",
+        "paragraphs": [
+          "素材归档后再做网页副本。",
+          "原图与副本应分别保留。",
+          "导出后核对文件名和体积。"
+        ],
+        "active": 1,
+        "located": false
+      },
+      {
+        "title": "素材管理",
+        "items": [
+          "文件名",
+          "采访原声.wav",
+          "采访提纲.md"
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "value": ""
+        },
+        {
+          "value": "访"
+        },
+        {
+          "value": "访谈"
+        }
+      ],
+      [
+        {
+          "active": 0,
+          "located": false
+        },
+        {
+          "active": 1,
+          "located": true
+        },
+        {
+          "active": 2,
+          "located": true
+        }
+      ],
+      [
+        {},
+        {
+          "active": 2
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

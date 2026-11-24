@@ -1,0 +1,56 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t15d",
+  "title": "成本账单逐行累计",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "values": [
+      2.4,
+      0.6,
+      1.8
+    ],
+    "labels": [
+      "输入处理",
+      "缓存读取",
+      "结果输出"
+    ],
+    "currency": "¥"
+  },
+  "nodes": [
+    {
+      "id": "n001-card",
+      "kind": "card",
+      "x": 480,
+      "y": 110,
+      "w": 960,
+      "h": 860,
+      "children": [],
+      "fill": "#FFFFFF"
+    },
+    {
+      "id": "n002-b3-bill",
+      "kind": "b3-bill",
+      "x": 540,
+      "y": 170,
+      "w": 840,
+      "h": 740,
+      "valuesKey": "values",
+      "labelsKey": "labels",
+      "currencyKey": "currency",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            4.15,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

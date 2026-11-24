@@ -27,7 +27,11 @@ def parsers(sub):
         if action=='proofs':
             p.add_argument('--opening-end',type=float);p.add_argument('--bridge',type=float,nargs=2);p.add_argument('--file',type=Path)
         if action in ('options','choose','watch','observe'):p.add_argument('--id',required=action!='options')
-        if action=='options':p.add_argument('--offset',type=int,default=0)
+        if action=='options':
+            p.add_argument('--offset',type=int,default=0)
+            p.add_argument('--query',help='用本句需要看见的变化查动作，例如拖进聊天框后变成附件')
+            p.add_argument('--folder',help='在动作库的一级或二级分类内查找，支持中文名或 key')
+            p.add_argument('--recipes',action='store_true',help='另查已有投稿剪法')
         if action=='choose':
             p.add_argument('--against');p.add_argument('--why',required=True);p.add_argument('--revision',type=int)
             p.add_argument('--aspect',choices=('motion','layout','color'),default='motion')
@@ -45,6 +49,10 @@ def parsers(sub):
 
 def command(args):
     folder=args.project.resolve()
+    from numbered_motions import number
+    for field in ('id','against'):
+        value=getattr(args,field,None)
+        if number(value):setattr(args,field,number(value))
     if args.command=='example':
         from episode_example import run
         return run(folder)
@@ -58,7 +66,7 @@ def command(args):
         if action=='decide':
             ed.decide(board,edits.read(args.file.resolve(strict=True)))
             result=ed.status(folder,board)
-        elif action=='options':result=ed.choices(board,u,args.id,args.offset)
+        elif action=='options':result=ed.choices(board,u,args.id,args.offset,args.query,args.folder,args.recipes)
         elif action=='choose':
             choice=ed.choose(board,u,args.id,args.against,args.why,args.revision,args.aspect)
             result={**choice,**trial_form(folder,board,u)}
@@ -92,6 +100,13 @@ def trial_form(folder,board,unit):
     seed={'seconds':unit['decision'].get('seconds',[None,None]),'audio':board.get('source_media'),'revision':unit['revision']}
     if choice['id']=='original':
         seed['picture']=board.get('source_media')
+    elif lib.numbered_motions.number(choice['id']):
+        card=lib.card(choice['id'])
+        seed['motion']={'inputs':card['inputs'],'assets':{},'text':{}}
+        if card.get('portrait_template'):
+            seed['size']=card['native_size']
+            seed['available_media_slots']=card['slot_labels']
+        elif card['material_slots']:seed['available_image_slots']=card['material_slots']
     else:
         card=lib.card(choice['id'])
         slots=card['inputs']
@@ -104,7 +119,7 @@ def trial_form(folder,board,unit):
         path.parent.mkdir(exist_ok=True,parents=True)
         write_atomic(path,seed)
     unit['trial_form']=ed.relative(folder,path)
-    return {'file_to_fill':str(path),'fields':seed,'next':'填本期真实素材、原声与剪点，直接运行 direct -- trial --project 本期工程 --unit '+unit['id']+' --spec "'+str(path)+'"。使用自定义合成时说明保留了哪个动作、改变了什么。'}
+    return {'file_to_fill':str(path),'fields':seed,'next':'填本期真实素材、原声与剪点，直接运行 direct -- trial --project 本期工程 --unit '+unit['id']+' --spec "'+str(path)+'"。编号动作通过 motion 绑定本期素材并渲染。'}
 
 
 def verify_and_register(folder, path, route='verify-output'):

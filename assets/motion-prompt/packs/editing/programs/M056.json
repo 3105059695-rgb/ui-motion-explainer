@@ -1,0 +1,38 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-native-t14c",
+  "title": "价格落定：数字逐位滚动，旧价划掉，差额亮出",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "oldPrice": 50,
+    "newPrice": 10,
+    "currency": "¥"
+  },
+  "nodes": [
+    {
+      "id": "n001-b3-price",
+      "kind": "b3-price",
+      "x": 240,
+      "y": 220,
+      "w": 1440,
+      "h": 650,
+      "oldKey": "oldPrice",
+      "newKey": "newPrice",
+      "currencyKey": "currency",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            4.25,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

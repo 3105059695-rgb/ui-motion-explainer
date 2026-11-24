@@ -1,0 +1,69 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t14f",
+  "title": "仪表读数",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "target": 84.07,
+    "title": "把结果放到同一量尺上",
+    "source": "0–100 标尺 · 示意读数"
+  },
+  "nodes": [
+    {
+      "id": "n001-text",
+      "kind": "text",
+      "x": 250,
+      "y": 90,
+      "w": 1420,
+      "h": 110,
+      "text": "{{title}}",
+      "size": 67,
+      "color": "#0B0B0F",
+      "align": "center"
+    },
+    {
+      "id": "n002-b2-gauge",
+      "kind": "b2-gauge",
+      "x": 450,
+      "y": 250,
+      "w": 1020,
+      "h": 620,
+      "toKey": "target",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            1.0,
+            0.0497
+          ],
+          [
+            2.1,
+            0.9759
+          ],
+          [
+            3.4,
+            1,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 400,
+      "y": 985,
+      "w": 1120,
+      "h": 55,
+      "text": "{{source}}",
+      "size": 30,
+      "color": "#62616C",
+      "align": "center"
+    }
+  ],
+  "assets": {}
+}

@@ -1,0 +1,75 @@
+{
+  "id": "M206",
+  "layout": "native",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-deliveries",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-argon",
+      "start": 241,
+      "end": 251
+    }
+  ],
+  "chain": [
+    "一份访谈稿送往几个输出文档，再与作者终稿对照，列之间的关系一直可追。"
+  ],
+  "binding": {
+    "headline": "一句话的三种用法",
+    "captions": [
+      "这里先有一句原话。",
+      "字幕和提词分别使用它。",
+      "剪辑备注也是从这句话来的。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "source": "以及对于你来说，有什么用处",
+        "items": [
+          "口播字幕",
+          "提词提示",
+          "剪辑备注"
+        ],
+        "bodies": [
+          "以及对于你来说／有什么用处",
+          "问观众：这对你有什么用？",
+          "说到「你」时留住人物视线"
+        ],
+        "active": 0
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

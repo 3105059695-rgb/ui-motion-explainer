@@ -1,0 +1,129 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t09n",
+  "title": "等待快进",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "wait": "等待处理完成",
+    "time": "等待过程已省略"
+  },
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 260,
+      "y": 130,
+      "w": 1400,
+      "h": 800,
+      "asset": "screen",
+      "fit": "contain",
+      "radius": 18,
+      "tracks": {
+        "blur": [
+          [
+            0,
+            12
+          ],
+          [
+            1.74,
+            12
+          ],
+          [
+            2.34,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-card",
+      "kind": "card",
+      "x": 470,
+      "y": 335,
+      "w": 980,
+      "h": 400,
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 50,
+          "y": 50,
+          "w": 880,
+          "h": 80,
+          "text": "{{wait}}",
+          "size": 64,
+          "color": "#FFFFFF",
+          "align": "center"
+        },
+        {
+          "id": "n003-bar",
+          "kind": "bar",
+          "x": 60,
+          "y": 265,
+          "w": 860,
+          "h": 26,
+          "tracks": {
+            "value": [
+              [
+                0,
+                0.18
+              ],
+              [
+                1.8,
+                1,
+                "linear"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 50,
+          "y": 170,
+          "w": 880,
+          "h": 60,
+          "text": "{{time}}",
+          "size": 34,
+          "color": "#62616C",
+          "align": "center"
+        }
+      ],
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            1.86,
+            1
+          ],
+          [
+            2.34,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            1.86,
+            1
+          ],
+          [
+            2.34,
+            0.92
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {
+    "screen": "aba20e6c2937800563"
+  }
+}

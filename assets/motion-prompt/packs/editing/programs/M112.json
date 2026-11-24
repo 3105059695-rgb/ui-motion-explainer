@@ -1,0 +1,356 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t08e",
+  "title": "评论里拎出问题",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "user0": "用户 1",
+    "comment0": "这个怎么在本地运行？",
+    "user1": "用户 2",
+    "comment1": "我该下载哪个版本？",
+    "user2": "用户 3",
+    "comment2": "已有文件会不会被覆盖？",
+    "issue0": "本地运行",
+    "issue1": "版本选择",
+    "issue2": "文件保留"
+  },
+  "nodes": [
+    {
+      "id": "n004-card",
+      "kind": "card",
+      "x": 180,
+      "y": 170,
+      "w": 850,
+      "h": 190,
+      "children": [
+        {
+          "id": "n001-circle",
+          "kind": "circle",
+          "x": 30,
+          "y": 30,
+          "w": 55,
+          "h": 55,
+          "fill": "#DBDBE0"
+        },
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 110,
+          "y": 32,
+          "w": 680,
+          "h": 50,
+          "text": "{{user0}}",
+          "size": 28,
+          "color": "#62616C",
+          "align": "left"
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 35,
+          "y": 105,
+          "w": 770,
+          "h": 60,
+          "text": "{{comment0}}",
+          "size": 35,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.6,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            205
+          ],
+          [
+            0.6,
+            170,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-card",
+      "kind": "card",
+      "x": 180,
+      "y": 400,
+      "w": 850,
+      "h": 190,
+      "children": [
+        {
+          "id": "n005-circle",
+          "kind": "circle",
+          "x": 30,
+          "y": 30,
+          "w": 55,
+          "h": 55,
+          "fill": "#DBDBE0"
+        },
+        {
+          "id": "n006-text",
+          "kind": "text",
+          "x": 110,
+          "y": 32,
+          "w": 680,
+          "h": 50,
+          "text": "{{user1}}",
+          "size": 28,
+          "color": "#62616C",
+          "align": "left"
+        },
+        {
+          "id": "n007-text",
+          "kind": "text",
+          "x": 35,
+          "y": 105,
+          "w": 770,
+          "h": 60,
+          "text": "{{comment1}}",
+          "size": 35,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.4,
+            0
+          ],
+          [
+            1.0,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.4,
+            435
+          ],
+          [
+            1.0,
+            400,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012-card",
+      "kind": "card",
+      "x": 180,
+      "y": 630,
+      "w": 850,
+      "h": 190,
+      "children": [
+        {
+          "id": "n009-circle",
+          "kind": "circle",
+          "x": 30,
+          "y": 30,
+          "w": 55,
+          "h": 55,
+          "fill": "#DBDBE0"
+        },
+        {
+          "id": "n010-text",
+          "kind": "text",
+          "x": 110,
+          "y": 32,
+          "w": 680,
+          "h": 50,
+          "text": "{{user2}}",
+          "size": 28,
+          "color": "#62616C",
+          "align": "left"
+        },
+        {
+          "id": "n011-text",
+          "kind": "text",
+          "x": 35,
+          "y": 105,
+          "w": 770,
+          "h": 60,
+          "text": "{{comment2}}",
+          "size": 35,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.8,
+            0
+          ],
+          [
+            1.4,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.8,
+            665
+          ],
+          [
+            1.4,
+            630,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013-pill",
+      "kind": "pill",
+      "x": 1200,
+      "y": 235,
+      "w": 520,
+      "h": 110,
+      "label": "{{issue0}}",
+      "size": 48,
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "stroke": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.1,
+            0
+          ],
+          [
+            2.7,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.1,
+            270
+          ],
+          [
+            2.7,
+            235,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014-pill",
+      "kind": "pill",
+      "x": 1200,
+      "y": 465,
+      "w": 520,
+      "h": 110,
+      "label": "{{issue1}}",
+      "size": 48,
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "stroke": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.75,
+            0
+          ],
+          [
+            3.35,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.75,
+            500
+          ],
+          [
+            3.35,
+            465,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n015-pill",
+      "kind": "pill",
+      "x": 1200,
+      "y": 695,
+      "w": 520,
+      "h": 110,
+      "label": "{{issue2}}",
+      "size": 48,
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "stroke": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.4,
+            0
+          ],
+          [
+            4.0,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.4,
+            730
+          ],
+          [
+            4.0,
+            695,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

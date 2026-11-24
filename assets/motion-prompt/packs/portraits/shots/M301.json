@@ -1,0 +1,194 @@
+{
+  "id": "M301",
+  "layout": "gather",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "file-tiles",
+      "states": [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            1
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "images",
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "composer",
+      "states": [
+        {
+          "attached": false,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": true
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-handoff",
+      "states": [
+        {
+          "delivered": []
+        },
+        {
+          "delivered": [
+            0
+          ]
+        },
+        {
+          "delivered": [
+            0,
+            1
+          ]
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "sample:A01",
+      "start": 0.0,
+      "end": 18.0
+    }
+  ],
+  "chain": [
+    "先看各自独立的材料",
+    "收拢以后变成一个任务",
+    "再把这个任务交给接收方"
+  ],
+  "binding": {
+    "headline": "从三份材料到一次交付",
+    "captions": [
+      "素材和说明分开摆着。",
+      "它们一起进入同一个任务。",
+      "处理好，再把交付件传给下一位。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "地出.jpg",
+          "压缩界面.png",
+          "安德斯.jpg"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp",
+          "portrait.webp"
+        ],
+        "active": 0
+      },
+      {
+        "text": "请对照这份资料列出变化。",
+        "file": "交付记录.md",
+        "attached": true,
+        "sent": false
+      },
+      {
+        "sender": "素材编辑",
+        "recipient": "剪辑台",
+        "items": [
+          "素材目录",
+          "输入原图"
+        ],
+        "delivered": [
+          0
+        ]
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      [
+        {
+          "attached": false,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": true
+        }
+      ],
+      [
+        {
+          "delivered": []
+        },
+        {
+          "delivered": [
+            0
+          ]
+        },
+        {
+          "delivered": [
+            0,
+            1
+          ]
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "文件缩略图 · earth"
+    },
+    {
+      "key": "media2",
+      "name": "文件缩略图 · interface"
+    },
+    {
+      "key": "media3",
+      "name": "文件缩略图 · portrait"
+    }
+  ]
+}

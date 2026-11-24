@@ -1,0 +1,442 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t04b",
+  "title": "角色分工：每个工具各管一环",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "task": "完成这次任务",
+    "role0": "理解任务",
+    "tool0": "资料工具",
+    "role1": "执行操作",
+    "tool1": "运行工具",
+    "role2": "检查结果",
+    "tool2": "核对工具"
+  },
+  "nodes": [
+    {
+      "id": "n001-pill",
+      "kind": "pill",
+      "x": 610,
+      "y": 90,
+      "w": 700,
+      "h": 130,
+      "label": "{{task}}",
+      "size": 63,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "n002-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 960,
+      "y": 245,
+      "w": -570,
+      "h": 145,
+      "arrow": true,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            0.5,
+            0
+          ],
+          [
+            1.25,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-pill",
+      "kind": "pill",
+      "x": 180,
+      "y": 420,
+      "w": 440,
+      "h": 130,
+      "label": "{{role0}}",
+      "size": 49,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.75,
+            0
+          ],
+          [
+            1.35,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.75,
+            455
+          ],
+          [
+            1.35,
+            420,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 400,
+      "y": 565,
+      "w": 0,
+      "h": 115,
+      "arrow": true,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            1.75,
+            0
+          ],
+          [
+            2.35,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-card",
+      "kind": "card",
+      "x": 180,
+      "y": 710,
+      "w": 440,
+      "h": 230,
+      "children": [
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 35,
+          "y": 70,
+          "w": 370,
+          "h": 100,
+          "text": "{{tool0}}",
+          "size": 51,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#F3F3F5",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.2,
+            0
+          ],
+          [
+            2.8,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.2,
+            745
+          ],
+          [
+            2.8,
+            710,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 960,
+      "y": 245,
+      "w": 0,
+      "h": 145,
+      "arrow": true,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            0.5,
+            0
+          ],
+          [
+            1.25,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-pill",
+      "kind": "pill",
+      "x": 750,
+      "y": 420,
+      "w": 440,
+      "h": 130,
+      "label": "{{role1}}",
+      "size": 49,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.25,
+            0
+          ],
+          [
+            1.85,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.25,
+            455
+          ],
+          [
+            1.85,
+            420,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 970,
+      "y": 565,
+      "w": 0,
+      "h": 115,
+      "arrow": true,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            2.25,
+            0
+          ],
+          [
+            2.85,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011-card",
+      "kind": "card",
+      "x": 750,
+      "y": 710,
+      "w": 440,
+      "h": 230,
+      "children": [
+        {
+          "id": "n010-text",
+          "kind": "text",
+          "x": 35,
+          "y": 70,
+          "w": 370,
+          "h": 100,
+          "text": "{{tool1}}",
+          "size": 51,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#D6C2FF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.7,
+            0
+          ],
+          [
+            3.3,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.7,
+            745
+          ],
+          [
+            3.3,
+            710,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 960,
+      "y": 245,
+      "w": 570,
+      "h": 145,
+      "arrow": true,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            0.5,
+            0
+          ],
+          [
+            1.25,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013-pill",
+      "kind": "pill",
+      "x": 1320,
+      "y": 420,
+      "w": 440,
+      "h": 130,
+      "label": "{{role2}}",
+      "size": 49,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.75,
+            0
+          ],
+          [
+            2.35,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.75,
+            455
+          ],
+          [
+            2.35,
+            420,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 1540,
+      "y": 565,
+      "w": 0,
+      "h": 115,
+      "arrow": true,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            2.75,
+            0
+          ],
+          [
+            3.35,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n016-card",
+      "kind": "card",
+      "x": 1320,
+      "y": 710,
+      "w": 440,
+      "h": 230,
+      "children": [
+        {
+          "id": "n015-text",
+          "kind": "text",
+          "x": 35,
+          "y": 70,
+          "w": 370,
+          "h": 100,
+          "text": "{{tool2}}",
+          "size": 51,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#F3F3F5",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.2,
+            0
+          ],
+          [
+            3.8,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.2,
+            745
+          ],
+          [
+            3.8,
+            710,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

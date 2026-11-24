@@ -1,0 +1,137 @@
+{
+  "id": "M273",
+  "layout": "unveil",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "progress",
+      "states": [
+        {
+          "value": 8
+        },
+        {
+          "value": 55
+        },
+        {
+          "value": 100
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "loading",
+      "states": [
+        {},
+        {},
+        {}
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "result",
+      "states": [
+        {
+          "success": false,
+          "title": "等待确认"
+        },
+        {
+          "success": true,
+          "title": "已完成"
+        },
+        {
+          "success": true,
+          "title": "已完成"
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "arun-membership",
+      "start": 88,
+      "end": 95,
+      "shotIds": [
+        "A-S023"
+      ],
+      "rowIds": [
+        "A-L047",
+        "A-L048",
+        "A-L049",
+        "A-L050"
+      ]
+    }
+  ],
+  "chain": [
+    "封闭实体覆盖原受阻区域",
+    "倒计时成为唯一变化重点，其他对象保持位置",
+    "计时归零后箱盖抬起",
+    "结果位置出现问号，表达此前不可见",
+    "主体退出并清场，交给下一判断维度"
+  ],
+  "binding": {
+    "headline": "盖住处理区，等待结束才揭开结果",
+    "captions": [
+      "先盖住正在处理的区域",
+      "等待时只留进度变化",
+      "完成以后才揭开结果"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "label": "导出进度",
+        "value": 64
+      },
+      {
+        "label": "正在读取素材",
+        "done": false
+      },
+      {
+        "success": true,
+        "title": "导出完成",
+        "body": "字幕和视频已生成。",
+        "action": "查看交付清单",
+        "open": false
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "value": 8
+        },
+        {
+          "value": 55
+        },
+        {
+          "value": 100
+        }
+      ],
+      [
+        {},
+        {},
+        {}
+      ],
+      [
+        {
+          "success": false,
+          "title": "等待确认"
+        },
+        {
+          "success": true,
+          "title": "已完成"
+        },
+        {
+          "success": true,
+          "title": "已完成"
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

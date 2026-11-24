@@ -1,0 +1,80 @@
+{
+  "id": "M205",
+  "layout": "native",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-extract",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-weekly",
+      "start": 210,
+      "end": 218
+    }
+  ],
+  "chain": [
+    "耳机旁先出现说出的提醒内容，随后同一项时间和事项进入手机日程。"
+  ],
+  "binding": {
+    "headline": "周三的交付安排",
+    "captions": [
+      "周三，下午两点，交初剪。",
+      "周三进日期，两点进时间。",
+      "交初剪是这次的事项。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "交付安排示例",
+        "items": [
+          "周三",
+          "下午两点",
+          "交初剪"
+        ],
+        "labels": [
+          "日期",
+          "时间",
+          "事项"
+        ],
+        "values": [
+          "周三",
+          "14:00",
+          "交初剪"
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

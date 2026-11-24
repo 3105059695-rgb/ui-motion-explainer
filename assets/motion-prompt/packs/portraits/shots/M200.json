@@ -1,0 +1,83 @@
+{
+  "id": "M200",
+  "layout": "native",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-choice",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-jev",
+      "start": 178,
+      "end": 190
+    }
+  ],
+  "chain": [
+    "偶尔调用与自己掌控模型分别对应不同方案，后一条需求出现时另一选项退到背景。"
+  ],
+  "binding": {
+    "headline": "给这张图选用途",
+    "captions": [
+      "留档要保留原图。",
+      "网页发布要考虑大小。",
+      "用途变了，合适的版本也会变。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "长期留档",
+          "网页发布",
+          "复查质量"
+        ],
+        "options": [
+          "输入原图",
+          "网页副本"
+        ],
+        "preferred": [
+          0,
+          1,
+          0
+        ],
+        "reasons": [
+          "留下完整的输入材料",
+          "质量 50 副本为 95.9 kB",
+          "用原图对照同一位置的细节"
+        ],
+        "active": 0
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

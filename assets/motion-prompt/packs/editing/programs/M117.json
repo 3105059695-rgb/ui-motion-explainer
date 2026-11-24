@@ -1,0 +1,307 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t09m",
+  "title": "快捷键",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "key0": "⌘",
+    "plus0": "+",
+    "key1": "⇧",
+    "plus1": "+",
+    "key2": "5",
+    "result": "打开录制工具"
+  },
+  "nodes": [
+    {
+      "id": "n002-card",
+      "kind": "card",
+      "x": 270,
+      "y": 400,
+      "w": 240,
+      "h": 220,
+      "children": [
+        {
+          "id": "n001-text",
+          "kind": "text",
+          "x": 15,
+          "y": 40,
+          "w": 210,
+          "h": 130,
+          "text": "{{key0}}",
+          "size": 100,
+          "color": "#0B0B0F",
+          "align": "center",
+          "tracks": {
+            "color": [
+              [
+                0,
+                "#0B0B0F"
+              ],
+              [
+                0.72,
+                "#0B0B0F"
+              ],
+              [
+                0.84,
+                "#FFFFFF",
+                "step"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "fill": [
+          [
+            0,
+            "#FFFFFF"
+          ],
+          [
+            0.72,
+            "#FFFFFF"
+          ],
+          [
+            0.84,
+            "#0B0B0F",
+            "step"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            400
+          ],
+          [
+            0.72,
+            400
+          ],
+          [
+            0.84,
+            412
+          ],
+          [
+            1.08,
+            400
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 545,
+      "y": 470,
+      "w": 60,
+      "h": 70,
+      "text": "{{plus0}}",
+      "size": 54,
+      "color": "#62616C",
+      "align": "center"
+    },
+    {
+      "id": "n005-card",
+      "kind": "card",
+      "x": 620,
+      "y": 400,
+      "w": 240,
+      "h": 220,
+      "children": [
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 15,
+          "y": 40,
+          "w": 210,
+          "h": 130,
+          "text": "{{key1}}",
+          "size": 100,
+          "color": "#0B0B0F",
+          "align": "center",
+          "tracks": {
+            "color": [
+              [
+                0,
+                "#0B0B0F"
+              ],
+              [
+                1.02,
+                "#0B0B0F"
+              ],
+              [
+                1.14,
+                "#FFFFFF",
+                "step"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "fill": [
+          [
+            0,
+            "#FFFFFF"
+          ],
+          [
+            1.02,
+            "#FFFFFF"
+          ],
+          [
+            1.14,
+            "#0B0B0F",
+            "step"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            400
+          ],
+          [
+            1.02,
+            400
+          ],
+          [
+            1.14,
+            412
+          ],
+          [
+            1.38,
+            400
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-text",
+      "kind": "text",
+      "x": 895,
+      "y": 470,
+      "w": 60,
+      "h": 70,
+      "text": "{{plus1}}",
+      "size": 54,
+      "color": "#62616C",
+      "align": "center"
+    },
+    {
+      "id": "n008-card",
+      "kind": "card",
+      "x": 970,
+      "y": 400,
+      "w": 240,
+      "h": 220,
+      "children": [
+        {
+          "id": "n007-text",
+          "kind": "text",
+          "x": 15,
+          "y": 40,
+          "w": 210,
+          "h": 130,
+          "text": "{{key2}}",
+          "size": 100,
+          "color": "#0B0B0F",
+          "align": "center",
+          "tracks": {
+            "color": [
+              [
+                0,
+                "#0B0B0F"
+              ],
+              [
+                1.32,
+                "#0B0B0F"
+              ],
+              [
+                1.44,
+                "#FFFFFF",
+                "step"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "fill": [
+          [
+            0,
+            "#FFFFFF"
+          ],
+          [
+            1.32,
+            "#FFFFFF"
+          ],
+          [
+            1.44,
+            "#0B0B0F",
+            "step"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            400
+          ],
+          [
+            1.32,
+            400
+          ],
+          [
+            1.44,
+            412
+          ],
+          [
+            1.68,
+            400
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-pill",
+      "kind": "pill",
+      "x": 1360,
+      "y": 440,
+      "w": 440,
+      "h": 140,
+      "label": "{{result}}",
+      "size": 43,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.8,
+            0
+          ],
+          [
+            2.16,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.8,
+            475
+          ],
+          [
+            2.16,
+            440,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

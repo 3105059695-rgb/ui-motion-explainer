@@ -1,0 +1,198 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t20c",
+  "title": "更新快讯开场",
+  "duration": 4,
+  "background": "#FFFFFF",
+  "inputs": {
+    "brand": "UPDATE",
+    "news0": "关键变化",
+    "news1": "实际案例",
+    "news2": "使用建议"
+  },
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "asset": "screen",
+      "fit": "contain",
+      "radius": 18,
+      "blur": 18,
+      "opacity": 0.3
+    },
+    {
+      "id": "n003-card",
+      "kind": "card",
+      "x": 700,
+      "y": 150,
+      "w": 520,
+      "h": 300,
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 25,
+          "y": 75,
+          "w": 470,
+          "h": 150,
+          "text": "{{brand}}",
+          "size": 100,
+          "color": "#0B0B0F",
+          "align": "center"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.0,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            185
+          ],
+          [
+            1.0,
+            150,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-pill",
+      "kind": "pill",
+      "x": 150,
+      "y": 530,
+      "w": 460,
+      "h": 140,
+      "label": "{{news0}}",
+      "size": 56,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.0,
+            0
+          ],
+          [
+            1.8,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.0,
+            605
+          ],
+          [
+            1.8,
+            530,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-pill",
+      "kind": "pill",
+      "x": 700,
+      "y": 810,
+      "w": 460,
+      "h": 140,
+      "label": "{{news1}}",
+      "size": 56,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.64,
+            0
+          ],
+          [
+            2.44,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.64,
+            885
+          ],
+          [
+            2.44,
+            810,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-pill",
+      "kind": "pill",
+      "x": 1310,
+      "y": 530,
+      "w": 460,
+      "h": 140,
+      "label": "{{news2}}",
+      "size": 56,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.28,
+            0
+          ],
+          [
+            3.08,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.28,
+            605
+          ],
+          [
+            3.08,
+            530,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {
+    "screen": "aba20e6c2937800563"
+  }
+}

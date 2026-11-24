@@ -1,0 +1,172 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t01c",
+  "title": "原则口诀：三句依次锁定",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "principle0": "先把目标说清楚",
+    "principle1": "再把素材用明白",
+    "principle2": "最后让结果可核对",
+    "star": "✦"
+  },
+  "nodes": [
+    {
+      "id": "n001-pill",
+      "kind": "pill",
+      "x": 320,
+      "y": 160,
+      "w": 1280,
+      "h": 170,
+      "label": "{{principle0}}",
+      "size": 73,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.8,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            235
+          ],
+          [
+            0.8,
+            160,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-pill",
+      "kind": "pill",
+      "x": 320,
+      "y": 425,
+      "w": 1280,
+      "h": 170,
+      "label": "{{principle1}}",
+      "size": 73,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.15,
+            0
+          ],
+          [
+            1.95,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.15,
+            500
+          ],
+          [
+            1.95,
+            425,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-pill",
+      "kind": "pill",
+      "x": 320,
+      "y": 690,
+      "w": 1280,
+      "h": 170,
+      "label": "{{principle2}}",
+      "size": 73,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.3,
+            0
+          ],
+          [
+            3.1,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.3,
+            765
+          ],
+          [
+            3.1,
+            690,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-text",
+      "kind": "text",
+      "x": 1510,
+      "y": 675,
+      "w": 160,
+      "h": 160,
+      "text": "{{star}}",
+      "size": 130,
+      "color": "#D6C2FF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.2,
+            0
+          ],
+          [
+            4.0,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.2,
+            710
+          ],
+          [
+            4.0,
+            675,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

@@ -1,0 +1,193 @@
+{
+  "id": "M236",
+  "layout": "relay",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "source-quote",
+      "states": [
+        {
+          "active": 0,
+          "located": false
+        },
+        {
+          "active": 1,
+          "located": true
+        },
+        {
+          "active": 2,
+          "located": true
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "tool-call",
+      "states": [
+        {
+          "phase": "running",
+          "open": false
+        },
+        {
+          "phase": "running",
+          "open": true
+        },
+        {
+          "phase": "done",
+          "open": true
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-handoff",
+      "states": [
+        {
+          "delivered": []
+        },
+        {
+          "delivered": [
+            0
+          ]
+        },
+        {
+          "delivered": [
+            0,
+            1
+          ]
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "network",
+      "start": 284.4,
+      "end": 308.3,
+      "shotIds": [
+        "N079",
+        "N080",
+        "N081",
+        "N082",
+        "N083"
+      ],
+      "rowIds": [
+        "N-L116",
+        "N-L117",
+        "N-L118",
+        "N-L119",
+        "N-L120",
+        "N-L121",
+        "N-L122",
+        "N-L123",
+        "N-L124",
+        "N-L125",
+        "N-L126",
+        "N-L127",
+        "N-L128",
+        "N-L129",
+        "N-L130"
+      ]
+    }
+  ],
+  "chain": [
+    "原作者在电脑前工作，接着白文档容器逐项写入提示词、工作流、Skill。",
+    "白机器人接过文档，在原电脑位置坐下。",
+    "机器人读文档、敲键盘，屏幕从图表变代码后出绿色勾；再起身经光环穿西装戴眼镜，展开炒股专用扇子。",
+    "另一人带笔记本来，机器人输入操作，笔记本由股图变代码/文字、出现勾，用户拿回结果。"
+  ],
+  "binding": {
+    "headline": "学会任务的执行者再服务下一人",
+    "captions": [
+      "先把任务说明交出去",
+      "执行者按说明得到回执",
+      "确认后的任务再交给下一位"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "本期交付约定",
+        "paragraphs": [
+          "素材归档后再做网页副本。",
+          "原图与副本应分别保留。",
+          "导出后核对文件名和体积。"
+        ],
+        "active": 1,
+        "located": false
+      },
+      {
+        "tool": "读取文件信息",
+        "arg": "地出.jpg",
+        "output": "494,374 字节 · JPEG",
+        "error": "未找到指定文件",
+        "phase": "done",
+        "open": true
+      },
+      {
+        "sender": "素材编辑",
+        "recipient": "剪辑台",
+        "items": [
+          "素材目录",
+          "输入原图"
+        ],
+        "delivered": [
+          0
+        ]
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0,
+          "located": false
+        },
+        {
+          "active": 1,
+          "located": true
+        },
+        {
+          "active": 2,
+          "located": true
+        }
+      ],
+      [
+        {
+          "phase": "running",
+          "open": false
+        },
+        {
+          "phase": "running",
+          "open": true
+        },
+        {
+          "phase": "done",
+          "open": true
+        }
+      ],
+      [
+        {
+          "delivered": []
+        },
+        {
+          "delivered": [
+            0
+          ]
+        },
+        {
+          "delivered": [
+            0,
+            1
+          ]
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

@@ -1,0 +1,257 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t09i",
+  "title": "按条件选中一行",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "row10": "package-linux-x64.tar.gz",
+    "row21": "package-mac-arm64.dmg",
+    "row32": "package-mac-x64.dmg",
+    "row43": "package-win-x64.7z",
+    "condition0": "Apple 芯片",
+    "condition1": "Windows"
+  },
+  "nodes": [
+    {
+      "id": "n001-window",
+      "kind": "window",
+      "x": 740,
+      "y": 220,
+      "w": 1000,
+      "h": 610,
+      "label": "选择与你系统相符的版本",
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 35,
+          "y": 100,
+          "w": 930,
+          "h": 55,
+          "text": "{{row10}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 35,
+          "y": 165,
+          "w": 930,
+          "h": 55,
+          "text": "{{row21}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 35,
+          "y": 230,
+          "w": 930,
+          "h": 55,
+          "text": "{{row32}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 35,
+          "y": 295,
+          "w": 930,
+          "h": 55,
+          "text": "{{row43}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "n006-rect",
+      "kind": "rect",
+      "x": 765,
+      "y": 372,
+      "w": 940,
+      "h": 61,
+      "fill": "#D6C2FF",
+      "radius": 8,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.38,
+            0
+          ],
+          [
+            2.16,
+            0.55
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 155,
+      "y": 375,
+      "w": 410,
+      "h": 70,
+      "label": "{{condition0}}",
+      "size": 34,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.38,
+            0
+          ],
+          [
+            2.1,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.38,
+            410
+          ],
+          [
+            2.1,
+            375,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-path",
+      "kind": "path",
+      "x": 565,
+      "y": 405,
+      "w": 1,
+      "h": 1,
+      "path": "M0 0 L170 0",
+      "length": 170,
+      "fill": "#0B0B0F",
+      "strokeWidth": 4,
+      "tracks": {
+        "draw": [
+          [
+            1.38,
+            0
+          ],
+          [
+            2.22,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-rect",
+      "kind": "rect",
+      "x": 765,
+      "y": 502,
+      "w": 940,
+      "h": 61,
+      "fill": "#D6C2FF",
+      "radius": 8,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.06,
+            0
+          ],
+          [
+            3.84,
+            0.55
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010-pill",
+      "kind": "pill",
+      "x": 155,
+      "y": 505,
+      "w": 410,
+      "h": 70,
+      "label": "{{condition1}}",
+      "size": 34,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.06,
+            0
+          ],
+          [
+            3.78,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.06,
+            540
+          ],
+          [
+            3.78,
+            505,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011-path",
+      "kind": "path",
+      "x": 565,
+      "y": 535,
+      "w": 1,
+      "h": 1,
+      "path": "M0 0 L170 0",
+      "length": 170,
+      "fill": "#0B0B0F",
+      "strokeWidth": 4,
+      "tracks": {
+        "draw": [
+          [
+            3.06,
+            0
+          ],
+          [
+            3.9,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

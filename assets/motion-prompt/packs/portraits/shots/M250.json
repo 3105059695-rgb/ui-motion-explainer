@@ -1,0 +1,292 @@
+{
+  "id": "M250",
+  "layout": "focus",
+  "layers": [
+    {
+      "kind": "photo",
+      "file": "fr-screen.webp",
+      "slot": "media1",
+      "label": "实际界面"
+    },
+    {
+      "kind": "ui",
+      "component": "fred-spotlight",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "fred-field",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": [
+        {
+          "slot": "media2",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-argon",
+      "start": 44.8,
+      "end": 48.4,
+      "shotIds": [
+        "F1-15"
+      ],
+      "rowIds": [
+        "F-L023",
+        "F-L024",
+        "F-L025"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 26.6,
+      "end": 31.6,
+      "shotIds": [
+        "J-S017",
+        "J-S018",
+        "J-S019"
+      ],
+      "rowIds": [
+        "J-L018",
+        "J-L019",
+        "J-L020",
+        "J-L021"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 64.3,
+      "end": 67.9,
+      "shotIds": [
+        "J-S037",
+        "J-S038"
+      ],
+      "rowIds": [
+        "J-L039",
+        "J-L040",
+        "J-L041"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 91.9,
+      "end": 94.5,
+      "shotIds": [
+        "J-S113"
+      ],
+      "rowIds": [
+        "J-L053",
+        "J-L054",
+        "J-L055"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 126.625,
+      "end": 131.125,
+      "shotIds": [
+        "J-S126",
+        "J-S127"
+      ],
+      "rowIds": [
+        "J-L078",
+        "J-L079",
+        "J-L080",
+        "J-L081",
+        "J-L082"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 133.5,
+      "end": 142.4,
+      "shotIds": [
+        "J-S130",
+        "J-S131",
+        "J-S132",
+        "J-S133",
+        "J-S201",
+        "J-S202"
+      ],
+      "rowIds": [
+        "J-L084",
+        "J-L085",
+        "J-L086",
+        "J-L087",
+        "J-L088",
+        "J-L089",
+        "J-L090"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 148.15,
+      "end": 149.1,
+      "shotIds": [
+        "J-S207"
+      ],
+      "rowIds": [
+        "J-L093"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 23.6,
+      "end": 26.3,
+      "shotIds": [
+        "A-S008"
+      ],
+      "rowIds": [
+        "A-L010",
+        "A-L011"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 56.5,
+      "end": 60,
+      "shotIds": [
+        "A-S018"
+      ],
+      "rowIds": [
+        "A-L027",
+        "A-L028",
+        "A-L029"
+      ]
+    }
+  ],
+  "chain": [
+    "窗口全貌和来源已建立",
+    "窗口与标签保持",
+    "内部内容缩放移动到目标",
+    "必要时内部退回全貌"
+  ],
+  "binding": {
+    "headline": "外框不动，只推进真实界面内部",
+    "captions": [
+      "先认清这是哪个界面",
+      "窗框不动，视线进入当前字段",
+      "把读到的值留在原件旁边"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "image": "fr-screen.webp",
+        "title": "Squoosh",
+        "items": [
+          "编码格式",
+          "导出质量",
+          "文件体积"
+        ],
+        "rects": [
+          [
+            79,
+            73.5,
+            20,
+            6.2
+          ],
+          [
+            79,
+            79.8,
+            20,
+            7
+          ],
+          [
+            81,
+            91.5,
+            13,
+            6.7
+          ]
+        ],
+        "active": 1
+      },
+      {
+        "image": "fr-record.webp",
+        "title": "NASA 图片记录",
+        "items": [
+          "摄影署名",
+          "记录日期",
+          "页面语言"
+        ],
+        "values": [
+          "NASA/Bill Anders",
+          "December 24, 1968",
+          "English"
+        ],
+        "active": 0
+      }
+    ],
+    "keyframes": [
+      [],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "实际界面"
+    },
+    {
+      "key": "media2",
+      "name": "原件字段摘读 · fr-record"
+    }
+  ]
+}

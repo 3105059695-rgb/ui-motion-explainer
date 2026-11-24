@@ -1,0 +1,459 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-fix5-t18b",
+  "title": "多工具组合成一条工作流",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "logo0": "A",
+    "name0": "接收信息",
+    "logo1": "B",
+    "name1": "执行任务",
+    "logo2": "C",
+    "name2": "交付结果",
+    "conclusion": "工具各自分工，串成一条工作流"
+  },
+  "nodes": [
+    {
+      "id": "n003-group",
+      "kind": "group",
+      "x": 250,
+      "y": 160,
+      "w": 230,
+      "h": 230,
+      "children": [
+        {
+          "id": "n001-card",
+          "kind": "card",
+          "x": 0,
+          "y": 0,
+          "w": 230,
+          "h": 230,
+          "children": [],
+          "fill": "#0B0B0F"
+        },
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 0,
+          "y": 30,
+          "w": 230,
+          "h": 160,
+          "text": "{{logo0}}",
+          "size": 130,
+          "color": "#FFFFFF",
+          "align": "center"
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            250
+          ],
+          [
+            1.6,
+            300
+          ]
+        ],
+        "y": [
+          [
+            0,
+            160
+          ],
+          [
+            1.6,
+            320
+          ]
+        ],
+        "rotation": [
+          [
+            0,
+            80
+          ],
+          [
+            1.6,
+            0,
+            "back"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-text",
+      "kind": "text",
+      "x": 250,
+      "y": 590,
+      "w": 330,
+      "h": 90,
+      "text": "{{name0}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.5,
+            0
+          ],
+          [
+            2.1,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.5,
+            625
+          ],
+          [
+            2.1,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-group",
+      "kind": "group",
+      "x": 1270,
+      "y": 80,
+      "w": 230,
+      "h": 230,
+      "children": [
+        {
+          "id": "n005-card",
+          "kind": "card",
+          "x": 0,
+          "y": 0,
+          "w": 230,
+          "h": 230,
+          "children": [],
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "n006-text",
+          "kind": "text",
+          "x": 0,
+          "y": 30,
+          "w": 230,
+          "h": 160,
+          "text": "{{logo1}}",
+          "size": 130,
+          "color": "#0B0B0F",
+          "align": "center"
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            1270
+          ],
+          [
+            1.6,
+            850
+          ]
+        ],
+        "y": [
+          [
+            0,
+            80
+          ],
+          [
+            1.6,
+            320
+          ]
+        ],
+        "rotation": [
+          [
+            0,
+            -80
+          ],
+          [
+            1.6,
+            0,
+            "back"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-text",
+      "kind": "text",
+      "x": 800,
+      "y": 590,
+      "w": 330,
+      "h": 90,
+      "text": "{{name1}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.7,
+            0
+          ],
+          [
+            2.3,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.7,
+            625
+          ],
+          [
+            2.3,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011-group",
+      "kind": "group",
+      "x": 700,
+      "y": 800,
+      "w": 230,
+      "h": 230,
+      "children": [
+        {
+          "id": "n009-card",
+          "kind": "card",
+          "x": 0,
+          "y": 0,
+          "w": 230,
+          "h": 230,
+          "children": [],
+          "fill": "#D6C2FF"
+        },
+        {
+          "id": "n010-text",
+          "kind": "text",
+          "x": 0,
+          "y": 30,
+          "w": 230,
+          "h": 160,
+          "text": "{{logo2}}",
+          "size": 130,
+          "color": "#0B0B0F",
+          "align": "center"
+        }
+      ],
+      "tracks": {
+        "x": [
+          [
+            0,
+            700
+          ],
+          [
+            1.6,
+            1400
+          ]
+        ],
+        "y": [
+          [
+            0,
+            800
+          ],
+          [
+            1.6,
+            320
+          ]
+        ],
+        "rotation": [
+          [
+            0,
+            80
+          ],
+          [
+            1.6,
+            0,
+            "back"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012-text",
+      "kind": "text",
+      "x": 1350,
+      "y": 590,
+      "w": 330,
+      "h": 90,
+      "text": "{{name2}}",
+      "size": 44,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.9,
+            0
+          ],
+          [
+            2.5,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.9,
+            625
+          ],
+          [
+            2.5,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 555,
+      "y": 435,
+      "w": 230,
+      "h": 0,
+      "arrow": true,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            1.8,
+            0
+          ],
+          [
+            2.4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 1105,
+      "y": 435,
+      "w": 230,
+      "h": 0,
+      "arrow": true,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            2.8,
+            0
+          ],
+          [
+            3.45,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n015-circle",
+      "kind": "circle",
+      "x": 550,
+      "y": 416,
+      "w": 35,
+      "h": 35,
+      "fill": "#D6C2FF",
+      "tracks": {
+        "x": [
+          [
+            2.1,
+            550
+          ],
+          [
+            2.75,
+            1020
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.1,
+            1
+          ],
+          [
+            2.75,
+            1
+          ],
+          [
+            2.85,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n016-pill",
+      "kind": "pill",
+      "x": 390,
+      "y": 840,
+      "w": 1140,
+      "h": 120,
+      "label": "{{conclusion}}",
+      "size": 49,
+      "fill": "#D6C2FF",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.8,
+            0
+          ],
+          [
+            4.4,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.8,
+            875
+          ],
+          [
+            4.4,
+            840,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

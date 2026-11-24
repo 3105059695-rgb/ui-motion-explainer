@@ -1,0 +1,184 @@
+{
+  "id": "M214",
+  "layout": "collect",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "file-tiles",
+      "states": [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            1
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "images",
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "composer",
+      "states": [
+        {
+          "attached": false,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": true
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "attachment",
+      "states": [
+        {},
+        {
+          "attached": false
+        },
+        {
+          "attached": false
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "workflow",
+      "start": 35,
+      "end": 42,
+      "shotIds": [
+        "W011",
+        "W012"
+      ],
+      "rowIds": [
+        "W-L013",
+        "W-L014",
+        "W-L015"
+      ]
+    }
+  ],
+  "chain": [
+    "四类媒体各占一处",
+    "逐项确认输入类型",
+    "材料收拢到左侧",
+    "箭头连向剪辑时间线"
+  ],
+  "binding": {
+    "headline": "两份输入汇进同一制作窗",
+    "captions": [
+      "先拿到素材和说明",
+      "把两份输入交给同一个工作台",
+      "对话框里保留了收到的附件"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "地出.jpg",
+          "压缩界面.png",
+          "安德斯.jpg"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp",
+          "portrait.webp"
+        ],
+        "active": 0
+      },
+      {
+        "text": "请对照这份资料列出变化。",
+        "file": "交付记录.md",
+        "attached": true,
+        "sent": false
+      },
+      {
+        "name": "地出.jpg",
+        "meta": "JPEG · 494.4 kB",
+        "attached": true
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      [
+        {
+          "attached": false,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": true
+        }
+      ],
+      [
+        {},
+        {
+          "attached": false
+        },
+        {
+          "attached": false
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "文件缩略图 · earth"
+    },
+    {
+      "key": "media2",
+      "name": "文件缩略图 · interface"
+    },
+    {
+      "key": "media3",
+      "name": "文件缩略图 · portrait"
+    }
+  ]
+}

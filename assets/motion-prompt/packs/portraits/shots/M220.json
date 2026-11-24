@@ -1,0 +1,166 @@
+{
+  "id": "M220",
+  "layout": "rewind",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "version-history",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 0
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "alert",
+      "states": [
+        {},
+        {
+          "open": false
+        },
+        {
+          "open": false
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "line-diff",
+      "states": [
+        {},
+        {
+          "onlyChanges": true
+        },
+        {
+          "onlyChanges": true
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "claude",
+      "start": 1394,
+      "end": 1410,
+      "shotIds": [
+        "CR025",
+        "CR026",
+        "CR027",
+        "CR028"
+      ],
+      "rowIds": [
+        "CR-L0536",
+        "CR-L0537",
+        "CR-L0538",
+        "CR-L0539",
+        "CR-L0540",
+        "CR-L0541",
+        "CR-L0542",
+        "CR-L0543",
+        "CR-L0544"
+      ]
+    }
+  ],
+  "chain": [
+    "主角前进并清除小障碍",
+    "红旗变绿形成存档",
+    "遇强敌后失败碎裂",
+    "镜头回到同一旗帜",
+    "同一角色在原存档点重建",
+    "Git路牌为机制命名"
+  ],
+  "binding": {
+    "headline": "存档、失败、读回同一版本",
+    "captions": [
+      "改之前先留一个版本",
+      "这一改动出了问题",
+      "回到同一个存档点核对"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "第三版",
+          "第二版",
+          "第一版"
+        ],
+        "meta": [
+          "15:40 · 林青",
+          "13:15 · 方木",
+          "09:20 · 林青"
+        ],
+        "bodies": [
+          "换入核对后的数据",
+          "补充两条素材出处",
+          "建立采访提纲"
+        ],
+        "active": 0
+      },
+      {
+        "title": "这一版有问题",
+        "body": "保留存档，再对照前一版。",
+        "open": true
+      },
+      {
+        "title": "交付说明",
+        "oldLines": [
+          "保留输入原图",
+          "直接覆盖输出",
+          "核对文件体积"
+        ],
+        "newLines": [
+          "保留输入原图",
+          "另存网页副本",
+          "核对文件体积"
+        ],
+        "onlyChanges": false
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 0
+        }
+      ],
+      [
+        {},
+        {
+          "open": false
+        },
+        {
+          "open": false
+        }
+      ],
+      [
+        {},
+        {
+          "onlyChanges": true
+        },
+        {
+          "onlyChanges": true
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

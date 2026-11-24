@@ -1,0 +1,159 @@
+{
+  "id": "M234",
+  "layout": "carry",
+  "layers": [
+    {
+      "kind": "photo",
+      "file": "fr-lunar.webp",
+      "slot": "media1",
+      "label": "输入原图"
+    },
+    {
+      "kind": "ui",
+      "component": "file-preview",
+      "states": [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "zoom": 170
+        }
+      ],
+      "media": [
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "images",
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "composer",
+      "states": [
+        {
+          "attached": false,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": true
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "network",
+      "start": 1225.4,
+      "end": 1238.6,
+      "shotIds": [
+        "N276",
+        "N277",
+        "N278"
+      ],
+      "rowIds": [
+        "N-L524",
+        "N-L525",
+        "N-L526",
+        "N-L527"
+      ]
+    }
+  ],
+  "chain": [
+    "创作者和人类/机器人同事在工作室聚成合影。",
+    "受益者这句到来，合影完整画面成为墙上的照片。",
+    "镜头/构图让观众看见照片外的女创作者，她贴好照片并转身。",
+    "同一角色走向门、转身招呼、开门走入白亮空间。"
+  ],
+  "binding": {
+    "headline": "上一场的成果变成下一场的物件",
+    "captions": [
+      "这张图先作为成果出现",
+      "缩成可以拿走的文件",
+      "下一场仍然接着使用它"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "title": "素材校对图册",
+        "items": [
+          "输入照片",
+          "处理界面"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp"
+        ],
+        "active": 0,
+        "zoom": 100
+      },
+      {
+        "text": "请对照这份资料列出变化。",
+        "file": "交付记录.md",
+        "attached": true,
+        "sent": false
+      }
+    ],
+    "keyframes": [
+      [],
+      [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "zoom": 170
+        }
+      ],
+      [
+        {
+          "attached": false,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": true
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "输入原图"
+    },
+    {
+      "key": "media2",
+      "name": "分页文件预览器 · earth"
+    },
+    {
+      "key": "media3",
+      "name": "分页文件预览器 · interface"
+    }
+  ]
+}

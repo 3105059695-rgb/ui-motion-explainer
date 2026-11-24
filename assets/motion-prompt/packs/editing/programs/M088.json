@@ -1,0 +1,60 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t12e",
+  "title": "章节白条擦出（快过渡）",
+  "duration": 2,
+  "background": "#0B0B0F",
+  "inputs": {
+    "chapter": "进入下一部分"
+  },
+  "nodes": [
+    {
+      "id": "n001-rect",
+      "kind": "rect",
+      "x": 100,
+      "y": 485,
+      "w": 1720,
+      "h": 110,
+      "fill": "#FFFFFF",
+      "radius": 0,
+      "tracks": {
+        "scaleX": [
+          [
+            0,
+            0
+          ],
+          [
+            0.68,
+            1,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 180,
+      "y": 490,
+      "w": 1560,
+      "h": 100,
+      "text": "{{chapter}}",
+      "size": 67,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "revealX": [
+          [
+            0.6,
+            0
+          ],
+          [
+            1.28,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

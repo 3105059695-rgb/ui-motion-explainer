@@ -41,7 +41,7 @@ def adopt(folder,board,u,path,implementation=None,expected=None):
     spec['revision']=u['revision']
     spec['custom']={'clip':ed.relative(folder,target),'in':prior['seconds'][0],'implementation':actual,
                     'assets':assets,'adaptation':previous.get('adaptation','')}
-    trial=media.make_trial(folder,board,u,spec)
+    trial=media.make_trial(folder,board,u,spec,external_revision=True)
     result=export.register(folder,board,target,'single-shot external revision')
     result['revised_unit']=u['id'];result['unchanged_picture_ranges']=proof['shots']
     result['new_trial']=trial['clip']

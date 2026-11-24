@@ -1,0 +1,167 @@
+{
+  "id": "M228",
+  "layout": "rewind",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "tree",
+      "states": [
+        {},
+        {
+          "open": false
+        },
+        {
+          "active": 1
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "empty",
+      "states": [
+        {},
+        {
+          "open": true
+        },
+        {
+          "open": true
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "version-history",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 0
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "network",
+      "start": 585.1,
+      "end": 614.5,
+      "shotIds": [
+        "N142",
+        "N143",
+        "N144",
+        "N145",
+        "N146",
+        "N147",
+        "N148"
+      ],
+      "rowIds": [
+        "N-L257",
+        "N-L258",
+        "N-L259",
+        "N-L260",
+        "N-L261",
+        "N-L262",
+        "N-L263",
+        "N-L264",
+        "N-L265",
+        "N-L266",
+        "N-L267"
+      ]
+    }
+  ],
+  "chain": [
+    "眼镜青年面对带Claude标志的机器人，双方原本互动。",
+    "机器人倒下、青年蹲下懊恼；另一段出现想换Agent的人。",
+    "Skill、插件、记忆被具象为多箱行李，箱子逐渐围住用户。",
+    "切回OpenClaw管理的内容清单与云端备份入口，给痛点一个可查找的操作去处。"
+  ],
+  "binding": {
+    "headline": "搬到新系统后找回缺失资料",
+    "captions": [
+      "先认出原目录里的内容",
+      "换到新位置，缺的那项留下空位",
+      "从恢复入口找回同一份资料"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "root": "本期素材",
+        "folder": "现场录音",
+        "children": [
+          "开场.wav",
+          "访谈.wav"
+        ],
+        "other": "剪辑笔记.md",
+        "open": true,
+        "active": 0
+      },
+      {
+        "title": "这份资料还没到",
+        "body": "原目录里有记录，这里仍留着空位。",
+        "action": "查看存档",
+        "open": true
+      },
+      {
+        "items": [
+          "第三版",
+          "第二版",
+          "第一版"
+        ],
+        "meta": [
+          "15:40 · 林青",
+          "13:15 · 方木",
+          "09:20 · 林青"
+        ],
+        "bodies": [
+          "换入核对后的数据",
+          "补充两条素材出处",
+          "建立采访提纲"
+        ],
+        "active": 0
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "open": false
+        },
+        {
+          "active": 1
+        }
+      ],
+      [
+        {},
+        {
+          "open": true
+        },
+        {
+          "open": true
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 0
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

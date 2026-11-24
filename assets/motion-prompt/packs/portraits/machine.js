@@ -1,0 +1,1 @@
+window.PortraitMachine={"originals":{},"strips":{}};

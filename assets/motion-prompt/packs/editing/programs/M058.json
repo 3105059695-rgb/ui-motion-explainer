@@ -1,0 +1,317 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-native-t17b",
+  "title": "终端运行：命令执行、输出滚动、结果行点亮",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "command": "$ npm test",
+    "output0": "运行测试…",
+    "output1": "✓ input.test.js",
+    "output2": "✓ workflow.test.js",
+    "output3": "✓ export.test.js",
+    "output4": "Tests 25 passed"
+  },
+  "nodes": [
+    {
+      "id": "n001-window",
+      "kind": "window",
+      "x": 190,
+      "y": 100,
+      "w": 1540,
+      "h": 870,
+      "fill": "#0B0B0F",
+      "label": "TERMINAL",
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 55,
+          "y": 110,
+          "w": 1430,
+          "h": 100,
+          "text": "{{command}}",
+          "size": 60,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "characters": [
+              [
+                0,
+                0
+              ],
+              [
+                1.25,
+                10,
+                "linear"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 55,
+          "y": 245,
+          "w": 1430,
+          "h": 90,
+          "text": "{{output0}}",
+          "size": 49,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                1.3,
+                0
+              ],
+              [
+                1.8,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                1.3,
+                265
+              ],
+              [
+                1.8,
+                245,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 55,
+          "y": 350,
+          "w": 1430,
+          "h": 90,
+          "text": "{{output1}}",
+          "size": 49,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                1.8,
+                0
+              ],
+              [
+                2.3,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                1.8,
+                370
+              ],
+              [
+                2.3,
+                350,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 55,
+          "y": 455,
+          "w": 1430,
+          "h": 90,
+          "text": "{{output2}}",
+          "size": 49,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                2.3,
+                0
+              ],
+              [
+                2.8,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                2.3,
+                475
+              ],
+              [
+                2.8,
+                455,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n006-text",
+          "kind": "text",
+          "x": 55,
+          "y": 560,
+          "w": 1430,
+          "h": 90,
+          "text": "{{output3}}",
+          "size": 49,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                2.8,
+                0
+              ],
+              [
+                3.3,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                2.8,
+                580
+              ],
+              [
+                3.3,
+                560,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n007-text",
+          "kind": "text",
+          "x": 55,
+          "y": 665,
+          "w": 1430,
+          "h": 90,
+          "text": "{{output4}}",
+          "size": 49,
+          "color": "#D6C2FF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                3.3,
+                0
+              ],
+              [
+                3.8,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                3.3,
+                685
+              ],
+              [
+                3.8,
+                665,
+                "out"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "n008-rect",
+      "kind": "rect",
+      "x": 225,
+      "y": 790,
+      "w": 1450,
+      "h": 100,
+      "fill": "#D6C2FF",
+      "radius": 12,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.75,
+            0
+          ],
+          [
+            4.1,
+            0.2
+          ],
+          [
+            4.5,
+            0.1
+          ]
+        ]
+      }
+    }
+  ],
+  "camera": {
+    "tracks": {
+      "scale": [
+        [
+          0,
+          1
+        ],
+        [
+          3.25,
+          1
+        ],
+        [
+          4.25,
+          1.18
+        ]
+      ],
+      "y": [
+        [
+          0,
+          0
+        ],
+        [
+          3.25,
+          0
+        ],
+        [
+          4.25,
+          -125
+        ]
+      ]
+    }
+  },
+  "assets": {}
+}

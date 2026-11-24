@@ -1,0 +1,141 @@
+{
+  "id": "M299",
+  "layout": "isolate",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "plan-checklist",
+      "states": [
+        {
+          "completed": 0
+        },
+        {
+          "completed": 1
+        },
+        {
+          "completed": 3
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "status-label",
+      "states": [
+        {},
+        {
+          "state": "已通过",
+          "emphasis": false
+        },
+        {
+          "state": "已通过",
+          "emphasis": false
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-stress",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "base-token",
+      "start": 179.0,
+      "end": 183.0
+    }
+  ],
+  "chain": [
+    "先看到全部步骤",
+    "完成的部分降低权重",
+    "当前项留下关键词"
+  ],
+  "binding": {
+    "headline": "下一步做什么",
+    "captions": [
+      "先看还有哪些步骤。",
+      "已经完成的部分退到后面。",
+      "现在轮到这一项。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "读入材料",
+          "筛选相关信息",
+          "处理当前内容"
+        ],
+        "completed": 1
+      },
+      {
+        "label": "当前步骤",
+        "state": "正在处理",
+        "emphasis": true
+      },
+      {
+        "firstLine": [
+          "前两步",
+          "已完成，"
+        ],
+        "secondLine": [
+          "现在",
+          "处理当前内容。"
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "completed": 0
+        },
+        {
+          "completed": 1
+        },
+        {
+          "completed": 3
+        }
+      ],
+      [
+        {},
+        {
+          "state": "已通过",
+          "emphasis": false
+        },
+        {
+          "state": "已通过",
+          "emphasis": false
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

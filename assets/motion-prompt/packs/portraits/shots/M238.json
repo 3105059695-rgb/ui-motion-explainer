@@ -1,0 +1,166 @@
+{
+  "id": "M238",
+  "layout": "compare",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "source-quote",
+      "states": [
+        {
+          "active": 0,
+          "located": false
+        },
+        {
+          "active": 1,
+          "located": true
+        },
+        {
+          "active": 2,
+          "located": true
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "chat-bubbles",
+      "states": [
+        {},
+        {
+          "showAnswer": false
+        },
+        {
+          "showAnswer": false
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "pair-compare",
+      "states": [
+        {},
+        {
+          "active": 0
+        },
+        {
+          "active": 0
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "network",
+      "start": 0,
+      "end": 25.5,
+      "shotIds": [
+        "N001",
+        "N002",
+        "N003",
+        "N004",
+        "N005",
+        "N006",
+        "N007",
+        "N008",
+        "N009",
+        "N010"
+      ],
+      "rowIds": [
+        "N-L001",
+        "N-L002",
+        "N-L003",
+        "N-L004",
+        "N-L005",
+        "N-L006",
+        "N-L007",
+        "N-L008"
+      ]
+    }
+  ],
+  "chain": [
+    "人物问候后，AI时代/普通人进入，接普通人街景上的完整问题。",
+    "融资、研究、高薪报道逐类叠入，后来的证据覆盖到前景。",
+    "访谈中的价值创造者继续换镜，另一侧黑白抗议人群持续存在，形成同屏反差。",
+    "回本人追问，再用真实形态的支点、杠杆与球承接少数人的杠杆这一完整比喻。"
+  ],
+  "binding": {
+    "headline": "把两边不对称的处境放到同一题下",
+    "captions": [
+      "先给一边的实际记录",
+      "另一边的处境随后进入",
+      "放在同一问题下看差别"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "本期交付约定",
+        "paragraphs": [
+          "素材归档后再做网页副本。",
+          "原图与副本应分别保留。",
+          "导出后核对文件名和体积。"
+        ],
+        "active": 1,
+        "located": false
+      },
+      {
+        "question": "这张图能再小一点吗？",
+        "answer": "可以。先留好原图，再导出一份网页副本。",
+        "showAnswer": true
+      },
+      {
+        "label": "同一张照片",
+        "items": [
+          "原图",
+          "网页副本"
+        ],
+        "values": [
+          "494.4",
+          "95.9"
+        ],
+        "unit": "kB",
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0,
+          "located": false
+        },
+        {
+          "active": 1,
+          "located": true
+        },
+        {
+          "active": 2,
+          "located": true
+        }
+      ],
+      [
+        {},
+        {
+          "showAnswer": false
+        },
+        {
+          "showAnswer": false
+        }
+      ],
+      [
+        {},
+        {
+          "active": 0
+        },
+        {
+          "active": 0
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

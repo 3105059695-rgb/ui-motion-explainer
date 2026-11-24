@@ -1,0 +1,72 @@
+{
+  "id": "M210",
+  "layout": "native",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-stress",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-weekly",
+      "start": 3,
+      "end": 7
+    }
+  ],
+  "chain": [
+    "提炼句压在原实拍中央，关键动词在同一句内另作强调；这里演化为两行口播字幕。"
+  ],
+  "binding": {
+    "headline": "体积与像素",
+    "captions": [
+      "同一张照片。",
+      "文件体积变小了，",
+      "像素尺寸没有变。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "firstLine": [
+          "文件体积",
+          "变小了，"
+        ],
+        "secondLine": [
+          "像素尺寸",
+          "没有变。"
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

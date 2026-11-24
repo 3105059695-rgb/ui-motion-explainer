@@ -1,0 +1,5668 @@
+{
+  "usage": "根据 use、keywords 选组件。example 是可替换参数，states[].set 是状态覆盖，reference 起止单位为秒。png 与 states[].png 可直接相对本目录打开。需要替换实际内容时可使用本机互动库。",
+  "gallery_resource": "approved-ui:gallery",
+  "layer_folder_in_gallery": "组件/通用组件",
+  "groups": [
+    {
+      "id": "action",
+      "name": "操作"
+    },
+    {
+      "id": "nav",
+      "name": "导航与定位"
+    },
+    {
+      "id": "input",
+      "name": "输入与查找"
+    },
+    {
+      "id": "choice",
+      "name": "选择与筛选"
+    },
+    {
+      "id": "content",
+      "name": "内容展示"
+    },
+    {
+      "id": "data",
+      "name": "数据与关系"
+    },
+    {
+      "id": "feedback",
+      "name": "状态与反馈"
+    },
+    {
+      "id": "overlay",
+      "name": "弹层与引导"
+    },
+    {
+      "id": "layout",
+      "name": "布局与容器"
+    },
+    {
+      "id": "mobile",
+      "name": "手机原生控件"
+    },
+    {
+      "id": "desktop",
+      "name": "桌面软件控件"
+    },
+    {
+      "id": "files",
+      "name": "文件与素材管理"
+    },
+    {
+      "id": "precision",
+      "name": "精确输入与筛选"
+    },
+    {
+      "id": "media",
+      "name": "音视频与字幕"
+    },
+    {
+      "id": "charts",
+      "name": "图形与关系"
+    },
+    {
+      "id": "chat",
+      "name": "AI 对话与工具"
+    },
+    {
+      "id": "reading",
+      "name": "文档与证据批注"
+    },
+    {
+      "id": "fred-focus",
+      "name": "材料与细节定位"
+    },
+    {
+      "id": "fred-compare",
+      "name": "测评与取舍"
+    },
+    {
+      "id": "fred-process",
+      "name": "过程与交接"
+    },
+    {
+      "id": "fred-type",
+      "name": "章节、字幕与读数"
+    }
+  ],
+  "components": [
+    {
+      "group": "action",
+      "id": "button",
+      "name": "操作按钮",
+      "english": "Button",
+      "use": "执行一个明确动作，完成后给出结果。",
+      "keywords": [
+        "点击",
+        "提交",
+        "确认"
+      ],
+      "example": {
+        "label": "生成预览",
+        "done": "预览已生成",
+        "pressed": false,
+        "disabled": false
+      },
+      "states": [
+        {
+          "label": "完成",
+          "set": {
+            "pressed": true
+          },
+          "png": "状态PNG/button-01.png"
+        },
+        {
+          "label": "禁用",
+          "set": {
+            "disabled": true
+          },
+          "png": "状态PNG/button-02.png"
+        }
+      ],
+      "png": "PNG/button.png"
+    },
+    {
+      "group": "action",
+      "id": "link",
+      "name": "文字链接",
+      "english": "Link",
+      "use": "从一句说明进入相关资料。",
+      "keywords": [
+        "跳转",
+        "来源",
+        "查看"
+      ],
+      "example": {
+        "label": "查看素材清单",
+        "detail": "原图、界面截图、口播音频",
+        "open": false
+      },
+      "states": [
+        {
+          "label": "目标内容",
+          "set": {
+            "open": true
+          },
+          "png": "状态PNG/link-01.png"
+        }
+      ],
+      "png": "PNG/link.png"
+    },
+    {
+      "group": "action",
+      "id": "split-button",
+      "name": "拆分按钮",
+      "english": "Split button",
+      "use": "主操作可以立即执行，旁边展开其他做法。",
+      "keywords": [
+        "主按钮",
+        "更多",
+        "导出"
+      ],
+      "example": {
+        "items": [
+          "导出 PNG",
+          "导出 WebP",
+          "导出 JPEG"
+        ],
+        "active": 0,
+        "open": false,
+        "done": false
+      },
+      "states": [
+        {
+          "label": "展开菜单",
+          "set": {
+            "open": true
+          },
+          "png": "状态PNG/split-button-01.png"
+        }
+      ],
+      "png": "PNG/split-button.png"
+    },
+    {
+      "group": "action",
+      "id": "menu-button",
+      "name": "操作菜单",
+      "english": "Dropdown menu",
+      "use": "在同一个对象上挑选一种操作。",
+      "keywords": [
+        "下拉",
+        "更多",
+        "菜单"
+      ],
+      "example": {
+        "label": "文件操作",
+        "items": [
+          "查看详情",
+          "添加到清单",
+          "复制文件名"
+        ],
+        "open": true,
+        "selection": "",
+        "context": false
+      },
+      "states": [
+        {
+          "label": "收起",
+          "set": {
+            "open": false
+          },
+          "png": "状态PNG/menu-button-01.png"
+        },
+        {
+          "label": "右键唤出",
+          "set": {
+            "context": true,
+            "open": false
+          },
+          "png": "状态PNG/menu-button-02.png"
+        }
+      ],
+      "png": "PNG/menu-button.png"
+    },
+    {
+      "group": "action",
+      "id": "toolbar",
+      "name": "工具栏",
+      "english": "Toolbar",
+      "use": "把对当前对象生效的编辑命令放在一起。",
+      "keywords": [
+        "编辑",
+        "排版",
+        "操作组"
+      ],
+      "example": {
+        "label": "段落对齐",
+        "items": [
+          "左对齐",
+          "居中",
+          "右对齐"
+        ],
+        "active": 0,
+        "text": "视频剪辑笔记"
+      },
+      "states": [
+        {
+          "label": "居中",
+          "set": {
+            "active": 1
+          },
+          "png": "状态PNG/toolbar-01.png"
+        }
+      ],
+      "png": "PNG/toolbar.png"
+    },
+    {
+      "group": "nav",
+      "id": "breadcrumbs",
+      "name": "面包屑",
+      "english": "Breadcrumb",
+      "use": "交代当前文件在什么位置，也能回到上一级。",
+      "keywords": [
+        "路径",
+        "文件夹",
+        "层级",
+        "返回"
+      ],
+      "example": {
+        "items": [
+          "工作区",
+          "视频项目",
+          "字幕"
+        ],
+        "active": 2
+      },
+      "states": [
+        {
+          "label": "上一级",
+          "set": {
+            "active": 1
+          },
+          "png": "状态PNG/breadcrumbs-01.png"
+        }
+      ],
+      "png": "PNG/breadcrumbs.png"
+    },
+    {
+      "group": "nav",
+      "id": "tabs",
+      "name": "标签页",
+      "english": "Tabs",
+      "use": "在同一对象的几类内容之间切换。",
+      "keywords": [
+        "切页",
+        "页签",
+        "标签栏"
+      ],
+      "example": {
+        "items": [
+          "概览",
+          "素材",
+          "字幕"
+        ],
+        "bodies": [
+          "项目名称 · 春日访谈",
+          "原始录音、人物照片",
+          "已校对的口播原话"
+        ],
+        "active": 1
+      },
+      "states": [
+        {
+          "label": "概览",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/tabs-01.png"
+        },
+        {
+          "label": "字幕",
+          "set": {
+            "active": 2
+          },
+          "png": "状态PNG/tabs-02.png"
+        }
+      ],
+      "png": "PNG/tabs.png"
+    },
+    {
+      "group": "nav",
+      "id": "side-nav",
+      "name": "侧边导航",
+      "english": "Side navigation",
+      "use": "显示当前所在区域和可以前往的相邻区域。",
+      "keywords": [
+        "侧栏",
+        "导航",
+        "菜单",
+        "跳转"
+      ],
+      "example": {
+        "label": "工作区",
+        "items": [
+          "项目概览",
+          "素材管理",
+          "导出记录"
+        ],
+        "active": 1
+      },
+      "states": [
+        {
+          "label": "导出记录",
+          "set": {
+            "active": 2
+          },
+          "png": "状态PNG/side-nav-01.png"
+        }
+      ],
+      "png": "PNG/side-nav.png"
+    },
+    {
+      "group": "nav",
+      "id": "pagination",
+      "name": "分页器",
+      "english": "Pagination",
+      "use": "把长列表分成多页，显示当前页。",
+      "keywords": [
+        "下一页",
+        "上一页",
+        "翻页"
+      ],
+      "example": {
+        "page": 2,
+        "total": 5
+      },
+      "states": [
+        {
+          "label": "首页",
+          "set": {
+            "page": 1
+          },
+          "png": "状态PNG/pagination-01.png"
+        },
+        {
+          "label": "末页",
+          "set": {
+            "page": 5
+          },
+          "png": "状态PNG/pagination-02.png"
+        }
+      ],
+      "png": "PNG/pagination.png"
+    },
+    {
+      "group": "nav",
+      "id": "steps",
+      "name": "步骤条",
+      "english": "Steps",
+      "use": "交代流程先后和当前做到哪一步。",
+      "keywords": [
+        "流程",
+        "第几步",
+        "进度",
+        "顺序"
+      ],
+      "example": {
+        "items": [
+          "选素材",
+          "剪片段",
+          "导出"
+        ],
+        "active": 1
+      },
+      "states": [
+        {
+          "label": "第一步",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/steps-01.png"
+        },
+        {
+          "label": "最后一步",
+          "set": {
+            "active": 2
+          },
+          "png": "状态PNG/steps-02.png"
+        }
+      ],
+      "png": "PNG/steps.png"
+    },
+    {
+      "group": "nav",
+      "id": "tree",
+      "name": "目录树",
+      "english": "Tree",
+      "use": "展开文件夹，看父子结构与选中的文件。",
+      "keywords": [
+        "文件树",
+        "层级",
+        "展开",
+        "路径"
+      ],
+      "example": {
+        "root": "本期素材",
+        "folder": "现场录音",
+        "children": [
+          "开场.wav",
+          "访谈.wav"
+        ],
+        "other": "剪辑笔记.md",
+        "open": true,
+        "active": 0
+      },
+      "states": [
+        {
+          "label": "折叠目录",
+          "set": {
+            "open": false
+          },
+          "png": "状态PNG/tree-01.png"
+        },
+        {
+          "label": "第二个文件",
+          "set": {
+            "active": 1
+          },
+          "png": "状态PNG/tree-02.png"
+        }
+      ],
+      "png": "PNG/tree.png"
+    },
+    {
+      "group": "nav",
+      "id": "contents",
+      "name": "页内目录",
+      "english": "Anchor navigation",
+      "use": "在长文的段落之间定位，标出正在读的部分。",
+      "keywords": [
+        "锚点",
+        "章节",
+        "段落",
+        "目录"
+      ],
+      "example": {
+        "items": [
+          "素材来源",
+          "处理方法",
+          "导出结果"
+        ],
+        "bodies": [
+          "素材来自本期现场录制。",
+          "从原文件制作网页副本。",
+          "副本与原件分别保存。"
+        ],
+        "active": 1
+      },
+      "states": [
+        {
+          "label": "首段",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/contents-01.png"
+        }
+      ],
+      "png": "PNG/contents.png"
+    },
+    {
+      "group": "input",
+      "id": "text-field",
+      "name": "文本输入框",
+      "english": "Text input",
+      "use": "给一项短内容命名或改名。",
+      "keywords": [
+        "输入",
+        "填写",
+        "改名",
+        "表单"
+      ],
+      "example": {
+        "label": "项目名称",
+        "value": "春日访谈",
+        "placeholder": "输入项目名称",
+        "disabled": false
+      },
+      "states": [
+        {
+          "label": "空值",
+          "set": {
+            "value": ""
+          },
+          "png": "状态PNG/text-field-01.png"
+        },
+        {
+          "label": "只读",
+          "set": {
+            "disabled": true
+          },
+          "png": "状态PNG/text-field-02.png"
+        }
+      ],
+      "png": "PNG/text-field.png"
+    },
+    {
+      "group": "input",
+      "id": "textarea",
+      "name": "多行文本框",
+      "english": "Text area",
+      "use": "填写备注或一段文案并看到字数。",
+      "keywords": [
+        "输入",
+        "文案",
+        "备注",
+        "字数"
+      ],
+      "example": {
+        "label": "剪辑备注",
+        "value": "保留人物停顿。\n第二句接现场画面。",
+        "limit": 100
+      },
+      "states": [
+        {
+          "label": "待填写",
+          "set": {
+            "value": ""
+          },
+          "png": "状态PNG/textarea-01.png"
+        }
+      ],
+      "png": "PNG/textarea.png"
+    },
+    {
+      "group": "input",
+      "id": "search",
+      "name": "搜索框",
+      "english": "Search",
+      "use": "输入一个词，在当前内容里找匹配项。",
+      "keywords": [
+        "查找",
+        "检索",
+        "过滤",
+        "搜"
+      ],
+      "example": {
+        "label": "搜索素材",
+        "value": "访谈",
+        "items": [
+          "访谈原声",
+          "访谈提纲",
+          "字幕定稿",
+          "产品截图"
+        ],
+        "recent": [
+          "访谈",
+          "截图"
+        ]
+      },
+      "states": [
+        {
+          "label": "全部",
+          "set": {
+            "value": "",
+            "recent": []
+          },
+          "png": "状态PNG/search-01.png"
+        },
+        {
+          "label": "无匹配",
+          "set": {
+            "value": "海边"
+          },
+          "png": "状态PNG/search-02.png"
+        },
+        {
+          "label": "最近搜索",
+          "set": {
+            "value": ""
+          },
+          "png": "状态PNG/search-03.png"
+        }
+      ],
+      "png": "PNG/search.png"
+    },
+    {
+      "group": "input",
+      "id": "number-input",
+      "name": "数字步进器",
+      "english": "Number input",
+      "use": "输入精确数值，或按指定步长增减。",
+      "keywords": [
+        "加减",
+        "数值",
+        "步长"
+      ],
+      "example": {
+        "label": "片段时长",
+        "unit": "秒",
+        "value": 12,
+        "min": 1,
+        "max": 30,
+        "step": 1
+      },
+      "states": [
+        {
+          "label": "下限",
+          "set": {
+            "value": 1
+          },
+          "png": "状态PNG/number-input-01.png"
+        },
+        {
+          "label": "上限",
+          "set": {
+            "value": 30
+          },
+          "png": "状态PNG/number-input-02.png"
+        }
+      ],
+      "png": "PNG/number-input.png"
+    },
+    {
+      "group": "input",
+      "id": "select",
+      "name": "下拉选择框",
+      "english": "Select",
+      "use": "从一组固定选项中选一个值。",
+      "keywords": [
+        "下拉",
+        "单选",
+        "格式"
+      ],
+      "example": {
+        "label": "输出格式",
+        "items": [
+          "PNG",
+          "JPEG",
+          "WebP"
+        ],
+        "active": 0,
+        "open": false
+      },
+      "states": [
+        {
+          "label": "展开选项",
+          "set": {
+            "open": true
+          },
+          "png": "状态PNG/select-01.png"
+        },
+        {
+          "label": "选择 WebP",
+          "set": {
+            "active": 2
+          },
+          "png": "状态PNG/select-02.png"
+        }
+      ],
+      "png": "PNG/select.png"
+    },
+    {
+      "group": "input",
+      "id": "autocomplete",
+      "name": "联想输入",
+      "english": "Autocomplete",
+      "use": "一边输入，一边从匹配建议中补全内容。",
+      "keywords": [
+        "补全",
+        "搜索",
+        "建议",
+        "联想"
+      ],
+      "example": {
+        "label": "查找文件夹",
+        "value": "原",
+        "items": [
+          "原始录音",
+          "原始图片",
+          "导出文件"
+        ],
+        "open": true
+      },
+      "states": [
+        {
+          "label": "已选中",
+          "set": {
+            "value": "原始录音",
+            "open": false
+          },
+          "png": "状态PNG/autocomplete-01.png"
+        }
+      ],
+      "png": "PNG/autocomplete.png"
+    },
+    {
+      "group": "input",
+      "id": "slider",
+      "name": "范围滑杆",
+      "english": "Slider",
+      "use": "拖动滑块调节连续数值，读数随滑块更新。",
+      "keywords": [
+        "拖动",
+        "质量",
+        "调节",
+        "滑块"
+      ],
+      "example": {
+        "label": "导出质量",
+        "value": 75,
+        "min": 0,
+        "max": 100,
+        "unit": "%"
+      },
+      "states": [
+        {
+          "label": "调至 50%",
+          "set": {
+            "value": 50
+          },
+          "png": "状态PNG/slider-01.png"
+        },
+        {
+          "label": "最高",
+          "set": {
+            "value": 100
+          },
+          "png": "状态PNG/slider-02.png"
+        }
+      ],
+      "png": "PNG/slider.png"
+    },
+    {
+      "group": "input",
+      "id": "date-picker",
+      "name": "日期选择器",
+      "english": "Date picker",
+      "use": "选择一个日历日期，或切换月份。",
+      "keywords": [
+        "日历",
+        "日期",
+        "排期"
+      ],
+      "example": {
+        "label": "交付日期",
+        "value": "2026-11-23",
+        "month": "2026-11",
+        "open": true
+      },
+      "states": [
+        {
+          "label": "收起日历",
+          "set": {
+            "open": false
+          },
+          "png": "状态PNG/date-picker-01.png"
+        }
+      ],
+      "png": "PNG/date-picker.png"
+    },
+    {
+      "group": "input",
+      "id": "file-upload",
+      "name": "文件选择区",
+      "english": "File uploader",
+      "use": "从本机选取文件，在画面上核对文件名。",
+      "keywords": [
+        "上传",
+        "导入",
+        "拖入",
+        "文件"
+      ],
+      "example": {
+        "label": "选择素材",
+        "value": "",
+        "hint": "选择本机文件"
+      },
+      "states": [
+        {
+          "label": "已选择",
+          "set": {
+            "value": "访谈原声.wav"
+          },
+          "png": "状态PNG/file-upload-01.png"
+        }
+      ],
+      "png": "PNG/file-upload.png"
+    },
+    {
+      "group": "choice",
+      "id": "checkbox",
+      "name": "复选框组",
+      "english": "Checkbox group",
+      "use": "同时勾选几个独立的交付项。",
+      "keywords": [
+        "勾选",
+        "多个",
+        "多选"
+      ],
+      "example": {
+        "label": "导出内容",
+        "items": [
+          "视频",
+          "字幕",
+          "封面"
+        ],
+        "selected": [
+          0,
+          1
+        ]
+      },
+      "states": [
+        {
+          "label": "全部勾选",
+          "set": {
+            "selected": [
+              0,
+              1,
+              2
+            ]
+          },
+          "png": "状态PNG/checkbox-01.png"
+        },
+        {
+          "label": "清空",
+          "set": {
+            "selected": []
+          },
+          "png": "状态PNG/checkbox-02.png"
+        }
+      ],
+      "png": "PNG/checkbox.png"
+    },
+    {
+      "group": "choice",
+      "id": "radio",
+      "name": "单选框组",
+      "english": "Radio group",
+      "use": "从互斥选项中确定一种输出方式。",
+      "keywords": [
+        "单选",
+        "互斥",
+        "范围"
+      ],
+      "example": {
+        "label": "导出范围",
+        "items": [
+          "全部片段",
+          "当前选区",
+          "仅音频"
+        ],
+        "active": 1
+      },
+      "states": [
+        {
+          "label": "全部片段",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/radio-01.png"
+        }
+      ],
+      "png": "PNG/radio.png"
+    },
+    {
+      "group": "choice",
+      "id": "switch",
+      "name": "开关",
+      "english": "Switch",
+      "use": "直接切换一个持续生效的设置。",
+      "keywords": [
+        "打开",
+        "关闭",
+        "开启",
+        "禁用",
+        "设置"
+      ],
+      "example": {
+        "label": "显示字幕",
+        "on": true
+      },
+      "states": [
+        {
+          "label": "关闭",
+          "set": {
+            "on": false
+          },
+          "png": "状态PNG/switch-01.png"
+        }
+      ],
+      "png": "PNG/switch.png"
+    },
+    {
+      "group": "choice",
+      "id": "segmented",
+      "name": "分段选择器",
+      "english": "Segmented control",
+      "use": "在同一视图里切换显示方式。",
+      "keywords": [
+        "模式",
+        "切换",
+        "分段"
+      ],
+      "example": {
+        "label": "画幅",
+        "items": [
+          "横屏",
+          "方形",
+          "竖屏"
+        ],
+        "active": 2
+      },
+      "states": [
+        {
+          "label": "横屏",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/segmented-01.png"
+        }
+      ],
+      "png": "PNG/segmented.png"
+    },
+    {
+      "group": "choice",
+      "id": "multi-select",
+      "name": "多选筛选器",
+      "english": "Multi-select",
+      "use": "选中多个筛选值，可逐个移除。",
+      "keywords": [
+        "条件",
+        "过滤",
+        "筛选",
+        "芯片"
+      ],
+      "example": {
+        "label": "素材类型",
+        "items": [
+          "人像",
+          "录屏",
+          "音频",
+          "文稿"
+        ],
+        "selected": [
+          0,
+          1
+        ],
+        "open": false
+      },
+      "states": [
+        {
+          "label": "展开筛选",
+          "set": {
+            "open": true
+          },
+          "png": "状态PNG/multi-select-01.png"
+        },
+        {
+          "label": "清空筛选",
+          "set": {
+            "selected": []
+          },
+          "png": "状态PNG/multi-select-02.png"
+        }
+      ],
+      "png": "PNG/multi-select.png"
+    },
+    {
+      "group": "content",
+      "id": "avatar-group",
+      "name": "头像组",
+      "english": "Avatar group",
+      "use": "展示一组参与者，并可展开查看其余成员。",
+      "keywords": [
+        "头像",
+        "成员",
+        "协作"
+      ],
+      "example": {
+        "label": "参与成员",
+        "items": [
+          "林青",
+          "方木",
+          "许言",
+          "陈禾",
+          "周凡"
+        ],
+        "limit": 3,
+        "open": false
+      },
+      "states": [
+        {
+          "label": "全部成员",
+          "set": {
+            "open": true
+          },
+          "png": "状态PNG/avatar-group-01.png"
+        }
+      ],
+      "png": "PNG/avatar-group.png"
+    },
+    {
+      "group": "content",
+      "id": "tags",
+      "name": "内容标签",
+      "english": "Tag",
+      "use": "用关键词给同一份内容归类。",
+      "keywords": [
+        "关键字",
+        "分类",
+        "标签"
+      ],
+      "example": {
+        "label": "项目标签",
+        "items": [
+          "口播",
+          "软件教程",
+          "竖屏"
+        ]
+      },
+      "states": [
+        {
+          "label": "单个标签",
+          "set": {
+            "items": [
+              "竖屏"
+            ]
+          },
+          "png": "状态PNG/tags-01.png"
+        }
+      ],
+      "png": "PNG/tags.png"
+    },
+    {
+      "group": "content",
+      "id": "badge",
+      "name": "计数徽标",
+      "english": "Badge",
+      "use": "把数量附在对应的项目旁。",
+      "keywords": [
+        "数字",
+        "数量",
+        "待办",
+        "红点"
+      ],
+      "example": {
+        "label": "待核对素材",
+        "count": 3
+      },
+      "states": [
+        {
+          "label": "无待办",
+          "set": {
+            "count": 0
+          },
+          "png": "状态PNG/badge-01.png"
+        },
+        {
+          "label": "两位数",
+          "set": {
+            "count": 12
+          },
+          "png": "状态PNG/badge-02.png"
+        }
+      ],
+      "png": "PNG/badge.png"
+    },
+    {
+      "group": "content",
+      "id": "status-label",
+      "name": "状态标签",
+      "english": "Lozenge",
+      "use": "用简短文字标记对象所处的阶段。",
+      "keywords": [
+        "状态",
+        "审核",
+        "标记"
+      ],
+      "example": {
+        "label": "剪辑稿",
+        "state": "待复核",
+        "emphasis": true
+      },
+      "states": [
+        {
+          "label": "已通过",
+          "set": {
+            "state": "已通过",
+            "emphasis": false
+          },
+          "png": "状态PNG/status-label-01.png"
+        }
+      ],
+      "png": "PNG/status-label.png"
+    },
+    {
+      "group": "content",
+      "id": "card",
+      "name": "内容卡片",
+      "english": "Card",
+      "use": "把同一对象的标题、说明和出处归为一组。",
+      "keywords": [
+        "信息卡",
+        "文章",
+        "摘要"
+      ],
+      "example": {
+        "title": "访谈素材",
+        "body": "原始录音和现场照片已归档。",
+        "meta": "素材清单 · 第 2 版"
+      },
+      "states": [],
+      "png": "PNG/card.png"
+    },
+    {
+      "group": "content",
+      "id": "item-list",
+      "name": "条目列表",
+      "english": "List",
+      "use": "逐条浏览同类文件，定位当前项。",
+      "keywords": [
+        "文件",
+        "列表",
+        "清单"
+      ],
+      "example": {
+        "items": [
+          "开场录音.wav",
+          "采访提纲.md",
+          "封面底图.png"
+        ],
+        "meta": [
+          "音频",
+          "文稿",
+          "图片"
+        ],
+        "active": 1
+      },
+      "states": [
+        {
+          "label": "首条",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/item-list-01.png"
+        }
+      ],
+      "png": "PNG/item-list.png"
+    },
+    {
+      "group": "content",
+      "id": "descriptions",
+      "name": "键值详情",
+      "english": "Descriptions",
+      "use": "把属性名与实际值一一对应。",
+      "keywords": [
+        "属性",
+        "详情",
+        "规格",
+        "参数"
+      ],
+      "example": {
+        "title": "文件详情",
+        "rows": [
+          [
+            "像素尺寸",
+            "3000 × 3000"
+          ],
+          [
+            "文件类型",
+            "JPEG"
+          ],
+          [
+            "文件体积",
+            "494.4 kB"
+          ]
+        ]
+      },
+      "states": [],
+      "png": "PNG/descriptions.png"
+    },
+    {
+      "group": "content",
+      "id": "accordion",
+      "name": "折叠面板",
+      "english": "Accordion",
+      "use": "先读小标题，再展开对应说明。",
+      "keywords": [
+        "折叠",
+        "展开",
+        "更多解释"
+      ],
+      "example": {
+        "items": [
+          "原始文件",
+          "网页副本"
+        ],
+        "bodies": [
+          "原件单独保存，供复核使用。",
+          "从同一原图导出，便于网页使用。"
+        ],
+        "active": 1
+      },
+      "states": [
+        {
+          "label": "全部收起",
+          "set": {
+            "active": -1
+          },
+          "png": "状态PNG/accordion-01.png"
+        },
+        {
+          "label": "展开原件",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/accordion-02.png"
+        }
+      ],
+      "png": "PNG/accordion.png"
+    },
+    {
+      "group": "content",
+      "id": "code-snippet",
+      "name": "代码片段",
+      "english": "Code snippet",
+      "use": "保留代码、命令或配置的原样和行序。",
+      "keywords": [
+        "命令",
+        "代码",
+        "配置",
+        "等宽"
+      ],
+      "example": {
+        "label": "导出设置 · JSON",
+        "lines": [
+          "{",
+          "  \"quality\": 50,",
+          "  \"resize\": false",
+          "}"
+        ]
+      },
+      "states": [],
+      "png": "PNG/code-snippet.png"
+    },
+    {
+      "group": "data",
+      "id": "statistic",
+      "name": "指标读数",
+      "english": "Statistic",
+      "use": "展示一个关键数值和它的计量单位。",
+      "keywords": [
+        "数字",
+        "读数",
+        "单位",
+        "统计",
+        "指标"
+      ],
+      "example": {
+        "label": "网页副本",
+        "value": "95.9",
+        "unit": "kB",
+        "note": "同一张输入原图"
+      },
+      "states": [],
+      "png": "PNG/statistic.png"
+    },
+    {
+      "group": "data",
+      "id": "data-table",
+      "name": "数据表格",
+      "english": "Data table",
+      "use": "对齐列名、行和值，按数值排序核对。",
+      "keywords": [
+        "表格",
+        "排序",
+        "列",
+        "数据",
+        "核对"
+      ],
+      "example": {
+        "headers": [
+          "项目",
+          "计算依据",
+          "体积（kB）"
+        ],
+        "rows": [
+          [
+            "输入原图",
+            "压缩前",
+            494.4
+          ],
+          [
+            "减少量",
+            "原图 − 副本",
+            398.5
+          ],
+          [
+            "网页副本",
+            "压缩后",
+            95.9
+          ]
+        ],
+        "sort": "none",
+        "frozen": false,
+        "selectable": false,
+        "selectedRows": [],
+        "expandedRows": [],
+        "details": [
+          "原文件的字节数",
+          "输入体积减去副本体积",
+          "网页输出的字节数"
+        ],
+        "wide": false,
+        "batch": ""
+      },
+      "states": [
+        {
+          "label": "由小到大",
+          "set": {
+            "sort": "asc"
+          },
+          "png": "状态PNG/data-table-01.png"
+        },
+        {
+          "label": "由大到小",
+          "set": {
+            "sort": "desc"
+          },
+          "png": "状态PNG/data-table-02.png"
+        },
+        {
+          "label": "固定首列",
+          "set": {
+            "frozen": true,
+            "wide": true
+          },
+          "png": "状态PNG/data-table-03.png"
+        },
+        {
+          "label": "展开一行",
+          "set": {
+            "expandedRows": [
+              0
+            ]
+          },
+          "png": "状态PNG/data-table-04.png"
+        },
+        {
+          "label": "批量操作",
+          "set": {
+            "selectable": true,
+            "selectedRows": [
+              0,
+              2
+            ]
+          },
+          "png": "状态PNG/data-table-05.png"
+        }
+      ],
+      "png": "PNG/data-table.png"
+    },
+    {
+      "group": "data",
+      "id": "bar-chart",
+      "name": "条形图",
+      "english": "Bar chart",
+      "use": "同一尺度下按条长对比多个量。",
+      "keywords": [
+        "柱状",
+        "比较",
+        "大小",
+        "差异",
+        "横条"
+      ],
+      "example": {
+        "label": "同一文件的体积",
+        "unit": "kB",
+        "items": [
+          "输入原图",
+          "减少量",
+          "网页副本"
+        ],
+        "values": [
+          494.4,
+          398.5,
+          95.9
+        ],
+        "active": 2
+      },
+      "states": [
+        {
+          "label": "突出原图",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/bar-chart-01.png"
+        }
+      ],
+      "png": "PNG/bar-chart.png"
+    },
+    {
+      "group": "data",
+      "id": "line-chart",
+      "name": "趋势折线",
+      "english": "Line chart",
+      "use": "沿横轴观察一组测量值如何变化。",
+      "keywords": [
+        "折线",
+        "走势",
+        "趋势",
+        "变化"
+      ],
+      "example": {
+        "label": "录音电平示例",
+        "unit": "%",
+        "items": [
+          "0 s",
+          "1 s",
+          "2 s",
+          "3 s",
+          "4 s"
+        ],
+        "values": [
+          22,
+          46,
+          35,
+          72,
+          53
+        ],
+        "active": 3
+      },
+      "states": [
+        {
+          "label": "读末点",
+          "set": {
+            "active": 4
+          },
+          "png": "状态PNG/line-chart-01.png"
+        }
+      ],
+      "png": "PNG/line-chart.png"
+    },
+    {
+      "group": "data",
+      "id": "timeline",
+      "name": "时间轴",
+      "english": "Timeline",
+      "use": "把事件放回实际先后顺序。",
+      "keywords": [
+        "时间线",
+        "顺序",
+        "时间点",
+        "大事记"
+      ],
+      "example": {
+        "items": [
+          "导入素材",
+          "完成初剪",
+          "提交复核"
+        ],
+        "times": [
+          "09:10",
+          "11:30",
+          "14:05"
+        ],
+        "active": 1
+      },
+      "states": [
+        {
+          "label": "最后事件",
+          "set": {
+            "active": 2
+          },
+          "png": "状态PNG/timeline-01.png"
+        }
+      ],
+      "png": "PNG/timeline.png"
+    },
+    {
+      "group": "data",
+      "id": "pair-compare",
+      "name": "两项对比卡",
+      "english": "Comparison",
+      "use": "让两组值共用同一条件、同一单位。",
+      "keywords": [
+        "前后",
+        "对比",
+        "差别",
+        "A/B"
+      ],
+      "example": {
+        "label": "同一张照片",
+        "items": [
+          "原图",
+          "网页副本"
+        ],
+        "values": [
+          "494.4",
+          "95.9"
+        ],
+        "unit": "kB",
+        "active": 1
+      },
+      "states": [
+        {
+          "label": "突出原图",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/pair-compare-01.png"
+        }
+      ],
+      "png": "PNG/pair-compare.png"
+    },
+    {
+      "group": "feedback",
+      "id": "progress",
+      "name": "进度条",
+      "english": "Progress bar",
+      "use": "有总量时明确展示完成比例。",
+      "keywords": [
+        "进度",
+        "比例",
+        "完成",
+        "正在导出"
+      ],
+      "example": {
+        "label": "导出进度",
+        "value": 64
+      },
+      "states": [
+        {
+          "label": "起步",
+          "set": {
+            "value": 12
+          },
+          "png": "状态PNG/progress-01.png"
+        },
+        {
+          "label": "完成",
+          "set": {
+            "value": 100
+          },
+          "png": "状态PNG/progress-02.png"
+        }
+      ],
+      "png": "PNG/progress.png"
+    },
+    {
+      "group": "feedback",
+      "id": "loading",
+      "name": "加载指示",
+      "english": "Spinner",
+      "use": "等待时提示系统正在处理。",
+      "keywords": [
+        "旋转",
+        "正在处理",
+        "加载中",
+        "等待"
+      ],
+      "example": {
+        "label": "正在读取素材",
+        "done": false
+      },
+      "states": [
+        {
+          "label": "就绪",
+          "set": {
+            "done": true
+          },
+          "png": "状态PNG/loading-01.png"
+        }
+      ],
+      "png": "PNG/loading.png"
+    },
+    {
+      "group": "feedback",
+      "id": "skeleton",
+      "name": "骨架屏",
+      "english": "Skeleton",
+      "use": "先给出内容轮廓，加载后填入真实文字。",
+      "keywords": [
+        "占位",
+        "加载",
+        "等待",
+        "骨架"
+      ],
+      "example": {
+        "title": "采访提纲",
+        "body": "开场、现场问答和补充问题。",
+        "loaded": false
+      },
+      "states": [
+        {
+          "label": "加载完成",
+          "set": {
+            "loaded": true
+          },
+          "png": "状态PNG/skeleton-01.png"
+        }
+      ],
+      "png": "PNG/skeleton.png"
+    },
+    {
+      "group": "feedback",
+      "id": "alert",
+      "name": "行内提示",
+      "english": "Inline alert",
+      "use": "在受影响的内容旁解释情况和下一步。",
+      "keywords": [
+        "警告",
+        "提示",
+        "注意",
+        "横幅"
+      ],
+      "example": {
+        "title": "缺少字幕文件",
+        "body": "请先选择需要合成的字幕。",
+        "open": true
+      },
+      "states": [
+        {
+          "label": "已关闭",
+          "set": {
+            "open": false
+          },
+          "png": "状态PNG/alert-01.png"
+        }
+      ],
+      "png": "PNG/alert.png"
+    },
+    {
+      "group": "feedback",
+      "id": "toast",
+      "name": "轻提示",
+      "english": "Toast",
+      "use": "一次操作后给出简短回执。",
+      "keywords": [
+        "消息",
+        "成功",
+        "回执",
+        "短提示"
+      ],
+      "example": {
+        "label": "保存草稿",
+        "message": "草稿已保存",
+        "open": true
+      },
+      "states": [
+        {
+          "label": "未操作",
+          "set": {
+            "open": false
+          },
+          "png": "状态PNG/toast-01.png"
+        }
+      ],
+      "png": "PNG/toast.png"
+    },
+    {
+      "group": "feedback",
+      "id": "validation",
+      "name": "输入校验",
+      "english": "Field validation",
+      "use": "指出哪一项输入有问题，并给出修改条件。",
+      "keywords": [
+        "报错",
+        "错误",
+        "必填",
+        "校验",
+        "纠正"
+      ],
+      "example": {
+        "label": "文件名",
+        "value": "",
+        "touched": true
+      },
+      "states": [
+        {
+          "label": "有效值",
+          "set": {
+            "value": "采访定稿"
+          },
+          "png": "状态PNG/validation-01.png"
+        },
+        {
+          "label": "待填写",
+          "set": {
+            "touched": false
+          },
+          "png": "状态PNG/validation-02.png"
+        }
+      ],
+      "png": "PNG/validation.png"
+    },
+    {
+      "group": "feedback",
+      "id": "empty",
+      "name": "空状态",
+      "english": "Empty state",
+      "use": "列表为空时说明原因和可采取的操作。",
+      "keywords": [
+        "空白",
+        "没有内容",
+        "无结果"
+      ],
+      "example": {
+        "title": "还没有收藏",
+        "body": "收藏素材后会出现在这里。",
+        "action": "查看可用素材",
+        "open": false
+      },
+      "states": [
+        {
+          "label": "查看可用项",
+          "set": {
+            "open": true
+          },
+          "png": "状态PNG/empty-01.png"
+        }
+      ],
+      "png": "PNG/empty.png"
+    },
+    {
+      "group": "feedback",
+      "id": "result",
+      "name": "结果面板",
+      "english": "Result",
+      "use": "为一项任务明确交代完成或受阻，并给出后续动作。",
+      "keywords": [
+        "结果",
+        "成功",
+        "失败",
+        "完成",
+        "交付"
+      ],
+      "example": {
+        "success": true,
+        "title": "导出完成",
+        "body": "字幕和视频已生成。",
+        "action": "查看交付清单",
+        "open": false
+      },
+      "states": [
+        {
+          "label": "受阻",
+          "set": {
+            "success": false,
+            "title": "导出未完成",
+            "body": "请检查字幕文件后重试。",
+            "action": "查看待处理项"
+          },
+          "png": "状态PNG/result-01.png"
+        }
+      ],
+      "png": "PNG/result.png"
+    },
+    {
+      "group": "overlay",
+      "id": "tooltip",
+      "name": "工具提示",
+      "english": "Tooltip",
+      "use": "对一个控件补充一句解释。",
+      "keywords": [
+        "悬停",
+        "气泡",
+        "解释",
+        "提示"
+      ],
+      "example": {
+        "label": "保留原图",
+        "tip": "输出到新文件，原图仍可复核。",
+        "open": true
+      },
+      "states": [
+        {
+          "label": "收起",
+          "set": {
+            "open": false
+          },
+          "png": "状态PNG/tooltip-01.png"
+        }
+      ],
+      "png": "PNG/tooltip.png"
+    },
+    {
+      "group": "overlay",
+      "id": "popover",
+      "name": "信息浮层",
+      "english": "Popover",
+      "use": "在原位置展开一小块补充信息。",
+      "keywords": [
+        "气泡卡",
+        "浮层",
+        "详情"
+      ],
+      "example": {
+        "label": "文件信息",
+        "title": "网页副本",
+        "body": "JPEG · 95.9 kB",
+        "open": true
+      },
+      "states": [
+        {
+          "label": "收起",
+          "set": {
+            "open": false
+          },
+          "png": "状态PNG/popover-01.png"
+        }
+      ],
+      "png": "PNG/popover.png"
+    },
+    {
+      "group": "overlay",
+      "id": "popconfirm",
+      "name": "就地确认",
+      "english": "Popconfirm",
+      "use": "在原操作旁确认一次具有影响的选择。",
+      "keywords": [
+        "二次确认",
+        "取消",
+        "就地"
+      ],
+      "example": {
+        "label": "移出清单",
+        "message": "将这一项移出本期清单？",
+        "open": true,
+        "done": false
+      },
+      "states": [
+        {
+          "label": "完成",
+          "set": {
+            "open": false,
+            "done": true
+          },
+          "png": "状态PNG/popconfirm-01.png"
+        }
+      ],
+      "png": "PNG/popconfirm.png"
+    },
+    {
+      "group": "overlay",
+      "id": "modal",
+      "name": "模态对话框",
+      "english": "Modal dialog",
+      "use": "在继续之前集中处理一个决定。",
+      "keywords": [
+        "弹窗",
+        "模态",
+        "保存",
+        "确认"
+      ],
+      "example": {
+        "label": "结束本次编辑",
+        "title": "保存本次修改？",
+        "body": "可将当前版本存为新草稿。",
+        "action": "保存草稿",
+        "open": true,
+        "done": false
+      },
+      "states": [
+        {
+          "label": "关闭",
+          "set": {
+            "open": false
+          },
+          "png": "状态PNG/modal-01.png"
+        }
+      ],
+      "png": "PNG/modal.png"
+    },
+    {
+      "group": "overlay",
+      "id": "drawer",
+      "name": "侧边抽屉",
+      "english": "Drawer",
+      "use": "保留当前页面，同时从侧边查看相关资料。",
+      "keywords": [
+        "抽屉",
+        "侧栏",
+        "侧边面板"
+      ],
+      "example": {
+        "label": "查看文件详情",
+        "title": "文件详情",
+        "rows": [
+          [
+            "类型",
+            "JPEG"
+          ],
+          [
+            "大小",
+            "95.9 kB"
+          ]
+        ],
+        "open": true
+      },
+      "states": [
+        {
+          "label": "关闭",
+          "set": {
+            "open": false
+          },
+          "png": "状态PNG/drawer-01.png"
+        }
+      ],
+      "png": "PNG/drawer.png"
+    },
+    {
+      "group": "overlay",
+      "id": "tour",
+      "name": "分步引导",
+      "english": "Guided tour",
+      "use": "逐步指向需要关注的控件。",
+      "keywords": [
+        "新手",
+        "指引",
+        "教程",
+        "高亮"
+      ],
+      "example": {
+        "items": [
+          "选择素材",
+          "设置格式",
+          "生成副本"
+        ],
+        "bodies": [
+          "先选要处理的文件。",
+          "确认输出格式和质量。",
+          "最后检查生成的副本。"
+        ],
+        "active": 1,
+        "open": true
+      },
+      "states": [
+        {
+          "label": "第一步",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/tour-01.png"
+        },
+        {
+          "label": "结束引导",
+          "set": {
+            "open": false
+          },
+          "png": "状态PNG/tour-02.png"
+        }
+      ],
+      "png": "PNG/tour.png"
+    },
+    {
+      "group": "layout",
+      "id": "divider",
+      "name": "分隔线",
+      "english": "Divider",
+      "use": "把前一个信息组与下一个主题隔开。",
+      "keywords": [
+        "线条",
+        "分区",
+        "分组"
+      ],
+      "example": {
+        "label": "导出设置"
+      },
+      "states": [
+        {
+          "label": "纯分隔",
+          "set": {
+            "label": ""
+          },
+          "png": "状态PNG/divider-01.png"
+        }
+      ],
+      "png": "PNG/divider.png"
+    },
+    {
+      "group": "layout",
+      "id": "panel",
+      "name": "分组容器",
+      "english": "Panel",
+      "use": "把属于同一任务的内容放在同一边界内。",
+      "keywords": [
+        "边框",
+        "卡片",
+        "容器",
+        "分组"
+      ],
+      "example": {
+        "title": "本期交付",
+        "body": "原声、逐字稿、压缩副本。"
+      },
+      "states": [],
+      "png": "PNG/panel.png"
+    },
+    {
+      "group": "layout",
+      "id": "grid",
+      "name": "网格",
+      "english": "Grid",
+      "use": "按固定列对齐一组可重复的内容。",
+      "keywords": [
+        "布局",
+        "栅格",
+        "宫格",
+        "栏"
+      ],
+      "example": {
+        "items": [
+          "开场",
+          "访谈",
+          "录屏",
+          "封面"
+        ],
+        "cols": 2
+      },
+      "states": [
+        {
+          "label": "单列",
+          "set": {
+            "cols": 1
+          },
+          "png": "状态PNG/grid-01.png"
+        }
+      ],
+      "png": "PNG/grid.png"
+    },
+    {
+      "group": "layout",
+      "id": "splitter",
+      "name": "可调分栏",
+      "english": "Splitter",
+      "use": "在同一工作区改变目录和正文的占比。",
+      "keywords": [
+        "布局",
+        "分屏",
+        "拖动",
+        "分隔"
+      ],
+      "example": {
+        "left": "文件",
+        "right": "预览",
+        "value": 37
+      },
+      "states": [
+        {
+          "label": "等宽",
+          "set": {
+            "value": 50
+          },
+          "png": "状态PNG/splitter-01.png"
+        },
+        {
+          "label": "扩大目录",
+          "set": {
+            "value": 60
+          },
+          "png": "状态PNG/splitter-02.png"
+        }
+      ],
+      "png": "PNG/splitter.png"
+    },
+    {
+      "group": "layout",
+      "id": "app-window",
+      "name": "应用窗框",
+      "english": "Application window",
+      "use": "为待替换内容提供独立标题栏与有厚度的边界。",
+      "keywords": [
+        "Mac",
+        "软件窗口",
+        "边框",
+        "标题栏"
+      ],
+      "example": {
+        "title": "素材管理",
+        "items": [
+          "文件名",
+          "采访原声.wav",
+          "采访提纲.md"
+        ],
+        "active": 1
+      },
+      "states": [
+        {
+          "label": "选中提纲",
+          "set": {
+            "active": 2
+          },
+          "png": "状态PNG/app-window-01.png"
+        }
+      ],
+      "png": "PNG/app-window.png"
+    },
+    {
+      "id": "bottom-nav",
+      "group": "mobile",
+      "name": "底部导航栏",
+      "english": "Bottom navigation",
+      "use": "在手机底部切换工作区，同时标出当前页。",
+      "keywords": [
+        "手机",
+        "底栏",
+        "导航",
+        "切页",
+        "竖屏"
+      ],
+      "example": {
+        "items": [
+          "首页",
+          "素材",
+          "我的"
+        ],
+        "bodies": [
+          "最近项目",
+          "本期素材库",
+          "我的收藏"
+        ],
+        "active": 1
+      },
+      "states": [
+        {
+          "label": "首页",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/bottom-nav-01.png"
+        }
+      ],
+      "png": "PNG/bottom-nav.png"
+    },
+    {
+      "id": "bottom-sheet",
+      "group": "mobile",
+      "name": "可拖动半屏面板",
+      "english": "Bottom sheet",
+      "use": "保留后面的内容，把这一项的详情从底部拉起。",
+      "keywords": [
+        "上拉",
+        "拉高",
+        "半屏",
+        "抽屉",
+        "手势"
+      ],
+      "example": {
+        "title": "片段详情",
+        "background": "口播素材",
+        "details": [
+          "原声节选.mp4",
+          "1080 竖屏工程",
+          "使用原声 · 字幕另轨"
+        ],
+        "level": 1
+      },
+      "states": [
+        {
+          "label": "收拢",
+          "set": {
+            "level": 0
+          },
+          "png": "状态PNG/bottom-sheet-01.png"
+        },
+        {
+          "label": "全展开",
+          "set": {
+            "level": 2
+          },
+          "png": "状态PNG/bottom-sheet-02.png"
+        }
+      ],
+      "png": "PNG/bottom-sheet.png"
+    },
+    {
+      "id": "wheel-picker",
+      "group": "mobile",
+      "name": "滚轮选择器",
+      "english": "Wheel picker",
+      "use": "滚到中间一行确定一个值。",
+      "keywords": [
+        "滚动",
+        "原生",
+        "滚轮",
+        "倍速"
+      ],
+      "example": {
+        "label": "预览倍速",
+        "items": [
+          "0.5×",
+          "0.75×",
+          "1×",
+          "1.25×",
+          "1.5×",
+          "2×"
+        ],
+        "active": 2
+      },
+      "states": [
+        {
+          "label": "慢放",
+          "set": {
+            "active": 1
+          },
+          "png": "状态PNG/wheel-picker-01.png"
+        },
+        {
+          "label": "加速",
+          "set": {
+            "active": 4
+          },
+          "png": "状态PNG/wheel-picker-02.png"
+        }
+      ],
+      "png": "PNG/wheel-picker.png"
+    },
+    {
+      "id": "swipe-row",
+      "group": "mobile",
+      "name": "列表侧滑操作",
+      "english": "Swipe actions",
+      "use": "向侧边滑开某一行，在原位归档或撤回。",
+      "keywords": [
+        "左滑",
+        "归档",
+        "手势",
+        "操作"
+      ],
+      "example": {
+        "label": "现场录音.wav",
+        "meta": "本期素材",
+        "open": true,
+        "archived": false
+      },
+      "states": [
+        {
+          "label": "收起",
+          "set": {
+            "open": false
+          },
+          "png": "状态PNG/swipe-row-01.png"
+        },
+        {
+          "label": "已归档",
+          "set": {
+            "open": false,
+            "archived": true
+          },
+          "png": "状态PNG/swipe-row-02.png"
+        }
+      ],
+      "png": "PNG/swipe-row.png"
+    },
+    {
+      "id": "pull-refresh",
+      "group": "mobile",
+      "name": "下拉刷新",
+      "english": "Pull to refresh",
+      "use": "手指下拉列表，松开后更新本地示例数据。",
+      "keywords": [
+        "刷新",
+        "手势",
+        "松开",
+        "更新",
+        "列表"
+      ],
+      "example": {
+        "title": "素材收件箱",
+        "items": [
+          "采访提纲.md",
+          "会议录音.wav"
+        ],
+        "incoming": "补充说明.md",
+        "refreshed": false
+      },
+      "states": [
+        {
+          "label": "已更新",
+          "set": {
+            "refreshed": true
+          },
+          "png": "状态PNG/pull-refresh-01.png"
+        }
+      ],
+      "png": "PNG/pull-refresh.png"
+    },
+    {
+      "id": "swipe-gallery",
+      "group": "mobile",
+      "name": "滑动图集",
+      "english": "Swipe gallery",
+      "use": "滑动连续浏览图片，页点和图名随当前图片变化。",
+      "keywords": [
+        "轮播",
+        "相册",
+        "手势",
+        "翻图",
+        "页点"
+      ],
+      "example": {
+        "items": [
+          "地出原图",
+          "压缩界面",
+          "摄影者"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp",
+          "portrait.webp"
+        ],
+        "active": 0
+      },
+      "states": [
+        {
+          "label": "下一张",
+          "set": {
+            "active": 1
+          },
+          "png": "状态PNG/swipe-gallery-01.png"
+        }
+      ],
+      "png": "PNG/swipe-gallery.png"
+    },
+    {
+      "id": "command-palette",
+      "group": "desktop",
+      "name": "全局命令面板",
+      "english": "Command palette",
+      "use": "搜索命令，用方向键选中并执行。",
+      "keywords": [
+        "命令",
+        "快捷键",
+        "搜索",
+        "全局"
+      ],
+      "example": {
+        "title": "查找命令",
+        "items": [
+          "导出本帧",
+          "切换字幕轨",
+          "定位到片头"
+        ],
+        "query": "",
+        "active": 0,
+        "result": ""
+      },
+      "states": [
+        {
+          "label": "筛选",
+          "set": {
+            "query": "字幕",
+            "active": 1
+          },
+          "png": "状态PNG/command-palette-01.png"
+        }
+      ],
+      "png": "PNG/command-palette.png"
+    },
+    {
+      "id": "key-chord",
+      "group": "desktop",
+      "name": "快捷键键帽",
+      "english": "Keyboard shortcut",
+      "use": "把同一条命令的组合键逐个排清楚。",
+      "keywords": [
+        "键帽",
+        "快捷键",
+        "热键",
+        "组合键"
+      ],
+      "example": {
+        "label": "打开命令面板",
+        "mac": [
+          "⌘",
+          "K"
+        ],
+        "windows": [
+          "Ctrl",
+          "K"
+        ],
+        "platform": "mac"
+      },
+      "states": [
+        {
+          "label": "Windows",
+          "set": {
+            "platform": "windows"
+          },
+          "png": "状态PNG/key-chord-01.png"
+        }
+      ],
+      "png": "PNG/key-chord.png"
+    },
+    {
+      "id": "dock-panel",
+      "group": "desktop",
+      "name": "可停靠工具面板",
+      "english": "Dockable panel",
+      "use": "把工具面板靠左、靠右或浮在工作区上。",
+      "keywords": [
+        "停靠",
+        "工作区",
+        "浮动",
+        "布局",
+        "拖动"
+      ],
+      "example": {
+        "title": "检查器",
+        "canvas": "预览画布",
+        "tools": [
+          "位置",
+          "比例",
+          "不透明度"
+        ],
+        "dock": "right"
+      },
+      "states": [
+        {
+          "label": "靠左",
+          "set": {
+            "dock": "left"
+          },
+          "png": "状态PNG/dock-panel-01.png"
+        },
+        {
+          "label": "浮动",
+          "set": {
+            "dock": "float"
+          },
+          "png": "状态PNG/dock-panel-02.png"
+        }
+      ],
+      "png": "PNG/dock-panel.png"
+    },
+    {
+      "id": "layer-panel",
+      "group": "desktop",
+      "name": "图层面板",
+      "english": "Layer panel",
+      "use": "切换选中图层、显隐及上下叠放次序。",
+      "keywords": [
+        "图层",
+        "显示",
+        "隐藏",
+        "顺序",
+        "素材层"
+      ],
+      "example": {
+        "items": [
+          "口播字幕",
+          "软件截图",
+          "底板"
+        ],
+        "hidden": [],
+        "active": 0
+      },
+      "states": [
+        {
+          "label": "隐藏截图",
+          "set": {
+            "hidden": [
+              1
+            ]
+          },
+          "png": "状态PNG/layer-panel-01.png"
+        },
+        {
+          "label": "选中截图",
+          "set": {
+            "active": 1
+          },
+          "png": "状态PNG/layer-panel-02.png"
+        }
+      ],
+      "png": "PNG/layer-panel.png"
+    },
+    {
+      "id": "inspector",
+      "group": "desktop",
+      "name": "属性检查器",
+      "english": "Property inspector",
+      "use": "只对当前选中的对象调整位置和透明度。",
+      "keywords": [
+        "属性",
+        "参数",
+        "位置",
+        "透明度",
+        "对象"
+      ],
+      "example": {
+        "items": [
+          "字幕层",
+          "图片层"
+        ],
+        "active": 0,
+        "settings": [
+          [
+            24,
+            38,
+            100
+          ],
+          [
+            12,
+            15,
+            80
+          ]
+        ]
+      },
+      "states": [
+        {
+          "label": "选中图片",
+          "set": {
+            "active": 1
+          },
+          "png": "状态PNG/inspector-01.png"
+        }
+      ],
+      "png": "PNG/inspector.png"
+    },
+    {
+      "id": "zoom-fit",
+      "group": "desktop",
+      "name": "画布缩放器",
+      "english": "Canvas zoom",
+      "use": "比较适配画布和放大局部的取景。",
+      "keywords": [
+        "缩放",
+        "放大",
+        "适配",
+        "比例",
+        "画布"
+      ],
+      "example": {
+        "label": "画布预览",
+        "image": "earth.webp",
+        "zoom": 100
+      },
+      "states": [
+        {
+          "label": "放大",
+          "set": {
+            "zoom": 160
+          },
+          "png": "状态PNG/zoom-fit-01.png"
+        }
+      ],
+      "png": "PNG/zoom-fit.png"
+    },
+    {
+      "id": "file-tiles",
+      "group": "files",
+      "name": "文件缩略图",
+      "english": "File thumbnails",
+      "use": "用原图、文件名和选中边框辨认要使用的素材。",
+      "keywords": [
+        "文件",
+        "预览",
+        "缩略图",
+        "素材库"
+      ],
+      "example": {
+        "items": [
+          "地出.jpg",
+          "压缩界面.png",
+          "安德斯.jpg"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp",
+          "portrait.webp"
+        ],
+        "active": 0
+      },
+      "states": [
+        {
+          "label": "选中截图",
+          "set": {
+            "active": 1
+          },
+          "png": "状态PNG/file-tiles-01.png"
+        }
+      ],
+      "png": "PNG/file-tiles.png"
+    },
+    {
+      "id": "attachment",
+      "group": "files",
+      "name": "附件条",
+      "english": "Attachment",
+      "use": "把文件名、类型和体积挂在当前草稿上，可移除再添加。",
+      "keywords": [
+        "附件",
+        "文件",
+        "移除",
+        "挂载"
+      ],
+      "example": {
+        "name": "地出.jpg",
+        "meta": "JPEG · 494.4 kB",
+        "attached": true
+      },
+      "states": [
+        {
+          "label": "已移除",
+          "set": {
+            "attached": false
+          },
+          "png": "状态PNG/attachment-01.png"
+        }
+      ],
+      "png": "PNG/attachment.png"
+    },
+    {
+      "id": "upload-queue",
+      "group": "files",
+      "name": "多文件上传队列",
+      "english": "Upload queue",
+      "use": "逐文件看进度与失败原因，单独重试失败项。",
+      "keywords": [
+        "上传",
+        "多文件",
+        "排队",
+        "重试",
+        "失败"
+      ],
+      "example": {
+        "items": [
+          "采访录音.wav",
+          "字幕草稿.srt",
+          "封面图.jpg"
+        ],
+        "progress": [
+          100,
+          64,
+          24
+        ],
+        "failed": [
+          2
+        ]
+      },
+      "states": [
+        {
+          "label": "全部就绪",
+          "set": {
+            "progress": [
+              100,
+              100,
+              100
+            ],
+            "failed": []
+          },
+          "png": "状态PNG/upload-queue-01.png"
+        }
+      ],
+      "png": "PNG/upload-queue.png"
+    },
+    {
+      "id": "file-preview",
+      "group": "files",
+      "name": "分页文件预览器",
+      "english": "File preview",
+      "use": "在同一份图册里翻页、放大并核对页码。",
+      "keywords": [
+        "文档",
+        "预览",
+        "翻页",
+        "放大",
+        "页码"
+      ],
+      "example": {
+        "title": "素材校对图册",
+        "items": [
+          "输入照片",
+          "处理界面"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp"
+        ],
+        "active": 0,
+        "zoom": 100
+      },
+      "states": [
+        {
+          "label": "第二页",
+          "set": {
+            "active": 1
+          },
+          "png": "状态PNG/file-preview-01.png"
+        },
+        {
+          "label": "局部",
+          "set": {
+            "zoom": 170
+          },
+          "png": "状态PNG/file-preview-02.png"
+        }
+      ],
+      "png": "PNG/file-preview.png"
+    },
+    {
+      "id": "transfer",
+      "group": "files",
+      "name": "双栏素材穿梭框",
+      "english": "Transfer list",
+      "use": "将选中的文件从可用库移入本期清单，也可移回。",
+      "keywords": [
+        "穿梭",
+        "移入",
+        "移出",
+        "多选",
+        "本期"
+      ],
+      "example": {
+        "items": [
+          "口播原声",
+          "产品截图",
+          "参考文档",
+          "封面照片"
+        ],
+        "assigned": [
+          1
+        ],
+        "marked": []
+      },
+      "states": [
+        {
+          "label": "已加入",
+          "set": {
+            "assigned": [
+              1,
+              3
+            ]
+          },
+          "png": "状态PNG/transfer-01.png"
+        }
+      ],
+      "png": "PNG/transfer.png"
+    },
+    {
+      "id": "version-history",
+      "group": "files",
+      "name": "文件版本历史",
+      "english": "Version history",
+      "use": "点选旧版，核对修改人、时间和改动。",
+      "keywords": [
+        "版本",
+        "历史",
+        "修订",
+        "恢复记录"
+      ],
+      "example": {
+        "items": [
+          "第三版",
+          "第二版",
+          "第一版"
+        ],
+        "meta": [
+          "15:40 · 林青",
+          "13:15 · 方木",
+          "09:20 · 林青"
+        ],
+        "bodies": [
+          "换入核对后的数据",
+          "补充两条素材出处",
+          "建立采访提纲"
+        ],
+        "active": 0
+      },
+      "states": [
+        {
+          "label": "查看上一版",
+          "set": {
+            "active": 1
+          },
+          "png": "状态PNG/version-history-01.png"
+        }
+      ],
+      "png": "PNG/version-history.png"
+    },
+    {
+      "id": "cascader",
+      "group": "precision",
+      "name": "级联选择器",
+      "english": "Cascader",
+      "use": "先选上级，再从对应的下一级取值。",
+      "keywords": [
+        "级联",
+        "子类",
+        "二级",
+        "路径",
+        "联动"
+      ],
+      "example": {
+        "label": "素材位置",
+        "items": [
+          "画面",
+          "声音"
+        ],
+        "children": [
+          [
+            "产品截图",
+            "人物照片"
+          ],
+          [
+            "采访原声",
+            "环境音"
+          ]
+        ],
+        "active": 0,
+        "child": 1
+      },
+      "states": [
+        {
+          "label": "声音路径",
+          "set": {
+            "active": 1,
+            "child": 0
+          },
+          "png": "状态PNG/cascader-01.png"
+        }
+      ],
+      "png": "PNG/cascader.png"
+    },
+    {
+      "id": "date-range",
+      "group": "precision",
+      "name": "起止日期选择器",
+      "english": "Date range",
+      "use": "同时看见开始、结束和覆盖天数。",
+      "keywords": [
+        "日期",
+        "范围",
+        "起止",
+        "排期"
+      ],
+      "example": {
+        "label": "拍摄日期",
+        "start": "2026-11-16",
+        "end": "2026-11-22"
+      },
+      "states": [
+        {
+          "label": "单日",
+          "set": {
+            "end": "2026-11-16"
+          },
+          "png": "状态PNG/date-range-01.png"
+        }
+      ],
+      "png": "PNG/date-range.png"
+    },
+    {
+      "id": "range-pair",
+      "group": "precision",
+      "name": "双端区间滑杆",
+      "english": "Range slider",
+      "use": "在同一标尺上拖动两个端点，圈定要保留的区间。",
+      "keywords": [
+        "双端",
+        "范围",
+        "时长",
+        "起点",
+        "终点",
+        "10到30秒"
+      ],
+      "example": {
+        "label": "片段时长",
+        "unit": "秒",
+        "min": 0,
+        "max": 60,
+        "low": 10,
+        "high": 30
+      },
+      "states": [
+        {
+          "label": "扩大范围",
+          "set": {
+            "low": 5,
+            "high": 45
+          },
+          "png": "状态PNG/range-pair-01.png"
+        }
+      ],
+      "png": "PNG/range-pair.png"
+    },
+    {
+      "id": "tag-entry",
+      "group": "precision",
+      "name": "自由标签输入框",
+      "english": "Tag input",
+      "use": "输入新词建立标签，逐项移除。",
+      "keywords": [
+        "标签",
+        "新词",
+        "添加",
+        "回车"
+      ],
+      "example": {
+        "label": "素材关键词",
+        "tags": [
+          "口播",
+          "待精剪"
+        ],
+        "draft": ""
+      },
+      "states": [
+        {
+          "label": "新增访谈",
+          "set": {
+            "tags": [
+              "口播",
+              "待精剪",
+              "访谈"
+            ]
+          },
+          "png": "状态PNG/tag-entry-01.png"
+        }
+      ],
+      "png": "PNG/tag-entry.png"
+    },
+    {
+      "id": "rule-filter",
+      "group": "precision",
+      "name": "多条件筛选器",
+      "english": "Filter builder",
+      "use": "同时应用类型、时长条件，并看到匹配的素材。",
+      "keywords": [
+        "条件",
+        "组合",
+        "筛选",
+        "且",
+        "或",
+        "同时"
+      ],
+      "example": {
+        "items": [
+          "访谈开场",
+          "环境底噪",
+          "演示录屏"
+        ],
+        "formats": [
+          "视频",
+          "音频",
+          "视频"
+        ],
+        "seconds": [
+          12,
+          24,
+          42
+        ],
+        "kind": "视频",
+        "limit": 30,
+        "andMode": true
+      },
+      "states": [
+        {
+          "label": "任一条件",
+          "set": {
+            "andMode": false
+          },
+          "png": "状态PNG/rule-filter-01.png"
+        },
+        {
+          "label": "全部时长",
+          "set": {
+            "limit": 60
+          },
+          "png": "状态PNG/rule-filter-02.png"
+        }
+      ],
+      "png": "PNG/rule-filter.png"
+    },
+    {
+      "id": "time-picker",
+      "group": "precision",
+      "name": "时分选择器",
+      "english": "Time picker",
+      "use": "分别设置小时和分钟，输出一个明确的时刻。",
+      "keywords": [
+        "时间",
+        "时",
+        "分",
+        "时刻",
+        "排期"
+      ],
+      "example": {
+        "label": "交付时刻",
+        "hour": 14,
+        "minute": 30
+      },
+      "states": [
+        {
+          "label": "上午",
+          "set": {
+            "hour": 9,
+            "minute": 5
+          },
+          "png": "状态PNG/time-picker-01.png"
+        }
+      ],
+      "png": "PNG/time-picker.png"
+    },
+    {
+      "id": "video-player",
+      "group": "media",
+      "name": "视频播放控制条",
+      "english": "Playback controls",
+      "use": "播放或暂停真实口播，拖动进度定位到对应画面。",
+      "keywords": [
+        "播放器",
+        "播放",
+        "暂停",
+        "进度",
+        "视频"
+      ],
+      "example": {
+        "label": "口播原声节选",
+        "src": "talk.mp4",
+        "poster": "frame-0.webp",
+        "duration": 5.44,
+        "time": 1.8,
+        "muted": true
+      },
+      "states": [
+        {
+          "label": "片尾",
+          "set": {
+            "time": 5.2
+          },
+          "png": "状态PNG/video-player-01.png"
+        }
+      ],
+      "png": "PNG/video-player.png"
+    },
+    {
+      "id": "wave-seek",
+      "group": "media",
+      "name": "可定位音频波形",
+      "english": "Waveform scrubber",
+      "use": "根据原声振幅定位播放头，点一下可听到该处原声。",
+      "keywords": [
+        "波形",
+        "原声",
+        "定位",
+        "音频",
+        "游标"
+      ],
+      "example": {
+        "label": "原声波形",
+        "src": "talk.mp4",
+        "wave": [
+          0.012,
+          0.077,
+          0.483,
+          0.458,
+          0.349,
+          0.409,
+          0.345,
+          0.289,
+          0.166,
+          0.239,
+          0.285,
+          0.262,
+          0.097,
+          0.162,
+          0.146,
+          0.176,
+          0.144,
+          0.116,
+          0.135,
+          0.068,
+          0.167,
+          0.156,
+          0.13,
+          0.117,
+          0.102,
+          0.173,
+          0.118,
+          0.168,
+          0.225,
+          0.21,
+          0.165,
+          0.154,
+          0.155,
+          0.075,
+          0.058,
+          0.173,
+          0.144,
+          0.119,
+          0.111,
+          0.054,
+          0.206,
+          0.321,
+          0.3,
+          0.098,
+          0.058,
+          0.096,
+          0.102,
+          0.111,
+          0.115,
+          0.096,
+          0.087,
+          0.111,
+          0.095,
+          0.1,
+          0.126,
+          0.13,
+          0.186,
+          0.129,
+          0.067,
+          0.129,
+          0.087,
+          0.103,
+          0.122,
+          0.157,
+          0.146,
+          0.106,
+          0.047,
+          0.167,
+          0.193,
+          0.175,
+          0.086,
+          0.094,
+          0.08,
+          0.077,
+          0.078,
+          0.09,
+          0.097,
+          0.078,
+          0.041,
+          0.041,
+          0.004,
+          0.025,
+          0.154,
+          0.311,
+          0.25,
+          0.147,
+          0.061,
+          0.058,
+          0.044,
+          0.039
+        ],
+        "duration": 5.44,
+        "time": 2.7
+      },
+      "states": [
+        {
+          "label": "靠近结尾",
+          "set": {
+            "time": 4.5
+          },
+          "png": "状态PNG/wave-seek-01.png"
+        }
+      ],
+      "png": "PNG/wave-seek.png"
+    },
+    {
+      "id": "trim",
+      "group": "media",
+      "name": "片段裁切器",
+      "english": "Clip trimmer",
+      "use": "调整入点和出点，显示将保留的区间和长度。",
+      "keywords": [
+        "裁切",
+        "裁剪",
+        "入点",
+        "出点",
+        "头尾",
+        "时间"
+      ],
+      "example": {
+        "label": "保留原声区间",
+        "wave": [
+          0.012,
+          0.077,
+          0.483,
+          0.458,
+          0.349,
+          0.409,
+          0.345,
+          0.289,
+          0.166,
+          0.239,
+          0.285,
+          0.262,
+          0.097,
+          0.162,
+          0.146,
+          0.176,
+          0.144,
+          0.116,
+          0.135,
+          0.068,
+          0.167,
+          0.156,
+          0.13,
+          0.117,
+          0.102,
+          0.173,
+          0.118,
+          0.168,
+          0.225,
+          0.21,
+          0.165,
+          0.154,
+          0.155,
+          0.075,
+          0.058,
+          0.173,
+          0.144,
+          0.119,
+          0.111,
+          0.054,
+          0.206,
+          0.321,
+          0.3,
+          0.098,
+          0.058,
+          0.096,
+          0.102,
+          0.111,
+          0.115,
+          0.096,
+          0.087,
+          0.111,
+          0.095,
+          0.1,
+          0.126,
+          0.13,
+          0.186,
+          0.129,
+          0.067,
+          0.129,
+          0.087,
+          0.103,
+          0.122,
+          0.157,
+          0.146,
+          0.106,
+          0.047,
+          0.167,
+          0.193,
+          0.175,
+          0.086,
+          0.094,
+          0.08,
+          0.077,
+          0.078,
+          0.09,
+          0.097,
+          0.078,
+          0.041,
+          0.041,
+          0.004,
+          0.025,
+          0.154,
+          0.311,
+          0.25,
+          0.147,
+          0.061,
+          0.058,
+          0.044,
+          0.039
+        ],
+        "duration": 5.44,
+        "start": 1.2,
+        "end": 4.18
+      },
+      "states": [
+        {
+          "label": "收短结尾",
+          "set": {
+            "end": 3.6
+          },
+          "png": "状态PNG/trim-01.png"
+        }
+      ],
+      "png": "PNG/trim.png"
+    },
+    {
+      "id": "filmstrip",
+      "group": "media",
+      "name": "缩略图胶片带",
+      "english": "Filmstrip",
+      "use": "沿真实片段逐个看取景，并按时间定位。",
+      "keywords": [
+        "胶片",
+        "缩略图",
+        "视频",
+        "帧",
+        "时间码"
+      ],
+      "example": {
+        "label": "口播镜头",
+        "frames": [
+          "frame-0.webp",
+          "frame-1.webp",
+          "frame-2.webp",
+          "frame-3.webp",
+          "frame-4.webp",
+          "frame-5.webp",
+          "frame-6.webp"
+        ],
+        "marks": [
+          0,
+          0.9,
+          1.8,
+          2.7,
+          3.6,
+          4.5,
+          5.35
+        ],
+        "active": 3
+      },
+      "states": [
+        {
+          "label": "选中结尾",
+          "set": {
+            "active": 6
+          },
+          "png": "状态PNG/filmstrip-01.png"
+        }
+      ],
+      "png": "PNG/filmstrip.png"
+    },
+    {
+      "id": "caption-track",
+      "group": "media",
+      "name": "逐句字幕轨",
+      "english": "Caption track",
+      "use": "点某一句查看覆盖的时间与原话，调整这句的结束点。",
+      "keywords": [
+        "字幕",
+        "逐句",
+        "字幕轨",
+        "调整结尾",
+        "对齐"
+      ],
+      "example": {
+        "items": [
+          "以及对于你来说",
+          "有什么用处"
+        ],
+        "starts": [
+          3.02,
+          4.08
+        ],
+        "ends": [
+          4.08,
+          5.42
+        ],
+        "active": 1,
+        "viewStart": 3.02,
+        "duration": 5.44
+      },
+      "states": [
+        {
+          "label": "选中前句",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/caption-track-01.png"
+        },
+        {
+          "label": "收短结尾",
+          "set": {
+            "ends": [
+              4.08,
+              4.9
+            ]
+          },
+          "png": "状态PNG/caption-track-02.png"
+        }
+      ],
+      "png": "PNG/caption-track.png"
+    },
+    {
+      "id": "level-meter",
+      "group": "media",
+      "name": "双声道电平表",
+      "english": "Stereo level meter",
+      "use": "比较原声在同一时刻的左右声道均方根电平。",
+      "keywords": [
+        "电平",
+        "音量",
+        "分贝",
+        "左声道",
+        "右声道"
+      ],
+      "example": {
+        "label": "原声电平",
+        "levels": [
+          [
+            -18.6,
+            -17.4
+          ],
+          [
+            -19.5,
+            -18.2
+          ],
+          [
+            -25.1,
+            -22.9
+          ],
+          [
+            -28.3,
+            -26.6
+          ],
+          [
+            -29.4,
+            -27.3
+          ],
+          [
+            -26.7,
+            -24.7
+          ],
+          [
+            -29.3,
+            -28.0
+          ],
+          [
+            -27.0,
+            -25.9
+          ],
+          [
+            -25.5,
+            -24.1
+          ],
+          [
+            -26.5,
+            -25.8
+          ],
+          [
+            -29.1,
+            -28.4
+          ],
+          [
+            -26.3,
+            -25.5
+          ],
+          [
+            -26.0,
+            -25.3
+          ],
+          [
+            -26.4,
+            -24.9
+          ],
+          [
+            -30.4,
+            -29.8
+          ],
+          [
+            -32.1,
+            -31.0
+          ],
+          [
+            -24.0,
+            -22.7
+          ],
+          [
+            -32.7,
+            -31.5
+          ]
+        ],
+        "duration": 5.44,
+        "active": 6
+      },
+      "states": [
+        {
+          "label": "另一时刻",
+          "set": {
+            "active": 14
+          },
+          "png": "状态PNG/level-meter-01.png"
+        }
+      ],
+      "png": "PNG/level-meter.png"
+    },
+    {
+      "id": "donut",
+      "group": "charts",
+      "name": "占比环图",
+      "english": "Donut chart",
+      "use": "用扇段、直接标签及百分比看整体的组成。",
+      "keywords": [
+        "占比",
+        "百分比",
+        "比例",
+        "构成"
+      ],
+      "example": {
+        "label": "素材构成示例",
+        "items": [
+          "视频",
+          "录音",
+          "图片"
+        ],
+        "values": [
+          6,
+          3,
+          1
+        ],
+        "active": 0
+      },
+      "states": [
+        {
+          "label": "查看录音",
+          "set": {
+            "active": 1
+          },
+          "png": "状态PNG/donut-01.png"
+        }
+      ],
+      "png": "PNG/donut.png"
+    },
+    {
+      "id": "stacked",
+      "group": "charts",
+      "name": "堆叠条形图",
+      "english": "Stacked bars",
+      "use": "同一比例尺下比较各组总量和内部构成。",
+      "keywords": [
+        "堆叠",
+        "总量",
+        "构成",
+        "图表",
+        "比较"
+      ],
+      "example": {
+        "label": "片段时长示例",
+        "items": [
+          "初剪",
+          "定稿"
+        ],
+        "series": [
+          "口播",
+          "演示",
+          "空镜"
+        ],
+        "matrix": [
+          [
+            24,
+            16,
+            8
+          ],
+          [
+            20,
+            18,
+            4
+          ]
+        ],
+        "unit": "秒",
+        "active": 0
+      },
+      "states": [
+        {
+          "label": "查看定稿",
+          "set": {
+            "active": 1
+          },
+          "png": "状态PNG/stacked-01.png"
+        }
+      ],
+      "png": "PNG/stacked.png"
+    },
+    {
+      "id": "waterfall",
+      "group": "charts",
+      "name": "增减瀑布图",
+      "english": "Waterfall chart",
+      "use": "从起点累计每次增减，读出怎样得到终值。",
+      "keywords": [
+        "瀑布",
+        "增减",
+        "起点",
+        "终点",
+        "变化"
+      ],
+      "example": {
+        "label": "片长变化示例",
+        "items": [
+          "初剪",
+          "去停顿",
+          "补演示"
+        ],
+        "values": [
+          60,
+          -12,
+          5
+        ],
+        "unit": "秒",
+        "active": 1
+      },
+      "states": [
+        {
+          "label": "看新增",
+          "set": {
+            "active": 2
+          },
+          "png": "状态PNG/waterfall-01.png"
+        }
+      ],
+      "png": "PNG/waterfall.png"
+    },
+    {
+      "id": "scatter",
+      "group": "charts",
+      "name": "散点图",
+      "english": "Scatter plot",
+      "use": "在两条有单位的轴上看分布，选点读出两个量。",
+      "keywords": [
+        "散点",
+        "分布",
+        "相关",
+        "横轴",
+        "纵轴"
+      ],
+      "example": {
+        "label": "片段样本示例",
+        "xLabel": "时长 / 秒",
+        "yLabel": "体积 / MB",
+        "items": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "points": [
+          [
+            4,
+            2
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            16,
+            5
+          ],
+          [
+            21,
+            9
+          ],
+          [
+            26,
+            10
+          ]
+        ],
+        "active": 2
+      },
+      "states": [
+        {
+          "label": "查看末点",
+          "set": {
+            "active": 4
+          },
+          "png": "状态PNG/scatter-01.png"
+        }
+      ],
+      "png": "PNG/scatter.png"
+    },
+    {
+      "id": "node-map",
+      "group": "charts",
+      "name": "节点关系图",
+      "english": "Node graph",
+      "use": "从当前节点追踪它直接交给谁、从谁接收。",
+      "keywords": [
+        "关系",
+        "流程",
+        "节点",
+        "依赖",
+        "交接"
+      ],
+      "example": {
+        "label": "素材交接",
+        "items": [
+          "口播",
+          "逐字稿",
+          "字幕",
+          "初剪"
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "active": 1
+      },
+      "states": [
+        {
+          "label": "看汇合点",
+          "set": {
+            "active": 3
+          },
+          "png": "状态PNG/node-map-01.png"
+        }
+      ],
+      "png": "PNG/node-map.png"
+    },
+    {
+      "id": "heatmap",
+      "group": "charts",
+      "name": "热力矩阵",
+      "english": "Heatmap",
+      "use": "用行列、数值及深浅查找哪项在什么时候最集中。",
+      "keywords": [
+        "热力",
+        "矩阵",
+        "密度",
+        "分布"
+      ],
+      "example": {
+        "label": "修改次数示例",
+        "labels": [
+          "文字",
+          "画面",
+          "声音"
+        ],
+        "columns": [
+          "一审",
+          "二审",
+          "三审",
+          "定稿"
+        ],
+        "matrix": [
+          [
+            4,
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            3,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0,
+            0
+          ]
+        ],
+        "cell": [
+          0,
+          0
+        ]
+      },
+      "states": [
+        {
+          "label": "查看二审",
+          "set": {
+            "cell": [
+              1,
+              1
+            ]
+          },
+          "png": "状态PNG/heatmap-01.png"
+        }
+      ],
+      "png": "PNG/heatmap.png"
+    },
+    {
+      "id": "chat-bubbles",
+      "group": "chat",
+      "name": "对话消息气泡",
+      "english": "Chat messages",
+      "use": "把提问者与回答者的原话分别放在同一条对话里。",
+      "keywords": [
+        "聊天",
+        "消息",
+        "气泡",
+        "提问",
+        "回答"
+      ],
+      "example": {
+        "question": "这张图能再小一点吗？",
+        "answer": "可以。先留好原图，再导出一份网页副本。",
+        "showAnswer": true
+      },
+      "states": [
+        {
+          "label": "仅提问",
+          "set": {
+            "showAnswer": false
+          },
+          "png": "状态PNG/chat-bubbles-01.png"
+        }
+      ],
+      "png": "PNG/chat-bubbles.png"
+    },
+    {
+      "id": "composer",
+      "group": "chat",
+      "name": "带附件的消息输入栏",
+      "english": "Prompt composer",
+      "use": "在同一条消息里添加材料、编辑问题并展示已发送内容。",
+      "keywords": [
+        "提示词",
+        "输入框",
+        "附件",
+        "发送",
+        "AI"
+      ],
+      "example": {
+        "text": "请对照这份资料列出变化。",
+        "file": "交付记录.md",
+        "attached": true,
+        "sent": false
+      },
+      "states": [
+        {
+          "label": "无附件",
+          "set": {
+            "attached": false
+          },
+          "png": "状态PNG/composer-01.png"
+        },
+        {
+          "label": "已发送",
+          "set": {
+            "sent": true
+          },
+          "png": "状态PNG/composer-02.png"
+        }
+      ],
+      "png": "PNG/composer.png"
+    },
+    {
+      "id": "tool-call",
+      "group": "chat",
+      "name": "工具调用详情",
+      "english": "Tool call",
+      "use": "看工具接收的参数、运行阶段和成功或失败的输出。",
+      "keywords": [
+        "工具调用",
+        "参数",
+        "输出",
+        "失败",
+        "运行"
+      ],
+      "example": {
+        "tool": "读取文件信息",
+        "arg": "地出.jpg",
+        "output": "494,374 字节 · JPEG",
+        "error": "未找到指定文件",
+        "phase": "done",
+        "open": true
+      },
+      "states": [
+        {
+          "label": "运行中",
+          "set": {
+            "phase": "running"
+          },
+          "png": "状态PNG/tool-call-01.png"
+        },
+        {
+          "label": "失败",
+          "set": {
+            "phase": "error"
+          },
+          "png": "状态PNG/tool-call-02.png"
+        }
+      ],
+      "png": "PNG/tool-call.png"
+    },
+    {
+      "id": "answer-versions",
+      "group": "chat",
+      "name": "回答版本切换",
+      "english": "Response versions",
+      "use": "对同一问题逐版查看回答及修改点。",
+      "keywords": [
+        "回答",
+        "切换",
+        "版本",
+        "AI",
+        "对照"
+      ],
+      "example": {
+        "label": "同一个问题",
+        "items": [
+          "初次回答",
+          "修订回答"
+        ],
+        "bodies": [
+          "导出一张较小的图片。",
+          "保留原图，将网页副本导出为 JPEG。"
+        ],
+        "active": 1
+      },
+      "states": [
+        {
+          "label": "看第一版",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/answer-versions-01.png"
+        }
+      ],
+      "png": "PNG/answer-versions.png"
+    },
+    {
+      "id": "inline-citation",
+      "group": "chat",
+      "name": "回答编号引用",
+      "english": "Inline citations",
+      "use": "点击回答中的编号，看到支持这句话的材料和位置。",
+      "keywords": [
+        "编号",
+        "引用",
+        "来源",
+        "AI",
+        "依据"
+      ],
+      "example": {
+        "answer": "原图和网页副本都已归档。",
+        "items": [
+          "原图记录",
+          "导出日志"
+        ],
+        "bodies": [
+          "输入记录 · 地出-输入.jpg",
+          "交付记录 · 网页副本-Q50.jpg"
+        ],
+        "active": 1,
+        "open": true
+      },
+      "states": [
+        {
+          "label": "第一处",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/inline-citation-01.png"
+        },
+        {
+          "label": "收起",
+          "set": {
+            "open": false
+          },
+          "png": "状态PNG/inline-citation-02.png"
+        }
+      ],
+      "png": "PNG/inline-citation.png"
+    },
+    {
+      "id": "plan-checklist",
+      "group": "chat",
+      "name": "任务执行清单",
+      "english": "Task plan",
+      "use": "分别表达已完成、正在处理和待处理，按任务推进。",
+      "keywords": [
+        "任务",
+        "清单",
+        "执行",
+        "计划",
+        "AI",
+        "进度"
+      ],
+      "example": {
+        "items": [
+          "读取输入资料",
+          "提取关键信息",
+          "生成核对清单"
+        ],
+        "completed": 1
+      },
+      "states": [
+        {
+          "label": "全部完成",
+          "set": {
+            "completed": 3
+          },
+          "png": "状态PNG/plan-checklist-01.png"
+        }
+      ],
+      "png": "PNG/plan-checklist.png"
+    },
+    {
+      "id": "source-quote",
+      "group": "reading",
+      "name": "可定位原文引用",
+      "english": "Source quotation",
+      "use": "从引用返回对应段落，同时保留上、下文。",
+      "keywords": [
+        "原句",
+        "原文",
+        "引用",
+        "定位",
+        "上下文"
+      ],
+      "example": {
+        "title": "本期交付约定",
+        "paragraphs": [
+          "素材归档后再做网页副本。",
+          "原图与副本应分别保留。",
+          "导出后核对文件名和体积。"
+        ],
+        "active": 1,
+        "located": false
+      },
+      "states": [
+        {
+          "label": "回到原文",
+          "set": {
+            "located": true
+          },
+          "png": "状态PNG/source-quote-01.png"
+        }
+      ],
+      "png": "PNG/source-quote.png"
+    },
+    {
+      "id": "footnote",
+      "group": "reading",
+      "name": "脚注预览",
+      "english": "Footnote",
+      "use": "保留正文位置，就地查看术语的补充说明。",
+      "keywords": [
+        "脚注",
+        "注释",
+        "注解",
+        "文档"
+      ],
+      "example": {
+        "text": "文件体积按十进制 kB 记录。",
+        "mark": "1",
+        "body": "本例中，1 kB 等于 1000 字节。",
+        "open": true
+      },
+      "states": [
+        {
+          "label": "收起",
+          "set": {
+            "open": false
+          },
+          "png": "状态PNG/footnote-01.png"
+        }
+      ],
+      "png": "PNG/footnote.png"
+    },
+    {
+      "id": "source-link",
+      "group": "reading",
+      "name": "带出处的链接卡",
+      "english": "Link preview",
+      "use": "在打开资料前认出发布者、文章标题和目的地址。",
+      "keywords": [
+        "网址",
+        "来源",
+        "链接",
+        "预览",
+        "出处"
+      ],
+      "example": {
+        "title": "Apollo 8 拍摄的地出",
+        "publisher": "NASA Science",
+        "url": "https://science.nasa.gov/resource/apollo-8s-iconic-earthrise/",
+        "image": "earth.webp",
+        "expanded": false
+      },
+      "states": [
+        {
+          "label": "查看地址",
+          "set": {
+            "expanded": true
+          },
+          "png": "状态PNG/source-link-01.png"
+        }
+      ],
+      "png": "PNG/source-link.png"
+    },
+    {
+      "id": "margin-note",
+      "group": "reading",
+      "name": "页边批注",
+      "english": "Margin comment",
+      "use": "从原文的具体词句连到旁边的审阅意见。",
+      "keywords": [
+        "批注",
+        "锚点",
+        "页边",
+        "评论"
+      ],
+      "example": {
+        "before": "交付时，",
+        "quote": "两份文件分别保存",
+        "after": "，并记录体积。",
+        "author": "校对",
+        "comment": "这里指输入原图和网页副本。",
+        "open": true
+      },
+      "states": [
+        {
+          "label": "仅看正文",
+          "set": {
+            "open": false
+          },
+          "png": "状态PNG/margin-note-01.png"
+        }
+      ],
+      "png": "PNG/margin-note.png"
+    },
+    {
+      "id": "line-diff",
+      "group": "reading",
+      "name": "双版本逐行差异",
+      "english": "Line diff",
+      "use": "对齐两版文字，标出新增、移除和保留的行。",
+      "keywords": [
+        "改了哪句",
+        "文档",
+        "版本",
+        "比较",
+        "差异",
+        "修订"
+      ],
+      "example": {
+        "title": "交付说明",
+        "oldLines": [
+          "保留输入原图",
+          "直接覆盖输出",
+          "核对文件体积"
+        ],
+        "newLines": [
+          "保留输入原图",
+          "另存网页副本",
+          "核对文件体积"
+        ],
+        "onlyChanges": false
+      },
+      "states": [
+        {
+          "label": "只看改动",
+          "set": {
+            "onlyChanges": true
+          },
+          "png": "状态PNG/line-diff-01.png"
+        }
+      ],
+      "png": "PNG/line-diff.png"
+    },
+    {
+      "id": "find-replace",
+      "group": "reading",
+      "name": "文中查找替换",
+      "english": "Find and replace",
+      "use": "在文本内定位同一个词的每次出现，逐处替换。",
+      "keywords": [
+        "文中搜索",
+        "查找",
+        "替换",
+        "词句"
+      ],
+      "example": {
+        "text": "保存副本后核对副本的体积。",
+        "query": "副本",
+        "replacement": "网页图",
+        "match": 0
+      },
+      "states": [
+        {
+          "label": "下一处",
+          "set": {
+            "match": 1
+          },
+          "png": "状态PNG/find-replace-01.png"
+        }
+      ],
+      "png": "PNG/find-replace.png"
+    },
+    {
+      "id": "fred-pins",
+      "group": "fred-focus",
+      "name": "实物点位签",
+      "english": "Object landmarks",
+      "use": "在同一张实物图上逐个指出部位，名称和引线贴着目标。",
+      "keywords": [
+        "实物",
+        "认位置",
+        "部位",
+        "指到",
+        "哪里",
+        "照片"
+      ],
+      "narration": "看画面中央偏右的地球，再往下看月面。",
+      "reference": {
+        "film": "weekly",
+        "start": 33,
+        "end": 39,
+        "observed": "接箱子的实拍保持连续，腿、腰、双手的标签随讲到的部位出现。"
+      },
+      "example": {
+        "image": "fr-lunar.webp",
+        "credit": "《地出》 · NASA / Bill Anders",
+        "items": [
+          "地球",
+          "月面"
+        ],
+        "points": [
+          [
+            57,
+            48
+          ],
+          [
+            25,
+            90
+          ]
+        ],
+        "active": 0,
+        "showPin": true
+      },
+      "states": [
+        {
+          "label": "月面",
+          "set": {
+            "active": 1
+          },
+          "png": "状态PNG/fred-pins-01.png"
+        },
+        {
+          "label": "全景",
+          "set": {
+            "showPin": false
+          },
+          "png": "状态PNG/fred-pins-02.png"
+        }
+      ],
+      "png": "PNG/fred-pins.png"
+    },
+    {
+      "id": "fred-spotlight",
+      "group": "fred-focus",
+      "name": "原界面聚光框",
+      "english": "Screen spotlight",
+      "use": "圈住真实截图上的控件，并把同一块界面放大到可读。",
+      "keywords": [
+        "录屏",
+        "按钮",
+        "在右下角",
+        "质量",
+        "画面放大",
+        "操作位置"
+      ],
+      "narration": "在右下角，质量调到 50，再看导出体积。",
+      "reference": {
+        "film": "jev",
+        "start": 127,
+        "end": 141,
+        "observed": "实录保留平台页面，页面其余位置压暗后依次突出页签、模型与机器。"
+      },
+      "example": {
+        "image": "fr-screen.webp",
+        "title": "Squoosh",
+        "items": [
+          "编码格式",
+          "导出质量",
+          "文件体积"
+        ],
+        "rects": [
+          [
+            79,
+            73.5,
+            20,
+            6.2
+          ],
+          [
+            79,
+            79.8,
+            20,
+            7
+          ],
+          [
+            81,
+            91.5,
+            13,
+            6.7
+          ]
+        ],
+        "active": 1
+      },
+      "states": [
+        {
+          "label": "定位格式",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/fred-spotlight-01.png"
+        },
+        {
+          "label": "定位体积",
+          "set": {
+            "active": 2
+          },
+          "png": "状态PNG/fred-spotlight-02.png"
+        }
+      ],
+      "png": "PNG/fred-spotlight.png"
+    },
+    {
+      "id": "fred-loupes",
+      "group": "fred-focus",
+      "name": "同位置双图细节镜",
+      "english": "Matched detail loupes",
+      "use": "让原图和副本显示相同取样区，切换位置时两边一起换。",
+      "keywords": [
+        "画质",
+        "同一位置",
+        "放大",
+        "局部",
+        "细节",
+        "月面"
+      ],
+      "narration": "压缩之后，把两张图的同一个位置拉近看。",
+      "reference": {
+        "film": "weekly",
+        "start": 158,
+        "end": 164,
+        "observed": "Turbo 和基础版把同一题材并排放大，观众能对着同处细节判断。"
+      },
+      "example": {
+        "title": "同位置取样",
+        "items": [
+          "地球云层",
+          "月面纹理"
+        ],
+        "left": [
+          "fr-input-earth.webp",
+          "fr-input-soil.webp"
+        ],
+        "right": [
+          "fr-50-earth.webp",
+          "fr-50-soil.webp"
+        ],
+        "names": [
+          "输入原图",
+          "网页副本 Q50"
+        ],
+        "active": 0,
+        "showLocator": true
+      },
+      "states": [
+        {
+          "label": "月面取样",
+          "set": {
+            "active": 1
+          },
+          "png": "状态PNG/fred-loupes-01.png"
+        },
+        {
+          "label": "只看纹理",
+          "set": {
+            "active": 1,
+            "showLocator": false
+          },
+          "png": "状态PNG/fred-loupes-02.png"
+        }
+      ],
+      "png": "PNG/fred-loupes.png"
+    },
+    {
+      "id": "fred-exhibits",
+      "group": "fred-focus",
+      "name": "四格材料查证窗",
+      "english": "Evidence contact panel",
+      "use": "四份材料各占固定位置，点到哪一份，就读到那份能说明的事。",
+      "keywords": [
+        "四份材料",
+        "并排",
+        "核对",
+        "证据",
+        "实录",
+        "原件"
+      ],
+      "narration": "要复查这次导出，我会留下这四份材料。",
+      "reference": {
+        "film": "weekly",
+        "start": 64,
+        "end": 71,
+        "observed": "四个现场各占一格，格内标签交代任务，再一起承接对共性的解释。"
+      },
+      "example": {
+        "items": [
+          "原照片",
+          "操作界面",
+          "输出细节",
+          "署名记录"
+        ],
+        "images": [
+          "fr-lunar.webp",
+          "fr-screen.webp",
+          "fr-50-earth.webp",
+          "fr-record.webp"
+        ],
+        "bodies": [
+          "辨认本次处理的照片",
+          "确认导出时的质量设置",
+          "逐像素核对同一处云层",
+          "核对摄影署名"
+        ],
+        "active": 1
+      },
+      "states": [
+        {
+          "label": "检查原照片",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/fred-exhibits-01.png"
+        },
+        {
+          "label": "检查署名",
+          "set": {
+            "active": 3
+          },
+          "png": "状态PNG/fred-exhibits-02.png"
+        }
+      ],
+      "png": "PNG/fred-exhibits.png"
+    },
+    {
+      "id": "fred-field",
+      "group": "fred-focus",
+      "name": "原件字段摘读",
+      "english": "Source field readout",
+      "use": "从原始记录中框出一行，让旁边的大字只读这一行的值。",
+      "keywords": [
+        "读原件",
+        "署名",
+        "日期",
+        "原表",
+        "原始记录",
+        "字段摘录"
+      ],
+      "narration": "照片署名写的是 NASA 和 Bill Anders。",
+      "reference": {
+        "film": "weekly",
+        "start": 153,
+        "end": 159,
+        "observed": "原始测试画面先给出两个耗时，右边的读数接着提取同一组数字。"
+      },
+      "example": {
+        "image": "fr-record.webp",
+        "title": "NASA 图片记录",
+        "items": [
+          "摄影署名",
+          "记录日期",
+          "页面语言"
+        ],
+        "values": [
+          "NASA/Bill Anders",
+          "December 24, 1968",
+          "English"
+        ],
+        "active": 0
+      },
+      "states": [
+        {
+          "label": "查看日期",
+          "set": {
+            "active": 1
+          },
+          "png": "状态PNG/fred-field-01.png"
+        },
+        {
+          "label": "查看语言",
+          "set": {
+            "active": 2
+          },
+          "png": "状态PNG/fred-field-02.png"
+        }
+      ],
+      "png": "PNG/fred-field.png"
+    },
+    {
+      "id": "fred-capacity",
+      "group": "fred-compare",
+      "name": "容量门槛尺",
+      "english": "Capacity threshold",
+      "use": "用同一把尺同时标出文件大小和上限，直接读到余量或超出量。",
+      "keywords": [
+        "装得下",
+        "放不下",
+        "缺口",
+        "受限",
+        "上限",
+        "门槛",
+        "能否"
+      ],
+      "narration": "这三份文件里，只有哪一份能放进 100 kB？",
+      "reference": {
+        "film": "jev",
+        "start": 94,
+        "end": 104,
+        "observed": "模型的需求量与 8、24、80 GB 三档显存放在同一尺度上，逐项判断能否容纳。"
+      },
+      "example": {
+        "title": "网页图片上限",
+        "items": [
+          "输入原图",
+          "质量 75",
+          "质量 50"
+        ],
+        "values": [
+          494374,
+          163502,
+          95873
+        ],
+        "limitKB": 100
+      },
+      "states": [
+        {
+          "label": "上限 200 kB",
+          "set": {
+            "limitKB": 200
+          },
+          "png": "状态PNG/fred-capacity-01.png"
+        },
+        {
+          "label": "上限 500 kB",
+          "set": {
+            "limitKB": 500
+          },
+          "png": "状态PNG/fred-capacity-02.png"
+        }
+      ],
+      "png": "PNG/fred-capacity.png"
+    },
+    {
+      "id": "fred-criteria",
+      "group": "fred-compare",
+      "name": "两项独立判定",
+      "english": "Independent checks",
+      "use": "为同一份材料分别出示两项判定，每项都有自己的实测依据。",
+      "keywords": [
+        "满足一个",
+        "仍然",
+        "两项条件",
+        "同时达标",
+        "判断"
+      ],
+      "narration": "像素宽度要保住，文件体积也要在上限以内。",
+      "reference": {
+        "film": "argon",
+        "start": 95,
+        "end": 101,
+        "observed": "功能与审美用两行分别给出判断，满足其中一项并未抹去另一项的问题。"
+      },
+      "example": {
+        "items": [
+          "输入原图",
+          "质量 75",
+          "质量 50"
+        ],
+        "values": [
+          494374,
+          163502,
+          95873
+        ],
+        "pixels": [
+          3000,
+          3000,
+          3000
+        ],
+        "minPixel": 3000,
+        "limitKB": 100,
+        "active": 0
+      },
+      "states": [
+        {
+          "label": "检查质量 75",
+          "set": {
+            "active": 1
+          },
+          "png": "状态PNG/fred-criteria-01.png"
+        },
+        {
+          "label": "检查质量 50",
+          "set": {
+            "active": 2
+          },
+          "png": "状态PNG/fred-criteria-02.png"
+        }
+      ],
+      "png": "PNG/fred-criteria.png"
+    },
+    {
+      "id": "fred-choice",
+      "group": "fred-compare",
+      "name": "按用途选方案",
+      "english": "Use-case decision",
+      "use": "保持两个方案的位置，条件改变时切换优先项，同时写明适用理由。",
+      "keywords": [
+        "如果",
+        "选哪个",
+        "看用途",
+        "只在",
+        "条件",
+        "取舍",
+        "推荐"
+      ],
+      "narration": "存档留原图，发布网页时才取小副本。",
+      "reference": {
+        "film": "jev",
+        "start": 178,
+        "end": 190,
+        "observed": "偶尔调用与自己掌控模型分别对应不同方案，后一条需求出现时另一选项退到背景。"
+      },
+      "example": {
+        "items": [
+          "长期留档",
+          "网页发布",
+          "复查质量"
+        ],
+        "options": [
+          "输入原图",
+          "网页副本"
+        ],
+        "preferred": [
+          0,
+          1,
+          0
+        ],
+        "reasons": [
+          "留下完整的输入材料",
+          "质量 50 副本为 95.9 kB",
+          "用原图对照同一位置的细节"
+        ],
+        "active": 0
+      },
+      "states": [
+        {
+          "label": "网页发布",
+          "set": {
+            "active": 1
+          },
+          "png": "状态PNG/fred-choice-01.png"
+        },
+        {
+          "label": "复查质量",
+          "set": {
+            "active": 2
+          },
+          "png": "状态PNG/fred-choice-02.png"
+        }
+      ],
+      "png": "PNG/fred-choice.png"
+    },
+    {
+      "id": "fred-proofs",
+      "group": "fred-compare",
+      "name": "固定原件的多轮校样",
+      "english": "Fixed-reference proofs",
+      "use": "原图取样始终在原位，每一轮更换右侧副本、实际体积和差值。",
+      "keywords": [
+        "多轮",
+        "目标",
+        "原图不动",
+        "迭代",
+        "校样",
+        "调参数"
+      ],
+      "narration": "原件放在左边，右边从质量 75 切到 50。",
+      "reference": {
+        "film": "argon",
+        "start": 161,
+        "end": 173,
+        "observed": "长网页作为参照，连续展示多轮修订及轮次，最后再对照目标画面。"
+      },
+      "example": {
+        "title": "云层校样",
+        "referenceImage": "fr-input-earth.webp",
+        "items": [
+          "质量 75",
+          "质量 50"
+        ],
+        "images": [
+          "fr-75-earth.webp",
+          "fr-50-earth.webp"
+        ],
+        "values": [
+          163502,
+          95873
+        ],
+        "inputBytes": 494374,
+        "active": 1,
+        "showDelta": true
+      },
+      "states": [
+        {
+          "label": "质量 75",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/fred-proofs-01.png"
+        },
+        {
+          "label": "只看细节",
+          "set": {
+            "showDelta": false
+          },
+          "png": "状态PNG/fred-proofs-02.png"
+        }
+      ],
+      "png": "PNG/fred-proofs.png"
+    },
+    {
+      "id": "fred-scorecard",
+      "group": "fred-compare",
+      "name": "逐项测评成绩单",
+      "english": "Progressive scorecard",
+      "use": "按口播逐行揭示已核对的项目，缺测项保留其状态和口径。",
+      "keywords": [
+        "成绩单",
+        "逐项",
+        "测评",
+        "有好有坏",
+        "未测",
+        "结论"
+      ],
+      "narration": "体积、尺寸查过了；网页加载耗时还没有测。",
+      "reference": {
+        "film": "argon",
+        "start": 272,
+        "end": 279,
+        "observed": "前端、游戏、写作等维度在同一成绩单中逐项出现，保留各自判断。"
+      },
+      "example": {
+        "title": "质量 50 副本",
+        "items": [
+          "文件体积",
+          "像素尺寸",
+          "网页加载耗时"
+        ],
+        "values": [
+          "95.9 kB",
+          "3000 × 3000",
+          "未测"
+        ],
+        "bodies": [
+          "本例上限 100 kB",
+          "与输入原图相同",
+          "需要实际网页计时"
+        ],
+        "active": 2
+      },
+      "states": [
+        {
+          "label": "只看体积",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/fred-scorecard-01.png"
+        },
+        {
+          "label": "再看尺寸",
+          "set": {
+            "active": 1
+          },
+          "png": "状态PNG/fred-scorecard-02.png"
+        }
+      ],
+      "png": "PNG/fred-scorecard.png"
+    },
+    {
+      "id": "fred-receipt",
+      "group": "fred-process",
+      "name": "终端命令回执",
+      "english": "Terminal receipt",
+      "use": "保留同一条命令，依次对照输入文件、错误位置和修正后的输出。",
+      "keywords": [
+        "终端",
+        "报错",
+        "命令",
+        "回执",
+        "修复",
+        "成功",
+        "校验"
+      ],
+      "narration": "同一条 JSON 校验命令，少了引号就报错，补上才能通过。",
+      "reference": {
+        "film": "argon",
+        "start": 136,
+        "end": 144,
+        "observed": "同一终端位置保留运行命令，错误输出和就绪回执前后切换。"
+      },
+      "example": {
+        "command": "python -m json.tool config.json",
+        "items": [
+          "原输入",
+          "报错位置",
+          "修正以后"
+        ],
+        "inputs": [
+          "{format: \"jpeg\"}",
+          "{format: \"jpeg\"}",
+          "{\"format\": \"jpeg\"}"
+        ],
+        "outputs": [
+          "",
+          "Expecting property name enclosed in double quotes",
+          "{\"format\": \"jpeg\"}"
+        ],
+        "errorColumn": 2,
+        "active": 1
+      },
+      "states": [
+        {
+          "label": "查看原输入",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/fred-receipt-01.png"
+        },
+        {
+          "label": "校验通过",
+          "set": {
+            "active": 2
+          },
+          "png": "状态PNG/fred-receipt-02.png"
+        }
+      ],
+      "png": "PNG/fred-receipt.png"
+    },
+    {
+      "id": "fred-paperedit",
+      "group": "fred-process",
+      "name": "原片与保留段落条",
+      "english": "Paper edit map",
+      "use": "把选中的原片区间映射到精剪条，保留每一句的起止和合计时长。",
+      "keywords": [
+        "原声",
+        "原片",
+        "精剪",
+        "保留",
+        "哪一段",
+        "摘要",
+        "粗剪",
+        "时间"
+      ],
+      "narration": "这两句分别留在哪儿，合在一起有多长？",
+      "reference": {
+        "film": "argon",
+        "start": 254,
+        "end": 263,
+        "observed": "长访谈先以整条出现，粗剪后成为较短的分段时间线，仍留出人工复看。"
+      },
+      "example": {
+        "title": "原声节选",
+        "duration": 5.44,
+        "items": [
+          "以及对于你来说",
+          "有什么用处"
+        ],
+        "starts": [
+          3.02,
+          4.08
+        ],
+        "ends": [
+          4.08,
+          5.42
+        ],
+        "active": 0,
+        "kept": [
+          0,
+          1
+        ]
+      },
+      "states": [
+        {
+          "label": "定位后一句",
+          "set": {
+            "active": 1
+          },
+          "png": "状态PNG/fred-paperedit-01.png"
+        },
+        {
+          "label": "只留后一句",
+          "set": {
+            "active": 1,
+            "kept": [
+              1
+            ]
+          },
+          "png": "状态PNG/fred-paperedit-02.png"
+        }
+      ],
+      "png": "PNG/fred-paperedit.png"
+    },
+    {
+      "id": "fred-extract",
+      "group": "fred-process",
+      "name": "原话到日程字段",
+      "english": "Speech-to-field mapping",
+      "use": "用同一焦点连接句中的原词和日程字段，观众能核对信息从哪里来。",
+      "keywords": [
+        "口述",
+        "转录",
+        "提取",
+        "日期",
+        "日程",
+        "结构化",
+        "字段"
+      ],
+      "narration": "周三下午两点交初剪，这句话里有三个字段。",
+      "reference": {
+        "film": "weekly",
+        "start": 210,
+        "end": 218,
+        "observed": "耳机旁先出现说出的提醒内容，随后同一项时间和事项进入手机日程。"
+      },
+      "example": {
+        "title": "交付安排示例",
+        "items": [
+          "周三",
+          "下午两点",
+          "交初剪"
+        ],
+        "labels": [
+          "日期",
+          "时间",
+          "事项"
+        ],
+        "values": [
+          "周三",
+          "14:00",
+          "交初剪"
+        ],
+        "active": 1
+      },
+      "states": [
+        {
+          "label": "指出日期",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/fred-extract-01.png"
+        },
+        {
+          "label": "指出事项",
+          "set": {
+            "active": 2
+          },
+          "png": "状态PNG/fred-extract-02.png"
+        }
+      ],
+      "png": "PNG/fred-extract.png"
+    },
+    {
+      "id": "fred-deliveries",
+      "group": "fred-process",
+      "name": "一稿多份交付",
+      "english": "One source, several outputs",
+      "use": "把输入原句留在画面上，切换不同交付件时同步显示相应正文。",
+      "keywords": [
+        "一份输入",
+        "多份输出",
+        "改写",
+        "交付",
+        "提词",
+        "编辑结果"
+      ],
+      "narration": "同一句话，字幕、提词和剪辑备注各怎么用？",
+      "reference": {
+        "film": "argon",
+        "start": 241,
+        "end": 251,
+        "observed": "一份访谈稿送往几个输出文档，再与作者终稿对照，列之间的关系一直可追。"
+      },
+      "example": {
+        "source": "以及对于你来说，有什么用处",
+        "items": [
+          "口播字幕",
+          "提词提示",
+          "剪辑备注"
+        ],
+        "bodies": [
+          "以及对于你来说／有什么用处",
+          "问观众：这对你有什么用？",
+          "说到「你」时留住人物视线"
+        ],
+        "active": 0
+      },
+      "states": [
+        {
+          "label": "看提词",
+          "set": {
+            "active": 1
+          },
+          "png": "状态PNG/fred-deliveries-01.png"
+        },
+        {
+          "label": "看剪辑备注",
+          "set": {
+            "active": 2
+          },
+          "png": "状态PNG/fred-deliveries-02.png"
+        }
+      ],
+      "png": "PNG/fred-deliveries.png"
+    },
+    {
+      "id": "fred-handoff",
+      "group": "fred-process",
+      "name": "材料交接门",
+      "english": "Asset handoff gate",
+      "use": "把发出方和接收方连起来，逐件显示哪些已送达、哪份仍缺。",
+      "keywords": [
+        "交接",
+        "缺少材料",
+        "没收到",
+        "本地",
+        "对方能否继续"
+      ],
+      "narration": "对方已经收到目录，原图却还在我电脑里。",
+      "reference": {
+        "film": "jev",
+        "start": 8,
+        "end": 17,
+        "observed": "本地与官方模型在两端，连接的可用条件和受限位置放在两端之间。"
+      },
+      "example": {
+        "sender": "素材编辑",
+        "recipient": "剪辑台",
+        "items": [
+          "素材目录",
+          "输入原图"
+        ],
+        "delivered": [
+          0
+        ]
+      },
+      "states": [
+        {
+          "label": "尚未发送",
+          "set": {
+            "delivered": []
+          },
+          "png": "状态PNG/fred-handoff-01.png"
+        },
+        {
+          "label": "两份送达",
+          "set": {
+            "delivered": [
+              0,
+              1
+            ]
+          },
+          "png": "状态PNG/fred-handoff-02.png"
+        }
+      ],
+      "png": "PNG/fred-handoff.png"
+    },
+    {
+      "id": "fred-chapter",
+      "group": "fred-type",
+      "name": "翻页章号与章题",
+      "english": "Split-flap chapter",
+      "use": "大号分位数字先交代章节，短章题与章号可分别入画。",
+      "keywords": [
+        "章节",
+        "章号",
+        "翻页",
+        "数字",
+        "章节标题",
+        "报幕"
+      ],
+      "narration": "第二部分，我们来调压缩质量。",
+      "reference": {
+        "film": "weekly",
+        "start": 23,
+        "end": 27,
+        "observed": "深底上先出现两位翻页式章号，随后接本章短题并过渡到实景。"
+      },
+      "example": {
+        "items": [
+          "认原图",
+          "调质量",
+          "验交付"
+        ],
+        "first": 1,
+        "active": 1,
+        "showTitle": true
+      },
+      "states": [
+        {
+          "label": "只出章号",
+          "set": {
+            "showTitle": false
+          },
+          "png": "状态PNG/fred-chapter-01.png"
+        },
+        {
+          "label": "第三章",
+          "set": {
+            "active": 2
+          },
+          "png": "状态PNG/fred-chapter-02.png"
+        }
+      ],
+      "png": "PNG/fred-chapter.png"
+    },
+    {
+      "id": "fred-verdict",
+      "group": "fred-type",
+      "name": "实景上的结论字幕签",
+      "english": "Verdict on footage",
+      "use": "保留支撑判断的画面，在同一处落结论，必要时接一行适用条件。",
+      "keywords": [
+        "结论",
+        "字幕签",
+        "实景",
+        "实拍",
+        "小结",
+        "前提",
+        "可见结果"
+      ],
+      "narration": "副本可以上网页了，前提是体积上限为 100 kB。",
+      "reference": {
+        "film": "argon",
+        "start": 77,
+        "end": 84,
+        "observed": "场景示例先占满画面，随后同一画面退到背景，中央短签给出判断。"
+      },
+      "example": {
+        "image": "fr-screen.webp",
+        "title": "可以交付网页副本",
+        "condition": "本例上限 100 kB",
+        "evidence": "实测 95.9 kB",
+        "stage": 2
+      },
+      "states": [
+        {
+          "label": "先看实录",
+          "set": {
+            "stage": 0
+          },
+          "png": "状态PNG/fred-verdict-01.png"
+        },
+        {
+          "label": "读结论",
+          "set": {
+            "stage": 1
+          },
+          "png": "状态PNG/fred-verdict-02.png"
+        }
+      ],
+      "png": "PNG/fred-verdict.png"
+    },
+    {
+      "id": "fred-stress",
+      "group": "fred-type",
+      "name": "句内重读字幕",
+      "english": "Timed phrase emphasis",
+      "use": "两句字幕留在固定位置，说到变化或否定时，只强调当前词组。",
+      "keywords": [
+        "字幕",
+        "重读",
+        "否定",
+        "没有变",
+        "只有",
+        "范围",
+        "强调词"
+      ],
+      "narration": "文件体积变小了，像素尺寸没有变。",
+      "reference": {
+        "film": "weekly",
+        "start": 3,
+        "end": 7,
+        "observed": "提炼句压在原实拍中央，关键动词在同一句内另作强调；这里演化为两行口播字幕。"
+      },
+      "example": {
+        "firstLine": [
+          "文件体积",
+          "变小了，"
+        ],
+        "secondLine": [
+          "像素尺寸",
+          "没有变。"
+        ],
+        "active": 1
+      },
+      "states": [
+        {
+          "label": "强调变小",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/fred-stress-01.png"
+        },
+        {
+          "label": "平读全句",
+          "set": {
+            "active": 2
+          },
+          "png": "状态PNG/fred-stress-02.png"
+        }
+      ],
+      "png": "PNG/fred-stress.png"
+    },
+    {
+      "id": "fred-units",
+      "group": "fred-type",
+      "name": "大数字单位换算",
+      "english": "Unit equivalence",
+      "use": "保持同一个原始量，切换计量单位时同时给出换算依据。",
+      "keywords": [
+        "大数字",
+        "换算",
+        "单位",
+        "字节",
+        "读数",
+        "口径",
+        "同一个数"
+      ],
+      "narration": "95,873 字节，换一种单位读是多少？",
+      "reference": {
+        "film": "jev",
+        "start": 81,
+        "end": 90,
+        "observed": "27B 的简写先单独出现，随后在旁边展开为更易读的参数规模。"
+      },
+      "example": {
+        "valueBytes": 95873,
+        "items": [
+          "字节",
+          "kB",
+          "KiB"
+        ],
+        "active": 1
+      },
+      "states": [
+        {
+          "label": "精确字节",
+          "set": {
+            "active": 0
+          },
+          "png": "状态PNG/fred-units-01.png"
+        },
+        {
+          "label": "换算 KiB",
+          "set": {
+            "active": 2
+          },
+          "png": "状态PNG/fred-units-02.png"
+        }
+      ],
+      "png": "PNG/fred-units.png"
+    },
+    {
+      "id": "fred-dates",
+      "group": "fred-type",
+      "name": "双日期间隔尺",
+      "english": "Date interval ruler",
+      "use": "把两个日期牢牢接在各自事件下方，按实际日历计算相隔天数。",
+      "keywords": [
+        "日期",
+        "预约",
+        "交付",
+        "发货",
+        "相隔多久",
+        "先后",
+        "间隔"
+      ],
+      "narration": "初剪交付和定稿交付，中间隔了四天。",
+      "reference": {
+        "film": "weekly",
+        "start": 200,
+        "end": 205,
+        "observed": "可预订与发货在一根线上分别标起止日期，观众可以看出两件事发生的间隔。"
+      },
+      "example": {
+        "title": "交付排期示例",
+        "items": [
+          "初剪交付",
+          "定稿交付"
+        ],
+        "dates": [
+          "2026-11-12",
+          "2026-11-16"
+        ],
+        "stage": 2
+      },
+      "states": [
+        {
+          "label": "只报初剪",
+          "set": {
+            "stage": 0
+          },
+          "png": "状态PNG/fred-dates-01.png"
+        },
+        {
+          "label": "报两个日期",
+          "set": {
+            "stage": 1
+          },
+          "png": "状态PNG/fred-dates-02.png"
+        }
+      ],
+      "png": "PNG/fred-dates.png"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Ant Design",
+      "url": "https://ant.design/components/overview/",
+      "detail": "按布局、导航、数据录入、展示和反馈等用途查找。"
+    },
+    {
+      "name": "IBM Carbon",
+      "url": "https://www.carbondesignsystem.com/building-blocks/core/components/overview/components",
+      "detail": "单项组件另有使用条件、结构、状态和示例。"
+    },
+    {
+      "name": "Atlassian Design System",
+      "url": "https://atlassian.design/components/",
+      "detail": "区分表单、标签、导航、加载反馈与浮层。"
+    },
+    {
+      "name": "Ant Design Mobile · 浮动面板",
+      "url": "https://mobile.ant.design/zh/components/floating-panel",
+      "detail": "面板可在不同的高度停靠。"
+    },
+    {
+      "name": "Radix · 滑杆",
+      "url": "https://www.radix-ui.com/primitives/docs/components/slider",
+      "detail": "双端选择用同一根轨道，可用键盘调整。"
+    },
+    {
+      "name": "Ant Design · 穿梭框",
+      "url": "https://ant.design/components/transfer",
+      "detail": "区分可用、已选与正式移入的项目。"
+    },
+    {
+      "name": "Audacity · 时间选区",
+      "url": "https://manual.audacityteam.org/man/selection_toolbar.html",
+      "detail": "用入点、出点及长度核对同一个选区。"
+    },
+    {
+      "name": "AI Elements · 工具调用",
+      "url": "https://elements.ai-sdk.dev/components/tool",
+      "detail": "参数、运行状态和输出各自有位置。"
+    },
+    {
+      "name": "ProseMirror · 修订对照",
+      "url": "https://prosemirror.net/examples/track/",
+      "detail": "把原文的修改定位到相应文字。"
+    },
+    {
+      "name": "Visual Studio Code · 界面布局",
+      "url": "https://code.visualstudio.com/docs/editing/getting-started/userinterface",
+      "detail": "区分工作区、可停靠面板和命令入口。"
+    },
+    {
+      "name": "Apache ECharts · 瀑布图",
+      "url": "https://echarts.apache.org/handbook/en/how-to/chart-types/bar/waterfall/",
+      "detail": "各步骤从上一步累计值起算。"
+    }
+  ],
+  "icons": [
+    {
+      "id": "arrow",
+      "name": "前往"
+    },
+    {
+      "id": "up",
+      "name": "向上"
+    },
+    {
+      "id": "down",
+      "name": "展开"
+    },
+    {
+      "id": "left",
+      "name": "上一项"
+    },
+    {
+      "id": "right",
+      "name": "下一项"
+    },
+    {
+      "id": "check",
+      "name": "完成"
+    },
+    {
+      "id": "plus",
+      "name": "增加"
+    },
+    {
+      "id": "minus",
+      "name": "减少"
+    },
+    {
+      "id": "close",
+      "name": "关闭"
+    },
+    {
+      "id": "search",
+      "name": "搜索"
+    },
+    {
+      "id": "file",
+      "name": "文件"
+    },
+    {
+      "id": "folder",
+      "name": "文件夹"
+    },
+    {
+      "id": "clock",
+      "name": "时间"
+    },
+    {
+      "id": "upload",
+      "name": "导入"
+    },
+    {
+      "id": "calendar",
+      "name": "日期"
+    },
+    {
+      "id": "info",
+      "name": "说明"
+    },
+    {
+      "id": "alert",
+      "name": "注意"
+    },
+    {
+      "id": "inbox",
+      "name": "收件箱"
+    },
+    {
+      "id": "align0",
+      "name": "左对齐"
+    },
+    {
+      "id": "align1",
+      "name": "居中"
+    },
+    {
+      "id": "align2",
+      "name": "右对齐"
+    },
+    {
+      "id": "menu",
+      "name": "菜单"
+    },
+    {
+      "id": "bookmark",
+      "name": "收藏"
+    },
+    {
+      "id": "sort",
+      "name": "排序"
+    },
+    {
+      "id": "copy",
+      "name": "复制"
+    },
+    {
+      "id": "edit",
+      "name": "编辑"
+    },
+    {
+      "id": "grid",
+      "name": "网格"
+    },
+    {
+      "id": "audio",
+      "name": "音频"
+    },
+    {
+      "id": "layers",
+      "name": "图层"
+    }
+  ],
+  "latest": [
+    "fred-pins",
+    "fred-spotlight",
+    "fred-loupes",
+    "fred-exhibits",
+    "fred-field",
+    "fred-capacity",
+    "fred-criteria",
+    "fred-choice",
+    "fred-proofs",
+    "fred-scorecard",
+    "fred-receipt",
+    "fred-paperedit",
+    "fred-extract",
+    "fred-deliveries",
+    "fred-handoff",
+    "fred-chapter",
+    "fred-verdict",
+    "fred-stress",
+    "fred-units",
+    "fred-dates"
+  ],
+  "collections": [
+    {
+      "id": "fred",
+      "name": "Fred 原片演化",
+      "ids": [
+        "fred-pins",
+        "fred-spotlight",
+        "fred-loupes",
+        "fred-exhibits",
+        "fred-field",
+        "fred-capacity",
+        "fred-criteria",
+        "fred-choice",
+        "fred-proofs",
+        "fred-scorecard",
+        "fred-receipt",
+        "fred-paperedit",
+        "fred-extract",
+        "fred-deliveries",
+        "fred-handoff",
+        "fred-chapter",
+        "fred-verdict",
+        "fred-stress",
+        "fred-units",
+        "fred-dates"
+      ]
+    },
+    {
+      "id": "previous48",
+      "name": "上轮通用扩充",
+      "ids": [
+        "bottom-nav",
+        "bottom-sheet",
+        "wheel-picker",
+        "swipe-row",
+        "pull-refresh",
+        "swipe-gallery",
+        "command-palette",
+        "key-chord",
+        "dock-panel",
+        "layer-panel",
+        "inspector",
+        "zoom-fit",
+        "file-tiles",
+        "attachment",
+        "upload-queue",
+        "file-preview",
+        "transfer",
+        "version-history",
+        "cascader",
+        "date-range",
+        "range-pair",
+        "tag-entry",
+        "rule-filter",
+        "time-picker",
+        "video-player",
+        "wave-seek",
+        "trim",
+        "filmstrip",
+        "caption-track",
+        "level-meter",
+        "donut",
+        "stacked",
+        "waterfall",
+        "scatter",
+        "node-map",
+        "heatmap",
+        "chat-bubbles",
+        "composer",
+        "tool-call",
+        "answer-versions",
+        "inline-citation",
+        "plan-checklist",
+        "source-quote",
+        "footnote",
+        "source-link",
+        "margin-note",
+        "line-diff",
+        "find-replace"
+      ]
+    }
+  ],
+  "referenceFilms": {
+    "argon": {
+      "title": "Argon 评测",
+      "resource": "source-video:fred-argon"
+    },
+    "jev": {
+      "title": "开源 JEV",
+      "resource": "source-video:fred-jev"
+    },
+    "weekly": {
+      "title": "一周 AI 大事",
+      "resource": "source-video:fred-weekly"
+    }
+  },
+  "portable_layers": {
+    "gallery": "index.html",
+    "media_examples": {
+      "video-player": "随包图层使用 Skill 的公开 UI 校样作为视频内容。",
+      "filmstrip": "随包图层使用相同 UI 校样的对应时间帧。"
+    }
+  }
+}

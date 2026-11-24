@@ -1,0 +1,212 @@
+{
+  "id": "M240",
+  "layout": "inset",
+  "layers": [
+    {
+      "kind": "photo",
+      "file": "fr-lunar.webp",
+      "slot": "media1",
+      "label": "输入原图"
+    },
+    {
+      "kind": "ui",
+      "component": "file-tiles",
+      "states": [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      "media": [
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "images",
+            1
+          ]
+        },
+        {
+          "slot": "media4",
+          "path": [
+            "images",
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "steps",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "creative",
+      "start": 0,
+      "end": 41,
+      "shotIds": [
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C007",
+        "C008",
+        "C009",
+        "C010"
+      ],
+      "rowIds": [
+        "C-L001",
+        "C-L002",
+        "C-L003",
+        "C-L004",
+        "C-L005",
+        "C-L006",
+        "C-L007",
+        "C-L008",
+        "C-L009",
+        "C-L010",
+        "C-L011",
+        "C-L012",
+        "C-L013",
+        "C-L014",
+        "C-L015"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 24.8,
+      "end": 40.2,
+      "shotIds": [
+        "J-S016",
+        "J-S017",
+        "J-S018",
+        "J-S019",
+        "J-S020",
+        "J-S021",
+        "J-S022",
+        "J-S023"
+      ],
+      "rowIds": [
+        "J-L017",
+        "J-L018",
+        "J-L019",
+        "J-L020",
+        "J-L021",
+        "J-L022",
+        "J-L023",
+        "J-L024",
+        "J-L025"
+      ]
+    }
+  ],
+  "chain": [
+    "讲述者招呼并说课程范围，先建立人与人的交流。",
+    "图片设计、汇报演示、视频创作三张成果卡依次进入，再一起让出AI创作课标题。",
+    "桌面纸稿和色卡的操作被压暗，必修课结论落在仍可辨认的工作情境上。",
+    "回人物说简单、解释Agent化，缓解门槛焦虑。",
+    "QZ眼镜项目卡揭示；同一项目拆成活动方案、商品图、TVC三项并以虚线箭头连接。",
+    "先给产物总览，再以单人/团队图示承接一个人像设计团队的比喻，最后回人物进入教程。"
+  ],
+  "binding": {
+    "headline": "先亮出作品再回到本期制作",
+    "captions": [
+      "先看最终要得到的作品",
+      "收进这次制作的素材区",
+      "带着同一个项目走后面几步"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "items": [
+          "地出.jpg",
+          "压缩界面.png",
+          "安德斯.jpg"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp",
+          "portrait.webp"
+        ],
+        "active": 0
+      },
+      {
+        "items": [
+          "选素材",
+          "剪片段",
+          "导出"
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [],
+      [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "输入原图"
+    },
+    {
+      "key": "media2",
+      "name": "文件缩略图 · earth"
+    },
+    {
+      "key": "media3",
+      "name": "文件缩略图 · interface"
+    },
+    {
+      "key": "media4",
+      "name": "文件缩略图 · portrait"
+    }
+  ]
+}

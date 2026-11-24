@@ -1,0 +1,174 @@
+{
+  "id": "M230",
+  "layout": "process",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "composer",
+      "states": [
+        {
+          "attached": false,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": true
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "tool-call",
+      "states": [
+        {
+          "phase": "running",
+          "open": false
+        },
+        {
+          "phase": "running",
+          "open": true
+        },
+        {
+          "phase": "done",
+          "open": true
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "result",
+      "states": [
+        {
+          "success": false,
+          "title": "等待确认"
+        },
+        {
+          "success": true,
+          "title": "已完成"
+        },
+        {
+          "success": true,
+          "title": "已完成"
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "network",
+      "start": 680.3,
+      "end": 696.4,
+      "shotIds": [
+        "N162",
+        "N163",
+        "N164",
+        "N165"
+      ],
+      "rowIds": [
+        "N-L294",
+        "N-L295",
+        "N-L296",
+        "N-L297",
+        "N-L298",
+        "N-L299",
+        "N-L300",
+        "N-L301",
+        "N-L302"
+      ]
+    }
+  ],
+  "chain": [
+    "广场中的创意网页大师条目被打开。",
+    "提问用途/效果时，详情和网页样例进入主要视野。",
+    "滚到示例提问和对应结果，再到评论。",
+    "评论输入框、标签和艾特作者入口显示如何提问与反馈。"
+  ],
+  "binding": {
+    "headline": "从用途展开输入、执行和反馈",
+    "captions": [
+      "先说这一步要做什么",
+      "输入交给工具执行",
+      "结果回来后才算完成"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "text": "请对照这份资料列出变化。",
+        "file": "交付记录.md",
+        "attached": true,
+        "sent": false
+      },
+      {
+        "tool": "读取文件信息",
+        "arg": "地出.jpg",
+        "output": "494,374 字节 · JPEG",
+        "error": "未找到指定文件",
+        "phase": "done",
+        "open": true
+      },
+      {
+        "success": true,
+        "title": "导出完成",
+        "body": "字幕和视频已生成。",
+        "action": "查看交付清单",
+        "open": false
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "attached": false,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": true
+        }
+      ],
+      [
+        {
+          "phase": "running",
+          "open": false
+        },
+        {
+          "phase": "running",
+          "open": true
+        },
+        {
+          "phase": "done",
+          "open": true
+        }
+      ],
+      [
+        {
+          "success": false,
+          "title": "等待确认"
+        },
+        {
+          "success": true,
+          "title": "已完成"
+        },
+        {
+          "success": true,
+          "title": "已完成"
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

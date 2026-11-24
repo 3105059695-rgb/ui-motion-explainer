@@ -1,0 +1,125 @@
+{
+  "id": "M287",
+  "layout": "carry",
+  "layers": [
+    {
+      "kind": "live",
+      "strip": "girl-handoff-0-4400",
+      "slot": "media1",
+      "label": "主体动作视频"
+    },
+    {
+      "kind": "ui",
+      "component": "attachment",
+      "states": [
+        {},
+        {
+          "attached": false
+        },
+        {
+          "attached": false
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-handoff",
+      "states": [
+        {
+          "delivered": []
+        },
+        {
+          "delivered": [
+            0
+          ]
+        },
+        {
+          "delivered": [
+            0,
+            1
+          ]
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "girl-handoff",
+      "start": 0.0,
+      "end": 4.4
+    }
+  ],
+  "chain": [
+    "材料先在交付者手里",
+    "交过去时仍认得同一份资料",
+    "接收回执最后出现"
+  ],
+  "binding": {
+    "headline": "资料到哪儿了？",
+    "captions": [
+      "这份资料在发送方手里。",
+      "还是同一份资料，现在传过去了。",
+      "接收方收到，回执亮起。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "name": "交接材料",
+        "meta": "本次移交的同一份资料",
+        "attached": true
+      },
+      {
+        "sender": "交付方",
+        "recipient": "接收方",
+        "items": [
+          "材料",
+          "交接记录"
+        ],
+        "delivered": [
+          0
+        ]
+      }
+    ],
+    "keyframes": [
+      [],
+      [
+        {},
+        {
+          "attached": false
+        },
+        {
+          "attached": false
+        }
+      ],
+      [
+        {
+          "delivered": []
+        },
+        {
+          "delivered": [
+            0
+          ]
+        },
+        {
+          "delivered": [
+            0,
+            1
+          ]
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "主体动作视频"
+    }
+  ]
+}

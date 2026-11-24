@@ -1,0 +1,202 @@
+{
+  "id": "M283",
+  "layout": "rank",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "file-tiles",
+      "states": [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            1
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "images",
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "fred-scorecard",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-choice",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "local-video-5c2f8b41",
+      "start": 82.0,
+      "end": 93.1
+    }
+  ],
+  "chain": [
+    "先认出候选各是谁",
+    "让同一对象换位",
+    "排序落稳以后再读判断"
+  ],
+  "binding": {
+    "headline": "候选轮换后在排序中归位",
+    "captions": [
+      "先认出候选各是谁",
+      "让同一对象换位",
+      "排序落稳以后再读判断"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "地出.jpg",
+          "压缩界面.png",
+          "安德斯.jpg"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp",
+          "portrait.webp"
+        ],
+        "active": 0
+      },
+      {
+        "title": "质量 50 副本",
+        "items": [
+          "文件体积",
+          "像素尺寸",
+          "网页加载耗时"
+        ],
+        "values": [
+          "95.9 kB",
+          "3000 × 3000",
+          "未测"
+        ],
+        "bodies": [
+          "本例上限 100 kB",
+          "与输入原图相同",
+          "需要实际网页计时"
+        ],
+        "active": 2
+      },
+      {
+        "items": [
+          "长期留档",
+          "网页发布",
+          "复查质量"
+        ],
+        "options": [
+          "输入原图",
+          "网页副本"
+        ],
+        "preferred": [
+          0,
+          1,
+          0
+        ],
+        "reasons": [
+          "留下完整的输入材料",
+          "质量 50 副本为 95.9 kB",
+          "用原图对照同一位置的细节"
+        ],
+        "active": 0
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "文件缩略图 · earth"
+    },
+    {
+      "key": "media2",
+      "name": "文件缩略图 · interface"
+    },
+    {
+      "key": "media3",
+      "name": "文件缩略图 · portrait"
+    }
+  ]
+}

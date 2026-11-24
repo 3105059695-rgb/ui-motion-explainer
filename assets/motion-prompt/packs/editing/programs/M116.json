@@ -1,0 +1,208 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t09l",
+  "title": "复制地址交给 AI",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "url": "https://example.org/project",
+    "task": "请阅读这个项目，告诉我如何使用：",
+    "send": "↑"
+  },
+  "nodes": [
+    {
+      "id": "n001-window",
+      "kind": "window",
+      "x": 240,
+      "y": 170,
+      "w": 1440,
+      "h": 250,
+      "label": "来源地址",
+      "children": []
+    },
+    {
+      "id": "n002-window",
+      "kind": "window",
+      "x": 240,
+      "y": 580,
+      "w": 1440,
+      "h": 300,
+      "label": "交给 AI 的具体任务",
+      "children": []
+    },
+    {
+      "id": "retained-source-address",
+      "kind": "text",
+      "x": 300,
+      "y": 275,
+      "w": 1100,
+      "h": 75,
+      "text": "{{url}}",
+      "size": 45
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 300,
+      "y": 275,
+      "w": 1100,
+      "h": 75,
+      "text": "{{url}}",
+      "size": 45,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "y": [
+          [
+            0,
+            275
+          ],
+          [
+            1.6,
+            275
+          ],
+          [
+            2.75,
+            735
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-text",
+      "kind": "text",
+      "x": 300,
+      "y": 680,
+      "w": 1100,
+      "h": 65,
+      "text": "{{task}}",
+      "size": 38,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n005-pill",
+      "kind": "pill",
+      "x": 1530,
+      "y": 760,
+      "w": 95,
+      "h": 80,
+      "label": "{{send}}",
+      "size": 50,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "n006-b2-cursor",
+      "kind": "b2-cursor",
+      "x": 1610,
+      "y": 410,
+      "w": 55,
+      "h": 75,
+      "tracks": {
+        "x": [
+          [
+            0,
+            1740
+          ],
+          [
+            1.0,
+            1520
+          ],
+          [
+            2.0,
+            1520
+          ],
+          [
+            3.25,
+            1570
+          ]
+        ],
+        "y": [
+          [
+            0,
+            480
+          ],
+          [
+            1.0,
+            280
+          ],
+          [
+            2.0,
+            280
+          ],
+          [
+            3.25,
+            790
+          ]
+        ],
+        "pulse": [
+          [
+            0.95,
+            0
+          ],
+          [
+            1.1,
+            1
+          ],
+          [
+            1.5,
+            0
+          ],
+          [
+            3.2,
+            0
+          ],
+          [
+            3.35,
+            1
+          ],
+          [
+            3.75,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-circle",
+      "kind": "circle",
+      "x": 880,
+      "y": 910,
+      "w": 45,
+      "h": 45,
+      "fill": "#DBDBE0",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.5,
+            0
+          ],
+          [
+            3.9,
+            1
+          ]
+        ],
+        "scale": [
+          [
+            3.5,
+            0.8
+          ],
+          [
+            4.25,
+            1.3
+          ],
+          [
+            4.9,
+            0.9
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

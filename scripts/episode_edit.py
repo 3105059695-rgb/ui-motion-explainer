@@ -7,9 +7,11 @@ from pathlib import Path
 import tempfile
 
 import editing_library as lib
+import motion_lookup
 from edit_session import plan_lock, write_atomic
 from reference_edits import digest, read
 from selection import source_segments
+from style_registry import ROOT, confirmed_workflow
 
 STATE = 'episode-edit.json'
 JOBS = ('keep', *lib.FUNCTIONS)
@@ -146,26 +148,47 @@ def decide(board, data):
         if d!=u.get('decision'):
             if u.get('decision') and row.get('revision')!=u['revision']:
                 raise ValueError('修改已有判断需要该镜当前 revision。')
-            for key in ('candidates','choice','trial','review'):
+            for key in ('candidates','motion_lookup','choice','trial','review'):
                 u.pop(key,None)
             u.update(decision=d, revision=u['revision']+1)
     board['synopsis'] = synopsis
 
 
-def choices(board, u, ident=None, offset=0):
+def choices(board, u, ident=None, offset=0, query=None, folder=None, recipes_only=False):
     if not whole_read(board):
         raise ValueError('先读完全稿，给每条原句登记观众问题或留真人的理由。')
-    ids = lib.options(u)
     if offset<0:
         raise ValueError('offset 不能为负数。')
+    lookup=motion_lookup.search(u,query,folder)
+    numbered=[r['id'] for r in lookup['matches']]
+    if folder and ident and ident not in numbered and ident!='original':
+        raise ValueError('该编号不在指定分类中。')
+    # A lookup without a visual match must not silently substitute unrelated recipes.
+    inspect_recipe=ident and ident!='original' and not lib.numbered_motions.number(ident)
+    recipes=lib.options(u) if recipes_only or inspect_recipe else []
+    ids=recipes if recipes_only or inspect_recipe else numbered
     keys = [ident] if ident else ids[offset:offset+3]+['original']
-    if any(k!='original' and k not in ids for k in keys):
+    if any(k!='original' and k not in ids and not lib.numbered_motions.number(k) for k in keys):
         raise ValueError('该条目没有可调用的投稿剪法。')
     result = [lib.card(k) for k in keys]
+    evidence={r['id']:r for r in lookup['matches']}
+    for card in result:
+        if card['id'] in evidence:card['lookup_evidence']=evidence[card['id']]
+    u['motion_lookup']={**lookup,'matches':lookup['matches'][:3],
+                        'candidate_count':len(numbered),'shown_ids':[k for k in keys if lib.numbered_motions.number(k)]}
     u['candidates'] = sorted(set(u.get('candidates',[]))|set(keys))
     return {'unit':u['id'],'quote':u['quote'][:720],'quote_length':len(u['quote']),'decision':u['decision'],'cards':result,
+            'motion_lookup':u['motion_lookup'],
             'next_offset':offset+3 if not ident and offset+3<len(ids) else None,
-            'choose':'比较具体剪法后 direct -- choose；原画面足够就选 original。'}
+            'choose':'对照整句原意和已看素材，比较候选动作的起态、触发和结果。原画面已讲清可选 original，采用库内动作时选完整编号，由 trial 调用。用 --query 或 --folder 细查，其他既有剪法可用 --recipes 浏览。'}
+
+
+def check_motion_order(unit,card):
+    if card.get('verified_order'):
+        for text in (unit['quote'],unit['decision']['why']):
+            conflict=motion_lookup.reversed_order(motion_lookup.requested_order(text),card['verified_order'])
+            if conflict:
+                raise ValueError('本句需要'+' → '.join(conflict['requested'])+'，编号 '+card['id']+' 的实际顺序为'+' → '.join(conflict['implemented'])+'。可继续查库或记录缺少的动作。')
 
 
 def choose(board, u, ident, alternative, why, rev, aspect='motion'):
@@ -181,7 +204,13 @@ def choose(board, u, ident, alternative, why, rev, aspect='motion'):
             raise ValueError('两种候选用了同一剪法。比较不同动作或原画面。')
     if ident=='original' and u['decision']['job']!='keep' and not alternative:
         raise ValueError('这句需要解释。记录比较过的素材和决定保留原画面的原因。')
-    c = {'id':ident,'alternative':alternative,'why':why,'implementation':lib.card(ident)['implementation'],
+    if 'motion_lookup' not in u and u['decision']['job']!='keep':
+        lookup=motion_lookup.search(u)
+        u['motion_lookup']={**lookup,'candidate_count':len(lookup['matches']),
+                            'matches':lookup['matches'][:3],'shown_ids':[]}
+    selected=lib.card(ident)
+    if aspect=='motion':check_motion_order(u,selected)
+    c = {'id':ident,'alternative':alternative,'why':why,'implementation':selected['implementation'],
          'aspect':'original' if ident=='original' else aspect}
     if u.get('choice')!=c:
         u.update(choice=c,revision=u['revision']+1)
@@ -255,7 +284,13 @@ def status(folder, board, shot=None, at=None, offset=0, quote_offset=0):
     import episode_media as media
     if offset<0:
         raise ValueError('offset 不能为负数。')
-    out={'project':str(folder),'state':STATE,'synopsis':board['synopsis']}
+    out={'project':str(folder),'state':STATE,'synopsis':board['synopsis'],
+         'confirmed_workflow':confirmed_workflow()}
+    if (folder/'materials-plan.json').is_file():
+        out['materials']={'plan':str(folder/'materials-plan.json'),
+                          'bindings':str(folder/'materials-bindings.json') if (folder/'materials-bindings.json').is_file() else None,
+                          'guide':str(ROOT/'references/material-choice-and-photo-direction.md'),
+                          'next':'通读后按同一段原句并行查动作和材料。按可见细节选择来源，实看后按原句入库，有原声时码就一并登记。'}
     if shot is not None or at is not None:
         if at is not None:
             from caption_edit import milliseconds
@@ -297,7 +332,7 @@ def status(folder, board, shot=None, at=None, offset=0, quote_offset=0):
             'exported':exported,'current_cut_exported':bound,'completed':completed,'full_review':(last or {}).get('full_review'),
             'current_shot':first, 'proof_first':proof_units(board), 'proofs_reviewed':proof_ok,
             'pending':dict(list(pending.items())[offset:offset+12]),'pending_count':len(pending),
-            'next':'按 current_shot 用 resume --shot 定位；先 options 选材，watch 看动作，trial 绑定本期原声，review 记录返修。' if pending else
+            'next':'按 current_shot 用 resume --shot 定位。按本句所需的可见变化并行用 options 查动作、找本期素材。结合原声和实际画面决定留人物、实拍或用 UI。用 watch 查看动作，choose 记取舍，trial 对齐原声，review 记录返修。' if pending else
             '用 deliver 合成，或 register 登记外部成片。原速带声看过整片后用 finish-review。'}
 
 

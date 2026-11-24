@@ -1,0 +1,220 @@
+{
+  "id": "M266",
+  "layout": "focus",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "file-preview",
+      "states": [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "zoom": 170
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "fred-spotlight",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": [
+        {
+          "slot": "media3",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "fred-verdict",
+      "states": [
+        {
+          "stage": 0
+        },
+        {
+          "stage": 1
+        },
+        {
+          "stage": 2
+        }
+      ],
+      "media": [
+        {
+          "slot": "media3",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "arun-membership",
+      "start": 19.5,
+      "end": 28.6,
+      "shotIds": [
+        "A-S007",
+        "A-S008",
+        "A-S009"
+      ],
+      "rowIds": [
+        "A-L008",
+        "A-L009",
+        "A-L010",
+        "A-L011",
+        "A-L012"
+      ]
+    }
+  ],
+  "chain": [
+    "当前产品卡向侧边缩小",
+    "真实聊天或使用界面展开到主要阅读区域",
+    "价格与评价贴在对应证据附近",
+    "换到限制证据，放大内部字段并圈注",
+    "证据退走，原产品回到中心",
+    "取消按钮与接近的光标表现犹豫，明确示意性质"
+  ],
+  "binding": {
+    "headline": "身份让出主位，证据支撑转折",
+    "captions": [
+      "先指明当前对象",
+      "放大支撑判断的实际字段",
+      "带着限定条件再下结论"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "素材校对图册",
+        "items": [
+          "输入照片",
+          "处理界面"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp"
+        ],
+        "active": 0,
+        "zoom": 100
+      },
+      {
+        "image": "fr-screen.webp",
+        "title": "Squoosh",
+        "items": [
+          "编码格式",
+          "导出质量",
+          "文件体积"
+        ],
+        "rects": [
+          [
+            79,
+            73.5,
+            20,
+            6.2
+          ],
+          [
+            79,
+            79.8,
+            20,
+            7
+          ],
+          [
+            81,
+            91.5,
+            13,
+            6.7
+          ]
+        ],
+        "active": 1
+      },
+      {
+        "image": "fr-screen.webp",
+        "title": "可以交付网页副本",
+        "condition": "本例上限 100 kB",
+        "evidence": "实测 95.9 kB",
+        "stage": 2
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "zoom": 170
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {
+          "stage": 0
+        },
+        {
+          "stage": 1
+        },
+        {
+          "stage": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "分页文件预览器 · earth"
+    },
+    {
+      "key": "media2",
+      "name": "分页文件预览器 · interface"
+    },
+    {
+      "key": "media3",
+      "name": "原界面聚光框 · fr-screen"
+    }
+  ]
+}

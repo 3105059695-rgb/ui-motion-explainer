@@ -1,0 +1,147 @@
+{
+  "id": "M225",
+  "layout": "gather",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "plan-checklist",
+      "states": [
+        {
+          "completed": 0
+        },
+        {
+          "completed": 1
+        },
+        {
+          "completed": 3
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "code-snippet",
+      "states": [
+        {},
+        {},
+        {}
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "line-diff",
+      "states": [
+        {},
+        {
+          "onlyChanges": true
+        },
+        {
+          "onlyChanges": true
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "claude",
+      "start": 1252,
+      "end": 1266,
+      "shotIds": [
+        "CR005",
+        "CR006",
+        "CR007"
+      ],
+      "rowIds": [
+        "CR-L0475",
+        "CR-L0476",
+        "CR-L0477",
+        "CR-L0478",
+        "CR-L0479",
+        "CR-L0480"
+      ]
+    }
+  ],
+  "chain": [
+    "实际终端多Agent反馈",
+    "当前反馈聚焦，其余减弱",
+    "三分支职责逐项建立",
+    "审查到优化的标签关系",
+    "回实际代码差异"
+  ],
+  "binding": {
+    "headline": "三项检查收回同一修改",
+    "captions": [
+      "这次修改要过三项检查",
+      "每项都回到对应的依据",
+      "最后一起核对改动"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "读取输入资料",
+          "提取关键信息",
+          "生成核对清单"
+        ],
+        "completed": 1
+      },
+      {
+        "label": "导出设置 · JSON",
+        "lines": [
+          "{",
+          "  \"quality\": 50,",
+          "  \"resize\": false",
+          "}"
+        ]
+      },
+      {
+        "title": "交付说明",
+        "oldLines": [
+          "保留输入原图",
+          "直接覆盖输出",
+          "核对文件体积"
+        ],
+        "newLines": [
+          "保留输入原图",
+          "另存网页副本",
+          "核对文件体积"
+        ],
+        "onlyChanges": false
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "completed": 0
+        },
+        {
+          "completed": 1
+        },
+        {
+          "completed": 3
+        }
+      ],
+      [
+        {},
+        {},
+        {}
+      ],
+      [
+        {},
+        {
+          "onlyChanges": true
+        },
+        {
+          "onlyChanges": true
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

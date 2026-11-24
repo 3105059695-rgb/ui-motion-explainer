@@ -1,0 +1,292 @@
+{
+  "id": "M263",
+  "layout": "gather",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "file-tiles",
+      "states": [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            1
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "images",
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "fred-exhibits",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 2
+        },
+        {
+          "active": 3
+        }
+      ],
+      "media": [
+        {
+          "slot": "media4",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media5",
+          "path": [
+            "images",
+            1
+          ]
+        },
+        {
+          "slot": "media6",
+          "path": [
+            "images",
+            2
+          ]
+        },
+        {
+          "slot": "media7",
+          "path": [
+            "images",
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "fred-proofs",
+      "states": [
+        {
+          "active": 0,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": true
+        }
+      ],
+      "media": [
+        {
+          "slot": "media8",
+          "path": [
+            "referenceImage"
+          ]
+        },
+        {
+          "slot": "media9",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media6",
+          "path": [
+            "images",
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "arun-membership",
+      "start": 5.9,
+      "end": 9.45,
+      "shotIds": [
+        "A-S002",
+        "A-S003"
+      ],
+      "rowIds": [
+        "A-L002",
+        "A-L003",
+        "A-L004"
+      ]
+    }
+  ],
+  "chain": [
+    "原候选一起缩小下移",
+    "真实作品从所属对象附近错峰向上展开",
+    "证据稳定后判断章短促进入",
+    "作品退走，会员卡收为同身份标识",
+    "后方总览前移接管主位"
+  ],
+  "binding": {
+    "headline": "作品从所属对象展开，再归入总览",
+    "captions": [
+      "先认识各自的来源",
+      "作品从所属位置展开",
+      "再把同一批候选收到总览"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "地出.jpg",
+          "压缩界面.png",
+          "安德斯.jpg"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp",
+          "portrait.webp"
+        ],
+        "active": 0
+      },
+      {
+        "items": [
+          "原照片",
+          "操作界面",
+          "输出细节",
+          "署名记录"
+        ],
+        "images": [
+          "fr-lunar.webp",
+          "fr-screen.webp",
+          "fr-50-earth.webp",
+          "fr-record.webp"
+        ],
+        "bodies": [
+          "辨认本次处理的照片",
+          "确认导出时的质量设置",
+          "逐像素核对同一处云层",
+          "核对摄影署名"
+        ],
+        "active": 1
+      },
+      {
+        "title": "云层校样",
+        "referenceImage": "fr-input-earth.webp",
+        "items": [
+          "质量 75",
+          "质量 50"
+        ],
+        "images": [
+          "fr-75-earth.webp",
+          "fr-50-earth.webp"
+        ],
+        "values": [
+          163502,
+          95873
+        ],
+        "inputBytes": 494374,
+        "active": 1,
+        "showDelta": true
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 2
+        },
+        {
+          "active": 3
+        }
+      ],
+      [
+        {
+          "active": 0,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": false
+        },
+        {
+          "active": 1,
+          "showDelta": true
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "文件缩略图 · earth"
+    },
+    {
+      "key": "media2",
+      "name": "文件缩略图 · interface"
+    },
+    {
+      "key": "media3",
+      "name": "文件缩略图 · portrait"
+    },
+    {
+      "key": "media4",
+      "name": "四格材料查证窗 · fr-lunar"
+    },
+    {
+      "key": "media5",
+      "name": "四格材料查证窗 · fr-screen"
+    },
+    {
+      "key": "media6",
+      "name": "四格材料查证窗 · fr-50-earth"
+    },
+    {
+      "key": "media7",
+      "name": "四格材料查证窗 · fr-record"
+    },
+    {
+      "key": "media8",
+      "name": "固定原件的多轮校样 · fr-input-earth"
+    },
+    {
+      "key": "media9",
+      "name": "固定原件的多轮校样 · fr-75-earth"
+    }
+  ]
+}

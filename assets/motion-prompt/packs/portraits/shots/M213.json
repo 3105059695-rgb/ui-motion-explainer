@@ -1,0 +1,202 @@
+{
+  "id": "M213",
+  "layout": "fork",
+  "layers": [
+    {
+      "kind": "photo",
+      "file": "fr-lunar.webp",
+      "slot": "media1",
+      "label": "输入原图"
+    },
+    {
+      "kind": "ui",
+      "component": "fred-choice",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "steps",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "workflow",
+      "start": 0,
+      "end": 26,
+      "shotIds": [
+        "W001",
+        "W002",
+        "W003",
+        "W004",
+        "W005",
+        "W006",
+        "W007",
+        "W008"
+      ],
+      "rowIds": [
+        "W-L001",
+        "W-L002",
+        "W-L003",
+        "W-L004",
+        "W-L005",
+        "W-L006",
+        "W-L007",
+        "W-L008",
+        "W-L009"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 176.55,
+      "end": 190.05,
+      "shotIds": [
+        "J-S224",
+        "J-S225",
+        "J-S226",
+        "J-S227",
+        "J-S228"
+      ],
+      "rowIds": [
+        "J-L106",
+        "J-L107",
+        "J-L108",
+        "J-L109",
+        "J-L110",
+        "J-L111",
+        "J-L112",
+        "J-L113"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 171,
+      "end": 191.7,
+      "shotIds": [
+        "A-S031"
+      ],
+      "rowIds": [
+        "A-L092",
+        "A-L093",
+        "A-L094",
+        "A-L095",
+        "A-L096",
+        "A-L097",
+        "A-L098",
+        "A-L099",
+        "A-L100",
+        "A-L101",
+        "A-L102",
+        "A-L103",
+        "A-L104",
+        "A-L105"
+      ]
+    }
+  ],
+  "chain": [
+    "人物问候与工具身份",
+    "工作台与效率承诺",
+    "两类受众出现",
+    "两列流程逐项建立",
+    "进入实际工具"
+  ],
+  "binding": {
+    "headline": "按交付用途分成两条流程",
+    "captions": [
+      "这份原图要交给谁？",
+      "留档与网页发布走两条路",
+      "按用途选好，再走对应的步骤"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "items": [
+          "长期留档",
+          "网页发布",
+          "复查质量"
+        ],
+        "options": [
+          "输入原图",
+          "网页副本"
+        ],
+        "preferred": [
+          0,
+          1,
+          0
+        ],
+        "reasons": [
+          "留下完整的输入材料",
+          "质量 50 副本为 95.9 kB",
+          "用原图对照同一位置的细节"
+        ],
+        "active": 0
+      },
+      {
+        "items": [
+          "选素材",
+          "剪片段",
+          "导出"
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "输入原图"
+    }
+  ]
+}

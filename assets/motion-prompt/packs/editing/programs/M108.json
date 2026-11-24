@@ -1,0 +1,342 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t04f",
+  "title": "一把钥匙解锁几件事",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "keyLabel": "一次授权",
+    "permission0": "读取资料",
+    "permission1": "提交变更",
+    "permission2": "触发任务"
+  },
+  "nodes": [
+    {
+      "id": "n001-b2-key",
+      "kind": "b2-key",
+      "x": 250,
+      "y": 410,
+      "w": 520,
+      "h": 200,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.6,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            445
+          ],
+          [
+            0.6,
+            410,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 270,
+      "y": 650,
+      "w": 500,
+      "h": 80,
+      "text": "{{keyLabel}}",
+      "size": 53,
+      "color": "#0B0B0F",
+      "align": "center"
+    },
+    {
+      "id": "n004-card",
+      "kind": "card",
+      "x": 1010,
+      "y": 180,
+      "w": 650,
+      "h": 170,
+      "children": [
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 145,
+          "y": 53,
+          "w": 440,
+          "h": 80,
+          "text": "{{permission0}}",
+          "size": 48,
+          "color": "#0B0B0F",
+          "align": "left",
+          "tracks": {
+            "color": [
+              [
+                0,
+                "#0B0B0F"
+              ],
+              [
+                1.1,
+                "#0B0B0F"
+              ],
+              [
+                1.5,
+                "#FFFFFF",
+                "step"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n005-b2-lock",
+          "kind": "b2-lock",
+          "x": 40,
+          "y": 45,
+          "w": 70,
+          "h": 80,
+          "fill": "#62616C",
+          "tracks": {
+            "fill": [
+              [
+                0,
+                "#62616C"
+              ],
+              [
+                1.1,
+                "#62616C"
+              ],
+              [
+                1.5,
+                "#D6C2FF",
+                "step"
+              ]
+            ],
+            "open": [
+              [
+                0,
+                false
+              ],
+              [
+                1.5,
+                true,
+                "step"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "fill": [
+          [
+            0,
+            "#F3F3F5"
+          ],
+          [
+            1.1,
+            "#F3F3F5"
+          ],
+          [
+            1.5,
+            "#0B0B0F",
+            "step"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-card",
+      "kind": "card",
+      "x": 1010,
+      "y": 430,
+      "w": 650,
+      "h": 170,
+      "children": [
+        {
+          "id": "n006-text",
+          "kind": "text",
+          "x": 145,
+          "y": 53,
+          "w": 440,
+          "h": 80,
+          "text": "{{permission1}}",
+          "size": 48,
+          "color": "#0B0B0F",
+          "align": "left",
+          "tracks": {
+            "color": [
+              [
+                0,
+                "#0B0B0F"
+              ],
+              [
+                2.1,
+                "#0B0B0F"
+              ],
+              [
+                2.5,
+                "#FFFFFF",
+                "step"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n008-b2-lock",
+          "kind": "b2-lock",
+          "x": 40,
+          "y": 45,
+          "w": 70,
+          "h": 80,
+          "fill": "#62616C",
+          "tracks": {
+            "fill": [
+              [
+                0,
+                "#62616C"
+              ],
+              [
+                2.1,
+                "#62616C"
+              ],
+              [
+                2.5,
+                "#D6C2FF",
+                "step"
+              ]
+            ],
+            "open": [
+              [
+                0,
+                false
+              ],
+              [
+                2.5,
+                true,
+                "step"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "fill": [
+          [
+            0,
+            "#F3F3F5"
+          ],
+          [
+            2.1,
+            "#F3F3F5"
+          ],
+          [
+            2.5,
+            "#0B0B0F",
+            "step"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010-card",
+      "kind": "card",
+      "x": 1010,
+      "y": 680,
+      "w": 650,
+      "h": 170,
+      "children": [
+        {
+          "id": "n009-text",
+          "kind": "text",
+          "x": 145,
+          "y": 53,
+          "w": 440,
+          "h": 80,
+          "text": "{{permission2}}",
+          "size": 48,
+          "color": "#0B0B0F",
+          "align": "left",
+          "tracks": {
+            "color": [
+              [
+                0,
+                "#0B0B0F"
+              ],
+              [
+                3.1,
+                "#0B0B0F"
+              ],
+              [
+                3.5,
+                "#FFFFFF",
+                "step"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n011-b2-lock",
+          "kind": "b2-lock",
+          "x": 40,
+          "y": 45,
+          "w": 70,
+          "h": 80,
+          "fill": "#62616C",
+          "tracks": {
+            "fill": [
+              [
+                0,
+                "#62616C"
+              ],
+              [
+                3.1,
+                "#62616C"
+              ],
+              [
+                3.5,
+                "#D6C2FF",
+                "step"
+              ]
+            ],
+            "open": [
+              [
+                0,
+                false
+              ],
+              [
+                3.5,
+                true,
+                "step"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "fill": [
+          [
+            0,
+            "#F3F3F5"
+          ],
+          [
+            3.1,
+            "#F3F3F5"
+          ],
+          [
+            3.5,
+            "#0B0B0F",
+            "step"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

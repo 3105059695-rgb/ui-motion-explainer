@@ -1,0 +1,555 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-fix5-t09e",
+  "title": "产物浏览：生成结果逐个打开",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {},
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 120,
+      "y": 130,
+      "w": 800,
+      "h": 380,
+      "asset": "work0",
+      "fit": "cover",
+      "radius": 18,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            0.9,
+            1
+          ],
+          [
+            1.25,
+            0
+          ],
+          [
+            4.5,
+            0
+          ],
+          [
+            5,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-image",
+      "kind": "image",
+      "x": 970,
+      "y": 130,
+      "w": 800,
+      "h": 380,
+      "asset": "work1",
+      "fit": "cover",
+      "radius": 18,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            0.9,
+            1
+          ],
+          [
+            1.25,
+            0
+          ],
+          [
+            4.5,
+            0
+          ],
+          [
+            5,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-image",
+      "kind": "image",
+      "x": 120,
+      "y": 550,
+      "w": 800,
+      "h": 380,
+      "asset": "work2",
+      "fit": "cover",
+      "radius": 18,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            0.9,
+            1
+          ],
+          [
+            1.25,
+            0
+          ],
+          [
+            4.5,
+            0
+          ],
+          [
+            5,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-image",
+      "kind": "image",
+      "x": 970,
+      "y": 550,
+      "w": 800,
+      "h": 380,
+      "asset": "work3",
+      "fit": "cover",
+      "radius": 18,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            0.9,
+            1
+          ],
+          [
+            1.25,
+            0
+          ],
+          [
+            4.5,
+            0
+          ],
+          [
+            5,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012-group",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n005-image",
+          "kind": "image",
+          "x": 140,
+          "y": 110,
+          "w": 1120,
+          "h": 780,
+          "asset": "work0",
+          "fit": "cover",
+          "radius": 20
+        },
+        {
+          "id": "n006-b3-crop-media",
+          "kind": "b3-crop-media",
+          "x": 1320,
+          "y": 110,
+          "w": 440,
+          "h": 370,
+          "asset": "work0",
+          "cropX": 0.05,
+          "cropY": 0.1,
+          "cropW": 0.5,
+          "cropH": 0.4
+        },
+        {
+          "id": "n007-b3-crop-media",
+          "kind": "b3-crop-media",
+          "x": 1320,
+          "y": 520,
+          "w": 440,
+          "h": 370,
+          "asset": "work0",
+          "cropX": 0.4,
+          "cropY": 0.45,
+          "cropW": 0.5,
+          "cropH": 0.4
+        },
+        {
+          "id": "n008-image",
+          "kind": "image",
+          "x": 600,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work0",
+          "fit": "cover",
+          "radius": 6
+        },
+        {
+          "id": "n009-image",
+          "kind": "image",
+          "x": 785,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work1",
+          "fit": "cover",
+          "radius": 6
+        },
+        {
+          "id": "n010-image",
+          "kind": "image",
+          "x": 970,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work2",
+          "fit": "cover",
+          "radius": 6
+        },
+        {
+          "id": "n011-image",
+          "kind": "image",
+          "x": 1155,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work3",
+          "fit": "cover",
+          "radius": 6
+        }
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.1,
+            0
+          ],
+          [
+            1.35,
+            1
+          ],
+          [
+            1.95,
+            1
+          ],
+          [
+            2.2,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n020-group",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n013-image",
+          "kind": "image",
+          "x": 140,
+          "y": 110,
+          "w": 1120,
+          "h": 780,
+          "asset": "work1",
+          "fit": "cover",
+          "radius": 20
+        },
+        {
+          "id": "n014-b3-crop-media",
+          "kind": "b3-crop-media",
+          "x": 1320,
+          "y": 110,
+          "w": 440,
+          "h": 370,
+          "asset": "work1",
+          "cropX": 0.05,
+          "cropY": 0.1,
+          "cropW": 0.5,
+          "cropH": 0.4
+        },
+        {
+          "id": "n015-b3-crop-media",
+          "kind": "b3-crop-media",
+          "x": 1320,
+          "y": 520,
+          "w": 440,
+          "h": 370,
+          "asset": "work1",
+          "cropX": 0.4,
+          "cropY": 0.45,
+          "cropW": 0.5,
+          "cropH": 0.4
+        },
+        {
+          "id": "n016-image",
+          "kind": "image",
+          "x": 600,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work0",
+          "fit": "cover",
+          "radius": 6
+        },
+        {
+          "id": "n017-image",
+          "kind": "image",
+          "x": 785,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work1",
+          "fit": "cover",
+          "radius": 6
+        },
+        {
+          "id": "n018-image",
+          "kind": "image",
+          "x": 970,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work2",
+          "fit": "cover",
+          "radius": 6
+        },
+        {
+          "id": "n019-image",
+          "kind": "image",
+          "x": 1155,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work3",
+          "fit": "cover",
+          "radius": 6
+        }
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.3,
+            0
+          ],
+          [
+            2.55,
+            1
+          ],
+          [
+            3.15,
+            1
+          ],
+          [
+            3.4,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n028-group",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n021-image",
+          "kind": "image",
+          "x": 140,
+          "y": 110,
+          "w": 1120,
+          "h": 780,
+          "asset": "work2",
+          "fit": "cover",
+          "radius": 20
+        },
+        {
+          "id": "n022-b3-crop-media",
+          "kind": "b3-crop-media",
+          "x": 1320,
+          "y": 110,
+          "w": 440,
+          "h": 370,
+          "asset": "work2",
+          "cropX": 0.05,
+          "cropY": 0.1,
+          "cropW": 0.5,
+          "cropH": 0.4
+        },
+        {
+          "id": "n023-b3-crop-media",
+          "kind": "b3-crop-media",
+          "x": 1320,
+          "y": 520,
+          "w": 440,
+          "h": 370,
+          "asset": "work2",
+          "cropX": 0.4,
+          "cropY": 0.45,
+          "cropW": 0.5,
+          "cropH": 0.4
+        },
+        {
+          "id": "n024-image",
+          "kind": "image",
+          "x": 600,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work0",
+          "fit": "cover",
+          "radius": 6
+        },
+        {
+          "id": "n025-image",
+          "kind": "image",
+          "x": 785,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work1",
+          "fit": "cover",
+          "radius": 6
+        },
+        {
+          "id": "n026-image",
+          "kind": "image",
+          "x": 970,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work2",
+          "fit": "cover",
+          "radius": 6
+        },
+        {
+          "id": "n027-image",
+          "kind": "image",
+          "x": 1155,
+          "y": 940,
+          "w": 160,
+          "h": 90,
+          "asset": "work3",
+          "fit": "cover",
+          "radius": 6
+        }
+      ],
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.45,
+            0
+          ],
+          [
+            3.7,
+            1
+          ],
+          [
+            4.3,
+            1
+          ],
+          [
+            4.55,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n029-b2-cursor",
+      "kind": "b2-cursor",
+      "x": 0,
+      "y": 0,
+      "w": 43,
+      "h": 64,
+      "tracks": {
+        "x": [
+          [
+            0,
+            900
+          ],
+          [
+            0.85,
+            450
+          ],
+          [
+            2.15,
+            860
+          ],
+          [
+            3.3,
+            1050
+          ],
+          [
+            4.55,
+            1670
+          ]
+        ],
+        "y": [
+          [
+            0,
+            1000
+          ],
+          [
+            0.85,
+            300
+          ],
+          [
+            2.15,
+            980
+          ],
+          [
+            3.3,
+            980
+          ],
+          [
+            4.55,
+            960
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {
+    "work0": "50bc3e314bdb7f0f4d",
+    "work1": "ebe9e9e5de709240bf",
+    "work2": "f0cad559eda3318fff",
+    "work3": "76bb7f7f3f36a255cd"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "M203",
+  "layout": "native",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-receipt",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-argon",
+      "start": 136,
+      "end": 144
+    }
+  ],
+  "chain": [
+    "同一终端位置保留运行命令，错误输出和就绪回执前后切换。"
+  ],
+  "binding": {
+    "headline": "检查配置文件",
+    "captions": [
+      "先检查这份配置。",
+      "错误就在这一列。",
+      "改完，再看同一个终端的回执。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "command": "python -m json.tool config.json",
+        "items": [
+          "原输入",
+          "报错位置",
+          "修正以后"
+        ],
+        "inputs": [
+          "{format: \"jpeg\"}",
+          "{format: \"jpeg\"}",
+          "{\"format\": \"jpeg\"}"
+        ],
+        "outputs": [
+          "",
+          "Expecting property name enclosed in double quotes",
+          "{\"format\": \"jpeg\"}"
+        ],
+        "errorColumn": 2,
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

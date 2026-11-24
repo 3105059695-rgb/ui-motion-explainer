@@ -1,0 +1,197 @@
+{
+  "id": "M237",
+  "layout": "collect",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "file-tiles",
+      "states": [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            1
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "images",
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "composer",
+      "states": [
+        {
+          "attached": false,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": true
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-deliveries",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "network",
+      "start": 1041.3,
+      "end": 1046.9,
+      "shotIds": [
+        "N233"
+      ],
+      "rowIds": [
+        "N-L446",
+        "N-L447",
+        "N-L448",
+        "N-L449"
+      ]
+    }
+  ],
+  "chain": [
+    "青年手中已有蓝色能力盒，货架上还有不同颜色盒，其他人排队。",
+    "炉子转身从货架取下橙盒。",
+    "把橙盒交给青年，青年把蓝橙两盒靠近。",
+    "亮光后两个盒变为手中的星形标记，人物看见组合结果。"
+  ],
+  "binding": {
+    "headline": "选取两份材料后组合为新结果",
+    "captions": [
+      "先选中要用的材料",
+      "把它们送进同一请求",
+      "输出可分别取用"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "地出.jpg",
+          "压缩界面.png",
+          "安德斯.jpg"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp",
+          "portrait.webp"
+        ],
+        "active": 0
+      },
+      {
+        "text": "请对照这份资料列出变化。",
+        "file": "交付记录.md",
+        "attached": true,
+        "sent": false
+      },
+      {
+        "source": "以及对于你来说，有什么用处",
+        "items": [
+          "口播字幕",
+          "提词提示",
+          "剪辑备注"
+        ],
+        "bodies": [
+          "以及对于你来说／有什么用处",
+          "问观众：这对你有什么用？",
+          "说到「你」时留住人物视线"
+        ],
+        "active": 0
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      [
+        {
+          "attached": false,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": true
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "文件缩略图 · earth"
+    },
+    {
+      "key": "media2",
+      "name": "文件缩略图 · interface"
+    },
+    {
+      "key": "media3",
+      "name": "文件缩略图 · portrait"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "M245",
+  "layout": "wipe",
+  "layers": [
+    {
+      "kind": "live",
+      "strip": "creative-843820-4180",
+      "slot": "media1",
+      "label": "主体动作视频"
+    },
+    {
+      "kind": "ui",
+      "component": "filmstrip",
+      "states": [
+        {},
+        {
+          "active": 6
+        },
+        {
+          "active": 6
+        }
+      ],
+      "media": [],
+      "sampleClip": "media1"
+    },
+    {
+      "kind": "live",
+      "strip": "creative-843820-4180",
+      "slot": "media1",
+      "label": "缩略图胶片带 · frame-6",
+      "followSlot": "media1"
+    }
+  ],
+  "refs": [
+    {
+      "video": "creative",
+      "start": 843.82,
+      "end": 848,
+      "shotIds": [
+        "C180",
+        "C181",
+        "C182"
+      ],
+      "rowIds": [
+        "C-L179"
+      ]
+    }
+  ],
+  "chain": [
+    "眼镜返回天气与白衬衫建议，衣柜中左侧白衬衫成为明确目标。",
+    "手伸向同一件白衬衫并取下，衬衫向镜头靠近。",
+    "白布填满画面，暂时遮住空间信息。",
+    "遮挡退出时露出街道，同一人物已穿同款白衬衫走近。"
+  ],
+  "binding": {
+    "headline": "前景擦过去接住换装结果",
+    "captions": [
+      "先交代人物的起始状态",
+      "前景经过时完成交接",
+      "同一个人留在结果画面里"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "label": "同一段动作",
+        "frames": [
+          "frame-0.webp",
+          "frame-1.webp",
+          "frame-2.webp",
+          "frame-3.webp",
+          "frame-4.webp",
+          "frame-5.webp",
+          "frame-6.webp"
+        ],
+        "marks": [
+          0,
+          0.9,
+          1.8,
+          2.7,
+          3.6,
+          4.5,
+          5.35
+        ],
+        "active": 0
+      },
+      {}
+    ],
+    "keyframes": [
+      [],
+      [
+        {},
+        {
+          "active": 6
+        },
+        {
+          "active": 6
+        }
+      ],
+      []
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "主体动作视频"
+    }
+  ]
+}

@@ -1,0 +1,321 @@
+{
+  "id": "M257",
+  "layout": "fork",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "source-quote",
+      "states": [
+        {
+          "active": 0,
+          "located": false
+        },
+        {
+          "active": 1,
+          "located": true
+        },
+        {
+          "active": 2,
+          "located": true
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-paperedit",
+      "states": [
+        {
+          "active": 0,
+          "kept": [
+            0,
+            1
+          ]
+        },
+        {
+          "active": 1,
+          "kept": [
+            0,
+            1
+          ]
+        },
+        {
+          "active": 1,
+          "kept": [
+            1
+          ]
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-deliveries",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-argon",
+      "start": 254,
+      "end": 263,
+      "shotIds": [
+        "F3-22",
+        "F3-23",
+        "F3-24",
+        "F3-25",
+        "F3-26"
+      ],
+      "rowIds": [
+        "F-L156",
+        "F-L157",
+        "F-L158",
+        "F-L159",
+        "F-L160",
+        "F-L161",
+        "F-L162",
+        "F-L163"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 9,
+      "end": 15.2,
+      "shotIds": [
+        "J-S006",
+        "J-S007",
+        "J-S008",
+        "J-S009"
+      ],
+      "rowIds": [
+        "J-L006",
+        "J-L007",
+        "J-L008",
+        "J-L009",
+        "J-L010",
+        "J-L011"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 53.3,
+      "end": 62.2,
+      "shotIds": [
+        "J-S031",
+        "J-S032",
+        "J-S033",
+        "J-S034",
+        "J-S035"
+      ],
+      "rowIds": [
+        "J-L032",
+        "J-L033",
+        "J-L034",
+        "J-L035",
+        "J-L036",
+        "J-L037",
+        "J-L038"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 74.625,
+      "end": 77.875,
+      "shotIds": [
+        "J-S103",
+        "J-S104",
+        "J-S105"
+      ],
+      "rowIds": [
+        "J-L044",
+        "J-L045",
+        "J-L046"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 145.5,
+      "end": 148.15,
+      "shotIds": [
+        "J-S204",
+        "J-S205",
+        "J-S206"
+      ],
+      "rowIds": [
+        "J-L092",
+        "J-L093"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 190.05,
+      "end": 194.4,
+      "shotIds": [
+        "J-S229",
+        "J-S230",
+        "J-S231"
+      ],
+      "rowIds": [
+        "J-L113",
+        "J-L114",
+        "J-L115"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 26.3,
+      "end": 28.6,
+      "shotIds": [
+        "A-S009"
+      ],
+      "rowIds": [
+        "A-L011",
+        "A-L012"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 82,
+      "end": 88,
+      "shotIds": [
+        "A-S022"
+      ],
+      "rowIds": [
+        "A-L041",
+        "A-L042",
+        "A-L043",
+        "A-L044",
+        "A-L045",
+        "A-L046",
+        "A-L047"
+      ]
+    }
+  ],
+  "chain": [
+    "建立动作对象",
+    "接入创建所属关系或容器",
+    "增加使项目变多，缩短使时长变小",
+    "调序移动同一对象，替换改变原位内容身份"
+  ],
+  "binding": {
+    "headline": "同一输入随动词走向不同结果",
+    "captions": [
+      "同一份输入先出现",
+      "剪短和拆分是两个动作",
+      "两个结果分别留在画面上"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "本期交付约定",
+        "paragraphs": [
+          "素材归档后再做网页副本。",
+          "原图与副本应分别保留。",
+          "导出后核对文件名和体积。"
+        ],
+        "active": 1,
+        "located": false
+      },
+      {
+        "title": "原声节选",
+        "duration": 5.44,
+        "items": [
+          "以及对于你来说",
+          "有什么用处"
+        ],
+        "starts": [
+          3.02,
+          4.08
+        ],
+        "ends": [
+          4.08,
+          5.42
+        ],
+        "active": 0,
+        "kept": [
+          0,
+          1
+        ]
+      },
+      {
+        "source": "以及对于你来说，有什么用处",
+        "items": [
+          "口播字幕",
+          "提词提示",
+          "剪辑备注"
+        ],
+        "bodies": [
+          "以及对于你来说／有什么用处",
+          "问观众：这对你有什么用？",
+          "说到「你」时留住人物视线"
+        ],
+        "active": 0
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0,
+          "located": false
+        },
+        {
+          "active": 1,
+          "located": true
+        },
+        {
+          "active": 2,
+          "located": true
+        }
+      ],
+      [
+        {
+          "active": 0,
+          "kept": [
+            0,
+            1
+          ]
+        },
+        {
+          "active": 1,
+          "kept": [
+            0,
+            1
+          ]
+        },
+        {
+          "active": 1,
+          "kept": [
+            1
+          ]
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

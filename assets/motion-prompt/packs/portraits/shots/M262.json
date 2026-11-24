@@ -1,0 +1,200 @@
+{
+  "id": "M262",
+  "layout": "compare",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-choice",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "file-tiles",
+      "states": [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            1
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "images",
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "pair-compare",
+      "states": [
+        {},
+        {
+          "active": 0
+        },
+        {
+          "active": 0
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "arun-membership",
+      "start": 0,
+      "end": 5.9,
+      "shotIds": [
+        "A-S001"
+      ],
+      "rowIds": [
+        "A-L001",
+        "A-L002"
+      ]
+    }
+  ],
+  "chain": [
+    "先建立同一预算条件",
+    "三张同尺寸会员卡横排，保留产品身份",
+    "注意力依次移给候选",
+    "问号接住选择疑问，后方总览保持退后"
+  ],
+  "binding": {
+    "headline": "固定共同条件再介绍候选",
+    "captions": [
+      "先给同一条件",
+      "再把几个候选放到相同尺度",
+      "开始比较前认清各自身份"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "长期留档",
+          "网页发布",
+          "复查质量"
+        ],
+        "options": [
+          "输入原图",
+          "网页副本"
+        ],
+        "preferred": [
+          0,
+          1,
+          0
+        ],
+        "reasons": [
+          "留下完整的输入材料",
+          "质量 50 副本为 95.9 kB",
+          "用原图对照同一位置的细节"
+        ],
+        "active": 0
+      },
+      {
+        "items": [
+          "地出.jpg",
+          "压缩界面.png",
+          "安德斯.jpg"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp",
+          "portrait.webp"
+        ],
+        "active": 0
+      },
+      {
+        "label": "同一张照片",
+        "items": [
+          "原图",
+          "网页副本"
+        ],
+        "values": [
+          "494.4",
+          "95.9"
+        ],
+        "unit": "kB",
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      [
+        {},
+        {
+          "active": 0
+        },
+        {
+          "active": 0
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "文件缩略图 · earth"
+    },
+    {
+      "key": "media2",
+      "name": "文件缩略图 · interface"
+    },
+    {
+      "key": "media3",
+      "name": "文件缩略图 · portrait"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t14a2",
+  "title": "A/B 耗时赛跑（返修）：轨道加长",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "timeA": 38,
+    "timeB": 122,
+    "labels": [
+      "方案 A",
+      "方案 B"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "n001-b3-race",
+      "kind": "b3-race",
+      "x": 180,
+      "y": 220,
+      "w": 1560,
+      "h": 650,
+      "aKey": "timeA",
+      "bKey": "timeB",
+      "labelsKey": "labels",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            0.75,
+            0
+          ],
+          [
+            3.95,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

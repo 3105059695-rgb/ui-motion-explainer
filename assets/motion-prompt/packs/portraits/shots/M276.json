@@ -1,0 +1,171 @@
+{
+  "id": "M276",
+  "layout": "dock",
+  "layers": [
+    {
+      "kind": "photo",
+      "file": "fr-lunar.webp",
+      "slot": "media1",
+      "label": "输入原图"
+    },
+    {
+      "kind": "ui",
+      "component": "file-preview",
+      "states": [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "zoom": 170
+        }
+      ],
+      "media": [
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "images",
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "fred-scorecard",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "arun-membership",
+      "start": 122,
+      "end": 134,
+      "shotIds": [
+        "A-S027"
+      ],
+      "rowIds": [
+        "A-L063",
+        "A-L064",
+        "A-L065",
+        "A-L066",
+        "A-L067",
+        "A-L068",
+        "A-L069",
+        "A-L070",
+        "A-L071"
+      ]
+    }
+  ],
+  "chain": [
+    "实际作品界面先大展示",
+    "界面缩成能力卡里的缩略图，身份连续",
+    "其他能力依次加入，各项确认后划线归组",
+    "回原产品卡给出价值判断",
+    "同一标识回到总览上移",
+    "对夸张评价补限制，再退出切换下一章节"
+  ],
+  "binding": {
+    "headline": "作品缩成能力卡，再归入评价",
+    "captions": [
+      "先把作品完整展示",
+      "缩成卡片以后仍认得它",
+      "带着证据回到评价表"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "title": "素材校对图册",
+        "items": [
+          "输入照片",
+          "处理界面"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp"
+        ],
+        "active": 0,
+        "zoom": 100
+      },
+      {
+        "title": "质量 50 副本",
+        "items": [
+          "文件体积",
+          "像素尺寸",
+          "网页加载耗时"
+        ],
+        "values": [
+          "95.9 kB",
+          "3000 × 3000",
+          "未测"
+        ],
+        "bodies": [
+          "本例上限 100 kB",
+          "与输入原图相同",
+          "需要实际网页计时"
+        ],
+        "active": 2
+      }
+    ],
+    "keyframes": [
+      [],
+      [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "zoom": 170
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "输入原图"
+    },
+    {
+      "key": "media2",
+      "name": "分页文件预览器 · earth"
+    },
+    {
+      "key": "media3",
+      "name": "分页文件预览器 · interface"
+    }
+  ]
+}

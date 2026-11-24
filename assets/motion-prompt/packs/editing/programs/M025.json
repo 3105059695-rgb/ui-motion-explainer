@@ -1,0 +1,87 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t12n",
+  "title": "卡叠抽走：顶卡飞走露出本章",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "title": "02  实际演示",
+    "previous": "01  先说明白"
+  },
+  "nodes": [
+    {
+      "id": "n001-card",
+      "kind": "card",
+      "x": 480,
+      "y": 415,
+      "w": 960,
+      "h": 220,
+      "children": [],
+      "fill": "#0B0B0F",
+      "rotation": -5
+    },
+    {
+      "id": "n002-card",
+      "kind": "card",
+      "x": 480,
+      "y": 405,
+      "w": 960,
+      "h": 220,
+      "children": [],
+      "fill": "#0B0B0F",
+      "rotation": 3
+    },
+    {
+      "id": "n003-pill",
+      "kind": "pill",
+      "x": 480,
+      "y": 390,
+      "w": 960,
+      "h": 220,
+      "label": "{{title}}",
+      "size": 72,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "n004-pill",
+      "kind": "pill",
+      "x": 480,
+      "y": 390,
+      "w": 960,
+      "h": 220,
+      "label": "{{previous}}",
+      "size": 72,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "x": [
+          [
+            0,
+            480
+          ],
+          [
+            0.81,
+            480
+          ],
+          [
+            1.65,
+            -1400,
+            "in"
+          ]
+        ],
+        "rotation": [
+          [
+            0.81,
+            0
+          ],
+          [
+            1.65,
+            -23
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

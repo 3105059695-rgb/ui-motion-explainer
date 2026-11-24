@@ -1,0 +1,134 @@
+{
+  "id": "M195",
+  "layout": "native",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-loupes",
+      "states": [
+        {
+          "active": 0,
+          "showLocator": false
+        },
+        {
+          "active": 0,
+          "showLocator": true
+        },
+        {
+          "active": 1,
+          "showLocator": true
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "left",
+            0
+          ]
+        },
+        {
+          "slot": "media2",
+          "path": [
+            "left",
+            1
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "right",
+            0
+          ]
+        },
+        {
+          "slot": "media4",
+          "path": [
+            "right",
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-weekly",
+      "start": 158,
+      "end": 164
+    }
+  ],
+  "chain": [
+    "Turbo 和基础版把同一题材并排放大，观众能对着同处细节判断。"
+  ],
+  "binding": {
+    "headline": "同一处云层",
+    "captions": [
+      "两张图选的是同一个位置。",
+      "让云层对着云层。",
+      "再一起看月面纹理。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "同位置取样",
+        "items": [
+          "地球云层",
+          "月面纹理"
+        ],
+        "left": [
+          "fr-input-earth.webp",
+          "fr-input-soil.webp"
+        ],
+        "right": [
+          "fr-50-earth.webp",
+          "fr-50-soil.webp"
+        ],
+        "names": [
+          "输入原图",
+          "网页副本 Q50"
+        ],
+        "active": 0,
+        "showLocator": true
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0,
+          "showLocator": false
+        },
+        {
+          "active": 0,
+          "showLocator": true
+        },
+        {
+          "active": 1,
+          "showLocator": true
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "同位置双图细节镜 · fr-input-earth"
+    },
+    {
+      "key": "media2",
+      "name": "同位置双图细节镜 · fr-input-soil"
+    },
+    {
+      "key": "media3",
+      "name": "同位置双图细节镜 · fr-50-earth"
+    },
+    {
+      "key": "media4",
+      "name": "同位置双图细节镜 · fr-50-soil"
+    }
+  ]
+}

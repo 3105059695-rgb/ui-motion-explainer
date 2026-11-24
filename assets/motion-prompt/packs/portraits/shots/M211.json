@@ -1,0 +1,70 @@
+{
+  "id": "M211",
+  "layout": "native",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-units",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-jev",
+      "start": 81,
+      "end": 90
+    }
+  ],
+  "chain": [
+    "27B 的简写先单独出现，随后在旁边展开为更易读的参数规模。"
+  ],
+  "binding": {
+    "headline": "这份文件有多大",
+    "captions": [
+      "这份文件有 95,873 字节。",
+      "用十进制 kB 来读。",
+      "换成 KiB，数值也跟着换算。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "valueBytes": 95873,
+        "items": [
+          "字节",
+          "kB",
+          "KiB"
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

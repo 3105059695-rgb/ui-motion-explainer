@@ -1,0 +1,111 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t06b",
+  "title": "反常识：常识被划掉，答案落定",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "belief": "工具越多，结果就一定越好",
+    "answer": "把正确的工具\n用在正确的步骤上"
+  },
+  "nodes": [
+    {
+      "id": "n002-card",
+      "kind": "card",
+      "x": 280,
+      "y": 200,
+      "w": 1360,
+      "h": 220,
+      "children": [
+        {
+          "id": "n001-text",
+          "kind": "text",
+          "x": 60,
+          "y": 55,
+          "w": 1240,
+          "h": 130,
+          "text": "{{belief}}",
+          "size": 69,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF"
+    },
+    {
+      "id": "n003-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 340,
+      "y": 310,
+      "w": 1240,
+      "h": 0,
+      "arrow": false,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            1.25,
+            0
+          ],
+          [
+            2.2,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-card",
+      "kind": "card",
+      "x": 280,
+      "y": 560,
+      "w": 1360,
+      "h": 280,
+      "children": [
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 60,
+          "y": 45,
+          "w": 1240,
+          "h": 190,
+          "text": "{{answer}}",
+          "size": 72,
+          "color": "#FFFFFF",
+          "align": "center"
+        }
+      ],
+      "fill": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.5,
+            0
+          ],
+          [
+            3.5,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.5,
+            595
+          ],
+          [
+            3.5,
+            560,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

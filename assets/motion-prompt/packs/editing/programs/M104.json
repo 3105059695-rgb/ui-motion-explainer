@@ -1,0 +1,87 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t01h",
+  "title": "注意澄清",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "subject": "这不等于什么都能自动完成",
+    "stamp": "注意"
+  },
+  "nodes": [
+    {
+      "id": "n001-pill",
+      "kind": "pill",
+      "x": 500,
+      "y": 400,
+      "w": 1070,
+      "h": 200,
+      "label": "{{subject}}",
+      "size": 62,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "x": [
+          [
+            0,
+            500
+          ],
+          [
+            1.05,
+            500
+          ],
+          [
+            1.86,
+            690
+          ]
+        ],
+        "w": [
+          [
+            0,
+            1070
+          ],
+          [
+            1.86,
+            1060
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-card",
+      "kind": "card",
+      "x": 195,
+      "y": 400,
+      "w": 470,
+      "h": 200,
+      "children": [
+        {
+          "id": "n002-pill",
+          "kind": "pill",
+          "x": 28,
+          "y": 40,
+          "w": 414,
+          "h": 120,
+          "label": "{{stamp}}",
+          "size": 75,
+          "fill": "#0B0B0F",
+          "color": "#FFFFFF"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "revealX": [
+          [
+            0.9,
+            0
+          ],
+          [
+            1.86,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

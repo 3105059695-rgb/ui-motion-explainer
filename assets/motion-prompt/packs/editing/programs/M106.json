@@ -1,0 +1,120 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t02h",
+  "title": "几个必备文件",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "file0": "README.md",
+    "role0": "怎么使用",
+    "file1": "LICENSE",
+    "role1": "允许怎样使用",
+    "file2": ".gitignore",
+    "role2": "什么不提交"
+  },
+  "nodes": [
+    {
+      "id": "n001-b2-flip",
+      "kind": "b2-flip",
+      "x": 180,
+      "y": 270,
+      "w": 480,
+      "h": 540,
+      "axis": "y",
+      "frontText": "{{file0}}",
+      "backText": "{{role0}}",
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "backFill": "#0B0B0F",
+      "backColor": "#D6C2FF",
+      "size": 50,
+      "radius": 20,
+      "tracks": {
+        "angle": [
+          [
+            0,
+            0
+          ],
+          [
+            1.2,
+            0
+          ],
+          [
+            2.1,
+            180,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-b2-flip",
+      "kind": "b2-flip",
+      "x": 740,
+      "y": 270,
+      "w": 480,
+      "h": 540,
+      "axis": "y",
+      "frontText": "{{file1}}",
+      "backText": "{{role1}}",
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "backFill": "#0B0B0F",
+      "backColor": "#D6C2FF",
+      "size": 50,
+      "radius": 20,
+      "tracks": {
+        "angle": [
+          [
+            0,
+            0
+          ],
+          [
+            2.28,
+            0
+          ],
+          [
+            3.18,
+            180,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-b2-flip",
+      "kind": "b2-flip",
+      "x": 1300,
+      "y": 270,
+      "w": 480,
+      "h": 540,
+      "axis": "y",
+      "frontText": "{{file2}}",
+      "backText": "{{role2}}",
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "backFill": "#0B0B0F",
+      "backColor": "#D6C2FF",
+      "size": 50,
+      "radius": 20,
+      "tracks": {
+        "angle": [
+          [
+            0,
+            0
+          ],
+          [
+            3.36,
+            0
+          ],
+          [
+            4.26,
+            180,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

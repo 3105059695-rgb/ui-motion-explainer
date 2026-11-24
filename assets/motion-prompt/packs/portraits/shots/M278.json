@@ -1,0 +1,148 @@
+{
+  "id": "M278",
+  "layout": "attach",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "statistic",
+      "states": [
+        {},
+        {},
+        {}
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "footnote",
+      "states": [
+        {},
+        {
+          "open": false
+        },
+        {
+          "open": false
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-verdict",
+      "states": [
+        {
+          "stage": 0
+        },
+        {
+          "stage": 1
+        },
+        {
+          "stage": 2
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "arun-membership",
+      "start": 145,
+      "end": 161,
+      "shotIds": [
+        "A-S029"
+      ],
+      "rowIds": [
+        "A-L079",
+        "A-L080",
+        "A-L081",
+        "A-L082",
+        "A-L083",
+        "A-L084",
+        "A-L085",
+        "A-L086"
+      ]
+    }
+  ],
+  "chain": [
+    "两个具体对象标签对齐，比较符号建立关系",
+    "关键数字成为视觉中心",
+    "限定词紧跟数字保留判断范围",
+    "切到不同时间口径的多组额度，各组分开摆放",
+    "回同一产品卡，风险折线和标记作用在卡面",
+    "产品卡退出，回收总评价"
+  ],
+  "binding": {
+    "headline": "关键数字带着口径和限制出现",
+    "captions": [
+      "先读关键数字",
+      "数字旁补上计算口径",
+      "最后明确它适用的条件"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "label": "网页副本",
+        "value": "95.9",
+        "unit": "kB",
+        "note": "同一张输入原图"
+      },
+      {
+        "text": "文件体积按十进制 kB 记录。",
+        "mark": "1",
+        "body": "本例中，1 kB 等于 1000 字节。",
+        "open": true
+      },
+      {
+        "image": "fr-screen.webp",
+        "title": "可以交付网页副本",
+        "condition": "本例上限 100 kB",
+        "evidence": "实测 95.9 kB",
+        "stage": 2
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {},
+        {}
+      ],
+      [
+        {},
+        {
+          "open": false
+        },
+        {
+          "open": false
+        }
+      ],
+      [
+        {
+          "stage": 0
+        },
+        {
+          "stage": 1
+        },
+        {
+          "stage": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "实景上的结论字幕签 · fr-screen"
+    }
+  ]
+}

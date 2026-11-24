@@ -1,0 +1,321 @@
+{
+  "id": "M249",
+  "layout": "compare",
+  "layers": [
+    {
+      "kind": "photo",
+      "file": "fr-lunar.webp",
+      "slot": "media1",
+      "label": "输入原图"
+    },
+    {
+      "kind": "photo",
+      "file": "fr-50-earth.webp",
+      "slot": "media2",
+      "label": "输出细节"
+    },
+    {
+      "kind": "ui",
+      "component": "fred-loupes",
+      "states": [
+        {
+          "active": 0,
+          "showLocator": false
+        },
+        {
+          "active": 0,
+          "showLocator": true
+        },
+        {
+          "active": 1,
+          "showLocator": true
+        }
+      ],
+      "media": [
+        {
+          "slot": "media3",
+          "path": [
+            "left",
+            0
+          ]
+        },
+        {
+          "slot": "media4",
+          "path": [
+            "left",
+            1
+          ]
+        },
+        {
+          "slot": "media2",
+          "path": [
+            "right",
+            0
+          ]
+        },
+        {
+          "slot": "media5",
+          "path": [
+            "right",
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-argon",
+      "start": 48.4,
+      "end": 54,
+      "shotIds": [
+        "F1-16",
+        "F1-17"
+      ],
+      "rowIds": [
+        "F-L026",
+        "F-L027",
+        "F-L028",
+        "F-L029",
+        "F-L030"
+      ]
+    },
+    {
+      "video": "fred-argon",
+      "start": 107.25,
+      "end": 110.125,
+      "shotIds": [
+        "P2-05",
+        "P2-06"
+      ],
+      "rowIds": [
+        "F-L067",
+        "F-L068"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 7.9,
+      "end": 9,
+      "shotIds": [
+        "J-S005"
+      ],
+      "rowIds": [
+        "J-L006"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 16.9,
+      "end": 21.6,
+      "shotIds": [
+        "J-S012",
+        "J-S013"
+      ],
+      "rowIds": [
+        "J-L013",
+        "J-L014",
+        "J-L015"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 105.5,
+      "end": 126.625,
+      "shotIds": [
+        "J-S119",
+        "J-S120",
+        "J-S121",
+        "J-S122",
+        "J-S123",
+        "J-S124",
+        "J-S125"
+      ],
+      "rowIds": [
+        "J-L060",
+        "J-L061",
+        "J-L062",
+        "J-L063",
+        "J-L064",
+        "J-L065",
+        "J-L066",
+        "J-L067",
+        "J-L068",
+        "J-L069",
+        "J-L070",
+        "J-L071",
+        "J-L072",
+        "J-L073",
+        "J-L074",
+        "J-L075",
+        "J-L076",
+        "J-L077",
+        "J-L078"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 170.85,
+      "end": 173.1,
+      "shotIds": [
+        "J-S221"
+      ],
+      "rowIds": [
+        "J-L104",
+        "J-L105"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 178.9,
+      "end": 190.05,
+      "shotIds": [
+        "J-S225",
+        "J-S226",
+        "J-S227",
+        "J-S228"
+      ],
+      "rowIds": [
+        "J-L107",
+        "J-L108",
+        "J-L109",
+        "J-L110",
+        "J-L111",
+        "J-L112",
+        "J-L113"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 8.8,
+      "end": 9.45,
+      "shotIds": [
+        "A-S003"
+      ],
+      "rowIds": [
+        "A-L004"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 19.5,
+      "end": 23.6,
+      "shotIds": [
+        "A-S007"
+      ],
+      "rowIds": [
+        "A-L008",
+        "A-L009"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 34.1,
+      "end": 38.4,
+      "shotIds": [
+        "A-S012"
+      ],
+      "rowIds": [
+        "A-L015",
+        "A-L016",
+        "A-L017"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 43,
+      "end": 45.7,
+      "shotIds": [
+        "A-S014"
+      ],
+      "rowIds": [
+        "A-L019",
+        "A-L020"
+      ]
+    }
+  ],
+  "chain": [
+    "原结果占主位",
+    "原结果缩小腾位",
+    "参照进入形成可读比较",
+    "选定结果接管主位，参照退出"
+  ],
+  "binding": {
+    "headline": "已有结果让出位置接住新对照",
+    "captions": [
+      "先记住已有的结果",
+      "原图移开给对照留出位置",
+      "两边对准同一处细节"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {},
+      {
+        "title": "同位置取样",
+        "items": [
+          "地球云层",
+          "月面纹理"
+        ],
+        "left": [
+          "fr-input-earth.webp",
+          "fr-input-soil.webp"
+        ],
+        "right": [
+          "fr-50-earth.webp",
+          "fr-50-soil.webp"
+        ],
+        "names": [
+          "输入原图",
+          "网页副本 Q50"
+        ],
+        "active": 0,
+        "showLocator": true
+      }
+    ],
+    "keyframes": [
+      [],
+      [],
+      [
+        {
+          "active": 0,
+          "showLocator": false
+        },
+        {
+          "active": 0,
+          "showLocator": true
+        },
+        {
+          "active": 1,
+          "showLocator": true
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "输入原图"
+    },
+    {
+      "key": "media2",
+      "name": "输出细节"
+    },
+    {
+      "key": "media3",
+      "name": "同位置双图细节镜 · fr-input-earth"
+    },
+    {
+      "key": "media4",
+      "name": "同位置双图细节镜 · fr-input-soil"
+    },
+    {
+      "key": "media5",
+      "name": "同位置双图细节镜 · fr-50-soil"
+    }
+  ]
+}

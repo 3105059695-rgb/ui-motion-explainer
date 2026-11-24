@@ -1,0 +1,152 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-native-t05c",
+  "title": "原句改写：旧写法划掉、新写法替换",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "row10": "先写清任务的输入。",
+    "row21": "完成后核对实际结果。",
+    "old": "处理完成后直接覆盖原文件。",
+    "new": "先保留原文件，再输出可核对的结果。",
+    "badge": "已更新规则"
+  },
+  "nodes": [
+    {
+      "id": "n001-window",
+      "kind": "window",
+      "x": 240,
+      "y": 160,
+      "w": 1440,
+      "h": 760,
+      "label": "AGENTS.md",
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 35,
+          "y": 100,
+          "w": 1370,
+          "h": 55,
+          "text": "{{row10}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 35,
+          "y": 165,
+          "w": 1370,
+          "h": 55,
+          "text": "{{row21}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 45,
+          "y": 320,
+          "w": 1300,
+          "h": 100,
+          "text": "{{old}}",
+          "size": 51,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "n005-b2-growing-line",
+      "kind": "b2-growing-line",
+      "x": 285,
+      "y": 535,
+      "w": 1300,
+      "h": 0,
+      "arrow": false,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "value": [
+          [
+            0.9,
+            0
+          ],
+          [
+            1.75,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-text",
+      "kind": "text",
+      "x": 285,
+      "y": 630,
+      "w": 1300,
+      "h": 120,
+      "text": "{{new}}",
+      "size": 53,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "characters": [
+          [
+            1.75,
+            0
+          ],
+          [
+            3.45,
+            20,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 1130,
+      "y": 785,
+      "w": 470,
+      "h": 90,
+      "label": "{{badge}}",
+      "size": 38,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.75,
+            0
+          ],
+          [
+            4.35,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.75,
+            820
+          ],
+          [
+            4.35,
+            785,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

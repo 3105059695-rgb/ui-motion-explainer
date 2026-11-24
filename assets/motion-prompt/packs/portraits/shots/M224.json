@@ -1,0 +1,153 @@
+{
+  "id": "M224",
+  "layout": "extract",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "chat-bubbles",
+      "states": [
+        {},
+        {
+          "showAnswer": false
+        },
+        {
+          "showAnswer": false
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "tags",
+      "states": [
+        {},
+        {
+          "items": [
+            "竖屏"
+          ]
+        },
+        {
+          "items": [
+            "竖屏"
+          ]
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "tree",
+      "states": [
+        {},
+        {
+          "open": false
+        },
+        {
+          "active": 1
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "claude",
+      "start": 2132,
+      "end": 2154,
+      "shotIds": [
+        "CR111",
+        "CR112",
+        "CR113"
+      ],
+      "rowIds": [
+        "CR-L0842",
+        "CR-L0843",
+        "CR-L0844",
+        "CR-L0845",
+        "CR-L0846",
+        "CR-L0847",
+        "CR-L0848"
+      ]
+    }
+  ],
+  "chain": [
+    "第二张卡揭示自动记忆",
+    "对话里出现偏好、错误与经验",
+    "对话移向左侧",
+    "后台Agent在右侧提取",
+    "箭头进入存储，随后展示分类文件"
+  ],
+  "binding": {
+    "headline": "一段对话归类为记忆文件",
+    "captions": [
+      "先看原话",
+      "把要保留的内容分到相应类别",
+      "最后认出它保存在哪个文件"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "question": "这张图能再小一点吗？",
+        "answer": "可以。先留好原图，再导出一份网页副本。",
+        "showAnswer": true
+      },
+      {
+        "label": "项目标签",
+        "items": [
+          "口播",
+          "软件教程",
+          "竖屏"
+        ]
+      },
+      {
+        "root": "本期素材",
+        "folder": "现场录音",
+        "children": [
+          "开场.wav",
+          "访谈.wav"
+        ],
+        "other": "剪辑笔记.md",
+        "open": true,
+        "active": 0
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "showAnswer": false
+        },
+        {
+          "showAnswer": false
+        }
+      ],
+      [
+        {},
+        {
+          "items": [
+            "竖屏"
+          ]
+        },
+        {
+          "items": [
+            "竖屏"
+          ]
+        }
+      ],
+      [
+        {},
+        {
+          "open": false
+        },
+        {
+          "active": 1
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

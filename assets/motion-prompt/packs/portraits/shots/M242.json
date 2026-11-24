@@ -1,0 +1,291 @@
+{
+  "id": "M242",
+  "layout": "process",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-spotlight",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "fred-criteria",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-verdict",
+      "states": [
+        {
+          "stage": 0
+        },
+        {
+          "stage": 1
+        },
+        {
+          "stage": 2
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "creative",
+      "start": 200,
+      "end": 218,
+      "shotIds": [
+        "C049",
+        "C050",
+        "C051",
+        "C052"
+      ],
+      "rowIds": [
+        "C-L073",
+        "C-L074",
+        "C-L075",
+        "C-L076",
+        "C-L077",
+        "C-L078",
+        "C-L079",
+        "C-L080"
+      ]
+    },
+    {
+      "video": "creative",
+      "start": 218,
+      "end": 288,
+      "shotIds": [
+        "C053",
+        "C054",
+        "C055",
+        "C056",
+        "C057",
+        "C058",
+        "C059",
+        "C060",
+        "C061",
+        "C062",
+        "C063",
+        "C064"
+      ],
+      "rowIds": [
+        "C-L080",
+        "C-L081",
+        "C-L082",
+        "C-L083",
+        "C-L084",
+        "C-L085",
+        "C-L086",
+        "C-L087",
+        "C-L088",
+        "C-L089",
+        "C-L090",
+        "C-L091"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 131.125,
+      "end": 160.18,
+      "shotIds": [
+        "J-S128",
+        "J-S129",
+        "J-S130",
+        "J-S131",
+        "J-S132",
+        "J-S133",
+        "J-S201",
+        "J-S202",
+        "J-S203",
+        "J-S204",
+        "J-S205",
+        "J-S206",
+        "J-S207",
+        "J-S208",
+        "J-S209",
+        "J-S210",
+        "J-S211",
+        "J-S212",
+        "J-S213",
+        "J-S214"
+      ],
+      "rowIds": [
+        "J-L082",
+        "J-L083",
+        "J-L084",
+        "J-L085",
+        "J-L086",
+        "J-L087",
+        "J-L088",
+        "J-L089",
+        "J-L090",
+        "J-L091",
+        "J-L092",
+        "J-L093",
+        "J-L094",
+        "J-L095",
+        "J-L096",
+        "J-L097",
+        "J-L098"
+      ]
+    }
+  ],
+  "chain": [
+    "应用入口展开到全部应用，出现飞书授权页，再出现授权已完成页。",
+    "Design Room从加号变对勾，而相邻Previs仍是加号，安装范围有可见界限。",
+    "输入区保留头脑风暴与Feishu标签，提交QZ活动创意请求后出现三种方案。",
+    "阅读并选择一个方向，后续对话出现已提交选择和细化方案。",
+    "上一结果保留在场，进一步请求200平方米布局；Visualize建议被选中后输入框出现标签。",
+    "跳到布局结果，再切动线和人流承载标签，底图中的路径与人数叠层随状态变化。"
+  ],
+  "binding": {
+    "headline": "入口、选项与执行结果连在一起",
+    "captions": [
+      "先找到操作入口",
+      "在同一界面选好条件",
+      "结果出现后再给判断"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "image": "fr-screen.webp",
+        "title": "Squoosh",
+        "items": [
+          "编码格式",
+          "导出质量",
+          "文件体积"
+        ],
+        "rects": [
+          [
+            79,
+            73.5,
+            20,
+            6.2
+          ],
+          [
+            79,
+            79.8,
+            20,
+            7
+          ],
+          [
+            81,
+            91.5,
+            13,
+            6.7
+          ]
+        ],
+        "active": 1
+      },
+      {
+        "items": [
+          "输入原图",
+          "质量 75",
+          "质量 50"
+        ],
+        "values": [
+          494374,
+          163502,
+          95873
+        ],
+        "pixels": [
+          3000,
+          3000,
+          3000
+        ],
+        "minPixel": 3000,
+        "limitKB": 100,
+        "active": 0
+      },
+      {
+        "image": "fr-screen.webp",
+        "title": "可以交付网页副本",
+        "condition": "本例上限 100 kB",
+        "evidence": "实测 95.9 kB",
+        "stage": 2
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {
+          "stage": 0
+        },
+        {
+          "stage": 1
+        },
+        {
+          "stage": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "原界面聚光框 · fr-screen"
+    }
+  ]
+}

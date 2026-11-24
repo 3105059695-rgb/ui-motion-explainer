@@ -1,0 +1,117 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-wave2-t23d",
+  "title": "地平线：一条线划开画面，序号升起",
+  "duration": 3,
+  "background": "#0B0B0F",
+  "inputs": {
+    "index": "03",
+    "title": "从方法到结果"
+  },
+  "nodes": [
+    {
+      "id": "n001-line",
+      "kind": "b2-growing-line",
+      "x": 160,
+      "y": 540,
+      "w": 1600,
+      "h": 0,
+      "fill": "#FFFFFF",
+      "strokeWidth": 3,
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            0.75,
+            1
+          ]
+        ]
+      },
+      "arrow": false
+    },
+    {
+      "id": "n004-group",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 0,
+          "y": 270,
+          "w": 1920,
+          "h": 230,
+          "text": "{{index}}",
+          "size": 220,
+          "color": "#FFFFFF",
+          "align": "center",
+          "tracks": {
+            "y": [
+              [
+                0,
+                550
+              ],
+              [
+                1.05,
+                270
+              ]
+            ]
+          }
+        }
+      ],
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 540
+      }
+    },
+    {
+      "id": "n005-group",
+      "kind": "group",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "children": [
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 0,
+          "y": 585,
+          "w": 1920,
+          "h": 130,
+          "text": "{{title}}",
+          "size": 70,
+          "color": "#FFFFFF",
+          "align": "center",
+          "tracks": {
+            "y": [
+              [
+                0.45,
+                450
+              ],
+              [
+                1.5,
+                585
+              ]
+            ]
+          }
+        }
+      ],
+      "clip": {
+        "x": 0,
+        "y": 540,
+        "w": 1920,
+        "h": 540
+      }
+    }
+  ],
+  "assets": {}
+}

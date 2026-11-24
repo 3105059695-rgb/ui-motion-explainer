@@ -1,0 +1,135 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t01e",
+  "title": "条件黑胶囊：圆点展开，逐字打出条件再补一段",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "condition": "如果任务需要多次执行",
+    "detail": "先保存上下文，再明确每一次的输入与结果。",
+    "extra": "下一次从已有进度继续。"
+  },
+  "nodes": [
+    {
+      "id": "n001-card",
+      "kind": "card",
+      "x": 805,
+      "y": 190,
+      "w": 310,
+      "h": 150,
+      "children": [],
+      "fill": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            0,
+            805
+          ],
+          [
+            1.38,
+            250
+          ]
+        ],
+        "w": [
+          [
+            0,
+            310
+          ],
+          [
+            1.38,
+            1420
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 310,
+      "y": 220,
+      "w": 1300,
+      "h": 100,
+      "text": "{{condition}}",
+      "size": 64,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "characters": [
+          [
+            1.2,
+            0
+          ],
+          [
+            2.58,
+            11,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-card",
+      "kind": "card",
+      "x": 250,
+      "y": 400,
+      "w": 1420,
+      "h": 420,
+      "children": [
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 60,
+          "y": 75,
+          "w": 1300,
+          "h": 160,
+          "text": "{{detail}}",
+          "size": 56,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 60,
+          "y": 280,
+          "w": 1300,
+          "h": 70,
+          "text": "{{extra}}",
+          "size": 42,
+          "color": "#62616C",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.88,
+            0
+          ],
+          [
+            4.08,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.88,
+            435
+          ],
+          [
+            4.08,
+            400,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

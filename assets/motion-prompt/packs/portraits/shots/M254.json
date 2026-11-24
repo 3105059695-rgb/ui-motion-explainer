@@ -1,0 +1,177 @@
+{
+  "id": "M254",
+  "layout": "network",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "code-snippet",
+      "states": [
+        {},
+        {},
+        {}
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "node-map",
+      "states": [
+        {},
+        {
+          "active": 3
+        },
+        {
+          "active": 3
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-field",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-argon",
+      "start": 211.96,
+      "end": 218,
+      "shotIds": [
+        "F3-06",
+        "F3-07",
+        "F3-08"
+      ],
+      "rowIds": [
+        "F-L132",
+        "F-L133",
+        "F-L134",
+        "F-L135"
+      ]
+    }
+  ],
+  "chain": [
+    "原结果保留作背景条件",
+    "必要代码高亮",
+    "同一区域接入机制图",
+    "机制执行，使对象产生可见结果"
+  ],
+  "binding": {
+    "headline": "从代码证据接到机制图",
+    "captions": [
+      "先看真实代码中的对象",
+      "抽出它们之间的关系",
+      "回到原处确认依据"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "label": "导出设置 · JSON",
+        "lines": [
+          "{",
+          "  \"quality\": 50,",
+          "  \"resize\": false",
+          "}"
+        ]
+      },
+      {
+        "label": "素材交接",
+        "items": [
+          "口播",
+          "逐字稿",
+          "字幕",
+          "初剪"
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "active": 1
+      },
+      {
+        "image": "fr-record.webp",
+        "title": "NASA 图片记录",
+        "items": [
+          "摄影署名",
+          "记录日期",
+          "页面语言"
+        ],
+        "values": [
+          "NASA/Bill Anders",
+          "December 24, 1968",
+          "English"
+        ],
+        "active": 0
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {},
+        {}
+      ],
+      [
+        {},
+        {
+          "active": 3
+        },
+        {
+          "active": 3
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "原件字段摘读 · fr-record"
+    }
+  ]
+}

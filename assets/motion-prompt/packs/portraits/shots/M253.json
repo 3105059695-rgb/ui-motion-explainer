@@ -1,0 +1,336 @@
+{
+  "id": "M253",
+  "layout": "rewind",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-receipt",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "code-snippet",
+      "states": [
+        {},
+        {},
+        {}
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "tool-call",
+      "states": [
+        {
+          "phase": "running",
+          "open": false
+        },
+        {
+          "phase": "running",
+          "open": true
+        },
+        {
+          "phase": "done",
+          "open": true
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-argon",
+      "start": 135.5,
+      "end": 143.75,
+      "shotIds": [
+        "P2-16",
+        "P2-17",
+        "P2-18"
+      ],
+      "rowIds": [
+        "F-L082",
+        "F-L083",
+        "F-L084",
+        "F-L085",
+        "F-L086",
+        "F-L087"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 0,
+      "end": 7.9,
+      "shotIds": [
+        "J-S001",
+        "J-S002",
+        "J-S003",
+        "J-S004"
+      ],
+      "rowIds": [
+        "J-L001",
+        "J-L002",
+        "J-L003",
+        "J-L004",
+        "J-L005",
+        "J-L006"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 21.6,
+      "end": 24.8,
+      "shotIds": [
+        "J-S014",
+        "J-S015"
+      ],
+      "rowIds": [
+        "J-L015",
+        "J-L016",
+        "J-L017"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 74.625,
+      "end": 82.125,
+      "shotIds": [
+        "J-S103",
+        "J-S104",
+        "J-S105",
+        "J-S106",
+        "J-S107",
+        "J-S108"
+      ],
+      "rowIds": [
+        "J-L044",
+        "J-L045",
+        "J-L046",
+        "J-L047",
+        "J-L048",
+        "J-L049"
+      ]
+    },
+    {
+      "video": "fred-jev",
+      "start": 149.1,
+      "end": 160.18,
+      "shotIds": [
+        "J-S208",
+        "J-S209",
+        "J-S210",
+        "J-S211",
+        "J-S212",
+        "J-S213",
+        "J-S214"
+      ],
+      "rowIds": [
+        "J-L093",
+        "J-L094",
+        "J-L095",
+        "J-L096",
+        "J-L097",
+        "J-L098"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 9.45,
+      "end": 12.6,
+      "shotIds": [
+        "A-S004"
+      ],
+      "rowIds": [
+        "A-L004"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 32.3,
+      "end": 34.1,
+      "shotIds": [
+        "A-S011"
+      ],
+      "rowIds": [
+        "A-L014",
+        "A-L015"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 69,
+      "end": 74,
+      "shotIds": [
+        "A-S020"
+      ],
+      "rowIds": [
+        "A-L034",
+        "A-L035",
+        "A-L036",
+        "A-L037"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 74,
+      "end": 82,
+      "shotIds": [
+        "A-S021"
+      ],
+      "rowIds": [
+        "A-L037",
+        "A-L038",
+        "A-L039",
+        "A-L040",
+        "A-L041"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 82,
+      "end": 88,
+      "shotIds": [
+        "A-S022"
+      ],
+      "rowIds": [
+        "A-L041",
+        "A-L042",
+        "A-L043",
+        "A-L044",
+        "A-L045",
+        "A-L046",
+        "A-L047"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 105,
+      "end": 109,
+      "shotIds": [
+        "A-S025"
+      ],
+      "rowIds": [
+        "A-L055",
+        "A-L056",
+        "A-L057"
+      ]
+    },
+    {
+      "video": "arun-membership",
+      "start": 109,
+      "end": 121,
+      "shotIds": [
+        "A-S026"
+      ],
+      "rowIds": [
+        "A-L057",
+        "A-L058",
+        "A-L059",
+        "A-L060",
+        "A-L061",
+        "A-L062"
+      ]
+    }
+  ],
+  "chain": [
+    "同一载体展示旧状态",
+    "时间或条件标签变化",
+    "旧错误内容退出",
+    "新状态和必要结果出现"
+  ],
+  "binding": {
+    "headline": "同一终端从报错走到就绪",
+    "captions": [
+      "命令留在同一个终端",
+      "报错指出要改的位置",
+      "修正后出现执行回执"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "command": "python -m json.tool config.json",
+        "items": [
+          "原输入",
+          "报错位置",
+          "修正以后"
+        ],
+        "inputs": [
+          "{format: \"jpeg\"}",
+          "{format: \"jpeg\"}",
+          "{\"format\": \"jpeg\"}"
+        ],
+        "outputs": [
+          "",
+          "Expecting property name enclosed in double quotes",
+          "{\"format\": \"jpeg\"}"
+        ],
+        "errorColumn": 2,
+        "active": 1
+      },
+      {
+        "label": "导出设置 · JSON",
+        "lines": [
+          "{",
+          "  \"quality\": 50,",
+          "  \"resize\": false",
+          "}"
+        ]
+      },
+      {
+        "tool": "读取文件信息",
+        "arg": "地出.jpg",
+        "output": "494,374 字节 · JPEG",
+        "error": "未找到指定文件",
+        "phase": "done",
+        "open": true
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {},
+        {},
+        {}
+      ],
+      [
+        {
+          "phase": "running",
+          "open": false
+        },
+        {
+          "phase": "running",
+          "open": true
+        },
+        {
+          "phase": "done",
+          "open": true
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

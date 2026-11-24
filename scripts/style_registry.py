@@ -15,6 +15,73 @@ PROJECT_FILES = ('project.json', 'current-project.json', 'director-plan.json', '
 PROFILE_KEYS = ('profile', 'profile_id', 'profileId', 'styleProfile', 'styleProfileDocument', 'account', 'workflow')
 
 
+def confirmed_workflow(root=ROOT):
+    """Return the shared editing standards independently of an episode's progress."""
+    from resource_inventory import load_overlay, resource_fact
+    root = Path(root).resolve()
+    overlay = load_overlay(root)
+    gallery = resource_fact('approved-ui:gallery', root=root, overlay=overlay)
+    layers = root / 'assets/approved-ui/index.html'
+    review = resource_fact('motion-prompt:sample-review', root=root, overlay=overlay)
+    samples = resource_fact('motion-prompt:sample-index', root=root, overlay=overlay)
+    registered = resource_fact('motion-prompt:library', root=root, overlay=overlay)
+    material_indexes = {}
+    for key in overlay['files']:
+        if key.startswith('material-index:'):
+            fact = resource_fact(key, root=root, overlay=overlay)
+            if fact['file_exists']:
+                material_indexes[key.removeprefix('material-index:')] = fact['path']
+    base = Path(registered['path']).parent if registered['file_exists'] else None
+    personal = base is not None and all((base/k).is_file() for k in ('index.html','catalog.json','入库.py'))
+    if not personal:
+        base = root / 'assets/motion-prompt'
+    return {
+        'material_library': {'indexes': material_indexes, 'episode_index': 'materials-bindings.json',
+                             'guide': str(root/'references/material-choice-and-photo-direction.md')},
+        'motion_library': {
+            'status': 'reference_candidates',
+            'sample_review': review['path'] if review['file_exists'] else None,
+            'sample_index': samples['path'] if samples['file_exists'] else None,
+            'gallery': str(base / 'index.html'),
+            'directory': str(base / '动作目录.html') if (base / '动作目录.html').is_file() else None,
+            'directory_markdown': str(base / '动作目录.md') if (base / '动作目录.md').is_file() else None,
+            'catalog': str(base / 'catalog.json'),
+            'usage': str(base / '使用说明.md'),
+            'intake': str(base / '入库.py'),
+            'update_on': 'episode',
+            'personal_library': personal,
+        },
+        'narration': {'status': 'confirmed', 'guide': str(root / 'references/script-visual-planning.md')},
+        'ui': {
+            'status': 'confirmed',
+            'catalog': str(root / 'assets/approved-ui/catalog.json'),
+            'tokens': str(root / 'assets/approved-ui/style.json'),
+            'gallery': gallery['path'] if gallery['file_exists'] else str(layers),
+            'layers': str(layers),
+            'interactive_gallery': gallery['path'] if gallery['file_exists'] else None,
+        },
+    }
+
+
+def collect_project_motions(project, workflow=None):
+    project = Path(project)
+    if not any((project / 'motion-additions').glob('*/motion.json')):
+        return None
+    import subprocess
+    import sys
+    settings = (workflow or confirmed_workflow())['motion_library']
+    if not settings.get('personal_library'):
+        return {'pending': [{'reason': '工程已保留候选；本机资源表需登记个人动作库的 index.html 文件 motion-prompt:library。'}]}
+    try:
+        result = subprocess.run([sys.executable,'-B','-X','utf8',settings['intake'],
+            'collect','--project',str(project.resolve())],capture_output=True,encoding='utf8',errors='replace')
+        if result.returncode:
+            return {'pending': [{'reason': result.stderr.strip() or result.stdout.strip()}]}
+        return json.loads(result.stdout)
+    except (OSError,ValueError) as exc:
+        return {'pending': [{'reason': str(exc)}]}
+
+
 def local_path(value, root):
     if not isinstance(value, str) or not value.strip() or '://' in value:
         raise ValueError('Expected a nonempty local path.')

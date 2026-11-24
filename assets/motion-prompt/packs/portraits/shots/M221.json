@@ -1,0 +1,180 @@
+{
+  "id": "M221",
+  "layout": "collect",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "chat-bubbles",
+      "states": [
+        {},
+        {
+          "showAnswer": false
+        },
+        {
+          "showAnswer": false
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "file-tiles",
+      "states": [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            1
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "images",
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "code-snippet",
+      "states": [
+        {},
+        {},
+        {}
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "claude",
+      "start": 1574,
+      "end": 1594,
+      "shotIds": [
+        "CR051",
+        "CR052",
+        "CR053",
+        "CR054"
+      ],
+      "rowIds": [
+        "CR-L0616",
+        "CR-L0617",
+        "CR-L0618",
+        "CR-L0619",
+        "CR-L0620",
+        "CR-L0621",
+        "CR-L0622",
+        "CR-L0623",
+        "CR-L0624",
+        "CR-L0625",
+        "CR-L0626"
+      ]
+    }
+  ],
+  "chain": [
+    "同一人物埋头书堆写字",
+    "翻页继续、皱眉停笔抱头",
+    "命令标题进入",
+    "多条对话条向上汇成一条",
+    "结果条换状态并标注保留关键信息"
+  ],
+  "binding": {
+    "headline": "积压的输入压缩为可用上下文",
+    "captions": [
+      "同一任务越聊材料越多",
+      "合并这次需要保留的信息",
+      "命令接手的是整理后的内容"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "question": "这张图能再小一点吗？",
+        "answer": "可以。先留好原图，再导出一份网页副本。",
+        "showAnswer": true
+      },
+      {
+        "items": [
+          "地出.jpg",
+          "压缩界面.png",
+          "安德斯.jpg"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp",
+          "portrait.webp"
+        ],
+        "active": 0
+      },
+      {
+        "label": "导出设置 · JSON",
+        "lines": [
+          "{",
+          "  \"quality\": 50,",
+          "  \"resize\": false",
+          "}"
+        ]
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "showAnswer": false
+        },
+        {
+          "showAnswer": false
+        }
+      ],
+      [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "active": 1
+        }
+      ],
+      [
+        {},
+        {},
+        {}
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "文件缩略图 · earth"
+    },
+    {
+      "key": "media2",
+      "name": "文件缩略图 · interface"
+    },
+    {
+      "key": "media3",
+      "name": "文件缩略图 · portrait"
+    }
+  ]
+}

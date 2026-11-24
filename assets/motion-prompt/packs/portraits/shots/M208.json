@@ -1,0 +1,77 @@
+{
+  "id": "M208",
+  "layout": "native",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-chapter",
+      "states": [
+        {
+          "active": 0,
+          "showTitle": false
+        },
+        {
+          "active": 0,
+          "showTitle": true
+        },
+        {
+          "active": 1,
+          "showTitle": true
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-weekly",
+      "start": 23,
+      "end": 27
+    }
+  ],
+  "chain": [
+    "深底上先出现两位翻页式章号，随后接本章短题并过渡到实景。"
+  ],
+  "binding": {
+    "headline": "从原图到交付",
+    "captions": [
+      "先从第一章开始。",
+      "今天先认原图。",
+      "下一章再看怎样处理。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "认原图",
+          "调质量",
+          "验交付"
+        ],
+        "first": 1,
+        "active": 1,
+        "showTitle": true
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0,
+          "showTitle": false
+        },
+        {
+          "active": 0,
+          "showTitle": true
+        },
+        {
+          "active": 1,
+          "showTitle": true
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

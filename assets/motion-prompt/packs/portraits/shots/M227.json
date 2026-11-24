@@ -1,0 +1,160 @@
+{
+  "id": "M227",
+  "layout": "unblock",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-capacity",
+      "states": [
+        {
+          "limitKB": 100
+        },
+        {
+          "limitKB": 200
+        },
+        {
+          "limitKB": 500
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "alert",
+      "states": [
+        {},
+        {
+          "open": false
+        },
+        {
+          "open": false
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "result",
+      "states": [
+        {
+          "success": false,
+          "title": "等待确认"
+        },
+        {
+          "success": true,
+          "title": "已完成"
+        },
+        {
+          "success": true,
+          "title": "已完成"
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "network",
+      "start": 802.2,
+      "end": 821.8,
+      "shotIds": [
+        "N184",
+        "N185",
+        "N186",
+        "N187"
+      ],
+      "rowIds": [
+        "N-L350",
+        "N-L351",
+        "N-L352",
+        "N-L353",
+        "N-L354",
+        "N-L355"
+      ]
+    }
+  ],
+  "chain": [
+    "律师、财税人员、抱猫兽医和咨询者同时站在一起；摄影机与高大代码屏在前。",
+    "口播点到门槛，专业人物停在这些设备前，炉子机器人进入。",
+    "机器人带路，原专业者从受阻站位走出。",
+    "同一批专业者到阶梯交流区给求助者看文件、交接宠物、面对面服务。"
+  ],
+  "binding": {
+    "headline": "遇到门槛才出现解法",
+    "captions": [
+      "把同一任务放到门槛前",
+      "条件还没满足，操作停住",
+      "满足条件后再放行"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "网页图片上限",
+        "items": [
+          "输入原图",
+          "质量 75",
+          "质量 50"
+        ],
+        "values": [
+          494374,
+          163502,
+          95873
+        ],
+        "limitKB": 100
+      },
+      {
+        "title": "超过当前上限",
+        "body": "这个文件还放不下。",
+        "open": true
+      },
+      {
+        "success": true,
+        "title": "导出完成",
+        "body": "字幕和视频已生成。",
+        "action": "查看交付清单",
+        "open": false
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "limitKB": 100
+        },
+        {
+          "limitKB": 200
+        },
+        {
+          "limitKB": 500
+        }
+      ],
+      [
+        {},
+        {
+          "open": false
+        },
+        {
+          "open": false
+        }
+      ],
+      [
+        {
+          "success": false,
+          "title": "等待确认"
+        },
+        {
+          "success": true,
+          "title": "已完成"
+        },
+        {
+          "success": true,
+          "title": "已完成"
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

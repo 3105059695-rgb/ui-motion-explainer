@@ -1,0 +1,145 @@
+{
+  "id": "M282",
+  "layout": "carry",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-chapter",
+      "states": [
+        {
+          "active": 0,
+          "showTitle": false
+        },
+        {
+          "active": 0,
+          "showTitle": true
+        },
+        {
+          "active": 1,
+          "showTitle": true
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "tree",
+      "states": [
+        {},
+        {
+          "open": false
+        },
+        {
+          "active": 1
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "app-window",
+      "states": [
+        {},
+        {
+          "active": 2
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "local-video-5c2f8b41",
+      "start": 63.3,
+      "end": 70.9
+    }
+  ],
+  "chain": [
+    "先定位到这一章",
+    "章号让出位置给具体文件",
+    "打开后落到同一个操作窗口"
+  ],
+  "binding": {
+    "headline": "章号变成文件入口，接到操作窗",
+    "captions": [
+      "先定位到这一章",
+      "章号让出位置给具体文件",
+      "打开后落到同一个操作窗口"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "认原图",
+          "调质量",
+          "验交付"
+        ],
+        "first": 1,
+        "active": 1,
+        "showTitle": true
+      },
+      {
+        "root": "本期素材",
+        "folder": "现场录音",
+        "children": [
+          "开场.wav",
+          "访谈.wav"
+        ],
+        "other": "剪辑笔记.md",
+        "open": true,
+        "active": 0
+      },
+      {
+        "title": "素材管理",
+        "items": [
+          "文件名",
+          "采访原声.wav",
+          "采访提纲.md"
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0,
+          "showTitle": false
+        },
+        {
+          "active": 0,
+          "showTitle": true
+        },
+        {
+          "active": 1,
+          "showTitle": true
+        }
+      ],
+      [
+        {},
+        {
+          "open": false
+        },
+        {
+          "active": 1
+        }
+      ],
+      [
+        {},
+        {
+          "active": 2
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

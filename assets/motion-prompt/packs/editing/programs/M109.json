@@ -1,0 +1,331 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t04g",
+  "title": "该选哪条路",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "question": "你更需要哪一种结果？",
+    "condition0": "快速使用",
+    "result0": "直接安装",
+    "detail0": "已有能力满足需求",
+    "condition1": "需要改造",
+    "result1": "获取源码",
+    "detail1": "保留控制权与扩展空间"
+  },
+  "nodes": [
+    {
+      "id": "n001-pill",
+      "kind": "pill",
+      "x": 470,
+      "y": 120,
+      "w": 980,
+      "h": 150,
+      "label": "{{question}}",
+      "size": 63,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "n002-path",
+      "kind": "path",
+      "x": 960,
+      "y": 270,
+      "w": 1,
+      "h": 1,
+      "path": "M0 0 L0 140 L-490 140 L-490 260 M0 140 L490 140 L490 260",
+      "length": 1600,
+      "fill": "#62616C",
+      "strokeWidth": 5,
+      "tracks": {
+        "draw": [
+          [
+            0.48,
+            0
+          ],
+          [
+            2.28,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 170,
+      "y": 440,
+      "w": 580,
+      "h": 90,
+      "text": "{{condition0}}",
+      "size": 46,
+      "color": "#62616C",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.38,
+            0
+          ],
+          [
+            2.1,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.38,
+            475
+          ],
+          [
+            2.1,
+            440,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-pill",
+      "kind": "pill",
+      "x": 170,
+      "y": 570,
+      "w": 580,
+      "h": 160,
+      "label": "{{result0}}",
+      "size": 62,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.8,
+            0
+          ],
+          [
+            2.52,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.8,
+            605
+          ],
+          [
+            2.52,
+            570,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-text",
+      "kind": "text",
+      "x": 170,
+      "y": 790,
+      "w": 580,
+      "h": 100,
+      "text": "{{detail0}}",
+      "size": 38,
+      "color": "#62616C",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.4,
+            0
+          ],
+          [
+            3.12,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.4,
+            825
+          ],
+          [
+            3.12,
+            790,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-text",
+      "kind": "text",
+      "x": 1170,
+      "y": 440,
+      "w": 580,
+      "h": 90,
+      "text": "{{condition1}}",
+      "size": 46,
+      "color": "#62616C",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.22,
+            0
+          ],
+          [
+            2.94,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.22,
+            475
+          ],
+          [
+            2.94,
+            440,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 1170,
+      "y": 570,
+      "w": 580,
+      "h": 160,
+      "label": "{{result1}}",
+      "size": 62,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.64,
+            0
+          ],
+          [
+            3.36,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.64,
+            605
+          ],
+          [
+            3.36,
+            570,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-text",
+      "kind": "text",
+      "x": 1170,
+      "y": 790,
+      "w": 580,
+      "h": 100,
+      "text": "{{detail1}}",
+      "size": 38,
+      "color": "#62616C",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.24,
+            0
+          ],
+          [
+            3.96,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.24,
+            825
+          ],
+          [
+            3.96,
+            790,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-rect",
+      "kind": "rect",
+      "x": 1160,
+      "y": 560,
+      "w": 600,
+      "h": 180,
+      "radius": 90,
+      "fill": "rgba(214,194,255,.25)",
+      "stroke": "#D6C2FF",
+      "strokeWidth": 6,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.32,
+            0
+          ],
+          [
+            4.92,
+            1
+          ],
+          [
+            5.4,
+            0.35
+          ],
+          [
+            6,
+            0.8
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

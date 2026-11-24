@@ -1,0 +1,36 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t14d",
+  "title": "前后数值变化",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "before": 69,
+    "after": 75.4
+  },
+  "nodes": [
+    {
+      "id": "n001-b3-delta",
+      "kind": "b3-delta",
+      "x": 250,
+      "y": 270,
+      "w": 1420,
+      "h": 640,
+      "beforeKey": "before",
+      "afterKey": "after",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            4.15,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

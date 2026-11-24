@@ -1,0 +1,48 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t15a",
+  "title": "跑分条形图：条依次长出，主角高亮",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "values": [
+      75.4,
+      74.3,
+      69
+    ],
+    "labels": [
+      "方案 A",
+      "方案 B",
+      "方案 C"
+    ],
+    "main": 0
+  },
+  "nodes": [
+    {
+      "id": "n001-b3-bars",
+      "kind": "b3-bars",
+      "x": 260,
+      "y": 180,
+      "w": 1320,
+      "h": 720,
+      "valuesKey": "values",
+      "labelsKey": "labels",
+      "activeKey": "main",
+      "suffix": "%",
+      "decimals": 1,
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            4.5,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

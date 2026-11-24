@@ -1,0 +1,358 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t04e",
+  "title": "拆开看里面装了什么",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "part0": "代码目录",
+    "detail0": "组成与结构",
+    "part1": "项目说明",
+    "detail1": "理解使用方法",
+    "part2": "发布版本",
+    "detail2": "直接下载使用",
+    "question": "一个项目里，分别装着什么？",
+    "spark": "✦"
+  },
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 260,
+      "y": 130,
+      "w": 1400,
+      "h": 800,
+      "asset": "screen",
+      "fit": "contain",
+      "radius": 18,
+      "tracks": {
+        "blur": [
+          [
+            0,
+            0
+          ],
+          [
+            1.2,
+            0
+          ],
+          [
+            2.28,
+            10
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            2.28,
+            0.5
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-card",
+      "kind": "card",
+      "x": 210,
+      "y": 390,
+      "w": 480,
+      "h": 340,
+      "children": [
+        {
+          "id": "n002-rect",
+          "kind": "rect",
+          "x": 175,
+          "y": 45,
+          "w": 130,
+          "h": 100,
+          "fill": "#D6C2FF",
+          "radius": 14
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 30,
+          "y": 180,
+          "w": 420,
+          "h": 60,
+          "text": "{{part0}}",
+          "size": 48,
+          "color": "#0B0B0F",
+          "align": "center"
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 30,
+          "y": 260,
+          "w": 420,
+          "h": 55,
+          "text": "{{detail0}}",
+          "size": 31,
+          "color": "#62616C",
+          "align": "center"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.38,
+            0
+          ],
+          [
+            2.1,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.38,
+            425
+          ],
+          [
+            2.1,
+            390,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-card",
+      "kind": "card",
+      "x": 750,
+      "y": 390,
+      "w": 480,
+      "h": 340,
+      "children": [
+        {
+          "id": "n006-rect",
+          "kind": "rect",
+          "x": 175,
+          "y": 45,
+          "w": 130,
+          "h": 100,
+          "fill": "#D6C2FF",
+          "radius": 14
+        },
+        {
+          "id": "n007-text",
+          "kind": "text",
+          "x": 30,
+          "y": 180,
+          "w": 420,
+          "h": 60,
+          "text": "{{part1}}",
+          "size": 48,
+          "color": "#0B0B0F",
+          "align": "center"
+        },
+        {
+          "id": "n008-text",
+          "kind": "text",
+          "x": 30,
+          "y": 260,
+          "w": 420,
+          "h": 55,
+          "text": "{{detail1}}",
+          "size": 31,
+          "color": "#62616C",
+          "align": "center"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.8,
+            0
+          ],
+          [
+            2.52,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.8,
+            425
+          ],
+          [
+            2.52,
+            390,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013-card",
+      "kind": "card",
+      "x": 1290,
+      "y": 390,
+      "w": 480,
+      "h": 340,
+      "children": [
+        {
+          "id": "n010-rect",
+          "kind": "rect",
+          "x": 175,
+          "y": 45,
+          "w": 130,
+          "h": 100,
+          "fill": "#D6C2FF",
+          "radius": 14
+        },
+        {
+          "id": "n011-text",
+          "kind": "text",
+          "x": 30,
+          "y": 180,
+          "w": 420,
+          "h": 60,
+          "text": "{{part2}}",
+          "size": 48,
+          "color": "#0B0B0F",
+          "align": "center"
+        },
+        {
+          "id": "n012-text",
+          "kind": "text",
+          "x": 30,
+          "y": 260,
+          "w": 420,
+          "h": 55,
+          "text": "{{detail2}}",
+          "size": 31,
+          "color": "#62616C",
+          "align": "center"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.22,
+            0
+          ],
+          [
+            2.94,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.22,
+            425
+          ],
+          [
+            2.94,
+            390,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014-pill",
+      "kind": "pill",
+      "x": 380,
+      "y": 160,
+      "w": 1160,
+      "h": 150,
+      "label": "{{question}}",
+      "size": 60,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.0,
+            0
+          ],
+          [
+            3.72,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.0,
+            195
+          ],
+          [
+            3.72,
+            160,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n015-text",
+      "kind": "text",
+      "x": 310,
+      "y": 130,
+      "w": 130,
+      "h": 130,
+      "text": "{{spark}}",
+      "size": 100,
+      "color": "#D6C2FF",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.5,
+            0
+          ],
+          [
+            5.22,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            4.5,
+            165
+          ],
+          [
+            5.22,
+            130,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {
+    "screen": "aba20e6c2937800563"
+  }
+}

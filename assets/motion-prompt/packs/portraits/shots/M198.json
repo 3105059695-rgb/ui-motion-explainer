@@ -1,0 +1,75 @@
+{
+  "id": "M198",
+  "layout": "native",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-capacity",
+      "states": [
+        {
+          "limitKB": 100
+        },
+        {
+          "limitKB": 200
+        },
+        {
+          "limitKB": 500
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-jev",
+      "start": 94,
+      "end": 104
+    }
+  ],
+  "chain": [
+    "模型的需求量与 8、24、80 GB 三档显存放在同一尺度上，逐项判断能否容纳。"
+  ],
+  "binding": {
+    "headline": "文件装得下吗",
+    "captions": [
+      "还是这三份文件。",
+      "放在同一条容量线上比较。",
+      "上限改变，能放下的版本也会变。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "网页图片上限",
+        "items": [
+          "输入原图",
+          "质量 75",
+          "质量 50"
+        ],
+        "values": [
+          494374,
+          163502,
+          95873
+        ],
+        "limitKB": 100
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "limitKB": 100
+        },
+        {
+          "limitKB": 200
+        },
+        {
+          "limitKB": 500
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

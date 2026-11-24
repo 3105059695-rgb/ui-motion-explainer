@@ -1,0 +1,108 @@
+{
+  "id": "M285",
+  "layout": "match",
+  "layers": [
+    {
+      "kind": "live",
+      "strip": "girl-manual-0-5400",
+      "slot": "media1",
+      "label": "主体动作视频"
+    },
+    {
+      "kind": "ui",
+      "component": "filmstrip",
+      "states": [
+        {},
+        {
+          "active": 6
+        },
+        {
+          "active": 6
+        }
+      ],
+      "media": [],
+      "sampleClip": "media1"
+    },
+    {
+      "kind": "live",
+      "strip": "girl-manual-1700-4800",
+      "slot": "media9",
+      "label": "结果视频",
+      "followSlot": "media1"
+    }
+  ],
+  "refs": [
+    {
+      "video": "girl-manual",
+      "start": 0.0,
+      "end": 6.5
+    }
+  ],
+  "chain": [
+    "先看人拿到材料",
+    "动作经过时始终跟着同一对象",
+    "放稳以后再标出它的去处"
+  ],
+  "binding": {
+    "headline": "这份资料怎么过去？",
+    "captions": [
+      "她先走到材料旁边。",
+      "同一份资料跟着她移动。",
+      "放下之后，再看它到了哪里。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "label": "同一段动作",
+        "frames": [
+          "frame-0.webp",
+          "frame-1.webp",
+          "frame-2.webp",
+          "frame-3.webp",
+          "frame-4.webp",
+          "frame-5.webp",
+          "frame-6.webp"
+        ],
+        "marks": [
+          0,
+          0.9,
+          1.8,
+          2.7,
+          3.6,
+          4.5,
+          5.35
+        ],
+        "active": 0
+      },
+      {}
+    ],
+    "keyframes": [
+      [],
+      [
+        {},
+        {
+          "active": 6
+        },
+        {
+          "active": 6
+        }
+      ],
+      []
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "主体动作视频"
+    },
+    {
+      "key": "media9",
+      "name": "结果视频"
+    }
+  ]
+}

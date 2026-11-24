@@ -1,0 +1,158 @@
+{
+  "id": "M223",
+  "layout": "rewind",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "code-snippet",
+      "states": [
+        {},
+        {},
+        {}
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "line-diff",
+      "states": [
+        {},
+        {
+          "onlyChanges": true
+        },
+        {
+          "onlyChanges": true
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "version-history",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 0
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "claude",
+      "start": 1476,
+      "end": 1498,
+      "shotIds": [
+        "CR038",
+        "CR039",
+        "CR040"
+      ],
+      "rowIds": [
+        "CR-L0575",
+        "CR-L0576",
+        "CR-L0577",
+        "CR-L0578",
+        "CR-L0579",
+        "CR-L0580",
+        "CR-L0581",
+        "CR-L0582"
+      ]
+    }
+  ],
+  "chain": [
+    "同一代码与终端并列",
+    "实际修改引出红色错误",
+    "发出恢复命令",
+    "相同位置错误消失"
+  ],
+  "binding": {
+    "headline": "原位对照改坏与恢复",
+    "captions": [
+      "盯住同一行",
+      "改动以后先看到差异",
+      "回退后再核对这一处"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "label": "导出设置 · JSON",
+        "lines": [
+          "{",
+          "  \"quality\": 50,",
+          "  \"resize\": false",
+          "}"
+        ]
+      },
+      {
+        "title": "交付说明",
+        "oldLines": [
+          "保留输入原图",
+          "直接覆盖输出",
+          "核对文件体积"
+        ],
+        "newLines": [
+          "保留输入原图",
+          "另存网页副本",
+          "核对文件体积"
+        ],
+        "onlyChanges": false
+      },
+      {
+        "items": [
+          "第三版",
+          "第二版",
+          "第一版"
+        ],
+        "meta": [
+          "15:40 · 林青",
+          "13:15 · 方木",
+          "09:20 · 林青"
+        ],
+        "bodies": [
+          "换入核对后的数据",
+          "补充两条素材出处",
+          "建立采访提纲"
+        ],
+        "active": 0
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {},
+        {}
+      ],
+      [
+        {},
+        {
+          "onlyChanges": true
+        },
+        {
+          "onlyChanges": true
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 0
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

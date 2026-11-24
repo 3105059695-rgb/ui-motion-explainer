@@ -7,6 +7,7 @@ from urllib.parse import parse_qs, urlsplit
 
 import reference_edits as edits
 import shot_direction as art
+import numbered_motions
 from video_routing import Router, _evidence
 from video_sources import Catalog, ROOT
 
@@ -39,6 +40,8 @@ def library(root=ROOT):
 def card(ident, root=ROOT):
     if ident == 'original':
         return dict(KEEP)
+    if numbered_motions.number(ident):
+        return numbered_motions.card(ident,root)
     catalog, _, recipes, directions = library(root)
     recipe = recipes[ident]
     row = catalog.lookup(ident)

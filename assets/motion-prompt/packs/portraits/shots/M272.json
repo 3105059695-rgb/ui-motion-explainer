@@ -1,0 +1,152 @@
+{
+  "id": "M272",
+  "layout": "quota",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "statistic",
+      "states": [
+        {
+          "value": "3"
+        },
+        {
+          "value": "1"
+        },
+        {
+          "value": "0"
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "progress",
+      "states": [
+        {
+          "value": 0
+        },
+        {
+          "value": 67
+        },
+        {
+          "value": 100
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "alert",
+      "states": [
+        {
+          "open": false
+        },
+        {
+          "open": false
+        },
+        {
+          "open": true
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "arun-membership",
+      "start": 74,
+      "end": 88,
+      "shotIds": [
+        "A-S021",
+        "A-S022"
+      ],
+      "rowIds": [
+        "A-L037",
+        "A-L038",
+        "A-L039",
+        "A-L040",
+        "A-L041",
+        "A-L042",
+        "A-L043",
+        "A-L044",
+        "A-L045",
+        "A-L046",
+        "A-L047"
+      ]
+    }
+  ],
+  "chain": [
+    "资源额度条和真实任务证据同场建立",
+    "圈注当前任务，计时增加同时额度减少",
+    "额度耗尽后接真实耗尽提示",
+    "明确换成任务完成进度，开始推进",
+    "进度中途停止并灰化，受阻标记落在停止处",
+    "光标尝试人工接手，失败标记说明后果"
+  ],
+  "binding": {
+    "headline": "三次额度，用完会怎样？",
+    "captions": [
+      "本次有三次可用额度",
+      "任务用掉了两次",
+      "最后一次用完，任务停在这里"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "label": "剩余额度",
+        "value": "3",
+        "unit": "次",
+        "note": "任务示例"
+      },
+      {
+        "label": "已用额度",
+        "value": 0
+      },
+      {
+        "title": "额度已经用完",
+        "body": "本次任务停在这里。",
+        "open": true
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "value": "3"
+        },
+        {
+          "value": "1"
+        },
+        {
+          "value": "0"
+        }
+      ],
+      [
+        {
+          "value": 0
+        },
+        {
+          "value": 67
+        },
+        {
+          "value": 100
+        }
+      ],
+      [
+        {
+          "open": false
+        },
+        {
+          "open": false
+        },
+        {
+          "open": true
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

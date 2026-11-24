@@ -1,0 +1,154 @@
+{
+  "id": "M229",
+  "layout": "attach",
+  "layers": [
+    {
+      "kind": "photo",
+      "file": "fr-lunar.webp",
+      "slot": "media1",
+      "label": "输入原图"
+    },
+    {
+      "kind": "ui",
+      "component": "timeline",
+      "states": [
+        {},
+        {
+          "active": 2
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-field",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": [
+        {
+          "slot": "media2",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "network",
+      "start": 53,
+      "end": 65.6,
+      "shotIds": [
+        "N019",
+        "N020",
+        "N021",
+        "N022",
+        "N023"
+      ],
+      "rowIds": [
+        "N-L018",
+        "N-L019",
+        "N-L020",
+        "N-L021",
+        "N-L022",
+        "N-L023"
+      ]
+    }
+  ],
+  "chain": [
+    "建筑素材上出现1989，先定位时间和地点。",
+    "说到人名，人物剪影和姓名来到前景，建筑压暗。",
+    "说提案，白色提案页覆盖到人物前，标题和关系图成为主体。",
+    "接旧电脑演示素材，最后以WWW与双语全称给行动命名。"
+  ],
+  "binding": {
+    "headline": "在同一历史现场加上时间与出处",
+    "captions": [
+      "先交代这件材料",
+      "日期贴到对应事件",
+      "出处落在原件旁边"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "items": [
+          "导入素材",
+          "完成初剪",
+          "提交复核"
+        ],
+        "times": [
+          "09:10",
+          "11:30",
+          "14:05"
+        ],
+        "active": 1
+      },
+      {
+        "image": "fr-record.webp",
+        "title": "NASA 图片记录",
+        "items": [
+          "摄影署名",
+          "记录日期",
+          "页面语言"
+        ],
+        "values": [
+          "NASA/Bill Anders",
+          "December 24, 1968",
+          "English"
+        ],
+        "active": 0
+      }
+    ],
+    "keyframes": [
+      [],
+      [
+        {},
+        {
+          "active": 2
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "输入原图"
+    },
+    {
+      "key": "media2",
+      "name": "原件字段摘读 · fr-record"
+    }
+  ]
+}

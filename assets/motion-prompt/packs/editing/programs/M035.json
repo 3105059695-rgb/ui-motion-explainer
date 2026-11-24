@@ -1,0 +1,67 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t20k",
+  "title": "屏幕立起：平躺的画面翻起立正",
+  "duration": 4,
+  "background": "#FFFFFF",
+  "inputs": {},
+  "nodes": [
+    {
+      "id": "n001-b2-perspective-media",
+      "kind": "b2-perspective-media",
+      "x": 170,
+      "y": 120,
+      "w": 1580,
+      "h": 850,
+      "asset": "screen",
+      "tracks": {
+        "angle": [
+          [
+            0,
+            77
+          ],
+          [
+            1.4,
+            0,
+            "back"
+          ]
+        ]
+      }
+    }
+  ],
+  "camera": {
+    "tracks": {
+      "scale": [
+        [
+          0,
+          1
+        ],
+        [
+          1.92,
+          1
+        ],
+        [
+          3.0,
+          1.35
+        ]
+      ],
+      "x": [
+        [
+          0,
+          0
+        ],
+        [
+          1.92,
+          0
+        ],
+        [
+          3.0,
+          180
+        ]
+      ]
+    }
+  },
+  "assets": {
+    "screen": "aba20e6c2937800563"
+  }
+}

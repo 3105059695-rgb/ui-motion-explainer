@@ -1,0 +1,117 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t01g",
+  "title": "黑窗打字：背景失焦，黑窗里逐行打出规则",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "rule0": "1. 先理解输入与目标",
+    "rule1": "2. 保留真实内容与出处",
+    "rule2": "3. 完成以后逐项核对"
+  },
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 260,
+      "y": 130,
+      "w": 1400,
+      "h": 800,
+      "asset": "screen",
+      "fit": "contain",
+      "radius": 18,
+      "blur": 14,
+      "opacity": 0.25
+    },
+    {
+      "id": "n002-window",
+      "kind": "window",
+      "x": 260,
+      "y": 160,
+      "w": 1400,
+      "h": 750,
+      "fill": "#0B0B0F",
+      "label": "本期规则",
+      "children": [
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 70,
+          "y": 150,
+          "w": 1260,
+          "h": 100,
+          "text": "{{rule0}}",
+          "size": 58,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "characters": [
+              [
+                0.3,
+                0
+              ],
+              [
+                1.5,
+                11,
+                "linear"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 70,
+          "y": 325,
+          "w": 1260,
+          "h": 100,
+          "text": "{{rule1}}",
+          "size": 58,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "characters": [
+              [
+                1.68,
+                0
+              ],
+              [
+                2.88,
+                12,
+                "linear"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 70,
+          "y": 500,
+          "w": 1260,
+          "h": 100,
+          "text": "{{rule2}}",
+          "size": 58,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "characters": [
+              [
+                3.06,
+                0
+              ],
+              [
+                4.26,
+                11,
+                "linear"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "screen": "aba20e6c2937800563"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "M209",
+  "layout": "native",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-verdict",
+      "states": [
+        {
+          "stage": 0
+        },
+        {
+          "stage": 1
+        },
+        {
+          "stage": 2
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-argon",
+      "start": 77,
+      "end": 84
+    }
+  ],
+  "chain": [
+    "场景示例先占满画面，随后同一画面退到背景，中央短签给出判断。"
+  ],
+  "binding": {
+    "headline": "这份副本可以交付吗",
+    "captions": [
+      "这是实际导出的副本。",
+      "这次的限制是 100 kB。",
+      "实测约 95.9 kB，符合这项条件。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "image": "fr-screen.webp",
+        "title": "可以交付网页副本",
+        "condition": "本例上限 100 kB",
+        "evidence": "实测 95.9 kB",
+        "stage": 2
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "stage": 0
+        },
+        {
+          "stage": 1
+        },
+        {
+          "stage": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "实景上的结论字幕签 · fr-screen"
+    }
+  ]
+}

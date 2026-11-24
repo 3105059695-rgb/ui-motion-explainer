@@ -1,0 +1,511 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t03e",
+  "title": "步骤折行串起",
+  "duration": 7,
+  "background": "#FFFFFF",
+  "inputs": {
+    "step0": "1  明确目标",
+    "step1": "2  准备资料",
+    "step2": "3  启动任务",
+    "step3": "4  读取上下文",
+    "step4": "5  执行操作",
+    "step5": "6  检查结果",
+    "step6": "7  修改细节",
+    "step7": "8  最终交付"
+  },
+  "nodes": [
+    {
+      "id": "n001-window",
+      "kind": "window",
+      "x": 130,
+      "y": 90,
+      "w": 1660,
+      "h": 900,
+      "fill": "#0B0B0F",
+      "label": "完整操作链",
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 80,
+          "y": 150,
+          "w": 430,
+          "h": 110,
+          "text": "{{step0}}",
+          "size": 52,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0.0,
+                0
+              ],
+              [
+                0.91,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                0.0,
+                185
+              ],
+              [
+                0.91,
+                150,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n003-b2-growing-line",
+          "kind": "b2-growing-line",
+          "x": 500,
+          "y": 205,
+          "w": 85,
+          "h": 0,
+          "arrow": true,
+          "fill": "#FFFFFF",
+          "strokeWidth": 5,
+          "tracks": {
+            "value": [
+              [
+                0.49,
+                0
+              ],
+              [
+                0.98,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 620,
+          "y": 150,
+          "w": 430,
+          "h": 110,
+          "text": "{{step1}}",
+          "size": 52,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                0.595,
+                0
+              ],
+              [
+                1.505,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                0.595,
+                185
+              ],
+              [
+                1.505,
+                150,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n005-b2-growing-line",
+          "kind": "b2-growing-line",
+          "x": 1040,
+          "y": 205,
+          "w": 85,
+          "h": 0,
+          "arrow": true,
+          "fill": "#FFFFFF",
+          "strokeWidth": 5,
+          "tracks": {
+            "value": [
+              [
+                1.085,
+                0
+              ],
+              [
+                1.575,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n006-text",
+          "kind": "text",
+          "x": 1160,
+          "y": 150,
+          "w": 430,
+          "h": 110,
+          "text": "{{step2}}",
+          "size": 52,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                1.19,
+                0
+              ],
+              [
+                2.1,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                1.19,
+                185
+              ],
+              [
+                2.1,
+                150,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n007-path",
+          "kind": "path",
+          "x": 30,
+          "y": 275,
+          "w": 1570,
+          "h": 160,
+          "path": "M1500 0 C1600 0 1600 125 1450 125 L90 125 C0 125 0 170 0 175",
+          "length": 2100,
+          "fill": "#FFFFFF",
+          "strokeWidth": 4,
+          "tracks": {
+            "draw": [
+              [
+                1.75,
+                0
+              ],
+              [
+                2.45,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n008-text",
+          "kind": "text",
+          "x": 80,
+          "y": 410,
+          "w": 430,
+          "h": 110,
+          "text": "{{step3}}",
+          "size": 52,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                1.785,
+                0
+              ],
+              [
+                2.695,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                1.785,
+                445
+              ],
+              [
+                2.695,
+                410,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n009-b2-growing-line",
+          "kind": "b2-growing-line",
+          "x": 500,
+          "y": 465,
+          "w": 85,
+          "h": 0,
+          "arrow": true,
+          "fill": "#FFFFFF",
+          "strokeWidth": 5,
+          "tracks": {
+            "value": [
+              [
+                2.275,
+                0
+              ],
+              [
+                2.765,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n010-text",
+          "kind": "text",
+          "x": 620,
+          "y": 410,
+          "w": 430,
+          "h": 110,
+          "text": "{{step4}}",
+          "size": 52,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                2.38,
+                0
+              ],
+              [
+                3.29,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                2.38,
+                445
+              ],
+              [
+                3.29,
+                410,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n011-b2-growing-line",
+          "kind": "b2-growing-line",
+          "x": 1040,
+          "y": 465,
+          "w": 85,
+          "h": 0,
+          "arrow": true,
+          "fill": "#FFFFFF",
+          "strokeWidth": 5,
+          "tracks": {
+            "value": [
+              [
+                2.87,
+                0
+              ],
+              [
+                3.36,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n012-text",
+          "kind": "text",
+          "x": 1160,
+          "y": 410,
+          "w": 430,
+          "h": 110,
+          "text": "{{step5}}",
+          "size": 52,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                2.975,
+                0
+              ],
+              [
+                3.885,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                2.975,
+                445
+              ],
+              [
+                3.885,
+                410,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n013-path",
+          "kind": "path",
+          "x": 30,
+          "y": 535,
+          "w": 1570,
+          "h": 160,
+          "path": "M1500 0 C1600 0 1600 125 1450 125 L90 125 C0 125 0 170 0 175",
+          "length": 2100,
+          "fill": "#FFFFFF",
+          "strokeWidth": 4,
+          "tracks": {
+            "draw": [
+              [
+                3.535,
+                0
+              ],
+              [
+                4.235,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n014-text",
+          "kind": "text",
+          "x": 80,
+          "y": 670,
+          "w": 430,
+          "h": 110,
+          "text": "{{step6}}",
+          "size": 52,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                3.57,
+                0
+              ],
+              [
+                4.48,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                3.57,
+                705
+              ],
+              [
+                4.48,
+                670,
+                "out"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n015-b2-growing-line",
+          "kind": "b2-growing-line",
+          "x": 500,
+          "y": 725,
+          "w": 85,
+          "h": 0,
+          "arrow": true,
+          "fill": "#FFFFFF",
+          "strokeWidth": 5,
+          "tracks": {
+            "value": [
+              [
+                4.06,
+                0
+              ],
+              [
+                4.55,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "n016-text",
+          "kind": "text",
+          "x": 620,
+          "y": 670,
+          "w": 430,
+          "h": 110,
+          "text": "{{step7}}",
+          "size": 52,
+          "color": "#FFFFFF",
+          "align": "left",
+          "tracks": {
+            "opacity": [
+              [
+                0,
+                0
+              ],
+              [
+                4.165,
+                0
+              ],
+              [
+                5.075,
+                1,
+                "out"
+              ]
+            ],
+            "y": [
+              [
+                4.165,
+                705
+              ],
+              [
+                5.075,
+                670,
+                "out"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "assets": {}
+}

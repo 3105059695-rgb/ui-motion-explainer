@@ -1,0 +1,243 @@
+{
+  "id": "M244",
+  "layout": "carry",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "file-preview",
+      "states": [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "zoom": 170
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "plan-checklist",
+      "states": [
+        {
+          "completed": 0
+        },
+        {
+          "completed": 1
+        },
+        {
+          "completed": 3
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "composer",
+      "states": [
+        {
+          "attached": false,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": true
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "creative",
+      "start": 682,
+      "end": 698,
+      "shotIds": [
+        "C143",
+        "C144",
+        "C145",
+        "C146"
+      ],
+      "rowIds": [
+        "C-L151",
+        "C-L152",
+        "C-L153",
+        "C-L154"
+      ]
+    },
+    {
+      "video": "creative",
+      "start": 703,
+      "end": 734,
+      "shotIds": [
+        "C148",
+        "C149",
+        "C150",
+        "C151",
+        "C152",
+        "C153"
+      ],
+      "rowIds": [
+        "C-L155",
+        "C-L156",
+        "C-L157",
+        "C-L158",
+        "C-L159",
+        "C-L160",
+        "C-L161"
+      ]
+    },
+    {
+      "video": "creative",
+      "start": 743,
+      "end": 809,
+      "shotIds": [
+        "C156",
+        "C157",
+        "C158",
+        "C159",
+        "C160",
+        "C161",
+        "C162",
+        "C163",
+        "C164",
+        "C165",
+        "C166",
+        "C167",
+        "C168",
+        "C169",
+        "C170",
+        "C171"
+      ],
+      "rowIds": [
+        "C-L162",
+        "C-L163",
+        "C-L164",
+        "C-L165",
+        "C-L166",
+        "C-L167",
+        "C-L168",
+        "C-L169",
+        "C-L170",
+        "C-L171",
+        "C-L172"
+      ]
+    }
+  ],
+  "chain": [
+    "确认节奏结构后，导演脚本展开为每镜时长、画面和字幕/旁白字段。",
+    "选Casting Room并确认资产模块，产出人物小传、造型、三视图、声音卡与表情组，再进入主体库。",
+    "Previs先把脚本拆成文字镜头时间线；播放头推进时切换文字镜头。",
+    "选择具体镜头调整景别、运镜、时长，再确认生成黑白故事板。",
+    "按产品特写、佩戴、街景、对谈顺序预演故事板，检查构图与接镜。",
+    "选中3×3故事板作为引用输入，制作方案明确列出故事板、产品和人物资产，随后出现视频任务节点与结果帧。"
+  ],
+  "binding": {
+    "headline": "确认草稿后挂到生成请求",
+    "captions": [
+      "先检查本轮草稿",
+      "确认以后保留同一份文件",
+      "把它挂到下一次制作请求"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "素材校对图册",
+        "items": [
+          "输入照片",
+          "处理界面"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp"
+        ],
+        "active": 0,
+        "zoom": 100
+      },
+      {
+        "items": [
+          "读取输入资料",
+          "提取关键信息",
+          "生成核对清单"
+        ],
+        "completed": 1
+      },
+      {
+        "text": "请对照这份资料列出变化。",
+        "file": "交付记录.md",
+        "attached": true,
+        "sent": false
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "zoom": 170
+        }
+      ],
+      [
+        {
+          "completed": 0
+        },
+        {
+          "completed": 1
+        },
+        {
+          "completed": 3
+        }
+      ],
+      [
+        {
+          "attached": false,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": false
+        },
+        {
+          "attached": true,
+          "sent": true
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "分页文件预览器 · earth"
+    },
+    {
+      "key": "media2",
+      "name": "分页文件预览器 · interface"
+    }
+  ]
+}

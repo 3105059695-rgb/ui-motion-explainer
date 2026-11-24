@@ -1,0 +1,188 @@
+{
+  "id": "M232",
+  "layout": "focus",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "app-window",
+      "states": [
+        {},
+        {
+          "active": 2
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "contents",
+      "states": [
+        {},
+        {
+          "active": 0
+        },
+        {
+          "active": 0
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-spotlight",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "network",
+      "start": 472.1,
+      "end": 487.7,
+      "shotIds": [
+        "N119",
+        "N120",
+        "N121"
+      ],
+      "rowIds": [
+        "N-L199",
+        "N-L200",
+        "N-L201",
+        "N-L202",
+        "N-L203",
+        "N-L204",
+        "N-L205"
+      ]
+    }
+  ],
+  "chain": [
+    "完整软件窗口在背景中，左下保留讲述者圆窗。",
+    "讲我的炉子时，侧栏白区放大成为焦点，其余界面变暗。",
+    "列四种栏目时，高亮区缩到四项并加橙色虚线框。",
+    "右侧勾选格式列表逐项增加，箭头仍指向同一个存储入口。"
+  ],
+  "binding": {
+    "headline": "从模块收窄到栏目",
+    "captions": [
+      "先记住这是哪个窗口",
+      "定位到当前栏目",
+      "只看口播点名的那一处"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "素材管理",
+        "items": [
+          "文件名",
+          "采访原声.wav",
+          "采访提纲.md"
+        ],
+        "active": 1
+      },
+      {
+        "items": [
+          "素材来源",
+          "处理方法",
+          "导出结果"
+        ],
+        "bodies": [
+          "素材来自本期现场录制。",
+          "从原文件制作网页副本。",
+          "副本与原件分别保存。"
+        ],
+        "active": 1
+      },
+      {
+        "image": "fr-screen.webp",
+        "title": "Squoosh",
+        "items": [
+          "编码格式",
+          "导出质量",
+          "文件体积"
+        ],
+        "rects": [
+          [
+            79,
+            73.5,
+            20,
+            6.2
+          ],
+          [
+            79,
+            79.8,
+            20,
+            7
+          ],
+          [
+            81,
+            91.5,
+            13,
+            6.7
+          ]
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "active": 2
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {},
+        {
+          "active": 0
+        },
+        {
+          "active": 0
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "原界面聚光框 · fr-screen"
+    }
+  ]
+}

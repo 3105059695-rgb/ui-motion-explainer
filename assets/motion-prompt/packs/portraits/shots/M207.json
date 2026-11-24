@@ -1,0 +1,82 @@
+{
+  "id": "M207",
+  "layout": "native",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-handoff",
+      "states": [
+        {
+          "delivered": []
+        },
+        {
+          "delivered": [
+            0
+          ]
+        },
+        {
+          "delivered": [
+            0,
+            1
+          ]
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-jev",
+      "start": 8,
+      "end": 17
+    }
+  ],
+  "chain": [
+    "本地与官方模型在两端，连接的可用条件和受限位置放在两端之间。"
+  ],
+  "binding": {
+    "headline": "本期素材交接",
+    "captions": [
+      "素材先在编辑这边。",
+      "开始发送。",
+      "剪辑台收到后才亮起回执。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "sender": "素材编辑",
+        "recipient": "剪辑台",
+        "items": [
+          "素材目录",
+          "输入原图"
+        ],
+        "delivered": [
+          0
+        ]
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "delivered": []
+        },
+        {
+          "delivered": [
+            0
+          ]
+        },
+        {
+          "delivered": [
+            0,
+            1
+          ]
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t20q",
+  "title": "大字透画：标题字里透出画面再展开",
+  "duration": 4,
+  "background": "#FFFFFF",
+  "inputs": {
+    "title": "一眼看懂"
+  },
+  "nodes": [
+    {
+      "id": "n002-image",
+      "kind": "image",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "asset": "art",
+      "fit": "cover",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.0,
+            0
+          ],
+          [
+            2.48,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n001-b2-text-media",
+      "kind": "b2-text-media",
+      "x": 200,
+      "y": 170,
+      "w": 1520,
+      "h": 740,
+      "asset": "art",
+      "text": "{{title}}",
+      "size": 320,
+      "tracks": {
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            1.0,
+            1
+          ],
+          [
+            2.6,
+            9,
+            "in"
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            1
+          ],
+          [
+            2.0,
+            1
+          ],
+          [
+            2.6,
+            0
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {
+    "art": "50bc3e314bdb7f0f4d"
+  }
+}

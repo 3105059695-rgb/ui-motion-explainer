@@ -1,0 +1,579 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t17c",
+  "title": "文件夹结构",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "root": "project/",
+    "file0": "apps/",
+    "file1": "docs/",
+    "file2": "scripts/",
+    "file3": "skills/",
+    "file4": ".gitignore",
+    "file5": "README.md",
+    "note0": "执行脚本",
+    "note1": "可调用的能力",
+    "note2": "项目入口说明",
+    "nested": "└  render/\n└  organize/\n└  publish/"
+  },
+  "nodes": [
+    {
+      "id": "n001-pill",
+      "kind": "pill",
+      "x": 210,
+      "y": 130,
+      "w": 530,
+      "h": 110,
+      "label": "{{root}}",
+      "size": 60,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "n002-path",
+      "kind": "path",
+      "x": 280,
+      "y": 240,
+      "w": 1,
+      "h": 1,
+      "path": "M0 0 L0 80 L90 80",
+      "length": 170,
+      "fill": "#DBDBE0",
+      "strokeWidth": 4,
+      "tracks": {
+        "draw": [
+          [
+            0.25,
+            0
+          ],
+          [
+            1.0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 400,
+      "y": 290,
+      "w": 650,
+      "h": 80,
+      "text": "{{file0}}",
+      "size": 42,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.6,
+            0
+          ],
+          [
+            1.2,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.6,
+            325
+          ],
+          [
+            1.2,
+            290,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-path",
+      "kind": "path",
+      "x": 280,
+      "y": 240,
+      "w": 1,
+      "h": 1,
+      "path": "M0 0 L0 180 L90 180",
+      "length": 270,
+      "fill": "#DBDBE0",
+      "strokeWidth": 4,
+      "tracks": {
+        "draw": [
+          [
+            0.45,
+            0
+          ],
+          [
+            1.2,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-text",
+      "kind": "text",
+      "x": 400,
+      "y": 390,
+      "w": 650,
+      "h": 80,
+      "text": "{{file1}}",
+      "size": 42,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.8,
+            0
+          ],
+          [
+            1.4,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.8,
+            425
+          ],
+          [
+            1.4,
+            390,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-path",
+      "kind": "path",
+      "x": 280,
+      "y": 240,
+      "w": 1,
+      "h": 1,
+      "path": "M0 0 L0 280 L90 280",
+      "length": 370,
+      "fill": "#DBDBE0",
+      "strokeWidth": 4,
+      "tracks": {
+        "draw": [
+          [
+            0.65,
+            0
+          ],
+          [
+            1.4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-text",
+      "kind": "text",
+      "x": 400,
+      "y": 490,
+      "w": 650,
+      "h": 80,
+      "text": "{{file2}}",
+      "size": 42,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.0,
+            0
+          ],
+          [
+            1.6,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.0,
+            525
+          ],
+          [
+            1.6,
+            490,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-path",
+      "kind": "path",
+      "x": 280,
+      "y": 240,
+      "w": 1,
+      "h": 1,
+      "path": "M0 0 L0 380 L90 380",
+      "length": 470,
+      "fill": "#DBDBE0",
+      "strokeWidth": 4,
+      "tracks": {
+        "draw": [
+          [
+            0.85,
+            0
+          ],
+          [
+            1.6,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-text",
+      "kind": "text",
+      "x": 400,
+      "y": 590,
+      "w": 650,
+      "h": 80,
+      "text": "{{file3}}",
+      "size": 42,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.2,
+            0
+          ],
+          [
+            1.8,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.2,
+            625
+          ],
+          [
+            1.8,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010-path",
+      "kind": "path",
+      "x": 280,
+      "y": 240,
+      "w": 1,
+      "h": 1,
+      "path": "M0 0 L0 480 L90 480",
+      "length": 570,
+      "fill": "#DBDBE0",
+      "strokeWidth": 4,
+      "tracks": {
+        "draw": [
+          [
+            1.05,
+            0
+          ],
+          [
+            1.8,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011-text",
+      "kind": "text",
+      "x": 400,
+      "y": 690,
+      "w": 650,
+      "h": 80,
+      "text": "{{file4}}",
+      "size": 42,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.4,
+            0
+          ],
+          [
+            2.0,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.4,
+            725
+          ],
+          [
+            2.0,
+            690,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012-path",
+      "kind": "path",
+      "x": 280,
+      "y": 240,
+      "w": 1,
+      "h": 1,
+      "path": "M0 0 L0 580 L90 580",
+      "length": 670,
+      "fill": "#DBDBE0",
+      "strokeWidth": 4,
+      "tracks": {
+        "draw": [
+          [
+            1.25,
+            0
+          ],
+          [
+            2.0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n013-text",
+      "kind": "text",
+      "x": 400,
+      "y": 790,
+      "w": 650,
+      "h": 80,
+      "text": "{{file5}}",
+      "size": 42,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.6,
+            0
+          ],
+          [
+            2.2,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.6,
+            825
+          ],
+          [
+            2.2,
+            790,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014-pill",
+      "kind": "pill",
+      "x": 1150,
+      "y": 475,
+      "w": 550,
+      "h": 85,
+      "label": "{{note0}}",
+      "size": 38,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.4,
+            0
+          ],
+          [
+            3.0,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.4,
+            510
+          ],
+          [
+            3.0,
+            475,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n015-pill",
+      "kind": "pill",
+      "x": 1150,
+      "y": 575,
+      "w": 550,
+      "h": 85,
+      "label": "{{note1}}",
+      "size": 38,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.1,
+            0
+          ],
+          [
+            3.7,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.1,
+            610
+          ],
+          [
+            3.7,
+            575,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n016-pill",
+      "kind": "pill",
+      "x": 1150,
+      "y": 775,
+      "w": 550,
+      "h": 85,
+      "label": "{{note2}}",
+      "size": 38,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.8,
+            0
+          ],
+          [
+            4.4,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.8,
+            810
+          ],
+          [
+            4.4,
+            775,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n017-text",
+      "kind": "text",
+      "x": 720,
+      "y": 585,
+      "w": 380,
+      "h": 190,
+      "text": "{{nested}}",
+      "size": 30,
+      "color": "#62616C",
+      "align": "left",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.4,
+            0
+          ],
+          [
+            3.0,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.4,
+            620
+          ],
+          [
+            3.0,
+            585,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

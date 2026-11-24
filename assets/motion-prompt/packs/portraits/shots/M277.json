@@ -1,0 +1,210 @@
+{
+  "id": "M277",
+  "layout": "fill",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "data-table",
+      "states": [
+        {},
+        {
+          "sort": "asc"
+        },
+        {
+          "selectable": true,
+          "selectedRows": [
+            0,
+            2
+          ]
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-criteria",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-scorecard",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "arun-membership",
+      "start": 134,
+      "end": 145,
+      "shotIds": [
+        "A-S028"
+      ],
+      "rowIds": [
+        "A-L072",
+        "A-L073",
+        "A-L074",
+        "A-L075",
+        "A-L076",
+        "A-L077",
+        "A-L078",
+        "A-L079"
+      ]
+    }
+  ],
+  "chain": [
+    "新对象卡居中后缩到侧面",
+    "评价先进入总览，再转向理由",
+    "比较表按口播逐行建立，保持相同维度对齐",
+    "列框框住被讨论对象，逐项确认归入该列"
+  ],
+  "binding": {
+    "headline": "同一维度逐行建表并锁定一列",
+    "captions": [
+      "先摆好两个候选",
+      "按照同一维度逐行比较",
+      "最后只强调当前这一列"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "headers": [
+          "项目",
+          "计算依据",
+          "体积（kB）"
+        ],
+        "rows": [
+          [
+            "输入原图",
+            "压缩前",
+            494.4
+          ],
+          [
+            "减少量",
+            "原图 − 副本",
+            398.5
+          ],
+          [
+            "网页副本",
+            "压缩后",
+            95.9
+          ]
+        ],
+        "sort": "none",
+        "frozen": false,
+        "selectable": false,
+        "selectedRows": [],
+        "expandedRows": [],
+        "details": [
+          "原文件的字节数",
+          "输入体积减去副本体积",
+          "网页输出的字节数"
+        ],
+        "wide": false,
+        "batch": ""
+      },
+      {
+        "items": [
+          "输入原图",
+          "质量 75",
+          "质量 50"
+        ],
+        "values": [
+          494374,
+          163502,
+          95873
+        ],
+        "pixels": [
+          3000,
+          3000,
+          3000
+        ],
+        "minPixel": 3000,
+        "limitKB": 100,
+        "active": 0
+      },
+      {
+        "title": "质量 50 副本",
+        "items": [
+          "文件体积",
+          "像素尺寸",
+          "网页加载耗时"
+        ],
+        "values": [
+          "95.9 kB",
+          "3000 × 3000",
+          "未测"
+        ],
+        "bodies": [
+          "本例上限 100 kB",
+          "与输入原图相同",
+          "需要实际网页计时"
+        ],
+        "active": 2
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "sort": "asc"
+        },
+        {
+          "selectable": true,
+          "selectedRows": [
+            0,
+            2
+          ]
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

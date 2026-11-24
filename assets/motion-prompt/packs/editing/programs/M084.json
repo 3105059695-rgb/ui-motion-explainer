@@ -1,0 +1,43 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t09f",
+  "title": "批量入队：逐项选中，计数跳动",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "tasks": [
+      "整理本期资料",
+      "筛选演示案例",
+      "核对数据出处",
+      "生成最终交付"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "n001-b3-checklist",
+      "kind": "b3-checklist",
+      "x": 230,
+      "y": 150,
+      "w": 1460,
+      "h": 800,
+      "labelsKey": "tasks",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            0.75,
+            0
+          ],
+          [
+            4.3,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

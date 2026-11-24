@@ -1,0 +1,115 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t12l",
+  "title": "黑圆扩散：黑圆接管画面，序号落定后领出章节名",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "index": "02",
+    "chapter": "02",
+    "title": "进入第二部分"
+  },
+  "nodes": [
+    {
+      "id": "n001-circle",
+      "kind": "circle",
+      "x": 710,
+      "y": 290,
+      "w": 500,
+      "h": 500,
+      "fill": "#0B0B0F",
+      "tracks": {
+        "scale": [
+          [
+            0,
+            0.01
+          ],
+          [
+            0.84,
+            5.2,
+            "in"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 400,
+      "y": 260,
+      "w": 1120,
+      "h": 300,
+      "text": "{{chapter}}",
+      "size": 240,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.54,
+            0
+          ],
+          [
+            0.9,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.54,
+            295
+          ],
+          [
+            0.9,
+            260,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 400,
+      "y": 635,
+      "w": 1120,
+      "h": 120,
+      "text": "{{title}}",
+      "size": 72,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.5,
+            0
+          ],
+          [
+            1.95,
+            1
+          ]
+        ],
+        "y": [
+          [
+            1.5,
+            690
+          ],
+          [
+            1.95,
+            635
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

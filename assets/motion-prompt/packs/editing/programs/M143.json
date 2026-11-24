@@ -1,0 +1,116 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-extra2-t08i",
+  "title": "毛玻璃要点卡",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "point": "这次更新真正改变了什么",
+    "detail": "保留原始资料，只把当前重点抬到前景。"
+  },
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 260,
+      "y": 130,
+      "w": 1400,
+      "h": 800,
+      "asset": "screen",
+      "fit": "contain",
+      "radius": 18,
+      "tracks": {
+        "blur": [
+          [
+            0,
+            0
+          ],
+          [
+            1.0,
+            0
+          ],
+          [
+            2.0,
+            12
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            2.0,
+            0.98
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-card",
+      "kind": "card",
+      "x": 510,
+      "y": 300,
+      "w": 900,
+      "h": 400,
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 50,
+          "y": 50,
+          "w": 800,
+          "h": 110,
+          "text": "{{point}}",
+          "size": 62,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 50,
+          "y": 205,
+          "w": 800,
+          "h": 100,
+          "text": "{{detail}}",
+          "size": 36,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "rgba(255,255,255,.92)",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.25,
+            0
+          ],
+          [
+            2.25,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.25,
+            335
+          ],
+          [
+            2.25,
+            300,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {
+    "screen": "aba20e6c2937800563"
+  }
+}

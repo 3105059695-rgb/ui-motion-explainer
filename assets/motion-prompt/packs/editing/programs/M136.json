@@ -1,0 +1,203 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t18d",
+  "title": "项目名片",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "address": "example.org/your-project",
+    "badge0": "开源项目",
+    "badge1": "跨平台",
+    "badge2": "可本地使用"
+  },
+  "nodes": [
+    {
+      "id": "n001-card",
+      "kind": "card",
+      "x": 350,
+      "y": 320,
+      "w": 1220,
+      "h": 170,
+      "children": [],
+      "fill": "#FFFFFF"
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 400,
+      "y": 368,
+      "w": 1080,
+      "h": 90,
+      "text": "{{address}}",
+      "size": 56,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "characters": [
+          [
+            0,
+            0
+          ],
+          [
+            2.0,
+            28,
+            "linear"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-pill",
+      "kind": "pill",
+      "x": 350,
+      "y": 590,
+      "w": 380,
+      "h": 100,
+      "label": "{{badge0}}",
+      "size": 39,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.0,
+            0
+          ],
+          [
+            2.6,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.0,
+            625
+          ],
+          [
+            2.6,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-pill",
+      "kind": "pill",
+      "x": 770,
+      "y": 590,
+      "w": 380,
+      "h": 100,
+      "label": "{{badge1}}",
+      "size": 39,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.6,
+            0
+          ],
+          [
+            3.2,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.6,
+            625
+          ],
+          [
+            3.2,
+            590,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-pill",
+      "kind": "pill",
+      "x": 1190,
+      "y": 590,
+      "w": 380,
+      "h": 100,
+      "label": "{{badge2}}",
+      "size": 39,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.2,
+            0
+          ],
+          [
+            3.8,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.2,
+            625
+          ],
+          [
+            3.8,
+            590,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "camera": {
+    "tracks": {
+      "scale": [
+        [
+          0,
+          1
+        ],
+        [
+          3.65,
+          1
+        ],
+        [
+          4.75,
+          0.9
+        ]
+      ],
+      "y": [
+        [
+          0,
+          0
+        ],
+        [
+          3.65,
+          0
+        ],
+        [
+          4.75,
+          -40
+        ]
+      ]
+    }
+  },
+  "assets": {}
+}

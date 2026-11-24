@@ -1,0 +1,279 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-extra2-t10a",
+  "title": "长回复拎要点",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "row10": "先明确你需要什么结果。",
+    "row21": "可以选择不同的工具：",
+    "row32": "Subtitle Edit 处理字幕，",
+    "row43": "whisper.cpp 用于本地转写，",
+    "row54": "Buzz 提供图形化操作。",
+    "summaryTitle": "提取要点",
+    "point0": "1  Subtitle Edit",
+    "point1": "2  whisper.cpp",
+    "point2": "3  Buzz"
+  },
+  "nodes": [
+    {
+      "id": "n001-window",
+      "kind": "window",
+      "x": 260,
+      "y": 160,
+      "w": 1400,
+      "h": 760,
+      "label": "完整原回复",
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 35,
+          "y": 100,
+          "w": 1330,
+          "h": 55,
+          "text": "{{row10}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 35,
+          "y": 165,
+          "w": 1330,
+          "h": 55,
+          "text": "{{row21}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 35,
+          "y": 230,
+          "w": 1330,
+          "h": 55,
+          "text": "{{row32}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 35,
+          "y": 295,
+          "w": 1330,
+          "h": 55,
+          "text": "{{row43}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n006-text",
+          "kind": "text",
+          "x": 35,
+          "y": 360,
+          "w": 1330,
+          "h": 55,
+          "text": "{{row54}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "tracks": {
+        "w": [
+          [
+            0,
+            1400
+          ],
+          [
+            1.5,
+            1400
+          ],
+          [
+            3.0,
+            770
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-card",
+      "kind": "card",
+      "x": 1120,
+      "y": 160,
+      "w": 560,
+      "h": 760,
+      "children": [
+        {
+          "id": "n007-text",
+          "kind": "text",
+          "x": 35,
+          "y": 40,
+          "w": 480,
+          "h": 70,
+          "text": "{{summaryTitle}}",
+          "size": 45,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.68,
+            0
+          ],
+          [
+            2.58,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.68,
+            195
+          ],
+          [
+            2.58,
+            160,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-pill",
+      "kind": "pill",
+      "x": 1160,
+      "y": 340,
+      "w": 480,
+      "h": 115,
+      "label": "{{point0}}",
+      "size": 40,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.1,
+            0
+          ],
+          [
+            2.82,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.1,
+            375
+          ],
+          [
+            2.82,
+            340,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010-pill",
+      "kind": "pill",
+      "x": 1160,
+      "y": 510,
+      "w": 480,
+      "h": 115,
+      "label": "{{point1}}",
+      "size": 40,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.06,
+            0
+          ],
+          [
+            3.78,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.06,
+            545
+          ],
+          [
+            3.78,
+            510,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011-pill",
+      "kind": "pill",
+      "x": 1160,
+      "y": 680,
+      "w": 480,
+      "h": 115,
+      "label": "{{point2}}",
+      "size": 40,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.02,
+            0
+          ],
+          [
+            4.74,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            4.02,
+            715
+          ],
+          [
+            4.74,
+            680,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

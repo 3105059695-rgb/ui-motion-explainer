@@ -1,0 +1,231 @@
+{
+  "id": "M295",
+  "layout": "dock",
+  "layers": [
+    {
+      "kind": "photo",
+      "file": "hokusai.webp",
+      "slot": "media1",
+      "label": "作品图"
+    },
+    {
+      "kind": "ui",
+      "component": "file-preview",
+      "states": [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "zoom": 170
+        }
+      ],
+      "media": [
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "images",
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "filmstrip",
+      "states": [
+        {},
+        {
+          "active": 6
+        },
+        {
+          "active": 6
+        }
+      ],
+      "media": [
+        {
+          "slot": "media4",
+          "path": [
+            "frames",
+            0
+          ]
+        },
+        {
+          "slot": "media5",
+          "path": [
+            "frames",
+            1
+          ]
+        },
+        {
+          "slot": "media6",
+          "path": [
+            "frames",
+            2
+          ]
+        },
+        {
+          "slot": "media7",
+          "path": [
+            "frames",
+            3
+          ]
+        },
+        {
+          "slot": "media8",
+          "path": [
+            "frames",
+            4
+          ]
+        },
+        {
+          "slot": "media9",
+          "path": [
+            "frames",
+            5
+          ]
+        },
+        {
+          "slot": "media10",
+          "path": [
+            "frames",
+            6
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "interview-n",
+      "start": 0.0,
+      "end": 18.0
+    }
+  ],
+  "chain": [
+    "先把封面完整展示",
+    "收进播放器时保持同一张图",
+    "播放进度接着往前走"
+  ],
+  "binding": {
+    "headline": "封面进了播放器",
+    "captions": [
+      "先记住这张封面。",
+      "它缩小，落进播放器。",
+      "播放开始，还是刚才那张封面。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "title": "正在播放",
+        "items": [
+          "封面",
+          "当前曲目"
+        ],
+        "images": [
+          "earth.webp",
+          "interface.webp"
+        ],
+        "active": 0,
+        "zoom": 100
+      },
+      {
+        "label": "同一段动作",
+        "frames": [
+          "frame-0.webp",
+          "frame-1.webp",
+          "frame-2.webp",
+          "frame-3.webp",
+          "frame-4.webp",
+          "frame-5.webp",
+          "frame-6.webp"
+        ],
+        "marks": [
+          0,
+          0.9,
+          1.8,
+          2.7,
+          3.6,
+          4.5,
+          5.35
+        ],
+        "active": 0
+      }
+    ],
+    "keyframes": [
+      [],
+      [
+        {},
+        {
+          "active": 1
+        },
+        {
+          "zoom": 170
+        }
+      ],
+      [
+        {},
+        {
+          "active": 6
+        },
+        {
+          "active": 6
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "作品图"
+    },
+    {
+      "key": "media2",
+      "name": "分页文件预览器 · earth"
+    },
+    {
+      "key": "media3",
+      "name": "分页文件预览器 · interface"
+    },
+    {
+      "key": "media4",
+      "name": "缩略图胶片带 · frame-0"
+    },
+    {
+      "key": "media5",
+      "name": "缩略图胶片带 · frame-1"
+    },
+    {
+      "key": "media6",
+      "name": "缩略图胶片带 · frame-2"
+    },
+    {
+      "key": "media7",
+      "name": "缩略图胶片带 · frame-3"
+    },
+    {
+      "key": "media8",
+      "name": "缩略图胶片带 · frame-4"
+    },
+    {
+      "key": "media9",
+      "name": "缩略图胶片带 · frame-5"
+    },
+    {
+      "key": "media10",
+      "name": "缩略图胶片带 · frame-6"
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t20j",
+  "title": "黑底快切：三个词连续砸出，合成一句",
+  "duration": 3.6,
+  "background": "#0B0B0F",
+  "inputs": {
+    "accent0": "谁说",
+    "accent1": "免费",
+    "accent2": "就不够好",
+    "result": "五个值得了解的工具"
+  },
+  "nodes": [
+    {
+      "id": "n001-text",
+      "kind": "text",
+      "x": 200,
+      "y": 350,
+      "w": 1520,
+      "h": 250,
+      "text": "{{accent0}}",
+      "size": 170,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.144,
+            1
+          ],
+          [
+            0.612,
+            1
+          ],
+          [
+            0.684,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0.0,
+            1.35
+          ],
+          [
+            0.324,
+            1,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 200,
+      "y": 350,
+      "w": 1520,
+      "h": 250,
+      "text": "{{accent1}}",
+      "size": 170,
+      "color": "#D6C2FF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.684,
+            0
+          ],
+          [
+            0.828,
+            1
+          ],
+          [
+            1.296,
+            1
+          ],
+          [
+            1.368,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            0.684,
+            1.35
+          ],
+          [
+            1.008,
+            1,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 200,
+      "y": 350,
+      "w": 1520,
+      "h": 250,
+      "text": "{{accent2}}",
+      "size": 170,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            1.368,
+            0
+          ],
+          [
+            1.512,
+            1
+          ],
+          [
+            1.98,
+            1
+          ],
+          [
+            2.052,
+            0
+          ]
+        ],
+        "scale": [
+          [
+            1.368,
+            1.35
+          ],
+          [
+            1.692,
+            1,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-pill",
+      "kind": "pill",
+      "x": 390,
+      "y": 400,
+      "w": 1140,
+      "h": 200,
+      "label": "{{result}}",
+      "size": 68,
+      "fill": "#FFFFFF",
+      "color": "#0B0B0F",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            2.232,
+            0
+          ],
+          [
+            2.664,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.232,
+            435
+          ],
+          [
+            2.664,
+            400,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

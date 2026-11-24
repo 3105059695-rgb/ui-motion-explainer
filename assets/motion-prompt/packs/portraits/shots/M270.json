@@ -1,0 +1,166 @@
+{
+  "id": "M270",
+  "layout": "fork",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "statistic",
+      "states": [
+        {},
+        {},
+        {}
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-scorecard",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "node-map",
+      "states": [
+        {},
+        {
+          "active": 3
+        },
+        {
+          "active": 3
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "arun-membership",
+      "start": 60,
+      "end": 69,
+      "shotIds": [
+        "A-S019"
+      ],
+      "rowIds": [
+        "A-L029",
+        "A-L030",
+        "A-L031",
+        "A-L032",
+        "A-L033",
+        "A-L034"
+      ]
+    }
+  ],
+  "chain": [
+    "原产品卡承接活动条件，旧价格被划掉并显示新状态",
+    "回到总览给出单项判断",
+    "单项结论保留，加入更大系统的节点群",
+    "组合价值结论在相应关系旁出现"
+  ],
+  "binding": {
+    "headline": "单个选项与整组价值并排",
+    "captions": [
+      "先评价这一项",
+      "把它放回所属的一组",
+      "两种评价同时保留"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "label": "网页副本",
+        "value": "95.9",
+        "unit": "kB",
+        "note": "同一张输入原图"
+      },
+      {
+        "title": "质量 50 副本",
+        "items": [
+          "文件体积",
+          "像素尺寸",
+          "网页加载耗时"
+        ],
+        "values": [
+          "95.9 kB",
+          "3000 × 3000",
+          "未测"
+        ],
+        "bodies": [
+          "本例上限 100 kB",
+          "与输入原图相同",
+          "需要实际网页计时"
+        ],
+        "active": 2
+      },
+      {
+        "label": "素材交接",
+        "items": [
+          "口播",
+          "逐字稿",
+          "字幕",
+          "初剪"
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {},
+        {}
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {},
+        {
+          "active": 3
+        },
+        {
+          "active": 3
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

@@ -1,0 +1,40 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t20p",
+  "title": "方块翻出：黑色方阵逐块翻成一张画面",
+  "duration": 4,
+  "background": "#FFFFFF",
+  "inputs": {},
+  "nodes": [
+    {
+      "id": "n001-b2-tile-media",
+      "kind": "b2-tile-media",
+      "x": 180,
+      "y": 100,
+      "w": 1560,
+      "h": 880,
+      "asset": "art",
+      "cols": 8,
+      "rows": 5,
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            0.8,
+            0
+          ],
+          [
+            3.0,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {
+    "art": "50bc3e314bdb7f0f4d"
+  }
+}

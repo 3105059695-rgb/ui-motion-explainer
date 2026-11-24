@@ -1,0 +1,203 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t16b",
+  "title": "版本迭代",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "version0": "v1",
+    "changes0": "基本结构\n○ 初次完成",
+    "version1": "v2",
+    "changes1": "＋ 补充来源\n＋ 修复边界\n○ 保留结构",
+    "version2": "v3",
+    "changes2": "＋ 增加复用\n＋ 清晰参数\n○ 延续旧能力"
+  },
+  "nodes": [
+    {
+      "id": "n003-card",
+      "kind": "card",
+      "x": 420,
+      "y": 180,
+      "w": 1050,
+      "h": 420,
+      "children": [
+        {
+          "id": "n001-text",
+          "kind": "text",
+          "x": 45,
+          "y": 35,
+          "w": 960,
+          "h": 80,
+          "text": "{{version0}}",
+          "size": 58,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 45,
+          "y": 155,
+          "w": 960,
+          "h": 200,
+          "text": "{{changes0}}",
+          "size": 41,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0.0,
+            0
+          ],
+          [
+            0.85,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.0,
+            70
+          ],
+          [
+            0.85,
+            180,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-card",
+      "kind": "card",
+      "x": 485,
+      "y": 360,
+      "w": 1050,
+      "h": 420,
+      "children": [
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 45,
+          "y": 35,
+          "w": 960,
+          "h": 80,
+          "text": "{{version1}}",
+          "size": 58,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 45,
+          "y": 155,
+          "w": 960,
+          "h": 200,
+          "text": "{{changes1}}",
+          "size": 41,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.05,
+            0
+          ],
+          [
+            1.9,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.05,
+            250
+          ],
+          [
+            1.9,
+            360,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-card",
+      "kind": "card",
+      "x": 550,
+      "y": 540,
+      "w": 1050,
+      "h": 420,
+      "children": [
+        {
+          "id": "n007-text",
+          "kind": "text",
+          "x": 45,
+          "y": 35,
+          "w": 960,
+          "h": 80,
+          "text": "{{version2}}",
+          "size": 58,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n008-text",
+          "kind": "text",
+          "x": 45,
+          "y": 155,
+          "w": 960,
+          "h": 200,
+          "text": "{{changes2}}",
+          "size": 41,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.1,
+            0
+          ],
+          [
+            2.95,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            2.1,
+            430
+          ],
+          [
+            2.95,
+            540,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

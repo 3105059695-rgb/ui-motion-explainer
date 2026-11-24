@@ -1,0 +1,232 @@
+{
+  "id": "M268",
+  "layout": "compare",
+  "layers": [
+    {
+      "kind": "photo",
+      "file": "fr-lunar.webp",
+      "slot": "media1",
+      "label": "输入原图"
+    },
+    {
+      "kind": "ui",
+      "component": "fred-loupes",
+      "states": [
+        {
+          "active": 0,
+          "showLocator": false
+        },
+        {
+          "active": 0,
+          "showLocator": true
+        },
+        {
+          "active": 1,
+          "showLocator": true
+        }
+      ],
+      "media": [
+        {
+          "slot": "media2",
+          "path": [
+            "left",
+            0
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "left",
+            1
+          ]
+        },
+        {
+          "slot": "media4",
+          "path": [
+            "right",
+            0
+          ]
+        },
+        {
+          "slot": "media5",
+          "path": [
+            "right",
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ui",
+      "component": "fred-spotlight",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": [
+        {
+          "slot": "media6",
+          "path": [
+            "image"
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "arun-membership",
+      "start": 38.4,
+      "end": 49.7,
+      "shotIds": [
+        "A-S013",
+        "A-S014",
+        "A-S015"
+      ],
+      "rowIds": [
+        "A-L017",
+        "A-L018",
+        "A-L019",
+        "A-L020",
+        "A-L021",
+        "A-L022",
+        "A-L023"
+      ]
+    }
+  ],
+  "chain": [
+    "实际视频作品轮换接管中心展示区",
+    "保留来源标识和有效过程，不只展示海报",
+    "双方品牌条拉开再靠拢，比较符号进入间隙",
+    "图片作品形成有序网格",
+    "真实工具页面放大到前景，旧网格退后"
+  ],
+  "binding": {
+    "headline": "作品切成对照，再进实际工具",
+    "captions": [
+      "先给作品本身",
+      "同一部分拉到两边比较",
+      "最后回到工具里看怎样得到"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "title": "同位置取样",
+        "items": [
+          "地球云层",
+          "月面纹理"
+        ],
+        "left": [
+          "fr-input-earth.webp",
+          "fr-input-soil.webp"
+        ],
+        "right": [
+          "fr-50-earth.webp",
+          "fr-50-soil.webp"
+        ],
+        "names": [
+          "输入原图",
+          "网页副本 Q50"
+        ],
+        "active": 0,
+        "showLocator": true
+      },
+      {
+        "image": "fr-screen.webp",
+        "title": "Squoosh",
+        "items": [
+          "编码格式",
+          "导出质量",
+          "文件体积"
+        ],
+        "rects": [
+          [
+            79,
+            73.5,
+            20,
+            6.2
+          ],
+          [
+            79,
+            79.8,
+            20,
+            7
+          ],
+          [
+            81,
+            91.5,
+            13,
+            6.7
+          ]
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [],
+      [
+        {
+          "active": 0,
+          "showLocator": false
+        },
+        {
+          "active": 0,
+          "showLocator": true
+        },
+        {
+          "active": 1,
+          "showLocator": true
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "输入原图"
+    },
+    {
+      "key": "media2",
+      "name": "同位置双图细节镜 · fr-input-earth"
+    },
+    {
+      "key": "media3",
+      "name": "同位置双图细节镜 · fr-input-soil"
+    },
+    {
+      "key": "media4",
+      "name": "同位置双图细节镜 · fr-50-earth"
+    },
+    {
+      "key": "media5",
+      "name": "同位置双图细节镜 · fr-50-soil"
+    },
+    {
+      "key": "media6",
+      "name": "原界面聚光框 · fr-screen"
+    }
+  ]
+}

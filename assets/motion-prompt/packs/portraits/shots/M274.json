@@ -1,0 +1,182 @@
+{
+  "id": "M274",
+  "layout": "stack",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-criteria",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "line-diff",
+      "states": [
+        {},
+        {
+          "onlyChanges": true
+        },
+        {
+          "onlyChanges": true
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "version-history",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 0
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "arun-membership",
+      "start": 95,
+      "end": 109,
+      "shotIds": [
+        "A-S024",
+        "A-S025"
+      ],
+      "rowIds": [
+        "A-L050",
+        "A-L051",
+        "A-L052",
+        "A-L053",
+        "A-L054",
+        "A-L055",
+        "A-L056",
+        "A-L057"
+      ]
+    }
+  ],
+  "chain": [
+    "评价关键词先居中明确，再缩为上方标签",
+    "具体任务卡补充评价范围",
+    "两条量表把能力与质量等不同维度分开",
+    "稿件带局部位移残影进入并停稳",
+    "划改线出现，同一稿件的新版本相继叠入",
+    "版本堆保留数量与先后关系"
+  ],
+  "binding": {
+    "headline": "判断分成两维，返工版本逐张叠入",
+    "captions": [
+      "两个维度分别判断",
+      "改动留在同一份稿件上",
+      "一轮轮返工按顺序叠起来"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "输入原图",
+          "质量 75",
+          "质量 50"
+        ],
+        "values": [
+          494374,
+          163502,
+          95873
+        ],
+        "pixels": [
+          3000,
+          3000,
+          3000
+        ],
+        "minPixel": 3000,
+        "limitKB": 100,
+        "active": 0
+      },
+      {
+        "title": "交付说明",
+        "oldLines": [
+          "保留输入原图",
+          "直接覆盖输出",
+          "核对文件体积"
+        ],
+        "newLines": [
+          "保留输入原图",
+          "另存网页副本",
+          "核对文件体积"
+        ],
+        "onlyChanges": false
+      },
+      {
+        "items": [
+          "第三版",
+          "第二版",
+          "第一版"
+        ],
+        "meta": [
+          "15:40 · 林青",
+          "13:15 · 方木",
+          "09:20 · 林青"
+        ],
+        "bodies": [
+          "换入核对后的数据",
+          "补充两条素材出处",
+          "建立采访提纲"
+        ],
+        "active": 0
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {},
+        {
+          "onlyChanges": true
+        },
+        {
+          "onlyChanges": true
+        }
+      ],
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 0
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

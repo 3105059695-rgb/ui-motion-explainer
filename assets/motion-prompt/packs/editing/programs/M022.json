@@ -1,0 +1,78 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t12k",
+  "title": "翻页序号：黑卡数字翻到下一章",
+  "duration": 3,
+  "background": "#0B0B0F",
+  "inputs": {
+    "previous": "01",
+    "index": "02",
+    "title": "开始实际操作"
+  },
+  "nodes": [
+    {
+      "id": "n001-b2-flip-clock",
+      "kind": "b2-flip-clock",
+      "x": 750,
+      "y": 265,
+      "w": 420,
+      "h": 330,
+      "frontText": "{{previous}}",
+      "backText": "{{index}}",
+      "size": 250,
+      "tracks": {
+        "value": [
+          [
+            0.45,
+            0
+          ],
+          [
+            1.65,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 400,
+      "y": 685,
+      "w": 1120,
+      "h": 100,
+      "text": "{{title}}",
+      "size": 65,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.65,
+            0
+          ],
+          [
+            2.01,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.65,
+            720
+          ],
+          [
+            2.01,
+            685,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

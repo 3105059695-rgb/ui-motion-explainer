@@ -1,0 +1,184 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t18e",
+  "title": "两方对决（快过渡）",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "vs": "VS",
+    "left": "方案甲",
+    "right": "方案乙"
+  },
+  "nodes": [
+    {
+      "id": "n001-image",
+      "kind": "image",
+      "x": 370,
+      "y": 300,
+      "w": 350,
+      "h": 350,
+      "asset": "brandA",
+      "fit": "contain",
+      "tracks": {
+        "x": [
+          [
+            0,
+            -400
+          ],
+          [
+            0.96,
+            370,
+            "back"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-image",
+      "kind": "image",
+      "x": 1200,
+      "y": 300,
+      "w": 350,
+      "h": 350,
+      "asset": "brandB",
+      "fit": "contain",
+      "tracks": {
+        "x": [
+          [
+            0,
+            2000
+          ],
+          [
+            0.96,
+            1200,
+            "back"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-pill",
+      "kind": "pill",
+      "x": 825,
+      "y": 390,
+      "w": 270,
+      "h": 170,
+      "label": "{{vs}}",
+      "size": 78,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.66,
+            0
+          ],
+          [
+            1.02,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0.66,
+            425
+          ],
+          [
+            1.02,
+            390,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-text",
+      "kind": "text",
+      "x": 300,
+      "y": 740,
+      "w": 500,
+      "h": 100,
+      "text": "{{left}}",
+      "size": 56,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.2,
+            0
+          ],
+          [
+            1.56,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.2,
+            775
+          ],
+          [
+            1.56,
+            740,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-text",
+      "kind": "text",
+      "x": 1120,
+      "y": 740,
+      "w": 500,
+      "h": 100,
+      "text": "{{right}}",
+      "size": 56,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.2,
+            0
+          ],
+          [
+            1.56,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.2,
+            775
+          ],
+          [
+            1.56,
+            740,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {
+    "brandA": "01a2b2babf49df311d",
+    "brandB": "01a2b2babf49df311d"
+  }
+}

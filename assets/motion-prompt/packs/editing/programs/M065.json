@@ -1,0 +1,101 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave2-42-t01b",
+  "title": "概念定义：术语到白话定义",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "term": "上下文",
+    "definition": "让下一步知道：你是谁、要做什么、已经做到哪里。"
+  },
+  "nodes": [
+    {
+      "id": "n001-pill",
+      "kind": "pill",
+      "x": 550,
+      "y": 230,
+      "w": 820,
+      "h": 170,
+      "label": "{{term}}",
+      "size": 90,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.0,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            0,
+            265
+          ],
+          [
+            1.0,
+            230,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-card",
+      "kind": "card",
+      "x": 280,
+      "y": 480,
+      "w": 1360,
+      "h": 330,
+      "children": [
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 60,
+          "y": 70,
+          "w": 1240,
+          "h": 210,
+          "text": "{{definition}}",
+          "size": 64,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.25,
+            0
+          ],
+          [
+            2.5,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.25,
+            620
+          ],
+          [
+            2.5,
+            480,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

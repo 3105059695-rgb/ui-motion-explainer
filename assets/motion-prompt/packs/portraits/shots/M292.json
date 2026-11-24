@@ -1,0 +1,141 @@
+{
+  "id": "M292",
+  "layout": "relay",
+  "layers": [
+    {
+      "kind": "live",
+      "strip": "interview-k-11140-5400",
+      "slot": "media1",
+      "label": "主体动作视频"
+    },
+    {
+      "kind": "ui",
+      "component": "transfer",
+      "states": [
+        {},
+        {
+          "assigned": [
+            1,
+            3
+          ]
+        },
+        {
+          "assigned": [
+            1,
+            3
+          ]
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "node-map",
+      "states": [
+        {},
+        {
+          "active": 3
+        },
+        {
+          "active": 3
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "interview-k",
+      "start": 11.14,
+      "end": 24.62
+    }
+  ],
+  "chain": [
+    "先认出交与接的两方",
+    "同一物件经过交接点",
+    "最后标出这两方的关系"
+  ],
+  "binding": {
+    "headline": "一杯奶茶怎样交接",
+    "captions": [
+      "一方把东西交出来。",
+      "另一方接住它。",
+      "这样就能看清，谁在给谁传东西。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {},
+      {
+        "items": [
+          "待交资料",
+          "交接说明",
+          "接收记录",
+          "处理结果"
+        ],
+        "assigned": [],
+        "marked": []
+      },
+      {
+        "label": "交接关系",
+        "items": [
+          "交付方",
+          "材料",
+          "接收方",
+          "回执"
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [],
+      [
+        {},
+        {
+          "assigned": [
+            1,
+            3
+          ]
+        },
+        {
+          "assigned": [
+            1,
+            3
+          ]
+        }
+      ],
+      [
+        {},
+        {
+          "active": 3
+        },
+        {
+          "active": 3
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "主体动作视频"
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "id": "M251",
+  "layout": "isolate",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "node-map",
+      "states": [
+        {},
+        {
+          "active": 3
+        },
+        {
+          "active": 3
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-handoff",
+      "states": [
+        {
+          "delivered": []
+        },
+        {
+          "delivered": [
+            0
+          ]
+        },
+        {
+          "delivered": [
+            0,
+            1
+          ]
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "node-map",
+      "states": [
+        {},
+        {
+          "active": 3
+        },
+        {
+          "active": 3
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-argon",
+      "start": 224.76,
+      "end": 227,
+      "shotIds": [
+        "F3-12"
+      ],
+      "rowIds": [
+        "F-L140"
+      ]
+    }
+  ],
+  "chain": [
+    "问题被选中",
+    "相关接口解释出现",
+    "其余区域压暗，问题与接口及后果保亮",
+    "连接线建立因果关系"
+  ],
+  "binding": {
+    "headline": "只点亮与本句有关的关系",
+    "captions": [
+      "先看到全部节点",
+      "无关的关系退到背景",
+      "留下这句说的那条连接"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "label": "素材交接",
+        "items": [
+          "口播",
+          "逐字稿",
+          "字幕",
+          "初剪"
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "active": 1
+      },
+      {
+        "sender": "素材编辑",
+        "recipient": "剪辑台",
+        "items": [
+          "素材目录",
+          "输入原图"
+        ],
+        "delivered": [
+          0
+        ]
+      },
+      {
+        "label": "素材交接",
+        "items": [
+          "口播",
+          "逐字稿",
+          "字幕",
+          "初剪"
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "active": 3
+        },
+        {
+          "active": 3
+        }
+      ],
+      [
+        {
+          "delivered": []
+        },
+        {
+          "delivered": [
+            0
+          ]
+        },
+        {
+          "delivered": [
+            0,
+            1
+          ]
+        }
+      ],
+      [
+        {},
+        {
+          "active": 3
+        },
+        {
+          "active": 3
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

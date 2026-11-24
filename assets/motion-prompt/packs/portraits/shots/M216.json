@@ -1,0 +1,140 @@
+{
+  "id": "M216",
+  "layout": "turn",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "contents",
+      "states": [
+        {},
+        {
+          "active": 0
+        },
+        {
+          "active": 0
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "photo",
+      "file": "fr-screen.webp",
+      "slot": "media1",
+      "label": "实际界面"
+    },
+    {
+      "kind": "ui",
+      "component": "fred-chapter",
+      "states": [
+        {
+          "active": 0,
+          "showTitle": false
+        },
+        {
+          "active": 0,
+          "showTitle": true
+        },
+        {
+          "active": 1,
+          "showTitle": true
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "workflow",
+      "start": 401.8,
+      "end": 409,
+      "shotIds": [
+        "W069",
+        "W070"
+      ],
+      "rowIds": [
+        "W-L129",
+        "W-L130",
+        "W-L131",
+        "W-L132",
+        "W-L133"
+      ]
+    }
+  ],
+  "chain": [
+    "真实编辑页",
+    "角部卷起扩展为白色翻页面",
+    "三产品标志露出",
+    "人物圆窗和导航仍在"
+  ],
+  "binding": {
+    "headline": "翻过去时保留上一层的位置",
+    "captions": [
+      "先记住当前章节",
+      "下一层从页边揭开",
+      "章号留在原位，可以找回上一层"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "素材来源",
+          "处理方法",
+          "导出结果"
+        ],
+        "bodies": [
+          "素材来自本期现场录制。",
+          "从原文件制作网页副本。",
+          "副本与原件分别保存。"
+        ],
+        "active": 1
+      },
+      {},
+      {
+        "items": [
+          "认原图",
+          "调质量",
+          "验交付"
+        ],
+        "first": 1,
+        "active": 1,
+        "showTitle": true
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {
+          "active": 0
+        },
+        {
+          "active": 0
+        }
+      ],
+      [],
+      [
+        {
+          "active": 0,
+          "showTitle": false
+        },
+        {
+          "active": 0,
+          "showTitle": true
+        },
+        {
+          "active": 1,
+          "showTitle": true
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "实际界面"
+    }
+  ]
+}

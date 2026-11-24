@@ -1,0 +1,86 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-chapter-transitions-20-t12t",
+  "title": "黑白分屏：左黑序号右白标题",
+  "duration": 3,
+  "background": "#FFFFFF",
+  "inputs": {
+    "index": "03",
+    "title": "现在\n看最终结果"
+  },
+  "nodes": [
+    {
+      "id": "n001-rect",
+      "kind": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 860,
+      "h": 1080,
+      "fill": "#0B0B0F",
+      "radius": 0,
+      "tracks": {
+        "w": [
+          [
+            0,
+            0
+          ],
+          [
+            0.9,
+            860,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 100,
+      "y": 320,
+      "w": 660,
+      "h": 390,
+      "text": "{{index}}",
+      "size": 300,
+      "color": "#FFFFFF",
+      "align": "center",
+      "tracks": {
+        "y": [
+          [
+            0.54,
+            1100
+          ],
+          [
+            1.5,
+            320,
+            "back"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 1020,
+      "y": 360,
+      "w": 730,
+      "h": 300,
+      "text": "{{title}}",
+      "size": 90,
+      "color": "#0B0B0F",
+      "align": "left",
+      "tracks": {
+        "revealX": [
+          [
+            0.75,
+            0
+          ],
+          [
+            1.86,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

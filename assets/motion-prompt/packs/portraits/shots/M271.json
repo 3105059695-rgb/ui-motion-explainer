@@ -1,0 +1,139 @@
+{
+  "id": "M271",
+  "layout": "dock",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "card",
+      "states": [
+        {},
+        {},
+        {}
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "status-label",
+      "states": [
+        {},
+        {
+          "state": "已通过",
+          "emphasis": false
+        },
+        {
+          "state": "已通过",
+          "emphasis": false
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "fred-capacity",
+      "states": [
+        {
+          "limitKB": 100
+        },
+        {
+          "limitKB": 200
+        },
+        {
+          "limitKB": 500
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "arun-membership",
+      "start": 69,
+      "end": 74,
+      "shotIds": [
+        "A-S020"
+      ],
+      "rowIds": [
+        "A-L034",
+        "A-L035",
+        "A-L036",
+        "A-L037"
+      ]
+    }
+  ],
+  "chain": [
+    "新对象卡先居中介绍",
+    "卡缩侧，总览回主位",
+    "该对象标识带问号进入总览，表示评价尚需展开",
+    "主总览缩回导航，具体状态量条接入主位"
+  ],
+  "binding": {
+    "headline": "问号暂留，转入额度说明",
+    "captions": [
+      "先介绍这个对象",
+      "这一项还要验证",
+      "转到额度上看它受什么限制"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "访谈素材",
+        "body": "原始录音和现场照片已归档。",
+        "meta": "素材清单 · 第 2 版"
+      },
+      {
+        "label": "剪辑稿",
+        "state": "待复核",
+        "emphasis": true
+      },
+      {
+        "title": "网页图片上限",
+        "items": [
+          "输入原图",
+          "质量 75",
+          "质量 50"
+        ],
+        "values": [
+          494374,
+          163502,
+          95873
+        ],
+        "limitKB": 100
+      }
+    ],
+    "keyframes": [
+      [
+        {},
+        {},
+        {}
+      ],
+      [
+        {},
+        {
+          "state": "已通过",
+          "emphasis": false
+        },
+        {
+          "state": "已通过",
+          "emphasis": false
+        }
+      ],
+      [
+        {
+          "limitKB": 100
+        },
+        {
+          "limitKB": 200
+        },
+        {
+          "limitKB": 500
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

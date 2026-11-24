@@ -1,0 +1,179 @@
+{
+  "id": "M264",
+  "layout": "fork",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-scorecard",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "pair-compare",
+      "states": [
+        {},
+        {
+          "active": 0
+        },
+        {
+          "active": 0
+        }
+      ],
+      "media": []
+    },
+    {
+      "kind": "ui",
+      "component": "node-map",
+      "states": [
+        {},
+        {
+          "active": 3
+        },
+        {
+          "active": 3
+        }
+      ],
+      "media": []
+    }
+  ],
+  "refs": [
+    {
+      "video": "arun-membership",
+      "start": 9.45,
+      "end": 16.9,
+      "shotIds": [
+        "A-S004",
+        "A-S005"
+      ],
+      "rowIds": [
+        "A-L004",
+        "A-L005",
+        "A-L006"
+      ]
+    }
+  ],
+  "chain": [
+    "候选标识在同一总览里改变位置",
+    "预演后回到候选位置，不假装已有最终结论",
+    "首尾位置改为问号和名次关系",
+    "弧形虚线连接反差，将总评价与单项优势分开"
+  ],
+  "binding": {
+    "headline": "总览两端连出评价反差",
+    "captions": [
+      "先看到目前的排序",
+      "把两端拉到一起发问",
+      "单项优势还要单独解释"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "title": "质量 50 副本",
+        "items": [
+          "文件体积",
+          "像素尺寸",
+          "网页加载耗时"
+        ],
+        "values": [
+          "95.9 kB",
+          "3000 × 3000",
+          "未测"
+        ],
+        "bodies": [
+          "本例上限 100 kB",
+          "与输入原图相同",
+          "需要实际网页计时"
+        ],
+        "active": 2
+      },
+      {
+        "label": "同一张照片",
+        "items": [
+          "原图",
+          "网页副本"
+        ],
+        "values": [
+          "494.4",
+          "95.9"
+        ],
+        "unit": "kB",
+        "active": 1
+      },
+      {
+        "label": "素材交接",
+        "items": [
+          "口播",
+          "逐字稿",
+          "字幕",
+          "初剪"
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 1
+        },
+        {
+          "active": 2
+        }
+      ],
+      [
+        {},
+        {
+          "active": 0
+        },
+        {
+          "active": 0
+        }
+      ],
+      [
+        {},
+        {
+          "active": 3
+        },
+        {
+          "active": 3
+        }
+      ]
+    ]
+  },
+  "mediaFields": []
+}

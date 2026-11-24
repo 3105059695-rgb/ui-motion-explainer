@@ -1,0 +1,353 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t22b",
+  "title": "新闻叠放",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "newsTitle0": "资料整合",
+    "newsTitle1": "执行方式",
+    "newsTitle2": "协作流程",
+    "newsTitle3": "模块组合"
+  },
+  "nodes": [
+    {
+      "id": "n003-card",
+      "kind": "card",
+      "x": 240,
+      "y": 210,
+      "w": 1040,
+      "h": 620,
+      "children": [
+        {
+          "id": "n001-image",
+          "kind": "image",
+          "x": 25,
+          "y": 25,
+          "w": 600,
+          "h": 570,
+          "asset": "news0",
+          "fit": "contain"
+        },
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 660,
+          "y": 100,
+          "w": 350,
+          "h": 300,
+          "text": "{{newsTitle0}}",
+          "size": 65,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "rotation": [
+          [
+            0,
+            -12.0
+          ],
+          [
+            1.25,
+            -12.0
+          ],
+          [
+            2.6,
+            0
+          ]
+        ],
+        "x": [
+          [
+            0,
+            240
+          ],
+          [
+            1.25,
+            240
+          ],
+          [
+            2.6,
+            -1200
+          ]
+        ],
+        "y": [
+          [
+            0,
+            210
+          ],
+          [
+            2.6,
+            225
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            0.88
+          ],
+          [
+            2.6,
+            0.8
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-card",
+      "kind": "card",
+      "x": 450,
+      "y": 280,
+      "w": 1040,
+      "h": 620,
+      "children": [
+        {
+          "id": "n004-image",
+          "kind": "image",
+          "x": 25,
+          "y": 25,
+          "w": 600,
+          "h": 570,
+          "asset": "news1",
+          "fit": "contain"
+        },
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 660,
+          "y": 100,
+          "w": 350,
+          "h": 300,
+          "text": "{{newsTitle1}}",
+          "size": 65,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "rotation": [
+          [
+            0,
+            -4.0
+          ],
+          [
+            1.25,
+            -4.0
+          ],
+          [
+            2.6,
+            0
+          ]
+        ],
+        "x": [
+          [
+            0,
+            450
+          ],
+          [
+            1.25,
+            450
+          ],
+          [
+            2.6,
+            -1200
+          ]
+        ],
+        "y": [
+          [
+            0,
+            280
+          ],
+          [
+            2.6,
+            225
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            0.88
+          ],
+          [
+            2.6,
+            0.8
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-card",
+      "kind": "card",
+      "x": 660,
+      "y": 350,
+      "w": 1040,
+      "h": 620,
+      "children": [
+        {
+          "id": "n007-image",
+          "kind": "image",
+          "x": 25,
+          "y": 25,
+          "w": 600,
+          "h": 570,
+          "asset": "news2",
+          "fit": "contain"
+        },
+        {
+          "id": "n008-text",
+          "kind": "text",
+          "x": 660,
+          "y": 100,
+          "w": 350,
+          "h": 300,
+          "text": "{{newsTitle2}}",
+          "size": 65,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#D6C2FF",
+      "tracks": {
+        "rotation": [
+          [
+            0,
+            4.0
+          ],
+          [
+            1.25,
+            4.0
+          ],
+          [
+            2.6,
+            0
+          ]
+        ],
+        "x": [
+          [
+            0,
+            660
+          ],
+          [
+            1.25,
+            660
+          ],
+          [
+            2.6,
+            440
+          ]
+        ],
+        "y": [
+          [
+            0,
+            350
+          ],
+          [
+            2.6,
+            225
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            0.88
+          ],
+          [
+            2.6,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n012-card",
+      "kind": "card",
+      "x": 870,
+      "y": 420,
+      "w": 1040,
+      "h": 620,
+      "children": [
+        {
+          "id": "n010-image",
+          "kind": "image",
+          "x": 25,
+          "y": 25,
+          "w": 600,
+          "h": 570,
+          "asset": "news3",
+          "fit": "contain"
+        },
+        {
+          "id": "n011-text",
+          "kind": "text",
+          "x": 660,
+          "y": 100,
+          "w": 350,
+          "h": 300,
+          "text": "{{newsTitle3}}",
+          "size": 65,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "rotation": [
+          [
+            0,
+            12.0
+          ],
+          [
+            1.25,
+            12.0
+          ],
+          [
+            2.6,
+            0
+          ]
+        ],
+        "x": [
+          [
+            0,
+            870
+          ],
+          [
+            1.25,
+            870
+          ],
+          [
+            2.6,
+            2100
+          ]
+        ],
+        "y": [
+          [
+            0,
+            420
+          ],
+          [
+            2.6,
+            225
+          ]
+        ],
+        "scale": [
+          [
+            0,
+            0.88
+          ],
+          [
+            2.6,
+            0.8
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {
+    "news0": "aba20e6c2937800563",
+    "news1": "104b1b1c1ac61fdbb7",
+    "news2": "5a132b4d3cfcc290a4",
+    "news3": "f0cad559eda3318fff"
+  }
+}

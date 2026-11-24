@@ -1,0 +1,381 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t21d",
+  "title": "可截图清单",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "title": "这一期的执行清单",
+    "item0": "先确认目标",
+    "item1": "保留原始素材",
+    "item2": "选择合适动作",
+    "item3": "核对关键结果",
+    "item4": "留下可编辑工程",
+    "save": "可以暂停保存这一页"
+  },
+  "nodes": [
+    {
+      "id": "n001-text",
+      "kind": "text",
+      "x": 300,
+      "y": 90,
+      "w": 1320,
+      "h": 110,
+      "text": "{{title}}",
+      "size": 70,
+      "color": "#0B0B0F",
+      "align": "center"
+    },
+    {
+      "id": "n002-circle",
+      "kind": "circle",
+      "x": 360,
+      "y": 270,
+      "w": 65,
+      "h": 65,
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n003-text",
+      "kind": "text",
+      "x": 500,
+      "y": 263,
+      "w": 1100,
+      "h": 90,
+      "text": "{{item0}}",
+      "size": 51,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n004-check",
+      "kind": "check",
+      "x": 350,
+      "y": 265,
+      "w": 85,
+      "h": 80,
+      "color": "#0B0B0F",
+      "tracks": {
+        "value": [
+          [
+            0.72,
+            0
+          ],
+          [
+            1.32,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            0.72,
+            0
+          ],
+          [
+            0.78,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-circle",
+      "kind": "circle",
+      "x": 360,
+      "y": 395,
+      "w": 65,
+      "h": 65,
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n006-text",
+      "kind": "text",
+      "x": 500,
+      "y": 388,
+      "w": 1100,
+      "h": 90,
+      "text": "{{item1}}",
+      "size": 51,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n007-check",
+      "kind": "check",
+      "x": 350,
+      "y": 390,
+      "w": 85,
+      "h": 80,
+      "color": "#0B0B0F",
+      "tracks": {
+        "value": [
+          [
+            1.5,
+            0
+          ],
+          [
+            2.1,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.5,
+            0
+          ],
+          [
+            1.56,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-circle",
+      "kind": "circle",
+      "x": 360,
+      "y": 520,
+      "w": 65,
+      "h": 65,
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n009-text",
+      "kind": "text",
+      "x": 500,
+      "y": 513,
+      "w": 1100,
+      "h": 90,
+      "text": "{{item2}}",
+      "size": 51,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n010-check",
+      "kind": "check",
+      "x": 350,
+      "y": 515,
+      "w": 85,
+      "h": 80,
+      "color": "#0B0B0F",
+      "tracks": {
+        "value": [
+          [
+            2.28,
+            0
+          ],
+          [
+            2.88,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.28,
+            0
+          ],
+          [
+            2.34,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n011-circle",
+      "kind": "circle",
+      "x": 360,
+      "y": 645,
+      "w": 65,
+      "h": 65,
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n012-text",
+      "kind": "text",
+      "x": 500,
+      "y": 638,
+      "w": 1100,
+      "h": 90,
+      "text": "{{item3}}",
+      "size": 51,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n013-check",
+      "kind": "check",
+      "x": 350,
+      "y": 640,
+      "w": 85,
+      "h": 80,
+      "color": "#0B0B0F",
+      "tracks": {
+        "value": [
+          [
+            3.06,
+            0
+          ],
+          [
+            3.66,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.06,
+            0
+          ],
+          [
+            3.12,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n014-circle",
+      "kind": "circle",
+      "x": 360,
+      "y": 770,
+      "w": 65,
+      "h": 65,
+      "fill": "#F3F3F5"
+    },
+    {
+      "id": "n015-text",
+      "kind": "text",
+      "x": 500,
+      "y": 763,
+      "w": 1100,
+      "h": 90,
+      "text": "{{item4}}",
+      "size": 51,
+      "color": "#0B0B0F",
+      "align": "left"
+    },
+    {
+      "id": "n016-check",
+      "kind": "check",
+      "x": 350,
+      "y": 765,
+      "w": 85,
+      "h": 80,
+      "color": "#0B0B0F",
+      "tracks": {
+        "value": [
+          [
+            3.84,
+            0
+          ],
+          [
+            4.44,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.84,
+            0
+          ],
+          [
+            3.9,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n017-text",
+      "kind": "text",
+      "x": 500,
+      "y": 970,
+      "w": 960,
+      "h": 60,
+      "text": "{{save}}",
+      "size": 32,
+      "color": "#62616C",
+      "align": "center",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.68,
+            0
+          ],
+          [
+            5.4,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            4.68,
+            1005
+          ],
+          [
+            5.4,
+            970,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n018-rect",
+      "kind": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "fill": "#FFFFFF",
+      "radius": 0,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            5.52,
+            0
+          ],
+          [
+            5.61,
+            0.75
+          ],
+          [
+            5.82,
+            0
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

@@ -1,0 +1,238 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t14e",
+  "title": "三个关键数字",
+  "duration": 5,
+  "background": "#FFFFFF",
+  "inputs": {
+    "metric0": 10,
+    "label0": "方案甲",
+    "metric1": 2,
+    "label1": "方案乙",
+    "metric2": 0.1,
+    "label2": "方案丙",
+    "source": "三项指标 · 示意数值，制作时替换"
+  },
+  "nodes": [
+    {
+      "id": "n003-card",
+      "kind": "card",
+      "x": 200,
+      "y": 260,
+      "w": 490,
+      "h": 500,
+      "children": [
+        {
+          "id": "n001-text",
+          "kind": "text",
+          "x": 35,
+          "y": 50,
+          "w": 420,
+          "h": 80,
+          "text": "{{label0}}",
+          "size": 48,
+          "color": "#0B0B0F",
+          "align": "center"
+        },
+        {
+          "id": "n002-b2-number",
+          "kind": "b2-number",
+          "x": 20,
+          "y": 205,
+          "w": 450,
+          "h": 150,
+          "toKey": "metric0",
+          "prefix": "$",
+          "size": 105,
+          "align": "center",
+          "decimals": 0,
+          "tracks": {
+            "value": [
+              [
+                0.6,
+                0
+              ],
+              [
+                2.5,
+                1,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            3.1,
+            1
+          ],
+          [
+            3.6,
+            1
+          ],
+          [
+            4.3,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-card",
+      "kind": "card",
+      "x": 750,
+      "y": 260,
+      "w": 490,
+      "h": 500,
+      "children": [
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 35,
+          "y": 50,
+          "w": 420,
+          "h": 80,
+          "text": "{{label1}}",
+          "size": 48,
+          "color": "#0B0B0F",
+          "align": "center"
+        },
+        {
+          "id": "n005-b2-number",
+          "kind": "b2-number",
+          "x": 20,
+          "y": 205,
+          "w": 450,
+          "h": 150,
+          "toKey": "metric1",
+          "prefix": "$",
+          "size": 105,
+          "align": "center",
+          "decimals": 0,
+          "tracks": {
+            "value": [
+              [
+                0.6,
+                0
+              ],
+              [
+                2.5,
+                1,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            3.1,
+            1
+          ],
+          [
+            3.6,
+            1
+          ],
+          [
+            4.3,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-card",
+      "kind": "card",
+      "x": 1300,
+      "y": 260,
+      "w": 490,
+      "h": 500,
+      "children": [
+        {
+          "id": "n007-text",
+          "kind": "text",
+          "x": 35,
+          "y": 50,
+          "w": 420,
+          "h": 80,
+          "text": "{{label2}}",
+          "size": 48,
+          "color": "#0B0B0F",
+          "align": "center"
+        },
+        {
+          "id": "n008-b2-number",
+          "kind": "b2-number",
+          "x": 20,
+          "y": 205,
+          "w": 450,
+          "h": 150,
+          "toKey": "metric2",
+          "prefix": "$",
+          "size": 105,
+          "align": "center",
+          "decimals": 2,
+          "tracks": {
+            "value": [
+              [
+                0.6,
+                0
+              ],
+              [
+                2.5,
+                1,
+                "out"
+              ]
+            ]
+          }
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "scale": [
+          [
+            0,
+            1
+          ],
+          [
+            3.1,
+            1
+          ],
+          [
+            3.6,
+            1.06
+          ],
+          [
+            4.3,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n010-text",
+      "kind": "text",
+      "x": 350,
+      "y": 900,
+      "w": 1220,
+      "h": 70,
+      "text": "{{source}}",
+      "size": 32,
+      "color": "#62616C",
+      "align": "center"
+    }
+  ],
+  "assets": {}
+}

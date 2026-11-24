@@ -1,0 +1,310 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t05h",
+  "title": "一次性拷贝 vs 持续同步",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "source": "源项目",
+    "version": "v1",
+    "target0": "一次性拷贝",
+    "destination0": "v1",
+    "target1": "持续同步",
+    "destination1": "v1",
+    "update": "v2"
+  },
+  "nodes": [
+    {
+      "id": "n001-pill",
+      "kind": "pill",
+      "x": 740,
+      "y": 120,
+      "w": 440,
+      "h": 130,
+      "label": "{{source}}",
+      "size": 48,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "n002-text",
+      "kind": "text",
+      "x": 860,
+      "y": 270,
+      "w": 200,
+      "h": 80,
+      "text": "{{version}}",
+      "size": 58,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "text": [
+          [
+            0,
+            "v1"
+          ],
+          [
+            2.52,
+            "v1"
+          ],
+          [
+            2.58,
+            "v2",
+            "step"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n003-path",
+      "kind": "path",
+      "x": 500,
+      "y": 350,
+      "w": 1,
+      "h": 1,
+      "path": "M460 0 L0 0 L0 160",
+      "length": 700,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "draw": [
+          [
+            0.6,
+            0
+          ],
+          [
+            1.68,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n004-pill",
+      "kind": "pill",
+      "x": 300,
+      "y": 580,
+      "w": 520,
+      "h": 120,
+      "label": "{{target0}}",
+      "size": 47,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.2,
+            0
+          ],
+          [
+            1.92,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.2,
+            615
+          ],
+          [
+            1.92,
+            580,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n005-text",
+      "kind": "text",
+      "x": 300,
+      "y": 735,
+      "w": 520,
+      "h": 100,
+      "text": "{{destination0}}",
+      "size": 70,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "text": [
+          [
+            0,
+            "v1"
+          ],
+          [
+            4.08,
+            "v1"
+          ],
+          [
+            4.14,
+            "v1",
+            "step"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-path",
+      "kind": "path",
+      "x": 1500,
+      "y": 350,
+      "w": 1,
+      "h": 1,
+      "path": "M-540 0 L0 0 L0 160",
+      "length": 700,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "draw": [
+          [
+            0.6,
+            0
+          ],
+          [
+            1.68,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 1300,
+      "y": 580,
+      "w": 520,
+      "h": 120,
+      "label": "{{target1}}",
+      "size": 47,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.2,
+            0
+          ],
+          [
+            1.92,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            1.2,
+            615
+          ],
+          [
+            1.92,
+            580,
+            "out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-text",
+      "kind": "text",
+      "x": 1300,
+      "y": 735,
+      "w": 520,
+      "h": 100,
+      "text": "{{destination1}}",
+      "size": 70,
+      "color": "#0B0B0F",
+      "align": "center",
+      "tracks": {
+        "text": [
+          [
+            0,
+            "v1"
+          ],
+          [
+            4.08,
+            "v1"
+          ],
+          [
+            4.14,
+            "v2",
+            "step"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n009-pill",
+      "kind": "pill",
+      "x": 900,
+      "y": 325,
+      "w": 120,
+      "h": 75,
+      "label": "{{update}}",
+      "size": 34,
+      "fill": "#D6C2FF",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            2.64,
+            900
+          ],
+          [
+            3.3,
+            1500
+          ],
+          [
+            4.14,
+            1500
+          ]
+        ],
+        "y": [
+          [
+            2.64,
+            325
+          ],
+          [
+            3.3,
+            325
+          ],
+          [
+            4.14,
+            535
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.58,
+            0
+          ],
+          [
+            2.64,
+            1
+          ],
+          [
+            4.14,
+            1
+          ],
+          [
+            4.26,
+            0
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

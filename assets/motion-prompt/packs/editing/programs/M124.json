@@ -1,0 +1,43 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t13c",
+  "title": "装不装得下",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "payloadGB": 52,
+    "capacitiesGB": [
+      8,
+      24,
+      80
+    ],
+    "unit": "GB"
+  },
+  "nodes": [
+    {
+      "id": "measured-capacity-comparison",
+      "kind": "b2-capacity-set",
+      "x": 160,
+      "y": 100,
+      "w": 1600,
+      "h": 900,
+      "payloadKey": "payloadGB",
+      "capacitiesKey": "capacitiesGB",
+      "unitKey": "unit",
+      "tracks": {
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            6,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

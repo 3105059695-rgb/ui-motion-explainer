@@ -1,0 +1,171 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t13b",
+  "title": "比喻变形",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "source": "访问权限",
+    "analogy": "像一份服务",
+    "relation": "↔"
+  },
+  "nodes": [
+    {
+      "id": "n003-card",
+      "kind": "card",
+      "x": 610,
+      "y": 270,
+      "w": 700,
+      "h": 530,
+      "children": [
+        {
+          "id": "n001-b2-lock",
+          "kind": "b2-lock",
+          "x": 260,
+          "y": 100,
+          "w": 180,
+          "h": 220
+        },
+        {
+          "id": "n002-text",
+          "kind": "text",
+          "x": 40,
+          "y": 380,
+          "w": 620,
+          "h": 90,
+          "text": "{{source}}",
+          "size": 56,
+          "color": "#0B0B0F",
+          "align": "center"
+        }
+      ],
+      "fill": "#FFFFFF",
+      "tracks": {
+        "x": [
+          [
+            0,
+            610
+          ],
+          [
+            1.8,
+            610
+          ],
+          [
+            3.6,
+            180
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-card",
+      "kind": "card",
+      "x": 1090,
+      "y": 270,
+      "w": 650,
+      "h": 530,
+      "children": [
+        {
+          "id": "n004-path",
+          "kind": "path",
+          "x": 155,
+          "y": 130,
+          "w": 1,
+          "h": 1,
+          "path": "M0 180 L340 180 M35 155 A135 135 0 0 1 305 155 M170 0 L170 22",
+          "length": 900,
+          "fill": "#FFFFFF",
+          "strokeWidth": 14
+        },
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 40,
+          "y": 380,
+          "w": 570,
+          "h": 90,
+          "text": "{{analogy}}",
+          "size": 54,
+          "color": "#FFFFFF",
+          "align": "center"
+        }
+      ],
+      "fill": "#0B0B0F",
+      "tracks": {
+        "revealX": [
+          [
+            1.68,
+            0
+          ],
+          [
+            3.72,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-line",
+      "kind": "line",
+      "x": 990,
+      "y": 150,
+      "w": 0,
+      "h": 780,
+      "fill": "#0B0B0F",
+      "strokeWidth": 5,
+      "tracks": {
+        "x": [
+          [
+            1.2,
+            2000
+          ],
+          [
+            3.3,
+            990
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-pill",
+      "kind": "pill",
+      "x": 825,
+      "y": 470,
+      "w": 270,
+      "h": 140,
+      "label": "{{relation}}",
+      "size": 70,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            3.72,
+            0
+          ],
+          [
+            4.44,
+            1,
+            "out"
+          ]
+        ],
+        "y": [
+          [
+            3.72,
+            505
+          ],
+          [
+            4.44,
+            470,
+            "out"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

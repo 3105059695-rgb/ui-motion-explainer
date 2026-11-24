@@ -1,0 +1,261 @@
+{
+  "schema": "ui-motion-fusion/independent-scene@1",
+  "id": "fredtalk:fred-wave3-40-t09j",
+  "title": "验证码从一个窗口交给另一个",
+  "duration": 6,
+  "background": "#FFFFFF",
+  "inputs": {
+    "row20": "请输入设备验证码",
+    "row31": "",
+    "row42": "确认后继续",
+    "code": "A1B2-C3D4",
+    "button": "继续"
+  },
+  "nodes": [
+    {
+      "id": "n001-code",
+      "kind": "code",
+      "x": 130,
+      "y": 200,
+      "w": 760,
+      "h": 620,
+      "lines": [
+        "$ gh auth login",
+        "确认登录设备",
+        "等待输入验证码"
+      ],
+      "size": 35,
+      "lineHeight": 80
+    },
+    {
+      "id": "n002-window",
+      "kind": "window",
+      "x": 1030,
+      "y": 200,
+      "w": 760,
+      "h": 620,
+      "label": "example.org/login/device",
+      "children": [
+        {
+          "id": "n003-text",
+          "kind": "text",
+          "x": 35,
+          "y": 100,
+          "w": 690,
+          "h": 55,
+          "text": "{{row20}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n004-text",
+          "kind": "text",
+          "x": 35,
+          "y": 165,
+          "w": 690,
+          "h": 55,
+          "text": "{{row31}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        },
+        {
+          "id": "n005-text",
+          "kind": "text",
+          "x": 35,
+          "y": 230,
+          "w": 690,
+          "h": 55,
+          "text": "{{row42}}",
+          "size": 30,
+          "color": "#0B0B0F",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "id": "retained-source-code",
+      "kind": "text",
+      "x": 180,
+      "y": 470,
+      "w": 560,
+      "h": 100,
+      "text": "{{code}}",
+      "color": "#D6C2FF",
+      "size": 50,
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1.1,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n006-pill",
+      "kind": "pill",
+      "x": 180,
+      "y": 470,
+      "w": 560,
+      "h": 110,
+      "label": "{{code}}",
+      "size": 52,
+      "fill": "#D6C2FF",
+      "color": "#0B0B0F",
+      "tracks": {
+        "x": [
+          [
+            1.08,
+            180
+          ],
+          [
+            2.4,
+            1110
+          ]
+        ],
+        "y": [
+          [
+            1.08,
+            470
+          ],
+          [
+            2.4,
+            455
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            1.02,
+            0
+          ],
+          [
+            1.08,
+            1
+          ],
+          [
+            2.55,
+            1
+          ],
+          [
+            2.8,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n007-pill",
+      "kind": "pill",
+      "x": 1220,
+      "y": 660,
+      "w": 360,
+      "h": 90,
+      "label": "{{button}}",
+      "size": 42,
+      "fill": "#0B0B0F",
+      "color": "#FFFFFF",
+      "tracks": {
+        "label": [
+          [
+            0,
+            "继续"
+          ],
+          [
+            4.68,
+            "继续"
+          ],
+          [
+            4.74,
+            "验证完成",
+            "step"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "n008-check",
+      "kind": "check",
+      "x": 730,
+      "y": 680,
+      "w": 80,
+      "h": 75,
+      "tracks": {
+        "value": [
+          [
+            4.56,
+            0
+          ],
+          [
+            5.1,
+            1
+          ]
+        ],
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            4.56,
+            0
+          ],
+          [
+            4.68,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "destination-code-boxes",
+      "kind": "b2-code-boxes",
+      "x": 1080,
+      "y": 455,
+      "w": 660,
+      "h": 110,
+      "codeKey": "code",
+      "tracks": {
+        "opacity": [
+          [
+            0,
+            0
+          ],
+          [
+            2.65,
+            0
+          ],
+          [
+            2.85,
+            1
+          ]
+        ],
+        "value": [
+          [
+            2.8,
+            0
+          ],
+          [
+            4.05,
+            1,
+            "linear"
+          ]
+        ]
+      }
+    }
+  ],
+  "assets": {}
+}

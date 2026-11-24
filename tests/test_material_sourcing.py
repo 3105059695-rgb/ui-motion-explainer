@@ -42,6 +42,49 @@ class MaterialSourcingTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'No selected'):
             material.export(self.plan, self.base / 'bindings.json')
 
+    def test_generated_photo_has_real_prompt_checked_uses_and_portable_binding(self):
+        photo = self.base / 'desk.png'
+        photo.write_bytes(b'project photo')
+        src = {'method': 'generated', 'rendering': 'photo', 'tool': 'imagegen', 'prompt': 'Side window, hand against camera grip.'}
+        use = {'unit_id': 'U002', 'timeline': [6, 8.4], 'trigger': '结果', 'slot': '封面', 'motion_id': 'M147'}
+        row = self.row(kind='image', local_path='desk.png', source=src, uses=[use])
+        del row['source_in'], row['source_out']
+        with self.assertRaisesRegex(ValueError, 'actual prompt'):
+            material.record(self.plan, {**row, 'source': {**src, 'prompt': ''}})
+        with self.assertRaisesRegex(ValueError, 'timeline'):
+            material.record(self.plan, {**row, 'uses': [{**use, 'timeline': [8.4, 6]}]})
+        with patch.object(material, 'probe', return_value={'status': 'probed', 'duration': None}):
+            material.record(self.plan, row)
+            self.assertEqual(material.inspect(self.plan)['selected_errors'], 1)
+            row['review'] = {'semantic_match': True, 'notes': 'camera touches its tray',
+                             'realism': {'status': 'pass', 'notes': 'paper edge occludes the camera base'}}
+            material.record(self.plan, {**row, 'id': 'final'})
+            data = material.read(self.plan)
+            self.assertEqual(data['units'][1]['material_ids'], ['M1','final'])
+            data['materials'][0]['selection'] = 'rejected'
+            self.plan.write_text(json.dumps(data), encoding='utf8')
+            index = self.base/'bindings.json'
+            material.export(self.plan, index)
+            self.assertEqual(material.read(index)['materials'][0]['uses'], [use])
+            self.assertIsNone(material.read(index)['materials'][0]['source_in'])
+            folder = self.base/'moved'
+            folder.mkdir()
+            index = index.rename(folder/index.name)
+            photo = photo.rename(folder/photo.name)
+            self.assertTrue(material.bound_file(index, 'final', folder).samefile(photo))
+            photo.write_bytes(b'changed')
+            with self.assertRaisesRegex(ValueError, 'changed'):
+                material.bound_file(index, 'final', folder)
+
+    def test_non_web_sources_keep_distinct_provenance(self):
+        for source in ({'method':'local','origin':'project recording chapter 2'},
+                       {'method':'recording','application':'Editor','action':'exported the selected file'}):
+            self.assertIsNone(material.source_issue(source))
+        self.assertIsNotNone(material.source_issue({'method':'recording'}))
+        self.assertIsNotNone(material.source_issue({}))
+        self.assertIsNotNone(material.source_issue({'method':'generated','rendering':'photo','tool':'renderer',
+                                                   'prompt':'desk','role':'evidence'}))
+
     def test_real_media_record_export_and_changed_file_rejection(self):
         clip = self.base / 'clip.mp4'
         clip.write_bytes(b'fixture-media')

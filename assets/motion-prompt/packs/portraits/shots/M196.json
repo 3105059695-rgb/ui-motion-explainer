@@ -1,0 +1,128 @@
+{
+  "id": "M196",
+  "layout": "native",
+  "layers": [
+    {
+      "kind": "ui",
+      "component": "fred-exhibits",
+      "states": [
+        {
+          "active": 0
+        },
+        {
+          "active": 2
+        },
+        {
+          "active": 3
+        }
+      ],
+      "media": [
+        {
+          "slot": "media1",
+          "path": [
+            "images",
+            0
+          ]
+        },
+        {
+          "slot": "media2",
+          "path": [
+            "images",
+            1
+          ]
+        },
+        {
+          "slot": "media3",
+          "path": [
+            "images",
+            2
+          ]
+        },
+        {
+          "slot": "media4",
+          "path": [
+            "images",
+            3
+          ]
+        }
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "video": "fred-weekly",
+      "start": 64,
+      "end": 71
+    }
+  ],
+  "chain": [
+    "四个现场各占一格，格内标签交代任务，再一起承接对共性的解释。"
+  ],
+  "binding": {
+    "headline": "这份副本的四项证据",
+    "captions": [
+      "先看原照片和操作界面。",
+      "这个细节来自实际输出。",
+      "摄影署名可以回原记录核对。"
+    ],
+    "beats": [
+      0.0,
+      0.32,
+      0.68
+    ],
+    "parts": [
+      {
+        "items": [
+          "原照片",
+          "操作界面",
+          "输出细节",
+          "署名记录"
+        ],
+        "images": [
+          "fr-lunar.webp",
+          "fr-screen.webp",
+          "fr-50-earth.webp",
+          "fr-record.webp"
+        ],
+        "bodies": [
+          "辨认本次处理的照片",
+          "确认导出时的质量设置",
+          "逐像素核对同一处云层",
+          "核对摄影署名"
+        ],
+        "active": 1
+      }
+    ],
+    "keyframes": [
+      [
+        {
+          "active": 0
+        },
+        {
+          "active": 2
+        },
+        {
+          "active": 3
+        }
+      ]
+    ]
+  },
+  "mediaFields": [
+    {
+      "key": "media1",
+      "name": "四格材料查证窗 · fr-lunar"
+    },
+    {
+      "key": "media2",
+      "name": "四格材料查证窗 · fr-screen"
+    },
+    {
+      "key": "media3",
+      "name": "四格材料查证窗 · fr-50-earth"
+    },
+    {
+      "key": "media4",
+      "name": "四格材料查证窗 · fr-record"
+    }
+  ]
+}
